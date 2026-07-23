@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Illustrated Input — carefully graded reading courses for language learners.">
+  <title>Illustrated Input</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to lesson</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Illustrated Input home">
+      <span class="brand-mark" aria-hidden="true">Ii</span>
+      <span><strong>Illustrated Input</strong><small>Learn through the story</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="course-nav">Lessons</button>
+  </header>
+
+  <div class="app-shell">
+    <aside class="course-panel" id="course-nav">
+      <div class="course-heading">
+        <p class="eyebrow" id="course-language">Course</p>
+        <h1 id="course-title">Loading…</h1>
+        <p id="course-description"></p>
+      </div>
+      <div class="progress-block" aria-labelledby="progress-label">
+        <div class="progress-copy"><span id="progress-label">Course progress</span><strong id="progress-count">0 / 0</strong></div>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div>
+      </div>
+      <nav aria-label="Course lessons"><ol class="lesson-list" id="lesson-list"></ol></nav>
+    </aside>
+
+    <main id="main" tabindex="-1">
+      <div id="loading" class="status-card" role="status">Opening the course…</div>
+      <div id="error" class="status-card error" role="alert" hidden></div>
+      <article id="lesson" hidden>
+        <header class="lesson-header">
+          <div>
+            <p class="eyebrow" id="lesson-kicker"></p>
+            <h2 id="lesson-title"></h2>
+            <p class="lesson-goal" id="lesson-goal"></p>
+          </div>
+          <span class="status-badge" id="lesson-status"></span>
+        </header>
+
+        <div class="audio-toolbar" id="audio-toolbar" hidden>
+          <button id="play-lesson" type="button" aria-label="Play the complete lesson audio"><span aria-hidden="true">▶</span> Listen to lesson</button>
+          <label class="voice-picker">Voice <select id="audio-source" aria-label="Audio source"></select></label>
+          <span>Or select any sentence to hear it.</span>
+        </div>
+
+        <section class="reading" aria-labelledby="reading-title">
+          <div class="section-heading"><p class="eyebrow">Read and notice</p><h3 id="reading-title">The story</h3></div>
+          <div id="story"></div>
+        </section>
+
+        <section class="reference-grid" aria-label="Lesson reference">
+          <details class="reference-card" open><summary><span>Vocabulary</span><small id="vocab-count"></small></summary><div id="vocabulary"></div></details>
+          <details class="reference-card"><summary><span>Grammar</span><small>Notice the pattern</small></summary><div id="grammar"></div></details>
+        </section>
+
+        <section class="pensa" aria-labelledby="pensa-title">
+          <div class="section-heading"><p class="eyebrow">Try it yourself</p><h3 id="pensa-title">Pensa A–C</h3><p>Check your understanding, then retry or reveal. Your score does not gate completion.</p></div>
+          <div id="exercises"></div>
+        </section>
+
+        <footer class="lesson-finish">
+          <div><p class="eyebrow">Ready to continue?</p><h3 id="finish-heading">Finish this lesson</h3><p>Completion stays on this device.</p></div>
+          <div class="finish-actions">
+            <button id="anki-button" class="button secondary" type="button">Download Anki TSV</button>
+            <button id="finish-button" class="button primary" type="button">Mark lesson finished</button>
+          </div>
+        </footer>
+        <nav class="lesson-pagination" aria-label="Lesson pagination"><button id="previous-button" type="button">← Previous</button><button id="next-button" type="button">Next →</button></nav>
+      </article>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="core.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
