@@ -3,31 +3,37 @@
   "id": "cy-draig-01-l31",
   "course_id": "cy-draig-01",
   "order": 31,
-  "title": "Straeon Porth Helyg",
+  "title": "Beth ydych chi'n ei ddewis?",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten lessons 01–30",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for polite-singular versus plural chi, idiom, mutation, and southern-register consistency."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G31",
       "label": "Plural and polite chi; register choices",
-      "description": "Address several people or one person politely with chi and its possessive and verb forms.",
+      "description": "Use chi for more than one addressee or for one respectfully addressed person, with eich and the matching ydych, oeddech, and byddwch forms.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
-      "Cumulative G01–G30"
+      "G12 plural present forms",
+      "G17 imperfect persons",
+      "G18 future forms",
+      "G27 reported statements",
+      "G28 perfect aspect",
+      "G30 hypothetical conditions"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "follow the exhibition story in lesson 31",
-      "Address several people or one person politely with chi and its possessive and verb forms."
+      "distinguish familiar singular ti from plural chi and polite singular chi",
+      "ask a group and one respected elder about past, present, and future",
+      "follow a public discussion in which the town chooses a community-led plan"
     ],
     "new_lexeme_ids": [
       "cy-chi",
@@ -40,228 +46,356 @@
       "cy-cymuned",
       "cy-hanes",
       "cy-cof"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l31-s01",
-        "title": "Croeso",
+        "title": "Croeso i'r arddangosfa",
         "segments": [
           {
             "id": "cy-draig-01-l31-s001",
-            "text": "Mae'r ymwelwyr yn cyrraedd.",
-            "inference_aids": [{"type":"image","ref":"cy-l31-scene","presentation":"inline_scene","src":"media/images/cy-l31-scene.svg","alt":"Mali yn croesawu ymwelwyr i'r arddangosfa."}]
+            "text": "Yn y bore daw ymwelwyr o'r dref. Mae Mali a Pero wrth y drws. Mae hi'n dweud, “Croeso!” Daw un ymwelydd, yna gymuned gyfan.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l31-scene",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l31-scene.svg",
+                "alt": "Mali in her rust-red cardigan welcomes one visitor and then a crowd into the warm library while Artur, Dafi, and Pero wait beside the exhibition wall.",
+                "covers_lexeme_ids": [
+                  "cy-croeso",
+                  "cy-ymwelydd",
+                  "cy-cymuned"
+                ]
+              },
+              {
+                "type": "image",
+                "ref": "cy-l31-croeso-ymwelydd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l31-croeso-ymwelydd.svg",
+                "alt": "An open library door marked Croeso, with one visitor approaching and several visitors already inside.",
+                "covers_lexeme_ids": [
+                  "cy-croeso",
+                  "cy-ymwelydd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l31-s002",
-            "text": "Mae Mali'n sefyll wrth y drws.",
-            "inference_aids": []
+            "text": "Mae Mali'n gofyn i'r grŵp, “Ydych chi'n barod?” “Ydyn,” mae'r ymwelwyr yn ateb. “Croeso i chi i gyd. Dyma eich gwaith chi.” Yma mae chi yn lluosog.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l31-ti-chi",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l31-ti-chi.svg",
+                "alt": "Three address paths: ti to one close friend, chi to several people, and chi to one respected elder, with matching present, past, and future question forms.",
+                "covers_lexeme_ids": [
+                  "cy-chi",
+                  "cy-ydych",
+                  "cy-oeddech",
+                  "cy-byddwch"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l31-s003",
-            "text": "Croeso i'r llyfrgell, meddai hi.",
-            "inference_aids": []
+            "text": "Ar y wal mae'r bocs, y map a'r drws aur. Mae Mali'n dweud, “Dyma eich map chi, eich lluniau chi, a'ch llyfrgell chi.” Mae'r goron wrth lun Artur heb goron.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l31-eich",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l31-eich.svg",
+                "alt": "Possession lines connect a group of visitors to their map, their pictures, and their library, all labelled with eich and echoed by chi.",
+                "covers_lexeme_ids": [
+                  "cy-eich"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l31-s004",
-            "text": "Ydych chi'n barod i weld yr arddangosfa?",
-            "inference_aids": []
+            "text": "Mae papur wrth bob llun. Gall pob ymwelydd ysgrifennu cof neu hanes: un am y môr ac un am y llyfrgell. Mae hanes Artur wrthyn nhw.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l31-cof-hanes",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l31-cof-hanes.svg",
+                "alt": "One elder remembers a red boat in a thought bubble; the memory becomes a narrated sequence on paper labelled cof and hanes.",
+                "covers_lexeme_ids": [
+                  "cy-cof",
+                  "cy-hanes"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l31-s005",
-            "text": "Rhowch eich rhaglenni yma.",
-            "inference_aids": []
+            "text": "Mae Artur wrth y llyfr. Mae'r ymwelwyr yn edrych ar y goron, ond dydy e ddim yn ei chymryd. Mae e'n gwrando.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l31-cymuned",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l31-cymuned.svg",
+                "alt": "Many distinct people carry separate pieces toward one shared town plan, showing a community made from many contributors.",
+                "covers_lexeme_ids": [
+                  "cy-cymuned"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l31-s006",
-            "text": "Byddwch chi'n gweld map, lluniau a straeon.",
+            "text": "Mae Dafi eisiau arwr, ond mae'n cofio: pe bai Artur yn rhoi pob ateb, basai'r gymuned yn colli ei llais.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s007",
-            "text": "Gallwch chi ddechrau yn yr ystafell flaen.",
+            "text": "Mae Nia'n dangos neges y cyngor: bydd y cyngor yn penderfynu yfory. Heddiw bydd yr ymwelwyr yn gweld y prawf a thri chynllun; bydd Artur yn gwrando.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s008",
-            "text": "Gofynnwch os oes angen help arnoch chi.",
+            "text": "Mae Mali'n dweud, “Byddwch chi'n gweld tair ffordd”: brenin sy'n gwneud popeth, tref heb Artur, a Artur yn helpu'r gymuned. Cyn dewis, byddwch chi'n clywed yr hanes.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s009",
-            "text": "Mae hi'n siarad â'r dorf gyfan.",
+            "text": "Mae'r grŵp wrth lun yr harbwr. Cyn hanes Iwan, mae gwraig hŷn yn stopio wrth y cwch coch. Mae Artur yn gweld bod y ddau'n ei gofio.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l31-s02",
-        "title": "Un ymwelydd",
+        "title": "Un ymwelydd, un chi",
         "segments": [
           {
             "id": "cy-draig-01-l31-s010",
-            "text": "Mae dynes hŷn yn dod at Mali.",
+            "text": "Mrs Evans ydy'r wraig. Roedd hi yn y cwch a achubodd Iwan yn y storm. Mae e wedi cofio'r ferch a'r ci; mae hithau wedi cofio Iwan ifanc.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s011",
-            "text": "Bore da, ydych chi'n byw ym Mhorth Helyg?",
+            "text": "Mae Artur yn gofyn, “Ydych chi'n cofio'r drws coch?” Un person sydd o'i flaen, ond mae e'n defnyddio chi yn barchus â Mrs Evans.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s012",
-            "text": "Ydw, dw i wedi byw yma ers blynyddoedd.",
+            "text": "Mae hi'n ateb, “Ydw. Dw i'n cofio golau coch.” “Oeddech chi'n ofnus?” “Oeddwn, ond roedd Iwan yn dod. Dŵr, gwynt a dwylo'n helpu yw fy nghof i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s013",
-            "text": "Oeddech chi'n defnyddio'r llyfrgell yn blentyn?",
+            "text": "“Oeddech chi'n gweld bachgen yn yr ogof?” “Nac oeddwn. Hanes Iwan ydy'r drws a'r bachgen; fy hanes i ydy'r cwch a'r bobl a'n hachubodd.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s014",
-            "text": "Oeddwn, bob wythnos.",
+            "text": "Dydy'r ddau hanes ddim yn ymladd: mae un cof yn dangos yr ogof, a'r llall yr achub. Mae Mali'n rhoi'r ddau wrth yr un llun.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s015",
-            "text": "Beth yw eich cof cyntaf?",
+            "text": "Mae Mrs Evans yn gofyn, “Ydych chi'n frenin?” Mae chi yma i un person. Mae Artur yn ateb, “Dw i wedi cysgu, ac wedi dod i wrando.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s016",
-            "text": "Fy nghof cyntaf yw llyfr am y môr.",
+            "text": "“Oeddech chi'n frenin cyn cysgu?” Does gan Artur ddim cof clir. “Mae pobl wedi ysgrifennu hanes amdana i, ond dydw i ddim yn gwybod bod popeth yn wir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s017",
-            "text": "A fyddwch chi'n rhannu eich hanes?",
+            "text": "Mae Artur yn gofyn, “Byddwch chi'n rhoi eich hanes chi ar y wal?” “Byddaf: Iwan, ei dad, y ci a'r cwch. Byddwch chi'n ei ddarllen e?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s018",
-            "text": "Byddaf, gyda phleser.",
+            "text": "Mae Artur yn ateb, “Byddaf.” Mae e'n gwrando tra mae Mrs Evans yn ysgrifennu. Disgwyliodd Dafi ateb brenin; yn lle hynny, mae Artur yn clywed cof un ymwelydd.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l31-s03",
-        "title": "Chi a ti",
+        "title": "Ti rhwng ffrindiau",
         "segments": [
           {
             "id": "cy-draig-01-l31-s019",
-            "text": "Mae Mali'n dweud ti wrth Dafi.",
+            "text": "Wrth y bocs mae Mali'n gofyn, “Wyt ti'n barod, Dafi?” “Ydw.” Mae hi'n defnyddio ti oherwydd un ffrind yw Dafi. Roedden nhw'n gweithio gyda'i gilydd yn yr ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s020",
-            "text": "Wyt ti'n barod, Dafi?",
+            "text": "Daw un bachgen ifanc at Dafi. Mae Dafi'n gofyn, “Wyt ti eisiau gweld papur yr hen lyfr?” “Ydw.” Mae Dafi'n ei groesawu fel ffrind.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s021",
-            "text": "Mae hi'n dweud chi wrth yr ymwelydd.",
+            "text": "Yna daw tri phlentyn. Mae Dafi'n dechrau, “Wyt ti...” ond mae Mali'n dangos y tri. “Ydych chi eisiau gweld y papur?” “Ydyn!” Y tro hwn mae chi yn lluosog.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s022",
-            "text": "Ydych chi'n barod, Mrs Evans?",
+            "text": "Daw athro nad yw Dafi'n ei adnabod. “Ydych chi wedi gweld yr hen lyfr?” “Nac ydw, ond dw i wedi clywed ei hanes.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s023",
-            "text": "Mae 'chi' hefyd yn cyfeirio at fwy nag un person.",
-            "inference_aids": [{"type":"image","ref":"cy-l31-ti-chi","presentation":"margin_diagram","src":"media/diagrams/cy-l31-ti-chi.svg","alt":"Ti a chi."}]
+            "text": "Mae Dafi'n cyfrif: ti, un ffrind; chi, llawer o bobl; chi hefyd, un person gyda pharch. Mae'r bobl a'r berthynas yn dangos pa chi sydd yma.",
+            "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s024",
-            "text": "Ydych chi i gyd yn mwynhau'r lluniau?",
+            "text": "Mae'r athro'n gofyn, “Oeddech chi yn yr ogof, Dafi?” “Oeddwn. Es i gyda fy ffrindiau ac roeddwn i'n ofnus. Ond dw i wedi dysgu gwrando cyn gwneud tân.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s025",
-            "text": "Mae 'eich' yn mynd gyda 'chi'.",
+            "text": "Mae Mali'n gofyn, “Wyt ti'n hapus?” “Ydw. Mae e wedi gofyn gyda chi!” Dydy chi ddim yn gwneud Dafi'n frenin; mae'n dangos bod yr athro'n siarad yn barchus.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s026",
-            "text": "Dyma eich llyfrgell chi, meddai Nia.",
+            "text": "Mae Dafi'n dweud wrth y tri, “Dyma eich llun chi.” Yna wrth y bachgen: “Dy lun di yw e.” Mae eich gyda chi, a dy gyda ti.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s027",
-            "text": "Mae'r dewis yn dangos y berthynas.",
+            "text": "Daw sain o'r llyfr. Mae tair tudalen yn agor: brenin sy'n gwneud popeth, tref heb Artur, a chymuned lle mae Artur yn helpu. Mae pawb yn mynd atynt.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l31-s04",
-        "title": "Y gymuned",
+        "title": "Tri chynllun i'r dref",
         "segments": [
           {
             "id": "cy-draig-01-l31-s028",
-            "text": "Mae straeon ym mhob cornel.",
-            "inference_aids": []
+            "text": "Mae Mali'n rhoi tri map ar dri bwrdd: Artur â choron a phawb yn aros; llyfrgell ar gau; neu Artur heb goron wrth gymuned sy'n gwneud cynllun.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l31-scene-y-dewis",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l31-scene-y-dewis.svg",
+                "alt": "At the public exhibition, visitors place gold marks on three plans; most gather around the third, where uncrowned Artur listens beside Mali and a shared community table.",
+                "covers_lexeme_ids": [
+                  "cy-cymuned",
+                  "cy-hanes",
+                  "cy-cof",
+                  "cy-chi",
+                  "cy-eich"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l31-s029",
-            "text": "Mae pob ymwelydd yn rhannu cof.",
+            "text": "Mae Mali'n gofyn i bawb, “Oeddech chi'n meddwl bod angen brenin?” “Oedden,” mae rhai'n ateb; “Nac oedden,” mae eraill yn ateb. Mae hanes a gwaith y gymuned yn rhoi atebion gwahanol.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s030",
-            "text": "Mae'r plant yn gwrando ar hanes Tad-cu.",
+            "text": "“Ydych chi'n credu y dylai Artur wneud pob penderfyniad?” Mae llawer yn ateb, “Nac ydyn.” Mae ymwelydd yn pwyntio at lun y garreg: y gymuned a'i symudodd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s031",
-            "text": "Mae Nia'n diolch i'r gymuned.",
+            "text": "Wrth yr ail fap mae Sam yn gofyn beth fasai'n digwydd pe bai'r cyngor yn cau. Basai'r bobl yn colli'r ystafell, ond yn parhau yn y caffi a'r harbwr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s032",
-            "text": "Rydych chi wedi achub hen straeon, meddai hi.",
+            "text": "Wrth y trydydd map mae Nia'n dangos cynllun gwahanol: basai Artur yn rhannu ei gof ac yn helpu, ond fasai e ddim yn rhoi pob ateb. Basai'r gymuned yn trefnu'r gwaith.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s033",
-            "text": "Byddwch chi'n creu straeon newydd hefyd.",
+            "text": "Mae Mali'n gofyn, “Beth ydych chi'n ei ddewis?” Mae pob ymwelydd yn cael marc aur, ond yn gyntaf mae pawb yn siarad. Dydy Artur ddim wrth unrhyw fap.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s034",
-            "text": "Mae eich lleisiau yn llenwi'r llyfrgell.",
+            "text": "Mae Dafi'n gofyn, “Pa un wyt ti eisiau, Artur?” “Baswn i'n dewis y trydydd, ond nid fy newis i ddylai orffen y cyfarfod.” Mae e'n gwrando.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s035",
-            "text": "Mae'r cyngor yn gweld cymuned fyw.",
+            "text": "Dywed Mrs Evans fod angen llyfrgell ar y plant a chof yr hen bobl ar y llyfrgell. Bydd plant yr athro'n helpu, a phobl y caffi'n cynnig byrddau.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l31-s036",
-            "text": "Mae'r arddangosfa'n llwyddiant.",
+            "text": "Mae Artur yn gofyn, “Ydych chi'n credu bod y trydydd cynllun yn bosib?” “Ydw, os bydd y gymuned yn gweithio.” Mae e'n diolch; Mrs Evans sy'n dewis.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l31-s05",
-        "title": "Croeso i bawb",
+        "title": "Dewis y gymuned",
         "segments": [
-          {"id":"cy-draig-01-l31-s037","text":"Mae'r drws yn agor, ac mae'r ymwelwyr cyntaf yn dod i mewn. Mae Mali wedi ymarfer un cyfarchiad, ond mae hi'n gweld llawer o bobl wahanol: plant o'r ysgol, teuluoedd, gweithwyr y caffi, aelodau'r cyngor ac un wraig hŷn sy'n cerdded yn araf gyda ffon. “Croeso i chi i gyd,” meddai Mali wrth y dorf. “Dyma eich arddangosfa chi, oherwydd straeon y gymuned sydd yma.” Mae'r plant yn edrych ar Dafi. Mae'r aelodau'r cyngor yn edrych ar y wal. Mae'r wraig hŷn yn edrych yn syth ar hen lun yr harbwr.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s038","text":"Mae Mali'n mynd at y wraig. “Ydych chi'n adnabod y lle yn y llun?” mae hi'n gofyn yn gwrtais. “Ydw,” meddai'r wraig. “Roeddwn i'n gweithio wrth yr harbwr pan oeddwn i'n ifanc.” Mae Tad-cu'n clywed yr ateb ac yn dod atyn nhw. Mae e'n adnabod y wraig: Mrs Evans yw hi. “Oeddech chi yno yn ystod y storm fawr?” mae Mali'n gofyn. “Oeddwn,” meddai Mrs Evans, “ac roedd eich Tad-cu chi yno hefyd.” Nawr dydy'r hen lun ddim yn llun tawel. Mae dau berson yn cofio'r un diwrnod o ddwy ochr.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s039","text":"Mae Mali'n siarad yn wahanol â Dafi. “Wyt ti'n barod i ddangos y bocs?” mae hi'n gofyn. “Ydw,” meddai Dafi. Mae ti yn iawn rhwng ffrindiau, ac mae Mali a Dafi wedi rhannu llawer o brofiadau. Yna mae Mali'n troi at y grŵp o blant. “Ydych chi'n barod?” mae hi'n gofyn. “Ydyn!” maen nhw'n ateb gyda'i gilydd. Yr un gair, chi, sy'n gallu dangos parch at un ymwelydd neu siarad â llawer o bobl. Mae'r wynebau a'r sefyllfa'n dangos pa ystyr sydd ei angen.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s040","text":"Mae Dafi'n agor y bocs, ond does dim draig y tu mewn y tro hwn. Mae cardiau cwestiwn yno. Mae pob plentyn yn cael un. “Ble oedd eich hoff le chi pan oeddech chi'n fach?” meddai un cerdyn. “Pa hanes fyddwch chi'n ei rannu?” meddai un arall. Mae'r plant yn gofyn y cwestiynau i'r oedolion. Mae rhai atebion yn fyr; mae eraill yn dod yn straeon hir. Mae Nia'n rhoi papur i'r ymwelwyr. “Ysgrifennwch eich cof chi,” meddai hi, “neu tynnwch eich llun chi.” Yn fuan mae'r bwrdd yn llawn lleisiau newydd.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s041","text":"Wrth y map mae Sam yn croesawu teulu. “Ydych chi wedi dilyn y llwybr?” mae e'n gofyn. Mae'r rhieni'n dweud eu bod nhw wedi gweld y caffi a'r harbwr, ond dydyn nhw ddim wedi mynd i'r bryn eto. “Byddwch chi'n gweld y dref gyfan oddi yno,” meddai Sam. Mae e'n rhoi map bach iddyn nhw. Mae un plentyn yn pwyntio at y llyfrgell. “Dyma ein lle ni,” meddai hi. Mae Sam yn gwenu. Dyna'r union syniad: nid llyfrgell Nia yn unig yw hi, ond eich llyfrgell chi, llyfrgell y gymuned gyfan.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s042","text":"Mae Mrs Evans yn eistedd wrth Tad-cu ac yn rhannu ei chof. Mae hi'n cofio'r gwynt, y glaw a'r cwch bach. Mae Tad-cu'n cofio'r rhaff a'r bobl a ddaeth i helpu. Dydy eu hatgofion ddim yn union yr un fath, ond dydyn nhw ddim yn gwrth-ddweud ei gilydd. Mae un yn cofio'r môr; mae'r llall yn cofio'r dwylo ar y lan. Mae Mali'n gofyn, “A fyddwch chi'n caniatáu i ni ysgrifennu'r ddwy stori?” “Byddwn,” meddai'r ddau. Bydd eu lleisiau nhw'n aros yn y llyfrgell ar ôl i'r arddangosfa gau.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s043","text":"Ar ddiwedd y prynhawn mae Nia'n sefyll o flaen pawb. “Diolch i chi,” meddai hi. “Rydych chi wedi dod â'ch lluniau, eich atgofion a'ch gobeithion. Rydych chi wedi gwrando ar eich gilydd. Byddwch chi'n creu straeon newydd hefyd.” Mae aelodau'r cyngor yn gweld mwy nag arddangosfa. Maen nhw'n gweld plant yn gofyn cwestiynau, pobl hŷn yn rhannu hanes, teuluoedd yn dilyn map, a draig fach yn ceisio darllen. Mae eich lleisiau chi'n llenwi'r adeilad, ac mae pob llais yn ychwanegu rhywbeth. Dyna sut mae lle'n dod yn gymuned fyw.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s044","text":"Mae un o aelodau'r cyngor yn mynd at Nia. “Faint o ymwelwyr ydych chi wedi'u cael?” mae e'n gofyn. Mae Nia'n dangos y llyfr wrth y drws. Mae pob ymwelydd wedi ysgrifennu enw neu farc. “Ydych chi wedi darllen y negeseuon hefyd?” mae hi'n gofyn. Mae'r aelod yn darllen: Eich llyfrgell chi yw lle cyntaf fy mab i ddarllen. Eich map chi wnaeth i ni gerdded drwy'r dref. Eich arddangosfa chi wnaeth i fy mam rannu ei hanes. Mae'r gair eich yn ailadrodd, ond mae pob neges yn dod gan berson gwahanol. Mae'r llyfrgell yn perthyn i lawer o bobl ar yr un pryd.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s045","text":"Mae Mali'n gofyn i Dafi helpu gyda'r ymwelydd olaf. Ffrind ifanc yw e, felly mae Dafi'n dweud, “Wyt ti eisiau gweld y bocs?” Yna mae dau athro'n dod at y bwrdd. Mae Dafi'n cofio'r gwahaniaeth. “Ydych chi eisiau gweld y bocs?” mae e'n gofyn iddyn nhw. Mae Mali'n gwenu. Nid rhestr o ffurfiau yn unig yw ti a chi. Mae'r dewis yn dangos faint o bobl sydd o'i flaen ac weithiau sut berthynas sydd rhyngddyn nhw. Mae Dafi'n gallu newid ei eiriau heb newid ei groeso. Mae'r un stori'n agored i un ffrind ac i grŵp cyfan.","inference_aids":[]},
-          {"id":"cy-draig-01-l31-s046","text":"Cyn mynd adref, mae Mrs Evans yn rhoi cerdyn i Mali. Arno mae hi wedi ysgrifennu: Diolch am wrando ar fy hanes i. Byddwch chi'n cadw'r cof yn fyw. Mae Mali'n darllen y geiriau i'r grŵp. Mae Tad-cu'n dweud nad yw cof yn aros yn fyw mewn un pen yn unig. Mae angen rhywun i'w adrodd a rhywun arall i wrando. Heddiw mae'r ymwelwyr wedi gwneud y ddau. Maen nhw wedi dod â'u straeon eu hunain ac wedi rhoi amser i straeon pobl eraill. Os bydd y cyngor yn gofyn beth mae'r llyfrgell yn ei wneud, dyma'r ateb sydd o'u cwmpas.","inference_aids":[]}
+          {
+            "id": "cy-draig-01-l31-s037",
+            "text": "Mae'r ymwelwyr yn rhoi marciau ar y mapiau: rhai ar y brenin, ychydig ar y dref heb lyfrgell, a llawer o amgylch Artur a'r gymuned.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s038",
+            "text": "Mae Mali'n cyfrif, a Dafi'n gwirio. Mae'r trydydd cynllun yn ennill, heb wneud Artur yn frenin. Ei waith fydd rhannu ei hanes, helpu a gwrando.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s039",
+            "text": "Mae Mali'n gofyn, “Beth ydych chi wedi'i ddewis?” Mae'r ymwelwyr yn ateb, “Cymuned sy'n gweithio gyda Artur.” “Eich dewis chi yw hwn, nid dewis Artur na'r cyngor.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s040",
+            "text": "Mae Dafi'n rhoi'r goron wrth y llyfr a'i farc ar y trydydd map. Mae e'n dweud, “Dw i'n dewis fy ffrind, nid rhywun sy'n gwneud popeth.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s041",
+            "text": "Mae Artur yn sefyll. “Croeso i chi oedd geiriau Mali. Nawr dw i'n diolch i chi. Rydych chi wedi dangos eich cof, eich hanes a'ch gwaith.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s042",
+            "text": "At Mrs Evans: “Byddwch chi'n dod yfory?” “Byddaf.” Yna at y grŵp: “A byddwch chi'n dod?” “Byddwn.” Un person parchus, yna lawer.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s043",
+            "text": "Mae aelod o'r cyngor yn cael y map. “Bydd y cyngor yn darllen eich cynllun chi. Byddwch chi'n clywed y penderfyniad yfory.” Dim ateb eto.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s044",
+            "text": "Mae'r ymwelydd olaf yn mynd, ond mae'r wal yn aros: dau gof, dau hanes, a'r map yn y canol.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s045",
+            "text": "Mae Mali'n gofyn, “Wyt ti'n barod?” “Ydw. Ond fydd y cyngor yn dweud ie?” Mae hi'n cau'r bocs. “Dydw i ddim yn gwybod. Ond rydyn ni'n gwybod ein dewis.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l31-s046",
+            "text": "Mae Artur yn rhoi'r goron yn y bocs ac yn cario'r map. Yfory bydd y cyngor yn penderfynu; heno mae Artur yn gwrando.",
+            "inference_aids": []
+          }
         ]
       }
     ]
@@ -346,7 +480,8 @@
       "part_of_speech": "noun",
       "current_sense": "visitor",
       "forms_seen": [
-        "ymwelydd, ymwelwyr"
+        "ymwelydd",
+        "ymwelwyr"
       ],
       "first_introduced_lesson": "cy-draig-01-l31",
       "new": true
@@ -358,7 +493,8 @@
       "part_of_speech": "noun",
       "current_sense": "community",
       "forms_seen": [
-        "cymuned (b.)"
+        "cymuned",
+        "gymuned"
       ],
       "first_introduced_lesson": "cy-draig-01-l31",
       "new": true
@@ -370,7 +506,7 @@
       "part_of_speech": "noun",
       "current_sense": "history; story",
       "forms_seen": [
-        "hanes (g.)"
+        "hanes"
       ],
       "first_introduced_lesson": "cy-draig-01-l31",
       "new": true
@@ -382,94 +518,136 @@
       "part_of_speech": "noun",
       "current_sense": "memory",
       "forms_seen": [
-        "cof (g.)"
+        "cof"
       ],
       "first_introduced_lesson": "cy-draig-01-l31",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Patrwm y wers: Plural and polite chi; register choices. Darllenwch y stori eto a sylwch ar y patrwm ym mhob adran.",
-    "bridge_language": "Address several people or one person politely with chi and its possessive and verb forms."
+    "target_language": "Mae Mali'n dweud “Wyt ti...?” wrth un ffrind, ond “Ydych chi...?” wrth grŵp. Mae Artur hefyd yn dweud “Ydych chi...?” wrth un person hŷn er mwyn dangos parch. Gyda chi: eich, ydych, oeddech, byddwch.",
+    "bridge_language": "Chi can mean plural “you” or respectful singular “you”; context identifies which. Use eich with chi, and keep the matching verb forms ydych (present question), oeddech (past question), and byddwch (future)."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l31-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Ti a chi",
+      "directions": "Cwblhewch gyda'r ffurf sy'n addas i'r person neu'r bobl.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Cyfarchwch un ffrind gyda ti, ac yna cyfarchwch ymwelydd gyda chi.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "A course reviewer should accept a grammatical sentence that uses the lesson target."
+          "prompt": "Un ffrind: “___ ti'n barod, Dafi?”",
+          "type": "cloze",
+          "accepted_answers": [
+            "Wyt"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch un frawddeg o'r stori sy'n dangos y patrwm.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "Must quote or closely reproduce a sentence demonstrating the target."
+          "prompt": "Tri ymwelydd: “___ chi'n barod?”",
+          "type": "cloze",
+          "accepted_answers": [
+            "Ydych"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Un person hŷn, yn barchus: “___ chi yn yr harbwr?”",
+          "type": "cloze",
+          "accepted_answers": [
+            "Oeddech"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Cwblhewch am yfory: “___ chi'n dod i'r cyfarfod?”",
+          "type": "cloze",
+          "accepted_answers": [
+            "Byddwch"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l31-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch gyda gair newydd.",
+      "title": "Pensa B — Geiriau'r arddangosfa",
+      "directions": "Cwblhewch o ystyr y stori a'r lluniau.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "you (plural/polite) = ___",
+          "prompt": "Mae person yn dod i weld yr arddangosfa: mae e'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "chi"
+            "ymwelydd"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "your (plural/polite) = ___",
+          "prompt": "Mae Mrs Evans yn cofio'r cwch: dyma ei ___ hi.",
           "type": "cloze",
           "accepted_answers": [
-            "eich"
+            "cof"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "are you = ___",
+          "prompt": "Mae llawer o atgofion gyda'i gilydd yn dangos ___ Porth Helyg.",
           "type": "cloze",
           "accepted_answers": [
-            "ydych"
+            "hanes"
+          ]
+        },
+        {
+          "id": "pb4",
+          "prompt": "Mae pobl y stryd, y caffi a'r harbwr yn gweithio gyda'i gilydd fel ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cymuned"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l31-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Dewis y dref",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-        "prompt": "Pryd mae Mali'n defnyddio ti, a phryd mae hi'n defnyddio chi?",
+          "prompt": "Pam mae Artur yn defnyddio chi wrth siarad â Mrs Evans?",
           "type": "bounded_response",
-        "accepted_answers": ["Mae hi'n defnyddio ti gyda Dafi a chi gyda grŵp neu ymwelydd."],
-        "rubric": "Must contrast familiar singular with plural or polite address."
+          "accepted_answers": [
+            "Mae e'n siarad yn barchus â pherson hŷn.",
+            "Oherwydd mae e eisiau dangos parch iddi hi."
+          ],
+          "rubric": "Must identify respectful singular address, not plural address."
         },
         {
           "id": "pc2",
-        "prompt": "Beth mae'r ymwelwyr yn ei rannu yn y llyfrgell?",
+          "prompt": "Beth mae dau gof y storm yn ei ddangos?",
           "type": "bounded_response",
-        "accepted_answers": ["Eu straeon, eu hatgofion a'u lluniau."],
-        "rubric": "Must name at least one form of community contribution."
+          "accepted_answers": [
+            "Mae cof Iwan yn dangos yr ogof, ac mae cof Mrs Evans yn dangos yr achub.",
+            "Maen nhw'n dangos dwy ran o'r un hanes."
+          ],
+          "rubric": "Must connect Iwan's cave memory and Mrs Evans's rescue memory as two perspectives on the same event."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o'r stori yn eich geiriau eich hun.",
+          "prompt": "Pa gynllun mae'r ymwelwyr yn ei ddewis?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Maen nhw'n dewis cymuned sy'n gweithio gyda Artur.",
+            "Y trydydd cynllun: mae Artur yn helpu ac mae'r gymuned yn gwneud y penderfyniadau."
+          ],
+          "rubric": "Must identify the third, community-led plan in which Artur helps without ruling."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dywedwch wrth un ffrind a grŵp pa gynllun rydych chi'n ei ddewis. Defnyddiwch ti unwaith a chi unwaith.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "One or two comprehensible Welsh sentences are sufficient."
+          "rubric": "Give two comprehensible Welsh sentences about one plan: one must address a single friend with ti, and the other must address several people with chi."
         }
       ]
     }
@@ -481,7 +659,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -491,6 +669,17 @@
       "source"
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
+    "lexeme_ids": [
+      "cy-eich",
+      "cy-ydych",
+      "cy-oeddech",
+      "cy-byddwch",
+      "cy-croeso",
+      "cy-ymwelydd",
+      "cy-cymuned",
+      "cy-hanes",
+      "cy-cof"
+    ],
     "tags": [
       "semeion",
       "welsh",
@@ -500,9 +689,17 @@
     "source": "cy-draig-01-l31"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
-    "images": ["cy-l31-scene", "cy-l31-ti-chi"],
+    "images": [
+      "cy-l31-scene",
+      "cy-l31-scene-y-dewis",
+      "cy-l31-croeso-ymwelydd",
+      "cy-l31-ti-chi",
+      "cy-l31-eich",
+      "cy-l31-cof-hanes",
+      "cy-l31-cymuned"
+    ],
     "audio": []
   }
 }

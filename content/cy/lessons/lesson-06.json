@@ -3,34 +3,46 @@
   "id": "cy-draig-01-l06",
   "course_id": "cy-draig-01",
   "order": 6,
-  "title": "Cath Nia",
+  "title": "Cath Nia a'r hen lyfr",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md; full Arthurian course rewrite",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for idiom, mutation, gender, and register."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G06",
       "label": "feminine nouns and adjective soft mutation",
-      "description": "Notice feminine noun gender and the soft mutation of a following adjective in selected noun phrases.",
-      "minimum_demonstrations": 6
+      "description": "Notice that selected adjectives undergo soft mutation after a singular feminine noun, while the same adjectives remain unmutated after a masculine noun.",
+      "minimum_demonstrations": 10
     },
     "recycled_grammar": [
       "G01",
+      "G02",
+      "G03",
       "G04",
       "G05"
     ],
-    "incidental_grammar": [],
+    "incidental_grammar": [
+      {
+        "form": "y gath; y ferch",
+        "note": "The article-triggered forms are presented only with the two pictured feminine nouns. Productive mutation after the article is not separately tested."
+      },
+      {
+        "form": "Pwy ydy hi? Nia ydy hi.",
+        "note": "This remains the bounded identity formula licensed by G02 and does not introduce general focus syntax."
+      }
+    ],
     "communicative_goals": [
-      "describe a cat and dog",
-      "recognize feminine noun-adjective agreement",
-      "say who is afraid and who meets whom"
+      "describe Nia's small white cat and contrast it with Pero and Dafi",
+      "say who is with whom and who is afraid",
+      "understand a cautious meeting among a cat, dog, and dragon",
+      "recognize Nia's contrast between a new book and the old mysterious book"
     ],
     "new_lexeme_ids": [
       "cy-cath",
@@ -43,236 +55,293 @@
       "cy-cyfarfod",
       "cy-gyda",
       "cy-hi"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l06-s01",
-        "title": "Nia",
+        "title": "Nia a'r gath",
         "segments": [
           {
             "id": "cy-draig-01-l06-s001",
-            "text": "Mae merch newydd yn y llyfrgell.",
+            "text": "Mae Nia yn y llyfrgell gyda Mali.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l06-scene",
-                "presentation": "inline_scene",
-                "src": "media/images/cy-l06-scene.svg",
-                "alt": "Nia a’r gath fach wen"
-              },
-              {
-                "type": "image",
-                "ref": "cy-l06-mutation",
+                "ref": "cy-l06-with",
                 "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l06-mutation.svg",
-                "alt": "Cath fach, cath wen, y gath fach wen."
+                "src": "media/diagrams/cy-l06-with.svg",
+                "alt": "Nia stands with her white cat; Mali stands with Pero.",
+                "covers_lexeme_ids": [
+                  "cy-gyda",
+                  "cy-hi",
+                  "cy-merch"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l06-s002",
-            "text": "Nia yw enw'r ferch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l06-s003",
-            "text": "Mae hi gyda Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l06-s004",
-            "text": "Mae Nia'n hapus.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l06-s005",
             "text": "Mae cath gyda hi.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l06-s006",
-            "text": "Mae'r gath yn fach.",
+            "id": "cy-draig-01-l06-s003",
+            "text": "Pwy ydy hi?",
             "inference_aids": []
           },
           {
+            "id": "cy-draig-01-l06-s004",
+            "text": "Nia ydy hi, a mae hi'n ferch newydd yn y llyfrgell.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l06-s005",
+            "text": "Mae'r ferch newydd yn hapus gyda Mali.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l06-s006",
+            "text": "Mae'r gath yn fach ac yn wyn.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l06-feminine-colours",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l06-feminine-colours.svg",
+                "alt": "A white cat is labelled cath wen, while the black-and-white dog Pero is labelled ci du; arrows show gwyn becoming wen and du becoming ddu after cath.",
+                "covers_lexeme_ids": [
+                  "cy-cath",
+                  "cy-gwyn",
+                  "cy-du"
+                ]
+              }
+            ]
+          },
+          {
             "id": "cy-draig-01-l06-s007",
-            "text": "Mae'r gath yn wyn.",
+            "text": "Mae hi'n gath fach wen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s008",
-            "text": "Cath wen yw hi.",
+            "text": "Dydy'r gath fach wen ddim yn fawr, a dydy hi ddim yn gath ddu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s009",
-            "text": "Mae Nia a'r gath yn y llyfrgell.",
+            "text": "Cath fach wen gyda Nia: merch newydd gyda chath newydd.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l06-s02",
-        "title": "Y gath wen",
+        "title": "Cyfarfod yn y llyfrgell",
         "segments": [
           {
             "id": "cy-draig-01-l06-s010",
-            "text": "Mae'r gath wen yn edrych ar Dafi.",
+            "text": "Mae Pero'n gi mawr du, ond mae'r gath yn fach ac yn wyn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s011",
-            "text": "Mae Dafi'n ddraig fach goch.",
+            "text": "Mae Dafi'n ddraig fach goch, ac mae e'n edrych ar y gath fach wen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s012",
-            "text": "Mae'r gath yn wyn; mae Dafi'n goch.",
+            "text": "Mae'r gath fach wen yn edrych ar Pero, y ci mawr du.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s013",
-            "text": "Mae'r gath yn newydd yn y llyfrgell.",
-            "inference_aids": []
+            "text": "Mae'r ferch, y gath, y ci, a'r ddraig yn cyfarfod yn y llyfrgell.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l06-meeting",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l06-meeting.svg",
+                "alt": "A girl, white cat, large dog, and small red dragon approach the old book from four sides; a central arrow ring shows that they meet.",
+                "covers_lexeme_ids": [
+                  "cy-cyfarfod",
+                  "cy-merch",
+                  "cy-cath"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l06-s014",
-            "text": "Mae'r llyfrgell yn hen.",
+            "text": "Mae Pero a'r gath yn cyfarfod, a mae Pero'n hapus.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s015",
-            "text": "Mae Nia'n hoffi'r hen lyfrgell.",
+            "text": "Mae Dafi a'r gath yn cyfarfod hefyd, ond dydy Dafi ddim yn hapus.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s016",
-            "text": "Mae'r ferch a'r gath yn edrych ar y bocs.",
+            "text": "Mae Nia gyda'r gath, a mae Mali gyda Dafi a Pero.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s017",
-            "text": "Mae'r gath fach wrth y bocs.",
+            "text": "Mae Nia gyda chath wen, a mae Mali gyda chi du a draig goch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s018",
-            "text": "“Helo,” meddai Dafi.",
-            "inference_aids": []
+            "text": "Mae'r hen lyfr yn y bocs; mae Dafi a'r gath yn edrych ar y llyfr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l06-scene",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l06-scene.svg",
+                "alt": "In the warm library, Nia and Mali watch as Nia's small white cat and the tiny red dragon Dafi face one another across the large old book in its box; Pero waits calmly beside them.",
+                "covers_lexeme_ids": [
+                  "cy-cath",
+                  "cy-merch",
+                  "cy-gwyn",
+                  "cy-du",
+                  "cy-hen",
+                  "cy-ofni",
+                  "cy-cyfarfod",
+                  "cy-gyda",
+                  "cy-hi"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l06-s03",
-        "title": "Cath a chi",
+        "title": "Y gath a Dafi",
         "segments": [
           {
             "id": "cy-draig-01-l06-s019",
-            "text": "Mae Pero'n gi mawr du.",
+            "text": "Mae'r gath fach wen yn edrych ar Dafi ac ar yr hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s020",
-            "text": "Mae'r gath fach wen yn edrych ar Pero.",
-            "inference_aids": []
+            "text": "Mae hi'n ofni Dafi.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l06-fear",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l06-fear.svg",
+                "alt": "The white cat and red dragon face each other with wide eyes; arrows marked ofni point in both directions.",
+                "covers_lexeme_ids": [
+                  "cy-ofni",
+                  "cy-hi"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l06-s021",
-            "text": "Mae hi'n ofni Pero.",
+            "text": "Ydy hi'n ofni Pero hefyd?",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s022",
-            "text": "Ydy Pero'n ofni'r gath?",
+            "text": "Nac ydy; dydy hi ddim yn ofni'r ci mawr du.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s023",
-            "text": "Nac ydy. Mae Pero'n hapus.",
+            "text": "Mae Dafi'n edrych ar y gath fach wen a'r hen lyfr hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s024",
-            "text": "Mae Pero'n edrych ar y gath.",
+            "text": "Mae e'n ofni'r gath.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s025",
-            "text": "Mae'r gath yn edrych ar y ci du.",
+            "text": "Ydy Dafi'n ofni Pero?",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s026",
-            "text": "Mae'r ci mawr yn edrych ar y gath wen.",
+            "text": "Nac ydy; mae Dafi'n ofni'r gath, a mae'r gath yn ofni Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s027",
-            "text": "Dydy'r gath ddim yn mynd.",
+            "text": "Mae Pero'n edrych ar y gath ac ar Dafi, ond mae Pero'n hapus.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l06-s04",
-        "title": "Cyfarfod",
+        "title": "Hen lyfr, llyfr newydd",
         "segments": [
           {
             "id": "cy-draig-01-l06-s028",
-            "text": "Mae Pero a'r gath yn cyfarfod.",
-            "inference_aids": []
+            "text": "Mae llyfr bach newydd yn y llyfrgell, a mae hen lyfr mawr yma.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l06-old-new-books",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l06-old-new-books.svg",
+                "alt": "A crisp small new book is contrasted with the worn large old book, whose title is damaged and unreadable.",
+                "covers_lexeme_ids": [
+                  "cy-newydd",
+                  "cy-hen"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l06-s029",
-            "text": "Mae Pero wrth y gath.",
+            "text": "Mae Nia'n edrych ar y llyfr bach newydd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s030",
-            "text": "Mae’r gath wrth Pero.",
+            "text": "Mae hi'n darllen y llyfr newydd, a mae hi'n hapus.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s031",
-            "text": "Dydy hi ddim yn ofni nawr.",
+            "text": "Ond dydy Dafi ddim yn edrych ar y llyfr newydd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s032",
-            "text": "Mae Nia'n hapus.",
+            "text": "Mae Dafi a'r gath fach wen yn edrych ar yr hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s033",
-            "text": "Mae Mali'n hapus hefyd.",
+            "text": "Mae Nia'n edrych ar y bocs, y papur, a'r hen lyfr hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s034",
-            "text": "Mae Dafi'n edrych ar y gath fach.",
+            "text": "Ydy'r llyfr mawr yn newydd?",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s035",
-            "text": "“Cath wen, ci du, draig goch,” meddai Dafi.",
+            "text": "Nia: “Dydy'r llyfr ddim yn newydd. Mae'r llyfr yn hen.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l06-s036",
-            "text": "Mae Nia, Mali, Pero, Dafi a'r gath yn yr hen lyfrgell.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l06-s05",
-        "title": "Y gath fach wen",
-        "segments": [
-          {
-            "id": "cy-draig-01-l06-s037",
-            "text": "Mae Nia'n dod i'r llyfrgell gyda chath. Mae'r gath yn fach ac yn wyn: cath fach wen yw hi. Mae Pero'n gi mawr du, a Dafi'n ddraig fach goch. Mae'r gath fach wen yn edrych ar y ci mawr du. Mae hi'n ofni Pero. Ydy Pero'n ofni'r gath? Nac ydy. Mae Pero'n aros wrth y bocs ac yn edrych ar y gath. Mae'r gath yn edrych ar Pero hefyd. Dydy hi ddim yn rhedeg. Mae Pero a'r gath yn dod yn agosach ac yn cyfarfod wrth y bocs. Nawr dydy'r gath ddim yn ofni Pero. Mae Nia'n hapus, mae Mali'n hapus, ac mae Dafi'n hapus hefyd. Yn yr hen lyfrgell mae cath wen, ci du a draig goch. Mae'r gath yn newydd, ond mae'r llyfrgell yn hen. Mae'r tri anifail yn edrych ar ei gilydd, ac mae'r ferch newydd yn aros gyda Mali.",
+            "text": "Mae hi'n edrych ar enw'r llyfr, ond dydy hi ddim yn darllen yr enw.",
             "inference_aids": []
           }
         ]
@@ -287,7 +356,8 @@
       "part_of_speech": "noun",
       "current_sense": "cat",
       "forms_seen": [
-        "cath"
+        "cath",
+        "gath"
       ],
       "first_introduced_lesson": "cy-draig-01-l06",
       "new": true
@@ -299,7 +369,8 @@
       "part_of_speech": "noun",
       "current_sense": "girl; daughter",
       "forms_seen": [
-        "merch"
+        "merch",
+        "ferch"
       ],
       "first_introduced_lesson": "cy-draig-01-l06",
       "new": true
@@ -311,7 +382,9 @@
       "part_of_speech": "adjective",
       "current_sense": "white",
       "forms_seen": [
-        "gwyn"
+        "gwyn",
+        "wyn",
+        "wen"
       ],
       "first_introduced_lesson": "cy-draig-01-l06",
       "new": true
@@ -323,7 +396,8 @@
       "part_of_speech": "adjective",
       "current_sense": "black",
       "forms_seen": [
-        "du"
+        "du",
+        "ddu"
       ],
       "first_introduced_lesson": "cy-draig-01-l06",
       "new": true
@@ -357,7 +431,7 @@
       "display_form": "ofni",
       "citation_form": "ofni",
       "part_of_speech": "verb",
-      "current_sense": "fear",
+      "current_sense": "fear; be afraid of",
       "forms_seen": [
         "ofni"
       ],
@@ -402,13 +476,13 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "cath wen, cath fach; ci gwyn, ci bach. Mae rhai ansoddeiriau ar ôl enw benywaidd unigol yn treiglo'n feddal.",
-    "bridge_language": "Some adjectives after a singular feminine noun undergo soft mutation: cath + gwyn → cath wen, cath + bach → cath fach. Gender and mutation need fluent-speaker review throughout this draft."
+    "target_language": "cath fach, cath wen, cath ddu; draig fach, draig goch. Ond: ci bach, ci gwyn, ci du. b → f; g → ∅; d → dd.",
+    "bridge_language": "With many singular feminine nouns, a following adjective soft-mutates: cath + bach → cath fach, cath + gwyn → cath wen, and cath + du → cath ddu. The masculine contrast keeps ci bach, ci gwyn, ci du."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l06-pa",
-      "title": "Pensa A — Y patrwm",
+      "title": "Pensa A — Cath a chi",
       "directions": "Cwblhewch y patrwm.",
       "items": [
         {
@@ -417,111 +491,121 @@
           "type": "cloze",
           "accepted_answers": [
             "wen"
-          ]
+          ],
+          "explanation": "After the feminine singular noun cath, gwyn soft-mutates to wen."
         },
         {
           "id": "pa2",
-          "prompt": "cath + bach = cath ___.",
+          "prompt": "cath + du = cath ___.",
           "type": "cloze",
           "accepted_answers": [
-            "fach"
-          ]
+            "ddu"
+          ],
+          "explanation": "After the feminine singular noun cath, du soft-mutates to ddu."
         },
         {
           "id": "pa3",
+          "prompt": "draig + bach = draig ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "fach"
+          ],
+          "explanation": "After the feminine singular noun draig, bach soft-mutates to fach."
+        },
+        {
+          "id": "pa4",
           "prompt": "ci + gwyn = ci ___.",
           "type": "cloze",
           "accepted_answers": [
             "gwyn"
-          ]
-        },
-        {
-          "id": "pa4",
-          "prompt": "Mae'r ___ wen yn fach. (cath)",
-          "type": "cloze",
-          "accepted_answers": [
-            "gath"
-          ]
+          ],
+          "explanation": "The masculine noun ci provides the unmutated contrast."
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l06-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Y cyfarfod",
+      "directions": "Cwblhewch o'r llun a'r stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "🐈 = ___",
+          "prompt": "Mae Nia yn y llyfrgell ___ Mali.",
           "type": "cloze",
           "accepted_answers": [
-            "cath"
+            "gyda"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Mae'r gath yn wyn; mae Pero'n ___.",
+          "prompt": "Mae'r gath yn ___ Dafi.",
           "type": "cloze",
           "accepted_answers": [
-            "du"
+            "ofni"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Ydy’r gath yn ofni Pero?",
+          "prompt": "Dydy'r llyfr mawr ddim yn newydd; mae e'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "Ydy.",
-            "Ydy"
+            "hen"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Mae Nia ___'r gath.",
+          "prompt": "Mae Pero'n gi mawr ___.",
           "type": "cloze",
           "accepted_answers": [
-            "gyda"
+            "du"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l06-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Yr hen lyfr",
       "directions": "Atebwch yn Gymraeg; gall ateb byr fod yn gywir.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy sydd yn y llyfrgell gyda chath?",
-          "type": "cloze",
+          "prompt": "Pwy ydy hi, y ferch newydd?",
+          "type": "bounded_response",
           "accepted_answers": [
             "Nia.",
-            "Nia"
-          ]
+            "Nia",
+            "Nia ydy hi."
+          ],
+          "rubric": "Must identify Nia; do not require the learner to produce a general focus construction."
         },
         {
           "id": "pc2",
-          "prompt": "Pa liw yw'r gath?",
-          "type": "cloze",
+          "prompt": "Ydy'r gath yn ofni Dafi?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Gwyn."
-          ]
+            "Ydy.",
+            "Ydy",
+            "ydy"
+          ],
+          "rubric": "Must answer affirmatively."
         },
         {
           "id": "pc3",
-          "prompt": "Ydy'r gath yn ofni Pero ar y diwedd?",
-          "type": "cloze",
+          "prompt": "Ydy Nia'n darllen enw'r hen lyfr?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Nac ydy."
-          ]
+            "Nac ydy.",
+            "Nac ydy",
+            "nac ydy"
+          ],
+          "rubric": "Must answer negatively; Nia recognizes the book as old but does not read its damaged name."
         },
         {
           "id": "pc4",
-          "prompt": "Disgrifiwch y gath mewn dau air.",
-          "type": "cloze",
-          "accepted_answers": [
-            "Cath fach wen."
-          ]
+          "prompt": "Y gath a Dafi: bach/mawr; gwyn/du/coch; ofni.",
+          "type": "bounded_retelling",
+          "accepted_answers": [],
+          "rubric": "Give two short descriptions and one fear sentence using known frames, for example: Mae'r gath yn fach ac yn wyn. Mae Dafi'n fach ac yn goch. Mae'r gath yn ofni Dafi. Accept either direction of fear or both."
         }
       ]
     }
@@ -533,7 +617,19 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-cath",
+      "cy-merch",
+      "cy-gwyn",
+      "cy-du",
+      "cy-newydd",
+      "cy-hen",
+      "cy-ofni",
+      "cy-cyfarfod",
+      "cy-gyda",
+      "cy-hi"
+    ],
     "format": "tsv",
     "fields": [
       "guid",
@@ -544,7 +640,7 @@
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
     "tags": [
-      "semeion",
+      "illustrated-input",
       "welsh",
       "cy-draig-01",
       "lesson-06"
@@ -552,11 +648,15 @@
     "source": "cy-draig-01-l06"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
       "cy-l06-scene",
-      "cy-l06-mutation"
+      "cy-l06-with",
+      "cy-l06-feminine-colours",
+      "cy-l06-meeting",
+      "cy-l06-fear",
+      "cy-l06-old-new-books"
     ],
     "audio": []
   }

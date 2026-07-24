@@ -3,31 +3,50 @@
   "id": "cy-draig-01-l28",
   "course_id": "cy-draig-01",
   "order": 28,
-  "title": "Beth wyt ti wedi'i wneud?",
+  "title": "Beth dyn ni wedi'i wneud?",
   "status": "draft",
-  "content_version": "0.4.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Welsh full-course rewrite brief, content specification, editorial decisions, Arthurian curriculum, and rewritten Lessons 01–27",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for idiom, mutation, perfect-object linkage, and register consistency."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G28",
       "label": "Perfect wedi and object-pronoun linkage",
-      "description": "Use wedi with bod to review completed experience, and link a definite object with wedi'i.",
+      "description": "Use present forms of bod + wedi + verbal noun for completed work; use wedi'i for a singular object and wedi'u for a plural object when the object is resumed by a pronoun.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
-      "Cumulative G01–G27"
+      "G02",
+      "G05",
+      "G10",
+      "G12",
+      "G14",
+      "G15",
+      "G16",
+      "G17",
+      "G18",
+      "G19",
+      "G20",
+      "G21",
+      "G22",
+      "G23",
+      "G24",
+      "G25",
+      "G26",
+      "G27"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "follow the exhibition story in lesson 28",
-      "Use wedi with bod to review completed experience, and link a definite object with wedi'i."
+      "inventory completed and unfinished work before opening Artur's door",
+      "show from concrete evidence that the town has already acted for itself",
+      "track a singular or plural object through wedi'i and wedi'u",
+      "understand the first face-to-face meeting with a young, seated, unarmed Artur"
     ],
     "new_lexeme_ids": [
       "cy-wedi",
@@ -40,564 +59,345 @@
       "cy-dal-eto",
       "cy-eisoes",
       "cy-erioed"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l28-s01",
-        "title": "Y bore",
+        "title": "Ateb i'r llais",
         "segments": [
           {
             "id": "cy-draig-01-l28-s001",
-            "text": "Mae bore'r arddangosfa wedi dod.",
-            "inference_aids": []
+            "text": "Daw llais Artur drwy'r drws eto: “Pwy ddywedodd fod angen brenin ar y dref?” Mae Dafi a Pero wedi clywed pob gair.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l28-gweld-clywed",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l28-gweld-clywed.svg",
+                "alt": "A clear contrast: an eye sees the gold door while an ear hears Artur's voice through it.",
+                "covers_lexeme_ids": [
+                  "cy-gweld",
+                  "cy-clywed"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l28-s002",
-            "text": "Mae Mali wedi cyrraedd yn gynnar.",
-            "inference_aids": []
+            "text": "Mae Mali'n ateb: “Dydy neb wedi gwneud y penderfyniad hwnnw. Dyn ni wedi dod i ofyn am help, ond heb ddewis brenin.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l28-wedi-gwneud",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l28-wedi-gwneud.svg",
+                "alt": "Two panels contrast work before it begins with the same work completed, establishing wedi gwneud.",
+                "covers_lexeme_ids": [
+                  "cy-wedi",
+                  "cy-gwneud"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l28-s003",
-            "text": "Mae Nia wedi agor y drws.",
+            "text": "Mae'r golau aur yn aros, ond dydy'r drws ddim yn agor. Mae'r llais yn gofyn, “Beth dyn ni wedi'i wneud?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s004",
-            "text": "Mae Sam wedi gwneud te.",
+            "text": "Mae Nia'n agor bocs y llyfrgell. Mae'r mapiau, neges y cyngor, y lluniau a rhestr y gwaith ynddo: prawf y dref.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s005",
-            "text": "Mae Dafi wedi bwyta brecwast.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s006",
-            "text": "Mae Pero wedi cysgu wrth y bocs.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s007",
-            "text": "Mae'r ystafell bron yn barod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s008",
-            "text": "Ond mae'r rhestr yn dal yn hir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s009",
-            "text": "Mae Mali'n gofyn am bob tasg.",
-            "inference_aids": []
+            "text": "Mae'r bocs yn barod eisoes, mae'r grŵp yn barod i ateb, ond mae drws Artur yn dal ar gau. Mae Dafi'n tynnu tair llinell ar y map: barod, eisoes, dal.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l28-barod-eisoes-dal",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l28-barod-eisoes-dal.svg",
+                "alt": "A completed checklist is ready already, while the gold door is still closed.",
+                "covers_lexeme_ids": [
+                  "cy-barod",
+                  "cy-eisoes",
+                  "cy-dal-eto"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l28-s02",
-        "title": "Y tasgau",
+        "title": "Y pethau a'r gwaith",
         "segments": [
           {
-            "id": "cy-draig-01-l28-s010",
-            "text": "Beth wyt ti wedi'i wneud, Sam?",
+            "id": "cy-draig-01-l28-s008",
+            "text": "Mae Sam yn codi'r map newydd. “Dw i wedi copïo'r hen fap bedair gwaith. Mae'r map hwn yn glir, ac dw i wedi'i gopïo e heb y llwybr cudd at yr ogof.”",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l28-wedi",
+                "ref": "cy-l28-cysylltu-gwrthrych",
                 "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l28-wedi.svg",
-                "alt": "Heb wneud; wedi gwneud."
+                "src": "media/diagrams/cy-l28-cysylltu-gwrthrych.svg",
+                "alt": "A singular map points to wedi'i gopïo e; several papers point to wedi'u trefnu nhw.",
+                "covers_lexeme_ids": [
+                  "cy-wedi"
+                ]
               }
             ]
           },
           {
+            "id": "cy-draig-01-l28-s009",
+            "text": "Mae Mali wedi trefnu'r papurau. Mae hi wedi'u trefnu nhw mewn rhes: y neges gyntaf, y map wedyn, a llun Artur yn olaf. Mae pob un yn dangos rhan o'r stori.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s010",
+            "text": "Mae Nia'n codi'r hen allwedd. “Dw i wedi'i chadw hi yn fy mhoced i. Dydy'r allwedd ddim wedi gadael fy nghot i ers i ni agor y wal gudd.”",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l28-s011",
-            "text": "Dw i wedi argraffu'r rhaglenni.",
+            "text": "“Beth am neges y cyngor?” gofynnodd Artur o'r ochr arall. Mae Nia'n dangos y papur. “Mae'r cyngor wedi'i hanfon hi, ac rydyn ni wedi'i darllen hi gyda'n gilydd.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s012",
-            "text": "Wyt ti wedi'u plygu nhw?",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s013",
-            "text": "Ydw, dw i wedi'u plygu nhw eisoes.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s014",
-            "text": "Beth mae Nia wedi'i wneud?",
+            "text": "Mae Dafi'n rhoi pedwar marc ar ei restr: map wedi'i gopïo, papurau wedi'u trefnu, allwedd wedi'i chadw, a neges wedi'i darllen. Gyda phob marc, mae golau bach yn ymddangos ar y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s015",
-            "text": "Mae hi wedi anfon y gwahoddiadau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s016",
-            "text": "Mae hi wedi derbyn ugain ateb.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s017",
-            "text": "Mae hi wedi gweld neges y cyngor.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s018",
-            "text": "Dydy hi ddim wedi'i darllen yn uchel eto.",
+            "text": "Mae Dafi'n dal y llun wrth y twll bach. “Wyt ti wedi'i weld e nawr?” Mae'r llais yn ateb, “Ydw. Dw i wedi gweld pobl yn gwneud gwaith trwm gyda'i gilydd.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l28-s03",
-        "title": "Y map coll",
+        "title": "Gwaith y dref",
         "segments": [
           {
-            "id": "cy-draig-01-l28-s019",
-            "text": "Mae Dafi wedi symud y map.",
+            "id": "cy-draig-01-l28-s016",
+            "text": "Nawr mae Nia'n agor ei llyfr bach. “Dw i wedi anfon gwahoddiadau i'r caffi, yr harbwr a'r cyngor. Dw i wedi anfon map newydd gyda phob gwahoddiad.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l28-anfon-derbyn",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l28-anfon-derbyn.svg",
+                "alt": "An envelope travels from Nia to the town for anfon, and reply envelopes return to Nia for derbyn.",
+                "covers_lexeme_ids": [
+                  "cy-anfon",
+                  "cy-derbyn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l28-s017",
+            "text": "Mae hi wedi derbyn llawer o atebion. Mae'r caffi wedi derbyn pedwar map, mae pobl yr harbwr wedi derbyn gwahoddiadau, ac mae Nia wedi derbyn neges newydd gan y cyngor.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s018",
+            "text": "Mae Sam yn darllen rhai atebion. Mae dau berson wedi cynnig dod â byrddau. Mae pedwar wedi cynnig cario llyfrau. Mae teulu o'r stryd wedi cynnig paentio'r ffenestri.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s020",
-            "text": "Ble wyt ti wedi'i roi e?",
-            "inference_aids": []
+            "text": "“Dydy'r bobl hynny erioed wedi gweld Artur,” meddai Mali. “Dydyn nhw erioed wedi dod i'r drws hwn. Ond maen nhw eisoes wedi dechrau helpu'r llyfrgell.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l28-erioed",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l28-erioed.svg",
+                "alt": "A timeline from long ago to now shows no visit to Artur's door, clarifying erioed in a negative perfect.",
+                "covers_lexeme_ids": [
+                  "cy-erioed"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l28-s021",
-            "text": "Dw i wedi'i roi ar y bwrdd, meddai Dafi.",
+            "text": "Mae Artur yn dawel. Yna mae e'n gofyn, “Ydy pobl y dref yn aros i frenin achub y lle?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s022",
-            "text": "Ond dydy'r map ddim ar y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s023",
-            "text": "Mae Pero wedi gweld rhywbeth o dan y gadair.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s024",
-            "text": "Mae e wedi dod o hyd i'r map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s025",
-            "text": "Dydy Pero erioed wedi darllen map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s026",
-            "text": "Ond mae e wedi achub y map ddwywaith.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s027",
-            "text": "Mae Dafi wedi dysgu gwirio.",
-            "inference_aids": []
+            "text": "“Nac ydyn,” mae Dafi'n ateb. “Maen nhw wedi symud carreg, wedi paratoi cyfarfod, wedi argraffu mapiau, wedi paentio arwyddion ac wedi gwahodd ei gilydd. Maen nhw'n gwneud eu gwaith eu hunain.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l28-scene-tystiolaeth",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l28-scene-tystiolaeth.svg",
+                "alt": "In the blue cave, Mali, Nia, Sam, Iwan, Dafi, and Pero hold an evidence box and a long completed checklist before Artur's closed gold door.",
+                "covers_lexeme_ids": [
+                  "cy-wedi",
+                  "cy-gwneud",
+                  "cy-gweld",
+                  "cy-clywed",
+                  "cy-anfon",
+                  "cy-derbyn",
+                  "cy-barod",
+                  "cy-dal-eto",
+                  "cy-eisoes",
+                  "cy-erioed"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l28-s04",
-        "title": "Barod",
+        "title": "Y rhestr olaf",
         "segments": [
           {
+            "id": "cy-draig-01-l28-s023",
+            "text": "Mae chwe golau aur ar ddrws Artur nawr, ond mae un marc yn dal yn ddu. Mae Mali'n edrych ar restr y gwaith. “Beth sydd heb ei wneud?”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s025",
+            "text": "Mae Dafi wedi paentio'r arwydd, ond mae e'n dal heb wneud un gwaith: dydy e ddim wedi ateb cwestiwn Artur yn llawn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s026",
+            "text": "Mae'r ddraig fach yn mynd at y drws. “Dw i wedi meddwl bod brenin yn gallu gwneud popeth. Dw i wedi credu bod coron yn ateb pob problem. Roeddwn i'n anghywir.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s027",
+            "text": "Mae e'n rhoi ei lun o'r goron dan y rhestr. “Dyn ni wedi gwneud llawer cyn clywed dy lais di. Mae'r dref wedi gwneud mwy nag oeddwn i'n gwybod.”",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l28-s028",
-            "text": "Mae Mali wedi hongian y llun olaf.",
+            "text": "“Pam agor y drws felly?” gofynnodd Artur. Mae Dafi'n ateb, “Oherwydd dyn ni eisiau clywed dy stori di. Dyn ni eisiau help, ond dydyn ni ddim eisiau rhoi pob gwaith i ti.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s029",
-            "text": "Mae Sam wedi gosod y rhaglenni.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s030",
-            "text": "Mae Nia wedi darllen neges y cyngor.",
+            "text": "Mae'r marc du yn troi'n aur. Mae'r rhestr gyfan yn barod. Dydy'r grŵp erioed wedi agor y drws hwn, ond maen nhw eisoes wedi dysgu nad yw'r dref yn wag heb frenin.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l28-s031",
-            "text": "Dydyn nhw ddim wedi gwneud penderfyniad eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s032",
-            "text": "Mae Tad-cu wedi agor y ffenestri.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s033",
-            "text": "Mae Dafi wedi gorffen yr arwydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s034",
-            "text": "Mae pawb wedi gwneud eu gwaith.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s035",
-            "text": "Mae'r arddangosfa'n barod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s036",
-            "text": "Dydyn nhw erioed wedi bod mor gyffrous.",
+            "text": "Nawr maen nhw'n barod i wneud yr un peth sydd ar ôl. Mae Nia'n cael yr allwedd o'i phoced hi ac yn ei rhoi i Ddafi.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l28-s05",
-        "title": "Y rhestr wedi newid",
+        "title": "Mae'r drws yn agor",
         "segments": [
           {
-            "id": "cy-draig-01-l28-s037",
-            "text": "Mae Mali'n rhoi'r rhestr waith ar y bwrdd ac yn tynnu llinell o dan y teitl.",
+            "id": "cy-draig-01-l28-s032",
+            "text": "Mae Dafi wedi dal yr allwedd o'r blaen, ond dydy e erioed wedi'i throi hi yn y drws aur. Nawr mae e'n ei throi hi'n araf.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s038",
-            "text": "Mae rhai swyddi wedi eu gorffen, ond mae eraill yn dal heb eu gwneud.",
+            "id": "cy-draig-01-l28-s033",
+            "text": "Mae'r saith marc yn goleuo. Daw sain o dan y llawr, ac mae'r drws yn agor i'r ystafell las.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s034",
+            "text": "Yno mae Artur ar gadair garreg. Mae e'n eistedd, nid yn cysgu. Mae ei lygaid e ar agor, ac mae e'n gwisgo dillad glas syml.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l28-scene-rhestr",
+                "ref": "cy-l28-eistedd-heb-gleddyf",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l28-eistedd-heb-gleddyf.svg",
+                "alt": "Young Artur sits awake on a stone chair; beside him an empty sword outline makes clear that he is unarmed.",
+                "covers_lexeme_ids": []
+              },
+              {
+                "type": "image",
+                "ref": "cy-l28-scene-drws-agored",
                 "presentation": "inline_scene",
-                "src": "media/images/cy-l28-scene-rhestr.svg",
-                "alt": "Wedi gorffen · heb orffen"
+                "src": "media/images/cy-l28-scene-drws-agored.svg",
+                "alt": "The gold door opens. Twelve-year-old dark-haired Artur sits awake on a stone chair in a simple blue tunic, with empty hands, no crown, and no sword; the friends remain together at the threshold.",
+                "covers_lexeme_ids": [
+                  "cy-gweld",
+                  "cy-clywed",
+                  "cy-barod"
+                ]
               }
             ]
           },
           {
+            "id": "cy-draig-01-l28-s035",
+            "text": "Does dim coron ar ei ben e. Does dim cleddyf wrth y gadair nac yn ei ddwylo e. Mae'r bachgen yn ifanc, ac mae ei ddwy law e'n wag.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s036",
+            "text": "Mae Dafi wedi gweld Artur mewn llawer o luniau, ond dydy e ddim wedi gweld Artur fel hyn. Mae'r bachgen yn llai, yn flinedig ac yn fwy trist na'r brenin yn llun Dafi.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l28-s037",
+            "text": "Mae Artur yn edrych ar Mali, Nia, Sam, Iwan, Pero, ac yn olaf Dafi. Mae e wedi clywed eu lleisiau, ond dydy e ddim wedi gweld eu hwynebau cyn nawr.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l28-s039",
-            "text": "Mae Sam wedi argraffu'r gwahoddiadau ac wedi rhoi rhai wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s040",
-            "text": "Mae Nia wedi ffonio'r cyngor ac wedi ysgrifennu'r ateb cywir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s041",
-            "text": "Mae Iwan wedi gwirio'r map, ond dydy e ddim wedi gosod y label olaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s042",
-            "text": "Mae Dafi wedi cario'r bocsys ysgafn, ond mae e wedi anghofio un wrth y ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s043",
-            "text": "Mae Mali'n gofyn, “Beth wyt ti wedi'i wneud ers y bore, Dafi?”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s044",
-            "text": "Mae Dafi'n dangos y wal ac yn dweud ei fod wedi dal pob llun yn ofalus.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s045",
-            "text": "Mae Pero wedi dilyn pawb, ond dydy e ddim wedi symud unrhyw waith.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s046",
-            "text": "Mae Sam yn dweud bod Pero wedi cadw'r llwybr yn glir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s047",
-            "text": "Mae Mali'n rhoi marc wrth bob swydd sydd wedi ei gorffen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s048",
-            "text": "Mae'r rhestr yn fyrrach, ond mae'r swyddi olaf yn bwysig.",
+            "text": "Mae Iwan yn rhoi ei law ar y gadair. “Ydw. Iwan dw i. Roeddwn i'n fach pan welais i ti, ac rydw i wedi dod yn ôl.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l28-s06",
-        "title": "Pethau sydd ar goll",
+        "title": "Beth sydd ei angen?",
         "segments": [
           {
-            "id": "cy-draig-01-l28-s049",
-            "text": "Mae Nia'n gofyn a oes rhywun wedi gweld y label ar gyfer yr allwedd.",
+            "id": "cy-draig-01-l28-s040",
+            "text": "Mae Artur yn edrych at y drws. “Dw i wedi cysgu am amser hir,” meddai e, yn ddryslyd.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s050",
-            "text": "Mae Sam wedi gweld y label yn y bore, ond dydy e ddim yn cofio ble.",
+            "id": "cy-draig-01-l28-s041",
+            "text": "Mae Dafi eisiau rhedeg at y gadair, ond mae e'n cofio gorchymyn Mali. Mae e wedi dysgu aros. Mae e'n sefyll gyda'r grŵp ac yn dal y rhestr.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s051",
-            "text": "Mae Mali wedi edrych ar y bwrdd ac o dan y bocsys.",
+            "id": "cy-draig-01-l28-s042",
+            "text": "“Dw i wedi cadw'r llyfr,” meddai Dafi. “Dw i wedi cofio dy enw di. Ond dydw i ddim wedi achub y dref. Mae'r bobl wedi helpu ei gilydd.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s052",
-            "text": "Mae Iwan wedi agor y cwpwrdd, ond dydy'r label ddim yno.",
+            "id": "cy-draig-01-l28-s043",
+            "text": "Mae Artur yn estyn ei law wag. Mae Dafi'n rhoi'r rhestr iddo fe, nid y goron. Mae Artur yn darllen pob marc ac yn edrych ar y bocs o dystiolaeth.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s053",
-            "text": "Mae Dafi'n dweud ei fod wedi clywed papur yn symud wrth y drws.",
+            "id": "cy-draig-01-l28-s045",
+            "text": "Mae Artur wedi clywed y gwaith drwy'r drws; nawr mae e wedi gweld ei brawf. “Dydy'r dref ddim yn aros yn wag,” meddai e. “Mae'r gwaith eisoes wedi dechrau.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s054",
-            "text": "Mae Pero eisoes wedi mynd at y drws ac mae e'n arogli rhywbeth.",
+            "id": "cy-draig-01-l28-s046",
+            "text": "Yna mae e'n gofyn, “Beth mae'r dref wedi'i wneud, a beth sydd ar ôl i'w wneud?” Mae Mali'n agor y map, ac mae'r lleill yn eistedd o amgylch y gadair.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l28-s055",
-            "text": "O dan ei droed mae darn bach o bapur gyda'r gair “allwedd”.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s056",
-            "text": "Mae Pero wedi dod o hyd i'r label cyn i unrhyw un arall ei weld.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s057",
-            "text": "Mae Mali'n ei godi ac yn gofyn sut mae e wedi cyrraedd y llawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s058",
-            "text": "Mae Sam yn cofio ei fod wedi agor y drws gyda llawer o wahoddiadau yn ei law.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s059",
-            "text": "Mae'r gwynt wedi symud y label pan agorodd e'r drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s060",
-            "text": "Maen nhw wedi datrys y broblem, ac mae Mali'n gludo'r label yn ei le.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l28-s07",
-        "title": "Beth sydd heb ei wneud?",
-        "segments": [
-          {
-            "id": "cy-draig-01-l28-s061",
-            "text": "Ar ôl cinio, mae Nia'n darllen y rhestr eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s062",
-            "text": "Mae'r grŵp wedi gorffen y wal, y map, a'r gwahoddiadau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s063",
-            "text": "Dydyn nhw ddim wedi profi'r sain o'r llyfr gyda llawer o bobl yn yr ystafell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s064",
-            "text": "Dydyn nhw ddim wedi symud y lamp olaf i ffwrdd o'r papur.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s065",
-            "text": "Dydy Iwan ddim wedi paratoi ei stori am yr harbwr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s066",
-            "text": "Dydy Dafi ddim wedi ymarfer aros yn dawel pan fydd rhywun yn darllen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s067",
-            "text": "Mae Dafi'n dweud nad yw e erioed wedi aros yn dawel am amser hir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s068",
-            "text": "Mae Mali'n gofyn iddo geisio am un funud, nid am y diwrnod cyfan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s069",
-            "text": "Mae Sam yn dechrau'r amser ac mae Dafi'n eistedd wrth Pero.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s070",
-            "text": "Mae e wedi aros yn dawel am hanner munud pan mae ei drwyn yn cosi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s071",
-            "text": "Ond dydy e ddim wedi gwneud mwg, ac mae pawb yn falch ohono.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s072",
-            "text": "Mae Nia'n rhoi hanner marc wrth ei swydd ac yn addo prawf arall.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l28-s08",
-        "title": "Y prawf gyda phobl",
-        "segments": [
-          {
-            "id": "cy-draig-01-l28-s073",
-            "text": "Mae pedwar ffrind wedi dod i helpu gyda'r prawf olaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s074",
-            "text": "Mae Nia wedi rhoi gwahoddiad i bob un ac wedi gofyn iddyn nhw ddilyn y llwybr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s075",
-            "text": "Mae Mali wedi sefyll wrth y map er mwyn ateb cwestiynau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s076",
-            "text": "Mae Sam wedi sefyll wrth y llyfr sy'n canu er mwyn dangos y sain.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s077",
-            "text": "Mae Iwan wedi dechrau ei stori, ond mae dau berson wedi stopio wrth y lamp.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s078",
-            "text": "Mae'r lamp wedi cuddio un o'r lluniau pan oedd yr ystafell yn llawn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s079",
-            "text": "Mae Nia wedi gweld y broblem ac wedi symud y lamp at y wal arall.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s080",
-            "text": "Mae'r ymwelwyr wedi cerdded y llwybr eto ac wedi gweld pob llun.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s081",
-            "text": "Mae Dafi wedi aros yn dawel drwy stori gyfan Iwan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s082",
-            "text": "Ar y diwedd, mae e wedi anadlu mwg bach tuag at y ffenestr agored.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s083",
-            "text": "Does dim papur wedi llosgi, ac mae'r ymwelwyr wedi chwerthin.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s084",
-            "text": "Mae'r prawf wedi dangos un broblem ac wedi profi bod y cynllun newydd yn gweithio.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l28-s09",
-        "title": "Barod o'r diwedd",
-        "segments": [
-          {
-            "id": "cy-draig-01-l28-s085",
-            "text": "Mae'r haul wedi mynd i lawr ac mae'r llyfrgell yn dawel eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s086",
-            "text": "Mae Mali wedi casglu'r offer ac wedi cau'r glud.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s087",
-            "text": "Mae Sam wedi cyfrif y gwahoddiadau sydd ar ôl.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s088",
-            "text": "Mae Iwan wedi rhoi ei nodiadau wrth y map er mwyn cofio ei stori.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s089",
-            "text": "Mae Nia wedi cerdded y llwybr olaf heb ddod o hyd i broblem arall.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s090",
-            "text": "Mae Dafi wedi edrych ar bob darn o bapur ac wedi cadw ei drwyn ymhell oddi wrthyn nhw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s091",
-            "text": "Mae Pero wedi gorwedd wrth y drws, wedi blino ar ôl diwrnod hir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s092",
-            "text": "Mae Mali'n gofyn, “Ydyn ni wedi gorffen popeth?”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s093",
-            "text": "Mae Sam yn ateb eu bod wedi gwneud popeth ar y rhestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s094",
-            "text": "Mae Iwan yn ychwanegu nad ydyn nhw erioed wedi gwneud arddangosfa fel hon o'r blaen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l28-s095",
-            "text": "Mae Nia'n rhoi'r marc olaf ac yn troi'r rhestr drosodd.",
-            "inference_aids": [
-              {
-                "type": "image",
-                "ref": "cy-l28-scene-prawf",
-                "presentation": "inline_scene",
-                "src": "media/images/cy-l28-scene-prawf.svg",
-                "alt": "Mae'r arddangosfa'n barod."
-              }
-            ]
-          },
-          {
-            "id": "cy-draig-01-l28-s096",
-            "text": "Mae'r gwaith wedi gorffen; nawr mae'n rhaid i'r gymuned ddod i weld y stori.",
+            "id": "cy-draig-01-l28-s047",
+            "text": "Mae'r drws ar agor. Mae Artur yn eistedd gyda nhw; dydy e ddim yn cysgu, a does dim cleddyf ganddo. Mae'r grŵp yn barod i ateb, ac mae'r brenin ifanc yn barod i wrando.",
             "inference_aids": []
           }
         ]
@@ -610,9 +410,11 @@
       "display_form": "wedi",
       "citation_form": "wedi",
       "part_of_speech": "aspect particle",
-      "current_sense": "after; have done",
+      "current_sense": "marks a completed action or experience",
       "forms_seen": [
-        "wedi"
+        "wedi",
+        "wedi'i",
+        "wedi'u"
       ],
       "first_introduced_lesson": "cy-draig-01-l28",
       "new": true
@@ -624,7 +426,9 @@
       "part_of_speech": "verb",
       "current_sense": "do; make",
       "forms_seen": [
-        "gwneud"
+        "gwneud",
+        "wedi gwneud",
+        "wedi'i wneud"
       ],
       "first_introduced_lesson": "cy-draig-01-l28",
       "new": true
@@ -636,7 +440,9 @@
       "part_of_speech": "verb",
       "current_sense": "see",
       "forms_seen": [
-        "gweld"
+        "gweld",
+        "wedi gweld",
+        "wedi'i weld"
       ],
       "first_introduced_lesson": "cy-draig-01-l28",
       "new": true
@@ -648,7 +454,8 @@
       "part_of_speech": "verb",
       "current_sense": "hear",
       "forms_seen": [
-        "clywed"
+        "clywed",
+        "wedi clywed"
       ],
       "first_introduced_lesson": "cy-draig-01-l20",
       "new": false
@@ -660,7 +467,10 @@
       "part_of_speech": "verb",
       "current_sense": "send",
       "forms_seen": [
-        "anfon"
+        "anfon",
+        "wedi anfon",
+        "wedi'i hanfon",
+        "wedi'u hanfon"
       ],
       "first_introduced_lesson": "cy-draig-01-l28",
       "new": true
@@ -672,7 +482,9 @@
       "part_of_speech": "verb",
       "current_sense": "receive",
       "forms_seen": [
-        "derbyn"
+        "derbyn",
+        "wedi derbyn",
+        "wedi'u derbyn"
       ],
       "first_introduced_lesson": "cy-draig-01-l28",
       "new": true
@@ -694,7 +506,7 @@
       "display_form": "dal",
       "citation_form": "dal",
       "part_of_speech": "adverb",
-      "current_sense": "still",
+      "current_sense": "still; continuing now",
       "forms_seen": [
         "dal"
       ],
@@ -706,7 +518,7 @@
       "display_form": "eisoes",
       "citation_form": "eisoes",
       "part_of_speech": "adverb",
-      "current_sense": "already",
+      "current_sense": "already; before now",
       "forms_seen": [
         "eisoes"
       ],
@@ -718,7 +530,7 @@
       "display_form": "erioed",
       "citation_form": "erioed",
       "part_of_speech": "adverb",
-      "current_sense": "ever",
+      "current_sense": "ever, across all time up to now",
       "forms_seen": [
         "erioed"
       ],
@@ -727,18 +539,18 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "Patrwm y wers: Perfect wedi and object-pronoun linkage. Darllenwch y stori eto a sylwch ar y patrwm ym mhob adran.",
-    "bridge_language": "Use wedi with bod to review completed experience, and link a definite object with wedi'i."
+    "target_language": "Mae Sam wedi copïo'r map; mae Nia wedi anfon y gwahoddiadau. Am un peth: mae Sam wedi'i gopïo e, ac mae Nia wedi'i chadw hi. Am fwy nag un: mae Mali wedi'u trefnu nhw. I ddweud na: dydy Dafi ddim wedi agor y drws.",
+    "bridge_language": "Present bod + wedi + verbal noun describes completed work with present relevance. When a definite object is resumed, this lesson models wedi'i for one object and wedi'u for plural objects, with the expected mutation after the possessive element: y map → wedi'i gopïo e; yr allwedd → wedi'i chadw hi; y papurau → wedi'u trefnu nhw."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l28-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch o ystyr a phatrwm y stori.",
+      "title": "Pensa A — Wedi, wedi'i, wedi'u",
+      "directions": "Cwblhewch gyda phatrwm y stori.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Cwblhewch: Mae Sam ___ argraffu’r gwahoddiadau.",
+          "prompt": "Mae Sam ___ copïo'r map bedair gwaith.",
           "type": "cloze",
           "accepted_answers": [
             "wedi"
@@ -746,57 +558,108 @@
         },
         {
           "id": "pa2",
-          "prompt": "Gwnewch yn negyddol: Mae Iwan wedi gosod y label.",
+          "prompt": "Y map: Mae Sam ___ gopïo e heb y llwybr cudd.",
           "type": "cloze",
           "accepted_answers": [
-            "Dydy Iwan ddim wedi gosod y label."
+            "wedi'i"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Y papurau: Mae Mali ___ trefnu nhw mewn rhes.",
+          "type": "cloze",
+          "accepted_answers": [
+            "wedi'u"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Gwnewch yn negyddol: Mae Dafi wedi agor y drws.",
+          "type": "transformation",
+          "accepted_answers": [
+            "Dydy Dafi ddim wedi agor y drws."
           ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l28-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr a phatrwm y stori.",
+      "title": "Pensa B — Y rhestr",
+      "directions": "Dewiswch air sy'n gwneud ystyr yn y stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Mae’r swydd wedi ei gorffen: mae hi’n ___.",
+          "prompt": "Mae Nia'n rhoi gwahoddiadau o'i llaw hi at bobl y dref: mae hi'n eu ___.",
           "type": "cloze",
           "accepted_answers": [
-            "barod"
+            "hanfon",
+            "anfon"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Mae hyn wedi digwydd cyn nawr: mae wedi digwydd ___.",
+          "prompt": "Mae'r atebion yn dod yn ôl at Nia: mae hi'n eu ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "derbyn"
+          ]
+        },
+        {
+          "id": "pb3",
+          "prompt": "Mae'r bocs a'r grŵp yn barod cyn i'r drws agor. Maen nhw'n barod ___.",
           "type": "cloze",
           "accepted_answers": [
             "eisoes"
+          ]
+        },
+        {
+          "id": "pb4",
+          "prompt": "Mae chwe marc yn aur, ond mae un marc yn ___ yn ddu.",
+          "type": "cloze",
+          "accepted_answers": [
+            "dal"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l28-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Beth mae'r dref wedi'i wneud?",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Sut daeth Pero o hyd i’r label?",
-          "type": "cloze",
+          "prompt": "Beth mae Sam wedi'i wneud i'r map?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Roedd y label o dan ei droed.",
-            "Daeth Pero o hyd i’r label o dan ei droed."
+            "Mae Sam wedi copïo'r map bedair gwaith.",
+            "Mae e wedi'i gopïo e heb y llwybr cudd."
           ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth ydych chi wedi’i wneud heddiw?",
-          "type": "transfer",
+          "prompt": "Pa waith mae pobl y dref wedi cynnig ei wneud?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Maen nhw wedi cynnig dod â byrddau, cario llyfrau a phaentio'r ffenestri.",
+            "Mae pobl wedi cynnig cario llyfrau, dod â byrddau a phaentio'r ffenestri."
+          ]
+        },
+        {
+          "id": "pc3",
+          "prompt": "Sut mae Artur pan mae'r drws yn agor?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Mae e'n ifanc ac yn eistedd ar gadair garreg. Dydy e ddim yn cysgu, a does dim coron na chleddyf ganddo.",
+            "Mae Artur yn eistedd ac mae ei lygaid e ar agor. Does dim cleddyf ganddo."
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dywedwch dri pheth mae'r grŵp neu'r dref wedi'u gwneud. Gorffennwch gyda'r peth sydd ar ôl i'w wneud.",
+          "type": "bounded_retelling",
           "accepted_answers": [],
-          "rubric": "Un neu ddwy frawddeg Gymraeg ddealladwy sy’n defnyddio iaith y cwrs."
+          "rubric": "Give three understandable Welsh perfect clauses grounded in this lesson, followed by one clear clause about remaining work. Use at least one object-linked form with wedi'i or wedi'u; do not require focus or hypothetical constructions."
         }
       ]
     }
@@ -808,7 +671,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -827,12 +690,18 @@
     "source": "cy-draig-01-l28"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l28-wedi",
-      "cy-l28-scene-rhestr",
-      "cy-l28-scene-prawf"
+      "cy-l28-gweld-clywed",
+      "cy-l28-wedi-gwneud",
+      "cy-l28-barod-eisoes-dal",
+      "cy-l28-cysylltu-gwrthrych",
+      "cy-l28-anfon-derbyn",
+      "cy-l28-erioed",
+      "cy-l28-scene-tystiolaeth",
+      "cy-l28-eistedd-heb-gleddyf",
+      "cy-l28-scene-drws-agored"
     ],
     "audio": []
   }

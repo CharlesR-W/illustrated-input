@@ -3,31 +3,47 @@
   "id": "cy-draig-01-l27",
   "course_id": "cy-draig-01",
   "order": 27,
-  "title": "Dywedodd Nia fod...",
+  "title": "Dywedodd y llyfr fod...",
   "status": "draft",
-  "content_version": "0.4.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G27 curriculum row, cumulative rewritten Lessons 01–26 available during drafting, and the L27 findings in docs/reviews/welsh-22-32.md and docs/reviews/rewrite-welsh-25-28.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked every bod/fod/nad yw complement, the distinction between fact, belief, unnamed report, and deliberate lie, the naturalness of Artur's final question, mutation, and register."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G27",
-      "label": "Reported statements with bod",
-      "description": "Report what somebody said, thought, or believed using a form of dweud plus fod/bod.",
+      "label": "Reported statements with bod, fod and nad yw",
+      "description": "Report present thoughts and beliefs with bod, past statements with dywedodd ... fod, and a bounded negative statement with nad yw.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
-      "Cumulative G01–G26"
+      "G05",
+      "G10",
+      "G12",
+      "G14",
+      "G15",
+      "G16",
+      "G17",
+      "G18",
+      "G20",
+      "G21",
+      "G22",
+      "G23",
+      "G24",
+      "G25",
+      "G26"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "follow the exhibition story in lesson 27",
-      "Report what somebody said, thought, or believed using a form of dweud plus fod/bod."
+      "trace three important claims to the council, Iwan, and the old book",
+      "distinguish a known truth, a sincere belief, an unnamed repeated claim, and a deliberate lie",
+      "report positive and negative statements without turning them into indirect questions",
+      "decide whether the town's danger proves that it needs a king"
     ],
     "new_lexeme_ids": [
       "cy-dweud",
@@ -40,564 +56,444 @@
       "cy-cyngor",
       "cy-penderfyniad",
       "cy-oherwydd"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l27-s01",
-        "title": "Y si",
+        "title": "Tri llais wrth y drws",
         "segments": [
           {
             "id": "cy-draig-01-l27-s001",
-            "text": "Mae si yn y dref.",
+            "text": "Pan mae gwaith y llyfrgell yn gorffen, mae Mali, Nia, Sam, Iwan, Dafi a Pero'n mynd yn ôl i'r ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s002",
-            "text": "Mae rhywun yn dweud bod y llyfrgell yn cau.",
+            "text": "Maen nhw'n cario'r hen lyfr, neges y cyngor, y map a'r allwedd i'r drws du.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s003",
-            "text": "Mae Sam yn meddwl bod y si'n wir.",
-            "inference_aids": []
+            "text": "Y tu ôl i'r drws mae Artur yn cysgu, ond o'u blaenau mae tri llais gwahanol.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l27-scene-tri-llais",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l27-scene-tri-llais.svg",
+                "alt": "The six friends sit at Artur's black door with a council letter, Iwan's remembered story, and the old book arranged as three distinct sources.",
+                "covers_lexeme_ids": [
+                  "cy-cyngor",
+                  "cy-dweud",
+                  "cy-credu",
+                  "cy-bod"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l27-s004",
-            "text": "Mae Mali'n credu bod rhywbeth o'i le.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s005",
-            "text": "Mae Dafi'n ofni bod yr arddangosfa'n rhy hwyr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s006",
-            "text": "Ond dydy Nia ddim yn credu pob si.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s007",
-            "text": "Mae hi'n dweud bod angen gwirio.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s008",
-            "text": "Mae celwydd yn gallu teithio'n gyflym.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s009",
-            "text": "Mae'r gwir yn aros yn y cyngor.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l27-s02",
-        "title": "Beth ddywedodd y cyngor?",
-        "segments": [
-          {
-            "id": "cy-draig-01-l27-s010",
-            "text": "Mae Nia'n ffonio'r cyngor.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s011",
-            "text": "Dywedodd swyddog nad oes penderfyniad eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s012",
-            "text": "Dywedodd hi fod y cyngor yn cyfarfod yfory.",
+            "text": "Dywedodd y cyngor fod y llyfrgell yn cau; dywedodd Iwan fod brenin yn dod eto pan mae angen help.",
             "inference_aids": [
               {
                 "type": "image",
                 "ref": "cy-l27-adrodd",
                 "presentation": "margin_diagram",
                 "src": "media/diagrams/cy-l27-adrodd.svg",
-                "alt": "Mae'n wir. Dywedodd hi fod e'n wir."
+                "alt": "A direct statement becomes a past report: Nia said that the door was closed, highlighting dywedodd and fod.",
+                "covers_lexeme_ids": [
+                  "cy-dweud",
+                  "cy-dywedodd",
+                  "cy-bod"
+                ]
               }
             ]
           },
           {
+            "id": "cy-draig-01-l27-s005",
+            "text": "Mae'r llyfr yn dweud bod Artur yn deffro pan mae gwir angen ar y dref.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s006",
+            "text": "Mae Dafi'n meddwl bod y tri llais yn dweud yr un peth: agorwch y drws a deffrowch y brenin.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s007",
+            "text": "Ond dydy Mali ddim yn credu bod yr ateb mor hawdd â hynny.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l27-meddwl-credu",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l27-meddwl-credu.svg",
+                "alt": "Two thought bubbles distinguish thinking that something may be so from believing a claim.",
+                "covers_lexeme_ids": [
+                  "cy-meddwl",
+                  "cy-credu"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l27-s008",
+            "text": "Mae hi'n dweud bod angen deall pob llais cyn gwneud penderfyniad.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s010",
+            "text": "Mae hi'n rhoi'r papurau mewn rhes: y cyngor, cof Iwan, a rheol yr hen lyfr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s011",
+            "text": "“Byddwn ni'n gofyn pwy ddywedodd bob peth,” meddai Nia, “a beth rydyn ni'n gwybod sy'n wir.”",
+            "inference_aids": []
+          }
+        ]
+      },
+      {
+        "id": "cy-draig-01-l27-s02",
+        "title": "Penderfyniad y cyngor",
+        "segments": [
+          {
+            "id": "cy-draig-01-l27-s012",
+            "text": "Yn gyntaf, mae Sam yn agor y neges a ddaeth o'r cyngor.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l27-s013",
-            "text": "Dywedodd hi fod yr arddangosfa'n bwysig.",
+            "text": "Mae e'n darllen y geiriau'n araf: “Bydd drws y llyfrgell yn cau ar ôl y cyfarfod yfory.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s014",
-            "text": "Ni ddywedodd hi fod y llyfrgell yn cau.",
-            "inference_aids": []
+            "text": "Mae Nia'n adrodd y neges: “Dywedodd y cyngor fod drws y llyfrgell yn cau ar ôl y cyfarfod.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l27-cyngor-penderfyniad",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l27-cyngor-penderfyniad.svg",
+                "alt": "A council table leads by an arrow to a signed decision about the library door.",
+                "covers_lexeme_ids": [
+                  "cy-cyngor",
+                  "cy-penderfyniad"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l27-s015",
-            "text": "Mae Nia'n ysgrifennu pob gair.",
-            "inference_aids": []
+            "text": "Dywedodd y cyngor hefyd fod yr arddangosfa'n bwysig, oherwydd bydd y bobl yn dangos faint maen nhw'n defnyddio'r llyfrgell.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l27-oherwydd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l27-oherwydd.svg",
+                "alt": "A cause-and-result arrow links the council decision to the closed library door with oherwydd between them.",
+                "covers_lexeme_ids": [
+                  "cy-oherwydd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l27-s016",
-            "text": "Mae hi'n gofyn eto oherwydd bod y si'n ddifrifol.",
+            "text": "“Ydy hynny'n wir?” gofynnodd Dafi, gan edrych ar y drws du fel pe bai'r cyngor y tu ôl iddo.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s017",
-            "text": "Mae'r ateb yr un fath.",
+            "text": "“Mae penderfyniad y cyngor ar y papur,” meddai Nia. “Mae hynny'n wir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s018",
-            "text": "Does dim penderfyniad eto.",
+            "text": "Mae hi'n dweud nad yw'r llyfrgell ar gau heddiw; mae'r drws yn dal ar agor.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s020",
+            "text": "Mae Mali'n meddwl bod amser ganddyn nhw i newid cynllun y cyngor drwy ddangos gwaith y dref.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s022",
+            "text": "Mae'r perygl yn wir, ond dydy'r ateb ddim yn glir eto.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l27-s03",
-        "title": "Adrodd yn gywir",
+        "title": "Y stori y mae Iwan yn ei chredu",
         "segments": [
           {
-            "id": "cy-draig-01-l27-s019",
-            "text": "Mae Nia'n dweud wrth Mali fod y cyngor yn cyfarfod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s020",
-            "text": "Mae Mali'n dweud wrth Sam nad oes penderfyniad.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s021",
-            "text": "Mae Sam yn dweud wrth Dafi fod y si'n anghywir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s022",
-            "text": "Mae Dafi'n meddwl bod hynny'n newyddion da.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l27-s023",
-            "text": "Mae Tad-cu'n credu bod angen parhau.",
+            "text": "Yna mae Iwan yn rhoi ei law ar yr hen fap ac yn dechrau dweud y stori a glywodd pan oedd e'n ifanc.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s024",
-            "text": "Mae pawb yn cytuno bod y gwir yn bwysig.",
+            "text": "“Dywedodd fy nhad fod brenin ifanc yn cysgu dan y bryn,” meddai e.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s025",
-            "text": "Dydyn nhw ddim yn dweud bod popeth yn ddiogel.",
+            "text": "“Dywedodd e fod draig yn cadw'r drws, a bod y brenin yn dod eto pan mae gwir angen.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s026",
-            "text": "Maen nhw'n dweud bod cyfle o hyd.",
+            "text": "Mae Iwan yn credu bod y stori'n wir oherwydd gwelodd fachgen, draig fawr a chleddyf yn yr ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s027",
-            "text": "Mae hynny'n fwy gonest.",
+            "text": "Mae Mali'n dweud bod cof Iwan yn bwysig, ond nad yw cof yn dangos pob rhan o'r stori.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s029",
+            "text": "“Dw i'n credu hyn,” meddai e. “Dydw i ddim yn gwybod popeth.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s031",
+            "text": "Dydy credu ddim yn gelwydd pan mae person yn dweud yn glir nad yw e'n gwybod popeth.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s032",
+            "text": "Ond mae Sam yn cofio stori arall: mae pobl yn dweud bod Artur yn hen ac yn gryf.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s033",
+            "text": "Does neb yn gwybod pwy ddywedodd hynny gyntaf, a does dim papur, map na llun i'w ddangos.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s034",
+            "text": "Mae un person yn dweud y geiriau wrth berson arall; yna mae'r ail berson yn eu dweud eto.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s035",
+            "text": "Dydy stori heb enw ddim yn wir eto, ond dydy hi ddim bob amser yn gelwydd chwaith.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l27-s04",
-        "title": "Neges i'r dref",
+        "title": "Rheol yr hen lyfr",
         "segments": [
           {
-            "id": "cy-draig-01-l27-s028",
-            "text": "Mae Sam yn ysgrifennu neges.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s029",
-            "text": "Mae'r neges yn dweud bod yr arddangosfa yfory.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s030",
-            "text": "Mae hi'n dweud nad yw'r llyfrgell wedi cau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s031",
-            "text": "Mae hi'n dweud bod y cyngor heb benderfynu.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s032",
-            "text": "Mae Nia'n gwirio bod pob gair yn wir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s033",
-            "text": "Mae Dafi'n gofyn a yw'r si'n gelwydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s034",
-            "text": "Mae Nia'n dweud bod y si heb dystiolaeth.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s035",
-            "text": "Mae'r grŵp yn rhannu'r neges.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l27-s036",
-            "text": "Nawr mae'r dref yn gwybod y gwir.",
+            "text": "Yn olaf, mae Mali'n agor yr hen lyfr wrth y drws, ac mae'r allwedd yn gwneud sain fach yn y marc.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s037",
+            "text": "Mae papur Artur yn symud, er nad oes gwynt yn yr ogof.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s038",
+            "text": "Mae geiriau newydd yn ymddangos dan lun y bachgen, ac mae Nia'n eu darllen i'r grŵp.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s039",
+            "text": "Mae'r llyfr yn dweud bod Artur yn cysgu tra mae pobl yn gallu helpu ei gilydd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s040",
+            "text": "Mae e'n dweud bod Artur yn deffro pan mae gwir angen, nid pan mae rhywun eisiau ateb hawdd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s041",
+            "text": "Mae'r llyfr hefyd yn dweud bod rhaid i bobl weithio gyda'i gilydd cyn deffro'r brenin.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s042",
+            "text": "Mae Dafi'n pwyntio at neges y cyngor: “Mae'r llyfrgell mewn perygl. Mae hynny'n wir angen.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s043",
+            "text": "Mae Mali'n pwyntio at y map, y lluniau a rhestr y gwaith: “Mae'r dref yn helpu ei hun hefyd.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s044",
+            "text": "Mae hi'n meddwl bod angen y llyfrgell ar y dref, ond dydy hi ddim yn gwybod bod angen brenin arni.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s045",
+            "text": "Mae Nia'n dweud bod gwir angen yn wahanol i eisiau rhywun arall wneud pob penderfyniad.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s047",
+            "text": "Mae'r hen lyfr yn cau ar ei ben ei hun, ac mae pob llais yn yr ogof yn dawel.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l27-s05",
-        "title": "Sïon wrth y drws",
+        "title": "Gwir, credu, neu gelwydd?",
         "segments": [
           {
-            "id": "cy-draig-01-l27-s037",
-            "text": "Mae Nia'n cyrraedd y llyfrgell ac yn gweld tri pherson wrth y drws.",
+            "id": "cy-draig-01-l27-s048",
+            "text": "Mae Nia'n gwneud pedwar papur bach ac yn eu rhoi mewn rhes ar y llawr.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s038",
-            "text": "Mae un person yn dweud bod y llyfrgell yn cau heddiw.",
+            "id": "cy-draig-01-l27-s049",
+            "text": "Ar y cyntaf mae hi'n ysgrifennu “MAE'N WIR” ac yn rhoi neges y cyngor arno.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l27-scene-sion",
-                "presentation": "inline_scene",
-                "src": "media/images/cy-l27-scene-sion.svg",
-                "alt": "Sïon neu wir?"
+                "ref": "cy-l27-gwir-celwydd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l27-gwir-celwydd.svg",
+                "alt": "A checked true statement supported by a matching letter contrasts with a crossed false statement spoken despite a visibly closed door.",
+                "covers_lexeme_ids": [
+                  "cy-gwir",
+                  "cy-celwydd"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l27-s039",
-            "text": "Mae person arall yn credu bod y cyngor wedi newid y penderfyniad.",
+            "id": "cy-draig-01-l27-s050",
+            "text": "Ar yr ail mae hi'n ysgrifennu “DW I'N CREDU” ac yn rhoi map a chof Iwan arno.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s040",
-            "text": "Mae'r trydydd yn meddwl bod yr arddangosfa wedi ei chanslo.",
+            "id": "cy-draig-01-l27-s051",
+            "text": "Ar y trydydd mae hi'n ysgrifennu “PWY DDYWEDODD?” ar gyfer y stori heb enw.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s041",
-            "text": "Mae Mali'n edrych ar Nia ac yn gofyn pa stori sy'n wir.",
+            "id": "cy-draig-01-l27-s052",
+            "text": "Ar y pedwerydd mae hi'n ysgrifennu “CELWYDD”, ond dydy hi ddim yn rhoi unrhyw un o'r tri llais arno.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s042",
-            "text": "Mae Nia'n dweud nad yw sïon yn benderfyniad.",
+            "id": "cy-draig-01-l27-s054",
+            "text": "Mae Nia'n ateb: “Celwydd yw dweud bod y drws ar agor pan rwyt ti'n gwybod bod e ar gau.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s043",
-            "text": "Mae hi'n gofyn pwy ddywedodd y geiriau cyntaf a phryd.",
+            "id": "cy-draig-01-l27-s055",
+            "text": "“Dydy cof bach, cred onest, neu stori heb enw ddim yr un peth â celwydd.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s044",
-            "text": "Does neb yn cofio enw'r person, ac mae hynny'n gwneud y stori'n wan.",
+            "id": "cy-draig-01-l27-s058",
+            "text": "Mae Mali'n cadw penderfyniad y cyngor gyda'r gwir, ond yn rhoi rheol y llyfr rhwng gwir a chredu.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s045",
-            "text": "Mae Sam yn dweud bod angen gwirio'r neges wreiddiol.",
+            "id": "cy-draig-01-l27-s059",
+            "text": "Mae'r rheol yn y llyfr, ond does dim penderfyniad eto fod angen brenin ar y dref.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l27-s046",
-            "text": "Mae Iwan yn credu bod copi yn y bocs wrth y map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s047",
-            "text": "Mae Dafi'n meddwl bod y bocs ar y bwrdd mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s048",
-            "text": "Maen nhw'n mynd i mewn er mwyn chwilio am dystiolaeth, nid am sïon.",
+            "id": "cy-draig-01-l27-s060",
+            "text": "Yna mae tri churiad araf yn dod o'r ochr arall i'r drws.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l27-s06",
-        "title": "Beth ddywedodd y cyngor?",
-        "segments": [
-          {
-            "id": "cy-draig-01-l27-s049",
-            "text": "Mae Sam yn agor y bocs ac yn dod o hyd i ddwy neges.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s050",
-            "text": "Mae'r neges gyntaf yn dweud bod y cyngor yn ystyried cau'r adeilad.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s051",
-            "text": "Mae'r ail neges yn dweud bod penderfyniad yn dod ar ôl yr arddangosfa.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s052",
-            "text": "Mae Mali'n dweud bod y ddwy neges yn wahanol iawn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s053",
-            "text": "Mae Iwan yn meddwl bod rhywun wedi darllen y neges gyntaf yn unig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s054",
-            "text": "Mae Nia'n nodi nad yw “ystyried” yn golygu bod rhywbeth wedi digwydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s055",
-            "text": "Mae Dafi'n dweud ei fod e wedi clywed bod y drws yn cau am byth.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s056",
-            "text": "Mae Sam yn gofyn pwy ddywedodd hynny wrtho.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s057",
-            "text": "Mae Dafi'n cofio bod Pero wedi clywed dau berson yn siarad y tu allan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s058",
-            "text": "Mae pawb yn chwerthin oherwydd dydy Pero ddim yn gallu adrodd y geiriau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s059",
-            "text": "Mae Nia'n dweud bod angen gofyn i'r cyngor yn uniongyrchol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s060",
-            "text": "Mae hi'n ysgrifennu'r cwestiwn: “A oes penderfyniad terfynol?”",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l27-s07",
-        "title": "Galwad glir",
+        "title": "Y cwestiwn y tu ôl i'r drws",
         "segments": [
           {
             "id": "cy-draig-01-l27-s061",
-            "text": "Mae Nia'n ffonio'r swyddfa ac mae'r grŵp yn gwrando'n dawel.",
+            "text": "Mae Pero'n codi; mae Dafi'n dal yr allwedd; mae Mali'n agor y map ar lawr yr ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s062",
-            "text": "Mae'r swyddog yn dweud bod y cyngor heb wneud penderfyniad terfynol eto.",
+            "text": "Mae golau aur yn mynd o'r marc ar y llyfr i'r un marc ar y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s063",
-            "text": "Mae hi'n dweud bod yr arddangosfa'n bwysig oherwydd bydd y cyngor yn gweld cefnogaeth y dref.",
+            "text": "Mae Dafi'n meddwl bod y drws yn barod, ac mae e'n rhoi'r allwedd yn y marc.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s064",
-            "text": "Mae Nia'n gofyn a yw'r llyfrgell yn cau heddiw.",
+            "text": "Cyn troi'r allwedd, mae Mali'n dweud wrth y drws fod y cyngor yn cau'r llyfrgell.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s065",
-            "text": "Mae'r swyddog yn ateb nad yw'r llyfrgell yn cau heddiw.",
+            "text": "Mae Iwan yn dweud bod brenin yn dod eto pan mae gwir angen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s066",
-            "text": "Mae hi'n dweud bod y drws yn aros ar agor tan ar ôl y cyfarfod.",
+            "text": "Mae Dafi'n dweud bod y llyfr a'r allwedd yn dangos y ffordd at Artur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s067",
-            "text": "Ar ôl yr alwad, mae Mali'n adrodd bod mwy o amser ganddyn nhw.",
+            "text": "Ond mae Mali'n dweud nad yw'r grŵp yn gwybod eto fod brenin yn well na gwaith y dref.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l27-s068",
-            "text": "Mae Sam yn dweud bod angen rhannu'r gwir gyda'r bobl wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s069",
-            "text": "Mae Iwan yn credu y dylai'r neges ddefnyddio'r union eiriau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s070",
-            "text": "Mae Dafi'n meddwl bod llun mawr o ddrws agored yn helpu hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s071",
-            "text": "Mae Nia'n cytuno bod geiriau clir a llun clir yn well na sïon.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s072",
-            "text": "Maen nhw'n dechrau gwneud arwydd newydd ar gyfer y ffenestr.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l27-s08",
-        "title": "Y gwir yn y ffenestr",
-        "segments": [
-          {
-            "id": "cy-draig-01-l27-s073",
-            "text": "Mae Sam yn ysgrifennu bod y llyfrgell ar agor heddiw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s074",
-            "text": "Mae Mali'n ychwanegu bod y penderfyniad terfynol yn dod ar ôl yr arddangosfa.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s075",
-            "text": "Mae Iwan yn dweud bod y gymuned yn gallu helpu drwy ddod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s076",
-            "text": "Mae Nia'n darllen pob brawddeg ac yn gwirio ei bod yn wir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s077",
-            "text": "Mae Dafi'n gofyn a allan nhw ddweud bod y llyfrgell wedi ei hachub.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s078",
-            "text": "Mae Nia'n ateb na allan nhw ddweud hynny eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s079",
-            "text": "Mae hi'n egluro bod gobaith yn wahanol i benderfyniad.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s080",
-            "text": "Mae Dafi'n meddwl am hyn ac yn newid ei lun o faner i gwestiwn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s081",
-            "text": "Mae Sam yn rhoi'r arwydd yn y ffenestr lle gall pawb ei weld.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s082",
-            "text": "Mae'r tri pherson wrth y drws yn darllen y geiriau newydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s083",
-            "text": "Mae un ohonyn nhw'n dweud ei fod wedi deall y sïon yn anghywir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s084",
-            "text": "Mae'r lleill yn addo dweud y gwir wrth eu ffrindiau.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l27-s09",
-        "title": "Stori sy'n newid",
-        "segments": [
-          {
-            "id": "cy-draig-01-l27-s085",
-            "text": "Yn y nos, mae'r grŵp yn edrych yn ôl ar y diwrnod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s086",
-            "text": "Mae Mali'n dweud bod un neges fer wedi troi'n dair sïon wahanol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s087",
-            "text": "Mae Sam yn meddwl bod pobl yn ychwanegu pethau pan nad ydyn nhw'n gwybod popeth.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s088",
-            "text": "Mae Iwan yn cofio bod yr un peth wedi digwydd yn yr harbwr flynyddoedd yn ôl.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s089",
-            "text": "Dywedodd un person fod storm yn dod, ond dywedodd un arall fod y storm wedi cyrraedd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s090",
-            "text": "Mae Nia'n dweud bod amser y geiriau yn newid ystyr y stori.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s091",
-            "text": "Mae Dafi'n adrodd bod Pero wedi clywed sŵn, ond dydy e ddim yn dweud bod Pero'n deall y sŵn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s092",
-            "text": "Mae pawb yn gweld bod adrodd yn gyfrifoldeb, nid dim ond ailadrodd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s093",
-            "text": "Mae Sam yn cadw'r ddwy neges gyda'r arwydd newydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s094",
-            "text": "Mae Mali'n dweud y bydd y tair dogfen yn rhan dda o'r arddangosfa.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l27-s095",
-            "text": "Byddan nhw'n dangos sut mae gwirionedd, cred, a sïon yn wahanol.",
+            "text": "Am funud, does dim ateb; yna mae llais ifanc a chlir yn siarad o'r ochr arall.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l27-scene-ffenestr",
+                "ref": "cy-l27-scene-llais-y-drws",
                 "presentation": "inline_scene",
-                "src": "media/images/cy-l27-scene-ffenestr.svg",
-                "alt": "Mae'r llyfrgell ar agor heddiw."
+                "src": "media/images/cy-l27-scene-llais-y-drws.svg",
+                "alt": "A thin gold line outlines young Artur behind the closed cave door as Mali, Dafi, Pero, Nia, Sam, and Iwan listen to his first question.",
+                "covers_lexeme_ids": [
+                  "cy-penderfyniad",
+                  "cy-gwir"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l27-s096",
-            "text": "Mae Nia'n cau'r bocs ac yn dweud bod y stori wir yn ddigon diddorol.",
+            "id": "cy-draig-01-l27-s069",
+            "text": "“Dywedodd y cyngor fod y llyfrgell yn cau,” meddai'r llais. “Mae hynny'n wir.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s070",
+            "text": "Mae Dafi'n gwenu oherwydd mae Artur yn clywed ac yn deall y geiriau.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s071",
+            "text": "Ond dydy'r drws ddim yn agor, a dydy'r llais ddim yn gofyn am ei goron na'i gleddyf.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l27-s072",
+            "text": "“Pwy wnaeth y penderfyniad?” mae Artur yn gofyn. “Pwy ddywedodd fod angen brenin ar y dref?”",
             "inference_aids": []
           }
         ]
@@ -612,7 +508,8 @@
       "part_of_speech": "verb",
       "current_sense": "say",
       "forms_seen": [
-        "dweud"
+        "dweud",
+        "dweud bod"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -624,19 +521,22 @@
       "part_of_speech": "verb",
       "current_sense": "said",
       "forms_seen": [
-        "dweud"
+        "dywedodd",
+        "dywedodd ... fod"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
     },
     {
       "lexeme_id": "cy-bod",
-      "display_form": "bod",
+      "display_form": "bod — fod; nad yw",
       "citation_form": "bod",
       "part_of_speech": "verb",
       "current_sense": "be; that ... is",
       "forms_seen": [
-        "bod"
+        "bod",
+        "fod",
+        "nad yw"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -648,7 +548,8 @@
       "part_of_speech": "verb",
       "current_sense": "think",
       "forms_seen": [
-        "meddwl"
+        "meddwl",
+        "meddwl bod"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -660,7 +561,8 @@
       "part_of_speech": "verb",
       "current_sense": "believe",
       "forms_seen": [
-        "credu"
+        "credu",
+        "credu bod"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -672,7 +574,9 @@
       "part_of_speech": "adjective/noun",
       "current_sense": "true; truth",
       "forms_seen": [
-        "gwir"
+        "gwir",
+        "yn wir",
+        "mae'n wir"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -684,7 +588,8 @@
       "part_of_speech": "noun",
       "current_sense": "lie",
       "forms_seen": [
-        "celwydd (g.)"
+        "celwydd",
+        "yn gelwydd"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -696,7 +601,8 @@
       "part_of_speech": "noun",
       "current_sense": "council",
       "forms_seen": [
-        "cyngor (g.)"
+        "cyngor",
+        "y cyngor"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -708,7 +614,8 @@
       "part_of_speech": "noun",
       "current_sense": "decision",
       "forms_seen": [
-        "penderfyniad (g.)"
+        "penderfyniad",
+        "y penderfyniad"
       ],
       "first_introduced_lesson": "cy-draig-01-l27",
       "new": true
@@ -727,77 +634,128 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "Patrwm y wers: Reported statements with bod. Darllenwch y stori eto a sylwch ar y patrwm ym mhob adran.",
-    "bridge_language": "Report what somebody said, thought, or believed using a form of dweud plus fod/bod."
+    "target_language": "Mae Nia'n dweud bod y drws ar agor; mae Iwan yn credu bod y stori'n wir. Ond am eiriau yn y gorffennol: dywedodd y cyngor fod y drws yn cau. I adrodd brawddeg negyddol: dywedodd Mali nad yw'r ateb yn glir.",
+    "bridge_language": "After present dweud, meddwl, and credu, this lesson uses bod. After past dywedodd, bod undergoes soft mutation to fod. A reported negative is modelled with nad yw; the lesson avoids adding indirect-question patterns."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l27-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch o ystyr a phatrwm y stori.",
+      "title": "Pensa A — Bod, fod, nad yw",
+      "directions": "Adroddwch y geiriau gyda'r patrwm o'r stori.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Adroddwch: “Mae’r llyfrgell ar agor,” meddai Nia.",
+          "prompt": "“Mae'r drws ar agor,” meddai Nia. Mae Nia'n dweud ___ y drws ar agor.",
           "type": "cloze",
           "accepted_answers": [
-            "Dywedodd Nia fod y llyfrgell ar agor."
+            "bod"
           ]
         },
         {
           "id": "pa2",
-          "prompt": "Adroddwch: “Dydy’r llyfrgell ddim yn cau heddiw,” meddai’r swyddog.",
+          "prompt": "“Bydd y llyfrgell yn cau,” meddai'r cyngor. Dywedodd y cyngor ___ y llyfrgell yn cau.",
           "type": "cloze",
           "accepted_answers": [
-            "Dywedodd y swyddog nad yw’r llyfrgell yn cau heddiw."
+            "fod"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "“Mae'r stori'n wir,” meddai Iwan. Mae Iwan yn credu ___ y stori'n wir.",
+          "type": "cloze",
+          "accepted_answers": [
+            "bod"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "“Dydy'r ateb ddim yn glir,” meddai Mali. Dywedodd Mali ___ yr ateb yn glir.",
+          "type": "cloze",
+          "accepted_answers": [
+            "nad yw"
           ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l27-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr a phatrwm y stori.",
+      "title": "Pensa B — Ystyr y geiriau",
+      "directions": "Cwblhewch o'r stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Stori heb dystiolaeth yw ___.",
+          "prompt": "Mae papur swyddogol yn dweud beth fydd yn digwydd; dyna ___ y cyngor.",
           "type": "cloze",
           "accepted_answers": [
-            "sïon"
+            "benderfyniad",
+            "penderfyniad"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Mae’r geiriau’n cyfateb i’r dystiolaeth; maen nhw’n ___.",
+          "prompt": "Mae Iwan yn dweud yr hyn sydd yn ei feddwl, ond dydy e ddim yn dweud ei fod yn gwybod. Mae e'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "wir",
-            "gwir"
+            "credu"
+          ]
+        },
+        {
+          "id": "pb3",
+          "prompt": "Mae person yn gwybod bod y drws ar gau, ond mae e'n dweud ei fod ar agor. Dyna ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "gelwydd",
+            "celwydd"
+          ]
+        },
+        {
+          "id": "pb4",
+          "prompt": "Mae'r grŵp yn poeni ___ mae'r llyfrgell mewn perygl.",
+          "type": "cloze",
+          "accepted_answers": [
+            "oherwydd"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l27-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Y tri llais",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Beth oedd y gwahaniaeth rhwng y ddwy neges?",
-          "type": "cloze",
+          "prompt": "Beth ddywedodd y cyngor am y llyfrgell?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Roedd y gyntaf yn dweud bod y cyngor yn ystyried cau; roedd yr ail yn dweud bod penderfyniad yn dod ar ôl yr arddangosfa."
+            "Dywedodd y cyngor fod drws y llyfrgell yn cau ar ôl y cyfarfod.",
+            "Dywedodd y cyngor fod y llyfrgell yn cau."
           ]
         },
         {
           "id": "pc2",
-          "prompt": "Sut mae’r grŵp yn atal y sïon?",
-          "type": "transfer",
+          "prompt": "Pam dydy cred Iwan ddim yn gelwydd?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Maen nhw’n ffonio’r cyngor ac yn rhoi’r gwir yn y ffenestr."
+            "Oherwydd mae e'n dweud yn glir ei fod yn credu'r stori, ond nad yw e'n gwybod popeth.",
+            "Mae Iwan yn credu'r stori ac yn dweud nad yw e'n gwybod popeth."
           ]
+        },
+        {
+          "id": "pc3",
+          "prompt": "Beth mae'r hen lyfr yn ei ddweud am wir angen?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Mae e'n dweud bod Artur yn deffro pan mae gwir angen, ar ôl i bobl weithio gyda'i gilydd.",
+            "Mae'r llyfr yn dweud bod rhaid i bobl weithio gyda'i gilydd cyn deffro Artur."
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Atebwch gwestiwn Artur: pwy wnaeth y penderfyniad fod angen brenin ar y dref? Dywedwch beth rydych chi'n ei gredu mewn dwy neu dair brawddeg.",
+          "type": "transfer",
+          "accepted_answers": [],
+          "rubric": "Give two or three understandable Welsh sentences that answer Artur's challenge. State who, if anyone, made the decision and give one reason. Include at least one coherent reported statement with bod, fod, or nad yw; the learner may decide that nobody made the decision."
         }
       ]
     }
@@ -809,7 +767,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -828,12 +786,16 @@
     "source": "cy-draig-01-l27"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
+      "cy-l27-scene-tri-llais",
       "cy-l27-adrodd",
-      "cy-l27-scene-sion",
-      "cy-l27-scene-ffenestr"
+      "cy-l27-meddwl-credu",
+      "cy-l27-cyngor-penderfyniad",
+      "cy-l27-oherwydd",
+      "cy-l27-gwir-celwydd",
+      "cy-l27-scene-llais-y-drws"
     ],
     "audio": []
   }

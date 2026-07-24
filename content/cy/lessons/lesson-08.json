@@ -3,34 +3,37 @@
   "id": "cy-draig-01-l08",
   "course_id": "cy-draig-01",
   "order": 8,
-  "title": "Mae gan Sam gacen",
+  "title": "Llun Dafi",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "Full rewrite to docs/welsh-full-rewrite-brief.md; Arthurian curriculum beat G08; rewritten Lessons 01–07 read for grading and continuity",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker, especially the possession mutation examples and the naturalness of the three-way exchange."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G08",
-      "label": "possession with gan",
-      "description": "Express possession with mae gan + possessor and use gen i for first-person possession.",
+      "label": "possession with gan; soft mutation in the possession pattern",
+      "description": "Express possession with mae/oes/does + gan, use gen i for first-person possession, and contrast soft mutation in positive and question forms with mutation blocked after ddim.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G01",
+      "G03",
       "G04",
       "G05",
+      "G06",
       "G07"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "say who has an object",
-      "say that someone has none",
-      "trade a drawing for cake"
+      "say who has an object and who has none",
+      "follow who gives and who receives an object",
+      "understand much and a little through pictured contrasts"
     ],
     "new_lexeme_ids": [
       "cy-gan",
@@ -43,236 +46,261 @@
       "cy-cael",
       "cy-llawer",
       "cy-ychydig"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l08-s01",
-        "title": "Cacen Sam",
+        "title": "Cacen a phapur Sam",
         "segments": [
           {
             "id": "cy-draig-01-l08-s001",
-            "text": "Mae Sam yn y caffi.",
+            "text": "Mae Mali, Dafi, Pero a Nia yn y caffi gyda Sam.",
             "inference_aids": [
-              {
-                "type": "image",
-                "ref": "cy-l08-scene",
-                "presentation": "inline_scene",
-                "src": "media/images/cy-l08-scene.svg",
-                "alt": "Llun am gacen"
-              },
               {
                 "type": "image",
                 "ref": "cy-l08-possession",
                 "presentation": "margin_diagram",
                 "src": "media/diagrams/cy-l08-possession.svg",
-                "alt": "Mae gan Sam gacen. Mae gan Dafi pensil."
+                "alt": "Owner-and-object pairs show that Sam has a cake and paper, while Dafi has a pencil but no money.",
+                "covers_lexeme_ids": [
+                  "cy-gan",
+                  "cy-gen",
+                  "cy-cacen",
+                  "cy-arian",
+                  "cy-pensil"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l08-s002",
-            "text": "Mae cacen ar y bwrdd.",
+            "text": "Mae gan Sam gacen a phapur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s003",
-            "text": "Mae gan Sam gacen.",
+            "text": "Mae'r gacen a'r papur gan Sam.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s004",
-            "text": "Mae'r gacen yn fawr.",
+            "text": "Mae'r gacen yn dda.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s005",
-            "text": "Mae'r gacen yn edrych yn dda.",
+            "text": "Mae Dafi'n edrych ar y gacen; mae e'n llwglyd ac eisiau'r gacen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s006",
-            "text": "Mae Dafi'n edrych ar y gacen.",
+            "text": "Oes arian gan Dafi? Nac oes: does gan Dafi ddim arian.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s007",
-            "text": "Mae e'n llwglyd eto.",
+            "text": "Dafi: “Does gen i ddim arian. Ond mae gen i bensil.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s008",
-            "text": "“Wyt ti eisiau cacen?” meddai Sam.",
+            "text": "Mae gan Dafi bensil bach, ond does gan Dafi ddim papur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s009",
-            "text": "“Ydw!” meddai Dafi.",
-            "inference_aids": []
+            "text": "Mae Sam yn rhoi papur i Ddafi, ac mae Dafi'n cael y papur.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l08-give-receive",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l08-give-receive.svg",
+                "alt": "An arrow follows a sheet of paper from Sam's hand to Dafi: Sam gives; Dafi receives.",
+                "covers_lexeme_ids": [
+                  "cy-rhoi",
+                  "cy-cael"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l08-s02",
-        "title": "Dim arian",
+        "title": "Y pensil ar y papur",
         "segments": [
           {
             "id": "cy-draig-01-l08-s010",
-            "text": "Mae cacen gan Sam.",
+            "text": "Nawr mae papur a phensil gan Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s011",
-            "text": "Mae arian gan Mali.",
-            "inference_aids": []
+            "text": "Mae llawer o bapur gyda Sam, ond ychydig o bapur gyda Dafi: un papur.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l08-much-little",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l08-much-little.svg",
+                "alt": "Two clear contrasts show a large pile labelled llawer and a tiny amount labelled ychydig.",
+                "covers_lexeme_ids": [
+                  "cy-llawer",
+                  "cy-ychydig"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l08-s012",
-            "text": "Mae ychydig o arian gan Nia.",
+            "text": "Mae llawer o gacen gyda Sam hefyd, ond does dim cacen gyda Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s013",
-            "text": "Oes arian gan Dafi?",
+            "text": "Mae Dafi'n edrych ar y papur bach yn yr hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s014",
-            "text": "Nac oes. Does dim arian gan Dafi.",
+            "text": "Mae e yn y papur bach: mae e'n fawr, a Dafi'n fach.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s015",
-            "text": "“Does gen i ddim arian,” meddai Dafi.",
+            "text": "Mae Dafi'n edrych ar e, ar y pensil, ac ar bapur Sam.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s016",
-            "text": "Mae Dafi'n drist.",
+            "text": "Mae'r pensil yn mynd yma ac ycw ar y papur; nawr mae llun newydd yma.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s017",
-            "text": "Mae Sam yn edrych ar Dafi.",
-            "inference_aids": []
+            "text": "Mae Dafi yn y llun, ac mae e yn y llun hefyd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l08-scene-drawing-clue",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l08-scene-drawing-clue.svg",
+                "alt": "At the café table, Dafi finishes a striking drawing of himself beside a sleeping dark-haired boy on a hill; above them is the same crown-shaped mark seen in the old paper.",
+                "covers_lexeme_ids": [
+                  "cy-llun"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l08-s018",
-            "text": "“Beth sydd gen ti?” meddai Sam.",
+            "text": "Mae llawer o goch yn y llun, ac ychydig o ddu.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l08-s03",
-        "title": "Pensil a llun",
+        "title": "Mae Mali'n cael y llun",
         "segments": [
           {
             "id": "cy-draig-01-l08-s019",
-            "text": "Mae pensil gan Dafi.",
+            "text": "Mae Mali'n edrych ar lun Dafi, ac mae hi'n edrych ar yr hen bapur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s020",
-            "text": "Mae papur gan Dafi hefyd.",
+            "text": "Ydy e yn y papur ac yn llun Dafi? Ydy.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s021",
-            "text": "Mae’r papur a’r pensil gan Dafi.",
+            "text": "Mae e yma ac ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s022",
-            "text": "Mae Dafi’n edrych ar y papur.",
+            "text": "Mae Mali eisiau'r llun; dydy hi ddim eisiau'r gacen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s023",
-            "text": "Mae llun o Sam ar y papur.",
+            "text": "Oes llun gan Dafi? Oes: mae gan Dafi lun mawr coch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s024",
-            "text": "Mae'r llun yn fawr ac yn dda.",
+            "text": "Mae Dafi'n rhoi'r llun i Fali, ac mae Mali'n cael y llun.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s025",
-            "text": "Mae llawer o goch yn y llun.",
+            "text": "Nawr mae llun Dafi gan Mali, a does gan Dafi ddim llun.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s026",
-            "text": "“Mae gen i lun,” meddai Dafi.",
+            "text": "Mae'r llun gyda Mali, ond mae'r pensil gyda Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s027",
-            "text": "Mae Sam yn hoffi'r llun.",
+            "text": "Mae Mali'n hapus gyda'r llun; mae Dafi'n edrych ar gacen Sam.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l08-s04",
-        "title": "Y fasnach",
+        "title": "Ychydig o gacen",
         "segments": [
           {
             "id": "cy-draig-01-l08-s028",
-            "text": "Mae Dafi'n rhoi'r llun i Sam.",
+            "text": "Mae ychydig o arian gan Mali, ac mae hi'n rhoi'r arian i Sam.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s029",
-            "text": "Mae Sam yn cael y llun.",
+            "text": "Mae Sam yn cael yr arian; nawr mae llawer o arian gan Sam.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s030",
-            "text": "Mae Sam yn rhoi cacen i Dafi.",
+            "text": "Mae Sam yn rhoi ychydig o gacen i Ddafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s031",
-            "text": "Mae Dafi'n cael y gacen.",
+            "text": "Mae Dafi'n cael y gacen ac yn edrych yn hapus.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s032",
-            "text": "Nawr mae llun gan Sam.",
+            "text": "Dafi: “Nawr mae gen i gacen. Mae gen i bensil hefyd.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s033",
-            "text": "Nawr mae cacen gan Dafi.",
+            "text": "Mae Dafi'n bwyta ychydig o gacen, ond mae llawer o gacen gyda Sam.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s034",
-            "text": "Mae Dafi'n bwyta ychydig o gacen.",
+            "text": "Mae Pero eisiau cacen, ond mae Sam yn rhoi dŵr i Pero.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s035",
-            "text": "Mae Pero eisiau cacen hefyd.",
+            "text": "Mae Pero'n cael y dŵr; dydy Pero ddim yn cael cacen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l08-s036",
-            "text": "Ond mae Sam yn rhoi dŵr i Pero. Mae Sam yn edrych ar ei lun newydd. Mae llawer o liw coch yn y llun. Mae Dafi'n edrych ar ei gacen. Mae ychydig o gacen gan Dafi nawr. Does dim cacen gan Pero, ond mae dŵr gan Pero.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l08-s05",
-        "title": "Llun am gacen",
-        "segments": [
-          {
-            "id": "cy-draig-01-l08-s037",
-            "text": "Mae gan Sam gacen fawr yn y caffi. Mae Dafi'n edrych ar y gacen ac mae e eisiau cacen. Oes arian gan Dafi? Nac oes. Does dim arian gan Dafi. Mae ychydig o arian gan Nia ac mae arian gan Mali, ond mae gan Dafi bapur a phensil. Mae Dafi'n gwneud llun mawr coch o Sam a'r caffi. Nawr mae llun gan Dafi. Mae Sam yn edrych ar y llun ac mae e'n hoffi'r llun. Mae Dafi'n rhoi'r llun i Sam, ac mae Sam yn rhoi cacen i Dafi. Nawr mae llun gan Sam a chacen gan Dafi. Mae Dafi'n bwyta ychydig o gacen; dydy e ddim yn bwyta gormod. Mae Pero eisiau cacen hefyd, ond mae Sam yn rhoi dŵr i Pero. Mae Pero'n yfed, mae Dafi'n bwyta, ac mae Sam yn rhoi'r llun coch wrth y bwrdd. Does dim arian yn y fasnach, ond mae gan y ddau rywbeth maen nhw'n ei hoffi.",
+            "text": "Mae'r llun gyda Mali, mae'r gacen gyda Dafi, ac mae'r hen bapur gyda'r llyfr.",
             "inference_aids": []
           }
         ]
@@ -286,21 +314,17 @@
       "citation_form": "gan",
       "part_of_speech": "preposition",
       "current_sense": "with; in the possession of",
-      "forms_seen": [
-        "gan"
-      ],
+      "forms_seen": ["gan"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
     {
       "lexeme_id": "cy-gen",
-      "display_form": "gen",
+      "display_form": "gen i",
       "citation_form": "gan — gen i",
       "part_of_speech": "preposition",
-      "current_sense": "I have",
-      "forms_seen": [
-        "gen"
-      ],
+      "current_sense": "with me; I have",
+      "forms_seen": ["gen"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -310,9 +334,7 @@
       "citation_form": "cacen (b.)",
       "part_of_speech": "noun",
       "current_sense": "cake",
-      "forms_seen": [
-        "cacen"
-      ],
+      "forms_seen": ["cacen", "gacen"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -322,9 +344,7 @@
       "citation_form": "arian",
       "part_of_speech": "noun",
       "current_sense": "money",
-      "forms_seen": [
-        "arian"
-      ],
+      "forms_seen": ["arian"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -334,9 +354,7 @@
       "citation_form": "llun (g.)",
       "part_of_speech": "noun",
       "current_sense": "picture; drawing",
-      "forms_seen": [
-        "llun"
-      ],
+      "forms_seen": ["llun"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -346,9 +364,7 @@
       "citation_form": "pensil (g.)",
       "part_of_speech": "noun",
       "current_sense": "pencil",
-      "forms_seen": [
-        "pensil"
-      ],
+      "forms_seen": ["pensil", "bensil"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -358,9 +374,7 @@
       "citation_form": "rhoi",
       "part_of_speech": "verb",
       "current_sense": "give",
-      "forms_seen": [
-        "rhoi"
-      ],
+      "forms_seen": ["rhoi"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -370,9 +384,7 @@
       "citation_form": "cael",
       "part_of_speech": "verb",
       "current_sense": "get; receive",
-      "forms_seen": [
-        "cael"
-      ],
+      "forms_seen": ["cael"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -382,9 +394,7 @@
       "citation_form": "llawer",
       "part_of_speech": "quantifier",
       "current_sense": "much; many",
-      "forms_seen": [
-        "llawer"
-      ],
+      "forms_seen": ["llawer"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     },
@@ -394,16 +404,14 @@
       "citation_form": "ychydig",
       "part_of_speech": "quantifier",
       "current_sense": "a little; a few",
-      "forms_seen": [
-        "ychydig"
-      ],
+      "forms_seen": ["ychydig"],
       "first_introduced_lesson": "cy-draig-01-l08",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Mae gan Sam gacen. Mae gan Dafi pensil. Mae gen i lun. Does gen i ddim arian.",
-    "bridge_language": "Welsh expresses possession with gan: mae gan Sam… For “I have”, use mae gen i… The mutation after gan should receive fluent review."
+    "target_language": "Mae gan Sam gacen. Mae gan Sam bapur. Mae gan Dafi bensil. Oes gan Dafi bensil? Ond: does gan Dafi ddim pensil. Mae gen i gacen.",
+    "bridge_language": "Welsh expresses possession with gan. In this pattern, an indefinite thing possessed soft-mutates in a positive statement or question (cacen → gacen, papur → bapur, pensil → bensil); ddim blocks that mutation in a negative. Use gen i for “I have”."
   },
   "pensa": {
     "a": {
@@ -413,74 +421,58 @@
       "items": [
         {
           "id": "pa1",
-          "prompt": "Mae ___ Sam gacen.",
+          "prompt": "Mae gan Sam ___ . (cacen)",
           "type": "cloze",
-          "accepted_answers": [
-            "gan"
-          ]
+          "accepted_answers": ["gacen"]
         },
         {
           "id": "pa2",
-          "prompt": "Mae ___ i lun.",
+          "prompt": "Mae gan Dafi ___ . (pensil)",
           "type": "cloze",
-          "accepted_answers": [
-            "gen"
-          ]
+          "accepted_answers": ["bensil"]
         },
         {
           "id": "pa3",
-          "prompt": "Does gen i ___ arian.",
+          "prompt": "Does gan Dafi ddim ___ . (papur)",
           "type": "cloze",
-          "accepted_answers": [
-            "ddim"
-          ]
+          "accepted_answers": ["papur"]
         },
         {
           "id": "pa4",
-          "prompt": "Mae gan Dafi ___. (pensil)",
+          "prompt": "Mae ___ i gacen.",
           "type": "cloze",
-          "accepted_answers": [
-            "pensil"
-          ]
+          "accepted_answers": ["gen"]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l08-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Ystyr",
+      "directions": "Dewiswch air o'r stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "🍰 = ___",
+          "prompt": "Mae Sam yn ___ papur i Ddafi.",
           "type": "cloze",
-          "accepted_answers": [
-            "cacen"
-          ]
+          "accepted_answers": ["rhoi"]
         },
         {
           "id": "pb2",
-          "prompt": "✏️ = ___",
+          "prompt": "Mae Dafi'n ___ y papur.",
           "type": "cloze",
-          "accepted_answers": [
-            "pensil"
-          ]
+          "accepted_answers": ["cael"]
         },
         {
           "id": "pb3",
-          "prompt": "Mae Dafi'n gwneud ___.",
+          "prompt": "Un papur: ___ o bapur.",
           "type": "cloze",
-          "accepted_answers": [
-            "llun"
-          ]
+          "accepted_answers": ["ychydig"]
         },
         {
           "id": "pb4",
-          "prompt": "Mae ___ o liw yn y llun.",
+          "prompt": "Cacen fawr: ___ o gacen.",
           "type": "cloze",
-          "accepted_answers": [
-            "llawer"
-          ]
+          "accepted_answers": ["llawer"]
         }
       ]
     },
@@ -493,32 +485,26 @@
           "id": "pc1",
           "prompt": "Beth sydd gan Sam ar y dechrau?",
           "type": "cloze",
-          "accepted_answers": [
-            "Cacen."
-          ]
+          "accepted_answers": ["Cacen a phapur.", "Mae gan Sam gacen a phapur."]
         },
         {
           "id": "pc2",
-          "prompt": "Oes arian gan Dafi?",
+          "prompt": "Beth mae Dafi'n rhoi i Fali?",
           "type": "cloze",
-          "accepted_answers": [
-            "Nac oes."
-          ]
+          "accepted_answers": ["Y llun.", "Mae Dafi'n rhoi'r llun i Fali."]
         },
         {
           "id": "pc3",
-          "prompt": "Beth mae Dafi'n rhoi i Sam?",
+          "prompt": "Beth mae Dafi'n cael gan Sam?",
           "type": "cloze",
-          "accepted_answers": [
-            "Llun."
-          ]
+          "accepted_answers": ["Ychydig o gacen.", "Mae Dafi'n cael ychydig o gacen."]
         },
         {
           "id": "pc4",
-          "prompt": "Beth sydd gyda chi nawr?",
-          "type": "transfer",
+          "prompt": "Dywedwch beth sydd gyda Dafi, Mali, a Sam ar y diwedd.",
+          "type": "production",
           "accepted_answers": [],
-          "rubric": "Any comprehensible possession answer is acceptable."
+          "rubric": "A correct bounded retelling names at least two final possessions: Dafi has cake and a pencil; Mali has the drawing; Sam has money and much cake. Minor article omissions do not block acceptance if possession is clear."
         }
       ]
     }
@@ -530,30 +516,33 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-gan",
+      "cy-gen",
+      "cy-cacen",
+      "cy-arian",
+      "cy-llun",
+      "cy-pensil",
+      "cy-rhoi",
+      "cy-cael",
+      "cy-llawer",
+      "cy-ychydig"
+    ],
     "format": "tsv",
-    "fields": [
-      "guid",
-      "front",
-      "back",
-      "tags",
-      "source"
-    ],
+    "fields": ["guid", "front", "back", "tags", "source"],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
-    "tags": [
-      "semeion",
-      "welsh",
-      "cy-draig-01",
-      "lesson-08"
-    ],
+    "tags": ["illustrated-input", "welsh", "cy-draig-01", "lesson-08"],
     "source": "cy-draig-01-l08"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l08-scene",
-      "cy-l08-possession"
+      "cy-l08-scene-drawing-clue",
+      "cy-l08-possession",
+      "cy-l08-much-little",
+      "cy-l08-give-receive"
     ],
     "audio": []
   }

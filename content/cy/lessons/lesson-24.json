@@ -3,31 +3,44 @@
   "id": "cy-draig-01-l24",
   "course_id": "cy-draig-01",
   "order": 24,
-  "title": "Gwell, mwy, gorau",
+  "title": "Y llwybr gorau",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G24 curriculum row, cumulative rewritten Lessons 01–23 available during drafting, and the L24 findings in docs/reviews/welsh-22-32.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked every comparison, especially mwy/llai o, gwell/gwaeth na, the idiom used to compare route length and space, mutations after na, and the exercise answers."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G24",
-      "label": "Comparison and superlative",
-      "description": "Compare choices with mwy, llai, gwell and gwaeth, and identify the superlative with gorau.",
+      "label": "Cymharu gyda mwy, llai, gwell, gwaeth, gorau a na",
+      "description": "Compare three routes with more and less, judge one choice as better or worse than another, and identify the best choice from evidence.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
-      "Cumulative G01–G23"
+      "G07",
+      "G09",
+      "G10",
+      "G12",
+      "G14",
+      "G16",
+      "G18",
+      "G19",
+      "G20",
+      "G21",
+      "G22",
+      "G23"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "follow the exhibition story in lesson 24",
-      "Compare choices with mwy, llai, gwell and gwaeth, and identify the superlative with gorau."
+      "compare the size, length, light, and difficulty of three routes",
+      "support a choice with visible evidence from a map and crown marks",
+      "disagree about which route is better without losing the shared goal",
+      "choose the smallest marked route into Artur's cave"
     ],
     "new_lexeme_ids": [
       "cy-mwy",
@@ -40,253 +53,420 @@
       "cy-byr",
       "cy-hawdd",
       "cy-anodd"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l24-s01",
-        "title": "Tair ystafell",
+        "title": "Tair ffordd dan y garreg",
         "segments": [
           {
             "id": "cy-draig-01-l24-s001",
-            "text": "Mae tair ystafell yn y llyfrgell.",
+            "text": "Drannoeth, mae'r grŵp yn ôl wrth y panel ysgafn â marc y goron.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s002",
-            "text": "Mae'r ystafell flaen yn fawr.",
+            "text": "Mae Dafi'n codi'r panel eto, ac mae Mali'n dal y map wrth y llinell goch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s003",
-            "text": "Mae'r ystafell gefn yn fwy.",
-            "inference_aids": []
+            "text": "Tu ôl iddo mae'r tair ffordd dywyll a welson nhw ddoe yn dechrau dan y bryn.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-scene-tair-ffordd",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l24-scene-tair-ffordd.svg",
+                "alt": "Mali, Pero, Dafi, Nia, Sam, and Iwan stand at three slate-blue cave routes: a tall broad left route, a short central route with broken steps, and a small right route bearing repeated gold crown marks.",
+                "covers_lexeme_ids": [
+                  "cy-tal",
+                  "cy-byr",
+                  "cy-mwy",
+                  "cy-llai"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l24-s004",
-            "text": "Mae'r ystafell ganol yn llai na'r lleill.",
-            "inference_aids": []
+            "text": "Mae drws y ffordd ar y chwith yn dal, ac mae llawer o le y tu mewn.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-tal-byr",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l24-tal-byr.svg",
+                "alt": "A tall doorway is labelled tal while a visibly short route is labelled byr.",
+                "covers_lexeme_ids": [
+                  "cy-tal",
+                  "cy-byr"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l24-s005",
-            "text": "Mae'r ystafell gefn yn fwy na'r ystafell flaen.",
-            "inference_aids": [{"type":"image","ref":"cy-l24-cymharu","presentation":"margin_diagram","src":"media/diagrams/cy-l24-cymharu.svg","alt":"Mawr, mwy, mwyaf."}]
-          },
-          {
-            "id": "cy-draig-01-l24-s006",
-            "text": "Ond mae hi'n dywyll.",
+            "text": "Mae'r ffordd yn y canol yn fyr; mae ei drws hi'n agos iawn at y grisiau.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l24-s007",
-            "text": "Mae mwy o olau yn yr ystafell flaen.",
+            "id": "cy-draig-01-l24-s006",
+            "text": "Mae'r drydedd ffordd yn fach, ac mae marc aur bach ar y wal wrth ei drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s008",
-            "text": "Mae dewis ystafell yn anodd.",
-            "inference_aids": []
+            "text": "Mae Dafi eisiau'r ffordd sydd â mwy o le; mae Pero'n edrych ar y ffordd fyr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-mwy-llai-na",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l24-mwy-llai-na.svg",
+                "alt": "Two route openings are compared with counters: the broad route has more space than the marked route, and the marked route has less space than the broad route.",
+                "covers_lexeme_ids": [
+                  "cy-mwy",
+                  "cy-llai",
+                  "cy-na"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l24-s009",
-            "text": "Mae Nia'n gofyn am farn pawb.",
+            "text": "Ond mae Mali'n cadw pawb wrth y panel: byddan nhw'n edrych ar y prawf cyn dewis.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l24-s02",
-        "title": "Y lluniau",
+        "title": "Y ffordd fawr",
         "segments": [
           {
-            "id": "cy-draig-01-l24-s010",
-            "text": "Mae un llun yn dal ac yn gul.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l24-s011",
-            "text": "Mae llun arall yn fyr ac yn llydan.",
+            "text": "Mae mwy o le yn y ffordd hon na'r ddwy arall, felly gall y grŵp gerdded gyda'i gilydd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s012",
-            "text": "Mae'r llun tal yn fwy na'r llun byr.",
+            "text": "Mae'r drws yn dal, mae'r llawr yn sych, ac mae Dafi'n dweud mai hon yw'r ffordd orau.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s013",
-            "text": "Mae'r llun byr yn haws ei hongian.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l24-s014",
-            "text": "Mae'r llun tal yn anodd ei gario.",
+            "text": "Ond mae Nia'n rhoi'r lamp wrth y drws: mae llai o olau yno na wrth y panel.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s015",
-            "text": "Mae'r map yn ysgafnach na'r ddau.",
+            "text": "Mae angen mwy o bobl i symud y garreg hon, ond does dim mwy o bobl dan y llyfrgell.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s016",
-            "text": "Mae Mali'n hoffi'r llun mwyaf.",
+            "text": "Mae Iwan yn cymharu'r map â'r wal: does dim marc coron ar y ffordd fawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s017",
-            "text": "Mae Sam yn hoffi'r un llai.",
-            "inference_aids": []
+            "text": "Mae ffordd heb farc yn waeth na ffordd â marc, meddai Mali, oherwydd gall fod yn ffordd anghywir.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-gwell-gwaeth",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l24-gwell-gwaeth.svg",
+                "alt": "A marked lit route receives a raised thumb and the label gwell; an unmarked blocked dark route receives a lowered thumb and the label gwaeth.",
+                "covers_lexeme_ids": [
+                  "cy-gwell",
+                  "cy-gwaeth",
+                  "cy-na"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l24-s018",
-            "text": "Mae Dafi'n hoffi'r map orau.",
+            "text": "Nawr mae Dafi'n cytuno bod mwy o le yn dda, ond bod carreg fawr a dim marc yn waeth.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l24-s03",
-        "title": "Y lampau",
+        "title": "Y ffordd fyr",
         "segments": [
           {
-            "id": "cy-draig-01-l24-s019",
-            "text": "Mae dwy lamp ar y bwrdd.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l24-s020",
-            "text": "Mae'r lamp hen yn hardd.",
+            "text": "Mae Sam yn dewis edrych ar y ffordd yn y canol, oherwydd mae hi'n fyr ac yn edrych yn hawdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s021",
-            "text": "Ond mae hi'n boeth ac yn beryglus.",
+            "text": "Mae llai o ffordd rhwng y grisiau a'r drws bach nag yn y ddwy ffordd arall.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s022",
-            "text": "Mae'r lamp newydd yn llai hardd.",
+            "text": "Mae Sam yn dweud bod ffordd fyr yn well na ffordd hir, ond dydy'r map ddim yn dweud hynny.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s023",
-            "text": "Ond mae hi'n fwy diogel.",
-            "inference_aids": []
+            "text": "Mae Pero'n rhoi pawen ar y cam cyntaf; mae'r garreg wlyb yn symud o dan ei droed.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-hawdd-anodd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l24-hawdd-anodd.svg",
+                "alt": "A straight dry path with steady footprints is labelled hawdd, while a short wet path with loose stones and a slipping paw is labelled anodd.",
+                "covers_lexeme_ids": [
+                  "cy-hawdd",
+                  "cy-anodd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l24-s024",
-            "text": "Mae'r hen lamp yn waeth i Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l24-s025",
-            "text": "Mae'r lamp newydd yn well na'r hen un.",
+            "text": "Mae'r ffordd fyr yn wlyb, ac mae cerrig bach yn symud bob tro mae Pero'n ceisio cerdded.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s026",
-            "text": "Y lamp newydd yw'r dewis gorau.",
+            "text": "Mae'r ffordd fyr yn anodd, er bod llai o gamau ynddi na'r ffordd fawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s027",
-            "text": "Mae Dafi'n cytuno.",
+            "text": "Mae Sam yn newid ei farn: dydy llwybr gyda llai o gamau ddim bob amser yn hawdd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s028",
+            "text": "Mae llwybr anodd sy'n fyr yn waeth na llwybr hawdd sy'n mynd yn araf at ddrws.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s029",
+            "text": "Maen nhw'n rhoi papur glas wrth y llinell ganol: ffordd fyr, llai o gamau, ond cerdded anodd.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l24-s04",
-        "title": "Y dewis gorau",
+        "title": "Ffordd y marciau",
         "segments": [
           {
-            "id": "cy-draig-01-l24-s028",
-            "text": "Mae'r ystafell flaen yn well na'r ystafell gefn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l24-s029",
-            "text": "Mae hi'n fwy golau ac yn haws i ymwelwyr.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l24-s030",
-            "text": "Mae'r lluniau llai ar y wal fer.",
+            "text": "Dim ond y ffordd fach sydd ar ôl, ac mae ei drws hi'n llai na'r drws tal.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s031",
-            "text": "Mae'r lluniau mwyaf ar y wal hir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l24-s032",
-            "text": "Mae'r map yn y lle gorau.",
+            "text": "Mae llai o le ynddi na'r ffordd fawr, felly bydd y ffrindiau'n mynd un ar ôl un.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s033",
-            "text": "Mae'r lamp ddiogel wrth y drws.",
+            "text": "Y tu mewn mae ail farc, ac wedyn trydydd marc, yr un fath â'r goron yn llyfr Artur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s034",
-            "text": "Mae'r cynllun newydd yn well.",
+            "text": "Mae Mali'n agor y map: mae mwy o farciau ar y llinell fach na'r ddwy linell arall.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s035",
-            "text": "Mae pawb yn hapusach.",
+            "text": "Mae'r llawr yn sych, mae'r golau'n glir, a does dim carreg fawr o flaen y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l24-s036",
-            "text": "Gall yr arddangosfa ddechrau.",
+            "text": "Mae'r ffordd fach yn hawdd; mae'r ffordd fyr wlyb yn anodd, er bod llai o le i Dafi agor ei adenydd.",
             "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s037",
+            "text": "Mae hi hefyd yn well na'r ffordd fawr, oherwydd mae'r map a'r wal yn rhoi'r un prawf.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s039",
+            "text": "Mae Nia'n rhoi papur aur wrth y drydedd linell: llai o le, mwy o farciau, ffordd well.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-tabl-prawf",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l24-tabl-prawf.svg",
+                "alt": "A Welsh-only evidence table compares three route symbols for space, light, stones, and crown marks; the small marked route has the strongest evidence.",
+                "covers_lexeme_ids": [
+                  "cy-mwy",
+                  "cy-llai",
+                  "cy-gwell",
+                  "cy-gwaeth",
+                  "cy-hawdd",
+                  "cy-anodd"
+                ]
+              }
+            ]
           }
         ]
       },
       {
-        "id":"cy-draig-01-l24-s05",
-        "title":"Profi'r dewisiadau",
-        "segments":[
-          {"id":"cy-draig-01-l24-s037","text":"Cyn gwneud y dewis olaf, mae Mali eisiau profi pob ystafell, oherwydd gall lle edrych yn dda cyn i'r lluniau a'r bobl gyrraedd.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s038","text":"Maen nhw'n cario'r llun byr i'r ystafell gefn, lle mae'r wal yn fwy ond lle mae llai o olau o'r ffenestr.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s039","text":"Mae Sam yn dal y llun wrth y wal ac mae Mali'n sefyll wrth y drws, gan geisio gweld y lliwiau o bell.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s040","text":"Mae'r llun yn haws ei gario na'r llun tal, ond mae'n anoddach ei weld yn yr ystafell dywyll, hyd yn oed gyda'r lamp.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s041","text":"Mae Dafi'n cynnig sefyll wrth y llun i wneud mwy o olau, ond mae Nia'n dweud bod lamp yn fwy diogel na thân draig.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s042","text":"Yn yr ystafell ganol mae mwy o olau, ond mae'r wal yn fyrrach ac mae'r drws yn gadael llai o le i ymwelwyr.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s043","text":"Mae Pero'n cerdded rhwng y cadeiriau yn hawdd, tra bo Sam yn taro'r bwrdd bob tro mae e'n troi gyda'r llun.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s044","text":"Dydy ystafell fach ddim bob amser yn waeth, meddai Tad-cu, ond mae'r ystafell hon yn rhy gul ar gyfer cymaint o bobl.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s045","text":"Maen nhw'n mynd yn ôl i'r ystafell flaen, sydd yn fwy golau na'r lleill ac yn agosach at brif ddrws y llyfrgell.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s046","text":"Mae'r wal hir yn ddigon mawr i'r llun tal a'r map, ac mae'r wal fer yn well ar gyfer y lluniau bach.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s047","text":"Mae Nia'n gosod cadair wrth bob wal er mwyn gweld faint o le fydd ar ôl pan fydd yr ymwelwyr yn eistedd.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s048","text":"Yn yr ystafell gefn gall chwech eistedd, yn yr ystafell ganol gall pedwar, ond yn yr ystafell flaen gall mwy na deg eistedd.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s049","text":"Mae deg yn well na chwech ar gyfer y cyfarfod, meddai Sam, ond mae angen lle i bobl sefyll a darllen hefyd.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s050","text":"Mae Mali'n tynnu llinell ar y llawr gyda'i phensil, ac mae pawb yn symud y cadeiriau y tu ôl i'r llinell.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s051","text":"Nawr mae'r llwybr o'r drws i'r map yn ehangach, mae'r cadeiriau'n fwy trefnus, ac mae'r lluniau'n haws eu gweld.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s052","text":"Mae Dafi'n cymharu'r ddwy lamp eto: mae'r hen un yn harddach, ond mae'r un newydd yn oerach ac yn fwy diogel.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s053","text":"Gall gwres yr hen lamp wneud mwg wrth y papur, meddai Nia, felly dydy hardd ddim yn golygu gorau.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s054","text":"Mae'r lamp newydd yn rhoi mwy o olau hefyd, ac mae ei golau'n cyrraedd y map heb wneud y gornel yn boeth.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s055","text":"Mae Dafi'n derbyn nad ei hoff lamp yw'r dewis gorau, ac mae e'n ei rhoi wrth y drws mor ofalus ag y gall.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s056","text":"Yna mae Mali'n cymharu'r lluniau: y llun tal yw'r mwyaf, y llun môr yw'r mwyaf lliwgar, a'r map yw'r hynaf.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s057","text":"Dydy'r peth mwyaf ddim bob amser yn bwysicaf, meddai Tad-cu, gan roi'r map bach yng nghanol y wal hir.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s058","text":"Heb y map, dim ond lluniau ar wal sydd yma; gyda'r map, mae pob llun yn rhan o'r un stori.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s059","text":"Mae Nia'n gofyn i bob person ddewis y trefniant gorau, ond rhaid iddyn nhw roi rheswm yn lle dweud dim ond dw i'n hoffi hwn.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s060","text":"Mae Sam yn dewis yr ystafell flaen oherwydd mae mwy o olau ynddi, mae hi'n haws ei chyrraedd, ac mae hi'n nes at y drws.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s061","text":"Mae Mali'n dewis yr un ystafell oherwydd bod y wal hir yn well i'r lluniau, a bod digon o le o'u blaen nhw.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s062","text":"Mae Tad-cu'n cytuno, ond mae e'n awgrymu rhoi un llun yn yr ystafell ganol er mwyn arwain pobl at y brif stori.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s063","text":"Mae Dafi'n dewis y lamp ddiogel, er ei bod yn llai hardd, ac mae Nia'n dweud mai dyna ei benderfyniad gorau heddiw.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s064","text":"Pan mae pob dewis yn ei le, mae'r ystafell flaen yn teimlo'n fwy cynnes, yn fwy clir, ac yn barod i groesawu'r dref.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s065","text":"Mae Mali'n cerdded drwy'r tair ystafell unwaith eto ac yn gweld bod pob un yn ddefnyddiol, er mai dim ond un yw'r gorau i'r arddangosfa.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s066","text":"Bydd yr ystafell gefn yn cadw'r llyfrau, bydd yr ystafell ganol yn arwain yr ymwelwyr, a bydd yr ystafell flaen yn adrodd prif stori'r map.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s067","text":"Mae'r dewis gorau yn defnyddio cryfder pob lle, meddai Nia, ac mae Dafi'n sylweddoli bod hynny'n wir am ystafelloedd yn ogystal â phobl.","inference_aids":[]},
-          {"id":"cy-draig-01-l24-s068","text":"Ar ôl dewis, mae Mali'n rhoi'r lluniau a'r papur ar y bwrdd, tra bo'r lleill yn symud y lamp ddiogel i'r gornel orau.","inference_aids":[]}
+        "id": "cy-draig-01-l24-s05",
+        "title": "Dadl wrth y map",
+        "segments": [
+          {
+            "id": "cy-draig-01-l24-s040",
+            "text": "Mae'r tri phapur ar y map, ond mae gan bob un yn y grŵp farn wahanol am y ffordd orau.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s041",
+            "text": "Mae Dafi'n dal i feddwl bod y ffordd fawr yn well, oherwydd mae ganddi fwy o le iddo fe.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s042",
+            "text": "Mae Sam yn hoffi'r ffordd fyr, oherwydd mae ganddi lai o ffordd cyn y drws.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s043",
+            "text": "Ond mae Nia'n gofyn pa brawf sy'n well: drws tal, ffordd fyr, neu farciau Artur.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s044",
+            "text": "Mae Iwan yn cofio'r ogof pan oedd e'n ifanc: y marc aur oedd wrth y golau coch.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s045",
+            "text": "Mae Mali'n dweud bod cof Iwan, y map a'r wal i gyd yn dangos y ffordd fach.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s046",
+            "text": "Mae tri phrawf sy'n cytuno yn well nag un syniad am le neu hyd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s047",
+            "text": "Mae'r ffordd fawr yn waeth am fod y cerrig yn ei chau; mae'r ffordd fyr yn waeth am fod y llawr yn symud.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s048",
+            "text": "Mae ffordd y marciau'n llai, ond mae ei phrawf yn well na phrawf y ffyrdd eraill.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s049",
+            "text": "Mae Pero'n dewis gyda'i bawen, mae Dafi'n dewis gyda'r map, ac mae'r ddau'n dewis y marciau.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s050",
+            "text": "Nawr mae pawb yn cytuno: nid y ffordd fawr na'r ffordd fyr, ond ffordd y goron yw'r gorau.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-y-gorau",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l24-y-gorau.svg",
+                "alt": "Three route cards are ranked; the small crown-marked route rises above the other two beside the Welsh label y gorau.",
+                "covers_lexeme_ids": [
+                  "cy-gorau"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-draig-01-l24-s06",
+        "title": "I mewn, un ar ôl un",
+        "segments": [
+          {
+            "id": "cy-draig-01-l24-s051",
+            "text": "Mae Mali'n mynd gyntaf i ffordd y goron, gyda'r lamp yn isel a'r map o'i blaen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s052",
+            "text": "Mae Pero'n dod ar ei hôl hi; wedyn mae Dafi, Nia, Sam ac Iwan yn dod un ar ôl un.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s053",
+            "text": "Mae'r llwybr yn llai na'r lle wrth y panel, ond mae'n dal yn ddigon mawr i bawb.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s054",
+            "text": "Mae pob marc aur yn arwain at un arall, felly mae dewis y ffordd yn aros yn hawdd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s055",
+            "text": "Ar ôl ychydig, mae'r ffordd yn agor i ystafell fach gyda drws du ar yr ochr arall.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s056",
+            "text": "Mae marc y goron ar y drws, ac mae llinell denau yn hongian o'r wal wrth y marc.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s057",
+            "text": "Mae hen bapur sych ar silff wrth lamp fach, ac mae tri marc gwyn ar y llawr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l24-scene-y-drws-du",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l24-scene-y-drws-du.svg",
+                "alt": "Inside the narrow crown-marked cave route, the group pauses before a black door; a thin cord hangs by the wall, dry old paper rests beside a small lamp, and three pale floor marks lie between Pero and the door.",
+                "covers_lexeme_ids": [
+                  "cy-gorau",
+                  "cy-llai"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l24-s058",
+            "text": "Mae Dafi'n agor ei geg i siarad, ond mae Pero'n stopio heb gyffwrdd â'r marciau gwyn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s059",
+            "text": "Mae'r ffordd orau'n mynd at ddrws Artur, ond dydy'r cam nesaf ddim yn edrych yn hawdd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l24-s060",
+            "text": "Y tu ôl i'r drws, mae'r ogof yn dawel; o'u blaenau, mae mwy nag un peth i ddeall.",
+            "inference_aids": []
+          }
         ]
       }
     ]
+  },
+  "grammar_observation": {
+    "target_language": "Mae gan un ffordd fwy o le na'r lleill; mae gan ffordd arall lai o gamau. Mae ffordd y marciau'n well na'r ffordd fawr, ac mae'r ffordd wlyb yn waeth. O'r tair ffordd, ffordd y goron yw'r gorau.",
+    "bridge_language": "Mwy and llai compare amount or size, often with o before a noun; na introduces the second item. Gwell means better, gwaeth means worse, and gorau identifies the best. This lesson does not teach regular comparative suffixes."
   },
   "vocabulary": [
     {
@@ -296,7 +476,8 @@
       "part_of_speech": "adverb/determiner",
       "current_sense": "more; bigger",
       "forms_seen": [
-        "mwy"
+        "mwy",
+        "mwy o"
       ],
       "first_introduced_lesson": "cy-draig-01-l24",
       "new": true
@@ -308,7 +489,8 @@
       "part_of_speech": "adverb/determiner",
       "current_sense": "less; smaller",
       "forms_seen": [
-        "llai"
+        "llai",
+        "llai o"
       ],
       "first_introduced_lesson": "cy-draig-01-l24",
       "new": true
@@ -344,7 +526,8 @@
       "part_of_speech": "adjective",
       "current_sense": "best",
       "forms_seen": [
-        "gorau"
+        "gorau",
+        "y gorau"
       ],
       "first_introduced_lesson": "cy-draig-01-l24",
       "new": true
@@ -356,7 +539,8 @@
       "part_of_speech": "conjunction",
       "current_sense": "than",
       "forms_seen": [
-        "na"
+        "na",
+        "nag"
       ],
       "first_introduced_lesson": "cy-draig-01-l24",
       "new": true
@@ -368,7 +552,8 @@
       "part_of_speech": "adjective",
       "current_sense": "tall",
       "forms_seen": [
-        "tal"
+        "tal",
+        "dal"
       ],
       "first_introduced_lesson": "cy-draig-01-l24",
       "new": true
@@ -380,7 +565,8 @@
       "part_of_speech": "adjective",
       "current_sense": "short",
       "forms_seen": [
-        "byr"
+        "byr",
+        "fyr"
       ],
       "first_introduced_lesson": "cy-draig-01-l24",
       "new": true
@@ -410,100 +596,134 @@
       "new": true
     }
   ],
-  "grammar_observation": {
-    "target_language": "Patrwm y wers: Comparison and superlative. Darllenwch y stori eto a sylwch ar y patrwm ym mhob adran.",
-    "bridge_language": "Compare choices with mwy, llai, gwell and gwaeth, and identify the superlative with gorau."
-  },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l24-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Cymharu",
+      "directions": "Cwblhewch gyda'r ffurf gywir o'r wers.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Cymharwch ddau beth gan ddefnyddio mwy, llai, gwell neu waeth.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "A course reviewer should accept a grammatical sentence that uses the lesson target."
+          "prompt": "Mae llawer o le yn y ffordd fawr. Mae ___ o le ynddi ___ ffordd y goron.",
+          "type": "cloze",
+          "accepted_answers": [
+            "mwy; na'r",
+            "mwy na'r"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch un frawddeg o'r stori sy'n dangos y patrwm.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "Must quote or closely reproduce a sentence demonstrating the target."
+          "prompt": "Mae ychydig o le yn ffordd y goron. Mae ___ o le ynddi ___ y ffordd fawr.",
+          "type": "cloze",
+          "accepted_answers": [
+            "llai; na",
+            "llai na"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Mae prawf ffordd y goron yn dda. Mae e'n ___ na phrawf y ffordd fawr.",
+          "type": "cloze",
+          "accepted_answers": [
+            "well"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "O'r tair ffordd, ffordd y marciau yw'r ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "gorau"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l24-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch gyda gair newydd.",
+      "title": "Pensa B — Tair ffordd",
+      "directions": "Cwblhewch o ystyr y stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "more; bigger = ___",
+          "prompt": "Mae drws y ffordd fawr yn uchel iawn. Mae'r drws yn ___.",
           "type": "cloze",
           "accepted_answers": [
-            "mwy"
+            "dal",
+            "tal"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "less; smaller = ___",
+          "prompt": "Does dim llawer o ffordd cyn drws y canol. Mae'r ffordd yn ___.",
           "type": "cloze",
           "accepted_answers": [
-            "llai"
+            "fyr",
+            "byr"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "better = ___",
+          "prompt": "Mae cerrig gwlyb yn symud dan draed Pero. Mae cerdded yno'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "gwell"
+            "anodd"
+          ]
+        },
+        {
+          "id": "pb4",
+          "prompt": "Mae'r llawr yn sych ac mae'r marciau'n glir. Mae dilyn ffordd y goron yn ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "hawdd"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l24-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Y dewis",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Beth yw prif broblem y wers?",
+          "prompt": "Pam mae'r ffordd fawr yn waeth na ffordd y goron?",
           "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "Answer must identify the central problem or decision in this lesson."
+          "accepted_answers": [
+            "Mae cerrig mawr yn ei chau hi, a does dim marc coron arni hi.",
+            "Oherwydd mae cerrig mawr yno a does dim marc coron."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Sut mae'r grŵp yn datrys y broblem?",
+          "prompt": "Pam dydy'r ffordd fyr ddim yn hawdd?",
           "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "Answer must name one action taken by the recurring characters."
+          "accepted_answers": [
+            "Mae'r llawr yn wlyb ac mae'r cerrig yn symud.",
+            "Oherwydd mae cerrig gwlyb yn symud dan draed Pero."
+          ]
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o'r stori yn eich geiriau eich hun.",
+          "prompt": "Pa dri phrawf sy'n dangos ffordd y goron?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Cof Iwan, y map a'r marciau ar y wal.",
+            "Mae cof Iwan, y map a'r wal i gyd yn dangos ffordd y goron."
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dewiswch un o'r tair ffordd. Rhowch ddau reswm gyda mwy, llai, gwell, gwaeth neu gorau.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "One or two comprehensible Welsh sentences are sufficient."
+          "rubric": "Give one or two understandable Welsh sentences that choose a route and support the choice with two comparisons. Use at least two of mwy, llai, gwell, gwaeth, gorau correctly; if na is used, the two compared routes must be clear. The choice may differ from the characters' choice if the evidence is explained."
         }
       ]
     }
   },
-  "completion": {
-    "allowed_without_pensa_score": true,
-    "button_label": "Gorffen y wers",
-    "storage_key": "cy-draig-01:cy-draig-01-l24:finished"
-  },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -522,9 +742,23 @@
     "source": "cy-draig-01-l24"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
-    "images": ["cy-l24-cymharu"],
+    "images": [
+      "cy-l24-scene-tair-ffordd",
+      "cy-l24-tal-byr",
+      "cy-l24-mwy-llai-na",
+      "cy-l24-gwell-gwaeth",
+      "cy-l24-hawdd-anodd",
+      "cy-l24-tabl-prawf",
+      "cy-l24-y-gorau",
+      "cy-l24-scene-y-drws-du"
+    ],
     "audio": []
+  },
+  "completion": {
+    "allowed_without_pensa_score": true,
+    "button_label": "Gorffen y wers",
+    "storage_key": "cy-draig-01:cy-draig-01-l24:finished"
   }
 }

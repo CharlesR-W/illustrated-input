@@ -3,14 +3,14 @@
   "id": "cy-draig-01-l12",
   "course_id": "cy-draig-01",
   "order": 12,
-  "title": "Rydyn ni'n helpu",
+  "title": "Rydyn ni'n agor y llyfr",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten Lessons 01–11 as available",
     "human_review": "not yet performed",
     "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
   },
@@ -18,21 +18,22 @@
     "primary_new_grammar": {
       "id": "G12",
       "label": "Plural persons in present periphrastic bod",
-      "description": "Use dyn ni/rydyn ni, rydych chi, and maen nhw with yn + verbal noun to describe what groups are doing.",
+      "description": "Use rydyn ni/dyn ni, rydych chi, and maen nhw with yn + verbal noun to describe what groups are doing.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
       "G11"
     ],
-    "incidental_grammar": [
-      {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
-      }
-    ],
+    "incidental_grammar": [],
     "communicative_goals": [
-      "say what a group is doing",
-      "ask what other people are doing",
+      "say what we are doing",
+      "say what plural you are doing",
+      "say what they are doing",
       "describe a shared repair job"
     ],
     "new_lexeme_ids": [
@@ -46,304 +47,325 @@
       "cy-gweithio",
       "cy-glanhau",
       "cy-trwsio"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-coron"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l12-s01",
-        "title": "Y sefyllfa",
+        "title": "Yr hen lyfr",
         "segments": [
           {
             "id": "cy-draig-01-l12-s001",
-            "text": "Mae'r bore yn dechrau yn y llyfrgell.",
+            "text": "Mae Mali, Sam, Nia, Iwan, Dafi a Pero yn y llyfrgell.",
             "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-scene-team-repairs-book",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l12-scene-team-repairs-book.svg",
+                "alt": "Mali and Sam work on four torn sheets while Nia and Iwan clean the old book; Dafi and Pero offer help around the library table.",
+                "covers_lexeme_ids": [
+                  "cy-helpu",
+                  "cy-gweithio",
+                  "cy-glanhau",
+                  "cy-trwsio"
+                ]
+              },
               {
                 "type": "image",
                 "ref": "cy-l12-personau",
                 "presentation": "margin_diagram",
                 "src": "media/diagrams/cy-l12-personau.svg",
-                "alt": "Rydyn ni, rydych chi, maen nhw — yn helpu."
+                "alt": "Three person groups show rydyn ni for a group including the speaker, rydych chi for the people addressed, and maen nhw for a group talked about.",
+                "covers_lexeme_ids": [
+                  "cy-rydyn",
+                  "cy-rydych",
+                  "cy-maen",
+                  "cy-ni",
+                  "cy-chi",
+                  "cy-nhw"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l12-s002",
-            "text": "Mae Mali, Nia, Sam, Dafi a Pero yma.",
+            "text": "Mae hen lyfr Iwan ar y bwrdd, ac mae pedwar papur o'r llyfr wrth y bocs.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s003",
-            "text": "Mae llawer o waith yn y llyfrgell.",
+            "text": "Mae'r llyfr yn ddu, dydy e ddim yn dda, ac mae'r papur yn hen hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s004",
-            "text": "Mae Mali'n edrych ar y drws.",
+            "text": "Mali: “Rydyn ni'n gweithio ar yr hen lyfr nawr.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s005",
-            "text": "Mae Nia'n edrych ar y silff.",
+            "text": "Sam: “Dyn ni'n helpu Iwan, ac rydyn ni'n trwsio ei lyfr e.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s006",
-            "text": "Mae Sam yn edrych ar y ffenestr.",
+            "text": "Nia: “Mali a Sam, rydych chi'n gweithio ar y pedwar papur.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s007",
-            "text": "Mae Dafi'n edrych ar y bocs.",
+            "text": "Nia: “Iwan, rydyn ni'n glanhau'r llyfr.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s008",
-            "text": "Mae Pero'n edrych ar bawb.",
+            "text": "Mae Dafi'n edrych ar y ffrindiau; maen nhw'n gweithio, ac mae e eisiau helpu hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s009",
-            "text": "Mae pawb eisiau helpu.",
+            "text": "Dafi: “Rydych chi'n gweithio ar y llyfr. Dw i'n helpu!”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l12-s02",
-        "title": "Y digwyddiad",
+        "title": "Pedwar papur",
         "segments": [
           {
             "id": "cy-draig-01-l12-s010",
-            "text": "“Rydyn ni'n helpu heddiw,” meddai Mali.",
-            "inference_aids": []
+            "text": "Mae Mali'n cael dau bapur, ac mae Sam yn cael dau bapur.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-four-papers",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l12-four-papers.svg",
+                "alt": "Four separated torn sheets are cleaned and repaired into one large continuous picture.",
+                "covers_lexeme_ids": [
+                  "cy-glanhau",
+                  "cy-trwsio"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l12-s011",
-            "text": "Dyn ni'n gweithio yn y llyfrgell.",
+            "text": "Maen nhw'n glanhau'r pedwar papur: mae Mali'n glanhau dau, ac mae Sam yn glanhau dau.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s012",
-            "text": "Dyn ni'n glanhau'r ystafell.",
+            "text": "Mae Mali'n rhoi ei phapur hi ar y bwrdd, ac mae Sam yn rhoi ei bapur e wrth ei phapur hi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s013",
-            "text": "Dyn ni'n trwsio'r drws.",
+            "text": "Maen nhw'n rhoi'r papur coch wrth y papur du, a'r papur mawr wrth y papur bach.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s014",
-            "text": "Mae Mali a Sam yn glanhau.",
+            "text": "Mali: “Rydyn ni'n trwsio'r llun.” Sam: “Rydyn ni'n trwsio'r pedwar papur.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s015",
-            "text": "Maen nhw'n gweithio gyda'i gilydd.",
+            "text": "Nawr mae un llun mawr ar y pedwar papur, ac mae'r llun yn perthyn i'r hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s016",
-            "text": "Mae Nia a Dafi yn trwsio'r silff.",
-            "inference_aids": []
+            "text": "Wrth y papur, mae Nia ac Iwan yn glanhau'r llyfr du.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-clean-repair",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l12-clean-repair.svg",
+                "alt": "A dark dusty book becomes clean, while four torn sheets become one repaired picture.",
+                "covers_lexeme_ids": [
+                  "cy-glanhau",
+                  "cy-trwsio"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l12-s017",
-            "text": "Maen nhw'n helpu hefyd.",
+            "text": "Maen nhw'n gweithio ar y llyfr: mae Nia'n glanhau, ac mae Iwan yn trwsio.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s018",
-            "text": "Mae Pero yn eistedd dan y bwrdd.",
+            "text": "Nia: “Rydyn ni'n trwsio'r llyfr. Maen nhw'n trwsio'r llun. Rydyn ni'n helpu.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l12-s03",
-        "title": "Y newid",
+        "title": "Mae Dafi'n helpu",
         "segments": [
           {
             "id": "cy-draig-01-l12-s019",
-            "text": "Mae dau ymwelydd wrth y drws.",
-            "inference_aids": []
+            "text": "Mae Dafi eisiau glanhau hefyd, ac mae cwpan o ddŵr gan y ddraig fach.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-helping-jobs",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l12-helping-jobs.svg",
+                "alt": "Dafi first reaches toward the old paper with water, then helps safely by putting pencils in a bag and books on a shelf.",
+                "covers_lexeme_ids": [
+                  "cy-helpu",
+                  "cy-gweithio",
+                  "cy-glanhau"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l12-s020",
-            "text": "Mae Nia'n gofyn, “Rydych chi'n helpu?”",
+            "text": "Dafi: “Rydych chi'n glanhau'r llyfr. Dw i'n glanhau'r papur gyda dŵr.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s021",
-            "text": "“Ydyn, rydyn ni'n helpu,” meddai'r ymwelwyr.",
+            "text": "Nia: “Nac wyt, Dafi! Dydy dŵr ddim yn dda i'r hen bapur.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s022",
-            "text": "Rydych chi'n glanhau'r ffenestr.",
+            "text": "Mae Dafi'n edrych ar y dŵr, yn edrych ar y papur, ac yn yfed y dŵr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s023",
-            "text": "Rydych chi'n trwsio'r cadeiriau.",
+            "text": "Mae e'n rhoi'r cwpan ar y bwrdd; nawr mae e'n helpu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s024",
-            "text": "Mae Mali'n dweud, “Diolch, rydych chi'n gweithio'n dda.”",
+            "text": "Mae Dafi'n rhoi'r pensiliau yn y bag ac yn rhoi'r llyfrau bach ar y silff.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s025",
-            "text": "Maen nhw i gyd yn gweithio.",
+            "text": "Mae papur bach dan Pero. Mae Pero'n rhoi'r papur i Mali, ac mae Mali'n ei roi ar y bwrdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s026",
-            "text": "Maen nhw i gyd yn glanhau.",
+            "text": "Dafi: “Pero, rydyn ni'n helpu.” Mali: “Ie, rydych chi'n helpu'n dda.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s027",
-            "text": "Mae'r llyfrgell yn newid.",
-            "inference_aids": []
+            "text": "Mae Pero a Dafi wrth y bwrdd. Maen nhw'n helpu ac maen nhw'n gweithio.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-we-you-they",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l12-we-you-they.svg",
+                "alt": "Dafi points to himself and Pero for rydyn ni, Mali addresses them as rydych chi, and Nia refers to them as maen nhw.",
+                "covers_lexeme_ids": [
+                  "cy-rydyn",
+                  "cy-rydych",
+                  "cy-maen",
+                  "cy-ni",
+                  "cy-chi",
+                  "cy-nhw",
+                  "cy-helpu"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l12-s04",
-        "title": "Y diwedd",
+        "title": "Drws yn y llyfr",
         "segments": [
           {
             "id": "cy-draig-01-l12-s028",
-            "text": "Nawr mae'r drws yn lân.",
+            "text": "Mae'r pedwar papur yn yr hen lyfr eto, ac mae'r llyfr yn dda nawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s029",
-            "text": "Nawr mae'r ffenestr yn lân.",
+            "text": "Iwan: “Rydyn ni'n glanhau'r llyfr, rydyn ni'n trwsio'r papur, ac rydyn ni'n helpu Mali a Sam.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s030",
-            "text": "Nawr mae'r silff yn dda.",
+            "text": "Mali: “Nawr rydyn ni'n agor y llyfr.” Mae Pero'n edrych ar y llyfr o dan y bwrdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s031",
-            "text": "“Dyn ni'n gorffen?” gofynna Dafi.",
-            "inference_aids": []
+            "text": "Mali, Sam, Nia, Iwan a Dafi: “Rydyn ni'n agor yr hen lyfr.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-scene-page-door",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l12-scene-page-door.svg",
+                "alt": "The five friends open the repaired old book together; a new red door appears across its pages with a clear gold crown symbol.",
+                "covers_lexeme_ids": [
+                  "cy-rydyn",
+                  "cy-ni",
+                  "cy-coron"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l12-s032",
-            "text": "“Ddim eto,” meddai Nia.",
+            "text": "Maen nhw'n agor y llyfr. Mae Dafi'n hapus, ond mae Iwan yn edrych ar y llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s033",
-            "text": "Rydyn ni'n helpu; rydych chi'n helpu; maen nhw'n helpu.",
+            "text": "Mae drws newydd yn y llyfr. Mae'r drws yn fach ac yn goch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s034",
-            "text": "Mae pawb yn gweithio gyda'i gilydd.",
-            "inference_aids": []
+            "text": "Mae coron ar y drws. Mae'r goron yn fawr, ac mae Dafi'n edrych ar y goron.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l12-crown-door",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l12-crown-door.svg",
+                "alt": "A gold crown is isolated above the same crown symbol on the small red door in the book.",
+                "covers_lexeme_ids": [
+                  "cy-coron"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l12-s035",
-            "text": "Mae Dafi'n fach, ond mae e'n helpu llawer.",
+            "text": "Dafi: “Coron!” Iwan: “Rydych chi'n edrych ar y drws; dw i'n edrych ar y goron.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l12-s036",
-            "text": "Mae'r llyfrgell yn llawn ffrindiau.",
+            "text": "Mae ei allwedd e gan Iwan. Mae e'n rhoi ei allwedd e ar y drws, ond dydy'r drws ddim yn agor.",
             "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l12-s05",
-        "title": "Darllen eto",
-        "segments": [
+          },
           {
             "id": "cy-draig-01-l12-s037",
-            "text": "Mae Mali a Sam yn glanhau'r ffenestr fawr, ac mae Nia a Dafi yn trwsio'r hen silff wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s038",
-            "text": "Mae Pero dan y bwrdd yn edrych ar bawb, ond dydy Pero ddim yn glanhau nac yn trwsio dim.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s039",
-            "text": "Mae'r ddau ymwelydd yn agor y bocsys, ac rydyn ni'n rhoi'r llyfrau ar y silff gyda'n gilydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s040",
-            "text": "“Rydych chi'n gweithio'n dda,” meddai Nia, ac mae'r ymwelwyr yn helpu Mali gyda'r ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s041",
-            "text": "Mae Dafi'n fach, ond mae e'n codi papur, pensiliau a llyfrau bach o'r bocs mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s042",
-            "text": "Mae Mali'n gofyn, “Dafi, wyt ti'n glanhau'r bocs?” ac mae Dafi'n ateb, “Ydw, dw i'n helpu.”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s043",
-            "text": "Mae Nia a Sam wrth y silff; maen nhw'n rhoi'r llyfrau mawr ar y silff a'r papur yn y bocs.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s044",
-            "text": "Mae'r gwaith yn fawr, ond mae llawer o ffrindiau yma ac mae pawb eisiau helpu'r llyfrgell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s045",
-            "text": "Rydyn ni'n glanhau'r drws a'r ffenestr, rydych chi'n trwsio'r cadeiriau, ac maen nhw'n gweithio wrth y silff.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s046",
-            "text": "Mae'r bore yn dechrau gyda llyfrgell hen, ond nawr mae'r ystafell yn lân ac mae'r drws yn dda.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s047",
-            "text": "Mae Sam yn edrych ar y bwrdd ac yn gofyn am Nia, ac mae Pero'n edrych ar Sam wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s048",
-            "text": "Mae dau gwpan ar y bwrdd, pedair cadair wrth y ffenestr, a llawer o lyfrau ar yr hen silff.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s049",
-            "text": "Mae Dafi eisiau darllen, ond mae Mali'n dweud, “Mae'r gwaith yma ac mae'r llyfr yn y bocs.”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s050",
-            "text": "Ar ddiwedd y bore mae pawb yn edrych ar yr ystafell, ac mae'r llyfrgell yn llawn ffrindiau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s051",
-            "text": "Mae'r ymwelwyr yn mynd at y drws, ond mae Mali, Nia, Sam a Dafi yn aros ac yn gorffen y gwaith.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l12-s052",
-            "text": "Mae Nia'n edrych ar y silff lân, ac mae Sam yn edrych ar y ffenestr lân gyda gwên fawr.",
+            "text": "Rydyn ni'n trwsio hen lyfr; nawr mae drws newydd yn y llyfr, ac mae coron ar y drws.",
             "inference_aids": []
           }
         ]
@@ -353,19 +375,20 @@
   "vocabulary": [
     {
       "lexeme_id": "cy-rydyn",
-      "display_form": "bod — rydyn/dyn",
+      "display_form": "bod — rydyn ni / dyn ni",
       "citation_form": "bod — rydyn/dyn",
       "part_of_speech": "verb",
       "current_sense": "are (we are)",
       "forms_seen": [
-        "rydyn"
+        "rydyn",
+        "dyn"
       ],
       "first_introduced_lesson": "cy-draig-01-l12",
       "new": true
     },
     {
       "lexeme_id": "cy-rydych",
-      "display_form": "bod — rydych",
+      "display_form": "bod — rydych chi",
       "citation_form": "bod — rydych",
       "part_of_speech": "verb",
       "current_sense": "are (you are)",
@@ -377,7 +400,7 @@
     },
     {
       "lexeme_id": "cy-maen",
-      "display_form": "bod — maen",
+      "display_form": "bod — maen nhw",
       "citation_form": "bod — maen",
       "part_of_speech": "verb",
       "current_sense": "are (they are)",
@@ -470,114 +493,144 @@
       ],
       "first_introduced_lesson": "cy-draig-01-l12",
       "new": true
+    },
+    {
+      "lexeme_id": "cy-coron",
+      "display_form": "coron",
+      "citation_form": "coron",
+      "part_of_speech": "noun",
+      "current_sense": "crown",
+      "forms_seen": [
+        "coron"
+      ],
+      "first_introduced_lesson": "cy-draig-01-l12",
+      "new": false,
+      "status": "receptive_illustrated"
     }
   ],
   "grammar_observation": {
-    "target_language": "Darllenwch y paragraffau eto. Chwiliwch am y patrwm newydd, cymharwch yr enghreifftiau, a dywedwch y ffurfiau yn uchel.",
-    "bridge_language": "Use dyn ni/rydyn ni, rydych chi, and maen nhw with yn + verbal noun to describe what groups are doing."
+    "target_language": "Nia + Iwan: rydyn ni. Mali + Sam: rydych chi / maen nhw. Rydyn ni'n helpu; rydych chi'n helpu; maen nhw'n helpu.",
+    "bridge_language": "Use rydyn ni (or colloquial dyn ni) for “we are,” rydych chi for plural or polite “you are,” and maen nhw for “they are,” followed here by yn/'n + verbal noun."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l12-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Rydyn / rydych / maen",
+      "directions": "Rydyn / rydych / maen.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "“Rydyn ni'n helpu heddiw,” meddai Mali. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
+          "prompt": "Nia: “Iwan, ___ ni'n glanhau'r llyfr.”",
+          "type": "cloze",
           "accepted_answers": [
-            "bod — rydyn/dyn"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+            "Rydyn",
+            "Dyn"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Mali a Sam, ___ chi'n trwsio'r papur.",
+          "type": "cloze",
           "accepted_answers": [
-            "Maen nhw'n gweithio gyda'i gilydd."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "rydych"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Mali a Sam: ___ nhw'n gweithio ar y llun.",
+          "type": "cloze",
+          "accepted_answers": [
+            "Maen"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Mae Pero a Dafi'n helpu. → ___ nhw'n helpu.",
+          "type": "cloze",
+          "accepted_answers": [
+            "Maen"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l12-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Y llyfr",
+      "directions": "Complete with one story word.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "are (we are) = ___",
+          "prompt": "Mae'r llyfr yn ddu. Nawr mae'r llyfr yn dda. Maen nhw'n ___ y llyfr.",
           "type": "cloze",
           "accepted_answers": [
-            "rydyn"
+            "glanhau"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "work = ___",
-          "type": "cloze",
-          "accepted_answers": [
-            "gweithio"
-          ]
-        },
-        {
-          "id": "pb3",
-          "prompt": "repair = ___",
+          "prompt": "Mae pedwar papur o'r hen lyfr. Nawr mae un llun mawr. Maen nhw'n ___ y papur.",
           "type": "cloze",
           "accepted_answers": [
             "trwsio"
           ]
         },
         {
+          "id": "pb3",
+          "prompt": "Mae Mali a Sam wrth y bwrdd. Maen nhw'n ___ ar y llun.",
+          "type": "cloze",
+          "accepted_answers": [
+            "gweithio"
+          ]
+        },
+        {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Mae Nia'n trwsio. Mae Dafi'n rhoi'r pensiliau yn y bag. Mae Dafi'n ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "helpu"
+          ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l12-pc",
       "title": "Pensa C — Y stori",
-      "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
+      "directions": "Answer briefly in Welsh.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
-          "type": "bounded_response",
+          "prompt": "Mali a Sam: “Rydyn ni'n glanhau'r ___.”",
+          "type": "cloze",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "papur",
+            "pedwar papur"
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth sy'n newid yn y stori?",
-          "type": "bounded_response",
+          "prompt": "Nia ac Iwan: “Rydyn ni'n trwsio'r ___.”",
+          "type": "cloze",
           "accepted_answers": [
-            "Mae'r llyfrgell yn llawn ffrindiau."
-          ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+            "llyfr",
+            "hen lyfr"
+          ]
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Nawr mae drws bach yn y ___, ac mae coron ar y ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "llyfr; drws",
+            "llyfr, drws"
+          ],
+          "rubric": "Both nouns are required: llyfr and drws. The crown word is supplied and is not being tested."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Retell the repair in four short Welsh sentences using rydyn ni, rydych chi, and maen nhw.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give four understandable sentences about the lesson's repair. Use all three frames at least once; accurate selection of person matters more than mutation beyond forms already modelled."
         }
       ]
     }
@@ -589,7 +642,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -608,10 +661,17 @@
     "source": "cy-draig-01-l12"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l12-personau"
+      "cy-l12-scene-team-repairs-book",
+      "cy-l12-personau",
+      "cy-l12-four-papers",
+      "cy-l12-clean-repair",
+      "cy-l12-helping-jobs",
+      "cy-l12-we-you-they",
+      "cy-l12-scene-page-door",
+      "cy-l12-crown-door"
     ],
     "audio": []
   }

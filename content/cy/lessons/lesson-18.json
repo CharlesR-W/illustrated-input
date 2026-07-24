@@ -5,234 +5,315 @@
   "order": 18,
   "title": "Bydd y llyfrgell ar gau",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G18 curriculum row, cumulative rewritten Lessons 01–17, and the L18 findings in docs/reviews/welsh-12-21.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked future forms, ar gau, mutations, idiom, register, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G18",
       "label": "Periphrastic future bydd and bydda i",
-      "description": "Use bydd/bydda i with yn + verbal noun or a complement to state future plans and conditions.",
+      "description": "Use bydd + subject + yn + verbal noun or a complement, and bydda i + yn + verbal noun, to say what will happen and what the speaker will do.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G07",
+      "G10",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
+      "G16",
       "G17"
     ],
     "incidental_grammar": [
       {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
+        "form": "ar gau",
+        "note": "A fixed future complement in the closure notice, established by the open/closed-door contrast; it is not a second grammar target."
       }
     ],
     "communicative_goals": [
+      "understand that the library will close",
       "say what will happen tomorrow",
-      "make a personal plan",
-      "understand a closure notice"
+      "state a personal plan with bydda i",
+      "contrast Dafi's hope in a sleeping king with Mali's practical plan"
     ],
     "new_lexeme_ids": [
       "cy-bydd",
       "cy-bydda",
       "cy-yfory",
-      "cy-cau",
       "cy-cynllun",
       "cy-cyfarfod-l18",
       "cy-ysgrifennu",
       "cy-dangos",
-      "cy-cadw",
-      "cy-rhaid"
+      "cy-cadw"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-brenin"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l18-s01",
-        "title": "Yr hysbysiad",
+        "title": "Papur ar y drws",
         "segments": [
           {
             "id": "cy-draig-01-l18-s001",
-            "text": "Mae hysbysiad mawr ar ddrws y llyfrgell: BYDD Y LLYFRGELL AR GAU.",
+            "text": "Yn y bore, mae Mali'n dod i'r llyfrgell gyda Pero. Mae papur mawr ar y drws: “YFORY BYDD Y LLYFRGELL AR GAU.”",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l18-pattern",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l18-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 18."
+                "ref": "cy-l18-scene-closure",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l18-scene-closure.svg",
+                "alt": "Outside the warm wooden library, Mali reads a large closure notice on the shut sea-green door while Nia looks sad, Dafi clutches the old book, and Pero waits beside them.",
+                "covers_lexeme_ids": [
+                  "cy-bydd",
+                  "cy-yfory",
+                  "cy-cau"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l18-s002",
-            "text": "Mae Mali'n darllen y geiriau ddwywaith.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s003",
-            "text": "“Bydd y llyfrgell ar gau?” mae hi'n gofyn.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l18-s004",
-            "text": "Mae Nia'n edrych yn drist.",
+            "text": "“Yfory?” mae'r ddraig yn gofyn. “Bydd y llyfrgell ar gau yfory?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s005",
-            "text": "“Bydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s006",
-            "text": "Bydd y cyngor yn cau'r adeilad ar ddiwedd y mis.” Bydd y caffi ar gau hefyd.",
-            "inference_aids": []
+            "text": "“Bydd,” mae Nia'n ateb. “Heddiw mae'r drws ar agor. Yfory bydd y drws ar gau.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l18-heddiw-yfory",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l18-heddiw-yfory.svg",
+                "alt": "A two-part Welsh timeline contrasts heddiw with an open library and yfory with the same closed library, introducing bydd.",
+                "covers_lexeme_ids": [
+                  "cy-bydd",
+                  "cy-bydda",
+                  "cy-yfory"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l18-s007",
-            "text": "Bydd y bwrdd mawr yn wag.",
+            "text": "Mae'r ystafell yn llawn heddiw: llyfrau ar y silff, papur ar y bwrdd, a'r map wrth y ffenestr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s008",
-            "text": "Bydd y llyfrau mewn blychau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s009",
-            "text": "Bydd y plant heb le i ddarllen.",
+            "text": "“Yfory bydd yr ystafell yn wag,” mae Nia'n ateb. “Bydd y llyfrau yn y bocsys, a bydd y map yn yr hen lyfr.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s010",
-            "text": "Mae Dafi'n edrych o'r hysbysiad i'r drws.",
+            "text": "“Bydd y caffi yma yfory,” mae Sam yn ateb, “ond bydd y llyfrgell ar gau.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s011",
-            "text": "“Bydd y ddraig heb gartref,” meddai.",
+            "text": "Mae Pero wrth ddrws y llyfrgell. Mae Dafi'n rhoi'r hen lyfr dan Pero.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s012",
-            "text": "Mae Pero'n eistedd ar ei droed.",
+            "text": "“Na,” mae Dafi'n ateb. “Bydd y llyfr gyda fi. Bydda i'n cadw'r llyfr.”",
             "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s013",
+            "text": "Mae Mali'n edrych o'r papur cau i'r hen lyfr. “Heddiw mae'r llyfr gyda ni. Yfory bydda i'n gwneud cynllun.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s014",
+            "text": "Mae hi'n agor ei bag hi ac yn cael papur newydd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l18-ar-gau",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l18-ar-gau.svg",
+                "alt": "Two labelled library doors contrast agor with cau and show the future closure phrase bydd ar gau.",
+                "covers_lexeme_ids": [
+                  "cy-cau",
+                  "cy-bydd"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l18-s02",
-        "title": "Beth fydd yn digwydd?",
+        "title": "Cynllun yfory",
         "segments": [
           {
-            "id": "cy-draig-01-l18-s013",
-            "text": "“Beth fydd yn digwydd i'r map?” mae Sam yn gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s014",
-            "text": "“Bydd e mewn blwch,” meddai Nia.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l18-s015",
-            "text": "“A beth fydd yn digwydd i'r lluniau?” “Byddan nhw mewn blychau hefyd.” Mae Mali'n ysgwyd ei phen.",
+            "text": "Mae Mali'n rhoi'r papur newydd wrth y papur cau. Ar y papur mae hi'n ysgrifennu: “YFORY — BORE — LLYFRGELL.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s016",
-            "text": "“Fydd y stori ddim mewn blwch.",
+            "text": "“Cynllun,” mae Mali'n ateb. “Bydd cyfarfod yma yfory yn y bore.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s017",
-            "text": "Bydd pobl Porth Helyg eisiau ei gweld.” Mae Iwan yn cytuno.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s018",
-            "text": "Bydd e'n siarad am yr hen harbwr.",
+            "text": "Bydd Mali, Nia, Sam, Iwan, Dafi a Pero yn cyfarfod yn y llyfrgell.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s019",
-            "text": "Bydd Sam yn gwneud bwyd.",
+            "text": "“Bydda i yma yn y bore,” mae hi'n ateb. “Bydda i'n dangos y map.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s020",
-            "text": "Bydd Nia'n dangos yr hen lyfrau.",
+            "text": "Mae Nia'n rhoi pensil wrth ei llun hi. “Bydda i'n ysgrifennu am y llyfrgell.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s021",
-            "text": "Bydd Dafi'n dangos ei lun.",
-            "inference_aids": []
+            "text": "Mae Sam yn rhoi papur wrth ei lun e. “Bydda i'n ysgrifennu hefyd. Bydd y papur ar ddrws y caffi.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l18-cynllun-cyfarfod",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l18-cynllun-cyfarfod.svg",
+                "alt": "A simple plan sheet labelled cynllun shows six friends moving toward one table labelled cyfarfod, with a sun marking tomorrow morning.",
+                "covers_lexeme_ids": [
+                  "cy-cynllun",
+                  "cy-cyfarfod-l18",
+                  "cy-yfory"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l18-s022",
-            "text": "“A bydda i'n dangos y map,” meddai Mali.",
+            "text": "Mae Iwan yn rhoi llun yr harbwr ar y cynllun. “Bydda i'n dangos y map a llun y cwch.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s023",
+            "text": "Mae Dafi'n rhoi'r hen lyfr ar ei lun e. “Bydda i'n cadw'r llyfr. Bydd Pero'n cadw'r drws.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s026",
+            "text": "Mae Mali'n gwneud tri llun arall: pensil yn ysgrifennu, llaw yn dangos map, a Dafi'n cadw'r llyfr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l18-gweithredoedd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l18-gweithredoedd.svg",
+                "alt": "Three Welsh-labelled panels show a pencil writing on paper, Mali showing a map, and Dafi keeping the old book in a closed box.",
+                "covers_lexeme_ids": [
+                  "cy-ysgrifennu",
+                  "cy-dangos",
+                  "cy-cadw"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l18-s027",
+            "text": "“Bydd Nia'n ysgrifennu. Bydd Mali'n dangos. Bydd Dafi'n cadw,” mae hi'n darllen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s028",
+            "text": "Mae'r cynllun ar y bwrdd nawr. Mae'r papur cau ar y drws. Heddiw mae papur; yfory bydd cyfarfod.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l18-s03",
-        "title": "Cynllun y ffrindiau",
+        "title": "Cynllun Dafi",
         "segments": [
           {
-            "id": "cy-draig-01-l18-s023",
-            "text": "Mae'r ffrindiau'n gwneud cynllun.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s024",
-            "text": "Byddan nhw'n cynnal arddangosfa am straeon Porth Helyg.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s025",
-            "text": "Bydd yr arddangosfa yn y llyfrgell os gall fod, neu o flaen yr adeilad.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s026",
-            "text": "Bydd Mali'n ysgrifennu am y map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s027",
-            "text": "Bydd Iwan yn ysgrifennu am y storm.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s028",
-            "text": "Bydd Sam yn paratoi'r caffi.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l18-s029",
-            "text": "Bydd Nia'n cadw'r llyfrau arbennig yn ddiogel.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s030",
-            "text": "Bydd Dafi'n gwneud llun mawr o'r ddraig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s031",
-            "text": "Bydd Pero yn croesawu pawb—neu bydd e'n bwyta'r bwyd, meddai Sam.",
+            "text": "Ond mae gan Dafi gynllun arall. Mae e'n agor yr hen lyfr wrth bapur y cyfarfod.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s032",
-            "text": "Mae pawb yn chwerthin.",
+            "text": "“Brenin ydy e,” mae Dafi'n ateb. “Brenin yn cysgu. Mae'r goron gyda'r brenin.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l18-brenin",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l18-brenin.svg",
+                "alt": "A sleeping dark-haired boy in a blue tunic is linked by arrows to the known crown mark and the Welsh label brenin; Dafi points excitedly while Mali shows uncertainty.",
+                "covers_lexeme_ids": [
+                  "cy-brenin"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l18-s034",
+            "text": "“Brenin ydy e nawr,” mae Dafi'n ateb. “Yfory bydd y brenin yn codi.”",
             "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s035",
+            "text": "Mae Dafi'n cyfrif: “Un: bydd y brenin yn dod o'r ogof. Dau: bydd e'n dod i'r llyfrgell.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s036",
+            "text": "“Bydd e'n achub y llyfrgell. Bydd e'n achub yr hen lyfr. Bydd e'n achub Dafi hefyd.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s037",
+            "text": "Mae Mali'n edrych ar y papur. Does dim “brenin” ar y papur cau, a does dim enw yn yr hen lyfr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s039",
+            "text": "“Yfory bydda i'n gweithio,” mae Mali'n ateb. “Bydd Nia'n ysgrifennu, bydd Sam yn helpu, a bydd Iwan yn dangos y map.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s040",
+            "text": "“A bydda i'n cadw'r llyfr,” mae Dafi'n ateb, ond mae e'n cadw llun y brenin ar y cynllun.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l18-s041",
+            "text": "Mae Mali'n rhoi lluniau'r ffrindiau yn ôl wrth lun y bachgen. Mae Dafi'n rhoi ei fys ar y brenin; mae Mali'n rhoi ei phensil ar gynllun y cyfarfod.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l18-scene-two-plans",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l18-scene-two-plans.svg",
+                "alt": "At the library table, Dafi points eagerly from the crown mark to the sleeping boy in the book, while Mali points to the practical meeting plan with writing, map-showing, and book-keeping tasks; Iwan watches uncertainly.",
+                "covers_lexeme_ids": [
+                  "cy-brenin",
+                  "cy-cynllun",
+                  "cy-dangos",
+                  "cy-cadw"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -241,205 +322,63 @@
         "title": "Yfory",
         "segments": [
           {
-            "id": "cy-draig-01-l18-s033",
-            "text": "“Pryd byddwn ni'n dechrau?” mae Nia'n gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s034",
-            "text": "“Yfory,” meddai Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s035",
-            "text": "“Bydda i yma yn y bore.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s036",
-            "text": "Bydd Sam yma am ddeg.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s037",
-            "text": "Bydd Iwan yma ar ôl cinio.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s038",
-            "text": "Bydd Dafi yma drwy'r dydd.” “Fydda i ddim yma drwy'r dydd,” meddai Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s039",
-            "text": "“Bydd rhaid i'r ddraig gysgu.” Mae Mali'n rhoi'r hysbysiad wrth ymyl y map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s040",
-            "text": "Mae un papur yn dweud y bydd y llyfrgell yn cau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s041",
-            "text": "Mae'r papur arall yn dangos hanes y llyfrgell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s042",
-            "text": "Yfory bydd y ffrindiau'n dewis pa stori fydd yn agor y drws.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l18-s05",
-        "title": "Llythyr at y dref",
-        "segments": [
-          {
             "id": "cy-draig-01-l18-s043",
-            "text": "Cyn mynd adref, mae Mali'n ysgrifennu llythyr byr at bobl Porth Helyg.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s044",
-            "text": "Mae hi'n darllen pob llinell, ac mae'r lleill yn ychwanegu manylion.",
+            "text": "“Un: bydd cyfarfod yma yfory. Dau: bydda i'n dangos y map. Tri: bydd Nia'n ysgrifennu.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s045",
-            "text": "“Bydd arddangosfa yn y llyfrgell.” “Bydd hen fap yno.” “Bydd Iwan yn adrodd stori'r storm.” “Bydd Nia'n dangos y llyfrau arbennig.” “Bydd Sam yn paratoi bwyd.” “Bydd Dafi'n dangos draig fawr.” Mae Dafi'n ychwanegu, “Bydd Pero yno hefyd.” Mae Nia'n gofyn beth fydd yn digwydd ar ôl yr arddangosfa.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s046",
-            "text": "Bydd pobl yn ysgrifennu eu straeon.",
+            "text": "Mae Nia'n ateb, “Bydda i yma yfory. Bydda i'n ysgrifennu yn y bore.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s047",
-            "text": "Bydd y straeon yn mynd ar y wal.",
+            "text": "Mae Iwan yn ateb, “Bydda i'n dangos llun yr harbwr. Bydd y map gyda fi.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s048",
-            "text": "Bydd y cyngor yn gweld bod y llyfrgell yn bwysig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s049",
-            "text": "Efallai bydd y cynllun cau'n newid, ond nid yw Mali'n dweud hynny fel ffaith.",
+            "text": "Mae Dafi'n ateb, “Bydda i'n cadw'r llyfr. Bydd y llyfr gyda fi.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s050",
-            "text": "Mae hi'n cadw at yr hyn y gallan nhw ei wneud.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s051",
-            "text": "Byddan nhw'n paratoi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s052",
-            "text": "Byddan nhw'n ysgrifennu.",
+            "text": "Mae Nia'n cau'r llyfrgell. Mae'r papur cau ar y drws, a'r cynllun ar y bwrdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s053",
-            "text": "Byddan nhw'n gwahodd pobl.",
+            "text": "“Bydda i'n cadw'r llyfr,” mae Dafi'n ateb i'r bachgen. “Yfory bydd y brenin yn codi.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s054",
-            "text": "Byddan nhw'n dangos y map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s055",
-            "text": "Mae Sam yn gwneud dau gopi o'r llythyr.",
+            "text": "Ond mae pensil Mali ar y bwrdd. Mae Mali'n dod yn ôl i'r llyfrgell. Mae Dafi wrth y llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s056",
-            "text": "Bydd un ar ddrws y caffi.",
+            "text": "Yna mae hi'n rhoi ei phensil hi wrth gynllun y cyfarfod.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s057",
-            "text": "Bydd un ar y giât.",
+            "text": "“Yfory bydda i yma,” mae Mali'n ateb. “Bydda i'n ysgrifennu, a bydda i'n dangos y map.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s058",
-            "text": "Bydd Mali'n gwneud mwy yfory.",
+            "text": "Mae Dafi'n edrych ar y bachgen. “A bydd y brenin yma,” mae e'n ateb.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s059",
-            "text": "Pan maen nhw'n gadael, mae'r hysbysiad cau o hyd ar y drws, ond mae llythyr yr arddangosfa wrth ei ymyl.",
+            "text": "Mae Mali'n cau'r llyfr. “Yfory bydd cyfarfod. Heddiw mae'r brenin yn cysgu.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l18-s060",
-            "text": "Mae'r ddau yn sôn am y dyfodol; dim ond un ohonyn nhw sy'n cynnig gobaith.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l18-s06",
-        "title": "Darllen eto",
-        "segments": [
-          {
-            "id": "cy-draig-01-l18-s061",
-            "text": "Drannoeth, mae pob person yn cadw ei addewid.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s062",
-            "text": "Mae Mali'n dod yn gynnar ac yn ysgrifennu tri pharagraff.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s063",
-            "text": "Mae Sam yn cyrraedd am ddeg gyda bara a chacennau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s064",
-            "text": "Mae Iwan yn dod ar ôl cinio gyda hen lun o'r cwch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s065",
-            "text": "Mae Nia'n dangos lle bydd y map yn ddiogel.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s066",
-            "text": "Mae Dafi'n dod â draig bapur sy'n rhy fawr i fynd drwy'r drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s067",
-            "text": "Bydd rhaid iddo ei phlygu, ond fydd e ddim yn ei thorri.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s068",
-            "text": "Ar ddiwedd y prynhawn, bydd y cynllun cyntaf yn barod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s069",
-            "text": "Bydd y llyfrgell yn cau os na fydd dim yn newid, ond bydd pobl y dref yn gweld beth sydd ynddi cyn hynny.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l18-s070",
-            "text": "Bydd pob un yn dod eto yn gynnar bore yfory.",
+            "text": "Ar y drws: “YFORY BYDD Y LLYFRGELL AR GAU.” Ar y bwrdd: “YFORY BYDD CYFARFOD.” Yn y llyfr, mae'r brenin yn cysgu.",
             "inference_aids": []
           }
         ]
@@ -452,9 +391,10 @@
       "display_form": "bod — bydd",
       "citation_form": "bod — bydd",
       "part_of_speech": "verb",
-      "current_sense": "will be",
+      "current_sense": "will be; will",
       "forms_seen": [
-        "bydd"
+        "bydd",
+        "fydd"
       ],
       "first_introduced_lesson": "cy-draig-01-l18",
       "new": true
@@ -464,7 +404,7 @@
       "display_form": "bod — bydda i",
       "citation_form": "bod — bydda i",
       "part_of_speech": "verb",
-      "current_sense": "I will be",
+      "current_sense": "I will be; I will",
       "forms_seen": [
         "bydda"
       ],
@@ -556,124 +496,142 @@
       "new": true
     },
     {
-      "lexeme_id": "cy-rhaid",
-      "display_form": "rhaid",
-      "citation_form": "rhaid",
+      "lexeme_id": "cy-brenin",
+      "display_form": "brenin",
+      "citation_form": "brenin (g.)",
       "part_of_speech": "noun",
-      "current_sense": "necessity; must",
+      "current_sense": "king",
       "forms_seen": [
-        "rhaid"
+        "brenin"
       ],
       "first_introduced_lesson": "cy-draig-01-l18",
-      "new": true
+      "status": "receptive_illustrated",
+      "new": false
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use bydd/bydda i with yn + verbal noun or a complement to state future plans and conditions."
+    "target_language": "Heddiw mae'r drws ar agor; yfory bydd y drws ar gau. Mae Mali'n gweithio heddiw; yfory bydd Mali'n gweithio. Mae hi'n ateb: “Bydda i'n gweithio.”",
+    "bridge_language": "Use bydd before a subject for what will happen; use bydda i for your own future plan. Before a verbal noun, both take yn/'n."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l18-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Bydd a bydda i",
+      "directions": "Cwblhewch y patrwm o'r stori.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "“Fydd y llyfrgell ar gau yfory?” gofynna Dafi. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
-          "accepted_answers": [
-            "bod — bydd"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
-        },
-        {
-          "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
-          "accepted_answers": [
-            "“Bydda i'n helpu,” meddai Mali."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
-        },
-        {
-          "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
-        }
-      ]
-    },
-    "b": {
-      "id": "cy-draig-01-l18-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
-      "items": [
-        {
-          "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: bydd.",
+          "prompt": "Heddiw mae'r drws ar agor. Yfory ___ y drws ar gau.",
           "type": "cloze",
           "accepted_answers": [
             "bydd"
           ]
         },
         {
-          "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: dangos.",
+          "id": "pa2",
+          "prompt": "Heddiw mae Mali'n dangos y map. Yfory ___ Mali'n dangos y map.",
           "type": "cloze",
           "accepted_answers": [
-            "dangos"
+            "bydd"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Dw i'n ysgrifennu heddiw. Yfory ___ i'n ysgrifennu.",
+          "type": "cloze",
+          "accepted_answers": [
+            "bydda"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Dw i'n cadw'r llyfr heddiw. Newidiwch i yfory.",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Yfory bydda i'n cadw'r llyfr.",
+            "Bydda i'n cadw'r llyfr yfory."
+          ],
+          "rubric": "Use bydda i with yn/'n and cadw; either position for yfory is acceptable."
+        }
+      ]
+    },
+    "b": {
+      "id": "cy-draig-01-l18-pb",
+      "title": "Pensa B — Cynllun yfory",
+      "directions": "Cwblhewch o ystyr y stori.",
+      "items": [
+        {
+          "id": "pb1",
+          "prompt": "Mae Mali, Nia, Sam, Iwan, Dafi a Pero wrth un bwrdd yn y bore. Mae ___ yma.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cyfarfod"
+          ]
+        },
+        {
+          "id": "pb2",
+          "prompt": "Mae Mali'n rhoi pedwar llun yfory ar bapur. Mae hi'n gwneud ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cynllun"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: rhaid.",
+          "prompt": "Mae Nia gyda phensil a phapur. Bydd hi'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "rhaid"
+            "ysgrifennu"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Mae'r hen lyfr gyda Dafi yn y nos. Bydd Dafi'n ___'r llyfr.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cadw"
+          ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l18-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Dau gynllun",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
+          "prompt": "Beth fydd ar gau yfory?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "Y llyfrgell.",
+            "Bydd y llyfrgell ar gau yfory."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Beth fydd Mali ac Iwan yn dangos yn y cyfarfod?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Bydd yfory yn ddiwrnod pwysig."
-          ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+            "Y map a llun yr harbwr.",
+            "Bydd Mali'n dangos y map, a bydd Iwan yn dangos y map a llun yr harbwr."
+          ]
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Cwblhewch ateb Dafi: “Bydd y brenin yn codi ac yn ___ y llyfrgell.”",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "achub"
+          ],
+          "rubric": "Supply achub from Dafi's prediction; the receptive word brenin is already supplied and is not required from memory."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dywedwch dair brawddeg. Dechreuwch: “Yfory bydda i...”",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give three short, understandable Welsh future sentences. Use bydda i at least twice and one lesson action such as ysgrifennu, dangos, cadw, cyfarfod, or gweithio."
         }
       ]
     }
@@ -685,7 +643,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -704,10 +662,16 @@
     "source": "cy-draig-01-l18"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l18-pattern"
+      "cy-l18-scene-closure",
+      "cy-l18-heddiw-yfory",
+      "cy-l18-ar-gau",
+      "cy-l18-cynllun-cyfarfod",
+      "cy-l18-gweithredoedd",
+      "cy-l18-brenin",
+      "cy-l18-scene-two-plans"
     ],
     "audio": []
   }

@@ -3,34 +3,47 @@
   "id": "cy-draig-01-l07",
   "course_id": "cy-draig-01",
   "order": 7,
-  "title": "I'r caffi",
+  "title": "O'r llyfrgell i'r caffi",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G07 curriculum row, the cumulative L01–L06 course contract, and prior L07 review findings.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked motion idiom, article contractions, mutation after i, coordinated verbal nouns, rhythm, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G07",
       "label": "mynd/dod + i; contractions i'r/o'r",
-      "description": "Use mynd or dod with i for motion to a place, and recognize i'r and o'r with the definite article.",
-      "minimum_demonstrations": 6
+      "description": "Use mynd or dod with i for motion to a place, use dod o for motion from a place, and recognize i'r and o'r before the definite article.",
+      "minimum_demonstrations": 12
     },
     "recycled_grammar": [
       "G01",
+      "G02",
+      "G03",
       "G04",
+      "G05",
       "G06"
     ],
-    "incidental_grammar": [],
+    "incidental_grammar": [
+      {
+        "form": "yn ôl",
+        "note": "A directly illustrated direction phrase used with the already taught G04 action frame. It does not license later time or route constructions."
+      },
+      {
+        "form": "ac yn + verbal noun",
+        "note": "Coordination only repeats the established action frame with the same singular subject; no plural-person verb forms are introduced."
+      }
+    ],
     "communicative_goals": [
-      "say where someone goes or comes from",
-      "understand to and from",
-      "follow a simple route"
+      "follow motion from the library to the café",
+      "contrast going to a place with coming from it",
+      "understand Dafi's repeated returns to the old book",
+      "follow Dafi as he opens and closes the library door and finally brings the book to the café"
     ],
     "new_lexeme_ids": [
       "cy-mynd",
@@ -43,236 +56,302 @@
       "cy-agor",
       "cy-cau",
       "cy-yn-ol"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l07-s01",
-        "title": "Y drws",
+        "title": "Drws y llyfrgell",
         "segments": [
           {
             "id": "cy-draig-01-l07-s001",
-            "text": "Mae drws y llyfrgell yn agor.",
+            "text": "Mae Mali, Nia, Pero, y gath, a Dafi yn y llyfrgell. Mae'r hen lyfr yn y bocs, a mae'r papur gyda'r llyfr.",
+            "lexeme_ids": [],
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l07-scene",
+                "ref": "cy-l07-scene-book-on-street",
                 "presentation": "inline_scene",
-                "src": "media/images/cy-l07-scene.svg",
-                "alt": "O'r llyfrgell i'r caffi"
-              },
-              {
-                "type": "image",
-                "ref": "cy-l07-route",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l07-route.svg",
-                "alt": "O'r llyfrgell i'r caffi."
+                "src": "media/images/cy-l07-scene-book-on-street.svg",
+                "alt": "On an off-white storybook street between the warm wooden library and sea-green café, Mali, Nia, Pero, and the white cat move toward the café while tiny red Dafi looks back toward the hill and carries the large old book in both forelegs.",
+                "covers_lexeme_ids": [
+                  "cy-mynd",
+                  "cy-dod",
+                  "cy-i-prep",
+                  "cy-o",
+                  "cy-caffi",
+                  "cy-stryd",
+                  "cy-drws",
+                  "cy-agor",
+                  "cy-cau",
+                  "cy-yn-ol"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l07-s002",
-            "text": "Mae Mali wrth y drws.",
-            "inference_aids": []
+            "text": "Mae Nia'n agor drws y llyfrgell. Mae'r drws yn agor. Mae'r stryd yma, ac mae'r caffi ycw.",
+            "lexeme_ids": [
+              "cy-agor",
+              "cy-drws",
+              "cy-stryd",
+              "cy-caffi"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l07-door-actions",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l07-door-actions.svg",
+                "alt": "Two panels show the same library door swinging open under agor and shut under cau, with drws labelled on the door.",
+                "covers_lexeme_ids": [
+                  "cy-drws",
+                  "cy-agor",
+                  "cy-cau"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l07-s003",
-            "text": "Mae Dafi, Pero a'r gath gyda hi.",
-            "inference_aids": []
+            "text": "Mae Mali'n mynd o'r llyfrgell i'r caffi. Mae Pero'n mynd gyda Mali. Mae Nia a'r gath yn mynd o'r llyfrgell i'r caffi hefyd.",
+            "lexeme_ids": [
+              "cy-mynd",
+              "cy-o",
+              "cy-i-prep",
+              "cy-caffi"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l07-route",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l07-route.svg",
+                "alt": "A simple street route runs from a small library at left to a café at right. A teal arrow points from O'r llyfrgell to I'r caffi.",
+                "covers_lexeme_ids": [
+                  "cy-mynd",
+                  "cy-i-prep",
+                  "cy-o",
+                  "cy-caffi",
+                  "cy-stryd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l07-s004",
-            "text": "Mae Nia'n cau'r bocs.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s005",
-            "text": "“I'r caffi,” meddai Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s006",
-            "text": "Mae Mali'n mynd at y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s007",
-            "text": "Mae Pero'n mynd at y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s008",
-            "text": "Mae Dafi'n mynd at y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s009",
-            "text": "Mae pawb yn mynd o'r llyfrgell.",
+            "text": "Mae Dafi'n mynd i'r drws. Ond mae e'n edrych ar yr hen lyfr. Mae e'n edrych ycw hefyd. Mae e'n trist.",
+            "lexeme_ids": [
+              "cy-mynd",
+              "cy-i-prep",
+              "cy-drws"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l07-s02",
-        "title": "Y stryd",
+        "title": "O'r llyfrgell",
         "segments": [
           {
             "id": "cy-draig-01-l07-s010",
-            "text": "Mae'r caffi ar y stryd.",
-            "inference_aids": []
+            "text": "Nawr mae Dafi'n mynd o'r llyfrgell i'r stryd. Mae e'n mynd gyda Mali, Nia, Pero, a'r gath.",
+            "lexeme_ids": [
+              "cy-mynd",
+              "cy-o",
+              "cy-i-prep",
+              "cy-stryd"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l07-go-come",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l07-go-come.svg",
+                "alt": "From the same viewpoint, Mali moves away toward the café under mynd i'r caffi while Dafi moves from the library toward Mali under dod o'r llyfrgell.",
+                "covers_lexeme_ids": [
+                  "cy-mynd",
+                  "cy-dod",
+                  "cy-i-prep",
+                  "cy-o",
+                  "cy-caffi"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l07-s011",
-            "text": "Mae'r llyfrgell ar y stryd hefyd.",
+            "text": "Mae Mali yn y stryd. Mae'r llyfrgell yma; mae'r caffi ycw. Mae Mali'n mynd i'r caffi.",
+            "lexeme_ids": [
+              "cy-stryd",
+              "cy-caffi",
+              "cy-mynd",
+              "cy-i-prep"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s012",
-            "text": "Mae Mali'n mynd o'r llyfrgell i'r caffi.",
+            "text": "Ond mae Dafi'n edrych yn ôl. Mae e'n edrych ar ddrws y llyfrgell. Mae'r drws yn agor. Mae Dafi'n mynd yn ôl i'r llyfrgell.",
+            "lexeme_ids": [
+              "cy-yn-ol",
+              "cy-drws",
+              "cy-agor",
+              "cy-mynd",
+              "cy-i-prep"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s013",
-            "text": "Mae Pero'n mynd gyda Mali.",
+            "text": "Mae Dafi'n agor y drws. Mae e'n mynd i'r llyfrgell ac yn edrych ar yr hen lyfr.",
+            "lexeme_ids": [
+              "cy-agor",
+              "cy-drws",
+              "cy-mynd",
+              "cy-i-prep"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s014",
-            "text": "Mae'r gath yn mynd gyda Nia.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s015",
-            "text": "Mae Dafi'n edrych ar y llyfrgell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s016",
-            "text": "Mae e'n mynd i'r llyfrgell eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s017",
-            "text": "“Dafi! I'r caffi!” meddai Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s018",
-            "text": "Mae Dafi'n dod o'r llyfrgell.",
+            "text": "Mae Dafi'n cau'r drws, yn dod o'r llyfrgell, ac yn mynd i'r caffi.",
+            "lexeme_ids": [
+              "cy-cau",
+              "cy-drws",
+              "cy-dod",
+              "cy-o",
+              "cy-mynd",
+              "cy-i-prep",
+              "cy-caffi"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l07-s03",
-        "title": "Yn ôl eto",
+        "title": "Yn ôl",
         "segments": [
           {
             "id": "cy-draig-01-l07-s019",
-            "text": "Mae Dafi'n dod at Mali.",
-            "inference_aids": []
+            "text": "Mae Dafi'n mynd i'r caffi, ond mae e'n edrych yn ôl. Mae'r hen lyfr yn y llyfrgell. Mae Dafi'n edrych ar Mali.",
+            "lexeme_ids": [
+              "cy-mynd",
+              "cy-i-prep",
+              "cy-caffi",
+              "cy-yn-ol"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l07-three-turns",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l07-three-turns.svg",
+                "alt": "Three numbered panels trace tiny Dafi going toward the café, turning back toward the library and hill, then coming from the library carrying the old book.",
+                "covers_lexeme_ids": [
+                  "cy-mynd",
+                  "cy-dod",
+                  "cy-i-prep",
+                  "cy-o",
+                  "cy-caffi",
+                  "cy-yn-ol"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l07-s020",
-            "text": "Mae pawb yn mynd i'r caffi eto.",
+            "text": "Ydy Dafi'n mynd i'r caffi nawr? Nac ydy. Mae e'n mynd yn ôl i'r llyfrgell. Mae Pero'n edrych ar Dafi.",
+            "lexeme_ids": [
+              "cy-mynd",
+              "cy-i-prep",
+              "cy-caffi",
+              "cy-yn-ol"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s021",
-            "text": "Ond mae Dafi'n edrych ar y llyfrgell eto.",
+            "text": "Mae drws y llyfrgell yn cau. Mae Dafi'n agor y drws. Mae e'n mynd i'r llyfrgell, ac mae Pero'n dod i'r drws.",
+            "lexeme_ids": [
+              "cy-drws",
+              "cy-cau",
+              "cy-agor",
+              "cy-mynd",
+              "cy-dod",
+              "cy-i-prep"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s022",
-            "text": "Mae drws y llyfrgell yn agor.",
+            "text": "Mae Dafi'n edrych ar y papur ac yn edrych ycw.",
+            "lexeme_ids": [],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s023",
-            "text": "Mae Dafi'n mynd at y drws eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s024",
-            "text": "Mae e'n cau'r drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s025",
-            "text": "Nawr mae Dafi'n cau'r drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s026",
-            "text": "Mae Dafi'n dod o'r drws at Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s027",
-            "text": "“Dafi!” meddai Nia.",
+            "text": "Nawr mae'r hen lyfr gyda Dafi. Mae e'n cau'r drws ac yn dod o'r llyfrgell.",
+            "lexeme_ids": [
+              "cy-cau",
+              "cy-drws",
+              "cy-dod",
+              "cy-o"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l07-s04",
-        "title": "Y caffi",
+        "title": "I'r caffi",
         "segments": [
           {
             "id": "cy-draig-01-l07-s028",
-            "text": "Mae drws y caffi ar agor.",
+            "text": "Mae Dafi'n dod o'r llyfrgell i'r stryd. Mae'r hen lyfr gyda Dafi. Mae Mali'n hapus nawr.",
+            "lexeme_ids": [
+              "cy-dod",
+              "cy-o",
+              "cy-i-prep"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s029",
-            "text": "Mae Sam yn y caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s030",
-            "text": "Mae Sam yn dod at y drws.",
+            "text": "Mae Mali'n mynd i'r caffi. Mae Pero'n mynd gyda Mali. Mae Nia a'r gath yn mynd hefyd. Mae Dafi'n mynd i'r caffi gyda'r hen lyfr.",
+            "lexeme_ids": [
+              "cy-mynd",
+              "cy-i-prep",
+              "cy-caffi"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s031",
-            "text": "Mae Mali'n mynd i'r caffi.",
+            "text": "Mae Dafi'n agor drws y caffi. Mae Mali'n mynd i'r caffi. Mae Nia, Pero, a'r gath yn dod i'r caffi. Mae Dafi'n dod hefyd.",
+            "lexeme_ids": [
+              "cy-agor",
+              "cy-drws",
+              "cy-caffi",
+              "cy-mynd",
+              "cy-dod",
+              "cy-i-prep"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l07-s032",
-            "text": "Mae Pero'n mynd i'r caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s033",
-            "text": "Mae Nia a'r gath yn dod i'r caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s034",
-            "text": "Mae Dafi’n dod hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s035",
-            "text": "Mae pawb yn y caffi nawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l07-s036",
-            "text": "Mae Sam yn cau drws y caffi.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l07-s05",
-        "title": "O'r llyfrgell i'r caffi",
-        "segments": [
-          {
-            "id": "cy-draig-01-l07-s037",
-            "text": "Mae Mali wrth ddrws y llyfrgell. Mae'r drws ar agor, ac mae'r caffi ar yr un stryd. Mae Mali'n mynd o'r llyfrgell i'r caffi. Mae Pero'n mynd gyda Mali, ac mae Nia a'r gath yn mynd hefyd. Mae Dafi'n mynd at y drws, ond mae e'n edrych yn ôl. Mae e'n mynd yn ôl i'r llyfrgell. “Dafi! I'r caffi!” Mae Dafi'n dod o'r llyfrgell at Mali, ac mae pawb yn mynd i'r caffi eto. Ond mae Dafi'n edrych yn ôl unwaith eto: mae drws y llyfrgell ar agor. Mae e'n mynd yn ôl ac yn cau'r drws. Nawr mae'r drws ar gau. Mae Dafi'n dod at Mali, ac mae'r grŵp yn mynd i'r caffi. Mae Mali'n mynd i mewn yn gyntaf. Mae Pero, Nia a'r gath yn dod ar ei hôl hi. Mae Dafi'n dod yn olaf, ac mae Sam yn cau drws y caffi.",
+            "text": "Nawr mae'r hen lyfr yn y caffi. Mae Dafi'n edrych ar y llyfr, ac mae e'n edrych ycw hefyd. Ond dydy Dafi ddim yn mynd yn ôl nawr.",
+            "lexeme_ids": [
+              "cy-caffi",
+              "cy-mynd",
+              "cy-yn-ol"
+            ],
             "inference_aids": []
           }
         ]
@@ -286,9 +365,7 @@
       "citation_form": "mynd",
       "part_of_speech": "verb",
       "current_sense": "go",
-      "forms_seen": [
-        "mynd"
-      ],
+      "forms_seen": ["mynd"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -298,33 +375,27 @@
       "citation_form": "dod",
       "part_of_speech": "verb",
       "current_sense": "come",
-      "forms_seen": [
-        "dod"
-      ],
+      "forms_seen": ["dod"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
     {
       "lexeme_id": "cy-i-prep",
-      "display_form": "i",
+      "display_form": "i / i'r",
       "citation_form": "i",
       "part_of_speech": "preposition",
       "current_sense": "to",
-      "forms_seen": [
-        "i"
-      ],
+      "forms_seen": ["i", "i'r"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
     {
       "lexeme_id": "cy-o",
-      "display_form": "o",
+      "display_form": "o / o'r",
       "citation_form": "o",
       "part_of_speech": "preposition",
       "current_sense": "from; of",
-      "forms_seen": [
-        "o"
-      ],
+      "forms_seen": ["o", "o'r"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -334,9 +405,7 @@
       "citation_form": "caffi (g.)",
       "part_of_speech": "noun",
       "current_sense": "café",
-      "forms_seen": [
-        "caffi"
-      ],
+      "forms_seen": ["caffi"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -346,9 +415,7 @@
       "citation_form": "stryd (b.)",
       "part_of_speech": "noun",
       "current_sense": "street",
-      "forms_seen": [
-        "stryd"
-      ],
+      "forms_seen": ["stryd"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -358,9 +425,7 @@
       "citation_form": "drws (g.)",
       "part_of_speech": "noun",
       "current_sense": "door",
-      "forms_seen": [
-        "drws"
-      ],
+      "forms_seen": ["drws"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -370,9 +435,7 @@
       "citation_form": "agor",
       "part_of_speech": "verb",
       "current_sense": "open",
-      "forms_seen": [
-        "agor"
-      ],
+      "forms_seen": ["agor"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -382,9 +445,7 @@
       "citation_form": "cau",
       "part_of_speech": "verb",
       "current_sense": "close",
-      "forms_seen": [
-        "cau"
-      ],
+      "forms_seen": ["cau"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     },
@@ -394,16 +455,14 @@
       "citation_form": "yn ôl",
       "part_of_speech": "adverb",
       "current_sense": "back",
-      "forms_seen": [
-        "yn ôl"
-      ],
+      "forms_seen": ["yn ôl"],
       "first_introduced_lesson": "cy-draig-01-l07",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Mae Mali'n mynd i'r caffi. Mae Dafi'n dod o'r llyfrgell. i + y = i'r; o + y = o'r.",
-    "bridge_language": "Mynd i means go to; dod o means come from. Before the article, i + y becomes i'r and o + y becomes o'r."
+    "target_language": "Mae Mali'n mynd i'r caffi. Mae Dafi'n dod o'r llyfrgell. Mae e'n mynd o'r llyfrgell i'r caffi. i + y = i'r; o + y = o'r.",
+    "bridge_language": "Use mynd i for motion to a place and dod o for motion from one. Before the article, i + y contracts to i'r and o + y contracts to o'r."
   },
   "pensa": {
     "a": {
@@ -413,113 +472,101 @@
       "items": [
         {
           "id": "pa1",
-          "prompt": "mynd ___ caffi",
+          "prompt": "mynd i + y caffi = mynd ___ caffi",
           "type": "cloze",
-          "accepted_answers": [
-            "i'r"
-          ]
+          "accepted_answers": ["i'r"],
+          "explanation": "I + y contracts to i'r before the definite noun."
         },
         {
           "id": "pa2",
-          "prompt": "dod ___ llyfrgell",
+          "prompt": "dod o + y llyfrgell = dod ___ llyfrgell",
           "type": "cloze",
-          "accepted_answers": [
-            "o'r"
-          ]
+          "accepted_answers": ["o'r"],
+          "explanation": "O + y contracts to o'r before the definite noun."
         },
         {
           "id": "pa3",
-          "prompt": "Mae Mali'n ___ i'r caffi.",
+          "prompt": "Mae Mali'n ___ i'r caffi. (mynd)",
           "type": "cloze",
-          "accepted_answers": [
-            "mynd"
-          ]
+          "accepted_answers": ["mynd"],
+          "explanation": "Mynd pairs with i to describe motion toward the café."
         },
         {
           "id": "pa4",
-          "prompt": "Mae Dafi'n ___ o'r llyfrgell.",
+          "prompt": "Mae Dafi'n ___ o'r llyfrgell. (dod)",
           "type": "cloze",
-          "accepted_answers": [
-            "dod"
-          ]
+          "accepted_answers": ["dod"],
+          "explanation": "Dod pairs with o to describe motion from the library."
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l07-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Y daith",
+      "directions": "Cwblhewch o'r stori a'r lluniau.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "🚪 = ___",
+          "prompt": "Mae Mali'n mynd o'r llyfrgell i'r ___.",
           "type": "cloze",
-          "accepted_answers": [
-            "drws"
-          ]
+          "aid_ref": "cy-l07-route",
+          "accepted_answers": ["caffi"]
         },
         {
           "id": "pb2",
-          "prompt": "Mae'r caffi ar y ___.",
+          "prompt": "Mae Mali yn y ___. Mae'r llyfrgell yma; mae'r caffi ycw.",
           "type": "cloze",
-          "accepted_answers": [
-            "stryd"
-          ]
+          "aid_ref": "cy-l07-route",
+          "accepted_answers": ["stryd"]
         },
         {
           "id": "pb3",
-          "prompt": "Mae Dafi'n ___ y drws.",
+          "prompt": "Mae'r drws yn agor. Nawr mae Dafi'n ___ y drws.",
           "type": "cloze",
-          "accepted_answers": [
-            "cau"
-          ]
+          "aid_ref": "cy-l07-door-actions",
+          "accepted_answers": ["cau"]
         },
         {
           "id": "pb4",
-          "prompt": "Mae Dafi'n mynd ___ i'r llyfrgell.",
+          "prompt": "Mae Dafi'n edrych ar y llyfrgell ac yn mynd ___ i'r llyfrgell.",
           "type": "cloze",
-          "accepted_answers": [
-            "yn ôl"
-          ]
+          "aid_ref": "cy-l07-three-turns",
+          "accepted_answers": ["yn ôl"]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l07-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Yr hen lyfr",
       "directions": "Atebwch yn Gymraeg; gall ateb byr fod yn gywir.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "I ble mae Mali'n mynd?",
-          "type": "cloze",
-          "accepted_answers": [
-            "I'r caffi."
-          ]
+          "prompt": "Ydy Mali'n mynd i'r caffi?",
+          "type": "bounded_response",
+          "accepted_answers": ["Ydy.", "Ydy", "ydy"],
+          "rubric": "Must answer affirmatively."
         },
         {
           "id": "pc2",
-          "prompt": "O ble mae Dafi'n dod?",
-          "type": "cloze",
-          "accepted_answers": [
-            "O'r llyfrgell."
-          ]
+          "prompt": "Dafi: o'r caffi / o'r llyfrgell?",
+          "type": "bounded_response",
+          "accepted_answers": ["o'r llyfrgell", "O'r llyfrgell.", "Mae Dafi'n dod o'r llyfrgell."],
+          "rubric": "Must identify the library as the place Dafi comes from."
         },
         {
           "id": "pc3",
-          "prompt": "Pam mae Dafi'n mynd yn ôl?",
-          "type": "cloze",
-          "accepted_answers": [
-            "Mae’r drws ar agor.",
-            "Mae e’n cau’r drws."
-          ]
+          "prompt": "Ydy Dafi'n cau drws y llyfrgell?",
+          "type": "bounded_response",
+          "accepted_answers": ["Ydy.", "Ydy", "ydy"],
+          "rubric": "Must answer affirmatively; Dafi closes the library door before leaving with the book."
         },
         {
           "id": "pc4",
-          "prompt": "Dywedwch le rydych chi'n mynd iddo.",
-          "type": "transfer",
+          "prompt": "Dafi: i'r caffi → yn ôl i'r llyfrgell → o'r llyfrgell gyda'r hen lyfr. Dywedwch y stori.",
+          "type": "bounded_retelling",
           "accepted_answers": [],
-          "rubric": "Any comprehensible i + place response is acceptable."
+          "rubric": "Give three or four short clauses using known singular action frames: Dafi goes toward the café, goes back to the library, opens or closes the door, and comes from the library with the old book. Require the direction changes and the book, not exact wording."
         }
       ]
     }
@@ -531,30 +578,33 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-mynd",
+      "cy-dod",
+      "cy-i-prep",
+      "cy-o",
+      "cy-caffi",
+      "cy-stryd",
+      "cy-drws",
+      "cy-agor",
+      "cy-cau",
+      "cy-yn-ol"
+    ],
     "format": "tsv",
-    "fields": [
-      "guid",
-      "front",
-      "back",
-      "tags",
-      "source"
-    ],
+    "fields": ["guid", "front", "back", "tags", "source"],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
-    "tags": [
-      "semeion",
-      "welsh",
-      "cy-draig-01",
-      "lesson-07"
-    ],
+    "tags": ["illustrated-input", "welsh", "cy-draig-01", "lesson-07"],
     "source": "cy-draig-01-l07"
   },
   "media": {
-    "status": "not-generated",
-    "audio_sources": [],
+    "status": "svg-draft-needs-review",
     "images": [
-      "cy-l07-scene",
-      "cy-l07-route"
+      "cy-l07-scene-book-on-street",
+      "cy-l07-door-actions",
+      "cy-l07-route",
+      "cy-l07-go-come",
+      "cy-l07-three-turns"
     ],
     "audio": []
   }

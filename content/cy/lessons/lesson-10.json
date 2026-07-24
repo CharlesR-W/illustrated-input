@@ -1,18 +1,18 @@
 {
   "schema_version": "0.1.0",
-  "id": "cy-draig-01-l10",
   "course_id": "cy-draig-01",
+  "id": "cy-draig-01-l10",
+  "title": "Ble mae'r bedwaredd ran?",
   "order": 10,
-  "title": "Ble mae Tad-cu?",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten Lessons 01–09",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for spatial idiom, mutation after prepositions, and register."
   },
   "learning_contract": {
     "primary_new_grammar": {
@@ -23,14 +23,17 @@
     },
     "recycled_grammar": [
       "G03",
+      "G04",
+      "G05",
       "G07",
+      "G08",
       "G09"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "ask where someone is",
+      "ask where a person or object is",
       "describe positions in a room",
-      "follow a search through the library"
+      "follow a search for the missing paper"
     ],
     "new_lexeme_ids": [
       "cy-ble",
@@ -43,123 +46,138 @@
       "cy-ffenestr",
       "cy-ystafell",
       "cy-chwilio"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l10-s01",
-        "title": "Tad-cu Iwan",
+        "title": "Yr ystafell fawr",
         "segments": [
           {
             "id": "cy-draig-01-l10-s001",
-            "text": "Mae Mali'n dod yn ôl i'r llyfrgell.",
+            "text": "Mae Mali, Dafi, Pero, Nia a Sam yn dod yn ôl i'r llyfrgell. Mae'r tri phapur gyda Mali, a'r hen lyfr gyda Dafi.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l10-scene",
+                "ref": "cy-l10-scene-library-search",
                 "presentation": "inline_scene",
                 "src": "media/images/cy-l10-scene.svg",
-                "alt": "Ble mae Tad-cu?"
+                "alt": "A cutaway library search: Mali and Dafi search the warm main room while Pero peers behind a shelf, where sleeping Iwan and an old box hide from view; the missing torn paper protrudes beneath the box.",
+                "covers_lexeme_ids": [
+                  "cy-ble",
+                  "cy-ar",
+                  "cy-dan",
+                  "cy-wrth",
+                  "cy-tu-ol",
+                  "cy-o-flaen",
+                  "cy-silff",
+                  "cy-ffenestr",
+                  "cy-ystafell",
+                  "cy-chwilio"
+                ]
               },
               {
                 "type": "image",
-                "ref": "cy-l10-places",
+                "ref": "cy-l10-room",
                 "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l10-places.svg",
-                "alt": "Tu ôl i, o flaen a wrth."
+                "src": "media/diagrams/cy-l10-room.svg",
+                "alt": "A simple labelled library room containing a shelf, window, table, and door.",
+                "covers_lexeme_ids": [
+                  "cy-ystafell",
+                  "cy-silff",
+                  "cy-ffenestr"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l10-s002",
-            "text": "Mae hi'n chwilio am Dad-cu Iwan.",
-            "inference_aids": []
+            "text": "Mae ystafell fawr yn y llyfrgell. Mae bwrdd yn yr ystafell, mae ffenestr o flaen y bwrdd, a silff wrth y ffenestr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l10-places",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l10-places.svg",
+                "alt": "Five small panels show a red paper on, under, beside, behind, and in front of the same table.",
+                "covers_lexeme_ids": [
+                  "cy-ar",
+                  "cy-dan",
+                  "cy-wrth",
+                  "cy-tu-ol",
+                  "cy-o-flaen"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l10-s003",
-            "text": "“Ble mae Tad-cu?” meddai Mali.",
+            "text": "Mae Mali'n rhoi tri phapur ar y bwrdd: un, dau, tri, a dim.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l10-s004",
-            "text": "Dydy Tad-cu ddim wrth y drws.",
-            "inference_aids": []
+            "text": "“Ble mae'r papur?” Mae Mali'n chwilio. Mae Dafi'n chwilio hefyd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l10-search",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l10-search.svg",
+                "alt": "Mali asks where the torn paper is while Dafi searches three possible places, ending at a question-mark silhouette.",
+                "covers_lexeme_ids": [
+                  "cy-ble",
+                  "cy-chwilio"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l10-s005",
-            "text": "Dydy e ddim o flaen y llyfrgell.",
+            "text": "Mae Pero'n edrych ar y bwrdd ac ar y silff. Mae Nia wrth y drws yn yr ystafell, ac mae Sam o flaen y ffenestr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l10-s006",
-            "text": "Mae Pero'n chwilio hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s007",
-            "text": "Mae Dafi'n edrych dan y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s008",
-            "text": "Dydy Tad-cu ddim dan y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s009",
-            "text": "Mae'r gath ar y bwrdd.",
+            "text": "Dydy'r papur ddim ar y bwrdd. Dydy e ddim wrth y ffenestr. Mae Mali, Dafi a Pero'n chwilio.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l10-s02",
-        "title": "Yr ystafell fawr",
+        "title": "Ble mae'r papur?",
         "segments": [
           {
+            "id": "cy-draig-01-l10-s007",
+            "text": "Mae Dafi'n edrych dan y bwrdd. Oes papur dan y bwrdd? Nac oes. Mae cwpan dan y bwrdd, ond does dim papur.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l10-s008",
+            "text": "Mae'r gath ar y silff. Oes papur wrth y gath? Nac oes.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l10-s009",
+            "text": "Mae Nia'n chwilio wrth y ffenestr, ond dydy'r papur ddim yma.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l10-s010",
-            "text": "Mae ystafell fawr yn y llyfrgell.",
+            "text": "Mae Sam yn chwilio o flaen y silff. Mae e'n edrych dan un gadair, ond does dim papur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l10-s011",
-            "text": "Mae pedair cadair yn yr ystafell.",
+            "text": "Mae Dafi'n edrych tu ôl i'r bwrdd ac wrth y drws. Dydy'r papur ddim yma.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l10-s012",
-            "text": "Mae silff wrth y wal.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s013",
-            "text": "Mae ffenestr o flaen y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s014",
-            "text": "Mae Dafi'n chwilio tu ôl i'r cadeiriau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s015",
-            "text": "Mae Pero'n chwilio dan y cadeiriau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s016",
-            "text": "“Ble mae Tad-cu?” meddai Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s017",
-            "text": "Dydy e ddim yn yr ystafell fawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s018",
-            "text": "Ond mae drws bach tu ôl i’r silff.",
+            "text": "Mae Mali'n trist, ond mae Pero'n edrych ar y silff. Mae Pero'n mynd o flaen y silff, ac mae e'n edrych tu ôl i'r silff.",
             "inference_aids": []
           }
         ]
@@ -169,110 +187,92 @@
         "title": "Tu ôl i'r silff",
         "segments": [
           {
-            "id": "cy-draig-01-l10-s019",
-            "text": "Mae Mali wrth y drws bach.",
+            "id": "cy-draig-01-l10-s013",
+            "text": "Ble mae Pero nawr? Dydy Pero ddim wrth Mali. Dydy e ddim o flaen y ffenestr. Mae Pero tu ôl i'r silff.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s020",
-            "text": "Mae drws bach tu ôl i'r silff.",
+            "id": "cy-draig-01-l10-s014",
+            "text": "Mae Mali, Dafi, Nia a Sam yn mynd tu ôl i'r silff.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s021",
-            "text": "Mae'r drws ddim ar agor.",
+            "id": "cy-draig-01-l10-s015",
+            "text": "Mae hen focs mawr tu ôl i'r silff. Mae Tad-cu Iwan tu ôl i'r silff hefyd, wrth yr hen focs.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s022",
-            "text": "Mae Mali'n agor y drws.",
+            "id": "cy-draig-01-l10-s016",
+            "text": "Dydy Iwan ddim yn edrych ar Mali. Mae Pero wrth Iwan.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s023",
-            "text": "Mae ystafell fach tu ôl i'r silff.",
+            "id": "cy-draig-01-l10-s017",
+            "text": "“Tad-cu!” Mae Iwan yn edrych ar Mali nawr.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s024",
-            "text": "Mae Dafi'n mynd i'r ystafell fach.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s025",
-            "text": "Mae Pero wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s026",
-            "text": "Mae Mali o flaen Pero.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s027",
-            "text": "Mae Dafi'n edrych yn yr ystafell.",
+            "id": "cy-draig-01-l10-s018",
+            "text": "Mae Iwan yn edrych ar Dafi, ar Pero, ac ar yr hen focs. “Ble mae'r papur, Tad-cu?” Mae Iwan yn edrych dan y bocs.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l10-s04",
-        "title": "Wedi ei ganfod",
+        "title": "Y papur dan y bocs",
         "segments": [
           {
-            "id": "cy-draig-01-l10-s028",
-            "text": "Mae Tad-cu Iwan yn yr ystafell fach.",
+            "id": "cy-draig-01-l10-s019",
+            "text": "Mae'r papur dan yr hen focs. Mae Dafi'n edrych dan y bocs hefyd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l10-paper-under-box",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l10-paper-under-box.svg",
+                "alt": "The fourth torn paper piece projects clearly from beneath an old box; three matching pieces on a nearby table leave exactly its shape empty.",
+                "covers_lexeme_ids": [
+                  "cy-dan",
+                  "cy-ar",
+                  "cy-wrth"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l10-s020",
+            "text": "“Y papur!” Mae Dafi'n hapus. Mae Mali'n rhoi'r hen focs ar y bwrdd.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s029",
-            "text": "Mae e dan hen lyfr mawr.",
+            "id": "cy-draig-01-l10-s021",
+            "text": "Mae Mali'n rhoi'r papur wrth y tri phapur. Un, dau, tri, pedwar: mae pedwar papur yn un llun.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s030",
-            "text": "“Tad-cu!” meddai Mali.",
+            "id": "cy-draig-01-l10-s022",
+            "text": "Mae Iwan wrth Mali, a Pero wrth Iwan. Mae Dafi ar y bwrdd!",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s031",
-            "text": "Mae Mali'n hapus.",
+            "id": "cy-draig-01-l10-s023",
+            "text": "Mae Dafi'n edrych ar y llun. Mae'r ddraig fach yn y llun, ac mae e yn y llun hefyd.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s032",
-            "text": "Mae Mali’n rhoi’r llyfr ar y bwrdd.",
+            "id": "cy-draig-01-l10-s024",
+            "text": "Mae Dafi'n edrych ar Iwan. “Pwy ydy e?” Mae Iwan yn edrych ar y llun, ond dydy e ddim yn hapus.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s033",
-            "text": "Mae Tad-cu'n dod o'r ystafell.",
+            "id": "cy-draig-01-l10-s025",
+            "text": "Mae'r pedwar papur ar y bwrdd. Mae Dafi o flaen Iwan, a'r llun o flaen Dafi.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l10-s034",
-            "text": "Mae e wrth Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s035",
-            "text": "Mae’r llyfr o flaen Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l10-s036",
-            "text": "Nawr mae pawb gyda Tad-cu. Mae Mali wrth Dad-cu. Mae Pero wrth y drws. Mae Dafi o flaen y map. Mae'r gath ar y bwrdd. Mae'r silff tu ôl i Mali, ac mae'r drws bach tu ôl i'r silff. Mae'r ffenestr o flaen y bwrdd. Nawr dydy pawb ddim yn chwilio: mae Tad-cu yma.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l10-s05",
-        "title": "Yr ystafell gudd",
-        "segments": [
-          {
-            "id": "cy-draig-01-l10-s037",
-            "text": "Mae Mali'n chwilio am Dad-cu yn y llyfrgell. Ble mae Tad-cu? Dydy e ddim wrth y drws nac o flaen y llyfrgell. Mae Dafi'n edrych dan y bwrdd, ond dim Tad-cu sydd yno; mae'r gath ar y bwrdd. Mae Pero'n chwilio yn yr ystafell fawr. Mae silff wrth y wal, ffenestr o flaen y bwrdd, a phedair cadair yn yr ystafell. Mae Dafi'n chwilio tu ôl i'r cadeiriau ac mae Pero'n chwilio dan y cadeiriau. Dydy Tad-cu ddim yno. Yna mae Mali'n gweld drws bach tu ôl i'r silff. Mae hi'n agor y drws. Mae ystafell fach tu ôl i'r silff. Mae Dafi'n mynd i'r ystafell fach, mae Pero wrth y drws, ac mae Mali o flaen Pero. Ble mae Tad-cu? Mae Tad-cu yn yr ystafell fach, dan hen fap mawr. Mae Mali'n symud y map, ac mae Tad-cu'n dod allan. Nawr mae'r map ar y bwrdd o flaen Dafi, a Tad-cu wrth Mali.",
+            "id": "cy-draig-01-l10-s026",
+            "text": "Dydy Iwan ddim yn darllen yr hen lyfr. Mae e'n edrych ar y papur, ac mae e'n trist.",
             "inference_aids": []
           }
         ]
@@ -402,18 +402,18 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "Ble mae Tad-cu? Mae e dan y map, yn yr ystafell fach, tu ôl i'r silff. Mae Pero wrth y drws.",
-    "bridge_language": "Ble asks where. Learn the location phrases as chunks: ar, dan, wrth, tu ôl i, and o flaen. Conjugated prepositions are deferred."
+    "target_language": "Ble mae'r papur? Mae'r papur ar y bwrdd, dan y bocs, wrth Iwan, tu ôl i'r silff, neu o flaen Dafi.",
+    "bridge_language": "Ble mae…? asks where something is. Use ar for on, dan for under, wrth for beside, tu ôl i for behind, and o flaen for in front of."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l10-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm.",
+      "title": "Pensa A — Ble?",
+      "directions": "Cwblhewch.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "___ mae Tad-cu?",
+          "prompt": "___ mae'r papur?",
           "type": "cloze",
           "accepted_answers": [
             "Ble"
@@ -421,7 +421,7 @@
         },
         {
           "id": "pa2",
-          "prompt": "Mae'r gath ___ y bwrdd.",
+          "prompt": "Mae'r gath ___ y silff.",
           "type": "cloze",
           "accepted_answers": [
             "ar"
@@ -429,7 +429,7 @@
         },
         {
           "id": "pa3",
-          "prompt": "Mae Tad-cu ___ y map.",
+          "prompt": "Mae'r papur ___ y bocs.",
           "type": "cloze",
           "accepted_answers": [
             "dan"
@@ -437,100 +437,120 @@
         },
         {
           "id": "pa4",
-          "prompt": "Mae'r drws ___ ôl i'r silff.",
+          "prompt": "Mae Iwan tu ___ i'r silff.",
           "type": "cloze",
           "accepted_answers": [
-            "tu"
+            "ôl"
           ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l10-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Yn yr ystafell",
+      "directions": "Cwblhewch o'r stori a'r llun.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Mae llyfrau ar y ___.",
+          "prompt": "Mae'r silff ___ y ffenestr.",
           "type": "cloze",
           "accepted_answers": [
-            "silff"
+            "wrth"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Mae’r drws bach tu ôl i’r ___.",
+          "prompt": "Mae Sam ___ y silff.",
           "type": "cloze",
           "accepted_answers": [
-            "silff"
+            "o flaen"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Mae pawb yn ___ am Tad-cu.",
+          "prompt": "Mae bwrdd a ffenestr yn yr ___.",
           "type": "cloze",
           "accepted_answers": [
-            "chwilio"
+            "ystafell"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Mae'r bwrdd yn yr ___.",
+          "prompt": "Ble mae'r papur? Mae Mali'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "ystafell"
+            "chwilio"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l10-pc",
-      "title": "Pensa C — Y stori",
-      "directions": "Atebwch yn Gymraeg; gall ateb byr fod yn gywir.",
+      "title": "Pensa C — Y papur ac Iwan",
+      "directions": "Atebwch yn Gymraeg.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Ble mae'r gath?",
-          "type": "cloze",
+          "prompt": "Ble mae'r papur gyda'r hen focs?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Ar y bwrdd."
-          ]
+            "Dan yr hen focs.",
+            "Dan yr hen focs",
+            "Mae'r papur dan yr hen focs.",
+            "Mae'r papur dan yr hen focs"
+          ],
+          "rubric": "Must locate the paper beneath the old box."
         },
         {
           "id": "pc2",
-          "prompt": "Ble mae'r drws bach?",
-          "type": "cloze",
+          "prompt": "Ble mae Tad-cu Iwan?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Tu ôl i'r silff."
-          ]
+            "Tu ôl i'r silff.",
+            "Tu ôl i'r silff",
+            "Mae Tad-cu Iwan tu ôl i'r silff.",
+            "Mae Tad-cu Iwan tu ôl i'r silff"
+          ],
+          "rubric": "Must locate Iwan behind the shelf."
         },
         {
           "id": "pc3",
-          "prompt": "Ble mae Tad-cu?",
-          "type": "cloze",
+          "prompt": "Ydy Iwan yn hapus gyda'r llun?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Yn yr ystafell fach, dan y map."
-          ]
+            "Nac ydy.",
+            "Nac ydy",
+            "nac ydy",
+            "Dydy e ddim yn hapus.",
+            "Dydy e ddim yn hapus"
+          ],
+          "rubric": "Must answer negatively; the final sentence says that Iwan is sad."
         },
         {
           "id": "pc4",
-          "prompt": "Ble mae un peth yn eich ystafell?",
-          "type": "transfer",
+          "prompt": "Y llyfrgell, y silff, Iwan, a'r papur: Mali a Dafi.",
+          "type": "bounded_retelling",
           "accepted_answers": [],
-          "rubric": "Use one learned place phrase with an object."
+          "rubric": "Retell the search in three or four short clauses. Include where Iwan is, where the paper is, and at least one other learned place phrase. Do not require undeclared later vocabulary or grammar."
         }
       ]
     }
   },
-  "completion": {
-    "allowed_without_pensa_score": true,
-    "button_label": "Gorffen y wers",
-    "storage_key": "cy-draig-01:cy-draig-01-l10:finished"
-  },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-ble",
+      "cy-ar",
+      "cy-dan",
+      "cy-wrth",
+      "cy-tu-ol",
+      "cy-o-flaen",
+      "cy-silff",
+      "cy-ffenestr",
+      "cy-ystafell",
+      "cy-chwilio"
+    ],
     "format": "tsv",
     "fields": [
       "guid",
@@ -541,19 +561,27 @@
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
     "tags": [
-      "semeion",
+      "illustrated-input",
       "welsh",
       "cy-draig-01",
       "lesson-10"
     ],
     "source": "cy-draig-01-l10"
   },
+  "completion": {
+    "allowed_without_pensa_score": true,
+    "button_label": "Gorffen y wers",
+    "storage_key": "cy-draig-01:cy-draig-01-l10:finished"
+  },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l10-scene",
-      "cy-l10-places"
+      "cy-l10-scene-library-search",
+      "cy-l10-room",
+      "cy-l10-places",
+      "cy-l10-search",
+      "cy-l10-paper-under-box"
     ],
     "audio": []
   }
