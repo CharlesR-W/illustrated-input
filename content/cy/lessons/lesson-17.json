@@ -5,35 +5,48 @@
   "order": 17,
   "title": "Pan oedd Iwan yn ifanc",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G17 curriculum row, the cumulative rewritten L01–L16 course contract, and the L17 findings in docs/reviews/welsh-12-21.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked imperfect-person forms, pan clauses, rescue aspect, mutations, idiom, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G17",
       "label": "Imperfect persons and pan clauses",
-      "description": "Use oeddwn/oeddet/oedden and pan oedd to connect remembered background actions and states.",
+      "description": "Use oeddwn i, oeddet ti, and oedden ni with pan oedd to frame remembered background, while recycled simple-past forms mark completed event boundaries.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G07",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
       "G16"
     ],
     "incidental_grammar": [
       {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
+        "form": "doeddwn i ddim / doedden ni ddim",
+        "note": "Negative counterparts appear only in direct contrast with the new affirmative imperfect-person forms; open production is not required."
+      },
+      {
+        "form": "gwnes i / gwnaeth + achub",
+        "note": "The already-taught G15 gwneud past forms carry the new verbal noun achub so the completed rescue does not introduce a new short-past person paradigm."
       }
     ],
     "communicative_goals": [
-      "talk about what people used to do",
-      "ask about someone's younger life",
-      "connect two past circumstances with pan"
+      "ask and answer what I, you, and we were doing in a remembered scene",
+      "connect ongoing past circumstances with pan",
+      "distinguish storm background from completed rescue events",
+      "understand Iwan's brief glimpse into the cave"
     ],
     "new_lexeme_ids": [
       "cy-oeddwn",
@@ -46,365 +59,406 @@
       "cy-pysgod",
       "cy-storm",
       "cy-achub"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-cleddyf"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l17-s01",
-        "title": "Pan oedd Iwan yn ifanc",
+        "title": "Y map a'r cof",
         "segments": [
           {
             "id": "cy-draig-01-l17-s001",
-            "text": "Mae pawb eisiau gwybod am y map.",
+            "text": "Yn y llyfrgell, mae Mali'n rhoi map Iwan wrth lun yr harbwr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s002",
+            "text": "Mae'r llinell las yn mynd o'r llyfrgell i'r harbwr ac i'r môr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s003",
+            "text": "Mae Mali'n gofyn, “Oeddet ti'n ifanc pan oedd y map yn yr harbwr?”",
             "inference_aids": [
               {
                 "type": "image",
                 "ref": "cy-l17-pattern",
                 "presentation": "margin_diagram",
                 "src": "media/diagrams/cy-l17-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 17."
+                "alt": "Three paired Welsh speech bubbles contrast oeddwn i, oeddet ti, and oedden ni inside pan clauses.",
+                "covers_lexeme_ids": [
+                  "cy-oeddwn",
+                  "cy-oeddet",
+                  "cy-oedden",
+                  "cy-pan"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l17-s002",
-            "text": "Mae Iwan yn eistedd wrth y ffenestr ac yn edrych ar lun yr harbwr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s003",
-            "text": "“Pan oeddwn i'n ifanc,” meddai, “roeddwn i'n dod i'r llyfrgell bob dydd Sadwrn.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l17-s004",
-            "text": "Roeddet ti'n darllen?” mae Mali'n gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s005",
-            "text": "“Oeddwn, ond roeddwn i'n gweithio yn yr harbwr hefyd.",
+            "text": "“Oeddwn,” mae Iwan yn ateb. “Pan oeddwn i'n ifanc, roeddwn i'n gweithio yn yr harbwr gyda fy nhad i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s006",
-            "text": "Roedd fy nhad yn pysgota.",
+            "text": "“Roedden ni'n gweithio gyda chwch bach. Roedd y cwch yn goch ac yn hen.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s007",
-            "text": "Pan oedden ni'n mynd i'r môr, roedd y map hwn gyda ni.” Mae Iwan yn rhoi bys ar linell las y map.",
+            "text": "“Roedden ni'n cael pysgod o'r môr, ac roedden ni'n rhoi'r pysgod yn y cwch.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-harbwr",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l17-harbwr.svg",
+                "alt": "A labelled harbour cutaway shows a boat on the sea carrying fish.",
+                "covers_lexeme_ids": [
+                  "cy-harbwr",
+                  "cy-cwch",
+                  "cy-mor",
+                  "cy-pysgod"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l17-s009",
+            "text": "“Oeddet ti'n hapus yn yr harbwr?” mae'r ddraig yn gofyn.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l17-s008",
-            "text": "Mae'r llinell yn mynd o'r llyfrgell i'r harbwr, ac o'r harbwr i ynys fach.",
+            "id": "cy-draig-01-l17-s010",
+            "text": "“Oeddwn. Roeddwn i'n ifanc, roedd fy nhad gyda fi, ac roedd yr harbwr yn llawn cychod.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s011",
+            "text": "“Ond dw i'n cofio un prynhawn. Roedd y môr yn wahanol.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s012",
+            "text": "Mae Iwan yn rhoi ei fys e ar farc du wrth yr ogof.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l17-s02",
-        "title": "Y bore yn yr harbwr",
+        "title": "Y storm",
         "segments": [
           {
-            "id": "cy-draig-01-l17-s009",
-            "text": "Un bore, pan oedd Iwan yn un ar bymtheg, roedd yr awyr yn las a'r môr yn dawel.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s010",
-            "text": "Roedd Iwan a'i dad yn paratoi'r cwch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s011",
-            "text": "Roedd ei dad yn rhoi'r rhwyd yn y cwch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s012",
-            "text": "Roedd Iwan yn rhoi dŵr a bara ynddo.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l17-s013",
-            "text": "Roedd pysgotwyr eraill yn siarad ar y lan.",
+            "text": "Y prynhawn hwnnw, roedd Iwan a'i dad yn gweithio yn yr harbwr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s014",
-            "text": "“Roedden ni'n meddwl bod y tywydd yn dda,” meddai Iwan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s015",
-            "text": "“Roeddwn i'n hapus.",
+            "text": "Roedden nhw'n glanhau pysgod, ac roedd dau gwch bach wrth y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s016",
-            "text": "Roedd fy nhad yn hapus.",
+            "text": "“Roedd cwch arall ar y môr. Roedd merch a chi yn y cwch hwnnw.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s017",
-            "text": "Pan oedden ni'n gadael yr harbwr, roedd Pero arall—ci fy nhad—yn rhedeg ar hyd y lan.” Mae Pero presennol yn codi ei ben wrth glywed y gair ci.",
+            "text": "Roedd y ferch yn dod yn ôl i'r harbwr pan ddaeth y storm.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s018",
+            "text": "Yn sydyn, roedd y môr yn ddu, roedd dŵr yn y cwch, ac roedd storm.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-storm",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l17-storm.svg",
+                "alt": "Two compact panels contrast a calm blue harbour with a dark storm and a boat filling with water.",
+                "covers_lexeme_ids": [
+                  "cy-storm",
+                  "cy-harbwr",
+                  "cy-cwch",
+                  "cy-mor"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l17-s019",
+            "text": "Roedd y cwch bach yn mynd i'r ogof, nid i'r harbwr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s021",
+            "text": "“Oeddet ti'n ofni'r storm?” mae Mali'n gofyn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s022",
+            "text": "“Oeddwn. Roeddwn i'n ofni'r môr, ac roedd fy nhad yn ofni am y cwch arall.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s023",
+            "text": "“Pan oedden ni'n edrych ar y cwch, doedden ni ddim yn gweld y ferch.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s024",
+            "text": "“Roedden ni'n chwilio yn y môr. Roedd Pero bach fy nhad yn chwilio o'r harbwr.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s025",
+            "text": "Edrychodd Pero ycw, at yr ogof, ac aeth cwch Iwan yno.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l17-s03",
-        "title": "Y storm",
+        "title": "Achub y cwch",
         "segments": [
           {
-            "id": "cy-draig-01-l17-s018",
-            "text": "Pan oedden nhw yng nghanol y môr, newidiodd y tywydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s019",
-            "text": "Roedd y gwynt yn gryf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s020",
-            "text": "Roedd y glaw yn drwm.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s021",
-            "text": "Roedd y cwch bach yn mynd i fyny ac i lawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s022",
-            "text": "Roedd Iwan yn dal y map, ac roedd ei dad yn dal y cwch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s023",
-            "text": "“Oeddet ti'n ofnus?” mae Dafi'n gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s024",
-            "text": "“Oeddwn,” meddai Iwan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s025",
-            "text": "“Roeddwn i'n ofnus iawn.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l17-s026",
-            "text": "Pan oedd y storm yn gryf, roedden ni'n gweld golau ar yr ynys.",
-            "inference_aids": []
+            "text": "Pan oedd y storm yn fawr, roedd y cwch bach wrth yr ogof.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-achub",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l17-achub.svg",
+                "alt": "A three-step arrow diagram shows Iwan's boat reaching a smaller boat, lifting the girl and dog aboard, and both returning to the harbour.",
+                "covers_lexeme_ids": [
+                  "cy-achub",
+                  "cy-cwch",
+                  "cy-harbwr"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l17-s027",
-            "text": "Roedd cwch arall ger y golau.",
+            "text": "Roedd y ferch yn y dŵr, ac roedd y ci ar y cwch llawn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s028",
-            "text": "Roedd dau berson yn y dŵr.” Roedd tad Iwan yn troi'r cwch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s029",
-            "text": "Roedd Iwan yn taflu rhaff.",
+            "text": "“Pan oedden ni wrth y cwch, roeddwn i'n edrych ar y ferch.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s030",
-            "text": "Roedd y ddau berson yn dal y rhaff, ac roedd y pysgotwyr yn eu tynnu i'r cwch.",
+            "text": "“Gwnes i achub y ferch. Gwnaeth fy nhad achub y ci. Gwnaeth y ddau ohonon ni achub y cwch.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s031",
+            "text": "Daeth y ferch a'r ci i gwch Iwan; aeth y cwch bach y tu ôl iddyn nhw.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-scene-rescue",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l17-scene-rescue.svg",
+                "alt": "In a dark storm at the harbour mouth, young Iwan reaches from a sturdy red boat to rescue a girl while his father lifts her black-and-white dog; the flooded small boat trails behind.",
+                "covers_lexeme_ids": [
+                  "cy-harbwr",
+                  "cy-cwch",
+                  "cy-mor",
+                  "cy-storm",
+                  "cy-achub"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l17-s033",
+            "text": "Ond roedd Iwan yn edrych ar yr ogof, nid ar yr harbwr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s034",
+            "text": "Roedd yr ogof yn goch. Doedd y coch ddim yn dân o gwch Iwan.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s035",
+            "text": "Pan oedd ei dad yn trwsio'r cwch bach, roedd Iwan wrth ddrws yr ogof.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s037",
+            "text": "“Nac oeddwn. Roeddwn i wrth yr ogof, ac roedd y drws yn agor.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s038",
+            "text": "Agorodd y drws yn sydyn. Edrychodd Iwan i'r ogof.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s039",
+            "text": "Caeodd Iwan ei lygaid e, ond agorodd e nhw eto.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l17-s04",
-        "title": "Y daith adref",
+        "title": "Y bachgen yn yr ogof",
         "segments": [
           {
-            "id": "cy-draig-01-l17-s031",
-            "text": "Ar ôl y storm, roedd pawb yn oer ac yn wlyb.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s032",
-            "text": "Roedd y môr yn dawel eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s033",
-            "text": "Roedden nhw'n dod yn ôl i'r harbwr yn araf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s034",
-            "text": "Pan oedden nhw'n cyrraedd y lan, roedd llawer o bobl yn aros.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s035",
-            "text": "Roedd mam Iwan yno.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s036",
-            "text": "Roedd y ci yno hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s037",
-            "text": "“Pan oeddwn i'n cerdded adref,” meddai Iwan, “roedd y map yn fy mhoced.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s038",
-            "text": "Yn y llyfrgell, roeddwn i'n sychu'r map wrth y ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s039",
-            "text": "Wedyn roedd marc glas newydd arno—llinell y daith.” Mae Mali'n edrych ar y llinell las.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l17-s040",
-            "text": "Nawr mae hi'n deall: nid addurn yw'r llinell.",
+            "text": "Roedd bachgen yn cysgu mewn ystafell wag yn yr ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s041",
-            "text": "Cof am daith ydy hi.",
+            "text": "Roedd y bachgen yn ifanc. Roedd draig fawr ddu y tu ôl i'r bachgen bach.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-scene-cave-glimpse",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l17-scene-cave-glimpse.svg",
+                "alt": "Young Iwan peers through a red-lit slate-blue cave opening at a sleeping dark-haired boy in a blue tunic; a huge dragon-shaped shadow rises behind him and a muted-gold sword lies beside him.",
+                "covers_lexeme_ids": [
+                  "cy-ifanc",
+                  "cy-cleddyf"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l17-s042",
+            "text": "Doedd y ddraig ddim yn fach ac yn goch. Roedd hi'n fawr ac yn ddu.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s043",
+            "text": "Roedd cleddyf wrth y bachgen. Roedd y cleddyf yn hir ac yn aur.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-cleddyf",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l17-cleddyf.svg",
+                "alt": "A large isolated muted-gold sword is labelled cleddyf and contrasted with a spoon and pencil already known to the learner.",
+                "covers_lexeme_ids": [
+                  "cy-cleddyf"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l17-s045",
+            "text": "Tri: caeodd y drws. Doedd dim coch, doedd dim bachgen, a doedd dim cleddyf.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s046",
+            "text": "Edrychodd Iwan eto, ond roedd yr ogof yn wag ac yn ddu.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s047",
+            "text": "Pan oedd Iwan yn mynd i'r cwch, roedd e'n cofio'r bachgen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s048",
+            "text": "Roedd e'n cofio'r ddraig ddu a'r cleddyf aur hefyd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s049",
+            "text": "“Oeddet ti yn yr ogof, Dafi?” mae Mali'n gofyn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l17-s050",
+            "text": "“Nac oeddwn,” mae Dafi'n ateb. “Dw i ddim yn cofio'r ogof, ond dw i'n cofio'r bachgen.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l17-s05",
-        "title": "Y map sych",
+        "title": "Ateb tad Iwan",
         "segments": [
           {
-            "id": "cy-draig-01-l17-s042",
-            "text": "Mae Iwan yn troi'r map drosodd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s043",
-            "text": "Mae smotiau golau ar y cefn lle roedd dŵr y môr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s044",
-            "text": "“Pan oedden ni'n dod adref,” meddai, “roeddwn i'n meddwl bod y map wedi'i golli.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s045",
-            "text": "Roedd e'n wlyb iawn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s046",
-            "text": "Pan oedd fy mam yn ei weld, roedd hi'n rhoi'r map rhwng dau lyfr mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s047",
-            "text": "Bob bore roeddwn i'n edrych arno.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s048",
-            "text": "Roedd e'n sychu'n araf.” Mae Mali'n cymharu'r smotiau â'r llinell las.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s049",
-            "text": "Mae un smotyn wrth yr ynys, lle roedd y storm.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s050",
-            "text": "Mae un wrth yr harbwr, lle roedd y bobl yn aros.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l17-s051",
-            "text": "Mae un wrth y llyfrgell, lle roedd y map yn sychu.",
+            "text": "Daeth y cychod i'r harbwr; daeth y ferch a'r ci adref.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s052",
-            "text": "Felly mae'r map yn cadw mwy nag un math o gof: llinell a dynnodd person, a marciau a wnaeth y dŵr.",
+            "text": "Pan oedd Iwan adref, gofynnodd e i'w dad am y drws a'r bachgen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s053",
-            "text": "Mae Dafi'n ailadrodd y daith.",
+            "text": "Atebodd ei dad e, “Roedd storm yn y môr. Roeddet ti'n ofnus, yn oer ac yn wlyb.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s054",
-            "text": "Pan oedd y bore'n dawel, roedd Iwan yn paratoi'r cwch.",
+            "text": "“Doedd dim bachgen yn yr ogof. Doedd dim draig, a doedd dim cleddyf.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s055",
-            "text": "Pan oedd y storm yn gryf, roedd e'n dal y map.",
-            "inference_aids": []
+            "text": "“Roeddwn i'n ofnus,” atebodd Iwan, “ond agorodd y drws, ac edrychodd y bachgen arna i.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l17-pan",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l17-pan.svg",
+                "alt": "A Welsh timeline places roeddwn and oedden ni on a long background band, while daeth, helpodd, and caeodd appear as three completed points.",
+                "covers_lexeme_ids": [
+                  "cy-oeddwn",
+                  "cy-oedden",
+                  "cy-pan",
+                  "cy-achub"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l17-s056",
-            "text": "Pan oedd pobl yn y dŵr, roedd e'n taflu'r rhaff.",
+            "text": "Bob nos roedd Iwan yn edrych o'r llyfrgell i'r ogof, ond doedd dim drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s057",
-            "text": "Pan oedden nhw ar y lan, roedd pawb yn aros.",
+            "text": "Nawr mae Mali'n rhoi'r map wrth yr hen lyfr, ac mae Iwan yn rhoi'r allwedd ar y llinell las.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s058",
-            "text": "Pan oedd y map yn y llyfrgell, roedd e'n sychu.",
+            "text": "Mae Dafi'n rhoi llun y bachgen wrth farc yr ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s059",
-            "text": "Mae Iwan yn nodio ar ôl pob cam.",
+            "text": "Pan oedd Iwan yn ifanc, roedd bachgen yn cysgu ycw; heddiw mae'r un bachgen yn yr hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l17-s060",
-            "text": "Dyma'r union stori roedd y llinell las yn ei chuddio.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l17-s06",
-        "title": "Darllen eto",
-        "segments": [
-          {
-            "id": "cy-draig-01-l17-s061",
-            "text": "Mae Mali'n rhoi'r map wrth ymyl llun yr harbwr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s062",
-            "text": "Pan oedd Iwan yn ifanc, roedd y llun yn newydd; nawr mae e'n hen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l17-s063",
-            "text": "Ond mae'r môr, yr ynys a'r llinell las yn dal yno.",
+            "text": "Mae Mali'n edrych ar y goron, yr allwedd a'r cleddyf. Mae'r tri yn perthyn i'r bachgen.",
             "inference_aids": []
           }
         ]
@@ -419,7 +473,9 @@
       "part_of_speech": "verb",
       "current_sense": "I was",
       "forms_seen": [
-        "oeddwn"
+        "oeddwn",
+        "roeddwn",
+        "doeddwn"
       ],
       "first_introduced_lesson": "cy-draig-01-l17",
       "new": true
@@ -431,7 +487,8 @@
       "part_of_speech": "verb",
       "current_sense": "you were",
       "forms_seen": [
-        "oeddet"
+        "oeddet",
+        "roeddet"
       ],
       "first_introduced_lesson": "cy-draig-01-l17",
       "new": true
@@ -443,7 +500,9 @@
       "part_of_speech": "verb",
       "current_sense": "we were",
       "forms_seen": [
-        "oedden"
+        "oedden",
+        "roedden",
+        "doedden"
       ],
       "first_introduced_lesson": "cy-draig-01-l17",
       "new": true
@@ -479,7 +538,8 @@
       "part_of_speech": "noun",
       "current_sense": "boat",
       "forms_seen": [
-        "cwch"
+        "cwch",
+        "cychod"
       ],
       "first_introduced_lesson": "cy-draig-01-l17",
       "new": true
@@ -531,114 +591,148 @@
       ],
       "first_introduced_lesson": "cy-draig-01-l17",
       "new": true
+    },
+    {
+      "lexeme_id": "cy-cleddyf",
+      "display_form": "cleddyf",
+      "citation_form": "cleddyf (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "sword",
+      "forms_seen": [
+        "cleddyf"
+      ],
+      "first_introduced_lesson": "cy-draig-01-l17",
+      "status": "receptive_illustrated",
+      "new": false
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use oeddwn/oeddet/oedden and pan oedd to connect remembered background actions and states."
+    "target_language": "Pan oeddwn i'n ifanc, roeddwn i'n gweithio. Oeddet ti'n ofnus? Oeddwn. Pan oedden ni yn yr harbwr, roedden ni'n gweithio. Daeth y storm; helpodd Iwan; caeodd y drws.",
+    "bridge_language": "Use oeddwn i, oeddet ti, and oedden ni for past background, often after pan; keep completed boundaries in the already-known simple past, as in daeth, helpodd, and caeodd."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l17-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Oeddwn, oeddet, oedden",
+      "directions": "Cwblhewch y patrwm o'r stori.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "“Oeddet ti yn y cwch pan ddaeth y storm?” gofynna Mali. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
-          "accepted_answers": [
-            "bod — oeddwn i"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
-        },
-        {
-          "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
-          "accepted_answers": [
-            "Pan oedden nhw ar y môr, roedd y map gyda nhw."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
-        },
-        {
-          "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
-        }
-      ]
-    },
-    "b": {
-      "id": "cy-draig-01-l17-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
-      "items": [
-        {
-          "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: oeddwn.",
+          "prompt": "Pan ___ i'n ifanc, roeddwn i'n gweithio yn yr harbwr.",
           "type": "cloze",
           "accepted_answers": [
             "oeddwn"
           ]
         },
         {
-          "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: pysgod.",
+          "id": "pa2",
+          "prompt": "___ ti'n ofni'r storm?",
           "type": "cloze",
           "accepted_answers": [
-            "pysgod"
+            "Oeddet"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Pan ___ ni'n chwilio, roedd y cwch wrth yr ogof.",
+          "type": "cloze",
+          "accepted_answers": [
+            "oedden"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Unwch y ddwy frawddeg: Roedd storm. Roeddwn i'n ofnus.",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Pan oedd storm, roeddwn i'n ofnus.",
+            "Roeddwn i'n ofnus pan oedd storm."
+          ],
+          "rubric": "Use pan oedd once and keep roeddwn i for Iwan's continuing state; either clause order is acceptable."
+        }
+      ]
+    },
+    "b": {
+      "id": "cy-draig-01-l17-pb",
+      "title": "Pensa B — Yr harbwr a'r storm",
+      "directions": "Dewiswch o: harbwr, cwch, môr, storm, achub.",
+      "items": [
+        {
+          "id": "pb1",
+          "prompt": "Mae cychod yn dod o'r môr i'r ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "harbwr"
+          ]
+        },
+        {
+          "id": "pb2",
+          "prompt": "Mae'r ferch a'r ci mewn ___ bach llawn dŵr.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cwch"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: achub.",
+          "prompt": "Mae'r dŵr yn ddu, ac mae'r cwch yn mynd i'r ogof: mae ___ yma.",
           "type": "cloze",
           "accepted_answers": [
-            "achub"
+            "storm"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Mae Iwan yn helpu'r ferch o'r dŵr: mae e'n ei ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "achub"
+          ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l17-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Cof Iwan",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
+          "prompt": "Beth oedd Iwan a'i dad yn ei wneud pan ddaeth y storm?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
+            "Roedden nhw'n gweithio yn yr harbwr.",
+            "Roedden nhw'n glanhau pysgod.",
+            "Roedden nhw'n rhoi pysgod yn y cwch."
           ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+          "rubric": "Accept any one of the ongoing harbour jobs stated before the storm."
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Pwy wnaeth Iwan a'i dad achub?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mae hen gof Iwan yn rhoi cynllun newydd."
-          ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+            "Y ferch a'r ci.",
+            "Gwnaeth Iwan achub y ferch, a gwnaeth ei dad achub y ci.",
+            "Y ferch, y ci a'r cwch bach."
+          ]
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Ble roedd y bachgen yn cysgu?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Yn yr ogof.",
+            "Roedd y bachgen yn cysgu yn yr ogof.",
+            "Mewn ystafell wag yn yr ogof."
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Adroddwch gof Iwan mewn pedair brawddeg: yr harbwr, y storm, yr achub, a'r ogof.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give four short, understandable Welsh sentences. Use at least one pan clause, one imperfect-person form, and one recycled completed-past form. Do not require the receptive word cleddyf."
         }
       ]
     }
@@ -650,7 +744,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -669,10 +763,17 @@
     "source": "cy-draig-01-l17"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l17-pattern"
+      "cy-l17-pattern",
+      "cy-l17-harbwr",
+      "cy-l17-storm",
+      "cy-l17-achub",
+      "cy-l17-scene-rescue",
+      "cy-l17-scene-cave-glimpse",
+      "cy-l17-cleddyf",
+      "cy-l17-pan"
     ],
     "audio": []
   }

@@ -3,22 +3,22 @@
   "id": "cy-draig-01-l04",
   "course_id": "cy-draig-01",
   "order": 4,
-  "title": "Mae Dafi'n bwyta",
+  "title": "Mae Dafi'n darllen?",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G04 curriculum row, the course contract, rewritten Lessons 01–03, and the L04 review findings.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked the negative bod frame, the lexical frames edrych ar and eisiau, idiom, mutation, rhythm, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G04",
       "label": "mae + subject + yn + verbal noun",
-      "description": "Use mae…yn with a verbal noun for an action happening now.",
+      "description": "Use mae + subject + yn/'n + verbal noun to present an action in progress.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
@@ -26,11 +26,25 @@
       "G02",
       "G03"
     ],
-    "incidental_grammar": [],
+    "incidental_grammar": [
+      {
+        "form": "Dydy + subject + ddim yn + verbal noun",
+        "note": "A complete illustrated negative action frame paired only with the positive G04 frame. It does not license G05 yes/no questions or answers."
+      },
+      {
+        "form": "edrych ar + object",
+        "note": "The governed lexical frame for edrych is learned as one pictured chunk. Ar is not used independently or spatially before G10."
+      },
+      {
+        "form": "mae + subject + eisiau + noun/verbal noun",
+        "note": "Eisiau appears only in this fixed visually contrasted desire frame; no broader complement system is inferred."
+      }
+    ],
     "communicative_goals": [
-      "describe eating, drinking, looking, and reading",
-      "say what someone wants or likes",
-      "contrast an appropriate and inappropriate action"
+      "describe someone eating, drinking, looking, or reading",
+      "contrast looking at a book with reading it",
+      "say what Dafi likes and wants",
+      "understand that Dafi wants to read but bites the book instead"
     ],
     "new_lexeme_ids": [
       "cy-bwyta",
@@ -43,236 +57,348 @@
       "cy-ond",
       "cy-ddim",
       "cy-da"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l04-s01",
-        "title": "Yr afal",
+        "title": "Yr afal a'r dŵr",
         "segments": [
           {
             "id": "cy-draig-01-l04-s001",
-            "text": "Mae Dafi'n edrych ar yr afal.",
+            "text": "Mae Mali, Pero a Dafi yn y llyfrgell. Mae'r bocs mawr yma.",
+            "lexeme_ids": [],
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l04-scene",
+                "ref": "cy-l04-book-bite-scene",
                 "presentation": "inline_scene",
-                "src": "media/images/cy-l04-scene.svg",
-                "alt": "Dydy llyfr ddim yn fwyd"
-              },
-              {
-                "type": "image",
-                "ref": "cy-l04-actions",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l04-actions.svg",
-                "alt": "Bwyta, yfed a darllen."
+                "src": "media/images/cy-l04-book-bite-scene.svg",
+                "alt": "In the warm library, Mali reads the worn book upright while tiny red Dafi holds it upside down and bites one corner. The red apple core and a bowl of water show what he ate and drank; Pero watches in surprise.",
+                "covers_lexeme_ids": [
+                  "cy-bwyta",
+                  "cy-yfed",
+                  "cy-dwr",
+                  "cy-edrych",
+                  "cy-darllen",
+                  "cy-hoffi",
+                  "cy-eisiau",
+                  "cy-ond",
+                  "cy-ddim",
+                  "cy-da"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l04-s002",
-            "text": "Mae'r afal yn goch.",
-            "inference_aids": []
+            "text": "Mae un afal coch yma. Mae dŵr yma hefyd. Mae'r llyfr mawr yn y bocs.",
+            "lexeme_ids": [
+              "cy-dwr"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l04-action-grid",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l04-action-grid.svg",
+                "alt": "A four-panel action grid shows Dafi eating an apple, Pero drinking water, Dafi looking at a book, and Mali reading it, with Welsh action labels.",
+                "covers_lexeme_ids": [
+                  "cy-bwyta",
+                  "cy-yfed",
+                  "cy-dwr",
+                  "cy-edrych",
+                  "cy-darllen"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l04-s003",
-            "text": "Mae Dafi eisiau'r afal.",
+            "text": "Mae Dafi'n edrych ar yr afal. Mae Dafi'n edrych ar y llyfr.",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s004",
-            "text": "Mae Dafi'n bwyta'r afal.",
-            "inference_aids": []
+            "text": "Mae Dafi eisiau'r afal. Mae Dafi'n bwyta'r afal coch.",
+            "lexeme_ids": [
+              "cy-eisiau",
+              "cy-bwyta"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l04-want-like",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l04-want-like.svg",
+                "alt": "First Dafi reaches toward an apple labelled eisiau; then he holds the eaten apple close with a pleased face labelled hoffi.",
+                "covers_lexeme_ids": [
+                  "cy-eisiau",
+                  "cy-hoffi"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l04-s005",
-            "text": "Mae e'n bwyta'r afal.",
+            "text": "Mae Pero'n edrych ar Dafi.",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s006",
-            "text": "Mae Mali'n edrych ar Dafi.",
+            "text": "Mae Dafi'n hoffi'r afal. Mae'r afal yn dda. Mae Dafi'n hoffi'r afal coch.",
+            "lexeme_ids": [
+              "cy-hoffi",
+              "cy-da"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s007",
-            "text": "“Wyt ti'n hoffi'r afal?”",
+            "text": "Mae Dafi eisiau dŵr. Mae Dafi'n yfed y dŵr.",
+            "lexeme_ids": [
+              "cy-eisiau",
+              "cy-yfed",
+              "cy-dwr"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s008",
-            "text": "“Ydw. Dw i'n hoffi'r afal.”",
+            "text": "Mae Pero'n yfed y dŵr hefyd. Dydy Mali ddim yn yfed.",
+            "lexeme_ids": [
+              "cy-yfed",
+              "cy-dwr",
+              "cy-ddim"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s009",
-            "text": "Mae'r afal yn dda.",
+            "text": "Mae Dafi'n hoffi'r dŵr. Mae'r dŵr yn dda. Mae Dafi'n bwyta. Mae Dafi'n yfed.",
+            "lexeme_ids": [
+              "cy-hoffi",
+              "cy-dwr",
+              "cy-da",
+              "cy-bwyta",
+              "cy-yfed"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l04-s02",
-        "title": "Y dŵr",
+        "title": "Edrych a darllen",
         "segments": [
           {
             "id": "cy-draig-01-l04-s010",
-            "text": "Mae dŵr yma.",
+            "text": "Mae Mali'n edrych ar y papur mawr.",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s011",
-            "text": "Mae Dafi'n edrych ar y dŵr.",
+            "text": "Mae Mali'n darllen y papur. Mae Dafi eisiau darllen y papur hefyd.",
+            "lexeme_ids": [
+              "cy-darllen",
+              "cy-eisiau"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s012",
-            "text": "Mae Dafi eisiau dŵr.",
-            "inference_aids": []
+            "text": "Mae Dafi'n edrych ar y papur, ond dydy Dafi ddim yn darllen y papur.",
+            "lexeme_ids": [
+              "cy-edrych",
+              "cy-ond",
+              "cy-ddim",
+              "cy-darllen"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l04-look-read",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l04-look-read.svg",
+                "alt": "A contrast diagram shows Dafi merely looking at an upside-down book, while Mali follows lines in the upright book with her finger and reads.",
+                "covers_lexeme_ids": [
+                  "cy-edrych",
+                  "cy-darllen",
+                  "cy-ond"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l04-s013",
-            "text": "Mae Dafi'n yfed y dŵr.",
+            "text": "Mae'r llyfr yn y bocs. Mae Dafi'n edrych ar y llyfr.",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s014",
-            "text": "Mae Pero'n yfed hefyd.",
+            "text": "Mae Dafi eisiau darllen y llyfr. Mae Mali'n darllen y llyfr.",
+            "lexeme_ids": [
+              "cy-eisiau",
+              "cy-darllen"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s015",
-            "text": "Dydy Mali ddim yn yfed.",
+            "text": "Mae Dafi'n edrych ar y llyfr. Mae Mali'n darllen.",
+            "lexeme_ids": [
+              "cy-edrych",
+              "cy-darllen"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s016",
-            "text": "Mae Dafi'n hoffi'r dŵr.",
+            "text": "Mae Dafi'n edrych ar y llyfr mawr. Dydy Dafi ddim yn darllen.",
+            "lexeme_ids": [
+              "cy-edrych",
+              "cy-ddim",
+              "cy-darllen"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s017",
-            "text": "Mae'r dŵr yn dda.",
+            "text": "Mae Mali'n darllen. Ond mae Dafi'n edrych.",
+            "lexeme_ids": [
+              "cy-darllen",
+              "cy-ond",
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s018",
-            "text": "Mae Dafi yn y llyfrgell.",
+            "text": "Mae Dafi eisiau darllen, ond dydy Dafi ddim yn darllen. Mae Dafi'n edrych ar Mali.",
+            "lexeme_ids": [
+              "cy-eisiau",
+              "cy-ond",
+              "cy-ddim",
+              "cy-darllen",
+              "cy-edrych"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l04-s03",
-        "title": "Y llyfr",
+        "title": "Yr afal a'r llyfr",
         "segments": [
           {
             "id": "cy-draig-01-l04-s019",
-            "text": "Mae llyfr yn y bocs.",
+            "text": "Mae Mali'n darllen y llyfr. Mae Dafi'n edrych ar y llyfr.",
+            "lexeme_ids": [
+              "cy-darllen",
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s020",
-            "text": "Mae Mali'n darllen y llyfr.",
+            "text": "Mae Dafi eisiau'r llyfr. Mae Dafi'n hoffi'r llyfr. Mae Dafi eisiau darllen.",
+            "lexeme_ids": [
+              "cy-eisiau",
+              "cy-hoffi",
+              "cy-darllen"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s021",
-            "text": "Mae Dafi'n edrych ar Mali.",
-            "inference_aids": []
+            "text": "Ond dydy Dafi ddim yn darllen y llyfr. Mae Dafi'n bwyta'r llyfr!",
+            "lexeme_ids": [
+              "cy-ond",
+              "cy-ddim",
+              "cy-darllen",
+              "cy-bwyta"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l04-good-not-good",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l04-good-not-good.svg",
+                "alt": "A smiling Dafi eats a red apple beside the words afal: da; a crossed-out image shows Dafi biting the old book beside llyfr: ddim yn dda.",
+                "covers_lexeme_ids": [
+                  "cy-bwyta",
+                  "cy-ddim",
+                  "cy-da"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l04-s022",
-            "text": "Mae Dafi eisiau'r llyfr.",
+            "text": "Mae Mali'n edrych ar Dafi. Mae Pero'n edrych ar Dafi.",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s023",
-            "text": "Mae e'n agor y llyfr.",
+            "text": "Does dim afal. Mae Dafi'n edrych ar y llyfr.",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s024",
-            "text": "Ond dydy Dafi ddim yn darllen.",
+            "text": "Mae afal yn dda. Ond dydy llyfr ddim yn afal.",
+            "lexeme_ids": [
+              "cy-da",
+              "cy-ond",
+              "cy-ddim"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s025",
-            "text": "Mae Dafi'n bwyta'r llyfr!",
+            "text": "Dydy Dafi ddim yn bwyta'r llyfr. Mae Mali'n darllen y llyfr.",
+            "lexeme_ids": [
+              "cy-ddim",
+              "cy-bwyta",
+              "cy-darllen"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s026",
-            "text": "“Na, Dafi!” meddai Mali.",
+            "text": "Mae Dafi'n edrych ar y llyfr. Mae Dafi eisiau darllen.",
+            "lexeme_ids": [
+              "cy-edrych",
+              "cy-eisiau",
+              "cy-darllen"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l04-s027",
-            "text": "“Na, Dafi! Dydy llyfr ddim yn fwyd.”",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l04-s04",
-        "title": "Darllen, nid bwyta",
-        "segments": [
-          {
-            "id": "cy-draig-01-l04-s028",
-            "text": "Dydy Dafi ddim yn bwyta'r llyfr nawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s029",
-            "text": "Mae Mali'n darllen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s030",
-            "text": "Mae Dafi'n edrych ar y papur.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s031",
-            "text": "Mae Mali'n darllen y papur hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s032",
-            "text": "Mae Dafi'n edrych ar y llyfr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s033",
-            "text": "Mae e eisiau darllen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s034",
-            "text": "Mae Dafi'n hoffi llyfrau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s035",
-            "text": "Mae e'n hoffi bwyd hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l04-s036",
-            "text": "Mae Mali'n darllen ac mae Dafi'n edrych. Mae Mali'n darllen y llyfr eto. Mae Dafi'n edrych ar Mali ac ar y llyfr. Dydy Dafi ddim yn bwyta'r llyfr nawr. Mae e'n bwyta bwyd ac yn yfed dŵr. Mae e'n hoffi'r afal a'r dŵr. Mae e eisiau darllen y llyfr hefyd.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l04-s05",
-        "title": "Bwyd neu lyfr?",
-        "segments": [
-          {
-            "id": "cy-draig-01-l04-s037",
-            "text": "Mae Dafi'n edrych ar yr afal coch. Mae e eisiau'r afal, ac mae e'n bwyta'r afal. Mae'r afal yn dda. Mae Pero'n edrych ar y dŵr. Mae Pero'n yfed, ac mae Dafi'n yfed hefyd. Mae'r dŵr yn dda. Mae Mali'n darllen; dydy Mali ddim yn bwyta nac yn yfed. Mae Dafi'n edrych ar y llyfr. Mae e eisiau'r llyfr, ond dydy e ddim yn darllen. Mae e'n ceisio bwyta'r llyfr. “Na, Dafi! Dydy llyfr ddim yn fwyd.” Nawr dydy Dafi ddim yn bwyta'r llyfr. Mae Mali'n darllen y llyfr yn araf, ac mae Dafi'n edrych ar y papur a'r llyfr. Mae e'n hoffi bwyd, ond mae e eisiau darllen hefyd. Yn y diwedd mae Dafi'n bwyta afal, yn yfed dŵr, ac yn edrych ar y llyfr gyda Mali.",
+            "text": "Mae Dafi'n edrych ar y papur. Mae Dafi yn y papur; mae e yn y papur hefyd. “Pwy ydy e?”",
+            "lexeme_ids": [
+              "cy-edrych"
+            ],
             "inference_aids": []
           }
         ]
@@ -318,10 +444,10 @@
     },
     {
       "lexeme_id": "cy-edrych",
-      "display_form": "edrych",
+      "display_form": "edrych ar",
       "citation_form": "edrych",
       "part_of_speech": "verb",
-      "current_sense": "look",
+      "current_sense": "look at",
       "forms_seen": [
         "edrych"
       ],
@@ -390,20 +516,21 @@
     },
     {
       "lexeme_id": "cy-da",
-      "display_form": "da",
+      "display_form": "da — yn dda",
       "citation_form": "da",
       "part_of_speech": "adjective",
       "current_sense": "good",
       "forms_seen": [
-        "da"
+        "da",
+        "dda"
       ],
       "first_introduced_lesson": "cy-draig-01-l04",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Mae Dafi'n bwyta. Mae Mali'n darllen. Mae Pero'n yfed. Mae + person + yn/'n + berfenw yn dangos gweithred sy'n digwydd nawr.",
-    "bridge_language": "Welsh commonly describes a current action with mae + subject + yn/'n + verbal noun. Learn bwyta, yfed, edrych, and darllen as verbal nouns."
+    "target_language": "Mae Dafi'n bwyta. Mae Pero'n yfed. Mae Mali'n darllen. Mae Dafi'n edrych. Mae + Dafi, Pero, Mali + yn/'n + bwyta, yfed, darllen, edrych.",
+    "bridge_language": "For an action in progress, use mae + subject + yn/'n + a verbal noun; the paired negative shown here is Dydy + subject + ddim yn + verbal noun."
   },
   "pensa": {
     "a": {
@@ -413,112 +540,134 @@
       "items": [
         {
           "id": "pa1",
-          "prompt": "Mae Dafi'n ___. (bwyta)",
+          "prompt": "Mae Pero ___ yfed y dŵr.",
           "type": "cloze",
           "accepted_answers": [
-            "bwyta"
-          ]
+            "yn"
+          ],
+          "explanation": "The action frame is mae + subject + yn + verbal noun."
         },
         {
           "id": "pa2",
-          "prompt": "Mae Pero'n ___. (yfed)",
+          "prompt": "Mae Mali___ darllen y llyfr.",
           "type": "cloze",
           "accepted_answers": [
-            "yfed"
-          ]
+            "'n",
+            "’n"
+          ],
+          "explanation": "After the vowel in Mali, yn contracts to 'n."
         },
         {
           "id": "pa3",
-          "prompt": "Mae Mali'n ___. (darllen)",
+          "prompt": "Mae Dafi'n ___ ar y llyfr. (edrych)",
           "type": "cloze",
           "accepted_answers": [
-            "darllen"
-          ]
+            "edrych"
+          ],
+          "explanation": "Edrych is the verbal noun inside the action frame."
         },
         {
           "id": "pa4",
-          "prompt": "Mae Dafi ___ yn darllen.",
+          "prompt": "Dydy Dafi ddim ___ bwyta'r llyfr.",
           "type": "cloze",
           "accepted_answers": [
-            "ddim"
-          ]
+            "yn"
+          ],
+          "explanation": "The paired negative action frame keeps yn before the verbal noun."
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l04-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Bwyta, yfed, edrych, darllen",
+      "directions": "Cwblhewch o'r stori a'r lluniau.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Mae Dafi'n yfed ___.",
-          "type": "cloze",
+          "prompt": "🍎 Mae Dafi'n ___. (bwyta / yfed)",
+          "type": "contextual_choice",
+          "aid_ref": "cy-l04-action-grid",
           "accepted_answers": [
-            "dŵr"
-          ]
+            "bwyta"
+          ],
+          "explanation": "The action panel shows Dafi eating the apple."
         },
         {
           "id": "pb2",
-          "prompt": "Mae Mali'n ___ y llyfr.",
+          "prompt": "Mae Dafi'n yfed ___.",
           "type": "cloze",
+          "aid_ref": "cy-l04-action-grid",
           "accepted_answers": [
-            "darllen"
-          ]
+            "dŵr"
+          ],
+          "explanation": "The pictured drink is water."
         },
         {
           "id": "pb3",
-          "prompt": "Mae Dafi eisiau'r afal ___ dydy e ddim eisiau'r papur.",
+          "prompt": "Mae Dafi eisiau darllen, ___ dydy Dafi ddim yn darllen.",
           "type": "cloze",
+          "aid_ref": "cy-l04-look-read",
           "accepted_answers": [
             "ond"
-          ]
+          ],
+          "explanation": "Ond marks the contrast between wanting and not doing."
         },
         {
           "id": "pb4",
-          "prompt": "Mae'r afal yn ___.",
+          "prompt": "Mae Dafi'n hoffi'r afal. Mae'r afal yn ___.",
           "type": "cloze",
+          "aid_ref": "cy-l04-good-not-good",
           "accepted_answers": [
             "dda"
-          ]
+          ],
+          "explanation": "After descriptive yn, da soft-mutates to dda."
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l04-pc",
       "title": "Pensa C — Y stori",
-      "directions": "Atebwch yn Gymraeg; gall ateb byr fod yn gywir.",
+      "directions": "Atebwch yn Gymraeg.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Beth mae Dafi'n bwyta?",
-          "type": "cloze",
+          "prompt": "Dafi a'r afal: bwyta / darllen?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Yr afal."
-          ]
+            "bwyta",
+            "Bwyta.",
+            "Mae Dafi'n bwyta'r afal."
+          ],
+          "rubric": "Must identify eating as Dafi's action with the apple."
         },
         {
           "id": "pc2",
-          "prompt": "Beth mae Pero'n yfed?",
-          "type": "cloze",
+          "prompt": "Mali a'r llyfr: edrych / darllen?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Dŵr."
-          ]
+            "darllen",
+            "Darllen.",
+            "Mae Mali'n darllen y llyfr."
+          ],
+          "rubric": "Must identify reading as Mali's action with the book."
         },
         {
           "id": "pc3",
-          "prompt": "Ydy Dafi'n darllen y llyfr ar y dechrau?",
-          "type": "cloze",
+          "prompt": "Mae Dafi eisiau darllen. Mae Dafi'n darllen?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Nac ydy."
-          ]
+            "Dydy Dafi ddim yn darllen.",
+            "Dydy e ddim yn darllen.",
+            "ddim"
+          ],
+          "rubric": "Must state or clearly indicate that Dafi is not reading; do not require a G05 yes/no answer."
         },
         {
           "id": "pc4",
-          "prompt": "Beth wyt ti’n hoffi bwyta?",
-          "type": "transfer",
+          "prompt": "Dafi: afal, dŵr, llyfr.",
+          "type": "bounded_retelling",
           "accepted_answers": [],
-          "rubric": "Any comprehensible food answer is acceptable."
+          "rubric": "Give three or four short true sentences using the G04 action frame: Dafi eats the apple, drinks water, looks at the book, and/or wants to read it. A final sentence may say that he is not reading or that he eats the book."
         }
       ]
     }
@@ -530,7 +679,19 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-bwyta",
+      "cy-yfed",
+      "cy-dwr",
+      "cy-edrych",
+      "cy-darllen",
+      "cy-hoffi",
+      "cy-eisiau",
+      "cy-ond",
+      "cy-ddim",
+      "cy-da"
+    ],
     "format": "tsv",
     "fields": [
       "guid",
@@ -541,7 +702,7 @@
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
     "tags": [
-      "semeion",
+      "illustrated-input",
       "welsh",
       "cy-draig-01",
       "lesson-04"
@@ -549,11 +710,14 @@
     "source": "cy-draig-01-l04"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l04-scene",
-      "cy-l04-actions"
+      "cy-l04-book-bite-scene",
+      "cy-l04-action-grid",
+      "cy-l04-want-like",
+      "cy-l04-look-read",
+      "cy-l04-good-not-good"
     ],
     "audio": []
   }

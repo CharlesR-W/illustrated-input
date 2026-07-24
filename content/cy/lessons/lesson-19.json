@@ -5,35 +5,45 @@
   "order": 19,
   "title": "Os bydd hi'n bwrw glaw",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G19 curriculum row, the cumulative rewritten L01–L18 course contract, and the L19 findings in docs/reviews/welsh-12-21.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked real-condition clauses, weather idiom, mutations, register, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G19",
-      "label": "Real conditions with os + future or present",
-      "description": "Use os to connect a real possible condition with its planned result.",
+      "label": "Real conditions with os + future",
+      "description": "Use os bydd to connect a real possible weather condition with the plan that will follow.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G07",
+      "G10",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
+      "G16",
+      "G17",
       "G18"
     ],
     "incidental_grammar": [
       {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
+        "form": "mae / bydd hi'n bwrw glaw",
+        "note": "Bwrw appears only inside the fixed, idiomatic weather formula for 'it is/will be raining'; learners are not asked to use bwrw independently."
       }
     ],
     "communicative_goals": [
-      "make two weather-dependent plans",
-      "say what will happen if something changes",
-      "prepare an indoor alternative"
+      "connect three possible kinds of weather with three practical plans",
+      "say whether the map, book, and meeting will be inside or outside",
+      "contrast dry and wet objects through visible consequences",
+      "understand how wind reveals a further clue in the old book"
     ],
     "new_lexeme_ids": [
       "cy-os",
@@ -46,400 +56,400 @@
       "cy-sych",
       "cy-gwlyb",
       "cy-paratoi"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l19-s01",
-        "title": "Dau gynllun",
+        "title": "Tri chynllun",
         "segments": [
           {
             "id": "cy-draig-01-l19-s001",
-            "text": "Mae'r arddangosfa yn agos, ond does neb yn gwybod sut bydd y tywydd.",
+            "text": "Yn y bore, mae papur cau'r llyfrgell wrth yr hen fap ar y bwrdd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s002",
+            "text": "Mae Mali, Nia, Sam ac Iwan yn paratoi cyfarfod yfory. Byddan nhw'n dangos y map, y llyfr a lluniau Iwan.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l19-pattern",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l19-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 19."
+                "ref": "cy-l19-scene-three-plans",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l19-scene-three-plans.svg",
+                "alt": "Around a library table, Mali points from the closure paper and cave map to three picture cards for sun, rain, and wind; Nia holds the old book, Sam prepares food, Iwan arranges harbour pictures, Dafi draws, and Pero watches.",
+                "covers_lexeme_ids": [
+                  "cy-paratoi",
+                  "cy-haul",
+                  "cy-glaw",
+                  "cy-gwynt"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l19-s002",
-            "text": "Mae Sam eisiau arddangos popeth tu allan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s003",
-            "text": "Mae Nia eisiau cadw'r hen lyfrau tu mewn.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l19-s004",
-            "text": "Mae Mali'n tynnu dwy golofn ar bapur: HAUL a GLAW.",
+            "text": "Ar ôl dangos y map, bydd Mali, Dafi a Pero'n mynd gyda fe i'r ogof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s005",
-            "text": "“Bydd gennym ni ddau gynllun,” meddai.",
+            "text": "Ond mae Nia'n edrych o'r ffenestr. “Beth fyddwn ni'n wneud os bydd hi'n bwrw glaw?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s006",
-            "text": "“Os bydd hi'n heulog, bydd yr arddangosfa o flaen y llyfrgell.",
-            "inference_aids": []
+            "text": "Mae Mali'n rhoi tri phapur ar y bwrdd: haul, glaw a gwynt.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l19-weather-branches",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l19-weather-branches.svg",
+                "alt": "A three-branch Welsh plan begins with os and divides into the sun coming out, rain falling, and wind rising, each with a different pictured result.",
+                "covers_lexeme_ids": [
+                  "cy-os",
+                  "cy-haul",
+                  "cy-glaw",
+                  "cy-gwynt"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l19-s007",
-            "text": "Os bydd hi'n bwrw glaw, bydd hi yn y neuadd.” Mae Dafi'n rhoi llun o haul uwchben un golofn a chwmwl uwchben y llall.",
+            "text": "“Os bydd hi'n sych ac os bydd yr haul yn dod allan, bydd y cyfarfod tu allan.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l19-inside-outside",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l19-inside-outside.svg",
+                "alt": "A cutaway library contrasts the group and table outside the open door with the group and old book inside the room.",
+                "covers_lexeme_ids": [
+                  "cy-tu-allan",
+                  "cy-tu-mewn"
+                ]
+              },
+              {
+                "type": "image",
+                "ref": "cy-l19-dry-wet",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l19-dry-wet.svg",
+                "alt": "Two matching maps contrast a flat dry paper under the sun with a darkened curling wet paper under raindrops.",
+                "covers_lexeme_ids": [
+                  "cy-sych",
+                  "cy-gwlyb",
+                  "cy-haul",
+                  "cy-glaw"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l19-s008",
+            "text": "“Os bydd hi'n bwrw glaw, bydd y map a'r hen lyfr tu mewn.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s009",
+            "text": "“Os bydd y gwynt yn codi, byddwn ni'n agor yr hen lyfr wrth y ffenestr.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s010",
+            "text": "Mae Dafi'n agor ei lun o'r brenin. “Os bydd y brenin yn codi, bydd e'n cadw'r llyfrgell.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s011",
+            "text": "Mae Mali'n ateb, “Dydy'r brenin ddim yma nawr. Byddwn ni'n paratoi nawr.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l19-s02",
-        "title": "Os bydd haul",
+        "title": "Yr haul a'r babell",
         "segments": [
           {
-            "id": "cy-draig-01-l19-s008",
-            "text": "Maen nhw'n dechrau gyda'r cynllun haul.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s009",
-            "text": "Os bydd hi'n heulog, bydd Sam yn rhoi byrddau tu allan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s010",
-            "text": "Bydd Nia'n agor y drws mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s011",
-            "text": "Bydd Iwan yn siarad wrth y map.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l19-s012",
-            "text": "Bydd Mali'n rhoi'r lluniau ar y wal allanol.",
+            "text": "Yn gyntaf, mae'r ffrindiau'n paratoi cynllun yr haul.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s013",
-            "text": "Os bydd y gwynt yn ysgafn, bydd y papurau'n ddiogel.",
-            "inference_aids": []
+            "text": "Mae Sam yn dod o'r caffi gyda phabell fach goch.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l19-tent",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l19-tent.svg",
+                "alt": "A clearly outlined red tent labelled pabell shelters a table, map, books, and small dragon while sun and rain remain outside its roof.",
+                "covers_lexeme_ids": [
+                  "cy-pabell",
+                  "cy-sych",
+                  "cy-glaw",
+                  "cy-haul"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l19-s014",
-            "text": "Os bydd y gwynt yn gryf, byddan nhw'n defnyddio cerrig bach ar y corneli.",
+            "text": "Mae Sam ac Iwan yn agor y babell o flaen y llyfrgell, ac mae Pero'n mynd dan y bwrdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s015",
-            "text": "Bydd Pero wrth y giât.",
+            "text": "Mae Mali'n rhoi papur newydd dan y babell, ond mae hi'n cadw'r hen fap tu mewn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s016",
-            "text": "Os bydd llawer o bobl yn dod, bydd Dafi'n dangos y ffordd.",
+            "text": "“Os bydd y papur yn aros yn sych, bydda i'n rhoi'r map yma,” meddai.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l19-s017",
-            "text": "“Os bydd Pero'n dangos y ffordd,” meddai Sam, “bydd pawb yn mynd i'r caffi.”",
+            "id": "cy-draig-01-l19-s019",
+            "text": "Mae Sam yn rhoi bwyd a dŵr ar y bwrdd, ac mae Mali'n dangos y map o dan y babell.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s020",
+            "text": "“Os bydd yr haul yn dod allan yfory, bydd y llyfrau, y lluniau a'r bwyd tu allan,” meddai Sam.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s021",
+            "text": "Mae'r papur yn sych. Mae'r bwrdd yn sych. Mae'r llyfrau'n sych.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s022",
+            "text": "Ond mae Pero dan y babell yn yfed, ac mae dŵr Pero ar un papur. Mae'r papur yn wlyb.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s023",
+            "text": "“Mae'r haul ar y papur,” meddai Dafi, “ond mae dŵr dan y bwrdd!”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s024",
+            "text": "Mae Mali'n rhoi papur yr haul wrth y cynllun.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l19-s03",
-        "title": "Os bydd glaw",
+        "title": "Mae hi'n bwrw glaw",
         "segments": [
           {
-            "id": "cy-draig-01-l19-s018",
-            "text": "Nawr y cynllun glaw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s019",
-            "text": "Os bydd hi'n bwrw glaw, bydd pawb tu mewn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s020",
-            "text": "Bydd y llyfrau'n sych yn y neuadd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s021",
-            "text": "Bydd Sam yn rhoi'r bwyd yn y caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s022",
-            "text": "Bydd Nia'n cadw'r drws ar agor.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s023",
-            "text": "Os bydd pobl yn wlyb, bydd tywelion wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s024",
-            "text": "Os bydd y gwynt yn gryf, bydd y ffenestri ar gau.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l19-s025",
-            "text": "Os bydd plant yn dod, bydd Dafi'n adrodd stori'r ddraig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s026",
-            "text": "Os bydd y neuadd yn llawn, bydd Iwan yn siarad ddwywaith.",
+            "text": "Yna mae dŵr ar y ffenestr. Mae hi'n bwrw glaw nawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s027",
-            "text": "Mae'r cynllun glaw yn hirach, ond mae popeth ynddo'n ddiogel.",
+            "text": "“Nawr,” meddai Mali. “Os bydd hi'n bwrw glaw yfory, beth fyddwn ni'n wneud?”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s029",
+            "text": "Mae Nia'n cau'r ffenestr, ac mae Mali'n rhoi'r hen fap ar y bwrdd mawr tu mewn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s030",
+            "text": "Mae Dafi'n dod o'r babell i'r llyfrgell gyda phapur yr haul. Mae'r papur yn wlyb.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s032",
+            "text": "“Os bydd y map yn wlyb, fyddwn ni ddim yn mynd gyda fe i'r ogof,” meddai Mali.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s033",
+            "text": "“Os bydd hi'n bwrw glaw, byddwn ni'n cadw'r map yn sych tu mewn ac yn darllen yr hen lyfr.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s034",
+            "text": "Mae Dafi'n rhoi papur y glaw ar y cynllun. Mae tri llun arno: map sych; Dafi'n cau'r drws; Nia'n agor y llyfr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s035",
+            "text": "Mae Nia'n rhoi'r map sych wrth y llyfr, ac mae'r ffrindiau'n darllen papur y bachgen eto.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s037",
+            "text": "“Os bydd hi'n bwrw glaw, fydd y brenin ddim yn dod i'r cyfarfod,” meddai Sam.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s038",
+            "text": "“Bydd,” meddai Dafi. “Bydd brenin da yn dod yn y glaw.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l19-s04",
-        "title": "Y dewis",
+        "title": "Cynllun y gwynt",
         "segments": [
           {
-            "id": "cy-draig-01-l19-s028",
-            "text": "Mae Mali'n edrych ar y ddau gynllun.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s029",
-            "text": "“Does dim angen dewis nawr,” meddai.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s030",
-            "text": "“Byddwn ni'n paratoi'r ddau.” Maen nhw'n rhoi pabell fach wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s031",
-            "text": "Os bydd haul, bydd y babell yn rhoi cysgod.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s032",
-            "text": "Os bydd glaw, bydd hi'n cadw'r ymwelwyr yn sych.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s033",
-            "text": "Maen nhw'n rhoi'r byrddau ger y neuadd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s034",
-            "text": "Os bydd y tywydd yn newid, bydd yn hawdd eu symud.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s035",
-            "text": "Yn sydyn mae diferion ar y ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s036",
-            "text": "Mae Dafi'n edrych allan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s037",
-            "text": "“Mae hi'n bwrw glaw!” meddai.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s038",
-            "text": "Ond munud wedyn, mae'r haul yn dod allan.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l19-s039",
-            "text": "Mae pawb yn chwerthin.",
+            "text": "Ar ôl y glaw, mae Nia'n agor y ffenestr. Mae'r papur gwlyb wrth y ffenestr; nawr mae e'n sych.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s040",
-            "text": "Mae Porth Helyg eisoes yn profi'r ddau gynllun.",
+            "text": "Mae'r haul yn gudd, ond mae'r gwynt yn codi.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s042",
+            "text": "Mae papur y glaw yn mynd at y drws, ac mae papur y gwynt yn mynd ar yr hen lyfr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l19-wind-actions",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l19-wind-actions.svg",
+                "alt": "Three arrow panels show wind rising at an open window, lifting loose paper, and opening the old book while hands secure the map inside.",
+                "covers_lexeme_ids": [
+                  "cy-gwynt",
+                  "cy-tu-mewn",
+                  "cy-paratoi"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l19-s044",
+            "text": "Mae Mali'n cau drws y llyfrgell ac yn cadw'r map tu mewn gyda Nia.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s045",
+            "text": "“Os bydd y gwynt yn codi yfory, fydd y papurau ddim tu allan,” meddai.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s047",
+            "text": "Nawr mae'r tri chynllun yn barod: haul a sych, glaw a gwlyb, gwynt a phapurau.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l19-prepare-checklist",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l19-prepare-checklist.svg",
+                "alt": "A Welsh-only preparation board pairs three weather pictures with checked actions: open the tent outside, keep the map dry inside, and close loose papers when wind rises.",
+                "covers_lexeme_ids": [
+                  "cy-paratoi",
+                  "cy-pabell",
+                  "cy-tu-allan",
+                  "cy-tu-mewn",
+                  "cy-sych",
+                  "cy-gwlyb"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l19-s049",
+            "text": "Os bydd yr haul yn dod allan, bydd Sam ac Iwan yn agor y babell tu allan.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s050",
+            "text": "Os bydd hi'n bwrw glaw, bydd Nia a Mali'n cadw'r map tu mewn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s051",
+            "text": "Os bydd y gwynt yn codi, bydd Dafi a Pero'n cadw'r papurau wrth y llyfr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l19-s052",
+            "text": "Ydy'r ffrindiau'n gorffen paratoi? Nac ydyn—mae'r gwynt yn dod eto.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l19-s05",
-        "title": "Profi’r cynlluniau",
+        "title": "Y papur yn y gwynt",
         "segments": [
           {
-            "id": "cy-draig-01-l19-s041",
-            "text": "Y diwrnod wedyn, mae'r ffrindiau'n profi'r cynlluniau heb aros am y tywydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s042",
-            "text": "Mae Sam yn sefyll tu allan ac yn galw, “Haul!” Mae pawb yn symud y byrddau at y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s043",
-            "text": "Mae Mali'n gosod y map mewn lle sych.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s044",
-            "text": "Mae Dafi'n rhoi cerrig ar gorneli'r papurau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s045",
-            "text": "Yna mae Sam yn galw, “Glaw!” Mae pawb yn cario'r pethau i'r neuadd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s046",
-            "text": "Mae Nia'n cau'r ffenestri.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s047",
-            "text": "Mae Iwan yn rhoi tywelion wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s048",
-            "text": "Y tro cyntaf, mae un llun yn aros tu allan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s049",
-            "text": "Y tro nesaf, mae Mali'n ychwanegu'r llun at ei rhestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s050",
-            "text": "Os bydd Sam yn galw haul, bydd Dafi'n agor y babell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s051",
-            "text": "Os bydd e'n galw glaw, bydd Dafi'n cau ei hochrau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s052",
-            "text": "Os bydd y gwynt yn gryf, bydd Nia'n symud y llyfrau.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l19-s053",
-            "text": "Os bydd y neuadd yn llawn, bydd Iwan yn dechrau ei ail stori.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s054",
-            "text": "Maen nhw'n profi'r newid dair gwaith.",
+            "text": "Mae'r gwynt yn agor y ffenestr fach eto, ac mae Pero'n rhedeg at y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s055",
-            "text": "Bob tro mae'n gyflymach ac yn dawelach.",
+            "text": "Ond mae'r gwynt yn agor y llyfr, un papur ar ôl un papur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s056",
-            "text": "Ar y diwedd, mae Pero'n rhedeg i mewn cyn i Sam alw unrhyw beth.",
-            "inference_aids": []
+            "text": "Mae papur y bachgen yn codi wrth bapur y goron: tap, tap, tap.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l19-scene-singing-page",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l19-scene-singing-page.svg",
+                "alt": "Wind curls through the warm wood library and opens the old book by itself; a loose page with the sleeping boy vibrates against the crown page while the letters A—t—r appear in the moving paper, and Mali, Dafi, Pero, Nia, Sam, and Iwan listen in surprise.",
+                "covers_lexeme_ids": [
+                  "cy-gwynt",
+                  "cy-paratoi"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l19-s057",
-            "text": "Mae e wedi gweld cwmwl tywyll drwy'r drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s058",
-            "text": "Eiliad wedyn, mae glaw'n taro'r ffenestr.",
+            "text": "Mae'r gwynt yn codi eto. Mae'r papur yn gwneud “A—a—a—t—r.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s059",
-            "text": "“Pero sy'n gwybod y tywydd,” meddai Dafi.",
+            "text": "Mae Nia'n agor y ffenestr ychydig. Mae'r gwynt yn dod eto, ac mae'r papur yn gwneud yr un peth.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s060",
-            "text": "Mae cynllun y glaw eisoes yn barod.",
+            "text": "Dydy Dafi ddim yn chwerthin. Mae e'n rhoi llun y brenin wrth y papur.",
             "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l19-s06",
-        "title": "Darllen eto",
-        "segments": [
+          },
           {
             "id": "cy-draig-01-l19-s061",
-            "text": "Mae Mali'n ysgrifennu'r penderfyniadau ar gefn y papur.",
+            "text": "“A—t—r,” meddai. “Mae'r bachgen yn y papur, ac mae ei enw e yn y gwynt.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s062",
-            "text": "Bydd y map tu mewn bob amser, oherwydd rhaid iddo aros yn sych.",
+            "text": "Mae Mali'n rhoi papur y gwynt wrth y map. Nawr mae ganddyn nhw gynllun ac ateb newydd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s063",
-            "text": "Bydd copïau o'r map tu allan os bydd haul.",
+            "text": "Os bydd y gwynt yn codi yfory, bydd y llyfr yn gwneud hyn eto.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l19-s064",
-            "text": "Bydd y bwyd o dan y babell os bydd y gwynt yn ysgafn; os bydd y gwynt yn gryf, bydd e yn y caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s065",
-            "text": "Bydd y stori gyntaf wrth y drws, fel y gall pobl ei chlywed cyn mynd i mewn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s066",
-            "text": "Mae pob penderfyniad yn gweithio yn y ddau gynllun.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s067",
-            "text": "Felly nid dau ddigwyddiad gwahanol sydd ganddyn nhw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s068",
-            "text": "Un arddangosfa ydy hi, gyda ffordd hyblyg o ymateb i'r haul, y glaw a'r gwynt.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s069",
-            "text": "Os bydd popeth yn barod, fydd neb yn ofni'r cymylau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l19-s070",
-            "text": "Mae'n gweithio.",
+            "text": "Ac os bydd e'n gwneud hyn eto, bydd ateb arall yn yr hen lyfr.",
             "inference_aids": []
           }
         ]
@@ -454,7 +464,8 @@
       "part_of_speech": "conjunction",
       "current_sense": "if",
       "forms_seen": [
-        "os"
+        "os",
+        "Os"
       ],
       "first_introduced_lesson": "cy-draig-01-l19",
       "new": true
@@ -502,7 +513,8 @@
       "part_of_speech": "noun",
       "current_sense": "tent",
       "forms_seen": [
-        "pabell"
+        "pabell",
+        "babell"
       ],
       "first_introduced_lesson": "cy-draig-01-l19",
       "new": true
@@ -550,7 +562,8 @@
       "part_of_speech": "adjective",
       "current_sense": "wet",
       "forms_seen": [
-        "gwlyb"
+        "gwlyb",
+        "wlyb"
       ],
       "first_introduced_lesson": "cy-draig-01-l19",
       "new": true
@@ -569,77 +582,102 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use os to connect a real possible condition with its planned result."
+    "target_language": "Os bydd hi'n bwrw glaw, bydd y map tu mewn. Os bydd yr haul yn dod allan, bydd y babell tu allan. Yn gyntaf daw os bydd a'r tywydd; wedyn daw bydd a'r cynllun.",
+    "bridge_language": "Use os bydd for a real possible condition, then bydd for the planned result. Weather is idiomatic: os bydd hi'n bwrw glaw, not a word-for-word description of a small or large rain."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l19-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Os bydd",
+      "directions": "Cwblhewch bob cynllun.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Os bydd hi'n bwrw glaw, bydd y papur yn wlyb. — Ysgrifennwch y gair sy'n dechrau'r amod.",
-          "type": "bounded_response",
+          "prompt": "___ bydd hi'n bwrw glaw, bydd y map tu mewn.",
+          "type": "cloze",
           "accepted_answers": [
+            "Os",
             "os"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Os bydd y gwynt yn codi, ___ y papur yn codi.",
+          "type": "cloze",
           "accepted_answers": [
-            "Os bydd y glaw yn fach, bydd y babell yn ddigon."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "bydd",
+            "Bydd"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Unwch y ddwy frawddeg: Bydd hi'n sych. Bydd y cyfarfod tu allan.",
+          "type": "transformation",
+          "accepted_answers": [
+            "Os bydd hi'n sych, bydd y cyfarfod tu allan.",
+            "os bydd hi'n sych, bydd y cyfarfod tu allan"
+          ],
+          "rubric": "Require one real-condition sentence with os bydd in the condition and bydd in the result; ignore capitalization and final punctuation."
+        },
+        {
+          "id": "pa4",
+          "prompt": "Cwblhewch: Os bydd yr haul yn dod allan, ___",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "bydd y cyfarfod tu allan.",
+            "bydd y babell tu allan.",
+            "bydd Sam ac Iwan yn agor y babell tu allan."
+          ],
+          "rubric": "Accept an accurate result from the sun branch, with a finite bydd clause."
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l19-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Tri chynllun",
+      "directions": "Atebwch o'r stori a'r lluniau.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: os.",
-          "type": "cloze",
+          "prompt": "Mae dŵr ar un papur. Ydy'r papur yn sych neu'n wlyb?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "os"
+            "Mae e'n wlyb.",
+            "Mae'r papur yn wlyb.",
+            "Gwlyb.",
+            "gwlyb"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: sych.",
-          "type": "cloze",
+          "prompt": "Mae'r map yn yr ystafell, nid o flaen y llyfrgell. Ydy e tu mewn neu du allan?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "sych"
+            "Tu mewn.",
+            "tu mewn",
+            "Mae e tu mewn."
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: paratoi.",
+          "prompt": "Mae Sam ac Iwan yn agor ___ o flaen y llyfrgell.",
           "type": "cloze",
           "accepted_answers": [
-            "paratoi"
+            "Pabell.",
+            "pabell",
+            "Y babell.",
+            "Y babell fach."
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Cyn y cyfarfod, mae'r ffrindiau'n gwneud y map, y llyfrau a'r bwyd yn barod. Beth maen nhw'n wneud?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Maen nhw'n paratoi.",
+            "Paratoi.",
+            "paratoi"
+          ]
         }
       ]
     },
@@ -650,30 +688,43 @@
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
+          "prompt": "Ble bydd y cyfarfod os bydd yr haul yn dod allan?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "Tu allan.",
+            "Bydd y cyfarfod tu allan.",
+            "O flaen y llyfrgell.",
+            "Dan y babell."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Os bydd hi'n bwrw glaw, ble bydd y map a'r hen lyfr?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Os bydd pawb yn paratoi, bydd yfory'n dda."
+            "Bydd y map a'r hen lyfr tu mewn.",
+            "Tu mewn.",
+            "tu mewn"
           ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+          "rubric": "Require tu mewn, either alone or in a complete answer."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Mae'r gwynt yn codi, ac mae'r hen lyfr yn ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "agor",
+            "agor; mae'r papur yn codi",
+            "agor ac mae'r papur yn gwneud “A—a—a—t—r”"
+          ],
+          "rubric": "Require agor in the cloze; a learner may add the page-lifting or A—t—r clue."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Adroddwch y tri chynllun mewn tair brawddeg: haul, glaw, gwynt. Dechreuwch bob brawddeg gydag Os bydd.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give three intelligible condition-result sentences grounded in the chapter: one sun/dry branch, one idiomatic os bydd hi'n bwrw glaw branch, and one wind branch. Each should begin with os bydd and contain a sensible future result; do not require untaught weather synonyms."
         }
       ]
     }
@@ -685,7 +736,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -695,6 +746,18 @@
       "source"
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
+    "lexeme_ids": [
+      "cy-os",
+      "cy-glaw",
+      "cy-haul",
+      "cy-gwynt",
+      "cy-pabell",
+      "cy-tu-allan",
+      "cy-tu-mewn",
+      "cy-sych",
+      "cy-gwlyb",
+      "cy-paratoi"
+    ],
     "tags": [
       "semeion",
       "welsh",
@@ -704,10 +767,17 @@
     "source": "cy-draig-01-l19"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l19-pattern"
+      "cy-l19-scene-three-plans",
+      "cy-l19-weather-branches",
+      "cy-l19-inside-outside",
+      "cy-l19-dry-wet",
+      "cy-l19-tent",
+      "cy-l19-wind-actions",
+      "cy-l19-prepare-checklist",
+      "cy-l19-scene-singing-page"
     ],
     "audio": []
   }

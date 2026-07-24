@@ -2,38 +2,40 @@
   "schema_version": "0.1.0",
   "id": "cy-draig-01-l16",
   "course_id": "cy-draig-01",
-  "order": 16,
   "title": "Roedd map yn y llyfr",
+  "order": 16,
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten Lessons 01–15 as available",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, aspect, and southern-register consistency."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G16",
-      "label": "Imperfect roedd for past background and states",
-      "description": "Use roedd to describe what was present, true, or ongoing as background in the past.",
+      "label": "Imperfect roedd / doedd for past background and states",
+      "description": "Use roedd for what was present or true in past background, and doedd ... ddim for its negative.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G07",
+      "G10",
+      "G12",
+      "G13",
+      "G14",
       "G15"
     ],
-    "incidental_grammar": [
-      {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
-      }
-    ],
+    "incidental_grammar": [],
     "communicative_goals": [
-      "describe how a place used to be",
-      "locate an object in past time",
-      "contrast then and now"
+      "describe how familiar places used to be",
+      "contrast past background with the present",
+      "ask when a past state was true",
+      "read a map through known place words and pictures"
     ],
     "new_lexeme_ids": [
       "cy-roedd",
@@ -46,359 +48,382 @@
       "cy-llawn",
       "cy-cudd",
       "cy-cofio"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-ogof"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l16-s01",
-        "title": "Y map yn y llyfr",
+        "title": "Papur cudd",
         "segments": [
           {
             "id": "cy-draig-01-l16-s001",
-            "text": "Y bore wedyn, mae Mali'n agor yr hen lyfr.",
-            "inference_aids": [
-              {
-                "type": "image",
-                "ref": "cy-l16-pattern",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l16-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 16."
-              }
-            ]
+            "text": "Heddiw mae Pero wrth yr hen silff; mae llun ei daith ar y bwrdd.",
+            "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s002",
-            "text": "Mae map bach rhwng dwy dudalen.",
+            "text": "Mae allwedd Iwan ar lun Pero, wrth y drws bach coch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s003",
-            "text": "“Edrychwch,” meddai hi.",
+            "text": "Mae Mali'n agor yr hen lyfr, ond mae un papur du dan bapur y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s004",
-            "text": "“Mae'r map yn dangos y llyfrgell.” Mae Iwan yn dod at y bwrdd.",
-            "inference_aids": []
+            "text": "Roedd y papur du yn gudd yn y llyfr; doedd e ddim yn y pedwar papur.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-scene-map-discovery",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l16-scene-map-discovery.svg",
+                "alt": "Mali lifts a dark sheet hidden inside the old book and reveals a map. Iwan remembers the younger library while Dafi, Pero, and Nia study the page.",
+                "covers_lexeme_ids": [
+                  "cy-roedd",
+                  "cy-map",
+                  "cy-cudd",
+                  "cy-cofio"
+                ]
+              },
+              {
+                "type": "image",
+                "ref": "cy-l16-roedd-doedd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l16-roedd-doedd.svg",
+                "alt": "A past panel labelled ROEDD shows the paper in the book; a contrasting past panel labelled DOEDD ... DDIM shows no paper among the four repaired sheets.",
+                "covers_lexeme_ids": [
+                  "cy-roedd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l16-s005",
-            "text": "Mae'n edrych ar y map am amser hir.",
-            "inference_aids": []
+            "text": "Mae Mali'n agor y papur. Mae map arno: y llyfrgell, y caffi a'r stryd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-map-cyn-nawr",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l16-map-cyn-nawr.svg",
+                "alt": "Two compact town maps compare CYN with NAWR: the earlier small library contains the café, while the present café stands across the street.",
+                "covers_lexeme_ids": [
+                  "cy-map",
+                  "cy-cyn"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l16-s006",
-            "text": "“Roedd y llyfrgell yn wahanol pan oeddwn i'n fach,” meddai.",
+            "text": "Mae'r map yn llawn coch a du. Dydy'r papur ddim yn wag.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s007",
-            "text": "“Roedd drws yma, ond doedd dim ffenestr yma.",
+            "text": "Gofynnodd Mali, “Tad-cu, wyt ti'n cofio'r map?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s008",
-            "text": "Roedd y caffi yn y cefn, a roedd y bwrdd mawr wrth y wal.” Mae Mali'n edrych o'r map i'r ystafell.",
+            "text": "Edrychodd Iwan arno. “Dw i'n cofio'r llyfrgell, ond dw i ddim yn cofio'r map.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s009",
-            "text": "Nawr mae ffenestr fawr wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s010",
-            "text": "Nawr mae'r caffi ar yr ochr arall.",
-            "inference_aids": []
+            "text": "Roedd e'n ifanc cyn amser Mali, ac roedd y llyfrgell yn wahanol.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-arfer-ifanc",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l16-arfer-ifanc.svg",
+                "alt": "A loop of morning, afternoon, and night follows young Iwan repeatedly entering the old library, reading, and going home.",
+                "covers_lexeme_ids": [
+                  "cy-arfer",
+                  "cy-ifanc",
+                  "cy-cofio"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l16-s02",
-        "title": "Yr ystafell gynt",
+        "title": "Cyn amser Mali",
         "segments": [
           {
+            "id": "cy-draig-01-l16-s010",
+            "text": "Mae Iwan yn rhoi'r map wrth lun Mali. Mae'r llyfrgell yn fawr, a'r caffi ar y stryd.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l16-s011",
-            "text": "Mae Iwan yn cofio'r hen ystafell.",
+            "text": "Cyn amser Mali, roedd y llyfrgell yn fach, a doedd dim caffi ar y stryd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s012",
-            "text": "“Roedd dau fwrdd hir yn y canol.",
+            "text": "Roedd caffi bach yn y llyfrgell, wrth y ffenestr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s013",
-            "text": "Roedd y llyfrau Cymraeg ar y chwith.",
+            "text": "Nawr mae silff wrth y ffenestr, ac mae'r caffi ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s014",
-            "text": "Roedd y llyfrau mawr ar y dde.",
+            "text": "Roedd llawer o lyfrau yn yr ystafell, ac roedd pob silff yn llawn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s015",
-            "text": "Doedd dim cyfrifiadur.",
-            "inference_aids": []
+            "text": "Nawr mae un silff yn wag, achos mae'r llyfrau ar y bwrdd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-llawn-gwag",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l16-llawn-gwag.svg",
+                "alt": "One shelf is packed tightly with books and labelled LLAWN; beside it an identical shelf has no books and is labelled GWAG.",
+                "covers_lexeme_ids": [
+                  "cy-llawn",
+                  "cy-gwag"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l16-s016",
-            "text": "Doedd dim caffi newydd.",
-            "inference_aids": []
+            "text": "Gofynnodd Dafi, “Pryd roedd y caffi yn y llyfrgell?”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-pryd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l16-pryd.svg",
+                "alt": "Dafi asks PRYD? above a short timeline with an old-library picture at one end and today's library at the other.",
+                "covers_lexeme_ids": [
+                  "cy-pryd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l16-s017",
-            "text": "Roedd cadair goch wrth bob bwrdd.” “Oedd y blwch coch yma?” mae Dafi'n gofyn.",
+            "text": "Atebodd Iwan, “Roedd e yma cyn y caffi newydd. Roeddwn i'n ifanc.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s018",
-            "text": "“Oedd,” meddai Iwan, “ond roedd e ar silff uchel.",
+            "text": "Mae Mali'n rhoi llun Iwan ifanc wrth yr hen lyfrgell ar y map.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s019",
-            "text": "Doedd e ddim ar y llawr.” Mae Dafi'n edrych i fyny.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s020",
-            "text": "Mae hen farc coch ar y wal.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s021",
-            "text": "Mae'r marc uwchben y silff newydd.",
+            "text": "Nawr mae'r hen fap yn ateb llun Mali: cyn a nawr.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l16-s03",
-        "title": "Y map a'r ystafell",
+        "title": "Roedd Iwan yn arfer...",
         "segments": [
           {
+            "id": "cy-draig-01-l16-s020",
+            "text": "Roedd Iwan yn arfer dod i'r llyfrgell bob bore.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s021",
+            "text": "Roedd e'n arfer darllen wrth y ffenestr bob prynhawn.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l16-s022",
-            "text": "Mae Mali'n rhoi'r map ar y llawr.",
+            "text": "Roedd e'n arfer mynd adref cyn nos, ond un nos aeth e dan y silff.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s023",
-            "text": "Mae hi'n cerdded o'r hen ddrws i'r hen gaffi.",
+            "text": "“Pryd?” gofynnodd Mali. Mae Iwan yn cofio, ac mae e'n rhoi ei fys ar y map.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s024",
-            "text": "Roedd y drws lle mae'r ffenestr nawr.",
+            "text": "“Roeddwn i'n ifanc. Roedd y drws bach yma, ond doedd y silff ddim yma.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s025",
-            "text": "Roedd y caffi lle mae'r bwrdd mawr nawr.",
+            "text": "Ar y map, mae Pero'n mynd o'r llyfrgell, dan y silff, ac i'r stryd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s026",
-            "text": "Roedd y blwch ar y silff lle mae'r llun o'r ddraig nawr.",
+            "text": "Yna mae e'n mynd o'r stryd i ddrws yn y coch a'r du.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s027",
-            "text": "Mae Pero'n dilyn Mali o gwmpas yr ystafell.",
+            "text": "Roedd y drws yn agor cyn y llyfrgell newydd. Nawr dydy e ddim yn agor.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s028",
-            "text": "Mae Dafi'n symud cadair i'r hen le.",
-            "inference_aids": []
+            "text": "Mae silff o flaen y drws, mae'r drws yn gudd, ac mae'r stryd dan y llyfrgell hefyd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-cudd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l16-cudd.svg",
+                "alt": "The same little red door is visible with no shelf in the past panel, then hidden behind a bookcase in the present panel.",
+                "covers_lexeme_ids": [
+                  "cy-cudd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l16-s029",
-            "text": "“Roedd y gadair yma?” mae'n gofyn.",
+            "text": "Dydy Iwan ddim yn cofio cau'r drws. Dydy e ddim yn cofio'r stryd dan y silff.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s030",
-            "text": "“Nac oedd,” meddai Iwan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s031",
-            "text": "“Roedd hi wrth y drws.” Mae Dafi'n symud y gadair eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s032",
-            "text": "Nawr mae'r map a'r ystafell yn cyd-fynd.",
+            "text": "Ond roedd y drws yno, ac roedd yr hen allwedd gan Iwan.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l16-s04",
-        "title": "Marc newydd",
+        "title": "Drws i'r ogof",
         "segments": [
           {
-            "id": "cy-draig-01-l16-s033",
-            "text": "Ond mae un peth yn rhyfedd.",
+            "id": "cy-draig-01-l16-s031",
+            "text": "Mae Nia'n rhoi allwedd Iwan ar y drws bach ar y map.",
             "inference_aids": []
           },
           {
+            "id": "cy-draig-01-l16-s032",
+            "text": "Mae Mali'n rhoi llun Pero ar y stryd ddu. Mae'r ddau'n mynd i'r un drws.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s033",
+            "text": "Y tu ôl i'r drws mae ogof. Mae'r ogof dan y coch a'r du.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l16-scene-cave-room",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l16-scene-cave-room.svg",
+                "alt": "A cutaway map beneath the hill shows a hidden route from the library shelf through a red door into a slate-blue cave. One chamber is full of books and one crown-marked chamber is empty.",
+                "covers_lexeme_ids": [
+                  "cy-map",
+                  "cy-cudd",
+                  "cy-ogof",
+                  "cy-llawn",
+                  "cy-gwag"
+                ]
+              }
+            ]
+          },
+          {
             "id": "cy-draig-01-l16-s034",
-            "text": "Mae seren fach ar y map.",
+            "text": "Dafi: “Ogof?” Mae e'n edrych ar y map, ar y ffenestr, ac ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s035",
-            "text": "Roedd y seren y tu ôl i'r blwch coch.",
+            "text": "Gofynnodd Nia, “Pryd roedd drws yr ogof yn agor?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s036",
-            "text": "Doedd dim drws yno, meddai Iwan.",
+            "text": "Atebodd Iwan, “Doedd y drws ddim yn agor bob dydd. Agorodd un nos.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s037",
-            "text": "Doedd dim ffenestr yno chwaith.",
+            "text": "“Roedd y llyfr gyda fi, ac roedd yr allwedd yn y drws. Yna agorodd e.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s038",
-            "text": "Roedd wal wen yn unig.",
+            "text": "Dydy Iwan ddim yn hapus nawr. Mae e'n cofio'r nos, ond mae e hefyd yn ofni'r cof.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s039",
-            "text": "Mae Mali'n edrych ar y wal bresennol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s040",
-            "text": "Mae llun mawr o'r harbwr arni.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s041",
-            "text": "Mae hi'n symud y llun ychydig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s042",
-            "text": "Y tu ôl iddo mae'r un seren fach.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s043",
-            "text": "“Roedd y seren yma pan oeddet ti'n fach?” mae hi'n gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s044",
-            "text": "“Nac oedd,” meddai Iwan yn araf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s045",
-            "text": "Roedd y map yn hen, ond roedd y seren yn newydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s046",
-            "text": "Mae rhywun wedi ychwanegu marc at yr hen fap.",
+            "text": "Dydy Dafi ddim yn gofyn “Pwy?” nawr.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l16-s05",
-        "title": "Cof a map",
+        "title": "Yr ystafell wag",
         "segments": [
           {
+            "id": "cy-draig-01-l16-s040",
+            "text": "Mae tair ystafell ar fap yr ogof. Roedd un ystafell yn llawn llyfrau.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s041",
+            "text": "Roedd un ystafell yn llawn bocsys, ond roedd yr ystafell olaf yn wag.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s042",
+            "text": "Doedd dim llyfr, dim bocs, dim ci, a dim draig yn yr ystafell wag.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s043",
+            "text": "Ond mae coron ar ddrws yr ystafell wag, a drws coch yn y papur.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s044",
+            "text": "Mae Dafi'n rhoi papur y bachgen ar yr ystafell. Mae'r bachgen yn cysgu yn y papur.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s045",
+            "text": "Roedd yr ystafell yn wag ar y map, ond doedd papur y bachgen ddim yn wag.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l16-s046",
+            "text": "Mae bachgen, coron a draig fach arno. Mae Dafi'n edrych o'r papur i'r map.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l16-s047",
-            "text": "Mae Mali'n copïo'r map ar ddarn mawr o bapur.",
+            "text": "Mae Mali eisiau agor y drws cudd, ond mae Iwan yn cau'r hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s048",
-            "text": "Ar un ochr mae hi'n ysgrifennu NAWR; ar yr ochr arall mae hi'n ysgrifennu CYNT.",
+            "text": "Aeth e adref cyn nos gyda'r allwedd. Cafodd Mali'r map, a chafodd Dafi bapur y bachgen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l16-s049",
-            "text": "Nawr mae'r caffi ar y dde; cynt roedd y caffi yn y cefn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s050",
-            "text": "Nawr mae un bwrdd mawr; cynt roedd dau fwrdd hir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s051",
-            "text": "Nawr mae cyfrifiadur wrth y ffenestr; cynt doedd dim cyfrifiadur.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s052",
-            "text": "Nawr mae'r blwch coch ar y llawr; cynt roedd e ar silff uchel.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s053",
-            "text": "Mae Dafi'n darllen y parau ac yn cerdded i bob lle.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s054",
-            "text": "Mae Iwan yn ei gywiro pan fo angen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s055",
-            "text": "“Roedd y drws fan hyn.” “Nac oedd; roedd e wrth y wal arall.” “Oedd y llyfrau mawr ar y chwith?” “Nac oedden; roedd y llyfrau Cymraeg ar y chwith.” Mae'r cwestiynau'n helpu Iwan i gofio mwy.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s056",
-            "text": "Pan oedd e'n fach, roedd y llyfrgell yn dawel yn y bore, ond roedd hi'n brysur ar ôl ysgol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s057",
-            "text": "Roedd ei fam yn gweithio wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s058",
-            "text": "Roedd ei dad yn dod o'r harbwr gyda phapurau gwlyb.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s059",
-            "text": "Roedd Iwan yn eu rhoi wrth y ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s060",
-            "text": "Un diwrnod roedd y map yn un o'r papurau hynny.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s061",
-            "text": "Roedd y llinell las arno, ond doedd dim seren.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s062",
-            "text": "Mae Mali'n rhoi seren newydd ar ei chopi, mewn lliw gwahanol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l16-s063",
-            "text": "Bellach mae'r copi'n dangos dau amser: y map fel roedd e, a'r map fel mae e nawr.",
+            "text": "Roedd drws ar agor cyn heddiw; nawr mae e'n gudd. Roedd yr ystafell yn wag. Pwy oedd yno cyn heddiw?",
             "inference_aids": []
           }
         ]
@@ -408,12 +433,15 @@
   "vocabulary": [
     {
       "lexeme_id": "cy-roedd",
-      "display_form": "bod — roedd",
+      "display_form": "bod — roedd / doedd ... ddim",
       "citation_form": "bod — roedd",
       "part_of_speech": "verb",
-      "current_sense": "was; there was",
+      "current_sense": "was; there was / was not; there was not",
       "forms_seen": [
-        "roedd"
+        "roedd",
+        "Roedd",
+        "doedd",
+        "Doedd"
       ],
       "first_introduced_lesson": "cy-draig-01-l16",
       "new": true
@@ -425,7 +453,8 @@
       "part_of_speech": "noun",
       "current_sense": "map",
       "forms_seen": [
-        "map"
+        "map",
+        "fap"
       ],
       "first_introduced_lesson": "cy-draig-01-l16",
       "new": true
@@ -461,7 +490,8 @@
       "part_of_speech": "adverb",
       "current_sense": "when",
       "forms_seen": [
-        "pryd"
+        "pryd",
+        "Pryd"
       ],
       "first_introduced_lesson": "cy-draig-01-l16",
       "new": true
@@ -525,114 +555,151 @@
       ],
       "first_introduced_lesson": "cy-draig-01-l16",
       "new": true
+    },
+    {
+      "lexeme_id": "cy-ogof",
+      "display_form": "ogof",
+      "citation_form": "ogof",
+      "part_of_speech": "noun",
+      "current_sense": "cave",
+      "forms_seen": [
+        "ogof"
+      ],
+      "first_introduced_lesson": "cy-draig-01-l16",
+      "new": false,
+      "status": "receptive_illustrated"
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use roedd to describe what was present, true, or ongoing as background in the past."
+    "target_language": "Nawr mae'r caffi ar y stryd. Cyn amser Mali, roedd caffi bach yn y llyfrgell. Nawr dydy'r drws ddim yn agor; cyn heddiw, doedd y silff ddim o flaen y drws.",
+    "bridge_language": "Use roedd for a past state or background and doedd ... ddim for its negative; completed events still use forms such as agorodd or aeth."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l16-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Roedd / doedd",
+      "directions": "Complete each past pattern.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Roedd y map yn gudd yn y llyfr. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
+          "prompt": "Nawr mae'r caffi ar y stryd. Cyn amser Mali, ___ caffi bach yn y llyfrgell.",
+          "type": "cloze",
           "accepted_answers": [
-            "bod — roedd"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+            "roedd",
+            "Roedd"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Nawr dydy'r drws ddim yn agor. Cyn y llyfrgell newydd, ___ y silff ddim yma.",
+          "type": "cloze",
           "accepted_answers": [
-            "Cyn y llyfrgell newydd, roedd llawer o focsys yma."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "doedd",
+            "Doedd"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Mae'r silff yn wag nawr. → Ddoe, ___ y silff yn wag.",
+          "type": "transformation",
+          "accepted_answers": [
+            "roedd",
+            "Roedd"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Dydy'r map ddim ar y bwrdd nawr. → Ddoe, ___ y map ddim ar y bwrdd.",
+          "type": "transformation",
+          "accepted_answers": [
+            "doedd",
+            "Doedd"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l16-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Y map",
+      "directions": "Complete each contrast from the story.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: roedd.",
+          "prompt": "Mae'r papur yn dangos y llyfrgell, y caffi a'r stryd. Mae e'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "roedd"
+            "map"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: llawn.",
+          "prompt": "Mae llawer o lyfrau ar un silff: mae hi'n ___. Does dim llyfr ar silff arall: mae hi'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "llawn"
-          ]
+            "llawn; wag",
+            "llawn, wag"
+          ],
+          "rubric": "Both contrast words are required in this order: llawn, then wag."
         },
         {
           "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: cofio.",
+          "prompt": "Mae silff o flaen y drws, a dydy Mali ddim yn gweld y drws. Mae'r drws yn ___.",
           "type": "cloze",
           "accepted_answers": [
-            "cofio"
+            "gudd"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Mae Iwan yn edrych ar yr hen lyfrgell ac yn dweud beth roedd e'n arfer gwneud. Mae e'n ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cofio"
+          ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l16-pc",
       "title": "Pensa C — Y stori",
-      "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
+      "directions": "Answer briefly in Welsh.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
+          "prompt": "Ble roedd y papur du?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "Roedd e'n gudd yn yr hen lyfr.",
+            "Yn yr hen lyfr.",
+            "Dan bapur y drws."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Beth roedd Iwan yn arfer gwneud bob prynhawn?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mae'r hen lyfr yn dechrau stori newydd."
-          ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+            "Roedd e'n arfer darllen wrth y ffenestr.",
+            "Darllen wrth y ffenestr."
+          ]
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Beth roedd yn yr ystafell wag?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Doedd dim llyfr, bocs, ci na draig yno.",
+            "Dim llyfr, dim bocs, dim ci, a dim draig.",
+            "Roedd coron ar y drws."
+          ],
+          "rubric": "Accept either an accurate statement of what was absent or the crown on the room's door; the pictured receptive word ogof is not required."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Retell the map discovery in four short Welsh sentences. Use roedd at least twice and doedd ... ddim once.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give four intelligible, story-grounded sentences: include two accurate roedd clauses, one grammatical doedd ... ddim clause, and either the hidden map, old/new library, hidden door, or empty room. Do not require the receptive word ogof."
         }
       ]
     }
@@ -644,7 +711,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -663,10 +730,17 @@
     "source": "cy-draig-01-l16"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l16-pattern"
+      "cy-l16-scene-map-discovery",
+      "cy-l16-roedd-doedd",
+      "cy-l16-map-cyn-nawr",
+      "cy-l16-arfer-ifanc",
+      "cy-l16-llawn-gwag",
+      "cy-l16-pryd",
+      "cy-l16-cudd",
+      "cy-l16-scene-cave-room"
     ],
     "audio": []
   }

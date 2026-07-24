@@ -3,34 +3,28 @@
   "id": "cy-draig-01-l11",
   "course_id": "cy-draig-01",
   "order": 11,
-  "title": "Fy llyfr i",
+  "title": "Ei lyfr e",
   "status": "draft",
-  "content_version": "0.2.0",
-  "provenance": {
-    "created_at": "2026-07-16",
-    "author_type": "AI draft",
-    "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
-    "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
-  },
+  "content_version": "0.3.0",
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G11",
       "label": "possessives fy/dy/ei with echo pronouns",
-      "description": "Mark possession with fy, dy, and ei and reinforce the owner with i, di, hi, or e.",
+      "description": "Mark possession with fy, dy, and ei, apply the associated initial mutation, and use i, di, e, or hi to make the owner clear.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
       "G06",
       "G08",
       "G10"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "identify an owner",
-      "distinguish my, your, his, and her objects",
-      "resolve mixed-up books"
+      "identify the owner of a book or bag",
+      "distinguish my, your, his, and her possessions",
+      "describe family and friendship relations",
+      "connect the assembled drawing and key to Iwan's old book"
     ],
     "new_lexeme_ids": [
       "cy-fy",
@@ -43,236 +37,272 @@
       "cy-brawd",
       "cy-chwaer",
       "cy-perthyn"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l11-s01",
-        "title": "Pedwar llyfr",
+        "title": "Llyfr a bag",
         "segments": [
           {
             "id": "cy-draig-01-l11-s001",
-            "text": "Mae pedwar llyfr ar y bwrdd.",
+            "text": "Mae Mali, Sam, Nia, Dafi a Tad-cu Iwan yn yr ystafell fawr. Mae pedwar llyfr ar y bwrdd a phedwar bag wrth y bwrdd.",
             "inference_aids": [
               {
                 "type": "image",
                 "ref": "cy-l11-scene",
                 "presentation": "inline_scene",
                 "src": "media/images/cy-l11-scene.svg",
-                "alt": "Pob llyfr yn ei fag"
+                "alt": "Mali, Sam, Nia, Dafi, and Iwan gather around four colour-coded books and bags while Dafi puts a black book into Mali's red bag; Iwan's old book and the small key are also visible.",
+                "covers_lexeme_ids": [
+                  "cy-llyfr",
+                  "cy-bag"
+                ]
               },
               {
                 "type": "image",
-                "ref": "cy-l11-possessives",
+                "ref": "cy-l11-books-bags",
                 "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l11-possessives.svg",
-                "alt": "Fy llyfr i, dy lyfr di, ei lyfr e, ei llyfr hi."
+                "src": "media/diagrams/cy-l11-books-bags.svg",
+                "alt": "Four books are paired with four open bags by matching colour, while a crossed arrow shows the black book wrongly entering the red bag.",
+                "covers_lexeme_ids": [
+                  "cy-llyfr",
+                  "cy-bag"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l11-s002",
-            "text": "Mae llyfr coch gan Mali.",
+            "text": "Mae llyfr coch gan Mali, llyfr du gan Sam, llyfr gwyn gan Nia, a hen lyfr mawr gan Iwan.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s003",
-            "text": "Mae llyfr du gan Sam.",
+            "text": "Mae Dafi'n rhoi'r llyfr du yn y bag coch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s004",
-            "text": "Mae llyfr gwyn gan Nia.",
-            "inference_aids": []
+            "text": "Dafi: “Dy lyfr di yn dy fag di, Mali.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l11-possessives",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l11-possessives.svg",
+                "alt": "Owner arrows contrast fy mag i, dy fag di, ei lyfr e, and ei llyfr hi, with the changed initial letters highlighted.",
+                "covers_lexeme_ids": [
+                  "cy-fy",
+                  "cy-dy",
+                  "cy-ei",
+                  "cy-llyfr",
+                  "cy-bag"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l11-s005",
-            "text": "Mae hen lyfr gan Tad-cu.",
+            "text": "Mae Mali'n edrych ar y llyfr du. “Nac ydy. Dydy'r llyfr du ddim yn fy llyfr i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s006",
-            "text": "Mae Dafi'n edrych ar y llyfrau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l11-s007",
-            "text": "Mae e'n rhoi'r llyfrau yn y bag.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l11-s008",
-            "text": "Ond dydy Dafi ddim yn gwybod pa lyfr sydd i bwy.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l11-s009",
-            "text": "Mae'r pedwar llyfr yn y bag.",
+            "text": "Nawr mae Dafi'n rhoi'r llyfr gwyn yn y bag coch. Mae Nia'n edrych yn trist.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l11-s02",
-        "title": "Fy llyfr i",
+        "title": "Brawd a chwaer",
         "segments": [
           {
             "id": "cy-draig-01-l11-s010",
-            "text": "Mae Mali'n agor y bag.",
-            "inference_aids": []
+            "text": "Mae Sam yn agor y llyfr du. Mae llun yn y llyfr: merch fach a Sam.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l11-siblings",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l11-siblings.svg",
+                "alt": "Sam and a girl are joined by a two-way family line labelled ei chwaer e and ei brawd hi.",
+                "covers_lexeme_ids": [
+                  "cy-brawd",
+                  "cy-chwaer",
+                  "cy-ei"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l11-s011",
-            "text": "“Ble mae fy llyfr i?” meddai Mali.",
+            "text": "Sam: “Fy chwaer i.” Mae Sam yn frawd, ac mae'r ferch fach yn chwaer.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s012",
-            "text": "Mae Dafi’n rhoi llyfr du i Mali.",
+            "text": "Mae brawd a chwaer yn y llun. Mali: “Ei chwaer e; ei brawd hi.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s013",
-            "text": "“Nage. Dydy hwn ddim yn fy llyfr i.”",
+            "text": "Dafi: “Dy lyfr di, Sam?” Sam: “Ie. Fy llyfr i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s014",
-            "text": "Mae Mali'n cael y llyfr coch.",
+            "text": "Mae Dafi'n rhoi llyfr Sam yn ei fag e.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s015",
-            "text": "“Ie, fy llyfr i.”",
+            "text": "Mae Nia'n agor y llyfr gwyn. Mae cath fach wen yn y llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s016",
-            "text": "Fy mag i. Fy llyfr i.",
+            "text": "Mali: “Ei chath hi.” Mae Dafi'n rhoi llyfr Nia yn ei bag hi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s017",
-            "text": "Fy mag i, ond fy llyfr i.",
+            "text": "Mae Mali'n agor y llyfr coch. Mae Pero yn y llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s018",
-            "text": "Mae Dafi'n rhoi'r llyfr du yn ôl.",
+            "text": "Nia: “Ei chi hi.” Mae Dafi'n rhoi llyfr Mali yn ei bag hi.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l11-s03",
-        "title": "Dy lyfr di",
+        "title": "Llun yr hen lyfr",
         "segments": [
           {
             "id": "cy-draig-01-l11-s019",
-            "text": "Mae Sam yn chwilio hefyd.",
+            "text": "Nawr mae hen lyfr Iwan ar y bwrdd. Mae pedwar papur o'r llyfr yma hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s020",
-            "text": "“Dafi, ble mae dy lyfr di?” meddai Sam.",
+            "text": "Mae Mali'n rhoi un papur wrth un papur, a dau bapur wrth ddau bapur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s021",
-            "text": "“Does gen i ddim llyfr,” meddai Dafi.",
+            "text": "Nawr mae un llun mawr ar y bwrdd: Dafi, e, a'r hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s022",
-            "text": "Mae Dafi’n codi’r llyfr du.",
-            "inference_aids": []
+            "text": "Mae'r pedwar papur yn perthyn i'r hen lyfr. Mae'r llun yn perthyn i hen lyfr Iwan. Mae'r papur bach dan y bocs yn perthyn i'r llyfr hefyd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l11-belongs",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l11-belongs.svg",
+                "alt": "Four torn paper pieces assemble into one drawing and an arrow labelled perthyn points from the completed drawing into Iwan's old book.",
+                "covers_lexeme_ids": [
+                  "cy-perthyn",
+                  "cy-llyfr"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l11-s023",
-            "text": "“Dy lyfr di?” meddai Dafi.",
+            "text": "Iwan: “Fy llyfr i.” Dafi: “Dy lyfr di?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s024",
-            "text": "“Ie, fy llyfr i,” meddai Sam.",
+            "text": "Iwan: “Ie, fy hen lyfr i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s025",
-            "text": "“Dy lyfr di?” meddai Dafi wrth Sam.",
+            "text": "Mae Mali'n rhoi'r pedwar papur yn ei lyfr e.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s026",
-            "text": "“Ie, fy llyfr i,” meddai Sam.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l11-s027",
-            "text": "Mae Sam yn rhoi ei lyfr yn ei fag.",
+            "text": "Mae Iwan yn rhoi ei lyfr e yn ei fag e.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l11-s04",
-        "title": "Ei llyfr hi",
+        "title": "Ei allwedd e?",
         "segments": [
           {
+            "id": "cy-draig-01-l11-s027",
+            "text": "Ond mae allwedd fach dan y papur yn hen lyfr Iwan.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l11-key-sleeper",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l11-key-sleeper.svg",
+                "alt": "A small old key moves from under the assembled drawing toward the pictured sleeping boy, while a dotted question line joins Iwan and the boy as possible old friends.",
+                "covers_lexeme_ids": [
+                  "cy-allwedd",
+                  "cy-ffrind",
+                  "cy-ei"
+                ]
+              }
+            ]
+          },
+          {
             "id": "cy-draig-01-l11-s028",
-            "text": "Mae Nia'n gweld y llyfr gwyn.",
+            "text": "Mae Nia'n agor y llyfr eto. Mae Dafi'n edrych ar yr allwedd ac ar e yn y llun.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s029",
-            "text": "“Ei llyfr hi yw hwn,” meddai Mali.",
+            "text": "Dafi: “Dy allwedd di, Iwan?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s030",
-            "text": "Mae'r llyfr gwyn yn perthyn i Nia.",
+            "text": "Iwan: “Nage. Dydy'r allwedd ddim yn fy allwedd i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s031",
-            "text": "Mae Nia'n rhoi ei llyfr hi yn ei bag.",
+            "text": "Mae Dafi'n rhoi'r allwedd ar y papur. “Ei allwedd e?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s032",
-            "text": "Mae Tad-cu'n cael ei hen lyfr e.",
+            "text": "Mae Iwan yn edrych ar e yn y llun, yn hapus ac yn trist.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s033",
-            "text": "Mae ei hallwedd hi gan Nia hefyd.",
+            "text": "Iwan: “Fy hen ffrind i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s034",
-            "text": "Mae Mali'n ffrind i Nia.",
+            "text": "Mali: “Dy ffrind di?” Mae Mali'n edrych ar Iwan. Mae Iwan yn hen, ond mae e'n fach.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s035",
-            "text": "Mae gan Mali frawd a chwaer.",
+            "text": "Mae Iwan yn edrych eto. “Nage. Dydy e ddim yn fy ffrind i. Mae e'n hen ffrind yn yr hen lyfr.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l11-s036",
-            "text": "Nawr mae pob llyfr gyda’r person cywir.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l11-s05",
-        "title": "Pob llyfr yn ei fag",
-        "segments": [
-          {
-            "id": "cy-draig-01-l11-s037",
-          "text": "Mae pedwar llyfr ar y bwrdd: llyfr coch Mali, llyfr du Sam, llyfr gwyn Nia a hen lyfr Tad-cu. Mae Dafi'n rhoi'r pedwar llyfr mewn un bag. Mae Mali'n agor y bag. “Ble mae fy llyfr i?” Mae Dafi'n rhoi'r llyfr du iddi. “Nage, dydy hwn ddim yn fy llyfr i.” Mae Dafi'n rhoi'r llyfr coch iddi. “Ie, fy llyfr i.” Mae Sam yn chwilio hefyd. Mae Dafi'n dangos y llyfr du. “Dy lyfr di?” “Ie, fy llyfr i,” meddai Sam. Mae Sam yn rhoi ei lyfr e yn ei fag e. Mae Nia'n gweld y llyfr gwyn. “Ei llyfr hi,” meddai Mali. Mae Nia'n rhoi ei llyfr hi yn ei bag hi. Yn olaf mae Tad-cu'n cael ei hen lyfr e. Mae Dafi'n edrych ar fag Mali ac ar fag Sam. “Dy fag di?” meddai Dafi wrth Mali. “Nage, fy mag i yw'r bag coch.” Mae Dafi'n edrych ar Nia. Mae ei llyfr hi yn ei bag hi, ac mae ei hallwedd hi gyda hi. Mae pedwar llyfr, pedwar perchennog a phedwar bag. Mae llyfr coch Mali yn ei bag hi, llyfr du Sam yn ei fag e, llyfr gwyn Nia yn ei bag hi, a hen lyfr Tad-cu gyda Tad-cu. Nawr does dim llyfr yn y bag anghywir.",
+            "text": "Mae Dafi'n edrych ar ei allwedd e ac ar Iwan. Pwy ydy e? Pam mae ei allwedd e yn llyfr Iwan?",
             "inference_aids": []
           }
         ]
@@ -323,7 +353,8 @@
       "part_of_speech": "noun",
       "current_sense": "book",
       "forms_seen": [
-        "llyfr"
+        "llyfr",
+        "lyfr"
       ],
       "first_introduced_lesson": "cy-draig-01-l11",
       "new": true
@@ -335,7 +366,9 @@
       "part_of_speech": "noun",
       "current_sense": "bag",
       "forms_seen": [
-        "bag"
+        "bag",
+        "fag",
+        "mag"
       ],
       "first_introduced_lesson": "cy-draig-01-l11",
       "new": true
@@ -347,7 +380,8 @@
       "part_of_speech": "noun",
       "current_sense": "key",
       "forms_seen": [
-        "allwedd"
+        "allwedd",
+        "hallwedd"
       ],
       "first_introduced_lesson": "cy-draig-01-l11",
       "new": true
@@ -402,8 +436,8 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "fy llyfr i, dy lyfr di, ei llyfr hi, ei lyfr e. Mae'r rhagenw ar ôl yr enw yn pwysleisio pwy yw'r perchennog.",
-    "bridge_language": "Possessives may be reinforced by an echo pronoun: fy…i, dy…di, ei…hi/e. Mutations and the gender-dependent meaning of ei require careful fluent review."
+    "target_language": "Fy mag i; dy fag di. Dy lyfr di; ei lyfr e; ei llyfr hi; ei hallwedd hi.",
+    "bridge_language": "Welsh places fy, dy, or ei before the noun and often adds an echo pronoun after it. Fy causes nasal mutation (bag → mag); dy and masculine ei cause soft mutation (bag → fag, llyfr → lyfr); feminine ei causes aspirate mutation or h- before a vowel (allwedd → hallwedd)."
   },
   "pensa": {
     "a": {
@@ -413,34 +447,36 @@
       "items": [
         {
           "id": "pa1",
-          "prompt": "___ llyfr i (my)",
+          "prompt": "___ mag i.",
           "type": "cloze",
           "accepted_answers": [
-            "fy"
+            "fy",
+            "Fy"
           ]
         },
         {
           "id": "pa2",
-          "prompt": "___ lyfr di (your)",
+          "prompt": "___ lyfr di.",
           "type": "cloze",
           "accepted_answers": [
-            "dy"
+            "dy",
+            "Dy"
           ]
         },
         {
           "id": "pa3",
-          "prompt": "ei llyfr ___ (her)",
+          "prompt": "ei ___ e (llyfr)",
           "type": "cloze",
           "accepted_answers": [
-            "hi"
+            "lyfr"
           ]
         },
         {
           "id": "pa4",
-          "prompt": "ei lyfr ___ (his)",
+          "prompt": "ei ___ hi (allwedd)",
           "type": "cloze",
           "accepted_answers": [
-            "e"
+            "hallwedd"
           ]
         }
       ]
@@ -452,34 +488,34 @@
       "items": [
         {
           "id": "pb1",
-          "prompt": "Mae llyfr yn y ___.",
+          "prompt": "Mae Dafi'n rhoi llyfr Sam yn ei ___.",
           "type": "cloze",
           "accepted_answers": [
-            "bag"
+            "fag"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Mae’r llyfrau yn y ___.",
+          "prompt": "Mae'r ___ fach dan y papur.",
           "type": "cloze",
           "accepted_answers": [
-            "bag"
+            "allwedd"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Mae'r llyfr yn ___ i Mali.",
+          "prompt": "Sam: “Fy ___ i.”",
           "type": "cloze",
           "accepted_answers": [
-            "perthyn"
+            "chwaer"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Mae llyfr coch Mali gyda ___.",
+          "prompt": "Mae'r papur yn ___ i'r hen lyfr.",
           "type": "cloze",
           "accepted_answers": [
-            "Mali"
+            "perthyn"
           ]
         }
       ]
@@ -491,46 +527,56 @@
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pa liw yw llyfr Mali?",
+          "prompt": "Pam mae Nia'n edrych yn trist?",
           "type": "cloze",
           "accepted_answers": [
-            "Coch."
+            "Mae Dafi'n rhoi'r llyfr gwyn yn y bag coch.",
+            "Mae llyfr Nia yn y bag coch."
           ]
         },
         {
           "id": "pc2",
-          "prompt": "Pwy biau'r llyfr du?",
+          "prompt": "Pwy ydy'r chwaer yn y llyfr du?",
           "type": "cloze",
           "accepted_answers": [
-            "Sam."
+            "Chwaer Sam.",
+            "Fy chwaer i, meddai Sam."
           ]
         },
         {
           "id": "pc3",
-          "prompt": "Ble mae Nia'n rhoi ei llyfr?",
+          "prompt": "Ble mae'r allwedd?",
           "type": "cloze",
           "accepted_answers": [
-            "Yn ei bag."
+            "Dan y papur yn hen lyfr Iwan.",
+            "Mae'r allwedd dan y papur yn hen lyfr Iwan."
           ]
         },
         {
           "id": "pc4",
-          "prompt": "Dewiswch wrthrych a dywedwch “fy ___ i”.",
+          "prompt": "Dewiswch lyfr neu fag. Dywedwch un frawddeg â “fy ___ i” ac un â “dy ___ di”.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Use fy + object + i; mutation accuracy is optional at this stage."
+          "rubric": "Produce two comprehensible possession phrases or sentences: one with fy + correctly mutated noun + i, and one with dy + correctly mutated noun + di. Accept a learned noun other than llyfr or bag if the possession frame and mutation are accurate."
         }
       ]
     }
   },
-  "completion": {
-    "allowed_without_pensa_score": true,
-    "button_label": "Gorffen y wers",
-    "storage_key": "cy-draig-01:cy-draig-01-l11:finished"
-  },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-fy",
+      "cy-dy",
+      "cy-ei",
+      "cy-llyfr",
+      "cy-bag",
+      "cy-allwedd",
+      "cy-ffrind",
+      "cy-brawd",
+      "cy-chwaer",
+      "cy-perthyn"
+    ],
     "format": "tsv",
     "fields": [
       "guid",
@@ -541,20 +587,37 @@
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
     "tags": [
-      "semeion",
+      "illustrated-input",
       "welsh",
       "cy-draig-01",
       "lesson-11"
     ],
     "source": "cy-draig-01-l11"
   },
+  "completion": {
+    "allowed_without_pensa_score": true,
+    "button_label": "Gorffen y wers",
+    "storage_key": "cy-draig-01:cy-draig-01-l11:finished"
+  },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
       "cy-l11-scene",
-      "cy-l11-possessives"
+      "cy-l11-books-bags",
+      "cy-l11-possessives",
+      "cy-l11-siblings",
+      "cy-l11-belongs",
+      "cy-l11-key-sleeper"
     ],
     "audio": []
+  },
+  "provenance": {
+    "created_at": "2026-07-24",
+    "author_type": "AI draft",
+    "model": "OpenAI Codex (GPT-5 family)",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten Lessons 01–10",
+    "human_review": "not yet performed",
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for possessive mutation, idiom, relationship wording, and natural dialogue."
   }
 }

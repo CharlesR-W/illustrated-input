@@ -3,31 +3,35 @@
   "id": "cy-draig-01-l29",
   "course_id": "cy-draig-01",
   "order": 29,
-  "title": "Yma y dechreuodd y stori",
+  "title": "Artur ydy e",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten Lessons 01–28",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker, especially the focused past clauses, mutations, and balance between emphatic and colloquial forms."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G29",
       "label": "Focused and emphatic identification",
-      "description": "Put the contrasted person, place, time, or thing first and identify it emphatically with yw/ydy.",
+      "description": "Put the contrasted person, place, time, or thing first and identify it emphatically with yw/ydy or a focused a-clause.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
-      "Cumulative G01–G28"
+      "Cumulative G01–G28",
+      "simple past for completed story events",
+      "subject and object relatives",
+      "perfect wedi for the completed exhibition work"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "follow the exhibition story in lesson 29",
-      "Put the contrasted person, place, time, or thing first and identify it emphatically with yw/ydy."
+      "identify exactly who woke Artur, where the story began, and how the group reached him",
+      "correct the false picture of Artur as a powerful adult king",
+      "give the library, Dafi, Pero, and the wider community accurate credit"
     ],
     "new_lexeme_ids": [
       "cy-union",
@@ -40,260 +44,427 @@
       "cy-pryd-l29",
       "cy-sut",
       "cy-ffocws"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l29-s01",
-        "title": "Y cliw olaf",
+        "title": "Pwy ddeffrodd Artur?",
         "segments": [
           {
             "id": "cy-draig-01-l29-s001",
-            "text": "Mae cliw olaf ar gefn y map.",
-            "inference_aids": [{"type":"image","ref":"cy-l29-scene","presentation":"inline_scene","src":"media/images/cy-l29-scene.svg","alt":"Mali, Dafi a Pero wrth y bocs o flaen wal yr arddangosfa."}]
-          },
-          {
-            "id": "cy-draig-01-l29-s002",
-            "text": "Mae'n gofyn: ble y dechreuodd popeth?",
+            "text": "Mae'r nos wedi dod, ac mae'r arddangosfa'n barod o'r diwedd.",
             "inference_aids": []
           },
           {
+            "id": "cy-draig-01-l29-s002",
+            "text": "Mae Mali, Nia, Sam, Iwan, Dafi a Pero wedi gwneud popeth ar y rhestr, ond mae rhywbeth yn symud yn yr hen lyfr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-rhywbeth-popeth",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l29-rhywbeth-popeth.svg",
+                "alt": "A covered single object contrasts with every visible object in a group.",
+                "covers_lexeme_ids": [
+                  "cy-rhywbeth",
+                  "cy-popeth"
+                ]
+              }
+            ]
+          },
+          {
             "id": "cy-draig-01-l29-s003",
-            "text": "Nid ar y bryn y dechreuodd y stori.",
+            "text": "Mae golau aur yn mynd o'r llyfr i'r wal gudd, ac mae'r drws dan y llyfrgell yn agor.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s004",
-            "text": "Nid yn y caffi y daeth Dafi.",
-            "inference_aids": []
+            "text": "Mae'r ffrindiau'n dilyn y golau i'r ogof; does neb yn siarad, ac mae Dafi'n dal yr hen lyfr wrth ei galon.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-rhywun-neb",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l29-rhywun-neb.svg",
+                "alt": "One person in a group is highlighted as someone; an empty group shows nobody.",
+                "covers_lexeme_ids": [
+                  "cy-rhywun",
+                  "cy-neb"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l29-s005",
-            "text": "Yma, yn y llyfrgell, y dechreuodd popeth.",
-            "inference_aids": []
+            "text": "Wrth y drws olaf mae Dafi'n gofyn, “Pwy sydd wedi gwneud hyn, a beth yn union sydd y tu ôl i'r drws?”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-ffocws-union",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l29-ffocws-union.svg",
+                "alt": "A spotlight picks one exact answer from three alternatives and labels it as the focus.",
+                "covers_lexeme_ids": [
+                  "cy-ffocws",
+                  "cy-union"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l29-s006",
-            "text": "Y bocs hwn yw'r union focs.",
+            "text": "Mae rhywun yn ateb o'r ochr arall: “Agorwch y drws.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s007",
-            "text": "Dafi yw'r un oedd ynddo.",
+            "text": "Mae Iwan yn troi'r allwedd, ac mae'r drws aur yn agor yn araf.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s008",
-            "text": "Y map yw'r peth a arweiniodd nhw.",
-            "inference_aids": []
+            "text": "Artur ydy e: bachgen tywyll ei wallt mewn dillad glas, yn eistedd ar gadair garreg heb goron a heb gleddyf.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-scene-artur-yn-deffro",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l29-scene-artur-yn-deffro.svg",
+                "alt": "Young Artur, about twelve, sits awake in a blue tunic beyond the golden cave door while Mali, Pero, tiny Dafi, Nia, Sam, and Iwan look in.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l29-s009",
-            "text": "Mae'r ateb yn glir.",
+            "text": "Mae Dafi'n rhedeg ato, ond mae Artur yn edrych ar y grŵp cyfan ac yn gofyn, “Pwy a'm deffrodd i?”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s010",
+            "text": "“Fi!” meddai Dafi; yna mae e'n cofio'r garreg, y map, y llyfr a gwaith y dref.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s011",
+            "text": "Nid Dafi ar ei ben ei hun a ddeffrodd Artur, ac nid rhywun â chleddyf a agorodd y ffordd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s012",
+            "text": "Y gymuned a ddeffrodd Artur: y bobl a helpodd, y gwaith a orffennodd, a'r stori a ddaeth yn fyw yn y llyfrgell.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l29-s02",
-        "title": "Pwy, ble, pryd?",
+        "title": "Bachgen, nid llun",
         "segments": [
           {
-            "id": "cy-draig-01-l29-s010",
-            "text": "Pwy a agorodd y bocs? Mali a'i agorodd.",
-            "inference_aids": [{"type":"image","ref":"cy-l29-ffocws","presentation":"margin_diagram","src":"media/diagrams/cy-l29-ffocws.svg","alt":"Mali a'i agorodd."}]
-          },
-          {
-            "id": "cy-draig-01-l29-s011",
-            "text": "Ble roedd Pero? Wrth y bocs roedd e.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l29-s012",
-            "text": "Pryd daeth Nia? Yn y bore y daeth hi.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l29-s013",
-            "text": "Sut cafodd Dafi ei enw? Mali a'i dewisodd.",
+            "text": "Mae Dafi'n agor yr hen lyfr ac yn dangos llun o ddyn mawr gyda choron, cleddyf a draig ddu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s014",
-            "text": "Pwy ddaeth o hyd i'r map? Pero a ddaeth o hyd iddo.",
+            "text": "Mae Artur yn edrych ar y llun, yna ar ei ddwylo bach ei hun, ac yn chwerthin.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s015",
-            "text": "Nid rhywun arall oedd yno.",
-            "inference_aids": []
+            "text": "Nid y dyn mawr yn y llun ydy e; y bachgen ifanc a welodd Iwan yn yr ogof ydy e.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-scene-bachgen-nid-brenin",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l29-scene-bachgen-nid-brenin.svg",
+                "alt": "Young unarmed Artur in a plain blue tunic stands beside an old picture of a large crowned swordsman while Dafi recognizes the boy.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l29-s016",
-            "text": "Nid rhywle arall oedd y lle.",
+            "text": "“Bachgen sy'n cysgu oeddwn i,” meddai Artur, “a bachgen sydd wedi deffro ydw i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s017",
-            "text": "Dyna'r union ddiwrnod.",
+            "text": "Mae e'n cofio rhywbeth am yr hen lyfr, ond dydy e ddim yn cofio popeth am y bryn na'r dref.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s018",
-            "text": "Mae pob ateb yn rhan o'r stori.",
+            "text": "Mae e'n gwybod ei fod wedi dod o rywle dan y bryn, ond dydy e ddim yn gwybod pa le oedd ei gartref.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-lle-rhywle",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l29-lle-rhywle.svg",
+                "alt": "A map contrasts one named place with an uncertain somewhere marked by several possible pins.",
+                "covers_lexeme_ids": [
+                  "cy-lle",
+                  "cy-rhywle"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l29-s019",
+            "text": "Does neb arall yn yr ystafell yn gwybod beth ddigwyddodd cyn storm Iwan.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s020",
+            "text": "Ond mae Dafi'n gwybod yr union wyneb: dyma'r bachgen roedd e wedi ei weld ar y papur bob nos.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s021",
+            "text": "Dafi a gadwodd y papur, Dafi a arhosodd wrth y llyfr, a Dafi a ddarllenodd enw Artur yn uchel.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s022",
+            "text": "Mae Artur yn rhoi ei law wrth law fach y ddraig ac yn dweud, “Ti a gadwodd y cof amdana i pan doeddwn i ddim yn gallu siarad.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s023",
+            "text": "Dydy hynny ddim yn golygu bod Dafi wedi gwneud popeth; mae'n golygu bod ei waith e'n rhan arbennig o waith pawb.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s024",
+            "text": "Nawr mae Artur eisiau gweld y lle lle mae'r stori wedi aros cyhyd.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l29-s03",
-        "title": "Y llwybr",
+        "title": "Yma y dechreuodd popeth",
         "segments": [
           {
-            "id": "cy-draig-01-l29-s019",
-            "text": "Mae'r map yn dangos sawl lle.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l29-s020",
-            "text": "Y llyfrgell yw'r man cyntaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l29-s021",
-            "text": "Y caffi yw'r ail fan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l29-s022",
-            "text": "Y bryn yw'r lle uchaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l29-s023",
-            "text": "Yr harbwr yw'r lle olaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l29-s024",
-            "text": "Ond y llyfrgell yw canol popeth.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l29-s025",
-            "text": "Yma mae rhywun yn gallu darllen.",
+            "text": "Mae'r grŵp yn arwain Artur i fyny'r grisiau ac i'r llyfrgell, lle mae wal yr arddangosfa o'i flaen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s026",
-            "text": "Yma mae rhywbeth newydd yn dechrau.",
+            "text": "Mae lluniau o'r ogof, y bryn, yr harbwr, y caffi a'r llyfrgell ar y wal, ond dydy Artur ddim yn gwybod ble i ddechrau.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l29-s027",
-            "text": "Yma y mae'r dref yn cyfarfod.",
+            "text": "“Lle y dechreuodd popeth?” mae e'n gofyn; “Pryd y dechreuodd y daith, a sut?”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-pryd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l29-pryd.svg",
+                "alt": "A three-part timeline asks when and highlights the morning when the box opened.",
+                "covers_lexeme_ids": [
+                  "cy-pryd-l29"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l29-s028",
+            "text": "Mae Sam yn pwyntio at yr harbwr, ond nid yn yr harbwr y dechreuodd y stori hon.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s029",
+            "text": "Mae Dafi'n pwyntio at y bryn, ond nid rhywle dan y bryn y daeth y ffrindiau at ei gilydd gyntaf.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s030",
+            "text": "Y llyfrgell yw'r lle cyntaf, a'r bocs mawr yw'r peth sydd yng nghanol llun Mali.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s031",
+            "text": "Mali a agorodd y bocs; Pero oedd wrth ei hochr; Dafi oedd y tu mewn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s032",
+            "text": "“Pryd yn union?” gofynnodd Artur, ac mae Dafi'n ateb, “Yn y bore, pan agorodd Mali'r bocs.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s033",
+            "text": "“Sut daeth y map?” Mae Mali'n dangos y papur du a gafodd hi yn yr hen lyfr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l29-sut",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l29-sut.svg",
+                "alt": "A sequence of box, book, map, and cave door answers how the group reached Artur.",
+                "covers_lexeme_ids": [
+                  "cy-sut"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l29-s034",
+            "text": "Mali a gafodd y map, a Pero a ddaeth o hyd i'r llwybr dan y silff.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s035",
+            "text": "Mae Artur yn rhoi'r llun o'r bocs yn y canol; dyna ffocws cyntaf y wal.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s036",
+            "text": "Nid rhywle enwog yw dechrau'r stori, ond y llyfrgell gynnes lle agorodd rhywun un bocs.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l29-s04",
-        "title": "Yr ateb",
+        "title": "Beth a'u hachubodd?",
         "segments": [
           {
-            "id": "cy-draig-01-l29-s028",
-            "text": "Mae Dafi'n rhoi'r cliw wrth y bocs.",
+            "id": "cy-draig-01-l29-s037",
+            "text": "Yna mae Artur yn edrych ar lun y garreg, y tri llwybr a'r drws peryglus.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s029",
-            "text": "Y bocs yw dechrau ei stori.",
+            "id": "cy-draig-01-l29-s038",
+            "text": "“Sut cyrhaeddoch chi yma?” mae e'n gofyn; dydy'r ateb ddim yn un llun nac yn un person.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s030",
-            "text": "Y llyfrgell yw dechrau ei ddarllen.",
+            "id": "cy-draig-01-l29-s039",
+            "text": "Nid y goron a symudodd y garreg, ac nid y cleddyf a ddewisodd y llwybr gorau.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s031",
-            "text": "Mali yw'r person a'i helpodd gyntaf.",
+            "id": "cy-draig-01-l29-s040",
+            "text": "Y bobl o'r caffi a helpodd i gario'r garreg; Nia a gyfrifodd; Iwan a welodd y grisiau; Mali a drefnodd y cynllun.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s032",
-            "text": "Pero yw'r ci a'i ganfu.",
+            "id": "cy-draig-01-l29-s041",
+            "text": "Pero a ddaeth o hyd i'r llwybr a'r allwedd, a Sam a baratôdd bapurau diogel ar gyfer y stori.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s033",
-            "text": "Nia yw'r person a gadwodd y drws ar agor.",
+            "id": "cy-draig-01-l29-s042",
+            "text": "Y llyfrgell a gadwodd yr hen lyfr, y map a chof Iwan pan doedd neb arall yn gwrando.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s034",
-            "text": "Nid un person a wnaeth popeth.",
+            "id": "cy-draig-01-l29-s043",
+            "text": "Dafi a gadwodd y llyfr, a Dafi a ddysgodd aros pan oedd eisiau deffro Artur yn rhy gynnar.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s035",
-            "text": "Y gymuned gyfan yw'r ateb.",
+            "id": "cy-draig-01-l29-s044",
+            "text": "Ond nid Dafi a wnaeth popeth: pawb a roddodd un rhan o'r ateb.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s036",
-            "text": "Dyna ffocws yr arddangosfa.",
+            "id": "cy-draig-01-l29-s045",
+            "text": "Nid rhywbeth mawr ac aur a'u hachubodd; gwrando, cofio, darllen a gweithio gyda'i gilydd a'u cadwodd yn ddiogel.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s046",
+            "text": "Mae Artur yn symud llun y cleddyf i ochr y wal ac yn rhoi llun y bobl yn y canol.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s047",
+            "text": "“Y gymuned yw'r ateb,” meddai Mali, “ond y llyfrgell yw'r lle a gadwodd yr ateb yn fyw.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s048",
+            "text": "Mae Dafi'n ychwanegu, “A fi yw'r ddraig a arhosodd,” ac mae Artur yn cytuno bod y ffocws hwnnw'n gywir hefyd.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l29-s05",
-        "title": "Y stori ar y wal",
+        "title": "Ffocws y wal",
         "segments": [
           {
-            "id": "cy-draig-01-l29-s037",
-            "text": "Mae Mali'n edrych ar wal wag yr arddangosfa. Mae llawer o luniau ganddi, ond dydy hi ddim yn gwybod pa lun ddylai fynd yn y canol. Mae llun o'r harbwr, llun o'r bryn, llun o'r caffi a llun o'r hen lyfrgell. “Pa le yw canol y stori?” mae hi'n gofyn. “Yr harbwr yw'r lle harddaf,” meddai Tad-cu. “Y caffi yw'r lle gyda'r gacen orau,” meddai Dafi. Ond nid harddwch na chacen yw'r cwestiwn. Lle y dechreuodd popeth yw'r cwestiwn.",
+            "id": "cy-draig-01-l29-s049",
+            "text": "Mae tri chwestiwn mawr ar ôl ar y bwrdd: pwy, lle, a sut.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s038",
-            "text": "Mae Sam yn gosod y pedwar llun ar y llawr. Mae'r harbwr ar y chwith, y bryn ar y dde, y caffi wrth y drws, a'r llyfrgell yn y canol. “Ai dyma'r union drefn?” mae Sam yn gofyn. Mae Nia'n dilyn y llwybr ar y map. Yn y llyfrgell y daeth Mali o hyd i Dafi. O'r llyfrgell yr aeth y grŵp i'r caffi. O'r caffi yr aethon nhw drwy'r dref. Y llyfrgell, felly, yw'r lle cyntaf a'r lle sy'n cysylltu pob lle arall.",
+            "id": "cy-draig-01-l29-s050",
+            "text": "Mae Artur yn ychwanegu “pryd”, oherwydd mae'r union foment yn bwysig yn ogystal â'r bobl a'r lle.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s039",
-            "text": "Ond mae rhywbeth ar goll o'r pedwar llun. Mae Pero'n arogli'r bocs coch ac yn cyfarth. Nid llun o le yn unig sydd ei angen. Y bocs yw'r peth a ddechreuodd y stori. Mae Mali'n rhoi'r bocs o flaen llun y llyfrgell. Nawr mae'r olygfa'n glir: y llyfrgell yw'r lle, y bocs yw'r peth, Mali yw'r person a'i hagorodd, a Dafi yw'r un oedd y tu mewn. Nid rhywun dieithr, nid rhywle pell, ac nid rhywbeth newydd yw'r ateb. Mae popeth wedi bod o'u blaenau nhw drwy'r amser.",
+            "id": "cy-draig-01-l29-s051",
+            "text": "Mae Mali'n ysgrifennu'r ateb cyntaf: “Artur ydy e, ond bachgen ifanc ydy e, nid dyn mawr gyda choron.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s040",
-            "text": "Mae Dafi'n darllen y cliw eto. “Pwy a agorodd y drws cyntaf?” Mae pawb yn edrych ar Mali. Mali a agorodd y bocs, ond Nia a gadwodd ddrws y llyfrgell ar agor. Mae dau ateb yn bosib. Mae Mali'n meddwl am funud. “Nid un drws sydd yn y cliw,” meddai hi. “Y bocs oedd y drws cyntaf i Dafi. Drws y llyfrgell oedd y drws cyntaf i'r gymuned.” Sut gall y ddau ateb fod yn gywir? Mae'r arddangosfa'n adrodd dwy stori sy'n dod yn un stori.",
+            "id": "cy-draig-01-l29-s052",
+            "text": "Mae Nia'n ysgrifennu'r ail: “Y llyfrgell yw'r lle; y bore agorodd Mali'r bocs yw'r amser.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s041",
-            "text": "Pryd yn union y dechreuodd y stori? Mae Tad-cu'n dweud mai'r bore y daeth Mali i'r llyfrgell. Mae Nia'n cofio mai yn y prynhawn y clywodd hi am Dafi. Mae Sam yn cofio mai gyda'r nos y gwelodd e'r llun cyntaf. Mae pob un yn dewis amser gwahanol. Yn y diwedd mae Dafi'n pwyntio at y bocs. “I mi,” meddai e, “pan agorodd Mali'r bocs y dechreuodd popeth.” Dyna'r union foment sydd ei hangen ar y wal: nid diwrnod cyfan, ond un foment fach a newidiodd bopeth.",
+            "id": "cy-draig-01-l29-s053",
+            "text": "Mae Sam yn ysgrifennu'r trydydd: “Y gymuned a wnaeth y gwaith, a'r gymuned a ddeffrodd Artur.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s042",
-            "text": "Mae Mali'n tynnu llun newydd. Yn y llun mae ei llaw hi ar gaead y bocs. Mae Pero wrth ei hochr hi. Mae llygaid bach coch Dafi yn edrych o'r tywyllwch. Y tu ôl iddyn nhw mae silffoedd yr hen lyfrgell. Dydy'r llun ddim yn dangos y bryn, y caffi na'r harbwr, ond mae pob un o'r lleoedd hynny'n dechrau yn y foment hon. “Dyma fe,” meddai Nia. “Nid map y dref yw hwn; map y stori yw hwn.” Mae'r llun yn mynd yng nghanol y wal.",
+            "id": "cy-draig-01-l29-s054",
+            "text": "Mae Dafi eisiau ysgrifennu ei enw ym mhob lle, ond mae e'n dewis un llun yn unig: y ddraig fach wrth yr hen lyfr.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s043",
-            "text": "O gwmpas y llun mae'r grŵp yn rhoi cwestiynau. Pwy yw'r ddraig? Dafi yw'r ddraig. Ble y cafodd e ei enw? Yn y llyfrgell y cafodd e ei enw. Pryd y dysgodd e am lyfrau? Ar ôl i Mali agor y bocs y dechreuodd e edrych ar y geiriau. Sut y daeth y gymuned i helpu? Drwy rannu lluniau, straeon, gwaith a bwyd y daeth pawb ynghyd. Mae'r cwestiynau'n gwneud i'r ymwelwyr edrych yn ofalus. Mae'r atebion yn gwneud iddyn nhw weld cysylltiadau, nid rhestr o ddigwyddiadau yn unig.",
+            "id": "cy-draig-01-l29-s055",
+            "text": "Nid neb ydy Dafi, ac nid un arall yn y grŵp ydy e; Dafi yw'r un a gadwodd y stori wrth Artur.",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l29-s044",
-            "text": "Pan fydd y wal yn barod, mae Dafi'n sefyll o'i blaen. Mae rhywun wedi dod â lamp, rhywun wedi gosod y map, ac mae rhywun arall wedi agor y drws. Ond neb ar ei ben ei hun a wnaeth yr arddangosfa. Mali a dynnodd y lluniau. Sam a baratôdd y caffi. Nia a drefnodd y llyfrau. Tad-cu a rannodd yr hen hanes. Dafi a roddodd y cwestiwn olaf. A'r gymuned gyfan a roddodd ystyr i'r ateb. Dyna ffocws y wal: yma y dechreuodd y stori, ond gyda phawb y bydd hi'n parhau.",
+            "id": "cy-draig-01-l29-s056",
+            "text": "Mae rhywbeth i bawb ar y wal, ond does dim un person yn cymryd ffocws popeth.",
             "inference_aids": []
           },
-          {"id":"cy-draig-01-l29-s045","text":"Cyn gadael, mae Nia'n profi'r wal gyda'r grŵp. Mae hi'n pwyntio at lun ar hap ac yn gofyn, “Pwy yw hwn? Ble digwyddodd hyn? Pryd oedd y digwyddiad? Sut newidiodd e'r stori?” Weithiau mae pawb yn rhoi'r un ateb. Weithiau mae pob person yn cofio rhywbeth gwahanol. Mae Pero'n dewis y llun lle mae cacen ar y bwrdd. Mae Dafi'n dewis y llun lle mae'r bocs yn agor. Mae Tad-cu'n dewis yr harbwr. Dydy'r atebion gwahanol ddim yn broblem, oherwydd mae pob un yn dangos ffocws gwahanol o fewn yr un stori.","inference_aids":[]},
-          {"id":"cy-draig-01-l29-s046","text":"Yn olaf mae Mali'n ysgrifennu un frawddeg fawr uwchben y lluniau: YMA Y DECHREUODD EIN STORI NI. Mae'r gair yma yn pwyntio at y llyfrgell, ond mae ein yn pwyntio at bawb. Nid stori Dafi yn unig yw hi bellach. Nid stori Mali na stori Nia yn unig yw hi. Mae'r union focs yn perthyn i un foment, ond mae ystyr y foment yn perthyn i'r gymuned. Pan fydd ymwelydd yn gofyn ble y dechreuodd popeth, bydd y wal yn rhoi ateb clir ac yn gadael cwestiwn newydd: ble bydd eich stori chi'n dechrau?","inference_aids":[]}
+          {
+            "id": "cy-draig-01-l29-s057",
+            "text": "Mae rhywun wedi agor bocs, rhywun wedi symud carreg, a llawer o bobl wedi gweithio mewn mwy nag un lle.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s058",
+            "text": "Mae'r stori wedi mynd o rywle tywyll dan y bryn i ganol y llyfrgell, lle gall y dref ei gweld.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s059",
+            "text": "Yfory bydd pobl yn gofyn pwy yw Artur, pryd y deffrodd e, a sut y cyrhaeddodd e'r llyfrgell.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l29-s060",
+            "text": "Mae Artur yn edrych ar y goron wrth ochr y wal, nid yn ei chanol, ac yn dweud, “Nawr mae'r stori'n dechrau dweud y gwir.”",
+            "inference_aids": []
+          }
         ]
       }
     ]
@@ -414,65 +585,92 @@
       "part_of_speech": "noun",
       "current_sense": "focus",
       "forms_seen": [
-        "ffocws (g.)"
+        "ffocws"
       ],
       "first_introduced_lesson": "cy-draig-01-l29",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Patrwm y wers: Focused and emphatic identification. Darllenwch y stori eto a sylwch ar y patrwm ym mhob adran.",
-    "bridge_language": "Put the contrasted person, place, time, or thing first and identify it emphatically with yw/ydy."
+    "target_language": "Yn “Artur ydy e”, Artur yw'r ffocws. Yn “Y llyfrgell yw'r lle”, y llyfrgell yw'r ffocws. Yn “Y gymuned a ddeffrodd Artur”, y gymuned sy'n dod gyntaf ac yn cael y ffocws.",
+    "bridge_language": "Welsh can foreground the contrasted answer: use X ydy/yw e for identity, or put the focused subject first before a and the mutated verb."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l29-pa",
       "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "directions": "Rhowch y person, y lle neu'r peth pwysig gyntaf.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Pwysleisiwch bwy, ble neu pryd y digwyddodd rhywbeth yn y stori.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "A course reviewer should accept a grammatical sentence that uses the lesson target."
+          "prompt": "Cwblhewch: Artur ___ e, nid y dyn mawr yn y llun.",
+          "type": "cloze",
+          "accepted_answers": [
+            "ydy"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch un frawddeg o'r stori sy'n dangos y patrwm.",
+          "prompt": "Cwblhewch: Y llyfrgell ___'r lle lle dechreuodd y stori.",
+          "type": "cloze",
+          "accepted_answers": [
+            "yw"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Atebwch gyda ffocws: Pwy agorodd y bocs?",
           "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "Must quote or closely reproduce a sentence demonstrating the target."
+          "accepted_answers": [
+            "Mali a agorodd y bocs."
+          ],
+          "rubric": "The answer must foreground Mali and retain the focused a-clause."
+        },
+        {
+          "id": "pa4",
+          "prompt": "Newidiwch i roi'r gymuned gyntaf: Fe ddeffrodd y gymuned Artur.",
+          "type": "transformation",
+          "accepted_answers": [
+            "Y gymuned a ddeffrodd Artur."
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l29-pb",
       "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch gyda gair newydd.",
+      "directions": "Cwblhewch o ystyr y lluniau a'r stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "exact; exactly = ___",
+          "prompt": "Mae un peth yn symud yn y bocs, ond dydyn ni ddim yn gwybod beth: mae ___ yn symud.",
+          "type": "cloze",
+          "accepted_answers": [
+            "rhywbeth"
+          ]
+        },
+        {
+          "id": "pb2",
+          "prompt": "Mae'r ystafell yn wag: does ___ ynddi.",
+          "type": "cloze",
+          "accepted_answers": [
+            "neb"
+          ]
+        },
+        {
+          "id": "pb3",
+          "prompt": "Nid ddoe nac yfory, ond heddiw ___.",
           "type": "cloze",
           "accepted_answers": [
             "union"
           ]
         },
         {
-          "id": "pb2",
-          "prompt": "someone = ___",
+          "id": "pb4",
+          "prompt": "Dydy Dafi ddim yn gwybod ble mae'r allwedd, ond mae hi ___ yn y llyfrgell.",
           "type": "cloze",
           "accepted_answers": [
-            "rhywun"
-          ]
-        },
-        {
-          "id": "pb3",
-          "prompt": "something = ___",
-          "type": "cloze",
-          "accepted_answers": [
-            "rhywbeth"
+            "rhywle"
           ]
         }
       ]
@@ -484,24 +682,40 @@
       "items": [
         {
           "id": "pc1",
-        "prompt": "Ble y dechreuodd y stori, yn ôl Dafi?",
+          "prompt": "Pwy a ddeffrodd Artur?",
           "type": "bounded_response",
-        "accepted_answers": ["Yn y llyfrgell, pan agorodd Mali'r bocs.", "Yn y llyfrgell."],
-        "rubric": "Must identify the library; the opening of the box may be added."
+          "accepted_answers": [
+            "Y gymuned a ddeffrodd Artur.",
+            "Nid un person; y gymuned a ddeffrodd Artur."
+          ],
+          "rubric": "Must credit the community, not Dafi or another individual alone."
         },
         {
           "id": "pc2",
-        "prompt": "Beth mae Mali'n ei roi yng nghanol y wal?",
+          "prompt": "Lle a phryd y dechreuodd y stori i Ddafi?",
           "type": "bounded_response",
-        "accepted_answers": ["Llun o Mali'n agor y bocs.", "Y llun o'r bocs."],
-        "rubric": "Must identify the central picture or opening-box moment."
+          "accepted_answers": [
+            "Yn y llyfrgell, yn y bore pan agorodd Mali'r bocs.",
+            "Yn y llyfrgell pan agorodd Mali'r bocs."
+          ],
+          "rubric": "Must identify the library and Mali opening the box; the morning is desirable but optional."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o'r stori yn eich geiriau eich hun.",
+          "prompt": "Beth a gadwodd y cof am Artur, a phwy a gadwodd yr hen lyfr?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Y llyfrgell a gadwodd y cof, a Dafi a gadwodd yr hen lyfr.",
+            "Y llyfrgell a gadwodd y cof; Dafi a gadwodd y llyfr."
+          ],
+          "rubric": "Must credit both the library and Dafi."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dewiswch un llun o'r wal. Dywedwch pwy neu beth yw'r ffocws, a sut mae'r llun yn newid y stori.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "One or two comprehensible Welsh sentences are sufficient."
+          "rubric": "Give one or two comprehensible Welsh sentences. At least one sentence must use a lesson focus pattern, such as “X ydy e”, “X yw'r lle”, or “X a wnaeth...”, and the chosen picture must come from this chapter."
         }
       ]
     }
@@ -513,7 +727,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -523,6 +737,18 @@
       "source"
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
+    "lexeme_ids": [
+      "cy-union",
+      "cy-rhywun",
+      "cy-rhywbeth",
+      "cy-rhywle",
+      "cy-neb",
+      "cy-popeth",
+      "cy-lle",
+      "cy-pryd-l29",
+      "cy-sut",
+      "cy-ffocws"
+    ],
     "tags": [
       "semeion",
       "welsh",
@@ -532,9 +758,18 @@
     "source": "cy-draig-01-l29"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
-    "images": ["cy-l29-scene", "cy-l29-ffocws"],
+    "images": [
+      "cy-l29-scene-artur-yn-deffro",
+      "cy-l29-scene-bachgen-nid-brenin",
+      "cy-l29-rhywbeth-popeth",
+      "cy-l29-rhywun-neb",
+      "cy-l29-ffocws-union",
+      "cy-l29-lle-rhywle",
+      "cy-l29-pryd",
+      "cy-l29-sut"
+    ],
     "audio": []
   }
 }

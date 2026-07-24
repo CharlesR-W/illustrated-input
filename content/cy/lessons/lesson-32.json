@@ -3,31 +3,36 @@
   "id": "cy-draig-01-l32",
   "course_id": "cy-draig-01",
   "order": 32,
-  "title": "Y drws sydd ar agor",
+  "title": "Y brenin a ddaw eto",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full-rewrite brief; docs/content-spec.md; docs/editorial-decisions.md; content/cy/curriculum.md; rewritten Lessons 01–31 as available",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for idiom, mutations, cumulative relative and focus syntax, and register consistency."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G32",
-      "label": "Integration of tense, mutation, relatives and focus",
-      "description": "Integrate the course patterns in connected narration and transfer; no new productive grammar.",
+      "label": "Integreiddio amser, treigladau, cymalau perthynol a ffocws",
+      "description": "Integrate previously taught tense, mutation, relative, reported-speech, perfect, conditional, register, and focus patterns in connected narration and transfer; introduce no new productive grammar.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
-      "Cumulative G01–G31"
+      "G01–G12 present, questions, possession, motion, place, and persons",
+      "G13–G19 time, past background and events, future, and real conditions",
+      "G20–G25 subject and object relatives, conjugated prepositions, needs, comparison, and commands",
+      "G26–G31 obligation, reported speech, perfect aspect, focus, hypothetical conditions, and polite/plural chi"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
-      "follow the exhibition story in lesson 32",
-      "Integrate the course patterns in connected narration and transfer; no new productive grammar."
+      "identify who saved the library and explain the community's decision",
+      "follow Dafi reading a whole page aloud",
+      "understand Artur's refusal of a present crown and his conditional promise to return",
+      "retell the open-library and closed-cave ending with cumulative course patterns"
     ],
     "new_lexeme_ids": [
       "cy-llwyddo",
@@ -40,228 +45,477 @@
       "cy-dysgu",
       "cy-parhau",
       "cy-diwedd"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l32-s01",
-        "title": "Y penderfyniad",
+        "title": "Y dewis a achubodd y llyfrgell",
         "segments": [
           {
             "id": "cy-draig-01-l32-s001",
-            "text": "Mae aelodau'r cyngor wedi gweld yr arddangosfa.",
-            "inference_aids": [{"type":"image","ref":"cy-l32-scene","presentation":"inline_scene","src":"media/images/cy-l32-scene.svg","alt":"Dafi yn darllen wrth ddrws agored y llyfrgell."}]
-          },
-          {
-            "id": "cy-draig-01-l32-s002",
-            "text": "Maen nhw wedi clywed straeon y gymuned.",
+            "text": "Y bore ar ôl yr arddangosfa, mae pobl y dref yn aros o flaen y wal.",
             "inference_aids": []
           },
           {
+            "id": "cy-draig-01-l32-s002",
+            "text": "Mae'r plant wedi rhannu llyfrau, pobl yr harbwr wedi cynnig trwsio'r ffenestri, a ffrindiau Sam wedi cynnig cario byrddau.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-rhannu-dysgu-gweithio",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-rhannu-dysgu-gweithio.svg",
+                "alt": "Three panels show two children sharing a book, Dafi learning to read with Mali, and townspeople doing practical work together.",
+                "covers_lexeme_ids": [
+                  "cy-rhannu",
+                  "cy-dysgu"
+                ]
+              }
+            ]
+          },
+          {
             "id": "cy-draig-01-l32-s003",
-            "text": "Y bore wedyn, mae neges yn cyrraedd.",
+            "text": "Mae Nia'n darllen y cynllun: bydd y llyfrgell yn agor bob bore, a bydd y gymuned yn trefnu'r gwaith.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s004",
-            "text": "Dywedodd y cyngor fod y llyfrgell yn ddiogel.",
+            "text": "Mae un person o'r cyngor yn gofyn, “Pwy fydd yn gwneud y gwaith os bydd y brenin yn mynd yn ôl i'r bryn?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s005",
-            "text": "Dydy'r adeilad ddim yn mynd i gau.",
+            "text": "“Y bobl sydd wedi dechrau'r gwaith fydd yn parhau,” atebodd Mali. “Dydyn ni ddim yn aros i Artur wneud ein gwaith droson ni.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s006",
-            "text": "Mae'r cynllun sydd wedi ennill yn cadw'r llyfrgell.",
+            "text": "Mae'r bobl yn codi eu dwylo: bydd rhywun yn glanhau, paentio, darllen gyda'r plant, neu gadw'r llyfrau.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s007",
-            "text": "Y gymuned a lwyddodd.",
+            "text": "Nid Artur a roddodd y cynllun hwn iddyn nhw; y gymuned a'i gwnaeth, a'r gymuned sydd wedi dewis ei dilyn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s008",
-            "text": "Mae pawb wedi helpu i'w hachub.",
+            "text": "Mae'r cyngor yn edrych ar y rhestr ac ar yr ymwelwyr sydd wedi addo helpu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s009",
-            "text": "Mae Nia'n darllen y penderfyniad ddwywaith.",
+            "text": "Yna maen nhw'n rhoi neges i Nia: bydd y llyfrgell yn parhau ar agor, a bydd arian i orffen y gwaith pwysig.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s010",
+            "text": "Mae'r cynllun wedi llwyddo; mae'r gymuned wedi achub y llyfrgell cyn i frenin wneud un penderfyniad drosti.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-llwyddo-achub",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-llwyddo-achub.svg",
+                "alt": "A closure notice changes into an open-library notice as many community hands support the building, showing success and rescue.",
+                "covers_lexeme_ids": [
+                  "cy-llwyddo",
+                  "cy-achub"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l32-s011",
+            "text": "Mae Dafi'n edrych ar Artur, ond mae Artur yn pwyntio at y bobl. “Nhw a lwyddodd,” meddai e. “Nhw a achubodd y lle.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l32-s02",
-        "title": "Dathlu",
+        "title": "Tudalen gyfan",
         "segments": [
           {
-            "id": "cy-draig-01-l32-s010",
-            "text": "Mae'r drws mawr ar agor.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s011",
-            "text": "Mae pobl yn dod i ddathlu.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l32-s012",
-            "text": "Mae Sam wedi dod â chacen.",
-            "inference_aids": []
+            "text": "Mae'r drws yn aros ar agor, ac mae Sam yn dod â chacen er mwyn dathlu.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-scene",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l32-scene.svg",
+                "alt": "In the warm open library, Dafi reads a full page aloud while Mali, Artur, Nia, Sam, Iwan, Pero, children, and townspeople listen and celebrate.",
+                "covers_lexeme_ids": [
+                  "cy-dathlu",
+                  "cy-dysgu",
+                  "cy-llwyddo"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l32-s013",
-            "text": "Mae Tad-cu'n rhannu hen hanes.",
+            "text": "Mae pobl yn dechrau dathlu, ond mae Dafi'n tynnu ei law o'r gacen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s014",
-            "text": "Mae Mali'n dangos y llun cyntaf.",
+            "text": "“Cyn dathlu, dw i eisiau gwneud rhywbeth,” meddai e, gan gael y llyfr y ceisiodd e ei fwyta.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s015",
-            "text": "Mae Pero'n gorwedd wrth y bocs.",
+            "text": "Pan ddaeth Dafi i'r llyfrgell yn y bocs mawr, doedd e ddim yn gallu darllen un gair, na hyd yn oed enw Artur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s016",
-            "text": "Mae Dafi'n sefyll o flaen y map.",
+            "text": "Mae Mali wedi helpu Dafi i ddysgu drwy edrych, gwrando, gofyn, gwneud camgymeriadau, a dechrau eto.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s017",
-            "text": "Mae e wedi dewis llyfr bach.",
+            "text": "Mae e wedi dewis tudalen gyfan, gyda brawddegau byr a hir arni.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s018",
-            "text": "Mae pawb yn aros yn dawel.",
+            "text": "Mae Dafi'n darllen y frawddeg gyntaf yn araf, ac mae ei lais yn stopio wrth air anodd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s019",
+            "text": "Dydy Mali ddim yn rhoi'r ateb iddo fe. Mae hi'n pwyntio at y llun, ac mae Dafi'n cofio'r ystyr ac yn darllen y gair.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s020",
+            "text": "Mae e'n parhau o frawddeg i frawddeg; mae Pero'n dawel, ac mae Artur yn gwrando.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s021",
+            "text": "Pan mae Dafi'n cyrraedd diwedd y dudalen, mae e'n darllen y gair olaf ddwywaith ac yna'n cau'r llyfr yn ofalus.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s022",
+            "text": "Am un eiliad does dim sain; yna mae pawb yn dweud, “Da iawn, Dafi!” Mae ei waith e hefyd wedi llwyddo.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l32-s03",
-        "title": "Tudalen Dafi",
+        "title": "Y goron ar y bwrdd",
         "segments": [
           {
-            "id": "cy-draig-01-l32-s019",
-            "text": "Pan ddaeth Dafi, doedd e ddim yn gallu darllen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s020",
-            "text": "Nawr mae e wedi dysgu llawer.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s021",
-            "text": "Mae e'n agor y llyfr yn ofalus.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s022",
-            "text": "Mae'r dudalen sydd o'i flaen yn llawn geiriau.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l32-s023",
-            "text": "Mae Dafi'n darllen y frawddeg gyntaf.",
+            "text": "Ar ôl y dudalen, mae Iwan yn cael y goron fach o'r bocs ac yn ei rhoi ar y bwrdd o flaen Artur.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s024",
-            "text": "Yna mae e'n darllen yr ail.",
+            "text": "Mae'r ymwelwyr yn edrych arni, ac mae Dafi'n gofyn y cwestiwn sydd wedi aros gydag e.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s025",
-            "text": "Mae e'n dal i ddarllen hyd at y diwedd.",
+            "text": "“Nawr bod y llyfrgell yn ddiogel, wyt ti'n mynd i fod yn frenin?” mae e'n gofyn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s026",
-            "text": "Dafi yw'r darllenydd y mae pawb yn ei glywed.",
-            "inference_aids": []
+            "text": "Mae Artur yn codi'r goron, ond dydy e ddim yn ei gwisgo. Mae e'n ei dal rhwng y bobl a'r bryn.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-dewis-coron",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-dewis-coron.svg",
+                "alt": "Young Artur stands between a crown and the hill path, gently pushing the crown back toward the table and choosing the hill.",
+                "covers_lexeme_ids": [
+                  "cy-dewis"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l32-s027",
-            "text": "Mae'r llyfrgell gyfan yn cymeradwyo.",
+            "text": "“Pe bai coron ar fy mhen i heddiw, basai llawer o bobl yn dechrau aros am fy newis i,” meddai e.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s028",
+            "text": "“Ond eich dewis chi a achubodd y llyfrgell. Eich gwaith chi a newidiodd benderfyniad y cyngor.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s029",
+            "text": "Mae e'n rhoi'r goron yn ôl wrth bensil Mali, allwedd Nia, map Iwan, a'r llyfr y mae Dafi wedi'i ddarllen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s030",
+            "text": "“Dydy'r goron ddim yn perthyn ar fy mhen heddiw,” meddai Artur. “Basai hynny'n ddiwedd anghywir i'r stori hon.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s031",
+            "text": "Mae Dafi'n trist, oherwydd roedd e wedi gweld dyfodol gyda Artur yn y llyfrgell bob dydd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-amser",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-amser.svg",
+                "alt": "A simple timeline moves from heddiw to yfory and into dyfodol, with the library continuing beyond the present day.",
+                "covers_lexeme_ids": [
+                  "cy-dyfodol",
+                  "cy-parhau"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l32-s032",
+            "text": "Ond mae Artur yn eistedd wrth y ddraig. “Dw i wedi dewis mynd yn ôl i'r bryn,” meddai e, “nid anghofio'r gymuned.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s033",
+            "text": "Mae e'n dweud bod ei amser yn yr ogof, a bod dyfodol y llyfrgell gyda'r bobl.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l32-s04",
-        "title": "Drws i'r dyfodol",
+        "title": "Addewid Artur",
         "segments": [
           {
-            "id": "cy-draig-01-l32-s028",
-            "text": "Mae'r cyngor wedi gwneud addewid.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s029",
-            "text": "Bydd y llyfrgell yn parhau ar agor.",
-            "inference_aids": [{"type":"image","ref":"cy-l32-amser","presentation":"margin_diagram","src":"media/diagrams/cy-l32-amser.svg","alt":"Daeth; wedi dysgu; bydd yn parhau."}]
-          },
-          {
-            "id": "cy-draig-01-l32-s030",
-            "text": "Bydd y gymuned yn rhannu mwy o straeon.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s031",
-            "text": "Bydd Mali'n parhau i dynnu lluniau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s032",
-            "text": "Bydd Nia'n dysgu darllenwyr newydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l32-s033",
-            "text": "Bydd Sam yn gwahodd ymwelwyr newydd.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l32-s034",
-            "text": "Bydd Dafi'n dewis llyfr arall.",
+            "text": "Cyn gadael, mae Artur yn gofyn i bawb sefyll o amgylch y goron, y map, a neges y cyngor.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l32-s035",
-            "text": "Nid diwedd y stori yw hwn.",
-            "inference_aids": []
+            "text": "“Dw i eisiau rhoi addewid,” meddai e. “Ond dydy fy addewid ddim yn rhoi brenin wrth bob drws caeedig.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-addewid",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-addewid.svg",
+                "alt": "Artur gives a promise beside three linked pictures: people share, learn, and complete their own work before his return path lights.",
+                "covers_lexeme_ids": [
+                  "cy-addewid",
+                  "cy-rhannu",
+                  "cy-dysgu"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l32-s036",
-            "text": "Mae'r drws sydd ar agor yn arwain at y dyfodol.",
+            "text": "Mae e'n pwyntio at y llyfrau: “Yn gyntaf, bydd y bobl yn rhannu'r hyn sydd ganddyn nhw, fel y gwnaethoch chi.”",
             "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s037",
+            "text": "Mae e'n pwyntio at dudalen Dafi: “Byddan nhw'n dysgu o'r hyn maen nhw'n ei weld, ei glywed, a'i ddarllen.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s038",
+            "text": "Yna mae e'n pwyntio at restr Mali: “Byddan nhw'n gwneud y gwaith y gallan nhw ei wneud gyda'i gilydd.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s039",
+            "text": "“Ar ôl iddyn nhw rannu, dysgu, a gwneud popeth y gallan nhw, os bydd gwir angen o hyd, bydda i'n dod eto.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s040",
+            "text": "Dyna addewid Artur: nid achub pobl cyn iddyn nhw ddechrau, ond dod pan maen nhw wedi gwneud eu gwaith ac yn dal angen help.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s041",
+            "text": "Mae Mali'n ailadrodd yr addewid heb y gair newydd: “Rhannu. Dysgu. Gwneud ein gwaith. Yna gofyn am help os oes gwir angen.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s042",
+            "text": "Mae Nia'n ysgrifennu'r pedair rhan ar neges y cyngor er mwyn cadw'r addewid yn glir.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s043",
+            "text": "Mae Dafi'n gofyn, “A fydd dyfodol arall i ni?” Mae Artur yn ateb, “Bydd, os byddwch chi'n parhau i greu un.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-dyfodol",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-dyfodol.svg",
+                "alt": "An unfinished path leaves today's library and branches into blank future spaces that the community can continue to make.",
+                "covers_lexeme_ids": [
+                  "cy-dyfodol",
+                  "cy-parhau"
+                ]
+              }
+            ]
           }
         ]
       },
       {
         "id": "cy-draig-01-l32-s05",
-        "title": "Y dudalen nesaf",
+        "title": "Yn ôl i'r bryn",
         "segments": [
-          {"id":"cy-draig-01-l32-s037","text":"Y bore ar ôl yr arddangosfa, Nia yw'r cyntaf i gyrraedd y llyfrgell. Mae hi'n gweld papur gwyn o dan y drws. Neges gan y cyngor yw hi. Dydy Nia ddim yn ei hagor ar unwaith. Mae hi'n galw Mali, Sam a Tad-cu. Mae Pero'n dod gyda Mali, ac mae Dafi'n cario'r bocs coch. Pan fydd pawb yno, mae Nia'n agor y neges yn ofalus. Mae hi'n darllen y llinell gyntaf, yna'r ail, ac yna mae hi'n dechrau gwenu. Mae'r cyngor wedi dewis cadw'r llyfrgell ar agor. Mae gwaith y gymuned wedi llwyddo.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s038","text":"Mae Nia'n darllen y penderfyniad eto fel bod pawb yn ei glywed. Dywedodd y cyngor fod yr arddangosfa wedi dangos pam mae angen y llyfrgell ar y dref. Mae'r adeilad yn cadw llyfrau, ond mae hefyd yn rhoi lle i bobl ddysgu, cyfarfod a rhannu. Y gymuned a lwyddodd i'w hachub: y plant a ofynnodd gwestiynau, yr ymwelwyr a rannodd atgofion, Sam a roddodd fwyd, Mali a dynnodd luniau, Tad-cu a adroddodd hanes, a Nia a gadwodd y drws ar agor. Nid un arwr sydd yn y neges. Mae pob person wedi bod yn rhan o'r ateb.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s039","text":"Mae Dafi'n edrych ar y gair llwyddo. Flwyddyn yn ôl, doedd e ddim yn gwybod y gair. Pan ddaeth Mali o hyd iddo yn y bocs, doedd e ddim yn gallu darllen ei enw ei hun. Nawr mae e'n adnabod geiriau am leoedd, amser, pobl, gwaith a gobaith. Mae e wedi gwneud camgymeriadau: bwyta llyfr, llosgi papur, colli allwedd a chyfrif cacennau'n wael. Ond mae pob camgymeriad wedi dysgu rhywbeth iddo. “Ydyn ni wedi gorffen?” mae e'n gofyn. “Dydyn ni ddim,” meddai Mali. “Rydyn ni wedi achub y llyfrgell; nawr mae'n rhaid i ni ei llenwi â dyfodol.”","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s040","text":"Yn y prynhawn mae pobl yn dod yn ôl i ddathlu. Mae Sam wedi dod â chacen fawr, ond dim ond un darn bach mae e'n ei roi i'r gath. Mae Pero'n gorwedd wrth yr hen fap. Mae Mrs Evans wedi dod â llun arall o'r harbwr. Mae'r plant wedi dod â'r cardiau a ysgrifennon nhw. Mae Mali'n hongian y neges gan y cyngor yng nghanol y wal, wrth ymyl llun y bocs. Ar un ochr mae dechrau'r stori; ar yr ochr arall mae'r addewid ar gyfer y dyfodol. Rhwng y ddau mae holl waith y gymuned.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s041","text":"Cyn torri'r gacen, mae Dafi'n sefyll o flaen pawb gyda llyfr bach. Dyma'r llyfr y ceisiodd e ei fwyta yn y wers gyntaf. Mae marc bach ar un cornel, ond mae'r tudalennau'n dal yn glir. Mae Dafi wedi dewis un dudalen. Mae'r frawddeg gyntaf yn fyr, ac mae e'n ei darllen yn araf. Mae'r ail frawddeg yn hirach. Mae e'n stopio, yn edrych ar Mali, ac yn dechrau eto. Y tro hwn mae e'n darllen hyd at y diwedd. Mae pawb yn dawel am eiliad, ac yna mae'r llyfrgell gyfan yn cymeradwyo.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s042","text":"Mae Tad-cu'n rhoi'r hen fap ar y bwrdd. Mae'r llwybr sydd arno wedi arwain y grŵp drwy'r llyfrgell, y caffi, yr harbwr a'r bryn. Ond mae Mali'n tynnu llinell newydd sydd ddim ar yr hen fap. Mae'r llinell yn dechrau wrth y bocs ac yn mynd drwy bob llun ar y wal. Yna mae hi'n gadael y llinell yn agored. “Ble mae'n mynd?” mae Dafi'n gofyn. “Dydyn ni ddim yn gwybod eto,” meddai Mali. “Dyma'r llwybr ar gyfer y stori nesaf.” Mae map da yn dangos lle rydyn ni wedi bod ac yn gadael lle i ddewis ble i fynd.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s043","text":"Mae Nia'n darllen addewid y cyngor: bydd y llyfrgell yn parhau ar agor, bydd arian i drwsio'r ffenestri, a bydd y gymuned yn cael dewis rhaglen newydd o weithgareddau. Bydd Mali'n parhau i dynnu lluniau. Bydd Sam yn gwahodd ymwelwyr o'r caffi. Bydd Tad-cu a Mrs Evans yn recordio eu hanes. Bydd y plant yn rhannu llyfrau. Bydd Dafi'n dysgu darllen tudalen newydd bob wythnos. Mae'r addewid ar bapur yn bwysig, ond mae'r addewid rhwng y bobl yn bwysicach: byddan nhw'n parhau i ddefnyddio'r lle maen nhw wedi'i achub.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s044","text":"Gyda'r nos mae'r ymwelwyr yn mynd adref. Mae Sam yn cau'r caffi, ond mae Nia'n aros wrth ddrws y llyfrgell. Mae Mali, Pero a Dafi'n sefyll ar y stryd. Yn y dechrau roedd y drws hwn yn arwain at focs mawr a draig fach ofnus. Nawr mae'n arwain at ystafell lawn o straeon, lluniau, atgofion a phobl. “Ydy hyn yn ddiwedd?” mae Dafi'n gofyn. Mae Mali'n edrych ar y drws sydd ar agor ac ar y map gyda'r llinell newydd. “Nac ydy,” meddai hi. “Dim ond diwedd y dudalen yw hwn.” Mae Dafi'n agor ei lyfr. Mae'r dudalen nesaf yn aros amdano.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s045","text":"Cyn iddyn nhw adael, mae Nia'n rhoi allwedd newydd i Mali. Nid allwedd y drws yw hi, ond allwedd i gwpwrdd bach lle bydd papur, pensiliau a recordiadau'r gymuned yn aros. “Bydd angen rhywun i barhau â'r arddangosfa,” meddai Nia. Mae Mali'n derbyn yr allwedd, ond dydy hi ddim am wneud y gwaith ar ei phen ei hun. Mae hi'n rhoi rhuban coch o'i chwmpas ac yn ei hongian wrth y map. Bydd unrhyw un sy'n ychwanegu stori'n defnyddio'r un allwedd. Mae'r peth bach yn perthyn i Mali heddiw, ond mae'r gwaith yn perthyn i bawb.","inference_aids":[]},
-          {"id":"cy-draig-01-l32-s046","text":"Mae Dafi'n edrych yn ôl unwaith eto. Y bocs sydd wrth y wal yw'r un lle cafodd Mali hyd iddo. Y llun sydd uwch ei ben yw'r un a dynnodd Mali ar y diwrnod cyntaf. Y map sydd ar y bwrdd yw'r un a arweiniodd nhw drwy'r dref. Mae pob gwrthrych wedi newid ei ystyr oherwydd yr hyn mae'r bobl wedi'i wneud. Roedd y bocs yn guddfan; nawr mae'n rhan o arddangosfa. Roedd y map yn gliw; nawr mae'n gofnod. Roedd y llyfr yn fwyd posib i Dafi; nawr mae'n ddrws i fil o straeon. Mae e'n dewis darllen yn lle bwyta.","inference_aids":[]}
+          {
+            "id": "cy-draig-01-l32-s044",
+            "text": "Gyda'r nos, mae Artur, Mali, Dafi, Pero ac Iwan yn dilyn yr hen fap o'r llyfrgell at y bryn.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s045",
+            "text": "Maen nhw'n mynd heibio'r caffi ac i lawr y grisiau cudd y cafodd Pero hyd iddyn nhw.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s046",
+            "text": "Mae Artur yn cario dim ond y llyfr bach a ddarllenodd Dafi; mae'r goron wedi aros ar fwrdd y gymuned.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s047",
+            "text": "Wrth ddrws yr ogof, mae Dafi'n cynnig aros gyda Artur, fel roedd e wedi addo o'r dechrau.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s048",
+            "text": "Mae Artur yn diolch iddo, ond mae e'n dweud, “Mae angen darllenydd ar y llyfrgell, ac mae angen ffrind ar Pero.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s049",
+            "text": "Mae Dafi'n dewis mynd yn ôl gyda Mali. Bydd e'n parhau i ddysgu, rhannu straeon, a helpu pobl newydd i ddechrau.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s050",
+            "text": "Mae Artur yn agor y drws aur ac yn sefyll yn yr ystafell las, yn effro a heb gleddyf.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s051",
+            "text": "Mae e'n rhoi'r llyfr ar y gadair garreg, yn codi ei law at y ffrindiau, ac yn ailadrodd, “Os bydd gwir angen, bydda i'n dod.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s052",
+            "text": "Mae'r drws aur yn cau'n araf. Ar yr un amser, yn yr hen lyfr, mae'r drws wedi'i baentio yn cau hefyd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s053",
+            "text": "Nid diwedd pob dyfodol yw'r drws caeedig; mae e'n cadw addewid Artur. Os bydd gwir angen, bydd e'n agor eto.",
+            "inference_aids": []
+          }
+        ]
+      },
+      {
+        "id": "cy-draig-01-l32-s06",
+        "title": "Y drws sydd ar agor",
+        "segments": [
+          {
+            "id": "cy-draig-01-l32-s054",
+            "text": "Pan mae'r ffrindiau'n cyrraedd y stryd eto, mae bore newydd yn dechrau dros Borth Helyg.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s055",
+            "text": "Y tu ôl iddyn nhw, mae drws yr ogof ar gau; o'u blaenau, mae drws y llyfrgell ar agor a golau cynnes ynddo.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-scene-echo",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l32-scene-echo.svg",
+                "alt": "A split storybook scene echoes two doors: Artur's quiet cave door closed under the hill, and the warm library door open to a working community, with uncrowned Artur departing and Dafi returning.",
+                "covers_lexeme_ids": [
+                  "cy-addewid",
+                  "cy-dyfodol",
+                  "cy-dewis",
+                  "cy-parhau",
+                  "cy-diwedd"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l32-s056",
+            "text": "Mae Nia wedi agor y llyfrgell; mae Sam yn cario dŵr, a phobl yr harbwr yn trwsio'r ffenestr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s057",
+            "text": "Mae plant yn rhannu llyfrau; mae Mali'n dangos lluniau; mae Iwan yn adrodd ei hanes.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s058",
+            "text": "Mae'r llyfrgell wedi'i hachub, ond dydy'r gwaith ddim wedi gorffen. Mae'r drws yn parhau ar agor, a bydd y gwaith yn parhau bob dydd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s059",
+            "text": "Mae Dafi'n agor tudalen newydd wrth y bocs er mwyn dysgu gair arall.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s060",
+            "text": "“Ydy hwn yn ddiwedd?” mae e'n gofyn. Mae Mali'n edrych o'r drws agored at y bryn ac yna'n ysgwyd ei phen.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l32-parhau-diwedd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l32-parhau-diwedd.svg",
+                "alt": "One story line stops at diwedd while another passes the same point and continues as parhau toward a new page.",
+                "covers_lexeme_ids": [
+                  "cy-parhau",
+                  "cy-diwedd"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l32-s061",
+            "text": "“Diwedd un dudalen ydy e,” meddai hi. “Mae'r llyfrgell yn parhau, ac mae'r bobl yn dal i ddewis ei dyfodol.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s062",
+            "text": "Mae Dafi'n darllen addewid Artur ac yn rhannu'r llyfr gyda'r plant newydd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s063",
+            "text": "Mae'r ogof yn dawel, ond mae'r llyfrgell yn llawn lleisiau, gwaith, cwestiynau, a straeon.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l32-s064",
+            "text": "Brenin a ddaw eto ydy Artur, ond y bobl sy'n rhannu, dysgu, a gwneud eu gwaith sy'n ysgrifennu'r dyfodol nawr.",
+            "inference_aids": []
+          }
         ]
       }
     ]
@@ -274,7 +528,9 @@
       "part_of_speech": "verb",
       "current_sense": "succeed",
       "forms_seen": [
-        "llwyddo"
+        "llwyddo",
+        "wedi llwyddo",
+        "lwyddodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -284,9 +540,12 @@
       "display_form": "achub",
       "citation_form": "achub",
       "part_of_speech": "verb",
-      "current_sense": "save",
+      "current_sense": "save; rescue",
       "forms_seen": [
-        "achub"
+        "achub",
+        "wedi achub",
+        "achubodd",
+        "hachub"
       ],
       "first_introduced_lesson": "cy-draig-01-l17",
       "new": false
@@ -298,7 +557,8 @@
       "part_of_speech": "verb",
       "current_sense": "celebrate",
       "forms_seen": [
-        "dathlu"
+        "dathlu",
+        "i ddathlu"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -310,7 +570,9 @@
       "part_of_speech": "noun",
       "current_sense": "promise",
       "forms_seen": [
-        "addewid (g.)"
+        "addewid",
+        "addewid Artur",
+        "fy addewid"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -322,7 +584,8 @@
       "part_of_speech": "noun",
       "current_sense": "future",
       "forms_seen": [
-        "dyfodol (g.)"
+        "dyfodol",
+        "y dyfodol"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -334,7 +597,9 @@
       "part_of_speech": "verb/noun",
       "current_sense": "choose; choice",
       "forms_seen": [
-        "dewis"
+        "dewis",
+        "wedi dewis",
+        "eich dewis"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -346,7 +611,9 @@
       "part_of_speech": "verb",
       "current_sense": "share",
       "forms_seen": [
-        "rhannu"
+        "rhannu",
+        "wedi rhannu",
+        "yn rhannu"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -358,7 +625,8 @@
       "part_of_speech": "verb",
       "current_sense": "learn; teach",
       "forms_seen": [
-        "dysgu"
+        "dysgu",
+        "wedi dysgu"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -370,7 +638,8 @@
       "part_of_speech": "verb",
       "current_sense": "continue",
       "forms_seen": [
-        "parhau"
+        "parhau",
+        "yn parhau"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
@@ -382,46 +651,68 @@
       "part_of_speech": "noun",
       "current_sense": "end",
       "forms_seen": [
-        "diwedd (g.)"
+        "diwedd",
+        "y diwedd"
       ],
       "first_introduced_lesson": "cy-draig-01-l32",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Patrwm y wers: Integration of tense, mutation, relatives and focus. Darllenwch y stori eto a sylwch ar y patrwm ym mhob adran.",
-    "bridge_language": "Integrate the course patterns in connected narration and transfer; no new productive grammar."
+    "target_language": "Mae'r bennod yn dod â hen batrymau at ei gilydd: y gymuned a achubodd y llyfrgell; y llyfr y mae Dafi wedi'i ddarllen; dywedodd Artur fod y bobl wedi gweithio; pe bai e'n gwisgo'r goron, basai pobl yn aros; os bydd gwir angen, bydd e'n dod eto. Mae'r amser, y berthynas, a'r ffocws yn newid, ond does dim patrwm newydd.",
+    "bridge_language": "This finale integrates already-taught past, perfect, relative, focus, reported-speech, real-condition, and hypothetical patterns. It introduces no new productive grammar."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l32-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Patrymau'r stori",
+      "directions": "Cwblhewch bob patrwm o'r bennod.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Ysgrifennwch ddwy frawddeg sy'n cysylltu dau batrwm gwahanol o'r cwrs.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "A course reviewer should accept a grammatical sentence that uses the lesson target."
+          "prompt": "Nid Artur wnaeth y cynllun; y gymuned ___ wnaeth.",
+          "type": "cloze",
+          "accepted_answers": [
+            "a'i",
+            "A'i"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch un frawddeg o'r stori sy'n dangos y patrwm.",
-          "type": "bounded_response",
-          "accepted_answers": [],
-          "rubric": "Must quote or closely reproduce a sentence demonstrating the target."
+          "prompt": "Dyma'r llyfr y mae Dafi wedi ___ ddarllen.",
+          "type": "cloze",
+          "accepted_answers": [
+            "ei"
+          ]
+        },
+        {
+          "id": "pa3",
+          "prompt": "Dywedodd Artur ___ y bobl wedi achub y llyfrgell.",
+          "type": "cloze",
+          "accepted_answers": [
+            "fod",
+            "bod"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Pe bai Artur yn gwisgo'r goron, ___ pobl yn aros am ei ddewis.",
+          "type": "cloze",
+          "accepted_answers": [
+            "basai",
+            "Basai"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l32-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch gyda gair newydd.",
+      "title": "Pensa B — Ystyr yn y cyd-destun",
+      "directions": "Dewiswch air neu eiriau sy'n cwblhau'r ystyr.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "succeed = ___",
+          "prompt": "Mae'r cynllun wedi ___: bydd y llyfrgell ar agor.",
           "type": "cloze",
           "accepted_answers": [
             "llwyddo"
@@ -429,59 +720,78 @@
         },
         {
           "id": "pb2",
-          "prompt": "save = ___",
+          "prompt": "Mae pobl yn dod â chacen ac yn dweud “Da iawn!” er mwyn ___.",
           "type": "cloze",
           "accepted_answers": [
-            "achub"
+            "dathlu"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "celebrate = ___",
+          "prompt": "Mae Artur yn rhoi ___: os bydd gwir angen ar ôl gwaith y bobl, bydd e'n dod eto.",
           "type": "cloze",
           "accepted_answers": [
-            "dathlu"
+            "addewid"
+          ]
+        },
+        {
+          "id": "pb4",
+          "prompt": "Dydy'r gwaith ddim yn gorffen; bydd y gymuned yn ___ i rannu a dysgu.",
+          "type": "cloze",
+          "accepted_answers": [
+            "parhau"
           ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l32-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Y diwedd a'r dyfodol",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-        "prompt": "Beth mae'r cyngor wedi'i benderfynu?",
+          "prompt": "Pwy achubodd y llyfrgell, a sut?",
           "type": "bounded_response",
-        "accepted_answers": ["Mae'r cyngor wedi penderfynu cadw'r llyfrgell ar agor."],
-        "rubric": "Must state that the library will remain open."
+          "accepted_answers": [
+            "Y gymuned a achubodd y llyfrgell drwy rannu, trefnu a gwneud y gwaith gyda'i gilydd.",
+            "Achubodd y gymuned y llyfrgell drwy weithio gyda'i gilydd."
+          ],
+          "rubric": "Must identify the community, not Artur alone, and mention its shared plan or work."
         },
         {
           "id": "pc2",
-        "prompt": "Beth mae Dafi'n ei wneud o flaen y gymuned?",
+          "prompt": "Beth mae Dafi'n ei wneud cyn i bawb ddathlu?",
           "type": "bounded_response",
-        "accepted_answers": ["Mae e'n darllen tudalen o lyfr."],
-        "rubric": "Must identify Dafi reading aloud."
+          "accepted_answers": [
+            "Mae Dafi'n darllen tudalen gyfan yn uchel.",
+            "Mae e'n darllen tudalen gyfan o'r llyfr bach."
+          ],
+          "rubric": "Must state that Dafi reads a whole page aloud."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o'r stori yn eich geiriau eich hun.",
+          "prompt": "Pam dydy Artur ddim yn gwisgo'r goron, a pham mae e'n mynd yn ôl i'r bryn?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Dydy e ddim yn gwisgo'r goron oherwydd dewis a gwaith y gymuned a achubodd y llyfrgell.",
+            "Mae e'n mynd yn ôl oherwydd dydy e ddim eisiau gwneud pob penderfyniad dros y bobl."
+          ],
+          "rubric": "Must connect his refusal to community agency, not mere dislike of the crown."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Adroddwch y diwedd mewn tair neu bedair brawddeg: y llyfrgell, Dafi, Artur, a'r ddau ddrws.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "One or two comprehensible Welsh sentences are sufficient."
+          "rubric": "Three or four comprehensible Welsh sentences should say that the community saves the library, Dafi reads, Artur refuses the crown/returns with a promise, and the library is open while the cave is closed. Exact wording is not required."
         }
       ]
     }
   },
-  "completion": {
-    "allowed_without_pensa_score": true,
-    "button_label": "Gorffen y wers",
-    "storage_key": "cy-draig-01:cy-draig-01-l32:finished"
-  },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "new productive vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -499,10 +809,25 @@
     ],
     "source": "cy-draig-01-l32"
   },
+  "completion": {
+    "allowed_without_pensa_score": true,
+    "button_label": "Gorffen y wers",
+    "storage_key": "cy-draig-01:cy-draig-01-l32:finished"
+  },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
-    "images": ["cy-l32-scene", "cy-l32-amser"],
+    "images": [
+      "cy-l32-scene",
+      "cy-l32-scene-echo",
+      "cy-l32-rhannu-dysgu-gweithio",
+      "cy-l32-llwyddo-achub",
+      "cy-l32-dewis-coron",
+      "cy-l32-amser",
+      "cy-l32-addewid",
+      "cy-l32-dyfodol",
+      "cy-l32-parhau-diwedd"
+    ],
     "audio": []
   }
 }

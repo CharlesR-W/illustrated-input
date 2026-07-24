@@ -3,33 +3,36 @@
   "id": "cy-draig-01-l09",
   "course_id": "cy-draig-01",
   "order": 9,
-  "title": "Tair cacen fach",
+  "title": "Pedair rhan",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, content/cy/curriculum.md, and rewritten Lessons 01–08",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for numeral gender, mutation, idiom, and register."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G09",
-      "label": "numbers 1–4 with gender",
-      "description": "Count one to four and distinguish selected masculine and feminine numeral forms, especially tri/tair and pedwar/pedair.",
+      "label": "numbers 1–4 with gender and mutation",
+      "description": "Count one to four with masculine and feminine numeral forms, including the mutations in un gadair, dau gwpan, dau bapur, and tri chwpan.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G05",
       "G06",
+      "G07",
       "G08"
     ],
     "incidental_grammar": [],
     "communicative_goals": [
       "count objects from one to four",
-      "use gendered forms of three and four",
-      "recognize an excessive quantity"
+      "choose masculine or feminine forms of three and four",
+      "notice that one of four pictured paper parts is absent"
     ],
     "new_lexeme_ids": [
       "cy-tri",
@@ -42,236 +45,259 @@
       "cy-cyfrif",
       "cy-eto",
       "cy-gormod"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l09-s01",
-        "title": "Ar y bwrdd",
+        "title": "Dafi'n cyfrif",
         "segments": [
           {
             "id": "cy-draig-01-l09-s001",
-            "text": "Mae tair cacen ar y bwrdd.",
+            "text": "Mae Sam, Mali, Nia, Pero a Dafi yn y caffi.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l09-scene",
+                "ref": "cy-l09-scene-paper-quest",
                 "presentation": "inline_scene",
-                "src": "media/images/cy-l09-scene.svg",
-                "alt": "Tri neu bedwar?"
+                "src": "media/images/cy-l09-scene-paper-quest.svg",
+                "alt": "At the café table, Dafi counts cakes while Mali compares three present torn paper pieces with a fourth missing space.",
+                "covers_lexeme_ids": [
+                  "cy-cacen",
+                  "cy-cwpan",
+                  "cy-cadair",
+                  "cy-bwrdd",
+                  "cy-cyfrif",
+                  "cy-tri",
+                  "cy-tair",
+                  "cy-pedwar",
+                  "cy-pedair"
+                ]
               },
               {
                 "type": "image",
-                "ref": "cy-l09-numbers",
+                "ref": "cy-l09-too-many",
                 "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l09-numbers.svg",
-                "alt": "Tri chwpan, tair cacen, pedwar cwpan, pedair cadair."
+                "src": "media/diagrams/cy-l09-too-many.svg",
+                "alt": "One small dragon with four cakes is contrasted with four friends each having one cake, making too much visually clear.",
+                "covers_lexeme_ids": [
+                  "cy-gormod",
+                  "cy-pedair"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l09-s002",
-            "text": "Mae pedwar cwpan ar y bwrdd hefyd.",
+            "text": "Mae bwrdd mawr yn y caffi, a mae tair cacen fach yma. Mae'r bwrdd yn fawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s003",
-            "text": "Mae Dafi'n cyfrif y cacennau.",
+            "text": "Mae pedwar cwpan dŵr yma hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s004",
-            "text": "“Un, dau, tri,” meddai Dafi.",
+            "text": "Mae Dafi'n edrych ar y gacen. Mae e'n llwglyd eto.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s005",
-            "text": "Mae tair cacen fach.",
+            "text": "“Ydy Dafi eisiau cacen?” “Ydy!”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s006",
-            "text": "Mae Dafi'n cyfrif eto.",
-            "inference_aids": []
+            "text": "Mae Dafi'n cyfrif y gacen: “Un, dau, tri, pedwar.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l09-count-again",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l09-count-again.svg",
+                "alt": "Dafi first counts three cakes as four, then follows Mali's pointing and counts the three correctly on a second attempt.",
+                "covers_lexeme_ids": [
+                  "cy-cyfrif",
+                  "cy-eto",
+                  "cy-tri",
+                  "cy-pedwar"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l09-s007",
-            "text": "“Un, dau, tri, pedwar!”",
+            "text": "“Pedair? Mae pedair cacen yn ormod.” “Nac oes.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s008",
-            "text": "Ond does dim pedair cacen.",
+            "text": "Oes pedair cacen? Nac oes. Mae tair cacen yma.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s009",
-            "text": "Mae tair cacen.",
+            "text": "Ond mae Dafi'n cyfrif eto: “Un, dau, tri, pedwar.” Mae e eisiau pedair cacen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l09-s010",
+            "text": "Mae pedair cacen i un ddraig fach yn ormod. Mae Sam yn rhoi ychydig o gacen i Dafi.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l09-s02",
-        "title": "Cwpanau",
+        "title": "Cwpan a chadair",
         "segments": [
           {
-            "id": "cy-draig-01-l09-s010",
-            "text": "Mae Sam yn rhoi cwpan ar y bwrdd.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l09-s011",
-            "text": "Mae Mali’n rhoi ail gwpan ar y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s012",
-            "text": "Mae Nia'n rhoi cwpan ar y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s013",
-            "text": "Mae Dafi'n rhoi cwpan ar y bwrdd.",
-            "inference_aids": []
+            "text": "Mae cwpan gan Sam, cwpan gan Mali, cwpan gan Nia, a chwpan gan Dafi.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l09-number-gender",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l09-number-gender.svg",
+                "alt": "Numbered rows contrast masculine cups with feminine cakes and chairs: three and four use different Welsh forms.",
+                "covers_lexeme_ids": [
+                  "cy-tri",
+                  "cy-tair",
+                  "cy-pedwar",
+                  "cy-pedair",
+                  "cy-cwpan",
+                  "cy-cadair"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l09-s014",
-            "text": "Mae pedwar cwpan ar y bwrdd.",
+            "text": "Mae Dafi'n cyfrif: un cwpan, dau gwpan, tri chwpan, pedwar cwpan.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s015",
-            "text": "Mae Dafi'n cyfrif: un, dau, tri, pedwar.",
+            "text": "“Tri chwpan, Dafi?” Nac oes: mae pedwar cwpan a bwrdd yma.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s016",
-            "text": "Pedwar cwpan, ond tair cacen.",
+            "text": "Mae pedair cadair yn y caffi hefyd. Mae un gadair gyda Mali, ac un gadair gyda Nia.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s017",
-            "text": "Mae llawer o gwpanau.",
+            "text": "Mae un gadair gyda Sam, ac un gadair gyda'r gath fach wen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s018",
-            "text": "“Dim gormod,” meddai Sam.",
+            "text": "Mae Dafi'n edrych: “Tair cadair?” Nac oes. Mae pedair cadair yma.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l09-s019",
+            "text": "Mae Dafi'n cael pedwar cwpan. Mae pedwar cwpan i un ddraig fach yn ormod.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l09-s020",
+            "text": "Mae e'n rhoi tri chwpan yn ôl i Sam, Mali a Nia. Nawr mae un cwpan gan Dafi.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l09-s03",
-        "title": "Cadeiriau",
+        "title": "Tri phapur",
         "segments": [
           {
-            "id": "cy-draig-01-l09-s019",
-            "text": "Mae pedair cadair wrth y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s020",
-            "text": "Mae Mali ar un gadair.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l09-s021",
-            "text": "Mae Nia ar gadair.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s022",
-            "text": "Mae Sam ar gadair.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s023",
-            "text": "Mae'r gath ar gadair.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s024",
-            "text": "Mae Dafi'n edrych ar y cadeiriau.",
-            "inference_aids": []
+            "text": "Mae'r hen lyfr gan Mali. Mae tri phapur o'r llyfr gyda Mali: un papur mawr a dau bapur bach.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l09-paper-parts",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l09-paper-parts.svg",
+                "alt": "Four interlocking torn-paper positions form one picture; three contain paper and the fourth is an empty dotted silhouette.",
+                "covers_lexeme_ids": [
+                  "cy-tri",
+                  "cy-pedwar",
+                  "cy-papur"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l09-s025",
-            "text": "“Un, dau, tri, pedair,” meddai Mali.",
+            "text": "Mae llun newydd gan Sam. Mae Dafi yn y llun newydd hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s026",
-            "text": "Cadair: un. Pedair cadair: pedair.",
+            "text": "Mae Dafi'n rhoi'r tri phapur gyda'r llun newydd. Un papur, dau bapur, tri phapur — a dim.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s027",
-            "text": "Felly: pedair cadair.",
+            "text": "Oes pedwar papur yma? Nac oes. Mae tri phapur yma.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l09-s028",
+            "text": "Dydy un papur ddim yma. Mae Dafi'n cyfrif eto: “Un, dau, tri — dim.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l09-s029",
+            "text": "Mae Mali'n cyfrif hefyd: “Un, dau, tri — dim.” Pedwar papur, ond tri phapur yma.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l09-s030",
+            "text": "Mae Dafi'n trist eto. Pam? Dydy un papur ddim yma.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l09-s04",
-        "title": "Gormod o gacen",
+        "title": "I'r llyfrgell",
         "segments": [
           {
-            "id": "cy-draig-01-l09-s028",
-            "text": "Mae Dafi'n rhoi un gacen i'r gath.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s029",
-            "text": "Mae e’n rhoi ail gacen i’r gath.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s030",
-            "text": "Mae e’n rhoi trydedd gacen i’r gath.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l09-s031",
-            "text": "Mae tair cacen gan y gath!",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l09-s032",
-            "text": "“Dafi, mae hynny'n ormod,” meddai Nia.",
+            "text": "Mae Mali'n cael y tri phapur. Mae Dafi'n cael yr hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s033",
-            "text": "Dydy'r gath ddim yn bwyta tair cacen.",
+            "text": "“Pedwar papur?” “Nac oes. Tri phapur yma; dydy un papur ddim yma.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s034",
-            "text": "Mae hi'n bwyta ychydig.",
+            "text": "Mae Dafi'n edrych o'r caffi i'r stryd. Mae'r llyfrgell ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s035",
-            "text": "Mae Dafi'n cyfrif y cacennau eto.",
+            "text": "Ydy'r papur yn y llyfrgell? Mae Dafi eisiau mynd i'r llyfrgell nawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l09-s036",
-            "text": "Nawr mae'r cacennau ar y bwrdd eto. Mae Dafi'n cyfrif y cwpanau: un, dau, tri, pedwar. Mae e'n cyfrif y cadeiriau: un, dau, tri, pedair. Mae e'n cyfrif y cacennau: un, dau, tri. Mae pedwar cwpan, pedair cadair a thair cacen. Mae tair cacen i un gath yn ormod. Mae'r gath yn bwyta ychydig, ac mae Dafi'n cyfrif eto.",
+            "text": "Mae Mali, Dafi, Nia a Pero'n mynd o'r caffi i'r llyfrgell. Mae Sam yn dod hefyd.",
             "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l09-s05",
-        "title": "Tri neu bedwar?",
-        "segments": [
+          },
           {
             "id": "cy-draig-01-l09-s037",
-            "text": "Mae cacennau a chwpanau ar y bwrdd. Mae Dafi'n cyfrif y cacennau: un, dau, tri. Mae tair cacen fach. Mae e'n cyfrif eto: un, dau, tri, pedwar. Ond does dim pedair cacen: tair cacen sydd yma. Mae Sam, Mali, Nia a Dafi yn rhoi cwpanau ar y bwrdd. Nawr mae pedwar cwpan ar y bwrdd. Mae pedair cadair wrth y bwrdd hefyd. Mae Mali, Nia, Sam a'r gath ar y pedair cadair. Mae Dafi'n rhoi un gacen i'r gath, yna ail gacen, ac yna drydedd gacen. Mae tair cacen gan un gath: mae hynny'n ormod. Dydy'r gath ddim yn bwyta tair cacen; mae hi'n bwyta ychydig. Mae Dafi'n rhoi'r cacennau yn ôl ar y bwrdd ac yn cyfrif eto. Pedwar cwpan, pedair cadair, tair cacen ac un gath. Y tro hwn mae'r cyfrif yn gywir, ac mae'r bwyd yn ddiogel.",
+            "text": "Mae tair cacen yn y caffi, ond dydy Dafi ddim yn edrych ar y gacen nawr. Mae e'n edrych ar yr hen lyfr. Mae tri phapur gyda Mali. Dydy un papur ddim yma. Un llun, pedwar papur. Mae Dafi'n cyfrif eto: “Un, dau, tri — dim.” Ydy'r papur yn y llyfrgell?",
             "inference_aids": []
           }
         ]
@@ -334,7 +360,9 @@
       "part_of_speech": "noun",
       "current_sense": "cup",
       "forms_seen": [
-        "cwpan"
+        "cwpan",
+        "gwpan",
+        "chwpan"
       ],
       "first_introduced_lesson": "cy-draig-01-l09",
       "new": true
@@ -346,7 +374,8 @@
       "part_of_speech": "noun",
       "current_sense": "chair",
       "forms_seen": [
-        "cadair"
+        "cadair",
+        "gadair"
       ],
       "first_introduced_lesson": "cy-draig-01-l09",
       "new": true
@@ -394,29 +423,31 @@
       "part_of_speech": "quantifier",
       "current_sense": "too much; too many",
       "forms_seen": [
-        "gormod"
+        "gormod",
+        "ormod"
       ],
       "first_introduced_lesson": "cy-draig-01-l09",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "tri chwpan, tair cacen; pedwar cwpan, pedair cadair. Mae tri/pedwar gyda rhai enwau gwrywaidd a tair/pedair gyda rhai enwau benywaidd.",
-    "bridge_language": "Use tri and pedwar here with masculine nouns; tair and pedair with feminine nouns. Welsh numeral syntax has further complexities deferred beyond this lesson."
+    "target_language": "Un cwpan, dau gwpan, tri chwpan, pedwar cwpan. Un gadair, tair cadair, pedair cadair.",
+    "bridge_language": "Welsh uses masculine tri/pedwar and feminine tair/pedair. Some nouns mutate after numerals: un gadair, dau gwpan, dau bapur, tri chwpan."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l09-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm.",
+      "title": "Pensa A — Tri, tair, pedwar, pedair",
+      "directions": "Cwblhewch.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "___ cwpan (3)",
+          "prompt": "___ chwpan (3)",
           "type": "cloze",
           "accepted_answers": [
             "tri"
-          ]
+          ],
+          "explanation": "Cwpan is masculine; tri also triggers the aspirate mutation c → ch."
         },
         {
           "id": "pa2",
@@ -424,7 +455,8 @@
           "type": "cloze",
           "accepted_answers": [
             "tair"
-          ]
+          ],
+          "explanation": "Cacen is feminine, so the feminine form tair is required."
         },
         {
           "id": "pa3",
@@ -432,7 +464,8 @@
           "type": "cloze",
           "accepted_answers": [
             "pedwar"
-          ]
+          ],
+          "explanation": "Cwpan is masculine, so use pedwar."
         },
         {
           "id": "pa4",
@@ -440,18 +473,19 @@
           "type": "cloze",
           "accepted_answers": [
             "pedair"
-          ]
+          ],
+          "explanation": "Cadair is feminine, so use pedair."
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l09-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Yn y caffi",
+      "directions": "Cwblhewch o'r stori a'r llun.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Mae'r bwyd ar y ___.",
+          "prompt": "Mae'r ___ mawr yn y caffi.",
           "type": "cloze",
           "accepted_answers": [
             "bwrdd"
@@ -459,23 +493,23 @@
         },
         {
           "id": "pb2",
-          "prompt": "Mae Nia ar ___.",
-          "type": "cloze",
-          "accepted_answers": [
-            "cadair"
-          ]
-        },
-        {
-          "id": "pb3",
-          "prompt": "Mae Dafi'n ___ eto.",
+          "prompt": "Mae Dafi'n ___ y gacen: un, dau, tri.",
           "type": "cloze",
           "accepted_answers": [
             "cyfrif"
           ]
         },
         {
+          "id": "pb3",
+          "prompt": "Mae Dafi'n cyfrif, ac mae e'n cyfrif ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "eto"
+          ]
+        },
+        {
           "id": "pb4",
-          "prompt": "Mae tair cacen i un gath yn ___.",
+          "prompt": "Mae pedair cacen i un ddraig fach yn ___.",
           "type": "cloze",
           "accepted_answers": [
             "gormod"
@@ -485,39 +519,52 @@
     },
     "c": {
       "id": "cy-draig-01-l09-pc",
-      "title": "Pensa C — Y stori",
-      "directions": "Atebwch yn Gymraeg; gall ateb byr fod yn gywir.",
+      "title": "Pensa C — Y papur",
+      "directions": "Atebwch yn Gymraeg.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Sawl cacen sydd ar y dechrau?",
-          "type": "cloze",
+          "prompt": "Oes pedair cacen yma?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Tair."
-          ]
+            "Nac oes.",
+            "Nac oes",
+            "nac oes"
+          ],
+          "rubric": "Must answer negatively; three cakes are present."
         },
         {
           "id": "pc2",
-          "prompt": "Sawl cwpan sydd ar y bwrdd?",
-          "type": "cloze",
+          "prompt": "Oes pedwar cwpan yma?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Pedwar."
-          ]
+            "Oes.",
+            "Oes",
+            "oes",
+            "Pedwar cwpan.",
+            "Pedwar cwpan"
+          ],
+          "rubric": "Must answer affirmatively or identify four cups."
         },
         {
           "id": "pc3",
-          "prompt": "Pwy sy'n cael tair cacen?",
-          "type": "cloze",
+          "prompt": "Oes pedwar papur gyda Mali?",
+          "type": "bounded_response",
           "accepted_answers": [
-            "Y gath."
-          ]
+            "Nac oes.",
+            "Nac oes",
+            "nac oes",
+            "Mae tri phapur gyda Mali.",
+            "Mae tri phapur gyda Mali"
+          ],
+          "rubric": "Must say no or state that Mali has three paper parts."
         },
         {
           "id": "pc4",
-          "prompt": "Cyfrifwch bedwar peth o'ch cwmpas.",
-          "type": "transfer",
+          "prompt": "Y caffi, y papur, a'r llyfrgell: Mali a Dafi.",
+          "type": "bounded_retelling",
           "accepted_answers": [],
-          "rubric": "Name or point to four countable things."
+          "rubric": "Retell the final decision in three or four short clauses using only familiar frames. Include that three paper parts are present, one is absent, and Mali and Dafi go from the café to the library. Do not require vocabulary outside this lesson's productive list."
         }
       ]
     }
@@ -529,7 +576,19 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson only",
+    "lexeme_ids": [
+      "cy-tri",
+      "cy-tair",
+      "cy-pedwar",
+      "cy-pedair",
+      "cy-cwpan",
+      "cy-cadair",
+      "cy-bwrdd",
+      "cy-cyfrif",
+      "cy-eto",
+      "cy-gormod"
+    ],
     "format": "tsv",
     "fields": [
       "guid",
@@ -540,7 +599,7 @@
     ],
     "guid_pattern": "cy-draig-01:{lexeme_id}:{card_stage}",
     "tags": [
-      "semeion",
+      "illustrated-input",
       "welsh",
       "cy-draig-01",
       "lesson-09"
@@ -548,11 +607,14 @@
     "source": "cy-draig-01-l09"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l09-scene",
-      "cy-l09-numbers"
+      "cy-l09-scene-paper-quest",
+      "cy-l09-too-many",
+      "cy-l09-count-again",
+      "cy-l09-number-gender",
+      "cy-l09-paper-parts"
     ],
     "audio": []
   }

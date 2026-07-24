@@ -5,35 +5,44 @@
   "order": 20,
   "title": "Y llyfr sy'n canu",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G20 curriculum row, cumulative rewritten Lessons 01–19 available during drafting, and the L20 findings in docs/reviews/welsh-12-21.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked sy'n/sydd distribution, mutations, idiom, register, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G20",
-      "label": "Present relative sy'n and sydd",
-      "description": "Use sy'n before a verb or description and sydd before a place/other complement to identify the right person or thing.",
+      "label": "Present subject relatives sy'n and sydd",
+      "description": "Use sy'n before a verbal noun or yn + description, and sydd before a place or other non-yn complement, to identify the person or thing that performs the relative clause.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G03",
+      "G04",
+      "G05",
+      "G10",
+      "G12",
+      "G13",
+      "G16",
+      "G18",
       "G19"
     ],
     "incidental_grammar": [
       {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
+        "form": "sydd â",
+        "note": "Used as a whole phrase for 'which has' in one evidence description; it remains a subject relative and does not introduce the object-relative pattern reserved for G21."
       }
     ],
     "communicative_goals": [
-      "identify an object by what it does",
-      "identify where something is",
-      "solve a descriptive clue"
+      "identify a book by what it does",
+      "identify a book by its location or description",
+      "eliminate wrong answers from visible and audible evidence",
+      "understand how the singing book reveals the sleeping boy's name"
     ],
     "new_lexeme_ids": [
       "cy-sy",
@@ -46,420 +55,378 @@
       "cy-cywir",
       "cy-anghywir",
       "cy-pos"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-artur"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l20-s01",
-        "title": "Y pos",
+        "title": "Pedwar llyfr, un pos",
         "segments": [
           {
             "id": "cy-draig-01-l20-s001",
-            "text": "Mae Mali'n darllen neges ar gefn y map: CHWILIWCH AM Y LLYFR SY'N CANU.",
+            "text": "Yn y bore, does dim glaw, ond mae'r gwynt yn dod o'r môr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s002",
+            "text": "Mae pedwar hen lyfr yn sych ar y bwrdd. Ddoe agorodd y gwynt un llyfr a chododd papur y bachgen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s003",
+            "text": "Yn sydyn, mae Pero'n codi ei ben. Mae e'n clywed sain fach: hŵ-î, hŵ-î.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l20-sain-clywed",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l20-sain-clywed.svg",
+                "alt": "Pero raises one ear toward visible sound waves labelled sain while Dafi listens beside him, establishing hear and sound.",
+                "covers_lexeme_ids": [
+                  "cy-sain",
+                  "cy-clywed"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l20-s004",
+            "text": "Mae Dafi'n clywed yr un sain â ddoe: A—a—a—t—r. Mae'n dechrau gyda'r gwynt ac yn gorffen heb y gwynt.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s005",
+            "text": "Mae'r ddraig yn cau ei llygaid. “Dw i'n cofio rhywbeth: llyfr arbennig sy'n canu.”",
             "inference_aids": [
               {
                 "type": "image",
                 "ref": "cy-l20-pattern",
                 "presentation": "margin_diagram",
                 "src": "media/diagrams/cy-l20-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 20."
+                "alt": "Two Welsh relative-pattern cards contrast a book which sings with a book which is beside the window.",
+                "covers_lexeme_ids": [
+                  "cy-sy",
+                  "cy-sydd",
+                  "cy-canu"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l20-s002",
-            "text": "“Llyfr sy'n canu?” meddai Sam.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s003",
-            "text": "“Dydy llyfr ddim yn canu.” Ond mae Dafi'n clywed sain fach wrth y ffenestr: hŵŵ, hŵŵ.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s004",
-            "text": "Mae'r sain yn stopio pan fydd y gwynt yn stopio.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s005",
-            "text": "Mae'n dechrau eto pan fydd y gwynt yn dod.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l20-s006",
-            "text": "“Mae rhywbeth sy'n canu yma,” meddai Dafi.",
-            "inference_aids": []
+            "text": "“Pos,” mae Mali'n ateb. “Rydyn ni'n chwilio am y llyfr sy'n canu.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l20-arbennig-pos",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l20-arbennig-pos.svg",
+                "alt": "Four ordinary closed books face one book with wind and musical marks, under the Welsh labels pos and arbennig.",
+                "covers_lexeme_ids": [
+                  "cy-arbennig",
+                  "cy-pos"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l20-s007",
-            "text": "Mae Nia'n dod â thri llyfr arbennig: llyfr coch sy'n agor yn hawdd, llyfr glas sydd â chloch fach, a llyfr gwyrdd sy'n hen iawn.",
+            "text": "Mae Nia'n rhoi pedwar llyfr ar y bwrdd: llyfr coch, llyfr sydd â llun draig, llyfr sydd wrth y ffenestr, a hen lyfr du.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l20-scene-four-books",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l20-scene-four-books.svg",
+                "alt": "At the warm library table, Mali, Dafi, Nia, Sam, and Pero compare four candidates: a red book, a book with a dragon picture, a book beside the window, and an old black book partly hidden behind the others.",
+                "covers_lexeme_ids": [
+                  "cy-sydd",
+                  "cy-arbennig",
+                  "cy-pos"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l20-s008",
+            "text": "Mae'r pedwar yn arbennig, ond mae un llyfr yn canu. Dydy Dafi ddim yn gwybod pa un.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l20-s02",
-        "title": "Tri llyfr",
+        "title": "Dau ateb anghywir",
         "segments": [
           {
-            "id": "cy-draig-01-l20-s008",
-            "text": "Mae Sam yn dewis y llyfr glas.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l20-s009",
-            "text": "“Dyma'r llyfr sy'n canu,” meddai.",
+            "text": "Mae Dafi'n dewis y llyfr coch. “Ydy'r llyfr sy'n goch yn canu?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s010",
-            "text": "Mae'n symud y llyfr, ac mae'r gloch yn gwneud sain.",
+            "text": "Mae Mali'n dal y llyfr coch wrth y ffenestr. Mae'r gwynt yn symud y llyfr, ond does dim sain.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s011",
-            "text": "Ond pan mae'r llyfr ar y bwrdd, dydy e ddim yn canu gyda'r gwynt.",
+            "text": "Mae Pero a Nia'n clywed y gwynt, ond dydyn nhw ddim yn clywed llyfr sy'n canu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s012",
-            "text": "“Mae hwn yn llyfr sydd â chloch,” meddai Mali.",
-            "inference_aids": []
+            "text": "“Anghywir,” mae Mali'n ateb. “Mae'r llyfr yn goch, ond dydy e ddim yn canu.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l20-cywir-anghywir",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l20-cywir-anghywir.svg",
+                "alt": "A red silent book and a dragon-picture silent book receive crosses labelled anghywir; a wind-singing book receives a tick labelled cywir.",
+                "covers_lexeme_ids": [
+                  "cy-cywir",
+                  "cy-anghywir"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l20-s013",
-            "text": "“Nid y llyfr sy'n canu gyda'r gwynt.” Mae Nia'n dewis y llyfr coch.",
+            "text": "Mae Sam yn rhoi'r llyfr coch yn ôl ac yn cael y llyfr sydd â llun draig.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s014",
-            "text": "Mae ei dudalennau'n symud yn y gwynt, ond does dim sain.",
+            "text": "Mae'r llun yn dangos draig ddu wrth fachgen sy'n cysgu. Mae coron a chleddyf yno hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s015",
-            "text": "“Mae hwn yn llyfr sy'n dawnsio,” meddai Dafi, “ond nid llyfr sy'n canu.”",
+            "text": "“Mae hwn yn arbennig,” mae Dafi'n ateb. “Mae draig yn y llyfr.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s016",
+            "text": "Mae Sam yn agor y llyfr yn y gwynt. Mae'r papur yn symud, ond dydy'r llyfr ddim yn canu.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s017",
+            "text": "“Anghywir eto,” mae Nia'n ateb. “Llun sy'n dangos draig ydy hwn; nid llyfr sy'n canu.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s018",
+            "text": "Mae dau ateb i'r pos yn anghywir. Yna mae'r sain fach yn dechrau eto.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l20-s03",
-        "title": "Y llyfr sy’n canu",
+        "title": "Wrth y ffenestr",
         "segments": [
           {
-            "id": "cy-draig-01-l20-s016",
-            "text": "Mae Mali'n edrych ar y llyfr gwyrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s017",
-            "text": "Mae e'n llyfr sydd â chloriau trwchus.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s018",
-            "text": "Mae twll bach yn un clawr.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l20-s019",
-            "text": "Pan mae Mali'n dal y twll wrth y ffenestr, mae'r gwynt yn mynd drwyddo.",
+            "text": "Mae Mali'n edrych ar y llyfr sydd wrth y ffenestr. “Ydy hwn yn canu?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s020",
-            "text": "Hŵŵ, hŵŵ.",
+            "text": "Mae hi'n cau'r ffenestr. Mae'r gwynt yn gorffen, ac mae'r sain yn gorffen hefyd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s021",
-            "text": "Mae pawb yn clywed y sain.",
+            "text": "Mae hi'n agor y ffenestr. Mae'r gwynt yn dod yn ôl, ac mae pawb yn clywed y sain.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s022",
-            "text": "“Dyma'r llyfr sy'n canu!” meddai Dafi.",
+            "text": "Mae Mali'n rhoi'r llyfr wrth y drws. Ond mae'r sain yn aros wrth y ffenestr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s023",
-            "text": "Mae Iwan yn gwybod y sain.",
+            "text": "“Mae hwn yn anghywir hefyd,” mae hi'n ateb. “Y ffenestr sy'n rhoi'r gwynt.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s024",
-            "text": "“Mae hwn yn debyg i chwiban,” meddai.",
+            "text": "Nawr mae Mali'n gwybod: mae rhywbeth arall wrth y ffenestr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s025",
-            "text": "Mae'r twll sy'n gwneud y sain yn fwriadol.",
+            "text": "Mae Pero'n chwilio dan y bwrdd, a Dafi'n chwilio yn y bocs.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s026",
-            "text": "Mae marc bach o gwmpas y twll—yr un seren sydd ar y map.",
+            "text": "Ond mae Nia'n edrych y tu ôl i'r llyfrau mawr. Yno mae'r hen lyfr du.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l20-s027",
+            "text": "Mae pedwar drws bach i'r gwynt yn yr hen lyfr: un, dau, tri, pedwar.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l20-wind-book",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l20-wind-book.svg",
+                "alt": "A cutaway of the old book shows wind entering four small round cover openings and leaving as four distinct sound waves.",
+                "covers_lexeme_ids": [
+                  "cy-canu",
+                  "cy-sain"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l20-s028",
+            "text": "Mae'r gwynt yn mynd i mewn ac allan yn y pedwar drws. “Llyfr arbennig,” mae Iwan yn ateb.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l20-s04",
-        "title": "Yr ateb",
+        "title": "Pedair sain ac un enw",
         "segments": [
           {
-            "id": "cy-draig-01-l20-s027",
-            "text": "Mae Nia'n agor y llyfr sy'n canu.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s028",
-            "text": "Mae llawer o dudalennau'n wag.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l20-s029",
-            "text": "Ond yng nghanol y llyfr mae llun o'r hen lyfrgell.",
+            "text": "Mae Mali'n dal yr hen lyfr du wrth y ffenestr. Mae'r gwynt yn mynd i mewn.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s030",
-            "text": "Mae seren wrth y wal.",
+            "text": "Mae'r llyfr yn canu. Un: hŵ. Dau: î.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s031",
-            "text": "Mae'r llun sy'n dangos y seren yn edrych fel map Iwan.",
+            "text": "Tri: hŵ. Pedwar: î.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s032",
-            "text": "Mae nodyn o dan y llun: MAE'R DRWS SYDD HEB DDOLEN Y TU ÔL I'R STORI.",
+            "text": "Mae pawb yn clywed pedair sain. Mae'r pedair sain yr un fath bob tro.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s033",
-            "text": "“Pos arall,” meddai Sam.",
+            "text": "“Y llyfr sy'n canu!” mae Sam yn ateb. “Mae'r ateb yn gywir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s034",
-            "text": "Mae Dafi'n gwrando ar y llyfr unwaith eto.",
+            "text": "Mae Dafi'n clywed y sain eto. Mae e'n edrych ar lun y bachgen sy'n cysgu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s035",
-            "text": "Nawr mae'r sain yn glir.",
-            "inference_aids": []
+            "text": "Mae ei lygaid e'n agor yn sydyn. Mae e'n gwybod nawr. “Artur!” mae'r ddraig yn ateb.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l20-scene-artur",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l20-scene-artur.svg",
+                "alt": "Wind sings through four openings in the old black book as Dafi suddenly remembers; Mali writes ARTUR beside the damaged A—T—R, while an inset shows the sleeping dark-haired boy in his blue tunic.",
+                "covers_lexeme_ids": [
+                  "cy-canu",
+                  "cy-sain",
+                  "cy-clywed",
+                  "cy-gwybod",
+                  "cy-artur"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l20-s036",
-            "text": "Nid cân mewn geiriau ydy hi, ond cân y gwynt.",
+            "text": "Mae'r hen bapur yn dangos A—T—R. Mae Mali'n ysgrifennu'r enw llawn ar bapur newydd: A-R-T-U-R.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s037",
-            "text": "Y llyfr anghywir oedd y llyfr â'r gloch.",
+            "text": "“Artur ydy enw'r bachgen,” mae Dafi'n ateb. “Artur ydy'r brenin sy'n cysgu.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s038",
-            "text": "Y llyfr cywir ydy'r llyfr sydd â'r twll.",
+            "text": "Mae Iwan yn edrych ar y map, yr allwedd a'r bachgen. “Nawr rydyn ni'n gwybod pam mae'r llyfr yn canu.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l20-s05",
-        "title": "Pethau sy’n gwneud sain",
+        "title": "Y prawf olaf",
         "segments": [
           {
             "id": "cy-draig-01-l20-s039",
-            "text": "Mae Dafi eisiau gwneud yn siŵr bod eu hateb yn gywir.",
+            "text": "Mae Mali'n cau'r ffenestr ac yn dal y llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s040",
-            "text": "Mae'n casglu pethau eraill sy'n gwneud sain: y gloch sy'n canu pan mae rhywun yn ei symud, y drws sy'n sgrechian pan mae'n agor, a'r ffenestr sy'n curo pan mae'r gwynt yn gryf.",
+            "text": "Does dim gwynt. Dydy'r llyfr ddim yn canu, a does dim sain.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s041",
-            "text": "Mae Mali'n disgrifio pob un.",
+            "text": "Gyda ffenestr ychydig yn agored, mae'r llyfr yn canu'n dawel.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s042",
-            "text": "Dyma gloch sy'n gwneud sain oherwydd llaw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s043",
-            "text": "Dyma ddrws sy'n gwneud sain oherwydd ei hen bren.",
+            "text": "Gyda'r ffenestr yn agored, mae llawer o wynt yn dod, ac mae'r sain yn fawr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s044",
-            "text": "Dyma ffenestr sy'n gwneud sain oherwydd y gwynt.",
+            "text": "“Cywir,” mae Mali'n ateb. “Mae'r ateb yn gywir. Y gwynt sy'n dechrau, a'r pedwar drws sy'n gwneud y pedair sain.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s045",
-            "text": "Ond dyma lyfr sydd â thwll arbennig; mae e'n gwneud un nodyn clir pan mae'r gwynt yn mynd drwyddo.",
+            "text": "Mae Dafi'n rhoi'r llyfr coch ar y silff. “Llyfr sy'n goch, ond llyfr anghywir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s046",
-            "text": "Mae Sam yn rhoi'r tri llyfr yn ôl ar y bwrdd.",
+            "text": "Mae e'n rhoi'r ail lyfr ar y silff. “Llyfr sydd â llun draig, ond llyfr anghywir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s047",
-            "text": "Pa un sydd â chloch?",
+            "text": "Mae e'n rhoi'r trydydd llyfr ar y silff. “Llyfr sydd wrth y ffenestr, ond llyfr anghywir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s048",
-            "text": "Y llyfr glas.",
+            "text": "Mae e'n cadw'r hen lyfr du ar y bwrdd. “Llyfr sy'n canu: y llyfr cywir.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s049",
-            "text": "Pa un sy'n symud ei dudalennau?",
+            "text": "Mae'r ffrindiau'n gorffen y pos ac yn rhoi'r llyfr wrth y map a'r allwedd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s050",
-            "text": "Y llyfr coch.",
+            "text": "Mae un pos yn gorffen yn y llyfrgell, ond mae un enw'n dechrau cynllun newydd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l20-s051",
-            "text": "Pa un sy'n canu drwy dwll?",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s052",
-            "text": "Y llyfr gwyrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s053",
-            "text": "Mae Dafi'n cau ei lygaid tra bod Mali'n profi pob llyfr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s054",
-            "text": "Mae'n adnabod y llyfr cywir o'r sain yn unig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s055",
-            "text": "Yna mae Nia'n cau'r ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s056",
-            "text": "Heb wynt, does dim cân.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s057",
-            "text": "Mae hi'n ei hagor, ac mae'r nodyn yn dychwelyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s058",
-            "text": "Mae'r prawf yn cadarnhau'r cliw: nid unrhyw lyfr sy'n gwneud sain, ond y llyfr sy'n canu pan mae'r gwynt yn chwythu.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l20-s06",
-        "title": "Darllen eto",
-        "segments": [
-          {
-            "id": "cy-draig-01-l20-s059",
-            "text": "Mae Mali'n copïo'r cliw o'r map ac yn rhoi llinell o dan y gair sy'n.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s060",
-            "text": "Mae hi'n gofyn am ddisgrifiadau newydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s061",
-            "text": "Pero ydy'r ci sy'n aros wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s062",
-            "text": "Iwan ydy'r dyn sy'n cofio'r harbwr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s063",
-            "text": "Nia ydy'r person sy'n cadw'r llyfrau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s064",
-            "text": "Sam ydy'r dyn sydd â'r caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s065",
-            "text": "Dafi ydy'r bachgen sy'n clywed y sain gyntaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s066",
-            "text": "Y llyfr gwyrdd ydy'r llyfr sydd â thwll ac sy'n canu yn y gwynt.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s067",
-            "text": "Mae pob disgrifiad yn dewis un person neu un peth o blith llawer.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s068",
-            "text": "Mae'r patrwm yn troi'n offeryn ar gyfer datrys y pos, nid rhestr o ffurfiau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s069",
-            "text": "Pan mae Mali'n dweud “y llyfr gwyrdd”, mae'r lliw yn ddigon.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s070",
-            "text": "Pan mae hi'n dweud “y llyfr sy'n canu”, mae'r weithred yn ddigon.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s071",
-            "text": "Mae'r ddau yn arwain at yr un llyfr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s072",
-            "text": "Mae Sam yn cynnig “y llyfr sydd ar y chwith”, ond mae Mali'n ei symud.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s073",
-            "text": "Mae'r lle'n newid; dydy'r nodwedd ddim.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l20-s074",
-            "text": "Mae'r llyfr yn dal yn un sy'n canu.",
+            "text": "Mae'r gwynt yn canu eto, ac mae Dafi'n ateb yn dawel, “Artur.”",
             "inference_aids": []
           }
         ]
@@ -474,7 +441,8 @@
       "part_of_speech": "relative particle",
       "current_sense": "who/which is; who/which does",
       "forms_seen": [
-        "sy"
+        "sy",
+        "sy'n"
       ],
       "first_introduced_lesson": "cy-draig-01-l20",
       "new": true
@@ -510,7 +478,8 @@
       "part_of_speech": "noun",
       "current_sense": "sound",
       "forms_seen": [
-        "sain"
+        "sain",
+        "seiniau"
       ],
       "first_introduced_lesson": "cy-draig-01-l20",
       "new": true
@@ -558,7 +527,8 @@
       "part_of_speech": "adjective",
       "current_sense": "correct",
       "forms_seen": [
-        "cywir"
+        "cywir",
+        "gywir"
       ],
       "first_introduced_lesson": "cy-draig-01-l20",
       "new": true
@@ -586,114 +556,148 @@
       ],
       "first_introduced_lesson": "cy-draig-01-l20",
       "new": true
+    },
+    {
+      "lexeme_id": "cy-artur",
+      "display_form": "Artur",
+      "citation_form": "Artur",
+      "part_of_speech": "proper noun",
+      "current_sense": "Artur; the sleeping boy",
+      "forms_seen": [
+        "Artur"
+      ],
+      "first_introduced_lesson": "cy-draig-01-l20",
+      "status": "receptive_illustrated",
+      "new": false
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use sy'n before a verb or description and sydd before a place/other complement to identify the right person or thing."
+    "target_language": "Mae'r llyfr yn canu: y llyfr sy'n canu. Mae'r llyfr wrth y ffenestr: y llyfr sydd wrth y ffenestr. Mae'r llyfr yn goch: y llyfr sy'n goch.",
+    "bridge_language": "Both forms introduce a subject relative. Use sy'n before a verbal noun or yn + description; use sydd before a place phrase or another complement without yn."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l20-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Sy'n a sydd",
+      "directions": "Cwblhewch y patrwm o'r stori.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Dyma'r llyfr sy'n canu. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
+          "prompt": "Mae'r llyfr yn canu. — y llyfr ___ canu",
+          "type": "cloze",
           "accepted_answers": [
             "sy'n"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Mae'r llyfr wrth y ffenestr. — y llyfr ___ wrth y ffenestr",
+          "type": "cloze",
           "accepted_answers": [
-            "Mae Dafi'n gweld llyfr sydd wrth y ffenestr."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "sydd"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Mae'r llyfr yn goch. Newidiwch i ddechrau gyda “y llyfr”.",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "y llyfr sy'n goch",
+            "Y llyfr sy'n goch."
+          ],
+          "rubric": "Use sy'n before the yn + adjective description; punctuation and capitalisation do not matter."
+        },
+        {
+          "id": "pa4",
+          "prompt": "Dewiswch sy'n neu sydd: y bachgen ___ yn yr ogof",
+          "type": "cloze",
+          "accepted_answers": [
+            "sydd"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l20-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Tystiolaeth y pos",
+      "directions": "Cwblhewch o ystyr y stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: sy'n.",
+          "prompt": "Mae Pero'n rhoi ei glust at y ffenestr. Mae e'n ___ sain.",
           "type": "cloze",
           "accepted_answers": [
-            "sy'n"
+            "clywed"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: cywir.",
+          "prompt": "Does dim sain o'r llyfr coch. Mae'r ateb yn ___.",
           "type": "cloze",
           "accepted_answers": [
-            "cywir"
+            "anghywir"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: pos.",
+          "prompt": "Mae'r gwynt yn dod, ac mae'r hen lyfr du yn canu. Mae'r ateb yn ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "gywir",
+            "cywir"
+          ],
+          "rubric": "Prefer mutated gywir after yn; accept the citation form cywir while the mutation awaits fluent review."
+        },
+        {
+          "id": "pb4",
+          "prompt": "Pedwar llyfr, ond un ateb cywir. Mae hwn yn ___.",
           "type": "cloze",
           "accepted_answers": [
             "pos"
           ]
-        },
-        {
-          "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l20-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Y llyfr cywir",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy sy'n helpu yn y stori hon?",
+          "prompt": "Ydy'r llyfr coch yn canu pan mae Mali'n ei ddal wrth y ffenestr?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "Nac ydy.",
+            "Nac ydy, does dim sain.",
+            "Dydy e ddim yn canu."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Ble mae Nia'n cael yr hen lyfr du?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Nawr mae dau sy'n canu: y llyfr a Dafi."
-          ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+            "Y tu ôl i'r llyfrau mawr.",
+            "Mae hi'n cael yr hen lyfr du y tu ôl i'r llyfrau mawr."
+          ]
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Beth sy'n dechrau'r gân yn yr hen lyfr?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Y gwynt.",
+            "Y gwynt sy'n dechrau'r gân.",
+            "Mae'r gwynt yn dechrau'r gân."
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dywedwch sut mae'r ffrindiau'n cael y llyfr cywir. Defnyddiwch dair enghraifft gyda sy'n neu sydd.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give a short, understandable retelling with three subject-relative descriptions. Mention at least one wrong book and the old book that sings; do not require the receptive name Artur."
         }
       ]
     }
@@ -705,7 +709,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -724,10 +728,16 @@
     "source": "cy-draig-01-l20"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l20-pattern"
+      "cy-l20-sain-clywed",
+      "cy-l20-pattern",
+      "cy-l20-arbennig-pos",
+      "cy-l20-scene-four-books",
+      "cy-l20-cywir-anghywir",
+      "cy-l20-wind-book",
+      "cy-l20-scene-artur"
     ],
     "audio": []
   }

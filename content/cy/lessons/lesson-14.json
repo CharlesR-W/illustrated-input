@@ -3,37 +3,39 @@
   "id": "cy-draig-01-l14",
   "course_id": "cy-draig-01",
   "order": 14,
-  "title": "Ddoe, agorodd Mali'r drws",
+  "title": "Ddoe, agorodd y drws",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G14 curriculum row, the cumulative L01–L13 course contract, and prior L14 review findings.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked the short-past forms, idiom, mutations, rhythm, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G14",
       "label": "Simple past, regular inflected third-person singular",
-      "description": "Use regular -odd past forms to recount a sequence of completed actions.",
+      "description": "Use regular third-person singular short-past forms to reconstruct completed events from yesterday.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G04",
+      "G05",
+      "G07",
+      "G08",
+      "G10",
+      "G11",
+      "G12",
       "G13"
     ],
-    "incidental_grammar": [
-      {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
-      }
-    ],
+    "incidental_grammar": [],
     "communicative_goals": [
-      "tell what happened yesterday",
-      "order completed events",
-      "ask and answer about a past event"
+      "say what one person or thing did yesterday",
+      "ask and answer about a completed event",
+      "reconstruct four events in order"
     ],
     "new_lexeme_ids": [
       "cy-ddoe",
@@ -46,339 +48,399 @@
       "cy-tan",
       "cy-mwg",
       "cy-sydyn"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l14-s01",
-        "title": "Y sefyllfa",
+        "title": "Pedwar papur Nia",
         "segments": [
           {
             "id": "cy-draig-01-l14-s001",
-            "text": "Heddiw mae Nia'n edrych ar y drws du.",
-            "inference_aids": []
+            "text": "Heddiw mae Nia, Mali, Sam, Iwan, Dafi a Pero yn y llyfrgell.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-scene-reconstruction",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l14-scene-reconstruction.svg",
+                "alt": "Nia arranges four event pictures around the warm library table while Mali, Sam, Iwan, Dafi, and Pero study the repaired book and its closed red painted door.",
+                "covers_lexeme_ids": [
+                  "cy-ddoe",
+                  "cy-agorodd",
+                  "cy-edrychodd",
+                  "cy-tan",
+                  "cy-mwg"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l14-s002",
-            "text": "Mae marc du wrth y drws.",
+            "text": "Mae'r hen lyfr ar y bwrdd, ac mae'r allwedd wrth y llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s003",
-            "text": "“Beth ddigwyddodd ddoe?” gofynnodd Nia.",
+            "text": "Mae'r drws bach coch yn y llyfr, ond dydy'r drws ddim yn agor.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s004",
-            "text": "Edrychodd Mali ar y marc.",
-            "inference_aids": []
+            "text": "Mae gan Nia bedwar papur, ac mae llun ar bob papur.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-ddoe-heddiw",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l14-ddoe-heddiw.svg",
+                "alt": "A timeline contrasts yesterday, when the painted door was open amid smoke, with today, when the old book rests on the table.",
+                "covers_lexeme_ids": [
+                  "cy-ddoe",
+                  "cy-agorodd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l14-s005",
-            "text": "Edrychodd Sam ar y ffenestr.",
+            "text": "Ar un papur mae Mali gyda'r llyfr; ar un mae Dafi gyda thân bach.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s006",
-            "text": "Edrychodd Dafi ar ei draed.",
+            "text": "Ar un papur mae mwg du dros y llyfr; ar un mae'r drws yn agor.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s007",
-            "text": "Roedd mwg yn y llyfrgell ddoe.",
+            "text": "Mae Nia'n rhoi'r pedwar papur o flaen y ffrindiau.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s008",
-            "text": "Roedd tân bach a sydyn hefyd.",
+            "text": "Mae Sam yn edrych ar bapur Mali, ac mae Iwan yn edrych ar bapur y mwg.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s009",
-            "text": "Mae pawb yn cofio'r bore.",
+            "text": "Mae Dafi'n edrych ar bapur y drws, ar “A—t—r”, ac ycw.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s010",
+            "text": "“Ddoe?” gofynnodd Nia.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-events",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l14-events.svg",
+                "alt": "Four numbered panels order yesterday's events: Mali opened the book, Dafi looked, fire and smoke appeared, and the painted door opened.",
+                "covers_lexeme_ids": [
+                  "cy-ddoe",
+                  "cy-agorodd",
+                  "cy-edrychodd",
+                  "cy-tan",
+                  "cy-mwg",
+                  "cy-sydyn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l14-s011",
+            "text": "“Ie, ddoe,” atebodd Sam.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s012",
+            "text": "Gofynnodd Dafi, “Agorodd y drws ddoe?”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l14-s02",
-        "title": "Y digwyddiad",
+        "title": "Tân bach",
         "segments": [
           {
-            "id": "cy-draig-01-l14-s010",
-            "text": "Ddoe, agorodd Mali'r drws.",
-            "inference_aids": [
-              {
-                "type": "image",
-                "ref": "cy-l14-gorffennol",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l14-gorffennol.svg",
-                "alt": "Ddoe: agorodd, edrychodd, helpodd."
-              }
-            ]
-          },
-          {
-            "id": "cy-draig-01-l14-s011",
-            "text": "Agorodd hi'r ffenestr hefyd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s012",
-            "text": "Helpodd Sam gyda'r bocsys.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l14-s013",
-            "text": "Helpodd Nia gyda'r llyfrau.",
+            "text": "Ddoe agorodd Mali'r hen lyfr ar y bwrdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s014",
-            "text": "Edrychodd Pero dan y bwrdd.",
+            "text": "Edrychodd Mali ar y drws bach coch, ac edrychodd Sam ar y goron.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s015",
-            "text": "Edrychodd Dafi ar bapur coch.",
+            "text": "Edrychodd Dafi ar y bachgen, ac edrychodd y bachgen ar Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s016",
-            "text": "Gofynnodd Mali, “Dafi, beth wyt ti'n wneud?”",
-            "inference_aids": []
+            "text": "Gofynnodd Dafi, “Pwy wyt ti? A—t—r?”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-fire-smoke",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l14-fire-smoke.svg",
+                "alt": "A small orange fire and dark grey smoke are contrasted on paper, with a burst symbol marking how suddenly they appeared.",
+                "covers_lexeme_ids": [
+                  "cy-tan",
+                  "cy-mwg",
+                  "cy-sydyn"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l14-s017",
-            "text": "Atebodd Dafi, “Dw i'n helpu.”",
+            "text": "Atebodd y bachgen? Nac atebodd: caeodd y bachgen ei lygaid e.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s018",
-            "text": "Yna dechreuodd y mwg.",
+            "text": "Edrychodd Dafi ar y goron eto. Tân bach ar y papur—tân sydyn!",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s019",
+            "text": "Mwg du dros y papur—mwg sydyn! Dim bachgen, dim coron, dim drws.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s020",
+            "text": "Helpodd Sam gyda dŵr, a helpodd Nia gyda'r hen lyfr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-scene-hand-at-door",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l14-scene-hand-at-door.svg",
+                "alt": "Grey smoke crosses the open book as its painted red door swings open. A pale hand reaches through and points toward the hill outside the library window while Mali, Dafi, and Pero stare.",
+                "covers_lexeme_ids": [
+                  "cy-agorodd",
+                  "cy-caeodd",
+                  "cy-edrychodd",
+                  "cy-helpodd",
+                  "cy-gofynnodd",
+                  "cy-atebodd",
+                  "cy-tan",
+                  "cy-mwg",
+                  "cy-sydyn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l14-s021",
+            "text": "Helpodd Mali gyda'r papur, ond dydy Mali ddim yn cau'r llyfr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s022",
+            "text": "“Caeodd Mali'r llyfr?” gofynnodd Nia.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s023",
+            "text": "“Nac atebodd—nac caeodd,” atebodd Sam. “Edrychodd Mali ar y mwg.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s024",
+            "text": "Edrychodd Iwan ar yr allwedd, ond dydy'r allwedd ddim yn helpu.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l14-s03",
-        "title": "Y newid",
+        "title": "Agorodd y drws",
         "segments": [
           {
-            "id": "cy-draig-01-l14-s019",
-            "text": "Edrychodd Mali ar Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s020",
-            "text": "Edrychodd Dafi ar y papur.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s021",
-            "text": "Llosgodd y papur am eiliad.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s022",
-            "text": "Helpodd Sam yn sydyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s023",
-            "text": "Helpodd Nia yn sydyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s024",
-            "text": "Caeodd Mali'r bocs.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l14-s025",
-            "text": "Agorodd Sam y drws mawr.",
+            "text": "Ddoe, gyda mwg dros y papur, agorodd y drws bach coch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s026",
-            "text": "Agorodd Nia'r ffenestr fawr.",
-            "inference_aids": []
+            "text": "Agorodd y drws yn sydyn. Edrychodd Mali; edrychodd Sam; edrychodd Pero.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-gofyn-ateb",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l14-gofyn-ateb.svg",
+                "alt": "Dafi asks who and where; an arrow runs from the open red door toward the hill as the door answers there.",
+                "covers_lexeme_ids": [
+                  "cy-gofynnodd",
+                  "cy-atebodd"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l14-s027",
-            "text": "Gorffennodd y tân bach.",
+            "text": "Edrychodd Dafi yn y drws. Dydy'r bachgen ddim yn y drws.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s028",
+            "text": "Gofynnodd Dafi, “Pwy wyt ti? Pwy ydy'r bachgen?”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s029",
+            "text": "Atebodd y drws: dim enw, dim “A—t—r”. Atebodd y drws, “Ycw.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s030",
+            "text": "“Ycw?” gofynnodd Dafi. “Ycw,” atebodd y drws.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l14-past-forms",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l14-past-forms.svg",
+                "alt": "A Welsh verb chart maps familiar verb-nouns to the new regular third-person past forms used in the reconstruction.",
+                "covers_lexeme_ids": [
+                  "cy-agorodd",
+                  "cy-caeodd",
+                  "cy-edrychodd",
+                  "cy-helpodd",
+                  "cy-gofynnodd",
+                  "cy-atebodd"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l14-s031",
+            "text": "Edrychodd Dafi ycw. Edrychodd Mali ycw. Edrychodd Iwan ycw hefyd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s032",
+            "text": "Caeodd y drws yn sydyn. Nawr: dim drws agored, dim tân, ychydig o fwg.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s033",
+            "text": "Agorodd Mali'r llyfr eto, ond dydy'r drws ddim yn agor.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s034",
+            "text": "Agorodd Sam y llyfr hefyd, ond dydy'r drws ddim yn ateb.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s035",
+            "text": "Helpodd Iwan gyda'r allwedd. Dydy'r allwedd ddim yn agor y drws.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l14-s036",
+            "text": "Caeodd Mali'r hen lyfr, ac edrychodd y ffrindiau ar Dafi.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l14-s04",
-        "title": "Y diwedd",
-        "segments": [
-          {
-            "id": "cy-draig-01-l14-s028",
-            "text": "Ar ôl y tân, glanhaodd pawb yr ystafell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s029",
-            "text": "Trwsiodd Mali'r bocs.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s030",
-            "text": "Helpodd Dafi gyda'r papur.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s031",
-            "text": "Gofynnodd Nia, “Oedd y tân yn fawr?”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s032",
-            "text": "Atebodd Mali, “Nac oedd, roedd e'n fach.”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s033",
-            "text": "Gofynnodd Nia, “Oedd y mwg yn sydyn?”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s034",
-            "text": "Atebodd Sam, “Oedd, yn sydyn iawn.”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s035",
-            "text": "Caeodd Nia'r drws ar ddiwedd y dydd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s036",
-            "text": "Ddoe roedd problem; heddiw mae cynllun.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l14-s05",
-        "title": "Darllen eto",
+        "title": "Un, dau, tri, pedwar",
         "segments": [
           {
             "id": "cy-draig-01-l14-s037",
-            "text": "Ddoe edrychodd Mali ar y papur coch, gofynnodd gwestiwn i Dafi, ac agorodd y drws mawr yn sydyn.",
+            "text": "Heddiw mae Nia'n rhoi'r pedwar papur wrth yr hen lyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s038",
-            "text": "Agorodd Sam y ffenestr, helpodd Nia gyda'r bocsys, a chaeodd Mali'r bocs wrth y bwrdd.",
+            "text": "Mae hi'n rhoi papur y llyfr o flaen papur y tân.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s039",
-            "text": "Dechreuodd y mwg; edrychodd Pero dan y bwrdd, ond edrychodd Dafi ar ei draed a'r papur.",
+            "text": "Mae hi'n rhoi papur y mwg wrth bapur y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s040",
-            "text": "Gofynnodd Nia beth ddigwyddodd, ac atebodd Mali, “Edrychodd Dafi ar y papur; yna dechreuodd y mwg.”",
+            "text": "Nia: “Un: agorodd Mali'r llyfr. Dau: edrychodd Dafi ar y drws.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s041",
-            "text": "Helpodd Sam gyda dŵr, helpodd Nia gyda'r ffenestr, ac agorodd Mali'r drws i'r stryd.",
+            "text": "Nia: “Tri: tân bach a mwg du. Pedwar: agorodd y drws.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s042",
-            "text": "Llosgodd y papur am eiliad yn unig, ac yna gorffennodd y tân bach yn sydyn.",
+            "text": "“Caeodd y drws?” gofynnodd Nia. “Ie, caeodd y drws,” atebodd Mali.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s043",
-            "text": "Ar ôl y tân glanhaodd pawb yr ystafell, trwsiodd Mali'r bocs, a chaeodd Nia'r drws.",
+            "text": "“Helpodd Sam?” gofynnodd Nia. “Ie, helpodd Sam a helpodd Mali,” atebodd Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s044",
-            "text": "Gofynnodd Dafi, “Wnes i broblem fawr?” ac atebodd Mali, “Naddo; dechreuodd mwg, ond gorffennodd y tân.”",
+            "text": "Mae Nia'n edrych ar bob papur. Nawr mae'r pedwar papur yn dda.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s045",
-            "text": "Edrychodd Nia ar y marc du wrth y drws ac edrychodd Sam ar y papur coch yn y bocs.",
+            "text": "Mae Dafi'n edrych ar y ffenestr. Mae e'n edrych ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s046",
-            "text": "Dechreuodd y bore gyda gwaith arferol, ond gorffennodd y bore gyda drws agored a ffenestr agored.",
+            "text": "Mae Pero'n mynd i'r drws mawr, ond mae Mali'n cau drws y llyfrgell.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s047",
-            "text": "Helpodd Dafi gyda'r papur glân, ond llosgodd y papur coch am eiliad wrth y bocs.",
+            "text": "Mae'r allwedd gyda Iwan; mae'r hen lyfr gyda Mali; mae'r pedwar papur gyda Nia.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s048",
-            "text": "Ddoe agorodd Mali'r drws; heddiw ysgrifennodd hi gynllun i gadw papur draw oddi wrth Dafi.",
+            "text": "Nawr mae Dafi eisiau mynd ycw, ond mae Mali'n edrych ar y tân a'r mwg.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s049",
-            "text": "Gofynnodd Nia un cwestiwn arall; atebodd Mali, atebodd Sam, ac yn olaf atebodd Dafi.",
+            "text": "Mae Mali eisiau helpu Dafi, ond mae hi'n rhoi'r papur yn ei bag hi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s050",
-            "text": "Ar ddiwedd y dydd caeodd Nia'r llyfrgell, ond parhaodd pawb i feddwl am y tân bach.",
+            "text": "Mae Sam yn rhoi dŵr wrth y llyfr, ac mae Nia'n cau'r llyfr.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s051",
-            "text": "Agorodd Nia'r bocs eto, edrychodd ar y papur du, a gofynnodd gwestiwn arall i Dafi.",
+            "text": "Mae Iwan yn rhoi'r allwedd yn ei fag e ac yn edrych ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s052",
-            "text": "Atebodd Dafi, “Dw i eisiau helpu,” ond gofynnodd Mali, “Wyt ti'n gweld y rheol newydd?”",
+            "text": "Mae Pero wrth ddrws y llyfrgell. Mae Dafi wrth Pero, ac mae'r ddau yn edrych ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l14-s053",
-            "text": "Ysgrifennodd Mali dri gair mawr ar bapur glân, ac edrychodd Dafi ar bob gair yn ofalus.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s054",
-            "text": "Helpodd Sam i roi'r arwydd wrth y bocs, a helpodd Nia i symud y papur oddi wrth Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s055",
-            "text": "Ar ddiwedd y stori atebodd Dafi bob cwestiwn, caeodd y bocs, ac edrychodd ar y dŵr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s056",
-            "text": "Edrychodd Mali ar y drws a'r ffenestr, ac ysgrifennodd hi bob ateb ar y papur mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s057",
-            "text": "Gofynnodd Sam am y dŵr, agorodd Nia'r bocs bach, a helpodd Pero drwy eistedd wrth y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s058",
-            "text": "Caeodd Mali'r ffenestr fach, agorodd Sam y ffenestr fawr, ac edrychodd Nia ar y mwg olaf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l14-s059",
-            "text": "Gorffennodd y dydd gyda bocs da, ystafell lân, a chynllun clir wrth y drws ar gyfer bore newydd.",
+            "text": "Gofynnodd Dafi, “Pwy?” Ond atebodd y drws, “Ycw.”",
             "inference_aids": []
           }
         ]
@@ -403,8 +465,9 @@
       "display_form": "agor — agorodd",
       "citation_form": "agor — agorodd",
       "part_of_speech": "verb",
-      "current_sense": "opened",
+      "current_sense": "open — opened",
       "forms_seen": [
+        "agor",
         "agorodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
@@ -415,8 +478,9 @@
       "display_form": "cau — caeodd",
       "citation_form": "cau — caeodd",
       "part_of_speech": "verb",
-      "current_sense": "closed",
+      "current_sense": "close — closed",
       "forms_seen": [
+        "cau",
         "caeodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
@@ -427,8 +491,9 @@
       "display_form": "edrych — edrychodd",
       "citation_form": "edrych — edrychodd",
       "part_of_speech": "verb",
-      "current_sense": "looked",
+      "current_sense": "look — looked",
       "forms_seen": [
+        "edrych",
         "edrychodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
@@ -439,8 +504,9 @@
       "display_form": "helpu — helpodd",
       "citation_form": "helpu — helpodd",
       "part_of_speech": "verb",
-      "current_sense": "helped",
+      "current_sense": "help — helped",
       "forms_seen": [
+        "helpu",
         "helpodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
@@ -451,8 +517,9 @@
       "display_form": "gofyn — gofynnodd",
       "citation_form": "gofyn — gofynnodd",
       "part_of_speech": "verb",
-      "current_sense": "asked",
+      "current_sense": "ask — asked",
       "forms_seen": [
+        "gofyn",
         "gofynnodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
@@ -463,8 +530,9 @@
       "display_form": "ateb — atebodd",
       "citation_form": "ateb — atebodd",
       "part_of_speech": "verb",
-      "current_sense": "answered",
+      "current_sense": "answer — answered",
       "forms_seen": [
+        "ateb",
         "atebodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
@@ -496,62 +564,70 @@
     },
     {
       "lexeme_id": "cy-sydyn",
-      "display_form": "sydyn",
+      "display_form": "sydyn — yn sydyn",
       "citation_form": "sydyn",
       "part_of_speech": "adjective",
-      "current_sense": "sudden",
+      "current_sense": "sudden — suddenly",
       "forms_seen": [
-        "sydyn"
+        "sydyn",
+        "yn sydyn"
       ],
       "first_introduced_lesson": "cy-draig-01-l14",
       "new": true
     }
   ],
   "grammar_observation": {
-    "target_language": "Darllenwch y paragraffau eto. Chwiliwch am y patrwm newydd, cymharwch yr enghreifftiau, a dywedwch y ffurfiau yn uchel.",
-    "bridge_language": "Use regular -odd past forms to recount a sequence of completed actions."
+    "target_language": "Heddiw: mae Mali'n agor, cau, edrych a helpu. Ddoe: agorodd Mali, caeodd Mali, edrychodd Mali a helpodd Mali. Gofyn → gofynnodd; ateb → atebodd.",
+    "bridge_language": "For one completed past event with a third-person subject, these regular short forms end in -odd; use the taught stem shown in each pair, for example agor → agorodd and gofyn → gofynnodd."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l14-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Ddoe",
+      "directions": "Newidiwch y ferf: heddiw → ddoe.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Ddoe, agorodd Mali'r drws. — Ysgrifennwch ferf y gorffennol.",
-          "type": "bounded_response",
+          "prompt": "Heddiw mae Mali'n agor y llyfr. Ddoe ___ Mali'r llyfr.",
+          "type": "cloze",
           "accepted_answers": [
             "agorodd"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Heddiw mae Dafi'n edrych ar y drws. Ddoe ___ Dafi ar y drws.",
+          "type": "cloze",
           "accepted_answers": [
-            "Edrychodd Mali ar Dafi."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "edrychodd"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Heddiw mae Sam yn helpu. Ddoe ___ Sam.",
+          "type": "cloze",
+          "accepted_answers": [
+            "helpodd"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Heddiw mae'r drws yn cau. Ddoe ___ y drws.",
+          "type": "cloze",
+          "accepted_answers": [
+            "caeodd"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l14-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Tân a mwg",
+      "directions": "Cwblhewch gyda gair o'r stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "yesterday = ___",
+          "prompt": "Heddiw, ond nid heddiw: ___.",
           "type": "cloze",
           "accepted_answers": [
             "ddoe"
@@ -559,7 +635,7 @@
         },
         {
           "id": "pb2",
-          "prompt": "fire = ___",
+          "prompt": "Mae e'n oren ac yn boeth ar y papur: ___.",
           "type": "cloze",
           "accepted_answers": [
             "tân"
@@ -567,52 +643,63 @@
         },
         {
           "id": "pb3",
-          "prompt": "sudden = ___",
+          "prompt": "Mae e'n ddu ac uwch y papur: ___.",
           "type": "cloze",
           "accepted_answers": [
-            "sydyn"
+            "mwg"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Dydy'r drws ddim yn agor, ac yn awr mae'n agor: mae'r newid yn ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "sydyn"
+          ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l14-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Y drws",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
+          "prompt": "Pwy agorodd yr hen lyfr ddoe?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "Mali.",
+            "Mali agorodd yr hen lyfr.",
+            "Agorodd Mali'r hen lyfr."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth sy'n newid yn y stori?",
+          "prompt": "Beth edrychodd Dafi arno yn yr hen lyfr?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Ddoe roedd problem; heddiw mae cynllun."
+            "Y drws bach coch.",
+            "Edrychodd Dafi ar y drws bach coch.",
+            "Y bachgen a'r drws."
           ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+          "rubric": "Accept the red door, or the boy and the door; both are explicitly supported by the section."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Beth atebodd y drws i Ddafi?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Ycw.",
+            "Atebodd y drws, “Ycw.”"
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Adroddwch bedwar cam ddoe: agorodd, edrychodd, tân a mwg, agorodd y drws.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Retell the four pictured events in four short Welsh clauses. Use at least three regular third-person past forms; do not require new connective words."
         }
       ]
     }
@@ -624,7 +711,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -643,10 +730,16 @@
     "source": "cy-draig-01-l14"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l14-gorffennol"
+      "cy-l14-scene-reconstruction",
+      "cy-l14-ddoe-heddiw",
+      "cy-l14-events",
+      "cy-l14-fire-smoke",
+      "cy-l14-scene-hand-at-door",
+      "cy-l14-gofyn-ateb",
+      "cy-l14-past-forms"
     ],
     "audio": []
   }

@@ -3,37 +3,38 @@
   "id": "cy-draig-01-l15",
   "course_id": "cy-draig-01",
   "order": 15,
-  "title": "Es i; aeth Dafi",
+  "title": "Aeth Dafi allan",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, and content/cy/curriculum.md",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Full Arthurian-story rewrite. Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for idiom, mutation, tense forms, and register."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G15",
       "label": "Common irregular simple-past forms",
-      "description": "Use es i/aeth, des i/daeth, gwnes i/gwnaeth, and ces i/cafodd for high-frequency past events.",
+      "description": "Use es i/aeth, des i/daeth, gwnes i/gwnaeth, and ces i/cafodd for high-frequency completed past events.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G07",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
       "G14"
     ],
-    "incidental_grammar": [
-      {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
-      }
-    ],
+    "incidental_grammar": [],
     "communicative_goals": [
-      "say where someone went",
-      "say what someone did",
-      "report what someone got"
+      "say where I or another person went",
+      "say where I or another person came from",
+      "say what I or another person made or got",
+      "compare different accounts of one event"
     ],
     "new_lexeme_ids": [
       "cy-es",
@@ -46,454 +47,396 @@
       "cy-cafodd",
       "cy-adref",
       "cy-allan"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-l15-mwd",
+      "cy-l15-traed",
+      "cy-l15-llwybr"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l15-s01",
-        "title": "Ar ôl y mwg",
+        "title": "Y drws coch",
         "segments": [
           {
             "id": "cy-draig-01-l15-s001",
-            "text": "Mae arogl mwg yn y llyfrgell o hyd.",
-            "inference_aids": [
-              {
-                "type": "image",
-                "ref": "cy-l15-pattern",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l15-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 15."
-              }
-            ]
-          },
-          {
-            "id": "cy-draig-01-l15-s002",
-            "text": "Mae Nia eisiau gwybod beth ddigwyddodd.",
+            "text": "Ddoe caeodd y drws coch yn yr hen lyfr, ond edrychodd pawb ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s003",
-            "text": "Mae Mali, Sam a Dafi yn eistedd wrth y bwrdd mawr.",
-            "inference_aids": []
+            "text": "“Mae'r drws yma, ond mae'r ateb ycw,” atebodd Dafi.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l15-mynd-dod",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l15-mynd-dod.svg",
+                "alt": "Four paired panels contrast first-person and third-person movement: es i and aeth e move away, while des i and daeth e move toward the speaker.",
+                "covers_lexeme_ids": [
+                  "cy-es",
+                  "cy-aeth",
+                  "cy-des",
+                  "cy-daeth"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l15-s004",
-            "text": "Mae Pero o dan y bwrdd.",
+            "text": "Gofynnodd Nia, “Ble mae Pero?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s005",
-            "text": "Mae pawb yn edrych ar y llun o'r tân.",
+            "text": "Edrychodd Mali dan y bwrdd, wrth y bocs, a thu ôl i'r silff.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s006",
-            "text": "“Pwy aeth allan gyntaf?” mae Nia'n gofyn.",
+            "text": "Dydy Pero ddim yn yr ystafell, a dydy e ddim o flaen y drws.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s007",
-            "text": "“Es i allan,” meddai Mali.",
+            "text": "Agorodd Dafi ddrws y llyfrgell, ac edrychodd ar y stryd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s008",
-            "text": "“Aeth Pero allan gyda fi.",
-            "inference_aids": []
+            "text": "“Es i allan,” atebodd e, ac aeth y ddraig fach goch i'r stryd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l15-scene-allan",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l15-scene-allan.svg",
+                "alt": "Outside the warm library, tiny red Dafi hurries toward the distant hill with Mali following; Sam approaches from the sea-green café while Iwan stands in the library doorway with the old key.",
+                "covers_lexeme_ids": [
+                  "cy-es",
+                  "cy-aeth",
+                  "cy-daeth",
+                  "cy-allan"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l15-s009",
-            "text": "Aeth Sam i'r caffi.",
+            "text": "Aeth Dafi o'r llyfrgell, aeth e i'r stryd, ac aeth e ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s010",
-            "text": "Ond aeth Dafi i gefn y llyfrgell.” Mae Dafi'n edrych ar y llawr.",
+            "text": "Aeth Mali allan hefyd, ac aeth hi i'r stryd gyda Dafi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s011",
-            "text": "“Pam est ti i'r cefn, Dafi?” mae Mali'n gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s012",
-            "text": "“Roedd y blwch coch yno,” meddai Dafi.",
+            "text": "Agorodd Nia'r ffenestr; edrychodd hi ar Dafi a Mali yn y stryd.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l15-s02",
-        "title": "Stori Mali",
+        "title": "Dau ateb",
         "segments": [
           {
             "id": "cy-draig-01-l15-s013",
-            "text": "Mae Mali'n adrodd ei stori.",
+            "text": "Daeth Mali yn ôl gyntaf, a daeth Dafi yn ôl ar ei hôl hi.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s014",
-            "text": "“Es i allan drwy'r drws blaen.",
+            "text": "Mae Nia'n agor y llyfr eto ac yn rhoi papur mawr ar y bwrdd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s015",
-            "text": "Ces i fwced wrth y drws.",
+            "text": "Gofynnodd hi, “Ble aeth Dafi?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s016",
-            "text": "Des i'n ôl gyda'r bwced, ond doedd dim dŵr ynddo.",
+            "text": "Atebodd Mali, “Aeth Dafi allan gyntaf. Es i allan gyda Dafi.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s017",
-            "text": "Felly es i i'r caffi.",
-            "inference_aids": []
+            "text": "“Es i ycw, ddim adref. Aeth Dafi ycw hefyd.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l15-allan-adref",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l15-allan-adref.svg",
+                "alt": "One panel shows Dafi going out through the library door, labelled allan; another shows Mali going toward a small home, labelled adref.",
+                "covers_lexeme_ids": [
+                  "cy-allan",
+                  "cy-adref",
+                  "cy-es",
+                  "cy-aeth"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l15-s018",
-            "text": "Roedd Sam yn y caffi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s019",
-            "text": "Gwnaeth Sam baned, ond gwnes i ddim paned.",
+            "text": "Ces i bapur gan Nia, a gwnes i lun o'r drws a'r stryd.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s020",
-            "text": "Ces i ddŵr oer.",
+            "text": "Atebodd Dafi, “Aeth Mali allan gyntaf. Es i allan gyda Mali.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s021",
-            "text": "Daeth Sam gyda fi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s022",
-            "text": "Daeth Pero hefyd.",
+            "text": "“Aeth Mali i'r caffi, ond es i ycw. Gwnes i chwilio ycw.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s023",
-            "text": "Pan ddaethon ni'n ôl, roedd Nia wrth y drws.” Mae Nia'n nodio.",
+            "text": "Gofynnodd Nia, “Pwy aeth i'r caffi?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s024",
-            "text": "“Ie.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s025",
-            "text": "Ces i'r allwedd gan Sam.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s026",
-            "text": "Gwnes i agor y drws mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s027",
-            "text": "Aeth Mali a Sam i mewn.”",
+            "text": "“Sam,” atebodd Mali. “Ond dydy Sam ddim yma nawr.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l15-s03",
-        "title": "Stori Dafi",
+        "title": "Sam ac Iwan",
         "segments": [
           {
+            "id": "cy-draig-01-l15-s025",
+            "text": "Yn sydyn, agorodd drws y llyfrgell, a daeth Sam o'r caffi.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s027",
+            "text": "“Des i o'r caffi,” atebodd Sam. “Es i ddim adref.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l15-gwneud-cael",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l15-gwneud-cael.svg",
+                "alt": "Paired panels show Mali saying gwnes i lun and Dafi as gwnaeth hi lun, then Iwan saying ces i'r allwedd and Mali as cafodd e'r allwedd.",
+                "covers_lexeme_ids": [
+                  "cy-gwnes",
+                  "cy-gwnaeth",
+                  "cy-ces",
+                  "cy-cafodd"
+                ]
+              }
+            ]
+          },
+          {
             "id": "cy-draig-01-l15-s028",
-            "text": "Nawr mae Dafi'n adrodd ei stori.",
+            "text": "“Ces i ddŵr yn y caffi, a gwnes i gacen yn y bore.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s029",
-            "text": "“Aeth pawb allan, ond es i i'r cefn.",
+            "text": "Gofynnodd Nia, “Pwy ddaeth i'r caffi?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s030",
-            "text": "Roedd y blwch coch ar y llawr.",
+            "text": "Atebodd Sam, “Daeth Dafi i'r caffi. Daeth e at y drws.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s031",
-            "text": "Ces i'r blwch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s032",
-            "text": "Roedd papur yn y blwch, a ches i syniad.",
+            "text": "“Es i ycw, ddim i'r caffi!” atebodd Dafi, ac edrychodd ar Mali.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s033",
-            "text": "Gwnes i lun o'r tân ar y papur.",
+            "text": "Daeth Iwan o du ôl i'r silff, gyda'r hen lyfr yn ei fag e.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s034",
-            "text": "Yna clywais i Mali wrth y drws.",
+            "text": "“Es i ddim adref,” atebodd Iwan. “Es i tu ôl i'r silff.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s035",
-            "text": "Des i'n ôl gyda'r llun.” “Ond pam?” mae Sam yn gofyn.",
+            "text": "“Gwnes i chwilio yn fy mag i ac yn yr hen lyfr.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s036",
-            "text": "“Roedd y llun yn dangos y mwg,” meddai Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s037",
-            "text": "“Roedd y mwg yn dod o'r hen lamp, nid o'r llyfrau.” Mae Nia'n edrych ar y lamp.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s038",
-            "text": "“Da iawn, Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s039",
-            "text": "Ces i ateb oherwydd y llun.” Mae Dafi'n gwenu.",
+            "text": "“Ces i'r allwedd.” Cafodd Iwan yr hen allwedd o'r llyfr.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l15-s04",
-        "title": "Beth ddigwyddodd?",
+        "title": "Pedwar llun",
         "segments": [
           {
+            "id": "cy-draig-01-l15-s037",
+            "text": "Cafodd Mali bensil, cafodd Sam bapur, a chafodd Dafi ychydig o gacen.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s038",
+            "text": "Gwnaeth Mali lun o'r llyfrgell, y stryd, a Dafi ycw.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l15-pedwar-llwybr",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l15-pedwar-llwybr.svg",
+                "alt": "A simple four-colour route diagram reconciles Dafi going from the library toward the hill, Mali following, Sam coming from the café, and Iwan getting the key; a dotted fifth route from beneath the shelf is labelled llwybr.",
+                "covers_lexeme_ids": [
+                  "cy-aeth",
+                  "cy-daeth",
+                  "cy-gwnaeth",
+                  "cy-cafodd",
+                  "cy-l15-llwybr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l15-s039",
+            "text": "Gwnaeth Sam lun o'r caffi, y ddau gwpan, a drws y llyfrgell.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l15-s040",
-            "text": "Mae'r pedwar yn rhoi'r storïau mewn trefn.",
+            "text": "Gwnaeth Iwan lun o'r silff, yr hen lyfr, a'r allwedd fach.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s041",
-            "text": "Aeth Mali allan.",
+            "text": "Gwnaeth Dafi lun o Fali, Pero, y stryd, a'r drws coch.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s042",
-            "text": "Aeth Sam i'r caffi.",
+            "text": "Dafi: “Es i o'r llyfrgell i'r stryd. Es i ycw.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s043",
-            "text": "Aeth Dafi i'r cefn.",
+            "text": "Mali: “Es i allan gyda Dafi. Des i yn ôl gyda fy llun i.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s044",
-            "text": "Ces i fwced, meddai Mali.",
+            "text": "Sam: “Des i o'r caffi. Daeth Dafi at ddrws y caffi.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s045",
-            "text": "Ces i ddŵr, meddai Sam.",
+            "text": "Iwan: “Ces i'r allwedd. Des i o du ôl i'r silff.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s046",
-            "text": "Ces i flwch, meddai Dafi.",
+            "text": "Mae'r pedwar llun ar y bwrdd, ac mae'r hen allwedd ar lun Iwan.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s047",
-            "text": "Daeth Mali a Sam yn ôl gyda dŵr.",
+            "text": "Ond dydy Pero ddim yn llun Mali, Sam, nac Iwan.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s048",
-            "text": "Daeth Dafi yn ôl gyda llun.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s049",
-            "text": "Gwnaeth Nia agor y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s050",
-            "text": "Gwnaeth pawb helpu.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s051",
-            "text": "“Felly, pwy wnaeth y tân?” mae Pero'n edrych ar y lamp.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s052",
-            "text": "Nid person wnaeth y tân.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s053",
-            "text": "Gwnaeth yr hen lamp y mwg.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s054",
-            "text": "Mae Nia'n diffodd y lamp.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s055",
-            "text": "Ar ddiwedd y dydd, aeth Sam adref.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s056",
-            "text": "Aeth Nia adref yn hwyr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s057",
-            "text": "Aeth Pero gyda Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s058",
-            "text": "Aeth Dafi allan yn olaf, gyda'i lun o dan ei fraich.",
+            "text": "Gofynnodd Nia eto, “Ble aeth Pero?”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l15-s05",
-        "title": "Tair stori, un digwyddiad",
+        "title": "Llwybr Pero",
         "segments": [
           {
+            "id": "cy-draig-01-l15-s049",
+            "text": "Yn sydyn daeth Pero o dan yr hen silff; mae mwd ar ei draed e.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l15-scene-pero",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l15-scene-pero.svg",
+                "alt": "Muddy black-and-white Pero emerges beside a newly visible narrow path beneath the old shelf; Mali, tiny red Dafi, Sam, Nia, and Iwan stare while the old key rests on their four route drawings.",
+                "covers_lexeme_ids": [
+                  "cy-daeth",
+                  "cy-l15-mwd",
+                  "cy-l15-traed",
+                  "cy-l15-llwybr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l15-s050",
+            "text": "Daeth Pero yn ôl, ond ddaeth e ddim o'r drws na'r ffenestr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s051",
+            "text": "Aeth Pero ar bapur Mali, a gwnaeth e lun gyda'i draed e.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s052",
+            "text": "Edrychodd pawb ar lun Pero: un, dau, tri, pedwar ar y papur.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s053",
+            "text": "Edrychodd Mali dan y silff. Mae llwybr bach yno nawr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s054",
+            "text": "Ddoe edrychodd Mali yno: dim llwybr. Edrychodd Iwan yno hefyd: dim llwybr.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s055",
+            "text": "Nawr mae'r llwybr yn mynd o dan y silff, o'r llyfrgell, ac ycw.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s056",
+            "text": "“Aeth Pero ar y llwybr,” atebodd Mali. “Daeth e yn ôl gyda mwd.”",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s057",
+            "text": "Cafodd Iwan yr allwedd; cafodd Pero y llwybr; cafodd y ffrindiau ateb newydd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l15-s058",
+            "text": "Mae Nia'n rhoi'r allwedd ar lun Pero, wrth y drws bach coch.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l15-s059",
-            "text": "Mae Nia'n gofyn i bob un adrodd yr un digwyddiad unwaith eto, ond y tro hwn heb edrych ar y llun.",
+            "text": "Mae Dafi'n edrych ar y llwybr, ar yr allwedd, ac ycw.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l15-s060",
-            "text": "Mae Mali'n dechrau: “Es i allan oherwydd roedd angen dŵr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s061",
-            "text": "Ces i fwced gwag, felly es i at Sam.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s062",
-            "text": "Des i'n ôl gyda Sam a dŵr.” Mae Sam yn parhau: “Es i i'r caffi cyn Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s063",
-            "text": "Gwnes i baratoi dŵr, nid paned.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s064",
-            "text": "Pan ddaeth Mali, des i'n ôl gyda hi.” Mae Dafi'n gorffen: “Es i i'r cefn oherwydd gwelais i'r blwch coch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s065",
-            "text": "Ces i bapur ynddo.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s066",
-            "text": "Gwnes i lun o'r mwg, ac yna des i'n ôl.” Mae Nia'n ysgrifennu pedwar pâr ar y bwrdd: es i—aeth; des i—daeth; gwnes i—gwnaeth; ces i—cafodd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s067",
-            "text": "Mae Mali'n darllen pob pâr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s068",
-            "text": "Es i allan; aeth Pero allan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s069",
-            "text": "Des i'n ôl; daeth Sam yn ôl.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s070",
-            "text": "Gwnes i chwilio; gwnaeth Dafi lun.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s071",
-            "text": "Ces i ddŵr; cafodd Dafi bapur.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s072",
-            "text": "Nawr mae trefn y stori'n glir.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s073",
-            "text": "Nid yw'r tri adroddiad yn cystadlu.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s074",
-            "text": "Mae pob un yn dangos rhan wahanol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s075",
-            "text": "Aeth Mali am gymorth.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s076",
-            "text": "Gwnaeth Sam baratoi'r dŵr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s077",
-            "text": "Cafodd Dafi y cliw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s078",
-            "text": "Daeth y tri yn ôl at Nia.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s079",
-            "text": "“A beth wnes i?” mae Nia'n gofyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s080",
-            "text": "“Gwnaethost ti wrando,” meddai Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s081",
-            "text": "Nid yw'r ffurf hon ar y bwrdd eto, ond mae pawb yn deall y weithred.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l15-s082",
-            "text": "Mae Nia'n gwenu ac yn tynnu cylch o gwmpas y pedwar pâr.",
+            "text": "“Es i allan; aeth Pero ycw. Des i yn ôl; daeth Pero o'r llwybr.”",
             "inference_aids": []
           }
         ]
@@ -602,7 +545,7 @@
       "display_form": "adref",
       "citation_form": "adref",
       "part_of_speech": "adverb",
-      "current_sense": "home",
+      "current_sense": "home; homewards",
       "forms_seen": [
         "adref"
       ],
@@ -623,77 +566,91 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use es i/aeth, des i/daeth, gwnes i/gwnaeth, and ces i/cafodd for high-frequency past events."
+    "target_language": "Es i allan; aeth Dafi allan. Des i yn ôl; daeth Sam yn ôl. Gwnes i lun; gwnaeth Mali lun. Ces i'r allwedd; cafodd Iwan yr allwedd.",
+    "bridge_language": "The first form in each pair reports what I did; the second reports what another person did. These very common simple-past forms are irregular and are best learned as pairs."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l15-pa",
       "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "directions": "Cwblhewch bob pâr o'r stori. Dywedwch yr atebion yn uchel.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "“Aeth Dafi i'r caffi,” meddai Sam. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
+          "prompt": "Es i allan. → Dafi: ___ allan.",
+          "type": "cloze",
           "accepted_answers": [
-            "mynd — es i"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+            "aeth",
+            "Aeth"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Des i o'r caffi. → Sam: ___ o'r caffi.",
+          "type": "cloze",
           "accepted_answers": [
-            "“Ces i syniad,” meddai Mali."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "daeth",
+            "Daeth"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Gwnes i lun. → Mali: ___ lun.",
+          "type": "cloze",
+          "accepted_answers": [
+            "gwnaeth",
+            "Gwnaeth"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Ces i'r allwedd. → Iwan: ___ yr allwedd.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cafodd",
+            "Cafodd"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l15-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Ystyr",
+      "directions": "Dewiswch ffurf sy'n cwblhau ystyr pob digwyddiad.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: es.",
-          "type": "cloze",
-          "accepted_answers": [
-            "es"
-          ]
-        },
-        {
-          "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: cafodd.",
-          "type": "cloze",
-          "accepted_answers": [
-            "cafodd"
-          ]
-        },
-        {
-          "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: allan.",
+          "prompt": "Agorodd Dafi'r drws ac aeth e i'r stryd. Mae Dafi ___.",
           "type": "cloze",
           "accepted_answers": [
             "allan"
           ]
         },
         {
+          "id": "pb2",
+          "prompt": "“Es i i'r caffi; es i ddim ___,” atebodd Sam.",
+          "type": "cloze",
+          "accepted_answers": [
+            "adref"
+          ]
+        },
+        {
+          "id": "pb3",
+          "prompt": "Mae'r allwedd gyda Iwan nawr. Ddoe ___ Iwan yr allwedd.",
+          "type": "cloze",
+          "accepted_answers": [
+            "cafodd",
+            "Cafodd"
+          ]
+        },
+        {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Mae Sam yn y llyfrgell nawr. ___ Sam o'r caffi.",
+          "type": "cloze",
+          "accepted_answers": [
+            "daeth",
+            "Daeth"
+          ]
         }
       ]
     },
@@ -704,30 +661,42 @@
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy ydy'r bobl yn y stori hon?",
+          "prompt": "Ble aeth Dafi ar ôl i'r drws coch gau?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
+            "Aeth Dafi allan.",
+            "Aeth e allan.",
+            "Aeth Dafi i'r stryd ac ycw."
           ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+          "rubric": "The answer must say that Dafi went outside or toward the visually established hill."
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Pwy ddaeth o'r caffi?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Aeth pawb adref yn ddiogel."
+            "Daeth Sam o'r caffi.",
+            "Sam."
           ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+          "rubric": "Name Sam, with or without the full clause."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Beth gafodd Iwan?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Cafodd Iwan yr allwedd.",
+            "Yr allwedd.",
+            "Allwedd."
+          ],
+          "rubric": "Identify the old key."
+        },
+        {
+          "id": "pc4",
+          "prompt": "Dywedwch bedair brawddeg: Dafi, Mali, Sam, Iwan, ac yna Pero.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give four short, intelligible clauses grounded in the story. Include at least one went form, one came form, and either a made or got form; finish with Pero coming back from the pictured path. Exact wording is not required."
         }
       ]
     }
@@ -739,7 +708,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -758,10 +727,15 @@
     "source": "cy-draig-01-l15"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l15-pattern"
+      "cy-l15-scene-allan",
+      "cy-l15-mynd-dod",
+      "cy-l15-allan-adref",
+      "cy-l15-gwneud-cael",
+      "cy-l15-pedwar-llwybr",
+      "cy-l15-scene-pero"
     ],
     "audio": []
   }

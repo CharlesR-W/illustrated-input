@@ -5,30 +5,41 @@
   "order": 2,
   "title": "Pwy wyt ti?",
   "status": "draft",
-  "content_version": "0.2.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md, docs/editorial-decisions.md, content/cy/curriculum.md, and the 2026-07-16 rewrite brief",
+    "prompt_basis": "docs/welsh-full-rewrite-brief.md, docs/content-spec.md, docs/editorial-decisions.md, prompts/02-write-lesson.md, and content/cy/curriculum.md",
+    "revision": "Full lesson rewrite for Y Brenin a Ddaw Eto with connected graded prose and checked-in SVG inference aids.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent southern-Welsh speaker for idiom, identity formulae, mutation, and register."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G02",
-      "label": "dw i / wyt ti; identity questions",
-      "description": "Use dw i to identify yourself, wyt ti to ask another person, and pwy for a person’s identity.",
-      "minimum_demonstrations": 6
+      "label": "dw i / wyt ti; bounded identity frames",
+      "description": "Use dw i to give the speaker's identity and wyt ti to ask one person. Pwy ydy e? and X ydy e appear only as fixed third-person identity formulae.",
+      "minimum_demonstrations": 10
     },
     "recycled_grammar": [
       "G01"
     ],
-    "incidental_grammar": [],
+    "incidental_grammar": [
+      {
+        "form": "e",
+        "note": "A visually anchored masculine pronoun for the pictured boy or a known male character. Any ydy identity use remains inside the complete curriculum-authorized Pwy ydy e? / X ydy e formula and does not license general focus grammar."
+      },
+      {
+        "form": "Wff!",
+        "note": "Pero's bark is a transparent sound effect, not productive vocabulary."
+      }
+    ],
     "communicative_goals": [
-      "ask who someone is",
-      "give a name",
-      "identify Mali, Dafi, and Pero"
+      "ask one person who they are",
+      "give one's own name",
+      "follow a comic mistaken identity",
+      "recognize that the pictured person's identity is still unknown"
     ],
     "new_lexeme_ids": [
       "cy-dw",
@@ -41,236 +52,283 @@
       "cy-dafi",
       "cy-pero",
       "cy-ydy"
-    ]
+    ],
+    "receptive_illustrated_lexeme_ids": []
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l02-s01",
-        "title": "Mali a'r ddraig",
+        "title": "Mali a Dafi",
         "segments": [
           {
             "id": "cy-draig-01-l02-s001",
-            "text": "Mae Mali yn y llyfrgell.",
+            "text": "Mae Mali yn y llyfrgell. Mae Dafi yn y bocs mawr. Mae Pero yn y llyfrgell.",
+            "lexeme_ids": [
+              "cy-mali",
+              "cy-dafi",
+              "cy-pero"
+            ],
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l02-scene",
+                "ref": "cy-l02-library-introductions",
                 "presentation": "inline_scene",
-                "src": "media/images/cy-l02-scene.png",
-                "alt": "Mae Mali a Pero yn cyfarch Dafi yn y llyfrgell."
-              },
-              {
-                "type": "image",
-                "ref": "cy-l02-identity",
-                "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l02-identity.svg",
-                "alt": "Pwy wyt ti? Mali dw i. Dafi dw i."
+                "src": "media/images/cy-l02-library-introductions.svg",
+                "alt": "In the warm library, Mali crouches by the open box while tiny red Dafi introduces himself; Pero barks beside an open old book showing an unidentified sleeping boy.",
+                "covers_lexeme_ids": [
+                  "cy-mali",
+                  "cy-dafi",
+                  "cy-pero"
+                ]
               }
             ]
           },
           {
             "id": "cy-draig-01-l02-s002",
-            "text": "Mae Dafi yn y bocs.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s003",
-            "text": "Mae Dafi'n fach ac yn goch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s004",
-            "text": "Mae Mali wrth y bocs.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s005",
-            "text": "Mae Dafi wrth Mali.",
+            "text": "Mae Pero'n gi mawr. Mae Dafi'n ddraig fach goch. Mae Pero'n fawr. Mae Dafi'n fach.",
+            "lexeme_ids": [
+              "cy-pero",
+              "cy-dafi"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l02-s006",
-            "text": "“Pwy wyt ti?” meddai Mali.",
+            "text": "“Pwy wyt ti?” Mae Mali yn y llyfrgell. Mae Dafi yn y bocs. “Dafi dw i.”",
+            "lexeme_ids": [
+              "cy-pwy",
+              "cy-wyt",
+              "cy-ti",
+              "cy-mali",
+              "cy-dafi",
+              "cy-dw",
+              "cy-i-pron"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l02-speaker-arrows",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l02-speaker-arrows.svg",
+                "alt": "Speaker arrows contrast Dafi pointing to himself for Dafi dw i with Dafi pointing to Mali for Pwy wyt ti?",
+                "covers_lexeme_ids": [
+                  "cy-dw",
+                  "cy-i-pron",
+                  "cy-wyt",
+                  "cy-ti",
+                  "cy-pwy"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l02-s011",
+            "text": "“Pwy wyt ti?” Mae Dafi yn y bocs. Mae Mali yn y llyfrgell. “Mali dw i.”",
+            "lexeme_ids": [
+              "cy-pwy",
+              "cy-wyt",
+              "cy-ti",
+              "cy-dafi",
+              "cy-mali",
+              "cy-dw",
+              "cy-i-pron"
+            ],
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l02-s007",
-            "text": "“Dafi dw i,” meddai'r ddraig.",
-            "inference_aids": []
+            "id": "cy-draig-01-l02-s012",
+            "text": "“Mali?” “Mali dw i.” Mae Mali yn y llyfrgell, a mae Dafi yn y bocs mawr.",
+            "lexeme_ids": [
+              "cy-mali",
+              "cy-dafi",
+              "cy-dw",
+              "cy-i-pron"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l02-name-cards",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l02-name-cards.svg",
+                "alt": "Three clear name cards pair Mali, Dafi, and Pero with their silhouettes; each card is headed enw.",
+                "covers_lexeme_ids": [
+                  "cy-enw",
+                  "cy-mali",
+                  "cy-dafi",
+                  "cy-pero"
+                ]
+              }
+            ]
           },
           {
-            "id": "cy-draig-01-l02-s008",
-            "text": "Dafi yw enw'r ddraig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s009",
-            "text": "Mae Mali a Dafi yn y llyfrgell.",
+            "id": "cy-draig-01-l02-s013",
+            "text": "Enw'r ddraig: Dafi.",
+            "lexeme_ids": [
+              "cy-enw",
+              "cy-dafi",
+              "cy-mali",
+              "cy-dw",
+              "cy-i-pron"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l02-s02",
-        "title": "Enw Mali",
+        "title": "Pero a Wff?",
         "segments": [
           {
-            "id": "cy-draig-01-l02-s010",
-            "text": "Mae Dafi'n edrych ar Mali.",
+            "id": "cy-draig-01-l02-s023",
+            "text": "Mae Dafi yn y bocs, a mae Pero yn y llyfrgell. “Pwy wyt ti?” “Wff!”",
+            "lexeme_ids": [
+              "cy-dafi",
+              "cy-pero",
+              "cy-pwy",
+              "cy-wyt",
+              "cy-ti"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l02-pero-wff-joke",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l02-pero-wff-joke.svg",
+                "alt": "Pero barks Wff; Dafi mistakenly treats Wff as the dog's name, while Mali points to a Pero name card and says Pero ydy e.",
+                "covers_lexeme_ids": [
+                  "cy-pero",
+                  "cy-wyt",
+                  "cy-ti",
+                  "cy-ydy"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l02-s027",
+            "text": "“Wff wyt ti?” Mae Pero'n fawr. Mae Dafi'n fach. “Wff?” Pero: “Wff! Wff! Wff!”",
+            "lexeme_ids": [
+              "cy-wyt",
+              "cy-ti",
+              "cy-pero",
+              "cy-dafi"
+            ],
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l02-s011",
-            "text": "“Pwy wyt ti?” meddai Dafi.",
+            "id": "cy-draig-01-l02-s030",
+            "text": "“Pero ydy e.” Mae Pero'n gi mawr. “Pero?” “Wff!” “Pero ydy e: Pero.”",
+            "lexeme_ids": [
+              "cy-pero",
+              "cy-ydy"
+            ],
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l02-s012",
-            "text": "“Mali dw i,” meddai Mali.",
+            "id": "cy-draig-01-l02-s031",
+            "text": "“Pero wyt ti?” “Wff!” Mae Pero'n fawr, mae Dafi'n fach, a mae Mali yn y llyfrgell.",
+            "lexeme_ids": [
+              "cy-pero",
+              "cy-wyt",
+              "cy-ti",
+              "cy-dafi",
+              "cy-mali"
+            ],
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l02-s013",
-            "text": "“Mali,” meddai Dafi. “Mali dw i,” meddai Mali.",
+            "id": "cy-draig-01-l02-s033",
+            "text": "“Dafi dw i. Pwy wyt ti?” “Wff!” “Pero ydy e.” Mae Dafi a Pero yn y llyfrgell.",
+            "lexeme_ids": [
+              "cy-dafi",
+              "cy-dw",
+              "cy-i-pron",
+              "cy-pwy",
+              "cy-wyt",
+              "cy-ti",
+              "cy-pero",
+              "cy-ydy"
+            ],
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l02-s014",
-            "text": "“Mali?” meddai Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s015",
-            "text": "“Ie. Mali dw i.”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s016",
-            "text": "“Dafi dw i,” meddai Dafi eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s017",
-            "text": "Mae Mali'n fawr; mae Dafi'n fach.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s018",
-            "text": "Mae Mali a Dafi yn y llyfrgell fawr.",
+            "id": "cy-draig-01-l02-s035",
+            "text": "Enw'r ci: Pero. Enw'r ddraig: Dafi. Enw Mali: Mali.",
+            "lexeme_ids": [
+              "cy-enw",
+              "cy-pero",
+              "cy-dafi",
+              "cy-mali"
+            ],
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l02-s03",
-        "title": "Pero",
-        "segments": [
-          {
-            "id": "cy-draig-01-l02-s019",
-            "text": "Mae Pero yn y llyfrgell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s020",
-            "text": "Mae Pero'n gi mawr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s021",
-            "text": "Mae Pero'n edrych ar Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s022",
-            "text": "Mae Dafi'n edrych ar Pero.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s023",
-            "text": "“Pwy wyt ti?” meddai Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s024",
-            "text": "“Pero,” meddai Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s025",
-            "text": "Pero yw enw'r ci.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s026",
-            "text": "Mae Pero'n dweud, “Wff!”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s027",
-            "text": "“Wff wyt ti?” meddai Dafi.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l02-s04",
-        "title": "Tri enw",
+        "title": "Pwy ydy e?",
         "segments": [
           {
             "id": "cy-draig-01-l02-s028",
-            "text": "“Nac ydw,” meddai Pero: “Wff!”",
+            "text": "Mae Mali, Dafi a Pero yn y llyfrgell. Mae Mali'n fawr. Mae Dafi'n fach. Mae Pero'n fawr.",
+            "lexeme_ids": [
+              "cy-mali",
+              "cy-dafi",
+              "cy-pero"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l02-s029",
-            "text": "Mae Mali yn hapus.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s030",
-            "text": "“Pero ydy e,” meddai Mali.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s031",
-            "text": "“Pero wyt ti?” meddai Dafi.",
-            "inference_aids": []
+            "text": "“Pwy ydy e?” Mae e'n fach. “Dafi ydy e?” “Dafi?” Mae Dafi yn y bocs. Enw?",
+            "lexeme_ids": [
+              "cy-pwy",
+              "cy-ydy"
+            ],
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l02-unknown-sleeper",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l02-unknown-sleeper.svg",
+                "alt": "An open old book contains the picture of a dark-haired sleeping boy without a name card; Dafi points at him under the question Pwy ydy e?",
+                "covers_lexeme_ids": [
+                  "cy-pwy",
+                  "cy-ydy"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l02-s032",
-            "text": "Mae Pero'n dweud, “Wff!”",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s033",
-            "text": "“Dafi dw i. Pwy wyt ti?”",
+            "text": "“Dafi ydy e?” “Dafi dw i.” Mae Dafi yn y bocs. Mae Dafi'n goch. “Pwy ydy e?”",
+            "lexeme_ids": [
+              "cy-dafi",
+              "cy-ydy",
+              "cy-dw",
+              "cy-i-pron"
+            ],
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l02-s034",
-            "text": "“Mali dw i,” meddai Mali.",
+            "text": "“Pero ydy e.” Mae Pero'n gi mawr. Mae Pero yn y llyfrgell. “Pwy ydy e?” Mae e'n fach.",
+            "lexeme_ids": [
+              "cy-pero",
+              "cy-ydy"
+            ],
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l02-s035",
-            "text": "Mali, Dafi a Pero: enw, enw ac enw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l02-s036",
-            "text": "Mae Mali, Dafi a Pero yn y llyfrgell.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l02-s05",
-        "title": "Enw, nid sŵn",
-        "segments": [
-          {
-            "id": "cy-draig-01-l02-s037",
-            "text": "Mae Dafi'n edrych ar Mali. “Pwy wyt ti?” “Mali dw i.” Mae Mali'n edrych ar Dafi. “Pwy wyt ti?” “Dafi dw i.” Mae'r ddau enw'n glir: Mali a Dafi. Yna mae Pero'n dod at y bocs. Mae Dafi'n edrych ar y ci mawr. “Pwy wyt ti?” Mae Pero'n dweud “Wff!” Mae Dafi'n edrych ar Mali. “Wff wyt ti?” “Nage,” meddai Mali. “Pero ydy e.” Mae Dafi'n edrych ar Pero eto. “Pero wyt ti?” Mae Pero'n dweud “Wff!” eto. Mae Mali'n hapus, ac mae Dafi'n hapus hefyd. Dafi yw enw'r ddraig fach, Pero yw enw'r ci mawr, a Mali yw enw'r ferch. Tri chymeriad, tri enw, ac un sŵn doniol: “Wff!”",
+            "id": "cy-draig-01-l02-s038",
+            "text": "Dafi: “Pwy ydy e? Pwy ydy e?” Mae Dafi'n fach. Mae Dafi'n goch. Mae e'n fach. Enw?",
+            "lexeme_ids": [
+              "cy-dafi",
+              "cy-pwy",
+              "cy-ydy",
+              "cy-enw"
+            ],
             "inference_aids": []
           }
         ]
@@ -280,7 +338,7 @@
   "vocabulary": [
     {
       "lexeme_id": "cy-dw",
-      "display_form": "dw",
+      "display_form": "dw i",
       "citation_form": "bod — dw i",
       "part_of_speech": "verb",
       "current_sense": "am (first person)",
@@ -304,7 +362,7 @@
     },
     {
       "lexeme_id": "cy-wyt",
-      "display_form": "wyt",
+      "display_form": "wyt ti",
       "citation_form": "bod — wyt ti",
       "part_of_speech": "verb",
       "current_sense": "are (second person)",
@@ -333,6 +391,7 @@
       "part_of_speech": "pronoun",
       "current_sense": "who",
       "forms_seen": [
+        "Pwy",
         "pwy"
       ],
       "first_introduced_lesson": "cy-draig-01-l02",
@@ -345,6 +404,7 @@
       "part_of_speech": "noun",
       "current_sense": "name",
       "forms_seen": [
+        "Enw",
         "enw"
       ],
       "first_introduced_lesson": "cy-draig-01-l02",
@@ -388,10 +448,10 @@
     },
     {
       "lexeme_id": "cy-ydy",
-      "display_form": "ydy",
+      "display_form": "ydy e",
       "citation_form": "bod — ydy",
       "part_of_speech": "verb",
-      "current_sense": "is; is it?",
+      "current_sense": "is, in the bounded identity formula X ydy e",
       "forms_seen": [
         "ydy"
       ],
@@ -400,8 +460,8 @@
     }
   ],
   "grammar_observation": {
-    "target_language": "“Mali dw i.” “Dafi dw i.” “Pwy wyt ti?” Mae dw i yn rhoi enw'r siaradwr; mae wyt ti yn gofyn i un person.",
-    "bridge_language": "Use dw i for “I am” and wyt ti for “you are”. Pwy wyt ti? asks a person’s identity. Ydy appears only in a naming confirmation here."
+    "target_language": "“Dafi dw i.” Dafi → Dafi. “Pwy wyt ti?” Dafi → Mali. “Pwy ydy e?” Dafi → e. “Pero ydy e.”",
+    "bridge_language": "Use dw i to identify yourself and Pwy wyt ti? to ask one person who they are. Treat Pwy ydy e? and X ydy e as complete identity phrases in this chapter; they do not yet license general focus constructions."
   },
   "pensa": {
     "a": {
@@ -411,74 +471,83 @@
       "items": [
         {
           "id": "pa1",
-          "prompt": "Dw ___ Mali.",
-          "type": "cloze",
-          "accepted_answers": [
-            "i"
-          ]
-        },
-        {
-          "id": "pa2",
           "prompt": "Dafi ___ i.",
           "type": "cloze",
           "accepted_answers": [
             "dw"
-          ]
+          ],
+          "explanation": "The speaker identifies himself with Dafi dw i."
         },
         {
-          "id": "pa3",
+          "id": "pa2",
           "prompt": "Pwy ___ ti?",
           "type": "cloze",
           "accepted_answers": [
             "wyt"
-          ]
+          ],
+          "explanation": "Wyt ti addresses one other person."
+        },
+        {
+          "id": "pa3",
+          "prompt": "Mali dw ___.",
+          "type": "cloze",
+          "accepted_answers": [
+            "i"
+          ],
+          "explanation": "I is the speaker pronoun in the fixed answer frame."
         },
         {
           "id": "pa4",
-          "prompt": "Pero ___ ti?",
+          "prompt": "Pwy ___ e?",
           "type": "cloze",
           "accepted_answers": [
-            "wyt"
-          ]
+            "ydy"
+          ],
+          "explanation": "Use the whole bounded identity question Pwy ydy e?"
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l02-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o'r stori.",
+      "title": "Pensa B — Enwau",
+      "directions": "Cwblhewch o'r stori a'r lluniau.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "___ dw i. (Mali)",
+          "prompt": "🐉 “___ dw i.”",
           "type": "cloze",
           "accepted_answers": [
-            "Mali"
-          ]
+            "Dafi"
+          ],
+          "explanation": "The small red dragon's name card says Dafi."
         },
         {
           "id": "pb2",
-          "prompt": "Pwy wyt ___?",
-          "type": "cloze",
-          "accepted_answers": [
-            "ti"
-          ]
-        },
-        {
-          "id": "pb3",
-          "prompt": "Enw'r ci ydy ___.",
+          "prompt": "🐕 “Wff!” ___ ydy e.",
           "type": "cloze",
           "accepted_answers": [
             "Pero"
-          ]
+          ],
+          "explanation": "Wff is the bark; Pero is the dog's name."
+        },
+        {
+          "id": "pb3",
+          "prompt": "___'r ci: Pero.",
+          "type": "cloze",
+          "accepted_answers": [
+            "Enw",
+            "enw"
+          ],
+          "explanation": "The illustrated card pairs the word enw with Pero."
         },
         {
           "id": "pb4",
-          "prompt": "Mae Dafi'n ddraig ___.",
+          "prompt": "Mae Dafi'n fach. Mae Pero'n ___.",
           "type": "cloze",
           "accepted_answers": [
-            "fach"
-          ]
+            "fawr"
+          ],
+          "explanation": "The picture and story contrast small Dafi with big Pero."
         }
       ]
     },
@@ -489,34 +558,41 @@
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy yw'r ddraig?",
+          "prompt": "Mali: “Pwy wyt ti?” Dafi: ___",
           "type": "cloze",
           "accepted_answers": [
-            "Dafi."
-          ]
+            "Dafi dw i.",
+            "Dafi dw i"
+          ],
+          "explanation": "The dragon introduces himself as Dafi."
         },
         {
           "id": "pc2",
-          "prompt": "Pwy yw'r ci?",
+          "prompt": "Dafi: “Pwy wyt ti?” Pero: ___",
           "type": "cloze",
           "accepted_answers": [
-            "Pero."
-          ]
+            "Wff!",
+            "Wff"
+          ],
+          "explanation": "Pero answers with a bark, which Dafi mistakes for a name."
         },
         {
           "id": "pc3",
-          "prompt": "Beth mae Pero'n dweud?",
-          "type": "cloze",
+          "prompt": "“Pwy ydy e?” Enw?",
+          "type": "short_answer",
           "accepted_answers": [
-            "Wff!"
-          ]
+            "Pwy ydy e?",
+            "Pwy ydy e",
+            "?"
+          ],
+          "rubric": "Accept a response that repeats the unresolved question or otherwise indicates that no name has yet been given; do not require untaught vocabulary."
         },
         {
           "id": "pc4",
-          "prompt": "Dywedwch eich enw: ___ dw i.",
+          "prompt": "Pwy wyt ti? ___ dw i.",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Give your own name followed by dw i."
+          "rubric": "The learner says their own name followed by dw i; pronunciation or spelling variants of the personal name are accepted."
         }
       ]
     }
@@ -528,7 +604,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -547,11 +623,14 @@
     "source": "cy-draig-01-l02"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l02-scene",
-      "cy-l02-identity"
+      "cy-l02-library-introductions",
+      "cy-l02-speaker-arrows",
+      "cy-l02-name-cards",
+      "cy-l02-pero-wff-joke",
+      "cy-l02-unknown-sleeper"
     ],
     "audio": []
   }

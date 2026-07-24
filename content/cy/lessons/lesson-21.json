@@ -5,35 +5,40 @@
   "order": 21,
   "title": "Y map a gafodd Mali",
   "status": "draft",
-  "content_version": "0.1.0",
+  "content_version": "0.3.0",
   "provenance": {
-    "created_at": "2026-07-16",
+    "created_at": "2026-07-24",
     "author_type": "AI draft",
     "model": "OpenAI Codex (GPT-5 family)",
-    "prompt_basis": "docs/content-spec.md and content/cy/curriculum.md",
+    "prompt_basis": "Full rewrite from docs/welsh-full-rewrite-brief.md, the G21 curriculum row, cumulative rewritten Lessons 01–20 available during drafting, and the L21 findings in docs/reviews/welsh-12-21.md.",
     "human_review": "not yet performed",
-    "review_warning": "Do not publish as reviewed Welsh until checked by a fluent Welsh speaker for idiom, mutation, gender, and southern-register consistency."
+    "review_warning": "Do not publish as reviewed Welsh until a fluent southern-Welsh speaker has checked every object relative and mutation, the idiom of dod o hyd, noun gender, register, and exercise wording."
   },
   "learning_contract": {
     "primary_new_grammar": {
       "id": "G21",
       "label": "Object relative with a + soft mutation",
-      "description": "Use a plus a mutated past verb to describe an object by what someone did to it.",
+      "description": "Use a plus a mutated past verb to identify an object by the action a named person did to it.",
       "minimum_demonstrations": 6
     },
     "recycled_grammar": [
+      "G07",
+      "G10",
+      "G11",
+      "G12",
+      "G14",
+      "G15",
+      "G16",
+      "G18",
+      "G19",
       "G20"
     ],
-    "incidental_grammar": [
-      {
-        "form": "Narrative linking and unavoidable mutations",
-        "note": "Used only where needed for connected prose; not an additional production target. Fluent review must audit staging."
-      }
-    ],
+    "incidental_grammar": [],
     "communicative_goals": [
-      "identify clues by past actions",
-      "say who found, read, or lost an object",
-      "follow a chain of evidence"
+      "identify a map, note, key, and mark by past actions",
+      "distinguish losing an object from finding it",
+      "follow a message through the corner, centre, and side of a map",
+      "connect four clues to a concealed library wall"
     ],
     "new_lexeme_ids": [
       "cy-relative-a",
@@ -46,385 +51,308 @@
       "cy-canol",
       "cy-ochr",
       "cy-dilyn"
+    ],
+    "receptive_illustrated_lexeme_ids": [
+      "cy-wal"
     ]
   },
   "story": {
     "sections": [
       {
         "id": "cy-draig-01-l21-s01",
-        "title": "Y bwrdd cliwiau",
+        "title": "Yr allwedd a gollodd Dafi",
         "segments": [
           {
             "id": "cy-draig-01-l21-s001",
-            "text": "Mae Mali'n gwneud bwrdd cliwiau.",
+            "text": "Yn y bore, mae'r hen lyfr, y map a llun Artur ar y bwrdd. Mae Mali eisiau rhoi'r allwedd wrth y map, ond does dim allwedd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l21-s002",
+            "text": "“Ces i'r allwedd ddoe,” mae Dafi'n ateb. “Ond gwnes i golli'r allwedd pan es i adref.” Mae Dafi'n dangos ei ddwy law wag.",
             "inference_aids": [
               {
                 "type": "image",
-                "ref": "cy-l21-pattern",
+                "ref": "cy-l21-colli-dod-o-hyd",
                 "presentation": "margin_diagram",
-                "src": "media/diagrams/cy-l21-pattern.svg",
-                "alt": "Diagram Cymraeg ar gyfer patrwm gwers 21."
+                "src": "media/diagrams/cy-l21-colli-dod-o-hyd.svg",
+                "alt": "Two-panel contrast: Dafi walks away while the key falls behind him under colli; Pero discovers the same key under a chair under dod o hyd.",
+                "covers_lexeme_ids": [
+                  "cy-colli",
+                  "cy-dod-o-hyd"
+                ]
               }
             ]
           },
           {
-            "id": "cy-draig-01-l21-s002",
-            "text": "Ar y chwith mae hi'n rhoi'r map a gafodd hi yn yr hen lyfr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s003",
-            "text": "Yn y canol mae hi'n rhoi'r nodyn a ddarllenodd Sam.",
-            "inference_aids": []
-          },
-          {
             "id": "cy-draig-01-l21-s004",
-            "text": "Ar y dde mae hi'n rhoi'r allwedd a gollodd Dafi ddoe.",
+            "text": "Mae Pero'n mynd o'r bwrdd i'r drws ac o'r drws i'r hen gadair. Dan y gadair mae rhywbeth bach coch. Mae Pero'n dod o hyd i'r allwedd.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s005",
-            "text": "“Do'n i ddim wedi colli'r allwedd,” meddai Dafi.",
-            "inference_aids": []
+            "text": "“Daeth Pero o hyd i'r allwedd a gollodd Dafi!” mae Mali'n ateb. Mae hi'n rhoi'r allwedd ar bapur newydd ac yn ysgrifennu enw Dafi ac enw Pero.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-patrwm-gwrthrych",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l21-patrwm-gwrthrych.svg",
+                "alt": "Welsh-only actor-action-object chain contrasting Collodd Dafi'r allwedd with yr allwedd a gollodd Dafi; the initial c changes to g after a.",
+                "covers_lexeme_ids": [
+                  "cy-relative-a",
+                  "cy-colli"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l21-s006",
-            "text": "“Yr allwedd a roddodd Nia i mi oedd honno.” Mae Nia'n gofyn, “A ble mae'r allwedd nawr?” Mae Dafi'n edrych yn ei bocedi.",
+            "text": "Mae Dafi'n darllen y papur: “Yr allwedd a gollodd Dafi; yr allwedd a gafodd Pero.” Mae e'n drist am y llinell gyntaf, ond yn hapus am yr ail.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s007",
-            "text": "Mae Pero'n edrych o dan y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s008",
-            "text": "Nid oes allwedd yno.",
+            "text": "Mae Mali'n ateb, “Colli, yna dod o hyd. Dyna un stori gyfan.” Mae Pero'n eistedd wrth yr allwedd ac yn edrych ar yr hen fap.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l21-s02",
-        "title": "Y pethau a gafwyd",
+        "title": "Pedwar peth ar y bwrdd",
         "segments": [
           {
-            "id": "cy-draig-01-l21-s009",
-            "text": "Maen nhw'n adolygu pob peth.",
-            "inference_aids": []
+            "id": "cy-draig-01-l21-s008",
+            "text": "Mae Mali'n rhoi pedwar peth ar bapur mawr: y map a gafodd Mali, y nodyn a ddarllenodd Sam, yr allwedd a gollodd Dafi, a'r marc a welodd Iwan.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-scene-bwrdd-pos",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l21-scene-bwrdd-pos.svg",
+                "alt": "Mali, Sam, Dafi, Iwan, and Pero gather around a warm library clue board. Four connected cards clearly show Mali's map, Sam's note and message, Dafi's key, and Iwan's crown-shaped mark.",
+                "covers_lexeme_ids": [
+                  "cy-relative-a",
+                  "cy-nodyn",
+                  "cy-neges",
+                  "cy-marc"
+                ]
+              }
+            ]
           },
           {
-            "id": "cy-draig-01-l21-s010",
-            "text": "Y map a gafodd Mali oedd mewn llyfr.",
-            "inference_aids": []
+            "id": "cy-draig-01-l21-s009",
+            "text": "Nodyn yw'r papur bach a ddarllenodd Sam yn yr hen lyfr. Ar y nodyn mae neges fer: “Map, llyfr, allwedd, marc: un pos.”",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-nodyn-neges-marc",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l21-nodyn-neges-marc.svg",
+                "alt": "A small paper labelled nodyn contains a short row of symbols labelled neges, while a repeated crown-shaped sign is labelled marc.",
+                "covers_lexeme_ids": [
+                  "cy-nodyn",
+                  "cy-neges",
+                  "cy-marc"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l21-s011",
-            "text": "Y nodyn a ddarllenodd Sam oedd ar gefn y map.",
+            "text": "Mae Iwan yn dangos y marc a welodd e pan oedd e'n ifanc. Mae'r marc yn edrych fel y goron yn llun Artur, ond mae rhan ohono'n ddu.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s012",
-            "text": "Y llyfr a ganodd yn y gwynt oedd ar silff ger y ffenestr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s013",
-            "text": "Y llun a welodd Nia oedd yng nghanol y llyfr.",
+            "text": "Mae Mali'n gweld yr un marc ar yr allwedd. Mae hi'n rhoi'r allwedd a gafodd Pero wrth y marc a welodd Iwan. Mae'r ddau farc yr un fath.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s014",
-            "text": "Yr allwedd a gafodd Dafi oedd mewn blwch coch.",
+            "text": "Mae Dafi'n edrych ar bapur Mali. “Dyma'r map a gafodd Mali. Dyma'r nodyn a ddarllenodd Sam. Dyma'r allwedd a gollodd Dafi. Ond beth mae'r pedwar peth yn dangos?”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s015",
-            "text": "Ond pa ddrws mae hi'n ei agor?",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s016",
-            "text": "Mae marc seren ar y map, ar y llyfr, ac ar yr allwedd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s017",
-            "text": "Mae'r tri marc yr un fath.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s018",
-            "text": "“Dyma un stori, nid tri phos,” meddai Mali.",
+            "text": "Mae Pero'n rhoi un pawen ar gornel y map. Mae Mali'n cofio'r neges ac yn rhoi'r nodyn wrth bawen Pero.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l21-s03",
-        "title": "Y stori a adeiladon nhw",
+        "title": "Cornel, canol ac ochr",
         "segments": [
           {
-            "id": "cy-draig-01-l21-s019",
-            "text": "Mae pob person yn ychwanegu llinell at y stori.",
+            "id": "cy-draig-01-l21-s016",
+            "text": "Mae'r map yn dangos yr hen ystafell yn y llyfrgell. Mae pedair cornel i'r ystafell, bwrdd yn y canol, a silff hir ar un ochr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-cornel-canol-ochr",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l21-cornel-canol-ochr.svg",
+                "alt": "A simple room plan labels one highlighted corner cornel, the table in the centre canol, and the long outer edge ochr.",
+                "covers_lexeme_ids": [
+                  "cy-cornel",
+                  "cy-canol",
+                  "cy-ochr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l21-s017",
+            "text": "Yn y gornel wrth y ffenestr mae marc coch. Yng nghanol y map mae marc gwyn. Ar ochr ddu'r map mae marc bach arall.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l21-s018",
+            "text": "Mae Mali'n darllen y neges: “Cornel: y marc a welodd Iwan. Canol: y goron a ddangosodd y llyfr. Ochr: y marc sydd ar yr allwedd.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s020",
-            "text": "“Mali gafodd y map,” meddai Sam.",
+            "text": "Mae Nia'n agor y llyfr. Mae canol y llyfr a chanol y map yn dangos yr un goron wen.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s021",
-            "text": "“Sam ddarllenodd y nodyn,” meddai Nia.",
+            "text": "Mae Dafi'n rhoi'r allwedd ar bob ochr. Ar yr ochr ddu, mae'r ddau farc yr un fath.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s022",
-            "text": "“Dafi glywodd y llyfr,” meddai Mali.",
-            "inference_aids": []
+            "text": "Nawr mae tri lle yn y drefn gywir: cornel, canol, ochr. Mae Mali'n rhoi llinell goch o'r gornel i'r canol ac o'r canol i'r ochr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-dilyn-y-marciau",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l21-dilyn-y-marciau.svg",
+                "alt": "A bold red route with footprints moves from a corner star through a central crown to a key mark at the side, labelled dilyn.",
+                "covers_lexeme_ids": [
+                  "cy-dilyn",
+                  "cy-marc",
+                  "cy-cornel",
+                  "cy-canol",
+                  "cy-ochr"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-draig-01-l21-s023",
-            "text": "“Iwan adnabododd y llun,” meddai Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s024",
-            "text": "Mae Iwan yn cywiro'r llinell olaf: “Iwan oedd y person a oedd yn cofio'r hen ystafell.” Mae Pero'n cyfarth wrth y wal.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s025",
-            "text": "“A Pero gafodd y drws,” meddai Sam.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s026",
-            "text": "Mae'r bwrdd cliwiau bellach yn dangos person, peth a gweithred ym mhob llinell.",
+            "text": "“Byddwn ni'n dilyn y llinell,” mae Mali'n ateb. “Byddwn ni'n dechrau yn y gornel, mynd drwy'r canol, a gorffen wrth yr ochr.”",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l21-s04",
-        "title": "Y drws",
+        "title": "Dilyn y marciau",
         "segments": [
           {
+            "id": "cy-draig-01-l21-s024",
+            "text": "Yn yr hen ystafell, mae Mali'n dilyn y map; mae Sam a Nia'n dilyn Mali. Mae Dafi a Pero yn y canol.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l21-s025",
+            "text": "Yn gyntaf, maen nhw'n mynd i'r gornel wrth y ffenestr. Does dim marc ar y ffenestr, ond mae Iwan yn edrych dan yr hen gadair.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l21-s026",
+            "text": "Dan y gadair mae'r marc a welodd Iwan pan oedd e'n ifanc. Mae Iwan yn rhoi papur coch ar gornel y map.",
+            "inference_aids": []
+          },
+          {
             "id": "cy-draig-01-l21-s027",
-            "text": "Maen nhw'n dilyn y marciau.",
+            "text": "O'r gornel, mae pawb yn dilyn Mali i'r bwrdd yng nghanol yr ystafell. Mae'r bwrdd yn wag, ond mae Pero'n edrych oddi tano.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s028",
-            "text": "Mae'r seren ar y map yng nghornel yr hen ystafell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s029",
-            "text": "Mae'r seren a welodd Mali y tu ôl i lun yr harbwr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s030",
-            "text": "Mae'r allwedd a gafodd Dafi yn ffitio mewn twll bach yn y wal.",
+            "text": "Dan ganol y bwrdd mae'r goron a welodd Nia yn y llyfr. Mae Mali'n rhoi'r nodyn yng nghanol y map: dim ond yr ochr sydd ar ôl.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s031",
-            "text": "Mae Mali'n troi'r allwedd.",
+            "text": "Wrth y silff hir, mae'r allwedd yn canu un sain fach. Mae Dafi'n cofio'r llyfr a ganodd yn y gwynt. Mae'r ochr hon yn gywir.",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s032",
-            "text": "Mae rhan o'r wal yn symud yn araf.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s033",
-            "text": "Y tu ôl iddi mae drws cul heb ddolen.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s034",
-            "text": "Dyma'r drws a ddisgrifiodd y nodyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s035",
-            "text": "Mae Nia'n agor y drws gyda'r allwedd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s036",
-            "text": "Mae ystafell dywyll y tu ôl iddo, ac mae blwch hir yn y canol.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s037",
-            "text": "Nid ydynt yn agor y blwch eto.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s038",
-            "text": "Mae Mali'n rhoi'r map, y nodyn a'r allwedd ar y bwrdd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s039",
-            "text": "Nawr mae pob cliw wedi arwain at yr un lle.",
+            "text": "Mae'r silff yn llawn hen lyfrau, ond mae un rhan yn wag. Tu ôl i'r rhan wag mae marc du ar rywbeth sea-green.",
             "inference_aids": []
           }
         ]
       },
       {
         "id": "cy-draig-01-l21-s05",
-        "title": "Pwy wnaeth beth?",
+        "title": "Y wal gudd",
         "segments": [
           {
-            "id": "cy-draig-01-l21-s040",
-            "text": "Cyn agor yr ystafell dywyll, mae Nia'n profi'r gadwyn unwaith eto.",
+            "id": "cy-draig-01-l21-s033",
+            "text": "Mae Mali'n rhoi'r map wrth y silff. Mae'r llinell a dynnodd Mali yn gorffen yn union wrth y marc du. Mae Pero'n edrych tu ôl i'r silff.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-scene-wal-gudd",
+                "presentation": "inline_scene",
+                "src": "media/images/cy-l21-scene-wal-gudd.svg",
+                "alt": "In the old sea-green library room, Mali holds the decoded map beside a long shelf while Pero peers through its empty section. Dafi's key, the black crown mark, and a narrow concealed wall panel align; the friends stop before opening anything.",
+                "covers_lexeme_ids": [
+                  "cy-wal",
+                  "cy-dilyn",
+                  "cy-marc",
+                  "cy-ochr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l21-s034",
+            "text": "Tu ôl i'r silff mae wal gyda llinell gul wrth y llyfrau. Roedd y silff yn cuddio'r wal.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "ref": "cy-l21-wal-gudd",
+                "presentation": "margin_diagram",
+                "src": "media/diagrams/cy-l21-wal-gudd.svg",
+                "alt": "Cutaway contrast showing a long bookcase in front and a narrow sea-green wall panel hidden behind it, labelled wal gudd.",
+                "covers_lexeme_ids": [
+                  "cy-wal"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-draig-01-l21-s035",
+            "text": "Mae Sam yn darllen papur y pos o'r dechrau: “Y map a gafodd Mali. Y nodyn a ddarllenodd Sam. Yr allwedd a gollodd Dafi. Y marc a welodd Iwan.”",
             "inference_aids": []
           },
           {
-            "id": "cy-draig-01-l21-s041",
-            "text": "“Pwy gafodd y map?” “Mali gafodd y map.” “Pa fap?” “Y map a gafodd Mali yn yr hen lyfr.” “Pwy ddarllenodd y nodyn?” “Sam ddarllenodd y nodyn.” “Pa nodyn?” “Y nodyn a ddarllenodd Sam ar gefn y map.” “Pwy gollodd yr allwedd?” Mae Dafi'n protestio eto.",
+            "id": "cy-draig-01-l21-s037",
+            "text": "“Ac fe wnaethon ni ddilyn y tri marc,” mae Nia'n ateb. Mae hi'n dangos y gornel, y canol, yr ochr, ac yna'r wal gudd.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l21-s038",
+            "text": "Mae Dafi'n rhoi'r allwedd wrth y marc du ar y wal. Mae'r ddau farc yr un fath, ond dydy Dafi ddim yn agor dim.",
+            "inference_aids": []
+          },
+          {
+            "id": "cy-draig-01-l21-s039",
+            "text": "“Dyma'r wal a ddangosodd y map,” mae Mali'n ateb. “Yfory byddwn ni'n edrych yma gyda'r map, y nodyn a'r allwedd.”",
             "inference_aids": []
           },
           {
             "id": "cy-draig-01-l21-s042",
-            "text": "“Ni chollais i hi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s043",
-            "text": "Pero gafodd yr allwedd o dan y gadair.” Mae pawb yn edrych ar Pero.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s044",
-            "text": "Felly maen nhw'n newid y llinell: yr allwedd a gafodd Pero o dan y gadair, ac a roddodd e i Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s045",
-            "text": "Mae'r manylder yn bwysig, oherwydd mae'r bwrdd cliwiau'n cofnodi pwy wnaeth bob gweithred.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s046",
-            "text": "Mae Mali'n ychwanegu saethau rhwng y pethau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s047",
-            "text": "Mae'r map a gafodd hi yn arwain at y llyfr a glywodd Dafi.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s048",
-            "text": "Mae'r llyfr a agorodd Nia yn arwain at y llun a adnabu Iwan.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s049",
-            "text": "Mae'r llun yn arwain at y wal y crafodd Pero.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s050",
-            "text": "Mae'r wal yn cuddio'r drws a agorodd yr allwedd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s051",
-            "text": "Mae'r gadwyn bellach heb fwlch.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s052",
-            "text": "Maen nhw'n barod i fynd i mewn, ond mae Nia'n dweud y byddan nhw'n aros nes bod golau ganddyn nhw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s053",
-            "text": "Mae'r penderfyniad yn siomedig i Dafi, ond mae'n ddiogel.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s054",
-            "text": "Mae'r stori'n stopio wrth y drws, nid ar ôl iddo.",
-            "inference_aids": []
-          }
-        ]
-      },
-      {
-        "id": "cy-draig-01-l21-s06",
-        "title": "Darllen eto",
-        "segments": [
-          {
-            "id": "cy-draig-01-l21-s055",
-            "text": "Mae Dafi'n copïo'r gadwyn mewn llyfr nodiadau.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s056",
-            "text": "Nid yw'n copïo enwau'n unig.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s057",
-            "text": "Mae'n copïo'r pethau a wnaeth pob person.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s058",
-            "text": "Mali yw'r person a gafodd y map.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s059",
-            "text": "Sam yw'r person a ddarllenodd y nodyn.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s060",
-            "text": "Dafi yw'r person a glywodd y llyfr.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s061",
-            "text": "Iwan yw'r person a adnabu'r hen ystafell.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s062",
-            "text": "Pero yw'r ci a gafodd yr allwedd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s063",
-            "text": "Nia yw'r person a agorodd y drws.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s064",
-            "text": "Yna mae'n troi'r disgrifiadau at y pethau: dyma'r map a gafodd Mali; dyma'r nodyn a ddarllenodd Sam; dyma'r llyfr a glywodd Dafi; dyma'r llun a adnabu Iwan; dyma'r allwedd a gafodd Pero; dyma'r drws a agorodd Nia.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s065",
-            "text": "Mae'r ddwy ffordd o adrodd yn cysylltu'r un bobl, pethau a gweithredoedd.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s066",
-            "text": "Pan fydd ymwelydd yn gweld y bwrdd, bydd yn gallu dilyn y stori heb wybod y cyfrinach ymlaen llaw.",
-            "inference_aids": []
-          },
-          {
-            "id": "cy-draig-01-l21-s067",
-            "text": "Mae Mali'n dweud y bydd y bwrdd cliwiau'n rhan o'r arddangosfa, ond byddan nhw'n cuddio'r ateb olaf y tu ôl i ddarn o bapur.",
+            "text": "Roedd pedwar peth ar bapur Mali. Nawr mae'r pedwar peth yn dangos un lle. Mae'r pos yn gorffen wrth wal gudd, ond dydy stori Artur ddim yn gorffen.",
             "inference_aids": []
           }
         ]
@@ -439,7 +367,7 @@
       "part_of_speech": "relative particle",
       "current_sense": "that/which (object relative)",
       "forms_seen": [
-        "relative a"
+        "a"
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
@@ -451,7 +379,9 @@
       "part_of_speech": "verb",
       "current_sense": "lose",
       "forms_seen": [
-        "colli"
+        "colli",
+        "golli",
+        "gollodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
@@ -463,7 +393,8 @@
       "part_of_speech": "verb",
       "current_sense": "find",
       "forms_seen": [
-        "dod o hyd"
+        "dod o hyd",
+        "daeth ... o hyd"
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
@@ -499,7 +430,9 @@
       "part_of_speech": "noun",
       "current_sense": "mark",
       "forms_seen": [
-        "marc"
+        "marc",
+        "marciau",
+        "farciodd"
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
@@ -511,7 +444,8 @@
       "part_of_speech": "noun",
       "current_sense": "corner",
       "forms_seen": [
-        "cornel"
+        "cornel",
+        "gornel"
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
@@ -521,9 +455,10 @@
       "display_form": "canol",
       "citation_form": "canol",
       "part_of_speech": "noun",
-      "current_sense": "middle",
+      "current_sense": "middle; centre",
       "forms_seen": [
-        "canol"
+        "canol",
+        "nghanol"
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
@@ -551,114 +486,144 @@
       ],
       "first_introduced_lesson": "cy-draig-01-l21",
       "new": true
+    },
+    {
+      "lexeme_id": "cy-wal",
+      "display_form": "wal",
+      "citation_form": "wal (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "wall",
+      "forms_seen": [
+        "wal"
+      ],
+      "first_introduced_lesson": "cy-draig-01-l21",
+      "status": "receptive_illustrated",
+      "new": false
     }
   ],
   "grammar_observation": {
-    "target_language": "Sylwch ar batrwm y wers yn y stori. Darllenwch bob adran eto, chwiliwch am y ffurfiau newydd, a dywedwch y parau yn uchel.",
-    "bridge_language": "Use a plus a mutated past verb to describe an object by what someone did to it."
+    "target_language": "Cafodd Mali'r map: dyma'r map a gafodd Mali. Darllenodd Sam y nodyn: dyma'r nodyn a ddarllenodd Sam. Collodd Dafi'r allwedd: dyma'r allwedd a gollodd Dafi. Ar ôl a, cafodd → gafodd, darllenodd → ddarllenodd, collodd → gollodd.",
+    "bridge_language": "To identify an object by a past action, place a before the soft-mutated past verb, then name the actor: y nodyn a ddarllenodd Sam, the note that Sam read. Keep the actor explicit."
   },
   "pensa": {
     "a": {
       "id": "cy-draig-01-l21-pa",
-      "title": "Pensa A — Y patrwm",
-      "directions": "Cwblhewch y patrwm o'r wers.",
+      "title": "Pensa A — Peth, gweithred, person",
+      "directions": "Cwblhewch gyda a a'r ferf gywir.",
       "items": [
         {
           "id": "pa1",
-          "prompt": "Mae Mali'n cofio'r map a gafodd hi. — Ysgrifennwch y patrwm newydd.",
-          "type": "bounded_response",
+          "prompt": "Cafodd Mali'r map. Dyma'r map ___ Mali.",
+          "type": "cloze",
           "accepted_answers": [
-            "a + treiglad meddal"
-          ],
-          "rubric": "Use the lesson's new grammar pattern; minor punctuation differences are acceptable."
+            "a gafodd"
+          ]
         },
         {
           "id": "pa2",
-          "prompt": "Dewiswch enghraifft arall o'r patrwm yn y stori.",
-          "type": "bounded_response",
+          "prompt": "Darllenodd Sam y nodyn. Dyma'r nodyn ___ Sam.",
+          "type": "cloze",
           "accepted_answers": [
-            "Dyma'r nodyn a ddarllenodd Sam."
-          ],
-          "rubric": "Any accurate sentence from the story containing the primary pattern is acceptable."
+            "a ddarllenodd"
+          ]
         },
         {
           "id": "pa3",
-          "prompt": "Dywedwch y patrwm yn uchel gyda gair arall o'r wers.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "Self-check that the primary form and word order match the examples."
+          "prompt": "Collodd Dafi'r allwedd. Dyma'r allwedd ___ Dafi.",
+          "type": "cloze",
+          "accepted_answers": [
+            "a gollodd"
+          ]
+        },
+        {
+          "id": "pa4",
+          "prompt": "Gwelodd Iwan y marc. Dyma'r marc ___ Iwan.",
+          "type": "cloze",
+          "accepted_answers": [
+            "a welodd"
+          ]
         }
       ]
     },
     "b": {
       "id": "cy-draig-01-l21-pb",
-      "title": "Pensa B — Geiriau",
-      "directions": "Cwblhewch o ystyr y stori. Atebwch yn Gymraeg.",
+      "title": "Pensa B — Neges y map",
+      "directions": "Cwblhewch o ystyr y stori.",
       "items": [
         {
           "id": "pb1",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: a.",
+          "prompt": "Doedd yr allwedd ddim gyda Dafi. Gwnes i ___ yr allwedd, meddai Dafi.",
           "type": "cloze",
           "accepted_answers": [
-            "a"
+            "golli"
           ]
         },
         {
           "id": "pb2",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: canol.",
+          "prompt": "Roedd yr allwedd dan y gadair. Mae Pero'n ___ i'r allwedd.",
           "type": "cloze",
           "accepted_answers": [
-            "canol"
+            "dod o hyd"
           ]
         },
         {
           "id": "pb3",
-          "prompt": "Dewiswch y gair Cymraeg cywir o'r stori: dilyn.",
+          "prompt": "Mae'r papur bach yn nodyn. Mae'r geiriau ar y nodyn yn ___.",
           "type": "cloze",
           "accepted_answers": [
-            "dilyn"
+            "neges"
           ]
         },
         {
           "id": "pb4",
-          "prompt": "Dewiswch ddau air newydd a gwnewch un frawddeg.",
-          "type": "transfer",
-          "accepted_answers": [],
-          "rubric": "The sentence should use two lesson words in a meaning consistent with the story."
+          "prompt": "Mae'r llinell yn mynd o'r gornel i'r canol ac yna i'r ochr. Mae'r ffrindiau'n ___ y llinell.",
+          "type": "cloze",
+          "accepted_answers": [
+            "dilyn"
+          ]
         }
       ]
     },
     "c": {
       "id": "cy-draig-01-l21-pc",
-      "title": "Pensa C — Y stori",
+      "title": "Pensa C — Y wal gudd",
       "directions": "Atebwch yn Gymraeg. Mae ateb byr yn iawn.",
       "items": [
         {
           "id": "pc1",
-          "prompt": "Pwy sy'n helpu yn y stori hon?",
+          "prompt": "Pa bedwar peth mae Mali'n eu rhoi ar bapur mawr?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mali a'i ffrindiau.",
-            "Pawb.",
-            "Mali, Nia, Sam a Dafi."
-          ],
-          "rubric": "Name at least one relevant character; for later lessons an equivalent story-grounded answer is acceptable."
+            "Y map, y nodyn, yr allwedd a'r marc.",
+            "Mae Mali'n rhoi'r map, y nodyn, yr allwedd a'r marc ar y papur."
+          ]
         },
         {
           "id": "pc2",
-          "prompt": "Beth yw’r newid neu’r darganfyddiad pwysicaf ar ddiwedd y stori?",
+          "prompt": "Pwy gollodd yr allwedd, a phwy ddaeth o hyd i'r allwedd?",
           "type": "bounded_response",
           "accepted_answers": [
-            "Mae'r allwedd a gollodd Dafi yn agor y stori nesaf."
+            "Collodd Dafi'r allwedd, a daeth Pero o hyd i'r allwedd.",
+            "Dafi a Pero.",
+            "Dafi gollodd hi; Pero ddaeth o hyd iddi."
           ],
-          "rubric": "Give one accurate change or outcome from the final subsection."
+          "rubric": "The answer must identify Dafi as the loser and Pero as the finder; a direct noun answer is preferred because conjugated prepositions are not taught until Lesson 22."
         },
         {
           "id": "pc3",
-          "prompt": "Adroddwch un rhan o’r stori yn eich geiriau eich hun.",
+          "prompt": "Pa dri lle mae'r llinell ar y map yn eu cysylltu?",
+          "type": "bounded_response",
+          "accepted_answers": [
+            "Y gornel, y canol a'r ochr.",
+            "Mae'r llinell yn cysylltu'r gornel, y canol a'r ochr."
+          ]
+        },
+        {
+          "id": "pc4",
+          "prompt": "Adroddwch y pos mewn pedair llinell. Defnyddiwch dair enghraifft gyda a: y map a..., y nodyn a..., yr allwedd a..., neu'r marc a....",
           "type": "transfer",
           "accepted_answers": [],
-          "rubric": "Any understandable, relevant Welsh response is acceptable; completion is not score-gated."
+          "rubric": "Give four short, understandable Welsh clauses. Include at least three object relatives with a plus a correctly soft-mutated past verb and an explicit named actor; finish with the concealed wall or the three-part route."
         }
       ]
     }
@@ -670,7 +635,7 @@
   },
   "anki_export": {
     "enabled": true,
-    "scope": "new vocabulary in this lesson",
+    "scope": "productive new vocabulary in this lesson",
     "format": "tsv",
     "fields": [
       "guid",
@@ -689,10 +654,17 @@
     "source": "cy-draig-01-l21"
   },
   "media": {
-    "status": "not-generated",
+    "status": "svg-draft-needs-review",
     "audio_sources": [],
     "images": [
-      "cy-l21-pattern"
+      "cy-l21-colli-dod-o-hyd",
+      "cy-l21-patrwm-gwrthrych",
+      "cy-l21-scene-bwrdd-pos",
+      "cy-l21-nodyn-neges-marc",
+      "cy-l21-cornel-canol-ochr",
+      "cy-l21-dilyn-y-marciau",
+      "cy-l21-scene-wal-gudd",
+      "cy-l21-wal-gudd"
     ],
     "audio": []
   }
