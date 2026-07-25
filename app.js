@@ -3,7 +3,7 @@
 const COURSE_URL = "content/cy/course.json";
 const state = { course: null, lessons: new Map(), lessonIndex: 0 };
 const $ = (selector) => document.querySelector(selector);
-const { normalise, accepted, tsvField, toggleCompleted } = window.IllustratedCore;
+const { normalise, accepted, tsvField, toggleCompleted, presentedAids, lessonAidIndex } = window.IllustratedCore;
 
 function completedKey() { return `illustrated-input:${state.course?.id || "course"}:completed`; }
 function completedLessons() {
@@ -109,12 +109,13 @@ function renderLesson(lesson) {
   renderStory(lesson.story || lesson.sections || [], lesson);
   renderVocabulary(lesson.vocabulary || []);
   renderGrammar(lesson.grammar_observation || lesson.grammar || {});
-  renderExercises(lesson.pensa || lesson.exercises || {});
+  renderExercises(lesson.pensa || lesson.exercises || {}, lesson);
   updateFinishButton(lesson);
   $("#anki-button").onclick = () => downloadAnki(lesson);
   $("#finish-button").onclick = () => toggleFinished(lesson);
   const hasAudio = Boolean(lesson._audioManifest?.lesson);
-  $("#audio-toolbar").hidden = !hasAudio;
+  const audioToolbar = $("#audio-toolbar");
+  audioToolbar.hidden = !hasAudio;
   if (hasAudio) {
     $("#play-lesson").onclick = () => playAudio(new URL(lesson._audioManifest.lesson, lesson._audioBase).href, $("#play-lesson"));
     const selector = $("#audio-source"); selector.replaceChildren(...lesson._audioSources.map((source) => new Option(source.label, source.id, false, source.id === lesson._selectedAudioSource.id)));
@@ -126,6 +127,11 @@ function renderLesson(lesson) {
       $("#play-lesson").onclick = () => playAudio(new URL(lesson._audioManifest.lesson, lesson._audioBase).href, $("#play-lesson"));
       toast(`Audio source: ${source.label}`);
     };
+  } else {
+    mediaPlayer.pause();
+    $("#play-lesson").onclick = null;
+    $("#audio-source").onchange = null;
+    $("#audio-source").replaceChildren();
   }
   const previous = adjacentAvailableIndex(-1), next = adjacentAvailableIndex(1);
   $("#previous-button").disabled = previous < 0;
@@ -136,7 +142,8 @@ function renderLesson(lesson) {
 
 function renderStory(sections, lesson) {
   if (!Array.isArray(sections)) sections = sections.sections || [];
-  $("#story").replaceChildren(...sections.map((section, sectionIndex) => {
+  const story = $("#story");
+  story.replaceChildren(...sections.map((section, sectionIndex) => {
     const wrap = document.createElement("section"); wrap.className = "story-section";
     if (section.title) { const h = document.createElement("h4"); h.textContent = section.title; wrap.append(h); }
     const segments = section.segments || section.sentences || (section.text ? [{ text: section.text }] : []);
@@ -152,24 +159,62 @@ function renderStory(sections, lesson) {
         const play = () => playAudio(new URL(audioFile, lesson._audioBase).href, sentence);
         sentence.addEventListener("click", play); sentence.addEventListener("keydown", (event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); play(); } });
       }
-      paragraph.append(sentence, document.createTextNode(" "));
+      paragraph.append(sentence);
+      for (const aid of presentedAids(segment)) {
+        const className = aid.presentation === "margin_diagram" ? "story-margin-aid" : "story-inline-aid";
+        paragraph.append(renderAid(aid, { inline: true, className, anchor: sentence }));
+      }
+      paragraph.append(document.createTextNode(" "));
     });
-    const presentedAids = segments.flatMap((segment) => segment.inference_aids || segment.aids || []).filter((aid) => aid.presentation);
-    const marginAids = presentedAids.filter((aid) => aid.presentation === "margin_diagram");
-    const sceneAids = presentedAids.filter((aid) => aid.presentation === "inline_scene");
     const readingRow = document.createElement("div"); readingRow.className = "reading-row"; readingRow.append(paragraph);
-    if (marginAids.length) {
-      const margin = document.createElement("aside"); margin.className = "margin-aids"; margin.setAttribute("aria-label", "Reading aids");
-      margin.replaceChildren(...marginAids.map((aid) => renderAid(aid, "Margin diagram"))); readingRow.append(margin);
-    }
-    wrap.append(readingRow, ...sceneAids.map((aid) => renderAid(aid, "Scene illustration"))); return wrap;
+    wrap.append(readingRow); return wrap;
   }));
+  scheduleStoryAidAlignment();
 }
 
-function renderAid(aid, label) {
-  const figure = document.createElement("figure"); figure.className = `reading-aid ${aid.presentation.replaceAll("_", "-")}`;
+const storyAidAnchors = new WeakMap();
+function renderAid(aid, options = {}) {
+  const figure = document.createElement(options.inline ? "span" : "figure");
+  const presentation = (aid.presentation || "inline_scene").replaceAll("_", "-");
+  figure.className = `reading-aid ${presentation}${options.className ? ` ${options.className}` : ""}`;
+  if (aid.ref) figure.setAttribute("data-aid-ref", aid.ref);
+  if (options.anchor) {
+    figure.setAttribute("data-anchor-id", options.anchor.id);
+    storyAidAnchors.set(figure, options.anchor);
+  }
   const media = document.createElement("img"); media.className = "aid-image"; media.src = new URL(aid.src, new URL(COURSE_URL, location.href)).href; media.alt = aid.alt || ""; media.loading = "lazy";
+  if (options.className === "story-margin-aid") media.addEventListener("load", scheduleStoryAidAlignment);
   figure.append(media); return figure;
+}
+
+let storyAidAlignmentFrame = 0;
+function scheduleStoryAidAlignment() {
+  if (storyAidAlignmentFrame) cancelAnimationFrame(storyAidAlignmentFrame);
+  storyAidAlignmentFrame = requestAnimationFrame(alignStoryAids);
+}
+function alignStoryAids() {
+  storyAidAlignmentFrame = 0;
+  const mobile = window.matchMedia("(max-width: 760px)").matches;
+  document.querySelectorAll(".reading-row").forEach((row) => {
+    row.classList.remove("story-aids-inline");
+    row.style.minHeight = "";
+    const aids = [...row.querySelectorAll(".story-margin-aid")];
+    for (const aid of aids) aid.style.removeProperty("--aid-top");
+    if (mobile || !aids.length) return;
+    let nextTop = 0;
+    for (const aid of aids) {
+      const anchor = storyAidAnchors.get(aid);
+      const top = Math.max(anchor?.offsetTop || 0, nextTop);
+      aid.style.setProperty("--aid-top", `${top}px`);
+      nextTop = top + aid.offsetHeight + 12;
+    }
+    const proseHeight = row.querySelector(".story-prose")?.offsetHeight || row.offsetHeight;
+    if (nextTop > proseHeight + 48) {
+      row.classList.add("story-aids-inline");
+      return;
+    }
+    if (nextTop > row.offsetHeight) row.style.minHeight = `${nextTop}px`;
+  });
 }
 
 const mediaPlayer = new Audio();
@@ -204,16 +249,19 @@ function exerciseGroups(pensa) {
   if (Array.isArray(pensa)) return pensa;
   return ["A", "B", "C"].map((key) => pensa[key] || pensa[key.toLowerCase()]).filter(Boolean).map((value, i) => ({ label: "ABC"[i], ...(Array.isArray(value) ? { items: value } : value) }));
 }
-function renderExercises(pensa) {
+function renderExercises(pensa, lesson) {
+  const aids = lessonAidIndex(lesson);
   $("#exercises").replaceChildren(...exerciseGroups(pensa).map((group, index) => {
     const section = document.createElement("section"); section.className = "pensa-group";
-    const header = document.createElement("header"); const label = group.label || group.type || "ABC"[index]; header.innerHTML = `<h4>Pensum ${label}</h4><p></p>`; header.children[1].textContent = group.instructions || group.description || ["Form and pattern", "Meaning and words", "Understand and respond"][index]; section.append(header);
-    for (const item of group.items || group.questions || group.exercises || []) section.append(renderExercise(item)); return section;
+    const header = document.createElement("header"); const label = group.label || group.type || "ABC"[index]; header.innerHTML = `<h4>Pensum ${label}</h4><p></p>`; header.children[1].textContent = group.instructions || group.directions || group.description || ["Form and pattern", "Meaning and words", "Understand and respond"][index]; section.append(header);
+    for (const item of group.items || group.questions || group.exercises || []) section.append(renderExercise(item, aids)); return section;
   }));
 }
 
-function renderExercise(item) {
+function renderExercise(item, aids = new Map()) {
   const wrap = document.createElement("div"); wrap.className = "exercise";
+  const aid = item.aid_ref ? aids.get(item.aid_ref) : null;
+  if (aid) wrap.append(renderAid(aid, { className: "exercise-aid" }));
   const prompt = document.createElement("p"); prompt.className = "prompt"; prompt.lang = state.course.language_code || state.course.language?.code || "cy"; prompt.textContent = item.prompt || item.question || item.text; wrap.append(prompt);
   const feedback = document.createElement("p"); feedback.className = "feedback"; feedback.setAttribute("aria-live", "polite");
   if (item.choices?.length) {
@@ -243,4 +291,5 @@ function showError(error) { $("#loading").hidden=true; $("#lesson").hidden=true;
 
 $(".nav-toggle").addEventListener("click", (event) => { const open=$("#course-nav").classList.toggle("open"); event.currentTarget.setAttribute("aria-expanded", String(open)); });
 window.addEventListener("hashchange", () => { const index=lessonEntries(state.course || {}).findIndex((entry)=>lessonId(entry)===decodeURIComponent(location.hash.slice(1))); if(index>=0 && index!==state.lessonIndex) openLesson(index); });
+window.addEventListener("resize", scheduleStoryAidAlignment);
 init();
