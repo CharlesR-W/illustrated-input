@@ -1,0 +1,2175 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l24",
+ "course_id": "cy-brenin-01",
+ "order": 24,
+ "title": "Y garreg sy'n dal y cleddyf",
+ "rhan": 3,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B4 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (Wave 2, 2026-10-17)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Beat as planned: the snowy churchyard (graves with stone crosses), the grey stone with a black anvil and the sword (bright steel blade, plain old grey hilt with no gold, so Cai can tell it from his own gold-hilted sword in 26). Mali recognises the stone from Myrddin's mirror (15). No-one else can read; Elen says Mali can (pays off 20) and Mali translates the Latin: 'Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.' She corrects a rumour from 22 (the stone does not sing). Knights try, in positive degree only (no comparison before 25): a very strong knight (rule of three pulls), a knight with a huge horse (the leather breaks, he falls in the snow, the horse bolts through the graves), a knight who shouts loudly at the sword (Dafi sneezes in Myrddin's hat: 'Pwy sy'n tisian?'). Others try; all fail. Cai wants to try but is refused (Cynyr: 'Dim heddiw'; the red-bearded lord: 'dim bechgyn' against Mali's 'pwy bynnag'); he stares at the sword, silent. For a moment sunlight lights the blade while Arth looks at it; Mali notices.",
+   "Target: about 20 relatives with sy / sydd: sy'n + verb-noun, sy wedi, sy ddim, sy yn + place, sydd â; questions Pwy sy'n …? / Beth sydd …?; contrasts Mae X yn … → X sy'n … (Gramadeg), and Pwy sy'n …? against Pwy yw …? (Pwy yw hwnnw? — Y marchog sy'n gweiddi). Relatives stay in dialogue and the inscription, so present-tense sy does not clash with past narration.",
+   "The inscription is shown as a margin diagram (Latin capitals on the stone, Mali's Welsh beneath on a wax tablet). The Latin is the depicted object, not learner text; the story text itself contains no Latin tokens. Suggested Latin: QVICVMQVE HVNC GLADIVM DE HOC SAXO EXTRAXERIT, IS REX ERIT.",
+   "Open slot: Cymraeg (CorCenCC rank 33), for 'Lladin ar y garreg, Cymraeg yn fy ngheg i'. neb and iaith were avoided because Penodau 26 and 38 already declare them as open slots (cy-neb, cy-iaith); 'Doedd dim un marchog yn llwyddo' is used instead of 'Llwyddodd neb'.",
+   "Running words about 1,360 (target 1,420, window 1,278–1,562). Recall warnings for sydd, arwydd, cyfieithu, dur and Cymraeg against the parallel Penodau 26–29 are addressed in Pennod 25 where the story allows; the rest need the 26–31 writers or the editor pass.",
+   "Speaker IDs for one-off characters: char-arglwydd-coch (the big red-bearded lord who says 'dim bechgyn'), char-hen-arglwydd, char-dyn-ifanc (the rumour-prone young traveller of 22, now at Caerllion), char-hen-fenyw, char-marchog-cryf, char-marchog-swnllyd."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l24-s045",
+    "question": "[?] Inscription wording 'Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.' (plan text) — natural, and is 'hwnnw yw'r brenin' right for 'he is the king'? Latin in the diagram: QVICVMQVE HVNC GLADIVM DE HOC SAXO EXTRAXERIT, IS REX ERIT — please check."
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s008",
+    "question": "[?] 'Dyma'r garreg sy yn y drych!' — sy + yn + place: natural, or 'sydd yn y drych'?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s073",
+    "question": "[?] 'Y marchog sydd â cheffyl enfawr!' — spoken model sy â / sydd â: confirm."
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s055",
+    "question": "[?] 'Gwnaeth hen fenyw arwydd y groes' (crossed herself): natural?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s097",
+    "question": "[?] 'Roedd rhai'n tynnu …, ac roedd eraill yn gweiddi' — rhai as pronoun subject with 'n: natural?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s121",
+    "question": "[?] 'Beth bynnag sy'n digwydd yfory, bydd y cleddyf yn aros yma': natural, or 'Beth bynnag fydd yn digwydd'?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G24",
+  "primary_new_grammar": {
+   "id": "G24",
+   "label": "subject relative sy'n / sydd / sy wedi / sy ddim (y garreg sy'n dal y cleddyf; y marchog sydd â cheffyl enfawr; pob marchog sy wedi ceisio; marchogion sy ddim yn gweiddi); questions Pwy sy'n …? / Beth sydd …?; contrasted with mae (Mae'r garreg yn y drych → y garreg sy yn y drych) and with Pwy yw …?; the inscription Pwy bynnag sy'n tynnu …",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G23",
+   "G22",
+   "G21",
+   "G20",
+   "G17",
+   "G16",
+   "G15",
+   "G13",
+   "G11",
+   "G10",
+   "G08",
+   "G02"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-sy",
+   "cy-sydd",
+   "cy-mynwent",
+   "cy-einion",
+   "cy-gair",
+   "cy-lladin",
+   "cy-arwydd",
+   "cy-cyfieithu",
+   "cy-methu",
+   "cy-llwyddo",
+   "cy-ceisio",
+   "cy-ph-pwy-bynnag",
+   "cy-ph-beth-bynnag",
+   "cy-unrhyw",
+   "cy-rhai",
+   "cy-eraill",
+   "cy-sownd",
+   "cy-bedd",
+   "cy-croes",
+   "cy-dur",
+   "cy-llafn",
+   "cy-carn",
+   "cy-cymraeg"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-sy",
+    "how": "gloss(paradigm)+contrast",
+    "segment_id": "cy-brenin-01-l24-s008"
+   },
+   {
+    "lexeme_id": "cy-sydd",
+    "how": "gloss(synonym)+context",
+    "segment_id": "cy-brenin-01-l24-s010"
+   },
+   {
+    "lexeme_id": "cy-mynwent",
+    "how": "gloss(define+radical)+picture(cover)",
+    "segment_id": "cy-brenin-01-l24-s003"
+   },
+   {
+    "lexeme_id": "cy-einion",
+    "how": "picture(vignette)",
+    "segment_id": "cy-brenin-01-l24-s006"
+   },
+   {
+    "lexeme_id": "cy-gair",
+    "how": "gloss(number)",
+    "segment_id": "cy-brenin-01-l24-s026"
+   },
+   {
+    "lexeme_id": "cy-lladin",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l24-s030"
+   },
+   {
+    "lexeme_id": "cy-arwydd",
+    "how": "gloss(define)+context",
+    "segment_id": "cy-brenin-01-l24-s055"
+   },
+   {
+    "lexeme_id": "cy-cyfieithu",
+    "how": "gloss(define)+picture(diagram)",
+    "segment_id": "cy-brenin-01-l24-s041"
+   },
+   {
+    "lexeme_id": "cy-methu",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l24-s066"
+   },
+   {
+    "lexeme_id": "cy-llwyddo",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l24-s099"
+   },
+   {
+    "lexeme_id": "cy-ceisio",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l24-s062"
+   },
+   {
+    "lexeme_id": "cy-ph-pwy-bynnag",
+    "how": "gloss(synonym)+picture(diagram)",
+    "segment_id": "cy-brenin-01-l24-s045"
+   },
+   {
+    "lexeme_id": "cy-ph-beth-bynnag",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l24-s111"
+   },
+   {
+    "lexeme_id": "cy-unrhyw",
+    "how": "gloss(synonym)",
+    "segment_id": "cy-brenin-01-l24-s048"
+   },
+   {
+    "lexeme_id": "cy-rhai",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l24-s098"
+   },
+   {
+    "lexeme_id": "cy-eraill",
+    "how": "gloss(define)+context",
+    "segment_id": "cy-brenin-01-l24-s097"
+   },
+   {
+    "lexeme_id": "cy-sownd",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l24-s065"
+   },
+   {
+    "lexeme_id": "cy-bedd",
+    "how": "gloss(radical+number)+picture(cover)",
+    "segment_id": "cy-brenin-01-l24-s004"
+   },
+   {
+    "lexeme_id": "cy-croes",
+    "how": "gloss(radical+number)+picture(cover)",
+    "segment_id": "cy-brenin-01-l24-s004"
+   },
+   {
+    "lexeme_id": "cy-dur",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l24-s023"
+   },
+   {
+    "lexeme_id": "cy-llafn",
+    "how": "gloss(antonym)+picture(vignette, cover)",
+    "segment_id": "cy-brenin-01-l24-s007"
+   },
+   {
+    "lexeme_id": "cy-carn",
+    "how": "gloss(antonym)+picture(cover)",
+    "segment_id": "cy-brenin-01-l24-s007"
+   },
+   {
+    "lexeme_id": "cy-cymraeg",
+    "how": "gloss(define)+context",
+    "segment_id": "cy-brenin-01-l24-s033"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-pob",
+   "cy-eglwys",
+   "cy-tynnu",
+   "cy-darllen",
+   "cy-drych",
+   "cy-carreg",
+   "cy-cleddyf",
+   "cy-bod-that",
+   "cy-gweiddi",
+   "cy-torf",
+   "cy-rhufeiniaid",
+   "cy-enfawr",
+   "cy-ph-i-ffwrdd",
+   "cy-lledr",
+   "cy-clymu",
+   "cy-chwys",
+   "cy-ennill",
+   "cy-twrnamaint"
+  ],
+  "swaps": [],
+  "open_slot_ids": [
+   "cy-cymraeg"
+  ]
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l24-img-cover",
+   "src": "media/images/cy-brenin-01-l24-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "In a snowy churchyard among old graves with stone crosses, a big grey stone holds a black anvil with a sword standing in it; a crowd of lords and knights watches as Mali reads the carved words aloud, with Arth, Cai, Cynyr, Elen and Myrddin beside her.",
+   "art_brief": "A snowy churchyard beside an old stone church at Caerllion (Caerllion palette: grey stone, red brick, snow; the church has small glass windows, the only glass in the story). Old graves under snow with simple stone crosses. In the middle, between the graves, a big rough grey stone with snow on top; on it a heavy black iron anvil, and standing upright in the anvil a long sword with a bright steel blade and a plain, old grey hilt (no gold). A semicircle crowd of lords in fur-trimmed cloaks and knights in chainmail with shields and banners watches, among them a big lord with a red beard. Mali (12, long dark braid, dark-blue dress, satchel) kneels at the stone tracing carved letters with one finger, reading aloud; Arth (11, untidy brown hair with cowlick, oversized brown coat) has just brushed the snow off the letters; Cai (15, red-blond, red cloak) stares at the sword; Cynyr (huge golden-blond beard, brown cloak) and Elen (white veil, green dress) stand behind; Myrddin (white beard, round spectacles, tall black hat, deep-blue robe) watches with a small smile. No legible text anywhere.",
+   "characters": [
+    "char-mali",
+    "char-arth",
+    "char-cai",
+    "char-cynyr",
+    "char-elen",
+    "char-myrddin",
+    "char-arglwydd-coch"
+   ],
+   "covers_lexeme_ids": [
+    "cy-mynwent",
+    "cy-bedd",
+    "cy-croes",
+    "cy-einion",
+    "cy-llafn",
+    "cy-carn"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l24-sec1",
+    "title": "Y fynwent",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l24-s001",
+      "text": "Yn y bore, gwisgodd y teulu eu cotiau a'u menig, ac aethon nhw i'r eglwys drwy'r eira.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s002",
+      "text": "Roedd hi'n oer ac yn wyntog, ac roedd niwl ar y bryniau uwchben y dyffryn."
+     },
+     {
+      "id": "cy-brenin-01-l24-s003",
+      "text": "Roedd mynwent fawr wrth yr eglwys, ac roedd torf yn y fynwent yn barod: arglwyddi, marchogion, milwyr a theithwyr.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "mynwent",
+        "gloss": "mynwent: beddau wrth eglwys",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "fynwent",
+        "gloss": "yn y fynwent ← mynwent (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s004",
+      "text": "Roedd hen feddau dan yr eira, a chroesau carreg ar y beddau, ac roedd rhew ar y croesau.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "feddau",
+        "gloss": "hen feddau ← beddau · bedd, beddau",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chroesau",
+        "gloss": "a chroesau ← croesau · croes, croesau",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s005",
+      "text": "Roedd croes fawr ar ben yr eglwys, ac yno, rhwng y beddau, roedd y garreg: carreg fawr, lwyd, gydag eira arni hi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s006",
+      "text": "Roedd einion fawr, ddu ar y garreg, ac roedd cleddyf yn yr einion.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l24-img-einion",
+        "anchor_text": "einion",
+        "label": "einion",
+        "src": "media/vignettes/cy-brenin-01-l24-img-einion.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A heavy black iron anvil, the kind a blacksmith uses, sitting on a rough grey stone, with a sword standing upright in it. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-einion"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s007",
+      "text": "Roedd llafn y cleddyf yn llwyd ac yn olau, ac roedd carn y cleddyf yn hen ac yn llwyd: dim aur, dim arian.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llafn",
+        "gloss": "llafn ↔ carn",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s008",
+      "text": "\"Arth!\" meddai Mali yn dawel, ac roedd ei llaw hi ar law Arth.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s009",
+      "text": "\"Dyma'r garreg sy yn y drych! Y byd gwyn, y garreg, a'r cleddyf.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sy",
+        "gloss": "mae'r garreg → y garreg sy",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s010",
+      "text": "\"Beth sydd yn y garreg?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s011",
+      "text": "\"Cleddyf go iawn?\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s012",
+      "text": "\"Ie. Dyma'r cleddyf sy yn y garreg, a dyma'r garreg sy'n dal y cleddyf.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s013",
+      "text": "\"Mae'r cleddyf yn gwybod, Mali,\" meddai Myrddin yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l24-s014",
+      "text": "\"Myrddin,\" meddai Arth, \"pwy sy wedi rhoi'r cleddyf yn y garreg?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s015",
+      "text": "\"Pwy sy'n gofyn?\" meddai Myrddin, a gwenodd e.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l24-s016",
+      "text": "\"Fi, wrth gwrs!\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s017",
+      "text": "\"Wel, dyna gwestiwn da, Arth,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l24-s018",
+      "text": "\"Cwestiwn da iawn.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s019",
+      "text": "Edrychodd Cynyr ar y carn llwyd am amser hir, a doedd e ddim yn siarad.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s020",
+      "text": "\"Pan o'n i'n was i'r Brenin Uthr, ro'n i'n cario cleddyf y brenin bob dydd,\" meddai e'n dawel, ac roedd ei lygaid e ar y cleddyf.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l24-s021",
+      "text": "\"Cynyr,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l24-s022",
+      "text": "Wedyn doedd Cynyr ddim yn siarad: edrychodd e ar Elen, ac edrychodd Elen ar Myrddin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s023",
+      "text": "Edrychodd Cai ar y llafn am amser hir.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s024",
+      "text": "\"Dur go iawn,\" meddai e.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dur",
+        "gloss": "dur: cleddyf go iawn, dim pren",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s025",
+      "text": "\"Llafn o ddur da, ond carn hen, llwyd. Mae carn aur ar fy nghleddyf i!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddur",
+        "gloss": "o ddur ← dur",
+        "gloss_kind": "radical"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l24-sec2",
+    "title": "Geiriau Lladin",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l24-s026",
+      "text": "Roedd llythrennau ar y garreg, dan yr eira.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s027",
+      "text": "Glanhaodd Arth yr eira gyda'i law, ac roedd geiriau yno: hen eiriau rhyfedd.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "geiriau",
+        "gloss": "gair, geiriau",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "eiriau",
+        "gloss": "hen eiriau ← geiriau",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s028",
+      "text": "\"Pwy sy'n gallu darllen y geiriau?\" meddai arglwydd mawr gyda barf goch.",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Pwy sy'n",
+        "gloss": "Pwy sy'n …? ↔ Pwy yw …?",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s029",
+      "text": "\"Dw i ddim yn gallu darllen, a dyw fy marchogion i ddim yn gallu darllen.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s030",
+      "text": "\"Lladin yw e,\" meddai hen arglwydd.",
+      "paragraph_start": true,
+      "speaker": "char-hen-arglwydd",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Lladin",
+        "gloss": "Lladin: hen eiriau'r Rhufeiniaid",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s031",
+      "text": "\"Geiriau'r Rhufeiniaid.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s032",
+      "text": "Edrychodd Elen ar Mali, a gwenodd hi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s033",
+      "text": "\"Mae Mali'n gallu darllen,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l24-s034",
+      "text": "\"Mae hi'n darllen Cymraeg, ac mae hi'n darllen Lladin hefyd: mae llyfrau Lladin gyda Myrddin.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Cymraeg",
+        "gloss": "Cymraeg: geiriau Cymru",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s035",
+      "text": "\"Merch fach sy'n darllen Lladin?\" meddai'r arglwydd coch, a chwarddodd e.",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch"
+     },
+     {
+      "id": "cy-brenin-01-l24-s036",
+      "text": "\"Wel, darllen, ferch!\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s037",
+      "text": "Aeth Mali at y garreg, a darllenodd hi'r geiriau'n araf, ac roedd y fynwent yn dawel iawn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s038",
+      "text": "Darllenodd hi'r gair cyntaf, yr ail air a'r trydydd gair, ac roedd y dorf yn aros.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "air",
+        "gloss": "yr ail air ← gair",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s039",
+      "text": "\"Wel?\" meddai'r arglwydd coch.",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch"
+     },
+     {
+      "id": "cy-brenin-01-l24-s040",
+      "text": "\"Beth mae'r geiriau'n dweud?\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s041",
+      "text": "\"Aros funud: dw i'n cyfieithu,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s042",
+      "text": "\"Lladin ar y garreg, Cymraeg yn fy ngheg i.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s043",
+      "text": "\"Cyfieithu? Beth yw hynny?\"",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch"
+     },
+     {
+      "id": "cy-brenin-01-l24-s044",
+      "text": "\"Mae'r garreg yn siarad Lladin, a dw i'n cyfieithu'r geiriau i'r Gymraeg, i chi,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gymraeg",
+        "gloss": "i'r Gymraeg ← Cymraeg (b.)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cyfieithu",
+        "gloss": "cyfieithu: Lladin → Cymraeg",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s045",
+      "text": "\"Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Pwy bynnag",
+        "gloss": "pwy bynnag = unrhyw ddyn",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "cy-brenin-01-l24-img-arysgrif",
+        "anchor_text": "Pwy bynnag",
+        "label": "Y geiriau ar y garreg",
+        "src": "media/diagrams/cy-brenin-01-l24-img-arysgrif.svg",
+        "alt": "The inscription carved on the grey stone, in Latin capitals (QVICVMQVE HVNC GLADIVM DE HOC SAXO EXTRAXERIT, IS REX ERIT), with Mali's Welsh beneath it in handwriting: Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.",
+        "status": "draft",
+        "art_brief": "The inscription carved on the grey stone, in Latin capitals (QVICVMQVE HVNC GLADIVM DE HOC SAXO EXTRAXERIT, IS REX ERIT), with Mali's Welsh beneath it in handwriting: Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.",
+        "covers_lexeme_ids": [
+         "cy-ph-pwy-bynnag",
+         "cy-gair",
+         "cy-lladin"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s046",
+      "text": "Am funud, roedd pawb yn dawel, ac wedyn roedd pawb yn clebran yn uchel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s047",
+      "text": "Roedd rhai arglwyddi'n chwerthin, roedd rhai'n edrych ar y cleddyf, ac roedd eraill yn edrych ar Mali gyda llygaid mawr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s048",
+      "text": "\"Pwy bynnag?\" meddai'r hen arglwydd.",
+      "paragraph_start": true,
+      "speaker": "char-hen-arglwydd"
+     },
+     {
+      "id": "cy-brenin-01-l24-s049",
+      "text": "\"Unrhyw ddyn? Unrhyw farchog?\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Unrhyw",
+        "gloss": "unrhyw ddyn = pob dyn, pwy bynnag",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s050",
+      "text": "\"Unrhyw un,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s051",
+      "text": "\"Pwy bynnag sy'n tynnu'r cleddyf: dyna'r geiriau ar y garreg.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s052",
+      "text": "\"Mae pobl yn dweud bod y garreg yn canu yn y nos,\" meddai dyn ifanc.",
+      "paragraph_start": true,
+      "speaker": "char-dyn-ifanc"
+     },
+     {
+      "id": "cy-brenin-01-l24-s053",
+      "text": "\"Does dim gair am ganu ar y garreg,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s054",
+      "text": "\"Dim ond y cleddyf, a'r brenin. Sïon yw hynny, dim gwir.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s055",
+      "text": "Gwnaeth hen fenyw arwydd y groes.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "arwydd y groes",
+        "gloss": "arwydd y groes: ✝",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "groes",
+        "gloss": "y groes ← croes (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s056",
+      "text": "\"Arwydd yw'r cleddyf,\" meddai hi.",
+      "paragraph_start": true,
+      "speaker": "char-hen-fenyw"
+     },
+     {
+      "id": "cy-brenin-01-l24-s057",
+      "text": "\"Arwydd i bawb sy yn y fynwent heddiw.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s058",
+      "text": "\"Mae pob arwydd yn dweud rhywbeth,\" meddai Myrddin, \"ond dyw pawb ddim yn gwrando.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l24-sec3",
+    "title": "Y marchog cryf",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l24-s059",
+      "text": "Wedyn daeth marchog mawr at y garreg: roedd e'n gryf iawn, ac ac roedd ei ddwylo e'n fawr iawn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s060",
+      "text": "\"Fi yw'r marchog sy'n ennill bob twrnamaint!\" meddai e.",
+      "paragraph_start": true,
+      "speaker": "char-marchog-cryf"
+     },
+     {
+      "id": "cy-brenin-01-l24-s061",
+      "text": "\"Dw i'n gryf iawn, iawn.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s062",
+      "text": "Rhoddodd e ei ddwylo ar garn y cleddyf, ac wedyn ceisiodd e dynnu'r cleddyf o'r garreg.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ceisiodd",
+        "gloss": "ceisio = gwneud, os dych chi'n gallu",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "garn",
+        "gloss": "ar garn ← carn",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s063",
+      "text": "Tynnodd e, a thynnodd e eto, a thynnodd e eto."
+     },
+     {
+      "id": "cy-brenin-01-l24-s064",
+      "text": "Roedd e'n goch iawn, ac roedd chwys ar ei ben e."
+     },
+     {
+      "id": "cy-brenin-01-l24-s065",
+      "text": "Ond doedd y cleddyf ddim yn dod o'r garreg: roedd e'n sownd.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sownd",
+        "gloss": "sownd: dim yn dod mas",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s066",
+      "text": "\"Mae e wedi methu!\" meddai'r arglwydd coch.",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "methu",
+        "gloss": "methu ↔ llwyddo",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s067",
+      "text": "\"Pwy sy nesaf?\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s068",
+      "text": "\"Mae'r cleddyf yn sownd yn yr einion,\" meddai'r marchog cryf yn ddig.",
+      "paragraph_start": true,
+      "speaker": "char-marchog-cryf"
+     },
+     {
+      "id": "cy-brenin-01-l24-s069",
+      "text": "\"Mae hud ar y garreg!\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s070",
+      "text": "\"Dyw'r geiriau ddim yn sôn am hud,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s071",
+      "text": "\"Dim ond am y brenin.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s072",
+      "text": "Wedyn daeth ail farchog, gyda cheffyl enfawr, du.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s073",
+      "text": "\"Edrych, Arth!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l24-s074",
+      "text": "\"Y marchog sydd â cheffyl enfawr!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sydd â",
+        "gloss": "sydd â = sy gyda",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s075",
+      "text": "Clymodd yr ail farchog ei geffyl wrth garn y cleddyf gyda lledr cryf, ac wedyn tynnodd y ceffyl.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s076",
+      "text": "Tynnodd y ceffyl, a thynnodd y marchog hefyd, ond torrodd y lledr."
+     },
+     {
+      "id": "cy-brenin-01-l24-s077",
+      "text": "Cwympodd y marchog i'r eira, a rhedodd y ceffyl enfawr i ffwrdd drwy'r beddau.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l24-img-ceffyl",
+        "src": "media/images/cy-brenin-01-l24-img-ceffyl.webp",
+        "alt": "In the snowy churchyard the second knight's huge black horse, tied to the sword's hilt with a leather strap, has snapped the strap and is bolting away between the graves and stone crosses; the knight sits in the snow; the sword stays fast in the anvil on the stone; the crowd laughs.",
+        "status": "planned",
+        "art_brief": "A snowy churchyard among old graves with simple stone crosses (Caerllion palette, grey stone and snow). Centre: the big grey stone with the black anvil and the upright sword (steel blade, gold hilt), unmoved. A broken leather strap dangles from the hilt. A huge black warhorse gallops away between the graves, the other end of the strap flying behind it. A knight in chainmail and a surcoat sits sprawled in the snow, helmet askew. The crowd of lords and knights laughs; among them Cynyr (huge golden-blond beard, brown cloak) laughing loudly, Cai (15, red-blond, red cloak) grinning, Mali (12, long dark braid, dark-blue dress) with hand over mouth, and Myrddin (tall black hat with a wisp of smoke from it). No text.",
+        "characters": [
+         "char-cynyr",
+         "char-cai",
+         "char-mali",
+         "char-myrddin"
+        ],
+        "covers_lexeme_ids": [
+         "cy-einion",
+         "cy-bedd",
+         "cy-croes",
+         "cy-carn"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s078",
+      "text": "Ond roedd y cleddyf yno, yn sownd yn y garreg."
+     },
+     {
+      "id": "cy-brenin-01-l24-s079",
+      "text": "\"Ha!\" meddai Dafi'n dawel yn yr het.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l24-s080",
+      "text": "\"Dyw ceffyl ddim yn frenin,\" meddai Cynyr, a chwarddodd e.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l24-s081",
+      "text": "\"Mae'r ceffyl yn gryf, ond dyw e ddim yn gallu darllen y geiriau!\" meddai Cai, a chwarddodd y dorf hefyd.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l24-sec4",
+    "title": "Y marchog sy'n gweiddi",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l24-s082",
+      "text": "Wedyn daeth trydydd marchog: dyn bach, ond roedd e'n gweiddi'n uchel iawn, yn uchel, yn uchel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s083",
+      "text": "\"Cleddyf!\" gwaeddodd e.",
+      "paragraph_start": true,
+      "speaker": "char-marchog-swnllyd"
+     },
+     {
+      "id": "cy-brenin-01-l24-s084",
+      "text": "\"Dere mas o'r garreg! Fi yw dy frenin di!\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s085",
+      "text": "\"Pwy yw hwnnw?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s086",
+      "text": "\"Y marchog sy'n gweiddi,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s087",
+      "text": "\"Ond dyw'r cleddyf ddim yn gwrando. Dw i'n hoffi marchogion sy ddim yn gweiddi.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s088",
+      "text": "Gwaeddodd y marchog eto, a thynnodd e, ond doedd y cleddyf ddim yn dod.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s089",
+      "text": "Ac yn sydyn, tisianodd rhywbeth yn het Myrddin, a daeth mwg bach o'r het."
+     },
+     {
+      "id": "cy-brenin-01-l24-s090",
+      "text": "\"Pwy sy'n tisian?\" meddai'r dyn ifanc.",
+      "paragraph_start": true,
+      "speaker": "char-dyn-ifanc"
+     },
+     {
+      "id": "cy-brenin-01-l24-s091",
+      "text": "\"Mae'r garreg yn tisian!\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s092",
+      "text": "\"Dyw'r garreg ddim yn tisian,\" meddai Mali, ac edrychodd hi ar het Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s093",
+      "text": "\"Dw i eisiau ceisio,\" sibrydodd Dafi o'r het.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l24-s094",
+      "text": "\"Dw i'n ddraig gryf, ac mae'r geiriau'n dweud: pwy bynnag!\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s095",
+      "text": "\"Dyw draig ddim yn frenin, Dafi,\" sibrydodd Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l24-s096",
+      "text": "\"Aros yn yr het.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s097",
+      "text": "Wedyn ceisiodd marchogion eraill hefyd, ac arglwyddi eraill.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s098",
+      "text": "Roedd rhai'n tynnu gyda dwy law, roedd rhai'n tynnu gyda'u ceffylau, ac roedd eraill yn gweiddi ar y cleddyf.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rhai",
+        "gloss": "rhai … eraill: ✓✓ … ✗✗",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s099",
+      "text": "Ond methodd pob un."
+     },
+     {
+      "id": "cy-brenin-01-l24-s100",
+      "text": "Doedd dim un marchog yn llwyddo, ac roedd rhai'n ddig iawn.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llwyddo",
+        "gloss": "llwyddo ↔ methu",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s101",
+      "text": "\"Bydd un marchog yn llwyddo un diwrnod,\" meddai'r hen arglwydd.",
+      "paragraph_start": true,
+      "speaker": "char-hen-arglwydd"
+     },
+     {
+      "id": "cy-brenin-01-l24-s102",
+      "text": "\"Ond pwy sydd nesaf? A phryd? Dw i'n gobeithio bod y brenin newydd yn ddyn da.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s103",
+      "text": "Wedyn aeth y dorf i ffwrdd yn araf, drwy'r mwd a heibio i'r hen golofnau.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s104",
+      "text": "Roedd y fynwent yn dawel eto, gyda'r eira ar y beddau a'r cleddyf yn y garreg."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l24-sec5",
+    "title": "Cai a'r cleddyf",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l24-s105",
+      "text": "Ond roedd Cai'n dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s106",
+      "text": "Roedd e'n edrych ar y cleddyf, ac roedd e'n edrych ar y cleddyf, ac roedd e'n edrych ar y cleddyf."
+     },
+     {
+      "id": "cy-brenin-01-l24-s107",
+      "text": "\"Dad,\" meddai e, \"dw i eisiau ceisio. Dw i'n gryf.\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l24-s108",
+      "text": "\"Dim heddiw, Cai,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l24-s109",
+      "text": "\"Yfory bydd y twrnamaint, a bydd angen dy ddwylo cryf di yno.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s110",
+      "text": "\"Mae'r arglwyddi a'r marchogion yn cael ceisio, fachgen, ond dim bechgyn,\" meddai'r arglwydd coch.",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch"
+     },
+     {
+      "id": "cy-brenin-01-l24-s111",
+      "text": "\"Ond mae'r geiriau'n dweud: pwy bynnag!\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s112",
+      "text": "\"Pwy bynnag sy'n tynnu'r cleddyf.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s113",
+      "text": "\"Beth bynnag mae'r garreg yn dweud,\" meddai'r arglwydd, \"dw i'n dweud: dim bechgyn.\"",
+      "paragraph_start": true,
+      "speaker": "char-arglwydd-coch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Beth bynnag",
+        "gloss": "beth bynnag: pob peth (✓ ✗)",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s114",
+      "text": "\"Beth bynnag,\" meddai Cai yn dawel, \"bydda i'n ennill y twrnamaint yfory. Ac wedyn…\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l24-s115",
+      "text": "Edrychodd Arth ar y cleddyf hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s116",
+      "text": "Am funud, daeth yr haul o'r cymylau, ac roedd golau ar y llafn: roedd y dur yn wyn ac yn olau iawn."
+     },
+     {
+      "id": "cy-brenin-01-l24-s117",
+      "text": "Gwelodd Mali'r golau, a gwelodd hi Arth hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l24-s118",
+      "text": "\"Arth?\" meddai hi'n dawel.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l24-s119",
+      "text": "\"Mae e'n olau,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s120",
+      "text": "\"Dim ond hynny.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s121",
+      "text": "\"Mae pob marchog sy wedi ceisio heddiw wedi methu,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l24-s122",
+      "text": "\"Beth bynnag sy'n digwydd yfory, bydd y cleddyf yn aros yma.\"",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l24-img-golau",
+        "src": "media/images/cy-brenin-01-l24-img-golau.webp",
+        "alt": "Sunlight breaks through the clouds onto the sword in the stone, lighting the steel blade white, while Arth stands looking at it; Mali watches Arth; Cai stands a little apart, staring at the sword.",
+        "status": "planned",
+        "art_brief": "The snowy churchyard at Caerllion in late morning (Caerllion palette), the crowd thinning. A single shaft of sunlight through grey clouds falls on the big grey stone, the black anvil and the upright sword: the steel blade shines white; the hilt is plain, old and grey. Arth (11, untidy brown hair with cowlick, oversized brown coat) stands a few steps from the stone, looking at the sword, calm. Mali (12, long dark braid, dark-blue dress, satchel) is turned not to the sword but to Arth, eyes wide. A little apart, Cai (15, red-blond, red cloak, round red shield on his back) stares at the sword with a hungry, troubled face. Myrddin (white beard, round spectacles, tall black hat) watches from beside a stone cross. No text.",
+        "characters": [
+         "char-arth",
+         "char-mali",
+         "char-cai",
+         "char-myrddin"
+        ],
+        "covers_lexeme_ids": [
+         "cy-llafn",
+         "cy-carn",
+         "cy-dur"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l24-s123",
+      "text": "Gadawodd y teulu'r fynwent yn araf, ac edrychodd Cai yn ôl ar y garreg wrth y porth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s124",
+      "text": "Ar y ffordd yn ôl i'r dafarn, cerddodd Arth wrth ochr Cai.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s125",
+      "text": "\"Wyt ti'n meddwl bod y cleddyf yn hud, Cai?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s126",
+      "text": "\"Dw i ddim yn gwybod: efallai,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l24-s127",
+      "text": "\"Ond dw i'n gwybod bod brenin sy'n gallu tynnu'r cleddyf hwnnw yn frenin cryf iawn.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s128",
+      "text": "\"Ac rwyt ti'n gwybod fy mod i'n gryf, Arth. Un diwrnod, bydda i'n llwyddo.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s129",
+      "text": "\"Ydw, Cai,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l24-s130",
+      "text": "\"Rwyt ti'n frawd cryf.\""
+     },
+     {
+      "id": "cy-brenin-01-l24-s131",
+      "text": "Wedyn roedd Cai'n dawel ar y ffordd i'r dafarn, ac yn y dafarn hefyd, gyda'i gawl.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l24-s132",
+      "text": "Dyw Cai byth yn dawel."
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Y garreg sy'n dal y cleddyf",
+  "rule_cy": "Mae'r garreg yn dal y cleddyf. → y garreg sy'n dal y cleddyf · Pwy sy'n …? Beth sydd …? · sy'n + berfenw · sy wedi + berfenw · sy ddim yn … · sydd = sy",
+  "tables": [
+   {
+    "caption": "mae → sy",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Mae'r garreg yn dal y cleddyf.",
+      "y garreg sy'n dal y cleddyf"
+     ],
+     [
+      "Mae'r garreg yn y drych.",
+      "y garreg sy yn y drych"
+     ],
+     [
+      "Mae'r marchog yn gweiddi.",
+      "y marchog sy'n gweiddi"
+     ],
+     [
+      "Mae ceffyl enfawr gyda'r marchog.",
+      "y marchog sydd â cheffyl enfawr"
+     ]
+    ]
+   },
+   {
+    "caption": "sy'n · sy wedi · sy ddim",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "sy'n",
+      "Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin."
+     ],
+     [
+      "sy wedi",
+      "Mae pob marchog sy wedi ceisio heddiw wedi methu."
+     ],
+     [
+      "sy ddim",
+      "Dw i'n hoffi marchogion sy ddim yn gweiddi."
+     ]
+    ]
+   },
+   {
+    "caption": "Pwy sy'n …? ↔ Pwy yw …?",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Pwy sy'n gallu darllen y geiriau?",
+      "Mali."
+     ],
+     [
+      "Pwy sy'n tisian?",
+      "Dyw'r garreg ddim yn tisian!"
+     ],
+     [
+      "Pwy yw hwnnw?",
+      "Y marchog sy'n gweiddi."
+     ],
+     [
+      "Beth sydd yn y garreg?",
+      "Cleddyf go iawn."
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l24-s008"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s010"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s012"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s028"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s035"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s045"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s050"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s060"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s073"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s086"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s090"
+   },
+   {
+    "segment_id": "cy-brenin-01-l24-s121"
+   }
+  ],
+  "nodyn_en": "Sy (written sydd) is the relative form of bod: 'who is / which is'. Mae'r garreg yn dal y cleddyf → y garreg sy'n dal y cleddyf. It takes yn + verb-noun, wedi, ddim, or a place: sy yn y drych. Questions: Pwy sy'n …? Beth sydd …? Pwy bynnag sy'n … = whoever …"
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l24-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Mae'r garreg yn dal y cleddyf. (y garreg …) →",
+      "answer": "y garreg sy'n dal y cleddyf"
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Mae'r marchog yn gweiddi. (y marchog …) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "y marchog sy'n gweiddi",
+        "y marchog sydd yn gweiddi"
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l24-s086"
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Mae'r ferch yn darllen Lladin. (y ferch …) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "y ferch sy'n darllen Lladin",
+        "y ferch sydd yn darllen Lladin"
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l24-s035"
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Mae'r marchogion wedi methu. (y marchogion …) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "y marchogion sy wedi methu",
+        "y marchogion sydd wedi methu"
+       ],
+       "common_wrong": [
+        {
+         "answer": "y marchogion sy'n wedi methu",
+         "hint": "sy wedi (dim 'n)"
+        }
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Dyw'r marchog ddim yn gweiddi. (y marchog …) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "y marchog sy ddim yn gweiddi",
+        "y marchog sydd ddim yn gweiddi"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Dafi'n tisian. (Pwy …?) →",
+      "answer": "Pwy sy'n tisian?"
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Mae Mali'n darllen y geiriau. (Pwy …?) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Pwy sy'n darllen y geiriau?",
+        "Pwy sydd yn darllen y geiriau?"
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Mae Arth wedi glanhau'r eira. (Pwy …?) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Pwy sy wedi glanhau'r eira?",
+        "Pwy sydd wedi glanhau'r eira?"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "___ yw'r marchog? — Fe yw'r marchog sy'n gweiddi. (Pwy sy'n / Pwy)",
+      "answer": "Pwy"
+     },
+     "items": [
+      {
+       "id": "a7",
+       "prompt": "___ tynnu'r cleddyf? — Dim un marchog! (Pwy sy'n / Pwy yw)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Pwy sy'n"
+       ],
+       "common_wrong": [
+        {
+         "answer": "Pwy yw",
+         "hint": "Pwy sy'n + berfenw"
+        }
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "___ hwnnw? — Arglwydd mawr gyda barf goch. (Pwy sy'n / Pwy yw)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Pwy yw"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Bydd hi'n bwrw eira. Byddwn ni'n mynd yn araf. (os) →",
+      "answer": "Os bydd hi'n bwrw eira, byddwn ni'n mynd yn araf."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Bydd y cleddyf yn dod. Bydd e'n frenin. (os) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Os bydd y cleddyf yn dod, bydd e'n frenin."
+       ],
+       "recall_of": "G21"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae'r cleddyf yn sownd. (Mae pawb yn dweud …) →",
+      "answer": "Mae pawb yn dweud bod y cleddyf yn sownd."
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Mae'r garreg yn canu. (Mae pobl yn dweud …) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae pobl yn dweud bod y garreg yn canu."
+       ],
+       "recall_of": "G22",
+       "source_segment_ids": [
+        "cy-brenin-01-l24-s052"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l24-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "mynwent",
+    "einion",
+    "gair",
+    "Lladin",
+    "arwydd",
+    "bedd",
+    "croes",
+    "dur",
+    "llafn",
+    "carn",
+    "cyfieithu",
+    "methu",
+    "llwyddo",
+    "ceisio",
+    "sownd",
+    "unrhyw",
+    "eraill"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae'r beddau wrth yr eglwys, yn y ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "fynwent"
+     ],
+     "explanation": "y + mynwent (b.) → y fynwent"
+    },
+    {
+     "id": "b2",
+     "prompt": "Mae'r marchog yn tynnu, ond dyw'r cleddyf ddim yn dod: mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "sownd"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae Mali'n darllen Lladin ac yn dweud y geiriau yn Gymraeg: mae hi'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cyfieithu"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Dyw'r llafn ddim yn bren: ___ yw e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "dur"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae llaw y brenin ar ___ y cleddyf, dim ar y llafn.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "garn"
+     ],
+     "explanation": "ar + carn → ar garn"
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae pob marchog yn tynnu, ond does dim un yn ___: maen nhw'n methu.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "llwyddo"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Mae'r cleddyf yn sownd, ond mae Cai eisiau ___ hefyd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ceisio"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "Mae rhai marchogion yn tynnu, ac mae marchogion ___ yn gweiddi.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "eraill"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Dw i ddim yn deall y geiriau ar y garreg: ___ yw hi.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Lladin"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae'r geiriau'n dweud pwy bynnag: mae ___ ddyn yn cael ceisio.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "unrhyw"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l24-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Beth sydd ar y garreg?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae einion ar y garreg, ac mae cleddyf yn yr einion.",
+     "rubric": "einion + cleddyf.",
+     "key_terms": [
+      "cy-einion",
+      "cy-cleddyf"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l24-s006"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Pam mae Mali'n gwybod am y garreg?",
+     "answer_mode": "self_check",
+     "model_answer": "Gwelodd hi'r garreg a'r cleddyf yn y drych.",
+     "rubric": "y drych (Pennod 15).",
+     "key_terms": [
+      "cy-drych"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l24-s008"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Pwy sy'n gallu darllen y geiriau Lladin?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Mali",
+      "Mali sy'n gallu darllen",
+      "Mae Mali'n gallu darllen y geiriau"
+     ],
+     "model_answer": "Mali.",
+     "source_segment_ids": [
+      "cy-brenin-01-l24-s033"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth yw'r geiriau ar y garreg, yn Gymraeg?",
+     "answer_mode": "self_check",
+     "model_answer": "Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.",
+     "rubric": "pwy bynnag + sy'n tynnu + brenin.",
+     "key_terms": [
+      "cy-ph-pwy-bynnag",
+      "cy-sy",
+      "cy-brenin"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l24-s045"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Beth sy'n digwydd i'r marchog sydd â cheffyl enfawr?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae'r lledr yn torri, mae'r marchog yn cwympo i'r eira, ac mae'r ceffyl yn rhedeg i ffwrdd.",
+     "rubric": "Un peth o dri: lledr yn torri / cwympo / ceffyl i ffwrdd.",
+     "key_terms": [
+      "cy-lledr",
+      "cy-cwympo"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l24-s075"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam dyw Cai ddim yn ceisio tynnu'r cleddyf?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae Cynyr yn dweud: dim heddiw. Ac mae'r arglwydd coch yn dweud: dim bechgyn.",
+     "rubric": "Rheswm Cynyr neu reswm yr arglwydd.",
+     "key_terms": [
+      "cy-ceisio"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l24-s108",
+      "cy-brenin-01-l24-s110"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "A ti? Pwy sy'n gallu darllen yn dy deulu di?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae pawb yn fy nheulu i'n gallu darllen. / Fy mam sy'n… Mae fy mam yn gallu darllen.",
+     "rubric": "Brawddeg gyda Pwy / sy'n neu gyda Mae … yn gallu darllen.",
+     "key_terms": [
+      "cy-darllen"
+     ]
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-sy",
+   "citation_form": "sy",
+   "part_of_speech": "verb",
+   "current_sense": "who is / which is (relative of bod: sy'n, sy wedi)",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sydd",
+   "citation_form": "sydd",
+   "part_of_speech": "verb",
+   "current_sense": "who is / which is (full form of sy)",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-mynwent",
+   "citation_form": "mynwent",
+   "part_of_speech": "noun",
+   "current_sense": "graveyard, churchyard",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-einion",
+   "citation_form": "einion",
+   "part_of_speech": "noun",
+   "current_sense": "anvil",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gair",
+   "citation_form": "gair",
+   "part_of_speech": "noun",
+   "current_sense": "word",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-lladin",
+   "citation_form": "Lladin",
+   "part_of_speech": "noun",
+   "current_sense": "Latin",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-arwydd",
+   "citation_form": "arwydd",
+   "part_of_speech": "noun",
+   "current_sense": "sign",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cyfieithu",
+   "citation_form": "cyfieithu",
+   "part_of_speech": "verb",
+   "current_sense": "to translate",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-methu",
+   "citation_form": "methu",
+   "part_of_speech": "verb",
+   "current_sense": "to fail; cannot",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llwyddo",
+   "citation_form": "llwyddo",
+   "part_of_speech": "verb",
+   "current_sense": "to succeed",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ceisio",
+   "citation_form": "ceisio",
+   "part_of_speech": "verb",
+   "current_sense": "to try",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-pwy-bynnag",
+   "citation_form": "pwy bynnag",
+   "part_of_speech": "pronoun",
+   "current_sense": "whoever (receptive)",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-beth-bynnag",
+   "citation_form": "beth bynnag",
+   "part_of_speech": "pronoun",
+   "current_sense": "whatever; anyway",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-unrhyw",
+   "citation_form": "unrhyw",
+   "part_of_speech": "adjective",
+   "current_sense": "any",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhai",
+   "citation_form": "rhai",
+   "part_of_speech": "pronoun",
+   "current_sense": "some",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-eraill",
+   "citation_form": "eraill",
+   "part_of_speech": "adjective",
+   "current_sense": "others, other (plural)",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sownd",
+   "citation_form": "sownd",
+   "part_of_speech": "adjective",
+   "current_sense": "stuck, fast",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-bedd",
+   "citation_form": "bedd",
+   "part_of_speech": "noun",
+   "current_sense": "grave",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-croes",
+   "citation_form": "croes",
+   "part_of_speech": "noun",
+   "current_sense": "cross",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dur",
+   "citation_form": "dur",
+   "part_of_speech": "noun",
+   "current_sense": "steel",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llafn",
+   "citation_form": "llafn",
+   "part_of_speech": "noun",
+   "current_sense": "blade",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-carn",
+   "citation_form": "carn",
+   "part_of_speech": "noun",
+   "current_sense": "hilt; hoof",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cymraeg",
+   "citation_form": "Cymraeg",
+   "part_of_speech": "noun",
+   "current_sense": "Welsh (language)",
+   "first_introduced_lesson": "cy-brenin-01-l24",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-24.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "sy (sy'n, sy wedi, sy ddim)",
+    "back": "who is / which is (relative of bod: sy'n, sy wedi)",
+    "example_segment_id": "cy-brenin-01-l24-s012",
+    "lexeme_id": "cy-sy"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "sydd (= sy)",
+    "back": "who is / which is (full form of sy)",
+    "example_segment_id": "cy-brenin-01-l24-s073",
+    "lexeme_id": "cy-sydd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "mynwent (b.)",
+    "back": "graveyard, churchyard",
+    "example_segment_id": "cy-brenin-01-l24-s003",
+    "seen_as": "y fynwent",
+    "lexeme_id": "cy-mynwent"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "einion (b.)",
+    "back": "anvil",
+    "example_segment_id": "cy-brenin-01-l24-s006",
+    "lexeme_id": "cy-einion"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "gair (g.), geiriau",
+    "back": "word",
+    "example_segment_id": "cy-brenin-01-l24-s026",
+    "lexeme_id": "cy-gair"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "Lladin (b.)",
+    "back": "Latin",
+    "example_segment_id": "cy-brenin-01-l24-s030",
+    "lexeme_id": "cy-lladin"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "arwydd (g.)",
+    "back": "sign",
+    "example_segment_id": "cy-brenin-01-l24-s056",
+    "lexeme_id": "cy-arwydd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "cyfieithu",
+    "back": "to translate",
+    "example_segment_id": "cy-brenin-01-l24-s041",
+    "lexeme_id": "cy-cyfieithu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "methu",
+    "back": "to fail; cannot",
+    "example_segment_id": "cy-brenin-01-l24-s066",
+    "lexeme_id": "cy-methu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "llwyddo",
+    "back": "to succeed",
+    "example_segment_id": "cy-brenin-01-l24-s099",
+    "lexeme_id": "cy-llwyddo"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "ceisio",
+    "back": "to try",
+    "example_segment_id": "cy-brenin-01-l24-s062",
+    "lexeme_id": "cy-ceisio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "pwy bynnag",
+    "back": "whoever (receptive)",
+    "example_segment_id": "cy-brenin-01-l24-s045",
+    "lexeme_id": "cy-ph-pwy-bynnag"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "beth bynnag",
+    "back": "whatever; anyway",
+    "example_segment_id": "cy-brenin-01-l24-s114",
+    "lexeme_id": "cy-ph-beth-bynnag"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "unrhyw (+ SM)",
+    "back": "any",
+    "example_segment_id": "cy-brenin-01-l24-s048",
+    "lexeme_id": "cy-unrhyw"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "rhai",
+    "back": "some",
+    "example_segment_id": "cy-brenin-01-l24-s098",
+    "lexeme_id": "cy-rhai"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "eraill",
+    "back": "others, other (plural)",
+    "example_segment_id": "cy-brenin-01-l24-s098",
+    "lexeme_id": "cy-eraill"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "sownd",
+    "back": "stuck, fast",
+    "example_segment_id": "cy-brenin-01-l24-s065",
+    "lexeme_id": "cy-sownd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "bedd (g.), beddau",
+    "back": "grave",
+    "example_segment_id": "cy-brenin-01-l24-s004",
+    "lexeme_id": "cy-bedd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "croes (b.), croesau",
+    "back": "cross",
+    "example_segment_id": "cy-brenin-01-l24-s004",
+    "lexeme_id": "cy-croes"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "dur (g.)",
+    "back": "steel",
+    "example_segment_id": "cy-brenin-01-l24-s023",
+    "lexeme_id": "cy-dur"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "llafn (g.)",
+    "back": "blade",
+    "example_segment_id": "cy-brenin-01-l24-s007",
+    "lexeme_id": "cy-llafn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "carn (g.)",
+    "back": "hilt; hoof",
+    "example_segment_id": "cy-brenin-01-l24-s007",
+    "lexeme_id": "cy-carn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l24",
+    "front": "Cymraeg (b.)",
+    "back": "Welsh (language)",
+    "example_segment_id": "cy-brenin-01-l24-s033",
+    "lexeme_id": "cy-cymraeg"
+   },
+   {
+    "id": "pattern-g24",
+    "lesson": "cy-brenin-01-l24",
+    "front": "y garreg sy'n dal y cleddyf · Pwy sy'n gallu darllen y geiriau? · Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.",
+    "back": "the stone that holds the sword · Who can read the words? · Whoever pulls this sword from the stone, he is the king. (sy'n, sy wedi, sy ddim; written sydd)",
+    "example_segment_id": "cy-brenin-01-l24-s012",
+    "example_segment_ids": [
+     "cy-brenin-01-l24-s012",
+     "cy-brenin-01-l24-s028"
+    ],
+    "lexeme_id": "cy-pattern-g24"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l24-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 1,
+   "margin_diagram": 1,
+   "margin_gloss": 28
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-24",
+   "rhan-3"
+  ]
+ },
+ "metrics": {
+  "running_words": 1363,
+  "sentences": 132,
+  "word_target": 1420,
+  "word_window": [
+   1278,
+   1562
+  ]
+ }
+}

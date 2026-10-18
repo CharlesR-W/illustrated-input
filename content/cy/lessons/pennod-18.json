@@ -1,0 +1,2412 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l18",
+  "course_id": "cy-brenin-01",
+  "order": 18,
+  "title": "Bob dydd",
+  "rhan": 2,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "block writer B3 (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief B3 2026-10-12",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Productive time work (Pensa A) is limited to weekdays, whole hours, bob, pryd and the ordinals with dydd. Hanner, chwarter, munud, mis, blwyddyn and the seasons appear in story sentences with glosses and the SVG but are never tested in Pensum A.",
+      "All 29 planned lexemes are used at least three times; no drops. The seasons come in naturally through Mali's practice words (gwanwyn, haf, hydref, gaeaf), Modlen's 'afalau'r hydref' and Myrddin's answer to 'Pryd dw i'n gallu darllen llyfr?'.",
+      "Letters spelled out by Arth (B… r… e… n… i… n…) are covered by a define gloss in that segment; single letters are otherwise avoided (Arth misreads 'ci' as the known word 'chi').",
+      "Checker warnings justified (re-run after the phrase-lexeme checker fix, 2026-10-18): (1) prior coverage 85.7% (Rhan 2 floor 88%): the day names, clock phrases and ordinals are this chapter's taught forms and recur throughout; (2) local density at Mali's season practice words (s078–s079) and at Myrddin's Sunday recap (s121, 'Y dydd cyntaf … Yr ail ddydd … Y trydydd dydd … Y pedwerydd dydd'), a deliberate retelling of ordinals met earlier in the chapter; (3) lemma-validation on ail, trydydd, pedwerydd, tabled awaits fluent sign-off.",
+      "Lexicon delta adds the seven day names as forms of cy-dydd plus a 'days' card stage, as the plan's new_forms row lists them under cy-dydd.",
+      "Running words 1,345 (target 1,233, window 1,110–1,356).",
+      "Continuity with 15: Dafi keeps Myrddin's watch; he announces the hours, and its ticking gives him away in the dark stable.",
+      "Cai catches the first lesson but treats it as play ('Mae Arth yn chwarae gyda llythrennau!'); the secret stays with Mali, Arth and Myrddin, who reveals on Sunday that he knew every night (his hat hung in the stable).",
+      "Fluent review 2026-10-12 applied: letter recognition now uses 'gallu darllen' (s055, s057, s106) instead of 'gwybod'; 'gwybod hanner yr wyddor' (s100, s117) kept as the reviewer's qualified verdict allows; s067 'wedi llosgi' (mas dropped, matching C.c4); A.a4, C.c1, C.c5 keys widened; A.a5/A.a6 (and their Enghraifft) now cue 'pob + …' so 'Bob dydd …' is explicitly required and pob → bob is what is tested; C.c7 asks 'Beth mae hi'n ysgrifennu?'. Review-question verdicts, all accepted unchanged: s013 'Bob dydd Llun, …' (no ar; comma fine); s011 'Dim ond chwarter awr! Dw i byth yn hwyr!'; s057 no comma after Weithiau; s070 'Aros funud' (adverbial SM of duration); s083 'afalau'r hydref yw'r rhain'; s136 'Dw i wedi darllen am flynyddoedd'; s122–126 verbless ordinal recap; s007 Monday-first week; s131 'Pryd dw i'n gallu darllen llyfr?' as colloquial present modal; 'tabled gŵyr' keeps the circumflex on the mutated form.",
+      "s007 now carries an antonym gloss 'cyntaf ↔ olaf': with the phrase-lexeme checker fix, 'olaf' is no longer licensed by Pennod 12's 'yn olaf' outside that phrase. The gloss also supplies the 'context+gloss' introduction of cyntaf declared for s007. s031 also gains the radical gloss 'y wers gyntaf ← cyntaf' that the checker asked for (first mutated use of a new word)."
+    ],
+    "review_questions": []
+  },
+  "learning_contract": {
+    "grammar_target_id": "G18",
+    "primary_new_grammar": {
+      "id": "G18",
+      "label": "Time: days of the week (dydd Llun … dydd Sul), whole hours (Faint o'r gloch yw hi? Mae hi'n wyth o'r gloch; am wyth o'r gloch; deuddeg), pob → bob (bob dydd), pryd?, ordinals 1st–4th with dydd (y dydd cyntaf, yr ail ddydd, y trydydd dydd, y pedwerydd dydd); fractions (hanner, chwarter) and seasons receptive",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G13",
+      "G14",
+      "G15",
+      "G16",
+      "G17"
+    ],
+    "incidental": [],
+    "new_lexeme_ids": [
+      "cy-dydd",
+      "cy-wythnos",
+      "cy-awr",
+      "cy-munud",
+      "cy-ph-or-gloch",
+      "cy-hanner",
+      "cy-chwarter",
+      "cy-pob",
+      "cy-weithiau",
+      "cy-byth",
+      "cy-cyntaf",
+      "cy-ail",
+      "cy-trydydd",
+      "cy-pedwerydd",
+      "cy-llythyren",
+      "cy-gwyddor",
+      "cy-tabled",
+      "cy-eglwys",
+      "cy-cwyr",
+      "cy-deuddeg",
+      "cy-pryd",
+      "cy-canu",
+      "cy-pobi",
+      "cy-ymarfer",
+      "cy-mis",
+      "cy-blwyddyn",
+      "cy-gwanwyn",
+      "cy-haf",
+      "cy-hydref"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-dydd",
+        "how": "context+picture(svg)",
+        "segment_id": "cy-brenin-01-l18-s002"
+      },
+      {
+        "lexeme_id": "cy-wythnos",
+        "how": "gloss",
+        "segment_id": "cy-brenin-01-l18-s006"
+      },
+      {
+        "lexeme_id": "cy-awr",
+        "how": "gloss+context",
+        "segment_id": "cy-brenin-01-l18-s011"
+      },
+      {
+        "lexeme_id": "cy-munud",
+        "how": "gloss+context",
+        "segment_id": "cy-brenin-01-l18-s070"
+      },
+      {
+        "lexeme_id": "cy-ph-or-gloch",
+        "how": "gloss+picture(svg)",
+        "segment_id": "cy-brenin-01-l18-s005"
+      },
+      {
+        "lexeme_id": "cy-hanner",
+        "how": "gloss+picture(svg)",
+        "segment_id": "cy-brenin-01-l18-s059"
+      },
+      {
+        "lexeme_id": "cy-chwarter",
+        "how": "gloss+picture(svg)",
+        "segment_id": "cy-brenin-01-l18-s011"
+      },
+      {
+        "lexeme_id": "cy-pob",
+        "how": "gloss",
+        "segment_id": "cy-brenin-01-l18-s002"
+      },
+      {
+        "lexeme_id": "cy-weithiau",
+        "how": "gloss(antonym)",
+        "segment_id": "cy-brenin-01-l18-s057"
+      },
+      {
+        "lexeme_id": "cy-byth",
+        "how": "gloss(antonym)",
+        "segment_id": "cy-brenin-01-l18-s011"
+      },
+      {
+        "lexeme_id": "cy-cyntaf",
+        "how": "context+gloss",
+        "segment_id": "cy-brenin-01-l18-s007"
+      },
+      {
+        "lexeme_id": "cy-ail",
+        "how": "gloss+context",
+        "segment_id": "cy-brenin-01-l18-s055"
+      },
+      {
+        "lexeme_id": "cy-trydydd",
+        "how": "context+gloss",
+        "segment_id": "cy-brenin-01-l18-s059"
+      },
+      {
+        "lexeme_id": "cy-pedwerydd",
+        "how": "gloss(paradigm)",
+        "segment_id": "cy-brenin-01-l18-s079"
+      },
+      {
+        "lexeme_id": "cy-llythyren",
+        "how": "gloss+picture(cover)",
+        "segment_id": "cy-brenin-01-l18-s025"
+      },
+      {
+        "lexeme_id": "cy-gwyddor",
+        "how": "gloss+context",
+        "segment_id": "cy-brenin-01-l18-s027"
+      },
+      {
+        "lexeme_id": "cy-tabled",
+        "how": "picture(vignette)+picture(cover)",
+        "segment_id": "cy-brenin-01-l18-s034"
+      },
+      {
+        "lexeme_id": "cy-eglwys",
+        "how": "picture(svg)+context",
+        "segment_id": "cy-brenin-01-l18-s019"
+      },
+      {
+        "lexeme_id": "cy-cwyr",
+        "how": "picture(vignette)",
+        "segment_id": "cy-brenin-01-l18-s035"
+      },
+      {
+        "lexeme_id": "cy-deuddeg",
+        "how": "gloss",
+        "segment_id": "cy-brenin-01-l18-s012"
+      },
+      {
+        "lexeme_id": "cy-pryd",
+        "how": "context",
+        "segment_id": "cy-brenin-01-l18-s029"
+      },
+      {
+        "lexeme_id": "cy-canu",
+        "how": "context",
+        "segment_id": "cy-brenin-01-l18-s017"
+      },
+      {
+        "lexeme_id": "cy-pobi",
+        "how": "context+picture(svg)",
+        "segment_id": "cy-brenin-01-l18-s017"
+      },
+      {
+        "lexeme_id": "cy-ymarfer",
+        "how": "context+picture(svg)",
+        "segment_id": "cy-brenin-01-l18-s013"
+      },
+      {
+        "lexeme_id": "cy-mis",
+        "how": "gloss(paradigm)",
+        "segment_id": "cy-brenin-01-l18-s133"
+      },
+      {
+        "lexeme_id": "cy-blwyddyn",
+        "how": "gloss(paradigm)",
+        "segment_id": "cy-brenin-01-l18-s133"
+      },
+      {
+        "lexeme_id": "cy-gwanwyn",
+        "how": "context+gloss",
+        "segment_id": "cy-brenin-01-l18-s060"
+      },
+      {
+        "lexeme_id": "cy-haf",
+        "how": "context+gloss",
+        "segment_id": "cy-brenin-01-l18-s079"
+      },
+      {
+        "lexeme_id": "cy-hydref",
+        "how": "context+gloss",
+        "segment_id": "cy-brenin-01-l18-s079"
+      }
+    ],
+    "recycle_lexeme_ids": [
+      "cy-un",
+      "cy-dau",
+      "cy-tri",
+      "cy-pedwar",
+      "cy-darllen",
+      "cy-ysgrifennu",
+      "cy-oriawr",
+      "cy-bod",
+      "cy-arfer",
+      "cy-cynnau",
+      "cy-cannwyll",
+      "cy-am",
+      "cy-mewn",
+      "cy-hwyr",
+      "cy-tair",
+      "cy-dwy",
+      "cy-ph-yn-gyntaf"
+    ],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "ref": "cy-brenin-01-l18-img-cover",
+      "src": "media/images/cy-brenin-01-l18-img-cover.webp",
+      "status": "planned",
+      "presentation": "inline_scene",
+      "alt": "Night in the llys stable: by one candle, Mali shows Arth letters scratched in the wax of a small wooden tablet; the horses look on and a tall black hat hangs on a peg.",
+      "art_brief": "Inside the llys stable at night (llys palette: warm wood, thatch, straw), lit by one candle on a beam; snow glimpsed through a gap in the door. Mali (12, long dark braid, dark-blue dress, ink-stained fingers, leather satchel) sits on the straw holding a small wooden wax tablet and a stylus, pointing to a letter. Arth (11, untidy brown hair with cowlick, freckles, oversized moss-green tunic) leans close, frowning hard in concentration. Two horses (an old white-grey and a young chestnut) look over a stall. On a peg on the wall hangs Myrddin's tall black brimmed hat, a thin wisp of smoke rising from it. The marks in the wax are scratches, not readable letters. No text.",
+      "characters": [
+        "char-mali",
+        "char-arth"
+      ],
+      "covers_lexeme_ids": [
+        "cy-tabled",
+        "cy-cwyr",
+        "cy-llythyren"
+      ]
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l18-sec1",
+        "title": "Yr wythnos",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l18-s001",
+            "text": "Mae oriawr Myrddin gyda Dafi nawr, yn yr het.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s002",
+            "text": "Mae hi'n gwneud sŵn bach bob dydd a phob nos: tic, toc, tic, toc.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "tic, toc, tic, toc",
+                "gloss": "tic, toc = sŵn yr oriawr",
+                "gloss_kind": "synonym"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "bob dydd",
+                "gloss": "bob dydd ← pob dydd",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "phob nos",
+                "gloss": "a phob nos ← pob nos",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s003",
+            "text": "\"Faint o'r gloch yw hi, Dafi?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s004",
+            "text": "\"Wyth o'r gloch!\" meddai Dafi, ac mae e'n edrych ar yr oriawr.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l18-s005",
+            "text": "\"Ie: mae hi'n wyth o'r gloch,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wyth o'r gloch",
+                "gloss": "wyth o'r gloch = 8:00",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s006",
+            "text": "\"Mae saith diwrnod mewn wythnos, ac mae gwaith gwahanol yn y llys bob dydd.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wythnos",
+                "gloss": "wythnos = saith dydd",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s007",
+            "text": "Dydd Llun yw'r dydd cyntaf, a dydd Sul yw'r dydd olaf.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "olaf",
+                "gloss": "cyntaf ↔ olaf",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s008",
+            "text": "Bob bore, am chwech o'r gloch, mae Dafi'n codi'n gynnar ac yn cynnau'r ffwrn i Modlen.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Am",
+                "gloss": "am chwech o'r gloch = 6:00",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s009",
+            "text": "Am wyth o'r gloch, mae Cai'n codi'n hwyr ac yn gofyn am fwyd."
+          },
+          {
+            "id": "cy-brenin-01-l18-s010",
+            "text": "\"Dw i ddim yn hwyr!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l18-s011",
+            "text": "\"Dim ond chwarter awr! Dw i byth yn hwyr!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "chwarter awr",
+                "gloss": "chwarter awr = 15 munud",
+                "gloss_kind": "define"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "byth",
+                "gloss": "byth ↔ bob dydd",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s012",
+            "text": "Am ddeuddeg o'r gloch, mae'r teulu'n bwyta yn y neuadd.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddeuddeg",
+                "gloss": "am ddeuddeg ← deuddeg (12)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s013",
+            "text": "Bob dydd Llun, mae Cai'n ymarfer gyda'i gleddyf a'i fwa yn y buarth, ac mae'r saethau'n mynd dros y wal.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l18-img-wythnos",
+                "anchor_text": "dydd Llun",
+                "label": "Yr wythnos",
+                "src": "media/diagrams/cy-brenin-01-l18-img-wythnos.svg",
+                "alt": "Two parts, Welsh labels only. Left: Myrddin's round pocket watch (now Dafi's) with numerals 1 to 12, the hands at eight o'clock, labelled 'wyth o'r gloch', with a quarter of the dial shaded and labelled 'chwarter awr'. Right: a week strip of seven rows: 'dydd Llun – ymarfer', 'dydd Mawrth – y dref', 'dydd Mercher – arian', 'dydd Iau – Myrddin', 'dydd Gwener – pobi', 'dydd Sadwrn – cysgu', 'dydd Sul – eglwys'.",
+                "status": "draft",
+                "art_brief": "Two parts, Welsh labels only. Left: Myrddin's round pocket watch (now Dafi's) with numerals 1 to 12, the hands at eight o'clock, labelled 'wyth o'r gloch', with a quarter of the dial shaded and labelled 'chwarter awr'. Right: a week strip of seven rows: 'dydd Llun – ymarfer', 'dydd Mawrth – y dref', 'dydd Mercher – arian', 'dydd Iau – Myrddin', 'dydd Gwener – pobi', 'dydd Sadwrn – cysgu', 'dydd Sul – eglwys'.",
+                "covers_lexeme_ids": [
+                  "cy-dydd",
+                  "cy-wythnos",
+                  "cy-ph-or-gloch",
+                  "cy-chwarter",
+                  "cy-awr",
+                  "cy-ymarfer",
+                  "cy-pobi",
+                  "cy-eglwys"
+                ],
+                "width": 320,
+                "height": 470
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s014",
+            "text": "Bob dydd Mawrth, mae Cynyr yn croesi'r bont ac yn mynd i'r dref gyda'r defaid."
+          },
+          {
+            "id": "cy-brenin-01-l18-s015",
+            "text": "Bob dydd Mercher, mae Elen yn cyfrif yr arian, ac mae'r morynion yn golchi."
+          },
+          {
+            "id": "cy-brenin-01-l18-s016",
+            "text": "Bob dydd Iau, mae Myrddin yn dysgu Arth yn y tŵr."
+          },
+          {
+            "id": "cy-brenin-01-l18-s017",
+            "text": "Bob dydd Gwener, mae Modlen yn pobi bara, ac mae hi'n canu yn y gegin."
+          },
+          {
+            "id": "cy-brenin-01-l18-s018",
+            "text": "Bob dydd Sadwrn, mae Pero'n cysgu: dyna waith Pero bob dydd!"
+          },
+          {
+            "id": "cy-brenin-01-l18-s019",
+            "text": "A phob dydd Sul, mae'r teulu'n mynd i'r eglwys yn y dref."
+          },
+          {
+            "id": "cy-brenin-01-l18-s020",
+            "text": "\"Mae amser yn mynd yn gyflym yn y llys,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l18-s021",
+            "text": "\"Ond dyw amser ddim yn mynd yn gyflym yn y gwersi!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l18-sec2",
+        "title": "Y dydd cyntaf",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l18-s022",
+            "text": "Ond yr wythnos yma, mae cyfrinach gydag Arth.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s023",
+            "text": "Mae e eisiau darllen: mae Mam yn darllen, mae Myrddin yn darllen, ac mae Mali'n darllen hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l18-s024",
+            "text": "Mae Arth yn cofio llyfrau Myrddin yn y tŵr, ac mae e'n teimlo'n drist."
+          },
+          {
+            "id": "cy-brenin-01-l18-s025",
+            "text": "\"Mali,\" meddai Arth yn dawel, \"dw i eisiau dysgu'r llythrennau.\"",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "llythrennau",
+                "gloss": "llythyren, llythrennau",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s026",
+            "text": "\"Wrth gwrs,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s027",
+            "text": "\"Pan o'n i'n fach, roedd Mam yn arfer dysgu'r wyddor i fi.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wyddor",
+                "gloss": "yr wyddor ← gwyddor (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s028",
+            "text": "Nawr dw i'n dysgu'r wyddor i ti.\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s029",
+            "text": "\"Pryd?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s030",
+            "text": "\"Bob nos, am wyth o'r gloch, yn y stabl.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s031",
+            "text": "Mae'r wers gyntaf nos Lun.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nos Lun",
+                "gloss": "nos Lun ← dydd Llun",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gyntaf",
+                "gloss": "y wers gyntaf ← cyntaf",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s032",
+            "text": "\"Ond paid â siarad am y gwersi gyda Cai!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s033",
+            "text": "Ar y dydd cyntaf, mae Arth a Mali'n mynd i'r stabl am wyth o'r gloch, ac mae Pero'n dilyn y plant.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "y dydd cyntaf",
+                "gloss": "dydd Llun = y dydd cyntaf",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s034",
+            "text": "Mae Mali'n cario cannwyll, ac mae tabled fach gyda hi.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l18-img-tabled",
+                "anchor_text": "tabled",
+                "label": "tabled gŵyr",
+                "src": "media/vignettes/cy-brenin-01-l18-img-tabled.webp",
+                "alt": "",
+                "status": "planned",
+                "art_brief": "A small wooden writing tablet filled with dark yellow wax, with a few letters scratched in it, and a bone stylus. Ink line and watercolour, transparent background, no text other than scratched marks that are not readable letters.",
+                "covers_lexeme_ids": [
+                  "cy-tabled",
+                  "cy-cwyr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s035",
+            "text": "Mae cwyr ar y dabled, ac mae Mali'n ysgrifennu yn y cwyr.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dabled",
+                "gloss": "y dabled ← tabled (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s036",
+            "text": "Yn gyntaf, mae Mali'n canu'r wyddor yn dawel, ac mae Arth yn canu hefyd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s037",
+            "text": "Wedyn mae hi'n ysgrifennu \"ci\"."
+          },
+          {
+            "id": "cy-brenin-01-l18-s038",
+            "text": "\"Beth yw hwn, Arth?\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s039",
+            "text": "Mae Arth yn edrych ar y llythrennau am amser hir."
+          },
+          {
+            "id": "cy-brenin-01-l18-s040",
+            "text": "\"Chi?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s041",
+            "text": "\"Nage!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s042",
+            "text": "\"Ci! Dim chi!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s043",
+            "text": "\"Dw i ddim yn deall,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s044",
+            "text": "Ond yn sydyn, mae drws y stabl yn agor: dyna Cai, gyda bara yn ei law e.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s045",
+            "text": "\"Arth? Mali?\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l18-s046",
+            "text": "\"Pam dych chi yn y stabl?\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s047",
+            "text": "Mae e'n edrych ar y dabled."
+          },
+          {
+            "id": "cy-brenin-01-l18-s048",
+            "text": "\"Ha! Llythrennau! Mae Arth yn chwarae gyda llythrennau!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s049",
+            "text": "\"Dyw e ddim yn chwarae,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s050",
+            "text": "\"Mae e'n dysgu.\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s051",
+            "text": "\"Dysgu? Ha! Dw i byth yn darllen, a dw i'n gryf!\"",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l18-s052",
+            "text": "Mae Cai'n gadael y stabl, ac mae e'n chwerthin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s053",
+            "text": "Mae Arth yn goch iawn."
+          },
+          {
+            "id": "cy-brenin-01-l18-s054",
+            "text": "\"Paid â gwrando ar Cai,\" meddai Mali, ac mae hi'n ysgrifennu \"ci\" eto.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s055",
+            "text": "Ar yr ail ddydd, dydd Mawrth, mae Arth yn gallu darllen deg llythyren.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ail ddydd",
+                "gloss": "yr ail ddydd ← dydd",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s056",
+            "text": "Mae Mali'n dangos y llythrennau i Arth, ac mae hi'n esbonio: \"Dyma lythyren. Beth yw hon?\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "lythyren",
+                "gloss": "dyma lythyren ← llythyren",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s057",
+            "text": "Weithiau mae e'n gallu darllen y llythyren, a weithiau dyw e ddim yn gallu, ond mae e'n ymarfer bob dydd.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Weithiau",
+                "gloss": "weithiau ↔ bob dydd ↔ byth",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s058",
+            "text": "Wedyn mae Mali'n cuddio'r dabled mewn bocs, ar silff yn y stabl."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l18-sec3",
+        "title": "Y trydydd dydd",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l18-s059",
+            "text": "Ar y trydydd dydd, dydd Mercher, mae'r wers yn hir: awr a hanner.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "hanner",
+                "gloss": "awr a hanner = 90 munud",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s060",
+            "text": "Am naw o'r gloch, mae Mali'n ysgrifennu \"gwanwyn\" yn y cwyr."
+          },
+          {
+            "id": "cy-brenin-01-l18-s061",
+            "text": "\"Dyma'r trydydd dydd, Arth,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s062",
+            "text": "\"Darllen!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s063",
+            "text": "\"Gwan…\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s064",
+            "text": "Ond nawr mae'r gannwyll yn fach iawn: dim ond chwarter awr o olau.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s065",
+            "text": "\"Gwan… gwan…\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s066",
+            "text": "\"Gwan? Dw i ddim yn wan! Ond dw i ddim yn gallu darllen heb olau!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s067",
+            "text": "Ac yn sydyn, mae'r stabl yn dywyll: mae'r gannwyll wedi llosgi.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s068",
+            "text": "\"Does dim golau!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s069",
+            "text": "\"Ble mae'r hen lamp?\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s070",
+            "text": "\"Aros funud,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "funud",
+                "gloss": "aros funud ← munud (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s071",
+            "text": "Mae e'n gwrando, ac mae e'n clywed sŵn bach yn y stabl dywyll: sŵn oriawr.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s072",
+            "text": "Wedyn mae tân bach yn y stabl: mae Dafi ar y wal, wrth het Myrddin, ac mae e'n cynnau'r hen lamp."
+          },
+          {
+            "id": "cy-brenin-01-l18-s073",
+            "text": "\"Dyma olau!\" meddai Dafi.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l18-s074",
+            "text": "\"Diolch, Dafi!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s075",
+            "text": "\"Ond pam mae het Myrddin yn y stabl?\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s076",
+            "text": "Dyw Dafi ddim yn ateb: mae e'n gwenu, ac mae mwg bach yn dod o'i drwyn e.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s077",
+            "text": "Mae Arth yn edrych ar y dabled eto.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s078",
+            "text": "\"Gwan… wyn… Gwanwyn!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s079",
+            "text": "Ar y pedwerydd dydd, dydd Iau, mae Arth yn darllen \"haf\", \"hydref\" a \"gaeaf\" hefyd, ac mae e'n gwybod hanner yr wyddor.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "pedwerydd",
+                "gloss": "1 cyntaf · 2 ail · 3 trydydd · 4 pedwerydd",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l18-sec4",
+        "title": "Dydd Gwener",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l18-s080",
+            "text": "Dydd Gwener yw dydd y bara.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s081",
+            "text": "Am chwech o'r gloch, mae Modlen yn pobi bara, ac mae hi'n canu'n uchel."
+          },
+          {
+            "id": "cy-brenin-01-l18-s082",
+            "text": "Am ddeuddeg o'r gloch, mae pasteiod afal ar y bwrdd."
+          },
+          {
+            "id": "cy-brenin-01-l18-s083",
+            "text": "\"Dw i wedi pobi pasteiod afal heddiw: afalau'r hydref yw'r rhain,\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l18-s084",
+            "text": "\"Hanner pastai i Cai, a hanner pastai i Arth."
+          },
+          {
+            "id": "cy-brenin-01-l18-s085",
+            "text": "Dafi: paid byth â chyffwrdd â'r pasteiod!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s086",
+            "text": "Am ddau o'r gloch, mae Cai yn y gegin; am dri o'r gloch, does dim pasteiod!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s087",
+            "text": "Mae Modlen yn cuddio'r pasteiod mewn basged.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s088",
+            "text": "Weithiau mae Dafi'n bwyta'r bara, ond heddiw dyw e ddim yn cael dim byd."
+          },
+          {
+            "id": "cy-brenin-01-l18-s089",
+            "text": "Yn y nos, mae e'n wyllt: mae e eisiau bwyd yn ofnadwy."
+          },
+          {
+            "id": "cy-brenin-01-l18-s090",
+            "text": "Am wyth o'r gloch, mae Mali'n rhoi'r dabled ar y gwellt yn y stabl.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s091",
+            "text": "Mae Arth a Mali'n rhoi bwyd i'r ceffylau am chwarter awr."
+          },
+          {
+            "id": "cy-brenin-01-l18-s092",
+            "text": "Wedyn mae Mali'n codi'r dabled."
+          },
+          {
+            "id": "cy-brenin-01-l18-s093",
+            "text": "\"Arth!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s094",
+            "text": "\"Ble mae'r cwyr?\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s095",
+            "text": "Does dim cwyr ar y dabled: dim ond pren.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s096",
+            "text": "Mae Dafi'n eistedd ar y gwellt, ac mae cwyr ar ei geg e.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l18-img-cwyr",
+                "src": "media/images/cy-brenin-01-l18-img-cwyr.webp",
+                "alt": "In the stable at night by candlelight: Mali holds up an empty wooden tablet with no wax left; Arth stares; tiny Dafi sits on the straw with yellow wax round his mouth, looking pleased.",
+                "status": "planned",
+                "art_brief": "Inside the llys stable at night (llys palette: warm wood, thatch, straw), lit by one candle stuck on a beam; two horses watch over a stall door, one old white-grey, one young chestnut. Mali (12, long dark braid, dark-blue dress, ink-stained fingers) holds up a small wooden writing tablet whose wax has been licked clean down to the bare wood, mouth open in outrage. Arth (11, untidy brown hair with cowlick, moss-green tunic) kneels beside her, staring. On the straw sits Dafi (red dragon small enough to sit inside a wooden drinking cup; cream horns, tiny bat wings, big yellow eyes), with smears of yellow wax round his mouth and on his claws, looking very pleased. Myrddin's tall black brimmed hat hangs on a peg on the wall. No text.",
+                "characters": [
+                  "char-mali",
+                  "char-arth",
+                  "char-dafi"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-tabled",
+                  "cy-cwyr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s097",
+            "text": "\"Dafi! Wyt ti wedi bwyta'r cwyr?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s098",
+            "text": "\"Ydw,\" meddai Dafi.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l18-s099",
+            "text": "\"Dw i'n hoffi pasteiod, ond dw i'n hoffi cwyr hefyd!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s100",
+            "text": "\"Ar y pedwerydd dydd, ro't ti'n gwybod hanner yr wyddor, Arth,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s101",
+            "text": "\"Pedwar diwrnod o wersi, a nawr? Does dim cwyr, does dim llythrennau, a does dim byd!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s102",
+            "text": "Ar ddydd Sadwrn, mae Mali'n prynu cwyr newydd yn y dref: mae hi'n talu un geiniog.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s103",
+            "text": "Ac mae Arth yn ymarfer eto."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l18-sec5",
+        "title": "Dydd Sul",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l18-s104",
+            "text": "Ar ddydd Sul, am ddeg o'r gloch, mae'r teulu yn yr eglwys yn y dref.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s105",
+            "text": "Mae'r eglwys yn hen ac yn dawel, ac mae llythrennau mawr ar garreg wrth y drws."
+          },
+          {
+            "id": "cy-brenin-01-l18-s106",
+            "text": "Mae Arth yn edrych ar y garreg: mae e'n gallu darllen y llythyren gyntaf, ac mae e'n gallu darllen yr ail lythyren!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "lythyren",
+                "gloss": "yr ail lythyren ← llythyren",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s107",
+            "text": "\"Pam wyt ti'n edrych ar y wal, Arth?\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l18-s108",
+            "text": "\"Dim byd!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s109",
+            "text": "Yn y nos, am ddeg o'r gloch, mae Arth a Mali yn y stabl eto, ac mae cannwyll newydd gyda Mali.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s110",
+            "text": "Mae Mali'n ysgrifennu yn y cwyr newydd, yn araf: un llythyren, dwy lythyren, tair llythyren…"
+          },
+          {
+            "id": "cy-brenin-01-l18-s111",
+            "text": "Mae hi'n edrych ar Arth, ac mae Arth yn edrych ar y llythrennau."
+          },
+          {
+            "id": "cy-brenin-01-l18-s112",
+            "text": "\"B… r… e… n… i… n…\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "B… r… e… n… i… n…",
+                "gloss": "B… r… = llythrennau",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s113",
+            "text": "\"Bren… brenin. Brenin!\"",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l18-img-brenin",
+                "src": "media/images/cy-brenin-01-l18-img-brenin.webp",
+                "alt": "In the stable at night: Arth reads his first word from the wax tablet, finger on the letters, while Mali watches his face; at the stable door Myrddin stands smiling, with Dafi on his hat holding up the pocket watch.",
+                "status": "planned",
+                "art_brief": "Inside the llys stable at night by the light of a new candle (llys palette: warm wood, straw, thatch). Arth (11, untidy brown hair with cowlick, freckles, moss-green tunic) sits on the straw with a small wooden wax tablet on his knees, one finger under a scratched word, mouth open mid-word, eyes shining. Mali (12, long dark braid, dark-blue dress, ink-stained fingers) kneels beside him, watching his face thoughtfully rather than the tablet. In the open stable doorway behind them stands Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat), smiling; on the brim of his hat sits Dafi (cup-sized red dragon) holding up an open round silver pocket watch. Snow outside the door. The letters on the tablet are scratches only, not readable text. No text.",
+                "characters": [
+                  "char-arth",
+                  "char-mali",
+                  "char-myrddin",
+                  "char-dafi"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-tabled",
+                  "cy-llythyren",
+                  "cy-cwyr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s114",
+            "text": "Mae Mali'n dawel am funud.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s115",
+            "text": "Mae hi'n edrych ar Arth, ac mae hi'n cofio stori Dad: y storm, y babi, a'r brenin."
+          },
+          {
+            "id": "cy-brenin-01-l18-s116",
+            "text": "\"Ie,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l18-s117",
+            "text": "\"Brenin. Rwyt ti'n darllen, Arth!\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s118",
+            "text": "Wedyn maen nhw'n clywed sŵn oriawr wrth ddrws y stabl.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s119",
+            "text": "Dyna Myrddin, ac mae Dafi ar ei het e, gyda'r oriawr."
+          },
+          {
+            "id": "cy-brenin-01-l18-s120",
+            "text": "\"Deg o'r gloch!\" meddai Dafi.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l18-s121",
+            "text": "\"Ie, mae hi'n ddeg o'r gloch,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l18-s122",
+            "text": "\"Y dydd cyntaf: ci a chi."
+          },
+          {
+            "id": "cy-brenin-01-l18-s123",
+            "text": "Yr ail ddydd: deg llythyren."
+          },
+          {
+            "id": "cy-brenin-01-l18-s124",
+            "text": "Y trydydd dydd: gwanwyn."
+          },
+          {
+            "id": "cy-brenin-01-l18-s125",
+            "text": "Y pedwerydd dydd: hanner yr wyddor."
+          },
+          {
+            "id": "cy-brenin-01-l18-s126",
+            "text": "A heddiw: brenin. Wythnos dda, Arth.\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s127",
+            "text": "\"Dych chi'n gwybod, Myrddin?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s128",
+            "text": "\"Am y gwersi yn y stabl? Am y gannwyll, a'r cwyr, a'r ddraig?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l18-s129",
+            "text": "\"Wrth gwrs.\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s130",
+            "text": "\"Mae cwestiwn gyda fi, Myrddin,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s131",
+            "text": "\"Pryd dw i'n gallu darllen llyfr?\""
+          },
+          {
+            "id": "cy-brenin-01-l18-s132",
+            "text": "\"Pryd?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l18-s133",
+            "text": "\"Mewn munud? Mewn awr? Mewn wythnos? Mewn mis? Mewn blwyddyn?\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Mewn munud",
+                "gloss": "munud → awr → wythnos → mis → blwyddyn",
+                "gloss_kind": "paradigm",
+                "covers_lexeme_ids": [
+                  "cy-munud",
+                  "cy-awr",
+                  "cy-wythnos",
+                  "cy-mis",
+                  "cy-blwyddyn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s134",
+            "text": "\"Mewn mis? Yn y gwanwyn? Yn yr haf?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l18-s135",
+            "text": "\"Mae deuddeg mis mewn blwyddyn, Arth, a gwanwyn, haf, hydref a gaeaf…\" meddai Myrddin, ac mae e'n gwenu.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gwanwyn, haf, hydref a gaeaf",
+                "gloss": "12 mis = 1 blwyddyn",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s136",
+            "text": "\"Dw i wedi darllen am flynyddoedd, Arth, a dw i'n dysgu bob dydd.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "flynyddoedd",
+                "gloss": "am flynyddoedd ← blwyddyn, blynyddoedd",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l18-s137",
+            "text": "Mae Myrddin yn mynd, ac mae'r stabl yn dawel.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l18-s138",
+            "text": "\"Brenin,\" meddai Arth, yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Bob dydd, am wyth o'r gloch",
+    "rule_cy": "Faint o'r gloch yw hi? — Mae hi'n wyth o'r gloch. Pryd? — Am wyth o'r gloch. pob dydd → bob dydd. y dydd cyntaf · yr ail ddydd · y trydydd dydd · y pedwerydd dydd.",
+    "tables": [
+      {
+        "caption": "Dyddiau'r wythnos",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "dydd Llun",
+            "Mae Cai'n ymarfer."
+          ],
+          [
+            "dydd Mawrth",
+            "Mae Cynyr yn mynd i'r dref."
+          ],
+          [
+            "dydd Mercher",
+            "Mae Elen yn cyfrif yr arian."
+          ],
+          [
+            "dydd Iau",
+            "Mae Myrddin yn dysgu Arth."
+          ],
+          [
+            "dydd Gwener",
+            "Mae Modlen yn pobi."
+          ],
+          [
+            "dydd Sadwrn",
+            "Mae Pero'n cysgu."
+          ],
+          [
+            "dydd Sul",
+            "Mae'r teulu yn yr eglwys."
+          ]
+        ]
+      },
+      {
+        "caption": "Faint o'r gloch yw hi? · Pryd?",
+        "header": [
+          "Mae hi'n …",
+          "am …"
+        ],
+        "rows": [
+          [
+            "Mae hi'n chwech o'r gloch.",
+            "am chwech o'r gloch"
+          ],
+          [
+            "Mae hi'n wyth o'r gloch.",
+            "am wyth o'r gloch"
+          ],
+          [
+            "Mae hi'n naw o'r gloch.",
+            "am naw o'r gloch"
+          ],
+          [
+            "Mae hi'n ddeg o'r gloch.",
+            "am ddeg o'r gloch"
+          ],
+          [
+            "Mae hi'n ddeuddeg o'r gloch.",
+            "am ddeuddeg o'r gloch"
+          ]
+        ]
+      },
+      {
+        "caption": "pob → bob",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "bob dydd · bob bore · bob nos",
+            "= every day, every morning, every night"
+          ],
+          [
+            "byth ↔ weithiau ↔ bob dydd",
+            "Dw i byth yn hwyr! · Weithiau mae Dafi'n bwyta'r bara."
+          ]
+        ]
+      },
+      {
+        "caption": "1 · 2 · 3 · 4",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "y dydd cyntaf",
+            "y llythyren gyntaf · y wers gyntaf"
+          ],
+          [
+            "yr ail ddydd",
+            "yr ail lythyren"
+          ],
+          [
+            "y trydydd dydd",
+            ""
+          ],
+          [
+            "y pedwerydd dydd",
+            ""
+          ]
+        ]
+      },
+      {
+        "caption": "Darllen: amser",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "munud → awr → wythnos → mis → blwyddyn",
+            "chwarter awr · hanner · awr a hanner"
+          ],
+          [
+            "gaeaf → gwanwyn → haf → hydref",
+            "deuddeg mis mewn blwyddyn"
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau",
+        "header": [
+          "",
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "ail + SM",
+            "yr ail ddydd · yr ail lythyren",
+            "Pennod 18"
+          ],
+          [
+            "pob → bob (amser)",
+            "bob dydd · bob nos",
+            "Pennod 18"
+          ],
+          [
+            "am + rhif",
+            "am ddeg · am ddeuddeg",
+            "Pennod 16"
+          ],
+          [
+            "yn + rhif",
+            "mae hi'n ddeg o'r gloch",
+            "Pennod 1"
+          ],
+          [
+            "pan + berf",
+            "pan ddaeth",
+            "Pennod 17"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l18-s003"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s005"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s008"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s012"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s013"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s029"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s033"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s055"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s059"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s079"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s011"
+      },
+      {
+        "segment_id": "cy-brenin-01-l18-s057"
+      }
+    ],
+    "nodyn_en": "Days are dydd + name: dydd Llun (Monday) … dydd Sul (Sunday). Time: Faint o'r gloch yw hi? — Mae hi'n wyth o'r gloch. 'At eight' is am wyth o'r gloch; am and yn mutate numbers (am ddeg, mae hi'n ddeg). Pob 'every' becomes bob in time phrases: bob dydd. Ordinals: y dydd cyntaf, yr ail ddydd (+ SM)."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l18-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "Pryd mae Dafi'n cynnau'r ffwrn? (6:00)",
+            "answer": "Am chwech o'r gloch."
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Pryd mae Cai'n codi? (8:00)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Am wyth o'r gloch."
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s009"
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "Pryd mae'r teulu'n bwyta yn y neuadd? (12:00)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Am ddeuddeg o'r gloch."
+              ],
+              "mutation_hint": true,
+              "common_wrong": [
+                {
+                  "answer": "Am deuddeg o'r gloch.",
+                  "hint": "am + d → dd"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s012"
+              ]
+            },
+            {
+              "id": "a3",
+              "prompt": "Pryd mae'r teulu yn yr eglwys? (10:00)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Am ddeg o'r gloch."
+              ],
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s104"
+              ]
+            },
+            {
+              "id": "a4",
+              "prompt": "Faint o'r gloch yw hi? (9:00)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae hi'n naw o'r gloch.",
+                "Naw o'r gloch."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Am naw o'r gloch.",
+                  "hint": "Faint o'r gloch yw hi? → Mae hi'n …"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Pryd mae Modlen yn pobi? (pob + Gwener)",
+            "answer": "Bob dydd Gwener."
+          },
+          "items": [
+            {
+              "id": "a5",
+              "prompt": "Pryd mae Elen yn cyfrif yr arian? (pob + Mercher)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Bob dydd Mercher."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Pob dydd Mercher.",
+                  "hint": "pob → bob (amser)"
+                }
+              ]
+            },
+            {
+              "id": "a6",
+              "prompt": "Pryd mae'r teulu'n mynd i'r eglwys? (pob + Sul)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Bob dydd Sul."
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s019"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "dydd Llun = y dydd ___ (1)",
+            "answer": "cyntaf"
+          },
+          "items": [
+            {
+              "id": "a7",
+              "prompt": "dydd Mawrth = yr ___ ddydd (2)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "ail"
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s055"
+              ]
+            },
+            {
+              "id": "a8",
+              "prompt": "dydd Mercher = y ___ dydd (3)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "trydydd"
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s059"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae Arth yn mynd i'r goedwig. (heb + ceffyl) →",
+            "answer": "Mae Arth yn mynd i'r goedwig heb geffyl."
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "Mae Dafi'n croesi'r nant. (heb + dŵr) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae Dafi'n croesi'r nant heb ddŵr."
+              ],
+              "mutation_hint": true,
+              "recall_of": "G16"
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae ___ yn y stabl. (2 + ceffyl)",
+            "answer": "dau geffyl"
+          },
+          "items": [
+            {
+              "id": "a10",
+              "prompt": "Mae ___ ar y bwrdd. (2 + pastai)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "dwy bastai"
+              ],
+              "mutation_hint": true,
+              "recall_of": "G14",
+              "explanation": "pastai (b.) → dwy + SM"
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l18-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "wythnos",
+        "llythyren",
+        "tabled",
+        "cwyr",
+        "eglwys",
+        "mis",
+        "awr",
+        "hanner",
+        "pobi",
+        "canu",
+        "ymarfer",
+        "byth",
+        "weithiau",
+        "eto"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Dydd Llun, dydd Mawrth, dydd Mercher… dydd Sul: dyna ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "wythnos"
+          ]
+        },
+        {
+          "id": "b2",
+          "prompt": "Mae Mali'n ysgrifennu yn y cwyr: un ___, dwy lythyren, tair llythyren.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "llythyren"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Does dim cwyr ar y ___: mae Dafi wedi bwyta'r cwyr!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "dabled"
+          ],
+          "explanation": "y + tabled (b.) → y dabled"
+        },
+        {
+          "id": "b4",
+          "prompt": "Mae bara yn y ffwrn: mae Modlen yn ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "pobi"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Mae'r bardd yn ___ yn y wledd, ac mae pawb yn gwrando.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "canu"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae Cai eisiau bod yn farchog cryf: mae e'n ___ gyda'r cleddyf bob dydd.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ymarfer"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Mae Pero'n hen iawn: dyw e ___ yn rhedeg nawr!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "byth"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "Dyw Dafi ddim yn bwyta cwyr bob dydd: dim ond ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "weithiau"
+          ]
+        },
+        {
+          "id": "b9",
+          "prompt": "Ar ddydd Sul, mae'r teulu'n mynd i'r ___ yn y dref.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "eglwys"
+          ]
+        },
+        {
+          "id": "b10",
+          "prompt": "Mae deuddeg ___ mewn blwyddyn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "mis"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l18-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Pryd mae Dafi'n cynnau'r ffwrn?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Am chwech o'r gloch",
+            "Bob bore",
+            "Bob bore, am chwech o'r gloch",
+            "Mae Dafi'n cynnau'r ffwrn am chwech o'r gloch"
+          ],
+          "model_answer": "Bob bore, am chwech o'r gloch.",
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s008"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Oes bara newydd yn y gegin ar ddydd Gwener? Pam?",
+          "answer_mode": "self_check",
+          "model_answer": "Oes: mae Modlen yn pobi bara bob dydd Gwener.",
+          "rubric": "Says yes and gives the reason: Modlen bakes on Fridays.",
+          "key_terms": [
+            "cy-pobi"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s017"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Ble mae Arth a Mali'n mynd bob nos am wyth o'r gloch?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "I'r stabl",
+            "Maen nhw'n mynd i'r stabl"
+          ],
+          "model_answer": "Maen nhw'n mynd i'r stabl."
+        },
+        {
+          "id": "c4",
+          "prompt": "Pam mae'r stabl yn dywyll ar y trydydd dydd?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae'r gannwyll wedi llosgi.",
+          "rubric": "Gives the reason: the candle has burnt out.",
+          "key_terms": [
+            "cy-cannwyll",
+            "cy-llosgi"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Pwy sy wedi bwyta'r cwyr?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Dafi",
+            "Dafi sy wedi bwyta'r cwyr",
+            "Dafi yw e"
+          ],
+          "model_answer": "Dafi.",
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s096"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Ble mae Arth yn gweld llythrennau ar ddydd Sul?",
+          "answer_mode": "self_check",
+          "model_answer": "Ar garreg wrth ddrws yr eglwys.",
+          "rubric": "Names the stone (carreg) at the church (eglwys).",
+          "key_terms": [
+            "cy-carreg",
+            "cy-eglwys"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s105"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "Ar ddydd Sul, yn y nos, mae Mali'n ysgrifennu yn y cwyr newydd. Beth mae hi'n ysgrifennu?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Brenin",
+            "Brenin yw e",
+            "Mae hi'n ysgrifennu Brenin"
+          ],
+          "model_answer": "Brenin.",
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s113"
+          ]
+        },
+        {
+          "id": "c8",
+          "prompt": "A ti? Pryd wyt ti'n codi bob bore?",
+          "answer_mode": "self_check",
+          "model_answer": "Dw i'n codi am saith o'r gloch.",
+          "rubric": "Dw i'n codi am + an hour + o'r gloch (with the right mutation: am ddeg, am ddau …)."
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-dydd",
+      "citation_form": "dydd",
+      "part_of_speech": "noun",
+      "current_sense": "day (dydd Llun … dydd Sul count as one group)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-wythnos",
+      "citation_form": "wythnos",
+      "part_of_speech": "noun",
+      "current_sense": "week",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-awr",
+      "citation_form": "awr",
+      "part_of_speech": "noun",
+      "current_sense": "hour",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-munud",
+      "citation_form": "munud",
+      "part_of_speech": "noun",
+      "current_sense": "minute (feminine in this course: dwy funud)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ph-or-gloch",
+      "citation_form": "o'r gloch",
+      "part_of_speech": "phrase",
+      "current_sense": "o'clock",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-hanner",
+      "citation_form": "hanner",
+      "part_of_speech": "noun",
+      "current_sense": "half",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-chwarter",
+      "citation_form": "chwarter",
+      "part_of_speech": "noun",
+      "current_sense": "quarter",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pob",
+      "citation_form": "pob",
+      "part_of_speech": "adjective",
+      "current_sense": "every, each (+ noun); bob dydd / bob bore = adverbial time use (SM)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-weithiau",
+      "citation_form": "weithiau",
+      "part_of_speech": "adverb",
+      "current_sense": "sometimes",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-byth",
+      "citation_form": "byth",
+      "part_of_speech": "adverb",
+      "current_sense": "never (with negative); ever",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cyntaf",
+      "citation_form": "cyntaf",
+      "part_of_speech": "adjective",
+      "current_sense": "first",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ail",
+      "citation_form": "ail",
+      "part_of_speech": "adjective",
+      "current_sense": "second (+ SM)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-trydydd",
+      "citation_form": "trydydd",
+      "part_of_speech": "adjective",
+      "current_sense": "third (with dydd; fem. trydedd receptive)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pedwerydd",
+      "citation_form": "pedwerydd",
+      "part_of_speech": "adjective",
+      "current_sense": "fourth (with dydd; fem. pedwaredd receptive)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-llythyren",
+      "citation_form": "llythyren",
+      "part_of_speech": "noun",
+      "current_sense": "letter (of the alphabet)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwyddor",
+      "citation_form": "gwyddor",
+      "part_of_speech": "noun",
+      "current_sense": "alphabet (yr wyddor)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tabled",
+      "citation_form": "tabled",
+      "part_of_speech": "noun",
+      "current_sense": "tablet (tabled gŵyr = wax tablet)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-eglwys",
+      "citation_form": "eglwys",
+      "part_of_speech": "noun",
+      "current_sense": "church",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cwyr",
+      "citation_form": "cwyr",
+      "part_of_speech": "noun",
+      "current_sense": "wax",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-deuddeg",
+      "citation_form": "deuddeg",
+      "part_of_speech": "numeral",
+      "current_sense": "twelve (traditional; clock times)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pryd",
+      "citation_form": "pryd",
+      "part_of_speech": "adverb",
+      "current_sense": "when? (question)",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-canu",
+      "citation_form": "canu",
+      "part_of_speech": "verb",
+      "current_sense": "to sing; to ring",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pobi",
+      "citation_form": "pobi",
+      "part_of_speech": "verb",
+      "current_sense": "to bake",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ymarfer",
+      "citation_form": "ymarfer",
+      "part_of_speech": "verb",
+      "current_sense": "to practise",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-mis",
+      "citation_form": "mis",
+      "part_of_speech": "noun",
+      "current_sense": "month",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-blwyddyn",
+      "citation_form": "blwyddyn",
+      "part_of_speech": "noun",
+      "current_sense": "year",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwanwyn",
+      "citation_form": "gwanwyn",
+      "part_of_speech": "noun",
+      "current_sense": "spring",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-haf",
+      "citation_form": "haf",
+      "part_of_speech": "noun",
+      "current_sense": "summer",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-hydref",
+      "citation_form": "hydref",
+      "part_of_speech": "noun",
+      "current_sense": "autumn",
+      "first_introduced_lesson": "cy-brenin-01-l18",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-18.json.",
+    "card_stages": [
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "dydd (g.)",
+        "back": "day (dydd Llun … dydd Sul count as one group)",
+        "example_segment_id": "cy-brenin-01-l18-s013",
+        "lexeme_id": "cy-dydd"
+      },
+      {
+        "id": "days",
+        "lesson": "cy-brenin-01-l18",
+        "front": "dydd Llun · dydd Mawrth · dydd Mercher · dydd Iau · dydd Gwener · dydd Sadwrn · dydd Sul",
+        "back": "Monday · Tuesday · Wednesday · Thursday · Friday · Saturday · Sunday",
+        "example_segment_id": "cy-brenin-01-l18-s013",
+        "lexeme_id": "cy-dydd"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "wythnos (b.)",
+        "back": "week",
+        "example_segment_id": "cy-brenin-01-l18-s006",
+        "lexeme_id": "cy-wythnos"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "awr (b.)",
+        "back": "hour",
+        "example_segment_id": "cy-brenin-01-l18-s059",
+        "lexeme_id": "cy-awr"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "munud (b.)",
+        "back": "minute (feminine in this course: dwy funud)",
+        "example_segment_id": "cy-brenin-01-l18-s070",
+        "seen_as": "aros funud",
+        "lexeme_id": "cy-munud"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "o'r gloch",
+        "back": "o'clock",
+        "example_segment_id": "cy-brenin-01-l18-s005",
+        "lexeme_id": "cy-ph-or-gloch"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "hanner (g.)",
+        "back": "half",
+        "example_segment_id": "cy-brenin-01-l18-s059",
+        "lexeme_id": "cy-hanner"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "chwarter (g.)",
+        "back": "quarter",
+        "example_segment_id": "cy-brenin-01-l18-s011",
+        "lexeme_id": "cy-chwarter"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "pob (bob dydd)",
+        "back": "every, each (+ noun); bob dydd / bob bore = adverbial time use (SM)",
+        "example_segment_id": "cy-brenin-01-l18-s008",
+        "seen_as": "bob dydd",
+        "lexeme_id": "cy-pob"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "weithiau",
+        "back": "sometimes",
+        "example_segment_id": "cy-brenin-01-l18-s057",
+        "lexeme_id": "cy-weithiau"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "byth",
+        "back": "never (with negative); ever",
+        "example_segment_id": "cy-brenin-01-l18-s011",
+        "lexeme_id": "cy-byth"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "cyntaf",
+        "back": "first",
+        "example_segment_id": "cy-brenin-01-l18-s033",
+        "lexeme_id": "cy-cyntaf"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "ail (+ SM)",
+        "back": "second (+ SM)",
+        "example_segment_id": "cy-brenin-01-l18-s055",
+        "lexeme_id": "cy-ail"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "trydydd",
+        "back": "third (with dydd; fem. trydedd receptive)",
+        "example_segment_id": "cy-brenin-01-l18-s059",
+        "lexeme_id": "cy-trydydd"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "pedwerydd",
+        "back": "fourth (with dydd; fem. pedwaredd receptive)",
+        "example_segment_id": "cy-brenin-01-l18-s079",
+        "lexeme_id": "cy-pedwerydd"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "llythyren (b.), llythrennau",
+        "back": "letter (of the alphabet)",
+        "example_segment_id": "cy-brenin-01-l18-s025",
+        "lexeme_id": "cy-llythyren"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "gwyddor (b.)",
+        "back": "alphabet (yr wyddor)",
+        "example_segment_id": "cy-brenin-01-l18-s027",
+        "seen_as": "yr wyddor",
+        "lexeme_id": "cy-gwyddor"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "tabled (b.)",
+        "back": "tablet (tabled gŵyr = wax tablet)",
+        "example_segment_id": "cy-brenin-01-l18-s035",
+        "seen_as": "y dabled",
+        "lexeme_id": "cy-tabled"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "eglwys (b.)",
+        "back": "church",
+        "example_segment_id": "cy-brenin-01-l18-s105",
+        "lexeme_id": "cy-eglwys"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "cwyr (g.)",
+        "back": "wax",
+        "example_segment_id": "cy-brenin-01-l18-s096",
+        "lexeme_id": "cy-cwyr"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "deuddeg",
+        "back": "twelve (traditional; clock times)",
+        "example_segment_id": "cy-brenin-01-l18-s012",
+        "lexeme_id": "cy-deuddeg"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "pryd",
+        "back": "when? (question)",
+        "example_segment_id": "cy-brenin-01-l18-s131",
+        "lexeme_id": "cy-pryd"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "canu",
+        "back": "to sing; to ring",
+        "example_segment_id": "cy-brenin-01-l18-s036",
+        "lexeme_id": "cy-canu"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "pobi",
+        "back": "to bake",
+        "example_segment_id": "cy-brenin-01-l18-s081",
+        "lexeme_id": "cy-pobi"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "ymarfer",
+        "back": "to practise",
+        "example_segment_id": "cy-brenin-01-l18-s013",
+        "lexeme_id": "cy-ymarfer"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "mis (g.)",
+        "back": "month",
+        "example_segment_id": "cy-brenin-01-l18-s135",
+        "lexeme_id": "cy-mis"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "blwyddyn (b.), blynyddoedd",
+        "back": "year",
+        "example_segment_id": "cy-brenin-01-l18-s136",
+        "lexeme_id": "cy-blwyddyn"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "gwanwyn (g.)",
+        "back": "spring",
+        "example_segment_id": "cy-brenin-01-l18-s078",
+        "lexeme_id": "cy-gwanwyn"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "haf (g.)",
+        "back": "summer",
+        "example_segment_id": "cy-brenin-01-l18-s135",
+        "lexeme_id": "cy-haf"
+      },
+      {
+        "id": "base",
+        "lesson": "cy-brenin-01-l18",
+        "front": "hydref (g.)",
+        "back": "autumn",
+        "example_segment_id": "cy-brenin-01-l18-s135",
+        "lexeme_id": "cy-hydref"
+      },
+      {
+        "id": "pattern-g18",
+        "lesson": "cy-brenin-01-l18",
+        "front": "Faint o'r gloch yw hi? — Mae hi'n wyth o'r gloch. · Pryd? — Am wyth o'r gloch. · bob dydd Llun",
+        "back": "What time is it? — It's eight o'clock. · When? — At eight o'clock. · every Monday (pob → bob in time phrases)",
+        "example_segment_id": "cy-brenin-01-l18-s005",
+        "example_segment_ids": [
+          "cy-brenin-01-l18-s005",
+          "cy-brenin-01-l18-s008"
+        ],
+        "lexeme_id": "cy-pattern-g18"
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l18-img-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 2,
+      "margin_vignette": 1,
+      "margin_diagram": 1,
+      "margin_gloss": 27
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-18",
+      "rhan-2"
+    ]
+  },
+  "metrics": {
+    "running_words": 1345,
+    "sentences": 138,
+    "word_target": 1233,
+    "word_window": [
+      1110,
+      1356
+    ]
+  }
+}

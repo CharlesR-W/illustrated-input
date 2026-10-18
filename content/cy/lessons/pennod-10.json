@@ -1,0 +1,2354 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l10",
+  "course_id": "cy-brenin-01",
+  "order": 10,
+  "title": "Pysgodyn!",
+  "rhan": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "block B1 writer (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief 2026-10-12",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Beat realised in four sections: the transformation and the discovery of fins, tails and scales (Hud!), the deep pool and the frightened small fish (Y llyn dwfn), the pike's claim 'Fy afon i yw hi!' and the chase in which Arth draws the pike away from Mali, and Myrddin's hand lifting them out ('Ydy e'n frenin da? Nac ydy. Mae'r pysgod yn ofni ei ddannedd e.'). End of Rhan 1: the Gramadeg carries the Rhan 1 cumulative mutation table.",
+      "Primary target G10: fy + NM (nwylo, nhraed, nannedd, ngwallt, nhrwyn, mhysgod; fy llyn / fy afon unchanged), dy + SM (draed, goesau, lygaid, geg, gefn, wallt, ddannedd), ei 'his' + SM (law, gorff, gefn, ben, gynffon, drwyn, geg, ddannedd), ei 'her' + AM six times (phen, chorff, chynffon ×2, cheg ×2). Contrasts: 'Does dim dwylo gyda ti' (G08) ↔ 'Ble mae fy nwylo i?'; 'Mae cynffon gyda fe' ↔ 'ei gynffon e'. ein / eich / eu each three times, receptive only, with echo pronouns.",
+      "Productive subset respected in Pensa: only fy and dy with body parts and ei (his) with p / t / c / d radicals are tested; ei (her) + AM is not tested.",
+      "Continuity with Pennod 11 (written in parallel): Myrddin's hat stayed in the kitchen; Dafi flies home alone at the end of Pennod 10; Cai rides home first; Myrddin, Arth, Mali and Pero walk home at nightfall.",
+      "Kingship thread planted as an action, not a moral: the pike rules by fear; Arth draws the pike away to save Mali; Myrddin answers Arth's question with silence and a smile.",
+      "The echo pronoun 'di' is added as a form of cy-ti in lexicon-deltas/pennod-10.json (it was not in the plan).",
+      "Applied gpt-6-astra review (2026-10-12): Rhan 1 mutation table now says feminine singular for the article, adjective and un rows, gives the ll-/rh- exceptions (yn llawn, y llaw, un llaw), excludes verb-nouns after yn, and names the imperative's direct object; Pensa A a1–a8 accept the forms without the echo pronoun, B b7 accepts brenin, B b8 accepts asgell, C c1/c2 accept further correct answers; '=' glosses that were associations (cuddio, Dyma fi) are now define glosses; cy-asgell sense now 'fin (of a fish); wing'; Mali's tail now 'o dan y garreg'; nodyn says the echo pronoun is optional.",
+      "Checker warnings left: lemma-validation for penhwyad (already in chapters.json validation.not_in_corcencc); media-manifest for the hand-authored SVG (media/manifest.json is not owned by this writer; integrator to add the entry); recall warnings for ein / eich / eu, cefn, corff, cen, dwfn, which depend on Penodau 11–15 (other writers).",
+      "SVG margin diagram cy-brenin-01-l10-img-corff.svg (boy ↔ fish, Welsh labels) is authored and on disk (status draft); the cover, scene and vignettes are planned raster art.",
+      "Continuity fix (2026-10-17): Dafi cannot really fly (Pennod 9 'dwyt ti ddim yn hedfan yn bell'; Pennod 16 'Adenydd bach … Bach iawn!'), so s150 now has him hop from Pero to the bridge and run home through the trees, instead of flying alone to the llys."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "cy-brenin-01-l10-s005",
+        "question": "[?] 'Maen nhw'n bysgod!' (They're fish!) with a plural noun predicate after yn + SM: natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: plural predicate noun mutates after yn."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s016",
+        "question": "[?] 'Pysgodyn dw i!' (I'm a fish!) identity order as in Pennod 5 'Dewin dw i': fine for a sudden discovery?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s032",
+        "question": "[?] 'Dy wallt di yw hi!' (It's your hair!) with hi agreeing with asgell (f.), and 'Dy wallt di yw e!' for cefn (m.): is the pronoun gender natural here?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: hi refers back to asgell (f.), e to cefn (m.)."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s088",
+        "question": "[?] 'A fy mhysgod i yw'r pysgod bach!' (And the little fish are my fish!): word order and fy + NM natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct order and mutation."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s049",
+        "question": "[?] 'Pysgod newydd dych chi?' (Are you new fish?) identity-question order: acceptable?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): acceptable; Pysgod newydd ydych chi? is a fuller option."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s133",
+        "question": "[?] Myrddin's teasing 'Ble mae eich esgyll chi nawr?': natural use of eich … chi?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct; eich adds no h-."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s148",
+        "question": "[?] '\"Paid, Dafi!\" meddai pawb.' (said everyone) with imperative singular to Dafi: natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: singular paid to one dragon."
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s107",
+        "question": "[?] 'Penhwyad! Dyma fi!' (Pike! Here I am!) as Arth's call to distract the pike: natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): acceptable; no vocative mutation needed for the species name used as a name."
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G10",
+    "primary_new_grammar": {
+      "id": "G10",
+      "label": "possessive determiners fy, dy, ei, ei (+ echo pronouns); ein, eich, eu receptive",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09"
+    ],
+    "incidental": [],
+    "new_lexeme_ids": [
+      "cy-fy",
+      "cy-dy",
+      "cy-ei-m",
+      "cy-ei-f",
+      "cy-ein",
+      "cy-eich",
+      "cy-eu",
+      "cy-pen",
+      "cy-llaw",
+      "cy-troed",
+      "cy-ceg",
+      "cy-trwyn",
+      "cy-dant",
+      "cy-cefn",
+      "cy-corff",
+      "cy-asgell",
+      "cy-cen",
+      "cy-brenin",
+      "cy-penhwyad",
+      "cy-ofni",
+      "cy-cuddio",
+      "cy-achub",
+      "cy-dwfn",
+      "cy-miniog"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-fy",
+        "how": "gloss(paradigm)+contrast (Does dim dwylo gyda ti ↔ Ble mae fy nwylo i?)",
+        "segment_id": "cy-brenin-01-l10-s007"
+      },
+      {
+        "lexeme_id": "cy-dy",
+        "how": "gloss(paradigm+radical)+context",
+        "segment_id": "cy-brenin-01-l10-s013"
+      },
+      {
+        "lexeme_id": "cy-ei-m",
+        "how": "gloss(radical: ei law ← llaw)+context",
+        "segment_id": "cy-brenin-01-l10-s001"
+      },
+      {
+        "lexeme_id": "cy-ei-f",
+        "how": "gloss(radical: ei phen hi ← pen)+echo pronoun hi",
+        "segment_id": "cy-brenin-01-l10-s021"
+      },
+      {
+        "lexeme_id": "cy-ein",
+        "how": "gloss(paradigm)+echo pronoun ni",
+        "segment_id": "cy-brenin-01-l10-s051"
+      },
+      {
+        "lexeme_id": "cy-eich",
+        "how": "gloss(paradigm)+echo pronoun chi",
+        "segment_id": "cy-brenin-01-l10-s079"
+      },
+      {
+        "lexeme_id": "cy-eu",
+        "how": "gloss(paradigm)+echo pronoun nhw",
+        "segment_id": "cy-brenin-01-l10-s064"
+      },
+      {
+        "lexeme_id": "cy-pen",
+        "how": "picture(svg)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l10-s021"
+      },
+      {
+        "lexeme_id": "cy-llaw",
+        "how": "picture(svg+scene)+gloss(radical, number)",
+        "segment_id": "cy-brenin-01-l10-s001"
+      },
+      {
+        "lexeme_id": "cy-troed",
+        "how": "picture(svg)+gloss(radical, number)",
+        "segment_id": "cy-brenin-01-l10-s008"
+      },
+      {
+        "lexeme_id": "cy-ceg",
+        "how": "picture(svg)+gloss(radical)+context (agor … cau)",
+        "segment_id": "cy-brenin-01-l10-s023"
+      },
+      {
+        "lexeme_id": "cy-trwyn",
+        "how": "picture(svg)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l10-s072"
+      },
+      {
+        "lexeme_id": "cy-dant",
+        "how": "picture(vignette)+gloss(radical, number)",
+        "segment_id": "cy-brenin-01-l10-s061"
+      },
+      {
+        "lexeme_id": "cy-cefn",
+        "how": "picture(cover)+gloss(radical)+context (asgell ar ei gefn)",
+        "segment_id": "cy-brenin-01-l10-s029"
+      },
+      {
+        "lexeme_id": "cy-corff",
+        "how": "picture(svg)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l10-s021"
+      },
+      {
+        "lexeme_id": "cy-asgell",
+        "how": "picture(svg+cover)+gloss(number)",
+        "segment_id": "cy-brenin-01-l10-s029"
+      },
+      {
+        "lexeme_id": "cy-cen",
+        "how": "picture(svg)+context (cen arian)",
+        "segment_id": "cy-brenin-01-l10-s030"
+      },
+      {
+        "lexeme_id": "cy-brenin",
+        "how": "picture(vignette)+context (brenin yr afon)",
+        "segment_id": "cy-brenin-01-l10-s056"
+      },
+      {
+        "lexeme_id": "cy-penhwyad",
+        "how": "picture(vignette+cover)+context",
+        "segment_id": "cy-brenin-01-l10-s059"
+      },
+      {
+        "lexeme_id": "cy-ofni",
+        "how": "gloss(antonym ↔ dewr)+context",
+        "segment_id": "cy-brenin-01-l10-s055"
+      },
+      {
+        "lexeme_id": "cy-cuddio",
+        "how": "gloss(define: Dafi yn yr het)+picture(cover)",
+        "segment_id": "cy-brenin-01-l10-s046"
+      },
+      {
+        "lexeme_id": "cy-achub",
+        "how": "picture(scene)+gloss(define)",
+        "segment_id": "cy-brenin-01-l10-s114"
+      },
+      {
+        "lexeme_id": "cy-dwfn",
+        "how": "gloss(radical)+context (tywyll, dan y bont)",
+        "segment_id": "cy-brenin-01-l10-s043"
+      },
+      {
+        "lexeme_id": "cy-miniog",
+        "how": "picture(vignette)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l10-s061"
+      }
+    ],
+    "recycle_lexeme_ids": [
+      "cy-llygad",
+      "cy-clust",
+      "cy-coes",
+      "cy-cynffon",
+      "cy-nofio",
+      "cy-dwr",
+      "cy-tywyll",
+      "cy-pysgodyn",
+      "cy-ni",
+      "cy-chi",
+      "cy-nhw",
+      "cy-llyn",
+      "cy-pont",
+      "cy-cwch",
+      "cy-haul",
+      "cy-glas",
+      "cy-melyn",
+      "cy-gwlyb",
+      "cy-byd",
+      "cy-byw",
+      "cy-pawb",
+      "cy-hud",
+      "cy-croeso",
+      "cy-dewr",
+      "cy-sut",
+      "cy-dewin",
+      "cy-cymryd",
+      "cy-sefyll",
+      "cy-deilen",
+      "cy-distaw",
+      "cy-arian",
+      "cy-aur",
+      "cy-ffrind",
+      "cy-cryf",
+      "cy-gwan",
+      "cy-gwag"
+    ],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "ref": "cy-brenin-01-l10-img-cover",
+      "src": "media/images/cy-brenin-01-l10-img-cover.webp",
+      "status": "draft",
+      "presentation": "inline_scene",
+      "alt": "Under the water: two small fish, Arth with a tuft-like fin and Mali with a dark stripe, face a huge green pike with open jaws full of sharp teeth; little fish hide under the stones.",
+      "art_brief": "Underwater, the dark pool under the old stone bridge on Afon Helyg (river greens, blue-black depths, sun shafts from above, the dark hull of an old rowing boat on the surface). Centre-left: Arth-fish, a small silver fish recognisable by a big untidy brown tuft-like fin sticking up on its back (Arth's cowlick) and a brave look; beside him Mali-fish, a slim fish with a long dark stripe down her back like her braid, wary. Facing them from the right, filling half the frame, the pike (penhwyad: a huge long green-and-gold river pike, pointed snout, underslung jaw full of needle-sharp white teeth, cold yellow eyes; menacing but storybook, never gory), jaws open. In the foreground small yellow, grey and silver fish hide under big stones and dead leaves. No text, no humans.",
+      "characters": [
+        "char-arth",
+        "char-mali",
+        "char-penhwyad"
+      ],
+      "covers_lexeme_ids": [
+        "cy-penhwyad",
+        "cy-brenin",
+        "cy-dant",
+        "cy-asgell",
+        "cy-cen",
+        "cy-cuddio",
+        "cy-dwfn",
+        "cy-cefn"
+      ],
+      "width": 1600,
+      "height": 1066
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l10-sec1",
+        "title": "Hud!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l10-s001",
+            "text": "Mae Myrddin yn sefyll ar y bont, ac mae e'n codi ei law e.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "law",
+                "gloss": "ei law ← llaw (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s002",
+            "text": "\"Hud!\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l10-s003",
+            "text": "Yn sydyn, mae Arth yn y dŵr, ac mae Mali yn y dŵr hefyd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s004",
+            "text": "Ond dyw Arth a Mali ddim yn blant nawr."
+          },
+          {
+            "id": "cy-brenin-01-l10-s005",
+            "text": "Maen nhw'n bysgod!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s006",
+            "text": "\"Mali!",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s007",
+            "text": "Ble mae fy nwylo i?\" meddai Arth.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fy nwylo i",
+                "gloss": "fy … i · dy … di · ei … e",
+                "gloss_kind": "paradigm"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nwylo",
+                "gloss": "fy nwylo ← dwylo",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nwylo",
+                "gloss": "llaw, dwylo",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l10-img-llaw",
+                "anchor_text": "nwylo",
+                "label": "llaw · dwylo",
+                "src": "media/vignettes/cy-brenin-01-l10-img-llaw.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "One open child's hand on its own, and beside it a pair of hands held up side by side. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-llaw"
+                ],
+                "width": 400,
+                "height": 208
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s008",
+            "text": "\"Ble mae fy nhraed i?\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nhraed",
+                "gloss": "fy nhraed ← traed",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nhraed",
+                "gloss": "troed, traed",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s009",
+            "text": "\"Does dim dwylo gyda ti, Arth!",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s010",
+            "text": "Does dim traed gyda ti!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s011",
+            "text": "Does dim clustiau gyda ti, a does dim trwyn gyda ti!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s012",
+            "text": "\"A ti, Mali?",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s013",
+            "text": "Ble mae dy draed di?",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "draed",
+                "gloss": "dy draed ← traed",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s014",
+            "text": "Ble mae dy goesau di?\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s015",
+            "text": "\"Does dim coesau gyda fi!",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s016",
+            "text": "Pysgodyn dw i!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s017",
+            "text": "Sut dyn ni'n bysgod?\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s018",
+            "text": "\"Hud!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s019",
+            "text": "Mae Arth yn edrych ar Mali.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s020",
+            "text": "Mae hi'n bysgodyn bach, hir."
+          },
+          {
+            "id": "cy-brenin-01-l10-s021",
+            "text": "Mae ei phen hi'n fach, ac mae ei chorff hi'n hir.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "phen",
+                "gloss": "ei phen hi ← pen",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "chorff",
+                "gloss": "ei chorff hi ← corff",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s022",
+            "text": "Mae ei chynffon hi'n gyflym."
+          },
+          {
+            "id": "cy-brenin-01-l10-s023",
+            "text": "Mae hi'n agor ei cheg hi, ac mae hi'n cau ei cheg hi.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cheg",
+                "gloss": "ei cheg hi ← ceg (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s024",
+            "text": "\"Mali, mae dy lygaid di'n fawr iawn!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s025",
+            "text": "\"Ac mae dy geg di'n fawr iawn, Arth!\"",
+            "paragraph_start": true,
+            "speaker": "char-mali",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "geg",
+                "gloss": "dy geg ← ceg (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s026",
+            "text": "Nawr mae Arth yn edrych ar ei gorff e.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gorff",
+                "gloss": "ei gorff e ← corff",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s027",
+            "text": "Does dim dwylo, a does dim traed."
+          },
+          {
+            "id": "cy-brenin-01-l10-s028",
+            "text": "Ond mae cynffon gyda fe, ac mae esgyll gyda fe."
+          },
+          {
+            "id": "cy-brenin-01-l10-s029",
+            "text": "Mae un asgell fawr ar ei gefn e, ac mae esgyll bach wrth ei ben e.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "esgyll",
+                "gloss": "asgell, esgyll",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gefn",
+                "gloss": "ei gefn ← cefn",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ben",
+                "gloss": "ei ben ← pen",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l10-img-corff",
+                "label": "corff bachgen ↔ corff pysgodyn",
+                "src": "media/diagrams/cy-brenin-01-l10-img-corff.svg",
+                "alt": "Two line drawings: a boy labelled pen, trwyn, ceg, corff, llaw, troed; a fish labelled asgell, cen, cynffon, ceg.",
+                "status": "draft",
+                "art_brief": "Two line drawings: a boy labelled pen, trwyn, ceg, corff, llaw, troed; a fish labelled asgell, cen, cynffon, ceg.",
+                "covers_lexeme_ids": [
+                  "cy-pen",
+                  "cy-trwyn",
+                  "cy-ceg",
+                  "cy-corff",
+                  "cy-llaw",
+                  "cy-troed",
+                  "cy-asgell",
+                  "cy-cen"
+                ],
+                "width": 300,
+                "height": 560
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s030",
+            "text": "Mae cen ar ei gorff e: cen arian."
+          },
+          {
+            "id": "cy-brenin-01-l10-s031",
+            "text": "\"Mae'r asgell ar dy gefn di'n fawr ac yn uchel, Arth.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s032",
+            "text": "Dy wallt di yw hi!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s033",
+            "text": "\"Ac mae dy gefn di'n ddu, Mali.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s034",
+            "text": "Dy wallt di yw e!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s035",
+            "text": "Mae Arth eisiau nofio, ac nawr mae e'n nofio!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s036",
+            "text": "\"Dw i'n gallu nofio!",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s037",
+            "text": "Edrych, Mali!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s038",
+            "text": "Mae ei gynffon e'n gyflym, ac mae ei esgyll e'n gryf.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s039",
+            "text": "Nawr mae Mali'n nofio hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l10-s040",
+            "text": "Maen nhw'n nofio dan y bont, i'r llyn tywyll."
+          },
+          {
+            "id": "cy-brenin-01-l10-s041",
+            "text": "Mae Arth yn gweld yr hen gwch ar y dŵr: mae e'n ddu yn yr haul."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l10-sec2",
+        "title": "Y llyn dwfn",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l10-s042",
+            "text": "\"Dyma'r byd dan y dŵr!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s043",
+            "text": "Mae'r llyn yn ddwfn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddwfn",
+                "gloss": "ddwfn ← dwfn",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s044",
+            "text": "Mae'r dŵr yn ddistaw, ac mae cerrig mawr a dail yn y dŵr."
+          },
+          {
+            "id": "cy-brenin-01-l10-s045",
+            "text": "Mae pysgod bach yn y llyn: pysgod melyn, pysgod llwyd, pysgod arian."
+          },
+          {
+            "id": "cy-brenin-01-l10-s046",
+            "text": "Ond maen nhw'n cuddio dan y cerrig.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cuddio",
+                "gloss": "cuddio: Dafi yn yr het!",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s047",
+            "text": "\"Pwy dych chi?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s048",
+            "text": "Mae pysgodyn bach melyn yn dod o'r cerrig.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s049",
+            "text": "\"Pysgod newydd dych chi?\" meddai'r pysgodyn melyn.",
+            "paragraph_start": true,
+            "speaker": "char-pysgodyn-melyn"
+          },
+          {
+            "id": "cy-brenin-01-l10-s050",
+            "text": "\"Croeso!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s051",
+            "text": "Dyma ein llyn ni, a dyma ein cerrig ni.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ein llyn ni",
+                "gloss": "ein … ni · eich … chi · eu … nhw",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s052",
+            "text": "Ond dewch yma, dan y garreg!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s053",
+            "text": "Dewch!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s054",
+            "text": "\"Pam dych chi'n cuddio?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s055",
+            "text": "\"Dyn ni'n ofni'r brenin.",
+            "paragraph_start": true,
+            "speaker": "char-pysgodyn-melyn",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ofni",
+                "gloss": "ofni ↔ bod yn ddewr",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s056",
+            "text": "Mae brenin yn y llyn: ein brenin ni.\"",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l10-img-brenin",
+                "anchor_text": "brenin",
+                "label": "brenin",
+                "src": "media/vignettes/cy-brenin-01-l10-img-brenin.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A storybook early-medieval king seated on a carved wooden chair, wearing a simple gold crown and a red cloak, holding a staff. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-brenin"
+                ],
+                "width": 400,
+                "height": 500
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s057",
+            "text": "\"Brenin?",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s058",
+            "text": "Pwy yw e?\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s059",
+            "text": "\"Y penhwyad yw e: brenin yr afon.",
+            "paragraph_start": true,
+            "speaker": "char-pysgodyn-melyn",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l10-img-penhwyad",
+                "anchor_text": "penhwyad",
+                "label": "penhwyad",
+                "src": "media/vignettes/cy-brenin-01-l10-img-penhwyad.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A pike fish in side view: long green body with pale gold spots, long flat snout, open jaw full of sharp teeth. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-penhwyad"
+                ],
+                "width": 400,
+                "height": 160
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s060",
+            "text": "Mae e'n byw yn y dŵr dwfn, tywyll."
+          },
+          {
+            "id": "cy-brenin-01-l10-s061",
+            "text": "Mae ei geg e'n fawr iawn, ac mae ei ddannedd e'n finiog.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddannedd",
+                "gloss": "ei ddannedd ← dannedd",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddannedd",
+                "gloss": "dant, dannedd",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "finiog",
+                "gloss": "finiog ← miniog",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l10-img-dannedd",
+                "anchor_text": "ddannedd",
+                "label": "dant · dannedd",
+                "src": "media/vignettes/cy-brenin-01-l10-img-dannedd.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "Close-up of an open fish jaw showing a row of long, needle-sharp white teeth, and beside it one single sharp tooth. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-dant",
+                  "cy-miniog"
+                ],
+                "width": 400,
+                "height": 309
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s062",
+            "text": "Mae pawb yn ofni ei ddannedd e.\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s063",
+            "text": "Mae'r pysgod bach yn edrych ar Arth a Mali.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s064",
+            "text": "Mae eu llygaid nhw'n fawr."
+          },
+          {
+            "id": "cy-brenin-01-l10-s065",
+            "text": "Maen nhw'n fach ac yn wan, ac maen nhw'n ofni."
+          },
+          {
+            "id": "cy-brenin-01-l10-s066",
+            "text": "\"Dw i ddim yn ofni'r brenin,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s067",
+            "text": "\"Rwyt ti'n ddewr, Arth,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s068",
+            "text": "\"Ond dw i'n ofni.\""
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l10-sec3",
+        "title": "Fy afon i yw hi!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l10-s069",
+            "text": "Yn sydyn, mae'r dŵr yn dywyll iawn.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s070",
+            "text": "Mae rhywbeth mawr yn dod o'r dŵr dwfn: pysgodyn hir, hir."
+          },
+          {
+            "id": "cy-brenin-01-l10-s071",
+            "text": "Mae ei gefn e'n wyrdd, ac mae cen gwyrdd ac aur ar ei gorff e."
+          },
+          {
+            "id": "cy-brenin-01-l10-s072",
+            "text": "Mae ei drwyn e'n hir, ac mae ei geg e ar agor.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "drwyn",
+                "gloss": "ei drwyn ← trwyn",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s073",
+            "text": "Y penhwyad yw e!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s074",
+            "text": "Mae'r pysgod bach yn cuddio eu pennau nhw dan y cerrig.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s075",
+            "text": "Mae Mali'n cuddio hefyd, ond mae ei chynffon hi'n dod o dan y garreg."
+          },
+          {
+            "id": "cy-brenin-01-l10-s076",
+            "text": "\"Pwy dych chi?\" meddai'r penhwyad.",
+            "paragraph_start": true,
+            "speaker": "char-penhwyad"
+          },
+          {
+            "id": "cy-brenin-01-l10-s077",
+            "text": "\"Pysgod newydd?"
+          },
+          {
+            "id": "cy-brenin-01-l10-s078",
+            "text": "Anrheg i'r brenin!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s079",
+            "text": "Beth yw eich enwau chi?"
+          },
+          {
+            "id": "cy-brenin-01-l10-s080",
+            "text": "Dw i'n gweld eich cynffonnau chi!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s081",
+            "text": "\"Arth dw i,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s082",
+            "text": "\"A Mali yw hi.\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s083",
+            "text": "\"Arth?",
+            "paragraph_start": true,
+            "speaker": "char-penhwyad"
+          },
+          {
+            "id": "cy-brenin-01-l10-s084",
+            "text": "Mali?"
+          },
+          {
+            "id": "cy-brenin-01-l10-s085",
+            "text": "Wel, croeso i fy llyn i,\" meddai'r penhwyad."
+          },
+          {
+            "id": "cy-brenin-01-l10-s086",
+            "text": "\"Fy afon i yw hi!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s087",
+            "text": "Fy llyn i yw e!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s088",
+            "text": "A fy mhysgod i yw'r pysgod bach!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s089",
+            "text": "\"Ond dwyt ti ddim yn frenin da!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "frenin",
+                "gloss": "frenin ← brenin",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s090",
+            "text": "\"Mae'r pysgod bach yn cuddio."
+          },
+          {
+            "id": "cy-brenin-01-l10-s091",
+            "text": "Dyn nhw ddim yn hapus!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s092",
+            "text": "\"Dw i'n frenin cryf!\" meddai'r penhwyad.",
+            "paragraph_start": true,
+            "speaker": "char-penhwyad"
+          },
+          {
+            "id": "cy-brenin-01-l10-s093",
+            "text": "\"Mae pawb yn ofni fy nannedd i!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nannedd",
+                "gloss": "fy nannedd ← dannedd",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s094",
+            "text": "Mae fy nannedd i'n finiog!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s095",
+            "text": "Mae e'n agor ei geg e.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s096",
+            "text": "Mae ei ddannedd e'n wyn ac yn finiog iawn."
+          },
+          {
+            "id": "cy-brenin-01-l10-s097",
+            "text": "\"A nawr, dw i eisiau bwyd!\"",
+            "paragraph_start": true,
+            "speaker": "char-penhwyad"
+          },
+          {
+            "id": "cy-brenin-01-l10-s098",
+            "text": "\"Myrddin!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s099",
+            "text": "\"Ble mae'r dewin?\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s100",
+            "text": "Mae'r penhwyad yn dod.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s101",
+            "text": "Mae ei geg e'n agos, yn agos iawn, ac mae Mali'n ofni."
+          },
+          {
+            "id": "cy-brenin-01-l10-s102",
+            "text": "Mae Arth yn gweld Mali, ac mae e eisiau achub Mali.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s103",
+            "text": "Mae e'n nofio o'r garreg."
+          },
+          {
+            "id": "cy-brenin-01-l10-s104",
+            "text": "\"Arth!",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s105",
+            "text": "Aros!\" meddai Mali."
+          },
+          {
+            "id": "cy-brenin-01-l10-s106",
+            "text": "\"Penhwyad!",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s107",
+            "text": "Dyma fi!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Dyma fi",
+                "gloss": "Dyma fi: Arth, yma!",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s108",
+            "text": "Dw i ddim yn ofni dy ddannedd di!\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s109",
+            "text": "Nawr dyw'r penhwyad ddim yn gweld Mali: mae e'n gweld Arth!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s110",
+            "text": "Mae Arth yn nofio'n gyflym o'r llyn tywyll, i'r dŵr glas, i'r haul."
+          },
+          {
+            "id": "cy-brenin-01-l10-s111",
+            "text": "Ond mae'r penhwyad yn gyflym hefyd, ac mae ei geg e ar agor…"
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l10-sec4",
+        "title": "Ydy e'n frenin da?",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l10-s112",
+            "text": "Yn sydyn, mae llaw fawr yn y dŵr: llaw Myrddin!",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l10-img-llaw-myrddin",
+                "src": "media/images/cy-brenin-01-l10-img-llaw-myrddin.webp",
+                "alt": "A huge wrinkled hand plunges into the green water and scoops up two small fish, one with a tuft-like fin and one with a dark stripe, just as the pike's open jaws snap shut behind them; small fish peep from under the stones.",
+                "status": "draft",
+                "art_brief": "Underwater view in the dark pool under the old stone bridge (greens, blue-black depths, light shafts from the sunny surface). From above, an enormous old wrinkled hand with a patched deep-blue sleeve (Myrddin's) plunges into the water and cups two small fish: Arth-fish (a small silver fish with a big untidy brown tuft-like fin sticking up on its back, like a cowlick) and Mali-fish (a slim fish with a long dark stripe down its back like a braid). Behind them the pike (penhwyad: a huge long green-and-gold river pike, pointed snout, underslung jaw full of needle-sharp white teeth, cold yellow eyes; menacing but storybook, never gory) snaps its open jaws shut on nothing. Little yellow, grey and silver fish peep from under large stones and dead leaves on the bottom. No text.",
+                "characters": [
+                  "char-arth",
+                  "char-mali",
+                  "char-myrddin",
+                  "char-penhwyad"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-llaw",
+                  "cy-achub",
+                  "cy-penhwyad"
+                ],
+                "width": 1600,
+                "height": 1067
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s113",
+            "text": "Mae'r llaw yn cymryd Arth, ac mae hi'n cymryd Mali hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l10-s114",
+            "text": "Mae llaw Myrddin yn achub y plant.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "achub",
+                "gloss": "achub: codi o'r dŵr",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s115",
+            "text": "Mae'r penhwyad yn cau ei geg e, ond mae ei geg e'n wag!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s116",
+            "text": "Nawr mae Arth a Mali ar y bont, wrth Myrddin, dan yr awyr las.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s117",
+            "text": "Maen nhw'n wlyb iawn, ond dyn nhw ddim yn bysgod nawr."
+          },
+          {
+            "id": "cy-brenin-01-l10-s118",
+            "text": "Maen nhw'n blant eto!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s119",
+            "text": "Ond mae Myrddin yn sych, wrth gwrs."
+          },
+          {
+            "id": "cy-brenin-01-l10-s120",
+            "text": "\"Dyma fy nwylo i!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s121",
+            "text": "\"Dyma fy nhraed i!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s122",
+            "text": "A dyma fy nhrwyn i!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nhrwyn",
+                "gloss": "fy nhrwyn ← trwyn",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l10-s123",
+            "text": "\"A dyma fy ngwallt i!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s124",
+            "text": "\"Ond mae fy ngwallt i'n wlyb ac yn drwm.\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s125",
+            "text": "Mae glan yr afon yn wyrdd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s126",
+            "text": "Mae Cai'n cysgu yno yn yr haul, wrth Pero: y marchog dewr!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s127",
+            "text": "Dyw e ddim yn gweld dim byd."
+          },
+          {
+            "id": "cy-brenin-01-l10-s128",
+            "text": "Nawr mae e'n codi."
+          },
+          {
+            "id": "cy-brenin-01-l10-s129",
+            "text": "\"Dw i eisiau bwyd!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l10-s130",
+            "text": "\"Dw i'n mynd i'r llys.\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s131",
+            "text": "Ac mae Cai'n marchogaeth i'r llys ar y ceffyl ifanc.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s132",
+            "text": "\"Wel?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l10-s133",
+            "text": "\"Ble mae eich esgyll chi nawr?\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s134",
+            "text": "\"Gwers?",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s135",
+            "text": "Dyw hi ddim yn wers dda!\" meddai Mali."
+          },
+          {
+            "id": "cy-brenin-01-l10-s136",
+            "text": "\"Ond mae Myrddin yn achub Arth, ac mae Arth yn achub Mali."
+          },
+          {
+            "id": "cy-brenin-01-l10-s137",
+            "text": "Diolch, Arth."
+          },
+          {
+            "id": "cy-brenin-01-l10-s138",
+            "text": "Rwyt ti'n ffrind da.\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s139",
+            "text": "Mae Arth yn edrych ar y dŵr dwfn, tywyll.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s140",
+            "text": "Mae'r pysgod bach yn y llyn, dan y cerrig, ac maen nhw'n ofni eu brenin nhw."
+          },
+          {
+            "id": "cy-brenin-01-l10-s141",
+            "text": "\"Ydy e'n frenin da?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s142",
+            "text": "\"Nac ydy,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s143",
+            "text": "\"Nac ydy.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l10-s144",
+            "text": "Mae'r pysgod yn ofni ei ddannedd e.\""
+          },
+          {
+            "id": "cy-brenin-01-l10-s145",
+            "text": "Mae Myrddin yn edrych ar Arth, ac mae e'n gwenu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s146",
+            "text": "Mae Dafi ar Pero, ac mae e'n edrych ar y dŵr.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s147",
+            "text": "\"Pysgota?\" meddai Dafi.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l10-s148",
+            "text": "\"Paid, Dafi!\" meddai pawb.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l10-s149",
+            "text": "Ond mae Dafi eisiau bwyd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l10-s150",
+            "text": "Nawr mae e'n hedfan o Pero i'r bont, ac mae e'n rhedeg i'r coed: i'r llys!"
+          },
+          {
+            "id": "cy-brenin-01-l10-s151",
+            "text": "Dyw'r plant ddim yn gweld."
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Fy nwylo i · dy draed di",
+    "rule_cy": "fy + treiglad trwynol (fy nwylo i) · dy, ei (e) + treiglad meddal (dy draed di, ei geg e) · ei (hi) + treiglad llaes (ei cheg hi)",
+    "tables": [
+      {
+        "caption": "fy · dy · ei · ei",
+        "header": [
+          "",
+          "pen",
+          "traed",
+          "ceg",
+          "dannedd"
+        ],
+        "rows": [
+          [
+            "fy … i",
+            "fy mhen i",
+            "fy nhraed i",
+            "fy ngheg i",
+            "fy nannedd i"
+          ],
+          [
+            "dy … di",
+            "dy ben di",
+            "dy draed di",
+            "dy geg di",
+            "dy ddannedd di"
+          ],
+          [
+            "ei … e",
+            "ei ben e",
+            "ei draed e",
+            "ei geg e",
+            "ei ddannedd e"
+          ],
+          [
+            "ei … hi",
+            "ei phen hi",
+            "ei thraed hi",
+            "ei cheg hi",
+            "ei dannedd hi"
+          ]
+        ]
+      },
+      {
+        "caption": "ein … ni · eich … chi · eu … nhw",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Dyma ein llyn ni.",
+            "(y pysgod bach)"
+          ],
+          [
+            "Beth yw eich enwau chi?",
+            "(y penhwyad)"
+          ],
+          [
+            "Mae eu llygaid nhw'n fawr.",
+            "(y pysgod bach)"
+          ]
+        ]
+      },
+      {
+        "caption": "Mae … gyda fi ↔ fy … i",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Does dim dwylo gyda ti!",
+            "Ble mae fy nwylo i?"
+          ],
+          [
+            "Mae cynffon gyda fe.",
+            "Mae ei gynffon e'n gyflym."
+          ],
+          [
+            "cynffon Mali",
+            "ei chynffon hi"
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau Rhan 1",
+        "header": [
+          "",
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "yn + ansoddair / enw (dim berfenw: yn rhedeg)",
+            "yn fawr · yn ddraig · yn bysgod; ll-, rh-: yn llawn",
+            "meddal · Pennod 1"
+          ],
+          [
+            "dyma + enw",
+            "dyma fara · dyma wers",
+            "meddal · Pennod 1"
+          ],
+          [
+            "y / 'r + enw benywaidd unigol",
+            "y ferch · y gegin · y bont; ll-, rh-: y llaw",
+            "meddal · Pennod 2"
+          ],
+          [
+            "enw benywaidd unigol + ansoddair",
+            "merch fach · het ddu · deilen fach",
+            "meddal · Pennod 2"
+          ],
+          [
+            "hen + enw",
+            "hen gi · hen gwch · hen bont",
+            "meddal · Pennod 2"
+          ],
+          [
+            "gorchymyn + enw (gwrthrych)",
+            "Rho wellt! ↔ Rho'r bwced! ('r: dim treiglad gorchymyn)",
+            "meddal · Pennod 7"
+          ],
+          [
+            "fy",
+            "fy nwylo i · fy mhysgod i",
+            "trwynol · Pennod 10"
+          ],
+          [
+            "dy · ei (e)",
+            "dy draed di · ei geg e",
+            "meddal · Pennod 10"
+          ],
+          [
+            "ei (hi)",
+            "ei cheg hi · ei phen hi",
+            "llaes · Pennod 10"
+          ],
+          [
+            "a · â · gyda (c, p, t)",
+            "bara a chaws · â chyffwrdd",
+            "llaes · Pennod 16"
+          ],
+          [
+            "ar · wrth · i · o · dan",
+            "ar gau · wrth ddrws · i farchog",
+            "meddal · Pennod 16"
+          ],
+          [
+            "un + enw benywaidd unigol",
+            "un goes · un bastai; ll-, rh-: un llaw",
+            "meddal · Pennod 14"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l10-s007"
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s013"
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s072"
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s023"
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s086"
+      },
+      {
+        "segment_id": "cy-brenin-01-l10-s064"
+      }
+    ],
+    "nodyn_en": "Possessives precede the noun; an optional echo pronoun follows: fy nwylo i (my hands), dy draed di (your feet), ei geg e (his mouth), ei cheg hi (her mouth). Fy adds a nasal mutation, dy and ei 'his' a soft one, ei 'her' an aspirate one (c → ch, p → ph, t → th). Ein, eich, eu: recognition only."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l10-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "(fy) ceg →",
+            "answer": "fy ngheg i"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "(fy) pen →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "fy mhen i",
+                "fy mhen"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "fy pen i",
+                  "hint": "fy + p → mh"
+                }
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a2",
+              "prompt": "(fy) dannedd →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "fy nannedd i",
+                "fy nannedd"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a3",
+              "prompt": "(fy) traed →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "fy nhraed i",
+                "fy nhraed"
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "(dy) ceg →",
+            "answer": "dy geg di"
+          },
+          "items": [
+            {
+              "id": "a4",
+              "prompt": "(dy) pen →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "dy ben di",
+                "dy ben"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "dy mhen di",
+                  "hint": "dy + p → b (fy + p → mh)"
+                }
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a5",
+              "prompt": "(dy) trwyn →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "dy drwyn di",
+                "dy drwyn"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a6",
+              "prompt": "(dy) llygaid →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "dy lygaid di",
+                "dy lygaid"
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "(Arth: ei) pen →",
+            "answer": "ei ben e"
+          },
+          "items": [
+            {
+              "id": "a7",
+              "prompt": "(y penhwyad: ei) dannedd →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "ei ddannedd e",
+                "ei ddannedd"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a8",
+              "prompt": "(Arth: ei) corff →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "ei gorff e",
+                "ei gorff"
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "(Mali: llyfr ✓) →",
+            "answer": "Mae llyfr gyda Mali."
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "(fi: cynffon ✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae cynffon gyda fi."
+              ],
+              "recall_of": "G08",
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Siarad! → Na!",
+            "answer": "Paid â siarad!"
+          },
+          "items": [
+            {
+              "id": "a10",
+              "prompt": "Edrych ar y penhwyad! → Na!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Paid ag edrych ar y penhwyad!"
+              ],
+              "recall_of": "G07",
+              "source_segment_ids": []
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l10-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "ceg",
+        "trwyn",
+        "penhwyad",
+        "asgell",
+        "cefn",
+        "brenin",
+        "corff",
+        "miniog",
+        "dwfn",
+        "gwlyb",
+        "cuddio",
+        "ofni",
+        "achub"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Mae Cai eisiau bwyd: mae e'n agor y ___, ac mae e'n bwyta'r bastai.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "geg"
+          ],
+          "explanation": "y + ceg (b.) → y geg"
+        },
+        {
+          "id": "b2",
+          "prompt": "Mae'r gath yn arogli'r caws gyda'r ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "trwyn"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Paid â chyffwrdd â chleddyf Cai: mae e'n ___!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "finiog"
+          ],
+          "explanation": "yn + miniog → finiog"
+        },
+        {
+          "id": "b4",
+          "prompt": "Dyw Arth ddim yn gweld y cerrig dan y bont: mae'r dŵr yn ___ iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ddwfn"
+          ],
+          "explanation": "yn + dwfn → ddwfn"
+        },
+        {
+          "id": "b5",
+          "prompt": "Dyw Modlen ddim yn gweld Dafi: mae e'n ___ yn yr het.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "cuddio"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae'r pysgod bach yn ___ y penhwyad: maen nhw'n cuddio dan y cerrig.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ofni"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Mae'r ___ yn byw yn y dŵr dwfn, ac mae ei ddannedd e'n finiog.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "penhwyad",
+            "brenin"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "Does dim dwylo gyda'r pysgodyn, ond mae ___ gyda fe.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "esgyll",
+            "asgell"
+          ],
+          "explanation": "asgell, esgyll"
+        },
+        {
+          "id": "b9",
+          "prompt": "Mae Pero yn yr afon, ac mae e'n ___ Dafi o'r dŵr dwfn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "achub"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l10-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Beth yw Arth a Mali yn y dŵr?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Pysgod",
+            "Maen nhw'n bysgod",
+            "Pysgod ydyn nhw"
+          ],
+          "model_answer": "Maen nhw'n bysgod.",
+          "source_segment_ids": [
+            "cy-brenin-01-l10-s005"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Oes dwylo gydag Arth yn y dŵr?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Nac oes",
+            "Nac oes. Mae esgyll gyda fe",
+            "Nac oes. Does dim dwylo gyda fe",
+            "Nac oes, does dim dwylo gyda fe"
+          ],
+          "model_answer": "Nac oes. Mae esgyll gyda fe.",
+          "source_segment_ids": [
+            "cy-brenin-01-l10-s009"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Pwy yw brenin yr afon?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Y penhwyad",
+            "Y penhwyad yw e",
+            "Y penhwyad yw brenin yr afon"
+          ],
+          "model_answer": "Y penhwyad yw brenin yr afon.",
+          "source_segment_ids": [
+            "cy-brenin-01-l10-s059"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Pam mae'r pysgod bach yn cuddio?",
+          "answer_mode": "self_check",
+          "model_answer": "Maen nhw'n ofni'r penhwyad: mae ei ddannedd e'n finiog.",
+          "rubric": "Gives the reason: they fear the pike (or its sharp teeth).",
+          "key_terms": [
+            "cy-ofni",
+            "cy-penhwyad",
+            "cy-dant"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Sut mae Arth a Mali'n dod o'r dŵr?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae llaw Myrddin yn achub y plant.",
+          "rubric": "Mentions Myrddin's hand.",
+          "key_terms": [
+            "cy-llaw",
+            "cy-achub"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l10-s114"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Ydy'r penhwyad yn frenin da? Pam?",
+          "answer_mode": "self_check",
+          "model_answer": "Nac ydy. Mae'r pysgod yn ofni ei ddannedd e, a dyn nhw ddim yn hapus.",
+          "rubric": "Nac ydy, plus a reason from the story (fear, hiding, unhappy fish).",
+          "key_terms": [
+            "cy-ofni",
+            "cy-brenin"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "A ti? Ble mae dy drwyn di?",
+          "answer_mode": "self_check",
+          "model_answer": "Dyma fy nhrwyn i!",
+          "rubric": "Uses fy + nasal mutation with the echo pronoun: fy nhrwyn i."
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-fy",
+      "citation_form": "fy",
+      "part_of_speech": "determiner",
+      "current_sense": "my (+ NM; with echo i)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dy",
+      "citation_form": "dy",
+      "part_of_speech": "determiner",
+      "current_sense": "your (singular; + SM; with echo di)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ei-m",
+      "citation_form": "ei (e)",
+      "part_of_speech": "determiner",
+      "current_sense": "his (+ SM; with echo e)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ei-f",
+      "citation_form": "ei (hi)",
+      "part_of_speech": "determiner",
+      "current_sense": "her (+ AM, h- before vowels; with echo hi)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ein",
+      "citation_form": "ein",
+      "part_of_speech": "determiner",
+      "current_sense": "our (receptive)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-eich",
+      "citation_form": "eich",
+      "part_of_speech": "determiner",
+      "current_sense": "your (plural/polite; receptive)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-eu",
+      "citation_form": "eu",
+      "part_of_speech": "determiner",
+      "current_sense": "their (receptive)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pen",
+      "citation_form": "pen (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "head",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-llaw",
+      "citation_form": "llaw (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "hand",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-troed",
+      "citation_form": "troed (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "foot",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ceg",
+      "citation_form": "ceg (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "mouth",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-trwyn",
+      "citation_form": "trwyn (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "nose",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dant",
+      "citation_form": "dant (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "tooth",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cefn",
+      "citation_form": "cefn (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "back",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-corff",
+      "citation_form": "corff (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "body",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-asgell",
+      "citation_form": "asgell (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "fin (of a fish); wing",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cen",
+      "citation_form": "cen (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "scales (of a fish), collective",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-brenin",
+      "citation_form": "brenin (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "king",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-penhwyad",
+      "citation_form": "penhwyad (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "pike (fish)",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ofni",
+      "citation_form": "ofni",
+      "part_of_speech": "verb",
+      "current_sense": "to fear",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cuddio",
+      "citation_form": "cuddio",
+      "part_of_speech": "verb",
+      "current_sense": "to hide",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-achub",
+      "citation_form": "achub",
+      "part_of_speech": "verb",
+      "current_sense": "to save, rescue",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dwfn",
+      "citation_form": "dwfn",
+      "part_of_speech": "adjective",
+      "current_sense": "deep",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-miniog",
+      "citation_form": "miniog",
+      "part_of_speech": "adjective",
+      "current_sense": "sharp",
+      "first_introduced_lesson": "cy-brenin-01-l10",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-10.json.",
+    "card_stages": [
+      {
+        "lexeme_id": "cy-fy",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "fy … i (+ NM)",
+        "back": "my (+ NM; with echo i)",
+        "example_segment_id": "cy-brenin-01-l10-s007"
+      },
+      {
+        "lexeme_id": "cy-dy",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "dy … di (+ SM)",
+        "back": "your (singular; + SM; with echo di)",
+        "example_segment_id": "cy-brenin-01-l10-s013"
+      },
+      {
+        "lexeme_id": "cy-ei-m",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "ei … e (his; + SM)",
+        "back": "his (+ SM; with echo e)",
+        "example_segment_id": "cy-brenin-01-l10-s072"
+      },
+      {
+        "lexeme_id": "cy-ei-f",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "ei … hi (her; + AM)",
+        "back": "her (+ AM, h- before vowels; with echo hi)",
+        "example_segment_id": "cy-brenin-01-l10-s021"
+      },
+      {
+        "lexeme_id": "cy-ein",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "ein … ni",
+        "back": "our (receptive)",
+        "example_segment_id": "cy-brenin-01-l10-s051"
+      },
+      {
+        "lexeme_id": "cy-eich",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "eich … chi",
+        "back": "your (plural/polite; receptive)",
+        "example_segment_id": "cy-brenin-01-l10-s079"
+      },
+      {
+        "lexeme_id": "cy-eu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "eu … nhw",
+        "back": "their (receptive)",
+        "example_segment_id": "cy-brenin-01-l10-s064"
+      },
+      {
+        "lexeme_id": "cy-pen",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "pen (g.), pennau",
+        "back": "head",
+        "example_segment_id": "cy-brenin-01-l10-s021"
+      },
+      {
+        "lexeme_id": "cy-llaw",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "llaw (b.), dwylo",
+        "back": "hand",
+        "example_segment_id": "cy-brenin-01-l10-s114"
+      },
+      {
+        "lexeme_id": "cy-troed",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "troed (b.), traed",
+        "back": "foot",
+        "example_segment_id": "cy-brenin-01-l10-s008"
+      },
+      {
+        "lexeme_id": "cy-ceg",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "ceg (b.)",
+        "back": "mouth",
+        "example_segment_id": "cy-brenin-01-l10-s025"
+      },
+      {
+        "lexeme_id": "cy-trwyn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "trwyn (g.)",
+        "back": "nose",
+        "example_segment_id": "cy-brenin-01-l10-s072"
+      },
+      {
+        "lexeme_id": "cy-dant",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "dant (g.), dannedd",
+        "back": "tooth",
+        "example_segment_id": "cy-brenin-01-l10-s093"
+      },
+      {
+        "lexeme_id": "cy-cefn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "cefn (g.)",
+        "back": "back",
+        "example_segment_id": "cy-brenin-01-l10-s071"
+      },
+      {
+        "lexeme_id": "cy-corff",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "corff (g.)",
+        "back": "body",
+        "example_segment_id": "cy-brenin-01-l10-s026"
+      },
+      {
+        "lexeme_id": "cy-asgell",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "asgell (b.), esgyll",
+        "back": "fin (of a fish); wing",
+        "example_segment_id": "cy-brenin-01-l10-s029"
+      },
+      {
+        "lexeme_id": "cy-cen",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "cen (g.)",
+        "back": "scales (of a fish), collective",
+        "example_segment_id": "cy-brenin-01-l10-s030"
+      },
+      {
+        "lexeme_id": "cy-brenin",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "brenin (g.)",
+        "back": "king",
+        "example_segment_id": "cy-brenin-01-l10-s059"
+      },
+      {
+        "lexeme_id": "cy-penhwyad",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "penhwyad (g.)",
+        "back": "pike (fish)",
+        "example_segment_id": "cy-brenin-01-l10-s073"
+      },
+      {
+        "lexeme_id": "cy-ofni",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "ofni",
+        "back": "to fear",
+        "example_segment_id": "cy-brenin-01-l10-s055"
+      },
+      {
+        "lexeme_id": "cy-cuddio",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "cuddio",
+        "back": "to hide",
+        "example_segment_id": "cy-brenin-01-l10-s046"
+      },
+      {
+        "lexeme_id": "cy-achub",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "achub",
+        "back": "to save, rescue",
+        "example_segment_id": "cy-brenin-01-l10-s114"
+      },
+      {
+        "lexeme_id": "cy-dwfn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "dwfn",
+        "back": "deep",
+        "example_segment_id": "cy-brenin-01-l10-s043"
+      },
+      {
+        "lexeme_id": "cy-miniog",
+        "id": "base",
+        "lesson": "cy-brenin-01-l10",
+        "front": "miniog",
+        "back": "sharp",
+        "example_segment_id": "cy-brenin-01-l10-s094"
+      },
+      {
+        "lexeme_id": "cy-pattern-g10",
+        "id": "pattern-g10",
+        "lesson": "cy-brenin-01-l10",
+        "front": "fy nwylo i · dy draed di · ei geg e · ei cheg hi",
+        "back": "my hands · your feet · his mouth · her mouth (fy + nasal; dy, ei 'his' + soft; ei 'her' + aspirate: c, p, t → ch, ph, th)",
+        "example_segment_id": "cy-brenin-01-l10-s007",
+        "example_segment_ids": [
+          "cy-brenin-01-l10-s007",
+          "cy-brenin-01-l10-s013",
+          "cy-brenin-01-l10-s072",
+          "cy-brenin-01-l10-s023"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l10-img-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 1,
+      "margin_vignette": 4,
+      "margin_diagram": 1,
+      "margin_gloss": 28
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-10",
+      "rhan-1"
+    ]
+  },
+  "metrics": {
+    "running_words": 1042,
+    "sentences": 151,
+    "word_target": 950,
+    "word_window": [
+      855,
+      1045
+    ]
+  }
+}

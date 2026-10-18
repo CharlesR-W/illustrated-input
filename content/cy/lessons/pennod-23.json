@@ -1,0 +1,2113 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l23",
+ "course_id": "cy-brenin-01",
+ "order": 23,
+ "title": "Y daith",
+ "rhan": 3,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B4 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (Wave 2, 2026-10-17)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Frame: on the night of arrival in a small inn by the church in Caerllion (the inn of Pennod 26), Mali reads her diary of the journey aloud to Arth and Cai, who interrupt with their own versions, as in Pennod 12. Day 1 (Pennod 21–22) is recalled in two lines; the diary proper covers the three days the plan asks for: over the mountain in mud and fog with real robbers (who run when Dafi's smoke and fire burst from the bread sack); the boat over Afon Wysg with the boatman of 22; arrival through the vale at Caerllion (Roman walls, gate, crowd, the lords' camp of tents) and the ruined round amphitheatre.",
+   "Target: plural persons of the preterite in every person: -on ni (gadawon, cawson, aethon, tynnon, gwelon, cysgon, arhoson, cyrhaeddon, rhoddon, rhwyfon, teithion, daethon, gwnaethon), -och chi (Gysgoch chi? Daethoch chi, Aethoch chi), -on nhw (chlywon nhw, rhedon nhw, welon nhw, gwnaethon nhw), beside -ais i / -aist ti (tynnais, tynnaist, rhwyfais, rhwyfaist, cwympaist) and -odd. Contrasts: Mali's 'we' diary against her 1sg diary of Pennod 12 (Gramadeg table), and Cai's version against Mali's ('pan welon nhw fy nghleddyf i' ↔ 'pan welon nhw fwg Dafi'). Negative and question mutation recycled (Chafodd e ddim byd; Cysgon ni ddim; Gysgoch chi?).",
+   "Running words about 1,420 (target 1,390, window 1,251–1,529). Dialogue share is high (≈84%) because the diary is read aloud inside quotation marks. Checker lemma-validation warnings (Rhufeiniaid, mwdlyd) concern planned lexemes.",
+   "Diary text is inside quotation marks (Mali reads it aloud); quoted speech inside the diary is reported with a colon and no inner quotation marks ('gwaeddodd e: Fi yw brenin yr amffitheatr!').",
+   "Delta adds the irregular-stem plural forms the suffix rule cannot derive (gadawon, cyrhaeddon, arhoson, rhoddon, daethoch, aethoch, cawsoch, gwnaethoch …) and past-plural card stages for mynd, dod, cael, gwneud.",
+   "Round Table seed (for 39): Arth stands in the middle of the amphitheatre and asks where the head of the circle is; Myrddin: 'Does dim pen i gylch, Arth. Mae pob sedd mewn cylch crwn yn sedd dda.'",
+   "Plan picture beat 'SVG: route map Cwm Helyg → Caerllion' is realised as a new simplified route diagram (cy-brenin-01-l23-img-taith.svg) in the layout of the Pennod 1 inset, not by reusing the full Pennod 1 map file."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l23-s025",
+    "question": "[?] 'Ro'n nhw'n lladron go iawn!' (They were real robbers!) in Mali's diary: natural, or 'Lladron go iawn o'n nhw!' (focus, not yet taught)?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s040",
+    "question": "[?] 'roedd Cai'n arogli o fwd' — arogli o for 'smelled of': natural?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s068",
+    "question": "[?] 'waliau'r Rhufeiniaid yw'r rhain' and 'gwnaethon nhw'r waliau' (they made the walls) rather than adeiladu (not yet a lexeme): acceptable?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s058",
+    "question": "[?] 'Gysgoch chi'n dda?' — cysgoch with SM in the question: confirm the 2pl form (cysgoch / cysgsoch)."
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s102",
+    "question": "[?] 'Does dim pen i gylch' (a circle has no head/end): natural, or 'Does dim pen gan gylch'?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s021",
+    "question": "[?] 'deg milltir, ugain milltir' — milltir f. after numerals without mutation (deg, ugain): confirm."
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G23",
+  "primary_new_grammar": {
+   "id": "G23",
+   "label": "full regular preterite paradigm productive: -ais i, -aist ti, -odd e/hi, -on ni, -och chi, -on nhw (gwelon ni, rhedon nhw, cysgoch chi); irregular plurals aethon / aethoch, daethon / daethoch, cawson, gwnaethon; contrasted with Mali's 1sg diary of Pennod 12 and with 3sg -odd",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G22",
+   "G21",
+   "G20",
+   "G19",
+   "G18",
+   "G17",
+   "G16",
+   "G14",
+   "G13",
+   "G12",
+   "G11",
+   "G10"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-milltir",
+   "cy-mwd",
+   "cy-porth",
+   "cy-adfail",
+   "cy-amffitheatr",
+   "cy-cylch",
+   "cy-rhufeiniaid",
+   "cy-torf",
+   "cy-rhwyfo",
+   "cy-ph-i-ffwrdd",
+   "cy-crwn",
+   "cy-enfawr",
+   "cy-mwdlyd",
+   "cy-dyffryn",
+   "cy-rhwyf",
+   "cy-colofn",
+   "cy-sedd",
+   "cy-gwersyll",
+   "cy-pabell",
+   "cy-gwastad"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-milltir",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l23-s021"
+   },
+   {
+    "lexeme_id": "cy-mwd",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l23-s022"
+   },
+   {
+    "lexeme_id": "cy-porth",
+    "how": "gloss(define)+picture(cover)",
+    "segment_id": "cy-brenin-01-l23-s069"
+   },
+   {
+    "lexeme_id": "cy-adfail",
+    "how": "gloss(define)+picture(scene)",
+    "segment_id": "cy-brenin-01-l23-s091"
+   },
+   {
+    "lexeme_id": "cy-amffitheatr",
+    "how": "picture(scene)+context",
+    "segment_id": "cy-brenin-01-l23-s091"
+   },
+   {
+    "lexeme_id": "cy-cylch",
+    "how": "gloss(radical)+picture(scene)",
+    "segment_id": "cy-brenin-01-l23-s092"
+   },
+   {
+    "lexeme_id": "cy-rhufeiniaid",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l23-s068"
+   },
+   {
+    "lexeme_id": "cy-torf",
+    "how": "gloss(define)+picture(cover)",
+    "segment_id": "cy-brenin-01-l23-s070"
+   },
+   {
+    "lexeme_id": "cy-rhwyfo",
+    "how": "picture(scene)+gloss(picture)",
+    "segment_id": "cy-brenin-01-l23-s046"
+   },
+   {
+    "lexeme_id": "cy-ph-i-ffwrdd",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l23-s032"
+   },
+   {
+    "lexeme_id": "cy-crwn",
+    "how": "gloss(define)+picture(scene)",
+    "segment_id": "cy-brenin-01-l23-s091"
+   },
+   {
+    "lexeme_id": "cy-enfawr",
+    "how": "gloss(synonym)",
+    "segment_id": "cy-brenin-01-l23-s074"
+   },
+   {
+    "lexeme_id": "cy-mwdlyd",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l23-s023"
+   },
+   {
+    "lexeme_id": "cy-dyffryn",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l23-s063"
+   },
+   {
+    "lexeme_id": "cy-rhwyf",
+    "how": "gloss(radical)+picture(scene)",
+    "segment_id": "cy-brenin-01-l23-s046"
+   },
+   {
+    "lexeme_id": "cy-colofn",
+    "how": "gloss(number)+picture(scene)",
+    "segment_id": "cy-brenin-01-l23-s094"
+   },
+   {
+    "lexeme_id": "cy-sedd",
+    "how": "picture(scene)+context",
+    "segment_id": "cy-brenin-01-l23-s092"
+   },
+   {
+    "lexeme_id": "cy-gwersyll",
+    "how": "gloss(define)+picture(cover)",
+    "segment_id": "cy-brenin-01-l23-s074"
+   },
+   {
+    "lexeme_id": "cy-pabell",
+    "how": "gloss(define+radical)",
+    "segment_id": "cy-brenin-01-l23-s055"
+   },
+   {
+    "lexeme_id": "cy-gwastad",
+    "how": "gloss(define)+picture(scene)",
+    "segment_id": "cy-brenin-01-l23-s042"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-dyddiadur",
+   "cy-cyrraedd",
+   "cy-croesi",
+   "cy-blinedig",
+   "cy-dinas",
+   "cy-gwlyb",
+   "cy-wal",
+   "cy-lleidr",
+   "cy-tafarn",
+   "cy-sach",
+   "cy-cert",
+   "cy-glaw",
+   "cy-niwl",
+   "cy-ymbarel",
+   "cy-milwr",
+   "cy-cwch",
+   "cy-cyllell",
+   "cy-peryglus",
+   "cy-gwas",
+   "cy-ail",
+   "cy-trydydd",
+   "cy-pedwerydd",
+   "cy-cyntaf",
+   "cy-ofn"
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l23-img-cover",
+   "src": "media/images/cy-brenin-01-l23-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "The travellers arrive at the great gate in the red Roman walls of Caerllion in snow: a crowd of lords, knights, servants, horses and dogs; tents and banners of a camp by the walls; an old soldier at the gate smiles at Cynyr.",
+   "art_brief": "Caerllion in winter (Caerllion palette: Roman red brick and snow; match place-caerllion.png). A great arched gateway in tall red-brick and stone Roman walls with towers; snow on the walls. In front of the gate a busy crowd: lords in fur-trimmed cloaks, knights in chainmail with round and kite shields, servants, horses and hounds; banners of many colours. To one side outside the walls a camp of tents (red, blue and white) with a banner on each. Arriving at the front: the mud-spattered two-wheeled cart with sacks, Arth (11, untidy brown hair, oversized brown coat) and Mali (12, long dark braid, dark-blue dress) sitting in it, Myrddin (white beard, round spectacles, tall black hat) beside them; Cynyr (huge golden-blond beard, brown cloak) on his old white horse, Cai (15, red-blond, red cloak, muddy boots) on his chestnut horse, Elen (white veil, green dress) on a horse. In the gateway an old grey-bearded soldier with a spear smiles in recognition at Cynyr. No text.",
+   "characters": [
+    "char-arth",
+    "char-mali",
+    "char-myrddin",
+    "char-cynyr",
+    "char-cai",
+    "char-elen"
+   ],
+   "covers_lexeme_ids": [
+    "cy-porth",
+    "cy-torf",
+    "cy-gwersyll",
+    "cy-pabell",
+    "cy-rhufeiniaid"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l23-sec1",
+    "title": "Dyddiadur y daith",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l23-s001",
+      "text": "Yn y nos, roedd y teulu mewn tafarn fach yng Nghaerllion, wrth yr eglwys.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l23-s002",
+      "text": "Roedd y dref yn llawn: roedd arglwyddi, marchogion a theithwyr ym mhob tafarn yng Nghaerllion."
+     },
+     {
+      "id": "cy-brenin-01-l23-s003",
+      "text": "Roedd Cynyr ac Elen yn bwyta cawl, roedd Myrddin yn cysgu ar ei gadair, ac roedd Mali'n eistedd ar stôl wrth y tân glo ar yr aelwyd, gyda'i dyddiadur."
+     },
+     {
+      "id": "cy-brenin-01-l23-s004",
+      "text": "Roedd teithwyr dieithr yn clebran wrth y tân am y twrnamaint, am y cleddyf ac am y sïon newydd."
+     },
+     {
+      "id": "cy-brenin-01-l23-s005",
+      "text": "\"Beth wyt ti'n ysgrifennu, Mali?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s006",
+      "text": "\"Y daith,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s007",
+      "text": "\"Pedwar diwrnod, a phob diwrnod yn y dyddiadur.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s008",
+      "text": "\"Darllen y daith i ni, Mali!\" meddai Cai, ac roedd bara yn ei geg e.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s009",
+      "text": "\"Dw i'n gobeithio bod fy nghleddyf i yn y dyddiadur.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s010",
+      "text": "\"Dw i eisiau clywed am y lladron, ac am fy nghleddyf i!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s011",
+      "text": "Agorodd Mali'r dyddiadur, a darllenodd hi'n dawel ac yn araf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l23-s012",
+      "text": "\"Wyt ti'n siŵr bod y lladron yno hefyd?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s013",
+      "text": "\"Dw i'n siŵr,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s014",
+      "text": "\"Y dydd cyntaf, gadawon ni'r llys yn yr eira.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s015",
+      "text": "\"Yn y nos, cawson ni gawl mewn tafarn, a chlywon ni sïon.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cawson ni",
+        "gloss": "cafodd e · cawson ni",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s016",
+      "text": "\"Talodd Cai chwe cheiniog i ddyn y cwch, a chafodd e ddim byd!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s017",
+      "text": "\"Mali!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s018",
+      "text": "\"Mae'n wir, Cai,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s019",
+      "text": "\"Dw i ddim yn ysgrifennu celwydd yn y dyddiadur.\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l23-sec2",
+    "title": "Yr ail ddydd",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l23-s020",
+      "text": "\"Yr ail ddydd, aethon ni dros y mynydd,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "aethon ni",
+        "gloss": "es i · aeth e · aethon ni",
+        "gloss_kind": "paradigm"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "cy-brenin-01-l23-img-taith",
+        "anchor_text": "aethon ni",
+        "label": "Y daith",
+        "src": "media/diagrams/cy-brenin-01-l23-img-taith.svg",
+        "alt": "Route map in the layout of the Pennod 1 inset: Cwm Helyg in the west; 1 to the inn (y dafarn); 2 over the mountain (y mynydd); 3 across Afon Wysg by boat (y cwch); 4 to the walled city of Caerllion. Welsh labels only.",
+        "status": "draft",
+        "art_brief": "Route map in the layout of the Pennod 1 inset: Cwm Helyg in the west; 1 to the inn (y dafarn); 2 over the mountain (y mynydd); 3 across Afon Wysg by boat (y cwch); 4 to the walled city of Caerllion. Welsh labels only.",
+        "covers_lexeme_ids": [
+         "cy-milltir",
+         "cy-dyffryn"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s021",
+      "text": "\"Roedd y ffordd yn hir iawn: deg milltir, ugain milltir, i fyny'r mynydd ac i lawr eto.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "milltir",
+        "gloss": "milltir: ffordd hir, hir",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s022",
+      "text": "\"Roedd mwd ar y ffordd: mwd du, mwd gwlyb, mwd ar ein traed ni ac ar goesau'r ceffylau.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "mwd",
+        "gloss": "mwd: dŵr + tir",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s023",
+      "text": "\"Tynnon ni'r gert drwy'r mwd, ac wedyn roedd y gert yn fwdlyd, roedd y ceffylau'n fwdlyd, ac roedd Cai'n fwdlyd iawn.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "fwdlyd",
+        "gloss": "yn fwdlyd ← mwdlyd (mwd)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s024",
+      "text": "\"Roedd hi'n wyntog iawn ar ben y mynydd, ac roedd rhew ar y cerrig. Wedyn daeth niwl, a doedd dim haul.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s025",
+      "text": "\"Yn y niwl, gwelon ni bedwar dyn ar y ffordd, gyda chyllyll mawr.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwelon ni",
+        "gloss": "gwelodd e · gwelon ni",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s026",
+      "text": "\"Ro'n nhw'n lladron go iawn!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s027",
+      "text": "\"Safodd y lladron ar y ffordd, wrth y ceffylau, a gofynnodd un lleidr: Ble mae'r arian?\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s028",
+      "text": "\"Ac wedyn tynnais i fy nghleddyf!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "tynnais i",
+        "gloss": "tynnais i · tynnaist ti · tynnodd e",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s029",
+      "text": "\"Do, Cai,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s030",
+      "text": "\"Tynnaist ti dy gleddyf, ond cwympaist ti yn y mwd.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s031",
+      "text": "\"Ac atebodd Dad: Does dim arian gyda ni, dim ond bara!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s032",
+      "text": "\"Ond wedyn tisianodd y sach fara: daeth tân bach a mwg mawr, du o'r gert.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s033",
+      "text": "\"Gwelodd y lladron y mwg, a chlywon nhw'r sŵn.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s034",
+      "text": "\"Gwaeddodd un lleidr: Draig! Mae draig yn y gert! Ond atebodd Myrddin yn dawel: Dim ond sach fara yw hi.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s035",
+      "text": "\"Rhedon nhw i ffwrdd pan welon nhw fwg Dafi!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "welon",
+        "gloss": "pan welon ← gwelon",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "i ffwrdd",
+        "gloss": "i ffwrdd ↔ yn ôl",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s036",
+      "text": "\"Rhedon nhw i ffwrdd pan welon nhw fy nghleddyf i!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s037",
+      "text": "\"Rhedon nhw i ffwrdd pan welon nhw fwg Dafi,\" meddai Arth, a chwarddodd e.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s038",
+      "text": "\"Mwg Dafi!\" meddai Dafi o het Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l23-s039",
+      "text": "\"Dw i'n ddraig beryglus!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s040",
+      "text": "\"Yn y nos, arhoson ni mewn stabl wrth y ffordd, a chysgon ni yn y gwellt gyda'r ceffylau,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s041",
+      "text": "\"Roedd pawb yn flinedig, ac roedd y stabl yn gynnes, ond roedd Cai'n arogli o fwd.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "fwd",
+        "gloss": "o fwd ← mwd",
+        "gloss_kind": "radical"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l23-sec3",
+    "title": "Y trydydd dydd",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l23-s042",
+      "text": "\"Y trydydd dydd, cyrhaeddon ni Afon Wysg,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s043",
+      "text": "\"Roedd yr afon yn fawr ac yn llwyd, ac roedd y dŵr yn gyflym.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s044",
+      "text": "\"Ac roedd dyn y cwch yno, wrth gwrs, gyda'i gwch mawr, gwastad.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwastad",
+        "gloss": "gwastad: dim bryn, dim mynydd",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s045",
+      "text": "\"Gofynnodd e i Cai: Wyt ti eisiau talu eto? Ac atebodd Cai yn gyflym: Nac ydw!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s046",
+      "text": "\"Rhoddon ni'r ceffylau a'r gert yn y cwch, ac wedyn rhwyfodd dyn y cwch gyda dwy rwyf hir.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rwyf",
+        "gloss": "dwy rwyf ← rhwyf (b.)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l23-img-cwch",
+        "src": "media/images/cy-brenin-01-l23-img-cwch.webp",
+        "alt": "The ferry crossing of the grey, fast Usk: a big flat wooden boat carries the cart and horses; the wet boatman and Cai each pull a long oar; Myrddin holds his black umbrella up in the rain, a tiny red tail showing under his hat brim; Mali writes on her wax tablet, Arth holds the horses' heads.",
+        "status": "planned",
+        "art_brief": "A wide grey river in winter with fast water and snowy fields on both banks (valley palette, greens and slate, soft rain). A big flat wooden ferry boat (raft-like, low sides) carries the two-wheeled cart piled with sacks and the horses: Cynyr's old white horse, Cai's young chestnut horse and two more. At the back the boatman (thin, dripping wet cloak, wet boots) pulls one long oar; Cai (15, red-blond, red cloak, mud on his boots) pulls a second long oar, red in the face with effort. Myrddin (very old, white beard, round spectacles, tall black brimmed hat, deep-blue robe) stands holding an open black umbrella over his hat; under the brim the tip of a tiny red tail shows (Dafi). Mali (12, long dark braid, dark-blue dress) shelters under the umbrella's edge, writing. Arth (11, untidy brown hair, oversized brown coat) holds the horses' heads; Cynyr (huge golden-blond beard, brown cloak) and Elen (white veil, green dress) stand by the cart. No text.",
+        "characters": [
+         "char-cai",
+         "char-myrddin",
+         "char-dafi",
+         "char-mali",
+         "char-arth",
+         "char-cynyr",
+         "char-elen",
+         "char-dyn-cwch"
+        ],
+        "covers_lexeme_ids": [
+         "cy-rhwyf",
+         "cy-rhwyfo",
+         "cy-gwastad"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s047",
+      "text": "\"Ond roedd y dŵr yn gryf, ac roedd dyn y cwch wedi blino, felly rhwyfodd Cai hefyd, gyda'r ail rwyf.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s048",
+      "text": "\"Rhwyfais i'n gryf iawn!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s049",
+      "text": "\"Do. Rhwyfaist ti'n gryf, Cai, a rhwyfon ni'n araf, ond croeson ni'r afon,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s050",
+      "text": "\"Roedd Dafi yn het Myrddin drwy'r amser, ac roedd ofn arno fe, ond roedd e'n sych.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s051",
+      "text": "\"Doedd hi ddim yn braf: roedd hi'n bwrw glaw ar yr afon, ac agorodd Myrddin ei ymbarél.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s052",
+      "text": "\"Ar y lan, roedd sanau Cai'n wlyb, a'i drowsus hefyd, felly gwisgodd e ddillad sych o'r sach: crys gwlân a sanau Dad.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s053",
+      "text": "\"Ar y lan, roedd teithwyr newydd yn aros am y cwch, a sibrydodd dyn y cwch wrth y teithwyr: Lladron ar y bont!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s054",
+      "text": "\"Chwarddon ni, a chwarddodd Cai hefyd… wel, dim yn uchel.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s055",
+      "text": "\"Yn y nos, cysgon ni mewn pabell ar lan yr afon.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "pabell",
+        "gloss": "pabell: tŷ bach i'r daith",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s056",
+      "text": "\"Roedd y babell yn hen: pabell Dad, o'r amser pan oedd e'n was i'r Brenin Uthr.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "babell",
+        "gloss": "y babell ← pabell (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s057",
+      "text": "\"Ac roedd dyn y cwch yn cysgu yn y babell hefyd, gyda'i rwyfau!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rwyfau",
+        "gloss": "ei rwyfau ← rhwyfau",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s058",
+      "text": "\"Gysgoch chi'n dda yn yr hen babell, blant?\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l23-s059",
+      "text": "\"Naddo!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s060",
+      "text": "\"Cysgon ni ddim: roedd Cai'n canu drwy'r nos!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s061",
+      "text": "\"Dw i byth yn canu,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s062",
+      "text": "\"Yn y bore, pacion ni'r babell yn y gert, ac aethon ni.\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l23-sec4",
+    "title": "Y pedwerydd dydd",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l23-s063",
+      "text": "\"Y pedwerydd dydd, heddiw, teithion ni drwy'r dyffryn,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dyffryn",
+        "gloss": "dyffryn: cwm mawr, gwastad",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s064",
+      "text": "\"Roedd Caerllion yn bell: milltiroedd a milltiroedd!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s065",
+      "text": "\"Roedd y dyffryn yn wastad ac yn wyrdd, a doedd dim mwd yn y dyffryn, ac roedd eira ar y bryniau.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wastad",
+        "gloss": "yn wastad ← gwastad",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s066",
+      "text": "\"O ben bryn bach, gwelon ni'r dyffryn gwastad, yr afon fawr… ac wedyn, gwelon ni Gaerllion!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s067",
+      "text": "\"Mae Caerllion yn ddinas fawr wrth Afon Wysg, ac mae ei waliau hi'n hen iawn ac yn goch.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s068",
+      "text": "\"Waliau'r Rhufeiniaid yw'r rhain: daeth y Rhufeiniaid yma amser hir yn ôl, a gwnaethon nhw'r waliau a'r tyrau.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Rhufeiniaid",
+        "gloss": "Rhufeiniaid: pobl o'r gorffennol pell",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwnaethon nhw",
+        "gloss": "gwnaeth e · gwnaethon nhw",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s069",
+      "text": "\"Cyrhaeddon ni'r porth mawr yn y wal, ac roedd milwyr yn y porth.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "porth",
+        "gloss": "porth: drws mawr yn y wal",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s070",
+      "text": "\"Roedd torf fawr wrth y porth: arglwyddi a marchogion, gweision a morynion, ceffylau a chŵn.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "torf",
+        "gloss": "torf: pobl, pobl, pobl…",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s071",
+      "text": "\"Aethon ni drwy'r dorf yn araf iawn, ac wedyn drwy'r porth.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dorf",
+        "gloss": "y dorf ← torf (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s072",
+      "text": "\"Edrychodd hen filwr ar Dad, ac edrychodd e ar ei farf fawr.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s073",
+      "text": "\"Wedyn gwenodd e: roedd e'n cofio Dad, o lys y Brenin Uthr!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s074",
+      "text": "\"Roedd gwersyll enfawr wrth y waliau: pebyll coch, pebyll glas, pebyll gwyn, a baner ar bob pabell.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwersyll",
+        "gloss": "gwersyll: pabell, pabell, pabell…",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "enfawr",
+        "gloss": "enfawr = mawr, mawr iawn",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "pebyll",
+        "gloss": "pabell, pebyll",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s075",
+      "text": "\"Mae'r arglwyddi'n cysgu yn y gwersyll, ond dyn ni'n cysgu yn y dafarn.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s076",
+      "text": "\"Weloch chi'r castell?\" meddai Cynyr yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Weloch",
+        "gloss": "Weloch chi? ← gweloch · gwelon ni",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s077",
+      "text": "\"Do, Dad,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s078",
+      "text": "\"Gwelon ni'r castell, ar y bryn, gyda'r tyrau mawr.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s079",
+      "text": "\"Pan o'n i'n ifanc, roedd y Brenin Uthr yn y castell, ac roedd golau yn y ffenestri bob nos,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l23-s080",
+      "text": "\"Nawr does dim brenin yn y castell, a does dim golau.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s081",
+      "text": "Edrychodd Cynyr ar y tân am funud, ac roedd e'n dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l23-s082",
+      "text": "\"Dw i eisiau cysgu yn y gwersyll, gyda'r marchogion!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s083",
+      "text": "\"Roedd baner un arglwydd yn enfawr!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s084",
+      "text": "\"Un diwrnod, bydd fy maner i'n enfawr hefyd.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s085",
+      "text": "\"Does dim baner gyda ti, Cai,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s086",
+      "text": "Wedyn daeth Elen at y tân, a rhoddodd hi ei llaw ar ben Mali.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l23-s087",
+      "text": "\"Daethoch chi'n bell heddiw, blant,\" meddai hi.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l23-s088",
+      "text": "\"Aethoch chi drwy'r mwd, drwy'r niwl a dros yr afon. Dych chi ddim wedi blino?\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s089",
+      "text": "\"Dw i ddim wedi blino eto, Mam,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s090",
+      "text": "\"Ac mae un peth eto yn y dyddiadur.\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l23-sec5",
+    "title": "Yr amffitheatr",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l23-s091",
+      "text": "\"Yn y dref, gwelon ni adfail mawr, crwn: amffitheatr y Rhufeiniaid,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "adfail",
+        "gloss": "adfail: hen, wedi cwympo",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "crwn",
+        "gloss": "crwn: ○",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s092",
+      "text": "\"Mae'r amffitheatr yn gylch enfawr o gerrig, ac mae seddau carreg ar yr ochrau, i fyny ac i fyny.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gylch",
+        "gloss": "yn gylch ← cylch",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s093",
+      "text": "\"Roedd torf fach o blant yn chwarae yn yr adfail, ac roedd y plant yn rhedeg ar y seddau.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s094",
+      "text": "\"Mae hen golofnau wedi cwympo ar y tir, ac mae eira ar y seddau ac ar y colofnau.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "golofnau",
+        "gloss": "hen golofnau ← colofnau · colofn, colofnau",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l23-img-amffitheatr",
+        "src": "media/images/cy-brenin-01-l23-img-amffitheatr.webp",
+        "alt": "The ruined round Roman amphitheatre at Caerllion under snow: tiers of grey stone seats in a great circle, fallen columns in the snow, Arth standing in the middle of the empty arena looking around, Myrddin at the edge smiling, Mali sitting on a stone seat with her wax tablet, Cai climbing the seats.",
+        "status": "planned",
+        "art_brief": "The ruined Roman amphitheatre at Caerllion in winter afternoon light (Caerllion palette: Roman red brick and grey stone under snow). A huge round grassy arena, white with snow, ringed by low tiers of stone seats rising in a circle, broken in places; two or three fallen stone columns lie half buried in the snow. Arth (11, untidy brown hair with cowlick, oversized brown coat) stands alone in the very middle, turning to look round the ring. Myrddin (very old, white beard, round spectacles, tall black brimmed hat) stands at the edge of the arena, smiling. Mali (12, long dark braid, dark-blue dress, satchel) sits on a stone seat writing on her wax tablet. Cai (15, red-blond, red cloak) stands on a high seat with his arms up. Red Roman town walls and the tents of a camp with banners are glimpsed beyond. No text.",
+        "characters": [
+         "char-arth",
+         "char-myrddin",
+         "char-mali",
+         "char-cai"
+        ],
+        "covers_lexeme_ids": [
+         "cy-amffitheatr",
+         "cy-colofn",
+         "cy-sedd",
+         "cy-cylch",
+         "cy-crwn",
+         "cy-adfail"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s095",
+      "text": "\"Dwedodd Myrddin: Roedd y Rhufeiniaid yn eistedd ar y seddau yma, ac roedd marchogion yn ymladd yn y cylch.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s096",
+      "text": "\"Eisteddodd Cai ar sedd uchel, a gwaeddodd e: Fi yw brenin yr amffitheatr!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s097",
+      "text": "\"Ro'n i'n frenin da,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s098",
+      "text": "\"Ond safodd Arth yn y cylch, ar yr eira, ac edrychodd e ar y seddau a'r colofnau am amser hir,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s099",
+      "text": "\"Gofynnodd e i Myrddin: Ble mae pen y cylch?\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s100",
+      "text": "\"A beth atebodd Myrddin?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s101",
+      "text": "\"Dw i wedi anghofio.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s102",
+      "text": "\"Does dim pen i gylch, Arth,\" darllenodd Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s103",
+      "text": "\"Mae pob sedd mewn cylch crwn yn sedd dda.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s104",
+      "text": "\"Mae'r amffitheatr yn adfail nawr, ond mae hi'n grwn, ac mae pob sedd yno.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "grwn",
+        "gloss": "yn grwn ← crwn",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l23-s105",
+      "text": "Roedd y dafarn yn dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l23-s106",
+      "text": "Roedd Myrddin wrth y tân, ac roedd ei lygaid e ar agor nawr: roedd e'n gwenu."
+     },
+     {
+      "id": "cy-brenin-01-l23-s107",
+      "text": "\"Ac yn olaf,\" meddai Mali, ac ysgrifennodd hi eto.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s108",
+      "text": "\"Daethon ni i Gaerllion. Gwnaethon ni'r daith!\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s109",
+      "text": "\"Ac yfory, byddwn ni'n mynd i'r eglwys i weld y garreg a'r cleddyf.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s110",
+      "text": "\"Yfory, bydda i'n tynnu'r cleddyf o'r garreg!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l23-s111",
+      "text": "\"Yfory, byddi di'n gweld y garreg, Cai,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l23-s112",
+      "text": "\"Dim ond gweld.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s113",
+      "text": "Edrychodd Arth drwy'r ffenest, ar yr eglwys dywyll yn yr eira.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l23-s114",
+      "text": "\"Wyt ti'n cofio'r drych, Mali?\" meddai e'n dawel.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s115",
+      "text": "\"Ydw,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s116",
+      "text": "\"Gwelais i'r garreg yn y drych, mewn byd gwyn. Nawr mae'r byd yn wyn, ac mae'r garreg yma, yng Nghaerllion.\""
+     },
+     {
+      "id": "cy-brenin-01-l23-s117",
+      "text": "\"Wyt ti'n meddwl bod y cleddyf yn hud?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l23-s118",
+      "text": "\"Dw i ddim yn gwybod,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l23-s119",
+      "text": "\"Ond mae pobl yn dweud bod llythrennau ar y garreg, a dw i'n gallu darllen.\""
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Aethon ni dros y mynydd",
+  "rule_cy": "ddoe: gwel-ais i · gwel-aist ti · gwel-odd e · gwel-on ni · gwel-och chi · gwel-on nhw. Mynd: aethon ni · aethoch chi · aethon nhw. Dod: daethon · Cael: cawson · Gwneud: gwnaethon.",
+  "tables": [
+   {
+    "caption": "-ais, -aist, -odd, -on, -och, -on",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "-ais i",
+      "Tynnais i fy nghleddyf! · Rhwyfais i'n gryf!"
+     ],
+     [
+      "-aist ti",
+      "Tynnaist ti dy gleddyf. · Rhwyfaist ti'n gryf."
+     ],
+     [
+      "-odd e / hi",
+      "Rhwyfodd dyn y cwch. · Tisianodd Dafi."
+     ],
+     [
+      "-on ni",
+      "Gwelon ni Gaerllion! · Cysgon ni mewn pabell."
+     ],
+     [
+      "-och chi",
+      "Gysgoch chi'n dda?"
+     ],
+     [
+      "-on nhw",
+      "Rhedon nhw i ffwrdd pan welon nhw fwg Dafi!"
+     ]
+    ]
+   },
+   {
+    "caption": "mynd · dod · cael · gwneud",
+    "header": [
+     "",
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "es i · aeth e",
+      "aethon ni",
+      "Aethon ni dros y mynydd."
+     ],
+     [
+      "des i · daeth e",
+      "daethon ni · daethoch chi",
+      "Daethon ni i Gaerllion. · Daethoch chi'n bell."
+     ],
+     [
+      "ces i · cafodd e",
+      "cawson ni",
+      "Cawson ni gawl mewn tafarn."
+     ],
+     [
+      "gwnes i · gwnaeth e",
+      "gwnaethon ni / nhw",
+      "Gwnaethon ni'r daith!"
+     ]
+    ]
+   },
+   {
+    "caption": "Pennod 12 ↔ Pennod 23",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "fi (Pennod 12)",
+      "Es i i'r afon. Gwelais i benhwyad."
+     ],
+     [
+      "ni (Pennod 23)",
+      "Aethon ni dros y mynydd. Gwelon ni ladron."
+     ]
+    ]
+   },
+   {
+    "caption": "treiglad: gwrthrych · cwestiwn · na",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "gwrthrych",
+      "Gwelon ni ladron. · Cawson ni gawl."
+     ],
+     [
+      "cwestiwn",
+      "Gysgoch chi'n dda?"
+     ],
+     [
+      "na (✗)",
+      "Cysgon ni ddim. · Chafodd e ddim byd."
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l23-s014"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s020"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s025"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s028"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s029"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s032"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s040"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s042"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s049"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s058"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s059"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s087"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s068"
+   },
+   {
+    "segment_id": "cy-brenin-01-l23-s107"
+   }
+  ],
+  "nodyn_en": "The past tense now has every person: stem + -ais i, -aist ti, -odd e/hi, -on ni, -och chi, -on nhw (gwelon ni, rhedon nhw). Irregulars: aethon (went), daethon (came), cawson (had), gwnaethon (did), with -och for chi. Questions and negatives still mutate: Gysgoch chi? Chafodd e ddim. The object still mutates: Gwelon ni ladron."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l23-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Gwelais i Gaerllion. (ni) →",
+      "answer": "Gwelon ni Gaerllion."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Cysgais i mewn pabell. (ni) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cysgon ni mewn pabell."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s055"
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Rhedodd y lleidr i ffwrdd. (nhw) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhedon nhw i ffwrdd."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s032"
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Rhwyfais i'n gryf. (ti) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhwyfaist ti'n gryf."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s049"
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Cerddais i drwy'r mwd. (chi) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cerddoch chi drwy'r mwd."
+       ]
+      },
+      {
+       "id": "a5",
+       "prompt": "Tynnodd Cai'r gert. (ni) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Tynnon ni'r gert."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s023"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Aeth e dros y mynydd. (ni) →",
+      "answer": "Aethon ni dros y mynydd."
+     },
+     "items": [
+      {
+       "id": "a6",
+       "prompt": "Daeth e i Gaerllion. (ni) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Daethon ni i Gaerllion."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s107"
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Cafodd e gawl. (ni) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cawson ni gawl."
+       ],
+       "mutation_hint": true,
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s014"
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "Aeth e drwy'r porth. (chi) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Aethoch chi drwy'r porth."
+       ],
+       "common_wrong": [
+        {
+         "answer": "Aethon chi drwy'r porth.",
+         "hint": "chi → -och: aethoch chi"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Cai'n ennill. (yfory) →",
+      "answer": "Bydd Cai'n ennill."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Mae hi'n bwrw eira. (yfory) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Bydd hi'n bwrw eira."
+       ],
+       "recall_of": "G20"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Y dydd ___ (1)",
+      "answer": "cyntaf"
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Y ___ dydd, cyrhaeddon ni Afon Wysg. (3)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "trydydd"
+       ],
+       "recall_of": "G18",
+       "source_segment_ids": [
+        "cy-brenin-01-l23-s042"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l23-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "milltir",
+    "mwd",
+    "porth",
+    "adfail",
+    "cylch",
+    "torf",
+    "rhwyf",
+    "pabell",
+    "sedd",
+    "gwersyll",
+    "dyffryn",
+    "rhwyfo",
+    "croesi",
+    "cyrraedd",
+    "crwn",
+    "enfawr",
+    "mwdlyd",
+    "gwastad"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae'r ffordd yn wlyb ac yn ddu ar ôl y glaw… wel, mae ___ ar y ffordd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "mwd"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "Mae'r hen dŵr wedi cwympo: ___ yw e nawr.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "adfail"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Does dim gwely gyda ni, a does dim tŷ: dyn ni'n cysgu mewn ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "pabell"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae'r cwch ar yr afon, ac mae Cai'n ___ gyda'r rhwyfau.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "rhwyfo"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae'r haul yn ___, ac mae'r plât yn ___ hefyd.",
+     "answer_mode": "exact",
+     "blanks": [
+      [
+       "grwn"
+      ],
+      [
+       "grwn"
+      ]
+     ],
+     "explanation": "yn + crwn → yn grwn"
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae pobl, pobl a phobl wrth y porth: mae ___ fawr yno.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "torf"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Dyw'r tir ddim yn mynd i fyny nac i lawr: mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "wastad"
+     ],
+     "explanation": "yn + gwastad → yn wastad"
+    },
+    {
+     "id": "b8",
+     "prompt": "Mae'r esgidiau'n llawn o fwd: maen nhw'n ___ iawn.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "fwdlyd"
+     ],
+     "explanation": "yn + mwdlyd → yn fwdlyd"
+    },
+    {
+     "id": "b9",
+     "prompt": "Dyw'r gwersyll ddim yn fawr: mae e'n ___! Mae pebyll, pebyll a phebyll yno!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "enfawr"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae Cai'n eistedd ar ___ garreg yn yr amffitheatr.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "sedd"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l23-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Ble cysgon nhw yn y nos, ar yr ail ddydd?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Mewn stabl",
+      "Mewn stabl wrth y ffordd",
+      "Cysgon nhw mewn stabl",
+      "Cysgon nhw mewn stabl wrth y ffordd",
+      "Yn y gwellt mewn stabl"
+     ],
+     "model_answer": "Mewn stabl wrth y ffordd.",
+     "source_segment_ids": [
+      "cy-brenin-01-l23-s040"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Pam rhedodd y lladron i ffwrdd?",
+     "answer_mode": "self_check",
+     "model_answer": "Rhedon nhw i ffwrdd pan welon nhw fwg Dafi.",
+     "rubric": "Rhedon nhw … pan welon nhw fwg / dân Dafi (dim cleddyf Cai!).",
+     "key_terms": [
+      "cy-mwg",
+      "cy-ph-i-ffwrdd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l23-s032"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Sut croesodd y teulu Afon Wysg?",
+     "answer_mode": "self_check",
+     "model_answer": "Croeson nhw'r afon yn y cwch mawr, gwastad. Rhwyfodd dyn y cwch a Cai.",
+     "rubric": "Cwch + rhwyfo.",
+     "key_terms": [
+      "cy-cwch",
+      "cy-rhwyfo"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l23-s046",
+      "cy-brenin-01-l23-s047"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Pwy oedd yn y porth, a pham roedd e'n gwenu?",
+     "answer_mode": "self_check",
+     "model_answer": "Hen filwr. Roedd e'n cofio Cynyr o lys y Brenin Uthr.",
+     "rubric": "Hen filwr + roedd e'n cofio Cynyr.",
+     "key_terms": [
+      "cy-milwr",
+      "cy-cofio"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l23-s072"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Ble mae'r arglwyddi'n cysgu, a ble mae'r teulu'n cysgu?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae'r arglwyddi'n cysgu yn y gwersyll, ond mae'r teulu'n cysgu yn y dafarn.",
+     "rubric": "gwersyll ↔ tafarn.",
+     "key_terms": [
+      "cy-gwersyll",
+      "cy-tafarn"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l23-s074"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam mae Myrddin yn dweud bod pob sedd mewn cylch yn sedd dda?",
+     "answer_mode": "self_check",
+     "model_answer": "Does dim pen i gylch.",
+     "rubric": "Rheswm Myrddin: does dim pen i gylch.",
+     "key_terms": [
+      "cy-cylch"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l23-s102"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "A ti? Ble aethoch chi, ti a dy deulu, ar daith? Beth weloch chi?",
+     "answer_mode": "self_check",
+     "model_answer": "Aethon ni i'r môr, a gwelon ni gychod.",
+     "rubric": "Aethon ni … a gwelon ni … (dwy ferf -on ni).",
+     "key_terms": [
+      "cy-mynd",
+      "cy-gweld"
+     ]
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-milltir",
+   "citation_form": "milltir",
+   "part_of_speech": "noun",
+   "current_sense": "mile",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-mwd",
+   "citation_form": "mwd",
+   "part_of_speech": "noun",
+   "current_sense": "mud",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-porth",
+   "citation_form": "porth",
+   "part_of_speech": "noun",
+   "current_sense": "gate, gateway",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-adfail",
+   "citation_form": "adfail",
+   "part_of_speech": "noun",
+   "current_sense": "ruin",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-amffitheatr",
+   "citation_form": "amffitheatr",
+   "part_of_speech": "noun",
+   "current_sense": "amphitheatre",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cylch",
+   "citation_form": "cylch",
+   "part_of_speech": "noun",
+   "current_sense": "circle",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhufeiniaid",
+   "citation_form": "Rhufeiniaid",
+   "part_of_speech": "noun",
+   "current_sense": "Romans",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-torf",
+   "citation_form": "torf",
+   "part_of_speech": "noun",
+   "current_sense": "crowd",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhwyfo",
+   "citation_form": "rhwyfo",
+   "part_of_speech": "verb",
+   "current_sense": "to row",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-i-ffwrdd",
+   "citation_form": "i ffwrdd",
+   "part_of_speech": "adverb",
+   "current_sense": "away",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-crwn",
+   "citation_form": "crwn",
+   "part_of_speech": "adjective",
+   "current_sense": "round (fem. cron, receptive)",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-enfawr",
+   "citation_form": "enfawr",
+   "part_of_speech": "adjective",
+   "current_sense": "huge",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-mwdlyd",
+   "citation_form": "mwdlyd",
+   "part_of_speech": "adjective",
+   "current_sense": "muddy",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dyffryn",
+   "citation_form": "dyffryn",
+   "part_of_speech": "noun",
+   "current_sense": "vale, valley floor",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhwyf",
+   "citation_form": "rhwyf",
+   "part_of_speech": "noun",
+   "current_sense": "oar",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-colofn",
+   "citation_form": "colofn",
+   "part_of_speech": "noun",
+   "current_sense": "column, pillar",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sedd",
+   "citation_form": "sedd",
+   "part_of_speech": "noun",
+   "current_sense": "seat",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwersyll",
+   "citation_form": "gwersyll",
+   "part_of_speech": "noun",
+   "current_sense": "camp",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-pabell",
+   "citation_form": "pabell",
+   "part_of_speech": "noun",
+   "current_sense": "tent",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwastad",
+   "citation_form": "gwastad",
+   "part_of_speech": "adjective",
+   "current_sense": "flat, level",
+   "first_introduced_lesson": "cy-brenin-01-l23",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-23.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "milltir (b.), milltiroedd",
+    "back": "mile",
+    "example_segment_id": "cy-brenin-01-l23-s021",
+    "lexeme_id": "cy-milltir"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "mwd (g.)",
+    "back": "mud",
+    "example_segment_id": "cy-brenin-01-l23-s022",
+    "lexeme_id": "cy-mwd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "porth (g.)",
+    "back": "gate, gateway",
+    "example_segment_id": "cy-brenin-01-l23-s069",
+    "lexeme_id": "cy-porth"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "adfail (g.)",
+    "back": "ruin",
+    "example_segment_id": "cy-brenin-01-l23-s091",
+    "lexeme_id": "cy-adfail"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "amffitheatr (b.)",
+    "back": "amphitheatre",
+    "example_segment_id": "cy-brenin-01-l23-s091",
+    "lexeme_id": "cy-amffitheatr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "cylch (g.)",
+    "back": "circle",
+    "example_segment_id": "cy-brenin-01-l23-s092",
+    "seen_as": "yn gylch enfawr",
+    "lexeme_id": "cy-cylch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "Rhufeiniaid (ll.)",
+    "back": "Romans",
+    "example_segment_id": "cy-brenin-01-l23-s068",
+    "lexeme_id": "cy-rhufeiniaid"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "torf (b.)",
+    "back": "crowd",
+    "example_segment_id": "cy-brenin-01-l23-s070",
+    "lexeme_id": "cy-torf"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "rhwyfo",
+    "back": "to row",
+    "example_segment_id": "cy-brenin-01-l23-s046",
+    "lexeme_id": "cy-rhwyfo"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "i ffwrdd",
+    "back": "away",
+    "example_segment_id": "cy-brenin-01-l23-s032",
+    "lexeme_id": "cy-ph-i-ffwrdd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "crwn",
+    "back": "round (fem. cron, receptive)",
+    "example_segment_id": "cy-brenin-01-l23-s091",
+    "lexeme_id": "cy-crwn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "enfawr",
+    "back": "huge",
+    "example_segment_id": "cy-brenin-01-l23-s074",
+    "lexeme_id": "cy-enfawr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "mwdlyd",
+    "back": "muddy",
+    "example_segment_id": "cy-brenin-01-l23-s023",
+    "seen_as": "yn fwdlyd",
+    "lexeme_id": "cy-mwdlyd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "dyffryn (g.)",
+    "back": "vale, valley floor",
+    "example_segment_id": "cy-brenin-01-l23-s063",
+    "lexeme_id": "cy-dyffryn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "rhwyf (b.), rhwyfau",
+    "back": "oar",
+    "example_segment_id": "cy-brenin-01-l23-s046",
+    "seen_as": "dwy rwyf",
+    "lexeme_id": "cy-rhwyf"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "colofn (b.), colofnau",
+    "back": "column, pillar",
+    "example_segment_id": "cy-brenin-01-l23-s094",
+    "lexeme_id": "cy-colofn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "sedd (b.), seddau",
+    "back": "seat",
+    "example_segment_id": "cy-brenin-01-l23-s092",
+    "lexeme_id": "cy-sedd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "gwersyll (g.)",
+    "back": "camp",
+    "example_segment_id": "cy-brenin-01-l23-s074",
+    "lexeme_id": "cy-gwersyll"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "pabell (b.), pebyll",
+    "back": "tent",
+    "example_segment_id": "cy-brenin-01-l23-s055",
+    "seen_as": "y babell",
+    "lexeme_id": "cy-pabell"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l23",
+    "front": "gwastad",
+    "back": "flat, level",
+    "example_segment_id": "cy-brenin-01-l23-s042",
+    "lexeme_id": "cy-gwastad"
+   },
+   {
+    "id": "past-plural",
+    "front": "gweld — gwelon ni, gweloch chi, gwelon nhw",
+    "back": "to see — we / you (pl) / they saw",
+    "example_segment_id": "cy-brenin-01-l23-s025",
+    "lesson": "cy-brenin-01-l23",
+    "lexeme_id": "cy-gweld"
+   },
+   {
+    "id": "past-plural",
+    "front": "dod — daethon ni, daethoch chi, daethon nhw",
+    "back": "to come — we / you (pl) / they came",
+    "example_segment_id": "cy-brenin-01-l23-s107",
+    "lesson": "cy-brenin-01-l23",
+    "lexeme_id": "cy-dod"
+   },
+   {
+    "id": "past-plural",
+    "front": "mynd — aethon ni, aethoch chi, aethon nhw",
+    "back": "to go — we / you (pl) / they went",
+    "example_segment_id": "cy-brenin-01-l23-s020",
+    "lesson": "cy-brenin-01-l23",
+    "lexeme_id": "cy-mynd"
+   },
+   {
+    "id": "past-plural",
+    "front": "cael — cawson ni, cawsoch chi, cawson nhw",
+    "back": "to have, get — we / you (pl) / they had",
+    "example_segment_id": "cy-brenin-01-l23-s014",
+    "lesson": "cy-brenin-01-l23",
+    "lexeme_id": "cy-cael"
+   },
+   {
+    "id": "past-plural",
+    "front": "gwneud — gwnaethon ni, gwnaethoch chi, gwnaethon nhw",
+    "back": "to do, make — we / you (pl) / they did",
+    "example_segment_id": "cy-brenin-01-l23-s068",
+    "lesson": "cy-brenin-01-l23",
+    "lexeme_id": "cy-gwneud"
+   },
+   {
+    "id": "pattern-g23",
+    "lesson": "cy-brenin-01-l23",
+    "front": "Aethon ni dros y mynydd. · Rhedon nhw i ffwrdd pan welon nhw fwg Dafi! · Gysgoch chi'n dda?",
+    "back": "We went over the mountain. · They ran away when they saw Dafi's smoke! · Did you (pl) sleep well? (-ais i, -aist ti, -odd e, -on ni, -och chi, -on nhw; aethon, daethon, cawson, gwnaethon)",
+    "example_segment_id": "cy-brenin-01-l23-s020",
+    "example_segment_ids": [
+     "cy-brenin-01-l23-s020",
+     "cy-brenin-01-l23-s032"
+    ],
+    "lexeme_id": "cy-pattern-g23"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l23-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 0,
+   "margin_diagram": 1,
+   "margin_gloss": 31
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-23",
+   "rhan-3"
+  ]
+ },
+ "metrics": {
+  "running_words": 1421,
+  "sentences": 119,
+  "word_target": 1390,
+  "word_window": [
+   1251,
+   1529
+  ]
+ }
+}

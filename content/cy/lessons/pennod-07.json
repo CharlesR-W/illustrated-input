@@ -1,0 +1,2366 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l07",
+  "course_id": "cy-brenin-01",
+  "order": 7,
+  "title": "Gwranda!",
+  "rhan": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "block B1 writer (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief 2026-10-12",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Beat realised in four sections: the listening lesson (Saf yma! / Gwranda!), Cai's mockery and fall into the straw man, Modlen's commands, Dafi's pie and the chase (Cer mas!). Ends on Myrddin's 'Gwers dda'.",
+      "Primary target G07: about 40 ti-imperatives (dere, cer, gwranda, saf, aros, edrych, dal, rho, cymer, paid â / ag). Contrasts with earlier forms: Dere yma. → Mae Arth yn dod.; Paid â siarad! ↔ Dw i ddim yn siarad!; Rho wellt! (SM) ↔ Rho'r bwced! / Dal y bwced! (no SM after 'r).",
+      "Continuity: Modlen sees only 'rhywbeth bach coch' ('Cath goch?') and chases Pero, so her discovery of Dafi stays in Pennod 11. Myrddin's deadpan 'Ffwrn fach yw Dafi' plants Dafi's oven job (Pennod 11).",
+      "Running words about 870 against 800 (window 720–880): the target needs dialogue (Modlen's commands), and the four sections each carry an event; nothing is restated.",
+      "Imperative forms gwranda, saf, cymer, rho and the form ag are added in lexicon-deltas/pennod-07.json so the checker licenses them; 'dewch' is the plan's declared incidental (glossed); 'ATISHŴ' is glossed in its segment as in Penodau 4–6.",
+      "Family-word recycling per the pilot note: gwraig, cogyddes, mab, chwaer, plant, menyw; tref, pell, agos (Arth: 'mae'r afon yn bell!' ↔ Modlen: 'Mae'r afon yn agos. Cer!').",
+      "Applied gpt-6-astra review (2026-10-12): pies now 'wrth ffenest y gegin' / 'wrth y ffenest' instead of 'ar y ffenest'; yn sydyn gloss no longer equates it with 'nawr (cyflym)'; Gramadeg, nodyn and pattern card now say the article blocks the imperative-object mutation while a feminine singular noun still softens after y (Cymer y bastai); un + feminine singular, ll-/rh- excepted; Pensa B b1/b2 and A a10, C c6 accept further correct answers; C c4 now fixes the moment (Modlen picking up the bucket).",
+      "Checker warnings left: local-density at s069–s078, where Modlen's burst of commands repeats the chapter's own new forms (paid, â, cer, dere, prysur, sydyn); no opaque word is first met there. lemma-validation for dere, cer, mas and deilen: already listed in chapters.json validation.not_in_corcencc for fluent sign-off."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "cy-brenin-01-l07-s050",
+        "question": "[?] 'Dyw hi ddim yn wers!' (from the plan beat): is hi natural for 'this isn't a lesson', or would a speaker say 'Dyw hyn ddim yn wers' / 'Dyw e ddim yn wers'?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): retain: hi can refer to the activity understood as the gwers."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s105",
+        "question": "[?] 'Does dim mwg nawr: tân yw e!' (There's no smoke now: it's fire!), with e = the sneeze: natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): acceptable: e identifies what emerges."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s052",
+        "question": "[?] 'Dyw Arth ddim yn fachgen: aderyn yw e!' (Arth isn't a boy: he's a bird!): identification order for mockery; natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: natural contrasting identification."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s086",
+        "question": "[?] 'Cer â'r bara i'r neuadd' for 'take the bread to the hall' (southern mynd â): natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: mynd â = take along."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s084",
+        "question": "[?] 'Rho wellt i'r ceffylau!': imperative object SM of gwellt (g- drops). Confirm natural, and that horses being given straw (rather than gwair, hay) is acceptable.",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct object mutation; gwellt = straw (bedding), not hay."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s100",
+        "question": "[?] Pies cooling 'wrth ffenest y gegin' (by the kitchen window); the exact 'ar sil y ffenest' would need the new word sil. Is wrth acceptable?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): ffenest alone does not mean sill; 'wrth y ffenest' adopted (no new vocabulary)."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s022",
+        "question": "[?] 'Gwrando ar beth?' (Listen to what?): natural as Arth's echo of gwranda?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: natural verbal-noun echo question."
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s070",
+        "question": "[?] Imperatives without a pronoun to a sibling: natural register for Cai?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: imperatives need no pronoun."
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G07",
+    "primary_new_grammar": {
+      "id": "G07",
+      "label": "informal imperatives (ti): dere, cer, edrych, gwranda, aros, saf, paid â / ag; â / ag 'with'; SM of an imperative's object (Rho wellt! ↔ Rho'r bwced!)",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06"
+    ],
+    "incidental": [
+      {
+        "form": "dewch! (plural of dere)",
+        "gloss_segment_id": "cy-brenin-01-l07-s072"
+      },
+      {
+        "form": "â + AM (Paid â chyffwrdd), receptive",
+        "gloss_segment_id": "cy-brenin-01-l07-s088"
+      }
+    ],
+    "new_lexeme_ids": [
+      "cy-dere",
+      "cy-cer",
+      "cy-gwrando",
+      "cy-aros",
+      "cy-sefyll",
+      "cy-paid",
+      "cy-cymryd",
+      "cy-dal",
+      "cy-cyffwrdd",
+      "cy-a-with",
+      "cy-mas",
+      "cy-siarad",
+      "cy-un",
+      "cy-gwers",
+      "cy-coes",
+      "cy-llygad",
+      "cy-clust",
+      "cy-gwynt",
+      "cy-aderyn",
+      "cy-deilen",
+      "cy-pastai",
+      "cy-ffwrn",
+      "cy-bwced",
+      "cy-distaw",
+      "cy-sydyn",
+      "cy-prysur"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-dere",
+        "how": "contrast (Dere yma. → Mae Arth yn dod.)",
+        "segment_id": "cy-brenin-01-l07-s009"
+      },
+      {
+        "lexeme_id": "cy-cer",
+        "how": "gloss(paradigm)+context",
+        "segment_id": "cy-brenin-01-l07-s078"
+      },
+      {
+        "lexeme_id": "cy-gwrando",
+        "how": "gloss(paradigm)+picture(cover)",
+        "segment_id": "cy-brenin-01-l07-s021"
+      },
+      {
+        "lexeme_id": "cy-aros",
+        "how": "gloss(antonym)+context",
+        "segment_id": "cy-brenin-01-l07-s025"
+      },
+      {
+        "lexeme_id": "cy-sefyll",
+        "how": "gloss(paradigm)+picture(cover)",
+        "segment_id": "cy-brenin-01-l07-s015"
+      },
+      {
+        "lexeme_id": "cy-paid",
+        "how": "gloss(antonym)+context",
+        "segment_id": "cy-brenin-01-l07-s017"
+      },
+      {
+        "lexeme_id": "cy-cymryd",
+        "how": "gloss(antonym)+context",
+        "segment_id": "cy-brenin-01-l07-s101"
+      },
+      {
+        "lexeme_id": "cy-dal",
+        "how": "context+picture(scene)",
+        "segment_id": "cy-brenin-01-l07-s077"
+      },
+      {
+        "lexeme_id": "cy-cyffwrdd",
+        "how": "picture(scene)+gloss(radical)+context",
+        "segment_id": "cy-brenin-01-l07-s088"
+      },
+      {
+        "lexeme_id": "cy-a-with",
+        "how": "context (chwarae â'r cleddyf; dere â dŵr) + gloss",
+        "segment_id": "cy-brenin-01-l07-s003"
+      },
+      {
+        "lexeme_id": "cy-mas",
+        "how": "gloss(synonym)+picture(scene)",
+        "segment_id": "cy-brenin-01-l07-s117"
+      },
+      {
+        "lexeme_id": "cy-siarad",
+        "how": "gloss(antonym)+context",
+        "segment_id": "cy-brenin-01-l07-s063"
+      },
+      {
+        "lexeme_id": "cy-un",
+        "how": "picture(cover)+context",
+        "segment_id": "cy-brenin-01-l07-s015"
+      },
+      {
+        "lexeme_id": "cy-gwers",
+        "how": "context (athro → gwers)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l07-s011"
+      },
+      {
+        "lexeme_id": "cy-coes",
+        "how": "picture(cover)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l07-s015"
+      },
+      {
+        "lexeme_id": "cy-llygad",
+        "how": "picture(vignette)+context (ar gau)",
+        "segment_id": "cy-brenin-01-l07-s018"
+      },
+      {
+        "lexeme_id": "cy-clust",
+        "how": "picture(vignette)+contrast (llygaid ↔ clustiau)",
+        "segment_id": "cy-brenin-01-l07-s024"
+      },
+      {
+        "lexeme_id": "cy-gwynt",
+        "how": "context (sŵn yn y coed, yn y dail)+picture(cover)",
+        "segment_id": "cy-brenin-01-l07-s032"
+      },
+      {
+        "lexeme_id": "cy-aderyn",
+        "how": "picture(vignette)+gloss(number)",
+        "segment_id": "cy-brenin-01-l07-s037"
+      },
+      {
+        "lexeme_id": "cy-deilen",
+        "how": "picture(vignette)+gloss(number)",
+        "segment_id": "cy-brenin-01-l07-s033"
+      },
+      {
+        "lexeme_id": "cy-pastai",
+        "how": "picture(vignette+scene)+gloss(number)",
+        "segment_id": "cy-brenin-01-l07-s087"
+      },
+      {
+        "lexeme_id": "cy-ffwrn",
+        "how": "picture(vignette)+context",
+        "segment_id": "cy-brenin-01-l07-s087"
+      },
+      {
+        "lexeme_id": "cy-bwced",
+        "how": "picture(vignette)+context (dŵr)",
+        "segment_id": "cy-brenin-01-l07-s073"
+      },
+      {
+        "lexeme_id": "cy-distaw",
+        "how": "gloss(synonym)+context",
+        "segment_id": "cy-brenin-01-l07-s043"
+      },
+      {
+        "lexeme_id": "cy-sydyn",
+        "how": "context (the event supplies the meaning)+gloss(paradigm)",
+        "segment_id": "cy-brenin-01-l07-s065"
+      },
+      {
+        "lexeme_id": "cy-prysur",
+        "how": "context (everyone working)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l07-s001"
+      }
+    ],
+    "recycle_lexeme_ids": [
+      "cy-edrych",
+      "cy-eistedd",
+      "cy-rhoi",
+      "cy-cario",
+      "cy-cegin",
+      "cy-ffenest",
+      "cy-drws",
+      "cy-oes",
+      "cy-does-dim",
+      "cy-cogyddes",
+      "cy-chwaer",
+      "cy-plentyn",
+      "cy-menyw",
+      "cy-tref",
+      "cy-pell",
+      "cy-agos"
+    ],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "ref": "cy-brenin-01-l07-img-cover",
+      "src": "media/images/cy-brenin-01-l07-img-cover.webp",
+      "status": "draft",
+      "presentation": "inline_scene",
+      "alt": "Morning in the llys yard: Arth stands on one leg with his eyes shut, listening; Myrddin stands beside him with a finger raised; Cai laughs behind them with his wooden sword by the straw man; Mali reads at the kitchen door; birds sit on the wall.",
+      "art_brief": "Llys yard (match place-buarth.png), bright breezy morning: timber hall, kitchen with a small shuttered window, stable, wattle palisade. Centre: Arth, Arth (11, untidy brown hair with a cowlick, freckles, oversized moss-green tunic, belt, brown boots), standing on ONE leg, the other knee raised, arms out for balance, eyes tightly shut, head tilted as if listening hard. Beside him Myrddin, Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat with a bent tip), one long finger raised to his lips; a thin wisp of grey smoke rises from the hat. Behind them Cai, Cai (15, tall, gangly, ginger-blond, rust-red tunic), laughing loudly and pointing, holding his wooden practice sword next to a straw man. Mali, Mali (12, long dark braid down her back, dark-blue dress, satchel with a blank wax tablet), sits on the kitchen doorstep reading. Three small birds on the palisade wall; green leaves blowing from a tree; Pero, Pero (big shaggy black-and-white hound, grey muzzle), asleep by the stable door. No text.",
+      "characters": [
+        "char-arth",
+        "char-myrddin",
+        "char-cai",
+        "char-mali",
+        "char-pero"
+      ],
+      "covers_lexeme_ids": [
+        "cy-sefyll",
+        "cy-un",
+        "cy-coes",
+        "cy-llygad",
+        "cy-gwrando",
+        "cy-gwers",
+        "cy-gwynt",
+        "cy-aderyn"
+      ],
+      "width": 1600,
+      "height": 1073
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l07-sec1",
+        "title": "Saf yma!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l07-s001",
+            "text": "Mae hi'n fore, ac mae'r llys yn brysur.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "brysur",
+                "gloss": "brysur ← prysur",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s002",
+            "text": "Mae Modlen, cogyddes y llys, yn gweithio yn y gegin."
+          },
+          {
+            "id": "cy-brenin-01-l07-s003",
+            "text": "Mae Cai'n chwarae â'r cleddyf pren wrth y dyn gwellt."
+          },
+          {
+            "id": "cy-brenin-01-l07-s004",
+            "text": "A Mali?"
+          },
+          {
+            "id": "cy-brenin-01-l07-s005",
+            "text": "Mae hi'n eistedd wrth ddrws y gegin, ac mae hi'n darllen.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddrws",
+                "gloss": "wrth ddrws ← drws",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s006",
+            "text": "Nawr mae Myrddin yn dod o'r neuadd: barf hir, sbectol, het ddu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s007",
+            "text": "Mae mwg bach yn dod o'r het."
+          },
+          {
+            "id": "cy-brenin-01-l07-s008",
+            "text": "\"Arth,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s009",
+            "text": "\"Dere yma.\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s010",
+            "text": "Mae Arth yn dod.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s011",
+            "text": "\"Athro dw i, a dyma wers.\"",
+            "paragraph_start": true,
+            "speaker": "char-myrddin",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wers",
+                "gloss": "dyma wers ← gwers (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s012",
+            "text": "\"Gwers?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s013",
+            "text": "\"Ble mae'r llyfrau?\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s014",
+            "text": "\"Does dim llyfrau.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s015",
+            "text": "Saf yma, a nawr saf ar un goes.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Saf",
+                "gloss": "sefyll → Saf!",
+                "gloss_kind": "paradigm"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "goes",
+                "gloss": "un goes ← coes (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s016",
+            "text": "Mae Arth yn codi un goes.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s017",
+            "text": "\"Paid ag edrych,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Paid ag edrych",
+                "gloss": "Edrych! ↔ Paid ag edrych!",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s018",
+            "text": "Mae llygaid Arth ar gau.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "llygaid",
+                "gloss": "llygad, llygaid",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ar gau",
+                "gloss": "ar gau ← cau",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s019",
+            "text": "\"Dw i ddim yn edrych,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s020",
+            "text": "\"Da iawn.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s021",
+            "text": "Nawr gwranda.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gwranda",
+                "gloss": "gwrando → Gwranda!",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s022",
+            "text": "\"Gwrando ar beth?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s023",
+            "text": "\"Gwranda,\" meddai Myrddin eto.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s024",
+            "text": "\"Llygaid ar gau, clustiau ar agor.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "clustiau",
+                "gloss": "clust, clustiau",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l07-img-llygad-clust",
+                "anchor_text": "clustiau",
+                "label": "llygad · clust",
+                "src": "media/vignettes/cy-brenin-01-l07-img-llygad-clust.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A boy's head in profile-three-quarter view (Arth: untidy brown hair, freckles), one eye clearly visible and one ear clearly visible, drawn simply. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-llygad",
+                  "cy-clust"
+                ],
+                "width": 400,
+                "height": 500
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l07-sec2",
+        "title": "Gwranda!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l07-s025",
+            "text": "Mae Arth yn aros ar un goes, ac mae e'n gwrando.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "aros",
+                "gloss": "aros ↔ mynd",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s026",
+            "text": "\"Wyt ti'n clywed rhywbeth?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s027",
+            "text": "\"Nac ydw.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s028",
+            "text": "Dw i ddim yn clywed dim byd.\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s029",
+            "text": "\"Aros, a gwranda eto.\"",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s030",
+            "text": "Nawr mae Arth yn clywed rhywbeth: sŵn bach, sŵn tawel.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s031",
+            "text": "\"Dw i'n clywed y gwynt,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s032",
+            "text": "\"Mae'r gwynt yn y coed, yn y dail.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dail",
+                "gloss": "deilen, dail",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s033",
+            "text": "Mae deilen fach yn dod o'r goeden.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l07-img-deilen",
+                "anchor_text": "deilen",
+                "label": "deilen · dail",
+                "src": "media/vignettes/cy-brenin-01-l07-img-deilen.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "One green oak leaf on its own, and beside it a small sprig with several leaves. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-deilen"
+                ],
+                "width": 400,
+                "height": 308
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s034",
+            "text": "Nawr mae hi ar yr het ddu."
+          },
+          {
+            "id": "cy-brenin-01-l07-s035",
+            "text": "\"Da iawn.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s036",
+            "text": "A nawr?\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s037",
+            "text": "\"Dw i'n clywed adar.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "adar",
+                "gloss": "aderyn, adar",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s038",
+            "text": "Mae adar ar y wal, ac mae aderyn bach yn y goeden.\"",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l07-img-aderyn",
+                "anchor_text": "aderyn",
+                "label": "aderyn · adar",
+                "src": "media/vignettes/cy-brenin-01-l07-img-aderyn.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "One small brown songbird (a wren or robin) perched alone, and three small birds sitting in a row on a wooden fence rail. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-aderyn"
+                ],
+                "width": 400,
+                "height": 217
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s039",
+            "text": "\"A nawr, Arth?\"",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s040",
+            "text": "\"Dw i'n clywed Pero.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s041",
+            "text": "Mae Pero'n cysgu, ond mae e'n gwneud sŵn mawr!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s042",
+            "text": "\"Gwranda eto, Arth.\"",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s043",
+            "text": "Nawr mae'r gwynt yn ddistaw, ac mae'r adar yn ddistaw.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddistaw",
+                "gloss": "ddistaw ← distaw",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddistaw",
+                "gloss": "distaw = tawel iawn",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s044",
+            "text": "Mae Arth yn gwrando, ac mae e'n clywed sŵn pell."
+          },
+          {
+            "id": "cy-brenin-01-l07-s045",
+            "text": "\"Dw i'n clywed yr afon,\" meddai Arth yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s046",
+            "text": "\"Ond mae'r afon yn bell!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s047",
+            "text": "\"Ydy,\" meddai Myrddin, ac mae e'n gwenu.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s048",
+            "text": "\"Ha!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l07-s049",
+            "text": "\"Gwynt, dail, adar?"
+          },
+          {
+            "id": "cy-brenin-01-l07-s050",
+            "text": "Dyw hi ddim yn wers!"
+          },
+          {
+            "id": "cy-brenin-01-l07-s051",
+            "text": "Mae Arth yn sefyll ar un goes, ac mae llygaid Arth ar gau."
+          },
+          {
+            "id": "cy-brenin-01-l07-s052",
+            "text": "Dyw Arth ddim yn fachgen: aderyn yw e!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s053",
+            "text": "\"Cai, dere yma,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s054",
+            "text": "\"Saf ar un goes, paid ag edrych, paid â siarad, a gwranda.\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s055",
+            "text": "\"Wel!",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l07-s056",
+            "text": "Aderyn Mawr yw enw Cai nawr!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s057",
+            "text": "Mae Cai'n sefyll ar un goes.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s058",
+            "text": "Ond dyw Cai ddim yn ddistaw."
+          },
+          {
+            "id": "cy-brenin-01-l07-s059",
+            "text": "\"Dw i'n clywed y gwynt!",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l07-s060",
+            "text": "Dw i'n clywed…\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s061",
+            "text": "\"Paid â siarad, Cai,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s062",
+            "text": "\"Clustiau ar agor.\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s063",
+            "text": "\"Dw i ddim yn siarad!",
+            "paragraph_start": true,
+            "speaker": "char-cai",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "siarad",
+                "gloss": "siarad ↔ gwrando",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s064",
+            "text": "Dw i'n gwrando!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s065",
+            "text": "Ond mae Cai'n siarad, ac yn sydyn mae Cai yn y dyn gwellt!",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "yn sydyn",
+                "gloss": "sydyn → yn sydyn",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s066",
+            "text": "Gwellt ar Cai, gwellt yn y gwallt coch!"
+          },
+          {
+            "id": "cy-brenin-01-l07-s067",
+            "text": "\"Mae Arth yn gwrando, Cai,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l07-s068",
+            "text": "\"Dwyt ti ddim yn gwrando."
+          },
+          {
+            "id": "cy-brenin-01-l07-s069",
+            "text": "Rwyt ti'n siarad.\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s070",
+            "text": "\"Paid â siarad, chwaer fach!\"",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l07-sec3",
+        "title": "Paid â chyffwrdd!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l07-s071",
+            "text": "Yn sydyn, mae drws y gegin yn agor, ac mae Modlen yn y drws: menyw fach, goch, brysur.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s072",
+            "text": "\"Blant, dewch yma!\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dewch",
+                "gloss": "dewch = dere + dere",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s073",
+            "text": "Mae'r plant yn dod, ac mae Modlen yn codi bwced.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l07-img-bwced",
+                "anchor_text": "bwced",
+                "label": "bwced",
+                "src": "media/vignettes/cy-brenin-01-l07-img-bwced.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A plain wooden bucket with iron hoops and a rope handle, empty. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-bwced"
+                ],
+                "width": 400,
+                "height": 500
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s074",
+            "text": "\"Oes dŵr yn y bwced?",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s075",
+            "text": "Nac oes!"
+          },
+          {
+            "id": "cy-brenin-01-l07-s076",
+            "text": "Does dim dŵr yn y bwced, does dim dŵr yn y gegin, does dim dŵr yn y llys!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s077",
+            "text": "\"Arth, dal y bwced.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s078",
+            "text": "Cer i'r afon, a dere â dŵr!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Cer",
+                "gloss": "edrych! · gwranda! · dere! · cer! · paid â …!",
+                "gloss_kind": "paradigm"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dere â dŵr",
+                "gloss": "= cario dŵr yma",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s079",
+            "text": "\"Ond mae'r afon yn bell!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s080",
+            "text": "\"Nac ydy!",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s081",
+            "text": "Mae'r afon yn agos."
+          },
+          {
+            "id": "cy-brenin-01-l07-s082",
+            "text": "Cer!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s083",
+            "text": "\"Cai, paid â chwarae!",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s084",
+            "text": "Rho wellt i'r ceffylau!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wellt",
+                "gloss": "Rho wellt ← gwellt",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s085",
+            "text": "\"Mali, paid â darllen!",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s086",
+            "text": "Cer â'r bara i'r neuadd!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Cer â'r bara",
+                "gloss": "= cario'r bara",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s087",
+            "text": "Mae pasteiod wrth ffenest y gegin: pasteiod mawr, pasteiod cynnes o'r ffwrn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "pasteiod",
+                "gloss": "pastai, pasteiod",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l07-img-pastai",
+                "anchor_text": "pasteiod",
+                "label": "pastai · pasteiod",
+                "src": "media/vignettes/cy-brenin-01-l07-img-pastai.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "One round golden pie with a crimped crust, and beside it three pies in a row. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-pastai"
+                ],
+                "width": 400,
+                "height": 160
+              },
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l07-img-modlen-yn-y-drws",
+                "src": "media/images/cy-brenin-01-l07-img-modlen-yn-y-drws.webp",
+                "alt": "Modlen stands in the kitchen doorway with her wooden spoon raised, giving orders; Arth holds an empty bucket, Cai looks hungrily at a row of pies cooling on the kitchen window sill, Mali holds bread; smoke rises from Myrddin's hat by the window.",
+                "status": "draft",
+                "art_brief": "Llys yard by the kitchen (match place-buarth.png and place-cegin.png), morning. In the kitchen doorway Modlen, Modlen (short, round, rosy, floury white apron over a brown dress, white headscarf, big wooden spoon), one arm pointing, spoon raised like a sceptre, red-faced and bossy. In front of her: Arth, Arth (11, untidy brown hair with a cowlick, freckles, oversized moss-green tunic, belt, brown boots), holding an empty wooden bucket; Cai, Cai (15, tall, gangly, ginger-blond, rust-red tunic), with bits of straw in his hair, staring longingly at the pies; Mali, Mali (12, long dark braid down her back, dark-blue dress, satchel with a blank wax tablet), holding a round loaf. On the kitchen window sill: a row of five round golden pies, steam rising. Beside the window stands Myrddin, Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat with a bent tip), innocently looking at the sky; from his hat a thin wisp of grey smoke and two cream horns and big yellow eyes peeping over the brim, sniffing towards the pies. A green leaf on the hat. No text.",
+                "characters": [
+                  "char-modlen",
+                  "char-arth",
+                  "char-cai",
+                  "char-mali",
+                  "char-myrddin",
+                  "char-dafi"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-pastai",
+                  "cy-bwced"
+                ],
+                "width": 1600,
+                "height": 1073
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l07-img-ffwrn",
+                "anchor_text": "ffwrn",
+                "label": "ffwrn",
+                "src": "media/vignettes/cy-brenin-01-l07-img-ffwrn.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A small domed clay bread oven with an arched opening, a little fire glowing inside and a long wooden peel leaning on it. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-ffwrn"
+                ],
+                "width": 400,
+                "height": 322
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s088",
+            "text": "\"Paid â chyffwrdd â'r pasteiod, Cai!\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "chyffwrdd",
+                "gloss": "â chyffwrdd ← cyffwrdd",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s089",
+            "text": "\"Dw i ddim yn cyffwrdd â'r pasteiod!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l07-s090",
+            "text": "Ond mae e eisiau bwyd."
+          },
+          {
+            "id": "cy-brenin-01-l07-s091",
+            "text": "Nawr mae'r plant yn brysur, ac mae Modlen yn y gegin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s092",
+            "text": "Ond mae Myrddin yn sefyll wrth ffenest y gegin, ac mae mwg bach yn dod o'r het.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s093",
+            "text": "Mae Dafi'n arogli'r pasteiod."
+          },
+          {
+            "id": "cy-brenin-01-l07-s094",
+            "text": "\"Pastai!\" meddai Dafi yn yr het.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l07-s095",
+            "text": "\"Paid, Dafi,\" meddai Myrddin yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s096",
+            "text": "\"Paid â chyffwrdd â'r pasteiod.\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s097",
+            "text": "\"Pastai — nawr!\"",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l07-s098",
+            "text": "\"Dafi, paid!\"",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l07-sec4",
+        "title": "Cer mas!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l07-s099",
+            "text": "Ond mae Dafi'n dod o'r het yn gyflym.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s100",
+            "text": "Nawr mae e wrth y pasteiod."
+          },
+          {
+            "id": "cy-brenin-01-l07-s101",
+            "text": "Mae e'n cymryd un bastai, ac mae e'n bwyta'r bastai.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cymryd",
+                "gloss": "cymryd ↔ rhoi",
+                "gloss_kind": "antonym"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "bastai",
+                "gloss": "un bastai ← pastai (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s102",
+            "text": "Mae e'n llawn, ond mae e eisiau pastai eto."
+          },
+          {
+            "id": "cy-brenin-01-l07-s103",
+            "text": "Yn sydyn, mae Dafi eisiau tisian.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s104",
+            "text": "\"A… a… ATISHŴ!\"",
+            "paragraph_start": true,
+            "speaker": "char-dafi",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ATISHŴ",
+                "gloss": "= Mae Dafi'n tisian.",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s105",
+            "text": "Does dim mwg nawr: tân yw e!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s106",
+            "text": "Nawr mae'r pasteiod yn ddu."
+          },
+          {
+            "id": "cy-brenin-01-l07-s107",
+            "text": "\"Ffwrn fach yw Dafi,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s108",
+            "text": "Mae Modlen yn rhedeg o'r gegin, ac mae hi'n gweld y pasteiod du.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s109",
+            "text": "\"Cai!",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s110",
+            "text": "Wyt ti'n cymryd y pasteiod?\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s111",
+            "text": "\"Nac ydw!\" meddai Cai o'r stabl.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l07-s112",
+            "text": "\"Dw i'n rhoi gwellt i'r ceffylau!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s113",
+            "text": "Nawr mae Modlen yn gweld rhywbeth bach coch wrth y ffenest.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s114",
+            "text": "\"Beth yw e?",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s115",
+            "text": "Cath goch?\" meddai Modlen."
+          },
+          {
+            "id": "cy-brenin-01-l07-s116",
+            "text": "\"Cer mas!"
+          },
+          {
+            "id": "cy-brenin-01-l07-s117",
+            "text": "Cer mas o'r gegin, cer mas o'r llys!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Cer mas",
+                "gloss": "Cer mas! = Cer o'r gegin!",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s118",
+            "text": "Mae Dafi'n rhedeg o'r ffenest i'r buarth.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s119",
+            "text": "Mae clustiau Pero'n codi, ac mae Pero'n rhedeg hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l07-s120",
+            "text": "\"Pero!\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s121",
+            "text": "\"Ci drwg, aros!"
+          },
+          {
+            "id": "cy-brenin-01-l07-s122",
+            "text": "Cai, dal y ci!\"",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l07-img-cer-mas",
+                "src": "media/images/cy-brenin-01-l07-img-cer-mas.webp",
+                "alt": "Modlen chases Pero across the yard with her wooden spoon; Cai runs after them; black burnt pies smoke on the window sill; a tiny red tail disappears into Myrddin's tall hat.",
+                "status": "draft",
+                "art_brief": "Llys yard (match place-buarth.png), morning, comic chase. Modlen, Modlen (short, round, rosy, floury white apron over a brown dress, white headscarf, big wooden spoon), runs across the yard waving her wooden spoon at Pero, Pero (big shaggy black-and-white hound, grey muzzle), who gallops away with ears up, looking innocent and alarmed. Cai, Cai (15, tall, gangly, ginger-blond, rust-red tunic), runs behind, arms out, failing to catch the dog. On the kitchen window sill: five pies burnt black, a curl of smoke. At the edge, Myrddin, Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat with a bent tip), stands calmly with his hat on; the very tip of a tiny red spade-tipped tail is vanishing over the brim of the hat. Chickens or geese scatter. No text.",
+                "characters": [
+                  "char-modlen",
+                  "char-pero",
+                  "char-cai",
+                  "char-myrddin",
+                  "char-dafi"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-dal"
+                ],
+                "width": 1600,
+                "height": 1073
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s123",
+            "text": "Mae Cai'n rhedeg, ond dyw e ddim yn dal Pero.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s124",
+            "text": "A Dafi?"
+          },
+          {
+            "id": "cy-brenin-01-l07-s125",
+            "text": "Yn yr het, wrth gwrs."
+          },
+          {
+            "id": "cy-brenin-01-l07-s126",
+            "text": "Mae Arth yn dod o'r afon.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s127",
+            "text": "Mae e'n cario'r bwced, ac mae'r bwced yn llawn."
+          },
+          {
+            "id": "cy-brenin-01-l07-s128",
+            "text": "\"Dyma ddŵr, Modlen,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s129",
+            "text": "\"Diolch, Arth.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s130",
+            "text": "Rho'r bwced yma."
+          },
+          {
+            "id": "cy-brenin-01-l07-s131",
+            "text": "Cymer bastai!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s132",
+            "text": "Mae Modlen yn edrych ar y ffenest.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s133",
+            "text": "\"Does dim pasteiod wrth y ffenest.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s134",
+            "text": "Does dim pasteiod yn y ffwrn."
+          },
+          {
+            "id": "cy-brenin-01-l07-s135",
+            "text": "Does dim byd!\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s136",
+            "text": "\"Mae Dad eisiau pastai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l07-s137",
+            "text": "Oes pasteiod yn y dref?\" meddai Cai."
+          },
+          {
+            "id": "cy-brenin-01-l07-s138",
+            "text": "\"Cer i'r dref, Cai!\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l07-s139",
+            "text": "Mae Arth ar un goes eto, ac mae llygaid Arth ar gau.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s140",
+            "text": "\"Wel, Arth?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s141",
+            "text": "\"Wyt ti'n clywed rhywbeth nawr?\""
+          },
+          {
+            "id": "cy-brenin-01-l07-s142",
+            "text": "\"Dw i'n clywed Modlen!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l07-s143",
+            "text": "Mae Myrddin yn gwenu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l07-s144",
+            "text": "\"Gwers dda, Arth.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l07-s145",
+            "text": "Gwers dda iawn.\""
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Gwranda! Paid â siarad!",
+    "rule_cy": "Mae Arth yn gwrando. → Gwranda, Arth! · Na: Paid â …! · Rho wellt! (treiglad) ↔ Rho'r bwced! (dim treiglad)",
+    "tables": [
+      {
+        "caption": "berfenw → gorchymyn (ti)",
+        "header": [
+          "Mae Arth yn …",
+          "Arth, …!"
+        ],
+        "rows": [
+          [
+            "dod",
+            "Dere yma!"
+          ],
+          [
+            "mynd",
+            "Cer i'r afon!"
+          ],
+          [
+            "gwrando",
+            "Gwranda!"
+          ],
+          [
+            "sefyll",
+            "Saf ar un goes!"
+          ],
+          [
+            "edrych · aros · dal",
+            "Edrych! · Aros! · Dal y bwced!"
+          ],
+          [
+            "rhoi · cymryd",
+            "Rho wellt! · Cymer bastai!"
+          ]
+        ]
+      },
+      {
+        "caption": "Paid â / Paid ag",
+        "header": [
+          "!",
+          "Na!"
+        ],
+        "rows": [
+          [
+            "Siarad!",
+            "Paid â siarad!"
+          ],
+          [
+            "Darllen!",
+            "Paid â darllen!"
+          ],
+          [
+            "Edrych!",
+            "Paid ag edrych!"
+          ],
+          [
+            "Cyffwrdd â'r pasteiod!",
+            "Paid â chyffwrdd â'r pasteiod!"
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Rho wellt! ← gwellt · Cymer bastai! ← pastai",
+            "gorchymyn + enw: treiglad meddal (Pennod 7)"
+          ],
+          [
+            "Rho'r bwced! · Dal y ci!",
+            "'r / y + enw: dim treiglad gorchymyn"
+          ],
+          [
+            "Cymer y bastai! ← pastai (b.)",
+            "ond y + enw benywaidd unigol: treiglad meddal (Pennod 2)"
+          ],
+          [
+            "â chyffwrdd ← cyffwrdd",
+            "â + c → ch (â + p → ph, â + t → th)"
+          ],
+          [
+            "un goes · un bastai",
+            "un + enw benywaidd unigol; ll-, rh-: dim treiglad (Pennod 14)"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l07-s009"
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s017"
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s084"
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s130"
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s131"
+      },
+      {
+        "segment_id": "cy-brenin-01-l07-s088"
+      }
+    ],
+    "nodyn_en": "To tell one friend (ti) to do something, use the command form: often the verb-noun (edrych, aros, dal), sometimes a short form (gwranda, saf, cymer, rho); dere and cer are special. 'Don't' is Paid â …, ag before a vowel. A direct object straight after a command softens (Rho wellt!), but not after 'r (Rho'r bwced!)."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l07-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "(dod) ___ yma, Arth!",
+            "answer": "Dere"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "(mynd) ___ i'r stabl, Cai!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Cer"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Mynd",
+                  "hint": "mynd → cer!"
+                }
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a2",
+              "prompt": "(gwrando) ___, Mali!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Gwranda"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a3",
+              "prompt": "(sefyll) ___ wrth y drws, Pero!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Saf"
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Siarad! → Na!",
+            "answer": "Paid â siarad!"
+          },
+          "items": [
+            {
+              "id": "a4",
+              "prompt": "Darllen! → Na!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Paid â darllen!"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a5",
+              "prompt": "Edrych! → Na!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Paid ag edrych!"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Paid â edrych",
+                  "hint": "â + e … → ag"
+                }
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a6",
+              "prompt": "Bwyta'r bara! → Na!",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Paid â bwyta'r bara!"
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Rho + bara →",
+            "answer": "Rho fara!"
+          },
+          "items": [
+            {
+              "id": "a7",
+              "prompt": "Cymer + pastai →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Cymer bastai!"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Cymer pastai!",
+                  "hint": "Cymer + p → b"
+                }
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a8",
+              "prompt": "Rho + y bwced →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Rho'r bwced!"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Rho'r fwced!",
+                  "hint": "'r bwced: dim treiglad"
+                }
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "\"Wyt ti'n gwrando?\" (✓) →",
+            "answer": "Ydw, dw i'n gwrando."
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "\"Wyt ti'n siarad?\" (✗) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Nac ydw, dw i ddim yn siarad."
+              ],
+              "recall_of": "G05",
+              "source_segment_ids": []
+            },
+            {
+              "id": "a10",
+              "prompt": "\"Ydy Pero'n cysgu?\" (✗) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Nac ydy, dyw Pero ddim yn cysgu.",
+                "Nac ydy, dyw e ddim yn cysgu."
+              ],
+              "recall_of": "G04",
+              "source_segment_ids": []
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l07-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "llygad",
+        "clust",
+        "deilen",
+        "ffwrn",
+        "bwced",
+        "coes",
+        "gwrando",
+        "siarad",
+        "cymryd",
+        "aros",
+        "distaw",
+        "prysur",
+        "sydyn"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Mae Pero'n cysgu: mae ___ Pero ar gau.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "llygaid",
+            "llygad"
+          ],
+          "explanation": "llygad, llygaid"
+        },
+        {
+          "id": "b2",
+          "prompt": "Dyw'r goeden ddim yn wyrdd yn y nos oer: does dim ___ ar y goeden.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "dail",
+            "deilen"
+          ],
+          "explanation": "deilen, dail"
+        },
+        {
+          "id": "b3",
+          "prompt": "Mae Modlen yn rhoi'r bara yn y ___, ac nawr mae'r bara'n gynnes.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ffwrn"
+          ]
+        },
+        {
+          "id": "b4",
+          "prompt": "Mae Arth yn cario dŵr o'r afon yn y ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "bwced"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Dyw Mali ddim yn siarad: mae hi'n ___ ar Myrddin.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "gwrando"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae Cai eisiau bwyd, ac mae e'n ___ bara o blât Mali!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "cymryd"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Does dim sŵn yn y nos: mae'r llys yn ___ iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ddistaw"
+          ],
+          "explanation": "yn + distaw → ddistaw"
+        },
+        {
+          "id": "b8",
+          "prompt": "Mae Modlen yn gweithio, yn rhedeg ac yn galw: mae hi'n ___ iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "brysur"
+          ],
+          "explanation": "yn + prysur → brysur"
+        },
+        {
+          "id": "b9",
+          "prompt": "Mae aderyn gwyn yn yr afon, ac mae e'n sefyll ar un ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "goes"
+          ],
+          "explanation": "un + coes (b.) → un goes"
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l07-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Ble mae'r wers?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Yn y buarth",
+            "Mae'r wers yn y buarth"
+          ],
+          "model_answer": "Mae'r wers yn y buarth.",
+          "source_segment_ids": [
+            "cy-brenin-01-l07-s025"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Ydy Arth yn clywed yr afon?",
+          "answer_mode": "self_check",
+          "model_answer": "Ydy. Mae e'n clywed y gwynt, adar, Pero a'r afon.",
+          "rubric": "Ydy, plus one other sound Arth hears.",
+          "key_terms": [
+            "cy-gwynt",
+            "cy-aderyn",
+            "cy-afon"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l07-s045"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Pam mae Cai yn y dyn gwellt?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae Cai'n siarad. Dyw e ddim yn gwrando.",
+          "rubric": "Gives the reason: Cai talks instead of listening (so he loses his balance).",
+          "key_terms": [
+            "cy-siarad",
+            "cy-gwrando"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Mae Modlen yn codi bwced. Oes dŵr yn y bwced?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Nac oes",
+            "Nac oes. Does dim dŵr yn y bwced"
+          ],
+          "model_answer": "Nac oes. Does dim dŵr yn y bwced.",
+          "source_segment_ids": [
+            "cy-brenin-01-l07-s074"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Ydy Pero'n bwyta'r bastai?",
+          "answer_mode": "self_check",
+          "model_answer": "Nac ydy! Mae Dafi'n bwyta'r bastai.",
+          "rubric": "Nac ydy, and names Dafi.",
+          "key_terms": [
+            "cy-bwyta",
+            "cy-pastai"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Ble mae Dafi nawr?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Yn yr het",
+            "Mae Dafi yn yr het",
+            "Mae e yn yr het",
+            "Yn het Myrddin",
+            "Mae Dafi yn het Myrddin"
+          ],
+          "model_answer": "Mae Dafi yn yr het."
+        },
+        {
+          "id": "c7",
+          "prompt": "A ti? Saf ar un goes, a gwranda. Wyt ti'n clywed rhywbeth?",
+          "answer_mode": "self_check",
+          "model_answer": "Ydw, dw i'n clywed y gwynt. / Nac ydw, dw i ddim yn clywed dim byd.",
+          "rubric": "Ydw / Nac ydw, plus one 'Dw i'n clywed …' sentence."
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-dere",
+      "citation_form": "dere!",
+      "part_of_speech": "verb",
+      "current_sense": "come! (southern informal imperative of dod)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cer",
+      "citation_form": "cer!",
+      "part_of_speech": "verb",
+      "current_sense": "go! (southern informal imperative of mynd)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwrando",
+      "citation_form": "gwrando (gwranda!)",
+      "part_of_speech": "verb",
+      "current_sense": "to listen (gwranda! = listen!)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-aros",
+      "citation_form": "aros",
+      "part_of_speech": "verb",
+      "current_sense": "to wait; to stay",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-sefyll",
+      "citation_form": "sefyll (saf!)",
+      "part_of_speech": "verb",
+      "current_sense": "to stand (saf!)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-paid",
+      "citation_form": "paid â / ag …!",
+      "part_of_speech": "verb",
+      "current_sense": "don't! (paid â / ag + verbal noun)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cymryd",
+      "citation_form": "cymryd (cymer!)",
+      "part_of_speech": "verb",
+      "current_sense": "to take (cymer!)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dal",
+      "citation_form": "dal",
+      "part_of_speech": "verb",
+      "current_sense": "to hold; to catch",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cyffwrdd",
+      "citation_form": "cyffwrdd",
+      "part_of_speech": "verb",
+      "current_sense": "to touch (cyffwrdd â)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-a-with",
+      "citation_form": "â / ag (+ AM)",
+      "part_of_speech": "preposition",
+      "current_sense": "with (dere â, cer â, paid â, cyffwrdd â; ag before vowels; + AM)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-mas",
+      "citation_form": "mas (cer mas!)",
+      "part_of_speech": "adverb",
+      "current_sense": "out (southern; cer mas!)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-siarad",
+      "citation_form": "siarad",
+      "part_of_speech": "verb",
+      "current_sense": "to speak, talk",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-un",
+      "citation_form": "un",
+      "part_of_speech": "numeral",
+      "current_sense": "one (+ SM on feminine singular nouns, except ll-, rh-)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwers",
+      "citation_form": "gwers (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "lesson",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-coes",
+      "citation_form": "coes (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "leg",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-llygad",
+      "citation_form": "llygad (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "eye",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-clust",
+      "citation_form": "clust (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "ear",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwynt",
+      "citation_form": "gwynt (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "wind",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-aderyn",
+      "citation_form": "aderyn (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "bird",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-deilen",
+      "citation_form": "deilen (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "leaf",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pastai",
+      "citation_form": "pastai (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "pie",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ffwrn",
+      "citation_form": "ffwrn (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "oven",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-bwced",
+      "citation_form": "bwced (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "bucket",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-distaw",
+      "citation_form": "distaw",
+      "part_of_speech": "adjective",
+      "current_sense": "silent, quiet",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-sydyn",
+      "citation_form": "sydyn (yn sydyn)",
+      "part_of_speech": "adjective",
+      "current_sense": "sudden (yn sydyn = suddenly)",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-prysur",
+      "citation_form": "prysur",
+      "part_of_speech": "adjective",
+      "current_sense": "busy",
+      "first_introduced_lesson": "cy-brenin-01-l07",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-07.json.",
+    "card_stages": [
+      {
+        "lexeme_id": "cy-dere",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "dere!",
+        "back": "come! (southern informal imperative of dod)",
+        "example_segment_id": "cy-brenin-01-l07-s009"
+      },
+      {
+        "lexeme_id": "cy-cer",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "cer!",
+        "back": "go! (southern informal imperative of mynd)",
+        "example_segment_id": "cy-brenin-01-l07-s078"
+      },
+      {
+        "lexeme_id": "cy-gwrando",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "gwrando (gwranda!)",
+        "back": "to listen (gwranda! = listen!)",
+        "example_segment_id": "cy-brenin-01-l07-s021"
+      },
+      {
+        "lexeme_id": "cy-aros",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "aros",
+        "back": "to wait; to stay",
+        "example_segment_id": "cy-brenin-01-l07-s025"
+      },
+      {
+        "lexeme_id": "cy-sefyll",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "sefyll (saf!)",
+        "back": "to stand (saf!)",
+        "example_segment_id": "cy-brenin-01-l07-s015"
+      },
+      {
+        "lexeme_id": "cy-paid",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "paid â / ag …!",
+        "back": "don't! (paid â / ag + verbal noun)",
+        "example_segment_id": "cy-brenin-01-l07-s017"
+      },
+      {
+        "lexeme_id": "cy-cymryd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "cymryd (cymer!)",
+        "back": "to take (cymer!)",
+        "example_segment_id": "cy-brenin-01-l07-s101"
+      },
+      {
+        "lexeme_id": "cy-dal",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "dal",
+        "back": "to hold; to catch",
+        "example_segment_id": "cy-brenin-01-l07-s077"
+      },
+      {
+        "lexeme_id": "cy-cyffwrdd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "cyffwrdd",
+        "back": "to touch (cyffwrdd â)",
+        "example_segment_id": "cy-brenin-01-l07-s088"
+      },
+      {
+        "lexeme_id": "cy-a-with",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "â / ag (+ AM)",
+        "back": "with (dere â, cer â, paid â, cyffwrdd â; ag before vowels; + AM)",
+        "example_segment_id": "cy-brenin-01-l07-s086"
+      },
+      {
+        "lexeme_id": "cy-mas",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "mas (cer mas!)",
+        "back": "out (southern; cer mas!)",
+        "example_segment_id": "cy-brenin-01-l07-s117"
+      },
+      {
+        "lexeme_id": "cy-siarad",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "siarad",
+        "back": "to speak, talk",
+        "example_segment_id": "cy-brenin-01-l07-s063"
+      },
+      {
+        "lexeme_id": "cy-un",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "un",
+        "back": "one (+ SM on feminine singular nouns, except ll-, rh-)",
+        "example_segment_id": "cy-brenin-01-l07-s015"
+      },
+      {
+        "lexeme_id": "cy-gwers",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "gwers (b.)",
+        "back": "lesson",
+        "example_segment_id": "cy-brenin-01-l07-s011"
+      },
+      {
+        "lexeme_id": "cy-coes",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "coes (b.)",
+        "back": "leg",
+        "example_segment_id": "cy-brenin-01-l07-s016"
+      },
+      {
+        "lexeme_id": "cy-llygad",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "llygad (g.), llygaid",
+        "back": "eye",
+        "example_segment_id": "cy-brenin-01-l07-s018"
+      },
+      {
+        "lexeme_id": "cy-clust",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "clust (b.), clustiau",
+        "back": "ear",
+        "example_segment_id": "cy-brenin-01-l07-s024"
+      },
+      {
+        "lexeme_id": "cy-gwynt",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "gwynt (g.)",
+        "back": "wind",
+        "example_segment_id": "cy-brenin-01-l07-s032"
+      },
+      {
+        "lexeme_id": "cy-aderyn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "aderyn (g.), adar",
+        "back": "bird",
+        "example_segment_id": "cy-brenin-01-l07-s038"
+      },
+      {
+        "lexeme_id": "cy-deilen",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "deilen (b.), dail",
+        "back": "leaf",
+        "example_segment_id": "cy-brenin-01-l07-s033"
+      },
+      {
+        "lexeme_id": "cy-pastai",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "pastai (b.), pasteiod",
+        "back": "pie",
+        "example_segment_id": "cy-brenin-01-l07-s087"
+      },
+      {
+        "lexeme_id": "cy-ffwrn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "ffwrn (b.)",
+        "back": "oven",
+        "example_segment_id": "cy-brenin-01-l07-s107"
+      },
+      {
+        "lexeme_id": "cy-bwced",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "bwced (g.)",
+        "back": "bucket",
+        "example_segment_id": "cy-brenin-01-l07-s074"
+      },
+      {
+        "lexeme_id": "cy-distaw",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "distaw",
+        "back": "silent, quiet",
+        "example_segment_id": "cy-brenin-01-l07-s043"
+      },
+      {
+        "lexeme_id": "cy-sydyn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "sydyn (yn sydyn)",
+        "back": "sudden (yn sydyn = suddenly)",
+        "example_segment_id": "cy-brenin-01-l07-s071"
+      },
+      {
+        "lexeme_id": "cy-prysur",
+        "id": "base",
+        "lesson": "cy-brenin-01-l07",
+        "front": "prysur",
+        "back": "busy",
+        "example_segment_id": "cy-brenin-01-l07-s001"
+      },
+      {
+        "lexeme_id": "cy-pattern-g07",
+        "id": "pattern-g07",
+        "lesson": "cy-brenin-01-l07",
+        "front": "Gwranda! · Dere yma! · Paid â siarad! · Rho wellt! ↔ Rho'r bwced!",
+        "back": "Listen! · Come here! · Don't talk! · Give (some) straw! ↔ Give the bucket! (a direct object straight after a command softens; the article blocks this, though a feminine singular noun still softens after y: Cymer y bastai)",
+        "example_segment_id": "cy-brenin-01-l07-s017",
+        "example_segment_ids": [
+          "cy-brenin-01-l07-s017",
+          "cy-brenin-01-l07-s084",
+          "cy-brenin-01-l07-s130"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l07-img-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 2,
+      "margin_vignette": 6,
+      "margin_diagram": 0,
+      "margin_gloss": 28
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-07",
+      "rhan-1"
+    ]
+  },
+  "metrics": {
+    "running_words": 867,
+    "sentences": 145,
+    "word_target": 800,
+    "word_window": [
+      720,
+      880
+    ]
+  }
+}

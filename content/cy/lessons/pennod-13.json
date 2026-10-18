@@ -1,0 +1,2308 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l13",
+  "course_id": "cy-brenin-01",
+  "order": 13,
+  "title": "Hedfanodd Arth",
+  "rhan": 2,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "block writer B2 (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief 2026-10-12 (B2: Penodau 11–15)",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Narration is now in the past (preterite for events). No imperfect (roedd) is used anywhere: description is carried by 'gwelodd e X yn …', verbless phrases and dialogue in the present. Group actions use noun subjects with 3sg verbs (Daeth y milwyr …, Gadawodd y milwyr …). Plural pronoun subjects in the past are avoided (Pennod 23).",
+      "Selected 3sg verbs: daeth, aeth, cafodd, gwnaeth; -odd on hedfan, gweld, edrych, codi, troi, glanio, disgyn, cyrraedd, gadael, cuddio, gwenu, rhedeg, cofio. Irregular stems not derivable by the checker's suffix rule are licensed as forms in the delta (gwelodd, trodd, cyrhaeddodd, gadawodd, disgynnodd; aeth/daeth/cafodd/gwnaeth also recorded as cy-mynd/dod/cael/gwneud forms), and 'past' card stages are added for mynd, dod, cael, gwneud and gweld (§8.3).",
+      "Do / Naddo answer only simple-past questions (Welaist ti …? Gest ti …? Wnest ti …?); the Ydw / Nac ydw contrast is set beside them in the same scene (Wyt ti'n flinedig? — Ydw). No inflected past negatives are used.",
+      "Prior coverage sits at the 88% floor because the target forms themselves (gwelodd, aeth, daeth, trodd …) count as new tokens; the hawk is called 'yr hen aderyn' in places to keep the new noun hebog from dominating.",
+      "Section count 4 as planned (the take-off and the flight over the valley share one section). 'i lawr' lemma-validation warning concerns the planned phrase lexeme.",
+      "Dafi's short sentence 'Dafi'n ofni hebog!' (s027) is Rhan 2 Dafi-speech, not a flagged deliberate error; the Codex review (2026-10-12) accepts it as the established fragment convention.",
+      "Codex review 2026-10-12, verdicts on the [?] questions (all accepted, no text change): s011 'trodd Arth yn hebog'; s031 'Gwelodd e olau'r haul' (object SM on the head noun golau); s035 'Mae Cwm Helyg yn wahanol o'r awyr: map yw e!'; s046 standard spelling cyrhaeddodd; s038 disgyn (plymio unnecessary); s075 'Fi yw hebog Cynyr' as plain identification; s126 purpose 'i ffeindio bwyd' (ff does not mutate); s041 'i'r coed'.",
+      "Applied from the Codex review (2026-10-12): s044 drops the singular 'Paid ag ofni!' (addressed to a nest of birds; peidiwch is not yet available) and keeps 'Dw i ddim yn benhwyad! Arth dw i!'; nodyn_en states object SM after the verb and its subject; B.b5 accepts cwmwl, B.b7 adain; C.c2 and C.c6 accept full-sentence answers; A.a1–a5 accept the supplied ddoe/neithiwr cue; the wedi recall cue is now '(wedi)' rather than '(nawr: wedi)'."
+    ],
+    "review_questions": []
+  },
+  "learning_contract": {
+    "grammar_target_id": "G13",
+    "primary_new_grammar": {
+      "id": "G13",
+      "label": "preterite 3sg in narration: a selected set of -odd verbs (hedfanodd, gwelodd, edrychodd, cododd, trodd, glaniodd, disgynnodd, cyrhaeddodd, gadawodd …) and aeth, daeth, cafodd, gwnaeth; Welaist ti …? / Gest ti …? answered Do / Naddo (simple past only); object SM after the verb",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G05",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12"
+    ],
+    "incidental": [],
+    "new_lexeme_ids": [
+      "cy-do",
+      "cy-naddo",
+      "cy-hebog",
+      "cy-adain",
+      "cy-cwmwl",
+      "cy-milwr",
+      "cy-baner",
+      "cy-lledr",
+      "cy-to",
+      "cy-maes",
+      "cy-uwchben",
+      "cy-ph-i-fyny",
+      "cy-ph-i-lawr",
+      "cy-troi",
+      "cy-glanio",
+      "cy-cyrraedd",
+      "cy-gadael",
+      "cy-disgyn",
+      "cy-clymu",
+      "cy-rhydd",
+      "cy-gwahanol",
+      "cy-llygoden",
+      "cy-nyth",
+      "cy-golau",
+      "cy-cysgod"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-do",
+        "how": "paradigm gloss (Welaist ti …? → Do. / Naddo.)",
+        "segment_id": "cy-brenin-01-l13-s093"
+      },
+      {
+        "lexeme_id": "cy-naddo",
+        "how": "antonym gloss (Do ↔ Naddo)",
+        "segment_id": "cy-brenin-01-l13-s100"
+      },
+      {
+        "lexeme_id": "cy-hebog",
+        "how": "picture(vignette+cover)",
+        "segment_id": "cy-brenin-01-l13-s011"
+      },
+      {
+        "lexeme_id": "cy-adain",
+        "how": "number gloss (adain, adenydd)+picture(cover)",
+        "segment_id": "cy-brenin-01-l13-s013"
+      },
+      {
+        "lexeme_id": "cy-cwmwl",
+        "how": "number gloss (cwmwl, cymylau)+picture(cover)",
+        "segment_id": "cy-brenin-01-l13-s030"
+      },
+      {
+        "lexeme_id": "cy-milwr",
+        "how": "picture(scene)+gloss",
+        "segment_id": "cy-brenin-01-l13-s051"
+      },
+      {
+        "lexeme_id": "cy-baner",
+        "how": "picture(scene)+gloss",
+        "segment_id": "cy-brenin-01-l13-s052"
+      },
+      {
+        "lexeme_id": "cy-lledr",
+        "how": "picture(vignette+scene)",
+        "segment_id": "cy-brenin-01-l13-s072"
+      },
+      {
+        "lexeme_id": "cy-to",
+        "how": "picture(cover)+context (Dafi ar y to)",
+        "segment_id": "cy-brenin-01-l13-s021"
+      },
+      {
+        "lexeme_id": "cy-maes",
+        "how": "picture(cover)+context",
+        "segment_id": "cy-brenin-01-l13-s036"
+      },
+      {
+        "lexeme_id": "cy-uwchben",
+        "how": "antonym gloss (uwchben ↔ dan)",
+        "segment_id": "cy-brenin-01-l13-s019"
+      },
+      {
+        "lexeme_id": "cy-ph-i-fyny",
+        "how": "antonym gloss (i fyny ↔ i lawr)",
+        "segment_id": "cy-brenin-01-l13-s017"
+      },
+      {
+        "lexeme_id": "cy-ph-i-lawr",
+        "how": "antonym gloss (i fyny ↔ i lawr)+context",
+        "segment_id": "cy-brenin-01-l13-s053"
+      },
+      {
+        "lexeme_id": "cy-troi",
+        "how": "paradigm gloss (troi → trodd: bachgen → hebog)",
+        "segment_id": "cy-brenin-01-l13-s011"
+      },
+      {
+        "lexeme_id": "cy-glanio",
+        "how": "define gloss (awyr → maes)",
+        "segment_id": "cy-brenin-01-l13-s039"
+      },
+      {
+        "lexeme_id": "cy-cyrraedd",
+        "how": "synonym gloss (= Daeth e i)",
+        "segment_id": "cy-brenin-01-l13-s046"
+      },
+      {
+        "lexeme_id": "cy-gadael",
+        "how": "antonym gloss (gadael ↔ cyrraedd)",
+        "segment_id": "cy-brenin-01-l13-s049"
+      },
+      {
+        "lexeme_id": "cy-disgyn",
+        "how": "define gloss (↓ ↓ ↓)",
+        "segment_id": "cy-brenin-01-l13-s038"
+      },
+      {
+        "lexeme_id": "cy-clymu",
+        "how": "picture(vignette)+define gloss",
+        "segment_id": "cy-brenin-01-l13-s073"
+      },
+      {
+        "lexeme_id": "cy-rhydd",
+        "how": "define gloss (dim lledr, dim clymu)",
+        "segment_id": "cy-brenin-01-l13-s077"
+      },
+      {
+        "lexeme_id": "cy-gwahanol",
+        "how": "gloss+context (the valley from the air)",
+        "segment_id": "cy-brenin-01-l13-s035"
+      },
+      {
+        "lexeme_id": "cy-llygoden",
+        "how": "gloss+context (a hawk's prey)",
+        "segment_id": "cy-brenin-01-l13-s037"
+      },
+      {
+        "lexeme_id": "cy-nyth",
+        "how": "picture(vignette)",
+        "segment_id": "cy-brenin-01-l13-s042"
+      },
+      {
+        "lexeme_id": "cy-golau",
+        "how": "gloss+context (golau'r haul ar y cymylau)",
+        "segment_id": "cy-brenin-01-l13-s031"
+      },
+      {
+        "lexeme_id": "cy-cysgod",
+        "how": "gloss+picture(scene)",
+        "segment_id": "cy-brenin-01-l13-s036"
+      }
+    ],
+    "recycle_lexeme_ids": [
+      "cy-hedfan",
+      "cy-aderyn",
+      "cy-awyr",
+      "cy-ogof",
+      "cy-bryn",
+      "cy-cwm",
+      "cy-dieithryn",
+      "cy-ffordd",
+      "cy-llaw",
+      "cy-coes",
+      "cy-penhwyad",
+      "cy-ofni",
+      "cy-cuddio",
+      "cy-cofio",
+      "cy-blinedig",
+      "cy-rhyfedd",
+      "cy-clogyn",
+      "cy-pont"
+    ],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "ref": "cy-brenin-01-l13-img-cover",
+      "src": "media/images/cy-brenin-01-l13-img-cover.webp",
+      "status": "draft",
+      "presentation": "inline_scene",
+      "alt": "A hawk's-eye view of Cwm Helyg, laid out like the map in Pennod 1: the river, the forest, the llys with its yard and roofs, the bare hill with the dark cave, and the road to the town; a small grey hawk's wings at the top edge.",
+      "art_brief": "Aerial view of Cwm Helyg from high above, in the same composition and orientation as the Pennod 1 panorama/map (match place-cwm-helyg and the Pennod 1 map): Afon Helyg winding along the valley floor with a stone bridge; the dark forest on one side; Llys Cynyr inside its round timber palisade with the thatched hall, kitchen and stable round the yard (tiny figures: a red-blond youth with a sword, a round woman in a doorway, a black-and-white dog asleep, a speck of red on the kitchen roof); a high bare hill with a dark cave mouth near the top; the earth road leading down the valley to a small town. Wisps of white cloud with sunlight on them drift below the viewer. At the top edge, the tips of a small grey hawk's spread wings frame the view. Valley palette, greens and slate. No text.",
+      "characters": [
+        "char-arth"
+      ],
+      "covers_lexeme_ids": [
+        "cy-hebog",
+        "cy-cwmwl",
+        "cy-maes",
+        "cy-to",
+        "cy-uwchben",
+        "cy-adain"
+      ],
+      "width": 1600,
+      "height": 1073
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l13-sec1",
+        "title": "Hedfanodd Arth",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l13-s001",
+            "text": "Un bore, daeth Myrddin i'r buarth gyda Mali ac Arth.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "daeth",
+                "gloss": "dod → des i → daeth e",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s002",
+            "text": "Edrychodd e ar yr awyr las, ac edrychodd e ar Arth."
+          },
+          {
+            "id": "cy-brenin-01-l13-s003",
+            "text": "\"Wyt ti eisiau hedfan, Arth?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l13-s004",
+            "text": "\"Ydw!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s005",
+            "text": "\"Gyda'r adar?\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s006",
+            "text": "\"Gyda'r adar,\" meddai Myrddin, a gwenodd e.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l13-s007",
+            "text": "\"A fi?\" meddai Mali. \"Dw i eisiau hedfan hefyd!\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s008",
+            "text": "\"Dim heddiw, Mali,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l13-s009",
+            "text": "\"Heddiw, mae gwaith gyda ti: edrych ar yr awyr, ac edrych ar Arth.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s010",
+            "text": "Cododd Myrddin ei law.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s011",
+            "text": "Yn sydyn, trodd Arth yn hebog: aderyn bach llwyd, gyda llygaid melyn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "trodd",
+                "gloss": "troi → trodd: bachgen → hebog",
+                "gloss_kind": "paradigm"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l13-img-hebog",
+                "anchor_text": "hebog",
+                "label": "hebog",
+                "src": "media/vignettes/cy-brenin-01-l13-img-hebog.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A small grey hawk with yellow eyes and a hooked beak, wings half open. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-hebog"
+                ],
+                "width": 400,
+                "height": 401
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s012",
+            "text": "\"Arth!\" meddai Mali. \"Rwyt ti'n hebog!\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s013",
+            "text": "Edrychodd Arth ar ei adenydd: adenydd llwyd, hir.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "adenydd",
+                "gloss": "adain, adenydd",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s132",
+            "text": "Edrychodd e ar ei gorff e: dim cen, dim esgyll nawr, ond plu llwyd ar ei gefn e!"
+          },
+          {
+            "id": "cy-brenin-01-l13-s014",
+            "text": "\"Ble mae fy nwylo i?\" meddai e.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s015",
+            "text": "\"Does dim dwylo gyda ti, Arth,\" meddai Mali. \"Mae adenydd gyda ti! Edrych ar dy adenydd di!\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s016",
+            "text": "Cododd Arth ei adenydd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s017",
+            "text": "Wedyn hedfanodd e i fyny, i fyny, i'r awyr las.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "i fyny",
+                "gloss": "i fyny ↔ i lawr",
+                "gloss_kind": "antonym"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l13-img-amser",
+                "anchor_text": "hedfanodd",
+                "label": "ddoe ↔ nawr",
+                "src": "media/diagrams/cy-brenin-01-l13-img-amser.svg",
+                "alt": "A time line: on the left, labelled 'ddoe', a small hawk flying and the caption 'Hedfanodd Arth.'; on the right, labelled 'nawr', the boy standing on the ground and the caption 'Mae e wedi hedfan.'. Welsh labels only.",
+                "status": "draft",
+                "covers_lexeme_ids": [
+                  "cy-hedfan"
+                ],
+                "width": 300,
+                "height": 200
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s018",
+            "text": "\"Hedfanodd Arth!\" meddai Mali yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s019",
+            "text": "Hedfanodd Arth uwchben y llys.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "uwchben",
+                "gloss": "uwchben ↔ dan",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s020",
+            "text": "Gwelodd e Cai yn y buarth, gyda'r cleddyf a'r darian.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Gwelodd",
+                "gloss": "gweld → gwelais i → gwelodd e",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s021",
+            "text": "Gwelodd e Modlen yn y drws, a Dafi ar y to."
+          },
+          {
+            "id": "cy-brenin-01-l13-s022",
+            "text": "Gwelodd e'r to mawr ar y neuadd, a Pero'n cysgu wrth y stabl, wrth gwrs."
+          },
+          {
+            "id": "cy-brenin-01-l13-s023",
+            "text": "Gwelodd e Elen yn yr ardd, a Cynyr gyda'r ceffylau."
+          },
+          {
+            "id": "cy-brenin-01-l13-s024",
+            "text": "Ond edrychodd Dafi i fyny ar yr hebog, ac yn sydyn daeth tân bach o'i geg e!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s025",
+            "text": "\"Dafi!\" meddai Modlen o'r drws, gyda'r llwy bren yn ei llaw hi.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l13-s133",
+            "text": "\"Paid â llosgi'r to!\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s026",
+            "text": "\"Dafi, paid ag ofni!\" meddai Arth. \"Arth dw i!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s027",
+            "text": "\"Arth? Hebog!\" meddai Dafi. \"Dafi'n ofni hebog!\"",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l13-s028",
+            "text": "\"Arth! Paid â chwarae gyda Dafi!\" meddai Mali o'r buarth, ac edrychodd hi i fyny.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s029",
+            "text": "\"Mae'r llys yn fach iawn!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s030",
+            "text": "Hedfanodd e i'r cymylau gwyn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cymylau",
+                "gloss": "cwmwl, cymylau",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s031",
+            "text": "Gwelodd e olau'r haul ar y cymylau, ac wedyn edrychodd e i lawr ar y cwm.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "olau",
+                "gloss": "gwelodd e olau ← golau",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s032",
+            "text": "\"Mae golau'r haul yn gynnes ar fy adenydd i!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s033",
+            "text": "Hedfanodd e uwchben yr afon, y bont, y llyn a'r hen gwch.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s034",
+            "text": "\"Dyma'r afon, dyma'r goedwig, a dyma'r llys bach!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s035",
+            "text": "\"Mae Cwm Helyg yn wahanol o'r awyr: map yw e!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wahanol",
+                "gloss": "yn wahanol ← gwahanol",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s036",
+            "text": "Wedyn gwelodd e gysgod bach ar y maes: cysgod hebog!",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gysgod",
+                "gloss": "gwelodd e gysgod ← cysgod",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s037",
+            "text": "A gwelodd e lygoden fach ar y maes, wrth y cysgod.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "lygoden",
+                "gloss": "gwelodd e lygoden ← llygoden (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s038",
+            "text": "Yn sydyn, disgynnodd Arth yn gyflym, gyflym i'r maes.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "disgynnodd",
+                "gloss": "disgyn: ↓ ↓ ↓",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s039",
+            "text": "Glaniodd e ar y maes, wrth y llygoden.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Glaniodd",
+                "gloss": "glanio: awyr → maes",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s040",
+            "text": "\"Nage!\" meddai Arth. \"Dw i ddim yn bwyta llygod!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s041",
+            "text": "Hedfanodd e i fyny eto, a rhedodd y llygoden i'r coed.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s042",
+            "text": "Wedyn hedfanodd e i'r goeden fawr, ac edrychodd e ar nyth bach: adar bach yn y nyth!",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l13-img-nyth",
+                "anchor_text": "nyth",
+                "label": "nyth",
+                "src": "media/vignettes/cy-brenin-01-l13-img-nyth.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A small round twig nest in the fork of a branch with three tiny chicks, beaks open. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-nyth"
+                ],
+                "width": 400,
+                "height": 415
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s043",
+            "text": "Edrychodd yr adar bach ar Arth, ac yn sydyn cuddiodd yr adar eu pennau nhw yn y nyth."
+          },
+          {
+            "id": "cy-brenin-01-l13-s044",
+            "text": "\"Dw i ddim yn benhwyad!\" meddai Arth. \"Arth dw i!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s045",
+            "text": "Ond cuddiodd yr adar bach eto, ac aeth Arth i'r bryn yn dawel.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s046",
+            "text": "Cyrhaeddodd e'r ogof dywyll ar y bryn uchel.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Cyrhaeddodd",
+                "gloss": "= Daeth e i",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s047",
+            "text": "Daeth gwynt oer, oer o'r ogof."
+          },
+          {
+            "id": "cy-brenin-01-l13-s048",
+            "text": "Edrychodd Arth yn yr ogof ddwfn: cysgod, cysgod du, a dim byd."
+          },
+          {
+            "id": "cy-brenin-01-l13-s049",
+            "text": "Wedyn gadawodd e'r bryn yn gyflym iawn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gadawodd",
+                "gloss": "gadael ↔ cyrraedd",
+                "gloss_kind": "antonym"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l13-sec2",
+        "title": "Y milwyr",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l13-s050",
+            "text": "Hedfanodd Arth uwchben y ffordd i'r dref.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s051",
+            "text": "Gwelodd e filwyr ar y ffordd.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "filwyr",
+                "gloss": "gwelodd e filwyr ← milwyr (milwr)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s052",
+            "text": "Gwelodd e faner fawr hefyd, a draig goch ar y faner.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "faner",
+                "gloss": "gwelodd e faner ← baner (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s053",
+            "text": "Daeth y milwyr i lawr y ffordd yn araf."
+          },
+          {
+            "id": "cy-brenin-01-l13-s054",
+            "text": "\"Milwyr!\" meddai Arth. \"Pwy yw'r milwyr? Ble maen nhw'n mynd?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s055",
+            "text": "Gwelodd Arth y dieithryn hefyd, ar geffyl du, gyda'r milwyr.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "geffyl",
+                "gloss": "ar geffyl ← ceffyl",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s056",
+            "text": "\"Y dieithryn!\" meddai Arth. \"Dyn rhyfedd Mali!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s057",
+            "text": "Disgynnodd Arth yn agos, yn dawel, yn araf.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s058",
+            "text": "Cyrhaeddodd y milwyr y bont, ac aeth y ceffylau i'r dŵr."
+          },
+          {
+            "id": "cy-brenin-01-l13-s059",
+            "text": "Yn sydyn, cododd y dieithryn ei ben, ac edrychodd e ar yr hebog."
+          },
+          {
+            "id": "cy-brenin-01-l13-s060",
+            "text": "Gwelodd Arth ei lygaid e: llygaid tywyll iawn."
+          },
+          {
+            "id": "cy-brenin-01-l13-s061",
+            "text": "\"Hebog?\" meddai'r dieithryn yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-negesydd"
+          },
+          {
+            "id": "cy-brenin-01-l13-s062",
+            "text": "\"Hebog Llys Cynyr?\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s063",
+            "text": "Trodd Arth, a hedfanodd e i'r llys yn gyflym, gyflym.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s064",
+            "text": "Cyrhaeddodd e'r llys, ac edrychodd e ar y ffordd eto."
+          },
+          {
+            "id": "cy-brenin-01-l13-s065",
+            "text": "Gadawodd y milwyr y bont, ac aeth y faner a'r ddraig goch i'r dref.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l13-img-milwyr",
+                "src": "media/images/cy-brenin-01-l13-img-milwyr.webp",
+                "alt": "From above, soldiers cross the bridge under a red-dragon banner; the dark-cloaked rider on a black horse looks straight up at the small hawk overhead.",
+                "status": "draft",
+                "art_brief": "Bird's-eye view, steep angle, of the stone bridge over Afon Helyg and the earth road to the town, valley greens and slate. A small column of soldiers in plain mail and round shields crosses the bridge on foot, a few horses drinking in the river. One soldier carries a long banner: a red dragon on green and white. Behind them a lean rider in a long dark hooded cloak on a big black horse, a small red-dragon brooch at his shoulder, has thrown back his head and stares straight up at the viewer. In the foreground top, the shadow and spread wings of a small grey hawk (Arth). Valley palette. No text, no lettering on the banner.",
+                "characters": [
+                  "char-negesydd"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-milwr",
+                  "cy-baner",
+                  "cy-hebog",
+                  "cy-cysgod"
+                ],
+                "width": 1600,
+                "height": 1066
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l13-sec3",
+        "title": "Hebog Cynyr",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l13-s066",
+            "text": "Glaniodd Arth ar wal y stabl, ac edrychodd e yn y stabl.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s067",
+            "text": "Gwelodd e hen hebog yno, ar bren uchel.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "bren",
+                "gloss": "ar bren ← pren",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s068",
+            "text": "\"Pwy wyt ti?\" meddai'r hen hebog.",
+            "paragraph_start": true,
+            "speaker": "char-hebog"
+          },
+          {
+            "id": "cy-brenin-01-l13-s069",
+            "text": "\"Arth dw i,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s070",
+            "text": "\"Bachgen dw i, ond heddiw hebog dw i.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s071",
+            "text": "\"Hebog Cynyr dw i,\" meddai'r hen hebog.",
+            "paragraph_start": true,
+            "speaker": "char-hebog"
+          },
+          {
+            "id": "cy-brenin-01-l13-s072",
+            "text": "\"Edrych ar fy nghoesau i: mae lledr ar fy nghoesau i.\"",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l13-img-lledr",
+                "anchor_text": "lledr",
+                "label": "lledr",
+                "src": "media/vignettes/cy-brenin-01-l13-img-lledr.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A hawk's yellow leg and talons with a thin leather strap (jess) tied round it and knotted to a wooden perch. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-lledr",
+                  "cy-clymu"
+                ],
+                "width": 400,
+                "height": 412
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s073",
+            "text": "\"Mae Cynyr yn clymu'r lledr wrth y pren.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "clymu",
+                "gloss": "clymu: lledr + pren = ∞",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s074",
+            "text": "\"Pam mae Cynyr yn clymu'r lledr?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s075",
+            "text": "\"Fi yw hebog Cynyr,\" meddai'r hen aderyn.",
+            "paragraph_start": true,
+            "speaker": "char-hebog"
+          },
+          {
+            "id": "cy-brenin-01-l13-s076",
+            "text": "\"Mae bwyd da gyda fi, ac mae'r stabl yn gynnes yn y nos.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s077",
+            "text": "\"Ond dw i ddim yn rhydd.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "rhydd",
+                "gloss": "rhydd: dim lledr, dim clymu",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s078",
+            "text": "\"Ond mae'r awyr yn wych!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s079",
+            "text": "\"Y cymylau, yr haul, y golau…\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s080",
+            "text": "\"Dw i'n cofio,\" meddai'r hen aderyn yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-hebog"
+          },
+          {
+            "id": "cy-brenin-01-l13-s081",
+            "text": "\"Wyt ti eisiau bod yn rhydd?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s082",
+            "text": "\"Dw i'n hen, Arth,\" meddai'r hen aderyn.",
+            "paragraph_start": true,
+            "speaker": "char-hebog"
+          },
+          {
+            "id": "cy-brenin-01-l13-s083",
+            "text": "\"Mae'r awyr yn fawr ac yn oer, ac mae'r stabl yn gynnes.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s084",
+            "text": "\"Ond rwyt ti'n wahanol: rwyt ti'n rhydd."
+          },
+          {
+            "id": "cy-brenin-01-l13-s085",
+            "text": "Cer!\"",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l13-img-hebog-cynyr",
+                "src": "media/images/cy-brenin-01-l13-img-hebog-cynyr.webp",
+                "alt": "In the dim stable, Arth as a small grey hawk sits on the wall, facing Cynyr's old hawk, which is tied to a high wooden perch by leather straps on its legs.",
+                "status": "draft",
+                "art_brief": "Inside the llys stable (match place-buarth.png / stabl): timber walls, straw, a horse's head in the shadows. On a high wooden perch sits a big old hawk with ruffled grey-brown feathers and wise, tired eyes; thin leather jesses on both legs are knotted to the perch. Facing it on the top of the wattle wall, by a gap of daylight, perches a smaller, sleeker grey hawk with bright yellow eyes (Arth). Warm dim light, dust in the sunbeam. Llys palette. No text.",
+                "characters": [
+                  "char-arth"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-hebog",
+                  "cy-lledr",
+                  "cy-clymu"
+                ],
+                "width": 1600,
+                "height": 1066
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s086",
+            "text": "Cododd Arth ei adenydd, ond edrychodd e ar yr hen aderyn eto, ac ar y lledr.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s087",
+            "text": "Wedyn gadawodd e'r stabl, a hedfanodd e i'r buarth."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l13-sec4",
+        "title": "Welaist ti'r ogof?",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l13-s088",
+            "text": "Edrychodd Mali i fyny ar yr awyr las yn y buarth, a gwenodd hi.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s089",
+            "text": "Disgynnodd Arth i lawr i'r buarth, a glaniodd e wrth Myrddin a Mali."
+          },
+          {
+            "id": "cy-brenin-01-l13-s090",
+            "text": "\"Croeso, hebog bach!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s091",
+            "text": "Gwnaeth Myrddin hud eto, ac yn sydyn trodd Arth yn fachgen.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s092",
+            "text": "\"Arth! Welaist ti'r llys?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s093",
+            "text": "\"Do!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Do",
+                "gloss": "Welaist ti …? → Do. / Naddo.",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s094",
+            "text": "\"Cai a Pero, a Dafi ar y to!\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s095",
+            "text": "\"Ac mae'r llys yn wahanol nawr: mae e'n fawr eto!\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s096",
+            "text": "\"Welaist ti'r ogof?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s097",
+            "text": "\"Do,\" meddai Arth yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s098",
+            "text": "\"Mae'r ogof yn dywyll, a does dim golau yn yr ogof.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s099",
+            "text": "\"Gest ti lygoden?\" meddai Mali, a gwenodd hi.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s100",
+            "text": "\"Naddo!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Naddo",
+                "gloss": "Do ↔ Naddo",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l13-s101",
+            "text": "\"Dw i ddim yn bwyta llygod!\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s102",
+            "text": "\"Wnest ti fwyta'r adar bach?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s103",
+            "text": "\"Naddo, wrth gwrs!\" meddai Arth yn ddig.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s104",
+            "text": "\"Wyt ti'n flinedig?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s105",
+            "text": "\"Ydw,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s106",
+            "text": "\"Ond Mali: mae'r dieithryn yn y cwm eto, gyda milwyr.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s107",
+            "text": "\"Welaist ti'r ddraig goch ar y clogyn?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s108",
+            "text": "\"Do.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s109",
+            "text": "A baner fawr gyda draig goch.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s110",
+            "text": "\"Ac mae'r dieithryn yn gwybod enw'r llys, Mali.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s111",
+            "text": "\"Ac mae e eisiau bachgen un ar ddeg oed,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s112",
+            "text": "\"Wnest ti ofni?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s113",
+            "text": "\"Naddo,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s114",
+            "text": "\"Wel… do.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s115",
+            "text": "\"Mae Cynyr yn clymu'r hen hebog wrth y pren gyda lledr, Mali.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s116",
+            "text": "\"Mae e'n hebog da, ond dyw e ddim yn rhydd.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s134",
+            "text": "\"Dw i ddim yn anghofio'r hen hebog, Mali.\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s117",
+            "text": "Edrychodd Mali ar Myrddin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s135",
+            "text": "\"Neithiwr, wnes i ysgrifennu cwestiwn yn y dyddiadur, gyda'r bluen a'r inc,\" meddai hi.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s136",
+            "text": "\"Myrddin, pwy yw'r dieithryn?\""
+          },
+          {
+            "id": "cy-brenin-01-l13-s119",
+            "text": "Gwenodd Myrddin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s120",
+            "text": "\"Dyn ar geffyl yw e,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l13-s121",
+            "text": "\"Myrddin!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s122",
+            "text": "\"Ac mae ceffyl du gyda fe,\" meddai Myrddin, a gwenodd e eto.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l13-s123",
+            "text": "Yn sydyn, daeth Cai o'r neuadd gyda'r cleddyf pen-blwydd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s124",
+            "text": "\"Arth! Ble wyt ti wedi bod?\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l13-s125",
+            "text": "\"Dw i wedi bod yn hebog!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s126",
+            "text": "\"Ha! A dw i wedi bod yn frenin!\" meddai Cai, ac aeth e i'r gegin i ffeindio bwyd.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l13-s127",
+            "text": "Yn y nos, cafodd Arth gawl, cig a bara yn y gegin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l13-s128",
+            "text": "Ond wedyn, cofiodd e'r hen hebog a'r lledr ar ei goesau e."
+          },
+          {
+            "id": "cy-brenin-01-l13-s137",
+            "text": "Teimlodd e'n drist."
+          },
+          {
+            "id": "cy-brenin-01-l13-s129",
+            "text": "\"Wyt ti'n hapus, Arth?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l13-s130",
+            "text": "\"Dw i'n hapus, Mali,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l13-s131",
+            "text": "\"Dw i'n rhydd.\""
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Hedfanodd Arth",
+    "rule_cy": "Mae Arth yn hedfan (nawr) → Hedfanodd Arth (ddoe). -odd: gwelodd, cododd, glaniodd. Aeth, daeth, cafodd, gwnaeth. Welaist ti …? → Do. / Naddo.",
+    "tables": [
+      {
+        "caption": "Mae e'n … → -odd e",
+        "header": [
+          "nawr",
+          "ddoe"
+        ],
+        "rows": [
+          [
+            "Mae Arth yn hedfan.",
+            "Hedfanodd Arth i fyny."
+          ],
+          [
+            "Mae e'n gweld milwyr.",
+            "Gwelodd e filwyr ar y ffordd."
+          ],
+          [
+            "Mae e'n glanio.",
+            "Glaniodd e ar y maes."
+          ],
+          [
+            "Mae Myrddin yn codi ei law.",
+            "Cododd Myrddin ei law."
+          ],
+          [
+            "Mae Arth yn troi'n hebog.",
+            "Trodd Arth yn hebog."
+          ]
+        ]
+      },
+      {
+        "caption": "fi · ti · fe",
+        "header": [
+          "",
+          "fi",
+          "ti",
+          "fe / hi"
+        ],
+        "rows": [
+          [
+            "mynd",
+            "es i",
+            "est ti",
+            "aeth e"
+          ],
+          [
+            "dod",
+            "des i",
+            "dest ti",
+            "daeth e"
+          ],
+          [
+            "cael",
+            "ces i",
+            "cest ti",
+            "cafodd e"
+          ],
+          [
+            "gwneud",
+            "(g)wnes i",
+            "(g)wnest ti",
+            "gwnaeth e"
+          ],
+          [
+            "gweld",
+            "gwelais i",
+            "welaist ti?",
+            "gwelodd e"
+          ]
+        ]
+      },
+      {
+        "caption": "Do · Naddo ↔ Ydw · Ydy",
+        "header": [
+          "?",
+          "✓",
+          "✗"
+        ],
+        "rows": [
+          [
+            "Welaist ti'r ogof?",
+            "Do.",
+            "Naddo."
+          ],
+          [
+            "Gest ti lygoden?",
+            "Do.",
+            "Naddo!"
+          ],
+          [
+            "Wyt ti'n flinedig?",
+            "Ydw.",
+            "Nac ydw."
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "gwelodd e + cysgod, milwyr, llygoden, baner",
+            "gwelodd e gysgod, filwyr, lygoden, faner (Pennod 13)"
+          ],
+          [
+            "gwelodd e + 'r",
+            "gwelodd e'r ogof (dim newid)"
+          ],
+          [
+            "gwelaist ti …? · cest ti …?",
+            "Welaist ti …? · Gest ti …? (Pennod 13)"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l13-s017"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s020"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s051"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s011"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s001"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s092"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s093"
+      },
+      {
+        "segment_id": "cy-brenin-01-l13-s100"
+      }
+    ],
+    "nodyn_en": "The story is now told in the past. For he/she add -odd to the stem: hedfanodd, gwelodd, glaniodd. Four common verbs are irregular: aeth, daeth, cafodd, gwnaeth. A bare noun object after the verb and its subject softens (gwelodd e filwyr; cafodd Arth gawl). Answer a simple-past question with Do (yes) or Naddo (no), not Ydw / Nac ydw."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l13-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "Mae Arth yn hedfan i'r cymylau. (ddoe) →",
+            "answer": "Hedfanodd Arth i'r cymylau."
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Mae Arth yn glanio ar y wal. (ddoe) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Glaniodd Arth ar y wal.",
+                "Glaniodd Arth ar y wal ddoe.",
+                "Ddoe, glaniodd Arth ar y wal."
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s066"
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "Mae'r hebog yn edrych ar y maes. (ddoe) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Edrychodd yr hebog ar y maes.",
+                "Edrychodd yr hebog ar y maes ddoe.",
+                "Ddoe, edrychodd yr hebog ar y maes."
+              ]
+            },
+            {
+              "id": "a3",
+              "prompt": "Mae Myrddin yn codi ei law. (ddoe) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Cododd Myrddin ei law.",
+                "Cododd Myrddin ei law ddoe.",
+                "Ddoe, cododd Myrddin ei law."
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s010"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae Arth yn mynd i'r bryn. (ddoe) →",
+            "answer": "Aeth Arth i'r bryn."
+          },
+          "items": [
+            {
+              "id": "a4",
+              "prompt": "Mae'r milwyr yn dod i'r bont. (ddoe) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Daeth y milwyr i'r bont.",
+                "Daeth y milwyr i'r bont ddoe.",
+                "Ddoe, daeth y milwyr i'r bont."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Aeth y milwyr i'r bont.",
+                  "hint": "dod → daeth (mynd → aeth)"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s053"
+              ]
+            },
+            {
+              "id": "a5",
+              "prompt": "Mae Arth yn cael cawl. (neithiwr) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Cafodd Arth gawl.",
+                "Cafodd Arth gawl neithiwr.",
+                "Neithiwr, cafodd Arth gawl."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Cafodd Arth cawl.",
+                  "hint": "cafodd Arth + cawl → gawl"
+                }
+              ],
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s127"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "\"Welaist ti'r ogof?\" (✓) →",
+            "answer": "Do."
+          },
+          "items": [
+            {
+              "id": "a6",
+              "prompt": "\"Gest ti lygoden?\" (✗) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Naddo"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Nac ydw",
+                  "hint": "Gest ti …? (ddoe) → Do / Naddo"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s100"
+              ]
+            },
+            {
+              "id": "a7",
+              "prompt": "\"Wyt ti'n flinedig?\" (✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Ydw"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Do",
+                  "hint": "Wyt ti …? (nawr) → Ydw / Nac ydw"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s105"
+              ]
+            },
+            {
+              "id": "a8",
+              "prompt": "\"Welaist ti'r dieithryn?\" (✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Do"
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l13-s108"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae Arth yn bwyta. (wedi) →",
+            "answer": "Mae Arth wedi bwyta."
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "Mae'r hebog yn glanio. (wedi) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae'r hebog wedi glanio."
+              ],
+              "recall_of": "G11"
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae Cai a Mali yn y buarth. (nhw) →",
+            "answer": "Maen nhw yn y buarth."
+          },
+          "items": [
+            {
+              "id": "a10",
+              "prompt": "Mae'r milwyr ar y ffordd. (nhw) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Maen nhw ar y ffordd."
+              ],
+              "recall_of": "G09"
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l13-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "hebog",
+        "adain",
+        "cwmwl",
+        "milwr",
+        "baner",
+        "lledr",
+        "to",
+        "maes",
+        "nyth",
+        "llygoden",
+        "cysgod",
+        "golau",
+        "glanio",
+        "cyrraedd",
+        "gadael",
+        "clymu",
+        "rhydd",
+        "gwahanol",
+        "tywyll",
+        "uwchben"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Mae'r haul yn uchel, ac mae ___ y ceffyl yn ddu ar y buarth.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "cysgod"
+          ]
+        },
+        {
+          "id": "b2",
+          "prompt": "Mae Cynyr yn ___ y ceffyl wrth y wal.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "clymu"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Mae'r aderyn yn hedfan i'r goeden, ac mae e'n ___ ar y nyth.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "glanio"
+          ]
+        },
+        {
+          "id": "b4",
+          "prompt": "Mae'r gath ddu'n rhedeg ar ôl ___ fach yn y gegin.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "llygoden"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Mae'r awyr yn las heddiw: does dim ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "cymylau",
+            "cwmwl"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae Dafi ar ___ y gegin, ac mae mwg yn dod o'r to.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "do"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Mae'r hebog yn codi ei ___ ac yn hedfan.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "adenydd",
+            "adain"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "Does dim lledr ar goesau'r aderyn bach: mae e'n ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "rhydd"
+          ]
+        },
+        {
+          "id": "b9",
+          "prompt": "Mae'r ___ yn cario cleddyf a tharian, ac mae e'n cerdded gyda'r faner.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "milwr"
+          ]
+        },
+        {
+          "id": "b10",
+          "prompt": "Dyw Arth ddim yn hebog nawr: mae e'n fachgen. Mae e'n ___!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "wahanol"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l13-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Beth wnaeth Myrddin i Arth?",
+          "answer_mode": "self_check",
+          "model_answer": "Trodd e Arth yn hebog.",
+          "rubric": "Says Myrddin turned Arth into a hawk (trodd … yn hebog).",
+          "key_terms": [
+            "cy-troi",
+            "cy-hebog"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l13-s011"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Welodd Arth Dafi?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Do",
+            "Do. Gwelodd e Dafi ar y to",
+            "Do. Gwelodd Arth Dafi ar y to"
+          ],
+          "model_answer": "Do. Gwelodd e Dafi ar y to.",
+          "source_segment_ids": [
+            "cy-brenin-01-l13-s021"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Beth welodd Arth ar y ffordd?",
+          "answer_mode": "self_check",
+          "model_answer": "Gwelodd e filwyr, baner gyda draig goch, a'r dieithryn ar geffyl du.",
+          "rubric": "Names at least two: soldiers, the banner, the stranger.",
+          "key_terms": [
+            "cy-milwr",
+            "cy-baner",
+            "cy-dieithryn"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l13-s051",
+            "cy-brenin-01-l13-s052",
+            "cy-brenin-01-l13-s055"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Pam mae'r adar bach yn cuddio?",
+          "answer_mode": "self_check",
+          "model_answer": "Hebog yw Arth, ac mae adar bach yn ofni hebog.",
+          "rubric": "Explains that small birds fear a hawk.",
+          "key_terms": [
+            "cy-hebog",
+            "cy-ofni"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l13-s043"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Ydy hebog Cynyr yn rhydd?",
+          "answer_mode": "self_check",
+          "model_answer": "Nac ydy. Mae lledr ar ei goesau e, ac mae Cynyr yn clymu'r lledr wrth y pren.",
+          "rubric": "Nac ydy, plus the leather on its legs.",
+          "key_terms": [
+            "cy-lledr",
+            "cy-clymu"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l13-s072",
+            "cy-brenin-01-l13-s077"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Welaist ti'r ogof, Arth?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Do",
+            "Do. Gwelais i'r ogof",
+            "Do. Wnes i weld yr ogof",
+            "Do. Gwnes i weld yr ogof"
+          ],
+          "model_answer": "Do.",
+          "source_segment_ids": [
+            "cy-brenin-01-l13-s097"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "A ti? Wyt ti eisiau hedfan? Ble?",
+          "answer_mode": "self_check",
+          "model_answer": "Ydw! Dw i eisiau hedfan uwchben y môr.",
+          "rubric": "Ydw / Nac ydw plus one sentence with a place."
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-do",
+      "citation_form": "do",
+      "part_of_speech": "interjection",
+      "current_sense": "yes (to a simple-past question)",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-naddo",
+      "citation_form": "naddo",
+      "part_of_speech": "interjection",
+      "current_sense": "no (to a simple-past question)",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-hebog",
+      "citation_form": "hebog (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "hawk",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-adain",
+      "citation_form": "adain (b.), adenydd",
+      "part_of_speech": "noun",
+      "current_sense": "wing",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cwmwl",
+      "citation_form": "cwmwl (g.), cymylau",
+      "part_of_speech": "noun",
+      "current_sense": "cloud",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-milwr",
+      "citation_form": "milwr (g.), milwyr",
+      "part_of_speech": "noun",
+      "current_sense": "soldier",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-baner",
+      "citation_form": "baner (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "banner, flag",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-lledr",
+      "citation_form": "lledr (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "leather",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-to",
+      "citation_form": "to (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "roof",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-maes",
+      "citation_form": "maes (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "field, open land",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-uwchben",
+      "citation_form": "uwchben",
+      "part_of_speech": "preposition",
+      "current_sense": "above, overhead",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ph-i-fyny",
+      "citation_form": "i fyny",
+      "part_of_speech": "adverb",
+      "current_sense": "up",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ph-i-lawr",
+      "citation_form": "i lawr",
+      "part_of_speech": "adverb",
+      "current_sense": "down",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-troi",
+      "citation_form": "troi",
+      "part_of_speech": "verb",
+      "current_sense": "to turn",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-glanio",
+      "citation_form": "glanio",
+      "part_of_speech": "verb",
+      "current_sense": "to land",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cyrraedd",
+      "citation_form": "cyrraedd",
+      "part_of_speech": "verb",
+      "current_sense": "to arrive, reach",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gadael",
+      "citation_form": "gadael",
+      "part_of_speech": "verb",
+      "current_sense": "to leave",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-disgyn",
+      "citation_form": "disgyn",
+      "part_of_speech": "verb",
+      "current_sense": "to descend, drop",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-clymu",
+      "citation_form": "clymu",
+      "part_of_speech": "verb",
+      "current_sense": "to tie",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-rhydd",
+      "citation_form": "rhydd",
+      "part_of_speech": "adjective",
+      "current_sense": "free",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwahanol",
+      "citation_form": "gwahanol",
+      "part_of_speech": "adjective",
+      "current_sense": "different",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-llygoden",
+      "citation_form": "llygoden (b.), llygod",
+      "part_of_speech": "noun",
+      "current_sense": "mouse",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-nyth",
+      "citation_form": "nyth (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "nest",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-golau",
+      "citation_form": "golau (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "light",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cysgod",
+      "citation_form": "cysgod (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "shadow",
+      "first_introduced_lesson": "cy-brenin-01-l13",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-13.json.",
+    "card_stages": [
+      {
+        "lexeme_id": "cy-do",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "do",
+        "back": "yes (answer to a simple-past question: Welaist ti …? — Do.)",
+        "example_segment_id": "cy-brenin-01-l13-s097"
+      },
+      {
+        "lexeme_id": "cy-naddo",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "naddo",
+        "back": "no (answer to a simple-past question: Gest ti …? — Naddo.)",
+        "example_segment_id": "cy-brenin-01-l13-s100"
+      },
+      {
+        "lexeme_id": "cy-hebog",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "hebog (g.)",
+        "back": "hawk",
+        "example_segment_id": "cy-brenin-01-l13-s011"
+      },
+      {
+        "lexeme_id": "cy-adain",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "adain (b.), adenydd",
+        "back": "wing",
+        "example_segment_id": "cy-brenin-01-l13-s015"
+      },
+      {
+        "lexeme_id": "cy-cwmwl",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "cwmwl (g.), cymylau",
+        "back": "cloud",
+        "example_segment_id": "cy-brenin-01-l13-s030"
+      },
+      {
+        "lexeme_id": "cy-milwr",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "milwr (g.), milwyr",
+        "back": "soldier",
+        "example_segment_id": "cy-brenin-01-l13-s053"
+      },
+      {
+        "lexeme_id": "cy-baner",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "baner (b.)",
+        "back": "banner, flag",
+        "example_segment_id": "cy-brenin-01-l13-s052",
+        "seen_as": "faner"
+      },
+      {
+        "lexeme_id": "cy-lledr",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "lledr (g.)",
+        "back": "leather",
+        "example_segment_id": "cy-brenin-01-l13-s072"
+      },
+      {
+        "lexeme_id": "cy-to",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "to (g.)",
+        "back": "roof",
+        "example_segment_id": "cy-brenin-01-l13-s022"
+      },
+      {
+        "lexeme_id": "cy-maes",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "maes (g.)",
+        "back": "field, open land",
+        "example_segment_id": "cy-brenin-01-l13-s039"
+      },
+      {
+        "lexeme_id": "cy-uwchben",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "uwchben",
+        "back": "above, overhead",
+        "example_segment_id": "cy-brenin-01-l13-s019"
+      },
+      {
+        "lexeme_id": "cy-ph-i-fyny",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "i fyny",
+        "back": "up",
+        "example_segment_id": "cy-brenin-01-l13-s017"
+      },
+      {
+        "lexeme_id": "cy-ph-i-lawr",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "i lawr",
+        "back": "down",
+        "example_segment_id": "cy-brenin-01-l13-s089"
+      },
+      {
+        "lexeme_id": "cy-troi",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "troi",
+        "back": "to turn",
+        "example_segment_id": "cy-brenin-01-l13-s011"
+      },
+      {
+        "lexeme_id": "cy-glanio",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "glanio",
+        "back": "to land",
+        "example_segment_id": "cy-brenin-01-l13-s089"
+      },
+      {
+        "lexeme_id": "cy-cyrraedd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "cyrraedd",
+        "back": "to arrive, reach",
+        "example_segment_id": "cy-brenin-01-l13-s046"
+      },
+      {
+        "lexeme_id": "cy-gadael",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "gadael",
+        "back": "to leave",
+        "example_segment_id": "cy-brenin-01-l13-s049"
+      },
+      {
+        "lexeme_id": "cy-disgyn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "disgyn",
+        "back": "to descend, drop",
+        "example_segment_id": "cy-brenin-01-l13-s038"
+      },
+      {
+        "lexeme_id": "cy-clymu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "clymu",
+        "back": "to tie",
+        "example_segment_id": "cy-brenin-01-l13-s073"
+      },
+      {
+        "lexeme_id": "cy-rhydd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "rhydd",
+        "back": "free",
+        "example_segment_id": "cy-brenin-01-l13-s131"
+      },
+      {
+        "lexeme_id": "cy-gwahanol",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "gwahanol",
+        "back": "different",
+        "example_segment_id": "cy-brenin-01-l13-s084",
+        "seen_as": "wahanol"
+      },
+      {
+        "lexeme_id": "cy-llygoden",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "llygoden (b.), llygod",
+        "back": "mouse",
+        "example_segment_id": "cy-brenin-01-l13-s040",
+        "seen_as": "lygoden"
+      },
+      {
+        "lexeme_id": "cy-nyth",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "nyth (g.)",
+        "back": "nest",
+        "example_segment_id": "cy-brenin-01-l13-s042"
+      },
+      {
+        "lexeme_id": "cy-golau",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "golau (g.)",
+        "back": "light",
+        "example_segment_id": "cy-brenin-01-l13-s098"
+      },
+      {
+        "lexeme_id": "cy-cysgod",
+        "id": "base",
+        "lesson": "cy-brenin-01-l13",
+        "front": "cysgod (g.)",
+        "back": "shadow",
+        "example_segment_id": "cy-brenin-01-l13-s036",
+        "seen_as": "gysgod"
+      },
+      {
+        "lexeme_id": "cy-mynd",
+        "id": "past",
+        "lesson": "cy-brenin-01-l13",
+        "front": "mynd — es i, aeth e",
+        "back": "to go — I went, he went",
+        "example_segment_id": "cy-brenin-01-l13-s045"
+      },
+      {
+        "lexeme_id": "cy-dod",
+        "id": "past",
+        "lesson": "cy-brenin-01-l13",
+        "front": "dod — des i, daeth e",
+        "back": "to come — I came, he came",
+        "example_segment_id": "cy-brenin-01-l13-s001"
+      },
+      {
+        "lexeme_id": "cy-cael",
+        "id": "past",
+        "lesson": "cy-brenin-01-l13",
+        "front": "cael — ces i, cafodd e",
+        "back": "to get, have — I got, he got",
+        "example_segment_id": "cy-brenin-01-l13-s127"
+      },
+      {
+        "lexeme_id": "cy-gwneud",
+        "id": "past",
+        "lesson": "cy-brenin-01-l13",
+        "front": "gwneud — (g)wnes i, gwnaeth e",
+        "back": "to do, make — I did (wnes i + verb-noun), he did",
+        "example_segment_id": "cy-brenin-01-l13-s091"
+      },
+      {
+        "lexeme_id": "cy-gweld",
+        "id": "past",
+        "lesson": "cy-brenin-01-l13",
+        "front": "gweld — gwelais i, gwelodd e",
+        "back": "to see — I saw, he saw (Welaist ti …? — Do.)",
+        "example_segment_id": "cy-brenin-01-l13-s020"
+      },
+      {
+        "lexeme_id": "cy-pattern-g13",
+        "id": "pattern-g13",
+        "lesson": "cy-brenin-01-l13",
+        "front": "Hedfanodd Arth. Gwelodd e filwyr. — Welaist ti'r ogof? — Do. / Naddo.",
+        "back": "Arth flew. He saw soldiers. — Did you see the cave? — Yes. / No. (aeth, daeth, cafodd, gwnaeth)",
+        "example_segment_id": "cy-brenin-01-l13-s017",
+        "example_segment_ids": [
+          "cy-brenin-01-l13-s017",
+          "cy-brenin-01-l13-s093"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l13-img-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 2,
+      "margin_vignette": 3,
+      "margin_diagram": 1,
+      "margin_gloss": 23
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-13",
+      "rhan-2"
+    ]
+  },
+  "metrics": {
+    "running_words": 1162,
+    "sentences": 136,
+    "word_target": 1067,
+    "word_window": [
+      960,
+      1174
+    ]
+  }
+}

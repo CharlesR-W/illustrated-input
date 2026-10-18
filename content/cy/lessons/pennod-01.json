@@ -1,0 +1,1915 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l01",
+  "course_id": "cy-brenin-01",
+  "order": 1,
+  "title": "Ynys Prydain",
+  "rhan": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "pilot writer (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; pilot brief 2026-10-12",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Bootstrap chapter (design §2.1 exemption): map exposition with contrasts inside newly established material; no characters yet.",
+      "Running words 390, below the advisory 405–495 window. With 32 lexemes and only G01 grammar, every further sentence I tried restated a map fact; the design forbids padding (§2.1, editorial-decisions). Names and map carry the rest.",
+      "Gloss density is above the Rhan 1 band (about 5 per 100 words) because nearly every predicative adjective and noun in a zero-knowledge chapter is a new, mutated word that §2.3(a) requires to be glossed. Second occurrences inside the same sentence share one gloss.",
+      "No 'A ti?' item: second-person forms arrive in Pennod 5; Pensum C ends with a small production item (c7) instead.",
+      "Predicative yn contracts to 'n after a vowel (Cymru'n wlad); locative yn never contracts (Cymru yn Ynys Prydain). The wrong accepted answer 'Mae Cymru'n Ynys Prydain' was removed from C/c1 after model review; note the answer normaliser still expands every 'n to yn, so a lint for locative 'n is recommended."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "cy-brenin-01-l01-s003",
+        "question": "[?] Prepositional yn left uncontracted after a vowel ('Mae Cymru yn Ynys Prydain') while predicative yn contracts ('Mae Cymru'n wlad'). Model review (gpt-6-astra): normal Welsh spelling, not merely a convention. Confirm."
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s023",
+        "question": "[?] Place-name mutation policy (§2.3): 'Dyma Gymru', 'yng Nghwm Helyg'. Confirm."
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s028",
+        "question": "[?] Natural to write 'Mae'r Wyddfa'n fynydd …' (Yr Wyddfa contracted to 'r after Mae)?"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s048",
+        "question": "[?] Two yns in one clause (predicative + locative): reads naturally, or too confusing for Pennod 1?"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s045",
+        "question": "[?] Question-and-fragment narration ('Ac wrth yr afon? Tref fach.' / 'Ar y bryn? Ogof.'): acceptable narrative Welsh, not a fronted focus?"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s062",
+        "question": "[?] 'Teulu: teulu mawr.' as a narrated answer fragment: natural?"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s014",
+        "question": "[?] 'hefyd' placement after 'fawr' fine here?"
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G01",
+    "primary_new_grammar": {
+      "id": "G01",
+      "label": "Mae X yn/ar/wrth Y (location) and Mae X yn + adjective/noun (+ SM); Ble mae …?; Dyma …",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [],
+    "incidental": [
+      {
+        "form": "yng Nghymru (yn + NM chunk)",
+        "gloss_segment_id": "cy-brenin-01-l01-s024"
+      },
+      {
+        "form": "yng Nghwm Helyg (yn + NM chunk)",
+        "gloss_segment_id": "cy-brenin-01-l01-s054"
+      }
+    ],
+    "new_lexeme_ids": [
+      "cy-bod",
+      "cy-yn-prep",
+      "cy-yn-pred",
+      "cy-y",
+      "cy-a-conj",
+      "cy-ble",
+      "cy-hefyd",
+      "cy-ond",
+      "cy-dyma",
+      "cy-iawn",
+      "cy-ar",
+      "cy-wrth",
+      "cy-rhwng",
+      "cy-gwlad",
+      "cy-ynys",
+      "cy-mor",
+      "cy-mynydd",
+      "cy-afon",
+      "cy-dinas",
+      "cy-tref",
+      "cy-cwm",
+      "cy-bryn",
+      "cy-coedwig",
+      "cy-ogof",
+      "cy-llys",
+      "cy-ty",
+      "cy-teulu",
+      "cy-mawr",
+      "cy-bach",
+      "cy-hir",
+      "cy-uchel",
+      "cy-tywyll"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-bod",
+        "how": "context",
+        "segment_id": "cy-brenin-01-l01-s003"
+      },
+      {
+        "lexeme_id": "cy-yn-prep",
+        "how": "context",
+        "segment_id": "cy-brenin-01-l01-s003"
+      },
+      {
+        "lexeme_id": "cy-yn-pred",
+        "how": "picture(svg)+gloss",
+        "segment_id": "cy-brenin-01-l01-s004"
+      },
+      {
+        "lexeme_id": "cy-y",
+        "how": "context",
+        "segment_id": "cy-brenin-01-l01-s001"
+      },
+      {
+        "lexeme_id": "cy-a-conj",
+        "how": "context (lists of names)",
+        "segment_id": "cy-brenin-01-l01-s010"
+      },
+      {
+        "lexeme_id": "cy-ble",
+        "how": "context (question + map answer)",
+        "segment_id": "cy-brenin-01-l01-s005"
+      },
+      {
+        "lexeme_id": "cy-hefyd",
+        "how": "context (parallel facts)",
+        "segment_id": "cy-brenin-01-l01-s008"
+      },
+      {
+        "lexeme_id": "cy-ond",
+        "how": "contrast",
+        "segment_id": "cy-brenin-01-l01-s012"
+      },
+      {
+        "lexeme_id": "cy-dyma",
+        "how": "picture(cover map)+context",
+        "segment_id": "cy-brenin-01-l01-s001"
+      },
+      {
+        "lexeme_id": "cy-iawn",
+        "how": "contrast (fawr ↔ fawr iawn)",
+        "segment_id": "cy-brenin-01-l01-s004"
+      },
+      {
+        "lexeme_id": "cy-ar",
+        "how": "picture(cover map)+context",
+        "segment_id": "cy-brenin-01-l01-s002"
+      },
+      {
+        "lexeme_id": "cy-wrth",
+        "how": "picture(cover map)",
+        "segment_id": "cy-brenin-01-l01-s017"
+      },
+      {
+        "lexeme_id": "cy-rhwng",
+        "how": "picture(cover map)",
+        "segment_id": "cy-brenin-01-l01-s015"
+      },
+      {
+        "lexeme_id": "cy-gwlad",
+        "how": "picture(cover)+gloss",
+        "segment_id": "cy-brenin-01-l01-s011"
+      },
+      {
+        "lexeme_id": "cy-ynys",
+        "how": "picture(cover map)",
+        "segment_id": "cy-brenin-01-l01-s002"
+      },
+      {
+        "lexeme_id": "cy-mor",
+        "how": "picture(cover)",
+        "segment_id": "cy-brenin-01-l01-s015"
+      },
+      {
+        "lexeme_id": "cy-mynydd",
+        "how": "picture(cover)+gloss",
+        "segment_id": "cy-brenin-01-l01-s024"
+      },
+      {
+        "lexeme_id": "cy-afon",
+        "how": "picture(cover)+gloss",
+        "segment_id": "cy-brenin-01-l01-s029"
+      },
+      {
+        "lexeme_id": "cy-dinas",
+        "how": "picture(cover)+gloss+picture(vignette)",
+        "segment_id": "cy-brenin-01-l01-s036"
+      },
+      {
+        "lexeme_id": "cy-tref",
+        "how": "gloss+picture(vignette)",
+        "segment_id": "cy-brenin-01-l01-s038"
+      },
+      {
+        "lexeme_id": "cy-cwm",
+        "how": "picture(scene)",
+        "segment_id": "cy-brenin-01-l01-s040"
+      },
+      {
+        "lexeme_id": "cy-bryn",
+        "how": "picture(scene)",
+        "segment_id": "cy-brenin-01-l01-s049"
+      },
+      {
+        "lexeme_id": "cy-coedwig",
+        "how": "picture(scene)+gloss",
+        "segment_id": "cy-brenin-01-l01-s047"
+      },
+      {
+        "lexeme_id": "cy-ogof",
+        "how": "picture(vignette)",
+        "segment_id": "cy-brenin-01-l01-s051"
+      },
+      {
+        "lexeme_id": "cy-llys",
+        "how": "picture(scene)+name",
+        "segment_id": "cy-brenin-01-l01-s055"
+      },
+      {
+        "lexeme_id": "cy-ty",
+        "how": "picture(vignette)",
+        "segment_id": "cy-brenin-01-l01-s057"
+      },
+      {
+        "lexeme_id": "cy-teulu",
+        "how": "picture(vignette)",
+        "segment_id": "cy-brenin-01-l01-s062"
+      },
+      {
+        "lexeme_id": "cy-mawr",
+        "how": "picture(svg)+gloss",
+        "segment_id": "cy-brenin-01-l01-s004"
+      },
+      {
+        "lexeme_id": "cy-bach",
+        "how": "gloss",
+        "segment_id": "cy-brenin-01-l01-s012"
+      },
+      {
+        "lexeme_id": "cy-hir",
+        "how": "picture(cover map: long river)+contrast",
+        "segment_id": "cy-brenin-01-l01-s031"
+      },
+      {
+        "lexeme_id": "cy-uchel",
+        "how": "picture(cover map: mountains)",
+        "segment_id": "cy-brenin-01-l01-s025"
+      },
+      {
+        "lexeme_id": "cy-tywyll",
+        "how": "picture(scene)+gloss",
+        "segment_id": "cy-brenin-01-l01-s047"
+      }
+    ],
+    "recycle_lexeme_ids": [],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "type": "image",
+      "presentation": "inline_scene",
+      "ref": "cy-brenin-01-l01-img-map",
+      "src": "media/diagrams/cy-brenin-01-l01-img-map.svg",
+      "status": "draft",
+      "alt": "Map of the island of Britain: Wales, England and Scotland; Ireland across the sea to the west and Brittany across the sea to the south. Mountains in Eryri, the rivers Hafren and Wysg, the city of Caerllion, and a tiny dot for Cwm Helyg.",
+      "art_brief": "Hand-authored SVG map, reused in Penodau 13, 23 and 36. Island of Britain with internal borders for Cymru, Lloegr and Yr Alban; Iwerddon to the west and Llydaw to the south, both across the sea, with a hint of the European mainland in the lower right corner labelled Ewrop. Mountain symbols in Eryri with Yr Wyddfa marked; the river Hafren drawn long through Wales and England; the river Wysg in south-east Wales with a walled-city symbol for Caerllion on it; a very small dot in south Wales labelled Cwm Helyg. Sea in pale blue-grey with the label 'y môr'. Welsh labels only, at least 14 px: Ynys Prydain, Cymru, Lloegr, Yr Alban, Iwerddon, Llydaw, Ewrop, Eryri, Yr Wyddfa, Hafren, Wysg, Caerllion, Cwm Helyg, y môr. viewBox, <title> and <desc>; no raster.",
+      "covers_lexeme_ids": [
+        "cy-ynys",
+        "cy-mor",
+        "cy-gwlad",
+        "cy-mynydd",
+        "cy-afon",
+        "cy-dinas"
+      ],
+      "width": 1200,
+      "height": 800
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l01-sec1",
+        "title": "Ynys Prydain",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l01-s001",
+            "text": "Dyma'r map.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s002",
+            "text": "Dyma Ynys Prydain, ar y map."
+          },
+          {
+            "id": "cy-brenin-01-l01-s003",
+            "text": "Mae Ynys Prydain yn Ewrop."
+          },
+          {
+            "id": "cy-brenin-01-l01-s004",
+            "text": "Mae Ynys Prydain yn fawr: mae Ynys Prydain yn ynys fawr iawn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fawr",
+                "gloss": "fawr ← mawr",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-mawr"
+                ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l01-img-dau-yn",
+                "anchor_text": "yn fawr",
+                "label": "yn Ewrop · yn fawr",
+                "src": "media/diagrams/cy-brenin-01-l01-img-dau-yn.svg",
+                "alt": "Two mini-panels side by side. Left: the island of Britain drawn inside a larger outline of Europe, labelled 'yn Ewrop'. Right: a big island next to a small one, the big one labelled 'yn fawr'. Welsh labels only.",
+                "status": "draft",
+                "art_brief": "Two mini-panels side by side. Left: the island of Britain drawn inside a larger outline of Europe, labelled 'yn Ewrop'. Right: a big island next to a small one, the big one labelled 'yn fawr'. Welsh labels only.",
+                "covers_lexeme_ids": [
+                  "cy-yn-prep",
+                  "cy-yn-pred"
+                ],
+                "width": 300,
+                "height": 200
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s005",
+            "text": "Ble mae Cymru?",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s006",
+            "text": "Yn Ynys Prydain."
+          },
+          {
+            "id": "cy-brenin-01-l01-s007",
+            "text": "Ble mae Lloegr?"
+          },
+          {
+            "id": "cy-brenin-01-l01-s008",
+            "text": "Yn Ynys Prydain hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l01-s009",
+            "text": "Ac mae'r Alban yn Ynys Prydain."
+          },
+          {
+            "id": "cy-brenin-01-l01-s010",
+            "text": "Cymru, Lloegr a'r Alban: dyma Ynys Prydain."
+          },
+          {
+            "id": "cy-brenin-01-l01-s011",
+            "text": "Mae Cymru'n wlad, ac mae Lloegr yn wlad hefyd.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wlad",
+                "gloss": "wlad ← gwlad (b.)",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-gwlad"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s012",
+            "text": "Ond mae Cymru'n wlad fach, ac mae Lloegr yn wlad fawr.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fach",
+                "gloss": "fach ← bach",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-bach"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fach",
+                "gloss": "bach ↔ mawr",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "cy-bach"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s013",
+            "text": "A'r Alban?"
+          },
+          {
+            "id": "cy-brenin-01-l01-s014",
+            "text": "Mae'r Alban yn wlad fawr hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l01-s015",
+            "text": "Mae môr mawr rhwng Ynys Prydain ac Iwerddon.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s016",
+            "text": "Ble mae Iwerddon?"
+          },
+          {
+            "id": "cy-brenin-01-l01-s017",
+            "text": "Yn y môr, wrth Ynys Prydain."
+          },
+          {
+            "id": "cy-brenin-01-l01-s018",
+            "text": "Mae Iwerddon yn ynys hefyd, ac mae Iwerddon yn wlad."
+          },
+          {
+            "id": "cy-brenin-01-l01-s019",
+            "text": "Ble mae Llydaw?",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s020",
+            "text": "Mae Llydaw yn Ewrop, ac mae môr rhwng Llydaw a Lloegr."
+          },
+          {
+            "id": "cy-brenin-01-l01-s021",
+            "text": "Mae Llydaw yn wlad fach."
+          },
+          {
+            "id": "cy-brenin-01-l01-s022",
+            "text": "Mae Ynys Prydain yn fawr, ond mae'r môr yn fawr iawn."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l01-sec2",
+        "title": "Mynyddoedd ac afonydd",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l01-s023",
+            "text": "Dyma Gymru.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Gymru",
+                "gloss": "Gymru ← Cymru",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s024",
+            "text": "Mae Cymru'n fach, ond mae mynyddoedd mawr yng Nghymru.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "mynyddoedd",
+                "gloss": "mynydd, mynyddoedd",
+                "gloss_kind": "number",
+                "covers_lexeme_ids": [
+                  "cy-mynydd"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "yng Nghymru",
+                "gloss": "yng Nghymru ← yn + Cymru",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s025",
+            "text": "Ble mae'r mynyddoedd uchel?"
+          },
+          {
+            "id": "cy-brenin-01-l01-s026",
+            "text": "Yn Eryri."
+          },
+          {
+            "id": "cy-brenin-01-l01-s027",
+            "text": "Dyma Eryri, a dyma'r Wyddfa."
+          },
+          {
+            "id": "cy-brenin-01-l01-s028",
+            "text": "Mae'r Wyddfa'n fynydd uchel iawn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fynydd",
+                "gloss": "fynydd ← mynydd",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-mynydd"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s029",
+            "text": "Mae afonydd yng Nghymru hefyd.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "afonydd",
+                "gloss": "afon, afonydd",
+                "gloss_kind": "number",
+                "covers_lexeme_ids": [
+                  "cy-afon"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s030",
+            "text": "Dyma Afon Hafren."
+          },
+          {
+            "id": "cy-brenin-01-l01-s031",
+            "text": "Mae Hafren yn afon hir iawn, ac mae Hafren yng Nghymru ac yn Lloegr."
+          },
+          {
+            "id": "cy-brenin-01-l01-s032",
+            "text": "Dyma Afon Wysg."
+          },
+          {
+            "id": "cy-brenin-01-l01-s033",
+            "text": "Mae Afon Wysg yn hir, ond mae Hafren yn hir iawn."
+          },
+          {
+            "id": "cy-brenin-01-l01-s034",
+            "text": "Ble mae Caerllion?",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s035",
+            "text": "Mae Caerllion yng Nghymru, wrth Afon Wysg."
+          },
+          {
+            "id": "cy-brenin-01-l01-s036",
+            "text": "Mae Caerllion yn ddinas.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddinas",
+                "gloss": "ddinas ← dinas (b.)",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-dinas"
+                ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l01-img-dinas",
+                "anchor_text": "ddinas",
+                "label": "dinas",
+                "src": "media/vignettes/cy-brenin-01-l01-img-dinas.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A walled Roman city on a river: long high stone-and-red-brick walls, roofs inside, a round ruined amphitheatre just outside; seen from a little above. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-dinas"
+                ],
+                "width": 400,
+                "height": 192
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s037",
+            "text": "Dyma'r ddinas: mae waliau hir ac uchel yn y ddinas.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddinas",
+                "gloss": "y ddinas ← dinas (b.)",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-dinas"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s038",
+            "text": "Mae trefi yng Nghymru hefyd.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "trefi",
+                "gloss": "tref, trefi",
+                "gloss_kind": "number",
+                "covers_lexeme_ids": [
+                  "cy-tref"
+                ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l01-img-tref",
+                "anchor_text": "trefi",
+                "label": "tref",
+                "src": "media/vignettes/cy-brenin-01-l01-img-tref.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A small early-medieval market town: a dozen thatched timber houses, a small stone church with a bell-turret, a track leading in. Much smaller than the walled city. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-tref"
+                ],
+                "width": 400,
+                "height": 250
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s039",
+            "text": "Ond mae'r trefi'n fach, ac mae'r ddinas yn fawr."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l01-sec3",
+        "title": "Cwm Helyg",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l01-s040",
+            "text": "Ble mae Cwm Helyg ar y map?",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s041",
+            "text": "Yng Nghymru, rhwng y mynyddoedd."
+          },
+          {
+            "id": "cy-brenin-01-l01-s042",
+            "text": "Mae Cwm Helyg yn fach iawn ar y map!"
+          },
+          {
+            "id": "cy-brenin-01-l01-s043",
+            "text": "Ond dyma'r cwm: Cwm Helyg.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l01-img-cwm-helyg",
+                "src": "media/images/cy-brenin-01-l01-img-cwm-helyg.webp",
+                "alt": "Cwm Helyg from high on one side: a winding river with willows, a dark forest with a thin line of smoke from among the trees, a small palisaded farmstead with thatched buildings by the river, a small town far down the valley, and a high bare hill with a small dark cave mouth near the top.",
+                "status": "draft",
+                "art_brief": "Panorama of Cwm Helyg, a green valley in south Wales, seen from high on one side (match place-cwm-helyg.png). A winding river (Afon Helyg) with willow trees runs down the valley floor. A dark green forest fills one side; from among its trees rises one thin wisp of grey smoke (the tower is hidden; only the smoke shows). By the river, between the river and the hill, a small palisaded llys: a long timber hall with golden thatch and limewashed walls and several small thatched buildings inside a round wooden wall. Far down the valley, a small town with a little church. At the head of the valley a high bare grassy hill; near its top one small, clearly visible dark cave mouth. Slate-grey mountains beyond. Early morning light. No people visible. Valley palette: greens and slate. No text.",
+                "covers_lexeme_ids": [
+                  "cy-cwm",
+                  "cy-afon",
+                  "cy-coedwig",
+                  "cy-bryn",
+                  "cy-ogof",
+                  "cy-llys"
+                ],
+                "width": 1600,
+                "height": 1073
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s044",
+            "text": "Mae'r cwm yn hir, ac mae afon yn y cwm: Afon Helyg.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s045",
+            "text": "Ac wrth yr afon?"
+          },
+          {
+            "id": "cy-brenin-01-l01-s046",
+            "text": "Tref fach."
+          },
+          {
+            "id": "cy-brenin-01-l01-s047",
+            "text": "Mae coedwig yn y cwm hefyd, ac mae'r goedwig yn fawr ac yn dywyll.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "goedwig",
+                "gloss": "y goedwig ← coedwig (b.)",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-coedwig"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dywyll",
+                "gloss": "dywyll ← tywyll",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-tywyll"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s048",
+            "text": "Mae'r afon yn dywyll yn y goedwig.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dywyll",
+                "gloss": "dywyll ← tywyll",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-tywyll"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s049",
+            "text": "Mae bryn uchel wrth y goedwig.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "goedwig",
+                "gloss": "y goedwig ← coedwig (b.)",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-coedwig"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s050",
+            "text": "Ar y bryn?"
+          },
+          {
+            "id": "cy-brenin-01-l01-s051",
+            "text": "Ogof.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l01-img-ogof",
+                "anchor_text": "Ogof",
+                "label": "ogof",
+                "src": "media/vignettes/cy-brenin-01-l01-img-ogof.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A small dark cave mouth in a bare grassy hillside, a few rocks around it, black inside. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-ogof"
+                ],
+                "width": 400,
+                "height": 245
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s052",
+            "text": "Mae'r ogof yn fach, ond mae'r ogof yn dywyll iawn."
+          },
+          {
+            "id": "cy-brenin-01-l01-s053",
+            "text": "Ble mae Llys Cynyr?",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s054",
+            "text": "Yng Nghwm Helyg, rhwng yr afon a'r bryn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Nghwm",
+                "gloss": "yng Nghwm ← yn + Cwm",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s055",
+            "text": "Dyma'r llys: Llys Cynyr."
+          },
+          {
+            "id": "cy-brenin-01-l01-s056",
+            "text": "Mae wal hir wrth y llys."
+          },
+          {
+            "id": "cy-brenin-01-l01-s057",
+            "text": "Mae tai bach yn y llys, ac mae tŷ mawr yn y llys hefyd.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l01-img-ty-tai",
+                "anchor_text": "tai",
+                "label": "tŷ · tai",
+                "src": "media/vignettes/cy-brenin-01-l01-img-ty-tai.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "Left: one long timber hall with golden thatch and limewashed walls. Right: three small thatched huts. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-ty"
+                ],
+                "width": 400,
+                "height": 160
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s058",
+            "text": "Mae'r llys yn y cwm.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s059",
+            "text": "Mae'r cwm yng Nghymru."
+          },
+          {
+            "id": "cy-brenin-01-l01-s060",
+            "text": "Ac mae Cymru yn Ynys Prydain, ar y map."
+          },
+          {
+            "id": "cy-brenin-01-l01-s061",
+            "text": "Ac yn y tŷ mawr?",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l01-s062",
+            "text": "Teulu: teulu mawr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l01-img-teulu",
+                "anchor_text": "teulu",
+                "label": "teulu",
+                "src": "media/vignettes/cy-brenin-01-l01-img-teulu.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A family group standing together at a hall door, seen small: a big fair-bearded man, a tall woman with keys at her belt, a tall red-blond teenage boy, a girl with a long dark braid, a smaller boy with untidy brown hair, a short round cook with a spoon, and a big black-and-white dog. Faces small and simple. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-teulu"
+                ],
+                "width": 400,
+                "height": 367
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l01-s063",
+            "text": "Mae teulu mawr yn y llys."
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Mae … yn …",
+    "rule_cy": "Ble? → yn Ewrop, yn y cwm, yng Nghymru. — Mae … yn + mawr → yn fawr (m → f, b → f, g → –, d → dd, t → d; ll, rh: dim newid).",
+    "tables": [
+      {
+        "caption": "Ble mae …?",
+        "header": [
+          "Ble mae …?",
+          "Mae … yn / ar / wrth / rhwng …"
+        ],
+        "rows": [
+          [
+            "Ble mae Iwerddon?",
+            "Yn y môr, wrth Ynys Prydain."
+          ],
+          [
+            "Ble mae Caerllion?",
+            "Mae Caerllion yng Nghymru, wrth Afon Wysg."
+          ],
+          [
+            "Ble mae Llys Cynyr?",
+            "Yng Nghwm Helyg, rhwng yr afon a'r bryn."
+          ],
+          [
+            "Ar y bryn?",
+            "Ogof."
+          ]
+        ]
+      },
+      {
+        "caption": "yn Ewrop ↔ yn fawr",
+        "header": [
+          "",
+          "Mae … yn …"
+        ],
+        "rows": [
+          [
+            "mawr",
+            "Mae Ynys Prydain yn fawr."
+          ],
+          [
+            "bach",
+            "Mae Cymru'n fach."
+          ],
+          [
+            "gwlad (b.)",
+            "Mae Cymru'n wlad."
+          ],
+          [
+            "dinas (b.)",
+            "Mae Caerllion yn ddinas."
+          ],
+          [
+            "mynydd",
+            "Mae'r Wyddfa'n fynydd uchel iawn."
+          ],
+          [
+            "tywyll",
+            "Mae'r ogof yn dywyll iawn."
+          ],
+          [
+            "hir · uchel (dim newid)",
+            "Mae Afon Wysg yn hir."
+          ],
+          [
+            "Ewrop (lle)",
+            "Mae Ynys Prydain yn Ewrop."
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Mae … yn + mawr → yn fawr",
+            "Pennod 1"
+          ],
+          [
+            "Dyma + Cymru → Dyma Gymru",
+            "Pennod 1"
+          ],
+          [
+            "y goedwig (coedwig, b.) · gwlad fach (gwlad, b.)",
+            "Pennod 2"
+          ],
+          [
+            "yng Nghymru · yng Nghwm Helyg",
+            "Pennod 16"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l01-s003"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s004"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s035"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s036"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s023"
+      }
+    ],
+    "nodyn_en": "Mae means 'is' or 'there is'. Yn has two jobs. Before a place it means 'in' (yn Ewrop; yng Nghymru is a fixed chunk for now). Before a describing word or noun it links it to the subject and softens the first letter: mawr → yn fawr, dinas → yn ddinas. Ll- and rh- stay unchanged."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l01-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "Mae Cymru'n ___. (bach)",
+            "answer": "fach"
+          },
+          "mutation_hint": true,
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Mae Lloegr yn ___. (mawr)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "fawr"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "mawr",
+                  "hint": "yn + m → f"
+                }
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "Mae Hafren yn ___. (hir)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "hir"
+              ],
+              "explanation": "h: dim newid"
+            },
+            {
+              "id": "a3",
+              "prompt": "Mae Caerllion yn ___. (dinas)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "ddinas"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "dinas",
+                  "hint": "yn + d → dd"
+                }
+              ]
+            },
+            {
+              "id": "a4",
+              "prompt": "Mae'r bryn yn ___. (uchel)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "uchel"
+              ],
+              "explanation": "u: dim newid"
+            },
+            {
+              "id": "a5",
+              "prompt": "Mae'r ogof yn ___. (tywyll)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "dywyll"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "tywyll",
+                  "hint": "yn + t → d"
+                }
+              ]
+            },
+            {
+              "id": "a6",
+              "prompt": "Mae'r Wyddfa'n ___ uchel. (mynydd)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "fynydd"
+              ]
+            },
+            {
+              "id": "a7",
+              "prompt": "Mae tŷ ___ yn y llys. (mawr)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "mawr"
+              ],
+              "explanation": "tŷ (g.) + mawr → tŷ mawr",
+              "common_wrong": [
+                {
+                  "answer": "fawr",
+                  "hint": "tŷ (g.) + mawr → tŷ mawr"
+                }
+              ]
+            },
+            {
+              "id": "a8",
+              "prompt": "Mae Llydaw yn ___ fach. (gwlad)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "wlad"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "gwlad",
+                  "hint": "yn + g → –"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Ble mae Caerllion? (wrth · Afon Wysg)",
+            "answer": "Mae Caerllion wrth Afon Wysg."
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "Ble mae'r ogof? (ar · y bryn)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae'r ogof ar y bryn."
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l01-s052"
+              ]
+            },
+            {
+              "id": "a10",
+              "prompt": "Ble mae'r môr? (rhwng · Cymru · Iwerddon)",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae'r môr rhwng Cymru ac Iwerddon."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Mae'r môr rhwng Cymru a Iwerddon.",
+                  "hint": "a + Iwerddon → ac Iwerddon"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l01-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "bach",
+        "mawr",
+        "hir",
+        "uchel",
+        "tywyll",
+        "rhwng",
+        "wrth",
+        "ar",
+        "ble",
+        "hefyd",
+        "iawn"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Mae Lloegr yn fawr, ac mae'r Alban yn fawr, ond mae Llydaw yn ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "fach"
+          ],
+          "explanation": "yn + bach → fach"
+        },
+        {
+          "id": "b2",
+          "prompt": "Mae'r bryn yn uchel, ond mae'r Wyddfa'n uchel ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "iawn"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Mae'r môr ___ Cymru ac Iwerddon.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "rhwng"
+          ]
+        },
+        {
+          "id": "b4",
+          "prompt": "Dyma'r map. Mae Cwm Helyg ___ y map, ond mae Cwm Helyg yn fach iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ar"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "\"___ mae'r dref?\" \"Wrth yr afon, yn y cwm.\"",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Ble"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae afon yn y cwm, ac mae coedwig yn y cwm ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "hefyd"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Mae Afon Helyg yn fach, ond mae Hafren yn afon ___ iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "hir",
+            "fawr"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "Mae Lloegr yn wlad fawr, ond dyma Gymru: gwlad ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "fach"
+          ],
+          "explanation": "gwlad (b.) + bach → gwlad fach"
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l01-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Ble mae Cymru?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Yn Ynys Prydain",
+            "Mae Cymru yn Ynys Prydain",
+            "Yn Ewrop",
+            "Mae Cymru yn Ewrop"
+          ],
+          "model_answer": "Mae Cymru yn Ynys Prydain.",
+          "source_segment_ids": [
+            "cy-brenin-01-l01-s005"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Ble mae Iwerddon?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae Iwerddon yn y môr, wrth Ynys Prydain.",
+          "rubric": "Says Ireland is in the sea, or by Britain.",
+          "key_terms": [
+            "cy-mor",
+            "cy-wrth"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l01-s017"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Ble mae Caerllion?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae Caerllion wrth Afon Wysg.",
+          "rubric": "Gives Wales or the river Wysg.",
+          "key_terms": [
+            "cy-afon"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l01-s035"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Ble mae'r ogof?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Ar y bryn",
+            "Mae'r ogof ar y bryn"
+          ],
+          "model_answer": "Mae'r ogof ar y bryn.",
+          "source_segment_ids": [
+            "cy-brenin-01-l01-s051"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Ble mae Llys Cynyr?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae Llys Cynyr yn y cwm, rhwng yr afon a'r bryn.",
+          "rubric": "Places the llys in Cwm Helyg, or between the river and the hill.",
+          "key_terms": [
+            "cy-cwm",
+            "cy-afon",
+            "cy-bryn"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l01-s054"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Ble mae'r teulu?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Yn y llys",
+            "Mae'r teulu yn y llys",
+            "Yn y tŷ mawr",
+            "Mae'r teulu yn y tŷ mawr",
+            "Mae'r teulu yn y tŷ mawr, yn y llys",
+            "Yn y tŷ mawr, yn y llys"
+          ],
+          "model_answer": "Mae'r teulu yn y tŷ mawr, yn y llys.",
+          "source_segment_ids": [
+            "cy-brenin-01-l01-s063"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "Mae Hafren yn hir. A'r Wyddfa?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae'r Wyddfa'n uchel iawn. / Mae'r Wyddfa'n fynydd uchel.",
+          "rubric": "One 'Mae … yn …' sentence about Yr Wyddfa with a mutated or unchanged adjective used correctly (yn uchel, yn fawr, yn fynydd).",
+          "key_terms": [
+            "cy-uchel",
+            "cy-mynydd",
+            "cy-mawr"
+          ]
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-bod",
+      "citation_form": "bod (mae)",
+      "part_of_speech": "verb",
+      "current_sense": "to be (mae = is; there is)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-yn-prep",
+      "citation_form": "yn (+ NM): in",
+      "part_of_speech": "preposition",
+      "current_sense": "in (+ nasal mutation: yng Nghymru)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-yn-pred",
+      "citation_form": "yn (+ SM)",
+      "part_of_speech": "particle",
+      "current_sense": "links a description or a noun to the subject (+ soft mutation): yn fawr = (is) big",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-y",
+      "citation_form": "y / yr / 'r",
+      "part_of_speech": "determiner",
+      "current_sense": "the (y / yr / 'r)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-a-conj",
+      "citation_form": "a / ac",
+      "part_of_speech": "conjunction",
+      "current_sense": "and (ac before vowels and mae)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ble",
+      "citation_form": "ble",
+      "part_of_speech": "adverb",
+      "current_sense": "where?",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-hefyd",
+      "citation_form": "hefyd",
+      "part_of_speech": "adverb",
+      "current_sense": "also, too",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ond",
+      "citation_form": "ond",
+      "part_of_speech": "conjunction",
+      "current_sense": "but",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dyma",
+      "citation_form": "dyma",
+      "part_of_speech": "adverb",
+      "current_sense": "here is / here are",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-iawn",
+      "citation_form": "iawn",
+      "part_of_speech": "adverb",
+      "current_sense": "very (after the adjective)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ar",
+      "citation_form": "ar (+ SM)",
+      "part_of_speech": "preposition",
+      "current_sense": "on (+ SM)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-wrth",
+      "citation_form": "wrth (+ SM)",
+      "part_of_speech": "preposition",
+      "current_sense": "by, beside (+ SM)",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-rhwng",
+      "citation_form": "rhwng",
+      "part_of_speech": "preposition",
+      "current_sense": "between",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwlad",
+      "citation_form": "gwlad (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "country",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ynys",
+      "citation_form": "ynys (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "island",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-mor",
+      "citation_form": "môr (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "sea",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-mynydd",
+      "citation_form": "mynydd (g.), mynyddoedd",
+      "part_of_speech": "noun",
+      "current_sense": "mountain",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-afon",
+      "citation_form": "afon (b.), afonydd",
+      "part_of_speech": "noun",
+      "current_sense": "river",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dinas",
+      "citation_form": "dinas (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "city",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tref",
+      "citation_form": "tref (b.), trefi",
+      "part_of_speech": "noun",
+      "current_sense": "town",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cwm",
+      "citation_form": "cwm (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "valley",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-bryn",
+      "citation_form": "bryn (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "hill",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-coedwig",
+      "citation_form": "coedwig (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "forest",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ogof",
+      "citation_form": "ogof (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "cave",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-llys",
+      "citation_form": "llys (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "court; lord's hall and farmstead",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ty",
+      "citation_form": "tŷ (g.), tai",
+      "part_of_speech": "noun",
+      "current_sense": "house",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-teulu",
+      "citation_form": "teulu (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "family",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-mawr",
+      "citation_form": "mawr",
+      "part_of_speech": "adjective",
+      "current_sense": "big",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-bach",
+      "citation_form": "bach",
+      "part_of_speech": "adjective",
+      "current_sense": "small",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-hir",
+      "citation_form": "hir",
+      "part_of_speech": "adjective",
+      "current_sense": "long",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-uchel",
+      "citation_form": "uchel",
+      "part_of_speech": "adjective",
+      "current_sense": "high; loud",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tywyll",
+      "citation_form": "tywyll",
+      "part_of_speech": "adjective",
+      "current_sense": "dark",
+      "first_introduced_lesson": "cy-brenin-01-l01",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-01.json.",
+    "card_stages": [
+      {
+        "lexeme_id": "cy-bod",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "bod (mae)",
+        "back": "to be (mae = is; there is)",
+        "example_segment_id": "cy-brenin-01-l01-s003"
+      },
+      {
+        "lexeme_id": "cy-yn-prep",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "yn (+ NM): in",
+        "back": "in (+ nasal mutation: yng Nghymru)",
+        "example_segment_id": "cy-brenin-01-l01-s003"
+      },
+      {
+        "lexeme_id": "cy-yn-pred",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "yn (+ SM)",
+        "back": "links a description or a noun to the subject (+ soft mutation): yn fawr = (is) big",
+        "example_segment_id": "cy-brenin-01-l01-s036"
+      },
+      {
+        "lexeme_id": "cy-y",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "y / yr / 'r",
+        "back": "the (y / yr / 'r)",
+        "example_segment_id": "cy-brenin-01-l01-s001"
+      },
+      {
+        "lexeme_id": "cy-a-conj",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "a / ac",
+        "back": "and (ac before vowels and mae)",
+        "example_segment_id": "cy-brenin-01-l01-s020"
+      },
+      {
+        "lexeme_id": "cy-ble",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "ble",
+        "back": "where?",
+        "example_segment_id": "cy-brenin-01-l01-s005"
+      },
+      {
+        "lexeme_id": "cy-hefyd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "hefyd",
+        "back": "also, too",
+        "example_segment_id": "cy-brenin-01-l01-s008"
+      },
+      {
+        "lexeme_id": "cy-ond",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "ond",
+        "back": "but",
+        "example_segment_id": "cy-brenin-01-l01-s012"
+      },
+      {
+        "lexeme_id": "cy-dyma",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "dyma",
+        "back": "here is / here are",
+        "example_segment_id": "cy-brenin-01-l01-s001"
+      },
+      {
+        "lexeme_id": "cy-iawn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "iawn",
+        "back": "very (after the adjective)",
+        "example_segment_id": "cy-brenin-01-l01-s004"
+      },
+      {
+        "lexeme_id": "cy-ar",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "ar (+ SM)",
+        "back": "on (+ SM)",
+        "example_segment_id": "cy-brenin-01-l01-s002"
+      },
+      {
+        "lexeme_id": "cy-wrth",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "wrth (+ SM)",
+        "back": "by, beside (+ SM)",
+        "example_segment_id": "cy-brenin-01-l01-s017"
+      },
+      {
+        "lexeme_id": "cy-rhwng",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "rhwng",
+        "back": "between",
+        "example_segment_id": "cy-brenin-01-l01-s015"
+      },
+      {
+        "lexeme_id": "cy-gwlad",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "gwlad (b.)",
+        "back": "country",
+        "example_segment_id": "cy-brenin-01-l01-s011",
+        "seen_as": "wlad"
+      },
+      {
+        "lexeme_id": "cy-ynys",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "ynys (b.)",
+        "back": "island",
+        "example_segment_id": "cy-brenin-01-l01-s002"
+      },
+      {
+        "lexeme_id": "cy-mor",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "môr (g.)",
+        "back": "sea",
+        "example_segment_id": "cy-brenin-01-l01-s015"
+      },
+      {
+        "lexeme_id": "cy-mynydd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "mynydd (g.), mynyddoedd",
+        "back": "mountain",
+        "example_segment_id": "cy-brenin-01-l01-s024"
+      },
+      {
+        "lexeme_id": "cy-afon",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "afon (b.), afonydd",
+        "back": "river",
+        "example_segment_id": "cy-brenin-01-l01-s029"
+      },
+      {
+        "lexeme_id": "cy-dinas",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "dinas (b.)",
+        "back": "city",
+        "example_segment_id": "cy-brenin-01-l01-s036",
+        "seen_as": "ddinas"
+      },
+      {
+        "lexeme_id": "cy-tref",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "tref (b.), trefi",
+        "back": "town",
+        "example_segment_id": "cy-brenin-01-l01-s038"
+      },
+      {
+        "lexeme_id": "cy-cwm",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "cwm (g.)",
+        "back": "valley",
+        "example_segment_id": "cy-brenin-01-l01-s040"
+      },
+      {
+        "lexeme_id": "cy-bryn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "bryn (g.)",
+        "back": "hill",
+        "example_segment_id": "cy-brenin-01-l01-s049"
+      },
+      {
+        "lexeme_id": "cy-coedwig",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "coedwig (b.)",
+        "back": "forest",
+        "example_segment_id": "cy-brenin-01-l01-s047"
+      },
+      {
+        "lexeme_id": "cy-ogof",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "ogof (b.)",
+        "back": "cave",
+        "example_segment_id": "cy-brenin-01-l01-s051"
+      },
+      {
+        "lexeme_id": "cy-llys",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "llys (g.)",
+        "back": "court; lord's hall and farmstead",
+        "example_segment_id": "cy-brenin-01-l01-s053"
+      },
+      {
+        "lexeme_id": "cy-ty",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "tŷ (g.), tai",
+        "back": "house",
+        "example_segment_id": "cy-brenin-01-l01-s057"
+      },
+      {
+        "lexeme_id": "cy-teulu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "teulu (g.)",
+        "back": "family",
+        "example_segment_id": "cy-brenin-01-l01-s062"
+      },
+      {
+        "lexeme_id": "cy-mawr",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "mawr",
+        "back": "big",
+        "example_segment_id": "cy-brenin-01-l01-s004",
+        "seen_as": "fawr"
+      },
+      {
+        "lexeme_id": "cy-bach",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "bach",
+        "back": "small",
+        "example_segment_id": "cy-brenin-01-l01-s012",
+        "seen_as": "fach"
+      },
+      {
+        "lexeme_id": "cy-hir",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "hir",
+        "back": "long",
+        "example_segment_id": "cy-brenin-01-l01-s031"
+      },
+      {
+        "lexeme_id": "cy-uchel",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "uchel",
+        "back": "high; loud",
+        "example_segment_id": "cy-brenin-01-l01-s025"
+      },
+      {
+        "lexeme_id": "cy-tywyll",
+        "id": "base",
+        "lesson": "cy-brenin-01-l01",
+        "front": "tywyll",
+        "back": "dark",
+        "example_segment_id": "cy-brenin-01-l01-s047",
+        "seen_as": "dywyll"
+      },
+      {
+        "lexeme_id": "cy-pattern-g01",
+        "id": "pattern-g01",
+        "lesson": "cy-brenin-01-l01",
+        "front": "Ble mae …? — Mae … yn y cwm. / Mae … yn fawr.",
+        "back": "Where is …? — … is in the valley. / … is big (yn + soft mutation).",
+        "example_segment_id": "cy-brenin-01-l01-s035",
+        "example_segment_ids": [
+          "cy-brenin-01-l01-s035",
+          "cy-brenin-01-l01-s036"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l01-img-map",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 1,
+      "margin_vignette": 5,
+      "margin_diagram": 1,
+      "margin_gloss": 17
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-01",
+      "rhan-1"
+    ]
+  },
+  "metrics": {
+    "running_words": 390,
+    "sentences": 63,
+    "word_target": 450,
+    "word_window": [
+      405,
+      495
+    ]
+  }
+}

@@ -1,0 +1,2357 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l14",
+  "course_id": "cy-brenin-01",
+  "order": 14,
+  "title": "Yn y ffair",
+  "rhan": 2,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "block writer B2 (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief 2026-10-12 (B2: Penodau 11–15)",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Prior coverage is about 85%, below the 88% Rhan 2 floor: the chapter's planned lexicon is mostly the numerals (13 of 29), which by design recur in counting runs (Modlen's eggs, Mali's coins, the apple-seller's count) and in every price. Reducing them would defeat the target; known-word dialogue was added instead (the walk to town, the stranger, Arth's fib 'Ar… y gwynt').",
+      "Numerals 1–10 and ugain all occur ≥ 3 times; each counting run is covered by the numerals diagram (covers_lexeme_ids) so the local-density check treats them as pictured. pum and chwe are licensed as forms of pump / chwech in the delta.",
+      "Mutation after numerals is shown with c-initial nouns (un geiniog, dwy geiniog, tri chaws, chwe cheiniog, tair ceiniog) and in Gaf i ddau afal? / Gaf i fochyn bach? (object SM after the inflected verb, Pennod 12–13).",
+      "tafarn is not available until Pennod 22, so the inn is 'tŷ'r tafarnwr'.",
+      "Codex review 2026-10-12, verdicts on the [?] questions (all accepted, no text change): s040 repeating ceiniog while counting; s037 'Dau wy: un geiniog' and bare 'Tair ceiniog'; s063 'pum ceiniog, dim saith!'; s060 unmutated saith ceiniog (matches Mynediad De); s099 'tŷ'r tafarnwr' as a workable circumlocution (the innkeeper's house, not a synonym of tafarn); s108 bare ugain; s085 'meddai'r fasged'; s020/s021 'Oes, Mam. Caws.'; s046 'Gaf i fochyn bach?' (object SM). Delta genders and plurals confirmed.",
+      "Applied from the Codex review (2026-10-12): C.c2 no longer has unmutated 'yn basged Modlen' (now 'Faint o wyau sy gyda Modlen?', avoiding the yn + nasal mutation that is taught only in Pennod 16; the reviewer's 'ym masged Modlen' is equally correct); un + ll-/rh- exception added to nodyn_en and the Treigladau table; A.a10 accepts Gwnes i and the ddoe cue; C.c2 accepts 'Deg o wyau', C.c3 full price sentences. rule_cy 'Un enw ar ôl rhif' (style) rewritten as 'Rhif + afal (dim afalau)' rather than the suggested 'Enw unigol', because unigol is not in the cumulative lexicon. Also (writer's own fix): C.c1 'Pwy sy'n …?' (G24) changed to the whitelisted 'Pwy sy wedi …?'; the wedi recall cue is now '(wedi)' rather than '(nawr: wedi)'."
+    ],
+    "review_questions": []
+  },
+  "learning_contract": {
+    "grammar_target_id": "G14",
+    "primary_new_grammar": {
+      "id": "G14",
+      "label": "numerals 1–10 and ugain with gender forms (dau / dwy, tri / tair, pedwar / pedair; pum, chwe before nouns), singular noun after a numeral; Faint yw …?; Gaf i …? — Cei. / Na chei.",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G06",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "G13"
+    ],
+    "incidental": [
+      {
+        "form": "Gaf i …? / Cei / Na chei (formula, §5.2 whitelist)",
+        "gloss_segment_id": "cy-brenin-01-l14-s071"
+      }
+    ],
+    "new_lexeme_ids": [
+      "cy-dau",
+      "cy-dwy",
+      "cy-tri",
+      "cy-tair",
+      "cy-pedwar",
+      "cy-pedair",
+      "cy-pump",
+      "cy-chwech",
+      "cy-saith",
+      "cy-wyth",
+      "cy-naw",
+      "cy-deg",
+      "cy-ugain",
+      "cy-faint",
+      "cy-ffair",
+      "cy-ceiniog",
+      "cy-basged",
+      "cy-afal",
+      "cy-gwlan",
+      "cy-dafad",
+      "cy-mochyn",
+      "cy-buwch",
+      "cy-tafarnwr",
+      "cy-prynu",
+      "cy-gwerthu",
+      "cy-talu",
+      "cy-cyfrif",
+      "cy-drud",
+      "cy-rhad"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-dau",
+        "how": "counting sequence + diagram",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-dwy",
+        "how": "coin counting + diagram",
+        "segment_id": "cy-brenin-01-l14-s040"
+      },
+      {
+        "lexeme_id": "cy-tri",
+        "how": "counting sequence + diagram (tri chaws)",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-tair",
+        "how": "coin counting + diagram",
+        "segment_id": "cy-brenin-01-l14-s029"
+      },
+      {
+        "lexeme_id": "cy-pedwar",
+        "how": "counting sequence + diagram",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-pedair",
+        "how": "coin counting + diagram",
+        "segment_id": "cy-brenin-01-l14-s025"
+      },
+      {
+        "lexeme_id": "cy-pump",
+        "how": "counting + paradigm gloss (pump → pum ceiniog)",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-chwech",
+        "how": "counting + paradigm gloss (chwech → chwe cheiniog)",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-saith",
+        "how": "counting sequence",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-wyth",
+        "how": "counting sequence",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-naw",
+        "how": "counting sequence",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-deg",
+        "how": "counting sequence",
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "lexeme_id": "cy-ugain",
+        "how": "context (a price that is drud) + diagram",
+        "segment_id": "cy-brenin-01-l14-s044"
+      },
+      {
+        "lexeme_id": "cy-faint",
+        "how": "paradigm gloss (Faint yw …? → Tair ceiniog.)",
+        "segment_id": "cy-brenin-01-l14-s028"
+      },
+      {
+        "lexeme_id": "cy-ffair",
+        "how": "picture(cover)+context",
+        "segment_id": "cy-brenin-01-l14-s002"
+      },
+      {
+        "lexeme_id": "cy-ceiniog",
+        "how": "picture(vignette)+gloss",
+        "segment_id": "cy-brenin-01-l14-s029"
+      },
+      {
+        "lexeme_id": "cy-basged",
+        "how": "picture(cover)+gloss",
+        "segment_id": "cy-brenin-01-l14-s010"
+      },
+      {
+        "lexeme_id": "cy-afal",
+        "how": "picture(cover+scene)+number gloss",
+        "segment_id": "cy-brenin-01-l14-s069"
+      },
+      {
+        "lexeme_id": "cy-gwlan",
+        "how": "picture(vignette)+context (o'r defaid)",
+        "segment_id": "cy-brenin-01-l14-s048"
+      },
+      {
+        "lexeme_id": "cy-dafad",
+        "how": "picture(vignette)+number gloss",
+        "segment_id": "cy-brenin-01-l14-s025"
+      },
+      {
+        "lexeme_id": "cy-mochyn",
+        "how": "picture(vignette)",
+        "segment_id": "cy-brenin-01-l14-s025"
+      },
+      {
+        "lexeme_id": "cy-buwch",
+        "how": "picture(vignette)+gloss",
+        "segment_id": "cy-brenin-01-l14-s025"
+      },
+      {
+        "lexeme_id": "cy-tafarnwr",
+        "how": "define gloss (gwerthu bwyd i bawb)+context",
+        "segment_id": "cy-brenin-01-l14-s099"
+      },
+      {
+        "lexeme_id": "cy-prynu",
+        "how": "antonym gloss (prynu ↔ gwerthu)",
+        "segment_id": "cy-brenin-01-l14-s023"
+      },
+      {
+        "lexeme_id": "cy-gwerthu",
+        "how": "antonym gloss (prynu ↔ gwerthu)",
+        "segment_id": "cy-brenin-01-l14-s023"
+      },
+      {
+        "lexeme_id": "cy-talu",
+        "how": "define gloss (ceiniog → Elen)",
+        "segment_id": "cy-brenin-01-l14-s033"
+      },
+      {
+        "lexeme_id": "cy-cyfrif",
+        "how": "define gloss (un, dau, tri …)",
+        "segment_id": "cy-brenin-01-l14-s011"
+      },
+      {
+        "lexeme_id": "cy-drud",
+        "how": "antonym gloss (drud ↔ rhad)+gloss",
+        "segment_id": "cy-brenin-01-l14-s030"
+      },
+      {
+        "lexeme_id": "cy-rhad",
+        "how": "antonym gloss (drud ↔ rhad)",
+        "segment_id": "cy-brenin-01-l14-s031"
+      }
+    ],
+    "recycle_lexeme_ids": [
+      "cy-un",
+      "cy-caws",
+      "cy-wy",
+      "cy-tref",
+      "cy-dieithryn",
+      "cy-un-ar-ddeg",
+      "cy-gweld",
+      "cy-gyda",
+      "cy-wedi",
+      "cy-cynffon",
+      "cy-cuddio",
+      "cy-ffordd",
+      "cy-wedyn",
+      "cy-ph-i-lawr",
+      "cy-mwg"
+    ],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "ref": "cy-brenin-01-l14-img-cover",
+      "src": "media/images/cy-brenin-01-l14-img-cover.webp",
+      "status": "draft",
+      "presentation": "inline_scene",
+      "alt": "The town fair on a sunny morning: stalls of cheese, eggs, apples and wool, sheep, pigs and a cow, and Elen, Modlen, Mali and Arth arriving with baskets; a wisp of smoke rises from Mali's basket.",
+      "art_brief": "A small market town in the valley (timber, wattle and thatch, a little stone church tower behind; valley greens and slate), market day in sunshine. Stalls on trestles: round cheeses, eggs in straw, heaps of red and green apples, piles of white and black wool; hurdle pens with four pigs, four sheep and a big brown-and-white cow; townsfolk in tunics and cloaks buying and selling, a silver penny changing hands. In the foreground arrive Elen (tall, white linen veil, forest-green dress, keys at her belt) carrying a basket of cheeses, Modlen (short, round, rosy, white headscarf, floury apron, wooden spoon) with a basket of eggs, Arth (11, untidy brown hair with cowlick, oversized moss-green tunic) and Mali (12, long dark braid, dark-blue dress) with a covered wicker basket from which a thin wisp of grey smoke rises. In the far background, by a big house with a hanging bush sign (no lettering), a black horse is tied. No text, no numbers.",
+      "characters": [
+        "char-elen",
+        "char-modlen",
+        "char-arth",
+        "char-mali"
+      ],
+      "covers_lexeme_ids": [
+        "cy-ffair",
+        "cy-basged",
+        "cy-afal",
+        "cy-dafad",
+        "cy-mochyn",
+        "cy-buwch",
+        "cy-gwlan",
+        "cy-prynu",
+        "cy-gwerthu"
+      ],
+      "width": 1600,
+      "height": 1073
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l14-sec1",
+        "title": "I'r ffair",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l14-s001",
+            "text": "Mae hi'n fore, ac mae'r haul yn gynnes: does dim cymylau heddiw.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s002",
+            "text": "Heddiw mae ffair yn y dref, ac mae Elen, Modlen, Mali ac Arth yn mynd i'r ffair."
+          },
+          {
+            "id": "cy-brenin-01-l14-s003",
+            "text": "Mae Cynyr a Cai'n aros yn y llys, ac mae Pero'n cysgu wrth y stabl."
+          },
+          {
+            "id": "cy-brenin-01-l14-s004",
+            "text": "\"Dw i eisiau gweld y ffair!\" meddai Arth, ac mae e'n rhedeg ar y ffordd.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s005",
+            "text": "\"Paid â rhedeg, Arth!\" meddai Modlen. \"Mae wyau yn y fasged!\"",
+            "paragraph_start": true,
+            "speaker": "char-modlen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fasged",
+                "gloss": "y fasged ← basged (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s007",
+            "text": "\"Wyt ti'n cofio'r dieithryn, Mali?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s008",
+            "text": "\"Ydw,\" meddai Mali. \"Ddoe, gwelodd Arth y milwyr, ac mae'r dieithryn gyda'r milwyr.\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s009",
+            "text": "\"Dw i ddim eisiau gweld y dieithryn,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s010",
+            "text": "Mae basged fawr gyda Modlen.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s011",
+            "text": "\"Wyau!\" meddai Modlen, ac mae hi'n edrych yn y fasged ac yn cyfrif yr wyau.",
+            "paragraph_start": true,
+            "speaker": "char-modlen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cyfrif",
+                "gloss": "cyfrif: un, dau, tri …",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s012",
+            "text": "\"Un, dau, tri, pedwar, pump, chwech, saith, wyth, naw, deg!",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l14-img-rhifau",
+                "anchor_text": "dau",
+                "label": "dau gi · dwy gath",
+                "src": "media/diagrams/cy-brenin-01-l14-img-rhifau.svg",
+                "alt": "A small table: two dogs 'dau gi' beside two cats 'dwy gath'; three horses 'tri cheffyl' beside three cows 'tair buwch'; 'un ci · un gath'; five coins 'pum ceiniog'. Column heads (g.) and (b.). Welsh labels only.",
+                "status": "draft",
+                "covers_lexeme_ids": [
+                  "cy-dau",
+                  "cy-dwy",
+                  "cy-tri",
+                  "cy-tair",
+                  "cy-pedwar",
+                  "cy-pedair",
+                  "cy-pump",
+                  "cy-chwech",
+                  "cy-saith",
+                  "cy-wyth",
+                  "cy-naw",
+                  "cy-deg",
+                  "cy-ugain",
+                  "cy-ceiniog"
+                ],
+                "width": 300,
+                "height": 260
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s013",
+            "text": "Deg wy.\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s014",
+            "text": "Mae basged gyda Mali hefyd, ac mae tri chaws yn y fasged.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "tri chaws",
+                "gloss": "tri + caws → tri chaws",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s015",
+            "text": "Ond mae basged Mali'n drwm iawn, ac mae mwg bach yn dod o'r caws!"
+          },
+          {
+            "id": "cy-brenin-01-l14-s017",
+            "text": "\"Mali!\" meddai e yn dawel. \"Dafi?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s018",
+            "text": "\"Dafi,\" meddai Mali yn dawel. \"Mae e eisiau gweld y ffair.\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s019",
+            "text": "Mae Elen yn edrych ar y mwg hefyd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s020",
+            "text": "\"Oes rhywbeth yn y fasged, Mali?\" meddai hi.",
+            "paragraph_start": true,
+            "speaker": "char-elen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s021",
+            "text": "\"Oes, Mam,\" meddai Mali. \"Caws.\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s022",
+            "text": "Mae Elen yn gwenu, ond dyw hi ddim yn siarad.",
+            "paragraph_start": true
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l14-sec2",
+        "title": "Faint yw'r caws?",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l14-s128",
+            "text": "Maen nhw'n cyrraedd y ffair ar y maes wrth y dref.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s023",
+            "text": "Mae'r ffair yn fawr ac yn brysur, ac mae dynion a menywod yn prynu ac yn gwerthu.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "prynu",
+                "gloss": "prynu ↔ gwerthu",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s024",
+            "text": "Mae hebog yma hefyd, gyda lledr ar ei goesau ac adenydd llwyd."
+          },
+          {
+            "id": "cy-brenin-01-l14-s025",
+            "text": "Mae dyn yn gwerthu pedwar mochyn, ac mae menyw'n gwerthu pedair dafad a buwch fawr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l14-img-anifeiliaid",
+                "anchor_text": "mochyn",
+                "label": "mochyn · dafad · buwch",
+                "src": "media/vignettes/cy-brenin-01-l14-img-anifeiliaid.webp",
+                "alt": "",
+                "status": "planned",
+                "art_brief": "A pig, a sheep and a cow standing side by side, simple and friendly. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-mochyn",
+                  "cy-dafad",
+                  "cy-buwch"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s026",
+            "text": "Nawr mae Modlen yn glanhau bwrdd bach, ac mae hi ac Elen yn rhoi'r caws a'r wyau ar y bwrdd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s027",
+            "text": "Dyma ddyn mawr, ac mae e'n edrych ar y caws.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s028",
+            "text": "\"Faint yw'r caws?\" meddai'r dyn.",
+            "paragraph_start": true,
+            "speaker": "char-cwsmer",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Faint",
+                "gloss": "Faint yw …? → Tair ceiniog.",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s029",
+            "text": "\"Tair ceiniog,\" meddai Elen.",
+            "paragraph_start": true,
+            "speaker": "char-elen",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l14-img-ceiniog",
+                "anchor_text": "ceiniog",
+                "label": "ceiniog",
+                "src": "media/vignettes/cy-brenin-01-l14-img-ceiniog.webp",
+                "alt": "",
+                "status": "planned",
+                "art_brief": "One small round silver penny with a simple cross on it. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-ceiniog"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s030",
+            "text": "\"Tair ceiniog? Mae'r caws yn ddrud!\"",
+            "paragraph_start": true,
+            "speaker": "char-cwsmer",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddrud",
+                "gloss": "yn ddrud ← drud",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s031",
+            "text": "\"Drud?\" meddai Modlen. \"Nac ydy! Mae e'n rhad!\"",
+            "paragraph_start": true,
+            "speaker": "char-modlen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "rhad",
+                "gloss": "drud ↔ rhad",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s129",
+            "text": "\"Caws da yw e: ein caws ni, caws Llys Cynyr!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s033",
+            "text": "Mae'r dyn yn prynu'r caws, ac mae e'n talu tair ceiniog i Elen.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "talu",
+                "gloss": "talu: ceiniog → Elen",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s036",
+            "text": "\"Faint yw'r wyau?\" meddai menyw fach.",
+            "paragraph_start": true,
+            "speaker": "char-cwsmer"
+          },
+          {
+            "id": "cy-brenin-01-l14-s037",
+            "text": "\"Dau wy: un geiniog,\" meddai Elen.",
+            "paragraph_start": true,
+            "speaker": "char-elen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "geiniog",
+                "gloss": "un geiniog ← ceiniog (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s038",
+            "text": "Mae'r fenyw'n prynu wyth wy, ac mae hi'n talu pedair ceiniog.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s039",
+            "text": "Nawr mae Mali'n cyfrif y ceiniogau.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ceiniogau",
+                "gloss": "ceiniog, ceiniogau",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s040",
+            "text": "\"Un geiniog, dwy geiniog, tair ceiniog, pedair ceiniog, pum ceiniog, chwe cheiniog, saith ceiniog!\"",
+            "paragraph_start": true,
+            "speaker": "char-mali",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "pum ceiniog",
+                "gloss": "pump → pum ceiniog",
+                "gloss_kind": "paradigm"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cheiniog",
+                "gloss": "chwech → chwe cheiniog ← ceiniog",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s041",
+            "text": "\"Mae saith ceiniog gyda ni, Mam!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s042",
+            "text": "Mae Elen yn rhoi dwy geiniog i Arth, a dwy i Mali.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s134",
+            "text": "Mae mochyn bach yn rhedeg yn rhydd rhwng y byrddau, ac mae Arth yn chwerthin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s043",
+            "text": "\"Faint yw'r mochyn bach?\" meddai Arth wrth y dyn.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s044",
+            "text": "\"Ugain ceiniog,\" meddai'r dyn.",
+            "paragraph_start": true,
+            "speaker": "char-gwerthwr"
+          },
+          {
+            "id": "cy-brenin-01-l14-s045",
+            "text": "\"Ugain! Mae'r mochyn yn ddrud!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s046",
+            "text": "\"Modlen, gaf i fochyn bach?\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fochyn",
+                "gloss": "gaf i fochyn ← mochyn",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s047",
+            "text": "\"Na chei!\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l14-sec3",
+        "title": "Y gwlân",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l14-s048",
+            "text": "Mae Modlen eisiau gwlân.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l14-img-gwlan",
+                "anchor_text": "gwlân",
+                "label": "gwlân",
+                "src": "media/vignettes/cy-brenin-01-l14-img-gwlan.webp",
+                "alt": "",
+                "status": "planned",
+                "art_brief": "Two soft balls of spun wool, one white and one black, with loose ends. Transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-gwlan"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s049",
+            "text": "Mae dyn bach yn gwerthu gwlân gwyn a gwlân du wrth y wal."
+          },
+          {
+            "id": "cy-brenin-01-l14-s050",
+            "text": "\"Ydy'r gwlân yn dod o'r defaid?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "defaid",
+                "gloss": "dafad, defaid",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s051",
+            "text": "\"Ydy, wrth gwrs,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s052",
+            "text": "\"Faint yw'r gwlân gwyn?\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s053",
+            "text": "\"Tair ceiniog,\" meddai'r dyn bach.",
+            "paragraph_start": true,
+            "speaker": "char-gwerthwr"
+          },
+          {
+            "id": "cy-brenin-01-l14-s054",
+            "text": "\"A'r gwlân du?\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s055",
+            "text": "\"Dwy geiniog.\"",
+            "paragraph_start": true,
+            "speaker": "char-gwerthwr"
+          },
+          {
+            "id": "cy-brenin-01-l14-s056",
+            "text": "\"Wel, dw i eisiau'r gwyn a'r du,\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s057",
+            "text": "\"Mae'r gwlân gwyn yn ddrud, ond mae e'n dda.\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s058",
+            "text": "Mae Modlen yn edrych ar y defaid, ac wedyn mae hi'n edrych ar y gwlân.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s059",
+            "text": "Mae'r dyn bach yn rhoi'r gwlân i Modlen, ac mae e'n gwenu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s060",
+            "text": "\"Saith ceiniog, Modlen,\" meddai e.",
+            "paragraph_start": true,
+            "speaker": "char-gwerthwr"
+          },
+          {
+            "id": "cy-brenin-01-l14-s061",
+            "text": "Mae Modlen yn cyfrif y ceiniogau: un, dau, tri…",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s062",
+            "text": "\"Nage!\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s063",
+            "text": "\"Tair ceiniog a dwy geiniog: pum ceiniog, dim saith!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s064",
+            "text": "Mae'r dyn bach yn goch iawn nawr.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s065",
+            "text": "\"Wel… pum ceiniog,\" meddai e.",
+            "paragraph_start": true,
+            "speaker": "char-gwerthwr"
+          },
+          {
+            "id": "cy-brenin-01-l14-s066",
+            "text": "\"Pum ceiniog!\" meddai Modlen, ac mae hi'n talu'r dyn bach.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s067",
+            "text": "\"Diolch, Mali: rwyt ti'n gyflym iawn, ac mae'r gwlân yn rhad nawr!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s130",
+            "text": "Wedyn mae Modlen yn prynu cig i'r cawl, blawd i'r bara, a jwg newydd: mae'r hen jwg wedi torri.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s068",
+            "text": "Mae Modlen yn hapus iawn nawr.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l14-img-gwlan",
+                "src": "media/images/cy-brenin-01-l14-img-gwlan.webp",
+                "alt": "Mali points at the wool-seller, counting on her fingers; the sly little man turns red; Modlen holds out her coins with a triumphant look.",
+                "status": "draft",
+                "art_brief": "A busy market fair in a small timber-and-thatch town (valley greens and slate): stalls, hurdles with sheep, a pig, a cow, people in tunics and cloaks. At a low stall by a wall a small, sly wool-seller with a pointed cap blushes red, a pile of white and black wool on his board. Mali (12, long dark braid, dark-blue dress, a covered basket on her arm from which a thin wisp of smoke rises) holds up five fingers firmly. Modlen (short, round, rosy, white headscarf, floury apron, wooden spoon tucked in her belt) holds out a palm of silver pennies. Arth (11, untidy brown hair, oversized moss-green tunic) grins behind them; Elen (tall, linen veil, green dress, keys) watches calmly from her cheese stall. No text, no numbers.",
+                "characters": [
+                  "char-mali",
+                  "char-modlen",
+                  "char-arth",
+                  "char-elen"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-gwlan",
+                  "cy-ceiniog",
+                  "cy-ffair",
+                  "cy-basged"
+                ],
+                "width": 1600,
+                "height": 1066
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l14-sec4",
+        "title": "Ble mae'r afalau?",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l14-s069",
+            "text": "Wedyn mae Mali ac Arth yn edrych ar yr afalau.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "afalau",
+                "gloss": "afal, afalau",
+                "gloss_kind": "number"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s070",
+            "text": "Mae bwrdd mawr yno, ac mae afalau coch ac afalau gwyrdd ar y bwrdd."
+          },
+          {
+            "id": "cy-brenin-01-l14-s071",
+            "text": "\"Gaf i afal?\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Gaf i",
+                "gloss": "Gaf i …? → Cei. / Na chei.",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s072",
+            "text": "\"Cei,\" meddai'r fenyw. \"Un geiniog.\"",
+            "paragraph_start": true,
+            "speaker": "char-menyw"
+          },
+          {
+            "id": "cy-brenin-01-l14-s073",
+            "text": "Mae Arth yn talu un geiniog, ac mae e'n cael afal coch.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s131",
+            "text": "Mae e'n golchi'r afal ac yn bwyta."
+          },
+          {
+            "id": "cy-brenin-01-l14-s074",
+            "text": "\"Gaf i ddau afal?\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddau",
+                "gloss": "gaf i ddau ← dau",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s075",
+            "text": "\"Cei. Dau afal: dwy geiniog.\"",
+            "paragraph_start": true,
+            "speaker": "char-menyw"
+          },
+          {
+            "id": "cy-brenin-01-l14-s076",
+            "text": "Mae Mali'n rhoi ei basged hi ar y bwrdd, wrth yr afalau, ac mae hi'n talu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s077",
+            "text": "Mae buwch fawr wrth y bwrdd, ac mae'r fuwch yn edrych ar y fasged.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fuwch",
+                "gloss": "y fuwch ← buwch (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s135",
+            "text": "Mae aderyn bach yn glanio ar y bwrdd, ac mae afal yn cwympo."
+          },
+          {
+            "id": "cy-brenin-01-l14-s078",
+            "text": "Nawr mae'r fenyw'n cyfrif yr afalau ar y bwrdd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s079",
+            "text": "\"Un, dau, tri, pedwar, pump, chwech, saith, wyth, naw?\" meddai hi.",
+            "paragraph_start": true,
+            "speaker": "char-menyw"
+          },
+          {
+            "id": "cy-brenin-01-l14-s080",
+            "text": "\"Naw afal? Mae deg afal ar y bwrdd!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s082",
+            "text": "\"Wyth? Mae dau afal wedi mynd!\"",
+            "paragraph_start": true,
+            "speaker": "char-menyw"
+          },
+          {
+            "id": "cy-brenin-01-l14-s083",
+            "text": "Mae Arth yn edrych i lawr: mae cynffon fach goch yn y caws, ac mae afal yn y gynffon!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s084",
+            "text": "\"Dafi!\" meddai Arth yn dawel. \"Paid â bwyta'r afalau!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s085",
+            "text": "\"Afal da!\" meddai'r fasged.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l14-s086",
+            "text": "Mae'r fenyw'n gweiddi: \"Saith! Beth sy wedi digwydd? Pwy sy wedi bwyta'r afalau?\"",
+            "paragraph_start": true,
+            "speaker": "char-menyw"
+          },
+          {
+            "id": "cy-brenin-01-l14-s132",
+            "text": "\"Arth! Wnest ti fwyta'r afalau?\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s133",
+            "text": "\"Naddo!\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s088",
+            "text": "\"Ci, wrth gwrs!\" meddai Modlen yn gyflym.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s089",
+            "text": "\"Pero yw e: ci du a gwyn, mawr a drwg iawn!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s090",
+            "text": "\"Ble mae'r ci?\" meddai'r fenyw.",
+            "paragraph_start": true,
+            "speaker": "char-menyw"
+          },
+          {
+            "id": "cy-brenin-01-l14-s091",
+            "text": "\"Wel… yn y llys,\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s092",
+            "text": "Mae Mali'n edrych ar Modlen, ond dyw hi ddim yn siarad.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s093",
+            "text": "Mae Elen yn dod, ac mae hi'n rhoi tair ceiniog i'r fenyw."
+          },
+          {
+            "id": "cy-brenin-01-l14-s094",
+            "text": "\"Dyma dair ceiniog,\" meddai Elen yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-elen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dair",
+                "gloss": "dyma dair ← tair",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s095",
+            "text": "\"Mae'r afalau'n rhad, ac mae'r ci'n bell.\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s096",
+            "text": "\"Dafi, rwyt ti'n ddrwg iawn!\" meddai Mali yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s097",
+            "text": "\"Dafi'n llawn,\" meddai Dafi, ac mae e'n hapus.",
+            "paragraph_start": true,
+            "speaker": "char-dafi",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l14-img-afalau",
+                "src": "media/images/cy-brenin-01-l14-img-afalau.webp",
+                "alt": "At the apple stall the seller counts on her fingers, scowling; behind her back a small red tail curls out of Mali's basket and steals an apple; a big cow watches the basket.",
+                "status": "planned",
+                "art_brief": "Market fair (valley palette), an apple stall: a trestle heaped with red and green apples. The stout apple-seller, a woman in a brown hood, counts on her fingers, frowning at the heap. Next to the apples stands Mali's covered wicker basket; a small spade-tipped red tail (Dafi's) curls out from under the cloth and coils round a red apple. Arth (11, untidy brown hair, moss-green tunic) stares at the tail with his own apple halfway to his mouth; Mali (12, dark braid, dark-blue dress) looks innocently at the sky. A big brown-and-white cow beside the stall stares at the basket. Behind, Modlen (round, rosy, white headscarf, floury apron, spoon) hurries up, pointing back up the road as if blaming someone. No text.",
+                "characters": [
+                  "char-menyw-afalau",
+                  "char-arth",
+                  "char-mali",
+                  "char-modlen",
+                  "char-dafi"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-afal",
+                  "cy-basged",
+                  "cy-buwch"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l14-sec5",
+        "title": "Y dieithryn",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l14-s098",
+            "text": "Nawr mae'r haul yn mynd i lawr, mae'r toeau'n goch, ac mae'r ffair yn dawel.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s099",
+            "text": "Mae tŷ mawr yn y dref, ac mae dynion yn bwyta ac yn yfed yno: tŷ'r tafarnwr yw e.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "tafarnwr",
+                "gloss": "tafarnwr: gwerthu bwyd i bawb",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s100",
+            "text": "Mae baner fawr gyda draig goch ar y wal, ac mae ceffyl mawr du wrth y drws."
+          },
+          {
+            "id": "cy-brenin-01-l14-s101",
+            "text": "\"Mali!\" meddai Arth yn dawel, ac mae e'n troi. \"Y ceffyl du!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s102",
+            "text": "Mae Mali ac Arth yn cuddio yn y cysgod wrth y wal, ac maen nhw'n gwrando.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s103",
+            "text": "Mae'r dieithryn yn clymu'r ceffyl wrth y wal, ac mae e'n siarad gyda'r tafarnwr."
+          },
+          {
+            "id": "cy-brenin-01-l14-s105",
+            "text": "Mae Arth yn gweld ei lygaid e eto: llygaid tywyll, tywyll."
+          },
+          {
+            "id": "cy-brenin-01-l14-s106",
+            "text": "\"Tafarnwr,\" meddai'r dieithryn, \"oes bachgen un ar ddeg oed yn y cwm?\"",
+            "paragraph_start": true,
+            "speaker": "char-negesydd"
+          },
+          {
+            "id": "cy-brenin-01-l14-s107",
+            "text": "\"Bachgen un ar ddeg oed?\" meddai'r tafarnwr, ac mae e'n chwerthin.",
+            "paragraph_start": true,
+            "speaker": "char-tafarnwr"
+          },
+          {
+            "id": "cy-brenin-01-l14-s108",
+            "text": "\"Mae deg bachgen un ar ddeg oed yn y dref, ac ugain yn y cwm!\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s109",
+            "text": "\"Dw i eisiau un bachgen,\" meddai'r dieithryn.",
+            "paragraph_start": true,
+            "speaker": "char-negesydd"
+          },
+          {
+            "id": "cy-brenin-01-l14-s110",
+            "text": "\"Dim ond un.\""
+          },
+          {
+            "id": "cy-brenin-01-l14-s111",
+            "text": "Mae e'n talu dwy geiniog i'r tafarnwr, ac mae e'n mynd i'r tŷ.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s112",
+            "text": "Mae Arth yn teimlo'n oer, oer iawn.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s113",
+            "text": "\"Mali,\" meddai e. \"Ydy e eisiau… fi?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s114",
+            "text": "\"Dw i ddim yn gwybod, Arth,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s115",
+            "text": "\"Dw i'n fachgen bach,\" meddai Arth. \"Does dim byd gyda fi.\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s116",
+            "text": "\"Mae ffrind gyda ti,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s117",
+            "text": "Wedyn mae Modlen yn galw o'r ffordd: \"Arth! Mali! Dewch!\"",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s118",
+            "text": "\"Ble dych chi wedi bod?\" meddai hi.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s119",
+            "text": "\"Dyn ni wedi bod wrth y wal,\" meddai Mali. \"Dyn ni wedi bod yn gwrando.\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s120",
+            "text": "\"Gwrando? Ar beth?\"",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l14-s121",
+            "text": "\"Ar… y gwynt,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l14-s122",
+            "text": "Mae Mali'n edrych ar Arth, ond dyw hi ddim yn siarad.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l14-s123",
+            "text": "Mae pawb yn flinedig, ac maen nhw'n gadael y dref, ond yn sydyn mae'r fasged yn tisian: \"Atishŵ!\"",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Atishŵ",
+                "gloss": "= Mae Dafi'n tisian.",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l14-s124",
+            "text": "\"Dafi'n llawn,\" meddai Dafi. \"Saith afal!\"",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l14-s125",
+            "text": "\"Saith, Dafi?\" meddai Mali. \"Tri afal, dim saith!\"",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l14-s126",
+            "text": "\"Saith,\" meddai Dafi.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l14-s127",
+            "text": "Mae Pero'n cysgu wrth y stabl yn y llys, a dyw e ddim yn gwybod dim byd.",
+            "paragraph_start": true
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Un, dau, tri … deg",
+    "rule_cy": "Enw (g.): dau, tri, pedwar. Enw (b.): dwy, tair, pedair. Rhif + afal (dim 'afalau'): dau afal, tair ceiniog. Faint yw …? Gaf i …? → Cei. / Na chei.",
+    "tables": [
+      {
+        "caption": "(g.) ↔ (b.)",
+        "header": [
+          "",
+          "(g.) afal, wy, mochyn",
+          "(b.) ceiniog, dafad, buwch"
+        ],
+        "rows": [
+          [
+            "1",
+            "un afal",
+            "un geiniog"
+          ],
+          [
+            "2",
+            "dau afal · dau wy",
+            "dwy geiniog"
+          ],
+          [
+            "3",
+            "tri afal · tri chaws",
+            "tair ceiniog"
+          ],
+          [
+            "4",
+            "pedwar mochyn",
+            "pedair dafad · pedair ceiniog"
+          ],
+          [
+            "5 · 6",
+            "pum afal · chwe afal",
+            "pum ceiniog · chwe cheiniog"
+          ],
+          [
+            "7–10, 20",
+            "saith, wyth, naw, deg, ugain afal",
+            "saith, wyth, naw, deg, ugain ceiniog"
+          ]
+        ]
+      },
+      {
+        "caption": "Faint? · Gaf i?",
+        "header": [
+          "?",
+          "ateb"
+        ],
+        "rows": [
+          [
+            "Faint yw'r caws?",
+            "Tair ceiniog."
+          ],
+          [
+            "Faint yw'r mochyn bach?",
+            "Ugain ceiniog."
+          ],
+          [
+            "Gaf i ddau afal?",
+            "Cei. Dau afal: dwy geiniog."
+          ],
+          [
+            "Gaf i fochyn bach?",
+            "Na chei!"
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "un + enw (b.)",
+            "un geiniog (ceiniog) · un llaw (ll, rh: dim newid) — un afal (dim newid)"
+          ],
+          [
+            "dau / dwy + enw",
+            "dau fochyn, dwy geiniog (treiglad meddal)"
+          ],
+          [
+            "tri / chwe + c, p, t",
+            "tri chaws, chwe cheiniog (treiglad llaes)"
+          ],
+          [
+            "tair, pedair, pum …",
+            "tair ceiniog, pum ceiniog (dim newid)"
+          ],
+          [
+            "dyma + rhif",
+            "dyma dair ceiniog (Pennod 1)"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l14-s012"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s040"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s014"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s037"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s028"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s071"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s074"
+      },
+      {
+        "segment_id": "cy-brenin-01-l14-s063"
+      }
+    ],
+    "nodyn_en": "Numbers take a singular noun: dau afal 'two apples'. Two, three and four have feminine forms: dwy, tair, pedair. un softens a feminine noun (un geiniog), but not ll- or rh- (un llaw); dau and dwy soften (dwy geiniog); tri and chwe aspirate c, p, t (tri chaws). Before a noun, pump → pum and chwech → chwe."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l14-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "2 + afal →",
+            "answer": "dau afal"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "2 + ceiniog →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "dwy geiniog"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "dau geiniog",
+                  "hint": "ceiniog (b.) → dwy"
+                },
+                {
+                  "answer": "dwy ceiniog",
+                  "hint": "dwy + c → g"
+                }
+              ],
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s042"
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "3 + ceiniog →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "tair ceiniog"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "tri cheiniog",
+                  "hint": "ceiniog (b.) → tair"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s029"
+              ]
+            },
+            {
+              "id": "a3",
+              "prompt": "3 + caws →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "tri chaws"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "tri caws",
+                  "hint": "tri + c → ch"
+                }
+              ],
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s014"
+              ]
+            },
+            {
+              "id": "a4",
+              "prompt": "4 + dafad →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "pedair dafad"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "pedwar dafad",
+                  "hint": "dafad (b.) → pedair"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s025"
+              ]
+            },
+            {
+              "id": "a5",
+              "prompt": "1 + buwch →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "un fuwch"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "un buwch",
+                  "hint": "un + enw (b.) → treiglad"
+                }
+              ],
+              "mutation_hint": true
+            },
+            {
+              "id": "a6",
+              "prompt": "5 + ceiniog →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "pum ceiniog"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "pump ceiniog",
+                  "hint": "pump + enw → pum"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s065"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "(caws) ? → Tair ceiniog.",
+            "answer": "Faint yw'r caws?"
+          },
+          "items": [
+            {
+              "id": "a7",
+              "prompt": "(gwlân) ? → Pum ceiniog.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Faint yw'r gwlân?"
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s052"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "(afal) ? → Cei.",
+            "answer": "Gaf i afal?"
+          },
+          "items": [
+            {
+              "id": "a8",
+              "prompt": "(2 afal) ? → Cei.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Gaf i ddau afal?"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Gaf i dau afal?",
+                  "hint": "Gaf i + dau → ddau"
+                }
+              ],
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l14-s074"
+              ]
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae Cai'n bwyta'r caws. (wedi) →",
+            "answer": "Mae Cai wedi bwyta'r caws."
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "Mae Dafi'n bwyta'r afalau. (wedi) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae Dafi wedi bwyta'r afalau."
+              ],
+              "recall_of": "G11"
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Dw i'n bwyta'r afal. (ddoe) →",
+            "answer": "Wnes i fwyta'r afal."
+          },
+          "items": [
+            {
+              "id": "a10",
+              "prompt": "Dw i'n prynu'r gwlân. (ddoe) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Wnes i brynu'r gwlân.",
+                "Gwnes i brynu'r gwlân.",
+                "Wnes i brynu'r gwlân ddoe.",
+                "Ddoe, wnes i brynu'r gwlân.",
+                "Gwnes i brynu'r gwlân ddoe.",
+                "Ddoe, gwnes i brynu'r gwlân."
+              ],
+              "recall_of": "G12",
+              "common_wrong": [
+                {
+                  "answer": "Wnes i prynu'r gwlân.",
+                  "hint": "wnes i + prynu → brynu"
+                }
+              ],
+              "mutation_hint": true
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l14-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "ffair",
+        "ceiniog",
+        "basged",
+        "afal",
+        "gwlân",
+        "dafad",
+        "mochyn",
+        "buwch",
+        "tafarnwr",
+        "prynu",
+        "gwerthu",
+        "talu",
+        "cyfrif",
+        "drud",
+        "rhad",
+        "oer",
+        "faint",
+        "heddiw",
+        "eto"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Mae'r tafarnwr yn ___ bwyd a llaeth i'r dynion.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "gwerthu"
+          ]
+        },
+        {
+          "id": "b2",
+          "prompt": "Mae Cai eisiau cleddyf newydd, ond does dim arian gyda fe: dyw e ddim yn gallu ___ cleddyf.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "prynu"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Cleddyf bach, ac ugain ceiniog? Mae'r cleddyf yn ___!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ddrud"
+          ],
+          "explanation": "yn + drud → yn ddrud"
+        },
+        {
+          "id": "b4",
+          "prompt": "Caws mawr, a dim ond dwy geiniog? Mae'r caws yn ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "rhad"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Mae Modlen yn rhoi'r bara a'r wyau yn y ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "fasged"
+          ],
+          "explanation": "y + basged (b.) → y fasged"
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae gwlân gwyn ar y ___, ac mae hi'n bwyta gwellt.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ddafad"
+          ],
+          "explanation": "y + dafad (b.) → y ddafad"
+        },
+        {
+          "id": "b7",
+          "prompt": "Mae'r ___ yn rhoi llaeth i Modlen.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "fuwch"
+          ],
+          "explanation": "y + buwch (b.) → y fuwch"
+        },
+        {
+          "id": "b8",
+          "prompt": "Mae Arth yn ___: un, dau, tri, pedwar …",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "cyfrif"
+          ]
+        },
+        {
+          "id": "b9",
+          "prompt": "\"___ yw'r afalau?\" \"Un geiniog.\"",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Faint"
+          ]
+        },
+        {
+          "id": "b10",
+          "prompt": "Mae Elen yn rhoi tair ceiniog i'r dyn: mae hi'n ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "talu"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l14-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Pwy sy wedi mynd i'r ffair?",
+          "answer_mode": "self_check",
+          "model_answer": "Elen, Modlen, Mali ac Arth (a Dafi, yn y fasged!).",
+          "rubric": "Names the four (and Dafi).",
+          "key_terms": [
+            "cy-ffair"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l14-s002"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Faint o wyau sy gyda Modlen?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Deg",
+            "Deg wy",
+            "Deg o wyau",
+            "Mae deg wy gyda Modlen",
+            "Mae deg wy gyda hi"
+          ],
+          "model_answer": "Deg wy.",
+          "source_segment_ids": [
+            "cy-brenin-01-l14-s013"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Faint yw'r caws?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Tair ceiniog",
+            "Tair ceiniog yw e",
+            "Tair ceiniog yw'r caws"
+          ],
+          "model_answer": "Tair ceiniog.",
+          "source_segment_ids": [
+            "cy-brenin-01-l14-s029"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Pam mae'r dyn bach yn goch?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae e eisiau saith ceiniog, ond mae Mali'n cyfrif: tair a dwy yw pump.",
+          "rubric": "Explains that he asked for seven but the price was five.",
+          "key_terms": [
+            "cy-cyfrif",
+            "cy-saith",
+            "cy-pump"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l14-s063"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Pwy sy wedi bwyta'r afalau?",
+          "answer_mode": "self_check",
+          "model_answer": "Dafi! Dyw Pero ddim yn y dref.",
+          "rubric": "Dafi (not Pero).",
+          "key_terms": [
+            "cy-afal"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l14-s083",
+            "cy-brenin-01-l14-s089"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Beth yw cwestiwn y dieithryn i'r tafarnwr?",
+          "answer_mode": "self_check",
+          "model_answer": "Oes bachgen un ar ddeg oed yn y cwm?",
+          "rubric": "Gives the question about a boy of eleven.",
+          "key_terms": [
+            "cy-un-ar-ddeg",
+            "cy-tafarnwr"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l14-s106"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "A ti? Beth wyt ti eisiau prynu yn y ffair? Faint yw e?",
+          "answer_mode": "self_check",
+          "model_answer": "Dw i eisiau prynu afal. Un geiniog yw e.",
+          "rubric": "One thing to buy plus a price with a numeral and ceiniog."
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-dau",
+      "citation_form": "dau",
+      "part_of_speech": "numeral",
+      "current_sense": "two (masculine; + SM)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dwy",
+      "citation_form": "dwy",
+      "part_of_speech": "numeral",
+      "current_sense": "two (feminine; + SM)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tri",
+      "citation_form": "tri",
+      "part_of_speech": "numeral",
+      "current_sense": "three (masculine; + AM)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tair",
+      "citation_form": "tair",
+      "part_of_speech": "numeral",
+      "current_sense": "three (feminine)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pedwar",
+      "citation_form": "pedwar",
+      "part_of_speech": "numeral",
+      "current_sense": "four (masculine)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pedair",
+      "citation_form": "pedair",
+      "part_of_speech": "numeral",
+      "current_sense": "four (feminine)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pump",
+      "citation_form": "pump",
+      "part_of_speech": "numeral",
+      "current_sense": "five (pum before nouns)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-chwech",
+      "citation_form": "chwech",
+      "part_of_speech": "numeral",
+      "current_sense": "six (chwe before nouns; + AM)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-saith",
+      "citation_form": "saith",
+      "part_of_speech": "numeral",
+      "current_sense": "seven",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-wyth",
+      "citation_form": "wyth",
+      "part_of_speech": "numeral",
+      "current_sense": "eight",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-naw",
+      "citation_form": "naw",
+      "part_of_speech": "numeral",
+      "current_sense": "nine",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-deg",
+      "citation_form": "deg",
+      "part_of_speech": "numeral",
+      "current_sense": "ten",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ugain",
+      "citation_form": "ugain",
+      "part_of_speech": "numeral",
+      "current_sense": "twenty",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-faint",
+      "citation_form": "faint",
+      "part_of_speech": "adverb",
+      "current_sense": "how much? how many? (faint o + SM)",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ffair",
+      "citation_form": "ffair (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "fair",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ceiniog",
+      "citation_form": "ceiniog (b.), ceiniogau",
+      "part_of_speech": "noun",
+      "current_sense": "penny",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-basged",
+      "citation_form": "basged (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "basket",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-afal",
+      "citation_form": "afal (g.), afalau",
+      "part_of_speech": "noun",
+      "current_sense": "apple",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwlan",
+      "citation_form": "gwlân (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "wool",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-dafad",
+      "citation_form": "dafad (b.), defaid",
+      "part_of_speech": "noun",
+      "current_sense": "sheep",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-mochyn",
+      "citation_form": "mochyn (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "pig",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-buwch",
+      "citation_form": "buwch (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "cow",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tafarnwr",
+      "citation_form": "tafarnwr (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "innkeeper",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-prynu",
+      "citation_form": "prynu",
+      "part_of_speech": "verb",
+      "current_sense": "to buy",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwerthu",
+      "citation_form": "gwerthu",
+      "part_of_speech": "verb",
+      "current_sense": "to sell",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-talu",
+      "citation_form": "talu",
+      "part_of_speech": "verb",
+      "current_sense": "to pay",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cyfrif",
+      "citation_form": "cyfrif",
+      "part_of_speech": "verb",
+      "current_sense": "to count",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-drud",
+      "citation_form": "drud",
+      "part_of_speech": "adjective",
+      "current_sense": "expensive",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-rhad",
+      "citation_form": "rhad",
+      "part_of_speech": "adjective",
+      "current_sense": "cheap",
+      "first_introduced_lesson": "cy-brenin-01-l14",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-14.json.",
+    "card_stages": [
+      {
+        "lexeme_id": "cy-dau",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "dau",
+        "back": "two (masculine; + SM: dau fochyn)",
+        "example_segment_id": "cy-brenin-01-l14-s037"
+      },
+      {
+        "lexeme_id": "cy-dwy",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "dwy",
+        "back": "two (feminine; + SM: dwy geiniog)",
+        "example_segment_id": "cy-brenin-01-l14-s042"
+      },
+      {
+        "lexeme_id": "cy-tri",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "tri",
+        "back": "three (masculine; + AM: tri chaws)",
+        "example_segment_id": "cy-brenin-01-l14-s014"
+      },
+      {
+        "lexeme_id": "cy-tair",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "tair",
+        "back": "three (feminine; no mutation: tair ceiniog)",
+        "example_segment_id": "cy-brenin-01-l14-s029"
+      },
+      {
+        "lexeme_id": "cy-pedwar",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "pedwar",
+        "back": "four (masculine)",
+        "example_segment_id": "cy-brenin-01-l14-s025"
+      },
+      {
+        "lexeme_id": "cy-pedair",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "pedair",
+        "back": "four (feminine)",
+        "example_segment_id": "cy-brenin-01-l14-s038"
+      },
+      {
+        "lexeme_id": "cy-pump",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "pump (pum + enw)",
+        "back": "five (pum before a noun: pum ceiniog)",
+        "example_segment_id": "cy-brenin-01-l14-s065"
+      },
+      {
+        "lexeme_id": "cy-chwech",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "chwech (chwe + enw)",
+        "back": "six (chwe before a noun, + AM: chwe cheiniog)",
+        "example_segment_id": "cy-brenin-01-l14-s040"
+      },
+      {
+        "lexeme_id": "cy-saith",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "saith",
+        "back": "seven",
+        "example_segment_id": "cy-brenin-01-l14-s041"
+      },
+      {
+        "lexeme_id": "cy-wyth",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "wyth",
+        "back": "eight",
+        "example_segment_id": "cy-brenin-01-l14-s038"
+      },
+      {
+        "lexeme_id": "cy-naw",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "naw",
+        "back": "nine",
+        "example_segment_id": "cy-brenin-01-l14-s079"
+      },
+      {
+        "lexeme_id": "cy-deg",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "deg",
+        "back": "ten",
+        "example_segment_id": "cy-brenin-01-l14-s013"
+      },
+      {
+        "lexeme_id": "cy-ugain",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "ugain",
+        "back": "twenty",
+        "example_segment_id": "cy-brenin-01-l14-s044"
+      },
+      {
+        "lexeme_id": "cy-faint",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "faint",
+        "back": "how much? how many? (Faint yw …?)",
+        "example_segment_id": "cy-brenin-01-l14-s028"
+      },
+      {
+        "lexeme_id": "cy-ffair",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "ffair (b.)",
+        "back": "fair",
+        "example_segment_id": "cy-brenin-01-l14-s002"
+      },
+      {
+        "lexeme_id": "cy-ceiniog",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "ceiniog (b.), ceiniogau",
+        "back": "penny",
+        "example_segment_id": "cy-brenin-01-l14-s029"
+      },
+      {
+        "lexeme_id": "cy-basged",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "basged (b.)",
+        "back": "basket",
+        "example_segment_id": "cy-brenin-01-l14-s010"
+      },
+      {
+        "lexeme_id": "cy-afal",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "afal (g.), afalau",
+        "back": "apple",
+        "example_segment_id": "cy-brenin-01-l14-s071"
+      },
+      {
+        "lexeme_id": "cy-gwlan",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "gwlân (g.)",
+        "back": "wool",
+        "example_segment_id": "cy-brenin-01-l14-s049"
+      },
+      {
+        "lexeme_id": "cy-dafad",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "dafad (b.), defaid",
+        "back": "sheep",
+        "example_segment_id": "cy-brenin-01-l14-s050"
+      },
+      {
+        "lexeme_id": "cy-mochyn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "mochyn (g.)",
+        "back": "pig",
+        "example_segment_id": "cy-brenin-01-l14-s043"
+      },
+      {
+        "lexeme_id": "cy-buwch",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "buwch (b.)",
+        "back": "cow",
+        "example_segment_id": "cy-brenin-01-l14-s077"
+      },
+      {
+        "lexeme_id": "cy-tafarnwr",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "tafarnwr (g.)",
+        "back": "innkeeper",
+        "example_segment_id": "cy-brenin-01-l14-s106"
+      },
+      {
+        "lexeme_id": "cy-prynu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "prynu",
+        "back": "to buy",
+        "example_segment_id": "cy-brenin-01-l14-s033"
+      },
+      {
+        "lexeme_id": "cy-gwerthu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "gwerthu",
+        "back": "to sell",
+        "example_segment_id": "cy-brenin-01-l14-s025"
+      },
+      {
+        "lexeme_id": "cy-talu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "talu",
+        "back": "to pay",
+        "example_segment_id": "cy-brenin-01-l14-s033"
+      },
+      {
+        "lexeme_id": "cy-cyfrif",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "cyfrif",
+        "back": "to count",
+        "example_segment_id": "cy-brenin-01-l14-s039"
+      },
+      {
+        "lexeme_id": "cy-drud",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "drud",
+        "back": "expensive",
+        "example_segment_id": "cy-brenin-01-l14-s045",
+        "seen_as": "ddrud"
+      },
+      {
+        "lexeme_id": "cy-rhad",
+        "id": "base",
+        "lesson": "cy-brenin-01-l14",
+        "front": "rhad",
+        "back": "cheap",
+        "example_segment_id": "cy-brenin-01-l14-s067"
+      },
+      {
+        "lexeme_id": "cy-pattern-g14",
+        "id": "pattern-g14",
+        "lesson": "cy-brenin-01-l14",
+        "front": "dau afal · dwy geiniog · tri chaws · tair ceiniog — Faint yw'r caws? — Gaf i afal?",
+        "back": "two apples · two pennies · three cheeses · three pennies — How much is the cheese? — May I have an apple? (Cei / Na chei)",
+        "example_segment_id": "cy-brenin-01-l14-s040",
+        "example_segment_ids": [
+          "cy-brenin-01-l14-s040",
+          "cy-brenin-01-l14-s028"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l14-img-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 2,
+      "margin_vignette": 3,
+      "margin_diagram": 1,
+      "margin_gloss": 21
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-14",
+      "rhan-2"
+    ]
+  },
+  "metrics": {
+    "running_words": 1203,
+    "sentences": 127,
+    "word_target": 1100,
+    "word_window": [
+      990,
+      1210
+    ]
+  }
+}

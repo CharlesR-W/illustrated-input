@@ -1,0 +1,2040 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l27",
+ "course_id": "cy-brenin-01",
+ "order": 27,
+ "title": "Rhaid i ti ddweud y gwir",
+ "rhan": 3,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B5 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (B5, Wave 2, 2026-10-17 notes)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Beat as planned: Cai claims the sword before Cynyr ('Mae'r cleddyf gyda fi. Fi… fi yw'r brenin!'); Cynyr hides it under his cloak, takes them to the church; the old priest asks for an oath on the book; Cai tries three times, cannot, and confesses that Arth brought it. No punishment ('Mae angen dewrder i ddweud y gwir'); Cai apologises, Arth forgives ('Brawd wyt ti', paying off Pennod 19, with a callback to the secret cwtsh). Cynyr: 'Rhaid iddo fe roi'r cleddyf yn ôl yn y garreg, a'i dynnu e eto' tonight with the lords there (sets up 28). Mali recites the inscription and only then does Arth understand; he has to sit down.",
+   "Foreshadowing for 30: Cynyr, hearing that Arth promised to put the sword back, says 'Amser hir yn ôl, wnes i addo rhywbeth hefyd' and will not answer Mali.",
+   "The inscription wording 'Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.' is taken from the 24 plan beat; harmonise with 24 as written.",
+   "Rhaid appears 20+ times: all seven conjugated persons of i, does dim rhaid i (4×), Oes rhaid i …? — Oes, and past 'roedd rhaid iddo fe'. Contrast with earlier forms: Mae angen … ar (G19) in 'Mae angen dewrder', and gwneud-past (G26) throughout the confession.",
+   "Speaker char-offeiriad (the old priest of Caerllion church) is a new minor character, unnamed.",
+   "Delta adds the form rhoddodd (rhoi) from 27 (the 32 writer also registers it; the merge keeps the earlier first_lesson) and the conjugated i paradigm with a conj card stage.",
+   "Local-density warnings (s089, s107–s108) fall where Cynyr and Arth sum up the confession (cyfaddef, ymddiheuro, dewrder, maddau): each word was introduced and glossed earlier in the chapter; the cluster is the motivated retelling, not new load.",
+   "Codex (gpt-6-astra) review applied: 'ysgrifennu am y cwtsh'; Pensa A accepts 'Mae'n rhaid …' alongside 'Rhaid …'; C3 accepts the full answer with Cynyr as subject."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l27-s016",
+    "question": "[?] 'Rhaid i ni fynd' vs southern spoken 'Mae'n rhaid i ni fynd': is the bare 'Rhaid i …' fine in dialogue throughout?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s048",
+    "question": "[?] 'tyngu llw ar y llyfr' — natural for swearing on the Bible (y Beibl is not in the lexicon)?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s096",
+    "question": "[?] 'Dw i'n gyfrifol: fy nghleddyf i, fy nghelwydd i' — natural for 'it's my fault/responsibility'?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s097",
+    "question": "[?] 'Wyt ti'n gallu maddau i fi?' — natural, or would a learner-level 'Wnei di faddau i fi?' be expected (short future is 37)?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s140",
+    "question": "[?] 'rhaid i fi fod yn yswain i ti' — 'squire to you' with i: natural?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G27",
+  "primary_new_grammar": {
+   "id": "G27",
+   "label": "Obligation rhaid i + subject + soft-mutated verbal noun (Rhaid i ni fynd, Rhaid i ti ddweud, Rhaid iddo fe roi); questions Oes rhaid i …? — Oes / Nac oes; does dim rhaid i …; conjugated i (i fi, i ti, iddo fe, iddi hi, i ni, i chi, iddyn nhw), also after maddau i, ymddiheuro i, rhoi … i",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G06",
+   "G10",
+   "G11",
+   "G13",
+   "G17",
+   "G19",
+   "G20",
+   "G21",
+   "G22",
+   "G24",
+   "G26"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-rhaid",
+   "cy-cosb",
+   "cy-llw",
+   "cy-tyngu",
+   "cy-addo",
+   "cy-cyfaddef",
+   "cy-maddau",
+   "cy-teg",
+   "cy-annheg",
+   "cy-cywir",
+   "cy-anghywir",
+   "cy-allor",
+   "cy-offeiriad",
+   "cy-llais",
+   "cy-dewrder",
+   "cy-ymddiheuro",
+   "cy-cyfrifol",
+   "cy-difrifol"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-rhaid",
+    "how": "gloss(paradigm)+context",
+    "segment_id": "cy-brenin-01-l27-s016"
+   },
+   {
+    "lexeme_id": "cy-difrifol",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l27-s015"
+   },
+   {
+    "lexeme_id": "cy-allor",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l27-s033"
+   },
+   {
+    "lexeme_id": "cy-offeiriad",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l27-s034"
+   },
+   {
+    "lexeme_id": "cy-llais",
+    "how": "gloss+context (siarad)",
+    "segment_id": "cy-brenin-01-l27-s041"
+   },
+   {
+    "lexeme_id": "cy-cosb",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l27-s046"
+   },
+   {
+    "lexeme_id": "cy-tyngu",
+    "how": "gloss (tyngu llw)",
+    "segment_id": "cy-brenin-01-l27-s048"
+   },
+   {
+    "lexeme_id": "cy-llw",
+    "how": "gloss (tyngu llw)+picture(cover)",
+    "segment_id": "cy-brenin-01-l27-s048"
+   },
+   {
+    "lexeme_id": "cy-cyfaddef",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l27-s071"
+   },
+   {
+    "lexeme_id": "cy-dewrder",
+    "how": "gloss (dewr → dewrder)",
+    "segment_id": "cy-brenin-01-l27-s085"
+   },
+   {
+    "lexeme_id": "cy-teg",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l27-s087"
+   },
+   {
+    "lexeme_id": "cy-annheg",
+    "how": "gloss(antonym)+contrast",
+    "segment_id": "cy-brenin-01-l27-s087"
+   },
+   {
+    "lexeme_id": "cy-ymddiheuro",
+    "how": "gloss+context (Mae'n ddrwg gyda fi)",
+    "segment_id": "cy-brenin-01-l27-s092"
+   },
+   {
+    "lexeme_id": "cy-cyfrifol",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l27-s096"
+   },
+   {
+    "lexeme_id": "cy-maddau",
+    "how": "gloss+context",
+    "segment_id": "cy-brenin-01-l27-s099"
+   },
+   {
+    "lexeme_id": "cy-cywir",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l27-s106"
+   },
+   {
+    "lexeme_id": "cy-anghywir",
+    "how": "gloss(antonym)+contrast",
+    "segment_id": "cy-brenin-01-l27-s106"
+   },
+   {
+    "lexeme_id": "cy-addo",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l27-s119"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-gwir",
+   "cy-celwydd",
+   "cy-cywilydd",
+   "cy-eglwys",
+   "cy-cwtsh",
+   "cy-ph-yn-ol",
+   "cy-disglair",
+   "cy-crynu",
+   "cy-gwelw",
+   "cy-tawelwch",
+   "cy-dwyn",
+   "cy-wyneb",
+   "cy-methu",
+   "cy-ceisio",
+   "cy-ph-pwy-bynnag"
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l27-img-cover",
+   "src": "media/images/cy-brenin-01-l27-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "In the dim stone church, the shining sword lies on the altar between candles; Cai stands with his hand over a big book, unable to speak, while Cynyr watches gravely and Arth stands a little behind.",
+   "art_brief": "Interior of the small stone church at Caerllion (match place-caerllion.png; Caerllion palette but dim: grey stone, a few candles, cold winter light falling through one small coloured glass window). A plain stone altar with a white cloth; on it two candles and the long sword from the stone lying flat, its blade shining in the candlelight; a big old leather-bound book open on a wooden stand beside it. An old thin priest in a plain brown robe with a white collar-band holds the book steady. Cai (15, tall, gangly, beardless, straight ginger-blond hair to the jaw, rust-red tunic, red cloak, empty sheath at his belt) stands before the altar, his right hand hovering just above the book, face pale and miserable, unable to speak. Cynyr (broad, fifties, huge golden-blond beard to mid-chest, fair shoulder-length hair, brown cloak with round silver brooch) stands close, arms folded, grave and silent. A little behind, Arth (11, untidy brown hair with cowlick, moss-green tunic) and Mali (12, long dark braid, dark-blue dress, satchel) watch; a thread of grey smoke rises from the edge of Mali's cloak where tiny Dafi hides. No text.",
+   "characters": [
+    "char-cai",
+    "char-cynyr",
+    "char-arth",
+    "char-mali",
+    "char-dafi"
+   ],
+   "covers_lexeme_ids": [
+    "cy-allor",
+    "cy-offeiriad",
+    "cy-llw"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l27-sec1",
+    "title": "Fi yw'r brenin!",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l27-s001",
+      "text": "Cerddodd Cai drwy'r dorf yn araf, gyda'r cleddyf disglair yn ei law e, ac roedd Arth a Mali'n ei ddilyn e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s002",
+      "text": "Roedd Cynyr yn sefyll gyda'r arglwyddi wrth y cae, ac roedd e'n chwerthin ac yn siarad am y twrnamaint."
+     },
+     {
+      "id": "cy-brenin-01-l27-s003",
+      "text": "Ond pan welodd e wyneb gwelw Cai, wnaeth e ddim chwerthin."
+     },
+     {
+      "id": "cy-brenin-01-l27-s004",
+      "text": "\"Dad,\" meddai Cai, ac roedd ei lais e'n crynu.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "lais",
+        "gloss": "lais ← llais: sŵn siarad",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s005",
+      "text": "\"Mae'r cleddyf gyda fi.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s006",
+      "text": "\"Edrych: y cleddyf o'r garreg yw e!\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s007",
+      "text": "\"Fi… fi yw'r brenin!\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s008",
+      "text": "Edrychodd Cynyr ar y cleddyf, ac edrychodd e ar ei fab, ac wedyn edrychodd e ar Arth am amser hir.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s009",
+      "text": "Roedd Arth yn sefyll wrth ochr Cai, ac roedd ei lygaid e'n fawr, ond wnaeth e ddim siarad."
+     },
+     {
+      "id": "cy-brenin-01-l27-s010",
+      "text": "Brawd oedd Cai."
+     },
+     {
+      "id": "cy-brenin-01-l27-s011",
+      "text": "\"Ble gest ti'r cleddyf hwn, Cai?\" meddai Cynyr yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s012",
+      "text": "\"Wnes i… wnes i ei dynnu e o'r garreg,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s013",
+      "text": "\"Yn y fynwent. Y bore yma.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s014",
+      "text": "Doedd Cynyr ddim yn chwerthin nawr, a doedd e ddim yn dweud \"Wel, wel\".",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s015",
+      "text": "Roedd ei wyneb e'n ddifrifol, ac roedd tawelwch hir.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddifrifol",
+        "gloss": "ddifrifol ← difrifol: dim chwerthin, dim gwenu",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s016",
+      "text": "\"Rhaid i ni fynd i'r eglwys,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Rhaid i ni",
+        "gloss": "rhaid i fi / iddo fe + treiglad",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s017",
+      "text": "\"Nawr.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s018",
+      "text": "\"I'r eglwys? Pam, Dad?\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s019",
+      "text": "\"Mae Gwalchmai'n aros, a rhaid i fi ymladd am ddeg o'r gloch!\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s020",
+      "text": "\"Does dim rhaid i ti ymladd heddiw,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s021",
+      "text": "\"Ond Dad, mae hynny'n annheg i Gwalchmai!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s022",
+      "text": "\"Bydd Gwalchmai'n hapus,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s023",
+      "text": "\"Ond rhaid i ti ddweud y gwir.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s024",
+      "text": "Rhoddodd e ei glogyn mawr dros y cleddyf yn gyflym.",
+      "inference_aids": [
+       {
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l27-img-clogyn",
+        "alt": "At the edge of the tournament field, pale Cai holds up the shining sword to his father; Cynyr, unsmiling, throws his big cloak over it before the nearby lords can see, while Arth and Mali watch.",
+        "art_brief": "Edge of the snowy tournament field below Caerllion's red-brick-banded walls (Caerllion palette; pennants, tents, a blurred crowd and two or three richly cloaked lords chatting with their backs half turned). Cai (15, tall, gangly, beardless, straight ginger-blond hair to the jaw, rust-red tunic, red cloak, empty sheath) holds up the long shining sword from the stone in both hands, face pale, saying something proud and frightened. Cynyr (broad, fifties, huge golden-blond beard, brown cloak with round silver brooch) has stopped laughing: grave, he swings his big brown cloak over the blade to hide it. Beside Cai, Arth (11, untidy brown hair with cowlick, moss-green tunic) watches wide-eyed and silent; Mali (12, long dark braid, dark-blue dress) watches Cynyr's face; a wisp of smoke from her cloak where tiny Dafi hides. No text.",
+        "characters": [
+         "char-cai",
+         "char-cynyr",
+         "char-arth",
+         "char-mali"
+        ],
+        "covers_lexeme_ids": [
+         "cy-difrifol"
+        ],
+        "type": "image",
+        "status": "planned",
+        "src": "media/images/cy-brenin-01-l27-img-clogyn.webp"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s025",
+      "text": "\"A does dim rhaid i'r arglwyddi weld y cleddyf hwn. Dim eto.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s026",
+      "text": "Aeth y pedwar drwy'r porth ac i'r dref dawel, ac roedd Dafi'n cuddio dan glogyn Mali.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s027",
+      "text": "Cerddodd Cynyr yn gyntaf, yn gyflym, a wnaeth e ddim siarad."
+     },
+     {
+      "id": "cy-brenin-01-l27-s028",
+      "text": "Cerddodd Cai wrth ochr Arth, ac roedd ei wyneb e'n welw eto."
+     },
+     {
+      "id": "cy-brenin-01-l27-s029",
+      "text": "\"Arth,\" meddai Cai yn dawel. \"Paid â dweud dim byd. Dim byd, iawn?\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s030",
+      "text": "\"Ond Cai,\" meddai Arth, \"os bydd Dad yn gofyn, rhaid i fi ddweud y gwir hefyd.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l27-s031",
+      "text": "Wnaeth Cai ddim ateb, ac roedd sŵn y dorf ar y cae'n mynd yn bell, yn bell.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l27-sec2",
+    "title": "Yn yr eglwys",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l27-s032",
+      "text": "Roedd yr eglwys yn hen, yn oer ac yn dywyll.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s033",
+      "text": "Roedd canhwyllau wrth y waliau, ac roedd ffenest fach, goch a glas uwchben yr allor.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "allor",
+        "gloss": "allor: bwrdd yr eglwys",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s034",
+      "text": "Roedd hen offeiriad yn sefyll wrth yr allor, gyda llyfr mawr, trwm yn ei ddwylo fe.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "offeiriad",
+        "gloss": "offeiriad: dyn yr eglwys",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s035",
+      "text": "Rhoddodd Cynyr y cleddyf ar yr allor, rhwng y canhwyllau.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s036",
+      "text": "Roedd y llafn yn ddisglair yng ngolau'r canhwyllau."
+     },
+     {
+      "id": "cy-brenin-01-l27-s037",
+      "text": "\"Dyma fy mab i, Cai,\" meddai Cynyr wrth yr offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s038",
+      "text": "\"Mae e'n dweud: Wnes i dynnu'r cleddyf o'r garreg.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s039",
+      "text": "Edrychodd yr offeiriad ar y cleddyf am amser hir, ac wedyn edrychodd e ar Cai.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s040",
+      "text": "Roedd e'n hen iawn, ac roedd e'n gweld marchogion wrth y garreg bob dydd."
+     },
+     {
+      "id": "cy-brenin-01-l27-s041",
+      "text": "Roedd ei lais e'n dawel, ond roedd pawb yn ei glywed e.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "lais",
+        "gloss": "lais ← llais",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s042",
+      "text": "\"Mae hyn yn ddifrifol iawn, fachgen,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l27-s043",
+      "text": "\"Mae marchogion cryf wedi ceisio tynnu'r cleddyf hwn, ac mae arglwyddi mawr wedi ceisio, ac mae pob un wedi methu.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s044",
+      "text": "\"Os yw dy stori di'n gywir, rwyt ti'n frenin.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gywir",
+        "gloss": "gywir ← cywir: = gwir",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s045",
+      "text": "\"Ond os yw hi'n anghywir…\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s046",
+      "text": "\"Beth fydd y gosb?\" meddai Cai yn gyflym.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gosb",
+        "gloss": "y gosb ← cosb (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s047",
+      "text": "\"Does dim rhaid i ti feddwl am gosb nawr,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gosb",
+        "gloss": "am gosb ← cosb",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s048",
+      "text": "\"Rhaid i ti dyngu llw ar y llyfr.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dyngu llw",
+        "gloss": "dyngu ← tyngu: \"Mae hyn yn wir!\"",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s049",
+      "text": "\"Rho dy law ar y llyfr, a dweud: Wnes i dynnu'r cleddyf o'r garreg.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s050",
+      "text": "\"Oes rhaid i fi dyngu llw?\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s051",
+      "text": "\"Mae Mali'n gwybod y gwir hefyd.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s052",
+      "text": "\"Oes,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l27-s053",
+      "text": "\"Rhaid i bob brenin dyngu llw.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s054",
+      "text": "Edrychodd e ar Mali. \"Wyt ti'n gwybod y gwir, ferch?\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s055",
+      "text": "\"Mae hi'n gwybod,\" meddai Cynyr. \"Ond does dim rhaid iddi hi siarad: rhaid i Cai siarad.\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s056",
+      "text": "\"A rhaid i chi fod yn dawel, blant,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l27-s057",
+      "text": "Daeth mwg bach, llwyd o glogyn Mali, ac edrychodd yr offeiriad ar y canhwyllau.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s058",
+      "text": "Rhoddodd Mali ei llaw ar ei chlogyn yn gyflym."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l27-sec3",
+    "title": "Y llw",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l27-s059",
+      "text": "Cododd Cai ei law, ac aeth e at y llyfr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s060",
+      "text": "Roedd ei law e'n crynu, ac roedd pawb yn edrych arno fe: Cynyr, yr offeiriad, Mali ac Arth."
+     },
+     {
+      "id": "cy-brenin-01-l27-s061",
+      "text": "\"Wnes i…\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s062",
+      "text": "\"Wnes i… dynnu…\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s063",
+      "text": "\"Rhaid i ti ddweud y geiriau, fachgen,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l27-s064",
+      "text": "Cododd Cai ei law eto, ac edrychodd e ar y cleddyf disglair ar yr allor.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s065",
+      "text": "\"Wnes i dynnu… wnes i…\" meddai Cai, ond roedd ei lais e'n dawel, dawel, a doedd neb yn ei glywed e.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s066",
+      "text": "Ond wnaeth ei law e ddim cyffwrdd â'r llyfr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s067",
+      "text": "Edrychodd e ar Mali: roedd Mali'n gwybod y gwir, a dyw Mali byth yn dweud celwydd."
+     },
+     {
+      "id": "cy-brenin-01-l27-s068",
+      "text": "Edrychodd e ar Arth, ac roedd Arth yn edrych ar ei draed e."
+     },
+     {
+      "id": "cy-brenin-01-l27-s069",
+      "text": "\"Dw i ddim yn gallu,\" meddai Cai yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s070",
+      "text": "\"Dw i ddim yn gallu tyngu llw.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s071",
+      "text": "\"Dad, rhaid i fi gyfaddef rhywbeth.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gyfaddef",
+        "gloss": "gyfaddef ← cyfaddef: dweud y gwir",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s072",
+      "text": "\"Rhaid i ti, Cai,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s073",
+      "text": "\"Wnes i ddim tynnu'r cleddyf,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s074",
+      "text": "\"Wnes i anghofio fy nghleddyf i yn y dafarn, a wnes i ddweud wrth Arth: Cer i'r dafarn!\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s075",
+      "text": "\"Wnaeth Arth ddod â'r cleddyf hwn i fi.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s076",
+      "text": "\"Dw i'n cyfaddef: celwydd oedd e, celwydd mawr.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s077",
+      "text": "\"Mae dewrder gyda ti, Cai,\" meddai Mali yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l27-s078",
+      "text": "Roedd stori Cai'n anghywir, ac roedd pawb yn gwybod hynny nawr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s079",
+      "text": "Roedd tawelwch yn yr eglwys.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s080",
+      "text": "Roedd wyneb Cai'n goch nawr, ac roedd cywilydd mawr arno fe."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l27-sec4",
+    "title": "Cosb?",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l27-s081",
+      "text": "\"Mae cywilydd arna i,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s082",
+      "text": "\"Beth yw'r gosb, Dad? Rhaid i fi gael cosb.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s083",
+      "text": "\"Cosb?\" meddai Cynyr, ac edrychodd e ar ei fab.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s084",
+      "text": "\"Wnest ti ddweud celwydd, Cai, ond wedyn wnest ti ddweud y gwir, yn yr eglwys, wrth yr allor.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s085",
+      "text": "\"Mae angen dewrder i ddweud y gwir.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dewrder",
+        "gloss": "dewr → dewrder",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s086",
+      "text": "\"Does dim rhaid i ti gael cosb.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s087",
+      "text": "\"Ond dyw hynny ddim yn deg, Dad,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "deg",
+        "gloss": "teg ↔ annheg",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s088",
+      "text": "\"Mae e'n annheg! Wnes i ddweud celwydd am Arth, a does dim cosb?\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s089",
+      "text": "\"Ydy e'n annheg?\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s090",
+      "text": "\"Edrych ar dy wyneb di, Cai: mae'r gosb yno yn barod.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s091",
+      "text": "\"Wel,\" meddai Cai yn araf.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s092",
+      "text": "\"Rhaid i fi ymddiheuro iddo fe.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ymddiheuro",
+        "gloss": "ymddiheuro: dweud \"Mae'n ddrwg gyda fi\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s093",
+      "text": "Trodd Cai at Arth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s094",
+      "text": "\"Arth, mae'n ddrwg gyda fi,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s095",
+      "text": "\"Wnest ti dynnu'r cleddyf, ac wnes i ddweud celwydd.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s096",
+      "text": "\"Dw i'n gyfrifol: fy nghleddyf i, fy nghelwydd i.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gyfrifol",
+        "gloss": "gyfrifol ← cyfrifol",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s097",
+      "text": "\"Wyt ti'n gallu maddau i fi?\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s098",
+      "text": "\"Wrth gwrs,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l27-s099",
+      "text": "\"Dw i'n maddau i ti, Cai.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "maddau",
+        "gloss": "maddau: dim yn ddig nawr",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s100",
+      "text": "\"Brawd wyt ti.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s101",
+      "text": "Rhoddodd Arth gwtsh mawr i Cai, wrth yr allor, a wnaeth Cai ddim dweud \"Paid â siarad am y cwtsh gyda Mali!\"",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s102",
+      "text": "\"Dw i wedi gweld y cwtsh,\" meddai Mali yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l27-s103",
+      "text": "\"Wel, mae hynny'n gywir: roedd e'n gwtsh mawr,\" meddai Cai, ac roedd e'n gwenu nawr.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gywir",
+        "gloss": "gywir ← cywir",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s104",
+      "text": "\"Ond paid ag ysgrifennu am y cwtsh yn dy ddyddiadur, Mali.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s105",
+      "text": "\"Dyddiadur? Does dim dyddiadur gyda fi,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l27-s106",
+      "text": "\"Wel… mae hynny'n anghywir. Mae dyddiadur gyda fi.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anghywir",
+        "gloss": "cywir ↔ anghywir",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s107",
+      "text": "\"Dyw Mali ddim yn gallu dweud celwydd, Cai!\" meddai Arth, ac roedd pawb yn chwerthin: Cai, Cynyr, a'r hen offeiriad hefyd.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l27-sec5",
+    "title": "Rhaid iddo fe…",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l27-s108",
+      "text": "\"Rwyt ti wedi cyfaddef, Cai, ac rwyt ti wedi ymddiheuro,\" meddai Cynyr. \"Mae hynny'n dangos dewrder.\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s109",
+      "text": "\"A dw i wedi maddau iddo fe, Dad,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l27-s110",
+      "text": "Roedd Cynyr yn dad teg, ac yn arglwydd teg hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s111",
+      "text": "Trodd e at Arth, ac edrychodd e arno fe am amser hir."
+     },
+     {
+      "id": "cy-brenin-01-l27-s112",
+      "text": "Roedd ei wyneb e'n ddifrifol eto."
+     },
+     {
+      "id": "cy-brenin-01-l27-s113",
+      "text": "\"Arth,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s114",
+      "text": "\"Wnest ti dynnu'r cleddyf hwn o'r garreg?\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s115",
+      "text": "\"Do, Dad,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l27-s116",
+      "text": "\"Mae hynny'n gywir.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s117",
+      "text": "\"Roedd y dafarn ar gau, ac roedd angen cleddyf ar Cai.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s118",
+      "text": "\"Ond wnes i ddim ei ddwyn e. Wnes i addo: bydda i'n rhoi'r cleddyf yn ôl yn y garreg.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s119",
+      "text": "\"Wnest ti addo?\" meddai Cynyr, ac am funud roedd e'n gwenu.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "addo",
+        "gloss": "addo: \"Bydda i'n …!\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s120",
+      "text": "\"Wel, wel. Amser hir yn ôl, wnes i addo rhywbeth hefyd.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s121",
+      "text": "\"Beth wnest ti addo, Dad?\" meddai Mali yn gyflym.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l27-s122",
+      "text": "Roedd e'n gwestiwn teg, ond wnaeth Cynyr ddim ateb.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s123",
+      "text": "Edrychodd e ar yr offeiriad."
+     },
+     {
+      "id": "cy-brenin-01-l27-s124",
+      "text": "\"Bachgen bach yw e,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l27-s125",
+      "text": "\"Bachgen un ar ddeg oed, heb dad a heb gleddyf. Fydd yr arglwyddi ddim yn ei gredu e.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s126",
+      "text": "\"Dw i'n gyfrifol am Arth, a dw i'n gyfrifol am y cleddyf hwn nawr,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l27-s127",
+      "text": "\"Felly rhaid iddyn nhw ei weld e.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s128",
+      "text": "\"Rhaid iddo fe roi'r cleddyf yn ôl yn y garreg, a'i dynnu e eto, yn y nos, yn y fynwent, a bydd yr arglwyddi yno.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s129",
+      "text": "\"Mae hynny'n deg,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l27-s130",
+      "text": "\"Bydd pawb yn gweld, a bydd pawb yn gwybod y gwir.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s131",
+      "text": "\"Fi? Pam, Dad?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l27-s132",
+      "text": "\"Dim ond cleddyf yw e.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s133",
+      "text": "Wnaeth Cynyr ddim ateb.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s134",
+      "text": "Ond roedd Mali'n gwybod, a dyw Mali byth yn dweud celwydd."
+     },
+     {
+      "id": "cy-brenin-01-l27-s135",
+      "text": "\"Arth,\" meddai Mali yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l27-s136",
+      "text": "\"Wyt ti'n cofio'r geiriau Lladin ar y garreg?\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s137",
+      "text": "\"Pwy bynnag sy'n tynnu'r cleddyf hwn o'r garreg, hwnnw yw'r brenin.\""
+     },
+     {
+      "id": "cy-brenin-01-l27-s138",
+      "text": "Edrychodd Arth ar Mali, ac wedyn edrychodd e ar y cleddyf ar yr allor.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s139",
+      "text": "Ac yn sydyn, roedd ei goesau e'n crynu, ac roedd rhaid iddo fe eistedd ar y fainc wrth y wal.",
+      "inference_aids": [
+       {
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l27-img-geiriau",
+        "alt": "In the dim church, Arth sits down suddenly on a bench by the wall, the sword on the altar behind him, as Mali repeats the words of the inscription; Cai, Cynyr and the old priest look at him.",
+        "art_brief": "Interior of the small stone church at Caerllion, dim (grey stone, candles, one small red-and-blue glass window above the altar). The long sword lies on the white-clothed altar between two candles; a big book on a stand. Arth (11, untidy brown hair with cowlick, freckles, moss-green tunic) has just sat down hard on a wooden bench by the wall, legs weak, staring at the sword, understanding at last. Mali (12, long dark braid, dark-blue dress, satchel) stands beside him, speaking quietly, one hand raised as if reciting. Cai (15, ginger-blond, rust-red tunic, red cloak) grins nervously at Arth; Cynyr (huge golden-blond beard, brown cloak) watches Arth with a grave, tender face; the thin old priest in a brown robe holds the book. A curl of smoke rises from Mali's cloak. No text.",
+        "characters": [
+         "char-arth",
+         "char-mali",
+         "char-cai",
+         "char-cynyr"
+        ],
+        "covers_lexeme_ids": [
+         "cy-allor",
+         "cy-offeiriad"
+        ],
+        "type": "image",
+        "status": "planned",
+        "src": "media/images/cy-brenin-01-l27-img-geiriau.webp"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l27-s140",
+      "text": "\"Wel,\" meddai Cai, ac roedd e'n chwerthin yn dawel, \"rhaid i fi fod yn yswain i ti nawr, Arth!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l27-s141",
+      "text": "\"Paid, Cai,\" meddai Arth. \"Dw i ddim eisiau yswain. Dw i eisiau brawd.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l27-s142",
+      "text": "\"Brenin Arth!\" meddai llais bach o glogyn Mali, ac yn sydyn tisianodd Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l27-s143",
+      "text": "Daeth mwg o'r clogyn, ac edrychodd yr offeiriad ar y canhwyllau eto."
+     },
+     {
+      "id": "cy-brenin-01-l27-s144",
+      "text": "\"Mae'n ddrwg gyda fi!\" meddai Dafi. \"Dw i'n ymddiheuro!\"",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l27-s145",
+      "text": "Cododd Cynyr y cleddyf o'r allor, a rhoddodd e'r cleddyf i Arth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l27-s146",
+      "text": "\"Cymer e,\" meddai Cynyr. \"Wnest ti ei dynnu e, felly rhaid i ti ei gario fe nawr.\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Rhaid i ti ddweud y gwir",
+  "rule_cy": "rhaid i fi / i ti / iddo fe / iddi hi / i ni / i chi / iddyn nhw + berfenw (treiglad meddal): Rhaid i ti ddweud. · Does dim rhaid i ti … · Oes rhaid i fi …? — Oes. / Nac oes.",
+  "tables": [
+   {
+    "caption": "i + person",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "i fi",
+      "Rhaid i fi gyfaddef rhywbeth."
+     ],
+     [
+      "i ti",
+      "Rhaid i ti ddweud y gwir."
+     ],
+     [
+      "iddo fe",
+      "Rhaid iddo fe roi'r cleddyf yn ôl yn y garreg."
+     ],
+     [
+      "iddi hi",
+      "Does dim rhaid iddi hi siarad."
+     ],
+     [
+      "i ni",
+      "Rhaid i ni fynd i'r eglwys."
+     ],
+     [
+      "i chi",
+      "Rhaid i chi fod yn dawel, blant."
+     ],
+     [
+      "iddyn nhw",
+      "Rhaid iddyn nhw ei weld e."
+     ]
+    ]
+   },
+   {
+    "caption": "rhaid ↔ does dim rhaid",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Rhaid i ti ddweud y gwir.",
+      "Does dim rhaid i ti ymladd heddiw."
+     ],
+     [
+      "Rhaid i fi gael cosb.",
+      "Does dim rhaid i ti gael cosb."
+     ],
+     [
+      "Oes rhaid i fi dyngu llw?",
+      "Oes. / Nac oes."
+     ]
+    ]
+   },
+   {
+    "caption": "i heb rhaid",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "maddau i",
+      "Dw i'n maddau i ti, Cai."
+     ],
+     [
+      "ymddiheuro i",
+      "Rhaid i fi ymddiheuro iddo fe."
+     ],
+     [
+      "rhoi … i",
+      "Rhoddodd e'r cleddyf i Arth."
+     ]
+    ]
+   },
+   {
+    "caption": "Treigladau: Pennod 27",
+    "header": [
+     "",
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "rhaid i X + berfenw",
+      "Rhaid i ti ddweud · Rhaid i ni fynd · Rhaid i chi fod · Rhaid i Cai dyngu",
+      "Pennod 27"
+     ],
+     [
+      "i fi, i ti … (+ enw)",
+      "i Gaerllion · i Cai (enw person: dim treiglad)",
+      "Pennod 16"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l27-s016"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s023"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s020"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s050"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s055"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s092"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s127"
+   },
+   {
+    "segment_id": "cy-brenin-01-l27-s128"
+   }
+  ],
+  "nodyn_en": "Obligation: rhaid i + person + verb-noun, which soft-mutates: Rhaid i ti ddweud (dweud), Rhaid i ni fynd (mynd). With pronouns i changes: i fi, i ti, iddo fe, iddi hi, i ni, i chi, iddyn nhw. Not obliged: Does dim rhaid i ti … Question: Oes rhaid i fi …? — Oes / Nac oes."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l27-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Dw i'n mynd. (rhaid) →",
+      "answer": "Rhaid i fi fynd."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Rwyt ti'n dweud y gwir. (rhaid) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhaid i ti ddweud y gwir.",
+        "Mae'n rhaid i ti ddweud y gwir."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Rhaid i ti dweud y gwir.",
+         "hint": "rhaid i ti + treiglad: dweud → ddweud"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Mae e'n rhoi'r cleddyf yn ôl. (rhaid) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhaid iddo fe roi'r cleddyf yn ôl.",
+        "Mae'n rhaid iddo fe roi'r cleddyf yn ôl."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Rhaid i e roi'r cleddyf yn ôl.",
+         "hint": "i + e → iddo fe"
+        }
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Mae hi'n darllen y geiriau. (rhaid) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhaid iddi hi ddarllen y geiriau.",
+        "Mae'n rhaid iddi hi ddarllen y geiriau."
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a4",
+       "prompt": "Maen nhw'n gweld y cleddyf. (rhaid) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhaid iddyn nhw weld y cleddyf.",
+        "Mae'n rhaid iddyn nhw weld y cleddyf."
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a5",
+       "prompt": "Mae Cai'n tyngu llw. (rhaid) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhaid i Cai dyngu llw.",
+        "Mae'n rhaid i Cai dyngu llw."
+       ],
+       "mutation_hint": true,
+       "explanation": "Cai: enw person, dim treiglad; tyngu → dyngu"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Rhaid i fi ymladd. (✗) →",
+      "answer": "Does dim rhaid i fi ymladd."
+     },
+     "items": [
+      {
+       "id": "a6",
+       "prompt": "Rhaid i ti gael cosb. (✗) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Does dim rhaid i ti gael cosb.",
+        "Does dim rhaid i ti gael cosb"
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l27-s086"
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Rhaid i ni fynd i'r eglwys. (?) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Oes rhaid i ni fynd i'r eglwys?"
+       ],
+       "common_wrong": [
+        {
+         "answer": "Ydy rhaid i ni fynd i'r eglwys?",
+         "hint": "Oes rhaid …?"
+        }
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "\"Oes rhaid i chi fod yn dawel yn yr eglwys?\" \"___.\"",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Oes"
+       ],
+       "common_wrong": [
+        {
+         "answer": "Ydw",
+         "hint": "Oes rhaid …? → Oes / Nac oes"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Cai'n gryf, ond mae Gwalchmai'n ___. (cryf + -ach)",
+      "answer": "gryfach"
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Mae'r cleddyf hwn yn ysgafn, ond mae cleddyf y garreg yn ___. (ysgafn + -ach)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ysgafnach"
+       ],
+       "recall_of": "G25"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Aeth Cai a Mali i'r eglwys. (nhw) →",
+      "answer": "Aethon nhw i'r eglwys."
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Daeth Cynyr a'r offeiriad i'r fynwent. (nhw) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Daethon nhw i'r fynwent."
+       ],
+       "recall_of": "G23"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l27-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "cosb",
+    "llw",
+    "tyngu",
+    "addo",
+    "cyfaddef",
+    "maddau",
+    "ymddiheuro",
+    "teg",
+    "annheg",
+    "cywir",
+    "anghywir",
+    "cyfrifol",
+    "difrifol",
+    "allor",
+    "offeiriad",
+    "llais",
+    "dewrder"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae dau afal gyda Mali, a dim afal gyda Arth. Dyw hynny ddim yn deg: mae e'n ___!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "annheg"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "\"Dau a dau: pedwar.\" \"Ie, mae hynny'n ___.\"",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gywir"
+     ],
+     "explanation": "yn + cywir → yn gywir"
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae Dafi wedi bwyta'r pasteiod. Mae e'n dweud wrth Modlen: \"Mae'n ddrwg gyda fi!\" Mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ymddiheuro"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae Modlen yn ddig, ond wedyn mae hi'n gwenu: \"Wel, dw i'n ___ i ti, Dafi.\"",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "maddau"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Yn yr eglwys, mae'r offeiriad yn rhoi'r canhwyllau ar yr ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "allor"
+     ]
+    },
+    {
+     "id": "b6",
+     "prompt": "Dyw'r offeiriad ddim yn gweiddi, ond mae ei ___ e'n gryf.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "lais"
+     ],
+     "explanation": "ei + llais → ei lais"
+    },
+    {
+     "id": "b7",
+     "prompt": "\"Bydda i'n dod yn ôl yfory!\" meddai Arth. Mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "addo"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "Dyw'r marchog ddim yn ofni'r ddraig fawr: mae ___ mawr gyda fe.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "dewrder"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae Cai wedi dweud celwydd, a nawr mae e'n dweud y gwir: mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cyfaddef"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae'r tŷ ar dân! Dyw hyn ddim yn chwarae: mae e'n ___ iawn.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ddifrifol"
+     ],
+     "explanation": "yn + difrifol → yn ddifrifol"
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l27-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Beth mae Cai'n dweud wrth ei dad ar y cae?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae e'n dweud: Mae'r cleddyf gyda fi. Fi yw'r brenin!",
+     "rubric": "Ateb: mae Cai'n dweud mai fe yw'r brenin / mae'r cleddyf gyda fe.",
+     "key_terms": [
+      "cy-brenin",
+      "cy-cleddyf"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s007"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Pam mae Cynyr yn rhoi ei glogyn dros y cleddyf?",
+     "answer_mode": "self_check",
+     "model_answer": "Does dim rhaid i'r arglwyddi weld y cleddyf: dim eto.",
+     "rubric": "Ateb: dyw Cynyr ddim eisiau i'r arglwyddi weld y cleddyf eto.",
+     "key_terms": [
+      "cy-arglwydd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s025"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Ble mae Cynyr yn rhoi'r cleddyf yn yr eglwys?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Ar yr allor",
+      "Ar yr allor, rhwng y canhwyllau",
+      "Mae e'n rhoi'r cleddyf ar yr allor",
+      "Mae Cynyr yn rhoi'r cleddyf ar yr allor"
+     ],
+     "model_answer": "Ar yr allor, rhwng y canhwyllau.",
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s035"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth sy'n rhaid i Cai wneud yn yr eglwys?",
+     "answer_mode": "self_check",
+     "model_answer": "Rhaid iddo fe dyngu llw ar y llyfr.",
+     "rubric": "Rhaid iddo fe + berfenw gyda threiglad (dyngu llw).",
+     "key_terms": [
+      "cy-tyngu",
+      "cy-llw"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s048"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Pam dyw Cai ddim yn gallu tyngu llw?",
+     "answer_mode": "self_check",
+     "model_answer": "Celwydd yw e: wnaeth Cai ddim tynnu'r cleddyf. Wnaeth Arth ei dynnu e.",
+     "rubric": "Ateb: dyw e ddim yn wir / Arth wnaeth ei dynnu e, dim Cai.",
+     "key_terms": [
+      "cy-celwydd",
+      "cy-gwir"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s073"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Ydy Cai'n cael cosb? Pam?",
+     "answer_mode": "self_check",
+     "model_answer": "Nac ydy. Wnaeth e ddweud y gwir, ac mae angen dewrder i ddweud y gwir.",
+     "rubric": "Nac ydy + rheswm: dwedodd e'r gwir / dewrder.",
+     "key_terms": [
+      "cy-cosb",
+      "cy-dewrder"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s086"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Beth sy'n rhaid i Arth wneud yn y nos?",
+     "answer_mode": "self_check",
+     "model_answer": "Rhaid iddo fe roi'r cleddyf yn ôl yn y garreg, a'i dynnu e eto, gyda'r arglwyddi yno.",
+     "rubric": "Rhaid iddo fe + roi'r cleddyf yn ôl / ei dynnu e eto.",
+     "key_terms": [
+      "cy-rhaid"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l27-s128"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Beth sy'n rhaid i ti wneud yfory?",
+     "answer_mode": "self_check",
+     "model_answer": "Rhaid i fi weithio. / Rhaid i fi fynd i'r dref.",
+     "rubric": "Rhaid i fi + berfenw gyda threiglad (weithio, fynd, ddarllen)."
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-rhaid",
+   "citation_form": "rhaid",
+   "part_of_speech": "noun",
+   "current_sense": "must, have to (rhaid i X + SM verbal noun); does dim rhaid i = needn't",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cosb",
+   "citation_form": "cosb",
+   "part_of_speech": "noun",
+   "current_sense": "punishment",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llw",
+   "citation_form": "llw",
+   "part_of_speech": "noun",
+   "current_sense": "oath",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-tyngu",
+   "citation_form": "tyngu",
+   "part_of_speech": "verb",
+   "current_sense": "to swear (an oath)",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-addo",
+   "citation_form": "addo",
+   "part_of_speech": "verb",
+   "current_sense": "to promise",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cyfaddef",
+   "citation_form": "cyfaddef",
+   "part_of_speech": "verb",
+   "current_sense": "to admit, confess",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-maddau",
+   "citation_form": "maddau",
+   "part_of_speech": "verb",
+   "current_sense": "to forgive",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-teg",
+   "citation_form": "teg",
+   "part_of_speech": "adjective",
+   "current_sense": "fair",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-annheg",
+   "citation_form": "annheg",
+   "part_of_speech": "adjective",
+   "current_sense": "unfair",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cywir",
+   "citation_form": "cywir",
+   "part_of_speech": "adjective",
+   "current_sense": "correct, right",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-anghywir",
+   "citation_form": "anghywir",
+   "part_of_speech": "adjective",
+   "current_sense": "wrong, incorrect",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-allor",
+   "citation_form": "allor",
+   "part_of_speech": "noun",
+   "current_sense": "altar",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-offeiriad",
+   "citation_form": "offeiriad",
+   "part_of_speech": "noun",
+   "current_sense": "priest",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llais",
+   "citation_form": "llais",
+   "part_of_speech": "noun",
+   "current_sense": "voice",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dewrder",
+   "citation_form": "dewrder",
+   "part_of_speech": "noun",
+   "current_sense": "courage",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ymddiheuro",
+   "citation_form": "ymddiheuro",
+   "part_of_speech": "verb",
+   "current_sense": "to apologise",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cyfrifol",
+   "citation_form": "cyfrifol",
+   "part_of_speech": "adjective",
+   "current_sense": "responsible",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-difrifol",
+   "citation_form": "difrifol",
+   "part_of_speech": "adjective",
+   "current_sense": "serious",
+   "first_introduced_lesson": "cy-brenin-01-l27",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-27.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "rhaid i … (+ SM)",
+    "back": "must, have to (rhaid i X + SM verbal noun); does dim rhaid i = needn't",
+    "example_segment_id": "cy-brenin-01-l27-s023",
+    "lexeme_id": "cy-rhaid"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "cosb (b.)",
+    "back": "punishment",
+    "example_segment_id": "cy-brenin-01-l27-s046",
+    "seen_as": "y gosb",
+    "lexeme_id": "cy-cosb"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "llw (g.)",
+    "back": "oath",
+    "example_segment_id": "cy-brenin-01-l27-s070",
+    "lexeme_id": "cy-llw"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "tyngu (llw)",
+    "back": "to swear (an oath)",
+    "example_segment_id": "cy-brenin-01-l27-s050",
+    "lexeme_id": "cy-tyngu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "addo",
+    "back": "to promise",
+    "example_segment_id": "cy-brenin-01-l27-s118",
+    "lexeme_id": "cy-addo"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "cyfaddef",
+    "back": "to admit, confess",
+    "example_segment_id": "cy-brenin-01-l27-s076",
+    "lexeme_id": "cy-cyfaddef"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "maddau (i)",
+    "back": "to forgive",
+    "example_segment_id": "cy-brenin-01-l27-s099",
+    "lexeme_id": "cy-maddau"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "teg",
+    "back": "fair",
+    "example_segment_id": "cy-brenin-01-l27-s110",
+    "lexeme_id": "cy-teg"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "annheg",
+    "back": "unfair",
+    "example_segment_id": "cy-brenin-01-l27-s088",
+    "lexeme_id": "cy-annheg"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "cywir",
+    "back": "correct, right",
+    "example_segment_id": "cy-brenin-01-l27-s116",
+    "seen_as": "yn gywir",
+    "lexeme_id": "cy-cywir"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "anghywir",
+    "back": "wrong, incorrect",
+    "example_segment_id": "cy-brenin-01-l27-s078",
+    "lexeme_id": "cy-anghywir"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "allor (b.)",
+    "back": "altar",
+    "example_segment_id": "cy-brenin-01-l27-s035",
+    "lexeme_id": "cy-allor"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "offeiriad (g.)",
+    "back": "priest",
+    "example_segment_id": "cy-brenin-01-l27-s034",
+    "lexeme_id": "cy-offeiriad"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "llais (g.)",
+    "back": "voice",
+    "example_segment_id": "cy-brenin-01-l27-s004",
+    "seen_as": "ei lais e",
+    "lexeme_id": "cy-llais"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "dewrder (g.)",
+    "back": "courage",
+    "example_segment_id": "cy-brenin-01-l27-s085",
+    "lexeme_id": "cy-dewrder"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "ymddiheuro",
+    "back": "to apologise",
+    "example_segment_id": "cy-brenin-01-l27-s092",
+    "lexeme_id": "cy-ymddiheuro"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "cyfrifol",
+    "back": "responsible",
+    "example_segment_id": "cy-brenin-01-l27-s096",
+    "seen_as": "yn gyfrifol",
+    "lexeme_id": "cy-cyfrifol"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l27",
+    "front": "difrifol",
+    "back": "serious",
+    "example_segment_id": "cy-brenin-01-l27-s042",
+    "seen_as": "yn ddifrifol",
+    "lexeme_id": "cy-difrifol"
+   },
+   {
+    "id": "pattern-g27",
+    "lesson": "cy-brenin-01-l27",
+    "front": "Rhaid i ti ddweud y gwir. · Rhaid iddo fe roi'r cleddyf yn ôl. · Does dim rhaid i ti ymladd. · Oes rhaid i fi dyngu llw? — Oes.",
+    "back": "You must tell the truth. · He must put the sword back. · You needn't fight. · Must I swear an oath? — Yes. (i fi, i ti, iddo fe, iddi hi, i ni, i chi, iddyn nhw)",
+    "example_segment_id": "cy-brenin-01-l27-s023",
+    "example_segment_ids": [
+     "cy-brenin-01-l27-s023",
+     "cy-brenin-01-l27-s020"
+    ],
+    "lexeme_id": "cy-pattern-g27"
+   },
+   {
+    "id": "conj",
+    "lesson": "cy-brenin-01-l27",
+    "front": "i — i fi, i ti, iddo fe, iddi hi, i ni, i chi, iddyn nhw",
+    "back": "to, for (conjugated): Rhaid iddo fe roi'r cleddyf yn ôl.",
+    "example_segment_id": "cy-brenin-01-l27-s127",
+    "lexeme_id": "cy-i"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l27-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 0,
+   "margin_diagram": 0,
+   "margin_gloss": 19
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-27",
+   "rhan-3"
+  ]
+ },
+ "metrics": {
+  "running_words": 1497,
+  "sentences": 146,
+  "word_target": 1510,
+  "word_window": [
+   1359,
+   1661
+  ]
+ }
+}

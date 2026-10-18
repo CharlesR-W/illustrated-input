@@ -1,0 +1,2069 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l33",
+ "course_id": "cy-brenin-01",
+ "order": 33,
+ "title": "Neges Rhita Gawr",
+ "rhan": 4,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B6 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (Wave 2, 2026-10-17 notes)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Codex review 2026-10-18 applied: C5 model 'yn elyn'; s092 'Ofynnodd y negesydd am fwyd?'; C1 'yn ei gasglu'; A3/A4/A6 accept colloquial fod e / bod hi; A7 accepts a / os ydy (no compulsory backshift; explanation added); nodyn_en distinguishes full and colloquial pronoun forms; s018 'Fydda i byth yn eillio …'; s033 'ond roedd un ochr yn fyr iawn'. Verdicts recorded on all review questions.",
+   "Target G33 is narrowed to one core: bod-reporting after a past verb. Reported statements (dwedodd X fod …, ei fod e …, ei bod hi …) and reported yes/no questions (gofynnodd X a / os oedd …) occur about 30 times, mostly in three retelling scenes: the morning council, Mali's retelling to Modlen (who missed the messenger) and Mali's diary. Each reported sentence has its direct-speech original earlier in the chapter, so the contrast meddai ↔ dwedodd … fod is built from the chapter itself.",
+   "y byddai appears once (Mali to Modlen), glossed '= \"bydd …\" (ddoe)' and immediately followed by the direct quotation of the threat ('Ei eiriau fe oedd: Bydd Rhita'n dod!'); it is listed as an incidental and is never tested.",
+   "Dafi's one deliberate error ('dwedodd e bod rhyfel yn dod') contrasts with the chapter target (dwedodd + fod) and is corrected by Mali at once.",
+   "Open-slot words (CorCenCC top 2000): erbyn (302) and neu (37) for the plan's demand 'Anfon dy farf erbyn y lleuad newydd, neu bydd Rhita'n dod!'; darn (442) for the lock of Cynyr's beard (the 'deposit' is shown as 'Dyma'r dechrau … darn o farf Cynyr nawr, a barf y brenin wedyn' rather than with a word for deposit); achos (576) because Mali's and Arthur's reasons need it. neb is already known from Pennod 26's open slots.",
+   "Form added: dwedodd (cy-dweud) and gofynnodd (cy-gofyn), preterite 3sg, already licensed at 33 by the plan's new_forms.",
+   "Continuity: Rhita's cloak shows the beards of the kings of Iwerddon (red) and Llydaw (black), matching Pennod 37 as written. The messenger cuts a long gold lock from one side of Cynyr's beard and takes it away with the cloak (Mali recovers it in 37). The deadline is the new moon, two weeks away (Mali). Modlen missed the messenger (she was in the kitchen) and decides on a wool beard; nothing in this chapter decides the plan or the journey (34).",
+   "Checker warnings justified: 'a oedd' lint-a-ac hits are the interrogative particle a in reported questions (gofynnodd e a oedd …), not the conjunction; three local-density warnings fall in Mali's retelling and the council, where this chapter's own words (bygwth, bygythiad, rhyfel, heddwch, rhybuddio) recur after being introduced and glossed earlier in the chapter; the near-duplicate pair is Mali's correction of Dafi's deliberate error and his corrected repeat.",
+   "Length about 1,530 words against 1,690 (window from 1,521): the chapter ends on Mali's diary and Modlen sewing; no padding added. Mean sentence length is kept in the Rhan 4 window by splitting only very long multi-sentence turns."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l33-s009",
+    "question": "[?] Vocative 'Frenin Arthur!' with SM, and 'Anfon dy farf at Rhita Gawr erbyn y lleuad newydd': natural?",
+    "resolved": true,
+    "resolution": "Codex: accept (vocative Frenin, erbyn, at Rhita)."
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s061",
+    "question": "[?] Reported question with 'a oedd' and, two lines later, colloquial 'os oedd': is mixing both acceptable as a learner model?",
+    "resolved": true,
+    "resolution": "Codex: accept both a oedd and os oedd in this register."
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s095",
+    "question": "[?] Negative bod-clause 'ei fod e ddim yn ofni'r cawr' (colloquial) vs 'nad oedd e'n ofni': acceptable here?",
+    "resolved": true,
+    "resolution": "Codex: accept colloquial ei fod e ddim; nad oedd not compulsory."
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s080",
+    "question": "[?] 'y byddai' after dwedodd for a reported future: confirm as the recognition model.",
+    "resolved": true,
+    "resolution": "Codex: accept; keep y byddai recognition-only (ddoe in the gloss = the reporting viewpoint)."
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s033",
+    "question": "[?] 'ar un ochr … ar un ochr' (avoids arall, not yet taught): acceptable, or does it read wrongly?",
+    "resolved": true,
+    "resolution": "Codex: revised to 'Roedd hi'n hir ac yn aur, ond roedd un ochr yn fyr iawn.'"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s124",
+    "question": "[?] 'dwedodd e fod y cawr eisiau mwy' (bod + eisiau without yn): natural?",
+    "resolved": true,
+    "resolution": "Codex: accept; no yn before eisiau."
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s018",
+    "question": "[?] 'heddiw nac un diwrnod' (neither today nor one day): natural, or 'heddiw nac yfory'?",
+    "resolved": true,
+    "resolution": "Codex: revised to 'Fydda i byth yn eillio fy marf i i gawr balch.'"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G33",
+  "primary_new_grammar": {
+   "id": "G33",
+   "label": "Reported speech after a past verb: dwedodd X fod … / ei fod e … / ei bod hi …; reported yes/no questions gofynnodd X a / os oedd …; y byddai met once as a glossed recognition-only phrase beside the directly quoted threat (Bydd Rhita'n dod!)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G13",
+   "G17",
+   "G20",
+   "G21",
+   "G22",
+   "G23",
+   "G24",
+   "G25",
+   "G26",
+   "G27",
+   "G29",
+   "G30",
+   "G31",
+   "G32"
+  ],
+  "incidental": [
+   {
+    "form": "y byddai",
+    "gloss_segment_id": "cy-brenin-01-l33-s080"
+   }
+  ],
+  "new_lexeme_ids": [
+   "cy-cawr",
+   "cy-heddwch",
+   "cy-rhyfel",
+   "cy-bygwth",
+   "cy-eillio",
+   "cy-casglu",
+   "cy-gorffen",
+   "cy-gorchfygu",
+   "cy-barfog",
+   "cy-bygythiad",
+   "cy-anrhydedd",
+   "cy-byddin",
+   "cy-gelyn",
+   "cy-rhybudd",
+   "cy-rhybuddio",
+   "cy-erbyn",
+   "cy-neu",
+   "cy-darn",
+   "cy-achos"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-cawr",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l33-s002"
+   },
+   {
+    "lexeme_id": "cy-heddwch",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l33-s010"
+   },
+   {
+    "lexeme_id": "cy-rhyfel",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l33-s010"
+   },
+   {
+    "lexeme_id": "cy-bygwth",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s020"
+   },
+   {
+    "lexeme_id": "cy-eillio",
+    "how": "gloss+context",
+    "segment_id": "cy-brenin-01-l33-s017"
+   },
+   {
+    "lexeme_id": "cy-casglu",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l33-s004"
+   },
+   {
+    "lexeme_id": "cy-gorffen",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l33-s007"
+   },
+   {
+    "lexeme_id": "cy-gorchfygu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s005"
+   },
+   {
+    "lexeme_id": "cy-barfog",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s012"
+   },
+   {
+    "lexeme_id": "cy-bygythiad",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l33-s021"
+   },
+   {
+    "lexeme_id": "cy-anrhydedd",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s027"
+   },
+   {
+    "lexeme_id": "cy-byddin",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s010"
+   },
+   {
+    "lexeme_id": "cy-gelyn",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l33-s042"
+   },
+   {
+    "lexeme_id": "cy-rhybudd",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s030"
+   },
+   {
+    "lexeme_id": "cy-rhybuddio",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s063"
+   },
+   {
+    "lexeme_id": "cy-erbyn",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s009"
+   },
+   {
+    "lexeme_id": "cy-neu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l33-s009"
+   },
+   {
+    "lexeme_id": "cy-darn",
+    "how": "gloss(radical)+picture(scene)",
+    "segment_id": "cy-brenin-01-l33-s026"
+   },
+   {
+    "lexeme_id": "cy-achos",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l33-s052"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-barf",
+   "cy-clogyn",
+   "cy-bod-that",
+   "cy-balch",
+   "cy-ofnadwy",
+   "cy-os",
+   "cy-gwlan",
+   "cy-dyddiadur",
+   "cy-gwrthod",
+   "cy-anfon",
+   "cy-lleuad",
+   "cy-peryglus",
+   "cy-enfawr",
+   "cy-mwyaf",
+   "cy-gwell",
+   "cy-gan",
+   "cy-llawer",
+   "cy-dechrau",
+   "cy-llestri"
+  ],
+  "swaps": [],
+  "open_slot_ids": [
+   "cy-erbyn",
+   "cy-neu",
+   "cy-darn",
+   "cy-achos"
+  ]
+ },
+ "story": {
+  "cover": {
+   "type": "image",
+   "presentation": "inline_scene",
+   "ref": "cy-brenin-01-l33-img-cover",
+   "src": "media/images/cy-brenin-01-l33-img-cover.webp",
+   "alt": "In the great hall at Caerllion the huge messenger holds up the long cloak of beards before the throne; the hall laughs at the beardless boy-king.",
+   "status": "planned",
+   "art_brief": "The great hall of the castle at Caerllion at night (Caerllion palette: red brick and timber, torches, a big hearth, a red-dragon banner on green and white). Rhita's messenger (a huge man, taller than the doorway, long grey snow-dusted hooded cloak, big boots, broad pale face) stands in the middle of the hall holding up the cloak of beards (long tufts of beard hair in red, gold, black, grey and white stitched together in rows; no faces; comic, never gory) so that it hangs down to his boots, pointing with one big finger at a red beard and a long black beard on it. On the tall throne Arthur (12, untidy brown hair with a cowlick, freckles; plain blue cloak over a long blue robe with a small red dragon on the chest) wearing the too-big gold crown sits very straight with a smooth, beardless face. Cai (15, tall, red-blond, rust-red tunic, red cloak, sword at his belt) beside the throne is laughing; lords and knights round the tables laugh behind their hands; Cynyr (broad, huge golden-blond beard to mid-chest, brown cloak with round silver brooch) frowns and holds his huge golden beard. Mali (12, long dark braid, dark-blue dress, satchel) stands by the throne, serious. Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat) watches from the hearth, a wisp of smoke from his hat. No text.",
+   "characters": [
+    "char-negesydd-rhita",
+    "char-arth",
+    "char-cai",
+    "char-cynyr",
+    "char-mali",
+    "char-myrddin"
+   ],
+   "covers_lexeme_ids": [
+    "cy-cawr",
+    "cy-casglu",
+    "cy-barf",
+    "cy-clogyn"
+   ],
+   "width": 1600,
+   "height": 1067
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l33-sec1",
+    "title": "Y clogyn barfau",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l33-s001",
+      "text": "Safodd y negesydd enfawr ar ei draed, ac roedd ei ben e'n agos at y to.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s002",
+      "text": "\"Arglwyddi!\" meddai e mewn llais mawr, dwfn. \"Dyma neges Rhita Gawr, y cawr mwyaf yn Eryri.\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cawr",
+        "gloss": "cawr: dyn mawr, mawr iawn",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s003",
+      "text": "Cododd e'r clogyn barfau o'r llawr, ac roedd y barfau'n cyrraedd ei draed e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s004",
+      "text": "\"Mae Rhita'n casglu barfau,\" meddai'r negesydd. \"Barfau brenhinoedd! Dyma farf brenin Iwerddon: barf goch. A dyma farf brenin Llydaw: barf ddu, hir.\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "casglu",
+        "gloss": "casglu: barf + barf + barf …",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s005",
+      "text": "\"Mae Rhita wedi gorchfygu llawer o frenhinoedd, ac mae e wedi cymryd eu barfau nhw.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gorchfygu",
+        "gloss": "gorchfygu = ennill yn erbyn",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s006",
+      "text": "Mae Rhita'n mynnu cael barf gan bob brenin.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s007",
+      "text": "\"Ond dyw'r clogyn ddim yn barod eto. Mae Rhita eisiau barf y brenin newydd i orffen y clogyn.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "orffen",
+        "gloss": "i orffen ← gorffen: gwneud yn barod",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s008",
+      "text": "Edrychodd y negesydd ar Arthur, ac wedyn dwedodd e'r neges yn uchel iawn:",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s009",
+      "text": "\"Frenin Arthur! Anfon dy farf at Rhita Gawr erbyn y lleuad newydd, neu bydd Rhita'n dod!\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "erbyn",
+        "gloss": "erbyn: dim ar ôl",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "neu",
+        "gloss": "neu: A, neu B?",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s010",
+      "text": "\"Bydd e'n dod gyda byddin o gewri, a bydd rhyfel yng Nghymru!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "byddin",
+        "gloss": "byddin: milwyr, milwyr, milwyr",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gewri",
+        "gloss": "o gewri ← cewri (cawr)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rhyfel",
+        "gloss": "rhyfel ↔ heddwch",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "cy-rhyfel",
+         "cy-heddwch"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s011",
+      "text": "Roedd y neuadd yn dawel iawn. Wedyn edrychodd pawb ar wyneb y brenin newydd: wyneb bachgen, heb farf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s012",
+      "text": "Dechreuodd Cai chwerthin. Wedyn dechreuodd y marchogion chwerthin, a'r arglwyddi barfog, a'r morynion. Roedd pawb yn y neuadd yn chwerthin.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "barfog",
+        "gloss": "barfog: gyda barf",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s013",
+      "text": "\"Barf?\" meddai Cai. \"Does dim barf gyda Arthur! Mae mwy o farf gyda Pero!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l33-s014",
+      "text": "Ond yn sydyn, doedd neb yn chwerthin. Doedd neb eisiau gweld byddin o gewri yng Nghymru.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l33-sec2",
+    "title": "Na!",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l33-s015",
+      "text": "Cododd Arthur o'r orsedd, ac roedd ei draed e ar y llawr nawr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s016",
+      "text": "\"Diolch am y neges,\" meddai'r brenin. \"Ond does dim barf gyda fi. Mae pawb yn gallu gweld hynny.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s017",
+      "text": "\"Wel, un diwrnod bydd barf gyda ti,\" meddai'r negesydd. \"Wedyn rhaid i ti ei heillio hi, a'i hanfon hi at Rhita.\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "heillio",
+        "gloss": "ei heillio ← eillio",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s018",
+      "text": "\"Na,\" meddai Arthur. \"Fydda i byth yn eillio fy marf i i gawr balch.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s019",
+      "text": "Gwrthododd Arthur, ac roedd y neuadd yn dawel eto.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s020",
+      "text": "\"Rwyt ti'n gwrthod?\" meddai'r negesydd. \"Mae Rhita'n bygwth rhyfel, frenin bach! Mae e'n gawr peryglus iawn.\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "bygwth",
+        "gloss": "bygwth: \"Neu bydd rhyfel!\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s021",
+      "text": "\"Dw i eisiau heddwch,\" meddai Arthur, \"ond dw i ddim yn ofni dy fygythiad di.",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "fygythiad",
+        "gloss": "dy fygythiad ← bygythiad: \"Neu …!\"",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s022",
+      "text": "Dyw barf ddim yn bwysig."
+     },
+     {
+      "id": "cy-brenin-01-l33-s023",
+      "text": "Mae heddwch yn bwysig.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s024",
+      "text": "Edrychodd y negesydd ar y neuadd. Wedyn gwelodd e farf fawr, aur Cynyr, a gwenodd e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s025",
+      "text": "\"Does dim barf gyda'r brenin,\" meddai e. \"Ond mae barf gyda'r arglwydd hwn!\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita"
+     },
+     {
+      "id": "cy-brenin-01-l33-s026",
+      "text": "Yn sydyn, tynnodd e gyllell, a thorrodd e ddarn hir o farf Cynyr.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddarn",
+        "gloss": "ddarn ← darn: rhan fach",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l33-img-torri",
+        "src": "media/images/cy-brenin-01-l33-img-torri.webp",
+        "alt": "The messenger cuts a long lock from one side of Cynyr's huge golden beard with a knife while Cynyr stares in horror and the lords leap up.",
+        "status": "planned",
+        "art_brief": "Close scene in the same hall at Caerllion (torchlight, red brick, timber). Rhita's messenger (a huge man, taller than the doorway, long grey snow-dusted hooded cloak, big boots, broad pale face) leans over Cynyr (broad, huge golden-blond beard to mid-chest, brown cloak with round silver brooch) and with a short knife cuts a long golden lock from one side of his huge beard, grinning; the lock hangs from his big fist. Cynyr's mouth is open in horror; one side of his beard is now short. Behind them an big red-bearded lord (Barf Goch) clutches his own beard; Arthur (12, untidy brown hair with a cowlick, freckles; plain blue cloak over a long blue robe with a small red dragon on the chest) (crown, blue robe) has risen from the throne with one hand raised; Elen (about fifty, white linen veil, forest-green dress, ring of keys) reaches towards Cynyr. The cloak of beards is slung over the messenger's shoulder. No text.",
+        "characters": [
+         "char-negesydd-rhita",
+         "char-cynyr",
+         "char-arth",
+         "char-elen",
+         "char-barf-goch"
+        ],
+        "covers_lexeme_ids": [
+         "cy-darn",
+         "cy-barf"
+        ],
+        "width": 1600,
+        "height": 1067
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s027",
+      "text": "\"Fy marf i!\" meddai Cynyr. \"Fy anrhydedd i!\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anrhydedd",
+        "gloss": "anrhydedd: enw da, urddas",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s028",
+      "text": "\"Dyma'r dechrau,\" meddai'r negesydd, ac roedd e'n chwerthin.",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita"
+     },
+     {
+      "id": "cy-brenin-01-l33-s029",
+      "text": "\"Bydd Rhita'n cael darn o farf Cynyr nawr, a barf y brenin wedyn."
+     },
+     {
+      "id": "cy-brenin-01-l33-s030",
+      "text": "Dyma fy rhybudd i: y lleuad newydd!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rhybudd",
+        "gloss": "rhybudd: \"Gwylia!\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s031",
+      "text": "Ac aeth e mas o'r neuadd i'r eira, gyda'r clogyn barfau ar ei gefn e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s032",
+      "text": "Rhoddodd Cynyr ei law ar ei farf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s033",
+      "text": "Roedd hi'n hir ac yn aur, ond roedd un ochr yn fyr iawn."
+     },
+     {
+      "id": "cy-brenin-01-l33-s034",
+      "text": "\"Mae'n ddrwg gyda fi, Dad,\" meddai Arthur.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s035",
+      "text": "\"Dim ond barf yw hi,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l33-s036",
+      "text": "Wedyn edrychodd e ar y darn byr, ac roedd e'n drist."
+     },
+     {
+      "id": "cy-brenin-01-l33-s037",
+      "text": "\"Ond barf dda oedd hi."
+     },
+     {
+      "id": "cy-brenin-01-l33-s038",
+      "text": "Barf fawr, barf hir, barf dda!\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s039",
+      "text": "Eisteddodd Elen wrth ochr Cynyr, ac roedd hi'n dawel. Ond roedd ei llygaid hi ar y drws, ac ar yr eira.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l33-sec3",
+    "title": "Y cyngor yn y nos",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l33-s040",
+      "text": "Y noson honno, roedd yr arglwyddi'n siarad yn uchel wrth y tân.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s041",
+      "text": "\"Rhaid i ni gasglu byddin!\" meddai Barf Goch.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gasglu",
+        "gloss": "gasglu ← casglu",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s042",
+      "text": "\"Mae Rhita'n elyn i bawb yng Nghymru, a does neb wedi gorchfygu Rhita.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "elyn",
+        "gloss": "elyn ← gelyn (↔ ffrind)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s043",
+      "text": "Mae gelyn gyda ni nawr. Rhyfel, felly!\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s044",
+      "text": "\"Dw i eisiau ymladd!\" meddai Cai, a chododd e ei gleddyf.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l33-s045",
+      "text": "\"Dw i ddim yn hoffi'r bygythiad yma,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l33-s046",
+      "text": "\"Mae anrhydedd y llys yn bwysig."
+     },
+     {
+      "id": "cy-brenin-01-l33-s047",
+      "text": "Ond mae cawr yn bygwth Cymru am farf!"
+     },
+     {
+      "id": "cy-brenin-01-l33-s048",
+      "text": "Barf neu ryfel: dyna'r neges.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ryfel",
+        "gloss": "neu ryfel ← rhyfel",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s049",
+      "text": "\"Mae barf hir, goch gyda Barf Goch,\" meddai Cai. \"Dyma farf i Rhita!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l33-s050",
+      "text": "Rhoddodd Barf Goch ei ddwy law ar ei farf goch yn gyflym, ac roedd pawb yn chwerthin eto, am funud.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s051",
+      "text": "\"Dyn ni ddim yn mynd i ryfel am farf,\" meddai Arthur.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s052",
+      "text": "\"Mae heddwch yn well na rhyfel, achos mewn rhyfel mae pawb yn colli.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s053",
+      "text": "Edrychodd Arthur ar Myrddin. Roedd Myrddin yn eistedd wrth y tân, ac roedd e'n dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s054",
+      "text": "\"Myrddin, dych chi'n gwybod rhywbeth am Rhita Gawr?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s055",
+      "text": "\"Dw i wedi clywed llawer amdano fe,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l33-s056",
+      "text": "\"Mae'r beirdd yn dweud bod Rhita'n byw ar ben yr Wyddfa, ac yn dweud ei fod e'n gryf iawn.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s057",
+      "text": "\"Ond mae'r beirdd yn dweud ei fod e'n falch iawn hefyd. Dyma fy rhybudd i: mae cawr balch yn elyn peryglus.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s058",
+      "text": "Edrychodd yr arglwyddi barfog ar Cynyr a'i farf. Roedd Mali'n ysgrifennu popeth ar ei thabled.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s059",
+      "text": "Yn y bore, roedd y cyngor yn y neuadd eto. Dwedodd Barf Goch fod rhaid casglu byddin fawr.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dwedodd",
+        "gloss": "\"Rhaid …\" → Dwedodd e fod rhaid …",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s060",
+      "text": "Dwedodd Cai ei fod e eisiau ymladd yn erbyn y cawr.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ei fod e",
+        "gloss": "ei fod e / ei bod hi",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s061",
+      "text": "Gofynnodd Arthur a oedd unrhyw un wedi gweld Rhita Gawr. Doedd neb wedi gweld y cawr.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gofynnodd",
+        "gloss": "\"Oes …?\" → Gofynnodd e a / os …",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s062",
+      "text": "Wedyn gofynnodd e os oedd Rhita eisiau heddwch hefyd. Doedd neb yn gwybod."
+     },
+     {
+      "id": "cy-brenin-01-l33-s063",
+      "text": "Rhybuddiodd Myrddin bawb fod Rhita'n gawr balch ac yn elyn peryglus.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Rhybuddiodd",
+        "gloss": "rhybuddio: rhoi rhybudd",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s064",
+      "text": "Dwedodd Cynyr fod ei farf e'n oer ar un ochr.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l33-sec4",
+    "title": "Mali a Modlen",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l33-s065",
+      "text": "Doedd Modlen ddim yn y neuadd pan ddaeth y negesydd: roedd hi yn y gegin, gyda'r llestri.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s066",
+      "text": "Felly yn y bore, aeth Mali i'r gegin."
+     },
+     {
+      "id": "cy-brenin-01-l33-s067",
+      "text": "\"Beth ddigwyddodd neithiwr?\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s068",
+      "text": "\"Roedd y neuadd yn dawel, ac wedyn roedd hi'n llawn o sŵn, ac wedyn roedd hi'n dawel eto!\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s069",
+      "text": "\"Daeth negesydd Rhita Gawr i'r wledd,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s070",
+      "text": "\"Dwedodd e fod Rhita'n gawr mawr iawn."
+     },
+     {
+      "id": "cy-brenin-01-l33-s071",
+      "text": "Dwedodd e fod clogyn o farfau gyda'r cawr.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s072",
+      "text": "\"Clogyn o farfau? Ofnadwy!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s073",
+      "text": "\"Ie. Dwedodd e fod Rhita wedi gorchfygu llawer o frenhinoedd, a'i fod e wedi casglu eu barfau nhw.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s074",
+      "text": "Dwedodd e fod Rhita eisiau barf Arthur i orffen y clogyn.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s075",
+      "text": "\"Ond does dim barf gyda Arthur!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s076",
+      "text": "\"Dyna beth ddwedodd pawb,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddwedodd",
+        "gloss": "beth ddwedodd ← dwedodd",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s077",
+      "text": "\"Wel, dwedodd e fod rhaid i Arthur eillio ei farf un diwrnod, a'i hanfon hi i Eryri."
+     },
+     {
+      "id": "cy-brenin-01-l33-s078",
+      "text": "Dwedodd e fod Rhita'n bygwth rhyfel."
+     },
+     {
+      "id": "cy-brenin-01-l33-s079",
+      "text": "Bygythiad oedd e, Modlen, a rhybudd hefyd.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s080",
+      "text": "\"Ac wedyn dwedodd y negesydd y byddai Rhita'n dod gyda byddin.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "y byddai",
+        "gloss": "y byddai = \"bydd …\" (ddoe)",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s081",
+      "text": "\"Ei eiriau fe oedd: Bydd Rhita'n dod!\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s082",
+      "text": "\"A dwedodd e bod rhyfel yn dod!\" meddai Dafi o'r ffwrn.",
+      "paragraph_start": true,
+      "speaker": "char-dafi",
+      "deliberate_error": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s083",
+      "text": "\"Fod, Dafi,\" meddai Mali. \"Dwedodd e fod rhyfel yn dod.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s084",
+      "text": "\"Dwedodd e fod rhyfel yn dod,\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l33-s085",
+      "text": "\"A dwedodd e fod y cawr yn hoffi barfau."
+     },
+     {
+      "id": "cy-brenin-01-l33-s086",
+      "text": "Dw i ddim yn hoffi barfau."
+     },
+     {
+      "id": "cy-brenin-01-l33-s087",
+      "text": "Dw i'n hoffi pasteiod.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s088",
+      "text": "\"A beth ddwedodd y negesydd am y lleuad?\" gofynnodd Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s089",
+      "text": "\"Dwedodd e fod rhaid anfon y farf erbyn y lleuad newydd. Barf neu ryfel, Modlen: dyna'r neges.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s090",
+      "text": "\"A beth ddwedodd Cai?\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s091",
+      "text": "\"Dwedodd Cai fod mwy o farf gyda Pero,\" meddai Mali, ac roedd Modlen yn chwerthin yn uchel.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s092",
+      "text": "\"Ofynnodd y negesydd am fwyd?\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s093",
+      "text": "\"Naddo.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s094",
+      "text": "\"Wel, dyna negesydd drwg!\" meddai Modlen. \"Dim bwyd, dim diolch, a dim barf! A beth ddwedodd y brenin?\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s095",
+      "text": "\"Dwedodd Arthur ei fod e eisiau heddwch, ond ei fod e ddim yn ofni'r cawr,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s096",
+      "text": "\"Ac wedyn torrodd y negesydd ddarn o farf Dad.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s097",
+      "text": "\"Barf Cynyr!\" meddai Modlen, a chododd hi'r llwy bren. \"Barf Cynyr yw ei anrhydedd e! Ble mae Cynyr nawr?\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s098",
+      "text": "\"Yn y neuadd. Mae e'n dweud bod ei farf e'n oer ar un ochr.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s099",
+      "text": "Roedd Modlen yn dawel am funud. Wedyn gofynnodd hi a oedd y cawr yn gweld yn dda.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s100",
+      "text": "\"Dw i ddim yn gwybod,\" meddai Mali. \"Mae Myrddin wedi ein rhybuddio ni: mae'r cawr yn falch iawn. Pam?\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l33-sec5",
+    "title": "Gwlân Modlen",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l33-s101",
+      "text": "\"Achos mae gwaith gyda fi,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s102",
+      "text": "Aeth hi at fasged fawr wrth y ffwrn, ac agorodd hi'r fasged. Roedd gwlân yn y fasged: gwlân gwyn a gwlân du.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s103",
+      "text": "\"Y gwlân o'r ffair!\" meddai Mali. \"Talaist ti bum ceiniog am y gwlân yma, dim saith!\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s104",
+      "text": "\"Do, diolch i ti,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s105",
+      "text": "\"Os ydy'r cawr eisiau barf, bydd e'n cael barf."
+     },
+     {
+      "id": "cy-brenin-01-l33-s106",
+      "text": "Ond fydd e ddim yn gorffen ei glogyn gyda barf Arthur!\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s107",
+      "text": "Cododd hi'r gwlân du a'i roi ar ei hwyneb hi: barf fawr, ddu!",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l33-img-gwlan",
+        "src": "media/images/cy-brenin-01-l33-img-gwlan.webp",
+        "alt": "In the castle kitchen Modlen holds a bundle of black wool to her face like a great black beard; Mali laughs and Dafi laughs smoke on the oven.",
+        "status": "planned",
+        "art_brief": "The big castle kitchen at Caerllion in the morning (warm firelight, a big bread oven, copper pots, stacked clean dishes). Modlen (short, round, rosy, white headscarf, long floury apron, big wooden spoon) has opened a big basket of white and black wool (the wool from the fair) and holds a thick bundle of black wool under her nose and chin like a huge black beard, eyebrows raised, wooden spoon in her other hand. Mali (12, long dark braid, dark-blue dress, satchel) laughs with her wax tablet under her arm; Dafi (cup-sized red dragon, two short cream horns, tiny bat wings, big yellow eyes; small enough to sit in a wooden drinking cup) sits on top of the warm oven laughing, a puff of grey smoke from his nose. In the doorway Arthur (12, untidy brown hair with a cowlick, freckles; plain blue cloak over a long blue robe with a small red dragon on the chest) (no crown, blue robe) and Cai (15, tall, red-blond, rust-red tunic, red cloak, sword at his belt) stare. No text.",
+        "characters": [
+         "char-modlen",
+         "char-mali",
+         "char-dafi",
+         "char-arth",
+         "char-cai"
+        ],
+        "covers_lexeme_ids": [
+         "cy-gwlan",
+         "cy-barfog"
+        ],
+        "width": 1600,
+        "height": 1067
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l33-s108",
+      "text": "Roedd Mali'n chwerthin, ac roedd Dafi'n chwerthin hefyd: daeth mwg bach o'i drwyn e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s109",
+      "text": "\"Modlen! Mae barf gyda Modlen!\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l33-s110",
+      "text": "\"Paid â chwerthin, Dafi,\" meddai Modlen. \"Dyma waith i fi heddiw: barf i'r brenin.\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s111",
+      "text": "Daeth Arthur a Cai i'r gegin, a gwelodd y bechgyn Modlen gyda barf ddu ar ei hwyneb.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s112",
+      "text": "\"Modlen? Wyt ti'n gawr nawr?\" gofynnodd Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l33-s113",
+      "text": "\"Nac ydw. Ond bydd y cawr yn cael barf i frenin,\" meddai Modlen. \"Yfory, bydd y brenin yn frenin barfog!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l33-s114",
+      "text": "Edrychodd Arthur ar y gwlân, ac wedyn ar Mali.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s115",
+      "text": "\"Faint o amser sy gyda ni, Mali?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s116",
+      "text": "\"Erbyn y lleuad newydd, meddai'r negesydd,\" meddai Mali. \"Mae'r lleuad newydd mewn dwy wythnos.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s117",
+      "text": "\"Dwy wythnos,\" meddai Arthur yn dawel. Roedd e'n edrych ar yr eira, ac ar y mynyddoedd pell.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l33-s118",
+      "text": "Y noson honno, eisteddodd Mali wrth y tân gyda'i dyddiadur, a dechreuodd hi ysgrifennu.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l33-s119",
+      "text": "\"Heddiw. Daeth negesydd enfawr i'r wledd.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l33-s120",
+      "text": "Dwedodd e fod Rhita Gawr yn casglu barfau brenhinoedd."
+     },
+     {
+      "id": "cy-brenin-01-l33-s121",
+      "text": "Dwedodd e fod rhaid i Arthur anfon ei farf erbyn y lleuad newydd.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s122",
+      "text": "\"Gofynnodd Arthur a oedd Rhita eisiau heddwch."
+     },
+     {
+      "id": "cy-brenin-01-l33-s123",
+      "text": "Doedd neb yn gwybod. Rhybuddiodd Myrddin ni fod y cawr yn falch iawn."
+     },
+     {
+      "id": "cy-brenin-01-l33-s124",
+      "text": "Torrodd y negesydd ddarn o farf Dad, a dwedodd e fod y cawr eisiau mwy.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s125",
+      "text": "\"Yn y bore, gofynnodd Modlen a oedd y cawr yn gweld yn dda."
+     },
+     {
+      "id": "cy-brenin-01-l33-s126",
+      "text": "Dw i ddim yn gwybod pam."
+     },
+     {
+      "id": "cy-brenin-01-l33-s127",
+      "text": "Ond dw i'n gwybod un peth: dyw Modlen ddim yn cysgu nawr."
+     },
+     {
+      "id": "cy-brenin-01-l33-s128",
+      "text": "Dwedodd hi ei bod hi'n brysur, achos mae gwaith gyda hi.\""
+     },
+     {
+      "id": "cy-brenin-01-l33-s129",
+      "text": "Yn y gegin, wrth y ffwrn, roedd golau bach, ac roedd Modlen yn canu'n dawel gyda'r gwlân du a'r gwlân gwyn yn ei dwylo hi.",
+      "paragraph_start": true
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Dwedodd e fod …",
+  "rule_cy": "\"Mae …\" → Dwedodd e fod … · \"Dw i …\" → Dwedodd e ei fod e … / Dwedodd hi ei bod hi … · \"Ydy …?\" → Gofynnodd e a (os) oedd … · dwedodd + bod → fod",
+  "tables": [
+   {
+    "caption": "meddai ↔ dwedodd … fod",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "\"Mae Rhita'n casglu barfau,\" meddai'r negesydd.",
+      "Dwedodd y negesydd fod Rhita'n casglu barfau."
+     ],
+     [
+      "\"Rhaid casglu byddin!\" meddai Barf Goch.",
+      "Dwedodd Barf Goch fod rhaid casglu byddin."
+     ],
+     [
+      "\"Mae rhyfel yn dod!\" meddai Dafi.",
+      "Dwedodd Dafi fod rhyfel yn dod."
+     ],
+     [
+      "\"Mae'r negesydd wedi torri barf Dad.\"",
+      "Dwedodd Mali fod y negesydd wedi torri barf Dad."
+     ]
+    ]
+   },
+   {
+    "caption": "fi, ti, e, hi … → fy mod i, dy fod di, ei fod e, ei bod hi",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "\"Dw i eisiau heddwch.\" (Arthur)",
+      "Dwedodd Arthur ei fod e eisiau heddwch."
+     ],
+     [
+      "\"Dw i eisiau ymladd.\" (Cai)",
+      "Dwedodd Cai ei fod e eisiau ymladd."
+     ],
+     [
+      "\"Dw i'n brysur.\" (Modlen)",
+      "Dwedodd Modlen ei bod hi'n brysur."
+     ]
+    ]
+   },
+   {
+    "caption": "Gofynnodd … a / os …",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "\"Ydy Rhita eisiau heddwch?\"",
+      "Gofynnodd Arthur os oedd Rhita eisiau heddwch."
+     ],
+     [
+      "\"Oes unrhyw un wedi gweld Rhita?\"",
+      "Gofynnodd Arthur a oedd unrhyw un wedi gweld Rhita."
+     ],
+     [
+      "\"Ydy'r cawr yn gweld yn dda?\"",
+      "Gofynnodd Modlen a oedd y cawr yn gweld yn dda."
+     ]
+    ]
+   },
+   {
+    "caption": "Darllen yn unig: y byddai",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "\"Bydd Rhita'n dod!\"",
+      "Dwedodd e y byddai Rhita'n dod. (byddai = bydd, ddoe)"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l33-s059"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s060"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s061"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s062"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s063"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s071"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s095"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s080"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s083"
+   },
+   {
+    "segment_id": "cy-brenin-01-l33-s099"
+   }
+  ],
+  "nodyn_en": "After a past verb: Dwedodd e fod … 'he said that …' (bod → fod). Full pronoun forms: ei fod e, ei bod hi, fy mod i; colloquially ei may drop: fod e, bod hi. Questions: Gofynnodd e a / os oedd … 'he asked whether …'. Y byddai 'that … would' is recognition only."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l33-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "\"Mae'r cawr yn fawr,\" meddai'r negesydd. →",
+      "answer": "Dwedodd y negesydd fod y cawr yn fawr."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "\"Mae Rhita'n casglu barfau,\" meddai'r negesydd. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dwedodd y negesydd fod Rhita'n casglu barfau."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Dwedodd y negesydd bod Rhita'n casglu barfau.",
+         "hint": "dwedodd + bod → fod"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "\"Mae rhyfel yn dod,\" meddai Dafi. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dwedodd Dafi fod rhyfel yn dod."
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a3",
+       "prompt": "\"Dw i eisiau heddwch,\" meddai Arthur. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dwedodd Arthur ei fod e eisiau heddwch.",
+        "Dwedodd Arthur ei fod eisiau heddwch.",
+        "Dwedodd Arthur fod e eisiau heddwch."
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "\"Dw i'n brysur,\" meddai Modlen. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dwedodd Modlen ei bod hi'n brysur.",
+        "Dwedodd Modlen ei bod yn brysur.",
+        "Dwedodd Modlen bod hi'n brysur.",
+        "Dwedodd Modlen fod hi'n brysur."
+       ],
+       "common_wrong": [
+        {
+         "answer": "Dwedodd Modlen ei fod hi'n brysur.",
+         "hint": "hi → ei bod hi"
+        }
+       ]
+      },
+      {
+       "id": "a5",
+       "prompt": "\"Mae'r negesydd wedi torri barf Dad,\" meddai Mali. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dwedodd Mali fod y negesydd wedi torri barf Dad."
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "\"Dw i eisiau ymladd,\" meddai Cai. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dwedodd Cai ei fod e eisiau ymladd.",
+        "Dwedodd Cai ei fod eisiau ymladd.",
+        "Dwedodd Cai fod e eisiau ymladd."
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "\"Oes bwyd?\" meddai Modlen. →",
+      "answer": "Gofynnodd Modlen a oedd bwyd."
+     },
+     "items": [
+      {
+       "id": "a7",
+       "prompt": "\"Ydy Rhita'n gryf?\" meddai Arthur. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Gofynnodd Arthur a oedd Rhita'n gryf.",
+        "Gofynnodd Arthur os oedd Rhita'n gryf.",
+        "Gofynnodd Arthur a ydy Rhita'n gryf.",
+        "Gofynnodd Arthur os ydy Rhita'n gryf."
+       ],
+       "explanation": "Yr ymarfer: adrodd o ddoe (a oedd …). Mae a ydy … yn iawn hefyd os ydy'r cwestiwn yn wir nawr."
+      },
+      {
+       "id": "a8",
+       "prompt": "\"Ydy'r cawr yn gweld yn dda?\" meddai Modlen. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Gofynnodd Modlen a oedd y cawr yn gweld yn dda.",
+        "Gofynnodd Modlen os oedd y cawr yn gweld yn dda."
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Pwy dynnodd y cleddyf? (Arthur) →",
+      "answer": "Arthur dynnodd y cleddyf."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Pwy goginiodd y wledd? (Modlen) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Modlen goginiodd y wledd.",
+        "Modlen goginiodd hi."
+       ],
+       "mutation_hint": true,
+       "recall_of": "G29"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Myrddin yn siarad am Rhita. →",
+      "answer": "Mae Myrddin yn siarad amdano fe."
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Mae Arthur yn meddwl am Mali. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae Arthur yn meddwl amdani hi.",
+        "Mae Arthur yn meddwl amdani."
+       ],
+       "recall_of": "G31"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l33-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "cawr",
+    "heddwch",
+    "rhyfel",
+    "byddin",
+    "gelyn",
+    "rhybudd",
+    "anrhydedd",
+    "bygythiad",
+    "bygwth",
+    "eillio",
+    "casglu",
+    "gorffen",
+    "rhybuddio",
+    "barfog",
+    "balch",
+    "peryglus"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae Rhita'n ddyn mawr, mawr iawn, yn Eryri: ___ yw e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cawr"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "Does dim ymladd yn y wlad, ac mae pawb yn hapus: mae ___ yng Nghymru.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "heddwch"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae llawer o filwyr gyda'r arglwydd: mae ___ fawr gyda fe.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "byddin"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae barf hir, aur gyda Cynyr: mae e'n ddyn ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "barfog",
+      "balch"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Does dim barf ar wyneb yr esgob: mae e'n ___ bob bore.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "eillio"
+     ]
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae Mali'n ___ y llythyrau o bob ystafell: nawr mae deg llythyr ar y bwrdd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "casglu"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Dyw Modlen ddim wedi ___ y farf eto: mae hi'n gweithio drwy'r nos.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gorffen"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "Dyw'r cawr ddim yn ffrind i'r brenin: ___ yw e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gelyn"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae Myrddin yn dweud wrth bawb: mae'r cawr yn beryglus. Mae e'n ___ pawb.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "rhybuddio"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae'r negesydd yn dweud bod rhyfel yn dod os dyw Arthur ddim yn anfon ei farf: mae e'n ___ Arthur.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "bygwth",
+      "rhybuddio"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l33-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Beth mae Rhita Gawr yn ei gasglu?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Barfau",
+      "Barfau brenhinoedd",
+      "Mae e'n casglu barfau",
+      "Mae e'n casglu barfau brenhinoedd",
+      "Mae Rhita'n casglu barfau"
+     ],
+     "model_answer": "Barfau brenhinoedd",
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s004"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Erbyn pryd rhaid i Arthur anfon ei farf?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Erbyn y lleuad newydd",
+      "Erbyn y lleuad newydd, neu bydd Rhita'n dod",
+      "Mewn dwy wythnos"
+     ],
+     "model_answer": "Erbyn y lleuad newydd",
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s009"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Pam mae'r neuadd yn chwerthin?",
+     "answer_mode": "self_check",
+     "model_answer": "Does dim barf gyda Arthur: mae ei wyneb e'n wyneb bachgen.",
+     "rubric": "Mae'r ateb yn dweud does dim barf gyda'r brenin.",
+     "key_terms": [
+      "cy-barf"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s011"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth wnaeth y negesydd i farf Cynyr?",
+     "answer_mode": "self_check",
+     "model_answer": "Torrodd e ddarn hir o farf Cynyr gyda chyllell.",
+     "rubric": "Mae'r ateb yn sôn am dorri darn o'r farf.",
+     "key_terms": [
+      "cy-darn",
+      "cy-torri"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s026"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Beth ddwedodd Myrddin am Rhita? Dechrau: Dwedodd Myrddin fod …",
+     "answer_mode": "self_check",
+     "model_answer": "Dwedodd Myrddin fod Rhita'n gawr balch ac yn elyn peryglus.",
+     "rubric": "Mae'r ateb yn dechrau Dwedodd Myrddin fod … ac yn sôn am gawr balch neu beryglus.",
+     "key_terms": [
+      "cy-balch",
+      "cy-peryglus"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s063"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam dyw Arthur ddim eisiau rhyfel?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae heddwch yn well na rhyfel, achos mewn rhyfel mae pawb yn colli.",
+     "rubric": "Mae'r ateb yn sôn am heddwch, neu fod pawb yn colli mewn rhyfel.",
+     "key_terms": [
+      "cy-heddwch",
+      "cy-rhyfel"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s052"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Beth mae Modlen yn ei wneud gyda'r gwlân du?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae hi'n rhoi'r gwlân ar ei hwyneb: barf fawr, ddu! Mae hi eisiau gwneud barf i'r brenin.",
+     "rubric": "Mae'r ateb yn sôn am farf o wlân.",
+     "key_terms": [
+      "cy-gwlan",
+      "cy-barf"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l33-s107"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Beth ddwedodd dy ffrind ddoe? Dechrau: Dwedodd fy ffrind …",
+     "answer_mode": "self_check",
+     "model_answer": "Dwedodd fy ffrind ei fod e'n brysur. / Dwedodd fy ffrind ei bod hi'n hapus.",
+     "rubric": "Dwedodd … fod … / ei fod e … / ei bod hi …"
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-cawr",
+   "citation_form": "cawr",
+   "part_of_speech": "noun",
+   "current_sense": "giant",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-heddwch",
+   "citation_form": "heddwch",
+   "part_of_speech": "noun",
+   "current_sense": "peace",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhyfel",
+   "citation_form": "rhyfel",
+   "part_of_speech": "noun",
+   "current_sense": "war",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-bygwth",
+   "citation_form": "bygwth",
+   "part_of_speech": "verb",
+   "current_sense": "to threaten",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-eillio",
+   "citation_form": "eillio",
+   "part_of_speech": "verb",
+   "current_sense": "to shave",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-casglu",
+   "citation_form": "casglu",
+   "part_of_speech": "verb",
+   "current_sense": "to collect, gather",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gorffen",
+   "citation_form": "gorffen",
+   "part_of_speech": "verb",
+   "current_sense": "to finish",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gorchfygu",
+   "citation_form": "gorchfygu",
+   "part_of_speech": "verb",
+   "current_sense": "to defeat, conquer",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-barfog",
+   "citation_form": "barfog",
+   "part_of_speech": "adjective",
+   "current_sense": "bearded",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-bygythiad",
+   "citation_form": "bygythiad",
+   "part_of_speech": "noun",
+   "current_sense": "threat",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-anrhydedd",
+   "citation_form": "anrhydedd",
+   "part_of_speech": "noun",
+   "current_sense": "honour",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-byddin",
+   "citation_form": "byddin",
+   "part_of_speech": "noun",
+   "current_sense": "army",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gelyn",
+   "citation_form": "gelyn",
+   "part_of_speech": "noun",
+   "current_sense": "enemy",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhybudd",
+   "citation_form": "rhybudd",
+   "part_of_speech": "noun",
+   "current_sense": "warning",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhybuddio",
+   "citation_form": "rhybuddio",
+   "part_of_speech": "verb",
+   "current_sense": "to warn",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-erbyn",
+   "citation_form": "erbyn",
+   "part_of_speech": "preposition",
+   "current_sense": "by (a time)",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-neu",
+   "citation_form": "neu",
+   "part_of_speech": "conjunction",
+   "current_sense": "or",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-darn",
+   "citation_form": "darn",
+   "part_of_speech": "noun",
+   "current_sense": "piece",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-achos",
+   "citation_form": "achos",
+   "part_of_speech": "conjunction",
+   "current_sense": "because",
+   "first_introduced_lesson": "cy-brenin-01-l33",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-33.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "cawr (g.), cewri",
+    "back": "giant",
+    "example_segment_id": "cy-brenin-01-l33-s002",
+    "lexeme_id": "cy-cawr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "heddwch (g.)",
+    "back": "peace",
+    "example_segment_id": "cy-brenin-01-l33-s052",
+    "lexeme_id": "cy-heddwch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "rhyfel (g.)",
+    "back": "war",
+    "example_segment_id": "cy-brenin-01-l33-s010",
+    "lexeme_id": "cy-rhyfel"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "bygwth",
+    "back": "to threaten",
+    "example_segment_id": "cy-brenin-01-l33-s020",
+    "lexeme_id": "cy-bygwth"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "eillio",
+    "back": "to shave",
+    "example_segment_id": "cy-brenin-01-l33-s018",
+    "lexeme_id": "cy-eillio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "casglu",
+    "back": "to collect, gather",
+    "example_segment_id": "cy-brenin-01-l33-s004",
+    "lexeme_id": "cy-casglu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "gorffen",
+    "back": "to finish",
+    "example_segment_id": "cy-brenin-01-l33-s106",
+    "lexeme_id": "cy-gorffen"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "gorchfygu",
+    "back": "to defeat, conquer",
+    "example_segment_id": "cy-brenin-01-l33-s005",
+    "lexeme_id": "cy-gorchfygu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "barfog",
+    "back": "bearded",
+    "example_segment_id": "cy-brenin-01-l33-s113",
+    "lexeme_id": "cy-barfog"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "bygythiad (g.)",
+    "back": "threat",
+    "example_segment_id": "cy-brenin-01-l33-s045",
+    "lexeme_id": "cy-bygythiad"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "anrhydedd (g.)",
+    "back": "honour",
+    "example_segment_id": "cy-brenin-01-l33-s027",
+    "lexeme_id": "cy-anrhydedd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "byddin (b.)",
+    "back": "army",
+    "example_segment_id": "cy-brenin-01-l33-s041",
+    "lexeme_id": "cy-byddin"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "gelyn (g.)",
+    "back": "enemy",
+    "example_segment_id": "cy-brenin-01-l33-s043",
+    "lexeme_id": "cy-gelyn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "rhybudd (g.)",
+    "back": "warning",
+    "example_segment_id": "cy-brenin-01-l33-s030",
+    "lexeme_id": "cy-rhybudd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "rhybuddio",
+    "back": "to warn",
+    "example_segment_id": "cy-brenin-01-l33-s063",
+    "lexeme_id": "cy-rhybuddio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "erbyn",
+    "back": "by (a time)",
+    "example_segment_id": "cy-brenin-01-l33-s009",
+    "lexeme_id": "cy-erbyn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "neu (+ SM)",
+    "back": "or",
+    "example_segment_id": "cy-brenin-01-l33-s048",
+    "lexeme_id": "cy-neu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "darn (g.)",
+    "back": "piece",
+    "example_segment_id": "cy-brenin-01-l33-s026",
+    "seen_as": "ddarn",
+    "lexeme_id": "cy-darn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l33",
+    "front": "achos",
+    "back": "because",
+    "example_segment_id": "cy-brenin-01-l33-s052",
+    "lexeme_id": "cy-achos"
+   },
+   {
+    "id": "pattern-g33",
+    "lesson": "cy-brenin-01-l33",
+    "front": "\"Mae'r cawr yn fawr.\" → Dwedodd e fod y cawr yn fawr. · \"Dw i eisiau heddwch.\" → Dwedodd Arthur ei fod e eisiau heddwch. · \"Ydy e'n gryf?\" → Gofynnodd e a oedd e'n gryf.",
+    "back": "He said (that) the giant was big. · Arthur said (that) he wanted peace. · He asked whether he was strong. (dwedodd + fod; fi → ei fod e / ei bod hi; Ydy …? → a / os oedd …)",
+    "example_segment_id": "cy-brenin-01-l33-s059",
+    "example_segment_ids": [
+     "cy-brenin-01-l33-s059",
+     "cy-brenin-01-l33-s061"
+    ],
+    "lexeme_id": "cy-pattern-g33"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l33-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 0,
+   "margin_diagram": 0,
+   "margin_gloss": 25
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-33",
+   "rhan-4"
+  ]
+ },
+ "metrics": {
+  "running_words": 1538,
+  "sentences": 129,
+  "word_target": 1690,
+  "word_window": [
+   1521,
+   1859
+  ]
+ }
+}

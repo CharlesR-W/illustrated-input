@@ -1,0 +1,2070 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l26",
+ "course_id": "cy-brenin-01",
+ "order": 26,
+ "title": "Ble mae cleddyf Cai?",
+ "rhan": 3,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B5 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (B5, Wave 2, 2026-10-17 notes)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Central image (plan: the book's key picture): Arth alone draws the sword in the silent churchyard. The beat follows Malory's errand: Cai left his sword under a bench at the inn after showing it off; the inn is locked because everyone is at the tournament; Arth takes the stone's sword for Cai 'just for today', does not think of the prophecy, and is honestly surprised it is not stuck ('Mae pawb yn dweud bod y cleddyf yn sownd, ond dyw e ddim yn sownd!'). Cai recognises it (no gold on the hilt, cf. Pennod 8) and goes pale; the chapter ends on Arth's 'Wnes i ddim ei ddwyn e!' and Cai looking at his father, which hands 27 its opening.",
+   "Target: gwneud-past in all persons appears in dialogue (wnes i, wnest ti, wnaeth e, wnaethon ni, wnaethoch chi in Pensa/Gramadeg only, wnaethon nhw); narration stays in the -odd preterite, which gives the contrast the Gramadeg table states (Tynnodd Arth = Wnaeth Arth dynnu). Possessive-object bridge: ei roi e, ei ddangos e, ei dynnu e, ei weld e, ei ddwyn e; a'i in 'y cleddyf a'i lafn disglair' and 'a'i ddangos e'.",
+   "Continuity assumptions (21–25 written in parallel): checked against 21–23 on disk: the party lodges at the small inn by the church (23); Cai arms in the knights' tent at the tournament field by the walls; he left his sword under the inn bench the night before and the party left the inn early; Myrddin is missing and Dafi rides under Mali's cloak; Cai is due to fight Gwalchmai at ten on the second day; Dafi travels under Mali's cloak with Myrddin's watch and announces the hours; Elen (at the inn), Modlen and Pero (at the llys, 21) do not appear. If 25 places the sword elsewhere the first section needs a one-line adjustment only.",
+   "mor hawdd â chleddyf o wain uses the equative receptively (productive from 37), as 25 introduced it; it is not tested.",
+   "Open slot: neb (CorCenCC top 2000), declared in learning_contract.open_slot_ids and the delta; needed for the empty town and churchyard and for 'Wnaeth neb lwyddo'.",
+   "Delta adds forms: safodd (sefyll), brysia (imperative), and gwneud-past auxiliary forms with a 'past' card stage for gwneud.",
+   "Codex (gpt-6-astra) review applied: avoided 'dod â ti'n ôl' (standard â thi), corrected the llithro gloss, widened C2 answers. C8 keeps the course-wide formula 'A ti?' (the checker requires it); two Codex reviews flag standard 'A thi?' (a + AM): a course-wide decision for the integrator."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l26-s031",
+    "question": "[?] 'Wnaeth neb sylwi ar y cleddyf dan y fainc' — natural for 'nobody noticed'?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s090",
+    "question": "[?] 'llithrodd y cleddyf o'r garreg mor hawdd â chleddyf o wain' — natural image and wording (o wain vs o'r wain)?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s089",
+    "question": "[?] 'Tynnodd Arth anadl ddofn' (took a deep breath) — idiomatic in the south, with anadl feminine?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s086",
+    "question": "[?] 'bydda i'n rhoi'r cleddyf yn ôl yn y garreg yn y nos' (Arth speaking aloud to himself at the stone) — natural?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s079",
+    "question": "[?] 'Wnaeth X ddim llwyddo' repeated three times as a deliberate rule of three — acceptable rhythm?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G26",
+  "primary_new_grammar": {
+   "id": "G26",
+   "label": "Colloquial gwneud-past in all persons: wnes i / wnest ti / wnaeth e / wnaethon ni / wnaethoch chi / wnaethon nhw + soft-mutated verbal noun (Wnes i gyfrif, Wnaeth neb lwyddo); negatives (Wnes i ddim …) and questions (Wnest ti …? — Do / Naddo); contrast with the inflected preterite (Tynnodd e / Wnes i ei dynnu e); bridge: pronoun object as possessive + verbal noun (ei ddwyn e, ei roi e, a'i)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G10",
+   "G11",
+   "G12",
+   "G13",
+   "G16",
+   "G17",
+   "G19",
+   "G20",
+   "G22",
+   "G23",
+   "G24",
+   "G25"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-cloi",
+   "cy-dwyn",
+   "cy-gafael",
+   "cy-sylwi",
+   "cy-rhyfeddu",
+   "cy-ph-ar-gau",
+   "cy-ph-ar-agor",
+   "cy-disglair",
+   "cy-syndod",
+   "cy-tawelwch",
+   "cy-clo",
+   "cy-llwch",
+   "cy-anadl",
+   "cy-calon",
+   "cy-wyneb",
+   "cy-crynu",
+   "cy-brysio",
+   "cy-llithro",
+   "cy-gwelw",
+   "cy-neb"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-dwyn",
+    "how": "gloss+context (lleidr)",
+    "segment_id": "cy-brenin-01-l26-s007"
+   },
+   {
+    "lexeme_id": "cy-sylwi",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l26-s031"
+   },
+   {
+    "lexeme_id": "cy-brysio",
+    "how": "gloss(synonym)",
+    "segment_id": "cy-brenin-01-l26-s036"
+   },
+   {
+    "lexeme_id": "cy-ph-ar-agor",
+    "how": "gloss(antonym)+contrast",
+    "segment_id": "cy-brenin-01-l26-s038"
+   },
+   {
+    "lexeme_id": "cy-ph-ar-gau",
+    "how": "gloss(antonym)+contrast",
+    "segment_id": "cy-brenin-01-l26-s038"
+   },
+   {
+    "lexeme_id": "cy-clo",
+    "how": "gloss+picture(vignette)",
+    "segment_id": "cy-brenin-01-l26-s043"
+   },
+   {
+    "lexeme_id": "cy-cloi",
+    "how": "gloss+context (clo)",
+    "segment_id": "cy-brenin-01-l26-s051"
+   },
+   {
+    "lexeme_id": "cy-llithro",
+    "how": "gloss+context (rhew)",
+    "segment_id": "cy-brenin-01-l26-s059"
+   },
+   {
+    "lexeme_id": "cy-crynu",
+    "how": "gloss+context (oer)",
+    "segment_id": "cy-brenin-01-l26-s060"
+   },
+   {
+    "lexeme_id": "cy-tawelwch",
+    "how": "gloss (tawel → tawelwch)",
+    "segment_id": "cy-brenin-01-l26-s068"
+   },
+   {
+    "lexeme_id": "cy-anadl",
+    "how": "gloss (anadlu → anadl)",
+    "segment_id": "cy-brenin-01-l26-s073"
+   },
+   {
+    "lexeme_id": "cy-calon",
+    "how": "gloss(radical)+context (curo)",
+    "segment_id": "cy-brenin-01-l26-s073"
+   },
+   {
+    "lexeme_id": "cy-llwch",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l26-s076"
+   },
+   {
+    "lexeme_id": "cy-disglair",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l26-s077"
+   },
+   {
+    "lexeme_id": "cy-gafael",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l26-s087"
+   },
+   {
+    "lexeme_id": "cy-rhyfeddu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l26-s095"
+   },
+   {
+    "lexeme_id": "cy-syndod",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l26-s096"
+   },
+   {
+    "lexeme_id": "cy-wyneb",
+    "how": "gloss+picture(scene)",
+    "segment_id": "cy-brenin-01-l26-s108"
+   },
+   {
+    "lexeme_id": "cy-gwelw",
+    "how": "gloss(radical)+picture(scene)",
+    "segment_id": "cy-brenin-01-l26-s117"
+   },
+   {
+    "lexeme_id": "cy-neb",
+    "how": "context (doedd neb … : dim marchogion, dim milwyr, dim plant)",
+    "segment_id": "cy-brenin-01-l26-s039"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-anghofio",
+   "cy-tafarn",
+   "cy-mynwent",
+   "cy-carreg",
+   "cy-ysgafn",
+   "cy-sydyn",
+   "cy-eira",
+   "cy-sefyll",
+   "cy-gwain",
+   "cy-einion",
+   "cy-carn",
+   "cy-llafn",
+   "cy-sownd",
+   "cy-llwyddo",
+   "cy-hawdd",
+   "cy-rhew",
+   "cy-lleidr",
+   "cy-oriawr",
+   "cy-drych"
+  ],
+  "swaps": [],
+  "open_slot_ids": [
+   "cy-neb"
+  ]
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l26-img-cover",
+   "src": "media/images/cy-brenin-01-l26-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "In a silent snowy churchyard, Arth stands alone at a big grey stone and draws a shining sword out of it with both hands; nobody else is there.",
+   "art_brief": "THE KEY IMAGE OF THE BOOK: give it the most care. A small snowy churchyard at Caerllion in clear, low winter morning light (match place-caerllion.png: Roman red-brick-banded wall behind, small stone church with a bell-turret and a little coloured glass window; Caerllion palette of red brick and snow). Snow on low graves and on two or three simple stone crosses; bare trees white with frost. In the centre, a large rough grey stone with an iron anvil set on top of it, dusted with snow and old dust, faint unreadable carved marks on its side (no legible letters). Arth (11, slight build, untidy brown hair with a cowlick, freckles, oversized moss-green wool tunic, knotted brown belt, dark grey leggings, knee-high brown boots; snow on his hair and shoulders) stands on the stone's step, both hands on the plain hilt, drawing the long straight sword up and out of the anvil in one easy movement; the blade catches the sunlight and shines, a little puff of stone-dust falling into the snow. His breath shows white; his face is surprised, not triumphant. He is completely alone: an empty path of his own footprints leads back to the open churchyard gate; one blackbird sits on a cross watching him. Silence, stillness, light. No crown, no other people. No text.",
+   "characters": [
+    "char-arth"
+   ],
+   "covers_lexeme_ids": [
+    "cy-disglair",
+    "cy-llwch",
+    "cy-tawelwch"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l26-sec1",
+    "title": "Gwain wag",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l26-s001",
+      "text": "Roedd hi'n fore oer ar ail ddydd y twrnamaint.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s002",
+      "text": "Roedd eira ar y pebyll yn y gwersyll wrth waliau'r dref, ac roedd y dorf yn barod ar y cae, ond doedd Cai ddim yn barod."
+     },
+     {
+      "id": "cy-brenin-01-l26-s003",
+      "text": "Roedd e'n sefyll ym mhabell y marchogion wrth y cae, gyda'i wain e yn ei law e, ac roedd y wain yn wag."
+     },
+     {
+      "id": "cy-brenin-01-l26-s004",
+      "text": "Chwiliodd e dan y fainc, yn y blancedi ac yn y sach fwyd, ond doedd y cleddyf ddim yno."
+     },
+     {
+      "id": "cy-brenin-01-l26-s005",
+      "text": "\"Ble mae fy nghleddyf i?\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s006",
+      "text": "\"Neithiwr roedd y wain yn wag, a heddiw mae hi'n wag eto!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s007",
+      "text": "\"Mae lleidr wedi dwyn fy nghleddyf i!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dwyn",
+        "gloss": "dwyn: lleidr yn cymryd",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s008",
+      "text": "Roedd Mali'n eistedd ar y fainc yn y babell, ac roedd Dafi'n cuddio dan ei chlogyn hi, gydag oriawr Myrddin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s009",
+      "text": "Ble roedd Myrddin? Doedd neb yn gwybod: doedd e ddim yn y dafarn, a doedd e ddim ar y cae."
+     },
+     {
+      "id": "cy-brenin-01-l26-s010",
+      "text": "\"Naw o'r gloch!\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l26-s011",
+      "text": "\"Dw i'n gallu cynnau tân, Cai, ond dw i ddim yn gallu gwneud cleddyf!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s012",
+      "text": "\"Diolch, Dafi,\" meddai Cai. \"Defnyddiol iawn.\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s013",
+      "text": "\"Naw o'r gloch!\" meddai Cai eto.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s014",
+      "text": "\"Am ddeg o'r gloch, bydda i'n ymladd â Gwalchmai, a does dim cleddyf gyda fi!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s015",
+      "text": "Edrychodd e ar Arth."
+     },
+     {
+      "id": "cy-brenin-01-l26-s016",
+      "text": "\"Arth, ti yw fy yswain i. Wnest ti anghofio fy nghleddyf i?\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s017",
+      "text": "\"Naddo!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s018",
+      "text": "\"Wnes i ddim anghofio dy gleddyf di!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s019",
+      "text": "\"Wnes i sgleinio'r cleddyf neithiwr, a wnes i ei roi e yn y wain.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s020",
+      "text": "\"Wel, wnaeth y cleddyf ddim cerdded o'r wain!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s021",
+      "text": "\"Nage, Cai,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l26-s022",
+      "text": "\"Wnaeth lleidr ddim dwyn dy gleddyf di, a wnaeth Arth ddim anghofio.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s023",
+      "text": "\"Wnes i weld dy gleddyf di neithiwr, yn y dafarn.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s024",
+      "text": "\"Wnest ti dynnu dy gleddyf, a wnest ti ei ddangos e i bawb: Dyma gleddyf y marchog gorau!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s025",
+      "text": "\"Wedyn wnest ti ei roi e dan y fainc, a wnest ti fwyta tair pastai.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s026",
+      "text": "\"Dwy bastai!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s027",
+      "text": "\"Tair, Cai,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l26-s028",
+      "text": "\"Wnes i gyfrif.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s029",
+      "text": "Roedd Cai'n goch iawn nawr: roedd e'n cofio'r dafarn, y wledd, y cwrw a'r pasteiod, ond doedd e ddim yn cofio'r cleddyf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s030",
+      "text": "\"A wnaethon ni adael y dafarn yn gynnar y bore yma,\" meddai Cai yn araf.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s031",
+      "text": "\"Wnaeth neb sylwi ar y cleddyf dan y fainc.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sylwi",
+        "gloss": "sylwi ar: gweld, a deall",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s032",
+      "text": "\"Arth, gaf i dy gleddyf di?\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s033",
+      "text": "\"Does dim cleddyf gyda fi, Cai,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s034",
+      "text": "\"Yswain dw i.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s035",
+      "text": "\"Wel, cer i'r dafarn!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s036",
+      "text": "\"Brysia, Arth! Brysia!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Brysia",
+        "gloss": "= Cer yn gyflym!",
+        "gloss_kind": "synonym"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l26-sec2",
+    "title": "Ar gau",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l26-s037",
+      "text": "Rhedodd Arth o'r cae, heibio i'r pebyll, ac at borth mawr y dref.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s038",
+      "text": "Roedd y porth ar agor, ond roedd y ffordd yn wag.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ar agor",
+        "gloss": "ar agor ↔ ar gau",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s039",
+      "text": "Doedd neb ar y ffordd, a doedd neb wrth y tai: roedd pawb yn y twrnamaint, y dynion, y menywod, y plant a'r cŵn hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l26-s040",
+      "text": "Roedd drysau'r tai ar gau, ac roedd y dref yn dawel iawn."
+     },
+     {
+      "id": "cy-brenin-01-l26-s041",
+      "text": "Roedd hen gi'n cysgu yn yr haul wrth y dafarn, a chododd e ddim ei ben e."
+     },
+     {
+      "id": "cy-brenin-01-l26-s042",
+      "text": "Cyrhaeddodd Arth y dafarn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s043",
+      "text": "Roedd drws y dafarn ar gau, ac roedd clo mawr, du ar y drws.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "clo",
+        "gloss": "clo: allwedd → clo",
+        "gloss_kind": "define"
+       },
+       {
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l26-img-clo",
+        "anchor_text": "clo",
+        "label": "clo",
+        "art_brief": "A big old black iron padlock hanging from a hasp on a wooden door, with its key-hole showing. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-clo"
+        ],
+        "type": "image",
+        "status": "planned",
+        "src": "media/vignettes/cy-brenin-01-l26-img-clo.webp",
+        "alt": ""
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s044",
+      "text": "Curodd e ar y drws: curo, curo, curo."
+     },
+     {
+      "id": "cy-brenin-01-l26-s045",
+      "text": "Wnaeth neb ateb."
+     },
+     {
+      "id": "cy-brenin-01-l26-s046",
+      "text": "\"Tafarnwr!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s047",
+      "text": "\"Dych chi yno? Wnaethoch chi fynd i'r twrnamaint hefyd?\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s048",
+      "text": "\"Mae angen help arna i!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s049",
+      "text": "Ond doedd neb yno.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s050",
+      "text": "Roedd cleddyf Cai yn y dafarn, dan y fainc, ac roedd y drws ar gau."
+     },
+     {
+      "id": "cy-brenin-01-l26-s051",
+      "text": "\"Pwy sy wedi cloi'r drws?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cloi",
+        "gloss": "cloi: cau gydag allwedd",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s052",
+      "text": "\"Mae'r tafarnwr wedi cloi'r drws, ac mae e wedi mynd i'r twrnamaint hefyd!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s053",
+      "text": "\"Wnaeth e ddim aros!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s054",
+      "text": "\"Bob nos mae e'n cloi'r dafarn, a heddiw mae e'n ei chloi hi yn y bore hefyd!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chloi",
+        "gloss": "chloi ← cloi",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s055",
+      "text": "Aeth Arth at ddrws y cefn: roedd clo ar y drws cefn hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s056",
+      "text": "Aeth e at y ffenest fach: roedd hi ar gau.",
+      "inference_aids": [
+       {
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l26-img-tafarn",
+        "alt": "Arth, alone in an empty snowy street of Caerllion, pulls at the locked door of the inn, which has a big black padlock; every shutter on the street is closed.",
+        "art_brief": "A narrow snowy street inside Caerllion's Roman walls (match place-caerllion.png: timber-and-thatch houses, red-brick-banded Roman wall in the background; Caerllion palette, morning light). The inn: a long low timber building with a thatched roof, wooden-shuttered windows all closed (unglazed), a heavy wooden door with a big black iron padlock on a hasp. Arth (11, untidy brown hair with cowlick, freckles, oversized moss-green tunic, brown boots, snow on his shoulders) tugs at the door handle with both hands, frustrated, one boot braced on the step. The street is completely empty: no people, closed doors and shutters, footprints only his own; a thin line of distant pennants above the wall hints at the tournament outside the town. No text.",
+        "characters": [
+         "char-arth"
+        ],
+        "covers_lexeme_ids": [
+         "cy-clo",
+         "cy-ph-ar-gau",
+         "cy-tafarn"
+        ],
+        "type": "image",
+        "status": "planned",
+        "src": "media/images/cy-brenin-01-l26-img-tafarn.webp"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s057",
+      "text": "\"Cloeon!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Cloeon",
+        "gloss": "clo, cloeon",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s058",
+      "text": "\"Mae cloeon ar bob drws heddiw!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s059",
+      "text": "Rhedodd e i lawr y ffordd, ond llithrodd e ar y rhew, a chwympodd e yn yr eira.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llithrodd",
+        "gloss": "llithro: traed yn mynd ar rew",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s060",
+      "text": "Cododd e'n araf: roedd eira ar ei wallt e ac ar ei glogyn e, ac roedd ei goesau e'n crynu.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "crynu",
+        "gloss": "crynu: \"brrr!\" yn yr oer",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s061",
+      "text": "\"Ble mae pawb?\" meddai Arth. \"Wnaethon nhw fynd i'r twrnamaint i weld y marchogion?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s062",
+      "text": "\"Beth nawr?\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s063",
+      "text": "\"Mae angen cleddyf ar Cai am ddeg o'r gloch.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s064",
+      "text": "\"Unrhyw gleddyf!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s065",
+      "text": "Edrychodd e ar y tai, ar yr eglwys wrth y dafarn, ac ar y fynwent wrth yr eglwys, ac yn sydyn, cofiodd e.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l26-sec3",
+    "title": "Tawelwch",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l26-s066",
+      "text": "Aeth Arth drwy'r porth bach i'r fynwent.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s067",
+      "text": "Roedd porth y fynwent ar agor hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l26-s068",
+      "text": "Roedd tawelwch yn y fynwent.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "tawelwch",
+        "gloss": "tawel → tawelwch",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s069",
+      "text": "Pan ddaeth y teulu i Gaerllion, roedd torf fawr yma, gyda marchogion ac arglwyddi a phobl o bob gwlad."
+     },
+     {
+      "id": "cy-brenin-01-l26-s070",
+      "text": "Ond heddiw doedd neb yno: dim marchogion, dim milwyr, dim plant."
+     },
+     {
+      "id": "cy-brenin-01-l26-s071",
+      "text": "Roedd eira ar y beddau ac ar y croesau, ac roedd y coed yn wyn."
+     },
+     {
+      "id": "cy-brenin-01-l26-s072",
+      "text": "Doedd dim gwynt, a doedd dim adar yn canu: dim ond tawelwch, a sŵn traed Arth yn yr eira."
+     },
+     {
+      "id": "cy-brenin-01-l26-s073",
+      "text": "Roedd anadl Arth yn wyn yn yr awyr oer, ac roedd ei galon e'n curo'n gyflym.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anadl",
+        "gloss": "anadlu → anadl (b.)",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "galon",
+        "gloss": "galon ← calon (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s074",
+      "text": "Dyna'r garreg fawr, lwyd, gyda'r einion arni hi."
+     },
+     {
+      "id": "cy-brenin-01-l26-s075",
+      "text": "A dyna'r cleddyf."
+     },
+     {
+      "id": "cy-brenin-01-l26-s076",
+      "text": "Roedd llwch ac eira ar y garreg, ac roedd geiriau Lladin ar y garreg hefyd, ond doedd dim amser i ddarllen.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llwch",
+        "gloss": "llwch: blawd y garreg",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s077",
+      "text": "Roedd golau'r haul ar y llafn, ac roedd y llafn yn ddisglair.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddisglair",
+        "gloss": "ddisglair ← disglair: llawn golau",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s078",
+      "text": "\"Wnaeth y marchog cryf ddim llwyddo,\" meddai Arth yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s079",
+      "text": "\"Wnaeth y marchog gyda'r ceffyl mawr ddim llwyddo, a wnaeth y marchog sy'n gweiddi ddim llwyddo.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s080",
+      "text": "\"Wnaeth neb lwyddo.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s081",
+      "text": "\"Mae pawb yn dweud bod y cleddyf yn sownd.\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s082",
+      "text": "Safodd e wrth y garreg, ac edrychodd e ar y cleddyf am amser hir.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s083",
+      "text": "Gafaelodd e yn yr einion am funud, ac roedd ei ddwylo e'n crynu."
+     },
+     {
+      "id": "cy-brenin-01-l26-s084",
+      "text": "\"Ond mae angen cleddyf ar Cai,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s085",
+      "text": "\"Dw i ddim yn dwyn,\" meddai e wrth y cleddyf."
+     },
+     {
+      "id": "cy-brenin-01-l26-s086",
+      "text": "\"Dim ond am heddiw, i Cai, a bydda i'n rhoi'r cleddyf yn ôl yn y garreg yn y nos.\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l26-sec4",
+    "title": "Y cleddyf",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l26-s087",
+      "text": "Gafaelodd Arth yn y carn.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gafaelodd",
+        "gloss": "gafael yn: dal yn gryf",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s088",
+      "text": "Roedd y carn yn oer, ac roedd llwch arno fe."
+     },
+     {
+      "id": "cy-brenin-01-l26-s089",
+      "text": "Tynnodd Arth anadl ddofn, a thynnodd e'r cleddyf.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anadl ddofn",
+        "gloss": "anadl ddofn ← dwfn",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s090",
+      "text": "A llithrodd y cleddyf o'r garreg mor hawdd â chleddyf o wain: heb sŵn, heb help, heb ddim byd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s091",
+      "text": "Daeth llwch bach o'r garreg, ac aeth y llwch i'r eira."
+     },
+     {
+      "id": "cy-brenin-01-l26-s092",
+      "text": "Am funud, safodd Arth yn y tawelwch, gyda'r cleddyf yn ei law e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s093",
+      "text": "Roedd y cleddyf yn ysgafn, yn ysgafn iawn, ac roedd y llafn yn ddisglair yn yr haul."
+     },
+     {
+      "id": "cy-brenin-01-l26-s094",
+      "text": "Roedd ei galon e'n curo, curo, curo."
+     },
+     {
+      "id": "cy-brenin-01-l26-s095",
+      "text": "Rhyfeddodd Arth, ac edrychodd e ar y garreg wag mewn syndod.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Rhyfeddodd",
+        "gloss": "rhyfeddu: \"O! Beth yw hyn?\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s096",
+      "text": "\"Wnes i ei dynnu e!\" meddai e mewn syndod.",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "syndod",
+        "gloss": "syndod: \"O!\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s097",
+      "text": "\"Dyw e ddim yn sownd!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s098",
+      "text": "\"Mae pawb yn dweud bod y cleddyf yn sownd, ond dyw e ddim yn sownd!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s099",
+      "text": "Edrychodd e ar y fynwent: doedd neb yno.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s100",
+      "text": "Wnaeth neb ei weld e."
+     },
+     {
+      "id": "cy-brenin-01-l26-s101",
+      "text": "Ond sylwodd Arth ar aderyn du ar groes wrth yr eglwys: roedd yr aderyn yn edrych arno fe."
+     },
+     {
+      "id": "cy-brenin-01-l26-s102",
+      "text": "Yn sydyn, clywodd Arth gorn o'r cae, o bell.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s103",
+      "text": "Brysiodd e o'r fynwent, gyda'r cleddyf dan ei glogyn e.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Brysiodd",
+        "gloss": "brysio = mynd yn gyflym",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s104",
+      "text": "Brysiodd e drwy'r dref dawel, heibio i'r dafarn ar gau, ac at y porth."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l26-sec5",
+    "title": "Ble gest ti'r cleddyf hwn?",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l26-s105",
+      "text": "Roedd y dorf ar y cae'n gweiddi, ac roedd baneri ar y pebyll.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s106",
+      "text": "Roedd marchogion ar eu ceffylau ar y cae, gyda gwaywffyn a tharianau."
+     },
+     {
+      "id": "cy-brenin-01-l26-s107",
+      "text": "\"Deg o'r gloch!\" meddai Dafi o glogyn Mali.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l26-s108",
+      "text": "Roedd Cai'n sefyll wrth y babell, ac roedd ei wyneb e'n goch ac yn ddig.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wyneb",
+        "gloss": "wyneb: llygaid, trwyn a cheg",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s109",
+      "text": "\"Arth! Ble wyt ti wedi bod?\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s110",
+      "text": "\"Mae Gwalchmai'n aros!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s111",
+      "text": "\"Roedd y dafarn ar gau, Cai!\" meddai Arth. Roedd ei anadl e'n gyflym, ac roedd e'n anadlu'n drwm.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s112",
+      "text": "\"Ond dyma gleddyf i ti!\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s113",
+      "text": "Cymerodd Cai'r cleddyf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s114",
+      "text": "Gafaelodd e yn y carn, ac edrychodd e ar y cleddyf a'i lafn disglair."
+     },
+     {
+      "id": "cy-brenin-01-l26-s115",
+      "text": "Sylwodd Cai ar y carn: doedd dim aur arno fe."
+     },
+     {
+      "id": "cy-brenin-01-l26-s116",
+      "text": "Doedd e ddim yn drwm, a doedd e ddim yn gleddyf Cai."
+     },
+     {
+      "id": "cy-brenin-01-l26-s117",
+      "text": "Yn sydyn, aeth wyneb Cai'n welw.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "welw",
+        "gloss": "welw ← gwelw: gwyn, fel wyneb sâl",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s118",
+      "text": "Roedd ei ddwylo e'n crynu, roedd ei geg e ar agor, ac roedd ei galon e'n curo'n gyflym."
+     },
+     {
+      "id": "cy-brenin-01-l26-s119",
+      "text": "Rhyfeddodd Cai, ond doedd e ddim yn hapus, ac roedd Arth yn rhyfeddu hefyd: pam roedd Cai'n drist?",
+      "inference_aids": [
+       {
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l26-img-wyneb-cai",
+        "alt": "Outside a tent at the snowy tournament field, Cai holds the shining sword and has gone pale, his mouth open, while breathless Arth looks up at him and Mali stares at the blade.",
+        "art_brief": "Close, three-figure scene outside a tent at the snowy tournament camp below Caerllion's walls (Caerllion palette; tents and pennants, a blurred crowd and mounted knights with lances far behind). Cai (15, tall, gangly, beardless, straight ginger-blond hair to the jaw, rust-red tunic, red cloak, an EMPTY sheath at his belt) holds the long shining sword from the stone in both trembling hands; its hilt is plain, with no gold. His face has gone white, mouth open, eyes on the blade: he recognises it. Arth (11, untidy brown hair with cowlick, moss-green tunic, snow on his shoulders and knees) stands breathless beside him, looking up hopefully, not understanding. Mali (12, long dark braid, dark-blue dress, satchel) stares at the sword, one hand to her mouth; from under the edge of her cloak peeps tiny red Dafi with Myrddin's silver pocket watch. No text.",
+        "characters": [
+         "char-cai",
+         "char-arth",
+         "char-mali",
+         "char-dafi"
+        ],
+        "covers_lexeme_ids": [
+         "cy-gwelw",
+         "cy-wyneb",
+         "cy-crynu"
+        ],
+        "type": "image",
+        "status": "planned",
+        "src": "media/images/cy-brenin-01-l26-img-wyneb-cai.webp"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s120",
+      "text": "Edrychodd Mali ar y cleddyf, ac wedyn edrychodd hi ar Arth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s121",
+      "text": "Roedd syndod mawr ar ei hwyneb hi, ac roedd hi'n welw hefyd, ond wnaeth hi ddim siarad.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "hwyneb",
+        "gloss": "hwyneb ← wyneb",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "welw",
+        "gloss": "welw ← gwelw",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s122",
+      "text": "Roedd hi'n gwybod: y cleddyf o'r drych oedd e."
+     },
+     {
+      "id": "cy-brenin-01-l26-s123",
+      "text": "Roedd tawelwch rhwng y ddau frawd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s124",
+      "text": "\"Ble gest ti'r cleddyf hwn, Arth?\" meddai Cai yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s125",
+      "text": "\"Yn y fynwent,\" meddai Arth. \"Roedd e mewn carreg fawr.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s126",
+      "text": "\"Roedd y dafarn ar gau, a doedd neb yn y dref, a wnes i weld y garreg, a…\""
+     },
+     {
+      "id": "cy-brenin-01-l26-s127",
+      "text": "\"Wnest ti ei dynnu e o'r garreg?\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l26-s128",
+      "text": "Llithrodd ei wain wag o'i law e i'r eira."
+     },
+     {
+      "id": "cy-brenin-01-l26-s129",
+      "text": "\"Do. Roedd e'n hawdd!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l26-s130",
+      "text": "\"Ond Cai, wnes i ddim ei ddwyn e!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddwyn",
+        "gloss": "ddwyn ← dwyn",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s131",
+      "text": "\"Wnes i ddim ei ddwyn e!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddwyn",
+        "gloss": "ddwyn ← dwyn",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l26-s132",
+      "text": "Wnaeth Cai ddim ateb.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l26-s133",
+      "text": "Edrychodd e ar y cleddyf disglair am amser hir, a'i wyneb e'n welw, ac wedyn edrychodd e ar ei dad yn y dorf."
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Wnes i ddim ei ddwyn e!",
+  "rule_cy": "wnes i, wnest ti, wnaeth e, wnaethon ni, wnaethoch chi, wnaethon nhw + berfenw (treiglad meddal): Wnes i gyfrif. · Wnes i ddim … · Wnest ti …? — Do. / Naddo. · ei + berfenw: Wnes i ei roi e.",
+  "tables": [
+   {
+    "caption": "gwneud + berfenw",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "wnes i",
+      "Wnes i gyfrif."
+     ],
+     [
+      "wnest ti",
+      "Wnest ti fwyta tair pastai."
+     ],
+     [
+      "wnaeth e / hi",
+      "Wnaeth y cleddyf ddim cerdded o'r wain!"
+     ],
+     [
+      "wnaethon ni",
+      "Wnaethon ni adael y dafarn yn hwyr."
+     ],
+     [
+      "wnaethoch chi",
+      "Wnaethoch chi weld Arth?"
+     ],
+     [
+      "wnaethon nhw",
+      "Wnaethon nhw fynd i'r twrnamaint."
+     ],
+     [
+      "Wnest ti …?",
+      "Wnest ti anghofio fy nghleddyf i? — Naddo!"
+     ],
+     [
+      "… ddim …",
+      "Wnes i ddim anghofio dy gleddyf di!"
+     ]
+    ]
+   },
+   {
+    "caption": "-odd ↔ wnaeth",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Tynnodd Arth y cleddyf.",
+      "Wnaeth Arth dynnu'r cleddyf."
+     ],
+     [
+      "Methodd y marchog.",
+      "Wnaeth y marchog ddim llwyddo."
+     ],
+     [
+      "Llwyddodd neb? ✗",
+      "Wnaeth neb lwyddo."
+     ]
+    ]
+   },
+   {
+    "caption": "ei + berfenw = e (gwrthrych)",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "dwyn y cleddyf",
+      "Wnes i ddim ei ddwyn e!"
+     ],
+     [
+      "tynnu'r cleddyf",
+      "Wnes i ei dynnu e!"
+     ],
+     [
+      "rhoi'r cleddyf",
+      "Wnest ti ei roi e dan y fainc."
+     ],
+     [
+      "gweld Arth",
+      "Wnaeth neb ei weld e."
+     ],
+     [
+      "a + ei = a'i",
+      "y cleddyf a'i lafn disglair"
+     ]
+    ]
+   },
+   {
+    "caption": "Treigladau: Pennod 26",
+    "header": [
+     "",
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "wnes i / wnaeth … + berfenw",
+      "Wnes i gyfrif · Wnaeth neb lwyddo · Wnest ti dynnu",
+      "Pennod 26"
+     ],
+     [
+      "… ddim + berfenw",
+      "Wnes i ddim llwyddo (dim treiglad ar ôl ddim)",
+      "Pennod 26"
+     ],
+     [
+      "ei (e) + berfenw",
+      "ei ddwyn e · ei dynnu e · ei weld e",
+      "Pennod 26"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l26-s016"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s018"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s028"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s030"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s080"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s096"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s100"
+   },
+   {
+    "segment_id": "cy-brenin-01-l26-s131"
+   }
+  ],
+  "nodyn_en": "Spoken southern Welsh often tells the past with gwneud: wnes i, wnest ti, wnaeth e, wnaethon ni/nhw, wnaethoch chi + a soft-mutated verb-noun (Wnes i gyfrif). Same meaning as -odd. Negative: Wnes i ddim … (no mutation after ddim). Answer Do / Naddo. A pronoun object goes before the verb-noun as a possessive: Wnes i ddim ei ddwyn e."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l26-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Anghofiodd Cai'r cleddyf. (wnaeth) →",
+      "answer": "Wnaeth Cai anghofio'r cleddyf."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Tynnodd Arth y cleddyf. (wnaeth) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnaeth Arth dynnu'r cleddyf."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Wnaeth Arth tynnu'r cleddyf.",
+         "hint": "wnaeth + treiglad: tynnu → dynnu"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Cyfrifais i'r pasteiod. (wnes i) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnes i gyfrif y pasteiod."
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a3",
+       "prompt": "Bwyton ni yn y dafarn. (wnaethon ni) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnaethon ni fwyta yn y dafarn."
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Brysiodd y plant i'r fynwent. (wnaethon nhw) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnaethon nhw frysio i'r fynwent."
+       ],
+       "mutation_hint": true
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Wnes i anghofio'r cleddyf. (✗) →",
+      "answer": "Wnes i ddim anghofio'r cleddyf."
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Wnaeth y tafarnwr aros. (✗) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnaeth y tafarnwr ddim aros."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l26-s053"
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Wnest ti fwyta'r pasteiod. (?) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnest ti fwyta'r pasteiod?"
+       ],
+       "common_wrong": [
+        {
+         "answer": "Wnest ti ddim bwyta'r pasteiod?",
+         "hint": "cwestiwn, dim ddim"
+        }
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "\"Wnest ti dynnu'r cleddyf?\" \"___, wnes i ei dynnu e.\"",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Do"
+       ],
+       "common_wrong": [
+        {
+         "answer": "Ydw",
+         "hint": "wnest ti …? → Do / Naddo"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Wnes i ddim dwyn y cleddyf. (e) →",
+      "answer": "Wnes i ddim ei ddwyn e."
+     },
+     "items": [
+      {
+       "id": "a8",
+       "prompt": "Wnaeth neb weld Arth. (e) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnaeth neb ei weld e."
+       ],
+       "mutation_hint": true,
+       "source_segment_ids": [
+        "cy-brenin-01-l26-s100"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "\"Mae'r cleddyf yn sownd.\" Mae pawb yn dweud … →",
+      "answer": "Mae pawb yn dweud bod y cleddyf yn sownd."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "\"Mae'r dafarn ar gau.\" Mae Arth yn dweud … →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae Arth yn dweud bod y dafarn ar gau."
+       ],
+       "recall_of": "G22"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae'r marchog yn gweiddi. Wnaeth e ddim llwyddo. → Wnaeth y marchog ___ ddim llwyddo.",
+      "answer": "sy'n gweiddi"
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Mae'r marchog yn ymladd â Gwalchmai. Mae e'n gryf. → Mae'r marchog ___ â Gwalchmai'n gryf.",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "sy'n ymladd"
+       ],
+       "recall_of": "G24"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l26-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "cloi",
+    "dwyn",
+    "gafael",
+    "sylwi",
+    "crynu",
+    "brysio",
+    "llithro",
+    "rhyfeddu",
+    "clo",
+    "llwch",
+    "calon",
+    "wyneb",
+    "tawelwch",
+    "disglair",
+    "gwelw",
+    "ysgafn",
+    "sownd",
+    "neb"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae'r ffordd yn wyn ac mae rhew arni hi: paid â rhedeg: byddi di'n ___!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "llithro"
+     ],
+     "explanation": "rhew → llithro"
+    },
+    {
+     "id": "b2",
+     "prompt": "Mae Modlen yn mynd i'r ffair. Mae hi'n ___ drws y gegin, ac mae'r allwedd gyda hi.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cloi"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae'r dyn drwg wedi cymryd ceiniogau Elen o'r bwrdd: lleidr yw e, ac mae e wedi ___ yr arian.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "dwyn"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae hi'n oer iawn, a dyw Dafi ddim yn y tân: mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "crynu"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae Cai'n sâl iawn: mae ei wyneb e'n wyn ac yn ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "welw"
+     ],
+     "explanation": "yn + gwelw → yn welw"
+    },
+    {
+     "id": "b6",
+     "prompt": "Doedd dim sŵn yn y neuadd: dim ond ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "tawelwch"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Mae'r haul ar yr afon, ac mae'r dŵr yn ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ddisglair"
+     ],
+     "explanation": "yn + disglair → yn ddisglair"
+    },
+    {
+     "id": "b8",
+     "prompt": "Mae Gwalchmai'n aros! ___, Cai!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Brysia"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae Arth yn ofni: mae ei ___ e'n curo'n gyflym.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "galon"
+     ],
+     "explanation": "ei + calon → ei galon"
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae'r dafarn ar gau, a dyw'r drws ddim yn agor: mae ___ mawr ar y drws.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "clo"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l26-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Pam mae Cai'n ddig yn y bore?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae ei wain e'n wag: does dim cleddyf gyda fe, ac mae e'n ymladd am ddeg o'r gloch.",
+     "rubric": "Ateb: does dim cleddyf yn y wain / mae Cai'n ymladd heddiw.",
+     "key_terms": [
+      "cy-gwain",
+      "cy-cleddyf"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s003"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Ble mae cleddyf Cai, meddai Mali?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Yn y dafarn",
+      "Dan y fainc yn y dafarn",
+      "Yn y dafarn, dan y fainc",
+      "Mae e yn y dafarn",
+      "Dan y fainc",
+      "Mae'r cleddyf yn y dafarn",
+      "Mae e dan y fainc yn y dafarn"
+     ],
+     "model_answer": "Yn y dafarn, dan y fainc.",
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s025"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Pam dyw Arth ddim yn gallu cael cleddyf Cai?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae'r dafarn ar gau, ac mae clo ar y drws. Mae'r tafarnwr wedi mynd i'r twrnamaint.",
+     "rubric": "Ateb: mae'r dafarn ar gau / mae clo ar y drws / does neb yno.",
+     "key_terms": [
+      "cy-ph-ar-gau",
+      "cy-clo"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s043"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Pwy sy yn y fynwent?",
+     "answer_mode": "self_check",
+     "model_answer": "Neb: dim ond Arth (ac aderyn du ar groes).",
+     "rubric": "Ateb: does neb yno / dim ond Arth.",
+     "key_terms": [
+      "cy-neb"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s070"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Ydy'r cleddyf yn sownd yn y garreg?",
+     "answer_mode": "self_check",
+     "model_answer": "Nac ydy. Mae'r cleddyf yn llithro o'r garreg yn hawdd, heb sŵn.",
+     "rubric": "Ateb Nac ydy, a rheswm: mae e'n llithro o'r garreg yn hawdd.",
+     "key_terms": [
+      "cy-llithro",
+      "cy-hawdd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s090"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam mae wyneb Cai'n welw?",
+     "answer_mode": "self_check",
+     "model_answer": "Dyw'r cleddyf ddim yn gleddyf Cai: dyma'r cleddyf o'r garreg. Mae Cai'n gwybod beth yw e.",
+     "rubric": "Ateb: dim aur ar y carn / cleddyf y garreg yw e, dim cleddyf Cai.",
+     "key_terms": [
+      "cy-carn",
+      "cy-carreg"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s115"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Wnaeth Arth ddwyn y cleddyf?",
+     "answer_mode": "self_check",
+     "model_answer": "Naddo. Wnaeth e ddim ei ddwyn e: wnaeth e ei dynnu e i Cai, am un diwrnod.",
+     "rubric": "Naddo + brawddeg gyda wnaeth e (ddim) …",
+     "key_terms": [
+      "cy-dwyn"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l26-s131"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Beth wnest ti ddoe?",
+     "answer_mode": "self_check",
+     "model_answer": "Wnes i fynd i'r dref. Wnes i ddim gweithio.",
+     "rubric": "Wnes i + berfenw gyda threiglad (Wnes i fynd, Wnes i ddarllen)."
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-cloi",
+   "citation_form": "cloi",
+   "part_of_speech": "verb",
+   "current_sense": "to lock",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dwyn",
+   "citation_form": "dwyn",
+   "part_of_speech": "verb",
+   "current_sense": "to steal",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gafael",
+   "citation_form": "gafael",
+   "part_of_speech": "verb",
+   "current_sense": "to grip, grasp (gafael yn)",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sylwi",
+   "citation_form": "sylwi",
+   "part_of_speech": "verb",
+   "current_sense": "to notice (sylwi ar)",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhyfeddu",
+   "citation_form": "rhyfeddu",
+   "part_of_speech": "verb",
+   "current_sense": "to marvel, be amazed",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-ar-gau",
+   "citation_form": "ar gau",
+   "part_of_speech": "phrase",
+   "current_sense": "closed, shut",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-ar-agor",
+   "citation_form": "ar agor",
+   "part_of_speech": "phrase",
+   "current_sense": "open",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-disglair",
+   "citation_form": "disglair",
+   "part_of_speech": "adjective",
+   "current_sense": "shining, bright",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-syndod",
+   "citation_form": "syndod",
+   "part_of_speech": "noun",
+   "current_sense": "surprise, amazement",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-tawelwch",
+   "citation_form": "tawelwch",
+   "part_of_speech": "noun",
+   "current_sense": "silence",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-clo",
+   "citation_form": "clo",
+   "part_of_speech": "noun",
+   "current_sense": "lock",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llwch",
+   "citation_form": "llwch",
+   "part_of_speech": "noun",
+   "current_sense": "dust",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-anadl",
+   "citation_form": "anadl",
+   "part_of_speech": "noun",
+   "current_sense": "breath",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-calon",
+   "citation_form": "calon",
+   "part_of_speech": "noun",
+   "current_sense": "heart",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-wyneb",
+   "citation_form": "wyneb",
+   "part_of_speech": "noun",
+   "current_sense": "face",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-crynu",
+   "citation_form": "crynu",
+   "part_of_speech": "verb",
+   "current_sense": "to tremble",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-brysio",
+   "citation_form": "brysio",
+   "part_of_speech": "verb",
+   "current_sense": "to hurry",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llithro",
+   "citation_form": "llithro",
+   "part_of_speech": "verb",
+   "current_sense": "to slip",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwelw",
+   "citation_form": "gwelw",
+   "part_of_speech": "adjective",
+   "current_sense": "pale",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-neb",
+   "citation_form": "neb",
+   "part_of_speech": "pronoun",
+   "current_sense": "nobody, no-one (with a negative verb)",
+   "first_introduced_lesson": "cy-brenin-01-l26",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-26.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "cloi",
+    "back": "to lock",
+    "example_segment_id": "cy-brenin-01-l26-s051",
+    "lexeme_id": "cy-cloi"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "dwyn",
+    "back": "to steal",
+    "example_segment_id": "cy-brenin-01-l26-s131",
+    "lexeme_id": "cy-dwyn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "gafael (yn)",
+    "back": "to grip, grasp (gafael yn)",
+    "example_segment_id": "cy-brenin-01-l26-s087",
+    "lexeme_id": "cy-gafael"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "sylwi (ar + SM)",
+    "back": "to notice (sylwi ar)",
+    "example_segment_id": "cy-brenin-01-l26-s115",
+    "lexeme_id": "cy-sylwi"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "rhyfeddu",
+    "back": "to marvel, be amazed",
+    "example_segment_id": "cy-brenin-01-l26-s095",
+    "lexeme_id": "cy-rhyfeddu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "ar gau",
+    "back": "closed, shut",
+    "example_segment_id": "cy-brenin-01-l26-s043",
+    "lexeme_id": "cy-ph-ar-gau"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "ar agor",
+    "back": "open",
+    "example_segment_id": "cy-brenin-01-l26-s038",
+    "lexeme_id": "cy-ph-ar-agor"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "disglair",
+    "back": "shining, bright",
+    "example_segment_id": "cy-brenin-01-l26-s077",
+    "lexeme_id": "cy-disglair"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "syndod (g.)",
+    "back": "surprise, amazement",
+    "example_segment_id": "cy-brenin-01-l26-s096",
+    "lexeme_id": "cy-syndod"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "tawelwch (g.)",
+    "back": "silence",
+    "example_segment_id": "cy-brenin-01-l26-s068",
+    "lexeme_id": "cy-tawelwch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "clo (g.), cloeon",
+    "back": "lock",
+    "example_segment_id": "cy-brenin-01-l26-s043",
+    "lexeme_id": "cy-clo"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "llwch (g.)",
+    "back": "dust",
+    "example_segment_id": "cy-brenin-01-l26-s091",
+    "lexeme_id": "cy-llwch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "anadl (b.)",
+    "back": "breath",
+    "example_segment_id": "cy-brenin-01-l26-s073",
+    "seen_as": "anadl ddofn",
+    "lexeme_id": "cy-anadl"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "calon (b.)",
+    "back": "heart",
+    "example_segment_id": "cy-brenin-01-l26-s073",
+    "seen_as": "ei galon e",
+    "lexeme_id": "cy-calon"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "wyneb (g.)",
+    "back": "face",
+    "example_segment_id": "cy-brenin-01-l26-s117",
+    "lexeme_id": "cy-wyneb"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "crynu",
+    "back": "to tremble",
+    "example_segment_id": "cy-brenin-01-l26-s118",
+    "lexeme_id": "cy-crynu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "brysio",
+    "back": "to hurry",
+    "example_segment_id": "cy-brenin-01-l26-s103",
+    "lexeme_id": "cy-brysio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "llithro",
+    "back": "to slip",
+    "example_segment_id": "cy-brenin-01-l26-s090",
+    "lexeme_id": "cy-llithro"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "gwelw",
+    "back": "pale",
+    "example_segment_id": "cy-brenin-01-l26-s117",
+    "seen_as": "yn welw",
+    "lexeme_id": "cy-gwelw"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l26",
+    "front": "neb",
+    "back": "nobody, no-one (with a negative verb)",
+    "example_segment_id": "cy-brenin-01-l26-s045",
+    "lexeme_id": "cy-neb"
+   },
+   {
+    "id": "pattern-g26",
+    "lesson": "cy-brenin-01-l26",
+    "front": "Wnest ti anghofio fy nghleddyf i? · Naddo! Wnes i ddim anghofio. · Wnaeth neb lwyddo. · Wnes i ddim ei ddwyn e!",
+    "back": "Did you forget my sword? · No! I didn't forget. · Nobody succeeded. · I didn't steal it! (wnes i, wnest ti, wnaeth e, wnaethon ni, wnaethoch chi, wnaethon nhw + SM)",
+    "example_segment_id": "cy-brenin-01-l26-s016",
+    "example_segment_ids": [
+     "cy-brenin-01-l26-s016",
+     "cy-brenin-01-l26-s080"
+    ],
+    "lexeme_id": "cy-pattern-g26"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l26-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 1,
+   "margin_diagram": 0,
+   "margin_gloss": 26
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-26",
+   "rhan-3"
+  ]
+ },
+ "metrics": {
+  "running_words": 1433,
+  "sentences": 133,
+  "word_target": 1480,
+  "word_window": [
+   1332,
+   1628
+  ]
+ }
+}

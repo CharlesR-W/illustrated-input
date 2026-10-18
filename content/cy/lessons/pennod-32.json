@@ -1,0 +1,2361 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l32",
+ "course_id": "cy-brenin-01",
+ "order": 32,
+ "title": "Coron i fachgen",
+ "rhan": 4,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B6 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (Wave 2, 2026-10-17 notes)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Codex review 2026-10-18 (docs/reviews/welsh-review-32-36-2026-10-18.md) applied: vocative SM 'Dywysog Arthur' (s054) and 'Frenin Arthur' (s105); Gramadeg row 'gan Modlen' without the over-general parenthesis; C3 and C6 accept the fuller answers. Its verdicts on all eight review questions are recorded as resolved. Also (coordinator): the grumbling lord is Barf Goch, the accuser of 29, throughout 32–34.",
+   "Target G32 (past cael-passive) is demonstrated about 25 times: narrated passives through the preparations (§II), Mali's Gafodd …? checklist with Do answers (question SM), the coronation (Cafodd y goron ei rhoi … Cafodd Arthur ei goroni gan yr esgob) and the feast. Contrasts with the active preterite: the s-gloss 'Glanhaodd y morynion y neuadd', 'Coginiodd/Croesawodd' in Gramadeg and Pensum A, and active narration alongside (Cododd yr esgob … a chafodd y goron ei rhoi). Masculine SM / feminine AM / plural eu are all shown (ei olchi, ei chynnau, ei pharatoi, ei choginio, eu golchi). Only past passive is used; present/future passive (receptive until 38) does not appear.",
+   "Dafi's one deliberate error (s-'Cafodd y bastai ei fwyta') contrasts with the target (feminine pastai needs ei bwyta) and is corrected by Mali in the next line.",
+   "Open-slot words (Rhan 4 allows 10), all CorCenCC top-2000: llawer (rank 1983; llawer o …), popeth (365), rhy (449), dechrau (253, with preterite dechreuodd). They are needed for the feast scene and recur in 33–36. The checker warns that they are not yet declared in plan/chapters.json (integrator).",
+   "Form added to an earlier lexeme: rhoddodd (cy-rhoi, preterite 3sg), not derivable by the -odd suffix rule.",
+   "Continuity choices: the coronation is on the day after Calan (ail ddiwrnod y flwyddyn) in the church at Caerllion, the feast in the great hall of the castle (Cynyr's Pennod 17 castle). The grumbling lord is Barf Goch, the red-bearded lord who accused Cynyr of twyll in the council of 29 (named as in Pennod 29; 'gogledd' is not taught until 35, so the plan's 'lord of the north' is not used). Cai and Mali stand beside Arthur (his condition in 31). Arthur wears a long blue robe sewn by Elen (visual bible: plain blue cloak in 32+). The crown is Uthr's old crown and is too big. Mali tells Arthur for the first time what she saw in the pool (16). Modlen–Dafi thread paid off: Modlen gives Dafi a pie, 'Anrheg gan Modlen'. Pero is only implied (Dafi: 'nid gan Pero!'); his presence at Caerllion is left to the 21–31 writers.",
+   "Known checker limitation: the cael-passive frame is not a lexeme, so its uses are not counted by the checker; the count above is by hand."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l32-s021",
+    "question": "[?] cael-passive with feminine subject: 'Cafodd y neuadd ei glanhau' (ei = her, no visible mutation on g-) — confirm agreement model for learners.",
+    "resolved": true,
+    "resolution": "Codex 2026-10-18: accept; feminine ei leaves g- unchanged."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s023",
+    "question": "[?] 'pob ffwrn … ei chynnau' — AM agreement with feminine ffwrn after pob: natural, or would speakers say 'cafodd y ffyrnau i gyd eu cynnau'?",
+    "resolved": true,
+    "resolution": "Codex: accept; natural feminine singular."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s034",
+    "question": "[?] Colloquial question 'Gafodd y neuadd ei glanhau?' without interrogative particle: acceptable southern written model?",
+    "resolved": true,
+    "resolution": "Codex: accept; particle omitted, mutation kept."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s073",
+    "question": "[?] Fragment 'Wel, gan lawer.' (= well, by many) as a dry narrator aside: natural?",
+    "resolved": true,
+    "resolution": "Codex: accept; natural ellipsis after gan bawb."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s057",
+    "question": "[?] 'ar ail ddiwrnod y flwyddyn' for 2 January: natural?",
+    "resolved": true,
+    "resolution": "Codex: accept; ail ddiwrnod correct."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s045",
+    "question": "[?] 'canodd clychau'r eglwys' / 'Cafodd y clychau eu canu' for bells ringing: both natural?",
+    "resolved": true,
+    "resolution": "Codex: accept both."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s015",
+    "question": "[?] 'mae angen llythyr i bob arglwydd' (a letter is needed for every lord): natural?",
+    "resolved": true,
+    "resolution": "Codex: accept."
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s099",
+    "question": "[?] 'ei wnïo o farfau' (sewn from beards): is 'o' natural here, or 'allan o' / 'gyda'?",
+    "resolved": true,
+    "resolution": "Codex: accept; o for material, clogyn (g.) → ei wnïo."
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G32",
+  "primary_new_grammar": {
+   "id": "G32",
+   "label": "Past cael-passive: cafodd X ei + SM (masculine) / ei + AM (feminine) / eu (plural) + verbal noun, with gan + SM for the agent; question Gafodd …? — Do / Naddo; contrast with the active preterite (Glanhaodd y morynion y neuadd)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G10",
+   "G13",
+   "G16",
+   "G17",
+   "G20",
+   "G22",
+   "G23",
+   "G24",
+   "G25",
+   "G26",
+   "G27",
+   "G28",
+   "G29",
+   "G30",
+   "G31"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-gan",
+   "cy-coroni",
+   "cy-gwahodd",
+   "cy-croesawu",
+   "cy-trefnu",
+   "cy-dathlu",
+   "cy-coginio",
+   "cy-gwnio",
+   "cy-seremoni",
+   "cy-cloch",
+   "cy-esgob",
+   "cy-tywysog",
+   "cy-urddas",
+   "cy-ystafell",
+   "cy-llawr",
+   "cy-balch",
+   "cy-nerfus",
+   "cy-swyddogol",
+   "cy-gwisg",
+   "cy-gwin",
+   "cy-cerddoriaeth",
+   "cy-llestri",
+   "cy-dawnsio",
+   "cy-llawer",
+   "cy-popeth",
+   "cy-rhy",
+   "cy-dechrau"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-gan",
+    "how": "gloss+context",
+    "segment_id": "cy-brenin-01-l32-s021"
+   },
+   {
+    "lexeme_id": "cy-coroni",
+    "how": "gloss(radical)+picture(cover)",
+    "segment_id": "cy-brenin-01-l32-s003"
+   },
+   {
+    "lexeme_id": "cy-gwahodd",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s015"
+   },
+   {
+    "lexeme_id": "cy-croesawu",
+    "how": "gloss+context",
+    "segment_id": "cy-brenin-01-l32-s072"
+   },
+   {
+    "lexeme_id": "cy-trefnu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s012"
+   },
+   {
+    "lexeme_id": "cy-dathlu",
+    "how": "gloss+context",
+    "segment_id": "cy-brenin-01-l32-s089"
+   },
+   {
+    "lexeme_id": "cy-coginio",
+    "how": "context(Modlen in the kitchen)+gloss",
+    "segment_id": "cy-brenin-01-l32-s024"
+   },
+   {
+    "lexeme_id": "cy-gwnio",
+    "how": "gloss+picture(vignette)",
+    "segment_id": "cy-brenin-01-l32-s028"
+   },
+   {
+    "lexeme_id": "cy-seremoni",
+    "how": "context(transparent)+picture(cover)",
+    "segment_id": "cy-brenin-01-l32-s006"
+   },
+   {
+    "lexeme_id": "cy-cloch",
+    "how": "gloss(number)+picture(vignette)",
+    "segment_id": "cy-brenin-01-l32-s045"
+   },
+   {
+    "lexeme_id": "cy-esgob",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l32-s053"
+   },
+   {
+    "lexeme_id": "cy-tywysog",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s048"
+   },
+   {
+    "lexeme_id": "cy-urddas",
+    "how": "gloss+context",
+    "segment_id": "cy-brenin-01-l32-s060"
+   },
+   {
+    "lexeme_id": "cy-ystafell",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s028"
+   },
+   {
+    "lexeme_id": "cy-llawr",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l32-s021"
+   },
+   {
+    "lexeme_id": "cy-balch",
+    "how": "gloss(radical)+context",
+    "segment_id": "cy-brenin-01-l32-s005"
+   },
+   {
+    "lexeme_id": "cy-nerfus",
+    "how": "context(transparent)",
+    "segment_id": "cy-brenin-01-l32-s007"
+   },
+   {
+    "lexeme_id": "cy-swyddogol",
+    "how": "context(transparent)",
+    "segment_id": "cy-brenin-01-l32-s004"
+   },
+   {
+    "lexeme_id": "cy-gwisg",
+    "how": "picture(vignette)+gloss(radical)",
+    "segment_id": "cy-brenin-01-l32-s029"
+   },
+   {
+    "lexeme_id": "cy-gwin",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s036"
+   },
+   {
+    "lexeme_id": "cy-cerddoriaeth",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s074"
+   },
+   {
+    "lexeme_id": "cy-llestri",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l32-s012"
+   },
+   {
+    "lexeme_id": "cy-dawnsio",
+    "how": "gloss+picture(scene)",
+    "segment_id": "cy-brenin-01-l32-s085"
+   },
+   {
+    "lexeme_id": "cy-llawer",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l32-s025"
+   },
+   {
+    "lexeme_id": "cy-popeth",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l32-s026"
+   },
+   {
+    "lexeme_id": "cy-rhy",
+    "how": "gloss+context(robe on the floor)",
+    "segment_id": "cy-brenin-01-l32-s030"
+   },
+   {
+    "lexeme_id": "cy-dechrau",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l32-s014"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-urddo",
+   "cy-gorsedd",
+   "cy-gwledd",
+   "cy-canu",
+   "cy-coron",
+   "cy-ei-m",
+   "cy-ei-f",
+   "cy-eu",
+   "cy-barf",
+   "cy-clogyn",
+   "cy-pastai",
+   "cy-pwll",
+   "cy-telyn",
+   "cy-bardd",
+   "cy-tal",
+   "cy-enfawr",
+   "cy-penlinio",
+   "cy-crynu",
+   "cy-addo",
+   "cy-teg"
+  ],
+  "swaps": [],
+  "open_slot_ids": [
+   "cy-llawer",
+   "cy-popeth",
+   "cy-rhy",
+   "cy-dechrau"
+  ]
+ },
+ "story": {
+  "cover": {
+   "type": "image",
+   "presentation": "inline_scene",
+   "ref": "cy-brenin-01-l32-img-cover",
+   "src": "media/images/cy-brenin-01-l32-img-cover.webp",
+   "alt": "Coronation in the church at Caerllion: an old bishop sets a gold crown on Arthur's head, but it is too big and slips down over his ears; Cai and Mali stand beside him, and lords and knights fill the church.",
+   "status": "planned",
+   "art_brief": "Inside the stone church at Caerllion on a snowy winter morning (Caerllion palette: Roman red brick, cold light, candles; the only glass windows in the story are here, small and plain). At the altar an old, tall bishop in gold vestments lowers an old gold crown onto Arthur (12, untidy brown hair with a cowlick, freckles; plain blue cloak over a long blue robe with a small red dragon on the chest); the crown is far too big and has slipped down over his ears to his eyebrows, and he is grinning under it. Cai (15, tall, red-blond, rust-red tunic, red cloak, sword at his belt) stands at his one side, Mali (12, long dark braid, dark-blue dress, satchel) at the other, staring at the crown with wide eyes. In the front row Cynyr (broad, huge golden-blond beard to mid-chest, brown cloak with round silver brooch) weeps proudly into his beard beside Elen (about fifty, white linen veil, forest-green dress, ring of keys). Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat) stands by a pillar near the door; a thin wisp of grey smoke rises from his hat. Behind them, rows of lords and knights in cloaks; one big red-bearded lord (Barf Goch) frowns and whispers. Bell ropes hang by the door. No text.",
+   "characters": [
+    "char-arth",
+    "char-cai",
+    "char-mali",
+    "char-cynyr",
+    "char-elen",
+    "char-myrddin",
+    "char-esgob",
+    "char-barf-goch"
+   ],
+   "covers_lexeme_ids": [
+    "cy-coroni",
+    "cy-esgob",
+    "cy-seremoni",
+    "cy-coron"
+   ],
+   "width": 1600,
+   "height": 1067
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l32-sec1",
+    "title": "Brenin heb goron",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l32-s001",
+      "text": "Ar ddydd Calan, ar ôl y prawf ar y wawr, roedd Arthur yn frenin. Ond doedd dim coron ar ei ben e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s002",
+      "text": "Y noson honno, roedd yr arglwyddi'n siarad yn uchel yn neuadd fawr y castell yng Nghaerllion.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s003",
+      "text": "\"Rhaid i ni goroni'r brenin yn gyflym,\" meddai Barf Goch, yr arglwydd a gyhuddodd Cynyr yn y cyngor.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "goroni",
+        "gloss": "goroni ← coroni: rhoi coron",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s004",
+      "text": "\"Heb goron, dyw e ddim yn frenin swyddogol. Heb goron, dim ond bachgen yw e.\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s005",
+      "text": "\"Yfory, felly!\" meddai Cynyr, ac roedd e'n falch iawn.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "falch",
+        "gloss": "falch ← balch",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s006",
+      "text": "\"Bydd seremoni swyddogol yn yr eglwys yn y bore, a gwledd fawr yn y neuadd wedyn! Bydd y brenin yn croesawu pob arglwydd wrth y drws.\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s007",
+      "text": "Ond roedd y brenin newydd yn eistedd ar stôl wrth y tân, ac roedd e'n nerfus iawn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s008",
+      "text": "\"Yfory?\" meddai Arthur. \"Ond dw i ddim yn barod!\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l32-s009",
+      "text": "\"Dwyt ti byth yn barod,\" meddai Mali. \"Ond yn y fynwent, tynnaist ti'r cleddyf o'r garreg.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l32-s010",
+      "text": "Wedyn daeth Modlen i'r neuadd, gyda'r llwy bren yn ei llaw hi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s011",
+      "text": "\"Gwledd? Yfory? I bob arglwydd yng Nghymru?\" meddai hi.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s012",
+      "text": "\"Wel, fi sy'n trefnu'r wledd, felly. Does dim amser, does dim bwyd, a does dim llestri!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "trefnu",
+        "gloss": "trefnu = dewis a pharatoi",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llestri",
+        "gloss": "llestri = platiau, jygiau, cyrn yfed",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s013",
+      "text": "\"Dewch, blant: mae gwaith gyda ni!\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s014",
+      "text": "Dechreuodd hi roi gwaith i bawb.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dechreuodd",
+        "gloss": "dechrau ↔ gorffen",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s015",
+      "text": "\"Cai: cer â'r byrddau hir i'r neuadd. Mali: mae angen llythyr i bob arglwydd: rhaid gwahodd pawb!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwahodd",
+        "gloss": "gwahodd = galw i'r wledd",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s016",
+      "text": "\"Dafi: cynna bob ffwrn yn y castell. A ti, Arthur…\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s017",
+      "text": "\"Ond fi yw'r brenin!\" meddai Arthur.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l32-s018",
+      "text": "\"Brenin? Dim eto: does dim coron ar dy ben di,\" meddai Modlen. \"Cer i olchi dy wyneb!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s019",
+      "text": "Gwenodd Arthur, ac aeth e i olchi ei wyneb.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l32-sec2",
+    "title": "Cafodd popeth ei wneud",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l32-s020",
+      "text": "Drwy'r dydd, roedd y castell yn brysur iawn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s021",
+      "text": "Cafodd y neuadd ei glanhau gan y morynion, a chafodd y llawr ei olchi hefyd.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "glanhau",
+        "gloss": "= Glanhaodd y morynion y neuadd",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gan",
+        "gloss": "gan y morynion: nhw sy'n glanhau",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llawr",
+        "gloss": "llawr ↔ to",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s022",
+      "text": "Cafodd y byrddau hir eu cario i'r neuadd gan Cai, a chafodd y llestri eu golchi yn y gegin.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "eu cario",
+        "gloss": "b.: ei · g.: ei · ll.: eu",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s023",
+      "text": "Cafodd pob ffwrn yn y castell ei chynnau gan Dafi: ffwrn fach yw Dafi, wrth gwrs."
+     },
+     {
+      "id": "cy-brenin-01-l32-s024",
+      "text": "Yn y gegin, roedd Modlen yn coginio.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s025",
+      "text": "Cafodd llawer o gig ei goginio, cafodd bara ei bobi, a chafodd cawl ei wneud mewn tri chrochan mawr.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "goginio",
+        "gloss": "ei goginio ← coginio",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llawer",
+        "gloss": "llawer o gig ↔ dim cig",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s026",
+      "text": "\"Pwy sy'n coginio'r wledd? Fi!\" meddai Modlen. \"Pwy sy'n trefnu popeth? Fi!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "popeth",
+        "gloss": "popeth ↔ dim byd",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s027",
+      "text": "\"A dim pasteiod i'r ddraig, dim pasteiod i Cai, a dim pasteiod i'r arglwyddi cyn y wledd!\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s028",
+      "text": "Yn yr ystafell fach wrth y neuadd, roedd Elen yn gwnïo.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ystafell",
+        "gloss": "y gegin, y neuadd: ystafelloedd",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwnïo",
+        "gloss": "gwnïo: gwneud dillad",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s029",
+      "text": "Cafodd gwisg newydd ei gwnïo i'r brenin: gwisg las, hir, gyda draig goch arni hi.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l32-img-gwisg",
+        "anchor_text": "gwisg",
+        "label": "gwisg",
+        "src": "media/vignettes/cy-brenin-01-l32-img-gwisg.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A long plain blue robe with a small red dragon embroidered on the chest, lying spread out, a needle and thread beside it. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-gwisg",
+         "cy-gwnio"
+        ],
+        "width": 400,
+        "height": 400
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s030",
+      "text": "Ond pan wisgodd Arthur y wisg, roedd hi'n rhy hir: roedd hi ar y llawr!",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wisg",
+        "gloss": "y wisg ← gwisg (b.)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rhy",
+        "gloss": "rhy hir = hir iawn, gormod",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s031",
+      "text": "\"Mae'r brenin yn rhy fach i'r wisg, a'r wisg yn rhy fawr i'r brenin!\" meddai Elen, a gwenodd hi.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s032",
+      "text": "Cafodd y wisg ei gwnïo eto, a nawr doedd hi ddim yn rhy hir."
+     },
+     {
+      "id": "cy-brenin-01-l32-s033",
+      "text": "Yn y nos, eisteddodd Mali wrth y bwrdd yn y gegin gyda'i thabled, a darllenodd hi bob gair.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s034",
+      "text": "\"Gafodd y neuadd ei glanhau?\" meddai hi.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gafodd",
+        "gloss": "cafodd → Gafodd …? → Do. / Naddo.",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s035",
+      "text": "\"Do,\" meddai Modlen. \"Dw i wedi trefnu popeth.\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s036",
+      "text": "\"Gafodd y llestri eu golchi? Gafodd y gwin ei gario i'r neuadd?\"",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwin",
+        "gloss": "gwin coch: i'r arglwyddi",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s037",
+      "text": "\"Do, a do,\" meddai Cai. \"Ond ches i ddim gwin. Dim ond llaeth, meddai Modlen!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l32-s038",
+      "text": "\"Gafodd pob arglwydd ei wahodd? Do: ysgrifennais i ugain llythyr. Gafodd y pasteiod eu cyfrif?\"",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wahodd",
+        "gloss": "ei wahodd ← gwahodd",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s039",
+      "text": "\"Do. Deg pastai,\" meddai Modlen. Wedyn cyfrifodd hi'r pasteiod eto. \"Naw!\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s040",
+      "text": "Edrychodd pawb ar y ddraig fach. Roedd Dafi'n eistedd ar y ffwrn, ac roedd blawd ar ei drwyn e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s041",
+      "text": "\"Cafodd un bastai ei bwyta,\" meddai Modlen. \"Ond gan bwy?\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s042",
+      "text": "\"Wel,\" meddai Dafi. \"Cafodd y bastai ei fwyta gan… ddraig fach.\"",
+      "paragraph_start": true,
+      "speaker": "char-dafi",
+      "deliberate_error": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s043",
+      "text": "\"Ei bwyta, Dafi,\" meddai Mali. \"Pastai yw hi: ei bwyta hi.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l32-s044",
+      "text": "\"Cafodd hi ei bwyta gan ddraig fach,\" meddai Dafi. \"Ond nid gan Pero!\"",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l32-sec3",
+    "title": "Y seremoni",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l32-s045",
+      "text": "Yn y bore, canodd clychau'r eglwys dros y ddinas, yn uchel ac yn hir.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "clychau",
+        "gloss": "cloch, clychau",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l32-img-clychau",
+        "anchor_text": "clychau",
+        "label": "cloch, clychau",
+        "src": "media/vignettes/cy-brenin-01-l32-img-clychau.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "Two bronze church bells hanging side by side from a wooden beam, ropes hanging down, small curved lines showing they are ringing. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-cloch"
+        ],
+        "width": 400,
+        "height": 400
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s046",
+      "text": "Cafodd y clychau eu canu am awr, ac roedd y ddinas yn llawn o bobl: roedd pawb eisiau gweld y seremoni."
+     },
+     {
+      "id": "cy-brenin-01-l32-s047",
+      "text": "Mewn ystafell fach wrth ddrws yr eglwys, roedd Arthur yn aros yn ei wisg las. Roedd Myrddin gyda fe.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s048",
+      "text": "\"Dw i'n nerfus, Myrddin,\" meddai Arthur. \"Ddoe ro'n i'n fachgen o Gwm Helyg. Heddiw dw i'n dywysog, ac mewn awr bydda i'n frenin.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dywysog",
+        "gloss": "yn dywysog ← tywysog: mab y brenin",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s049",
+      "text": "\"Ro't ti'n dywysog ddoe hefyd,\" meddai Myrddin, ac roedd e'n gwenu. \"Ond doedd Arth ddim yn gwybod.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l32-s050",
+      "text": "\"Ac Arthur? Roedd dy dad yn nerfus hefyd, ar y bore pan gafodd e ei goroni.\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s051",
+      "text": "Wedyn canodd un gloch fawr, yn araf: roedd y seremoni'n dechrau.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gloch",
+        "gloss": "un gloch ← cloch (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s052",
+      "text": "Agorodd drws yr ystafell, a cherddodd y tywysog i'r eglwys. Roedd Cai wrth ei ochr e, ac roedd Mali wrth ei ochr e hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l32-s053",
+      "text": "Roedd yr eglwys yn llawn o arglwyddi a marchogion. Wrth yr allor, roedd yr esgob yn aros: hen ddyn tal, mewn gwisg aur, swyddogol.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "esgob",
+        "gloss": "esgob: arweinydd yr offeiriaid",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s054",
+      "text": "\"Dywysog Arthur, mab Uthr,\" meddai'r esgob mewn llais uchel. \"Wyt ti'n addo bod yn frenin teg i bawb?\"",
+      "paragraph_start": true,
+      "speaker": "char-esgob"
+     },
+     {
+      "id": "cy-brenin-01-l32-s055",
+      "text": "\"Ydw,\" meddai Arthur. \"Dw i'n addo.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l32-s056",
+      "text": "Wedyn cododd yr esgob hen goron y Brenin Uthr, a chafodd y goron ei rhoi ar ben Arthur.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ei rhoi",
+        "gloss": "cafodd y goron (b.) ei rhoi",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s057",
+      "text": "Cafodd Arthur ei goroni gan yr esgob, yng Nghaerllion, ar ail ddiwrnod y flwyddyn."
+     },
+     {
+      "id": "cy-brenin-01-l32-s058",
+      "text": "Ond roedd y goron yn rhy fawr. Cwympodd hi dros ei wallt e, dros ei glustiau e, ac at ei drwyn e!",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s059",
+      "text": "Dechreuodd rhai o'r arglwyddi chwerthin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s060",
+      "text": "\"Ble mae ei urddas e?\" meddai Barf Goch yn dawel. \"Brenin heb urddas yw e: bachgen bach mewn coron fawr!\"",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "urddas",
+        "gloss": "urddas: brenin tawel, cryf, balch",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s061",
+      "text": "Ond cododd Arthur y goron yn araf, gyda'i ddwy law, a gwenodd e ar bawb.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s062",
+      "text": "\"Mae urddas gyda fe,\" meddai Elen yn dawel wrth Cynyr. \"Edrych: mae e'n gwenu.\"",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s063",
+      "text": "Roedd Cynyr yn falch iawn, ac roedd dagrau ar ei farf fawr e. Roedd Elen yn falch hefyd, ond roedd hi'n dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s064",
+      "text": "Edrychodd Mali ar y goron aur ar ben Arthur, ac yn sydyn cofiodd hi'r pwll ar ochr y bryn yng Nghwm Helyg.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s065",
+      "text": "\"Gwelais i'r goron hon yn y dŵr,\" meddai hi wrth Arthur. \"Gwelais i hi ar dy ben di, yn y pwll, ar ddiwrnod y carw gwyn.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l32-s066",
+      "text": "\"Pam wnest ti ddim dweud?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l32-s067",
+      "text": "\"Doedd hi ddim yn amser eto,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l32-s068",
+      "text": "Yn sydyn, cododd yr esgob ei drwyn. Roedd mwg bach llwyd yn dod o'r drws, o het ddu Myrddin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s069",
+      "text": "\"Mwg?\" meddai'r esgob. \"Oes tân yn yr eglwys?\"",
+      "paragraph_start": true,
+      "speaker": "char-esgob"
+     },
+     {
+      "id": "cy-brenin-01-l32-s070",
+      "text": "\"Nac oes,\" meddai Myrddin. \"Mae'r het yn hen iawn.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l32-s071",
+      "text": "Gwenodd Arthur, a gwenodd Mali hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s072",
+      "text": "\"Dyma'r brenin!\" meddai'r esgob, a chafodd y brenin newydd ei groesawu gan bawb.",
+      "paragraph_start": true,
+      "speaker": "char-esgob",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "groesawu",
+        "gloss": "ei groesawu ← croesawu: \"Croeso!\"",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s073",
+      "text": "Wel, gan lawer.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "lawer",
+        "gloss": "gan lawer ← llawer",
+        "gloss_kind": "radical"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l32-sec4",
+    "title": "Y wledd",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l32-s074",
+      "text": "Yn y nos, roedd y neuadd fawr yn llawn o olau, o fwyd ac o gerddoriaeth.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gerddoriaeth",
+        "gloss": "cerddoriaeth (b.): telyn, canu",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s075",
+      "text": "Cafodd popeth ei drefnu gan Modlen.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "drefnu",
+        "gloss": "ei drefnu ← trefnu",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s076",
+      "text": "Cafodd y wledd ei pharatoi gan Modlen, a chafodd hi ei choginio gan Modlen hefyd: cig, bara, cawl, caws, mêl a phasteiod.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "pharatoi",
+        "gloss": "ei pharatoi ← paratoi",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "choginio",
+        "gloss": "ei choginio ← coginio",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s077",
+      "text": "Roedd bardd yn chwarae'r delyn wrth y tân. Edrychodd Cynyr ar y bardd, ac wedyn ar ei draed e, ac roedd e'n chwerthin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s078",
+      "text": "\"Dw i ddim yn cario cleddyf y brenin nawr!\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l32-s079",
+      "text": "Croesawodd Arthur bob arglwydd wrth y drws, ac roedd pob arglwydd a gafodd ei wahodd yno.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s080",
+      "text": "Cafodd gwin coch ei roi i'r arglwyddi, a llaeth i'r plant.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s081",
+      "text": "\"Dw i'n farchog nawr!\" meddai Cai. \"Gwin i fi!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l32-s082",
+      "text": "\"Llaeth i ti,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s083",
+      "text": "\"Cafodd bachgen ei goroni heddiw,\" meddai Barf Goch, ac roedd gwin ar ei farf e. \"A nawr mae Cai'n gofyn am win!\"",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "win",
+        "gloss": "am win ← gwin",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s084",
+      "text": "\"Un diwrnod, bydda i'n urddo marchogion newydd, Cai,\" meddai Arthur. \"Ond heddiw, llaeth!\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l32-s085",
+      "text": "Wedyn dechreuodd y gerddoriaeth a'r dawnsio. Dawnsiodd Cynyr gydag Elen, a dawnsiodd y marchogion gyda'r morynion.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dawnsio",
+        "gloss": "dawnsio: traed + cerddoriaeth",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s086",
+      "text": "Dawnsiodd Cai gyda Modlen, ond roedd ei draed e'n fawr ac yn araf, ac roedd traed Modlen yn fach ac yn gyflym."
+     },
+     {
+      "id": "cy-brenin-01-l32-s087",
+      "text": "Roedd Arthur yn eistedd ar yr orsedd. Roedd yr orsedd yn uchel, a doedd traed y brenin newydd ddim yn cyrraedd y llawr.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l32-img-gwledd",
+        "src": "media/images/cy-brenin-01-l32-img-gwledd.webp",
+        "alt": "The coronation feast: Arthur sits on a tall throne with his feet dangling above the floor; Modlen hands Dafi a pie on a plate while lords, knights and maids dance to a harp.",
+        "status": "planned",
+        "art_brief": "The great hall of the castle at Caerllion at night (Caerllion palette: red brick and timber, torches, a big hearth, a red-dragon banner on green and white on the wall). Arthur (12, untidy brown hair with a cowlick, freckles; plain blue cloak over a long blue robe with a small red dragon on the chest) wearing the too-big gold crown sits on a tall carved throne; his boots dangle well above the floor. In the foreground Modlen (short, round, rosy, white headscarf, long floury apron, big wooden spoon) proudly holds out a pie on a plate to Dafi (cup-sized red dragon, two short cream horns, tiny bat wings, big yellow eyes; small enough to sit in a wooden drinking cup), who sits on the edge of the hearth staring at it with huge eyes. Behind, Cynyr (broad, huge golden-blond beard to mid-chest, brown cloak with round silver brooch) dances with Elen (about fifty, white linen veil, forest-green dress, ring of keys); Cai (15, tall, red-blond, rust-red tunic, red cloak, sword at his belt) dances clumsily with a maid; an old bard plays a harp by the fire; long tables with meat, bread, cheese, honey and jugs; lords drink red wine from horns. No text.",
+        "characters": [
+         "char-arth",
+         "char-modlen",
+         "char-dafi",
+         "char-cynyr",
+         "char-elen",
+         "char-cai"
+        ],
+        "covers_lexeme_ids": [
+         "cy-dawnsio",
+         "cy-gwin",
+         "cy-gorsedd",
+         "cy-cerddoriaeth"
+        ],
+        "width": 1600,
+        "height": 1067
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s088",
+      "text": "Ar ôl y cawl, cododd Arthur.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s089",
+      "text": "\"Diolch i chi am ddod,\" meddai'r brenin. \"Dyn ni'n dathlu heddiw, ond cafodd y wledd hon ei choginio gan un fenyw.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dathlu",
+        "gloss": "dathlu: gwledd, canu, dawnsio",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s090",
+      "text": "\"A chafodd pob ffwrn yn y castell ei chynnau gan un ddraig fach!\""
+     },
+     {
+      "id": "cy-brenin-01-l32-s091",
+      "text": "Edrychodd yr arglwyddi ar y ddraig fach wrth y tân, ac wedyn ar y faner fawr ar y wal: draig goch ar y faner, a draig goch wrth y brenin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s092",
+      "text": "Daeth Modlen o'r gegin gyda phastai ar blât. Rhoddodd hi'r bastai i Dafi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s093",
+      "text": "\"Dyma bastai i ti, Dafi,\" meddai hi. \"Anrheg gan Modlen.\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l32-s094",
+      "text": "\"Pastai… gan Modlen? I fi?\" meddai Dafi, ac roedd ei lygaid melyn e'n fawr iawn.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l32-s095",
+      "text": "Roedd pawb yn y neuadd yn dathlu: y brenin, y marchogion, y morynion, Modlen a'r ddraig. Wel, roedd llawer yn dathlu.",
+      "paragraph_start": true
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l32-sec5",
+    "title": "Y negesydd mawr",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l32-s096",
+      "text": "Yn sydyn, agorodd drysau'r neuadd gyda sŵn mawr. Daeth gwynt oer ac eira i'r neuadd, ac yn sydyn roedd y gerddoriaeth yn ddistaw.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s097",
+      "text": "Yn y drws, roedd dyn enfawr. Roedd e'n dalach na Cynyr, yn dalach na'r drws, ac roedd ei glogyn e'n llwyd gydag eira.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s098",
+      "text": "Cerddodd e'n araf drwy'r neuadd dawel at yr orsedd, a phenliniodd e ar y llawr wrth draed y brenin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s099",
+      "text": "Wedyn agorodd e glogyn hir ar y llawr. Doedd e ddim yn glogyn gwlân: cafodd y clogyn ei wnïo o farfau.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "farfau",
+        "gloss": "barf, barfau",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wnïo",
+        "gloss": "ei wnïo ← gwnïo",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s100",
+      "text": "Barfau coch, barfau du, barfau llwyd a barfau gwyn: llawer o farfau mewn un clogyn mawr.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l32-img-negesydd",
+        "src": "media/images/cy-brenin-01-l32-img-negesydd.webp",
+        "alt": "A huge grey-cloaked messenger kneels on the hall floor and unrolls a long cloak sewn from many beards of every colour; every bearded man in the hall covers his own beard with his hands.",
+        "status": "planned",
+        "art_brief": "The same great hall at Caerllion, moments later: the doors stand open to the snowy night and snow blows in. A huge man, taller than the doorway, in a long grey snow-dusted cloak, kneels on the floor before the throne and unrolls a long cloak sewn from many tufts of beard in red, gold, black, grey and white (no faces on it; comic, never gory). On the throne Arthur (12, untidy brown hair with a cowlick, freckles; plain blue cloak over a long blue robe with a small red dragon on the chest) (crown slightly crooked) looks down at him calmly. All around, the bearded men grab their own beards with both hands: Cynyr (broad, huge golden-blond beard to mid-chest, brown cloak with round silver brooch) covers his huge golden beard with both hands, an big red-bearded lord (Barf Goch) clutches his, knights clutch theirs. A wisp of smoke trembles out of the tall black hat of Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat) by the fire. Mali (12, long dark braid, dark-blue dress, satchel) and Cai (15, tall, red-blond, rust-red tunic, red cloak, sword at his belt) stand beside the throne. No text.",
+        "characters": [
+         "char-negesydd-rhita",
+         "char-arth",
+         "char-cynyr",
+         "char-barf-goch",
+         "char-myrddin",
+         "char-mali",
+         "char-cai"
+        ],
+        "covers_lexeme_ids": [
+         "cy-barf",
+         "cy-clogyn",
+         "cy-gwnio",
+         "cy-llawr"
+        ],
+        "width": 1600,
+        "height": 1067
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s101",
+      "text": "Rhoddodd Barf Goch ei law ar ei farf goch. Rhoddodd y marchogion eu dwylo ar eu barfau nhw. Rhoddodd Cynyr ei ddwy law ar ei farf fawr e.",
+      "paragraph_start": true,
+      "tableau": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s102",
+      "text": "Yn het Myrddin, wrth y tân, roedd Dafi'n crynu. \"Atishŵ!\"",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Atishŵ",
+        "gloss": "= Mae Dafi'n tisian.",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l32-s103",
+      "text": "\"Ble mae'r brenin newydd?\" meddai'r dyn enfawr.",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita"
+     },
+     {
+      "id": "cy-brenin-01-l32-s104",
+      "text": "Edrychodd pawb ar Arthur, ar yr orsedd uchel. Edrychodd y dyn ar wyneb Arthur am amser hir.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l32-s105",
+      "text": "\"Frenin Arthur,\" meddai'r dyn. \"Mae neges gyda fi i ti… gan Rhita Gawr.\"",
+      "paragraph_start": true,
+      "speaker": "char-negesydd-rhita"
+     },
+     {
+      "id": "cy-brenin-01-l32-s106",
+      "text": "Yn y neuadd dawel, roedd pob barf yn crynu.",
+      "paragraph_start": true
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Cafodd y neuadd ei glanhau",
+  "rule_cy": "cafodd + X + ei / eu + berfenw (+ gan …): y bwrdd (g.) → ei + SM · y neuadd (b.) → ei + AM · y llestri → eu. Cwestiwn: Gafodd …? — Do. / Naddo.",
+  "tables": [
+   {
+    "caption": "Pwy wnaeth? ↔ Beth ddigwyddodd?",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Glanhaodd y morynion y neuadd.",
+      "Cafodd y neuadd ei glanhau gan y morynion."
+     ],
+     [
+      "Coginiodd Modlen y wledd.",
+      "Cafodd y wledd ei choginio gan Modlen."
+     ],
+     [
+      "Coronodd yr esgob Arthur.",
+      "Cafodd Arthur ei goroni gan yr esgob."
+     ],
+     [
+      "Golchodd y morynion y llestri.",
+      "Cafodd y llestri eu golchi."
+     ]
+    ]
+   },
+   {
+    "caption": "ei · ei · eu",
+    "header": [
+     "",
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "y llawr (g.)",
+      "ei + SM",
+      "Cafodd y llawr ei olchi."
+     ],
+     [
+      "y bara (g.)",
+      "ei + SM",
+      "Cafodd bara ei bobi."
+     ],
+     [
+      "Arthur (g.)",
+      "ei + SM",
+      "Cafodd Arthur ei goroni."
+     ],
+     [
+      "y wledd (b.)",
+      "ei + AM",
+      "Cafodd y wledd ei pharatoi · ei choginio."
+     ],
+     [
+      "y ffwrn (b.)",
+      "ei + AM",
+      "Cafodd pob ffwrn ei chynnau."
+     ],
+     [
+      "y goron (b.)",
+      "ei",
+      "Cafodd y goron ei rhoi ar ben Arthur."
+     ],
+     [
+      "y llestri (ll.)",
+      "eu",
+      "Cafodd y llestri eu golchi."
+     ]
+    ]
+   },
+   {
+    "caption": "Gafodd …?",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Gafodd y neuadd ei glanhau?",
+      "Do."
+     ],
+     [
+      "Gafodd pob arglwydd ei wahodd?",
+      "Do."
+     ],
+     [
+      "Gafodd y pasteiod eu cyfrif?",
+      "Do. (Naw!)"
+     ]
+    ]
+   },
+   {
+    "caption": "Treigladau: gan + SM (Pennod 32)",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "gan + pawb",
+      "gan bawb"
+     ],
+     [
+      "gan + llawer",
+      "gan lawer"
+     ],
+     [
+      "gan + pwy?",
+      "gan bwy?"
+     ],
+     [
+      "gan + draig",
+      "gan ddraig fach"
+     ],
+     [
+      "gan + Modlen",
+      "gan Modlen"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l32-s021"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s022"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s023"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s025"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s056"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s057"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s034"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s044"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s076"
+   },
+   {
+    "segment_id": "cy-brenin-01-l32-s099"
+   }
+  ],
+  "nodyn_en": "The past passive uses cael: cafodd + subject + ei/eu + verb-noun: Cafodd y neuadd ei glanhau, 'the hall was cleaned'. The possessive agrees with the subject: ei + soft mutation (masculine), ei + aspirate (feminine: ei choginio), eu (plural). The doer follows gan + soft mutation: gan bawb. Question: Gafodd …? — Do / Naddo."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l32-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Glanhaodd y morynion y neuadd. →",
+      "answer": "Cafodd y neuadd ei glanhau gan y morynion."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Coginiodd Modlen y cig. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y cig ei goginio gan Modlen."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Cafodd y cig ei coginio gan Modlen.",
+         "hint": "y cig (g.): ei + SM → ei goginio"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Gwnïodd Elen y wisg. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y wisg ei gwnïo gan Elen."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l32-s029"
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Golchodd Cai y llestri. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y llestri eu golchi gan Cai."
+       ],
+       "common_wrong": [
+        {
+         "answer": "Cafodd y llestri ei golchi gan Cai.",
+         "hint": "llestri (ll.) → eu"
+        }
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Torrodd Dafi'r bastai. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y bastai ei thorri gan Dafi."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Cafodd y bastai ei dorri gan Dafi.",
+         "hint": "pastai (b.): ei + AM → ei thorri"
+        }
+       ]
+      },
+      {
+       "id": "a5",
+       "prompt": "Cododd yr esgob y goron. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y goron ei chodi gan yr esgob."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Cafodd y goron ei godi gan yr esgob.",
+         "hint": "coron (b.): ei + AM → ei chodi"
+        }
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Croesawodd Arthur yr arglwyddi. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd yr arglwyddi eu croesawu gan Arthur."
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Cafodd y neuadd ei glanhau. (?) →",
+      "answer": "Gafodd y neuadd ei glanhau?"
+     },
+     "items": [
+      {
+       "id": "a7",
+       "prompt": "Cafodd y llestri eu golchi. (?) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Gafodd y llestri eu golchi?"
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Cafodd y llestri eu golchi?",
+         "hint": "cwestiwn: cafodd → gafodd"
+        }
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "Cafodd y gwin ei gario i'r neuadd. (?) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Gafodd y gwin ei gario i'r neuadd?"
+       ],
+       "mutation_hint": true
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Cai'n mynd i'r neuadd. (rhaid) →",
+      "answer": "Rhaid i Cai fynd i'r neuadd."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Mae Arthur yn golchi ei wyneb. (rhaid) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Rhaid i Arthur olchi ei wyneb."
+       ],
+       "mutation_hint": true,
+       "recall_of": "G27"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Dyma'r bachgen. Tynnodd y bachgen y cleddyf. →",
+      "answer": "Dyma'r bachgen a dynnodd y cleddyf."
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Dyma'r fenyw. Coginiodd y fenyw y wledd. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Dyma'r fenyw a goginiodd y wledd."
+       ],
+       "mutation_hint": true,
+       "recall_of": "G28"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l32-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "coroni",
+    "gwahodd",
+    "coginio",
+    "gwnïo",
+    "dawnsio",
+    "dathlu",
+    "esgob",
+    "cloch",
+    "llestri",
+    "ystafell",
+    "llawr",
+    "gwin",
+    "tywysog",
+    "balch",
+    "nerfus",
+    "swyddogol"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae'r plant yn yfed llaeth, ond mae'r arglwyddi'n yfed ___ coch.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwin"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "Mab y Brenin Uthr yw Arthur: ___ yw e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "tywysog"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Ar ôl y wledd, rhaid golchi'r ___: y platiau, y jygiau a'r cyrn.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "llestri"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae'r delyn yn canu, ac mae Cynyr ac Elen yn ___ yn y neuadd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "dawnsio",
+      "dathlu"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae'r bwyd wedi cwympo o'r bwrdd: mae e ar y ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "llawr"
+     ]
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae Elen yn ___ clogyn newydd i Mali.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwnïo"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Mae'r ___ fawr yn canu yn yr eglwys: mae'r seremoni'n dechrau.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gloch"
+     ],
+     "explanation": "y + cloch (b.) → y gloch"
+    },
+    {
+     "id": "b8",
+     "prompt": "Dyw Arthur ddim yn bwyta cyn y seremoni: mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "nerfus"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae Cynyr yn crio ac yn gwenu: mae e'n ___ iawn o Arthur.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "falch"
+     ],
+     "explanation": "yn + balch → yn falch"
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae'r goron yn llaw'r esgob: rhaid iddo fe ___ y brenin newydd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "goroni"
+     ],
+     "explanation": "rhaid iddo fe + coroni → goroni"
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l32-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Pwy sy'n trefnu'r wledd?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Modlen",
+      "Modlen sy'n trefnu'r wledd",
+      "Modlen sydd yn trefnu'r wledd",
+      "Modlen, y gogyddes"
+     ],
+     "model_answer": "Modlen",
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s012"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Pam mae'r arglwyddi eisiau coroni Arthur yn gyflym?",
+     "answer_mode": "self_check",
+     "model_answer": "Heb goron, dyw e ddim yn frenin swyddogol.",
+     "rubric": "Mae'r ateb yn dweud: heb goron, dyw Arthur ddim yn frenin swyddogol.",
+     "key_terms": [
+      "cy-coron",
+      "cy-swyddogol"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s004"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Pwy wnïodd y wisg las?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Elen",
+      "Elen wnïodd y wisg",
+      "Elen wnïodd hi",
+      "Mam",
+      "Elen wnïodd y wisg las",
+      "Elen a wnïodd y wisg las"
+     ],
+     "model_answer": "Elen",
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s029"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth ddigwyddodd i'r goron yn yr eglwys?",
+     "answer_mode": "self_check",
+     "model_answer": "Roedd hi'n rhy fawr: cwympodd hi dros glustiau Arthur.",
+     "rubric": "Mae'r ateb yn dweud bod y goron yn rhy fawr.",
+     "key_terms": [
+      "cy-rhy",
+      "cy-coron"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s058"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Pam mae Mali'n cofio'r pwll yng Nghwm Helyg?",
+     "answer_mode": "self_check",
+     "model_answer": "Gwelodd hi'r goron ar ben Arthur yn y dŵr, ar ddiwrnod y carw gwyn.",
+     "rubric": "Mae'r ateb yn cysylltu'r goron â'r pwll: gwelodd Mali goron ar ben Arthur yn y dŵr.",
+     "key_terms": [
+      "cy-pwll",
+      "cy-coron"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s065"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pwy fwytodd un bastai?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Dafi",
+      "Dafi fwytodd y bastai",
+      "Dafi fwytodd hi",
+      "Y ddraig",
+      "Dafi, y ddraig fach",
+      "Draig fach",
+      "Y ddraig fach"
+     ],
+     "model_answer": "Dafi",
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s044"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Pam mae pob barf yn y neuadd yn crynu?",
+     "answer_mode": "self_check",
+     "model_answer": "Daeth dyn enfawr gan Rhita Gawr gyda chlogyn o farfau.",
+     "rubric": "Mae'r ateb yn sôn am y clogyn o farfau neu am Rhita Gawr.",
+     "key_terms": [
+      "cy-barf",
+      "cy-clogyn"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s099"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Beth gafodd ei goginio yn dy gegin di ddoe?",
+     "answer_mode": "self_check",
+     "model_answer": "Cafodd cawl ei goginio. / Cafodd bara ei bobi.",
+     "rubric": "Brawddeg gyda Cafodd … ei / eu + berfenw."
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-gan",
+   "citation_form": "gan",
+   "part_of_speech": "preposition",
+   "current_sense": "by (agent of a passive); from (+ SM)",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-coroni",
+   "citation_form": "coroni",
+   "part_of_speech": "verb",
+   "current_sense": "to crown",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwahodd",
+   "citation_form": "gwahodd",
+   "part_of_speech": "verb",
+   "current_sense": "to invite",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-croesawu",
+   "citation_form": "croesawu",
+   "part_of_speech": "verb",
+   "current_sense": "to welcome",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-trefnu",
+   "citation_form": "trefnu",
+   "part_of_speech": "verb",
+   "current_sense": "to organise, arrange",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dathlu",
+   "citation_form": "dathlu",
+   "part_of_speech": "verb",
+   "current_sense": "to celebrate",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-coginio",
+   "citation_form": "coginio",
+   "part_of_speech": "verb",
+   "current_sense": "to cook",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwnio",
+   "citation_form": "gwnïo",
+   "part_of_speech": "verb",
+   "current_sense": "to sew",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-seremoni",
+   "citation_form": "seremoni",
+   "part_of_speech": "noun",
+   "current_sense": "ceremony",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cloch",
+   "citation_form": "cloch",
+   "part_of_speech": "noun",
+   "current_sense": "bell",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-esgob",
+   "citation_form": "esgob",
+   "part_of_speech": "noun",
+   "current_sense": "bishop",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-tywysog",
+   "citation_form": "tywysog",
+   "part_of_speech": "noun",
+   "current_sense": "prince",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-urddas",
+   "citation_form": "urddas",
+   "part_of_speech": "noun",
+   "current_sense": "dignity",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ystafell",
+   "citation_form": "ystafell",
+   "part_of_speech": "noun",
+   "current_sense": "room",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llawr",
+   "citation_form": "llawr",
+   "part_of_speech": "noun",
+   "current_sense": "floor",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-balch",
+   "citation_form": "balch",
+   "part_of_speech": "adjective",
+   "current_sense": "proud; glad",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-nerfus",
+   "citation_form": "nerfus",
+   "part_of_speech": "adjective",
+   "current_sense": "nervous",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-swyddogol",
+   "citation_form": "swyddogol",
+   "part_of_speech": "adjective",
+   "current_sense": "official",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwisg",
+   "citation_form": "gwisg",
+   "part_of_speech": "noun",
+   "current_sense": "garment, robe, costume",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwin",
+   "citation_form": "gwin",
+   "part_of_speech": "noun",
+   "current_sense": "wine",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cerddoriaeth",
+   "citation_form": "cerddoriaeth",
+   "part_of_speech": "noun",
+   "current_sense": "music",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llestri",
+   "citation_form": "llestri",
+   "part_of_speech": "noun",
+   "current_sense": "dishes, crockery",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dawnsio",
+   "citation_form": "dawnsio",
+   "part_of_speech": "verb",
+   "current_sense": "to dance",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llawer",
+   "citation_form": "llawer",
+   "part_of_speech": "determiner",
+   "current_sense": "many, a lot (llawer o + SM)",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-popeth",
+   "citation_form": "popeth",
+   "part_of_speech": "noun",
+   "current_sense": "everything",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhy",
+   "citation_form": "rhy",
+   "part_of_speech": "adverb",
+   "current_sense": "too (rhy + SM: rhy fawr)",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dechrau",
+   "citation_form": "dechrau",
+   "part_of_speech": "verb",
+   "current_sense": "to begin, start",
+   "first_introduced_lesson": "cy-brenin-01-l32",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-32.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "gan (+ SM)",
+    "back": "by (agent of a passive); from (+ SM)",
+    "example_segment_id": "cy-brenin-01-l32-s093",
+    "lexeme_id": "cy-gan"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "coroni",
+    "back": "to crown",
+    "example_segment_id": "cy-brenin-01-l32-s057",
+    "seen_as": "ei goroni",
+    "lexeme_id": "cy-coroni"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "gwahodd",
+    "back": "to invite",
+    "example_segment_id": "cy-brenin-01-l32-s015",
+    "lexeme_id": "cy-gwahodd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "croesawu",
+    "back": "to welcome",
+    "example_segment_id": "cy-brenin-01-l32-s079",
+    "lexeme_id": "cy-croesawu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "trefnu",
+    "back": "to organise, arrange",
+    "example_segment_id": "cy-brenin-01-l32-s026",
+    "lexeme_id": "cy-trefnu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "dathlu",
+    "back": "to celebrate",
+    "example_segment_id": "cy-brenin-01-l32-s089",
+    "lexeme_id": "cy-dathlu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "coginio",
+    "back": "to cook",
+    "example_segment_id": "cy-brenin-01-l32-s026",
+    "lexeme_id": "cy-coginio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "gwnïo",
+    "back": "to sew",
+    "example_segment_id": "cy-brenin-01-l32-s028",
+    "lexeme_id": "cy-gwnio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "seremoni (b.)",
+    "back": "ceremony",
+    "example_segment_id": "cy-brenin-01-l32-s006",
+    "lexeme_id": "cy-seremoni"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "cloch (b.), clychau",
+    "back": "bell",
+    "example_segment_id": "cy-brenin-01-l32-s045",
+    "lexeme_id": "cy-cloch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "esgob (g.)",
+    "back": "bishop",
+    "example_segment_id": "cy-brenin-01-l32-s053",
+    "lexeme_id": "cy-esgob"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "tywysog (g.)",
+    "back": "prince",
+    "example_segment_id": "cy-brenin-01-l32-s054",
+    "seen_as": "yn dywysog",
+    "lexeme_id": "cy-tywysog"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "urddas (g.)",
+    "back": "dignity",
+    "example_segment_id": "cy-brenin-01-l32-s062",
+    "lexeme_id": "cy-urddas"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "ystafell (b.)",
+    "back": "room",
+    "example_segment_id": "cy-brenin-01-l32-s028",
+    "lexeme_id": "cy-ystafell"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "llawr (g.)",
+    "back": "floor",
+    "example_segment_id": "cy-brenin-01-l32-s021",
+    "lexeme_id": "cy-llawr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "balch",
+    "back": "proud; glad",
+    "example_segment_id": "cy-brenin-01-l32-s063",
+    "seen_as": "yn falch",
+    "lexeme_id": "cy-balch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "nerfus",
+    "back": "nervous",
+    "example_segment_id": "cy-brenin-01-l32-s048",
+    "lexeme_id": "cy-nerfus"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "swyddogol",
+    "back": "official",
+    "example_segment_id": "cy-brenin-01-l32-s004",
+    "lexeme_id": "cy-swyddogol"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "gwisg (b.)",
+    "back": "garment, robe, costume",
+    "example_segment_id": "cy-brenin-01-l32-s029",
+    "lexeme_id": "cy-gwisg"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "gwin (g.)",
+    "back": "wine",
+    "example_segment_id": "cy-brenin-01-l32-s080",
+    "lexeme_id": "cy-gwin"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "cerddoriaeth (b.)",
+    "back": "music",
+    "example_segment_id": "cy-brenin-01-l32-s085",
+    "seen_as": "y gerddoriaeth",
+    "lexeme_id": "cy-cerddoriaeth"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "llestri (ll.)",
+    "back": "dishes, crockery",
+    "example_segment_id": "cy-brenin-01-l32-s022",
+    "lexeme_id": "cy-llestri"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "dawnsio",
+    "back": "to dance",
+    "example_segment_id": "cy-brenin-01-l32-s085",
+    "lexeme_id": "cy-dawnsio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "llawer (o + SM)",
+    "back": "many, a lot (llawer o + SM)",
+    "example_segment_id": "cy-brenin-01-l32-s025",
+    "lexeme_id": "cy-llawer"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "popeth (g.)",
+    "back": "everything",
+    "example_segment_id": "cy-brenin-01-l32-s075",
+    "lexeme_id": "cy-popeth"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "rhy (+ SM)",
+    "back": "too (rhy + SM: rhy fawr)",
+    "example_segment_id": "cy-brenin-01-l32-s058",
+    "lexeme_id": "cy-rhy"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l32",
+    "front": "dechrau — dechreuodd e",
+    "back": "to begin, start",
+    "example_segment_id": "cy-brenin-01-l32-s014",
+    "lexeme_id": "cy-dechrau"
+   },
+   {
+    "id": "pattern-g32",
+    "lesson": "cy-brenin-01-l32",
+    "front": "Cafodd y neuadd ei glanhau gan y morynion. · Cafodd y bwrdd ei olchi. · Cafodd y llestri eu golchi. · Gafodd y gwin ei gario? — Do.",
+    "back": "The hall was cleaned by the maids. · The table was washed. · The dishes were washed. · Was the wine carried? — Yes. (ei + SM for g., ei + AM for b., eu for plural; gan + SM)",
+    "example_segment_id": "cy-brenin-01-l32-s021",
+    "example_segment_ids": [
+     "cy-brenin-01-l32-s021",
+     "cy-brenin-01-l32-s036"
+    ],
+    "lexeme_id": "cy-pattern-g32"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l32-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 2,
+   "margin_diagram": 0,
+   "margin_gloss": 38
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-32",
+   "rhan-4"
+  ]
+ },
+ "metrics": {
+  "running_words": 1565,
+  "sentences": 106,
+  "word_target": 1660,
+  "word_window": [
+   1494,
+   1826
+  ]
+ }
+}

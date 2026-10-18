@@ -1,0 +1,2300 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l21",
+ "course_id": "cy-brenin-01",
+ "order": 21,
+ "title": "Os bydd hi'n bwrw eira",
+ "rhan": 3,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B4 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (Wave 2, 2026-10-17)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Running words about 1,455 (target 1,330, window 1,197–1,463): five planning branches plus the departure and the road need the room; trimmed twice from a 1,890-word draft. 'braf' is not mutated after yn (Mae hi'n braf); the three lint-yn warnings on it are expected.",
+   "Narration is now in the past (Rhan 3 default): preterite for events, imperfect for background; group actions take noun subjects with a 3sg verb (Gadawodd y gert y llys, dilynodd y ceffylau'r ffordd). No pronoun-subject plural preterites before Pennod 23.",
+   "Target: os appears in ten-plus conditions, most with bydd (Os bydd hi'n bwrw eira / glaw, Os bydd rhew / niwl / lladron, Os bydd dynion yn gweld draig, Os byddwch chi'n aros), and with the present in the question form (Os wyt ti'n sâl, Os dw i'n aros yma, Os wyt ti'n aros yma). Contrasts: Cynyr's 'Pan fydd yr haul yn dod' against Mali's 'Os bydd yr haul yn dod' (pan ✓ ↔ os ?), and present against future conditions.",
+   "Weather idioms (Mae hi'n oer / wyntog / braf, bwrw eira / glaw, niwl, rhew) carry the departure. Deliberate error: Dafi's 'os bydd e'n bwrw eira' (s-label err) is corrected by Mali in the next line ('Hi: mae hi'n bwrw eira'), contrasting the weather idiom with hi.",
+   "cert is treated as feminine, as the plan lists it (y gert, i'r gert; plural ceirt) — flagged [?] for the fluent reviewer. sach is feminine (sach fawr, sach goch); 'sach fara' is written with soft mutation of the dependent noun after a feminine noun (cf. basged fara) — also flagged.",
+   "Continuity: secret sec-dafi resolved for Cynyr and Elen. Elen knew all along ('Ro'n i'n gwybod … Dw i'n gweld pob peth yn y llys'); Cynyr learns on the road and laughs ('Pawb yn y llys, a dim Cynyr!'). Mali, who cannot lie, names everyone who knew. Modlen, Pero and the servants stay at the llys; Modlen plans to come to Caerllion for the Calan feast with carts of food if the weather is fine (sets up Pennod 29, 'Modlen, arrived with the carts'). Myrddin's empty hat: 'Does dim byd yn yr het, Modlen' (callback to 6, this time true).",
+   "Travelling party: Cynyr (old white horse), Cai (young horse, sword, shield, red cloak), Elen (on a horse), Arth, Mali and Myrddin in the cart with the sacks; Dafi in the white bread sack; Myrddin's umbrella. Arth still has the cold from 19–20 and takes Myrddin's medicine; he wears Cai's old coat (too long) and gloves.",
+   "Checker artefact: the phrase lexeme cy-ph-or-gloch makes every 'o'r' count as a Pennod 18 word (known checker bug); prose was not changed for it."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l21-s048",
+    "question": "[?] cert treated as feminine (y gert, i'r gert, plural ceirt) as the plan lists it; confirm gender (GPC gives cert eb./eg.?) and plural."
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s076",
+    "question": "[?] 'y sach fara' (bread sack) with soft mutation after feminine sach (cf. basged fara): or 'sach bara'?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s135",
+    "question": "[?] 'Does byth gormod o fara' (there's never too much bread): natural?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s038",
+    "question": "[?] 'roedd hi'n cyrraedd traed Arth' for a coat reaching his feet: natural, or 'roedd hi'n cyrraedd at draed Arth'?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s001",
+    "question": "[?] 'yfory, roedd y teulu'n mynd ar y daith hir' (imperfect for a planned departure, 'the family were going tomorrow'): acceptable in past narration?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s115",
+    "question": "[?] 'Dw i'n gweld pob peth yn y llys' — or popeth (not yet a lexeme)?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G21",
+  "primary_new_grammar": {
+   "id": "G21",
+   "label": "os + present / future for real conditions (Os bydd hi'n bwrw eira, byddwn ni'n …; Os wyt ti'n sâl, byddi di'n …), contrasted with pan + SM (pan fydd); weather idioms with hi (Mae hi'n bwrw glaw / eira, Mae hi'n braf / wyntog / oer)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G20",
+   "G19",
+   "G17",
+   "G16",
+   "G14",
+   "G13",
+   "G12",
+   "G10",
+   "G08",
+   "G07",
+   "G06"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-os",
+   "cy-glaw",
+   "cy-niwl",
+   "cy-rhew",
+   "cy-lleidr",
+   "cy-sach",
+   "cy-cot",
+   "cy-esgid",
+   "cy-maneg",
+   "cy-bwrw",
+   "cy-gwisgo",
+   "cy-pacio",
+   "cy-braf",
+   "cy-gwyntog",
+   "cy-digon",
+   "cy-gormod",
+   "cy-diogel",
+   "cy-peryglus",
+   "cy-dillad",
+   "cy-crys",
+   "cy-trowsus",
+   "cy-hosan",
+   "cy-cert"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-os",
+    "how": "gloss(paradigm)+context",
+    "segment_id": "cy-brenin-01-l21-s007"
+   },
+   {
+    "lexeme_id": "cy-glaw",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s009"
+   },
+   {
+    "lexeme_id": "cy-niwl",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s016"
+   },
+   {
+    "lexeme_id": "cy-rhew",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s017"
+   },
+   {
+    "lexeme_id": "cy-lleidr",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s055"
+   },
+   {
+    "lexeme_id": "cy-sach",
+    "how": "picture(scene)+gloss(number)",
+    "segment_id": "cy-brenin-01-l21-s025"
+   },
+   {
+    "lexeme_id": "cy-cot",
+    "how": "picture(scene)+gloss(radical)",
+    "segment_id": "cy-brenin-01-l21-s035"
+   },
+   {
+    "lexeme_id": "cy-esgid",
+    "how": "picture(scene)+gloss(number)",
+    "segment_id": "cy-brenin-01-l21-s030"
+   },
+   {
+    "lexeme_id": "cy-maneg",
+    "how": "picture(scene)+gloss(number)",
+    "segment_id": "cy-brenin-01-l21-s036"
+   },
+   {
+    "lexeme_id": "cy-bwrw",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s007"
+   },
+   {
+    "lexeme_id": "cy-gwisgo",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s040"
+   },
+   {
+    "lexeme_id": "cy-pacio",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s032"
+   },
+   {
+    "lexeme_id": "cy-braf",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s006"
+   },
+   {
+    "lexeme_id": "cy-gwyntog",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l21-s005"
+   },
+   {
+    "lexeme_id": "cy-digon",
+    "how": "gloss(antonym)+context",
+    "segment_id": "cy-brenin-01-l21-s058"
+   },
+   {
+    "lexeme_id": "cy-gormod",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l21-s050"
+   },
+   {
+    "lexeme_id": "cy-diogel",
+    "how": "gloss(radical+antonym)",
+    "segment_id": "cy-brenin-01-l21-s018"
+   },
+   {
+    "lexeme_id": "cy-peryglus",
+    "how": "gloss(radical+antonym)",
+    "segment_id": "cy-brenin-01-l21-s018"
+   },
+   {
+    "lexeme_id": "cy-dillad",
+    "how": "picture(scene)+gloss(define)",
+    "segment_id": "cy-brenin-01-l21-s025"
+   },
+   {
+    "lexeme_id": "cy-crys",
+    "how": "picture(scene)+gloss(radical)",
+    "segment_id": "cy-brenin-01-l21-s027"
+   },
+   {
+    "lexeme_id": "cy-trowsus",
+    "how": "picture(scene)+gloss(radical)",
+    "segment_id": "cy-brenin-01-l21-s027"
+   },
+   {
+    "lexeme_id": "cy-hosan",
+    "how": "picture(scene)+gloss(number)",
+    "segment_id": "cy-brenin-01-l21-s027"
+   },
+   {
+    "lexeme_id": "cy-cert",
+    "how": "picture(vignette+cover)+gloss(radical)",
+    "segment_id": "cy-brenin-01-l21-s048"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-eira",
+   "cy-dere",
+   "cy-cer",
+   "cy-gyda",
+   "cy-cuddio",
+   "cy-aros",
+   "cy-bara",
+   "cy-annwyd",
+   "cy-sal",
+   "cy-gaeaf",
+   "cy-ph-or-gloch",
+   "cy-oriawr",
+   "cy-taith",
+   "cy-gwledd",
+   "cy-pastai",
+   "cy-ffwrn",
+   "cy-llwy",
+   "cy-tafarnwr",
+   "cy-dyddiadur",
+   "cy-angen",
+   "cy-tywydd"
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l21-img-cover",
+   "src": "media/images/cy-brenin-01-l21-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "In falling snow the family leaves the llys: a loaded cart with Arth, Mali and Myrddin, Cynyr and Cai on horseback, Elen riding beside them, while Modlen stands at the gate with her wooden spoon and old Pero sits sadly beside her.",
+   "art_brief": "Early winter morning at the gate of Llys Cynyr (match place-buarth.png; llys palette, thatch and limewash under grey sky, snow beginning to fall in soft flakes, a little frost on the ground). A plain wooden two-wheeled cart piled with tied cloth sacks, one white sack on top, pulled by one horse, is leaving through the open gate. In the cart: Arth (11, untidy brown hair with cowlick, wearing an oversized old brown coat that reaches his boots and big gloves), Mali (12, long dark braid, dark-blue dress under a cloak, satchel), and Myrddin (very old, white beard, round spectacles, tall black brimmed hat with snow on it, holding his long black umbrella). Ahead, Cynyr (huge golden-blond beard, brown cloak) on his old white horse and Cai (15, red-blond, red cloak, sword and round red shield) on his young chestnut horse; Elen (white veil, green dress, cloak, keys) rides beside the cart. At the gate Modlen (short, round, floury apron, wooden spoon held up) waves them off, and old Pero (large black-and-white hound, grey muzzle) sits beside her looking at the cart. No text.",
+   "characters": [
+    "char-arth",
+    "char-mali",
+    "char-myrddin",
+    "char-cynyr",
+    "char-cai",
+    "char-elen",
+    "char-modlen",
+    "char-pero"
+   ],
+   "covers_lexeme_ids": [
+    "cy-cert",
+    "cy-sach",
+    "cy-cot",
+    "cy-eira"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l21-sec1",
+    "title": "Sut mae'r tywydd?",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l21-s001",
+      "text": "Roedd hi'n fore oer yn Llys Cynyr, ac roedd pawb yn brysur iawn: yfory, roedd y teulu'n mynd ar y daith hir i Gaerllion.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s002",
+      "text": "Am saith o'r gloch, daeth Dafi o het Myrddin gyda'r oriawr: \"Saith o'r gloch!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s003",
+      "text": "Agorodd Cynyr ddrws y neuadd, ac edrychodd e ar yr awyr lwyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s004",
+      "text": "\"Sut mae'r tywydd, Dad?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l21-s005",
+      "text": "\"Mae hi'n oer, ac mae hi'n wyntog,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wyntog",
+        "gloss": "wyntog ← gwyntog (gwynt)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s006",
+      "text": "\"Ddoe roedd hi'n braf, ond heddiw mae'r gwynt yn gryf iawn.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "braf",
+        "gloss": "braf: haul, dim gwynt",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s007",
+      "text": "\"Os bydd hi'n bwrw eira yfory, fyddwn ni'n mynd?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Os",
+        "gloss": "os …? → … / …",
+        "gloss_kind": "paradigm"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "bwrw eira",
+        "gloss": "bwrw eira: eira'n cwympo",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s008",
+      "text": "\"Byddwn!\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s009",
+      "text": "\"Os bydd hi'n bwrw eira, byddwn ni'n mynd yn araf, ac os bydd hi'n bwrw glaw, byddwn ni'n wlyb.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "glaw",
+        "gloss": "glaw: dŵr o'r cymylau",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s010",
+      "text": "Tisianodd Arth yn uchel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s011",
+      "text": "\"Mae annwyd arnat ti, Arth,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s012",
+      "text": "\"Os wyt ti'n sâl, byddi di'n aros yma gyda Modlen.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s013",
+      "text": "\"Dw i ddim yn sâl, Mam!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l21-s014",
+      "text": "\"Dim ond annwyd bach yw e.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s015",
+      "text": "\"Os dw i'n aros yma, bydda i'n drist iawn!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s016",
+      "text": "\"Os bydd niwl ar y mynyddoedd, fyddwn ni ddim yn gweld y ffordd,\" meddai Myrddin wrth y tân.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "niwl",
+        "gloss": "niwl: cwmwl ar y tir",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s017",
+      "text": "\"Ac os bydd rhew ar y ffordd, bydd y ceffylau'n cwympo.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rhew",
+        "gloss": "rhew: dŵr oer iawn, gwyn",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s018",
+      "text": "\"Mae rhew yn beryglus: dyw'r ffordd ddim yn ddiogel yn y gaeaf.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "beryglus",
+        "gloss": "beryglus ← peryglus · ↔ diogel",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddiogel",
+        "gloss": "yn ddiogel ← diogel",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s019",
+      "text": "\"Wel, wel,\" meddai Cynyr, a chwarddodd e.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chwarddodd",
+        "gloss": "chwarddodd ← chwerthin",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s020",
+      "text": "\"Pan fydd yr haul yn dod, byddwn ni'n mynd yn gyflym.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Pan",
+        "gloss": "pan: bydd ✓ · os: bydd?",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s021",
+      "text": "\"Os bydd yr haul yn dod, Dad,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l21-s022",
+      "text": "\"Mae hi'n aeaf.\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l21-sec2",
+    "title": "Dillad i'r daith",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l21-s023",
+      "text": "Galwodd Elen y plant i'r neuadd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s024",
+      "text": "Roedd tair sach fawr ar y fainc, ac roedd dillad ar y byrddau ac ar y cadeiriau.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sach",
+        "gloss": "sach, sachau",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l21-img-dillad",
+        "src": "media/images/cy-brenin-01-l21-img-dillad.webp",
+        "alt": "Elen in the llys hall packing clothes into three big sacks on a bench, handing Arth a long coat that reaches his feet; Cai holds up only his sword and red cloak; Mali packs her diary, quill and ink into a small sack.",
+        "status": "planned",
+        "art_brief": "Inside the llys hall by day (match place-neuadd.png; llys palette, firelight from the central hearth). Three big cloth sacks on a long bench, piles of clothes on the table and chairs: wool shirts, trousers, socks, gloves, boots and heavy coats, clearly drawn so each kind of garment can be told apart. Elen (white veil, green dress, keys at her belt) holds out an old brown coat to Arth (11, untidy brown hair with cowlick, moss-green tunic), who already wears big gloves. Cai (15, red-blond, rust-red tunic) proudly holds up his sword, round red shield and red cloak, nothing else. Mali (12, long dark braid, dark-blue dress) puts a small book, a white quill and an ink pot into a small sack. Myrddin (white beard, round spectacles, tall black hat, deep-blue robe) stands by the hearth holding his long black umbrella. No text.",
+        "characters": [
+         "char-elen",
+         "char-arth",
+         "char-cai",
+         "char-mali",
+         "char-myrddin"
+        ],
+        "covers_lexeme_ids": [
+         "cy-dillad",
+         "cy-crys",
+         "cy-trowsus",
+         "cy-hosan",
+         "cy-maneg",
+         "cy-esgid",
+         "cy-cot",
+         "cy-sach"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s025",
+      "text": "\"Dillad i'r daith,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dillad",
+        "gloss": "dillad: crys, trowsus, cot…",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s026",
+      "text": "\"Os bydd hi'n oer, bydd angen dillad cynnes arnoch chi.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s027",
+      "text": "\"Dau grys, dau drowsus, a phedair hosan i bob plentyn: dyma nhw.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "grys",
+        "gloss": "dau grys ← crys",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "drowsus",
+        "gloss": "dau drowsus ← trowsus",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s028",
+      "text": "\"Pedair hosan?\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l21-s029",
+      "text": "\"Ond mae dwy droed gyda fi, Mam, dim pedair!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s030",
+      "text": "\"Os bydd eira yn dy esgidiau di, bydd dy sanau di'n wlyb,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sanau",
+        "gloss": "hosan, sanau",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "esgidiau",
+        "gloss": "esgid, esgidiau",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s031",
+      "text": "\"Wedyn bydd angen sanau sych arnat ti.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s032",
+      "text": "Ond doedd Cai ddim eisiau dillad.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s033",
+      "text": "Paciodd e ei gleddyf, ei darian a'i glogyn coch: dim crys, dim trowsus, dim sanau.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Paciodd",
+        "gloss": "pacio: rhoi yn y sach",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s034",
+      "text": "\"Does dim angen dillad ar farchog!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l21-s035",
+      "text": "\"Os bydd hi'n bwrw glaw, bydd dy glogyn di'n wlyb, Cai,\" meddai Elen, a rhoddodd hi hen got Cynyr yn sach Cai.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "got",
+        "gloss": "hen got ← cot (b.)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "rhoddodd",
+        "gloss": "rhoddodd ← rhoi",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s036",
+      "text": "\"Ac Arth: oes menig gyda ti?\"",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "menig",
+        "gloss": "maneg, menig",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s037",
+      "text": "\"Nac oes, Mam,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l21-s038",
+      "text": "Rhoddodd Elen hen fenig Cai i Arth, a hen got Cai hefyd.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "fenig",
+        "gloss": "hen fenig ← menig",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s039",
+      "text": "Roedd y got yn fawr iawn: roedd hi'n cyrraedd traed Arth!"
+     },
+     {
+      "id": "cy-brenin-01-l21-s040",
+      "text": "\"Gwisga dy got, Arth,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gwisga",
+        "gloss": "gwisgo: dillad ar y corff",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s041",
+      "text": "\"Os wyt ti'n gynnes, bydd yr annwyd yn mynd.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s042",
+      "text": "Paciodd Mali ei dyddiadur hi, ei phluen hi a'r inc mewn sach fach.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s043",
+      "text": "\"Ble mae eich dillad chi, Myrddin?\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s044",
+      "text": "\"Dych chi ddim wedi pacio dim byd!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s045",
+      "text": "\"Dyma nhw,\" meddai Myrddin, ac edrychodd e ar ei glogyn hir, glas.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l21-s046",
+      "text": "\"Dw i'n gwisgo fy nillad i.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "nillad",
+        "gloss": "fy nillad ← dillad",
+        "gloss_kind": "radical"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l21-sec3",
+    "title": "Gormod o fwyd!",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l21-s047",
+      "text": "Yn y gegin, roedd Modlen yn pobi drwy'r dydd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s048",
+      "text": "Roedd hi'n rhoi bara, caws, cig ac afalau mewn sachau mawr, ac roedd y gweision yn cario'r sachau i'r gert yn y buarth.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gert",
+        "gloss": "i'r gert ← cert (b.)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l21-img-cert",
+        "anchor_text": "gert",
+        "label": "cert",
+        "src": "media/vignettes/cy-brenin-01-l21-img-cert.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A plain wooden two-wheeled farm cart with high slatted sides, loaded with tied cloth sacks; a shaft at the front for one horse; a dusting of snow on the sacks. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-cert"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s049",
+      "text": "Cyfrifodd Cynyr y sachau'n araf: un, dau, tri, pedwar… naw sach!",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s050",
+      "text": "\"Modlen!\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s051",
+      "text": "\"Mae gormod o fwyd yma! Taith pedwar diwrnod yw hi, dim taith blwyddyn!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gormod",
+        "gloss": "gormod ↔ digon",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s052",
+      "text": "\"Gormod?\" meddai Modlen, a chododd hi'r llwy bren.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s053",
+      "text": "\"Does dim gormod o fwyd ar daith!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s054",
+      "text": "\"Os bydd hi'n bwrw eira, byddwch chi'n aros ar y ffordd, ac os byddwch chi'n aros, bydd angen bwyd arnoch chi.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s055",
+      "text": "\"Ac os bydd lladron ar y ffordd?\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "lladron",
+        "gloss": "lleidr, lladron: dynion drwg",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s056",
+      "text": "\"Os bydd lladron ar y ffordd, bydda i'n ymladd,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l21-s057",
+      "text": "\"Dw i ddim yn ofni lleidr!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s058",
+      "text": "\"Ond mae Modlen yn iawn, Dad: dyw naw sach ddim yn ddigon i fi!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddigon",
+        "gloss": "yn ddigon ← digon",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s059",
+      "text": "\"Diolch, Cai,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s060",
+      "text": "\"Dyma ddigon o fara i bawb, a dyma ddigon o gaws, ac mae digon o gig yn y sach goch.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s061",
+      "text": "Ond roedd un sach yn wahanol: roedd hi'n wyn, ac roedd hi'n llawn o fara poeth o'r ffwrn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s062",
+      "text": "\"A Dafi?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l21-s063",
+      "text": "\"Os bydd e'n dod gyda ni, bydd e'n cynnau tân i ni bob nos.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s064",
+      "text": "\"Fydd e ddim yn dod!\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s065",
+      "text": "\"Os bydd dynion yn gweld draig ar y ffordd, byddan nhw'n ofni, a bydd y milwyr yn dod gyda'u cleddyfau. Mae draig yn beryglus!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s066",
+      "text": "\"Os bydd dynion yn gweld draig fach, byddan nhw'n chwerthin,\" meddai Myrddin yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l21-s067",
+      "text": "\"Bydd y ddraig yn aros yma, gyda fi a fy ffwrn i!\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s068",
+      "text": "Daeth mwg bach o het Myrddin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s069",
+      "text": "\"Dw i ddim eisiau aros,\" meddai Dafi o'r het.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l21-s070",
+      "text": "\"Dw i eisiau gweld Caerllion, a'r cleddyf yn y garreg, a'r wledd.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s071",
+      "text": "\"Os wyt ti'n aros yma, byddi di'n cael pastai afal bob bore,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s072",
+      "text": "\"Pastai bob bore?\" meddai Dafi, ac roedd yr het yn dawel am funud.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l21-s073",
+      "text": "\"Wel… diolch, Modlen.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s074",
+      "text": "Gwenodd Modlen.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s075",
+      "text": "Ond doedd Myrddin ddim yn gwenu: roedd e'n edrych ar y sach fara."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l21-sec4",
+    "title": "Y sach fara",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l21-s076",
+      "text": "Y noson honno, roedd pawb yn cysgu, ac roedd y gert yn y buarth, yn llawn o sachau.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l21-img-sach",
+        "src": "media/images/cy-brenin-01-l21-img-sach.webp",
+        "alt": "Night in the snowy llys yard: the loaded cart stands by the stable; on top of the pile of sacks sits a white bread sack, and a small red spade-tipped tail sticks out of its mouth, with a wisp of grey smoke. Old Pero lies by the stable door with one eye open, watching.",
+        "status": "planned",
+        "art_brief": "Night in the llys yard (match place-buarth.png; llys palette under dark blue night light, thin snow on the ground and on the thatch). A plain wooden two-wheeled cart piled high with tied cloth sacks stands by the stable. On top of the pile, a white sack bulges; from its open mouth sticks out the tip of a small red tail with a spade tip (Dafi, cup-sized, otherwise hidden), and a thin wisp of grey smoke rises from the sack. Old Pero (large shaggy black-and-white hound, grey muzzle) lies by the stable door, one heavy-lidded eye open, looking at the sack. A faint glow from the kitchen door, otherwise dark. No text.",
+        "characters": [
+         "char-dafi",
+         "char-pero"
+        ],
+        "covers_lexeme_ids": [
+         "cy-sach",
+         "cy-cert"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s077",
+      "text": "Daeth rhywbeth bach coch o'r gegin, a cherddodd e'n dawel drwy'r buarth at y gert."
+     },
+     {
+      "id": "cy-brenin-01-l21-s078",
+      "text": "Arogliodd e'r sachau: caws, cig, afalau… a bara poeth."
+     },
+     {
+      "id": "cy-brenin-01-l21-s079",
+      "text": "Wedyn aeth e i'r sach fara, a chuddiodd e yno."
+     },
+     {
+      "id": "cy-brenin-01-l21-s080",
+      "text": "Agorodd Pero un llygad wrth ddrws y stabl, ac wedyn cysgodd e eto."
+     },
+     {
+      "id": "cy-brenin-01-l21-s081",
+      "text": "Yn y bore, am chwech o'r gloch, roedd y teulu yn y buarth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s082",
+      "text": "Roedd hi'n oer ac yn wyntog, ac roedd rhew ar y ffordd."
+     },
+     {
+      "id": "cy-brenin-01-l21-s083",
+      "text": "Roedd pawb yn gwisgo dillad cynnes: crysau gwlân, trowsusau, cotiau, menig ac esgidiau mawr.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cotiau",
+        "gloss": "cot, cotiau",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s084",
+      "text": "Roedd Cynyr, Cai ac Elen ar eu ceffylau, ac roedd Arth, Mali a Myrddin yn y gert gyda'r sachau."
+     },
+     {
+      "id": "cy-brenin-01-l21-s085",
+      "text": "Ond doedd dim mwg yn dod o'r ffwrn, a daeth Modlen i'r buarth gyda'r llwy bren yn ei llaw hi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s086",
+      "text": "\"Ble mae'r ddraig?\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s087",
+      "text": "\"Mae'r ffwrn yn oer! Myrddin, ydy'r ddraig yn yr het?\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s088",
+      "text": "Tynnodd Myrddin ei het, ac edrychodd Modlen yn yr het.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s089",
+      "text": "\"Does dim byd yn yr het, Modlen,\" meddai Myrddin, a gwenodd e.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l21-s090",
+      "text": "\"Wel, mae e'n cuddio yn y gegin, wrth gwrs,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s091",
+      "text": "\"Bydd e'n cynnau'r ffwrn pan fydd e eisiau pastai!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s092",
+      "text": "\"Nage, Pero,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s093",
+      "text": "\"Rwyt ti'n hen, ac mae'r daith yn hir ac yn oer. Os bydd hi'n bwrw eira, byddi di'n sâl. Aros yma gyda Modlen.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s094",
+      "text": "Edrychodd Pero ar Cynyr, ac wedyn ar y sach fara, ond eisteddodd e wrth y drws yn drist.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s095",
+      "text": "\"Dere, Pero,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s096",
+      "text": "\"Os bydd y tywydd yn braf, byddwn ni'n dod i Gaerllion i'r wledd ar ddydd Calan, gyda cheirt o fwyd!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cheirt",
+        "gloss": "cert, ceirt",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cheirt",
+        "gloss": "a cheirt ← ceirt",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s097",
+      "text": "\"Cer i'r gert, Arth, a gwisga dy fenig!\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s098",
+      "text": "Cododd Cynyr ei law.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s099",
+      "text": "Gadawodd y gert y llys, a dilynodd y ceffylau'r ffordd i lawr y cwm, dros y bont a heibio i'r tŵr."
+     },
+     {
+      "id": "cy-brenin-01-l21-s100",
+      "text": "Ac yn sydyn, roedd hi'n bwrw eira ar y coed, ar y ffordd ac ar het ddu Myrddin."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l21-sec5",
+    "title": "Mae'r bara'n tisian!",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l21-s101",
+      "text": "Roedd y ffordd yn wyn, ac roedd y gert yn mynd yn araf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s102",
+      "text": "Doedd hi ddim yn bwrw glaw, ond roedd hi'n bwrw eira, ac roedd hi'n wyntog iawn."
+     },
+     {
+      "id": "cy-brenin-01-l21-s103",
+      "text": "Roedd niwl ar y mynyddoedd, ac roedd eira yn esgidiau Arth ac ar ei got fawr e."
+     },
+     {
+      "id": "cy-brenin-01-l21-s104",
+      "text": "\"Os bydd yr eira'n drwm a'r niwl yn dywyll, byddwn ni'n aros yn y dref nesaf, mewn tŷ tafarnwr,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s105",
+      "text": "\"Ac os bydd hi'n braf yfory, byddwn ni'n mynd yn gyflym.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s106",
+      "text": "Wedyn tisianodd Arth eto, ac yn sydyn, daeth sŵn bach o'r gert: \"Atishŵ!\"",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Atishŵ",
+        "gloss": "Atishŵ! = tisian",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l21-s107",
+      "text": "Daeth mwg o'r sach fara."
+     },
+     {
+      "id": "cy-brenin-01-l21-s108",
+      "text": "\"Ydy'r bara'n tisian?\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s109",
+      "text": "Agorodd Elen y sach fara.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s110",
+      "text": "Roedd draig fach goch yn y sach, ac roedd bara yn ei geg e."
+     },
+     {
+      "id": "cy-brenin-01-l21-s111",
+      "text": "\"Bore da,\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l21-s112",
+      "text": "\"Wyth o'r gloch!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s113",
+      "text": "\"Draig!\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s114",
+      "text": "\"Draig yn y sach fara!\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s115",
+      "text": "\"Draig yw e, Cynyr,\" meddai Elen yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s116",
+      "text": "\"Dafi yw ei enw e.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s117",
+      "text": "\"Ro't ti'n gwybod, Elen?\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s118",
+      "text": "\"Ro'n i'n gwybod,\" meddai Elen, a gwenodd hi.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s119",
+      "text": "\"Dw i'n gweld pob peth yn y llys.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s120",
+      "text": "\"Mae Modlen yn gwybod hefyd, Dad,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l21-s121",
+      "text": "\"Ac mae Myrddin yn gwybod, ac Arth, a fi.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s122",
+      "text": "\"A fi!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l21-s123",
+      "text": "\"Pawb!\" meddai Cynyr, a chwarddodd e'n uchel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s124",
+      "text": "\"Pawb yn y llys, a dim Cynyr! Wel, wel.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s125",
+      "text": "\"Ond mae'r daith yn beryglus, Dafi,\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l21-s126",
+      "text": "\"Os bydd dynion yn gweld draig ar y ffordd, beth fydd yn digwydd?\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s127",
+      "text": "\"Os bydd dynion yn edrych yn y gert, byddan nhw'n gweld sach fara,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l21-s128",
+      "text": "\"Bydd Dafi'n ddiogel.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s129",
+      "text": "\"Ac os bydd e'n bwrw eira eto, bydda i'n aros yn y sach,\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi",
+      "inference_aids": [],
+      "deliberate_error": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s130",
+      "text": "\"Os bydd hi'n bwrw eira, Dafi,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l21-s131",
+      "text": "\"Hi: mae hi'n bwrw eira.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s132",
+      "text": "\"Os bydd hi'n bwrw eira, bydda i'n aros yn y sach,\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l21-s133",
+      "text": "\"Mae hi'n ddiogel ac yn gynnes, ac mae digon o fara yma.\""
+     },
+     {
+      "id": "cy-brenin-01-l21-s134",
+      "text": "\"Digon, Dafi? Dim gormod?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l21-s135",
+      "text": "\"Does byth gormod o fara,\" meddai Dafi, a chwarddodd Cynyr eto.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l21-s136",
+      "text": "Yn y llys, roedd Modlen yn sefyll wrth ei ffwrn oer, ac roedd Pero wrth ei thraed hi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l21-s137",
+      "text": "\"Bydd y ddraig yn aros yma…\" meddai hi'n dawel.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l21-s138",
+      "text": "Ond doedd dim draig yn y gegin: dim ond eira ar y ffenest, a dim mwg o'r ffwrn.",
+      "paragraph_start": true
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Os bydd hi'n bwrw eira…",
+  "rule_cy": "os + bydd (yfory): Os bydd hi'n bwrw eira, byddwn ni'n mynd yn araf. · os + nawr: os dw i, os wyt ti (dim rwyt), os yw e. · Y tywydd: Mae hi'n bwrw glaw / eira; Mae hi'n braf / wyntog / oer. · pan fydd ✓ ↔ os bydd ?",
+  "tables": [
+   {
+    "caption": "os + bydd",
+    "header": [
+     "os …",
+     "…"
+    ],
+    "rows": [
+     [
+      "Os bydd hi'n bwrw eira,",
+      "byddwn ni'n mynd yn araf."
+     ],
+     [
+      "Os bydd hi'n bwrw glaw,",
+      "byddwn ni'n wlyb."
+     ],
+     [
+      "Os bydd rhew ar y ffordd,",
+      "bydd y ceffylau'n cwympo."
+     ],
+     [
+      "Os bydd niwl ar y mynyddoedd,",
+      "fyddwn ni ddim yn gweld y ffordd."
+     ],
+     [
+      "Os bydd lladron ar y ffordd,",
+      "bydda i'n ymladd."
+     ]
+    ]
+   },
+   {
+    "caption": "os + nawr",
+    "header": [
+     "os …",
+     "…"
+    ],
+    "rows": [
+     [
+      "Os wyt ti'n sâl,",
+      "byddi di'n aros yma."
+     ],
+     [
+      "Os dw i'n aros yma,",
+      "bydda i'n drist iawn!"
+     ],
+     [
+      "Os wyt ti'n aros yma,",
+      "byddi di'n cael pastai bob bore."
+     ],
+     [
+      "rwyt ti → os wyt ti",
+      "mae e → os yw e"
+     ]
+    ]
+   },
+   {
+    "caption": "Sut mae'r tywydd?",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "glaw",
+      "Mae hi'n bwrw glaw."
+     ],
+     [
+      "eira",
+      "Mae hi'n bwrw eira."
+     ],
+     [
+      "haul",
+      "Mae hi'n braf."
+     ],
+     [
+      "gwynt",
+      "Mae hi'n wyntog."
+     ],
+     [
+      "niwl · rhew",
+      "Mae niwl ar y mynydd. · Mae rhew ar y ffordd."
+     ]
+    ]
+   },
+   {
+    "caption": "os ↔ pan",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "os (?)",
+      "Os bydd yr haul yn dod…"
+     ],
+     [
+      "pan (✓) + treiglad",
+      "Pan fydd yr haul yn dod…"
+     ]
+    ]
+   },
+   {
+    "caption": "digon o · gormod o + treiglad",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "bara → digon o fara",
+      "bwyd → gormod o fwyd"
+     ],
+     [
+      "caws → digon o gaws",
+      "cig → digon o gig"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l21-s007"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s009"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s011"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s013"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s016"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s017"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s054"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s064"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s071"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s019"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s005"
+   },
+   {
+    "segment_id": "cy-brenin-01-l21-s050"
+   }
+  ],
+  "nodyn_en": "Os (if) sets a real condition. With the future: Os bydd hi'n bwrw eira, byddwn ni'n mynd yn araf. With the present, os takes the question form: os wyt ti (not rwyt ti), os yw e, os dw i. Weather uses hi: Mae hi'n bwrw glaw, Mae hi'n braf. Pan (when) is certain: pan fydd."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l21-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Bydd hi'n bwrw eira. Byddwn ni'n mynd yn araf. (os) →",
+      "answer": "Os bydd hi'n bwrw eira, byddwn ni'n mynd yn araf."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Bydd hi'n bwrw glaw. Byddwn ni'n wlyb. (os) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Os bydd hi'n bwrw glaw, byddwn ni'n wlyb."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l21-s009"
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Bydd lladron ar y ffordd. Bydd Cai'n ymladd. (os) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Os bydd lladron ar y ffordd, bydd Cai'n ymladd."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l21-s056"
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Rwyt ti'n sâl. Byddi di'n aros yma. (os) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Os wyt ti'n sâl, byddi di'n aros yma."
+       ],
+       "common_wrong": [
+        {
+         "answer": "Os rwyt ti'n sâl, byddi di'n aros yma.",
+         "hint": "os + wyt ti (dim rwyt ti)"
+        }
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l21-s011"
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Mae e'n oer. Bydd e'n gwisgo cot. (os) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Os yw e'n oer, bydd e'n gwisgo cot.",
+        "Os ydy e'n oer, bydd e'n gwisgo cot."
+       ],
+       "common_wrong": [
+        {
+         "answer": "Os mae e'n oer, bydd e'n gwisgo cot.",
+         "hint": "os + yw e (dim mae e)"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Sut mae'r tywydd? (eira) →",
+      "answer": "Mae hi'n bwrw eira."
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Sut mae'r tywydd? (glaw) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae hi'n bwrw glaw."
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Sut mae'r tywydd? (gwynt) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae hi'n wyntog."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Mae hi'n gwyntog.",
+         "hint": "yn + treiglad: gwyntog → wyntog"
+        }
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Sut mae'r tywydd? (haul, dim gwynt) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae hi'n braf."
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Oes digon o ___? (caws)",
+      "answer": "gaws"
+     },
+     "items": [
+      {
+       "id": "a8",
+       "prompt": "Mae gormod o ___ yma! (bwyd)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "fwyd"
+       ],
+       "mutation_hint": true,
+       "source_segment_ids": [
+        "cy-brenin-01-l21-s050"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae syched ar Dafi. (fe) →",
+      "answer": "Mae syched arno fe."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Mae annwyd ar Arth. (fe) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae annwyd arno fe.",
+        "Mae annwyd arno."
+       ],
+       "recall_of": "G19",
+       "source_segment_ids": [
+        "cy-brenin-01-l21-s011"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae hi'n oer. (ddoe) →",
+      "answer": "Roedd hi'n oer."
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Mae hi'n braf. (ddoe) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Roedd hi'n braf."
+       ],
+       "recall_of": "G17",
+       "source_segment_ids": [
+        "cy-brenin-01-l21-s006"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l21-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "glaw",
+    "niwl",
+    "rhew",
+    "lleidr",
+    "maneg",
+    "cot",
+    "esgid",
+    "sach",
+    "gormod",
+    "digon",
+    "braf",
+    "peryglus",
+    "diogel",
+    "gwyntog",
+    "pacio",
+    "gwisgo",
+    "bwrw"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae dŵr yn dod o'r cymylau: mae hi'n bwrw ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "glaw"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "Mae cwmwl ar y tir, a dw i ddim yn gweld y bryn: ___ yw e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "niwl"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae'r ffordd yn wyn ac yn oer iawn, ac mae'r ceffyl yn cwympo: mae ___ ar y ffordd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "rhew"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae dyn drwg yn cymryd arian Cynyr yn y nos: ___ yw e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "lleidr"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae dwylo Arth yn oer iawn: mae angen ___ ar ei ddwylo e.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "menig"
+     ],
+     "explanation": "maneg, menig"
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae'r haul yn gynnes, a does dim gwynt: mae hi'n ___ heddiw.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "braf"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Naw sach o fwyd i bedwar diwrnod? Mae ___ o fwyd yn y gert!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gormod"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "Mae'r cleddyf yn finiog: paid â chwarae gyda fe, mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "beryglus"
+     ],
+     "explanation": "yn + peryglus → yn beryglus"
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae Mali'n rhoi'r dyddiadur a'r inc yn y sach fach: mae hi'n ___ i'r daith.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "pacio"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae Myrddin yn ___ ei glogyn glas a'i het ddu bob dydd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwisgo"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l21-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Sut oedd y tywydd yn y bore cyntaf, pan agorodd Cynyr y drws?",
+     "answer_mode": "self_check",
+     "model_answer": "Roedd hi'n oer, ac roedd hi'n wyntog.",
+     "rubric": "Dau air o'r stori: oer a gwyntog (wyntog).",
+     "key_terms": [
+      "cy-gwyntog"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s005"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Faint o sachau o fwyd oedd gyda Modlen?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Naw",
+      "Naw sach",
+      "Roedd naw sach",
+      "Roedd naw sach gyda hi"
+     ],
+     "model_answer": "Naw sach.",
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s050"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Pam doedd Cai ddim eisiau dillad?",
+     "answer_mode": "self_check",
+     "model_answer": "Does dim angen dillad ar farchog, meddai Cai: mae cleddyf a chlogyn gyda fe.",
+     "rubric": "Ateb Cai: marchog yw e, a does dim angen dillad arno fe.",
+     "key_terms": [
+      "cy-dillad",
+      "cy-marchog"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s032"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth fydd yn digwydd os bydd dynion yn gweld draig, meddai Modlen?",
+     "answer_mode": "self_check",
+     "model_answer": "Byddan nhw'n ofni, a bydd y milwyr yn dod gyda'u cleddyfau.",
+     "rubric": "Bydd / byddan nhw + un peth o'r stori (ofni, milwyr).",
+     "key_terms": [
+      "cy-ofni",
+      "cy-milwr"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s064"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Ble mae Dafi'n cuddio ar y daith?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Yn y sach fara",
+      "Mae e'n cuddio yn y sach fara",
+      "Mae Dafi'n cuddio yn y sach fara",
+      "Yn y sach"
+     ],
+     "model_answer": "Yn y sach fara.",
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s076"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam dyw Pero ddim yn mynd i Gaerllion?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae e'n hen, ac mae'r daith yn hir ac yn oer.",
+     "rubric": "Rheswm Cynyr: hen, taith hir, oer.",
+     "key_terms": [
+      "cy-hen",
+      "cy-taith"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s092"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Oedd Elen yn gwybod am Dafi?",
+     "answer_mode": "self_check",
+     "model_answer": "Oedd. Mae hi'n gweld pob peth yn y llys.",
+     "rubric": "Oedd + rheswm Elen.",
+     "key_terms": [
+      "cy-gwybod"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l21-s115"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Beth fyddi di'n gwisgo os bydd hi'n bwrw eira yfory?",
+     "answer_mode": "self_check",
+     "model_answer": "Os bydd hi'n bwrw eira yfory, bydda i'n gwisgo cot, menig ac esgidiau mawr.",
+     "rubric": "Os bydd hi'n bwrw eira, bydda i'n gwisgo … (dau ddilledyn o'r stori).",
+     "key_terms": [
+      "cy-gwisgo",
+      "cy-os"
+     ]
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-os",
+   "citation_form": "os",
+   "part_of_speech": "conjunction",
+   "current_sense": "if (real condition)",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-glaw",
+   "citation_form": "glaw",
+   "part_of_speech": "noun",
+   "current_sense": "rain",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-niwl",
+   "citation_form": "niwl",
+   "part_of_speech": "noun",
+   "current_sense": "fog, mist",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-rhew",
+   "citation_form": "rhew",
+   "part_of_speech": "noun",
+   "current_sense": "frost, ice",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-lleidr",
+   "citation_form": "lleidr",
+   "part_of_speech": "noun",
+   "current_sense": "thief, robber",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sach",
+   "citation_form": "sach",
+   "part_of_speech": "noun",
+   "current_sense": "sack",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cot",
+   "citation_form": "cot",
+   "part_of_speech": "noun",
+   "current_sense": "coat",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-esgid",
+   "citation_form": "esgid",
+   "part_of_speech": "noun",
+   "current_sense": "shoe, boot",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-maneg",
+   "citation_form": "maneg",
+   "part_of_speech": "noun",
+   "current_sense": "glove",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-bwrw",
+   "citation_form": "bwrw",
+   "part_of_speech": "verb",
+   "current_sense": "to strike; (bwrw glaw / eira) to rain / to snow",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwisgo",
+   "citation_form": "gwisgo",
+   "part_of_speech": "verb",
+   "current_sense": "to wear; to dress",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-pacio",
+   "citation_form": "pacio",
+   "part_of_speech": "verb",
+   "current_sense": "to pack",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-braf",
+   "citation_form": "braf",
+   "part_of_speech": "adjective",
+   "current_sense": "fine (weather)",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwyntog",
+   "citation_form": "gwyntog",
+   "part_of_speech": "adjective",
+   "current_sense": "windy",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-digon",
+   "citation_form": "digon",
+   "part_of_speech": "noun",
+   "current_sense": "enough (digon o + SM)",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gormod",
+   "citation_form": "gormod",
+   "part_of_speech": "noun",
+   "current_sense": "too much (gormod o + SM)",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-diogel",
+   "citation_form": "diogel",
+   "part_of_speech": "adjective",
+   "current_sense": "safe",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-peryglus",
+   "citation_form": "peryglus",
+   "part_of_speech": "adjective",
+   "current_sense": "dangerous",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dillad",
+   "citation_form": "dillad",
+   "part_of_speech": "noun",
+   "current_sense": "clothes",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-crys",
+   "citation_form": "crys",
+   "part_of_speech": "noun",
+   "current_sense": "shirt",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-trowsus",
+   "citation_form": "trowsus",
+   "part_of_speech": "noun",
+   "current_sense": "trousers",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-hosan",
+   "citation_form": "hosan",
+   "part_of_speech": "noun",
+   "current_sense": "sock, stocking",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cert",
+   "citation_form": "cert",
+   "part_of_speech": "noun",
+   "current_sense": "cart",
+   "first_introduced_lesson": "cy-brenin-01-l21",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-21.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "os (+ bydd / wyt / yw …)",
+    "back": "if (real condition)",
+    "example_segment_id": "cy-brenin-01-l21-s009",
+    "lexeme_id": "cy-os"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "glaw (g.) · Mae hi'n bwrw glaw",
+    "back": "rain",
+    "example_segment_id": "cy-brenin-01-l21-s009",
+    "lexeme_id": "cy-glaw"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "niwl (g.)",
+    "back": "fog, mist",
+    "example_segment_id": "cy-brenin-01-l21-s016",
+    "lexeme_id": "cy-niwl"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "rhew (g.)",
+    "back": "frost, ice",
+    "example_segment_id": "cy-brenin-01-l21-s017",
+    "lexeme_id": "cy-rhew"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "lleidr (g.), lladron",
+    "back": "thief, robber",
+    "example_segment_id": "cy-brenin-01-l21-s055",
+    "lexeme_id": "cy-lleidr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "sach (b.), sachau",
+    "back": "sack",
+    "example_segment_id": "cy-brenin-01-l21-s048",
+    "lexeme_id": "cy-sach"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "cot (b.), cotiau",
+    "back": "coat",
+    "example_segment_id": "cy-brenin-01-l21-s035",
+    "seen_as": "hen got",
+    "lexeme_id": "cy-cot"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "esgid (b.), esgidiau",
+    "back": "shoe, boot",
+    "example_segment_id": "cy-brenin-01-l21-s030",
+    "lexeme_id": "cy-esgid"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "maneg (b.), menig",
+    "back": "glove",
+    "example_segment_id": "cy-brenin-01-l21-s036",
+    "seen_as": "menig",
+    "lexeme_id": "cy-maneg"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "bwrw · Mae hi'n bwrw eira",
+    "back": "to strike; bwrw glaw / eira = to rain / to snow",
+    "example_segment_id": "cy-brenin-01-l21-s007",
+    "lexeme_id": "cy-bwrw"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "gwisgo",
+    "back": "to wear; to dress",
+    "example_segment_id": "cy-brenin-01-l21-s045",
+    "lexeme_id": "cy-gwisgo"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "pacio",
+    "back": "to pack",
+    "example_segment_id": "cy-brenin-01-l21-s032",
+    "lexeme_id": "cy-pacio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "braf · Mae hi'n braf",
+    "back": "fine (weather)",
+    "example_segment_id": "cy-brenin-01-l21-s006",
+    "lexeme_id": "cy-braf"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "gwyntog · Mae hi'n wyntog",
+    "back": "windy",
+    "example_segment_id": "cy-brenin-01-l21-s005",
+    "seen_as": "mae hi'n wyntog",
+    "lexeme_id": "cy-gwyntog"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "digon (o + SM)",
+    "back": "enough (digon o + SM)",
+    "example_segment_id": "cy-brenin-01-l21-s059",
+    "lexeme_id": "cy-digon"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "gormod (o + SM)",
+    "back": "too much (gormod o + SM)",
+    "example_segment_id": "cy-brenin-01-l21-s050",
+    "lexeme_id": "cy-gormod"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "diogel",
+    "back": "safe",
+    "example_segment_id": "cy-brenin-01-l21-s132",
+    "lexeme_id": "cy-diogel"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "peryglus",
+    "back": "dangerous",
+    "example_segment_id": "cy-brenin-01-l21-s018",
+    "seen_as": "yn beryglus",
+    "lexeme_id": "cy-peryglus"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "dillad (ll.)",
+    "back": "clothes",
+    "example_segment_id": "cy-brenin-01-l21-s025",
+    "lexeme_id": "cy-dillad"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "crys (g.), crysau",
+    "back": "shirt",
+    "example_segment_id": "cy-brenin-01-l21-s027",
+    "seen_as": "dau grys",
+    "lexeme_id": "cy-crys"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "trowsus (g.)",
+    "back": "trousers",
+    "example_segment_id": "cy-brenin-01-l21-s027",
+    "seen_as": "dau drowsus",
+    "lexeme_id": "cy-trowsus"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "hosan (b.), sanau",
+    "back": "sock, stocking",
+    "example_segment_id": "cy-brenin-01-l21-s027",
+    "lexeme_id": "cy-hosan"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l21",
+    "front": "cert (b.), ceirt",
+    "back": "cart",
+    "example_segment_id": "cy-brenin-01-l21-s048",
+    "seen_as": "i'r gert",
+    "lexeme_id": "cy-cert"
+   },
+   {
+    "id": "pattern-g21",
+    "lesson": "cy-brenin-01-l21",
+    "front": "Os bydd hi'n bwrw eira, byddwn ni'n mynd yn araf. · Os wyt ti'n sâl, byddi di'n aros yma. · Mae hi'n braf / wyntog.",
+    "back": "If it snows, we'll go slowly. · If you're ill, you'll stay here. · It's fine / windy. (os wyt ti, os yw e; pan fydd = when)",
+    "example_segment_id": "cy-brenin-01-l21-s009",
+    "example_segment_ids": [
+     "cy-brenin-01-l21-s009",
+     "cy-brenin-01-l21-s011"
+    ],
+    "lexeme_id": "cy-pattern-g21"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l21-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 1,
+   "margin_diagram": 0,
+   "margin_gloss": 32
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-21",
+   "rhan-3"
+  ]
+ },
+ "metrics": {
+  "running_words": 1459,
+  "sentences": 138,
+  "word_target": 1330,
+  "word_window": [
+   1197,
+   1463
+  ]
+ }
+}

@@ -1,0 +1,2381 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l19",
+ "course_id": "cy-brenin-01",
+ "order": 19,
+ "title": "Mae annwyd ar Cai",
+ "rhan": 2,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B3 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief B3 2026-10-12",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Open slot used: gwely (bed), CorCenCC rank 707, because Cai is in bed for most of the chapter and no planned lexeme means 'bed'. It is declared in learning_contract.open_slot_ids and in the gwely entry's notes in lexicon-deltas/pennod-19.json; the integrator should add it to chapters.json open_slot_words for Pennod 19.",
+   "All seven conjugated forms of ar are used in story sentences (arna i, arnat ti, arno fe, arni hi, arnon ni, arnoch chi, arnyn nhw); the literal 'Mae tair blanced arno fe' sits beside the idiom 'Mae gwres arno fe' as the chapter's contrast, and gyda (possession) is contrasted in Pensum A. Pen tost takes gyda, not ar (southern Mynediad: a named sore body part with gyda, conditions such as annwyd and peswch with ar), so s015 sets 'Mae pen tost gyda fi' beside 'mae syched arna i' as a second contrast inside the target.",
+   "Deliberate error: Dafi's 'Mae syched gyda fi!' is corrected by Mali in the next line ('Mae syched arnat ti: dim gyda ti, ond arnat ti!'), and Dafi repeats it correctly, contrasting this chapter's target with Pennod 8 gyda.",
+   "The illness follows its own snowy hunt (told in the past in the opening paragraph), so it does not depend on the autumn hunt of Pennod 16.",
+   "Running words 1,333 (target 1,267, window 1,140–1,394).",
+   "'Beth sy'n bod?' is used as the whitelisted formula (from 19) and glossed at first use.",
+   "Lexicon delta lists the conjugated forms under cy-ar with a 'conj' card stage (design §8.3).",
+   "Fluent review 2026-10-12 (docs/reviews/welsh-review-16-20-2026-10-12.md) applied. Pen tost: s015, s029, s134 now 'pen tost gyda fi'; s015 gloss 'pen tost → fy mhen i'n dost' (the review's full sentence is 7 words, over the 6-word gloss limit); rule_cy, the 'Mae … ar …' table (pen tost row removed), the gyda ↔ ar table (row 'Mae pen tost gyda fi. ↔ Mae peswch arna i.'), the question table ('Oes pen tost gyda ti? — Oes.'), nodyn_en, C.c2 model and rubric, and the cy-ph-pen-tost sense/card (delta and mirrors) all teach gyda; s015 added to the Gramadeg examples. The literal-ar contrast moved to its own 'ar ↔ ar' table (tair blanced ar Cai ↔ gwres ar Cai). s024 is now 'Ac wedyn mae Cai'n peswch.' with a define gloss (peswch: sŵn o'r geg (annwyd)) in place of the 'Ych! Ych!' sound gloss; cy-peswch gains the verbal-noun sense 'to cough'. s119 'Fy mrawd i wyt ti.'; C.c4 'y peth coch'; A.a3, B.b2, B.b4, C.c3, C.c5 keys widened. s134 gains a radical gloss 'yn dost ← tost': with the phrase-lexeme checker fix, standalone tost is not licensed by the phrase pen tost.",
+   "Review-question verdicts: s014 keep 'annwyd arna i' and 'syched arna i' (pen tost corrected to gyda, above); s025 'Mae fy ngwddf i'n dost' accepted; s041 masculine 'jwg bach' retained; s024 'Ych! Ych!' replaced (above); s050 singular mass treatment of moddion accepted; s114 'chwerthin am dy ben di' accepted; s124 'Mae angen cwtsh ar bawb' accepted; s119 changed to 'Fy mrawd i wyt ti' as preferred; s072 deliberate error accepted as flagged.",
+   "Checker warnings justified: local density at Cai's first symptoms and Elen's diagnosis (around s013–s030): these lines are the chapter's target frame 'Mae … ar …' (and its gyda contrast) filled with its own new nouns, each glossed. Also: the lint-yn warning on s024 'Cai'n peswch' is a false positive (peswch is a verbal noun there, so no mutation; the review confirms the verbal use); the pensa-unknown warning on C.c5 'sydd' is deliberate: the review asks that the uncontracted relative a learner may type be accepted, though the text uses sy."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l19-s072",
+    "question": "Deliberate error (flagged): 'Mae syched gyda fi!' corrected next line."
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G19",
+  "primary_new_grammar": {
+   "id": "G19",
+   "label": "ar idioms of illness and feeling (Mae annwyd / gwres / peswch / ofn / syched / cywilydd / angen … ar …) with the conjugated forms arna i, arnat ti, arno fe, arni hi, arnon ni, arnoch chi, arnyn nhw; contrast with gyda (possession, and the southern sore-body-part construction Mae pen tost gyda fi) and literal ar (on)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01",
+   "G04",
+   "G05",
+   "G06",
+   "G07",
+   "G08",
+   "G09",
+   "G10",
+   "G11",
+   "G12",
+   "G13",
+   "G14",
+   "G16",
+   "G17",
+   "G18"
+  ],
+  "incidental": [
+   {
+    "form": "Beth sy'n bod?",
+    "gloss_segment_id": "cy-brenin-01-l19-s013"
+   }
+  ],
+  "new_lexeme_ids": [
+   "cy-annwyd",
+   "cy-ofn",
+   "cy-syched",
+   "cy-angen",
+   "cy-peswch",
+   "cy-gwres",
+   "cy-ph-pen-tost",
+   "cy-moddion",
+   "cy-help",
+   "cy-cywilydd",
+   "cy-cwtsh",
+   "cy-sal",
+   "cy-gwella",
+   "cy-gorffwys",
+   "cy-helpu",
+   "cy-gofalu",
+   "cy-gwddf",
+   "cy-bol",
+   "cy-chwys",
+   "cy-breuddwyd",
+   "cy-hunllef",
+   "cy-anadlu",
+   "cy-llyncu",
+   "cy-gwely"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-annwyd",
+    "how": "gloss+picture(cover)",
+    "segment_id": "cy-brenin-01-l19-s014"
+   },
+   {
+    "lexeme_id": "cy-ofn",
+    "how": "context+gloss",
+    "segment_id": "cy-brenin-01-l19-s038"
+   },
+   {
+    "lexeme_id": "cy-syched",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l19-s015"
+   },
+   {
+    "lexeme_id": "cy-angen",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s030"
+   },
+   {
+    "lexeme_id": "cy-peswch",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s024"
+   },
+   {
+    "lexeme_id": "cy-gwres",
+    "how": "context+picture(cover)",
+    "segment_id": "cy-brenin-01-l19-s022"
+   },
+   {
+    "lexeme_id": "cy-ph-pen-tost",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s015"
+   },
+   {
+    "lexeme_id": "cy-moddion",
+    "how": "gloss+picture(vignette)",
+    "segment_id": "cy-brenin-01-l19-s044"
+   },
+   {
+    "lexeme_id": "cy-help",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l19-s055"
+   },
+   {
+    "lexeme_id": "cy-cywilydd",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s112"
+   },
+   {
+    "lexeme_id": "cy-cwtsh",
+    "how": "gloss+picture(scene)",
+    "segment_id": "cy-brenin-01-l19-s120"
+   },
+   {
+    "lexeme_id": "cy-sal",
+    "how": "context+picture(cover)",
+    "segment_id": "cy-brenin-01-l19-s023"
+   },
+   {
+    "lexeme_id": "cy-gwella",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l19-s091"
+   },
+   {
+    "lexeme_id": "cy-gorffwys",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l19-s030"
+   },
+   {
+    "lexeme_id": "cy-helpu",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l19-s057"
+   },
+   {
+    "lexeme_id": "cy-gofalu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s060"
+   },
+   {
+    "lexeme_id": "cy-gwddf",
+    "how": "gloss+picture(vignette)",
+    "segment_id": "cy-brenin-01-l19-s025"
+   },
+   {
+    "lexeme_id": "cy-bol",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s026"
+   },
+   {
+    "lexeme_id": "cy-chwys",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s011"
+   },
+   {
+    "lexeme_id": "cy-breuddwyd",
+    "how": "contrast",
+    "segment_id": "cy-brenin-01-l19-s106"
+   },
+   {
+    "lexeme_id": "cy-hunllef",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l19-s099"
+   },
+   {
+    "lexeme_id": "cy-anadlu",
+    "how": "context",
+    "segment_id": "cy-brenin-01-l19-s011"
+   },
+   {
+    "lexeme_id": "cy-llyncu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l19-s016"
+   },
+   {
+    "lexeme_id": "cy-gwely",
+    "how": "gloss+picture(vignette)",
+    "segment_id": "cy-brenin-01-l19-s010"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-pen",
+   "cy-corff",
+   "cy-cefn",
+   "cy-pob",
+   "cy-awr",
+   "cy-wedi",
+   "cy-aros",
+   "cy-cawl",
+   "cy-nant",
+   "cy-hela",
+   "cy-penhwyad",
+   "cy-dyfodol",
+   "cy-llwy",
+   "cy-jwg",
+   "cy-blanced",
+   "cy-hwyr",
+   "cy-arfer",
+   "cy-ofnadwy",
+   "cy-afal",
+   "cy-ffrind"
+  ],
+  "swaps": [],
+  "open_slot_ids": [
+   "cy-gwely"
+  ]
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l19-img-cover",
+   "src": "media/images/cy-brenin-01-l19-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "Cai lies ill in his box bed under three blankets; Elen sits beside him with her hand on his forehead, Myrddin holds out a spoon of red medicine from a tiny bottle, and Arth sits at the bedside, worried.",
+   "art_brief": "A small timber sleeping room in the llys on a winter morning, light through a shuttered unglazed window (llys palette: warm wood, limewash, thatch; snow outside). Cai (15, tall, red-blond, square-jawed) lies in a wooden box bed under three woollen blankets, cheeks flushed, hair damp with sweat, miserable. Elen (about fifty, white linen veil, forest-green dress, iron key-ring) sits on the bed edge, one hand on his forehead. Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat) holds out a wooden spoon of bright red syrup from a tiny round glass bottle that looks out of place. Arth (11, untidy brown hair with cowlick, moss-green tunic) sits on a low chair at the bedside, worried. Mali (12, long dark braid, dark-blue dress) peers in from the doorway. A cup of water and a bowl of cawl on a stool. No text.",
+   "characters": [
+    "char-cai",
+    "char-elen",
+    "char-myrddin",
+    "char-arth",
+    "char-mali"
+   ],
+   "covers_lexeme_ids": [
+    "cy-gwely",
+    "cy-moddion",
+    "cy-annwyd",
+    "cy-gwres",
+    "cy-sal"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l19-sec1",
+    "title": "Ble mae Cai?",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l19-s001",
+      "text": "Ddoe, aeth Cynyr a Cai i hela ceirw yn yr eira.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s002",
+      "text": "Roedd hi'n oer iawn, roedd eira ar y tir, ac roedd y tywydd yn ofnadwy."
+     },
+     {
+      "id": "cy-brenin-01-l19-s003",
+      "text": "Croesodd y ceffylau'r nant, ond cwympodd ceffyl Cai, a chwympodd Cai i'r dŵr oer."
+     },
+     {
+      "id": "cy-brenin-01-l19-s004",
+      "text": "Collodd e ei fwa a'i saethau yn y dŵr hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l19-s005",
+      "text": "Roedd e'n wlyb ac yn oer drwy'r dydd, ond roedd e'n chwerthin: \"Dw i'n gryf! Dw i ddim yn oer!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s006",
+      "text": "Heddiw, mae hi'n naw o'r gloch, ond dyw Cai ddim yn y gegin.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s007",
+      "text": "\"Ble mae Cai?\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s008",
+      "text": "\"Mae'r brecwast yn barod, a dyw Cai byth yn hwyr i'r brecwast!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s009",
+      "text": "Wedyn mae Mali'n mynd i weld Cai.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s010",
+      "text": "Mae Cai yn ei wely e, ar ei gefn, ac mae e'n goch iawn.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ei wely",
+        "gloss": "ei wely ← gwely",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l19-img-gwely",
+        "anchor_text": "wely",
+        "label": "gwely",
+        "src": "media/vignettes/cy-brenin-01-l19-img-gwely.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A simple early-medieval wooden box bed with a straw mattress, a woollen blanket and a sheepskin. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-gwely"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s011",
+      "text": "Dyw e ddim yn cysgu: mae chwys ar ei ben e, ac mae e'n anadlu'n drwm.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chwys",
+        "gloss": "chwys = dŵr ar y pen",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s012",
+      "text": "\"Cai?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s013",
+      "text": "\"Beth sy'n bod?\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Beth sy'n bod?",
+        "gloss": "Beth sy'n bod? → Mae annwyd…",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s014",
+      "text": "\"Mae annwyd arna i,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "annwyd arna i",
+        "gloss": "annwyd arna i = dw i'n sâl",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s015",
+      "text": "\"Mae pen tost gyda fi, ac mae syched arna i.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "syched",
+        "gloss": "syched: eisiau dŵr",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "pen tost",
+        "gloss": "pen tost → fy mhen i'n dost",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s016",
+      "text": "A dw i ddim yn gallu llyncu.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llyncu",
+        "gloss": "llyncu: bwyd → ceg → bol",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s017",
+      "text": "Wedyn mae e'n tisian yn uchel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s018",
+      "text": "Nawr mae Mali'n rhedeg i'r neuadd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s019",
+      "text": "\"Mam!\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s020",
+      "text": "\"Mae annwyd ar Cai!\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l19-sec2",
+    "title": "Moddion o bell",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l19-s021",
+      "text": "Mae Elen yn dod at y gwely ac yn rhoi ei llaw hi ar ben Cai.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s022",
+      "text": "\"Mae gwres arno fe,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "arno fe",
+        "gloss": "arna i · arnat ti · arno fe",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s023",
+      "text": "\"Mae ei gorff e'n boeth iawn: mae e'n sâl.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s024",
+      "text": "Ac wedyn mae Cai'n peswch.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "peswch",
+        "gloss": "peswch: sŵn o'r geg (annwyd)",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-peswch"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s025",
+      "text": "\"Mae fy ngwddf i'n dost, Mam,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dost",
+        "gloss": "yn dost ← tost",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ngwddf",
+        "gloss": "fy ngwddf ← gwddf",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l19-img-gwddf",
+        "anchor_text": "ngwddf",
+        "label": "gwddf",
+        "src": "media/vignettes/cy-brenin-01-l19-img-gwddf.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A boy's head and neck in profile with the throat lightly shaded red. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-gwddf"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s026",
+      "text": "\"Ac mae fy mol i'n wag.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "mol",
+        "gloss": "fy mol ← bol",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s027",
+      "text": "\"Mae dy wddf di'n goch hefyd,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wddf",
+        "gloss": "dy wddf ← gwddf",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s028",
+      "text": "\"Oes peswch arnat ti?\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s029",
+      "text": "\"Oes. Ac mae pen tost gyda fi hefyd.\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s030",
+      "text": "\"Mae angen gorffwys arnat ti, Cai,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "angen",
+        "gloss": "angen X arna i = eisiau X",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s031",
+      "text": "\"Aros yn y gwely! Mae angen cawl arnat ti, a dŵr, a gorffwys.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s032",
+      "text": "\"Oes blanced arno fe?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s033",
+      "text": "\"Oes,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s034",
+      "text": "\"Mae tair blanced wlân arno fe yn barod!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s035",
+      "text": "Mae Cynyr yn dod at y drws hefyd, ac mae e'n edrych ar Cai yn y gwely.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s036",
+      "text": "\"Cai! Fy mab i!\" meddai Cynyr.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l19-s037",
+      "text": "\"Ddoe es i i hela gyda Cai yn yr eira, ac nawr mae e'n sâl."
+     },
+     {
+      "id": "cy-brenin-01-l19-s038",
+      "text": "Mae ofn arna i, Elen.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s039",
+      "text": "\"Does dim angen ofn, Cynyr,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s040",
+      "text": "\"Mae annwyd arno fe, ac mae Cai'n gryf.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s041",
+      "text": "Wedyn mae Myrddin yn curo ar y drws, ac mae jwg bach yn ei law e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s042",
+      "text": "Dyna rywbeth coch yn y jwg!"
+     },
+     {
+      "id": "cy-brenin-01-l19-s043",
+      "text": "\"Beth yw hwn, Myrddin?\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s044",
+      "text": "\"Moddion o bell,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Moddion",
+        "gloss": "moddion: i'r sâl",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l19-img-moddion",
+        "anchor_text": "Moddion",
+        "label": "moddion",
+        "src": "media/vignettes/cy-brenin-01-l19-img-moddion.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A tiny round glass medicine bottle with a cork, half full of bright red syrup, and a wooden spoon beside it. Ink line and watercolour, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "cy-moddion"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s045",
+      "text": "\"O bell iawn: o'r dyfodol."
+     },
+     {
+      "id": "cy-brenin-01-l19-s046",
+      "text": "Llwy o foddion bob awr, Cai.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "foddion",
+        "gloss": "llwy o foddion ← moddion",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s047",
+      "text": "Wedyn mae Cai'n llyncu'r moddion, ac mae'r peswch yn dod eto.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s048",
+      "text": "\"Mae hyn yn ofnadwy!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s049",
+      "text": "\"Wrth gwrs,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l19-s050",
+      "text": "\"Mae moddion da'n ofnadwy, ond mae e'n ddefnyddiol.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s051",
+      "text": "\"Oes annwyd arnoch chi, Myrddin?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s052",
+      "text": "\"Nac oes. Dyw annwyd byth yn dod i'r tŵr.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l19-sec3",
+    "title": "Gwaith Cai",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l19-s053",
+      "text": "Mae Elen wedi bod gyda Cai drwy'r bore, ac mae hi wedi blino.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s054",
+      "text": "\"Mae angen gorffwys arni hi,\" meddai Modlen yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s055",
+      "text": "\"Mae angen help arna i,\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "help",
+        "gloss": "help: Arth yn helpu Elen",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s056",
+      "text": "\"Mae gwaith Cai yn y stabl ac yn y buarth, ac mae angen help arnon ni.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s057",
+      "text": "\"Dw i'n gallu helpu, Mam!\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s058",
+      "text": "Ac mae Arth yn gwneud gwaith Cai drwy'r dydd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s059",
+      "text": "Yn y bore, mae e'n cario pren i'r tân, ac mae e'n cario dŵr o'r afon."
+     },
+     {
+      "id": "cy-brenin-01-l19-s060",
+      "text": "Mae e'n gofalu am geffyl Cai, ac mae e'n helpu Modlen yn y gegin.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gofalu am",
+        "gloss": "gofalu am = rhoi bwyd, dŵr, help",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s061",
+      "text": "Mae ceffyl ifanc Cai'n edrych ar y drws: mae e eisiau Cai."
+     },
+     {
+      "id": "cy-brenin-01-l19-s062",
+      "text": "Dyw e ddim yn hoffi Arth, ac mae e'n troi ei ben e."
+     },
+     {
+      "id": "cy-brenin-01-l19-s063",
+      "text": "\"Mae Cai'n sâl,\" meddai Arth wrth y ceffyl.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s064",
+      "text": "\"Mae angen gorffwys arno fe, ac mae angen help arnat ti."
+     },
+     {
+      "id": "cy-brenin-01-l19-s065",
+      "text": "Dw i yma heddiw.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s066",
+      "text": "Mae Arth yn rhoi afal i'r ceffyl, ac mae'r ceffyl yn arogli'r afal ac yn bwyta.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s067",
+      "text": "\"Ffrindiau?\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s068",
+      "text": "Mae'r ceffyl yn rhoi ei drwyn e ar wallt Arth, ac mae Arth yn clymu'r ceffyl yn y stabl.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s069",
+      "text": "\"Mae syched arnyn nhw,\" meddai Arth, ac mae e'n rhoi dŵr i'r ceffylau.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s070",
+      "text": "Wedyn mae Mali'n dod i'r stabl, a dyna Dafi, ar y bwced: mae e wedi dilyn Mali.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s071",
+      "text": "\"Dw i'n helpu hefyd!\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l19-s072",
+      "text": "\"Mae syched gyda fi!\"",
+      "deliberate_error": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s073",
+      "text": "\"Nage, Dafi,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s074",
+      "text": "\"Mae syched arnat ti: dim gyda ti, ond arnat ti!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s075",
+      "text": "\"Mae syched arna i!\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l19-s076",
+      "text": "Mae Dafi'n yfed o'r bwced, ac wedyn mae e'n tisian mwg ar y ceffylau.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s077",
+      "text": "\"Mae fy mol i'n llawn o ddŵr nawr!\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l19-s078",
+      "text": "Wedyn mae e'n gweld nyth yn y gwellt: nyth llygod!",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s079",
+      "text": "\"Bwyd?\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l19-s080",
+      "text": "\"Nage, Dafi!\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s081",
+      "text": "\"Mae llygoden fach yn y nyth, ac mae ofn arni hi.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s082",
+      "text": "Yn y nos, mae Arth wedi blino, ond mae e'n hapus.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s083",
+      "text": "\"Mae Arth wedi gweithio drwy'r dydd: mae e'n was da!\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s084",
+      "text": "\"Diolch am dy help, Arth. Dyma gawl poeth i ti.\""
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l19-sec4",
+    "title": "Yn y nos",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l19-s085",
+      "text": "Y noson honno, am un ar ddeg o'r gloch, mae Arth yn eistedd wrth ochr gwely Cai.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s086",
+      "text": "Mae cannwyll fach ar y bwrdd."
+     },
+     {
+      "id": "cy-brenin-01-l19-s087",
+      "text": "\"Wyt ti'n aros gyda Cai drwy'r nos, Arth?\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s088",
+      "text": "\"Ydw, Mam.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s089",
+      "text": "Mae Elen yn gwenu, ac mae hi'n rhoi blanced ar Arth hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s090",
+      "text": "Mae Arth yn gofalu am Cai: mae e'n rhoi dŵr i Cai, a llwy o foddion bob awr."
+     },
+     {
+      "id": "cy-brenin-01-l19-s091",
+      "text": "Ond dyw Cai ddim yn gwella."
+     },
+     {
+      "id": "cy-brenin-01-l19-s092",
+      "text": "Mae'r gwynt yn wyllt yn y coed a'r llwyni, ac mae'r gwres yn uchel: mae chwys ar ei gorff e."
+     },
+     {
+      "id": "cy-brenin-01-l19-s093",
+      "text": "Weithiau mae Cai'n cysgu, a weithiau mae e'n siarad."
+     },
+     {
+      "id": "cy-brenin-01-l19-s094",
+      "text": "\"Paid! Paid!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s095",
+      "text": "Am ddeuddeg o'r gloch, mae Cai'n codi'n sydyn yn y gwely.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s096",
+      "text": "\"Arth? Ble dw i?\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s097",
+      "text": "\"Yn dy wely di, Cai,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s098",
+      "text": "\"Dw i yma.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s099",
+      "text": "\"Ces i hunllef,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "hunllef",
+        "gloss": "hunllef ↔ breuddwyd dda",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s100",
+      "text": "\"Hunllef? Beth oedd yn yr hunllef?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s101",
+      "text": "\"Hunllef ofnadwy,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s102",
+      "text": "\"Roedd storm yn yr hunllef: taranau a mellt."
+     },
+     {
+      "id": "cy-brenin-01-l19-s103",
+      "text": "Roedd penhwyad mawr mewn pwll dwfn, ac ro'n i'n bysgodyn bach."
+     },
+     {
+      "id": "cy-brenin-01-l19-s104",
+      "text": "Roedd ei ddannedd e'n finiog, ac roedd ofn arna i.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ofn arna i",
+        "gloss": "ofn arna i = dw i'n ofni",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s105",
+      "text": "Mae ofn arna i nawr hefyd, Arth.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s106",
+      "text": "\"Breuddwyd yw hi, Cai,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Breuddwyd",
+        "gloss": "breuddwyd: yn y nos",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s107",
+      "text": "\"Breuddwyd ddrwg yw hynny, dim ond breuddwyd."
+     },
+     {
+      "id": "cy-brenin-01-l19-s108",
+      "text": "Mae'r penhwyad hwnnw yn yr afon, a dyw e ddim yma.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s109",
+      "text": "Am funud, mae Cai'n dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s110",
+      "text": "Mae e'n anadlu'n araf, ac mae e'n edrych ar Arth."
+     },
+     {
+      "id": "cy-brenin-01-l19-s111",
+      "text": "\"Arth,\" meddai Cai yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s112",
+      "text": "\"Mae cywilydd arna i.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cywilydd",
+        "gloss": "cywilydd: \"Dw i'n ddrwg.\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s113",
+      "text": "\"Pam?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s114",
+      "text": "\"Ro'n i'n arfer chwerthin am dy ben di: Arth bach, Arth heb geffyl, Arth heb gleddyf…",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s115",
+      "text": "Ond heddiw rwyt ti wedi gwneud fy ngwaith i, ac rwyt ti yma yn y nos."
+     },
+     {
+      "id": "cy-brenin-01-l19-s116",
+      "text": "Mae'n ddrwg gyda fi, Arth."
+     },
+     {
+      "id": "cy-brenin-01-l19-s117",
+      "text": "Mae cywilydd mawr arna i.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s118",
+      "text": "\"Does dim angen cywilydd,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s119",
+      "text": "\"Fy mrawd i wyt ti.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s120",
+      "text": "Mae Cai'n gwenu, ac mae Arth yn rhoi cwtsh mawr i Cai.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cwtsh",
+        "gloss": "rhoi cwtsh = 🫂",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s121",
+      "text": "\"Paid â siarad am y cwtsh gyda Mali!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s122",
+      "text": "\"Cyfrinach yw hi.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s123",
+      "text": "\"Mae angen cwtsh arnat ti, Cai,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l19-s124",
+      "text": "\"Mae angen cwtsh ar bawb.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s125",
+      "text": "Wedyn mae Arth yn darllen i Cai: mae e'n darllen y llythrennau ar dabled Mali, yn araf.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s126",
+      "text": "\"Rwyt ti'n darllen, Arth!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s127",
+      "text": "\"Dw i ddim yn credu!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s128",
+      "text": "Mae Arth yn canu'n dawel, ac nawr mae Cai'n cysgu ac yn anadlu'n dawel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s129",
+      "text": "Ac mae Arth yn cysgu ar y gadair wrth y gwely.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l19-img-nos",
+        "src": "media/images/cy-brenin-01-l19-img-nos.webp",
+        "alt": "Night: Cai, pale and sweaty, sits up in bed and hugs Arth, who has been sitting by his bed on a chair; a small candle burns on a stool.",
+        "status": "planned",
+        "art_brief": "A small timber sleeping room in the llys at night, lit by one small candle on a stool beside a wooden box bed (llys palette, deep blue night shadows). Cai (15, tall, red-blond, damp hair, flushed, in a plain shirt) sits up among three woollen blankets and hugs Arth (11, untidy brown hair with cowlick, moss-green tunic), who leans over from a low wooden chair beside the bed, eyes closed, smiling. A cup of water, a wooden spoon and a tiny glass bottle of red medicine on the stool. No text.",
+        "characters": [
+         "char-cai",
+         "char-arth"
+        ],
+        "covers_lexeme_ids": [
+         "cy-cwtsh",
+         "cy-gwely",
+         "cy-moddion"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l19-sec5",
+    "title": "Bore da",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l19-s130",
+      "text": "Yn y bore, mae'r haul ar y gwely, a does dim chwys ar ben Cai.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s131",
+      "text": "\"Does dim gwres arno fe nawr!\" meddai Elen.",
+      "paragraph_start": true,
+      "speaker": "char-elen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s132",
+      "text": "\"Mae e'n gwella.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s133",
+      "text": "\"Dw i'n gwella, Mam!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s134",
+      "text": "\"Does dim pen tost gyda fi, dyw fy ngwddf i ddim yn dost, a dw i'n gallu llyncu!",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dost",
+        "gloss": "yn dost ← tost",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s135",
+      "text": "Ond mae fy mol i'n wag iawn: dw i eisiau bwyd!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s136",
+      "text": "\"Dyma gawl poeth i'r bachgen sâl,\" meddai Modlen.",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l19-s137",
+      "text": "\"Dw i ddim yn sâl nawr!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s138",
+      "text": "\"Pryd dw i'n cael bara?\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s139",
+      "text": "\"Wel, wel!\" meddai Cynyr, ac mae e'n chwerthin yn uchel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l19-s140",
+      "text": "\"Mae fy mab i'n bwyta: mae e'n gwella!\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s141",
+      "text": "Nawr mae Myrddin yn edrych ar Cai, ac wedyn mae e'n edrych ar Arth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s142",
+      "text": "\"Rwyt ti wedi gofalu am dy frawd, Arth,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l19-s143",
+      "text": "\"Mae moddion da gyda Cai.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s144",
+      "text": "\"Arth,\" meddai Cai, ac mae bara yn ei geg e.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s145",
+      "text": "\"Mae angen gorffwys arna i heddiw, ond mae fy ngheffyl i eisiau mynd i'r cwm."
+     },
+     {
+      "id": "cy-brenin-01-l19-s146",
+      "text": "Heddiw, rwyt ti'n cael marchogaeth fy ngheffyl i.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s147",
+      "text": "\"Fi? Ar dy geffyl di?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l19-img-bore",
+        "src": "media/images/cy-brenin-01-l19-img-bore.webp",
+        "alt": "Morning: Cai, better, sits up in bed eating bread and cawl and points to the window where his young horse waits; Arth, by the door, sneezes a huge sneeze; Mali throws up her hands; Elen and Cynyr laugh.",
+        "status": "planned",
+        "art_brief": "The same small timber sleeping room in bright winter morning sun (llys palette: warm wood, limewash, golden light). Cai (15, tall, red-blond, rosy and well again, in a plain shirt) sits up in his wooden box bed with a hunk of bread in one hand and a bowl of steaming cawl on his knees, pointing out of the open shutter at his young chestnut horse waiting in the snowy yard. Arth (11, untidy brown hair with cowlick, moss-green tunic) at the doorway is caught mid-sneeze, eyes screwed shut. Mali (12, long dark braid, dark-blue dress) beside him throws up her hands. Cynyr (huge golden-blond beard, brown cloak) laughs loudly; Elen (white veil, green dress, keys) smiles. Modlen (floury apron, wooden spoon) in the background with a pot. No text.",
+        "characters": [
+         "char-cai",
+         "char-arth",
+         "char-mali",
+         "char-cynyr",
+         "char-elen",
+         "char-modlen"
+        ],
+        "covers_lexeme_ids": [
+         "cy-gwely",
+         "cy-annwyd"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s148",
+      "text": "\"Ie,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l19-s149",
+      "text": "\"Rwyt ti'n frawd da.\""
+     },
+     {
+      "id": "cy-brenin-01-l19-s150",
+      "text": "Mae Arth yn gwenu, ac mae e'n mynd at y drws.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l19-s151",
+      "text": "Ond wedyn, yn sydyn: \"Atishŵ!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Atishŵ",
+        "gloss": "= Mae Arth yn tisian.",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l19-s152",
+      "text": "\"Arth!\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l19-s153",
+      "text": "\"Mae annwyd arnat ti nawr!\""
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Mae annwyd arna i",
+  "rule_cy": "annwyd, gwres, peswch, ofn, syched, cywilydd, angen: Mae … ar + person. ar + fi → arna i; ar + fe → arno fe. Mae ceffyl gyda fi ↔ Mae annwyd arna i. Ond: Mae pen tost gyda fi.",
+  "tables": [
+   {
+    "caption": "ar + …",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "ar + fi",
+      "arna i"
+     ],
+     [
+      "ar + ti",
+      "arnat ti"
+     ],
+     [
+      "ar + fe",
+      "arno fe"
+     ],
+     [
+      "ar + hi",
+      "arni hi"
+     ],
+     [
+      "ar + ni",
+      "arnon ni"
+     ],
+     [
+      "ar + chi",
+      "arnoch chi"
+     ],
+     [
+      "ar + nhw",
+      "arnyn nhw"
+     ],
+     [
+      "ar + Cai",
+      "ar Cai"
+     ]
+    ]
+   },
+   {
+    "caption": "Mae … ar …",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "annwyd",
+      "Mae annwyd ar Cai."
+     ],
+     [
+      "gwres",
+      "Mae gwres arno fe."
+     ],
+     [
+      "peswch",
+      "Mae peswch arna i hefyd."
+     ],
+     [
+      "syched",
+      "Mae syched arnyn nhw."
+     ],
+     [
+      "ofn",
+      "Mae ofn arna i."
+     ],
+     [
+      "cywilydd",
+      "Mae cywilydd arna i."
+     ],
+     [
+      "angen",
+      "Mae angen gorffwys arnat ti."
+     ]
+    ]
+   },
+   {
+    "caption": "gyda ↔ ar",
+    "header": [
+     "gyda",
+     "ar"
+    ],
+    "rows": [
+     [
+      "Mae ceffyl gyda Cai.",
+      "Mae annwyd ar Cai."
+     ],
+     [
+      "Mae llyfr gyda fi.",
+      "Mae syched arna i."
+     ],
+     [
+      "Mae pen tost gyda fi.",
+      "Mae peswch arna i."
+     ]
+    ]
+   },
+   {
+    "caption": "ar ↔ ar",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Mae tair blanced ar Cai.",
+      "Mae gwres ar Cai."
+     ],
+     [
+      "Mae llaw Elen ar ben Cai.",
+      "Mae annwyd ar Cai."
+     ]
+    ]
+   },
+   {
+    "caption": "? · Na …",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Oes pen tost gyda ti? — Oes.",
+      "Does dim gwres arno fe nawr."
+     ],
+     [
+      "Oes annwyd arnoch chi? — Nac oes.",
+      "Does dim angen cywilydd."
+     ]
+    ]
+   },
+   {
+    "caption": "Treigladau",
+    "header": [
+     "",
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "fy + treiglad trwynol",
+      "fy ngwddf · fy mol · fy ngheffyl",
+      "Pennod 10"
+     ],
+     [
+      "dy + treiglad meddal",
+      "dy wely di · dy geffyl di",
+      "Pennod 10"
+     ],
+     [
+      "ar + treiglad meddal",
+      "ar bawb · ar ben Cai",
+      "Pennod 16"
+     ],
+     [
+      "o + treiglad meddal",
+      "llwy o foddion · moddion o bell",
+      "Pennod 16"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l19-s014"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s015"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s020"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s022"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s028"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s054"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s056"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s051"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s069"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s104"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s030"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s034"
+   },
+   {
+    "segment_id": "cy-brenin-01-l19-s074"
+   }
+  ],
+  "nodyn_en": "Welsh puts a cold, fever, fear or thirst 'on' you: Mae annwyd ar Cai 'Cai has a cold', Mae ofn arna i 'I'm afraid'. With pronouns: arna i, arnat ti, arno fe, arni hi, arnon ni, arnoch chi, arnyn nhw. Need: Mae angen help arna i. A sore body part takes gyda, like possession: Mae pen tost gyda fi."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l19-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Mae annwyd ar Cai. (fe) →",
+      "answer": "Mae annwyd arno fe."
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Mae gwres ar Cai. (fi) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae gwres arna i."
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Mae syched ar y ceffylau. (nhw) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae syched arnyn nhw."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l19-s069"
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Mae angen gorffwys ar Elen. (hi) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae angen gorffwys arni hi.",
+        "Mae angen gorffwys arni."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l19-s054"
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Mae ofn ar Arth a Mali. (ni) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae ofn arnon ni."
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae ceffyl ___ Cai. (gyda / ar)",
+      "answer": "gyda"
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Mae annwyd ___ Mali. (gyda / ar)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ar"
+       ],
+       "common_wrong": [
+        {
+         "answer": "gyda",
+         "hint": "annwyd, ofn, syched → ar"
+        }
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Mae cleddyf ___ Cai. (gyda / ar)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "gyda"
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Mae llyfr ___. (fi)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "gyda fi"
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "Mae syched ___. (fi)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "arna i"
+       ],
+       "common_wrong": [
+        {
+         "answer": "gyda fi",
+         "hint": "syched → ar: arna i"
+        }
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l19-s074"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae hi'n oer heddiw. → Ddoe, ___ hi'n oer hefyd.",
+      "answer": "roedd"
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Mae'r tywydd yn ofnadwy heddiw. → Ddoe, ___ y tywydd yn ofnadwy hefyd.",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "roedd"
+       ],
+       "recall_of": "G17"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae ___ ar y bwrdd. (2 + cannwyll)",
+      "answer": "dwy gannwyll"
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Mae ___ ar y gwely. (3 + blanced)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "tair blanced"
+       ],
+       "recall_of": "G14",
+       "source_segment_ids": [
+        "cy-brenin-01-l19-s034"
+       ],
+       "common_wrong": [
+        {
+         "answer": "tri blanced",
+         "hint": "blanced (b.) → tair"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l19-pb",
+   "title": "Pensum B — Geiriau",
+   "word_bank": [
+    "syched",
+    "hunllef",
+    "breuddwyd",
+    "moddion",
+    "gwella",
+    "llyncu",
+    "cwtsh",
+    "gorffwys",
+    "gwely",
+    "ofn",
+    "annwyd",
+    "peswch",
+    "helpu",
+    "anadlu"
+   ],
+   "mutation_hint": true,
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae Pero wedi rhedeg drwy'r dydd, ac mae e eisiau dŵr: mae ___ arno fe.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "syched"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "Mae Dafi'n cysgu, ac yn y nos mae e'n gweld penhwyad mawr: mae ofn arno fe! ___ yw hi.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Hunllef",
+      "Breuddwyd"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae Myrddin yn rhoi ___ i Cai: llwy bob awr.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "moddion"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Roedd Arth yn sâl ddoe, ond nawr mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwella",
+      "gorffwys"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae'r cawl yn ei geg e, ond dyw Cai ddim yn gallu ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "llyncu"
+     ]
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae Mali'n rhoi ___ mawr i Arth: mae hi'n hapus.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cwtsh"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Mae Modlen wedi gweithio drwy'r dydd: mae angen ___ arni hi.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gorffwys"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "Mae Cai'n sâl, ac mae e'n aros yn y ___ drwy'r dydd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwely"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae Elen yn gweld ci mawr, gwyllt yn y buarth: mae ___ arni hi.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ofn"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l19-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Pam mae annwyd ar Cai?",
+     "answer_mode": "self_check",
+     "model_answer": "Ddoe, cwympodd e i'r nant oer yn yr eira.",
+     "rubric": "Mentions the snowy hunt or falling into the cold stream.",
+     "key_terms": [
+      "cy-nant",
+      "cy-eira"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l19-s004"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Beth sy'n bod ar Cai yn y bore?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae annwyd arno fe, mae gwres arno fe, ac mae pen tost gyda fe.",
+     "rubric": "Names at least two symptoms, each with the right preposition: ar for annwyd, gwres, peswch, syched; gyda for pen tost.",
+     "key_terms": [
+      "cy-annwyd",
+      "cy-gwres",
+      "cy-ph-pen-tost",
+      "cy-peswch",
+      "cy-syched"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Oes blanced ar Cai?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Oes",
+      "Oes, mae tair blanced arno fe",
+      "Oes: mae tair blanced arno fe",
+      "Oes, mae blanced arno fe",
+      "Oes, mae tair blanced ar Cai"
+     ],
+     "model_answer": "Oes: mae tair blanced arno fe.",
+     "source_segment_ids": [
+      "cy-brenin-01-l19-s034"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth yw'r peth coch yn jwg Myrddin?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Moddion",
+      "Moddion o bell",
+      "Moddion o'r dyfodol"
+     ],
+     "model_answer": "Moddion o'r dyfodol.",
+     "source_segment_ids": [
+      "cy-brenin-01-l19-s044"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Pwy sy wedi gwneud gwaith Cai?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Arth",
+      "Arth sy wedi gwneud gwaith Cai",
+      "Arth yw e",
+      "Arth sydd wedi gwneud gwaith Cai"
+     ],
+     "model_answer": "Arth."
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam mae cywilydd ar Cai?",
+     "answer_mode": "self_check",
+     "model_answer": "Roedd e'n arfer chwerthin am ben Arth, ond nawr mae Arth wedi gwneud ei waith e ac wedi gofalu am Cai.",
+     "rubric": "Says Cai used to laugh at Arth and/or that Arth has helped him.",
+     "key_terms": [
+      "cy-chwerthin",
+      "cy-gofalu",
+      "cy-helpu"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l19-s114"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Pam mae Arth yn cael marchogaeth ceffyl Cai heddiw?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae angen gorffwys ar Cai, ac mae Arth yn frawd da i Cai.",
+     "rubric": "Gives a reason: Cai needs rest / Cai thanks his brother.",
+     "key_terms": [
+      "cy-gorffwys",
+      "cy-brawd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l19-s146"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Oes annwyd arnat ti heddiw?",
+     "answer_mode": "self_check",
+     "model_answer": "Nac oes, does dim annwyd arna i. / Oes, mae annwyd arna i.",
+     "rubric": "Oes / Nac oes plus a full sentence with arna i."
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-annwyd",
+   "citation_form": "annwyd",
+   "part_of_speech": "noun",
+   "current_sense": "cold (illness)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ofn",
+   "citation_form": "ofn",
+   "part_of_speech": "noun",
+   "current_sense": "fear (mae ofn ar X = X is afraid)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-syched",
+   "citation_form": "syched",
+   "part_of_speech": "noun",
+   "current_sense": "thirst (mae syched ar X = X is thirsty)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-angen",
+   "citation_form": "angen",
+   "part_of_speech": "noun",
+   "current_sense": "need (mae angen X ar Y = Y needs X)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-peswch",
+   "citation_form": "peswch",
+   "part_of_speech": "noun",
+   "current_sense": "cough; to cough",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwres",
+   "citation_form": "gwres",
+   "part_of_speech": "noun",
+   "current_sense": "fever; heat",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-pen-tost",
+   "citation_form": "pen tost",
+   "part_of_speech": "noun",
+   "current_sense": "headache (southern: mae pen tost gyda fi)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-moddion",
+   "citation_form": "moddion",
+   "part_of_speech": "noun",
+   "current_sense": "medicine (treated as a mass noun with singular agreement in this course)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-help",
+   "citation_form": "help",
+   "part_of_speech": "noun",
+   "current_sense": "help",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cywilydd",
+   "citation_form": "cywilydd",
+   "part_of_speech": "noun",
+   "current_sense": "shame",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cwtsh",
+   "citation_form": "cwtsh",
+   "part_of_speech": "noun",
+   "current_sense": "cuddle, hug (southern)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sal",
+   "citation_form": "sâl",
+   "part_of_speech": "adjective",
+   "current_sense": "ill",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwella",
+   "citation_form": "gwella",
+   "part_of_speech": "verb",
+   "current_sense": "to get better; to improve",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gorffwys",
+   "citation_form": "gorffwys",
+   "part_of_speech": "verb",
+   "current_sense": "to rest",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-helpu",
+   "citation_form": "helpu",
+   "part_of_speech": "verb",
+   "current_sense": "to help",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gofalu",
+   "citation_form": "gofalu",
+   "part_of_speech": "verb",
+   "current_sense": "to take care (gofalu am)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwddf",
+   "citation_form": "gwddf",
+   "part_of_speech": "noun",
+   "current_sense": "throat, neck",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-bol",
+   "citation_form": "bol",
+   "part_of_speech": "noun",
+   "current_sense": "belly (southern)",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-chwys",
+   "citation_form": "chwys",
+   "part_of_speech": "noun",
+   "current_sense": "sweat",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-breuddwyd",
+   "citation_form": "breuddwyd",
+   "part_of_speech": "noun",
+   "current_sense": "dream",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-hunllef",
+   "citation_form": "hunllef",
+   "part_of_speech": "noun",
+   "current_sense": "nightmare",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-anadlu",
+   "citation_form": "anadlu",
+   "part_of_speech": "verb",
+   "current_sense": "to breathe",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llyncu",
+   "citation_form": "llyncu",
+   "part_of_speech": "verb",
+   "current_sense": "to swallow",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwely",
+   "citation_form": "gwely",
+   "part_of_speech": "noun",
+   "current_sense": "bed",
+   "first_introduced_lesson": "cy-brenin-01-l19",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-19.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "annwyd (g.) · Mae annwyd ar …",
+    "back": "cold (illness)",
+    "example_segment_id": "cy-brenin-01-l19-s020",
+    "lexeme_id": "cy-annwyd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "ofn (g.) · Mae ofn ar …",
+    "back": "fear (mae ofn ar X = X is afraid)",
+    "example_segment_id": "cy-brenin-01-l19-s104",
+    "lexeme_id": "cy-ofn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "syched (g.) · Mae syched ar …",
+    "back": "thirst (mae syched ar X = X is thirsty)",
+    "example_segment_id": "cy-brenin-01-l19-s069",
+    "lexeme_id": "cy-syched"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "angen (g.) · Mae angen … ar …",
+    "back": "need (mae angen X ar Y = Y needs X)",
+    "example_segment_id": "cy-brenin-01-l19-s030",
+    "lexeme_id": "cy-angen"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "peswch (g.)",
+    "back": "cough",
+    "example_segment_id": "cy-brenin-01-l19-s029",
+    "lexeme_id": "cy-peswch"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "gwres (g.)",
+    "back": "fever; heat",
+    "example_segment_id": "cy-brenin-01-l19-s022",
+    "lexeme_id": "cy-gwres"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "pen tost (g.) · Mae pen tost gyda …",
+    "back": "headache (southern: mae pen tost gyda fi)",
+    "example_segment_id": "cy-brenin-01-l19-s015",
+    "lexeme_id": "cy-ph-pen-tost"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "moddion (g.)",
+    "back": "medicine (treated as a mass noun with singular agreement in this course)",
+    "example_segment_id": "cy-brenin-01-l19-s046",
+    "lexeme_id": "cy-moddion"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "help (g.)",
+    "back": "help",
+    "example_segment_id": "cy-brenin-01-l19-s055",
+    "lexeme_id": "cy-help"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "cywilydd (g.) · Mae cywilydd ar …",
+    "back": "shame",
+    "example_segment_id": "cy-brenin-01-l19-s112",
+    "lexeme_id": "cy-cywilydd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "cwtsh (g.)",
+    "back": "cuddle, hug (southern)",
+    "example_segment_id": "cy-brenin-01-l19-s120",
+    "lexeme_id": "cy-cwtsh"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "sâl",
+    "back": "ill",
+    "example_segment_id": "cy-brenin-01-l19-s023",
+    "lexeme_id": "cy-sal"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "gwella",
+    "back": "to get better; to improve",
+    "example_segment_id": "cy-brenin-01-l19-s133",
+    "lexeme_id": "cy-gwella"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "gorffwys",
+    "back": "to rest",
+    "example_segment_id": "cy-brenin-01-l19-s054",
+    "lexeme_id": "cy-gorffwys"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "helpu",
+    "back": "to help",
+    "example_segment_id": "cy-brenin-01-l19-s057",
+    "lexeme_id": "cy-helpu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "gofalu (am + SM)",
+    "back": "to take care (gofalu am)",
+    "example_segment_id": "cy-brenin-01-l19-s142",
+    "lexeme_id": "cy-gofalu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "gwddf (g.)",
+    "back": "throat, neck",
+    "example_segment_id": "cy-brenin-01-l19-s025",
+    "seen_as": "fy ngwddf i",
+    "lexeme_id": "cy-gwddf"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "bol (g.)",
+    "back": "belly (southern)",
+    "example_segment_id": "cy-brenin-01-l19-s135",
+    "seen_as": "fy mol i",
+    "lexeme_id": "cy-bol"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "chwys (g.)",
+    "back": "sweat",
+    "example_segment_id": "cy-brenin-01-l19-s011",
+    "lexeme_id": "cy-chwys"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "breuddwyd (b.)",
+    "back": "dream",
+    "example_segment_id": "cy-brenin-01-l19-s106",
+    "lexeme_id": "cy-breuddwyd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "hunllef (b.)",
+    "back": "nightmare",
+    "example_segment_id": "cy-brenin-01-l19-s099",
+    "lexeme_id": "cy-hunllef"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "anadlu",
+    "back": "to breathe",
+    "example_segment_id": "cy-brenin-01-l19-s011",
+    "lexeme_id": "cy-anadlu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "llyncu",
+    "back": "to swallow",
+    "example_segment_id": "cy-brenin-01-l19-s047",
+    "lexeme_id": "cy-llyncu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l19",
+    "front": "gwely (g.)",
+    "back": "bed",
+    "example_segment_id": "cy-brenin-01-l19-s010",
+    "seen_as": "ei wely e",
+    "lexeme_id": "cy-gwely"
+   },
+   {
+    "id": "conj",
+    "lesson": "cy-brenin-01-l19",
+    "front": "ar — arna i, arnat ti, arno fe, arni hi, arnon ni, arnoch chi, arnyn nhw",
+    "back": "on (with pronouns) · Mae annwyd arna i = I have a cold",
+    "example_segment_id": "cy-brenin-01-l19-s014",
+    "lexeme_id": "cy-ar"
+   },
+   {
+    "id": "pattern-g19",
+    "lesson": "cy-brenin-01-l19",
+    "front": "Mae annwyd ar Cai. · Mae ofn arna i. · Mae angen help arnon ni. ↔ Mae ceffyl gyda Cai.",
+    "back": "Cai has a cold. · I'm afraid. · We need help. (feelings and illness: ar) ↔ Cai has a horse. (possession: gyda)",
+    "example_segment_id": "cy-brenin-01-l19-s020",
+    "example_segment_ids": [
+     "cy-brenin-01-l19-s020",
+     "cy-brenin-01-l19-s104"
+    ],
+    "lexeme_id": "cy-pattern-g19"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l19-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 3,
+   "margin_diagram": 0,
+   "margin_gloss": 25
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-19",
+   "rhan-2"
+  ]
+ },
+ "metrics": {
+  "running_words": 1333,
+  "sentences": 153,
+  "word_target": 1267,
+  "word_window": [
+   1140,
+   1394
+  ]
+ }
+}

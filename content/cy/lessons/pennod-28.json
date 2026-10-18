@@ -1,0 +1,1967 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l28",
+ "course_id": "cy-brenin-01",
+ "order": 28,
+ "title": "Y cleddyf a dynnodd Arth",
+ "rhan": 3,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B5 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (B5, Wave 2, 2026-10-17 notes)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Beat as planned: by night, with torches, before the lords and nobles, Arth puts the sword back and every lord fails; Arth draws it three times (tri phrawf: rule of three, each time the loudest lord demands another trial). Uproar: 'Bachgen a ddaeth o gwm bach?'; some kneel (led by the old white-haired lord who tried first), others shout trickery. The priest holds his torch high: 'Dyma'r cleddyf a dynnodd Arth o'r garreg'.",
+   "Speaker char-barf-goch is the big red-bearded lord of 24 who mocked Mali and ruled 'dim bechgyn' (checked against 24 on disk): tallest lord, long red beard, black cloak, jealous; Cai nicknames him 'Barf Goch' because Mali does not know his name. He is the plan's 'loudest accuser' in 29 (the plan's 'lord of the north'; gogledd is not available until 35, so the nickname carries him). Beards thread: echo for 33–37.",
+   "New foreshadowing for 30: the old lord notes Arth's grey eyes ('Roedd llygaid y Brenin Uthr yn llwyd hefyd', cf. Uthr's grey eyes in 17). Art direction: Arth's eyes are grey from here on. Mali silently connects the storm-night baby with Arth.",
+   "Relative a + SM: a geisiodd, a fethodd, a ddaeth (2×), a dynnodd (4×), a benliniodd (2×); contrast with sy'n (y bachgen sy'n twyllo). No relative a before a vowel-initial verb (avoided to keep a/ac clear). tro is not used alone before 35: the trials are counted as prawf (y prawf cyntaf, yr ail brawf, y trydydd prawf, tri phrawf) and dro ar ôl tro.",
+   "'mor ysgafn â phluen' and 'mor hawdd â chleddyf i wain' use the equative receptively (productive from 37).",
+   "Local-density warnings: s073 (the second trial: prawf, gwaedd, protestio, amau, twyllo are the crowd's reactions, each glossed at first use) and s109 (the priest's verdict: sicr/pendant glossed together as a synonym pair). gwaedd is flagged by lemma validation (attested noun 'shout'; fluent sign-off).",
+   "Codex (gpt-6-astra) review applied: twyllo/amau/penlinio glosses corrected (penlinio ↔ sefyll, with the kneeling scene), B2 accepts only the mutated wthio, B6 reworded, C1 widened, C7 reworded (sylwi ar issue avoided)."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l28-s040",
+    "question": "[?] 'Hen ddyn gyda gwallt gwyn oedd yr arglwydd cyntaf a geisiodd.' — natural identification order here?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s031",
+    "question": "[?] Nickname 'Barf Goch' (barf f. → goch) — natural as a name for a man?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s094",
+    "question": "[?] 'beth i wneud' (colloquial) vs 'beth i'w wneud' — acceptable in narration?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s045",
+    "question": "[?] 'protestio' for a knight objecting aloud — natural, or would 'cwyno' be more idiomatic?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s067",
+    "question": "[?] 'mynnu prawf newydd' (demand a new test) — natural?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G28",
+  "primary_new_grammar": {
+   "id": "G28",
+   "label": "Relative a + soft mutation before an inflected past verb, for subjects and objects (y cleddyf a dynnodd Arth, y bachgen a ddaeth, y dynion a fethodd, yr arglwydd a geisiodd, yr arglwyddi a benliniodd); contrast with present sy'n (y bachgen sy'n twyllo ↔ y bachgen a dynnodd)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G13",
+   "G15",
+   "G16",
+   "G17",
+   "G20",
+   "G22",
+   "G23",
+   "G24",
+   "G25",
+   "G26",
+   "G27"
+  ],
+  "incidental": [],
+  "new_lexeme_ids": [
+   "cy-a-rel",
+   "cy-ph-dro-ar-ol-tro",
+   "cy-yn-erbyn",
+   "cy-cenfigen",
+   "cy-prawf",
+   "cy-ffagl",
+   "cy-penlinio",
+   "cy-twyllo",
+   "cy-protestio",
+   "cy-gwthio",
+   "cy-mynnu",
+   "cy-gwallgof",
+   "cy-gwaedd",
+   "cy-uchelwr",
+   "cy-plygu",
+   "cy-gwawdio",
+   "cy-amau",
+   "cy-sicr",
+   "cy-pendant"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-a-rel",
+    "how": "context + contrast with sy'n; Gramadeg",
+    "segment_id": "cy-brenin-01-l28-s040"
+   },
+   {
+    "lexeme_id": "cy-uchelwr",
+    "how": "gloss(number)+picture(cover)",
+    "segment_id": "cy-brenin-01-l28-s015"
+   },
+   {
+    "lexeme_id": "cy-ffagl",
+    "how": "gloss(number)+picture(cover)",
+    "segment_id": "cy-brenin-01-l28-s015"
+   },
+   {
+    "lexeme_id": "cy-gwawdio",
+    "how": "gloss+context (chwerthin)",
+    "segment_id": "cy-brenin-01-l28-s027"
+   },
+   {
+    "lexeme_id": "cy-prawf",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l28-s034"
+   },
+   {
+    "lexeme_id": "cy-gwthio",
+    "how": "gloss(antonym tynnu)",
+    "segment_id": "cy-brenin-01-l28-s043"
+   },
+   {
+    "lexeme_id": "cy-yn-erbyn",
+    "how": "gloss(antonym)",
+    "segment_id": "cy-brenin-01-l28-s053"
+   },
+   {
+    "lexeme_id": "cy-gwaedd",
+    "how": "gloss+context (gweiddi)",
+    "segment_id": "cy-brenin-01-l28-s064"
+   },
+   {
+    "lexeme_id": "cy-twyllo",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l28-s066"
+   },
+   {
+    "lexeme_id": "cy-mynnu",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l28-s067"
+   },
+   {
+    "lexeme_id": "cy-protestio",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l28-s075"
+   },
+   {
+    "lexeme_id": "cy-amau",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l28-s075"
+   },
+   {
+    "lexeme_id": "cy-ph-dro-ar-ol-tro",
+    "how": "context (rule of three: tri phrawf)",
+    "segment_id": "cy-brenin-01-l28-s080"
+   },
+   {
+    "lexeme_id": "cy-penlinio",
+    "how": "gloss+picture(scene)",
+    "segment_id": "cy-brenin-01-l28-s090"
+   },
+   {
+    "lexeme_id": "cy-plygu",
+    "how": "gloss+picture(scene)",
+    "segment_id": "cy-brenin-01-l28-s091"
+   },
+   {
+    "lexeme_id": "cy-gwallgof",
+    "how": "gloss",
+    "segment_id": "cy-brenin-01-l28-s097"
+   },
+   {
+    "lexeme_id": "cy-cenfigen",
+    "how": "gloss+picture(scene)",
+    "segment_id": "cy-brenin-01-l28-s099"
+   },
+   {
+    "lexeme_id": "cy-sicr",
+    "how": "gloss(synonym siŵr)",
+    "segment_id": "cy-brenin-01-l28-s110"
+   },
+   {
+    "lexeme_id": "cy-pendant",
+    "how": "gloss(radical)",
+    "segment_id": "cy-brenin-01-l28-s110"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-arglwydd",
+   "cy-methu",
+   "cy-torf",
+   "cy-distaw",
+   "cy-rhaid",
+   "cy-cryf",
+   "cy-tal",
+   "cy-ceisio",
+   "cy-sion",
+   "cy-sownd",
+   "cy-disglair",
+   "cy-calon",
+   "cy-neb",
+   "cy-offeiriad",
+   "cy-celwydd"
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l28-img-cover",
+   "src": "media/images/cy-brenin-01-l28-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "At night in the snowy churchyard, a ring of lords holding flaming torches stands round the big grey stone, where a tall red-bearded lord strains to pull the sword while small Arth waits beside Cynyr.",
+   "art_brief": "Night in the snowy churchyard at Caerllion (match place-caerllion.png; deep blue night, snow, the dark church with its bell-turret behind). A ring of twelve or so lords and nobles in rich cloaks of red, green and blue with brooches, many holding flaming torches, crowd round the big rough grey stone with the iron anvil on top; the torchlight is warm orange on the snow and on their faces. At the stone a very tall lord with a long red beard and a black fur-trimmed cloak (the lord the children call Barf Goch) grips the sword hilt with both hands, red-faced with effort, one boot braced against the stone; the sword does not move. Waiting a little apart: Arth (11, untidy brown hair with cowlick, moss-green tunic, small among the lords) beside Cynyr (huge golden-blond beard, brown cloak, one hand on Arth's shoulder); Cai (15, ginger-blond, rust-red tunic, red cloak) and Mali (12, long dark braid, dark-blue dress) just behind; the thin old priest in a brown robe by the anvil. No text.",
+   "characters": [
+    "char-arth",
+    "char-cynyr",
+    "char-cai",
+    "char-mali",
+    "char-barf-goch",
+    "char-offeiriad",
+    "char-hen-arglwydd"
+   ],
+   "covers_lexeme_ids": [
+    "cy-ffagl",
+    "cy-uchelwr",
+    "cy-arglwydd"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l28-sec1",
+    "title": "Ffaglau yn yr eira",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l28-s001",
+      "text": "Roedd hi'n nos, ac roedd hi'n bwrw eira eto.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s002",
+      "text": "Roedd sïon yn mynd drwy'r gwersyll ac i'r dref: \"Maen nhw'n dweud bod bachgen wedi tynnu'r cleddyf!\" \"Bachgen? Dw i ddim yn credu!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s003",
+      "text": "Yn y dafarn wrth yr eglwys, roedd Arth yn eistedd ar ei wely gyda'r cleddyf ar ei goesau e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s004",
+      "text": "Doedd e ddim yn bwyta, a doedd e ddim yn siarad."
+     },
+     {
+      "id": "cy-brenin-01-l28-s005",
+      "text": "\"Paid ag ofni, Arth,\" meddai Dafi o glogyn Mali.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l28-s006",
+      "text": "\"Dw i'n ofni hefyd, ond draig dw i, ac mae tân gyda fi!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s007",
+      "text": "\"Diolch, Dafi,\" meddai Arth, ac roedd e'n gwenu am funud.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l28-s008",
+      "text": "\"Ond beth os bydd yr arglwyddi'n chwerthin?\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s009",
+      "text": "\"Byddan nhw'n chwerthin,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l28-s010",
+      "text": "\"Ac wedyn byddan nhw'n gweld y cleddyf, a fyddan nhw ddim yn chwerthin.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s011",
+      "text": "\"A bydda i yno, wrth dy ochr di,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l28-s012",
+      "text": "\"Dw i ddim yn gallu tynnu'r cleddyf, ond dw i'n gallu gwthio arglwydd mawr!\"",
+      "inference_aids": [
+       {
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l28-img-dafarn",
+        "alt": "In a lamplit room at the inn before the trial, Arth sits on a cot with the sword across his knees while Mali, Cai and tiny Dafi try to cheer him up.",
+        "art_brief": "A small low-beamed room at the inn by the church in Caerllion at night (warm lamplight on limewashed walls, an unglazed shuttered window ajar showing snow and the dark church outside, torches moving in the street). Arth (11, untidy brown hair with cowlick, moss-green tunic) sits hunched on a low wooden cot, the long shining sword lying across his knees, not eating, a bowl of food untouched beside him. Mali (12, long dark braid, dark-blue dress) sits beside him, calm and certain; tiny red Dafi (cup-sized, cream horns, big yellow eyes) peeps from the edge of her cloak and puffs a little brave flame. Cai (15, tall, ginger-blond, rust-red tunic, red cloak) stands with his fists on his hips, grinning, ready to shove any lord. No text.",
+        "characters": [
+         "char-arth",
+         "char-mali",
+         "char-cai",
+         "char-dafi"
+        ],
+        "covers_lexeme_ids": [],
+        "type": "image",
+        "status": "planned",
+        "src": "media/images/cy-brenin-01-l28-img-dafarn.webp"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s013",
+      "text": "Wedyn aethon nhw i'r fynwent.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s014",
+      "text": "Doedd y fynwent ddim yn dawel nawr."
+     },
+     {
+      "id": "cy-brenin-01-l28-s015",
+      "text": "Roedd arglwyddi ac uchelwyr o bob gwlad yn sefyll yn yr eira, mewn cylch mawr wrth y garreg, ac roedd ffaglau yn eu dwylo nhw.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "uchelwyr",
+        "gloss": "uchelwr, uchelwyr: arglwyddi mawr",
+        "gloss_kind": "number"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ffaglau",
+        "gloss": "ffagl, ffaglau: tân ar bren",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s016",
+      "text": "Roedd golau'r ffaglau'n goch ar yr eira, ar y croesau ac ar wynebau'r dynion."
+     },
+     {
+      "id": "cy-brenin-01-l28-s017",
+      "text": "Daeth Cynyr ac Elen drwy'r porth bach, gydag Arth rhwng y ddau.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s018",
+      "text": "Roedd Cai, Mali a'r offeiriad yn eu dilyn nhw."
+     },
+     {
+      "id": "cy-brenin-01-l28-s019",
+      "text": "Roedd Arth yn cario'r cleddyf, ac roedd y cleddyf yn ddisglair yng ngolau'r ffaglau."
+     },
+     {
+      "id": "cy-brenin-01-l28-s020",
+      "text": "Roedd un arglwydd yn dalach na'r arglwyddi eraill.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s021",
+      "text": "Roedd barf goch, hir gyda fe, ac roedd clogyn du ar ei gefn e."
+     },
+     {
+      "id": "cy-brenin-01-l28-s022",
+      "text": "Edrychodd e ar Arth, ac roedd e'n chwerthin yn uchel."
+     },
+     {
+      "id": "cy-brenin-01-l28-s023",
+      "text": "\"Hwn?\" meddai'r arglwydd tal.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     },
+     {
+      "id": "cy-brenin-01-l28-s024",
+      "text": "\"Hwn yw'r brenin newydd? Bachgen bach, heb geffyl a heb farf?\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s025",
+      "text": "\"Fi yw'r arglwydd mwyaf yma, a dw i ddim yn frenin! Ro'n i'n dweud: dim bechgyn, a dw i'n dweud hynny eto!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s026",
+      "text": "Roedd yr arglwyddi eraill yn chwerthin hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l28-s027",
+      "text": "Roedd rhai'n gwawdio Arth: \"Brenin bach! Brenin y defaid!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwawdio",
+        "gloss": "gwawdio: chwerthin am ben rhywun",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s028",
+      "text": "\"Pwy yw'r arglwydd yna?\" meddai Cai yn dawel wrth Mali.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l28-s029",
+      "text": "\"Dw i ddim yn gwybod ei enw e,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l28-s030",
+      "text": "\"Ond mae barf goch gyda fe.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s031",
+      "text": "\"Wel, Barf Goch yw ei enw e nawr,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l28-sec2",
+    "title": "Y prawf",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l28-s032",
+      "text": "Cododd yr offeiriad ei law, a daeth tawelwch: roedd y dorf yn ddistaw.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s033",
+      "text": "\"Mae Cynyr yn dweud bod y bachgen hwn wedi tynnu'r cleddyf o'r garreg,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l28-s034",
+      "text": "\"Felly nawr bydd prawf.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "prawf",
+        "gloss": "prawf: \"Ydy hyn yn wir?\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s035",
+      "text": "\"Bydd y bachgen yn rhoi'r cleddyf yn ôl yn y garreg, a bydd pob arglwydd yn ceisio ei dynnu e.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s036",
+      "text": "Aeth Arth at y garreg.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s037",
+      "text": "Roedd ei galon e'n curo'n gyflym, ac roedd pawb yn edrych arno fe."
+     },
+     {
+      "id": "cy-brenin-01-l28-s038",
+      "text": "Rhoddodd e'r cleddyf yn yr einion, a llithrodd y cleddyf i'r garreg mor hawdd â chleddyf i wain."
+     },
+     {
+      "id": "cy-brenin-01-l28-s039",
+      "text": "Nawr roedd y cleddyf yn sownd eto, gyda'r carn yn y golau."
+     },
+     {
+      "id": "cy-brenin-01-l28-s040",
+      "text": "Hen ddyn gyda gwallt gwyn oedd yr arglwydd cyntaf a geisiodd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s041",
+      "text": "Gafaelodd e yn y carn a thynnodd e, ond wnaeth y cleddyf ddim dod o'r garreg."
+     },
+     {
+      "id": "cy-brenin-01-l28-s042",
+      "text": "Wedyn daeth marchog ifanc, y marchog cryfaf yn y twrnamaint."
+     },
+     {
+      "id": "cy-brenin-01-l28-s043",
+      "text": "Tynnodd e, a gwthiodd e ei droed yn erbyn y garreg, a thynnodd e eto.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwthiodd",
+        "gloss": "gwthio ↔ tynnu",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s044",
+      "text": "Methodd e."
+     },
+     {
+      "id": "cy-brenin-01-l28-s045",
+      "text": "\"Dyw hyn ddim yn deg!\" meddai'r marchog ifanc, ac roedd e'n protestio'n uchel.",
+      "paragraph_start": true,
+      "speaker": "char-uchelwr"
+     },
+     {
+      "id": "cy-brenin-01-l28-s046",
+      "text": "\"Dw i'n gryf! Mae'r garreg yn twyllo!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s047",
+      "text": "Ceisiodd yr arglwyddi a'r uchelwyr, un, dau, tri, deg, ugain, a methodd pob un.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s048",
+      "text": "Roedd y dynion a fethodd yn sefyll yn yr eira yn ddig, ac roedd eu hwynebau nhw'n goch."
+     },
+     {
+      "id": "cy-brenin-01-l28-s049",
+      "text": "Yn olaf, daeth Barf Goch at y garreg.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s050",
+      "text": "\"Edrych, fachgen bach,\" meddai Barf Goch, ac roedd e'n gwawdio Arth eto.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     },
+     {
+      "id": "cy-brenin-01-l28-s051",
+      "text": "\"Dyma sut mae dyn go iawn yn tynnu cleddyf!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s052",
+      "text": "Rhoddodd e ei ffagl i was, a gafaelodd e yn y carn gyda'i ddwy law.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s053",
+      "text": "Tynnodd e. Gwthiodd e yn erbyn y garreg gyda'i draed.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "yn erbyn",
+        "gloss": "yn erbyn: ↔ gyda",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s054",
+      "text": "Roedd ei wyneb e'n goch, yn goch iawn, ac roedd chwys ar ei ben e yn yr oer."
+     },
+     {
+      "id": "cy-brenin-01-l28-s055",
+      "text": "Ond roedd y cleddyf yn sownd."
+     },
+     {
+      "id": "cy-brenin-01-l28-s056",
+      "text": "Nawr roedd rhai yn y dorf yn gwawdio Barf Goch: \"Dyn go iawn? Ha!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s057",
+      "text": "\"Mae e'n sownd!\" meddai Barf Goch.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     },
+     {
+      "id": "cy-brenin-01-l28-s058",
+      "text": "\"Does neb yn gallu ei dynnu e!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s059",
+      "text": "\"Nawr, y bachgen,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l28-sec3",
+    "title": "Dro ar ôl tro",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l28-s060",
+      "text": "Aeth Arth at y garreg eto.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s061",
+      "text": "Gafaelodd e yn y carn, a thynnodd e."
+     },
+     {
+      "id": "cy-brenin-01-l28-s062",
+      "text": "Llithrodd y cleddyf o'r garreg yn dawel, heb sŵn, ac roedd e'n ddisglair yng ngolau'r ffaglau."
+     },
+     {
+      "id": "cy-brenin-01-l28-s063",
+      "text": "Am funud, doedd neb yn siarad.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s064",
+      "text": "Wedyn daeth gwaedd fawr o'r dorf.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwaedd",
+        "gloss": "gwaedd: \"Aaa!\" uchel",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s065",
+      "text": "\"Celwydd!\" meddai Barf Goch.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     },
+     {
+      "id": "cy-brenin-01-l28-s066",
+      "text": "\"Mae'r bachgen yn twyllo! Mae Myrddin wedi gwneud hud ar y garreg!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "twyllo",
+        "gloss": "twyllo: gwneud i bobl gredu celwydd",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s067",
+      "text": "\"Dw i'n mynnu prawf newydd! Eto!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "mynnu",
+        "gloss": "mynnu: \"Rhaid!\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s068",
+      "text": "\"Eto, felly,\" meddai Cynyr yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l28-s069",
+      "text": "\"Rho'r cleddyf yn ôl, Arth.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s070",
+      "text": "Rhoddodd Arth y cleddyf yn ôl yn y garreg.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s071",
+      "text": "Ceisiodd Barf Goch eto, a methodd e eto."
+     },
+     {
+      "id": "cy-brenin-01-l28-s072",
+      "text": "Ceisiodd y marchog cryfaf eto, a methodd e eto."
+     },
+     {
+      "id": "cy-brenin-01-l28-s073",
+      "text": "Wedyn tynnodd Arth y cleddyf, a llithrodd y cleddyf o'r garreg eto: yr ail brawf.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "brawf",
+        "gloss": "brawf ← prawf",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s074",
+      "text": "Roedd y gwaeddau'n uchel nawr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s075",
+      "text": "Roedd rhai uchelwyr yn protestio, ac roedd rhai'n amau: \"Ydy hyn yn wir? Wnaeth e dwyllo?\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "protestio",
+        "gloss": "protestio: gweiddi \"Na!\"",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "amau",
+        "gloss": "amau: dim yn siŵr",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dwyllo",
+        "gloss": "dwyllo ← twyllo",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s076",
+      "text": "\"Eto!\" meddai Barf Goch.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     },
+     {
+      "id": "cy-brenin-01-l28-s077",
+      "text": "\"Dw i'n mynnu! Dw i'n amau'r bachgen hwn, a dw i'n amau Cynyr hefyd!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s078",
+      "text": "\"Prawf teg yw hwn,\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l28-s079",
+      "text": "\"Ond iawn: y trydydd prawf, a dyna ddigon.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s080",
+      "text": "Rhoddodd Arth y cleddyf yn ôl dro ar ôl tro, a methodd yr arglwyddi dro ar ôl tro.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s081",
+      "text": "Ac yn y trydydd prawf, tynnodd Arth y cleddyf o'r garreg, yn hawdd, yn dawel, mor ysgafn â phluen."
+     },
+     {
+      "id": "cy-brenin-01-l28-s082",
+      "text": "Daeth gwaedd fawr o'r dorf eto: \"Brenin! Brenin!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s083",
+      "text": "Roedd hanner y dorf gydag Arth, a hanner y dorf yn erbyn Arth."
+     },
+     {
+      "id": "cy-brenin-01-l28-s084",
+      "text": "\"Celwydd!\" meddai Barf Goch, ac roedd e'n protestio eto, ond doedd neb yn gwrando arno fe.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l28-sec4",
+    "title": "Y bachgen a ddaeth o gwm bach",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l28-s085",
+      "text": "Wedyn roedd y fynwent yn llawn o sŵn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s086",
+      "text": "\"Bachgen a ddaeth o gwm bach?\" meddai un uchelwr.",
+      "paragraph_start": true,
+      "speaker": "char-uchelwr"
+     },
+     {
+      "id": "cy-brenin-01-l28-s087",
+      "text": "\"Bachgen heb dad, a ddaeth heb geffyl?\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s088",
+      "text": "\"Ond dyma'r bachgen a dynnodd y cleddyf!\" meddai marchog ifanc.",
+      "paragraph_start": true,
+      "speaker": "char-uchelwr"
+     },
+     {
+      "id": "cy-brenin-01-l28-s089",
+      "text": "\"Dro ar ôl tro! Gwelais i!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s090",
+      "text": "Yn sydyn, penliniodd hen arglwydd yn yr eira, yr hen ddyn gyda'r gwallt gwyn a geisiodd gyntaf.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "penliniodd",
+        "gloss": "penlinio ↔ sefyll",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s091",
+      "text": "Plygodd e ei ben.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Plygodd",
+        "gloss": "plygu: rhoi'r pen i lawr",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s092",
+      "text": "Wedyn penliniodd arglwyddi eraill, ac uchelwyr, a marchogion."
+     },
+     {
+      "id": "cy-brenin-01-l28-s093",
+      "text": "Plygodd y marchog cryfaf ei ben hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l28-s094",
+      "text": "Doedd Arth ddim yn gwybod beth i wneud, felly plygodd e ei ben hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l28-s095",
+      "text": "\"Mae'r byd yn wallgof!\" meddai hen ddyn yn y dorf, ac roedd e'n chwerthin.",
+      "paragraph_start": true,
+      "speaker": "char-uchelwr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wallgof",
+        "gloss": "wallgof ← gwallgof",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s096",
+      "text": "Ond roedd rhai eraill yn sefyll ac yn gweiddi.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s097",
+      "text": "\"Gwallgof!\" meddai Barf Goch.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gwallgof",
+        "gloss": "gwallgof: pen ddim yn iawn",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s098",
+      "text": "\"Mae hyn yn wallgof! Fydda i ddim yn penlinio i fachgen!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wallgof",
+        "gloss": "wallgof ← gwallgof",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s099",
+      "text": "Roedd cenfigen yn ei lygaid e, cenfigen ddu, ac roedd ei law e ar ei gleddyf e.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cenfigen",
+        "gloss": "cenfigen: \"Fi! Dim ti!\"",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s100",
+      "text": "Daeth e at Arth, a gwthiodd e drwy'r dorf."
+     },
+     {
+      "id": "cy-brenin-01-l28-s101",
+      "text": "Ond safodd Cai rhwng Barf Goch ac Arth, a gwthiodd Cai yn ôl."
+     },
+     {
+      "id": "cy-brenin-01-l28-s102",
+      "text": "\"Paid â chyffwrdd â fy mrawd i,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l28-s103",
+      "text": "\"Dyw e ddim yn fachgen sy'n twyllo. Fe yw'r bachgen a dynnodd y cleddyf!\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s104",
+      "text": "Am funud, roedd Barf Goch a Cai'n sefyll yn yr eira, trwyn wrth drwyn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s105",
+      "text": "Wedyn edrychodd Barf Goch ar yr arglwyddi a benliniodd, a throdd e i ffwrdd."
+     },
+     {
+      "id": "cy-brenin-01-l28-s106",
+      "text": "Ond roedd cenfigen ar ei wyneb e."
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l28-sec5",
+    "title": "Y cleddyf a dynnodd Arth",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l28-s107",
+      "text": "Cododd yr offeiriad ei ffagl yn uchel.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s108",
+      "text": "\"Edrychwch!\" meddai'r offeiriad.",
+      "paragraph_start": true,
+      "speaker": "char-offeiriad"
+     },
+     {
+      "id": "cy-brenin-01-l28-s109",
+      "text": "\"Dyma'r cleddyf a dynnodd Arth o'r garreg: tri phrawf, a phawb yn gweld.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "phrawf",
+        "gloss": "phrawf ← prawf",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s110",
+      "text": "\"Dw i'n sicr, a dw i'n bendant: does neb yn twyllo yma.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "sicr",
+        "gloss": "sicr = siŵr",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "bendant",
+        "gloss": "bendant ← pendant: siŵr iawn",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s111",
+      "text": "Roedd ei lais e'n bendant, ac roedd e'n uchel."
+     },
+     {
+      "id": "cy-brenin-01-l28-s112",
+      "text": "\"Wyt ti'n sicr, offeiriad?\" meddai Barf Goch o'r cysgod.",
+      "paragraph_start": true,
+      "speaker": "char-barf-goch"
+     },
+     {
+      "id": "cy-brenin-01-l28-s113",
+      "text": "\"Dw i ddim yn sicr. Dw i'n mynnu siarad yfory, yn y neuadd, gyda'r arglwyddi.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s114",
+      "text": "Rhoddodd Cynyr ei law ar ben Arth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s115",
+      "text": "Roedd Cynyr yn dawel, ond roedd ei lygaid e'n wlyb yng ngolau'r ffaglau."
+     },
+     {
+      "id": "cy-brenin-01-l28-s116",
+      "text": "\"Dw i'n bendant, Arth,\" meddai Cynyr yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l28-s117",
+      "text": "\"Wnest ti dynnu'r cleddyf, a wnest ti ddim twyllo.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s118",
+      "text": "Edrychodd Mali ar ei thad, ac edrychodd hi ar Arth, a wnaeth hi ddim siarad.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s119",
+      "text": "Roedd hi'n meddwl am y storm, am y babi yn y flanced, ac am Arth."
+     },
+     {
+      "id": "cy-brenin-01-l28-s120",
+      "text": "Cododd Arth y cleddyf yn uchel, ac roedd y llafn yn ddisglair yn y nos.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s121",
+      "text": "Gwelodd pawb y cleddyf a dynnodd Arth.",
+      "inference_aids": [
+       {
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l28-img-penlinio",
+        "alt": "By torchlight in the snowy churchyard, Arth holds up the sword; an old white-haired lord and several nobles kneel in the snow with bowed heads, while others shout and point, and the red-bearded lord turns away in anger.",
+        "art_brief": "Night, snowy churchyard at Caerllion, lit by many flaming torches (warm orange on blue snow; church and bell-turret dark behind). Centre: Arth (11, untidy brown hair with cowlick, moss-green tunic, snow in his hair) beside the grey stone and anvil, holding the shining sword up uncertainly, looking small and surprised rather than proud. Left: an old lord with white hair and a green cloak kneels in the snow with his head bowed; behind him two or three nobles and a strong young knight in mail also kneel and bow. Right: other lords stand shouting and pointing, faces angry or doubtful, torches raised; the very tall lord with a long red beard and black fur-trimmed cloak (Barf Goch) turns away, hand on his sword hilt, face dark with jealousy. Cai (15, ginger-blond, rust-red tunic, red cloak) stands squarely between Barf Goch and Arth; Cynyr (huge golden-blond beard, brown cloak) watches with wet eyes; Mali (12, long dark braid, dark-blue dress) watches everyone. The old priest raises a torch high. No text.",
+        "characters": [
+         "char-arth",
+         "char-cai",
+         "char-cynyr",
+         "char-mali",
+         "char-barf-goch",
+         "char-offeiriad",
+         "char-hen-arglwydd"
+        ],
+        "covers_lexeme_ids": [
+         "cy-penlinio",
+         "cy-plygu",
+         "cy-ffagl",
+         "cy-cenfigen"
+        ],
+        "type": "image",
+        "status": "planned",
+        "src": "media/images/cy-brenin-01-l28-img-penlinio.webp"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l28-s122",
+      "text": "Ond doedd Arth ddim yn teimlo'n frenin."
+     },
+     {
+      "id": "cy-brenin-01-l28-s123",
+      "text": "Roedd e'n teimlo'n fach, yn fach iawn, ac roedd yr eira'n disgyn ar ei wallt e."
+     },
+     {
+      "id": "cy-brenin-01-l28-s124",
+      "text": "Wedyn daeth yr hen arglwydd a benliniodd gyntaf at Arth.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s125",
+      "text": "Roedd eira ar ei wallt gwyn e, ac roedd e'n edrych ar wyneb Arth yng ngolau'r ffagl."
+     },
+     {
+      "id": "cy-brenin-01-l28-s126",
+      "text": "\"Beth yw dy enw di, fachgen?\" meddai'r hen arglwydd.",
+      "paragraph_start": true,
+      "speaker": "char-hen-arglwydd"
+     },
+     {
+      "id": "cy-brenin-01-l28-s127",
+      "text": "\"Arth,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l28-s128",
+      "text": "\"A phwy yw dy dad di?\"",
+      "paragraph_start": true,
+      "speaker": "char-hen-arglwydd"
+     },
+     {
+      "id": "cy-brenin-01-l28-s129",
+      "text": "Edrychodd Arth ar Cynyr.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s130",
+      "text": "\"Cynyr yw fy nhad i,\" meddai Arth.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l28-s131",
+      "text": "Wnaeth Cynyr ddim siarad.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l28-s132",
+      "text": "Edrychodd yr hen arglwydd ar Cynyr am amser hir."
+     },
+     {
+      "id": "cy-brenin-01-l28-s133",
+      "text": "\"Mae llygaid y bachgen yn llwyd, Cynyr,\" meddai e yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-hen-arglwydd"
+     },
+     {
+      "id": "cy-brenin-01-l28-s134",
+      "text": "\"Roedd llygaid y Brenin Uthr yn llwyd hefyd.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s135",
+      "text": "Wedyn aeth e i ffwrdd drwy'r eira, a'i ffagl yn ei law e."
+     },
+     {
+      "id": "cy-brenin-01-l28-s136",
+      "text": "\"Cai,\" meddai Arth yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l28-s137",
+      "text": "\"Wnest ti sefyll wrth fy ochr i.\""
+     },
+     {
+      "id": "cy-brenin-01-l28-s138",
+      "text": "\"Wrth gwrs,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l28-s139",
+      "text": "\"Brodyr dyn ni.\""
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Y cleddyf a dynnodd Arth",
+  "rule_cy": "y + enw + a + berf (-odd …) gyda threiglad meddal: y cleddyf a dynnodd Arth · y bachgen a ddaeth. Nawr: sy'n (y bachgen sy'n twyllo).",
+  "tables": [
+   {
+    "caption": "a + treiglad",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "tynnodd → a dynnodd",
+      "y cleddyf a dynnodd Arth"
+     ],
+     [
+      "daeth → a ddaeth",
+      "Bachgen a ddaeth o gwm bach?"
+     ],
+     [
+      "methodd → a fethodd",
+      "y dynion a fethodd"
+     ],
+     [
+      "ceisiodd → a geisiodd",
+      "yr arglwydd cyntaf a geisiodd"
+     ],
+     [
+      "penliniodd → a benliniodd",
+      "yr arglwyddi a benliniodd"
+     ]
+    ]
+   },
+   {
+    "caption": "sy'n (nawr) ↔ a (ddoe)",
+    "header": [
+     "sy'n",
+     "a"
+    ],
+    "rows": [
+     [
+      "y bachgen sy'n twyllo",
+      "y bachgen a dynnodd y cleddyf"
+     ],
+     [
+      "y marchog sy'n ceisio nawr",
+      "y marchog a geisiodd gyntaf"
+     ],
+     [
+      "Pwy sy'n tynnu?",
+      "Dyma'r bachgen a dynnodd!"
+     ]
+    ]
+   },
+   {
+    "caption": "Treigladau: Pennod 28",
+    "header": [
+     "",
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "a (perthynol) + berf",
+      "a dynnodd · a ddaeth · a fethodd · a geisiodd · a benliniodd",
+      "Pennod 28"
+     ],
+     [
+      "a (a/and) + c, p, t",
+      "a thynnodd e · a phawb",
+      "Pennod 16"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l28-s040"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s048"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s086"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s088"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s105"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s103"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s109"
+   },
+   {
+    "segment_id": "cy-brenin-01-l28-s121"
+   }
+  ],
+  "nodyn_en": "Relative 'who/which/that' before an inflected past verb is a, and the verb soft-mutates: y cleddyf a dynnodd Arth (tynnodd), y bachgen a ddaeth (daeth). It works for subjects and objects. For 'who is / who is doing' now, use sy'n (Pennod 24): y bachgen sy'n twyllo. Note 'a' (and) mutates c/p/t differently: a thynnodd e."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l28-pa",
+   "title": "Pensum A — Ffurfiau",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Tynnodd Arth y cleddyf. → y cleddyf ___ Arth",
+      "answer": "a dynnodd"
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Methodd y marchog. → y marchog ___",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "a fethodd"
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "a methodd",
+         "hint": "a + treiglad: methodd → fethodd"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Daeth y bachgen o gwm bach. → y bachgen ___ o gwm bach",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "a ddaeth"
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a3",
+       "prompt": "Penliniodd yr hen arglwydd. → yr hen arglwydd ___",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "a benliniodd"
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a4",
+       "prompt": "Gwelodd Mali'r cleddyf yn y drych. → y cleddyf ___ Mali yn y drych",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "a welodd"
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a5",
+       "prompt": "Ceisiodd Barf Goch dynnu'r cleddyf. → yr arglwydd ___ dynnu'r cleddyf",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "a geisiodd"
+       ],
+       "mutation_hint": true
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae'r bachgen yn twyllo nawr. → y bachgen ___ nawr",
+      "answer": "sy'n twyllo"
+     },
+     "items": [
+      {
+       "id": "a6",
+       "prompt": "Mae'r marchog yn ceisio nawr. → y marchog ___ nawr",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "sy'n ceisio"
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Ceisiodd y marchog ddoe. → y marchog ___ ddoe",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "a geisiodd"
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a8",
+       "prompt": "Mae'r arglwyddi'n gweiddi nawr. → yr arglwyddi ___ nawr",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "sy'n gweiddi"
+       ],
+       "common_wrong": [
+        {
+         "answer": "a weiddodd",
+         "hint": "nawr → sy'n"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Gwelais i'r garreg. (wnes i) →",
+      "answer": "Wnes i weld y garreg."
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Tynnais i'r cleddyf. (wnes i) →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Wnes i dynnu'r cleddyf."
+       ],
+       "mutation_hint": true,
+       "recall_of": "G26"
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Cai'n gryf. Mae e'n ___ na Mali. (cryf + -ach)",
+      "answer": "gryfach"
+     },
+     "items": [
+      {
+       "id": "a10",
+       "prompt": "Mae pob arglwydd yn dal, ond Barf Goch yw'r arglwydd ___. (tal + -af)",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "talaf"
+       ],
+       "recall_of": "G25"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l28-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "prawf",
+    "ffagl",
+    "gwaedd",
+    "cenfigen",
+    "uchelwr",
+    "penlinio",
+    "twyllo",
+    "protestio",
+    "gwthio",
+    "mynnu",
+    "plygu",
+    "gwawdio",
+    "amau",
+    "gwallgof",
+    "sicr",
+    "pendant",
+    "yn erbyn"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Mae hi'n dywyll iawn yn y nos: mae Cynyr yn cario ___ i'r stabl.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ffagl"
+     ]
+    },
+    {
+     "id": "b2",
+     "prompt": "Dyw'r drws ddim yn agor pan dw i'n tynnu: rhaid i fi ___!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "wthio"
+     ],
+     "explanation": "rhaid i fi + treiglad: gwthio → wthio"
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae Cai'n chwerthin am ben Arth: \"Arth bach! Arth heb gleddyf!\" Mae e'n ___ Arth.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwawdio"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae gyda Cai geffyl newydd, a dyw Arth ddim yn hapus: mae ___ arno fe.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cenfigen"
+     ]
+    },
+    {
+     "id": "b5",
+     "prompt": "Mae Mali'n dweud: \"Mae'r stori'n wir!\" Ond dw i ddim yn credu: dw i'n ___ hynny.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "amau"
+     ]
+    },
+    {
+     "id": "b6",
+     "prompt": "Dyw'r marchogion ddim yn sefyll nawr: maen nhw'n ___ yn yr eira i'r brenin.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "penlinio"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Dyw Dafi ddim yn chwarae'n deg: mae e'n ___!",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "twyllo"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "\"Dim ond un pastai?\" meddai Cai. \"Na! Dw i'n ___ cael dwy!\"",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "mynnu"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Daeth sŵn mawr, uchel o'r dorf: ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwaedd"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Mae'r marchog ifanc yn ymladd ___ Barf Goch yn y twrnamaint.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "yn erbyn"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l28-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Ble mae'r arglwyddi'n sefyll yn y nos?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Yn y fynwent",
+      "Yn y fynwent, wrth y garreg",
+      "Wrth y garreg",
+      "Maen nhw'n sefyll yn y fynwent",
+      "Yn yr eira",
+      "Mewn cylch mawr",
+      "Mewn cylch mawr wrth y garreg"
+     ],
+     "model_answer": "Yn y fynwent, wrth y garreg.",
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s015"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Pwy yw'r arglwydd a geisiodd yn olaf?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Barf Goch",
+      "Barf Goch yw e"
+     ],
+     "model_answer": "Barf Goch.",
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s049"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Faint o brofion sy yn y fynwent?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Tri",
+      "Tri phrawf",
+      "Mae tri phrawf"
+     ],
+     "model_answer": "Tri phrawf.",
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s109"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Beth mae Barf Goch'n dweud pan mae Arth yn tynnu'r cleddyf?",
+     "answer_mode": "self_check",
+     "model_answer": "Celwydd! Mae'r bachgen yn twyllo!",
+     "rubric": "Ateb: celwydd / twyllo / hud Myrddin.",
+     "key_terms": [
+      "cy-twyllo",
+      "cy-celwydd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s066"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Beth mae'r arglwyddi a benliniodd yn wneud?",
+     "answer_mode": "self_check",
+     "model_answer": "Maen nhw'n penlinio yn yr eira ac yn plygu eu pennau.",
+     "rubric": "Ateb: penlinio / plygu eu pennau.",
+     "key_terms": [
+      "cy-penlinio",
+      "cy-plygu"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s090"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Pam mae Cai'n sefyll rhwng Barf Goch ac Arth?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae Barf Goch'n dod at Arth gyda'i law ar ei gleddyf, ac mae Cai eisiau helpu ei frawd.",
+     "rubric": "Ateb gyda rheswm: mae Cai'n amddiffyn / helpu ei frawd.",
+     "key_terms": [
+      "cy-brawd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s102"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Beth mae'r hen arglwydd yn dweud am lygaid Arth?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae llygaid Arth yn llwyd, ac roedd llygaid Uthr yn llwyd hefyd.",
+     "rubric": "Ateb: llwyd / llygaid Uthr yn llwyd hefyd.",
+     "key_terms": [
+      "cy-llygad",
+      "cy-llwyd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l28-s133"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Pwy yw'r athro a ddysgodd ti i ddarllen?",
+     "answer_mode": "self_check",
+     "model_answer": "Mam yw'r athro a ddysgodd fi. / Fy athro i.",
+     "rubric": "Unrhyw ateb gydag enw; da iawn os oes 'a + treiglad'."
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-a-rel",
+   "citation_form": "a",
+   "part_of_speech": "particle",
+   "current_sense": "who, which, that (relative before an inflected verb, + SM)",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ph-dro-ar-ol-tro",
+   "citation_form": "dro ar ôl tro",
+   "part_of_speech": "phrase",
+   "current_sense": "again and again",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-yn-erbyn",
+   "citation_form": "yn erbyn",
+   "part_of_speech": "preposition",
+   "current_sense": "against",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cenfigen",
+   "citation_form": "cenfigen",
+   "part_of_speech": "noun",
+   "current_sense": "jealousy",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-prawf",
+   "citation_form": "prawf",
+   "part_of_speech": "noun",
+   "current_sense": "test, proof",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ffagl",
+   "citation_form": "ffagl",
+   "part_of_speech": "noun",
+   "current_sense": "torch",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-penlinio",
+   "citation_form": "penlinio",
+   "part_of_speech": "verb",
+   "current_sense": "to kneel",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-twyllo",
+   "citation_form": "twyllo",
+   "part_of_speech": "verb",
+   "current_sense": "to deceive, trick",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-protestio",
+   "citation_form": "protestio",
+   "part_of_speech": "verb",
+   "current_sense": "to protest",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwthio",
+   "citation_form": "gwthio",
+   "part_of_speech": "verb",
+   "current_sense": "to push",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-mynnu",
+   "citation_form": "mynnu",
+   "part_of_speech": "verb",
+   "current_sense": "to insist, demand",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwallgof",
+   "citation_form": "gwallgof",
+   "part_of_speech": "adjective",
+   "current_sense": "mad, crazy",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwaedd",
+   "citation_form": "gwaedd",
+   "part_of_speech": "noun",
+   "current_sense": "shout, cry",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-uchelwr",
+   "citation_form": "uchelwr",
+   "part_of_speech": "noun",
+   "current_sense": "nobleman",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-plygu",
+   "citation_form": "plygu",
+   "part_of_speech": "verb",
+   "current_sense": "to bend, bow (plygu ei ben = bow his head)",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwawdio",
+   "citation_form": "gwawdio",
+   "part_of_speech": "verb",
+   "current_sense": "to mock",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-amau",
+   "citation_form": "amau",
+   "part_of_speech": "verb",
+   "current_sense": "to doubt, suspect",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-sicr",
+   "citation_form": "sicr",
+   "part_of_speech": "adjective",
+   "current_sense": "certain",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-pendant",
+   "citation_form": "pendant",
+   "part_of_speech": "adjective",
+   "current_sense": "definite, firm",
+   "first_introduced_lesson": "cy-brenin-01-l28",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-28.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "a (+ SM) — y cleddyf a dynnodd Arth",
+    "back": "who, which, that (relative before an inflected verb, + SM)",
+    "example_segment_id": "cy-brenin-01-l28-s109",
+    "lexeme_id": "cy-a-rel"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "dro ar ôl tro",
+    "back": "again and again",
+    "example_segment_id": "cy-brenin-01-l28-s080",
+    "lexeme_id": "cy-ph-dro-ar-ol-tro"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "yn erbyn",
+    "back": "against",
+    "example_segment_id": "cy-brenin-01-l28-s083",
+    "lexeme_id": "cy-yn-erbyn"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "cenfigen (b.)",
+    "back": "jealousy",
+    "example_segment_id": "cy-brenin-01-l28-s099",
+    "lexeme_id": "cy-cenfigen"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "prawf (g.)",
+    "back": "test, proof",
+    "example_segment_id": "cy-brenin-01-l28-s034",
+    "lexeme_id": "cy-prawf"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "ffagl (b.), ffaglau",
+    "back": "torch",
+    "example_segment_id": "cy-brenin-01-l28-s052",
+    "lexeme_id": "cy-ffagl"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "penlinio",
+    "back": "to kneel",
+    "example_segment_id": "cy-brenin-01-l28-s098",
+    "lexeme_id": "cy-penlinio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "twyllo",
+    "back": "to deceive, trick",
+    "example_segment_id": "cy-brenin-01-l28-s066",
+    "lexeme_id": "cy-twyllo"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "protestio",
+    "back": "to protest",
+    "example_segment_id": "cy-brenin-01-l28-s045",
+    "lexeme_id": "cy-protestio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "gwthio",
+    "back": "to push",
+    "example_segment_id": "cy-brenin-01-l28-s101",
+    "lexeme_id": "cy-gwthio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "mynnu",
+    "back": "to insist, demand",
+    "example_segment_id": "cy-brenin-01-l28-s113",
+    "lexeme_id": "cy-mynnu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "gwallgof",
+    "back": "mad, crazy",
+    "example_segment_id": "cy-brenin-01-l28-s095",
+    "seen_as": "yn wallgof",
+    "lexeme_id": "cy-gwallgof"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "gwaedd (b.)",
+    "back": "shout, cry",
+    "example_segment_id": "cy-brenin-01-l28-s082",
+    "lexeme_id": "cy-gwaedd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "uchelwr (g.), uchelwyr",
+    "back": "nobleman",
+    "example_segment_id": "cy-brenin-01-l28-s047",
+    "lexeme_id": "cy-uchelwr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "plygu (pen)",
+    "back": "to bend, bow (plygu ei ben = bow his head)",
+    "example_segment_id": "cy-brenin-01-l28-s093",
+    "lexeme_id": "cy-plygu"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "gwawdio",
+    "back": "to mock",
+    "example_segment_id": "cy-brenin-01-l28-s050",
+    "lexeme_id": "cy-gwawdio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "amau",
+    "back": "to doubt, suspect",
+    "example_segment_id": "cy-brenin-01-l28-s077",
+    "lexeme_id": "cy-amau"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "sicr",
+    "back": "certain",
+    "example_segment_id": "cy-brenin-01-l28-s112",
+    "lexeme_id": "cy-sicr"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l28",
+    "front": "pendant",
+    "back": "definite, firm",
+    "example_segment_id": "cy-brenin-01-l28-s116",
+    "seen_as": "yn bendant",
+    "lexeme_id": "cy-pendant"
+   },
+   {
+    "id": "pattern-g28",
+    "lesson": "cy-brenin-01-l28",
+    "front": "y cleddyf a dynnodd Arth · y bachgen a ddaeth o gwm bach · y dynion a fethodd · ↔ y bachgen sy'n twyllo",
+    "back": "the sword (that) Arth drew · the boy who came from a little valley · the men who failed · ↔ the boy who is cheating (present: sy'n)",
+    "example_segment_id": "cy-brenin-01-l28-s109",
+    "example_segment_ids": [
+     "cy-brenin-01-l28-s109",
+     "cy-brenin-01-l28-s086"
+    ],
+    "lexeme_id": "cy-pattern-g28"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l28-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 0,
+   "margin_diagram": 0,
+   "margin_gloss": 22
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-28",
+   "rhan-3"
+  ]
+ },
+ "metrics": {
+  "running_words": 1434,
+  "sentences": 139,
+  "word_target": 1540,
+  "word_window": [
+   1386,
+   1694
+  ]
+ }
+}

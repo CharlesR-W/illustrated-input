@@ -1,0 +1,2266 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "cy-brenin-01-l38",
+ "course_id": "cy-brenin-01",
+ "order": 38,
+ "title": "Dwy stori",
+ "rhan": 4,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "2.0.0-draft",
+ "provenance": {
+  "author": "block writer B7 (Claude Opus 5.5, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (Wave 2, 2026-10-17 notes)",
+  "review_required": "fluent southern-Welsh review",
+  "notes": [
+   "Register chapter. Literary forms are receptive and always glossed with '=' to the colloquial equivalent the reader produces: gwelwyd, dallwyd, brathwyd, gorchfygwyd, claddwyd (-wyd), dywedir, ef, hwy, byddai, and the written spelling dywedodd (once, inside the chronicle). They appear only inside the chronicle text (read aloud by Mali or the bishop) and in the bishop's description of it; the familiar inflected past (aeth ef, cysgodd) is shared ground. Literary forms are recorded in the delta as receptive_only forms so they carry no cards.",
+   "Present/future passive promoted to productive: Mae'r stori'n cael ei dweud; Bydd y stori hon yn cael ei chanu; Bydd y cronicl yn cael ei ddarllen; Bydd e'n cael ei gadw; Bydd fy stori i'n cael ei chanu. Pensum A is 'Dweud yn y De' (literary → colloquial), plus present/future passive production; no receptive form is required in any answer.",
+   "Repetition engine: the same events of 37 are told twice (Mali's chronicle, read twice; Cai's tavern tale, three times with escalation: tŵr → dau dŵr → tri chawr, taller than Yr Wyddfa). Mali catches Cai lying again (Celwydd!).",
+   "Open-slot word: iaith (f., CorCenCC top 2000), needed for the chapter's subject, 'iaith y cronicl / iaith y dafarn'. Incidentally glossed once: gwrandewch (plural imperative of gwrando, recorded as a form), chwarddodd (irregular preterite of chwerthin, recorded as a form).",
+   "Continuity choices: about a week after 37 the party is back in Caerllion; the bishop (32) asks Mali to record the Wyddfa in the church chronicle because his own scribe is old and ill (this sets up her appointment as the king's scribe in 39). Modlen has sewn Cynyr's recovered lock back into his beard. A young bard in the tavern will sing Cai's version. Dafi walks through the wet ink and leaves his footprints beside Cai's name in the chronicle.",
+   "Checker warnings justified: pensa-receptive on Pensum A a1–a6 is by design (Dweud yn y De, §7.2): the literary form appears only in the prompt and every accepted answer is colloquial and productive. budget-open-slots: iaith is proposed as an open slot (see report).",
+   "Myrddin states the chapter's point once ('Mae angen ffeithiau ar ddarllenydd. Ac mae angen dychymyg ar gynulleidfa.'), as a character, not the narrator."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "cy-brenin-01-l38-s036",
+    "question": "[?] Chronicle sentence 'Ac yna y gorchfygwyd Rhita Gawr ar ben yr Wyddfa, a chladdwyd ef dan garnedd.' (from the plan): correct literary word order and AM after a?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s034",
+    "question": "[?] 'Dywedodd y brenin y byddai ef yn ymladd gyda'i ffrindiau, nid ar ei ben ei hun.' — acceptable chronicle style, and is the colloquial gloss 'y basai fe'n' in the table right?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s030",
+    "question": "[?] 'Aeth ci a draig gyda hwy hefyd.' — gyda hwy (rather than gyda hwynt) acceptable as literary?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s132",
+    "question": "[?] 'A dywedir yn y tafarndai fod tri chawr ar yr Wyddfa, a bod y cawr mwyaf yn dalach na'r mynydd. Nid gwir hynny.' — natural chronicle Welsh?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s133",
+    "question": "[?] 'Dychymyg y marchog Cai fab Cynyr yw hynny' — fab after a personal name (patronymic) is mutated here although personal names are not; correct?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s004",
+    "question": "[?] tudalen as feminine (y dudalen, hen dudalen) following the plan; is masculine preferable for southern learners?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s085",
+    "question": "[?] 'Mae'r stori'n cael ei dweud yn well bob tro' — natural?"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s041",
+    "question": "[?] 'Ond dw i ddim yn ei chofnodi hi' (I'm not recording it): natural for a fact (ffaith f.)?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G38",
+  "primary_new_grammar": {
+   "id": "G38",
+   "label": "Literary register, receptive: impersonal -wyd (gwelwyd = cafodd ei weld), dywedir, ef / hwy, byddai; present and future cael-passive (mae / bydd … yn cael ei …) promoted to productive.",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G13",
+   "G22",
+   "G26",
+   "G28",
+   "G29",
+   "G31",
+   "G32",
+   "G33",
+   "G34",
+   "G37"
+  ],
+  "incidental": [
+   {
+    "form": "gwrandewch",
+    "gloss_segment_id": "cy-brenin-01-l38-s058"
+   },
+   {
+    "form": "chwarddodd",
+    "gloss_segment_id": "cy-brenin-01-l38-s110"
+   }
+  ],
+  "new_lexeme_ids": [
+   "cy-chwedl",
+   "cy-canrif",
+   "cy-cronicl",
+   "cy-hanes",
+   "cy-ysgrifennydd",
+   "cy-gwirionedd",
+   "cy-gorliwio",
+   "cy-cofnodi",
+   "cy-tudalen",
+   "cy-llawysgrif",
+   "cy-darllenydd",
+   "cy-cynulleidfa",
+   "cy-ffaith",
+   "cy-dychymyg",
+   "cy-iaith"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "cy-chwedl",
+    "how": "gloss(define)+contrast(hanes)",
+    "segment_id": "cy-brenin-01-l38-s115"
+   },
+   {
+    "lexeme_id": "cy-canrif",
+    "how": "gloss(synonym)",
+    "segment_id": "cy-brenin-01-l38-s117"
+   },
+   {
+    "lexeme_id": "cy-cronicl",
+    "how": "gloss(define)+picture(vignette)",
+    "segment_id": "cy-brenin-01-l38-s005"
+   },
+   {
+    "lexeme_id": "cy-hanes",
+    "how": "gloss(synonym)",
+    "segment_id": "cy-brenin-01-l38-s004"
+   },
+   {
+    "lexeme_id": "cy-ysgrifennydd",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l38-s007"
+   },
+   {
+    "lexeme_id": "cy-gwirionedd",
+    "how": "gloss(synonym)",
+    "segment_id": "cy-brenin-01-l38-s044"
+   },
+   {
+    "lexeme_id": "cy-gorliwio",
+    "how": "gloss(define)+context(rule of three)",
+    "segment_id": "cy-brenin-01-l38-s074"
+   },
+   {
+    "lexeme_id": "cy-cofnodi",
+    "how": "gloss(radical+define)",
+    "segment_id": "cy-brenin-01-l38-s008"
+   },
+   {
+    "lexeme_id": "cy-tudalen",
+    "how": "gloss(define)+picture(vignette)",
+    "segment_id": "cy-brenin-01-l38-s004"
+   },
+   {
+    "lexeme_id": "cy-llawysgrif",
+    "how": "gloss(define)+picture(vignette)",
+    "segment_id": "cy-brenin-01-l38-s003"
+   },
+   {
+    "lexeme_id": "cy-darllenydd",
+    "how": "gloss(number)+context(darllen)",
+    "segment_id": "cy-brenin-01-l38-s117"
+   },
+   {
+    "lexeme_id": "cy-cynulleidfa",
+    "how": "gloss(synonym)+picture(scene)",
+    "segment_id": "cy-brenin-01-l38-s059"
+   },
+   {
+    "lexeme_id": "cy-ffaith",
+    "how": "gloss(number)+context",
+    "segment_id": "cy-brenin-01-l38-s010"
+   },
+   {
+    "lexeme_id": "cy-dychymyg",
+    "how": "gloss(define)+contrast(ffaith)",
+    "segment_id": "cy-brenin-01-l38-s120"
+   },
+   {
+    "lexeme_id": "cy-iaith",
+    "how": "gloss(define)",
+    "segment_id": "cy-brenin-01-l38-s017"
+   }
+  ],
+  "recycle_lexeme_ids": [
+   "cy-carnedd",
+   "cy-cawr",
+   "cy-tafarn",
+   "cy-celwydd",
+   "cy-gwir",
+   "cy-esgob",
+   "cy-uchelwr",
+   "cy-bardd",
+   "cy-tal",
+   "cy-ffer",
+   "cy-dallu",
+   "cy-brathu",
+   "cy-claddu",
+   "cy-gorchfygu",
+   "cy-ph-ar-fy-mhen-fy-hun",
+   "cy-llawer",
+   "cy-ystafell",
+   "cy-swyddogol",
+   "cy-gwnio",
+   "cy-aelwyd"
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "cy-brenin-01-l38-img-cover",
+   "src": "media/images/cy-brenin-01-l38-img-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "A split picture: on the left Mali writes carefully by candlelight in a huge old manuscript; on the right Cai stands on a tavern table telling a noisy crowd about a giant as tall as a tower.",
+   "art_brief": "One picture divided down the middle by a soft vertical edge (no frame lines or text). LEFT half, cool and quiet: a small stone room by Caerllion church at night, one candle; Mali (12, long dark braid, dark-blue dress, ink-stained fingers) bent over a huge old open manuscript on a wooden table, white quill in hand, neat lines of script (illegible, no readable letters) and a red initial; Dafi (cup-sized red dragon, cream horns, yellow eyes) sitting by the ink pot watching the wet ink. RIGHT half, warm and loud: a crowded firelit tavern; Cai (15, red-blond, rust-red tunic) standing on a table with a cup of ale, one arm flung high to show how tall the giant was; listeners with mouths open, a young bard with a harp, Cynyr (huge golden-blond beard) and Modlen (floury apron, wooden spoon) at the side; Pero asleep by the hearth. Absolutely no text.",
+   "characters": [
+    "char-mali",
+    "char-dafi",
+    "char-cai",
+    "char-cynyr",
+    "char-modlen",
+    "char-bardd",
+    "char-pero"
+   ],
+   "covers_lexeme_ids": [
+    "cy-llawysgrif",
+    "cy-cronicl",
+    "cy-tafarn",
+    "cy-cynulleidfa"
+   ]
+  },
+  "sections": [
+   {
+    "id": "cy-brenin-01-l38-sec1",
+    "title": "Y llawysgrif",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l38-s001",
+      "text": "Wythnos ar ôl y frwydr ar yr Wyddfa, roedd y brenin a'i ffrindiau yn ôl yng Nghaerllion, ac roedd eira ar waliau'r ddinas.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s002",
+      "text": "Mewn ystafell fach, dawel wrth yr eglwys, roedd Mali'n eistedd wrth fwrdd, gyda phluen, inc a channwyll."
+     },
+     {
+      "id": "cy-brenin-01-l38-s003",
+      "text": "Ar y bwrdd roedd llyfr mawr, trwm, hen iawn: llawysgrif.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "llawysgrif",
+        "gloss": "llawysgrif: llaw + ysgrifennu → llyfr",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-llawysgrif"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "cy-brenin-01-l38-img-llawysgrif",
+        "anchor_text": "llawysgrif",
+        "label": "llawysgrif",
+        "src": "media/vignettes/cy-brenin-01-l38-img-llawysgrif.webp",
+        "alt": "",
+        "status": "planned",
+        "art_brief": "A large old handwritten book lying open on a wooden table, two pages of neat dark script with a red initial letter, a white quill and an ink pot beside it. Ink line and watercolour, transparent background, no text that can be read.",
+        "covers_lexeme_ids": [
+         "cy-llawysgrif",
+         "cy-tudalen"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s004",
+      "text": "Ar bob tudalen roedd hanes Caerllion: hanes y brenhinoedd, y rhyfeloedd a'r brwydrau.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "hanes",
+        "gloss": "hanes = stori go iawn",
+        "gloss_kind": "synonym",
+        "covers_lexeme_ids": [
+         "cy-hanes"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "tudalen",
+        "gloss": "tudalen: ▯▯ yn y llyfr",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-tudalen"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s005",
+      "text": "Cronicl oedd y llawysgrif.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Cronicl",
+        "gloss": "cronicl: hanes, blwyddyn ar ôl blwyddyn",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-cronicl"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s006",
+      "text": "\"Mae angen hanes yr Wyddfa yn y cronicl,\" meddai'r esgob.",
+      "paragraph_start": true,
+      "speaker": "char-esgob"
+     },
+     {
+      "id": "cy-brenin-01-l38-s007",
+      "text": "\"Mae fy ysgrifennydd i'n hen ac yn sâl, ond rwyt ti'n gallu ysgrifennu'n dda, Mali.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ysgrifennydd",
+        "gloss": "ysgrifennydd: dyn sy'n ysgrifennu",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-ysgrifennydd"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s008",
+      "text": "\"Rhaid i ti gofnodi'r ffeithiau.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gofnodi",
+        "gloss": "gofnodi ← cofnodi: ysgrifennu yn y cronicl",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-cofnodi"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s009",
+      "text": "\"Ffeithiau?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s010",
+      "text": "\"Ffeithiau: beth ddigwyddodd, ble a phryd,\" meddai'r esgob.",
+      "paragraph_start": true,
+      "speaker": "char-esgob",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Ffeithiau",
+        "gloss": "ffaith, ffeithiau: pethau go iawn",
+        "gloss_kind": "number",
+        "covers_lexeme_ids": [
+         "cy-ffaith"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s011",
+      "text": "\"Ond paid ag anghofio, Mali: dyw cronicl ddim yn siarad fel ni. Edrych ar y dudalen yma.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dudalen",
+        "gloss": "y dudalen ← tudalen (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s012",
+      "text": "Dangosodd e hen dudalen i Mali, a darllenodd hi'n araf:",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dudalen",
+        "gloss": "hen dudalen ← tudalen",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s013",
+      "text": "\"Yn y flwyddyn honno, gwelwyd seren fawr yn yr awyr uwchben Caerllion.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwelwyd",
+        "gloss": "gwelwyd = cafodd ei gweld",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s014",
+      "text": "\"Dywedir bod Myrddin wedi ei gweld hi'n gyntaf.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dywedir",
+        "gloss": "dywedir = mae pobl yn dweud",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s015",
+      "text": "\"Gwelwyd?\" meddai Mali. \"Cafodd y seren ei gweld, ond gan bwy?\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s016",
+      "text": "\"Dyw'r cronicl ddim yn dweud,\" meddai'r esgob, ac roedd e'n gwenu.",
+      "paragraph_start": true,
+      "speaker": "char-esgob"
+     },
+     {
+      "id": "cy-brenin-01-l38-s017",
+      "text": "\"Dyna iaith y cronicl: gwelwyd, dywedir, ef. Mae hi'n hen ac yn swyddogol, fel fi.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "iaith",
+        "gloss": "iaith: Cymraeg, Lladin …",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-iaith"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s018",
+      "text": "\"Dw i'n hoffi'r cronicl,\" meddai Mali. \"Does dim celwyddau mewn cronicl.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s019",
+      "text": "\"Wel,\" meddai'r esgob, \"dim llawer.\"",
+      "paragraph_start": true,
+      "speaker": "char-esgob"
+     },
+     {
+      "id": "cy-brenin-01-l38-s020",
+      "text": "Trodd yr esgob y dudalen, a darllenodd Mali'r geiriau nesaf:",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s021",
+      "text": "\"Yn y flwyddyn honno, ganwyd mab i'r brenin Uthr, ond ni welwyd y plentyn wedyn.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ganwyd",
+        "gloss": "ganwyd = cafodd ei eni",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "welwyd",
+        "gloss": "ni welwyd ← gwelwyd",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ni welwyd",
+        "gloss": "ni welwyd = dim gweld",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s022",
+      "text": "\"Arthur yw'r plentyn!\" meddai Mali yn dawel.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s023",
+      "text": "\"Ie,\" meddai'r esgob. \"Ac nawr, bydd hanes y plentyn yn cael ei ysgrifennu gan ferch Cynyr.\"",
+      "paragraph_start": true,
+      "speaker": "char-esgob"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l38-sec2",
+    "title": "Mali'n ysgrifennu",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l38-s024",
+      "text": "Pan aeth yr esgob, daeth Dafi o'r gannwyll: roedd e wedi bod yn cysgu yn y golau cynnes.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s025",
+      "text": "Eisteddodd e ar y bwrdd ac edrychodd e ar y dudalen wag."
+     },
+     {
+      "id": "cy-brenin-01-l38-s026",
+      "text": "\"Beth wyt ti'n ysgrifennu, Mali?\" meddai Dafi. \"Ydw i yn y stori?\"",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l38-s027",
+      "text": "\"Gwranda,\" meddai Mali, a chododd hi'r bluen.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s028",
+      "text": "Ysgrifennodd hi'n araf, a darllenodd hi bob gair yn uchel."
+     },
+     {
+      "id": "cy-brenin-01-l38-s029",
+      "text": "\"Yn y gaeaf hwnnw, aeth y brenin Arthur i'r gogledd, ac aeth ei ffrindiau gydag ef.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gydag ef",
+        "gloss": "ef = e · gydag ef = gyda fe",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s030",
+      "text": "\"Aeth ci a draig gyda hwy hefyd.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "hwy",
+        "gloss": "hwy = nhw",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s031",
+      "text": "\"Ar ben yr Wyddfa, gwelwyd y cawr Rhita Gawr, a dywedir bod clogyn o farfau brenhinoedd ar ei gefn.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s032",
+      "text": "\"Ond fi welodd y cawr gyntaf!\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l38-s033",
+      "text": "\"Gwranda, Dafi.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s034",
+      "text": "\"Dywedodd y brenin y byddai ef yn ymladd gyda'i ffrindiau, nid ar ei ben ei hun.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "byddai",
+        "gloss": "y byddai ef = y basai fe",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s035",
+      "text": "\"Dallwyd y cawr gan fwg y ddraig, a brathwyd ei ffêr gan y ci.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dallwyd",
+        "gloss": "dallwyd = cafodd ei ddallu",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "brathwyd",
+        "gloss": "brathwyd = cafodd ei brathu",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s036",
+      "text": "\"Ac yna y gorchfygwyd Rhita Gawr ar ben yr Wyddfa, a chladdwyd ef dan garnedd.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gorchfygwyd",
+        "gloss": "gorchfygwyd = cafodd ei orchfygu",
+        "gloss_kind": "synonym"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chladdwyd",
+        "gloss": "chladdwyd ← claddwyd",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chladdwyd ef",
+        "gloss": "= cafodd e ei gladdu",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s037",
+      "text": "\"Ac mae ef yn cysgu yno, dan y cerrig.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s038",
+      "text": "\"Y ddraig?\" meddai Dafi. \"Dafi yw fy enw i! A Pero yw enw'r ci!\"",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l38-s039",
+      "text": "\"Does dim enwau bach mewn cronicl, Dafi,\" meddai Mali. \"Ffeithiau yn unig.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s040",
+      "text": "\"Ffaith yw hi: roedd mwg y ddraig yn ddefnyddiol iawn,\" meddai Dafi.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l38-s041",
+      "text": "\"Ffaith yw hi,\" meddai Mali, a gwenodd hi. \"Ond dw i ddim yn ei chofnodi hi.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ei chofnodi hi",
+        "gloss": "ei chofnodi hi ← cofnodi",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s042",
+      "text": "Edrychodd Mali ar y dudalen, ac roedd hi'n falch.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s043",
+      "text": "\"Dw i'n ysgrifennydd nawr, Dafi: ysgrifennydd y cronicl!\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s044",
+      "text": "Roedd hi wedi ysgrifennu'r gwirionedd, a dim byd ond y gwirionedd.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwirionedd",
+        "gloss": "gwirionedd = beth sy'n wir",
+        "gloss_kind": "synonym",
+        "covers_lexeme_ids": [
+         "cy-gwirionedd"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s045",
+      "text": "Yn sydyn, agorodd y drws, a daeth Arthur i mewn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s046",
+      "text": "Doedd dim coron ar ei ben e: dim ond y gwallt mawr, fel arfer."
+     },
+     {
+      "id": "cy-brenin-01-l38-s047",
+      "text": "\"Ydy'r stori yn barod, Mali?\" meddai e. \"Gaf i ei darllen hi?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l38-s048",
+      "text": "Eisteddodd Arthur wrth y bwrdd, a darllenodd e'n araf, gair ar ôl gair, fel yn y stabl gyda'r dabled.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s049",
+      "text": "\"Gorchfygwyd?\" meddai Arthur yn araf. \"Beth yw hwnnw?\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l38-s050",
+      "text": "\"Cafodd e ei orchfygu,\" meddai Mali. \"Iaith y cronicl yw hi.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s051",
+      "text": "\"Ond dyw'r cronicl ddim yn dweud bod y brenin yn ddewr ac yn gryf!\" meddai Arthur.",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     },
+     {
+      "id": "cy-brenin-01-l38-s052",
+      "text": "\"Does dim geiriau fel dewr a chryf mewn cronicl,\" meddai Mali. \"Dim ond ffeithiau.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s053",
+      "text": "\"Wel,\" meddai Arthur, ac roedd e'n gwenu, \"dyna ffaith dda: aeth y brenin gyda'i ffrindiau.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l38-sec3",
+    "title": "Yn y dafarn",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l38-s054",
+      "text": "Ar yr un noson, roedd tafarn y ddinas yn llawn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s055",
+      "text": "Roedd tân mawr ar yr aelwyd, roedd cwrw a gwin ar y byrddau, ac roedd llawer o bobl yno: marchogion, uchelwyr, morynion a gweision, a Cynyr a Modlen hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l38-s056",
+      "text": "Roedd Pero'n cysgu wrth yr aelwyd, wrth gwrs."
+     },
+     {
+      "id": "cy-brenin-01-l38-s057",
+      "text": "Ac ar fwrdd mawr yn y dafarn, roedd Cai'n sefyll gyda chwrw yn ei law."
+     },
+     {
+      "id": "cy-brenin-01-l38-s058",
+      "text": "\"Gwrandewch!\" meddai Cai yn uchel. \"Dyma stori'r frwydr ar yr Wyddfa!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gwrandewch",
+        "gloss": "gwranda (ti) → gwrandewch (chi)",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s059",
+      "text": "Roedd pawb yn dawel. Roedd Cai'n hoffi cynulleidfa, ac roedd cynulleidfa fawr yn y dafarn y noson honno.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cynulleidfa",
+        "gloss": "cynulleidfa = pawb sy'n gwrando",
+        "gloss_kind": "synonym",
+        "covers_lexeme_ids": [
+         "cy-cynulleidfa"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s060",
+      "text": "\"Roedd hi'n nos, ac roedd storm eira ofnadwy,\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s061",
+      "text": "\"Dringon ni'r Wyddfa drwy'r eira, drwy'r gwynt a drwy'r rhew.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s062",
+      "text": "\"Ar y copa, roedd y cawr yn aros amdanon ni.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s063",
+      "text": "\"Roedd e mor dal â thŵr!\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s064",
+      "text": "\"Mor dal â thŵr?\" meddai un uchelwr, ac agorodd e ei geg.",
+      "paragraph_start": true,
+      "speaker": "char-uchelwr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s065",
+      "text": "\"Mor dal â thŵr!\" meddai Cai. \"Ac roedd cleddyf gyda fe mor hir ag Afon Wysg!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s066",
+      "text": "\"Wel, wel,\" meddai Cynyr yn dawel wrth Modlen, ac roedd e'n cyffwrdd â'i farf.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s067",
+      "text": "\"Daeth y cawr ata i,\" meddai Cai. \"Gwelodd e fy marf wlân i, ac roedd ofn arno fe!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s068",
+      "text": "\"Wedyn gwnes i ymladd â'r cawr ar fy mhen fy hun, drwy'r nos!\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s069",
+      "text": "Roedd bardd ifanc yn eistedd wrth y tân, ac roedd e'n gwrando ar bob gair.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s070",
+      "text": "\"Stori wych!\" meddai'r bardd. \"Bydd y stori hon yn cael ei chanu yn llys y brenin!\"",
+      "paragraph_start": true,
+      "speaker": "char-bardd",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "yn cael ei chanu",
+        "gloss": "= bydd y beirdd yn canu'r stori",
+        "gloss_kind": "synonym"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l38-sec4",
+    "title": "Mwy a mwy",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l38-s071",
+      "text": "Ond roedd mwy o bobl yn dod i'r dafarn drwy'r amser, ac roedd y bobl newydd eisiau'r stori hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s072",
+      "text": "Felly dwedodd Cai'r stori eto."
+     },
+     {
+      "id": "cy-brenin-01-l38-s073",
+      "text": "\"Ar y copa, roedd y cawr yn aros amdanon ni,\" meddai Cai. \"Roedd e mor dal â dau dŵr!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s074",
+      "text": "\"Dau dŵr nawr?\" meddai Modlen wrth Cynyr. \"Mae'r bachgen yn gorliwio. Dyw Mali, yr ysgrifennydd, ddim yn gorliwio.\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gorliwio",
+        "gloss": "gorliwio: gwneud y stori'n fwy",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-gorliwio"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s075",
+      "text": "\"Mae Cai'n gorliwio bob tro,\" meddai Cynyr. \"Fe yw fy mab i, wrth gwrs.\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s076",
+      "text": "\"Ac roedd clogyn o farfau ar ei gefn e: barfau ugain brenin!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s077",
+      "text": "\"Ac ar y clogyn roedd barf Dad!\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s078",
+      "text": "\"Fy marf i!\" meddai Cynyr. \"Ond pwy ffeindiodd hi, Cai?\"",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s079",
+      "text": "\"Fi, wrth gwrs!\" meddai Cai. \"Tynnais i'r farf o'r clogyn gyda fy nghleddyf, a'r cawr yn rhuo!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s080",
+      "text": "\"Mwy o gelwyddau,\" meddai Modlen yn dawel, \"ond mae hi'n stori dda.\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l38-s081",
+      "text": "Yfodd Cai fwy o gwrw, ac roedd ei stori'n mynd yn hirach ac yn hirach.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s082",
+      "text": "Wedyn daeth tri marchog o'r gogledd i'r dafarn, a dwedodd Cai'r stori am y trydydd tro."
+     },
+     {
+      "id": "cy-brenin-01-l38-s083",
+      "text": "\"Edrychwch arna i, farchogion!\" meddai Cai.",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s084",
+      "text": "\"Ar y copa roedd tri chawr, ac roedd y cawr mwyaf yn dalach na'r Wyddfa!\"",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l38-img-tafarn",
+        "src": "media/images/cy-brenin-01-l38-img-tafarn.webp",
+        "alt": "Cai stands on a tavern table with a cup of ale, arms stretched high to show a giant taller than a mountain, while the crowded firelit tavern listens: knights banging the tables, a young bard scribbling, Cynyr stroking his beard and Modlen rolling her eyes; old Pero sleeps by the hearth.",
+        "status": "planned",
+        "art_brief": "A crowded timber-and-thatch tavern in snowy Caerllion at night (warm firelight, red-brick glimpsed through the door, no glass windows). Cai (15, red-blond, rust-red tunic, sword at his belt) stands on a big wooden table, cup of ale slopping in one hand, the other arm flung up as high as it goes, mouth open mid-boast. Around him: three travel-stained knights from the north banging the table, servants and maids laughing, a young bard by the fire with a small harp on his knee, eyes shining; Cynyr (broad, fifties, huge golden-blond beard with one neatly sewn-back lock, brown cloak) stroking his beard sceptically; Modlen (short, round, floury apron, wooden spoon in hand, white headscarf) rolling her eyes. Old Pero (shaggy black-and-white hound) asleep on the hearth. No text.",
+        "characters": [
+         "char-cai",
+         "char-cynyr",
+         "char-modlen",
+         "char-bardd",
+         "char-pero"
+        ],
+        "covers_lexeme_ids": [
+         "cy-tafarn",
+         "cy-gorliwio",
+         "cy-cynulleidfa"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s085",
+      "text": "\"Mae'r stori'n cael ei dweud yn well bob tro,\" meddai'r tafarnwr, ac roedd e'n chwerthin.",
+      "paragraph_start": true,
+      "speaker": "char-tafarnwr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s086",
+      "text": "\"Tri chawr!\" meddai'r uchelwr. \"A Cai ar ei ben ei hun!\"",
+      "paragraph_start": true,
+      "speaker": "char-uchelwr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s087",
+      "text": "Roedd y gynulleidfa'n gweiddi, roedd y marchogion yn curo'r byrddau, ac roedd y bardd yn canu yn barod.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gynulleidfa",
+        "gloss": "y gynulleidfa ← cynulleidfa (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s088",
+      "text": "Ond yn sydyn, agorodd drws y dafarn, a daeth gwynt oer i mewn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s089",
+      "text": "Yn y drws roedd Mali, gyda thudalen yn ei llaw a draig fach goch yn ei gwallt hi.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "thudalen",
+        "gloss": "thudalen ← tudalen (b.)",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "cy-brenin-01-l38-img-celwydd",
+        "src": "media/images/cy-brenin-01-l38-img-celwydd.webp",
+        "alt": "Mali stands in the open tavern doorway with snow blowing in behind her, holding up a written page and pointing at Cai on the table; Dafi peeks out of her braid; the whole tavern turns to look.",
+        "status": "planned",
+        "art_brief": "The tavern door of the Caerllion inn flung open on a snowy night (cold blue light outside, warm firelight inside). In the doorway: Mali (12, long dark braid, dark-blue dress, ink-stained fingers, satchel) holding up a single written parchment page in one hand and pointing with the other; Dafi (cup-sized red dragon, cream horns, yellow eyes) peeping out of her braid near her ear. Inside, the crowd has turned round: Cai (red-blond, rust-red tunic) frozen on the table with his arm still up and his face going red, Cynyr laughing into his beard, Modlen with her spoon. No readable text on the page.",
+        "characters": [
+         "char-mali",
+         "char-dafi",
+         "char-cai",
+         "char-cynyr",
+         "char-modlen"
+        ],
+        "covers_lexeme_ids": [
+         "cy-tudalen",
+         "cy-celwydd"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s090",
+      "text": "\"Celwydd!\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l38-sec5",
+    "title": "Y gwirionedd",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l38-s091",
+      "text": "Trodd pawb yn y dafarn ac edrychon nhw ar Mali.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s092",
+      "text": "Roedd Cai'n goch iawn, ac roedd y cwrw'n crynu yn ei law."
+     },
+     {
+      "id": "cy-brenin-01-l38-s093",
+      "text": "\"Dw i wedi cofnodi'r frwydr yn y cronicl,\" meddai Mali. \"Dyma'r ffeithiau.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s094",
+      "text": "Darllenodd hi o'r dudalen yn uchel:",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s095",
+      "text": "\"Ar ben yr Wyddfa, gwelwyd y cawr Rhita Gawr.\"",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "cy-brenin-01-l38-img-dwy-stori",
+        "anchor_text": "gwelwyd",
+        "label": "Dwy stori",
+        "src": "media/diagrams/cy-brenin-01-l38-img-dwy-stori.svg",
+        "alt": "Two columns comparing the same events. Left, headed 'Y cronicl' with a quill: 'gwelwyd y cawr', 'dallwyd ef gan fwg', 'claddwyd ef dan garnedd'. Right, headed 'Y dafarn' with a cup of ale: 'roedd tri chawr!', 'roedd e mor dal â thŵr!', 'gwnes i ymladd ar fy mhen fy hun!'. Welsh labels only.",
+        "status": "draft",
+        "art_brief": "Two columns comparing the same events. Left, headed 'Y cronicl' with a quill: 'gwelwyd y cawr', 'dallwyd ef gan fwg', 'claddwyd ef dan garnedd'. Right, headed 'Y dafarn' with a cup of ale: 'roedd tri chawr!', 'roedd e mor dal â thŵr!', 'gwnes i ymladd ar fy mhen fy hun!'. Welsh labels only.",
+        "covers_lexeme_ids": [
+         "cy-cronicl",
+         "cy-tafarn"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s096",
+      "text": "\"Un cawr,\" meddai Mali. \"Dim tri. Ac roedd e'n dal, ond dim mor dal â'r Wyddfa.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s097",
+      "text": "\"Dallwyd y cawr gan fwg y ddraig.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s098",
+      "text": "Cododd Dafi ei adenydd bach yng ngwallt Mali, ac roedd e'n falch iawn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s099",
+      "text": "\"Fi ddallodd y cawr!\" meddai Dafi yn uchel.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l38-s100",
+      "text": "\"Draig yn fy nhafarn i!\" meddai'r tafarnwr. \"Paid â llosgi'r to!\"",
+      "paragraph_start": true,
+      "speaker": "char-tafarnwr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s101",
+      "text": "\"Wna i ddim llosgi dim byd,\" meddai Dafi. \"Dw i'n ddraig swyddogol nawr: dw i yn y cronicl!\"",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     },
+     {
+      "id": "cy-brenin-01-l38-s102",
+      "text": "\"A brathwyd ei ffêr gan y ci.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s103",
+      "text": "\"Pero?\" meddai Modlen, ac edrychodd hi ar yr hen gi wrth yr aelwyd. \"Ein Pero ni?\"",
+      "paragraph_start": true,
+      "speaker": "char-modlen"
+     },
+     {
+      "id": "cy-brenin-01-l38-s104",
+      "text": "\"Ie, Pero,\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s105",
+      "text": "\"A Cai: wnest ti ddim ymladd ar dy ben dy hun. Wnaethon ni ymladd gyda'n gilydd.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s106",
+      "text": "\"Wel…\" meddai Cai. \"Roedd y cawr yn dal iawn, iawn. A dyw iaith y dafarn ddim yn iaith y cronicl!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s107",
+      "text": "\"Ffaith yw hynny,\" meddai Mali. \"Ond tri chawr? Dychymyg yw hynny, Cai, dim ffaith. Rwyt ti'n gorliwio!\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s108",
+      "text": "\"A dyma ffaith hefyd!\" meddai Cynyr, ac roedd e'n chwerthin yn uchel.",
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
+     },
+     {
+      "id": "cy-brenin-01-l38-s109",
+      "text": "\"Mae fy marf i yma eto! Mae Modlen wedi ei gwnïo hi'n ôl.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s110",
+      "text": "Chwarddodd pawb yn y dafarn, ac ar ôl munud roedd Cai'n chwerthin hefyd.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s111",
+      "text": "\"Ond pwy sy'n iawn, felly?\" meddai'r bardd yn drist.",
+      "paragraph_start": true,
+      "speaker": "char-bardd"
+     }
+    ]
+   },
+   {
+    "id": "cy-brenin-01-l38-sec6",
+    "title": "Dwy stori",
+    "segments": [
+     {
+      "id": "cy-brenin-01-l38-s112",
+      "text": "Roedd Myrddin yn eistedd yn y cysgod wrth yr aelwyd, ac roedd e wedi gwrando ar y ddwy stori.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s113",
+      "text": "Nawr cododd e o'r gadair."
+     },
+     {
+      "id": "cy-brenin-01-l38-s114",
+      "text": "\"Mae dwy stori yma nawr,\" meddai Myrddin.",
+      "paragraph_start": true,
+      "speaker": "char-myrddin"
+     },
+     {
+      "id": "cy-brenin-01-l38-s115",
+      "text": "\"Mae hanes yn y cronicl, ac mae chwedl yn y dafarn: dwy stori, a dwy iaith.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "chwedl",
+        "gloss": "chwedl: hen stori + dychymyg",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-chwedl"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s116",
+      "text": "\"Ond mae chwedl Cai'n gelwydd!\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s117",
+      "text": "\"Efallai,\" meddai Myrddin. \"Ond mewn canrif, bydd y cronicl yn cael ei ddarllen gan rai darllenwyr.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "canrif",
+        "gloss": "canrif = blwyddyn × 100",
+        "gloss_kind": "synonym",
+        "covers_lexeme_ids": [
+         "cy-canrif"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "darllenwyr",
+        "gloss": "darllenydd, darllenwyr ← darllen",
+        "gloss_kind": "number",
+        "covers_lexeme_ids": [
+         "cy-darllenydd"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s118",
+      "text": "\"A bydd chwedl Cai'n cael ei chanu gan bawb, ym mhob tafarn yng Nghymru.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s119",
+      "text": "\"Wir?\" meddai Cai, ac roedd e'n hapus eto. \"Bydd fy stori i'n cael ei chanu am ganrif!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ganrif",
+        "gloss": "ganrif ← canrif (b.)",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s120",
+      "text": "\"Mae angen ffeithiau ar ddarllenydd,\" meddai Myrddin. \"Ac mae angen dychymyg ar gynulleidfa.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddarllenydd",
+        "gloss": "ddarllenydd ← darllenydd",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dychymyg",
+        "gloss": "dychymyg: gweld rhywbeth yn y pen",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-dychymyg"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s121",
+      "text": "\"A'r gwirionedd?\" meddai Mali.",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s122",
+      "text": "\"Mae'r gwirionedd yn dy gronicl di, Mali,\" meddai Myrddin. \"Bydd e'n cael ei gadw yno am ganrifoedd, a bydd darllenwyr y cronicl yn gwybod beth ddigwyddodd.\"",
+      "paragraph_start": true,
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gronicl",
+        "gloss": "dy gronicl ← cronicl",
+        "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ganrifoedd",
+        "gloss": "ganrifoedd ← canrifoedd",
+        "gloss_kind": "radical"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s123",
+      "text": "Yna agorodd y drws eto, a daeth Arthur i'r dafarn.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s124",
+      "text": "Cododd pawb ar eu traed, a chododd Pero ei ben hefyd."
+     },
+     {
+      "id": "cy-brenin-01-l38-s125",
+      "text": "\"Eisteddwch, eisteddwch,\" meddai Arthur. \"Dw i wedi clywed y ddwy stori o'r drws.\"",
+      "paragraph_start": true,
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Eisteddwch",
+        "gloss": "eistedd → eisteddwch (chi)",
+        "gloss_kind": "paradigm"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s126",
+      "text": "\"Bydd stori Mali'n cael ei chadw yn y cronicl, a bydd stori Cai'n cael ei chanu gan y bardd.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s127",
+      "text": "\"Ond Cai: yn dy chwedl di, paid ag anghofio'r rhaff, y mwg a'r dannedd.\""
+     },
+     {
+      "id": "cy-brenin-01-l38-s128",
+      "text": "\"Wrth gwrs!\" meddai Cai, a chododd e ei gwrw. \"Mwg Dafi, rhaff Mali, dannedd Pero… a chawr mor dal â thri thŵr!\"",
+      "paragraph_start": true,
+      "speaker": "char-cai"
+     },
+     {
+      "id": "cy-brenin-01-l38-s129",
+      "text": "Chwarddodd y brenin hefyd, a chwarddodd pawb gydag e.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s130",
+      "text": "Yn hwyr y noson honno, roedd Mali wrth y llawysgrif eto.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s131",
+      "text": "Ysgrifennodd hi eto, ar yr un dudalen:"
+     },
+     {
+      "id": "cy-brenin-01-l38-s132",
+      "text": "\"A dywedir yn y tafarndai fod tri chawr ar yr Wyddfa, a bod y cawr mwyaf yn dalach na'r mynydd.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "dywedir",
+        "gloss": "= mae pobl yn dweud",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s133",
+      "text": "\"Nid gwir hynny. Dychymyg y marchog Cai fab Cynyr yw hynny.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "fab",
+        "gloss": "Cai fab Cynyr = Cai, mab Cynyr",
+        "gloss_kind": "synonym"
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l38-s134",
+      "text": "Wedyn cerddodd Dafi dros y dudalen, drwy'r inc gwlyb.",
+      "paragraph_start": true
+     },
+     {
+      "id": "cy-brenin-01-l38-s135",
+      "text": "Ar y dudalen, wrth enw Cai, roedd ôl traed bach, bach: ôl traed draig."
+     },
+     {
+      "id": "cy-brenin-01-l38-s136",
+      "text": "\"Dafi!\" meddai Mali. \"Rwyt ti yn y cronicl nawr.\"",
+      "paragraph_start": true,
+      "speaker": "char-mali"
+     },
+     {
+      "id": "cy-brenin-01-l38-s137",
+      "text": "\"Ffaith!\" meddai Dafi, a thisianodd e'n hapus ar y gannwyll.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
+     }
+    ]
+   }
+  ]
+ },
+ "grammar": {
+  "title_cy": "Iaith y cronicl, iaith y dafarn",
+  "rule_cy": "Yn y cronicl: gwelwyd = cafodd ei weld · dywedir = mae pobl yn dweud · ef = e · hwy = nhw. Yn y De: mae … yn cael ei … · bydd … yn cael ei …",
+  "tables": [
+   {
+    "caption": "cronicl → y De",
+    "header": [
+     "y cronicl (darllen)",
+     "y De (dweud)"
+    ],
+    "rows": [
+     [
+      "Gwelwyd y cawr.",
+      "Cafodd y cawr ei weld."
+     ],
+     [
+      "Dallwyd y cawr gan fwg y ddraig.",
+      "Cafodd y cawr ei ddallu gan fwg y ddraig."
+     ],
+     [
+      "brathwyd ei ffêr",
+      "cafodd ei ffêr ei brathu"
+     ],
+     [
+      "Gorchfygwyd Rhita Gawr.",
+      "Cafodd Rhita Gawr ei orchfygu."
+     ],
+     [
+      "claddwyd ef dan garnedd",
+      "cafodd e ei gladdu dan garnedd"
+     ],
+     [
+      "Dywedir bod …",
+      "Mae pobl yn dweud bod …"
+     ],
+     [
+      "aeth ei ffrindiau gydag ef",
+      "aeth ei ffrindiau gyda fe"
+     ],
+     [
+      "gyda hwy",
+      "gyda nhw"
+     ],
+     [
+      "Dywedodd y brenin y byddai ef yn ymladd …",
+      "Dwedodd y brenin y basai fe'n ymladd …"
+     ]
+    ]
+   },
+   {
+    "caption": "mae / bydd … yn cael ei …",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Mae'r stori'n cael ei dweud yn well bob tro.",
+      "stori (b.): ei dweud"
+     ],
+     [
+      "Bydd y stori hon yn cael ei chanu.",
+      "stori (b.): ei + llaes"
+     ],
+     [
+      "Bydd y cronicl yn cael ei ddarllen.",
+      "cronicl (g.): ei + meddal"
+     ],
+     [
+      "Bydd e'n cael ei gadw yno am ganrifoedd.",
+      "e: ei + meddal"
+     ]
+    ]
+   },
+   {
+    "caption": "cafodd · mae · bydd",
+    "header": [
+     "ddoe",
+     "heddiw",
+     "yfory"
+    ],
+    "rows": [
+     [
+      "Cafodd y stori ei dweud.",
+      "Mae'r stori'n cael ei dweud.",
+      "Bydd y stori'n cael ei dweud."
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "cy-brenin-01-l38-s013"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s014"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s015"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s029"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s030"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s035"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s036"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s034"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s070"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s085"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s117"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s118"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s122"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s119"
+   },
+   {
+    "segment_id": "cy-brenin-01-l38-s132"
+   }
+  ],
+  "nodyn_en": "Chronicle Welsh, to recognise only: -wyd is an impersonal past (gwelwyd y cawr = the giant was seen), dywedir = it is said, ef = e, hwy = nhw, byddai = would. Everyday Welsh uses cael: Cafodd y cawr ei weld. Now also produce mae/bydd … yn cael ei …: Bydd y stori'n cael ei chanu."
+ },
+ "pensa": {
+  "A": {
+   "id": "cy-brenin-01-l38-pa",
+   "title": "Pensum A — Dweud yn y De",
+   "blocks": [
+    {
+     "enghraifft": {
+      "prompt": "Gwelwyd y cawr. →",
+      "answer": "Cafodd y cawr ei weld."
+     },
+     "mutation_hint": true,
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Claddwyd y cawr. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y cawr ei gladdu."
+       ],
+       "mutation_hint": true,
+       "source_segment_ids": [
+        "cy-brenin-01-l38-s036"
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Dallwyd y cawr gan y mwg. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y cawr ei ddallu gan y mwg."
+       ],
+       "mutation_hint": true,
+       "source_segment_ids": [
+        "cy-brenin-01-l38-s035"
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Gwelwyd y garnedd. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd y garnedd ei gweld."
+       ],
+       "common_wrong": [
+        {
+         "answer": "Cafodd y garnedd ei weld.",
+         "hint": "carnedd (b.) → ei gweld (hi)"
+        }
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Gorchfygwyd Rhita Gawr. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Cafodd Rhita Gawr ei orchfygu.",
+        "Cafodd Rhita ei orchfygu."
+       ],
+       "mutation_hint": true
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Aeth ef i'r gogledd. →",
+      "answer": "Aeth e i'r gogledd."
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Dywedir bod y cawr yn cysgu. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae pobl yn dweud bod y cawr yn cysgu."
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Aeth ci a draig gyda hwy. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Aeth ci a draig gyda nhw."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l38-s030"
+       ]
+      }
+     ]
+    },
+    {
+     "enghraifft": {
+      "prompt": "Mae Mali'n ysgrifennu'r cronicl. →",
+      "answer": "Mae'r cronicl yn cael ei ysgrifennu."
+     },
+     "mutation_hint": true,
+     "items": [
+      {
+       "id": "a7",
+       "prompt": "Bydd y beirdd yn canu'r stori. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Bydd y stori'n cael ei chanu.",
+        "Bydd y stori yn cael ei chanu.",
+        "Bydd y stori'n cael ei chanu gan y beirdd.",
+        "Bydd y stori yn cael ei chanu gan y beirdd."
+       ],
+       "mutation_hint": true,
+       "common_wrong": [
+        {
+         "answer": "Bydd y stori'n cael ei ganu.",
+         "hint": "stori (b.) → ei chanu (hi)"
+        }
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l38-s070"
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "Mae Cai'n dweud y chwedl. →",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Mae'r chwedl yn cael ei dweud.",
+        "Mae'r chwedl yn cael ei dweud gan Cai."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l38-s085"
+       ]
+      },
+      {
+       "id": "a9",
+       "prompt": "\"Mae'r cawr yn dal,\" meddai Cai. → Dwedodd Cai …",
+       "answer_mode": "exact",
+       "recall_of": "G33",
+       "accepted_answers": [
+        "Dwedodd Cai fod y cawr yn dal."
+       ],
+       "mutation_hint": true
+      },
+      {
+       "id": "a10",
+       "prompt": "Gwnïodd Modlen y farf. → Cafodd y farf …",
+       "answer_mode": "exact",
+       "recall_of": "G32",
+       "accepted_answers": [
+        "Cafodd y farf ei gwnïo gan Modlen.",
+        "Cafodd y farf ei gwnïo."
+       ],
+       "source_segment_ids": [
+        "cy-brenin-01-l38-s109"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "cy-brenin-01-l38-pb",
+   "title": "Pensum B — Geiriau",
+   "mutation_hint": true,
+   "word_bank": [
+    "chwedl",
+    "canrif",
+    "cronicl",
+    "hanes",
+    "ysgrifennydd",
+    "gwirionedd",
+    "gorliwio",
+    "cofnodi",
+    "tudalen",
+    "llawysgrif",
+    "darllenydd",
+    "cynulleidfa",
+    "ffaith",
+    "dychymyg",
+    "iaith",
+    "cyfieithu",
+    "darllen"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Dyw Myrddin ddim yn ifanc: mae e wedi byw am ___, dim am flwyddyn.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ganrifoedd",
+      "ganrif"
+     ],
+     "explanation": "am + meddal: canrif → ganrif"
+    },
+    {
+     "id": "b2",
+     "prompt": "Mae Cai'n dweud bod tri chawr ar yr Wyddfa. Dyw hynny ddim yn wir: mae e'n ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gorliwio"
+     ]
+    },
+    {
+     "id": "b3",
+     "prompt": "Mae Mali'n ysgrifennu'r ffeithiau yn y llawysgrif: mae hi'n eu ___ nhw.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "cofnodi"
+     ]
+    },
+    {
+     "id": "b4",
+     "prompt": "Mae'r llyfr yn drwm iawn: mae llawer o ___ yn y llyfr.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "dudalennau"
+     ],
+     "explanation": "llawer o + meddal: tudalennau → dudalennau"
+    },
+    {
+     "id": "b5",
+     "prompt": "Roedd pawb yn y dafarn yn dawel: roedd y ___ yn gwrando ar Cai.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gynulleidfa"
+     ],
+     "explanation": "y + enw benywaidd: cynulleidfa → y gynulleidfa"
+    },
+    {
+     "id": "b6",
+     "prompt": "Mae'r esgob yn sâl, felly mae ei ___ yn ysgrifennu'r cronicl.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ysgrifennydd"
+     ]
+    },
+    {
+     "id": "b7",
+     "prompt": "Dyw stori Cai ddim yn wir, ond mae hi'n stori dda: mae ___ mawr gyda Cai.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "dychymyg"
+     ]
+    },
+    {
+     "id": "b8",
+     "prompt": "Mae Mali'n hoffi'r ___ yn y cronicl: beth ddigwyddodd, ble a phryd.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ffeithiau"
+     ]
+    },
+    {
+     "id": "b9",
+     "prompt": "Mae'r beirdd yn canu hen ___ am y cawr ym mhob tafarn: hen stori, gyda llawer o ddychymyg.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "chwedl"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Dyw Mali ddim yn dweud celwydd: mae hi'n dweud y ___.",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "gwirionedd"
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "cy-brenin-01-l38-pc",
+   "title": "Pensum C — Cwestiynau",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Pam mae Mali'n ysgrifennu yn y cronicl?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae ysgrifennydd yr esgob yn hen ac yn sâl, ac mae Mali'n gallu ysgrifennu'n dda.",
+     "rubric": "Un rheswm: mae'r ysgrifennydd yn sâl / mae Mali'n ysgrifennu'n dda.",
+     "key_terms": [
+      "cy-ysgrifennydd"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s007"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Ble roedd Cai'n dweud ei stori?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Yn y dafarn",
+      "Mewn tafarn",
+      "Ar fwrdd yn y dafarn",
+      "Yn y dafarn yng Nghaerllion",
+      "Yn nhafarn y ddinas",
+      "Roedd e'n dweud ei stori yn y dafarn",
+      "Roedd Cai'n dweud ei stori yn y dafarn"
+     ],
+     "model_answer": "Yn y dafarn.",
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s057"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Yn stori gyntaf Cai, roedd y cawr mor dal â beth?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Mor dal â thŵr",
+      "Â thŵr",
+      "Tŵr",
+      "Roedd e mor dal â thŵr",
+      "Roedd y cawr mor dal â thŵr"
+     ],
+     "model_answer": "Mor dal â thŵr.",
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s063"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Y trydydd tro, faint o gewri oedd yn stori Cai?",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Tri",
+      "Tri chawr",
+      "Roedd tri chawr",
+      "Tri chawr oedd yn y stori"
+     ],
+     "model_answer": "Tri chawr.",
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s084"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Pam dwedodd Mali \"Celwydd!\"?",
+     "answer_mode": "self_check",
+     "model_answer": "Roedd Cai'n gorliwio: dim ond un cawr oedd, a wnaeth Cai ddim ymladd ar ei ben ei hun.",
+     "rubric": "Un ffaith o'r cronicl yn erbyn stori Cai (un cawr / gyda'n gilydd).",
+     "key_terms": [
+      "cy-gorliwio",
+      "cy-cawr"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s096",
+      "cy-brenin-01-l38-s105"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Beth sy'n bwysig i ddarllenydd, a beth sy'n bwysig i gynulleidfa, meddai Myrddin?",
+     "answer_mode": "self_check",
+     "model_answer": "Mae angen ffeithiau ar ddarllenydd, ac mae angen dychymyg ar gynulleidfa.",
+     "rubric": "ffeithiau → darllenydd; dychymyg → cynulleidfa.",
+     "key_terms": [
+      "cy-ffaith",
+      "cy-dychymyg"
+     ],
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s120"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Beth fasai'n digwydd tasai Mali'n ysgrifennu stori Cai yn y cronicl?",
+     "answer_mode": "self_check",
+     "model_answer": "Basai'r darllenwyr yn credu bod tri chawr ar yr Wyddfa, a basai'r cronicl yn dweud celwydd.",
+     "rubric": "Brawddeg gyda basai / basen nhw.",
+     "key_terms": [
+      "cy-darllenydd"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "A ti? Wyt ti'n gorliwio weithiau?",
+     "answer_mode": "self_check",
+     "model_answer": "Ydw, weithiau dw i'n gorliwio. / Nac ydw, dw i'n dweud y gwir.",
+     "rubric": "Ydw / Nac ydw + brawddeg Dw i'n …"
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "cy-chwedl",
+   "citation_form": "chwedl",
+   "part_of_speech": "noun",
+   "current_sense": "legend, tale",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-canrif",
+   "citation_form": "canrif",
+   "part_of_speech": "noun",
+   "current_sense": "century",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cronicl",
+   "citation_form": "cronicl",
+   "part_of_speech": "noun",
+   "current_sense": "chronicle",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-hanes",
+   "citation_form": "hanes",
+   "part_of_speech": "noun",
+   "current_sense": "history; account",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ysgrifennydd",
+   "citation_form": "ysgrifennydd",
+   "part_of_speech": "noun",
+   "current_sense": "secretary, scribe",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gwirionedd",
+   "citation_form": "gwirionedd",
+   "part_of_speech": "noun",
+   "current_sense": "truth",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-gorliwio",
+   "citation_form": "gorliwio",
+   "part_of_speech": "verb",
+   "current_sense": "to exaggerate",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cofnodi",
+   "citation_form": "cofnodi",
+   "part_of_speech": "verb",
+   "current_sense": "to record, write down",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-tudalen",
+   "citation_form": "tudalen",
+   "part_of_speech": "noun",
+   "current_sense": "page",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-llawysgrif",
+   "citation_form": "llawysgrif",
+   "part_of_speech": "noun",
+   "current_sense": "manuscript",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-darllenydd",
+   "citation_form": "darllenydd",
+   "part_of_speech": "noun",
+   "current_sense": "reader",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-cynulleidfa",
+   "citation_form": "cynulleidfa",
+   "part_of_speech": "noun",
+   "current_sense": "audience",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-ffaith",
+   "citation_form": "ffaith",
+   "part_of_speech": "noun",
+   "current_sense": "fact",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-dychymyg",
+   "citation_form": "dychymyg",
+   "part_of_speech": "noun",
+   "current_sense": "imagination",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  },
+  {
+   "lexeme_id": "cy-iaith",
+   "citation_form": "iaith",
+   "part_of_speech": "noun",
+   "current_sense": "language",
+   "first_introduced_lesson": "cy-brenin-01-l38",
+   "new": true
+  }
+ ],
+ "lexicon_delta": {
+  "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-38.json.",
+  "card_stages": [
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "chwedl (b.)",
+    "back": "legend, tale",
+    "example_segment_id": "cy-brenin-01-l38-s115",
+    "lexeme_id": "cy-chwedl"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "canrif (b.), canrifoedd",
+    "back": "century",
+    "example_segment_id": "cy-brenin-01-l38-s117",
+    "lexeme_id": "cy-canrif"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "cronicl (g.)",
+    "back": "chronicle",
+    "example_segment_id": "cy-brenin-01-l38-s005",
+    "lexeme_id": "cy-cronicl"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "hanes (g.)",
+    "back": "history; account",
+    "example_segment_id": "cy-brenin-01-l38-s004",
+    "lexeme_id": "cy-hanes"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "ysgrifennydd (g.)",
+    "back": "secretary, scribe",
+    "example_segment_id": "cy-brenin-01-l38-s007",
+    "lexeme_id": "cy-ysgrifennydd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "gwirionedd (g.)",
+    "back": "truth",
+    "example_segment_id": "cy-brenin-01-l38-s044",
+    "lexeme_id": "cy-gwirionedd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "gorliwio",
+    "back": "to exaggerate",
+    "example_segment_id": "cy-brenin-01-l38-s074",
+    "lexeme_id": "cy-gorliwio"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "cofnodi",
+    "back": "to record, write down",
+    "example_segment_id": "cy-brenin-01-l38-s008",
+    "seen_as": "gofnodi",
+    "lexeme_id": "cy-cofnodi"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "tudalen (b.)",
+    "back": "page",
+    "example_segment_id": "cy-brenin-01-l38-s004",
+    "lexeme_id": "cy-tudalen"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "llawysgrif (b.)",
+    "back": "manuscript",
+    "example_segment_id": "cy-brenin-01-l38-s003",
+    "lexeme_id": "cy-llawysgrif"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "darllenydd (g.), darllenwyr",
+    "back": "reader",
+    "example_segment_id": "cy-brenin-01-l38-s117",
+    "seen_as": "ddarllenwyr",
+    "lexeme_id": "cy-darllenydd"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "cynulleidfa (b.)",
+    "back": "audience",
+    "example_segment_id": "cy-brenin-01-l38-s059",
+    "lexeme_id": "cy-cynulleidfa"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "ffaith (b.), ffeithiau",
+    "back": "fact",
+    "example_segment_id": "cy-brenin-01-l38-s010",
+    "lexeme_id": "cy-ffaith"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "dychymyg (g.)",
+    "back": "imagination",
+    "example_segment_id": "cy-brenin-01-l38-s120",
+    "lexeme_id": "cy-dychymyg"
+   },
+   {
+    "id": "base",
+    "lesson": "cy-brenin-01-l38",
+    "front": "iaith (b.)",
+    "back": "language",
+    "example_segment_id": "cy-brenin-01-l38-s017",
+    "lexeme_id": "cy-iaith"
+   },
+   {
+    "id": "pattern-g38",
+    "lesson": "cy-brenin-01-l38",
+    "front": "Mae'r stori'n cael ei dweud. · Bydd y stori'n cael ei chanu. · (cronicl: Gwelwyd y cawr. = Cafodd y cawr ei weld.)",
+    "back": "The story is (being) told. · The story will be sung. · (chronicle style: The giant was seen.)",
+    "example_segment_id": "cy-brenin-01-l38-s070",
+    "example_segment_ids": [
+     "cy-brenin-01-l38-s070",
+     "cy-brenin-01-l38-s085"
+    ],
+    "lexeme_id": "cy-pattern-g38"
+   }
+  ]
+ },
+ "media": {
+  "status": "planned",
+  "cover": "cy-brenin-01-l38-img-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 1,
+   "margin_diagram": 1,
+   "margin_gloss": 42
+  }
+ },
+ "completion": {
+  "button_label": "Gorffen y bennod"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "cy-brenin-01",
+   "pennod-38",
+   "rhan-4"
+  ]
+ },
+ "metrics": {
+  "running_words": 1700,
+  "sentences": 137,
+  "word_target": 1840,
+  "word_window": [
+   1656,
+   2024
+  ]
+ }
+}

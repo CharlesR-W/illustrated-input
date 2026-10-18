@@ -1,38 +1,565 @@
 {
-  "schema_version": "0.1.0",
-  "id": "cy-draig-01",
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01",
   "language": {
     "code": "cy",
     "name": "Cymraeg",
     "english_name": "Welsh"
   },
-  "title": "Y Brenin a Ddaw Eto",
-  "subtitle": "Stori Arthur, draig fach, a llyfrgell sy'n gwrthod aros am arwr",
+  "title": "Y Brenin a Fu ac a Fydd",
+  "subtitle": "Llys Cynyr, draig fach, a'r bachgen a fydd yn frenin",
   "status": "draft",
-  "content_version": "0.3.0",
-  "review_required": "fluent-Welsh language review",
+  "content_version": "2.0.0-plan",
+  "review_required": "fluent southern-Welsh review of every chapter before text_status: reviewed",
   "register": "informal modern Welsh; target-language-first",
-  "dialect": "southern colloquial forms in dialogue; broadly standard informal orthography",
-  "pronunciation": "southern model; pregenerated audio deferred",
-  "lesson_count": 32,
-  "curriculum_path": "curriculum.md",
+  "dialect": "southern, as taught by the National Centre for Learning Welsh 'De' Mynediad/Sylfaen courses, in dialogue and narration (docs/welsh-v2-design.md §2.6)",
+  "pronunciation": "southern model; human recordings preferred, Piper cy_GB-bu_tts as interim source",
+  "personal_name_mutation": false,
+  "place_name_mutation": true,
+  "lesson_count": 40,
+  "design_path": "../../docs/welsh-v2-design.md",
+  "plan_path": "plan/chapters.json",
+  "grammar_map_path": "plan/grammar-map.json",
+  "continuity_path": "plan/continuity.json",
   "lexicon_path": "lexicon.json",
   "grading": {
-    "early_new_lexemes_min": 8,
-    "early_new_lexemes_max": 12,
-    "known_or_aided_token_target": 0.9,
-    "first_lesson_min_occurrences": 3,
-    "next_five_lessons_recall_target": 3,
-    "primary_pattern_min_demonstrations": 6
-    ,"story_length_bands": [
-      {"from": 2, "to": 11, "words_from": 250, "words_to": 450},
-      {"from": 12, "to": 21, "words_from": 500, "words_to": 800},
-      {"from": 22, "to": 32, "words_from": 850, "words_to": 1200}
-    ]
+    "by_rhan": {
+      "1": {
+        "chapters": [
+          1,
+          10
+        ],
+        "word_targets": {
+          "1": 450,
+          "2": 550,
+          "3": 600,
+          "4": 650,
+          "5": 700,
+          "6": 750,
+          "7": 800,
+          "8": 850,
+          "9": 900,
+          "10": 950
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 3,
+          "max": 4
+        },
+        "new_lexemes_ceiling": 37,
+        "open_slots_max": 0,
+        "mean_sentence_words": [
+          6,
+          9
+        ],
+        "max_sentence_words": 18,
+        "mae_initial_max": 0.5,
+        "gloss_per_100": [
+          2,
+          4
+        ],
+        "prior_coverage_min": 0.8,
+        "pensa": {
+          "A": [
+            8,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "max_consecutive_mae": 5,
+        "exact_duplicate_sentences_max": 3
+      },
+      "2": {
+        "chapters": [
+          11,
+          20
+        ],
+        "word_targets": {
+          "11": 1000,
+          "12": 1033,
+          "13": 1067,
+          "14": 1100,
+          "15": 1133,
+          "16": 1167,
+          "17": 1200,
+          "18": 1233,
+          "19": 1267,
+          "20": 1300
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 4,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 33,
+        "open_slots_max": 4,
+        "mean_sentence_words": [
+          8,
+          11
+        ],
+        "max_sentence_words": 22,
+        "mae_initial_max": 0.4,
+        "gloss_per_100": [
+          1.5,
+          3
+        ],
+        "prior_coverage_min": 0.88,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "max_consecutive_mae": 5,
+        "exact_duplicate_sentences_max": 2
+      },
+      "3": {
+        "chapters": [
+          21,
+          31
+        ],
+        "word_targets": {
+          "21": 1330,
+          "22": 1360,
+          "23": 1390,
+          "24": 1420,
+          "25": 1450,
+          "26": 1480,
+          "27": 1510,
+          "28": 1540,
+          "29": 1570,
+          "30": 1600,
+          "31": 1630
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 5,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 31,
+        "open_slots_max": 8,
+        "mean_sentence_words": [
+          10,
+          13
+        ],
+        "max_sentence_words": 28,
+        "mae_initial_max": 0.3,
+        "gloss_per_100": [
+          1,
+          2.5
+        ],
+        "prior_coverage_min": 0.88,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "max_consecutive_mae": 5,
+        "exact_duplicate_sentences_max": 2
+      },
+      "4": {
+        "chapters": [
+          32,
+          40
+        ],
+        "word_targets": {
+          "32": 1660,
+          "33": 1690,
+          "34": 1720,
+          "35": 1750,
+          "36": 1780,
+          "37": 1810,
+          "38": 1840,
+          "39": 1870,
+          "40": 1800
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 5,
+          "max": 6
+        },
+        "new_lexemes_ceiling": 33,
+        "open_slots_max": 10,
+        "mean_sentence_words": [
+          11,
+          15
+        ],
+        "max_sentence_words": 32,
+        "mae_initial_max": 0.3,
+        "gloss_per_100": [
+          1,
+          2.5
+        ],
+        "prior_coverage_min": 0.88,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "max_consecutive_mae": 5,
+        "exact_duplicate_sentences_max": 2
+      }
+    },
+    "recurrence": {
+      "min_uses_in_chapter": 3,
+      "recall_in_next_five_min": 2
+    },
+    "coverage": {
+      "unlicensed_tokens_max": 0,
+      "local_window_tokens": 25,
+      "local_window_new_max": 4
+    },
+    "primary_target_min_demonstrations": 8,
+    "primary_target_min_contrasts": 2,
+    "frequency_list": "CorCenCC Yr Amliadur whole-corpus lemma list, top 2000 (doi:10.17035/d.2020.0120164107), vendored at plan/frequency.json"
+  },
+  "dialect_lint": [
+    {
+      "form": "dydy",
+      "allowed_from": null,
+      "note": "use dyw … ddim (southern)"
+    },
+    {
+      "form": "dydyn",
+      "allowed_from": null,
+      "note": "use dyn nhw ddim"
+    },
+    {
+      "form": "rŵan",
+      "allowed_from": 36,
+      "note": "northern; use nawr"
+    },
+    {
+      "form": "isio",
+      "allowed_from": 36,
+      "note": "northern; use eisiau"
+    },
+    {
+      "form": "moyn",
+      "allowed_from": null,
+      "note": "house choice: eisiau"
+    },
+    {
+      "form": "gen i",
+      "allowed_from": 36,
+      "note": "northern possession; use gyda fi"
+    },
+    {
+      "form": "ganddo fo",
+      "allowed_from": 36,
+      "note": "northern"
+    },
+    {
+      "form": "gynno fo",
+      "allowed_from": 36,
+      "note": "northern"
+    },
+    {
+      "form": "fo",
+      "allowed_from": 36,
+      "note": "northern pronoun; use e/fe"
+    },
+    {
+      "form": "dynes",
+      "allowed_from": 36,
+      "note": "use menyw"
+    },
+    {
+      "form": "llefrith",
+      "allowed_from": 36,
+      "note": "use llaeth"
+    },
+    {
+      "form": "hogyn",
+      "allowed_from": 36,
+      "note": "use bachgen"
+    },
+    {
+      "form": "hogan",
+      "allowed_from": 36,
+      "note": "use merch"
+    },
+    {
+      "form": "taid",
+      "allowed_from": 36,
+      "note": "northern"
+    },
+    {
+      "form": "nain",
+      "allowed_from": 36,
+      "note": "northern"
+    },
+    {
+      "form": "dan ni",
+      "allowed_from": 36,
+      "note": "use dyn ni"
+    },
+    {
+      "form": "dach chi",
+      "allowed_from": 36,
+      "note": "use dych chi"
+    },
+    {
+      "form": "tyrd",
+      "allowed_from": null,
+      "note": "use dere"
+    },
+    {
+      "form": "dos",
+      "allowed_from": null,
+      "note": "use cer"
+    },
+    {
+      "form": "lan",
+      "allowed_from": null,
+      "note": "house choice: i fyny"
+    },
+    {
+      "form": "allan",
+      "allowed_from": 36,
+      "note": "house choice: mas"
+    },
+    {
+      "form": "medru",
+      "allowed_from": null,
+      "note": "use gallu"
+    },
+    {
+      "form": "byddwn i",
+      "allowed_from": 38,
+      "note": "conditional is baswn i; byddwn i receptive in literary register"
+    },
+    {
+      "form": "byddai",
+      "allowed_from": 33,
+      "note": "receptive future-in-past"
+    },
+    {
+      "form": "roeddwn i",
+      "allowed_from": 38,
+      "note": "dialogue uses ro'n i"
+    },
+    {
+      "form": "weles i",
+      "allowed_from": null,
+      "note": "course uses -ais i: gwelais i"
+    },
+    {
+      "form": "ycw",
+      "allowed_from": null,
+      "note": "typo; acw"
+    },
+    {
+      "form": "a mae",
+      "allowed_from": null,
+      "note": "use ac mae"
+    },
+    {
+      "form": "mi",
+      "allowed_from": 36,
+      "note": "northern affirmative particle"
+    }
+  ],
+  "mutation_triggers_path": "plan/grammar-map.json#mutation_triggers",
+  "ui_strings": {
+    "cy": {
+      "course_contents": "Cynnwys",
+      "continue": "Ymlaen",
+      "part": "Rhan",
+      "chapter": "Pennod",
+      "story": "Y stori",
+      "grammar": "Gramadeg",
+      "nodyn": "Nodyn (Saesneg)",
+      "vocabulary": "Geirfa",
+      "exercises": "Pensa",
+      "pensum": "Pensum",
+      "example": "Enghraifft",
+      "word_bank": "Banc geiriau",
+      "check": "Gwirio",
+      "reveal": "Dangos",
+      "try_again": "Eto",
+      "correct": "Da iawn!",
+      "almost_circumflex": "Bron! (ŵ / ŷ / â …)",
+      "mutation_hint": "Bron! Treiglad?",
+      "wrong": "Dim eto. Eto?",
+      "empty": "Ysgrifenna ateb yn gyntaf.",
+      "self_check_yes": "Roedd e gyda fi",
+      "self_check_no": "Dim eto",
+      "model_answer": "Ateb enghreifftiol",
+      "oral_mode": "Ar lafar",
+      "hide_notes": "Cuddio'r nodiadau",
+      "show_notes": "Dangos y nodiadau",
+      "finish": "Gorffen y bennod",
+      "finished": "✓ Wedi gorffen",
+      "next": "Pennod nesaf",
+      "previous": "Pennod flaenorol",
+      "anki": "Lawrlwytho cardiau Anki",
+      "anki_cumulative": "Cardiau Anki: penodau 1–N",
+      "audio_play": "Gwrando",
+      "audio_source": "Llais",
+      "english_toggle": "English",
+      "start": "Dechrau darllen",
+      "lessons_range": "Penodau {from}–{to}",
+      "planned": "yn dod cyn hir",
+      "notes": "Nodiadau",
+      "enlarge": "Chwyddo'r llun",
+      "close": "Cau",
+      "item": "Cwestiwn {n}",
+      "blank": "bwlch {n}",
+      "words_count": "{n} gair",
+      "anki_done": "Anki: {n} cerdyn",
+      "rubric": "Gwirio",
+      "key_terms": "Geiriau allweddol",
+      "stop": "Stopio"
+    },
+    "en": {
+      "course_contents": "Contents",
+      "continue": "Continue",
+      "part": "Part",
+      "chapter": "Chapter",
+      "story": "The story",
+      "grammar": "Grammar",
+      "nodyn": "Note (English)",
+      "vocabulary": "Vocabulary",
+      "exercises": "Exercises",
+      "pensum": "Exercise",
+      "example": "Example",
+      "word_bank": "Word bank",
+      "check": "Check",
+      "reveal": "Show",
+      "try_again": "Again",
+      "correct": "Well done!",
+      "almost_circumflex": "Almost! (ŵ / ŷ / â …)",
+      "mutation_hint": "Almost! Mutation?",
+      "wrong": "Not yet. Again?",
+      "empty": "Write an answer first.",
+      "self_check_yes": "I had it",
+      "self_check_no": "Not yet",
+      "model_answer": "Model answer",
+      "oral_mode": "Oral mode",
+      "hide_notes": "Hide margin notes",
+      "show_notes": "Show margin notes",
+      "finish": "Finish chapter",
+      "finished": "✓ Finished",
+      "next": "Next chapter",
+      "previous": "Previous chapter",
+      "anki": "Download Anki cards",
+      "anki_cumulative": "Anki cards: chapters 1–N",
+      "audio_play": "Listen",
+      "audio_source": "Voice",
+      "english_toggle": "Cymraeg"
+    }
+  },
+  "special_characters": [
+    "â",
+    "ê",
+    "î",
+    "ô",
+    "û",
+    "ŵ",
+    "ŷ",
+    "ä",
+    "ë",
+    "ï",
+    "ö",
+    "ü",
+    "á",
+    "é"
+  ],
+  "names_personal": [
+    "Arth",
+    "Arthur",
+    "Mali",
+    "Cai",
+    "Cynyr",
+    "Elen",
+    "Modlen",
+    "Myrddin",
+    "Dafi",
+    "Pero",
+    "Uthr",
+    "Rhita",
+    "Gawr",
+    "Gwalchmai"
+  ],
+  "names_place": [
+    "Ynys Prydain",
+    "Cymru",
+    "Lloegr",
+    "Alban",
+    "Iwerddon",
+    "Llydaw",
+    "Eryri",
+    "Wyddfa",
+    "Hafren",
+    "Wysg",
+    "Caerllion",
+    "Cwm Helyg",
+    "Helyg",
+    "Llys Cynyr",
+    "Ewrop"
+  ],
+  "names_other": [
+    "Calan"
+  ],
+  "names_note": "Personal names are never mutated (lint: flag Ddafi, Fali, Bero, Gai, Dwm-style forms); place names always mutate (lint: flag i Caerllion, yn Cymru).",
+  "function_words": {
+    "'r": 1,
+    "'n": 1,
+    "'i": 10,
+    "'u": 10,
+    "'ch": 10,
+    "'m": 10,
+    "ac": 1,
+    "yr": 1
   },
   "anki": {
     "unit": "lesson",
     "format": "tsv",
+    "file_headers": [
+      "#separator:tab",
+      "#html:true",
+      "#guid column:1",
+      "#tags column:4",
+      "#deck:Cymraeg::Y Brenin a Fu ac a Fydd"
+    ],
     "fields": [
       "guid",
       "front",
@@ -40,264 +567,393 @@
       "tags",
       "source"
     ],
-    "identity": "course_id + lexeme_id + card_stage"
+    "identity": "course_id + lexeme_id + card_stage",
+    "guid_pattern": "cy-brenin-01:{lexeme_id}:{stage_id}",
+    "source": "lexicon.card_stages where lesson == this lesson id",
+    "cumulative_export": true,
+    "tags_base": [
+      "cy-brenin-01"
+    ]
   },
   "lessons": [
     {
-      "id": "cy-draig-01-l01",
+      "id": "cy-brenin-01-l01",
       "order": 1,
-      "title": "Y ddraig yn y bocs",
+      "title": "Ynys Prydain",
+      "rhan": 1,
       "status": "draft",
-      "path": "lessons/lesson-01.json",
+      "path": "lessons/pennod-01.json",
       "grammar_target_id": "G01"
     },
     {
-      "id": "cy-draig-01-l02",
+      "id": "cy-brenin-01-l02",
       "order": 2,
-      "title": "Pwy wyt ti?",
+      "title": "Teulu Cynyr",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G02",
-      "path": "lessons/lesson-02.json"
+      "path": "lessons/pennod-02.json",
+      "grammar_target_id": "G02"
     },
     {
-      "id": "cy-draig-01-l03",
+      "id": "cy-brenin-01-l03",
       "order": 3,
-      "title": "Beth sydd yn y bocs?",
+      "title": "Yn y buarth",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G03",
-      "path": "lessons/lesson-03.json"
+      "path": "lessons/pennod-03.json",
+      "grammar_target_id": "G03"
     },
     {
-      "id": "cy-draig-01-l04",
+      "id": "cy-brenin-01-l04",
       "order": 4,
-      "title": "Mae Dafi'n darllen?",
+      "title": "Ble mae Pero?",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G04",
-      "path": "lessons/lesson-04.json"
+      "path": "lessons/pennod-04.json",
+      "grammar_target_id": "G04"
     },
     {
-      "id": "cy-draig-01-l05",
+      "id": "cy-brenin-01-l05",
       "order": 5,
-      "title": "Ydy Dafi'n cofio?",
+      "title": "Pwy wyt ti?",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G05",
-      "path": "lessons/lesson-05.json"
+      "path": "lessons/pennod-05.json",
+      "grammar_target_id": "G05"
     },
     {
-      "id": "cy-draig-01-l06",
+      "id": "cy-brenin-01-l06",
       "order": 6,
-      "title": "Cath Nia a'r hen lyfr",
+      "title": "Oes draig yn y gegin?",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G06",
-      "path": "lessons/lesson-06.json"
+      "path": "lessons/pennod-06.json",
+      "grammar_target_id": "G06"
     },
     {
-      "id": "cy-draig-01-l07",
+      "id": "cy-brenin-01-l07",
       "order": 7,
-      "title": "O'r llyfrgell i'r caffi",
+      "title": "Gwranda!",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G07",
-      "path": "lessons/lesson-07.json"
+      "path": "lessons/pennod-07.json",
+      "grammar_target_id": "G07"
     },
     {
-      "id": "cy-draig-01-l08",
+      "id": "cy-brenin-01-l08",
       "order": 8,
-      "title": "Llun Dafi",
+      "title": "Mae cleddyf gyda Cai",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G08",
-      "path": "lessons/lesson-08.json"
+      "path": "lessons/pennod-08.json",
+      "grammar_target_id": "G08"
     },
     {
-      "id": "cy-draig-01-l09",
+      "id": "cy-brenin-01-l09",
       "order": 9,
-      "title": "Pedair rhan",
+      "title": "Dych chi'n byw yn y tŵr?",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G09",
-      "path": "lessons/lesson-09.json"
+      "path": "lessons/pennod-09.json",
+      "grammar_target_id": "G09"
     },
     {
-      "id": "cy-draig-01-l10",
+      "id": "cy-brenin-01-l10",
       "order": 10,
-      "title": "Ble mae'r bedwaredd ran?",
+      "title": "Pysgodyn!",
+      "rhan": 1,
       "status": "draft",
-      "grammar_target_id": "G10",
-      "path": "lessons/lesson-10.json"
+      "path": "lessons/pennod-10.json",
+      "grammar_target_id": "G10"
     },
     {
-      "id": "cy-draig-01-l11",
+      "id": "cy-brenin-01-l11",
       "order": 11,
-      "title": "Ei lyfr e",
+      "title": "Mae Dafi wedi bwyta'r pasteiod!",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G11",
-      "path": "lessons/lesson-11.json"
+      "path": "lessons/pennod-11.json",
+      "grammar_target_id": "G11"
     },
     {
-      "id": "cy-draig-01-l12",
+      "id": "cy-brenin-01-l12",
       "order": 12,
-      "title": "Rydyn ni'n agor y llyfr",
+      "title": "Dyddiadur Mali",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G12",
-      "path": "lessons/lesson-12.json"
+      "path": "lessons/pennod-12.json",
+      "grammar_target_id": "G12"
     },
     {
-      "id": "cy-draig-01-l13",
+      "id": "cy-brenin-01-l13",
       "order": 13,
-      "title": "Bob nos",
+      "title": "Hedfanodd Arth",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G13",
-      "path": "lessons/lesson-13.json"
+      "path": "lessons/pennod-13.json",
+      "grammar_target_id": "G13"
     },
     {
-      "id": "cy-draig-01-l14",
+      "id": "cy-brenin-01-l14",
       "order": 14,
-      "title": "Ddoe, agorodd y drws",
+      "title": "Yn y ffair",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G14",
-      "path": "lessons/lesson-14.json"
+      "path": "lessons/pennod-14.json",
+      "grammar_target_id": "G14"
     },
     {
-      "id": "cy-draig-01-l15",
+      "id": "cy-brenin-01-l15",
       "order": 15,
-      "title": "Aeth Dafi allan",
+      "title": "Beth yw hwn?",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G15",
-      "path": "lessons/lesson-15.json"
+      "path": "lessons/pennod-15.json",
+      "grammar_target_id": "G15"
     },
     {
-      "id": "cy-draig-01-l16",
+      "id": "cy-brenin-01-l16",
       "order": 16,
-      "title": "Roedd map yn y llyfr",
+      "title": "Y carw gwyn",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G16",
-      "path": "lessons/lesson-16.json"
+      "path": "lessons/pennod-16.json",
+      "grammar_target_id": "G16"
     },
     {
-      "id": "cy-draig-01-l17",
+      "id": "cy-brenin-01-l17",
       "order": 17,
-      "title": "Pan oedd Iwan yn ifanc",
+      "title": "Pan oedd Cynyr yn ifanc",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G17",
-      "path": "lessons/lesson-17.json"
+      "path": "lessons/pennod-17.json",
+      "grammar_target_id": "G17"
     },
     {
-      "id": "cy-draig-01-l18",
+      "id": "cy-brenin-01-l18",
       "order": 18,
-      "title": "Bydd y llyfrgell ar gau",
+      "title": "Bob dydd",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G18",
-      "path": "lessons/lesson-18.json"
+      "path": "lessons/pennod-18.json",
+      "grammar_target_id": "G18"
     },
     {
-      "id": "cy-draig-01-l19",
+      "id": "cy-brenin-01-l19",
       "order": 19,
-      "title": "Os bydd hi'n bwrw glaw",
+      "title": "Mae annwyd ar Cai",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G19",
-      "path": "lessons/lesson-19.json"
+      "path": "lessons/pennod-19.json",
+      "grammar_target_id": "G19"
     },
     {
-      "id": "cy-draig-01-l20",
+      "id": "cy-brenin-01-l20",
       "order": 20,
-      "title": "Y llyfr sy'n canu",
+      "title": "Y negesydd",
+      "rhan": 2,
       "status": "draft",
-      "grammar_target_id": "G20",
-      "path": "lessons/lesson-20.json"
+      "path": "lessons/pennod-20.json",
+      "grammar_target_id": "G20"
     },
     {
-      "id": "cy-draig-01-l21",
+      "id": "cy-brenin-01-l21",
       "order": 21,
-      "title": "Y map a gafodd Mali",
+      "title": "Os bydd hi'n bwrw eira",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G21",
-      "path": "lessons/lesson-21.json"
+      "path": "lessons/pennod-21.json",
+      "grammar_target_id": "G21"
     },
     {
-      "id": "cy-draig-01-l22",
+      "id": "cy-brenin-01-l22",
       "order": 22,
-      "title": "Mae'r allwedd arni hi",
+      "title": "Mae pobl yn dweud bod …",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G22",
-      "path": "lessons/lesson-22.json"
+      "path": "lessons/pennod-22.json",
+      "grammar_target_id": "G22"
     },
     {
-      "id": "cy-draig-01-l23",
+      "id": "cy-brenin-01-l23",
       "order": 23,
-      "title": "Mae angen help arnon ni",
+      "title": "Y daith",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G23",
-      "path": "lessons/lesson-23.json"
+      "path": "lessons/pennod-23.json",
+      "grammar_target_id": "G23"
     },
     {
-      "id": "cy-draig-01-l24",
+      "id": "cy-brenin-01-l24",
       "order": 24,
-      "title": "Y llwybr gorau",
+      "title": "Y garreg sy'n dal y cleddyf",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G24",
-      "path": "lessons/lesson-24.json"
+      "path": "lessons/pennod-24.json",
+      "grammar_target_id": "G24"
     },
     {
-      "id": "cy-draig-01-l25",
+      "id": "cy-brenin-01-l25",
       "order": 25,
-      "title": "Paid â deffro'r brenin!",
+      "title": "Y twrnamaint",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G25",
-      "path": "lessons/lesson-25.json"
+      "path": "lessons/pennod-25.json",
+      "grammar_target_id": "G25"
     },
     {
-      "id": "cy-draig-01-l26",
+      "id": "cy-brenin-01-l26",
       "order": 26,
-      "title": "Mae'n rhaid i ni ddewis",
+      "title": "Ble mae cleddyf Cai?",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G26",
-      "path": "lessons/lesson-26.json"
+      "path": "lessons/pennod-26.json",
+      "grammar_target_id": "G26"
     },
     {
-      "id": "cy-draig-01-l27",
+      "id": "cy-brenin-01-l27",
       "order": 27,
-      "title": "Dywedodd y llyfr fod...",
+      "title": "Rhaid i ti ddweud y gwir",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G27",
-      "path": "lessons/lesson-27.json"
+      "path": "lessons/pennod-27.json",
+      "grammar_target_id": "G27"
     },
     {
-      "id": "cy-draig-01-l28",
+      "id": "cy-brenin-01-l28",
       "order": 28,
-      "title": "Beth dyn ni wedi'i wneud?",
+      "title": "Y cleddyf a dynnodd Arth",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G28",
-      "path": "lessons/lesson-28.json"
+      "path": "lessons/pennod-28.json",
+      "grammar_target_id": "G28"
     },
     {
-      "id": "cy-draig-01-l29",
+      "id": "cy-brenin-01-l29",
       "order": 29,
-      "title": "Artur ydy e",
+      "title": "Arth wnaeth e!",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G29",
-      "path": "lessons/lesson-29.json"
+      "path": "lessons/pennod-29.json",
+      "grammar_target_id": "G29"
     },
     {
-      "id": "cy-draig-01-l30",
+      "id": "cy-brenin-01-l30",
       "order": 30,
-      "title": "Pe bai Artur yn frenin",
+      "title": "Mab Uthr",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G30",
-      "path": "lessons/lesson-30.json"
+      "path": "lessons/pennod-30.json",
+      "grammar_target_id": "G30"
     },
     {
-      "id": "cy-draig-01-l31",
+      "id": "cy-brenin-01-l31",
       "order": 31,
-      "title": "Beth ydych chi'n ei ddewis?",
+      "title": "Y brenin bach",
+      "rhan": 3,
       "status": "draft",
-      "grammar_target_id": "G31",
-      "path": "lessons/lesson-31.json"
+      "path": "lessons/pennod-31.json",
+      "grammar_target_id": "G31"
     },
     {
-      "id": "cy-draig-01-l32",
+      "id": "cy-brenin-01-l32",
       "order": 32,
-      "title": "Y brenin a ddaw eto",
+      "title": "Coron i fachgen",
+      "rhan": 4,
       "status": "draft",
-      "grammar_target_id": "G32",
-      "path": "lessons/lesson-32.json"
+      "path": "lessons/pennod-32.json",
+      "grammar_target_id": "G32"
+    },
+    {
+      "id": "cy-brenin-01-l33",
+      "order": 33,
+      "title": "Neges Rhita Gawr",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-33.json",
+      "grammar_target_id": "G33"
+    },
+    {
+      "id": "cy-brenin-01-l34",
+      "order": 34,
+      "title": "Taswn i'n gawr …",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-34.json",
+      "grammar_target_id": "G34"
+    },
+    {
+      "id": "cy-brenin-01-l35",
+      "order": 35,
+      "title": "Gwers olaf Myrddin",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-35.json",
+      "grammar_target_id": "G35"
+    },
+    {
+      "id": "cy-brenin-01-l36",
+      "order": 36,
+      "title": "I'r gogledd",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-36.json",
+      "grammar_target_id": "G36"
+    },
+    {
+      "id": "cy-brenin-01-l37",
+      "order": 37,
+      "title": "Ar yr Wyddfa",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-37.json",
+      "grammar_target_id": "G37"
+    },
+    {
+      "id": "cy-brenin-01-l38",
+      "order": 38,
+      "title": "Dwy stori",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-38.json",
+      "grammar_target_id": "G38"
+    },
+    {
+      "id": "cy-brenin-01-l39",
+      "order": 39,
+      "title": "Y Bwrdd Crwn",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-39.json",
+      "grammar_target_id": "G39"
+    },
+    {
+      "id": "cy-brenin-01-l40",
+      "order": 40,
+      "title": "Y brenin a fu ac a fydd",
+      "rhan": 4,
+      "status": "draft",
+      "path": "lessons/pennod-40.json",
+      "grammar_target_id": "G40"
     }
-  ]
+  ],
+  "parts": [
+    {
+      "rhan": 1,
+      "title": "Y Llys"
+    },
+    {
+      "rhan": 2,
+      "title": "Gwersi"
+    },
+    {
+      "rhan": 3,
+      "title": "Y Cleddyf"
+    },
+    {
+      "rhan": 4,
+      "title": "Y Brenin"
+    }
+  ],
+  "intro_en": "This book teaches Welsh the way Lingua Latina per se Illustrata teaches Latin: by reading one continuous story written entirely in Welsh, from the first page.\n\nRead for meaning, not for every word. Each chapter adds only a little new language, and the story, the pictures and what you already know are meant to make it clear. If a sentence is unclear, read on: the next sentence often answers it.\n\nUse the margin. The notes beside the text are in Welsh only. \"mawr ↔ bach\" means opposites. \"=\" gives a simpler way of saying the same thing. \"gadair ← cadair\" shows the ordinary form of a word whose first letter has changed (a mutation). A small picture shows an object.\n\nRe-read. When a chapter feels easy, read it again with the notes hidden. A second, faster reading is where much of the learning happens. Listen to the audio where it exists.\n\nDo the Pensa, ideally aloud. A practises the chapter's grammar, B its new words, C asks questions about the story. Each starts with a worked example. Nothing is locked behind a score: check, show the answer, or move on.\n\nExport the Anki cards for each chapter you finish (or all chapters so far) and review them daily. The cards show the Welsh word with an example sentence from the story.\n\nThe Welsh is southern Welsh, as taught by the national Learn Welsh courses.\n\nPlease note: all chapters are drafts. They were written with AI assistance and have not yet been checked by a fluent Welsh speaker. Corrections are welcome."
 }

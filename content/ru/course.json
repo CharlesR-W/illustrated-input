@@ -1,0 +1,1517 @@
+{
+  "schema_version": "0.1.0",
+  "id": "ru-mir-01",
+  "lang": "ru",
+  "language": {
+    "code": "ru",
+    "name": "Русский",
+    "english_name": "Russian"
+  },
+  "title": "Мир",
+  "subtitle": "Дере́вня, война́ и во́ля, 1913–1918",
+  "status": "draft",
+  "content_version": "0.1.0-plan",
+  "review_required": "native-speaker review of each Часть before text_status: reviewed (design §11.8); the owner is the pilot reader",
+  "register": "modern standard literary Russian in narration and educated speech; peasants and soldiers speak standard morphology with a whitelisted colloquial lexicon (design §7.2)",
+  "orthography": {
+    "policy": "modern (post-1918) orthography everywhere except the receptive pre-1918 texts of Глава 36",
+    "yo": "ё is always written; a bare е in a lexeme whose form has ё is an error",
+    "quotes": "«…» outer, „…“ inner",
+    "dash": "— with spaces; direct speech by Russian punctuation rules",
+    "numbers": "words for 1–10 and round numbers; digits for years and prices once G15 is taught; dates as digit chunks before G25"
+  },
+  "address": "ты in family, among soldiers, to animals and children; вы to Vera, the priest, the Orlovs, officers, and from Vera to adults; name + patronymic where a Russian would use it (taught in Глава 5); Order No. 1 forbids officers' ты to soldiers (Глава 32)",
+  "pronunciation": "standard Moscow norm; Silero v4_ru with stored stress (put_accent=False), vosk-tts as fallback; human recordings preferred (design §10.4)",
+  "lesson_count": 40,
+  "design_path": "../../docs/russian-mir-design.md",
+  "lesson_shape_path": "../../docs/russian-mir-lesson-shape.md",
+  "plan_path": "plan/chapters.json",
+  "grammar_map_path": "plan/grammar-map.json",
+  "continuity_path": "plan/continuity.json",
+  "recall_path": "plan/recall.json",
+  "baseline_path": "plan/baseline.json",
+  "frequency_path": "plan/frequency.json",
+  "sources_path": "plan/sources.json",
+  "lexicon_path": "lexicon.json",
+  "grammar_licensing": "advisory",
+  "stress": {
+    "unstressed_units": [
+      "то",
+      "ка",
+      "де",
+      "с",
+      "таки",
+      "же",
+      "бы",
+      "ли",
+      "нибудь",
+      "либо",
+      "кое"
+    ],
+    "exempt": [
+      "м",
+      "ж",
+      "ср",
+      "ipf",
+      "pf"
+    ],
+    "check": "warn",
+    "default_on_through_part": 2,
+    "toggle_applies_to": [
+      "story",
+      "glosses",
+      "pensa",
+      "exercises",
+      "words_with_history"
+    ]
+  },
+  "baseline_chunks": [
+    {
+      "text": "Меня́ зову́т …",
+      "lexeme_id": "ru-ph-menya-zovut"
+    },
+    {
+      "text": "Как тебя́ зову́т?",
+      "lexeme_id": "ru-ph-kak-tebya-zovut"
+    },
+    {
+      "text": "Как вас зову́т?",
+      "lexeme_id": "ru-ph-kak-vas-zovut"
+    },
+    {
+      "text": "Здра́вствуй",
+      "lexeme_id": "ru-ph-zdravstvuj"
+    },
+    {
+      "text": "Здра́вствуйте",
+      "lexeme_id": "ru-ph-zdravstvujte"
+    },
+    {
+      "text": "До свида́ния",
+      "lexeme_id": "ru-ph-do-svidaniya"
+    },
+    {
+      "text": "Спаси́бо",
+      "lexeme_id": "ru-spasibo"
+    },
+    {
+      "text": "Пожа́луйста",
+      "lexeme_id": "ru-pozhalujsta"
+    },
+    {
+      "text": "Хорошо́",
+      "lexeme_id": "ru-khorosho"
+    },
+    {
+      "text": "Ла́дно",
+      "lexeme_id": "ru-ladno"
+    },
+    {
+      "text": "Не зна́ю",
+      "lexeme_id": "ru-ph-ne-znayu"
+    },
+    {
+      "text": "Мо́жно?",
+      "lexeme_id": "ru-mozhno"
+    },
+    {
+      "text": "Коне́чно",
+      "lexeme_id": "ru-konechno"
+    },
+    {
+      "text": "Что э́то?",
+      "lexeme_id": "ru-ph-chto-eto"
+    },
+    {
+      "text": "Кто э́то?",
+      "lexeme_id": "ru-ph-kto-eto"
+    },
+    {
+      "text": "Ско́лько тебе́ лет?",
+      "lexeme_id": "ru-ph-skolko-tebe-let"
+    },
+    {
+      "text": "Мне … лет",
+      "lexeme_id": "ru-ph-mne-let"
+    }
+  ],
+  "register_whitelist": {
+    "allowed": [
+      "ба́тюшка",
+      "ма́тушка",
+      "мужи́к",
+      "ба́ба",
+      "ба́рин",
+      "ла́дно",
+      "ну",
+      "небо́сь",
+      "аво́сь",
+      "чай",
+      "не́ту",
+      "ничего́",
+      "бра́тцы",
+      "ребя́та",
+      "ми́лый",
+      "голу́бчик",
+      "чёрт"
+    ],
+    "receptive_only": [
+      "и́хний",
+      "чаво́",
+      "е́вонный",
+      "е́жели",
+      "пока́мест"
+    ],
+    "forbidden": [
+      "сво́лочь"
+    ]
+  },
+  "register_allowed_from": {
+    "чай": 39,
+    "небо́сь": 39,
+    "аво́сь": 30
+  },
+  "register_note": "No мат anywhere; сво́лочь-class insults forbidden; чёрт allowed. Period lexicon (верста́, десяти́на, пуд, уря́дник, во́лость, уе́зд, губе́рния, зе́мство, сход, ста́роста, поме́щик, уса́дьба, ла́вка, каба́к, изба́, печь, ла́пти, соха́, теле́га, шине́ль, папа́ха, винто́вка, око́п, блинда́ж, фельдфе́бель, пору́чик, ро́та, полк, лазаре́т, сестра́ милосе́рдия, комите́т, сове́т, депута́т, декре́т, комисса́р) is ordinary vocabulary, planned in plan/chapters.json.",
+  "instruction_vocabulary": {
+    "note": "Fixed exercise directions and labels, licensed from Глава 1 in titles, instructions, length hints and Образец rules only (never in story text or expected answers). Each has an English hint behind the toggle. The checker should apply this list to those fields instead of the chapter's grammar licence (Codex review of Глава 6).",
+    "phrases": [
+      "Поста́вь сло́во в ну́жную фо́рму.",
+      "Поста́вь глаго́л в ну́жную фо́рму.",
+      "Поста́вь местоиме́ние в ну́жную фо́рму.",
+      "Допиши́ оконча́ние.",
+      "Отве́ть на вопро́с.",
+      "Отве́ть по те́ксту.",
+      "Сло́во в ско́бках",
+      "Спроси́",
+      "Скажи́",
+      "Скажи́ коро́че",
+      "Соедини́ два предложе́ния",
+      "Сде́лай одно́ предложе́ние.",
+      "Расста́вь слова́.",
+      "Напиши́",
+      "Перепиши́",
+      "предложе́ние, предложе́ния, предложе́ний",
+      "сло́во, слова́, слов",
+      "Образе́ц",
+      "Пе́нсум",
+      "Фо́рмы",
+      "Слова́",
+      "Вопро́сы",
+      "Слова́ с исто́рией",
+      "Подстано́вка",
+      "Преобразова́ние",
+      "Оконча́ния",
+      "Типи́чные оши́бки",
+      "м.",
+      "ж.",
+      "ср.",
+      "ipf.",
+      "pf."
+    ]
+  },
+  "grading": {
+    "note": "Per-part settings sit under `by_rhan` because scripts/lib/analyse-lesson.mjs reads that key; `rhan` = Часть here. Keys the Russian plug-in does not implement yet are ignored (course.schema.json allows them).",
+    "recurrence": {
+      "min_uses_in_chapter": 3,
+      "recall_in_next_five_min": 2
+    },
+    "coverage": {
+      "unlicensed_tokens_max": 0,
+      "local_window_tokens": 25,
+      "local_window_new_max": 4
+    },
+    "primary_target_min_demonstrations": 8,
+    "primary_target_min_contrasts": 2,
+    "new_lexeme_cluster_warn_at": 4,
+    "frequency_list": "hermitdave/FrequencyWords OpenSubtitles-2018 Russian, top 5,000 lemmas after pymorphy3 lemmatisation, CC BY-SA 4.0, vendored at plan/frequency.json",
+    "baseline_manifest": "plan/baseline.json (owner's Anki cards; lexemes reported per chapter as known / uncertain / new)",
+    "by_rhan": {
+      "1": {
+        "chapters": [
+          1,
+          10
+        ],
+        "word_targets": {
+          "1": 400,
+          "2": 500,
+          "3": 550,
+          "4": 600,
+          "5": 650,
+          "6": 700,
+          "7": 750,
+          "8": 800,
+          "9": 850,
+          "10": 900
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "bootstrap_chapters": [
+          1
+        ],
+        "sections": {
+          "min": 3,
+          "max": 4
+        },
+        "new_lexemes_ceiling": 35,
+        "open_slots_max": 0,
+        "mean_sentence_words": [
+          5,
+          9
+        ],
+        "max_sentence_words": 18,
+        "subject_pronoun_initial_max": 0.3,
+        "ivan_initial_max": 0.2,
+        "max_consecutive_same_initial": 4,
+        "exact_duplicate_sentences_max": 3,
+        "dialogue_share": [
+          0.3,
+          0.6
+        ],
+        "gloss_per_100": [
+          2,
+          4
+        ],
+        "prior_coverage_min": 0.8,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "pensum_a_recall_items": 2,
+        "exercises_per_section": [
+          4,
+          5
+        ],
+        "items_per_exercise": [
+          5,
+          8
+        ],
+        "napishi_length": "3–5 предложе́ний",
+        "rubric_lang": "en",
+        "media": {
+          "cover": [
+            1,
+            1
+          ],
+          "inline_scene": [
+            2,
+            3
+          ],
+          "margin_vignette": [
+            2,
+            6
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      },
+      "2": {
+        "chapters": [
+          11,
+          20
+        ],
+        "word_targets": {
+          "11": 950,
+          "12": 990,
+          "13": 1030,
+          "14": 1070,
+          "15": 1110,
+          "16": 1140,
+          "17": 1180,
+          "18": 1220,
+          "19": 1260,
+          "20": 1300
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 4,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 50,
+        "open_slots_max": 6,
+        "mean_sentence_words": [
+          7,
+          11
+        ],
+        "max_sentence_words": 24,
+        "subject_pronoun_initial_max": 0.3,
+        "ivan_initial_max": 0.15,
+        "max_consecutive_same_initial": 4,
+        "exact_duplicate_sentences_max": 2,
+        "dialogue_share": [
+          0.3,
+          0.6
+        ],
+        "gloss_per_100": [
+          1.5,
+          3
+        ],
+        "prior_coverage_min": 0.88,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "pensum_a_recall_items": 2,
+        "exercises_per_section": [
+          4,
+          5
+        ],
+        "items_per_exercise": [
+          5,
+          8
+        ],
+        "napishi_length": "5–8 предложе́ний (a letter of about 60–80 words)",
+        "rubric_lang": "en",
+        "media": {
+          "cover": [
+            1,
+            1
+          ],
+          "inline_scene": [
+            2,
+            3
+          ],
+          "margin_vignette": [
+            1,
+            5
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      },
+      "3": {
+        "chapters": [
+          21,
+          30
+        ],
+        "word_targets": {
+          "21": 1350,
+          "22": 1390,
+          "23": 1430,
+          "24": 1470,
+          "25": 1510,
+          "26": 1540,
+          "27": 1580,
+          "28": 1620,
+          "29": 1660,
+          "30": 1700
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 5,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 55,
+        "open_slots_max": 10,
+        "mean_sentence_words": [
+          9,
+          13
+        ],
+        "max_sentence_words": 30,
+        "subject_pronoun_initial_max": 0.25,
+        "ivan_initial_max": 0.12,
+        "max_consecutive_same_initial": 3,
+        "exact_duplicate_sentences_max": 1,
+        "dialogue_share": [
+          0.3,
+          0.6
+        ],
+        "gloss_per_100": [
+          1,
+          2
+        ],
+        "prior_coverage_min": 0.9,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "pensum_a_recall_items": 2,
+        "exercises_per_section": [
+          4,
+          5
+        ],
+        "items_per_exercise": [
+          5,
+          8
+        ],
+        "napishi_length": "a letter or note of 80–120 words",
+        "rubric_lang": "ru",
+        "media": {
+          "cover": [
+            1,
+            1
+          ],
+          "inline_scene": [
+            2,
+            3
+          ],
+          "margin_vignette": [
+            0,
+            4
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      },
+      "4": {
+        "chapters": [
+          31,
+          40
+        ],
+        "word_targets": {
+          "31": 1700,
+          "32": 1730,
+          "33": 1770,
+          "34": 1800,
+          "35": 1830,
+          "36": 1870,
+          "37": 1900,
+          "38": 1930,
+          "39": 1970,
+          "40": 2000
+        },
+        "word_tolerance": 0.1,
+        "length_is_advisory": true,
+        "sections": {
+          "min": 5,
+          "max": 6
+        },
+        "new_lexemes_ceiling": 55,
+        "open_slots_max": 12,
+        "mean_sentence_words": [
+          10,
+          15
+        ],
+        "max_sentence_words": 36,
+        "subject_pronoun_initial_max": 0.25,
+        "ivan_initial_max": 0.12,
+        "max_consecutive_same_initial": 3,
+        "exact_duplicate_sentences_max": 1,
+        "dialogue_share": [
+          0.3,
+          0.6
+        ],
+        "gloss_per_100": [
+          0.5,
+          1.5
+        ],
+        "prior_coverage_min": 0.9,
+        "pensa": {
+          "A": [
+            10,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "pensum_a_recall_items": 2,
+        "exercises_per_section": [
+          4,
+          5
+        ],
+        "items_per_exercise": [
+          5,
+          8
+        ],
+        "napishi_length": "a letter, minutes or note of 80–150 words",
+        "rubric_lang": "ru",
+        "media": {
+          "cover": [
+            1,
+            1
+          ],
+          "inline_scene": [
+            2,
+            3
+          ],
+          "margin_vignette": [
+            0,
+            4
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      }
+    }
+  },
+  "names_personal": [
+    "Ива́н",
+    "Ва́ня",
+    "Ва́нька",
+    "Ваню́ша",
+    "Петро́вич",
+    "Пётр",
+    "Матве́евич",
+    "Ма́рья",
+    "Степа́новна",
+    "Матве́й",
+    "Фёдор",
+    "Фе́дя",
+    "На́стя",
+    "Да́рья",
+    "Да́ша",
+    "Ми́ша",
+    "Ли́за",
+    "Ве́ра",
+    "Никола́евна",
+    "Ле́бедева",
+    "Дми́трий",
+    "Ле́бедев",
+    "Алексе́й",
+    "Орло́в",
+    "Андре́й",
+    "Серге́евич",
+    "Никола́евич",
+    "Степа́нович",
+    "Никола́й",
+    "Сила́нтий",
+    "Кузьми́ч",
+    "Гаври́лов",
+    "Его́р",
+    "Семён",
+    "Гро́мов",
+    "Ахме́т",
+    "Юсу́пов",
+    "Козло́в",
+    "Васи́льев",
+    "Ша́рик",
+    "Соколо́в",
+    "Соколо́вы",
+    "Гри́ша",
+    "Григо́рий",
+    "Зу́ев",
+    "Еле́на",
+    "Па́вловна",
+    "Па́влович",
+    "Про́хор",
+    "Про́ша",
+    "Ники́фор",
+    "Анаста́сия",
+    "Петро́вна",
+    "Константи́н",
+    "Мака́рыч",
+    "Жу́ков"
+  ],
+  "names_place": [
+    "Росси́я",
+    "Русь",
+    "Евро́па",
+    "А́зия",
+    "Во́лга",
+    "Ока́",
+    "Москва́",
+    "Петербу́рг",
+    "Петрогра́д",
+    "Ряза́нь",
+    "Берёзовка",
+    "Каси́мов",
+    "Гали́ция",
+    "А́встрия",
+    "Герма́ния",
+    "Се́рбия",
+    "Ки́ев",
+    "А́нглия",
+    "Берли́н",
+    "Болга́рия",
+    "Петербу́рг"
+  ],
+  "names_other": [
+    "Бог",
+    "Христо́с",
+    "Никола́й Второ́й",
+    "Распу́тин",
+    "Бруси́лов",
+    "Ке́ренский",
+    "Ле́нин",
+    "Толсто́й",
+    "Че́хов",
+    "Есе́нин",
+    "Некра́сов",
+    "Па́сха",
+    "Рождество́",
+    "Алла́х",
+    "Кора́н",
+    "Вильге́льм",
+    "Не́жинский",
+    "Зе́мский сою́з",
+    "Ура́за",
+    "Покро́в",
+    "Сре́тение",
+    "Ива́нов день",
+    "Петро́в день",
+    "Росси́йская импе́рия"
+  ],
+  "names_note": "Names are licensed in every case through the analyser (pymorphy lemmatises a feminine patronymic to the masculine one: Никола́евну → николаевич, so the masculine forms Никола́евич, Степа́нович are listed too); the declension table is in plan/continuity.json cast[].declension. Watch: Пётр → Петра́ (ё drops); Ма́рья → Ма́рьи, Ма́рье, Ма́рью, Ма́рьей; Сила́нтий → о Сила́нтии (-ии locative, G07); Ряза́нь (ж.) → в Ряза́ни (G07); surnames in -ов/-ев take -ым in the instrumental singular (с Орло́вым) and adjective endings in the plural (у Соколо́вых, chunk from G02); Ле́бедева (ж.) → Ле́бедевой in every oblique case; Ша́рик is animate (ви́жу Ша́рика). Names are never stressed differently from the cast table.",
+  "function_words": {
+    "и": 1,
+    "а": 1,
+    "но": 1,
+    "не": 1,
+    "в": 1,
+    "на": 1,
+    "вот": 1,
+    "э́то": 1,
+    "то́же": 1,
+    "у": 3,
+    "нет": 3,
+    "потому́": 3,
+    "что": 1,
+    "с": 9,
+    "к": 8,
+    "по": 8,
+    "о": 7,
+    "об": 7,
+    "из": 3,
+    "от": 3,
+    "до": 3,
+    "для": 3,
+    "без": 3,
+    "за": 9,
+    "под": 9,
+    "над": 9,
+    "пе́ред": 9,
+    "ме́жду": 9,
+    "же": 5,
+    "ведь": 5,
+    "ну": 5,
+    "ли": 24,
+    "бы": 22,
+    "что́бы": 22,
+    "е́сли": 13,
+    "когда́": 10,
+    "кото́рый": 21
+  },
+  "function_words_note": "Grammar words first licensed by their target chapter; listed for the checker's chapter-scoped allowlist. Their lexemes are planned in plan/chapters.json like any other word.",
+  "special_characters": [
+    "ё",
+    "Ё",
+    "́"
+  ],
+  "anki": {
+    "unit": "lesson",
+    "format": "tsv",
+    "deck": "Русский::Мир",
+    "file_headers": [
+      "#separator:tab",
+      "#html:true",
+      "#guid column:1",
+      "#tags column:4",
+      "#deck:Русский::Мир"
+    ],
+    "fields": [
+      "guid",
+      "front",
+      "back",
+      "tags",
+      "source"
+    ],
+    "identity": "course_id + lexeme_id + card_stage",
+    "guid_pattern": "ru-mir-01:{lexeme_id}:{stage_id}",
+    "source": "lexicon.card_stages where lesson == this lesson id",
+    "cumulative_export": true,
+    "tags_base": [
+      "ru-mir-01"
+    ],
+    "card_kinds": [
+      "recognition",
+      "production"
+    ],
+    "skip_baseline_known_default": true,
+    "tag_pattern": "ru-mir-01 glava-NN chast-N <pos> recognition|production"
+  },
+  "ui_strings": {
+    "ru": {
+      "skip": "К тексту",
+      "nav_lessons": "Главы",
+      "contents": "Оглавление",
+      "course_progress": "Пройдено",
+      "continue": "Продолжить",
+      "start": "Начать чтение",
+      "how_to_read": "Как читать эту книгу",
+      "part": "Часть",
+      "lesson": "Глава",
+      "lessons_range": "Главы {from}–{to}",
+      "planned": "скоро",
+      "hide_notes": "Скрыть заметки",
+      "show_notes": "Показать заметки",
+      "notes": "Заметки",
+      "listen": "Слушать",
+      "stop": "Стоп",
+      "voice": "Голос",
+      "grammar": "Грамматика",
+      "grammar_note_en": "Примечание (English)",
+      "in_story": "в тексте",
+      "pensa": "Пенсум",
+      "oral_mode": "Устно",
+      "check": "Проверить",
+      "reveal": "Показать",
+      "retry": "Ещё",
+      "reveal_all": "Показать всё",
+      "example": "Образец",
+      "correct": "Верно!",
+      "correct_yo": "Верно! (ё)",
+      "ending_hint": "Почти! Окончание?",
+      "aspect_hint": "Почти! Вид?",
+      "wrong": "Пока нет. Ещё?",
+      "empty": "Сначала напиши ответ.",
+      "answer": "Ответ",
+      "model_answer": "Образец ответа",
+      "rubric": "Проверь себя",
+      "self_yes": "Получилось",
+      "self_no": "Пока нет",
+      "key_terms": "Ключевые слова",
+      "word_bank": "Слова",
+      "item": "Вопрос {n}",
+      "blank": "пропуск {n}",
+      "vocabulary": "Словарь",
+      "words_count": "слов: {n}",
+      "finish": "Закончить главу",
+      "finished_state": "Готово",
+      "english_toggle": "English",
+      "finished_announce": "{title}: готово.",
+      "unfinished_announce": "{title}: отметка снята.",
+      "anki_lesson": "Anki: эта глава",
+      "anki_cumulative": "Anki: главы 1–{n}",
+      "anki_done": "Anki: карточек — {n}",
+      "anki_empty": "Для этой главы карточек пока нет.",
+      "next": "Следующая глава",
+      "previous": "Предыдущая глава",
+      "enlarge": "Увеличить картинку",
+      "close": "Закрыть",
+      "loading": "Открываю книгу…",
+      "status_draft": "черновик",
+      "status_reviewed": "проверено",
+      "status_published": "опубликовано",
+      "gender_m": "м.",
+      "gender_f": "ж.",
+      "gender_n": "ср.",
+      "stress_marks": "Ударения",
+      "workbook": "Упражнения",
+      "obrazec": "Образец",
+      "skip_exercise": "Пропустить",
+      "skipped": "Пропущено",
+      "unskip": "Вернуть",
+      "lookalike_warning": "Латинские буквы ({chars}) заменены на русские.",
+      "stepper": "Порядок работы",
+      "step_read": "Читать {n}",
+      "step_exercises": "Упражнения {n}",
+      "step_grammar": "Грамматика и слова с историей",
+      "step_pensa": "Пенсум A, B, C",
+      "step_write": "Напиши",
+      "step_reread": "Перечитать",
+      "step_anki": "Anki",
+      "step_done": "Готово",
+      "step_mark": "Шаг сделан",
+      "step_marked": "Сделано",
+      "step_next": "Дальше: {step}",
+      "continue_step": "{lesson} · {step}",
+      "export_timing": "Экспорт времени (JSON)",
+      "words_with_history": "Слова с историей",
+      "note_en": "Примечание (English)",
+      "afterword": "Послесловие (English)",
+      "whats_next": "Что дальше",
+      "napishi": "Напиши",
+      "napishi_draft": "Твой текст",
+      "napishi_rewrite": "Исправленный вариант",
+      "napishi_mark": "Отметь одну-две свои ошибки и перепиши эти предложения ниже.",
+      "napishi_typical": "Типичные ошибки",
+      "my_error": "У меня так",
+      "model_answers": "Образцы",
+      "copy_feedback": "Копировать для проверки",
+      "copied": "Скопировано.",
+      "copy_failed": "Не удалось скопировать. Выдели текст ниже и скопируй сам.",
+      "feedback_task": "Задание",
+      "feedback_text": "Текст ученика",
+      "feedback_rewrite": "Исправленный вариант ученика",
+      "feedback_prompt": "Ты — опытный преподаватель русского языка как иностранного. Ученик (уровень A2–B1) написал текст по заданию ниже. Пожалуйста:\n1. Перепиши текст правильно, как можно меньше меняя мысли и слова ученика.\n2. Перечисли каждую ошибку в виде «было → правильно» и коротко объясни правило (падеж, вид глагола, согласование, порядок слов, выбор слова).\n3. Скажи, что получилось хорошо.\n4. Дай одно короткое упражнение (2–3 предложения) на самую важную ошибку.\nОбъясняй просто и по-русски; трудный термин можно дать в скобках по-английски. В новых словах ставь ударения.",
+      "timing_summary": "Время по главам",
+      "timing_total": "Всего:",
+      "minutes": "{n} мин",
+      "words_typed": "слов: {n}",
+      "course_select": "Курс",
+      "latin_warning": "Латинские буквы: {chars}. Переключи раскладку?",
+      "ex_type_okonchaniya": "Окончания",
+      "ex_type_preobrazovanie": "Преобразование",
+      "ex_type_podstanovka": "Подстановка",
+      "ex_type_otvet": "Ответь",
+      "ex_type_soedini": "Соедини",
+      "ex_type_rasstav": "Расставь слова",
+      "ex_type_napishi": "Напиши",
+      "course_contents": "Содержание",
+      "chapter": "Глава",
+      "story": "Рассказ",
+      "nodyn": "Примечание (по-английски)",
+      "exercises": "Упражнения",
+      "pensum": "Пенсум",
+      "try_again": "Ещё",
+      "almost_circumflex": "Верно! (ё)",
+      "almost_ending": "Почти! Окончание?",
+      "almost_aspect": "Почти! Вид?",
+      "mutation_hint": "Почти! Окончание?",
+      "latin_lookalike": "Здесь латинские буквы (a, e, o, p, c, x)? Попробуй ещё раз.",
+      "self_check_yes": "Получилось",
+      "self_check_no": "Пока нет",
+      "finished": "✓ Готово",
+      "anki": "Скачать карточки Anki",
+      "anki_include_known": "Включить знакомые слова",
+      "audio_play": "Слушать",
+      "audio_source": "Голос",
+      "stress_toggle": "Ударения",
+      "stress_on": "Ударения: вкл.",
+      "stress_off": "Ударения: выкл.",
+      "proverb": "Пословица",
+      "hint_toggle": "Подсказка (по-английски)",
+      "exercise_okonchaniya": "Окончания",
+      "exercise_preobrazovanie": "Преобразование",
+      "exercise_podstanovka": "Подстановка",
+      "exercise_otvet": "Ответь",
+      "exercise_soedini": "Соедини",
+      "exercise_rasstav": "Расставь слова",
+      "exercise_napishi": "Напиши",
+      "pensum_a": "Пенсум A — Формы",
+      "pensum_b": "Пенсум B — Слова",
+      "pensum_c": "Пенсум C — Вопросы",
+      "next_step": "Следующий шаг",
+      "steps": "Шаги",
+      "section_n": "Часть текста {n}",
+      "write_box": "Твой текст",
+      "length_hint": "Длина",
+      "typical_errors": "Типичные ошибки",
+      "correction_mark": "Найди одну-две свои ошибки (по списку «Что проверить»).",
+      "correction_rewrite": "Перепиши эти предложения правильно.",
+      "correction_box": "Исправленный текст",
+      "copy_for_feedback": "Скопировать для проверки",
+      "baseline_known": "уже знаешь",
+      "baseline_uncertain": "почти знаешь",
+      "baseline_new": "новое",
+      "draft_notice": "Черновик: текст ещё не проверял носитель языка."
+    },
+    "en": {
+      "nav_lessons": "Chapters",
+      "contents": "Contents",
+      "course_progress": "Progress",
+      "lesson": "Chapter",
+      "part": "Part",
+      "lessons_range": "Chapters {from}–{to}",
+      "pensa": "Pensum",
+      "oral_mode": "Oral mode",
+      "grammar": "Grammar",
+      "correct": "Correct!",
+      "correct_yo": "Correct! (ё)",
+      "ending_hint": "Almost! The ending?",
+      "aspect_hint": "Almost! Aspect?",
+      "wrong": "Not yet. Again?",
+      "retry": "Again",
+      "english_toggle": "Русский",
+      "finish": "Finish chapter",
+      "stress_marks": "Stress marks",
+      "workbook": "Workbook",
+      "obrazec": "Example",
+      "skip_exercise": "Skip",
+      "skipped": "Skipped",
+      "unskip": "Undo",
+      "lookalike_warning": "Latin letters ({chars}) were replaced by Cyrillic ones.",
+      "stepper": "Steps",
+      "step_read": "Read {n}",
+      "step_exercises": "Workbook {n}",
+      "step_grammar": "Grammar and words with a history",
+      "step_pensa": "Pensum A, B, C",
+      "step_write": "Write",
+      "step_reread": "Re-read",
+      "step_anki": "Anki",
+      "step_done": "Done",
+      "step_mark": "Step done",
+      "step_marked": "Done",
+      "step_next": "Next: {step}",
+      "continue_step": "{lesson} · {step}",
+      "export_timing": "Export timing (JSON)",
+      "words_with_history": "Words with a history",
+      "note_en": "Note (English)",
+      "afterword": "Afterword",
+      "whats_next": "What next",
+      "napishi": "Write",
+      "napishi_draft": "Your text",
+      "napishi_rewrite": "Corrected version",
+      "napishi_mark": "Mark one or two of your own errors and rewrite those sentences below.",
+      "napishi_typical": "Typical errors",
+      "my_error": "I did this",
+      "model_answers": "Model answers",
+      "copy_feedback": "Copy for feedback",
+      "copied": "Copied.",
+      "copy_failed": "Could not copy. Select the text below and copy it yourself.",
+      "timing_summary": "Time per chapter",
+      "timing_total": "Total:",
+      "minutes": "{n} min",
+      "words_typed": "{n} words",
+      "course_select": "Course",
+      "latin_warning": "Latin letters: {chars}. Switch the keyboard layout?",
+      "model_answer": "Model answer",
+      "rubric": "Check yourself",
+      "key_terms": "Key words",
+      "word_bank": "Word bank",
+      "vocabulary": "Vocabulary",
+      "ex_type_okonchaniya": "Endings",
+      "ex_type_preobrazovanie": "Transform",
+      "ex_type_podstanovka": "Substitute",
+      "ex_type_otvet": "Answer",
+      "ex_type_soedini": "Join",
+      "ex_type_rasstav": "Word order",
+      "ex_type_napishi": "Write",
+      "course_contents": "Contents",
+      "continue": "Continue",
+      "chapter": "Chapter",
+      "story": "The story",
+      "nodyn": "Note (English)",
+      "exercises": "Exercises",
+      "pensum": "Exercise",
+      "example": "Example",
+      "check": "Check",
+      "reveal": "Show",
+      "try_again": "Again",
+      "almost_circumflex": "Correct! (ё)",
+      "almost_ending": "Almost! Ending?",
+      "almost_aspect": "Almost! Aspect?",
+      "mutation_hint": "Almost! Ending?",
+      "empty": "Write an answer first.",
+      "latin_lookalike": "Latin letters (a, e, o, p, c, x)? Try again.",
+      "self_check_yes": "I had it",
+      "self_check_no": "Not yet",
+      "hide_notes": "Hide margin notes",
+      "show_notes": "Show margin notes",
+      "finished": "✓ Finished",
+      "next": "Next chapter",
+      "previous": "Previous chapter",
+      "anki": "Download Anki cards",
+      "anki_cumulative": "Anki cards: chapters 1–N",
+      "anki_include_known": "Include words I already know",
+      "audio_play": "Listen",
+      "audio_source": "Voice",
+      "start": "Start reading",
+      "planned": "coming soon",
+      "notes": "Notes",
+      "enlarge": "Enlarge picture",
+      "close": "Close",
+      "item": "Question {n}",
+      "blank": "blank {n}",
+      "words_count": "{n} words",
+      "anki_done": "Anki: {n} cards",
+      "stop": "Stop",
+      "stress_toggle": "Stress marks",
+      "stress_on": "Stress marks: on",
+      "stress_off": "Stress marks: off",
+      "proverb": "Proverb",
+      "skip": "Skip",
+      "hint_toggle": "Hint (English)",
+      "exercise_okonchaniya": "Endings",
+      "exercise_preobrazovanie": "Transform",
+      "exercise_podstanovka": "Substitute",
+      "exercise_otvet": "Answer",
+      "exercise_soedini": "Join",
+      "exercise_rasstav": "Word order",
+      "exercise_napishi": "Write",
+      "pensum_a": "Exercise A — Forms",
+      "pensum_b": "Exercise B — Words",
+      "pensum_c": "Exercise C — Questions",
+      "next_step": "Next step",
+      "steps": "Steps",
+      "section_n": "Section {n}",
+      "write_box": "Your text",
+      "length_hint": "Length",
+      "typical_errors": "Typical mistakes",
+      "correction_mark": "Mark one or two of your own mistakes against the checklist.",
+      "correction_rewrite": "Rewrite those sentences correctly.",
+      "correction_box": "Corrected text",
+      "copy_for_feedback": "Copy for feedback",
+      "baseline_known": "already known",
+      "baseline_uncertain": "half-known",
+      "baseline_new": "new",
+      "draft_notice": "Draft: not yet checked by a native speaker."
+    }
+  },
+  "stepper": true,
+  "answer_checker": "ru",
+  "pensa_hints_en": {
+    "A": "Put the word in brackets into the right form, or choose between the forms.",
+    "B": "Fill each gap with a word from the list, in the right form.",
+    "C": "Answer from the story. Write, or say it aloud and then press Show."
+  },
+  "intro_title_en": "How to read this book",
+  "whats_next": {
+    "title": "Что да́льше",
+    "lang": "ru",
+    "body": [
+      "Тепе́рь чита́й «Пикни́к на обо́чине» Стругацких: пять страни́ц в день.",
+      "Выпи́сывай но́вые слова́ и чита́й да́льше на сле́дующий день."
+    ],
+    "note": "The list of the novel's 300 most frequent lemmas not taught in the course is added only if it can be computed from the owner's copy without redistributing the text (design §13)."
+  },
+  "parts": [
+    {
+      "number": 1,
+      "part": 1,
+      "title": "Дере́вня",
+      "from": 1,
+      "to": 10,
+      "dates": "spring–December 1913",
+      "afterword_title_en": "The village in 1913",
+      "afterword_en": "In 1913 four Russians in five lived in villages. Most peasant land in central Russia belonged not to households but to the commune (the mir, or obshchina): the village assembly of household heads (the skhod) shared the fields out in narrow strips, set the farming calendar of the three-field rotation, apportioned taxes and could redistribute the strips. Collective liability for taxes had been abolished by 1907, but the commune still decided almost everything.\n\nFrom 1906 the prime minister Pyotr Stolypin's reforms let a household take its strips out of the commune as private property and consolidate them into one plot (an otrub; a khutor if the farmhouse moved onto it). Between 1907 and 1915 nearly half of all households applied for land settlement, but only a minority, fewer in the central provinces, actually separated. Fyodor's request in Chapter 9 is typical of 1913, and so is the assembly's refusal.\n\nLiteracy was spreading through zemstvo schools: about a fifth of the Empire could read in 1897, and by 1913 roughly three army recruits in four were at least semi-literate. Grandfather Matvei was born a serf; the emancipation of 1861 freed the serfs but left them paying for land many thought was theirs already.",
+      "afterword_sources": [
+        "https://ru.wikipedia.org/wiki/Сельский_сход",
+        "https://ru.wikipedia.org/wiki/Столыпинская_аграрная_реформа",
+        "https://ru.wikipedia.org/wiki/Грамотность_в_России"
+      ]
+    },
+    {
+      "number": 2,
+      "part": 2,
+      "title": "Война́",
+      "from": 11,
+      "to": 20,
+      "dates": "July 1914 – spring 1916",
+      "afterword_title_en": "The war, 1914–1916",
+      "afterword_en": "Russia mobilised on 17 (30) July 1914; Germany declared war on 19 July (1 August). The first call-up took trained reservists such as Fyodor; younger men like Ivan, born in 1894, were called early, in January 1915, trained for a few weeks in a reserve battalion and sent to the front in march companies. The Ryazan regiments of the 35th Infantry Division served on the Southwestern Front against Austria-Hungary.\n\nFrom May 1915 the German and Austro-Hungarian breakthrough at Gorlice–Tarnów drove the Russian armies out of Galicia and Poland in the Great Retreat. Wounded men travelled for weeks through dressing stations, field hospitals, evacuation points and hospital trains to rear cities; Ryazan had its own evacuation point and zemstvo infirmaries.\n\nIn the villages the sale of vodka was banned, prices rose, and women ran the farms and learnt to read soldiers' letters.",
+      "afterword_sources": [
+        "https://conf.msu.ru/archive/Lomonosov_2016/data/8375/uid104786_report.pdf",
+        "https://ru.wikipedia.org/wiki/35-я_пехотная_дивизия_(Российская_империя)",
+        "https://militera.lib.ru/research/golovnin_nn/04.html"
+      ]
+    },
+    {
+      "number": 3,
+      "part": 3,
+      "title": "Пра́вда",
+      "from": 21,
+      "to": 30,
+      "dates": "May 1916 – December 1916",
+      "afterword_title_en": "Truth and rumour, 1916",
+      "afterword_en": "In June 1916 General Brusilov's offensive broke the Austro-Hungarian lines in Volhynia and Galicia: the Russian army's greatest success of the war, bought with enormous losses. Behind the front, food and fuel ran short in the cities, prices climbed, and rumours of treason at court (Rasputin, the German-born Empress) spread through trenches and villages alike.\n\nSocialist ideas reached the front with men like Semyon, a Petrograd metalworker sent to the army as punishment for striking. In the winter of 1916–17 strikes and bread queues in Petrograd prepared the revolution of February 1917.",
+      "afterword_sources": [
+        "https://ru.wikipedia.org/wiki/Брусиловский_прорыв"
+      ]
+    },
+    {
+      "number": 4,
+      "part": 4,
+      "title": "Во́ля",
+      "from": 31,
+      "to": 40,
+      "dates": "March 1917 – August 1918; coda 1962",
+      "afterword_title_en": "Freedom and land, 1917–1918",
+      "afterword_en": "In February 1917 the monarchy fell. On 1 March the Petrograd Soviet's Order No. 1 told soldiers to elect committees and forbade officers to address them as ty. At Easter soldiers fraternised with Austrian troops across the lines; the June offensive collapsed as units refused to advance. On 25–26 October the Bolsheviks took power and issued the Decrees on Peace and on Land; peasants divided landlords' estates themselves, often equally by the number of mouths in each household. In the Constituent Assembly elections of November 1917 most villages voted for the Socialist Revolutionaries; the Assembly was dispersed in January 1918.\n\nThe orthographic reform removed ѣ, і, ѳ and final ъ (decreed December 1917, in force October 1918). In May 1918 the Soviet government declared a food dictatorship; armed requisitioning detachments reached Ryazan province that spring and summer.",
+      "afterword_sources": [
+        "https://ru.wikipedia.org/wiki/Приказ_№_1",
+        "https://ru.wikisource.org/wiki/Декрет_о_мире",
+        "https://ru.wikipedia.org/wiki/Декрет_о_земле",
+        "https://ru.wikipedia.org/wiki/Реформа_русской_орфографии_1918_года"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "id": "ru-mir-01-l01",
+      "order": 1,
+      "title": "Росси́я",
+      "part": 1,
+      "status": "draft",
+      "grammar_target_id": "G01",
+      "path": "lessons/glava-01.json"
+    },
+    {
+      "id": "ru-mir-01-l02",
+      "order": 2,
+      "title": "Семья́ Соколо́вых",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-02.json",
+      "grammar_target_id": "G02"
+    },
+    {
+      "id": "ru-mir-01-l03",
+      "order": 3,
+      "title": "Изба́",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-03.json",
+      "grammar_target_id": "G03"
+    },
+    {
+      "id": "ru-mir-01-l04",
+      "order": 4,
+      "title": "Рабо́та",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-04.json",
+      "grammar_target_id": "G04"
+    },
+    {
+      "id": "ru-mir-01-l05",
+      "order": 5,
+      "title": "Как тебя́ зову́т?",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-05.json",
+      "grammar_target_id": "G05"
+    },
+    {
+      "id": "ru-mir-01-l06",
+      "order": 6,
+      "title": "В шко́ле",
+      "part": 1,
+      "status": "draft",
+      "grammar_target_id": "G06",
+      "path": "lessons/glava-06.json"
+    },
+    {
+      "id": "ru-mir-01-l07",
+      "order": 7,
+      "title": "О чём говоря́т в дере́вне",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-07.json",
+      "grammar_target_id": "G07"
+    },
+    {
+      "id": "ru-mir-01-l08",
+      "order": 8,
+      "title": "Кому́ что ну́жно",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-08.json",
+      "grammar_target_id": "G08"
+    },
+    {
+      "id": "ru-mir-01-l09",
+      "order": 9,
+      "title": "С кем ты?",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-09.json",
+      "grammar_target_id": "G09"
+    },
+    {
+      "id": "ru-mir-01-l10",
+      "order": 10,
+      "title": "Дед расска́зывает",
+      "part": 1,
+      "status": "planned",
+      "planned_path": "lessons/glava-10.json",
+      "grammar_target_id": "G10"
+    },
+    {
+      "id": "ru-mir-01-l11",
+      "order": 11,
+      "title": "Ко́локол",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-11.json",
+      "grammar_target_id": "G11"
+    },
+    {
+      "id": "ru-mir-01-l12",
+      "order": 12,
+      "title": "На ста́нцию",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-12.json",
+      "grammar_target_id": "G12"
+    },
+    {
+      "id": "ru-mir-01-l13",
+      "order": 13,
+      "title": "Я напишу́",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-13.json",
+      "grammar_target_id": "G13"
+    },
+    {
+      "id": "ru-mir-01-l14",
+      "order": 14,
+      "title": "Сми́рно!",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-14.json",
+      "grammar_target_id": "G14"
+    },
+    {
+      "id": "ru-mir-01-l15",
+      "order": 15,
+      "title": "Ско́лько вёрст?",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-15.json",
+      "grammar_target_id": "G15"
+    },
+    {
+      "id": "ru-mir-01-l16",
+      "order": 16,
+      "title": "Отхо́дим",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-16.json",
+      "grammar_target_id": "G16"
+    },
+    {
+      "id": "ru-mir-01-l17",
+      "order": 17,
+      "title": "Бой",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-17.json",
+      "grammar_target_id": "G17"
+    },
+    {
+      "id": "ru-mir-01-l18",
+      "order": 18,
+      "title": "Лазаре́т",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-18.json",
+      "grammar_target_id": "G18"
+    },
+    {
+      "id": "ru-mir-01-l19",
+      "order": 19,
+      "title": "Ка́ждый день",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-19.json",
+      "grammar_target_id": "G19"
+    },
+    {
+      "id": "ru-mir-01-l20",
+      "order": 20,
+      "title": "До́ма",
+      "part": 2,
+      "status": "planned",
+      "planned_path": "lessons/glava-20.json",
+      "grammar_target_id": "G20"
+    },
+    {
+      "id": "ru-mir-01-l21",
+      "order": 21,
+      "title": "Лю́ди, кото́рые…",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-21.json",
+      "grammar_target_id": "G21"
+    },
+    {
+      "id": "ru-mir-01-l22",
+      "order": 22,
+      "title": "Е́сли бы не́ было царя́",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-22.json",
+      "grammar_target_id": "G22"
+    },
+    {
+      "id": "ru-mir-01-l23",
+      "order": 23,
+      "title": "Ты прав",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-23.json",
+      "grammar_target_id": "G23"
+    },
+    {
+      "id": "ru-mir-01-l24",
+      "order": 24,
+      "title": "Говоря́т, что…",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-24.json",
+      "grammar_target_id": "G24"
+    },
+    {
+      "id": "ru-mir-01-l25",
+      "order": 25,
+      "title": "Како́е сего́дня число́?",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-25.json",
+      "grammar_target_id": "G25"
+    },
+    {
+      "id": "ru-mir-01-l26",
+      "order": 26,
+      "title": "Уби́т",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-26.json",
+      "grammar_target_id": "G26"
+    },
+    {
+      "id": "ru-mir-01-l27",
+      "order": 27,
+      "title": "Си́дя в око́пе",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-27.json",
+      "grammar_target_id": "G27"
+    },
+    {
+      "id": "ru-mir-01-l28",
+      "order": 28,
+      "title": "Кни́га",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-28.json",
+      "grammar_target_id": "G28"
+    },
+    {
+      "id": "ru-mir-01-l29",
+      "order": 29,
+      "title": "Хле́ба нет",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-29.json",
+      "grammar_target_id": "G29"
+    },
+    {
+      "id": "ru-mir-01-l30",
+      "order": 30,
+      "title": "Да ведь он же не зна́ет!",
+      "part": 3,
+      "status": "planned",
+      "planned_path": "lessons/glava-30.json",
+      "grammar_target_id": "G30"
+    },
+    {
+      "id": "ru-mir-01-l31",
+      "order": 31,
+      "title": "Свобо́да",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-31.json",
+      "grammar_target_id": "G31"
+    },
+    {
+      "id": "ru-mir-01-l32",
+      "order": 32,
+      "title": "И́збран",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-32.json",
+      "grammar_target_id": "G32"
+    },
+    {
+      "id": "ru-mir-01-l33",
+      "order": 33,
+      "title": "Христо́с воскре́се",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-33.json",
+      "grammar_target_id": "G33"
+    },
+    {
+      "id": "ru-mir-01-l34",
+      "order": 34,
+      "title": "Хотя́ прика́з был…",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-34.json",
+      "grammar_target_id": "G34"
+    },
+    {
+      "id": "ru-mir-01-l35",
+      "order": 35,
+      "title": "Он стал дезерти́ром?",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-35.json",
+      "grammar_target_id": "G35"
+    },
+    {
+      "id": "ru-mir-01-l36",
+      "order": 36,
+      "title": "Декре́тъ о мирѣ",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-36.json",
+      "grammar_target_id": "G36"
+    },
+    {
+      "id": "ru-mir-01-l37",
+      "order": 37,
+      "title": "По едока́м",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-37.json",
+      "grammar_target_id": "G37"
+    },
+    {
+      "id": "ru-mir-01-l38",
+      "order": 38,
+      "title": "Дед у́мер",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-38.json",
+      "grammar_target_id": "G38"
+    },
+    {
+      "id": "ru-mir-01-l39",
+      "order": 39,
+      "title": "Вряд ли",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-39.json",
+      "grammar_target_id": "G39"
+    },
+    {
+      "id": "ru-mir-01-l40",
+      "order": 40,
+      "title": "Мир",
+      "part": 4,
+      "status": "planned",
+      "planned_path": "lessons/glava-40.json",
+      "grammar_target_id": "G40"
+    }
+  ],
+  "intro_en": "This book teaches Russian the way Lingua Latina per se Illustrata teaches Latin: one continuous story, written entirely in Russian, read in order. It follows Ivan Sokolov, a peasant from a village in Ryazan province, from the spring of 1913 through the war and the revolutions to the summer of 1918.\n\nYou already know some Russian. The first chapters will feel easy: they install the case system on words you half-know. Difficulty rises from Chapter 11 (aspect) and again from Chapter 21.\n\nEvery word carries a stress mark (а́). Stress is shown by default in Parts 1–2 and hidden from Part 3; the toggle works at any time, and cards, glosses and grammar tables always show it. The letter ё is always written with its dots and is always stressed.\n\nThe margin is in Russian only. \"=\" gives a simpler way to say the same thing; \"↔\" an opposite; \"шёл ← идти\" points from an unfamiliar form to its dictionary form; \"сказать pf. ← говорить\" pairs aspects; small tables show three forms of a new pattern. A small picture names an object.\n\nEach chapter has a stepper. Do the steps in order and you never have to decide what to do next: read a section (with audio), do its exercises, repeat for each section; read the Grammar and the Word with a History once; do Exercises A, B and C; write the short text and correct it against the checklist; re-read the whole chapter with stress marks off; download the chapter's Anki cards; press Done. Any step can be skipped, and nothing is locked behind a score.\n\nThe Anki export skips words your existing Russian deck already has as mature cards (you can include them). Cards go to the deck Русский::Мир.\n\nThe Russian is modern standard Russian with period vocabulary. The chapters are drafts written with AI assistance and have not yet been checked by a native speaker; corrections are welcome."
+}

@@ -1,0 +1,2246 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "cy-brenin-01-l08",
+  "course_id": "cy-brenin-01",
+  "order": 8,
+  "title": "Mae cleddyf gyda Cai",
+  "rhan": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "2.0.0-draft",
+  "provenance": {
+    "author": "block B1 writer (Claude Opus 5.5, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; block-writer brief 2026-10-12",
+    "review_required": "fluent southern-Welsh review",
+    "notes": [
+      "Beat realised in four sections: the birthday gifts in the hall (sword, shield, cloak, pies, Mali's book), Arth's straw-man present and Cai riding, Arth trying to hold the real sword (Cynyr looks at Elen), and the evening scene in which Dafi becomes Arth's friend.",
+      "Primary target G08: more than 25 possession sentences with gyda fi / ti / fe / hi / Cai, Oes … gyda ti? and Does dim … gyda fi. Contrasts with earlier forms: 'Cleddyf Cai yw e' (genitive, Pennod 2) ↔ 'Mae cleddyf gyda Cai'; 'Mae Cai'n cael cleddyf' (receives) ↔ 'Mae cleddyf gyda Cai' (has); Oes … gyda ti? reuses Pennod 6 Oes.",
+      "Secondary pattern per writer_notes: gallu / hoffi / cael + verb-noun with no mutation (Mae Cai'n gallu marchogaeth; Dw i'n hoffi marchogaeth; Rwyt ti'n cael dal cleddyf go iawn).",
+      "Plan gap: 'fe' is needed for 'gyda fe' (the target paradigm) but is not a planned lexeme. Added as a form of cy-e in lexicon-deltas/pennod-08.json (the cy-e card already says 'fe after conjugated prepositions'). Also added 'gydag' (before a vowel) to cy-gyda for 'gydag Arth'.",
+      "Threads: thr-tad-arth echo (Cynyr watches Arth holding the real sword and looks at Elen; Mali: 'Pam mae Dad yn edrych ar Mam?'); thr-beards echo (Cai: 'ble mae barf Cai?' – Cynyr: 'Dim ond pymtheg oed wyt ti!'). Myrddin's 'Rwyt ti'n fach nawr. Nawr.' echoes his 'Ydy, nawr' from Pennod 5.",
+      "Family words recycled per the pilot note (brawd, chwaer, plant, mab via Cai), and tref, pell, agos.",
+      "Applied gpt-6-astra review (2026-10-12): 'rhedeg i Arth' (calque) recast as 'Mae Dafi'n dod o'r het ac yn rhedeg yn gyflym'; Pensa A a5 now cues possession (a book that is Mali's), B b6 now needs hoffi (gallu cannot take a noun object), C c1/c2/c6 accept further correct answers; gydag rule stated as 'before a vowel sound'. 'Pam rwyt ti …?' kept (Mynediad De form). Not taken: 'taro' for the sword hitting the straw man (new word); 'mae e'n mynd i'r dyn gwellt' stays, with the scene picture carrying the impact.",
+      "Age pattern 'Dim ond pymtheg / un ar ddeg oed wyt ti / dw i' is emphatic fronting before G29: model review judges it natural; recorded here as a limited exception for age statements (integrator: add to the fronting rule's whitelist).",
+      "Checker warnings left: recall for pen-blwydd and marchog (each recurs in Pennod 9 or 10 here; the second recurrence must come from Penodau 11–13, written by other writers).",
+      "Running words about 930 against 850 (window 765–935, at the top): the chapter also carries next-five-chapter recall for Penodau 3–7 (breakfast foods, yfed, gardd, gweithio, chwarae, chwilio, galw, oer, carreg, sŵn; Pennod 7 sefyll, cymryd, bwced, gwynt, dail, adar, distaw, prysur, clust). Each recall item sits inside an event (birthday breakfast, Cai riding, the evening search for Arth)."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "cy-brenin-01-l08-s004",
+        "question": "[?] 'Mae hi'n ben-blwydd Cai heddiw' (It's Cai's birthday today), modelled on 'Mae hi'n fore': natural, or is 'Mae'n ben-blwydd ar Cai heddiw' the expected idiom (ar-idioms come at Pennod 19)?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): acceptable; retain ('Mae pen-blwydd Cai heddiw' is a simpler option)."
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s014",
+        "question": "[?] Focus order 'Dim ond pymtheg oed wyt ti!' (You're only fifteen!): the pilot used 'Arth wyt ti' / 'X dw i' identity order from Pennod 5; confirm this age sentence is natural and not a problem before G29.",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): natural emphatic fronting; recorded as a limited pre-G29 exception for ages (see notes)."
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s139",
+        "question": "[?] 'gydag Arth' before a vowel (written standard) vs 'gyda Arth' (common in speech): which should the course use? The course uses unmutated personal names after prepositions.",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): retain gydag before a vowel; name unmutated per convention."
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s112",
+        "question": "[?] 'Mae Arth yn eistedd ar hen fwced' (sitting on an old upturned bucket): natural, and is hen + SM (hen fwced) right for bwced (m.)?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct: hen mutates bwced regardless of gender."
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s127",
+        "question": "[?] Recast from 'mae e'n rhedeg i Arth' (calque; at is not taught until Pennod 16) to 'Mae Dafi'n dod o'r het ac yn rhedeg yn gyflym. Nawr mae e ar Arth …': natural?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): 'rhedeg i Arth' is a calque (movement to a person takes at); recast with known words."
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s064",
+        "question": "[?] 'Dw i'n hoffi'r anrheg yn fawr' (I like the present very much): natural southern usage?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): correct and natural."
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s023",
+        "question": "[?] cael in two senses in one chapter (Mae Cai'n cael cleddyf = gets; Rwyt ti'n cael dal = is allowed to): acceptable for learners?",
+        "resolution": "Model review (gpt-6-astra, 2026-10-12): retain both senses of cael."
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G08",
+    "primary_new_grammar": {
+      "id": "G08",
+      "label": "possession Mae … gyda fi / ti / fe / hi; Oes … gyda ti? Does dim … gyda fi; secondary: gallu / hoffi / cael + verbal noun",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07"
+    ],
+    "incidental": [
+      {
+        "form": "Pen-blwydd hapus (formula)",
+        "gloss_segment_id": "cy-brenin-01-l08-s005"
+      },
+      {
+        "form": "Mae'n ddrwg gyda fi (formula)",
+        "gloss_segment_id": "cy-brenin-01-l08-s095"
+      },
+      {
+        "form": "rhoi … i + person",
+        "gloss_segment_id": "cy-brenin-01-l08-s031"
+      }
+    ],
+    "new_lexeme_ids": [
+      "cy-gyda",
+      "cy-fi",
+      "cy-ti",
+      "cy-pen-blwydd",
+      "cy-anrheg",
+      "cy-tarian",
+      "cy-marchog",
+      "cy-arian",
+      "cy-aur",
+      "cy-ffrind",
+      "cy-oed",
+      "cy-clogyn",
+      "cy-cael",
+      "cy-gallu",
+      "cy-hoffi",
+      "cy-marchogaeth",
+      "cy-newydd",
+      "cy-cryf",
+      "cy-gwan",
+      "cy-trwm",
+      "cy-ph-go-iawn",
+      "cy-ph-dim-ond",
+      "cy-heddiw",
+      "cy-pymtheg",
+      "cy-un-ar-ddeg"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "cy-gyda",
+        "how": "gloss(paradigm)+picture(cover)",
+        "segment_id": "cy-brenin-01-l08-s030"
+      },
+      {
+        "lexeme_id": "cy-fi",
+        "how": "gloss(paradigm)+context",
+        "segment_id": "cy-brenin-01-l08-s036"
+      },
+      {
+        "lexeme_id": "cy-ti",
+        "how": "gloss(paradigm)+context",
+        "segment_id": "cy-brenin-01-l08-s043"
+      },
+      {
+        "lexeme_id": "cy-pen-blwydd",
+        "how": "picture(cover)+gloss(radical)+formula",
+        "segment_id": "cy-brenin-01-l08-s004"
+      },
+      {
+        "lexeme_id": "cy-anrheg",
+        "how": "gloss(define)+picture(cover)",
+        "segment_id": "cy-brenin-01-l08-s021"
+      },
+      {
+        "lexeme_id": "cy-tarian",
+        "how": "picture(vignette)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l08-s028"
+      },
+      {
+        "lexeme_id": "cy-marchog",
+        "how": "picture(vignette)+gloss(define)",
+        "segment_id": "cy-brenin-01-l08-s022"
+      },
+      {
+        "lexeme_id": "cy-arian",
+        "how": "picture(vignette)+context",
+        "segment_id": "cy-brenin-01-l08-s032"
+      },
+      {
+        "lexeme_id": "cy-aur",
+        "how": "picture(vignette+cover)+context",
+        "segment_id": "cy-brenin-01-l08-s024"
+      },
+      {
+        "lexeme_id": "cy-ffrind",
+        "how": "picture(scene)+context",
+        "segment_id": "cy-brenin-01-l08-s133"
+      },
+      {
+        "lexeme_id": "cy-oed",
+        "how": "gloss(synonym: pymtheg oed = 15)",
+        "segment_id": "cy-brenin-01-l08-s006"
+      },
+      {
+        "lexeme_id": "cy-clogyn",
+        "how": "picture(vignette)+context",
+        "segment_id": "cy-brenin-01-l08-s032"
+      },
+      {
+        "lexeme_id": "cy-cael",
+        "how": "gloss(antonym: rhoi ↔ cael)",
+        "segment_id": "cy-brenin-01-l08-s023"
+      },
+      {
+        "lexeme_id": "cy-gallu",
+        "how": "contrast (dw i ddim yn gallu darllen ↔ dw i'n gallu darllen)",
+        "segment_id": "cy-brenin-01-l08-s048"
+      },
+      {
+        "lexeme_id": "cy-hoffi",
+        "how": "context (Cai delighted with the present)",
+        "segment_id": "cy-brenin-01-l08-s063"
+      },
+      {
+        "lexeme_id": "cy-marchogaeth",
+        "how": "gloss(synonym)+picture",
+        "segment_id": "cy-brenin-01-l08-s068"
+      },
+      {
+        "lexeme_id": "cy-newydd",
+        "how": "gloss(antonym)",
+        "segment_id": "cy-brenin-01-l08-s032"
+      },
+      {
+        "lexeme_id": "cy-cryf",
+        "how": "gloss(radical)+contrast with gwan",
+        "segment_id": "cy-brenin-01-l08-s034"
+      },
+      {
+        "lexeme_id": "cy-gwan",
+        "how": "gloss(antonym)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l08-s088"
+      },
+      {
+        "lexeme_id": "cy-trwm",
+        "how": "context+picture(scene)+gloss(radical)",
+        "segment_id": "cy-brenin-01-l08-s024"
+      },
+      {
+        "lexeme_id": "cy-ph-go-iawn",
+        "how": "gloss(antonym ↔ pren)",
+        "segment_id": "cy-brenin-01-l08-s022"
+      },
+      {
+        "lexeme_id": "cy-ph-dim-ond",
+        "how": "context (Dim ond pymtheg oed wyt ti!)",
+        "segment_id": "cy-brenin-01-l08-s014"
+      },
+      {
+        "lexeme_id": "cy-heddiw",
+        "how": "context (pen-blwydd … heddiw)",
+        "segment_id": "cy-brenin-01-l08-s004"
+      },
+      {
+        "lexeme_id": "cy-pymtheg",
+        "how": "gloss(synonym: = 15)",
+        "segment_id": "cy-brenin-01-l08-s006"
+      },
+      {
+        "lexeme_id": "cy-un-ar-ddeg",
+        "how": "gloss(synonym: = 11)",
+        "segment_id": "cy-brenin-01-l08-s089"
+      }
+    ],
+    "recycle_lexeme_ids": [
+      "cy-cleddyf",
+      "cy-pren",
+      "cy-ceffyl",
+      "cy-oes",
+      "cy-does-dim",
+      "cy-dere",
+      "cy-dal",
+      "cy-brawd",
+      "cy-chwaer",
+      "cy-tref",
+      "cy-pell",
+      "cy-agos",
+      "cy-llyfr",
+      "cy-barf"
+    ],
+    "swaps": []
+  },
+  "story": {
+    "cover": {
+      "ref": "cy-brenin-01-l08-img-cover",
+      "src": "media/images/cy-brenin-01-l08-img-cover.webp",
+      "status": "draft",
+      "presentation": "inline_scene",
+      "alt": "Birthday morning in the llys hall: Cynyr, laughing into his huge beard, hands Cai a real sword with a gold hilt; Elen holds a red cloak and a red shield with a gold dragon leans on the table; Mali, Arth and Modlen watch.",
+      "art_brief": "Inside the llys hall (match place-neuadd.png), morning sunlight through the door, central hearth fire, long wooden table. Cynyr, Cynyr (broad, fifties, huge golden-blond beard to mid-chest, brown cloak with a round silver brooch over a fawn tunic), laughing, presents a long real sword with a gold hilt, flat across both hands, to Cai, Cai (15, tall, gangly, ginger-blond, rust-red tunic), who reaches for it wide-eyed and overjoyed. A round red shield with a small golden dragon leans against the table. Elen, Elen (tall, about fifty, dark hair with grey at the temples under a white linen veil, forest-green dress, iron key-ring at her belt), stands holding a folded long red cloak with a silver brooch. Mali, Mali (12, long dark braid down her back, dark-blue dress, satchel with a blank wax tablet), and Arth, Arth (11, untidy brown hair with a cowlick, freckles, oversized moss-green tunic, belt, brown boots), watch from the bench; Arth's expression is happy for Cai but a little wistful. Modlen, Modlen (short, round, rosy, floury white apron over a brown dress, white headscarf, big wooden spoon), comes in from the side with a plate of pies. Myrddin's tall black hat sits by the fire with a wisp of smoke. No text.",
+      "characters": [
+        "char-cynyr",
+        "char-cai",
+        "char-elen",
+        "char-mali",
+        "char-arth",
+        "char-modlen"
+      ],
+      "covers_lexeme_ids": [
+        "cy-pen-blwydd",
+        "cy-anrheg",
+        "cy-cleddyf",
+        "cy-tarian",
+        "cy-clogyn",
+        "cy-aur",
+        "cy-marchog"
+      ],
+      "width": 1600,
+      "height": 1073
+    },
+    "sections": [
+      {
+        "id": "cy-brenin-01-l08-sec1",
+        "title": "Pen-blwydd hapus!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l08-s001",
+            "text": "Mae hi'n fore, ac mae'r neuadd yn brysur: brecwast pen-blwydd!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s002",
+            "text": "Mae bara a chaws ar y bwrdd hir, mêl a menyn, wyau a llaeth.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "chaws",
+                "gloss": "a chaws ← caws",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s003",
+            "text": "Mae'r teulu'n bwyta ac yn yfed."
+          },
+          {
+            "id": "cy-brenin-01-l08-s004",
+            "text": "Mae hi'n ben-blwydd Cai heddiw!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ben-blwydd",
+                "gloss": "ben-blwydd ← pen-blwydd",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s005",
+            "text": "\"Pen-blwydd hapus, Cai!\" meddai Cynyr.",
+            "paragraph_start": true,
+            "speaker": "char-cynyr"
+          },
+          {
+            "id": "cy-brenin-01-l08-s006",
+            "text": "\"Pymtheg oed heddiw!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Pymtheg oed",
+                "gloss": "pymtheg oed = 15",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s007",
+            "text": "Mae Cai'n bymtheg oed, ac mae e'n hapus iawn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "bymtheg",
+                "gloss": "bymtheg ← pymtheg",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s008",
+            "text": "Mae e'n edrych ar y farf fawr."
+          },
+          {
+            "id": "cy-brenin-01-l08-s009",
+            "text": "\"Pymtheg oed!",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s010",
+            "text": "Ond ble mae barf Cai?\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s011",
+            "text": "\"Ha!",
+            "paragraph_start": true,
+            "speaker": "char-cynyr"
+          },
+          {
+            "id": "cy-brenin-01-l08-s012",
+            "text": "Ha!\" meddai Cynyr."
+          },
+          {
+            "id": "cy-brenin-01-l08-s013",
+            "text": "\"Barf?"
+          },
+          {
+            "id": "cy-brenin-01-l08-s014",
+            "text": "Dim ond pymtheg oed wyt ti!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s015",
+            "text": "Nawr mae Myrddin yn dod i'r neuadd, ac mae'r het ddu ar Myrddin.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s016",
+            "text": "\"Myrddin!",
+            "paragraph_start": true,
+            "speaker": "char-cynyr"
+          },
+          {
+            "id": "cy-brenin-01-l08-s017",
+            "text": "Croeso!"
+          },
+          {
+            "id": "cy-brenin-01-l08-s018",
+            "text": "Sut wyt ti?\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s019",
+            "text": "Mae Myrddin yn eistedd ar gadair wrth y tân.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ar gadair",
+                "gloss": "ar gadair ← cadair (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s020",
+            "text": "Nawr mae Cynyr yn codi rhywbeth hir o dan y bwrdd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s021",
+            "text": "\"Dyma anrheg, Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cynyr",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "anrheg",
+                "gloss": "anrheg: rhoi i Cai",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s022",
+            "text": "Cleddyf go iawn: cleddyf marchog!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "go iawn",
+                "gloss": "cleddyf go iawn ↔ cleddyf pren",
+                "gloss_kind": "antonym"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "marchog",
+                "gloss": "marchog: dyn + ceffyl + cleddyf",
+                "gloss_kind": "define"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l08-img-marchog",
+                "anchor_text": "marchog",
+                "label": "marchog",
+                "src": "media/vignettes/cy-brenin-01-l08-img-marchog.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A knight on a horse seen from the side: chainmail, round shield, sword at his belt, a cloak; storybook early-medieval, not plate armour. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-marchog"
+                ],
+                "width": 400,
+                "height": 415
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s023",
+            "text": "Mae Cai'n cael cleddyf go iawn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cael",
+                "gloss": "Cynyr: rhoi ↔ Cai: cael",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s024",
+            "text": "Dyw e ddim yn gleddyf pren: mae e'n hir ac yn drwm, ac mae aur ar y cleddyf.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "drwm",
+                "gloss": "drwm ← trwm",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l08-img-aur-arian",
+                "anchor_text": "aur",
+                "label": "aur · arian",
+                "src": "media/vignettes/cy-brenin-01-l08-img-aur-arian.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "Two small coins side by side: one gold coin and one silver coin, each with a simple worn pattern but no letters or numbers. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-aur",
+                  "cy-arian"
+                ],
+                "width": 400,
+                "height": 201
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s025",
+            "text": "\"Cleddyf aur!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s026",
+            "text": "\"Dyw'r cleddyf ddim yn aur, Cai,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l08-s027",
+            "text": "\"Mae aur ar y cleddyf.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s028",
+            "text": "\"A dyma darian,\" meddai Cynyr.",
+            "paragraph_start": true,
+            "speaker": "char-cynyr",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "darian",
+                "gloss": "dyma darian ← tarian (b.)",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l08-img-tarian",
+                "anchor_text": "darian",
+                "label": "tarian",
+                "src": "media/vignettes/cy-brenin-01-l08-img-tarian.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A round wooden shield painted red with a small golden dragon in the centre and an iron rim and boss. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-tarian"
+                ],
+                "width": 400,
+                "height": 405
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s029",
+            "text": "Mae'r darian yn goch, ac mae draig aur ar y darian.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s030",
+            "text": "Nawr mae cleddyf gyda Cai, ac mae tarian gyda fe hefyd.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gyda",
+                "gloss": "gyda: fi · ti · fe · hi",
+                "gloss_kind": "paradigm"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s031",
+            "text": "Mae Elen yn codi clogyn, ac mae hi'n rhoi'r clogyn i Cai.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s032",
+            "text": "Clogyn newydd yw e: clogyn hir, coch, ac mae arian ar y clogyn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "newydd",
+                "gloss": "newydd ↔ hen",
+                "gloss_kind": "antonym"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l08-img-clogyn",
+                "anchor_text": "Clogyn",
+                "label": "clogyn",
+                "src": "media/vignettes/cy-brenin-01-l08-img-clogyn.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A long red wool cloak laid out flat, with a round silver brooch at the neck. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-clogyn"
+                ],
+                "width": 400,
+                "height": 500
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s033",
+            "text": "\"Clogyn newydd i farchog newydd,\" meddai Elen.",
+            "paragraph_start": true,
+            "speaker": "char-elen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "farchog",
+                "gloss": "i farchog ← marchog",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s034",
+            "text": "Mae Cai'n codi'r cleddyf, ac mae e'n gryf iawn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gryf",
+                "gloss": "gryf ← cryf",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s035",
+            "text": "\"Marchog dw i nawr!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s036",
+            "text": "\"Mae cleddyf gyda fi, mae tarian gyda fi, ac mae clogyn newydd gyda fi!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s037",
+            "text": "Mae Modlen yn dod o'r gegin, ac mae pasteiod gyda hi ar y plât mawr.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s038",
+            "text": "\"Pasteiod pen-blwydd!\" meddai Modlen.",
+            "paragraph_start": true,
+            "speaker": "char-modlen"
+          },
+          {
+            "id": "cy-brenin-01-l08-s039",
+            "text": "\"Pasteiod o'r dref!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s040",
+            "text": "Mae hi'n edrych ar het Myrddin, wrth y tân.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s041",
+            "text": "\"A ti, het: paid â chyffwrdd â'r pasteiod!\"",
+            "paragraph_start": true,
+            "speaker": "char-modlen",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "chyffwrdd",
+                "gloss": "â chyffwrdd ← cyffwrdd",
+                "gloss_kind": "radical"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l08-sec2",
+        "title": "Oes anrheg gyda ti?",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l08-s042",
+            "text": "Mae Cai'n gofyn i Mali:",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s043",
+            "text": "\"Mali, oes anrheg gyda ti?\"",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s044",
+            "text": "\"Oes,\" meddai Mali.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l08-s045",
+            "text": "\"Mae llyfr gyda fi."
+          },
+          {
+            "id": "cy-brenin-01-l08-s046",
+            "text": "Dyma lyfr, Cai: llyfr marchogion!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s047",
+            "text": "\"Llyfr?\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s048",
+            "text": "\"Ond dw i ddim yn gallu darllen!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s049",
+            "text": "\"Wel, dw i'n gallu darllen, Cai.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l08-s050",
+            "text": "Dw i'n gallu dysgu Cai!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s051",
+            "text": "\"A ti, Arth?",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s052",
+            "text": "Oes anrheg gyda ti?\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s053",
+            "text": "Mae Arth yn goch.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l08-img-dim-anrheg",
+                "src": "media/images/cy-brenin-01-l08-img-dim-anrheg.webp",
+                "alt": "At the birthday table in the hall Cai, in a new red cloak with his sword and shield, turns to Arth; Arth looks down at the table, red-faced, with empty hands; Mali holds out a book.",
+                "status": "draft",
+                "art_brief": "Inside the llys hall (match place-neuadd.png), morning, central hearth fire, long table with pies. Cai, Cai (15, tall, gangly, ginger-blond, rust-red tunic), now wearing a long red cloak with a silver brooch, a real sword with a gold hilt at his side and a round red shield with a small gold dragon leaning on the bench, turns with a big grin to ask Arth something. Arth, Arth (11, untidy brown hair with a cowlick, freckles, oversized moss-green tunic, belt, brown boots), sits looking down at the table, red in the face, his hands empty. Mali, Mali (12, long dark braid down her back, dark-blue dress, satchel with a blank wax tablet), holds out a leather-bound book towards Cai. Cynyr, Cynyr (broad, fifties, huge golden-blond beard to mid-chest, brown cloak with a round silver brooch over a fawn tunic), and Elen, Elen (tall, about fifty, dark hair with grey at the temples under a white linen veil, forest-green dress, iron key-ring at her belt), at the end of the table; Modlen, Modlen (short, round, rosy, floury white apron over a brown dress, white headscarf, big wooden spoon), with a plate of pies glancing suspiciously at Myrddin's tall black hat by the fire. No text.",
+                "characters": [
+                  "char-cai",
+                  "char-arth",
+                  "char-mali",
+                  "char-cynyr",
+                  "char-elen",
+                  "char-modlen"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-anrheg",
+                  "cy-clogyn",
+                  "cy-tarian"
+                ],
+                "width": 1600,
+                "height": 1073
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s054",
+            "text": "\"Nac oes,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s055",
+            "text": "\"Does dim anrheg gyda fi."
+          },
+          {
+            "id": "cy-brenin-01-l08-s056",
+            "text": "Does dim arian gyda fi.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s057",
+            "text": "Mae Arth yn mynd i'r stabl, ac mae e'n cario gwellt i'r buarth.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s058",
+            "text": "Mae e'n gweithio'n gyflym: dyn gwellt newydd, dyn gwellt mawr!"
+          },
+          {
+            "id": "cy-brenin-01-l08-s059",
+            "text": "Nawr mae Cai'n dod i'r buarth.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s060",
+            "text": "\"Dyma anrheg, Cai,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s061",
+            "text": "\"Dim ond gwellt yw e, ond mae e'n newydd.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s062",
+            "text": "\"Dyn gwellt newydd!\" meddai Cai.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s063",
+            "text": "\"Dw i'n hoffi'r anrheg, Arth!"
+          },
+          {
+            "id": "cy-brenin-01-l08-s064",
+            "text": "Dw i'n hoffi'r anrheg yn fawr!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s065",
+            "text": "Mae Cai'n chwarae â'r cleddyf newydd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s066",
+            "text": "Ac mae e'n gallu marchogaeth hefyd."
+          },
+          {
+            "id": "cy-brenin-01-l08-s067",
+            "text": "Nawr mae e ar y ceffyl ifanc, yn y clogyn newydd, ac mae'r darian gyda fe."
+          },
+          {
+            "id": "cy-brenin-01-l08-s068",
+            "text": "Mae e'n marchogaeth yn gyflym o'r buarth i'r ardd, ac o'r ardd i'r buarth.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "marchogaeth",
+                "gloss": "marchogaeth = mynd ar geffyl",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s069",
+            "text": "\"Edrych, Arth!",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s070",
+            "text": "Dw i'n gallu marchogaeth!"
+          },
+          {
+            "id": "cy-brenin-01-l08-s071",
+            "text": "Dw i'n hoffi marchogaeth!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s072",
+            "text": "Mae Arth yn edrych ar Cai.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s073",
+            "text": "Does dim ceffyl gyda fe, a does dim cleddyf gyda fe."
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l08-sec3",
+        "title": "Mae'r cleddyf yn drwm!",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l08-s074",
+            "text": "Mae Cai'n edrych ar Arth, ac mae e'n gwenu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s075",
+            "text": "\"Arth, dere yma.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s076",
+            "text": "Dal y cleddyf!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s077",
+            "text": "\"Fi?",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s078",
+            "text": "Dw i'n cael dal y cleddyf?\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s079",
+            "text": "\"Wyt.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s080",
+            "text": "Heddiw, rwyt ti'n cael dal cleddyf go iawn.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s081",
+            "text": "Mae Arth yn dal y cleddyf.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s082",
+            "text": "Ond mae'r cleddyf yn hir iawn ac yn drwm iawn."
+          },
+          {
+            "id": "cy-brenin-01-l08-s083",
+            "text": "Dyw Arth ddim yn gallu codi'r cleddyf."
+          },
+          {
+            "id": "cy-brenin-01-l08-s084",
+            "text": "\"Wyt ti'n gallu codi'r cleddyf?\"",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s085",
+            "text": "\"Nac ydw!",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s086",
+            "text": "Mae'r cleddyf yn drwm iawn!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s087",
+            "text": "\"Dwyt ti ddim yn gryf, Arth.",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s088",
+            "text": "Rwyt ti'n wan!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wan",
+                "gloss": "wan ← gwan",
+                "gloss_kind": "radical"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wan",
+                "gloss": "gwan ↔ cryf",
+                "gloss_kind": "antonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s089",
+            "text": "Dim ond un ar ddeg oed wyt ti!\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "un ar ddeg",
+                "gloss": "un ar ddeg = 11",
+                "gloss_kind": "synonym"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s090",
+            "text": "\"Dw i'n un ar ddeg oed, ond dw i ddim yn wan!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s091",
+            "text": "Mae Arth yn codi'r cleddyf yn araf, yn araf… Nawr mae'r cleddyf yn uchel!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s092",
+            "text": "\"Rwyt ti'n ddewr, Arth!\"",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s093",
+            "text": "Ond mae'r cleddyf yn drwm, ac mae e'n mynd i'r dyn gwellt newydd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s094",
+            "text": "Gwellt ar Arth, gwellt ar Cai, gwellt ar Pero!",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l08-img-cleddyf-trwm",
+                "src": "media/images/cy-brenin-01-l08-img-cleddyf-trwm.webp",
+                "alt": "In the yard Arth struggles to lift Cai's real sword, which is far too big and heavy for him; the blade swings into a new straw man and straw flies everywhere; Cai laughs; Cynyr watches from the hall door and glances at Elen.",
+                "status": "draft",
+                "art_brief": "Llys yard (match place-buarth.png), late morning. Arth, Arth (11, untidy brown hair with a cowlick, freckles, oversized moss-green tunic, belt, brown boots), both hands on the hilt of a long real sword with a gold hilt, far too big for him, the blade tipping sideways into a freshly made straw man; straw bursting out in all directions, over Arth, over Cai and over Pero. Cai, Cai (15, tall, gangly, ginger-blond, rust-red tunic), in his new red cloak, laughing with his head thrown back. Pero, Pero (big shaggy black-and-white hound, grey muzzle), startled, shaking straw off. In the doorway of the hall Cynyr, Cynyr (broad, fifties, huge golden-blond beard to mid-chest, brown cloak with a round silver brooch over a fawn tunic), watches Arth very seriously, and glances sideways at Elen, Elen (tall, about fifty, dark hair with grey at the temples under a white linen veil, forest-green dress, iron key-ring at her belt), who stands calm and silent beside him. No text.",
+                "characters": [
+                  "char-arth",
+                  "char-cai",
+                  "char-pero",
+                  "char-cynyr",
+                  "char-elen"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-trwm",
+                  "cy-gwan"
+                ],
+                "width": 1600,
+                "height": 1073
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s095",
+            "text": "\"Mae'n ddrwg gyda fi, Cai!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s096",
+            "text": "\"Ha!",
+            "paragraph_start": true,
+            "speaker": "char-cai"
+          },
+          {
+            "id": "cy-brenin-01-l08-s097",
+            "text": "Dim ond gwellt yw e!\" meddai Cai."
+          },
+          {
+            "id": "cy-brenin-01-l08-s098",
+            "text": "\"Cer, Pero!\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s099",
+            "text": "Mae Cynyr yn sefyll wrth ddrws y neuadd, ac mae e'n edrych ar Arth a'r cleddyf.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddrws",
+                "gloss": "wrth ddrws ← drws",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s100",
+            "text": "Nawr mae Cynyr yn edrych ar Elen, ond dyw Elen ddim yn siarad."
+          },
+          {
+            "id": "cy-brenin-01-l08-s101",
+            "text": "\"Pam mae Dad yn edrych ar Mam?\" meddai Mali yn dawel.",
+            "paragraph_start": true,
+            "speaker": "char-mali"
+          },
+          {
+            "id": "cy-brenin-01-l08-s102",
+            "text": "Mae Cai'n cymryd y cleddyf.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s103",
+            "text": "\"Diolch, Cai.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s104",
+            "text": "Cleddyf Cai yw e.\""
+          }
+        ]
+      },
+      {
+        "id": "cy-brenin-01-l08-sec4",
+        "title": "Mae ffrind gyda ti",
+        "segments": [
+          {
+            "id": "cy-brenin-01-l08-s105",
+            "text": "Mae hi'n nos, ac mae hi'n oer.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s106",
+            "text": "Mae gwynt oer yn y buarth, ac mae dail ar y llwybr."
+          },
+          {
+            "id": "cy-brenin-01-l08-s107",
+            "text": "Mae'r adar yn ddistaw."
+          },
+          {
+            "id": "cy-brenin-01-l08-s108",
+            "text": "Mae Elen yn galw: \"Arth!",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s109",
+            "text": "Ble mae Arth?\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s110",
+            "text": "Ond dyw Arth ddim yn dod."
+          },
+          {
+            "id": "cy-brenin-01-l08-s111",
+            "text": "Mae Myrddin yn chwilio, ac mae e'n gweld Arth wrth y stabl.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s112",
+            "text": "Mae Arth yn eistedd ar hen fwced, yn bell o'r neuadd, ac mae e'n drist."
+          },
+          {
+            "id": "cy-brenin-01-l08-s113",
+            "text": "Mae Myrddin yn eistedd yn agos, ar garreg.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ar garreg",
+                "gloss": "ar garreg ← carreg (b.)",
+                "gloss_kind": "radical"
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s114",
+            "text": "\"Pam rwyt ti'n drist, Arth?\"",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l08-s115",
+            "text": "\"Mae Cai'n bymtheg oed, a dim ond un ar ddeg oed dw i,\" meddai Arth.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s116",
+            "text": "\"Mae Cai'n fawr ac yn gryf."
+          },
+          {
+            "id": "cy-brenin-01-l08-s117",
+            "text": "Dw i'n fach ac yn wan.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s118",
+            "text": "\"Rwyt ti'n fach nawr,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l08-s119",
+            "text": "\"Nawr.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s120",
+            "text": "\"Mae cleddyf gyda Cai, ac mae llyfr gyda Mali.",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s121",
+            "text": "Ond does dim cleddyf gyda fi, does dim arian gyda fi."
+          },
+          {
+            "id": "cy-brenin-01-l08-s122",
+            "text": "Does dim byd gyda fi.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s123",
+            "text": "\"Does dim byd gyda ti?\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l08-s124",
+            "text": "\"Mae brawd gyda ti, ac mae chwaer gyda ti."
+          },
+          {
+            "id": "cy-brenin-01-l08-s125",
+            "text": "A nawr, edrych.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s126",
+            "text": "Mae sŵn bach yn dod o'r het, a mwg bach hefyd.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s127",
+            "text": "Mae Dafi'n dod o'r het ac yn rhedeg yn gyflym."
+          },
+          {
+            "id": "cy-brenin-01-l08-s128",
+            "text": "Nawr mae e ar Arth, wrth y glust, yn y gwallt mawr!",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "cy-brenin-01-l08-img-ffrind",
+                "src": "media/images/cy-brenin-01-l08-img-ffrind.webp",
+                "alt": "Evening by the stable: Arth sits on an upturned bucket by the old white horse; tiny red Dafi sits on his shoulder with his tail in Arth's untidy hair, a puff of smoke; old Myrddin sits close by, smiling.",
+                "status": "draft",
+                "art_brief": "Outside the llys stable at dusk (match place-buarth.png), warm light from the hall door far behind. Arth, Arth (11, untidy brown hair with a cowlick, freckles, oversized moss-green tunic, belt, brown boots), sits on an upturned wooden bucket next to Cynyr's old white-grey horse, his face turning from sad to delighted. On his shoulder sits Dafi, Dafi (cup-sized red dragon, two short cream horns, tiny bat wings, big yellow eyes; small enough to sit in a wooden cup), curling his tail into Arth's untidy hair and sneezing a tiny puff of grey smoke. Myrddin, Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat with a bent tip), sits close by on a log, his tall black hat in his lap, smiling. No text.",
+                "characters": [
+                  "char-arth",
+                  "char-dafi",
+                  "char-myrddin"
+                ],
+                "covers_lexeme_ids": [
+                  "cy-ffrind"
+                ],
+                "width": 1600,
+                "height": 1073
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s129",
+            "text": "\"Mae rhywbeth gyda ti, Arth,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l08-s130",
+            "text": "\"Dafi!\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s131",
+            "text": "\"Ffrind!\" meddai Dafi.",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l08-s132",
+            "text": "\"Ie,\" meddai Myrddin.",
+            "paragraph_start": true,
+            "speaker": "char-myrddin"
+          },
+          {
+            "id": "cy-brenin-01-l08-s133",
+            "text": "\"Mae ffrind gyda ti."
+          },
+          {
+            "id": "cy-brenin-01-l08-s134",
+            "text": "Ffrind bach, ond ffrind da.\""
+          },
+          {
+            "id": "cy-brenin-01-l08-s135",
+            "text": "Mae Arth yn gwenu.",
+            "paragraph_start": true
+          },
+          {
+            "id": "cy-brenin-01-l08-s136",
+            "text": "Mae Dafi'n tisian: mwg bach llwyd yn y gwallt mawr."
+          },
+          {
+            "id": "cy-brenin-01-l08-s137",
+            "text": "\"Wyt ti'n hoffi'r gwallt, Dafi?\"",
+            "paragraph_start": true,
+            "speaker": "char-arth"
+          },
+          {
+            "id": "cy-brenin-01-l08-s138",
+            "text": "\"Cynnes!\"",
+            "paragraph_start": true,
+            "speaker": "char-dafi"
+          },
+          {
+            "id": "cy-brenin-01-l08-s139",
+            "text": "Mae cleddyf gyda Cai, ond mae draig gydag Arth.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gydag",
+                "gloss": "gydag Arth = gyda + Arth",
+                "gloss_kind": "synonym"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title_cy": "Mae cleddyf gyda Cai",
+    "rule_cy": "Mae X gyda fi / ti / fe / hi / Cai. — Oes X gyda ti? Oes. / Nac oes. — Does dim X gyda fi.",
+    "tables": [
+      {
+        "caption": "gyda",
+        "header": [
+          "",
+          "Mae … / Oes …?",
+          "Does dim …"
+        ],
+        "rows": [
+          [
+            "fi",
+            "Mae clogyn newydd gyda fi!",
+            "Does dim arian gyda fi."
+          ],
+          [
+            "ti",
+            "Oes anrheg gyda ti? · Mae ffrind gyda ti.",
+            "Does dim byd gyda ti?"
+          ],
+          [
+            "fe",
+            "Mae tarian gyda fe.",
+            "Does dim ceffyl gyda fe."
+          ],
+          [
+            "hi",
+            "Mae pasteiod gyda hi.",
+            ""
+          ],
+          [
+            "Cai",
+            "Mae cleddyf gyda Cai.",
+            ""
+          ]
+        ]
+      },
+      {
+        "caption": "Cleddyf Cai ↔ Mae cleddyf gyda Cai",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Cleddyf Cai yw e.",
+            "(Pennod 2: pwy?)"
+          ],
+          [
+            "Mae cleddyf gyda Cai.",
+            "(Pennod 8: Oes cleddyf gyda Cai? Oes.)"
+          ],
+          [
+            "Mae Cai'n cael cleddyf.",
+            "(cael ↔ rhoi)"
+          ]
+        ]
+      },
+      {
+        "caption": "gallu · hoffi · cael + berfenw (dim treiglad)",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "Mae Cai'n gallu marchogaeth.",
+            "Dw i ddim yn gallu darllen."
+          ],
+          [
+            "Dw i'n hoffi marchogaeth.",
+            "Dw i'n hoffi'r anrheg."
+          ],
+          [
+            "Rwyt ti'n cael dal y cleddyf.",
+            "Dw i'n cael dal y cleddyf?"
+          ]
+        ]
+      },
+      {
+        "caption": "Treigladau",
+        "header": [
+          "",
+          ""
+        ],
+        "rows": [
+          [
+            "i farchog ← marchog · wrth ddrws ← drws",
+            "ar, wrth, i, o, dan + treiglad meddal (Pennod 16)"
+          ],
+          [
+            "gyda / gydag",
+            "gydag + llafariad (sain a, e, i, o, u …): gydag Arth"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "cy-brenin-01-l08-s030"
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s043"
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s055"
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s030"
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s037"
+      },
+      {
+        "segment_id": "cy-brenin-01-l08-s070"
+      }
+    ],
+    "nodyn_en": "Welsh says 'a sword is with Cai' for 'Cai has a sword': Mae cleddyf gyda Cai. The thing owned is usually indefinite, so questions use Oes …? and negatives Does dim …, as in Pennod 6. Gallu (can), hoffi (like) and cael (be allowed to) take a second verb-noun with no mutation."
+  },
+  "pensa": {
+    "A": {
+      "id": "cy-brenin-01-l08-pa",
+      "title": "Pensum A — Ffurfiau",
+      "blocks": [
+        {
+          "enghraifft": {
+            "prompt": "(Cai: cleddyf ✓) →",
+            "answer": "Mae cleddyf gyda Cai."
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "(Mali: llyfr ✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae llyfr gyda Mali."
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a2",
+              "prompt": "(fi: arian ✗) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Does dim arian gyda fi."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Dyw arian ddim gyda fi.",
+                  "hint": "arian (dim y) → Does dim"
+                }
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a3",
+              "prompt": "(ti: ceffyl ?) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Oes ceffyl gyda ti?"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a4",
+              "prompt": "(Cai → fe: tarian ✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae tarian gyda fe."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Mae tarian gyda e.",
+                  "hint": "gyda fe"
+                }
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "(gyda / ar) Mae llyfr ___ y bwrdd.",
+            "answer": "ar"
+          },
+          "items": [
+            {
+              "id": "a5",
+              "prompt": "(gyda / ar) Mae llyfr ___ Mali: llyfr Mali yw e.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "gyda"
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a6",
+              "prompt": "(gyda / yn) Mae'r pasteiod ___ y gegin.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "yn"
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae Mali'n darllen. (gallu) →",
+            "answer": "Mae Mali'n gallu darllen."
+          },
+          "items": [
+            {
+              "id": "a7",
+              "prompt": "Mae Cai'n marchogaeth. (gallu) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Mae Cai'n gallu marchogaeth."
+              ],
+              "source_segment_ids": []
+            },
+            {
+              "id": "a8",
+              "prompt": "Dw i'n darllen. (hoffi) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Dw i'n hoffi darllen."
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Dw i'n hoffi ddarllen.",
+                  "hint": "hoffi + darllen: dim treiglad"
+                }
+              ],
+              "source_segment_ids": []
+            }
+          ]
+        },
+        {
+          "enghraifft": {
+            "prompt": "Mae caws ar y plât. → ?",
+            "answer": "Oes caws ar y plât?"
+          },
+          "items": [
+            {
+              "id": "a9",
+              "prompt": "Mae bara yn y gegin. → ?",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Oes bara yn y gegin?"
+              ],
+              "recall_of": "G06",
+              "source_segment_ids": []
+            },
+            {
+              "id": "a10",
+              "prompt": "\"Wyt ti'n gryf?\" (✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Ydw, dw i'n gryf."
+              ],
+              "recall_of": "G05",
+              "source_segment_ids": []
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "cy-brenin-01-l08-pb",
+      "title": "Pensum B — Geiriau",
+      "word_bank": [
+        "anrheg",
+        "ffrind",
+        "clogyn",
+        "arian",
+        "tarian",
+        "aur",
+        "trwm",
+        "cryf",
+        "newydd",
+        "gwan",
+        "marchogaeth",
+        "hoffi",
+        "gallu"
+      ],
+      "mutation_hint": true,
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Mae Elen yn rhoi llyfr i Mali: ___ yw e.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "anrheg"
+          ]
+        },
+        {
+          "id": "b2",
+          "prompt": "Dyw Mali ddim yn gallu codi'r bwced llawn: mae e'n ___ iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "drwm"
+          ],
+          "explanation": "yn + trwm → drwm"
+        },
+        {
+          "id": "b3",
+          "prompt": "Mae Cai'n codi Mali ac Arth! Mae e'n ___ iawn.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "gryf"
+          ],
+          "explanation": "yn + cryf → gryf"
+        },
+        {
+          "id": "b4",
+          "prompt": "Dyw'r cleddyf ddim yn hen: mae e'n ___.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "newydd"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Mae Cynyr ar yr hen geffyl gwyn: mae e'n ___ i'r dref.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "marchogaeth"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Mae Cai'n bwyta pastai, ac mae e'n hapus iawn: mae e'n ___ pasteiod!",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "hoffi"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Mae Dafi'n eistedd yn y gwallt mawr: mae e'n ___ i Arth.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ffrind"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "Mae hi'n oer yn y nos: mae Elen yn rhoi ___ hir i Cai.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "clogyn"
+          ]
+        },
+        {
+          "id": "b9",
+          "prompt": "Mae Arth eisiau rhoi anrheg i Cai, ond does dim ___ gyda fe.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "arian"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "cy-brenin-01-l08-pc",
+      "title": "Pensum C — Cwestiynau",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Pwy yw'r marchog newydd?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Cai",
+            "Cai yw'r marchog newydd",
+            "Cai yw e"
+          ],
+          "model_answer": "Cai yw'r marchog newydd.",
+          "source_segment_ids": [
+            "cy-brenin-01-l08-s035"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Oes tarian gyda Cai?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Oes",
+            "Oes. Mae tarian gyda fe",
+            "Oes, mae tarian gyda fe",
+            "Oes, mae tarian gyda Cai",
+            "Oes. Mae tarian gyda Cai"
+          ],
+          "model_answer": "Oes, mae tarian gyda fe.",
+          "source_segment_ids": [
+            "cy-brenin-01-l08-s030"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Beth yw anrheg Arth?",
+          "answer_mode": "self_check",
+          "model_answer": "Dyn gwellt newydd yw anrheg Arth.",
+          "rubric": "Names the new straw man.",
+          "key_terms": [
+            "cy-gwellt",
+            "cy-newydd"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l08-s060"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Pam dyw Arth ddim yn gallu codi'r cleddyf?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae'r cleddyf yn drwm iawn, a dim ond un ar ddeg oed yw Arth.",
+          "rubric": "Gives a reason: the sword is heavy (or Arth is young / small).",
+          "key_terms": [
+            "cy-trwm"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Pam mae Arth yn drist yn y nos?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae cleddyf a tharian gyda Cai, ond does dim byd gydag Arth.",
+          "rubric": "Contrasts what Cai has with what Arth has (Does dim … gyda …).",
+          "key_terms": [
+            "cy-gyda",
+            "cy-does-dim"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Ble mae Dafi nawr?",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Yn y gwallt mawr",
+            "Ar Arth",
+            "Mae Dafi ar Arth, yn y gwallt mawr",
+            "Yn y gwallt",
+            "Wrth y glust",
+            "Mae Dafi ar Arth",
+            "Mae Dafi yn y gwallt mawr"
+          ],
+          "model_answer": "Mae Dafi ar Arth, yn y gwallt mawr."
+        },
+        {
+          "id": "c7",
+          "prompt": "A ti? Oes ffrind gyda ti?",
+          "answer_mode": "self_check",
+          "model_answer": "Oes, mae ffrind gyda fi. / Nac oes.",
+          "rubric": "Oes / Nac oes, plus one sentence 'Mae … gyda fi.'"
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "cy-gyda",
+      "citation_form": "gyda / gydag (+ AM)",
+      "part_of_speech": "preposition",
+      "current_sense": "with; (mae … gyda fi) have (+ AM)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-fi",
+      "citation_form": "fi",
+      "part_of_speech": "pronoun",
+      "current_sense": "me; I (after prepositions and verbs)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ti",
+      "citation_form": "ti",
+      "part_of_speech": "pronoun",
+      "current_sense": "you (singular, after prepositions)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pen-blwydd",
+      "citation_form": "pen-blwydd (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "birthday",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-anrheg",
+      "citation_form": "anrheg (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "present, gift",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-tarian",
+      "citation_form": "tarian (b.)",
+      "part_of_speech": "noun",
+      "current_sense": "shield",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-marchog",
+      "citation_form": "marchog (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "knight",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-arian",
+      "citation_form": "arian (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "silver; money",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-aur",
+      "citation_form": "aur (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "gold",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ffrind",
+      "citation_form": "ffrind (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "friend",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-oed",
+      "citation_form": "oed (pymtheg oed)",
+      "part_of_speech": "noun",
+      "current_sense": "age (… oed = … years old)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-clogyn",
+      "citation_form": "clogyn (g.)",
+      "part_of_speech": "noun",
+      "current_sense": "cloak",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cael",
+      "citation_form": "cael",
+      "part_of_speech": "verb",
+      "current_sense": "to get, receive; to have (be allowed)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gallu",
+      "citation_form": "gallu",
+      "part_of_speech": "verb",
+      "current_sense": "to be able, can",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-hoffi",
+      "citation_form": "hoffi",
+      "part_of_speech": "verb",
+      "current_sense": "to like",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-marchogaeth",
+      "citation_form": "marchogaeth",
+      "part_of_speech": "verb",
+      "current_sense": "to ride (a horse)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-newydd",
+      "citation_form": "newydd",
+      "part_of_speech": "adjective",
+      "current_sense": "new",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-cryf",
+      "citation_form": "cryf",
+      "part_of_speech": "adjective",
+      "current_sense": "strong",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-gwan",
+      "citation_form": "gwan",
+      "part_of_speech": "adjective",
+      "current_sense": "weak",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-trwm",
+      "citation_form": "trwm",
+      "part_of_speech": "adjective",
+      "current_sense": "heavy",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ph-go-iawn",
+      "citation_form": "go iawn (after the noun)",
+      "part_of_speech": "phrase",
+      "current_sense": "real, proper (after the noun)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-ph-dim-ond",
+      "citation_form": "dim ond",
+      "part_of_speech": "phrase",
+      "current_sense": "only",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-heddiw",
+      "citation_form": "heddiw",
+      "part_of_speech": "adverb",
+      "current_sense": "today",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-pymtheg",
+      "citation_form": "pymtheg",
+      "part_of_speech": "numeral",
+      "current_sense": "fifteen (traditional)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    },
+    {
+      "lexeme_id": "cy-un-ar-ddeg",
+      "citation_form": "un ar ddeg",
+      "part_of_speech": "numeral",
+      "current_sense": "eleven (traditional)",
+      "first_introduced_lesson": "cy-brenin-01-l08",
+      "new": true
+    }
+  ],
+  "lexicon_delta": {
+    "note": "Review copy only; the source of truth is content/cy/lexicon-deltas/pennod-08.json.",
+    "card_stages": [
+      {
+        "lexeme_id": "cy-gyda",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "gyda / gydag (+ AM)",
+        "back": "with; (mae … gyda fi) have (+ AM)",
+        "example_segment_id": "cy-brenin-01-l08-s030"
+      },
+      {
+        "lexeme_id": "cy-fi",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "fi",
+        "back": "me; I (after prepositions and verbs)",
+        "example_segment_id": "cy-brenin-01-l08-s055"
+      },
+      {
+        "lexeme_id": "cy-ti",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "ti",
+        "back": "you (singular, after prepositions)",
+        "example_segment_id": "cy-brenin-01-l08-s043"
+      },
+      {
+        "lexeme_id": "cy-pen-blwydd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "pen-blwydd (g.)",
+        "back": "birthday · Pen-blwydd hapus! = Happy birthday!",
+        "example_segment_id": "cy-brenin-01-l08-s005"
+      },
+      {
+        "lexeme_id": "cy-anrheg",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "anrheg (b.)",
+        "back": "present, gift",
+        "example_segment_id": "cy-brenin-01-l08-s021"
+      },
+      {
+        "lexeme_id": "cy-tarian",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "tarian (b.)",
+        "back": "shield",
+        "example_segment_id": "cy-brenin-01-l08-s029"
+      },
+      {
+        "lexeme_id": "cy-marchog",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "marchog (g.), marchogion",
+        "back": "knight",
+        "example_segment_id": "cy-brenin-01-l08-s033"
+      },
+      {
+        "lexeme_id": "cy-arian",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "arian (g.)",
+        "back": "silver; money",
+        "example_segment_id": "cy-brenin-01-l08-s056"
+      },
+      {
+        "lexeme_id": "cy-aur",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "aur (g.)",
+        "back": "gold",
+        "example_segment_id": "cy-brenin-01-l08-s027"
+      },
+      {
+        "lexeme_id": "cy-ffrind",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "ffrind (g.)",
+        "back": "friend",
+        "example_segment_id": "cy-brenin-01-l08-s133"
+      },
+      {
+        "lexeme_id": "cy-oed",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "oed (pymtheg oed)",
+        "back": "age (… oed = … years old)",
+        "example_segment_id": "cy-brenin-01-l08-s006"
+      },
+      {
+        "lexeme_id": "cy-clogyn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "clogyn (g.)",
+        "back": "cloak",
+        "example_segment_id": "cy-brenin-01-l08-s032"
+      },
+      {
+        "lexeme_id": "cy-cael",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "cael",
+        "back": "to get, receive; to have (be allowed)",
+        "example_segment_id": "cy-brenin-01-l08-s023"
+      },
+      {
+        "lexeme_id": "cy-gallu",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "gallu",
+        "back": "to be able, can",
+        "example_segment_id": "cy-brenin-01-l08-s048"
+      },
+      {
+        "lexeme_id": "cy-hoffi",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "hoffi",
+        "back": "to like",
+        "example_segment_id": "cy-brenin-01-l08-s063"
+      },
+      {
+        "lexeme_id": "cy-marchogaeth",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "marchogaeth",
+        "back": "to ride (a horse)",
+        "example_segment_id": "cy-brenin-01-l08-s070"
+      },
+      {
+        "lexeme_id": "cy-newydd",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "newydd",
+        "back": "new",
+        "example_segment_id": "cy-brenin-01-l08-s033"
+      },
+      {
+        "lexeme_id": "cy-cryf",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "cryf",
+        "back": "strong",
+        "example_segment_id": "cy-brenin-01-l08-s034"
+      },
+      {
+        "lexeme_id": "cy-gwan",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "gwan",
+        "back": "weak",
+        "example_segment_id": "cy-brenin-01-l08-s088"
+      },
+      {
+        "lexeme_id": "cy-trwm",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "trwm",
+        "back": "heavy",
+        "example_segment_id": "cy-brenin-01-l08-s086"
+      },
+      {
+        "lexeme_id": "cy-ph-go-iawn",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "go iawn (after the noun)",
+        "back": "real, proper (after the noun)",
+        "example_segment_id": "cy-brenin-01-l08-s022"
+      },
+      {
+        "lexeme_id": "cy-ph-dim-ond",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "dim ond",
+        "back": "only",
+        "example_segment_id": "cy-brenin-01-l08-s014"
+      },
+      {
+        "lexeme_id": "cy-heddiw",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "heddiw",
+        "back": "today",
+        "example_segment_id": "cy-brenin-01-l08-s006"
+      },
+      {
+        "lexeme_id": "cy-pymtheg",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "pymtheg",
+        "back": "fifteen (traditional)",
+        "example_segment_id": "cy-brenin-01-l08-s007"
+      },
+      {
+        "lexeme_id": "cy-un-ar-ddeg",
+        "id": "base",
+        "lesson": "cy-brenin-01-l08",
+        "front": "un ar ddeg",
+        "back": "eleven (traditional)",
+        "example_segment_id": "cy-brenin-01-l08-s089"
+      },
+      {
+        "lexeme_id": "cy-pattern-g08",
+        "id": "pattern-g08",
+        "lesson": "cy-brenin-01-l08",
+        "front": "Mae cleddyf gyda Cai. · Oes anrheg gyda ti? · Does dim byd gyda fi.",
+        "back": "Cai has a sword. · Have you got a present? · I've got nothing. (gyda fi · ti · fe · hi)",
+        "example_segment_id": "cy-brenin-01-l08-s030",
+        "example_segment_ids": [
+          "cy-brenin-01-l08-s030",
+          "cy-brenin-01-l08-s043",
+          "cy-brenin-01-l08-s122"
+        ]
+      }
+    ]
+  },
+  "media": {
+    "status": "planned",
+    "cover": "cy-brenin-01-l08-img-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 3,
+      "margin_vignette": 4,
+      "margin_diagram": 0,
+      "margin_gloss": 23
+    }
+  },
+  "completion": {
+    "button_label": "Gorffen y bennod"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "cy-brenin-01",
+      "pennod-08",
+      "rhan-1"
+    ]
+  },
+  "metrics": {
+    "running_words": 928,
+    "sentences": 139,
+    "word_target": 850,
+    "word_window": [
+      765,
+      935
+    ]
+  }
+}
