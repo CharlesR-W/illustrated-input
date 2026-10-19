@@ -1,0 +1,3881 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "ru-mir-01-l05",
+ "course_id": "ru-mir-01",
+ "order": 5,
+ "title": "Как тебя́ зову́т?",
+ "part": 1,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "0.1.0-pilot",
+ "provenance": {
+  "author": "pilot writer (Claude, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "prompts/russian-block-writer-brief.md; content/ru/plan/chapters.json row 5; docs/russian-mir-lesson-shape.md",
+  "review_required": "Codex cross-model review (applied, see docs/reviews/russian-pilot-log-2026-10-18.md) and native-speaker review before text_status: reviewed",
+  "notes": [
+   "Warnings left, with reasons: prior coverage 72% (floor 80%): the verb system and the naming vocabulary arrive together (23 of 35 lexemes known to the owner); answer-unknown for зову́т in the «А ты?» item and the Напиши models (the baseline chunk «Меня́ зову́т» is not chunk-matched in answers: checker limitation); stress-unverified; new-cluster.",
+   "2nd-conjugation present now productive in all persons; мочь and хоте́ть tabulated (L10). No animate masculine accusative and no object pronouns yet (Глава 6): Vera never 'sees Ivan'; she sees the children, the school, the village.",
+   "Address: Vera uses вы to Ivan (an adult) and ты to Nastya (a child); Ivan slips into ты and Marya corrects him (design §7.2, plan writer note) — paid off in Глава 32 (Order No. 1).",
+   "Glava 6 continuity: Ivan knows three letters (seen on the sign), Vera calls him Ива́н Петро́вич, the evening class is for grown men (отцы́ и сосе́ди), the slate is mended and lies on the table."
+  ],
+  "review_questions": [
+   {
+    "quote": "ка́рта",
+    "question": "[?] Material culture and dates assumed, not sourced in the history notes: the first school day in early September O.S.; a wall map and a portrait of the Tsar in a new zemstvo school; the painted signboard «Зе́мская шко́ла»; the mended slate.",
+    "segment_id": "ru-mir-01-l05-s029"
+   },
+   {
+    "quote": "Не «ты», а «вы»!",
+    "question": "Would a peasant mother in 1913 correct her grown son's ты to the new teacher in front of her? (Plan: Marya corrects, not Vera.)",
+    "segment_id": "ru-mir-01-l05-s051"
+   },
+   {
+    "quote": "отцы́ и сосе́ди",
+    "question": "[?] Evening literacy classes for adult men in a zemstvo school in 1913 (Sunday or evening classes existed; please confirm this village setting).",
+    "segment_id": "ru-mir-01-l05-s072"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G05",
+  "primary_new_grammar": {
+   "id": "G05",
+   "label": "2nd conjugation (говори́ть, ви́деть, смотре́ть, люби́ть, сиде́ть, стоя́ть, лежа́ть); all persons; ты/вы; мочь and хоте́ть; names, patronymics, diminutives",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01",
+   "G02",
+   "G03",
+   "G04"
+  ],
+  "incidental": [
+   {
+    "form": "спра́шивает, отвеча́ет, кричи́т — 3rd-person speech tags from the G02 whitelist (glossed in Главы 2–3; lexemes in Главы 6 and 9)"
+   },
+   {
+    "form": "Чита́йте! — imperative chunk (G05 secondary, L11), glossed; never tested before Глава 14"
+   },
+   {
+    "form": "ве́чером — Глава 6 lexeme, glossed once here; девятна́дцать — number in the age chunk, glossed"
+   },
+   {
+    "form": "ни «да», ни «нет» — ни … ни as a fixed pair (particles)"
+   }
+  ],
+  "new_lexeme_ids": [
+   "ru-videt",
+   "ru-smotret",
+   "ru-lyubit",
+   "ru-sidet",
+   "ru-stoyat",
+   "ru-lezhat",
+   "ru-govorit",
+   "ru-chitat",
+   "ru-moch",
+   "ru-khotet",
+   "ru-umet",
+   "ru-uchitsya",
+   "ru-uchitelnitsa",
+   "ru-uchitel",
+   "ru-imya",
+   "ru-otchestvo",
+   "ru-familiya",
+   "ru-vyveska",
+   "ru-bukva",
+   "ru-slovo",
+   "ru-my",
+   "ru-vy",
+   "ru-vash",
+   "ru-molodoj",
+   "ru-starshij",
+   "ru-mladshij",
+   "ru-zemskij",
+   "ru-sejchas",
+   "ru-zhe",
+   "ru-ved",
+   "ru-nu",
+   "ru-takoj",
+   "ru-devushka",
+   "ru-domoj",
+   "ru-kak"
+  ],
+  "recycle_lexeme_ids": [
+   "ru-shkola",
+   "ru-doska",
+   "ru-sestra",
+   "ru-brat",
+   "ru-ty",
+   "ru-ya",
+   "ru-znat",
+   "ru-rabotat",
+   "ru-delat",
+   "ru-ponimat",
+   "ru-novyj",
+   "ru-staryj",
+   "ru-otets",
+   "ru-mat",
+   "ru-semya",
+   "ru-pochemu"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "ru-videt",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s056"
+   },
+   {
+    "lexeme_id": "ru-smotret",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l05-s081"
+   },
+   {
+    "lexeme_id": "ru-lyubit",
+    "how": "gloss(paradigm)+context",
+    "segment_id": "ru-mir-01-l05-s024"
+   },
+   {
+    "lexeme_id": "ru-sidet",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l05-s081"
+   },
+   {
+    "lexeme_id": "ru-stoyat",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s003"
+   },
+   {
+    "lexeme_id": "ru-lezhat",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l05-s080"
+   },
+   {
+    "lexeme_id": "ru-govorit",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s049"
+   },
+   {
+    "lexeme_id": "ru-chitat",
+    "how": "gloss(form)+context",
+    "segment_id": "ru-mir-01-l05-s057"
+   },
+   {
+    "lexeme_id": "ru-moch",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l05-s063"
+   },
+   {
+    "lexeme_id": "ru-khotet",
+    "how": "gloss(paradigm)+context",
+    "segment_id": "ru-mir-01-l05-s069"
+   },
+   {
+    "lexeme_id": "ru-umet",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l05-s063"
+   },
+   {
+    "lexeme_id": "ru-uchitsya",
+    "how": "gloss(paradigm)+context",
+    "segment_id": "ru-mir-01-l05-s037"
+   },
+   {
+    "lexeme_id": "ru-uchitelnitsa",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l05-s002"
+   },
+   {
+    "lexeme_id": "ru-uchitel",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l05-s002"
+   },
+   {
+    "lexeme_id": "ru-imya",
+    "how": "gloss(form)+context",
+    "segment_id": "ru-mir-01-l05-s014"
+   },
+   {
+    "lexeme_id": "ru-otchestvo",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s020"
+   },
+   {
+    "lexeme_id": "ru-familiya",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s009"
+   },
+   {
+    "lexeme_id": "ru-vyveska",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l05-s054"
+   },
+   {
+    "lexeme_id": "ru-bukva",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s061"
+   },
+   {
+    "lexeme_id": "ru-slovo",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s057"
+   },
+   {
+    "lexeme_id": "ru-my",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s022"
+   },
+   {
+    "lexeme_id": "ru-vy",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l05-s051"
+   },
+   {
+    "lexeme_id": "ru-vash",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s038"
+   },
+   {
+    "lexeme_id": "ru-molodoj",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l05-s004"
+   },
+   {
+    "lexeme_id": "ru-starshij",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l05-s032"
+   },
+   {
+    "lexeme_id": "ru-mladshij",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l05-s032"
+   },
+   {
+    "lexeme_id": "ru-zemskij",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s053"
+   },
+   {
+    "lexeme_id": "ru-sejchas",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s001"
+   },
+   {
+    "lexeme_id": "ru-zhe",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s066"
+   },
+   {
+    "lexeme_id": "ru-ved",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l05-s070"
+   },
+   {
+    "lexeme_id": "ru-nu",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l05-s074"
+   },
+   {
+    "lexeme_id": "ru-takoj",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s068"
+   },
+   {
+    "lexeme_id": "ru-devushka",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l05-s004"
+   },
+   {
+    "lexeme_id": "ru-domoj",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l05-s076"
+   },
+   {
+    "lexeme_id": "ru-kak",
+    "how": "context",
+    "segment_id": "ru-mir-01-l05-s071"
+   }
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "ru-mir-01-l05-cover",
+   "src": "media/images/ru-mir-01-l05-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "The new zemstvo school on its first day: a log building with two windows and a signboard over the door, village children crowding, a young woman teacher in a dark skirt and white blouse at the door, and Ivan holding his cap.",
+   "art_brief": "Early September 1913, a bright morning. A new log zemstvo school with a plank roof, two windows and a painted signboard over the door (the lettering is not legible in the image). Vera Nikolaevna (23, dark skirt, white high-collared blouse, hair pinned up, a shawl) stands at the door, smiling. Village children of 8–12 crowd in front, Nastya (12, kerchief, braid) at the front. Marya (50) behind them. Ivan (19, tall, fair, cap in his hands) at the back, awkward. Birch trees, autumn yellow just beginning. No legible text.",
+   "characters": [
+    "char-vera",
+    "char-nastya",
+    "char-ivan",
+    "char-marya"
+   ],
+   "covers_lexeme_ids": [
+    "ru-uchitelnitsa",
+    "ru-vyveska",
+    "ru-molodoj",
+    "ru-devushka",
+    "ru-zemskij"
+   ]
+  },
+  "sections": [
+   {
+    "id": "ru-mir-01-l05-sec1",
+    "title": "Но́вая учи́тельница",
+    "segments": [
+     {
+      "id": "ru-mir-01-l05-s001",
+      "text": "Весна́ — э́то рабо́та, а сейча́с — шко́ла.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s002",
+      "text": "Шко́ла в Берёзовке но́вая, зе́мская, и учи́тельница то́же но́вая.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "учи́тельница",
+        "gloss": "учи́тель — он, учи́тельница — она́",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-uchitelnitsa",
+         "ru-uchitel"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 9,
+        "end": 18,
+        "token": "Берёзовке",
+        "lemma": "берёзовка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'в' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s003",
+      "text": "Де́ти стоя́т у шко́лы и смо́трят."
+     },
+     {
+      "id": "ru-mir-01-l05-s004",
+      "text": "Вот она́, но́вая учи́тельница!",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l05-img-uchitelnitsa",
+        "src": "media/images/ru-mir-01-l05-img-uchitelnitsa.webp",
+        "alt": "The young teacher at the school door greets the village children; Misha and Liza at the front, Nastya beside them, mothers behind.",
+        "status": "planned",
+        "art_brief": "Early September 1913, morning, in front of the new log zemstvo school. Vera Nikolaevna (23, dark skirt, white high-collared blouse, hair pinned up) bends a little towards little Misha (6) and Liza (4); Nastya (12, kerchief, braid) stands proudly beside them; Marya and other village women behind; the signboard over the door (letters not legible). No text.",
+        "characters": [
+         "char-vera",
+         "char-nastya",
+         "char-misha",
+         "char-liza",
+         "char-marya"
+        ],
+        "covers_lexeme_ids": [
+         "ru-uchitelnitsa",
+         "ru-molodoj",
+         "ru-devushka"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s005",
+      "text": "Учи́тельница — молода́я де́вушка.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "де́вушка",
+        "gloss": "де́вушка: молода́я, но не ребёнок",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-devushka",
+         "ru-molodoj"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s006",
+      "text": "— Така́я молода́я! — говори́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l05-s007",
+      "text": "Да́рья, жена́ Фёдора, то́же здесь: её де́ти — Ми́ша и Ли́за.",
+      "pins": [
+       {
+        "start": 14,
+        "end": 20,
+        "token": "Фёдора",
+        "lemma": "фёдор",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       },
+       {
+        "start": 35,
+        "end": 37,
+        "token": "её",
+        "lemma": "её",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s008",
+      "text": "— Учи́тель — э́то он, а она́ — учи́тельница! — говори́т ма́ленький Ми́ша.",
+      "paragraph_start": true,
+      "speaker": "char-misha"
+     },
+     {
+      "id": "ru-mir-01-l05-s009",
+      "text": "— Здра́вствуйте, де́ти! Меня́ зову́т Ве́ра Никола́евна, фами́лия — Ле́бедева.",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "фами́лия",
+        "gloss": "фами́лия: Соколо́в, Соколо́ва",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-familiya"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 67,
+        "end": 76,
+        "token": "Ле́бедева",
+        "lemma": "лебедев",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s010",
+      "text": "А как тебя́ зову́т? — спра́шивает она́.",
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s011",
+      "text": "— Ми́ша.",
+      "paragraph_start": true,
+      "speaker": "char-misha"
+     },
+     {
+      "id": "ru-mir-01-l05-s012",
+      "text": "— А тебя́?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s013",
+      "text": "— Ли́за!",
+      "paragraph_start": true,
+      "speaker": "char-liza"
+     },
+     {
+      "id": "ru-mir-01-l05-s014",
+      "text": "— Ми́ша, Ли́за… Каки́е имена́! А их мать?",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "имена́",
+        "gloss": "и́мя → имена́",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-imya"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 33,
+        "end": 35,
+        "token": "их",
+        "lemma": "их",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s015",
+      "text": "— Я Да́рья.",
+      "paragraph_start": true,
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l05-s016",
+      "text": "— А ты?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s017",
+      "text": "— Меня́ зову́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l05-s018",
+      "text": "— На́стя и́ли Анаста́сия? Ты дочь Петра́ Матве́евича?",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "pins": [
+       {
+        "start": 14,
+        "end": 24,
+        "token": "Анаста́сия",
+        "lemma": "анастасия",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 34,
+        "end": 40,
+        "token": "Петра́",
+        "lemma": "пётр",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       },
+       {
+        "start": 41,
+        "end": 52,
+        "token": "Матве́евича",
+        "lemma": "матвеевич",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s019",
+      "text": "— Да. Анаста́сия Петро́вна!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 6,
+        "end": 16,
+        "token": "Анаста́сия",
+        "lemma": "анастасия",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s020",
+      "text": "— Анаста́сия — э́то и́мя. Петро́вна — э́то о́тчество: твой оте́ц — Пётр.",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "о́тчество",
+        "gloss": "Пётр → Петро́вич, Петро́вна",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-otchestvo"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 12,
+        "token": "Анаста́сия",
+        "lemma": "анастасия",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s021",
+      "text": "А фами́лия?",
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s022",
+      "text": "— Соколо́ва. Мы — Соколо́вы.",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 2,
+        "end": 11,
+        "token": "Соколо́ва",
+        "lemma": "соколов",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s023",
+      "text": "— Хорошо́. Анаста́сия Петро́вна Соколо́ва. Ты лю́бишь шко́лу?",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "pins": [
+       {
+        "start": 11,
+        "end": 21,
+        "token": "Анаста́сия",
+        "lemma": "анастасия",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 32,
+        "end": 41,
+        "token": "Соколо́ва",
+        "lemma": "соколов",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s024",
+      "text": "— Люблю́! Я люблю́ чита́ть!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Люблю́",
+        "gloss": "люби́ть: люблю́, лю́бишь",
+        "gloss_kind": "paradigm",
+        "covers_lexeme_ids": [
+         "ru-lyubit"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s025",
+      "text": "На́стя стои́т и смо́трит: она́ — Анаста́сия Петро́вна!",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 33,
+        "end": 43,
+        "token": "Анаста́сия",
+        "lemma": "анастасия",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s026",
+      "text": "— А вы из Москвы́? — спра́шивает она́.",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 7,
+        "end": 9,
+        "token": "из",
+        "lemma": "из",
+        "feats": {
+         "pos": "PREP"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s027",
+      "text": "— Нет, я из Ряза́ни. Ряза́нь — ста́рый ру́сский го́род на Оке́.",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "pins": [
+       {
+        "start": 9,
+        "end": 11,
+        "token": "из",
+        "lemma": "из",
+        "feats": {
+         "pos": "PREP"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       },
+       {
+        "start": 58,
+        "end": 62,
+        "token": "Оке́",
+        "lemma": "ока",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'на' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s028",
+      "text": "Э́то большо́й го́род, не уе́здный, и там желе́зная доро́га. А сейча́с я здесь, в уе́зде.",
+      "speaker": "char-vera",
+      "pins": [
+       {
+        "start": 5,
+        "end": 13,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s029",
+      "text": "В шко́ле — стол, доска́ и ка́рта: Росси́я, больша́я страна́, и Москва́, Во́лга, Ока́.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "шко́ле",
+        "lemma": "школа",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'в' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s030",
+      "text": "А там — царь."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l05-x1-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "2nd conjugation: я -ю/-у, ты -ишь, он -ит, мы -им, вы -ите, они́ -ят/-ат.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "говори́ть: я говорю́, ты говори́шь, они́ говоря́т",
+       "prompt": "Ты говор___.",
+       "answer": "и́шь"
+      },
+      "items": [
+       {
+        "prompt": "Я говор___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ю́"
+        ],
+        "explanation": "Я говорю́.",
+        "id": "x1-1-1"
+       },
+       {
+        "prompt": "Он смо́тр___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ит"
+        ],
+        "explanation": "Он смо́трит.",
+        "id": "x1-1-2"
+       },
+       {
+        "prompt": "Мы сид___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́м"
+        ],
+        "explanation": "Мы сиди́м.",
+        "id": "x1-1-3"
+       },
+       {
+        "prompt": "Вы ви́д___?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ите"
+        ],
+        "explanation": "Вы ви́дите?",
+        "id": "x1-1-4"
+       },
+       {
+        "prompt": "Они́ сто___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "я́т"
+        ],
+        "explanation": "Они́ стоя́т.",
+        "id": "x1-1-5"
+       },
+       {
+        "prompt": "Они́ леж___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́т"
+        ],
+        "explanation": "Они́ лежа́т.",
+        "id": "x1-1-6"
+       },
+       {
+        "prompt": "Ты лю́б___ шко́лу?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ишь"
+        ],
+        "explanation": "Ты лю́бишь шко́лу?",
+        "id": "x1-1-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x1-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+      "hint_en": "Watch the я form: ви́деть → ви́жу, сиде́ть → сижу́, люби́ть → люблю́.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "ви́деть: я ви́жу, ты ви́дишь",
+       "prompt": "Я ___ (ви́деть) шко́лу.",
+       "answer": "ви́жу"
+      },
+      "items": [
+       {
+        "prompt": "Я ___ (сиде́ть) у окна́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сижу́"
+        ],
+        "id": "x1-2-1"
+       },
+       {
+        "prompt": "Я ___ (люби́ть) чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "люблю́"
+        ],
+        "id": "x1-2-2"
+       },
+       {
+        "prompt": "Ты ___ (смотре́ть) на вы́веску.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "смо́тришь"
+        ],
+        "id": "x1-2-3"
+       },
+       {
+        "prompt": "Мы ___ (говори́ть) «вы».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "говори́м"
+        ],
+        "id": "x1-2-4"
+       },
+       {
+        "prompt": "Вы ___ (стоя́ть) у две́ри.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "стои́те"
+        ],
+        "id": "x1-2-5"
+       },
+       {
+        "prompt": "Де́ти ___ (смотре́ть).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "смо́трят"
+        ],
+        "id": "x1-2-6"
+       },
+       {
+        "prompt": "Доска́ ___ (лежа́ть) на столе́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "лежи́т"
+        ],
+        "id": "x1-2-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x1-3",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́ «вы», не «ты».",
+      "hint_en": "To an adult you do not know: вы + -ите/-ете.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "ты ви́дишь → вы ви́дите",
+       "prompt": "Ты ви́дишь вы́веску? →",
+       "answer": "Вы ви́дите вы́веску?"
+      },
+      "items": [
+       {
+        "prompt": "Ты лю́бишь шко́лу? →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы лю́бите шко́лу?"
+        ],
+        "id": "x1-3-1"
+       },
+       {
+        "prompt": "Ты говори́шь «ты». →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы говори́те «ты»."
+        ],
+        "id": "x1-3-2"
+       },
+       {
+        "prompt": "Ты хо́чешь учи́ться? →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы хоти́те учи́ться?"
+        ],
+        "id": "x1-3-3"
+       },
+       {
+        "prompt": "Ты мо́жешь чита́ть? →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы мо́жете чита́ть?"
+        ],
+        "id": "x1-3-4"
+       },
+       {
+        "prompt": "Ты сиди́шь у окна́? →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы сиди́те у окна́?"
+        ],
+        "id": "x1-3-5"
+       },
+       {
+        "prompt": "Ты уме́ешь чита́ть? →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы уме́ете чита́ть?"
+        ],
+        "id": "x1-3-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x1-4",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "First name, patronymic, surname.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "Анаста́сия — и́мя, Петро́вна — о́тчество, Соколо́ва — фами́лия",
+       "prompt": "Анаста́сия Петро́вна Соколо́ва. Како́е и́мя? — ___.",
+       "answer": "Анаста́сия"
+      },
+      "items": [
+       {
+        "prompt": "Анаста́сия Петро́вна Соколо́ва. Како́е о́тчество? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петро́вна"
+        ],
+        "id": "x1-4-1"
+       },
+       {
+        "prompt": "Анаста́сия Петро́вна Соколо́ва. Кака́я фами́лия? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Соколо́ва"
+        ],
+        "id": "x1-4-2"
+       },
+       {
+        "prompt": "Ве́ра Никола́евна. Како́е о́тчество? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Никола́евна"
+        ],
+        "id": "x1-4-3"
+       },
+       {
+        "prompt": "Ива́н Петро́вич Соколо́в. Кака́я фами́лия? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Соколо́в"
+        ],
+        "id": "x1-4-4"
+       },
+       {
+        "prompt": "Пётр Матве́евич. Како́е и́мя? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Пётр"
+        ],
+        "id": "x1-4-5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l05-sec2",
+    "title": "Ва́ня, Ва́нька, Ива́н Петро́вич",
+    "segments": [
+     {
+      "id": "ru-mir-01-l05-s031",
+      "text": "А вот и Ива́н.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s032",
+      "text": "Он стои́т у две́ри, ста́рший брат, большо́й и молодо́й.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ста́рший",
+        "gloss": "ста́рший брат ↔ мла́дшая сестра́",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-starshij",
+         "ru-mladshij"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 35,
+        "end": 43,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 46,
+        "end": 54,
+        "token": "молодо́й",
+        "lemma": "молодой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s033",
+      "text": "— Ва́ня, вот На́стя! — говори́т мать.",
+      "paragraph_start": true,
+      "speaker": "char-marya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Ва́ня",
+        "gloss": "Ва́ня = Ива́н",
+        "gloss_kind": "paraphrase"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s034",
+      "text": "— Э́то ваш сын?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s035",
+      "text": "— Да, мой сын, Ва́ня.",
+      "paragraph_start": true,
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l05-s036",
+      "text": "А на доро́ге — Фёдор, и он кричи́т:",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 5,
+        "end": 12,
+        "token": "доро́ге",
+        "lemma": "дорога",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'на' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s037",
+      "text": "— Ва́нька! Ты то́же у́чишься? А кто э́та де́вушка?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "у́чишься",
+        "gloss": "учи́ться: я учу́сь, ты у́чишься",
+        "gloss_kind": "paradigm",
+        "covers_lexeme_ids": [
+         "ru-uchitsya"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s038",
+      "text": "— Ва́ша мла́дшая сестра́? — спра́шивает Ве́ра Никола́евна.",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s039",
+      "text": "— Да, На́стя — моя́ мла́дшая сестра́, а я — ста́рший брат.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s040",
+      "text": "— А вы? Как вас зову́т?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s041",
+      "text": "— Меня́? Ва́ня… Ива́н. Ива́н — э́то моё и́мя.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s042",
+      "text": "— Ива́н, а как ва́ше о́тчество?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s043",
+      "text": "— О́тчество? Петро́вич.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s044",
+      "text": "— А ва́ша фами́лия?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s045",
+      "text": "— Соколо́в.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 2,
+        "end": 10,
+        "token": "Соколо́в",
+        "lemma": "соколов",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s046",
+      "text": "— Здра́вствуйте, Ива́н Петро́вич!",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s047",
+      "text": "Ива́н Петро́вич! Ива́н смо́трит: кто э́то? Э́то он!",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s048",
+      "text": "Мать говори́т «Ва́ня», Фёдор кричи́т «Ва́нька», а учи́тельница говори́т «Ива́н Петро́вич».",
+      "inference_aids": [
+       {
+        "type": "diagram",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l05-svg-imena",
+        "anchor_text": "Ива́н Петро́вич",
+        "src": "media/diagrams/ru-mir-01-l05-svg-imena.svg",
+        "label": "Ва́ня, Ва́нька, Ива́н Петро́вич",
+        "alt": "Name card: in the centre Ива́н; arrows from мать (Ва́ня), Фёдор (Ва́нька) and учи́тельница (Ива́н Петро́вич).",
+        "status": "draft",
+        "width": 320,
+        "height": 220,
+        "covers_lexeme_ids": [
+         "ru-imya",
+         "ru-otchestvo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s049",
+      "text": "Де́ти смо́трят и говоря́т: «Ива́н Петро́вич!»"
+     },
+     {
+      "id": "ru-mir-01-l05-s050",
+      "text": "— А ты — но́вый учи́тель? — спра́шивает Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s051",
+      "text": "— Ва́ня! Не «ты», а «вы»! И не учи́тель, а учи́тельница! — говори́т мать.",
+      "paragraph_start": true,
+      "speaker": "char-marya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "«вы»",
+        "gloss": "ты ↔ вы",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-vy"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s052",
+      "text": "— Вы… вы но́вая учи́тельница?",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s053",
+      "text": "— Да, но́вая, — отвеча́ет Ве́ра Никола́евна. — Зе́мская учи́тельница.",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Зе́мская",
+        "gloss": "зе́мская шко́ла: шко́ла зе́мства",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-zemskij"
+        ]
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l05-x2-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Скажи́ о́тчество.",
+      "hint_en": "Father Пётр → сын Петро́вич, дочь Петро́вна.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "оте́ц Пётр → Ива́н Петро́вич, На́стя Петро́вна",
+       "prompt": "Оте́ц — Пётр. Ива́н — ___.",
+       "answer": "Петро́вич"
+      },
+      "items": [
+       {
+        "prompt": "Оте́ц — Пётр. На́стя — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петро́вна"
+        ],
+        "id": "x2-1-1"
+       },
+       {
+        "prompt": "Оте́ц — Матве́й. Пётр — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Матве́евич"
+        ],
+        "id": "x2-1-2"
+       },
+       {
+        "prompt": "Оте́ц — Никола́й. Ве́ра — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Никола́евна"
+        ],
+        "id": "x2-1-3"
+       },
+       {
+        "prompt": "Оте́ц — Никола́й. Дми́трий — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Никола́евич"
+        ],
+        "id": "x2-1-4"
+       },
+       {
+        "prompt": "Оте́ц — Пётр. Фёдор — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петро́вич"
+        ],
+        "id": "x2-1-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x2-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Кто говори́т как? Отве́ть по те́ксту.",
+      "hint_en": "Who calls Ivan what?",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "Ва́ня · Ва́нька · Ива́н Петро́вич",
+       "prompt": "Мать говори́т: «___».",
+       "answer": "Ва́ня"
+      },
+      "items": [
+       {
+        "prompt": "Фёдор говори́т: «___»!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ва́нька"
+        ],
+        "id": "x2-2-1",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s048"
+        ]
+       },
+       {
+        "prompt": "Учи́тельница говори́т: «Здра́вствуйте, ___!»",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н Петро́вич"
+        ],
+        "id": "x2-2-2",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s046"
+        ]
+       },
+       {
+        "prompt": "Ива́н говори́т: «Ва́ня… Ива́н. Ива́н — э́то моё ___».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́мя"
+        ],
+        "id": "x2-2-3",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s041"
+        ]
+       },
+       {
+        "prompt": "Ма́ленький Ми́ша говори́т: «Учи́тель — э́то он, а она́ — ___!»",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "учи́тельница"
+        ],
+        "id": "x2-2-4",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s008"
+        ]
+       },
+       {
+        "prompt": "Мать говори́т: «Не „ты“, а „___“!»",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "вы"
+        ],
+        "id": "x2-2-5",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s051"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x2-3",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́ «ты» и́ли «вы».",
+      "hint_en": "ты to family and children; вы to the teacher, the priest, an adult you do not know.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "На́стя → ты · Ве́ра Никола́евна → вы",
+       "prompt": "(На́стя) ___ лю́бишь шко́лу?",
+       "answer": "Ты"
+      },
+      "items": [
+       {
+        "prompt": "(Ве́ра Никола́евна) ___ лю́бите шко́лу?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы"
+        ],
+        "id": "x2-3-1"
+       },
+       {
+        "prompt": "(Ва́ня) ___ хо́чешь учи́ться?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ты"
+        ],
+        "id": "x2-3-2"
+       },
+       {
+        "prompt": "(Ива́н Петро́вич) ___ хоти́те учи́ться?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы"
+        ],
+        "id": "x2-3-3"
+       },
+       {
+        "prompt": "(Ми́ша) ___ ви́дишь до́ску?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ты"
+        ],
+        "id": "x2-3-4"
+       },
+       {
+        "prompt": "(учи́тельница) ___ ви́дите вы́веску?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вы"
+        ],
+        "id": "x2-3-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x2-4",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "мой → ваш: ваш (м.), ва́ша (ж.), ва́ше (ср.), ва́ши (мн.).",
+      "grammar_target_ids": [
+       "G05",
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "ваш брат · ва́ша сестра́ · ва́ше и́мя · ва́ши де́ти",
+       "prompt": "Э́то ва́ш___ сестра́?",
+       "answer": "а"
+      },
+      "items": [
+       {
+        "prompt": "Э́то ва́ш___ и́мя?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "explanation": "Э́то ва́ше и́мя?",
+        "id": "x2-4-1"
+       },
+       {
+        "prompt": "Э́то ва́ш___ де́ти?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Э́то ва́ши де́ти?",
+        "id": "x2-4-2"
+       },
+       {
+        "prompt": "Как ва́ш___ о́тчество?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "explanation": "Как ва́ше о́тчество?",
+        "id": "x2-4-3"
+       },
+       {
+        "prompt": "Кака́я ва́ш___ фами́лия?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Кака́я ва́ша фами́лия?",
+        "id": "x2-4-4"
+       },
+       {
+        "prompt": "Где ва́ш___ мла́дшая сестра́?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Где ва́ша мла́дшая сестра́?",
+        "id": "x2-4-5"
+       },
+       {
+        "prompt": "Э́то ва́ш___ ста́ршие бра́тья?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Э́то ва́ши ста́ршие бра́тья?",
+        "id": "x2-4-6"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l05-sec3",
+    "title": "Вы́веска",
+    "segments": [
+     {
+      "id": "ru-mir-01-l05-s054",
+      "text": "На шко́ле — вы́веска.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l05-img-vyveska",
+        "anchor_text": "вы́веска",
+        "label": "вы́веска",
+        "src": "media/vignettes/ru-mir-01-l05-img-vyveska.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "A painted wooden signboard of 1913 with large dark letters on a pale ground, nailed above a school door; the letters are suggested, not legible. Transparent background.",
+        "covers_lexeme_ids": [
+         "ru-vyveska"
+        ],
+        "width": 320,
+        "height": 160
+       }
+      ],
+      "pins": [
+       {
+        "start": 3,
+        "end": 9,
+        "token": "шко́ле",
+        "lemma": "школа",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'на' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s055",
+      "text": "— Ива́н Петро́вич, вы ви́дите вы́веску?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s056",
+      "text": "— Ви́жу.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s057",
+      "text": "— Чита́йте, пожа́луйста! Како́е там сло́во?",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Чита́йте",
+        "gloss": "чита́йте ← чита́ть",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-chitat"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "сло́во",
+        "gloss": "сло́во: «шко́ла», «Росси́я»",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-slovo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s058",
+      "text": "— Сейча́с? Как? Сло́во? Оно́ большо́е…",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s059",
+      "text": "Ива́н смо́трит на вы́веску.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s060",
+      "text": "Что же там?"
+     },
+     {
+      "id": "ru-mir-01-l05-s061",
+      "text": "Он ви́дит ру́сские бу́квы: одна́ бу́ква, две бу́квы, три…",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "бу́квы",
+        "gloss": "бу́квы: А, Б, В",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-bukva"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s062",
+      "text": "Три бу́квы он зна́ет. Бу́квы он ви́дит, а сло́во — нет."
+     },
+     {
+      "id": "ru-mir-01-l05-s063",
+      "text": "— Я… я не уме́ю чита́ть, — говори́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "уме́ю",
+        "gloss": "уме́ть чита́ть = знать бу́квы и слова́",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-umet",
+         "ru-moch"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s064",
+      "text": "А На́стя уже́ чита́ет.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l05-img-nastya-chitaet",
+        "src": "media/images/ru-mir-01-l05-img-nastya-chitaet.webp",
+        "alt": "Nastya on tiptoe reads the signboard aloud, pointing; Ivan stands behind her red in the face; the teacher smiles.",
+        "status": "planned",
+        "art_brief": "The school door, same morning. Nastya (12) on tiptoe, pointing up at the signboard over the door and reading aloud, delighted. Ivan (19, tall) behind her, cap crushed in his hands, red-faced, looking at the ground. Vera smiles kindly. Village children watching. Signboard letters not legible. No text.",
+        "characters": [
+         "char-nastya",
+         "char-ivan",
+         "char-vera"
+        ],
+        "covers_lexeme_ids": [
+         "ru-chitat",
+         "ru-vyveska",
+         "ru-umet"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s065",
+      "text": "— «Зе́мская шко́ла»!",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l05-s066",
+      "text": "Я могу́ чита́ть! Я уме́ю! Я же учу́сь!",
+      "speaker": "char-nastya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "же",
+        "gloss": "Я же учу́сь! = Я учу́сь, вот!",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-zhe"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s067",
+      "text": "Ива́н кра́сный, о́чень кра́сный.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s068",
+      "text": "Де́ти смо́трят: тако́й большо́й, а чита́ть не уме́ет!",
+      "pins": [
+       {
+        "start": 16,
+        "end": 22,
+        "token": "тако́й",
+        "lemma": "такой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 23,
+        "end": 31,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s069",
+      "text": "— Ива́н Петро́вич, вы хоти́те учи́ться?",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "хоти́те",
+        "gloss": "хоте́ть: хочу́, хо́чешь, хоти́те",
+        "gloss_kind": "paradigm",
+        "covers_lexeme_ids": [
+         "ru-khotet"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 22,
+        "end": 29,
+        "token": "хоти́те",
+        "lemma": "хотеть",
+        "feats": {
+         "pos": "VERB",
+         "number": "plur",
+         "tense": "pres",
+         "person": "2per"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s070",
+      "text": "— Я? Мне девятна́дцать лет. Я ведь рабо́таю.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ведь",
+        "gloss": "я ведь рабо́таю = я рабо́таю, вы зна́ете",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-ved"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "девятна́дцать",
+        "gloss": "девятна́дцать = 19",
+        "gloss_kind": "number"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s071",
+      "text": "По́ле, лес, ло́шадь, коро́ва… Я не могу́ сиде́ть в шко́ле, как На́стя.",
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 51,
+        "end": 57,
+        "token": "шко́ле",
+        "lemma": "школа",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'в' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s072",
+      "text": "— А ве́чером? Ве́чером здесь у́чатся не де́ти, а отцы́ и сосе́ди.",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ве́чером",
+        "gloss": "у́тром ↔ ве́чером",
+        "gloss_kind": "antonym"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s073",
+      "text": "Они́ то́же не уме́ют чита́ть, но они́ хотя́т.",
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l05-s074",
+      "text": "— Ве́чером? Ну… не зна́ю.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Ну",
+        "gloss": "ну… = я ду́маю…",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-nu"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s075",
+      "text": "Ива́н не говори́т ни «да», ни «нет».",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s076",
+      "text": "Ве́ра Никола́евна идёт в шко́лу, а Ива́н — домо́й.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "домо́й",
+        "gloss": "куда́? домо́й",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-domoj"
+        ]
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l05-x3-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+      "hint_en": "мочь: могу́, мо́жешь, мо́жет, мо́жем, мо́жете, мо́гут; хоте́ть: хочу́, хо́чешь, хо́чет, хоти́м, хоти́те, хотя́т.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "мочь: я могу́, ты мо́жешь",
+       "prompt": "Я ___ (мочь) чита́ть.",
+       "answer": "могу́"
+      },
+      "items": [
+       {
+        "prompt": "Ты ___ (мочь) чита́ть?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мо́жешь"
+        ],
+        "id": "x3-1-1"
+       },
+       {
+        "prompt": "Они́ не ___ (мочь) чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мо́гут"
+        ],
+        "id": "x3-1-2"
+       },
+       {
+        "prompt": "Я ___ (хоте́ть) учи́ться.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хочу́"
+        ],
+        "id": "x3-1-3"
+       },
+       {
+        "prompt": "Ты ___ (хоте́ть) учи́ться?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хо́чешь"
+        ],
+        "id": "x3-1-4"
+       },
+       {
+        "prompt": "Вы ___ (хоте́ть) учи́ться?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хоти́те"
+        ],
+        "id": "x3-1-5"
+       },
+       {
+        "prompt": "Мы ___ (хоте́ть) чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хоти́м"
+        ],
+        "id": "x3-1-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x3-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "уме́ть + infinitive: I can (know how to) read.",
+      "grammar_target_ids": [
+       "G05",
+       "G04"
+      ],
+      "obrazec": {
+       "rule": "Ты уме́ешь чита́ть? — Да, я уме́ю чита́ть.",
+       "prompt": "На́стя уме́ет чита́ть? — Да, она́ ___ чита́ть.",
+       "answer": "уме́ет"
+      },
+      "items": [
+       {
+        "prompt": "Ива́н уме́ет чита́ть? — Нет, он не ___ чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уме́ет"
+        ],
+        "id": "x3-2-1"
+       },
+       {
+        "prompt": "Ты уме́ешь чита́ть? — Да, я ___ чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уме́ю"
+        ],
+        "id": "x3-2-2"
+       },
+       {
+        "prompt": "Вы уме́ете чита́ть? — Да, мы ___ чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уме́ем"
+        ],
+        "id": "x3-2-3"
+       },
+       {
+        "prompt": "Де́ти уме́ют чита́ть? — Да, они́ ___ чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уме́ют"
+        ],
+        "id": "x3-2-4"
+       },
+       {
+        "prompt": "Дед уме́ет чита́ть? — Нет, дед не ___ чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уме́ет"
+        ],
+        "id": "x3-2-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x3-3",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "чита́ть (-ю, -ешь, -ет) ↔ говори́ть (-ю, -ишь, -ит).",
+      "grammar_target_ids": [
+       "G05",
+       "G04"
+      ],
+      "obrazec": {
+       "rule": "он чита́ет ↔ он говори́т",
+       "prompt": "На́стя чита́___.",
+       "answer": "ет"
+      },
+      "items": [
+       {
+        "prompt": "Ве́ра Никола́евна говор___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́т"
+        ],
+        "explanation": "Ве́ра Никола́евна говори́т.",
+        "id": "x3-3-1"
+       },
+       {
+        "prompt": "Де́ти чита́___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ют"
+        ],
+        "explanation": "Де́ти чита́ют.",
+        "id": "x3-3-2"
+       },
+       {
+        "prompt": "Де́ти говор___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "я́т"
+        ],
+        "explanation": "Де́ти говоря́т.",
+        "id": "x3-3-3"
+       },
+       {
+        "prompt": "Ты чита́___?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ешь"
+        ],
+        "explanation": "Ты чита́ешь?",
+        "id": "x3-3-4"
+       },
+       {
+        "prompt": "Ты говор___?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́шь"
+        ],
+        "explanation": "Ты говори́шь?",
+        "id": "x3-3-5"
+       },
+       {
+        "prompt": "Ива́н не уме́___ чита́ть.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ет"
+        ],
+        "explanation": "Ива́н не уме́ет чита́ть.",
+        "id": "x3-3-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x3-4",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Соедини́ два предложе́ния: а и́ли но (в ско́бках).",
+      "hint_en": "Join with а (contrast) or но (but).",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "…, а … · …, но …",
+       "prompt": "На́стя чита́ет. Ива́н не чита́ет. (а)",
+       "answer": "На́стя чита́ет, а Ива́н не чита́ет."
+      },
+      "items": [
+       {
+        "prompt": "Ива́н ви́дит бу́квы. Он не мо́жет чита́ть. (но)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н ви́дит бу́квы, но он не мо́жет чита́ть.",
+         "Ива́н ви́дит бу́квы, но не мо́жет чита́ть."
+        ],
+        "id": "x3-4-1"
+       },
+       {
+        "prompt": "Мать говори́т «Ва́ня». Учи́тельница говори́т «Ива́н Петро́вич». (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Мать говори́т «Ва́ня», а учи́тельница говори́т «Ива́н Петро́вич».",
+         "Мать говори́т «Ва́ня», а учи́тельница — «Ива́н Петро́вич».",
+         "Учи́тельница говори́т «Ива́н Петро́вич», а мать — «Ва́ня».",
+         "Учи́тельница говори́т «Ива́н Петро́вич», а Мать говори́т «Ва́ня»."
+        ],
+        "id": "x3-4-2"
+       },
+       {
+        "prompt": "Ива́н хо́чет учи́ться. Он рабо́тает. (но)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н хо́чет учи́ться, но он рабо́тает.",
+         "Ива́н хо́чет учи́ться, но рабо́тает."
+        ],
+        "id": "x3-4-3"
+       },
+       {
+        "prompt": "Де́ти у́чатся. Отцы́ рабо́тают. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Де́ти у́чатся, а отцы́ рабо́тают.",
+         "Отцы́ рабо́тают, а Де́ти у́чатся."
+        ],
+        "id": "x3-4-4"
+       },
+       {
+        "prompt": "На́стя ма́ленькая. Она́ уме́ет чита́ть. (но)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "На́стя ма́ленькая, но она́ уме́ет чита́ть.",
+         "На́стя ма́ленькая, но уме́ет чита́ть."
+        ],
+        "id": "x3-4-5"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l05-sec4",
+    "title": "Хочу́",
+    "segments": [
+     {
+      "id": "ru-mir-01-l05-s077",
+      "text": "Мать и На́стя то́же иду́т домо́й.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s078",
+      "text": "В избе́ семья́.",
+      "pins": [
+       {
+        "start": 2,
+        "end": 7,
+        "token": "избе́",
+        "lemma": "изба",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'в' → loct); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s079",
+      "text": "На столе́ лежи́т доска́ На́сти."
+     },
+     {
+      "id": "ru-mir-01-l05-s080",
+      "text": "Доска́ уже́ не разби́тая.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l05-img-doska",
+        "anchor_text": "Доска́",
+        "label": "доска́",
+        "src": "media/vignettes/ru-mir-01-l05-img-doska.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "The same school slate in its wooden frame, now mended: the two halves joined by a thin strip of tin nailed across the frame. Transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-lezhat"
+        ],
+        "width": 240,
+        "height": 240
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s081",
+      "text": "Сейча́с Ива́н сиди́т и смо́трит на до́ску.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l05-img-vecher",
+        "src": "media/images/ru-mir-01-l05-img-vecher.webp",
+        "alt": "Evening in the izba: Ivan sits alone at the table with Nastya's mended slate by the lamp; his mother watches from the stove.",
+        "status": "planned",
+        "art_brief": "Interior of the Sokolov izba, evening, one small oil lamp on the table. Ivan (19) sits at the table, elbows on it, looking hard at the mended slate. Marya (50) stands by the big white stove, watching him. Pyotr at the icon corner, Ded Matvei on the stove bench, Sharik lying by the door. Warm low light. No text.",
+        "characters": [
+         "char-ivan",
+         "char-marya",
+         "char-pyotr"
+        ],
+        "covers_lexeme_ids": [
+         "ru-sidet",
+         "ru-smotret"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s082",
+      "text": "Он смо́трит, смо́трит…"
+     },
+     {
+      "id": "ru-mir-01-l05-s083",
+      "text": "— Ва́ня, что ты де́лаешь? — спра́шивает мать.",
+      "paragraph_start": true,
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l05-s084",
+      "text": "— Смотрю́.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s085",
+      "text": "— Ва́ня, ты ведь хо́чешь учи́ться?",
+      "paragraph_start": true,
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l05-s086",
+      "text": "— Хочу́.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l05-s087",
+      "text": "На́стя смо́трит: Ва́ня хо́чет учи́ться!",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s088",
+      "text": "— Ва́ня, я зна́ю все бу́квы! — говори́т она́.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l05-s089",
+      "text": "— Учи́ться? Почему́ шко́ла? — спра́шивает оте́ц. — А кто рабо́тает в по́ле?",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l05-s090",
+      "text": "— Я рабо́таю у́тром. А ве́чером — шко́ла.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 13,
+        "end": 19,
+        "token": "у́тром",
+        "lemma": "утром",
+        "feats": {
+         "pos": "ADVB"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s091",
+      "text": "— Пётр, ведь он хо́чет.",
+      "paragraph_start": true,
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l05-s092",
+      "text": "— Я понима́ю, — говори́т оте́ц. — Ну, ла́дно.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l05-s093",
+      "text": "Фёдор то́же идёт домо́й, и он говори́т:",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s094",
+      "text": "— Ва́нька хо́чет учи́ться? Тако́й большо́й? Ну, Ва́нька!",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 27,
+        "end": 33,
+        "token": "Тако́й",
+        "lemma": "такой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 34,
+        "end": 42,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s095",
+      "text": "Учи́тельница — молода́я де́вушка, а ты — большо́й!",
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 41,
+        "end": 49,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s096",
+      "text": "Ты же не ма́ленький! Ты ста́рший брат На́сти, а не мла́дший!",
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l05-s097",
+      "text": "— Да, я не ма́ленький. Я большо́й. Но я хочу́ чита́ть.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 25,
+        "end": 33,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-s098",
+      "text": "Дед сиди́т у пе́чи.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s099",
+      "text": "— Ну, хорошо́, — говори́т он. — Мы, Соколо́вы, мо́жем рабо́тать. А чита́ть мы не уме́ем.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l05-s100",
+      "text": "Ша́рик, на́ша соба́ка, лежи́т у две́ри и смо́трит: Ива́н сиди́т, а доска́ лежи́т на столе́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l05-s101",
+      "text": "Три бу́квы — э́то ещё не сло́во. Но э́то бу́квы."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l05-x4-1",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́: я.",
+      "hint_en": "Change the subject to я.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "Ива́н смо́трит. → Я смотрю́.",
+       "prompt": "Ива́н смо́трит на до́ску. →",
+       "answer": "Я смотрю́ на до́ску."
+      },
+      "items": [
+       {
+        "prompt": "Ива́н сиди́т у стола́. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Я сижу́ у стола́."
+        ],
+        "id": "x4-1-1"
+       },
+       {
+        "prompt": "Ива́н хо́чет учи́ться. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Я хочу́ учи́ться."
+        ],
+        "id": "x4-1-2"
+       },
+       {
+        "prompt": "Ива́н не мо́жет чита́ть. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Я не могу́ чита́ть."
+        ],
+        "id": "x4-1-3"
+       },
+       {
+        "prompt": "Ива́н ви́дит бу́квы. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Я ви́жу бу́квы."
+        ],
+        "id": "x4-1-4"
+       },
+       {
+        "prompt": "Ива́н лю́бит шко́лу. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Я люблю́ шко́лу."
+        ],
+        "id": "x4-1-5"
+       },
+       {
+        "prompt": "Ива́н у́чится. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Я учу́сь."
+        ],
+        "id": "x4-1-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x4-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть по те́ксту.",
+      "hint_en": "Fill the gap from the story.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "Ва́ня, ты хо́чешь учи́ться? — ___.",
+       "prompt": "— Ва́ня, ты ведь хо́чешь учи́ться? — ___.",
+       "answer": "Хочу́"
+      },
+      "items": [
+       {
+        "prompt": "— Ва́ня, что ты де́лаешь? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Смотрю́",
+         "Я смотрю́",
+         "Смотрю́ на до́ску",
+         "Я смотрю́ на до́ску"
+        ],
+        "id": "x4-2-1",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s084"
+        ]
+       },
+       {
+        "prompt": "«Ты же не ма́ленький! Ты ста́рший брат На́сти, а не ___!»",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мла́дший"
+        ],
+        "id": "x4-2-2",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s096"
+        ]
+       },
+       {
+        "prompt": "«Мы, Соколо́вы, мо́жем рабо́тать. А чита́ть мы не ___».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уме́ем"
+        ],
+        "id": "x4-2-3",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s099"
+        ]
+       },
+       {
+        "prompt": "Три бу́квы — э́то ещё не ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сло́во"
+        ],
+        "id": "x4-2-4",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s101"
+        ]
+       },
+       {
+        "prompt": "«Да, я не ма́ленький. Я большо́й. Но я ___ чита́ть».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хочу́"
+        ],
+        "id": "x4-2-5",
+        "source_segment_ids": [
+         "ru-mir-01-l05-s097"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x4-3",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ сло́во.",
+      "hint_en": "учи́ться: я учу́сь, ты у́чишься, он у́чится, мы у́чимся, вы у́читесь, они́ у́чатся.",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "учи́ться: он у́чится · они́ у́чатся",
+       "prompt": "На́стя у́чит___.",
+       "answer": "ся"
+      },
+      "items": [
+       {
+        "prompt": "Я уч___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "у́сь"
+        ],
+        "explanation": "Я учу́сь.",
+        "id": "x4-3-1"
+       },
+       {
+        "prompt": "Ты у́чиш___?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ься"
+        ],
+        "explanation": "Ты у́чишься?",
+        "id": "x4-3-2"
+       },
+       {
+        "prompt": "Мы у́чим___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ся"
+        ],
+        "explanation": "Мы у́чимся.",
+        "id": "x4-3-3"
+       },
+       {
+        "prompt": "Вы у́чите___?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сь"
+        ],
+        "explanation": "Вы у́читесь?",
+        "id": "x4-3-4"
+       },
+       {
+        "prompt": "Отцы́ у́чат___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ся"
+        ],
+        "explanation": "Отцы́ у́чатся.",
+        "id": "x4-3-5"
+       },
+       {
+        "prompt": "Ива́н то́же у́чит___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ся"
+        ],
+        "explanation": "Ива́н то́же у́чится.",
+        "id": "x4-3-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-x4-4",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Соедини́ два предложе́ния: но и́ли а (в ско́бках).",
+      "hint_en": "Join with но (but) or а (contrast).",
+      "grammar_target_ids": [
+       "G05"
+      ],
+      "obrazec": {
+       "rule": "…, но … · …, а …",
+       "prompt": "Ива́н хо́чет учи́ться. Он рабо́тает у́тром. (но)",
+       "answer": "Ива́н хо́чет учи́ться, но он рабо́тает у́тром."
+      },
+      "items": [
+       {
+        "prompt": "Ива́н рабо́тает. На́стя у́чится. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н рабо́тает, а На́стя у́чится.",
+         "На́стя у́чится, а Ива́н рабо́тает."
+        ],
+        "id": "x4-4-1"
+       },
+       {
+        "prompt": "Фёдор говори́т «Ва́нька». Мать говори́т «Ва́ня». (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдор говори́т «Ва́нька», а мать говори́т «Ва́ня».",
+         "Фёдор говори́т «Ва́нька», а мать — «Ва́ня».",
+         "Мать говори́т «Ва́ня», а Фёдор — «Ва́нька».",
+         "Мать говори́т «Ва́ня», а Фёдор говори́т «Ва́нька»."
+        ],
+        "id": "x4-4-2"
+       },
+       {
+        "prompt": "Дед не уме́ет чита́ть. Он мо́жет рабо́тать. (но)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Дед не уме́ет чита́ть, но он мо́жет рабо́тать.",
+         "Дед не уме́ет чита́ть, но мо́жет рабо́тать."
+        ],
+        "id": "x4-4-3"
+       },
+       {
+        "prompt": "Ива́н не ма́ленький. Он хо́чет учи́ться. (но)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н не ма́ленький, но он хо́чет учи́ться.",
+         "Ива́н не ма́ленький, но хо́чет учи́ться."
+        ],
+        "id": "x4-4-4"
+       },
+       {
+        "prompt": "Ша́рик лежи́т во дворе́. Доска́ лежи́т на столе́. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ша́рик лежи́т во дворе́, а доска́ лежи́т на столе́.",
+         "Ша́рик лежи́т во дворе́, а доска́ — на столе́.",
+         "Доска́ лежи́т на столе́, а Ша́рик — во дворе́.",
+         "Доска́ лежи́т на столе́, а Ша́рик лежи́т во дворе́."
+        ],
+        "id": "x4-4-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l05-napishi",
+      "type": "napishi",
+      "title": "Напиши́",
+      "mode": "productive",
+      "prompt": "Как тебя́ зову́т? Како́е твоё и́мя, о́тчество, фами́лия? Что ты лю́бишь, что ты уме́ешь и что ты хо́чешь? Напиши́.",
+      "length_hint": "3–5 предложе́ний",
+      "hint_en": "Write 3–5 sentences about yourself: name, patronymic, surname; what you love, can and want to do.",
+      "model_answers": [
+       "Меня́ зову́т Ива́н. О́тчество — Петро́вич, фами́лия — Соколо́в. Я люблю́ рабо́тать. Я не уме́ю чита́ть, но я хочу́ учи́ться.",
+       "Меня́ зову́т На́стя. Моё и́мя — Анаста́сия, о́тчество — Петро́вна. Я люблю́ шко́лу. Я уме́ю чита́ть, и я хочу́ чита́ть!"
+      ],
+      "rubric": [
+       "2nd-conjugation and irregular verbs in the я form: люблю́, хочу́, могу́, ви́жу",
+       "уме́ть / хоте́ть / мочь + infinitive (уме́ю чита́ть, хочу́ учи́ться)",
+       "name, patronymic, surname (и́мя, о́тчество, фами́лия)"
+      ],
+      "rubric_lang": "en",
+      "key_terms": [
+       "ru-lyubit",
+       "ru-khotet",
+       "ru-umet",
+       "ru-otchestvo"
+      ],
+      "typical_errors": [
+       {
+        "wrong": "Я любю́ рабо́тать.",
+        "right": "Я люблю́ рабо́тать.",
+        "note": "люби́ть → люблю́ (л is added)",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Я хоте́ю учи́ться.",
+        "right": "Я хочу́ учи́ться.",
+        "note": "хоте́ть → хочу́, хо́чешь",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Я могу́ чита́ю.",
+        "right": "Я могу́ чита́ть.",
+        "note": "after мочь/хоте́ть/уме́ть: the infinitive",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Я ви́дю бу́квы.",
+        "right": "Я ви́жу бу́квы.",
+        "note": "ви́деть → ви́жу (д → ж)",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Ты хоти́шь?",
+        "right": "Ты хо́чешь?",
+        "note": "хоте́ть: хочу́, хо́чешь, хо́чет — but хоти́м, хоти́те, хотя́т",
+        "note_lang": "en"
+       }
+      ],
+      "elicits": [
+       "G05",
+       "G04"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "words_with_history": {
+  "title": "Слова́ с исто́рией",
+  "word": "и́мя / о́тчество",
+  "text": [
+   "Мать говори́т «Ва́ня»: Ва́ня — её сын.",
+   "Фёдор кричи́т «Ва́нька»: Ва́нька — его́ брат, мла́дший.",
+   "А учи́тельница говори́т «Ива́н Петро́вич»: Ива́н — не ребёнок, и его́ оте́ц — Пётр.",
+   "И́мя — э́то кто ты. О́тчество — э́то чей ты."
+  ],
+  "proverb": "Учи́ться никогда́ не по́здно.",
+  "lexeme_ids": [
+   "ru-imya",
+   "ru-otchestvo"
+  ],
+  "note_en": "The diminutive tells you who is speaking and how close they are: Ва́ня (warm), Ва́нька (familiar, rough), Ваню́ша (tender), Ива́н Петро́вич (respect). The proverb: 'it is never too late to learn'."
+ },
+ "grammar": {
+  "title": "Говорю́, говори́шь… Вы говори́те",
+  "rule": "чита́ть: чита́ю, чита́ешь, чита́ют · говори́ть: говорю́, говори́шь, говоря́т · ты ↔ вы: ты говори́шь ↔ вы говори́те",
+  "tables": [
+   {
+    "caption": "чита́ть ↔ говори́ть",
+    "header": [
+     "",
+     "чита́ть",
+     "говори́ть"
+    ],
+    "rows": [
+     [
+      "я",
+      "чита́ю",
+      "говорю́"
+     ],
+     [
+      "ты",
+      "чита́ешь",
+      "говори́шь"
+     ],
+     [
+      "он, она́",
+      "чита́ет",
+      "говори́т"
+     ],
+     [
+      "мы",
+      "чита́ем",
+      "говори́м"
+     ],
+     [
+      "вы",
+      "чита́ете",
+      "говори́те"
+     ],
+     [
+      "они́",
+      "чита́ют",
+      "говоря́т"
+     ]
+    ]
+   },
+   {
+    "caption": "я ви́жу, но ты ви́дишь",
+    "header": [
+     "",
+     "я",
+     "ты",
+     "они́"
+    ],
+    "rows": [
+     [
+      "ви́деть",
+      "ви́жу",
+      "ви́дишь",
+      "ви́дят"
+     ],
+     [
+      "сиде́ть",
+      "сижу́",
+      "сиди́шь",
+      "сидя́т"
+     ],
+     [
+      "люби́ть",
+      "люблю́",
+      "лю́бишь",
+      "лю́бят"
+     ],
+     [
+      "смотре́ть",
+      "смотрю́",
+      "смо́тришь",
+      "смо́трят"
+     ],
+     [
+      "стоя́ть",
+      "стою́",
+      "стои́шь",
+      "стоя́т"
+     ],
+     [
+      "лежа́ть",
+      "лежу́",
+      "лежи́шь",
+      "лежа́т"
+     ]
+    ]
+   },
+   {
+    "caption": "мочь · хоте́ть",
+    "header": [
+     "",
+     "мочь",
+     "хоте́ть"
+    ],
+    "rows": [
+     [
+      "я",
+      "могу́",
+      "хочу́"
+     ],
+     [
+      "ты",
+      "мо́жешь",
+      "хо́чешь"
+     ],
+     [
+      "он, она́",
+      "мо́жет",
+      "хо́чет"
+     ],
+     [
+      "мы",
+      "мо́жем",
+      "хоти́м"
+     ],
+     [
+      "вы",
+      "мо́жете",
+      "хоти́те"
+     ],
+     [
+      "они́",
+      "мо́гут",
+      "хотя́т"
+     ]
+    ]
+   },
+   {
+    "caption": "и́мя · о́тчество · фами́лия",
+    "header": [
+     "и́мя",
+     "о́тчество",
+     "фами́лия"
+    ],
+    "rows": [
+     [
+      "Ива́н (Ва́ня, Ва́нька)",
+      "Петро́вич",
+      "Соколо́в"
+     ],
+     [
+      "Анаста́сия (На́стя)",
+      "Петро́вна",
+      "Соколо́ва"
+     ],
+     [
+      "Ве́ра",
+      "Никола́евна",
+      "Ле́бедева"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "ru-mir-01-l05-s049"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s056"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s024"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s055"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s066"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s069"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s051"
+   },
+   {
+    "segment_id": "ru-mir-01-l05-s020"
+   }
+  ],
+  "note_en": "Second-conjugation verbs (говори́ть, ви́деть, люби́ть, сиде́ть…) take -ишь, -ит, -им, -ите, -ят/-ат; some change the consonant in the я form (ви́жу, сижу́, люблю́). мочь and хоте́ть are irregular. ты: family, friends, children; вы: a respected adult, or several people. A patronymic comes from the father's name, usually with -ович/-евич, -овна/-евна: Пётр → Петро́вич, Никола́й → Никола́евна. учи́тель can also be said of a woman."
+ },
+ "pensa": {
+  "A": {
+   "id": "ru-mir-01-l05-pa",
+   "title": "Пе́нсум A — Фо́рмы",
+   "blocks": [
+    {
+     "obrazec": {
+      "prompt": "Он ___ (говори́ть).",
+      "answer": "говори́т"
+     },
+     "items": [
+      {
+       "prompt": "Он ___ (чита́ть).",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "чита́ет"
+       ],
+       "choices": [
+        "чита́ет",
+        "чита́ит"
+       ],
+       "id": "a1"
+      },
+      {
+       "prompt": "Они́ ___ (говори́ть).",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "говоря́т"
+       ],
+       "choices": [
+        "говоря́т",
+        "говори́ют"
+       ],
+       "id": "a2"
+      },
+      {
+       "prompt": "Я ___ (ви́деть) вы́веску.",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "ви́жу"
+       ],
+       "choices": [
+        "ви́жу",
+        "ви́дю"
+       ],
+       "id": "a3"
+      },
+      {
+       "prompt": "Ты ___ (хоте́ть) учи́ться?",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "хо́чешь"
+       ],
+       "choices": [
+        "хо́чешь",
+        "хоти́шь"
+       ],
+       "id": "a4"
+      },
+      {
+       "prompt": "Они́ не ___ (мочь) чита́ть.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "мо́гут"
+       ],
+       "id": "a5"
+      },
+      {
+       "prompt": "Мы ___ (люби́ть) шко́лу.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "лю́бим"
+       ],
+       "id": "a6"
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "(На́стя) ___ лю́бишь шко́лу?",
+      "answer": "Ты"
+     },
+     "items": [
+      {
+       "prompt": "(Ве́ра Никола́евна) Вы ___ (ви́деть) вы́веску?",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "ви́дите"
+       ],
+       "choices": [
+        "ви́дишь",
+        "ви́дите"
+       ],
+       "id": "a7"
+      },
+      {
+       "prompt": "(Ва́ня) Ты ___ (хоте́ть) учи́ться?",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "хо́чешь"
+       ],
+       "choices": [
+        "хо́чешь",
+        "хоти́те"
+       ],
+       "id": "a8"
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "У ___ есть доска́. (На́стя)",
+      "answer": "На́сти"
+     },
+     "items": [
+      {
+       "prompt": "На шко́ле есть вы́веска, а у Ива́на нет ___. (доска́)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "доски́"
+       ],
+       "recall_of": "G03",
+       "id": "a9"
+      },
+      {
+       "prompt": "Вот бу́ква, а вот три ___. (бу́ква)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "бу́квы"
+       ],
+       "recall_of": "G03",
+       "id": "a10"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "ru-mir-01-l05-pb",
+   "title": "Пе́нсум B — Слова́",
+   "word_bank": [
+    "бу́ква",
+    "вы́веска",
+    "и́мя",
+    "мла́дший",
+    "молодо́й",
+    "о́тчество",
+    "сло́во",
+    "смотре́ть",
+    "ста́рший",
+    "уме́ть",
+    "учи́тельница",
+    "учи́ться",
+    "фами́лия"
+   ],
+   "items": [
+    {
+     "prompt": "В шко́ле не учи́тель, а ___: она́ молода́я.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "учи́тельница"
+     ],
+     "id": "b1"
+    },
+    {
+     "prompt": "На ла́вке Сила́нтия — доска́, и на доске́ — «Ла́вка». Э́та доска́ — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "вы́веска"
+     ],
+     "id": "b2"
+    },
+    {
+     "prompt": "Пётр — оте́ц, и у Ива́на ___ «Петро́вич».",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "о́тчество"
+     ],
+     "id": "b3"
+    },
+    {
+     "prompt": "Соколо́в, Соколо́ва, Соколо́вы — э́то ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "фами́лия"
+     ],
+     "id": "b4"
+    },
+    {
+     "prompt": "Ива́н зна́ет три ___, но сло́во он не ви́дит.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "бу́квы"
+     ],
+     "id": "b5"
+    },
+    {
+     "prompt": "«Росси́я» — э́то не бу́ква, э́то ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "сло́во"
+     ],
+     "id": "b6"
+    },
+    {
+     "prompt": "Ива́н не ___ чита́ть, а На́стя уме́ет.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "уме́ет"
+     ],
+     "id": "b7"
+    },
+    {
+     "prompt": "Фёдор — ста́рший брат, а На́стя — ___ сестра́.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "мла́дшая"
+     ],
+     "id": "b8"
+    },
+    {
+     "prompt": "Ве́ра Никола́евна не ста́рая, она́ ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "молода́я"
+     ],
+     "id": "b9"
+    }
+   ]
+  },
+  "C": {
+   "id": "ru-mir-01-l05-pc",
+   "title": "Пе́нсум C — Вопро́сы",
+   "items": [
+    {
+     "prompt": "Кто но́вая учи́тельница? — Ве́ра ___ Ле́бедева.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Никола́евна"
+     ],
+     "id": "c1",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s009"
+     ]
+    },
+    {
+     "prompt": "Како́е о́тчество у На́сти? — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Петро́вна",
+      "Её о́тчество — Петро́вна.",
+      "У На́сти о́тчество — Петро́вна.",
+      "О́тчество На́сти — Петро́вна."
+     ],
+     "id": "c2",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s019"
+     ]
+    },
+    {
+     "prompt": "Как говоря́т мать, Фёдор и учи́тельница: «Ва́ня», «Ва́нька» и́ли «Ива́н Петро́вич»?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Мать говори́т «Ва́ня», Фёдор — «Ва́нька», а учи́тельница — «Ива́н Петро́вич».",
+     "model_answers": [
+      "Мать говори́т «Ва́ня», Фёдор — «Ва́нька», а учи́тельница — «Ива́н Петро́вич»."
+     ],
+     "rubric": "Mother: Ва́ня; Fyodor: Ва́нька; the teacher: Ива́н Петро́вич.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-otchestvo"
+     ],
+     "id": "c3",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s048"
+     ]
+    },
+    {
+     "prompt": "Ива́н говори́т «ты». Что говори́т мать?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Не «ты», а «вы»!",
+     "model_answers": [
+      "Не «ты», а «вы»!",
+      "Мать говори́т: «Не „ты“, а „вы“!»"
+     ],
+     "rubric": "Not ты but вы (to the teacher).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-vy"
+     ],
+     "id": "c4",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s051"
+     ]
+    },
+    {
+     "prompt": "Что на вы́веске? Кто чита́ет?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "«Зе́мская шко́ла». Чита́ет На́стя, а Ива́н не уме́ет.",
+     "model_answers": [
+      "«Зе́мская шко́ла». Чита́ет На́стя, а Ива́н не уме́ет.",
+      "На́стя чита́ет: «Зе́мская шко́ла»."
+     ],
+     "rubric": "The sign says «Зе́мская шко́ла»; Nastya reads it, Ivan cannot.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-vyveska",
+      "ru-chitat"
+     ],
+     "id": "c5",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s065"
+     ]
+    },
+    {
+     "prompt": "Почему́ Ива́н не мо́жет учи́ться у́тром?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Потому́ что он рабо́тает.",
+     "model_answers": [
+      "Потому́ что он рабо́тает.",
+      "Он рабо́тает, а у́тром в шко́ле де́ти."
+     ],
+     "rubric": "He works; the morning school is for children.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-rabotat"
+     ],
+     "id": "c6",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s070"
+     ]
+    },
+    {
+     "prompt": "Мать: «Ва́ня, ты ведь хо́чешь учи́ться?» Ива́н: «___»",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Хочу́",
+      "Хочу́.",
+      "Да, хочу́.",
+      "Я хочу́ учи́ться."
+     ],
+     "id": "c7",
+     "source_segment_ids": [
+      "ru-mir-01-l05-s086"
+     ]
+    },
+    {
+     "prompt": "А ты? Как тебя́ зову́т? Что ты лю́бишь и что ты хо́чешь?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Меня́ зову́т Ива́н. Я люблю́ рабо́тать и хочу́ учи́ться.",
+     "model_answers": [
+      "Меня́ зову́т Ива́н. Я люблю́ рабо́тать и хочу́ учи́ться.",
+      "Меня́ зову́т На́стя. Я люблю́ шко́лу и хочу́ чита́ть."
+     ],
+     "rubric": "Your name (Меня́ зову́т …), one thing you love (люблю́ + noun or infinitive), one thing you want (хочу́ + infinitive).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-lyubit",
+      "ru-khotet"
+     ],
+     "id": "c8"
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "ru-videt",
+   "citation_form": "ви́деть",
+   "part_of_speech": "verb",
+   "current_sense": "to see",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-smotret",
+   "citation_form": "смотре́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to look, watch",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-lyubit",
+   "citation_form": "люби́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to love, like",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-sidet",
+   "citation_form": "сиде́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to sit, be sitting",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-stoyat",
+   "citation_form": "стоя́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to stand",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-lezhat",
+   "citation_form": "лежа́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to lie, be lying",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-govorit",
+   "citation_form": "говори́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to speak, say",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-chitat",
+   "citation_form": "чита́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to read",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-moch",
+   "citation_form": "мочь",
+   "part_of_speech": "verb",
+   "current_sense": "can, be able",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-khotet",
+   "citation_form": "хоте́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to want",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-umet",
+   "citation_form": "уме́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to know how to",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-uchitsya",
+   "citation_form": "учи́ться",
+   "part_of_speech": "verb",
+   "current_sense": "to study, learn",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-uchitelnitsa",
+   "citation_form": "учи́тельница",
+   "part_of_speech": "noun",
+   "current_sense": "(woman) teacher",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-uchitel",
+   "citation_form": "учи́тель",
+   "part_of_speech": "noun",
+   "current_sense": "teacher",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-imya",
+   "citation_form": "и́мя",
+   "part_of_speech": "noun",
+   "current_sense": "(first) name",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-otchestvo",
+   "citation_form": "о́тчество",
+   "part_of_speech": "noun",
+   "current_sense": "patronymic",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-familiya",
+   "citation_form": "фами́лия",
+   "part_of_speech": "noun",
+   "current_sense": "surname",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-vyveska",
+   "citation_form": "вы́веска",
+   "part_of_speech": "noun",
+   "current_sense": "signboard",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-bukva",
+   "citation_form": "бу́ква",
+   "part_of_speech": "noun",
+   "current_sense": "letter (of the alphabet)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-slovo",
+   "citation_form": "сло́во",
+   "part_of_speech": "noun",
+   "current_sense": "word",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-my",
+   "citation_form": "мы",
+   "part_of_speech": "pron",
+   "current_sense": "we",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-vy",
+   "citation_form": "вы",
+   "part_of_speech": "pron",
+   "current_sense": "you (pl.; polite)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-vash",
+   "citation_form": "ваш",
+   "part_of_speech": "pron",
+   "current_sense": "your (pl.; polite)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-molodoj",
+   "citation_form": "молодо́й",
+   "part_of_speech": "adj",
+   "current_sense": "young",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-starshij",
+   "citation_form": "ста́рший",
+   "part_of_speech": "adj",
+   "current_sense": "elder, senior",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-mladshij",
+   "citation_form": "мла́дший",
+   "part_of_speech": "adj",
+   "current_sense": "younger, junior",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-zemskij",
+   "citation_form": "зе́мский",
+   "part_of_speech": "adj",
+   "current_sense": "zemstvo (adj.)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-sejchas",
+   "citation_form": "сейча́с",
+   "part_of_speech": "adv",
+   "current_sense": "now, right away",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-zhe",
+   "citation_form": "же",
+   "part_of_speech": "part",
+   "current_sense": "(emphatic particle; glossed, system at G30)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ved",
+   "citation_form": "ведь",
+   "part_of_speech": "part",
+   "current_sense": "after all, you know (particle; system at G30)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nu",
+   "citation_form": "ну",
+   "part_of_speech": "part",
+   "current_sense": "well (particle)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-takoj",
+   "citation_form": "тако́й",
+   "part_of_speech": "pron",
+   "current_sense": "such, so",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-devushka",
+   "citation_form": "де́вушка",
+   "part_of_speech": "noun",
+   "current_sense": "girl, young woman",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-domoj",
+   "citation_form": "домо́й",
+   "part_of_speech": "adv",
+   "current_sense": "home(wards)",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-kak",
+   "citation_form": "как",
+   "part_of_speech": "adv",
+   "current_sense": "how; as, like",
+   "first_introduced_lesson": "ru-mir-01-l05",
+   "new": true
+  }
+ ],
+ "media": {
+  "status": "partial",
+  "cover": "ru-mir-01-l05-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 3,
+   "margin_vignette": 2,
+   "margin_diagram": 1,
+   "margin_gloss": 22
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-05/silero/manifest.json",
+    "default": true
+   }
+  ]
+ },
+ "completion": {
+  "button_label": "Гото́во"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "ru-mir-01",
+   "glava-05",
+   "chast-1"
+  ]
+ },
+ "metrics": {
+  "running_words": 608,
+  "sentences": 101,
+  "word_target": 650,
+  "word_window": [
+   585,
+   715
+  ]
+ }
+}

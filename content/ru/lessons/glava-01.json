@@ -19,6 +19,8 @@
    "Pronouns (он, она́) are Глава 2 lexemes and do not appear; the narrator repeats the noun instead, which is also the LLPSI cap. I texture.",
    "Stress was marked from the writer's knowledge (Zaliznyak-type forms) and cross-checked by Codex; `stress-unverified` lists inflected forms the lexicon does not list (by design only irregular or mobile-stress forms are listed). RUAccent (scripts/ru/stress.py) could not load its model on 2026-10-18.",
    "Warnings left, with reasons: length 347 words against 360–440 (advisory; the bootstrap chapter has no verbs and every further sentence would restate a proposition); new-cluster in about 30 sentences (every word of Глава 1 is new, including и, а, не, в, на; unavoidable in the map chapter); answer-unknown / prompt-unknown for желе́зная (the phrase lexeme ru-ph-zheleznaya-doroga is not phrase-matched in answers) and for the baseline chunks Меня́ зову́т, Мне … лет in the «А ты?» item (chunks are not chunk-matched in answers): checker limitations, reported to the integrator.",
+   "«Желе́зная доро́га — но́вая» is relative: the Moscow–Ryazan line (1860s) is new beside the centuries-old road; no newly built branch is implied (Codex review).",
+   "Recall: губе́рния and желе́зная доро́га recur only once in Главы 2–6 (Главы 6 and 5); the plan brings them back in Глава 8 (the fair in the district town) and Глава 12 (the station).",
    "Глава 6 dictates Глава 1's sentences: «Э́то Росси́я.», «Росси́я — больша́я страна́.», «Э́то Москва́, большо́й го́род.», «Берёзовка — дере́вня. Дере́вня ма́ленькая, но це́рковь больша́я.» all occur here verbatim."
   ],
   "review_questions": [
@@ -31,11 +33,6 @@
     "quote": "То́же да!",
     "question": "«То́же да!» as a playful second answer: natural spoken Russian, or should it be «И э́то да!» / «Да, и А́зия»?",
     "segment_id": "ru-mir-01-l01-s008"
-   },
-   {
-    "quote": "не в дере́вне",
-    "question": "«А что там, не в дере́вне?» for 'what is that over there, outside the village?': natural enough, or «за дере́вней» (instrumental, not yet licensed)?",
-    "segment_id": "ru-mir-01-l01-s052"
    }
   ]
  },
@@ -338,7 +335,7 @@
         "anchor_text": "Росси́я",
         "src": "media/diagrams/ru-mir-01-l01-svg-karta.svg",
         "label": "Росси́я на ка́рте",
-        "alt": "Outline map of European Russia with Russian labels: Россия, Европа, Азия, Москва, Петербург, Волга, Ока, Рязань.",
+        "alt": "Outline map of European Russia with Russian labels: Росси́я, Евро́па, А́зия, Москва́, Петербу́рг, Во́лга, Ока́, Ряза́нь.",
         "status": "draft",
         "width": 320,
         "height": 240,
@@ -716,7 +713,7 @@
       "obrazec": {
        "rule": "го́род (м.) → большо́й · страна́ (ж.) → больша́я · по́ле (ср.) → большо́е",
        "prompt": "Росси́я — больш___ страна́.",
-       "answer": "ая"
+       "answer": "а́я"
       },
       "items": [
        {
@@ -724,7 +721,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ой"
+         "о́й"
         ],
         "explanation": "Москва́ — большо́й го́род.",
         "id": "x1-1-1"
@@ -754,7 +751,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ая"
+         "а́я"
         ],
         "explanation": "Ка́рта больша́я.",
         "id": "x1-1-4"
@@ -764,7 +761,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ое"
+         "о́е"
         ],
         "common_wrong": [
          {
@@ -790,7 +787,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ая"
+         "а́я"
         ],
         "explanation": "Ока́ — то́же больша́я река́.",
         "id": "x1-1-7"
@@ -984,7 +981,8 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Во́лга там, а Москва́ здесь."
+         "Во́лга там, а Москва́ здесь.",
+         "Москва́ здесь, а Во́лга там."
         ],
         "id": "x1-4-1"
        },
@@ -993,7 +991,8 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Ка́рта больша́я, а Берёзовка ма́ленькая."
+         "Ка́рта больша́я, а Берёзовка ма́ленькая.",
+         "Берёзовка ма́ленькая, а Ка́рта больша́я."
         ],
         "id": "x1-4-2"
        },
@@ -1002,7 +1001,8 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Губе́рния больша́я, а уе́зд ма́ленький."
+         "Губе́рния больша́я, а уе́зд ма́ленький.",
+         "Уе́зд ма́ленький, а Губе́рния больша́я."
         ],
         "id": "x1-4-3"
        },
@@ -1011,7 +1011,8 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Це́рковь ста́рая, а шко́ла но́вая."
+         "Це́рковь ста́рая, а шко́ла но́вая.",
+         "Шко́ла но́вая, а Це́рковь ста́рая."
         ],
         "id": "x1-4-4"
        },
@@ -1020,7 +1021,8 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Вот Евро́па, а вот А́зия."
+         "Вот Евро́па, а вот А́зия.",
+         "Вот А́зия, а Вот Евро́па."
         ],
         "id": "x1-4-5"
        }
@@ -1163,7 +1165,7 @@
         "alt": "Zoom map: Ryazan province with one district outlined, the district town with the railway line, a road to the village Берёзовка on a small river. Russian labels only.",
         "status": "draft",
         "width": 320,
-        "height": 240,
+        "height": 260,
         "covers_lexeme_ids": [
          "ru-guberniya",
          "ru-uezd",
@@ -1340,13 +1342,15 @@
         "ref": "ru-mir-01-l01-img-zheleznaya-doroga",
         "anchor_text": "желе́зная доро́га",
         "label": "желе́зная доро́га",
-        "src": "media/vignettes/ru-mir-01-l01-img-zheleznaya-doroga.webp",
+        "src": "media/vignettes/ru-mir-01-l01-img-zheleznaya-doroga.svg",
         "alt": "",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "A short stretch of single-track railway with wooden sleepers and a small steam locomotive with two carriages, Russia 1913. Transparent background, no text.",
         "covers_lexeme_ids": [
          "ru-ph-zheleznaya-doroga"
-        ]
+        ],
+        "width": 320,
+        "height": 200
        }
       ],
       "pins": [
@@ -1628,14 +1632,14 @@
       "type": "okonchaniya",
       "title": "Оконча́ния",
       "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "What? → -а/-я. Where? в/на + -е.",
+      "hint_en": "For these nouns: что? -а/-я; где? в/на + -е.",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
        "rule": "Вот Ока́. → Где? На Оке́.",
        "prompt": "Ряза́нь на Ок___.",
-       "answer": "е"
+       "answer": "е́"
       },
       "items": [
        {
@@ -1643,7 +1647,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "а"
+         "а́"
         ],
         "explanation": "Вот Ока́.",
         "id": "x2-1-1"
@@ -1673,7 +1677,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "а"
+         "а́"
         ],
         "explanation": "Вот Москва́.",
         "id": "x2-1-4"
@@ -1683,7 +1687,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "е"
+         "е́"
         ],
         "explanation": "Ива́н не в Москве́.",
         "id": "x2-1-5"
@@ -1693,7 +1697,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "е"
+         "е́"
         ],
         "explanation": "Вот река́. Берёзовка на реке́.",
         "id": "x2-1-6"
@@ -1725,7 +1729,7 @@
       "type": "otvet",
       "title": "Отве́ть",
       "instruction": "Отве́ть на вопро́с. Сло́во в ско́бках поста́вь в ну́жную фо́рму.",
-      "hint_en": "Где? в/на + -е: Москва' → в Москве', Ока' → на Оке'.",
+      "hint_en": "For these nouns: где? в/на + -е (Москва́ → в Москве́; a town on a river: на Оке́).",
       "grammar_target_ids": [
        "G01"
       ],
@@ -1864,7 +1868,7 @@
       "type": "preobrazovanie",
       "title": "Преобразова́ние",
       "instruction": "Спроси́: … и́ли …?",
-      "hint_en": "Turn the statement into an either-or question with и'ли and the word in brackets.",
+      "hint_en": "Turn the statement into an either-or question with и́ли and the word in brackets.",
       "grammar_target_ids": [
        "G01"
       ],
@@ -2032,13 +2036,15 @@
         "ref": "ru-mir-01-l01-img-tserkov",
         "anchor_text": "це́рковь",
         "label": "це́рковь",
-        "src": "media/vignettes/ru-mir-01-l01-img-tserkov.webp",
+        "src": "media/vignettes/ru-mir-01-l01-img-tserkov.svg",
         "alt": "",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "A small wooden village church of central Russia, log walls, one onion dome with a cross, a separate small bell tower. Transparent background, no text.",
         "covers_lexeme_ids": [
          "ru-tserkov"
-        ]
+        ],
+        "width": 240,
+        "height": 240
        }
       ],
       "pins": [
@@ -2197,7 +2203,7 @@
      },
      {
       "id": "ru-mir-01-l01-s052",
-      "text": "А что там, не в дере́вне?",
+      "text": "А что там?",
       "paragraph_start": true,
       "pins": [
        {
@@ -2224,13 +2230,15 @@
         "ref": "ru-mir-01-l01-img-usadba",
         "anchor_text": "уса́дьба",
         "label": "уса́дьба",
-        "src": "media/vignettes/ru-mir-01-l01-img-usadba.webp",
+        "src": "media/vignettes/ru-mir-01-l01-img-usadba.svg",
         "alt": "",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "A Russian provincial manor house of about 1850: white plastered two-storey house with a portico of four columns, a green roof, old lime trees. Transparent background, no text.",
         "covers_lexeme_ids": [
          "ru-usadba"
-        ]
+        ],
+        "width": 320,
+        "height": 200
        }
       ],
       "pins": [
@@ -2491,7 +2499,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ое"
+         "о́е"
         ],
         "explanation": "По́ле большо́е.",
         "id": "x3-1-2"
@@ -2501,7 +2509,7 @@
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ой"
+         "о́й"
         ],
         "explanation": "Лес то́же большо́й.",
         "id": "x3-1-3"
@@ -2776,8 +2784,8 @@
        "Вот Берёзовка. Берёзовка — не го́род, а дере́вня. Здесь це́рковь, а там уса́дьба. Уса́дьба больша́я, а дере́вня ма́ленькая. Дере́вня в уе́зде, на реке́."
       ],
       "rubric": [
-       "adjectives that agree with their nouns: м. -ый/-ой, ж. -ая, ср. -ое (ста'рая це'рковь, большо'е по'ле)",
-       "где? with в/на + -е (в Берёзовке, на реке', в уе'зде)",
+       "adjectives that agree with their nouns: м. -ый/-ой, ж. -ая, ср. -ое (ста́рая це́рковь, большо́е по́ле)",
+       "где? with в/на + -е (в Берёзовке, на реке́, в уе́зде)",
        "a contrast with а or но (здесь …, а там …)"
       ],
       "rubric_lang": "en",
@@ -2791,13 +2799,13 @@
        {
         "wrong": "ста́рый це́рковь",
         "right": "ста́рая це́рковь",
-        "note": "це'рковь is feminine (-ь): ста'рая",
+        "note": "це́рковь is feminine (-ь): ста́рая",
         "note_lang": "en"
        },
        {
         "wrong": "больша́я по́ле",
         "right": "большо́е по́ле",
-        "note": "по'ле is neuter: -ое",
+        "note": "по́ле is neuter: -ое",
         "note_lang": "en"
        },
        {
@@ -2809,13 +2817,13 @@
        {
         "wrong": "в Ока́",
         "right": "на Оке́",
-        "note": "a river: на + -е",
+        "note": "a town on a river: на + -е",
         "note_lang": "en"
        },
        {
         "wrong": "Берёзовка есть дере́вня.",
         "right": "Берёзовка — дере́вня.",
-        "note": "no 'is' in the present: use a dash",
+        "note": "in 'X is Y' sentences Russian normally leaves out 'is': use a dash",
         "note_lang": "en"
        }
       ],
@@ -2832,16 +2840,16 @@
   "word": "Росси́я / Русь",
   "text": [
    "Росси́я — на ка́рте: губе́рния, уе́зд, го́род, желе́зная доро́га. Росси́я — больша́я страна́.",
-   "А Русь — не на ка́рте. Русь — ста́рая Росси́я: це́рковь, по́ле, лес, дере́вня."
+   "А Русь — це́рковь, по́ле, лес, дере́вня."
   ],
   "lexeme_ids": [
    "ru-strana",
    "ru-karta"
   ],
-  "note_en": "Росси́я is the name of the state, on maps and in official papers. Русь is the old name of the land and its people: church books, songs and Дед Матвей use it. Yesenin's 1914 poem «Гой ты, Русь, моя родная» (Part 3) is addressed to Русь, not to Россия."
+  "note_en": "Росси́я is the name of the state, on maps and in official papers. Русь is the old historical name of the East Slavic lands, and in songs and poetry a name for the Russian land and people; Дед Матве́й uses it so, and so does Yesenin's 1914 poem «Гой ты, Русь, моя́ родна́я» (Part 3)."
  },
  "grammar": {
-  "title": "Како́й? Кака́я? Како́е?",
+  "title": "Большо́й · больша́я · большо́е",
   "rule": "го́род (м.) — большо́й го́род · страна́ (ж.) — больша́я страна́ · по́ле (ср.) — большо́е по́ле · Где? — в Москве́, на Оке́",
   "tables": [
    {
@@ -2967,7 +2975,7 @@
     "segment_id": "ru-mir-01-l01-s047"
    }
   ],
-  "note_en": "Nouns have a gender, shown by the ending: no ending (го́род) is masculine, -а/-я (страна́, дере́вня) feminine, -о/-е (по́ле) neuter; -ь can be either (це́рковь is feminine). Adjectives agree: большо́й го́род, больша́я страна́, большо́е по́ле. There is no ́iś in the present: Росси́я — больша́я страна́. Где? is answered with в or на + -е: в Москве́, на Оке́ (rivers take на)."
+  "note_en": "The ending usually shows the gender: no ending (го́род) is usually masculine, -а/-я (страна́, дере́вня) usually feminine, -о/-е (по́ле) neuter; -ь can be either (це́рковь is feminine). Adjectives agree: большо́й го́род, больша́я страна́, большо́е по́ле. In present-tense sentences that say what something is, Russian normally leaves out 'is': Росси́я — больша́я страна́. For the nouns of this chapter, Где? is answered with в/на + -е: в Москве́, в дере́вне; a town on a river is на: на Оке́."
  },
  "pensa": {
   "A": {
@@ -3134,19 +3142,18 @@
    "id": "ru-mir-01-l01-pb",
    "title": "Пе́нсум B — Слова́",
    "word_bank": [
-    "ка́рта",
-    "страна́",
-    "река́",
+    "большо́й",
     "го́род",
     "дере́вня",
-    "уе́зд",
-    "по́ле",
+    "ка́рта",
     "лес",
-    "це́рковь",
-    "но́вый",
-    "ста́рый",
     "ма́ленький",
-    "большо́й"
+    "но́вый",
+    "река́",
+    "ста́рый",
+    "страна́",
+    "уе́зд",
+    "це́рковь"
    ],
    "items": [
     {
@@ -3195,22 +3202,13 @@
      "id": "b5"
     },
     {
-     "prompt": "Губе́рния больша́я, а ___ ма́ленький.",
+     "prompt": "Губе́рния больша́я, а уе́здный го́род в ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
-      "уе́зд"
+      "уе́зде"
      ],
      "id": "b6"
-    },
-    {
-     "prompt": "Здесь не лес. Здесь большо́е ___.",
-     "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "по́ле"
-     ],
-     "id": "b7"
     },
     {
      "prompt": "Шко́ла не ста́рая, шко́ла ___.",
@@ -3219,7 +3217,7 @@
      "accepted_answers": [
       "но́вая"
      ],
-     "id": "b8"
+     "id": "b7"
     },
     {
      "prompt": "Москва́ — большо́й го́род, а уе́здный го́род — ___.",
@@ -3228,7 +3226,7 @@
      "accepted_answers": [
       "ма́ленький"
      ],
-     "id": "b9"
+     "id": "b8"
     }
    ]
   },
@@ -3243,7 +3241,11 @@
      "accepted_answers": [
       "И Евро́па, и А́зия.",
       "Росси́я — и Евро́па, и А́зия.",
-      "И Евро́па и А́зия"
+      "Евро́па и А́зия.",
+      "А́зия и Евро́па.",
+      "Росси́я — Евро́па и А́зия.",
+      "Росси́я — э́то Евро́па и А́зия.",
+      "И А́зия, и Евро́па."
      ],
      "id": "c1",
      "source_segment_ids": [
@@ -3257,9 +3259,9 @@
      "model_answer": "Нет, Москва́ не на Во́лге. Москва́ здесь, а Во́лга там.",
      "model_answers": [
       "Нет, Москва́ не на Во́лге. Москва́ здесь, а Во́лга там.",
-      "Нет. Москва́ в Росси́и, а Во́лга там."
+      "Нет. Москва́ здесь, а Во́лга там."
      ],
-     "rubric": "Says no, Moscow is not on the Volga (Москва' здесь, а Во'лга там).",
+     "rubric": "Says no, Moscow is not on the Volga (Москва́ здесь, а Во́лга там).",
      "rubric_lang": "en",
      "key_terms": [
       "ru-gde"
@@ -3270,12 +3272,11 @@
      ]
     },
     {
-     "prompt": "Где Ряза́нь? — Ряза́нь ___.",
+     "prompt": "Где Ряза́нь? (Ока́) — Ряза́нь на ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
-      "на Оке́",
-      "здесь, на Оке́"
+      "Оке́"
      ],
      "id": "c3",
      "source_segment_ids": [
@@ -3309,7 +3310,9 @@
      "accepted_answers": [
       "Ма́ленькая река́.",
       "Ма́ленькая",
-      "Э́то ма́ленькая река́."
+      "Э́то ма́ленькая река́.",
+      "Река́ ма́ленькая.",
+      "В Берёзовке ма́ленькая река́."
      ],
      "id": "c5",
      "source_segment_ids": [
@@ -3317,7 +3320,7 @@
      ]
     },
     {
-     "prompt": "Что в Берёзовке? А что там, не в дере́вне?",
+     "prompt": "Что в Берёзовке? А что там?",
      "mode": "productive",
      "answer_mode": "self_check",
      "model_answer": "В Берёзовке це́рковь и шко́ла. А там уса́дьба.",
@@ -3359,7 +3362,7 @@
       "Меня́ зову́т Ива́н. Мне 19 лет.",
       "Меня́ зову́т Ве́ра. Мне 25 лет."
      ],
-     "rubric": "Your name with Меня' зову'т … and your age with Мне … лет.",
+     "rubric": "Your name with Меня́ зову́т … and your age with Мне … лет (лет after 5–20, 25–30 …; for 21, 31 … say год, for 22–24, 32–34 … го́да: Мне 21 год, Мне 23 го́да).",
      "rubric_lang": "en",
      "key_terms": [
       "ru-ph-menya-zovut",
@@ -3666,7 +3669,7 @@
   }
  ],
  "media": {
-  "status": "planned",
+  "status": "partial",
   "cover": "ru-mir-01-l01-cover",
   "counts": {
    "cover": 1,
@@ -3674,7 +3677,15 @@
    "margin_vignette": 3,
    "margin_diagram": 2,
    "margin_gloss": 13
-  }
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-01/silero/manifest.json",
+    "default": true
+   }
+  ]
  },
  "completion": {
   "button_label": "Гото́во"
@@ -3689,7 +3700,7 @@
   ]
  },
  "metrics": {
-  "running_words": 348,
+  "running_words": 345,
   "sentences": 66,
   "word_target": 400,
   "word_window": [

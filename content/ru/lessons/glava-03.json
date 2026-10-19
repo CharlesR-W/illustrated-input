@@ -1,0 +1,4202 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "ru-mir-01-l03",
+ "course_id": "ru-mir-01",
+ "order": 3,
+ "title": "Изба́",
+ "part": 1,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "0.1.0-pilot",
+ "provenance": {
+  "author": "pilot writer (Claude, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "prompts/russian-block-writer-brief.md; content/ru/plan/chapters.json row 3; docs/russian-mir-lesson-shape.md",
+  "review_required": "Codex cross-model review (applied, see docs/reviews/russian-pilot-log-2026-10-18.md) and native-speaker review before text_status: reviewed",
+  "notes": [
+   "Warnings left, with reasons: prior coverage 57% (bootstrap floor 70%): the izba inventory and the money vocabulary are new together (35 planned lexemes, 13 known to the owner); new-cluster in the counting and possession sentences (оди́н рубль, две копе́йки… is a list of new numerals by design); stress-unverified by design. де́ньги is listed as a form in the delta because the analyser lemmatises it to деньга (Q-T4), so the checker can match it literally.",
+   "Still no present tense outside the G02 whitelist: the search is told through Где? Нет. у + genitive / нет + genitive, and the bargain through possession (Коро́ва на́ша, а рубль — Сила́нтия).",
+   "Running jokes kept: Шарик is looked at first (here innocent: he sleeps); Pyotr's «Ты большо́й» from Глава 2 is reused for Fyodor («Потому́ что ты большо́й»), and «А у Ива́на — доска́» pays off Ivan mending the slate.",
+   "Глава 6 and later chapters: the family owes Силантий a rouble paid and two days of Fyodor's work; Fyodor's anger at Силантий is seeded (he goes red and says nothing).",
+   "One-off glossed words (not lexemes; Часть 1 has no open slots): ведро́, ест (G02 whitelist), второ́го, дня (день is a Глава 4 lexeme), краси́вый in a gloss."
+  ],
+  "review_questions": [
+   {
+    "quote": "Кра́сный, потому́ что там ико́на",
+    "question": "Folk explanation of «кра́сный у́гол» via the icon (кра́сный = beautiful): fine for a grandfather's answer to a child?",
+    "segment_id": "ru-mir-01-l03-s018"
+   },
+   {
+    "quote": "Он кра́сный, о́чень кра́сный.",
+    "question": "«Он кра́сный» for 'he goes red with anger' (narration, present tense): natural, or «Он весь кра́сный» (весь is a Глава 4 lexeme)?",
+    "segment_id": "ru-mir-01-l03-s071"
+   },
+   {
+    "quote": "Оди́н рубль — и два дня.",
+    "question": "[?] Economic plausibility: four young cabbages priced at two roubles, settled for one rouble plus two days of a grown man's work (May 1913, Ryazan province). The history notes give no prices or day wages; please judge or supply a source.",
+    "segment_id": "ru-mir-01-l03-s064"
+   },
+   {
+    "quote": "Вот изба́ Соколо́вых",
+    "question": "[?] Material culture assumed, not sourced: the wooden milk pail, the izba layout (stove by the door, icon corner diagonally opposite, one small window on the street side), the village shop with sacks and a barrel, coins of 1913 (silver rouble, copper kopecks).",
+    "segment_id": "ru-mir-01-l03-s007"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G03",
+  "primary_new_grammar": {
+   "id": "G03",
+   "label": "Genitive singular of nouns, adjectives, possessives and pronouns: possession (дом Петра́), у + gen есть, нет + gen; свой; 2–4 + gen. sg",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01",
+   "G02"
+  ],
+  "incidental": [
+   {
+    "form": "говори́т, спра́шивает, отвеча́ет, кричи́т, сиди́т, стои́т, смо́трит, спит, зна́ет, ест — 3rd-person present from the G02 whitelist (glossed, never tested)"
+   },
+   {
+    "form": "Соколо́вых — surname genitive plural chunk; нет де́нег — genitive plural chunk (L05), glossed"
+   },
+   {
+    "form": "Ша́рик не винова́т — short-adjective chunk (L04)"
+   }
+  ],
+  "new_lexeme_ids": [
+   "ru-izba",
+   "ru-pech",
+   "ru-ugol",
+   "ru-ph-krasnyj-ugol",
+   "ru-ikona",
+   "ru-krasnyj",
+   "ru-okno",
+   "ru-dver",
+   "ru-vorota",
+   "ru-korova",
+   "ru-ogorod",
+   "ru-kapusta",
+   "ru-lavka",
+   "ru-khozyain",
+   "ru-sosed",
+   "ru-vina",
+   "ru-u",
+   "ru-byt",
+   "ru-dengi",
+   "ru-rubl",
+   "ru-kopejka",
+   "ru-chej",
+   "ru-svoj",
+   "ru-chuzhoj",
+   "ru-ph-potomu-chto",
+   "ru-odin",
+   "ru-dva",
+   "ru-tri",
+   "ru-chetyre",
+   "ru-pochemu",
+   "ru-dom",
+   "ru-belyj",
+   "ru-iskat",
+   "ru-tot",
+   "ru-mama"
+  ],
+  "recycle_lexeme_ids": [
+   "ru-doska",
+   "ru-semya",
+   "ru-otets",
+   "ru-mat",
+   "ru-ded",
+   "ru-dvor",
+   "ru-stol",
+   "ru-khleb",
+   "ru-kto",
+   "ru-chto",
+   "ru-moj",
+   "ru-nash",
+   "ru-ego",
+   "ru-derevnya",
+   "ru-tserkov"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "ru-izba",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l03-s007"
+   },
+   {
+    "lexeme_id": "ru-pech",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-ugol",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-ph-krasnyj-ugol",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-ikona",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-krasnyj",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l03-s018"
+   },
+   {
+    "lexeme_id": "ru-okno",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-dver",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-vorota",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l03-s004"
+   },
+   {
+    "lexeme_id": "ru-korova",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l03-s043"
+   },
+   {
+    "lexeme_id": "ru-ogorod",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l03-s041"
+   },
+   {
+    "lexeme_id": "ru-kapusta",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l03-s043"
+   },
+   {
+    "lexeme_id": "ru-lavka",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l03-s038"
+   },
+   {
+    "lexeme_id": "ru-khozyain",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l03-s042"
+   },
+   {
+    "lexeme_id": "ru-sosed",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l03-s029"
+   },
+   {
+    "lexeme_id": "ru-vina",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l03-s021"
+   },
+   {
+    "lexeme_id": "ru-u",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s041"
+   },
+   {
+    "lexeme_id": "ru-byt",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s053"
+   },
+   {
+    "lexeme_id": "ru-dengi",
+    "how": "gloss(form)+context",
+    "segment_id": "ru-mir-01-l03-s057"
+   },
+   {
+    "lexeme_id": "ru-rubl",
+    "how": "gloss(number)+context",
+    "segment_id": "ru-mir-01-l03-s055"
+   },
+   {
+    "lexeme_id": "ru-kopejka",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l03-s059"
+   },
+   {
+    "lexeme_id": "ru-chej",
+    "how": "gloss(paradigm)+context",
+    "segment_id": "ru-mir-01-l03-s019"
+   },
+   {
+    "lexeme_id": "ru-svoj",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l03-s047"
+   },
+   {
+    "lexeme_id": "ru-chuzhoj",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l03-s047"
+   },
+   {
+    "lexeme_id": "ru-ph-potomu-chto",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s018"
+   },
+   {
+    "lexeme_id": "ru-odin",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s059"
+   },
+   {
+    "lexeme_id": "ru-dva",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s055"
+   },
+   {
+    "lexeme_id": "ru-tri",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s059"
+   },
+   {
+    "lexeme_id": "ru-chetyre",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s060"
+   },
+   {
+    "lexeme_id": "ru-pochemu",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s005"
+   },
+   {
+    "lexeme_id": "ru-dom",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l03-s007"
+   },
+   {
+    "lexeme_id": "ru-belyj",
+    "how": "context",
+    "segment_id": "ru-mir-01-l03-s009"
+   },
+   {
+    "lexeme_id": "ru-iskat",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l03-s028"
+   },
+   {
+    "lexeme_id": "ru-tot",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l03-s031"
+   },
+   {
+    "lexeme_id": "ru-mama",
+    "how": "picture(cover)+context",
+    "segment_id": "ru-mir-01-l03-s074"
+   }
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "ru-mir-01-l03-cover",
+   "src": "media/images/ru-mir-01-l03-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "Inside the Sokolov izba early in the morning: the big white stove with the grandfather beside it, the icon corner with an icon and a small lamp, the table, a small window where Ivan sits mending the slate, and the mother in the doorway with an empty pail.",
+   "art_brief": "Interior of a Ryazan peasant izba, early May 1913, morning light through one small window. The huge whitewashed Russian stove takes a quarter of the room; Ded Matvei (70, white beard) sits beside it. The icon corner (красный угол) diagonally opposite: an icon of the Mother of God with a small red lamp, an embroidered towel. Pyotr (55) stands there. A plank table, benches along the walls. At the window Ivan (19) mends a wooden-framed school slate with a small nail. Marya (50, kerchief) in the open doorway with an empty wooden pail, alarmed. Nastya (12) beside her. No text.",
+   "characters": [
+    "char-marya",
+    "char-pyotr",
+    "char-ded-matvej",
+    "char-ivan",
+    "char-nastya"
+   ],
+   "covers_lexeme_ids": [
+    "ru-izba",
+    "ru-pech",
+    "ru-ph-krasnyj-ugol",
+    "ru-ikona",
+    "ru-okno",
+    "ru-dver",
+    "ru-mama"
+   ]
+  },
+  "sections": [
+   {
+    "id": "ru-mir-01-l03-sec1",
+    "title": "Где коро́ва?",
+    "segments": [
+     {
+      "id": "ru-mir-01-l03-s001",
+      "text": "Ма́рья Степа́новна во дворе́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s002",
+      "text": "У неё ведро́.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l03-img-vedro",
+        "anchor_text": "ведро́",
+        "label": "ведро́",
+        "src": "media/vignettes/ru-mir-01-l03-img-vedro.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "A wooden peasant milk pail with an iron band and a rope handle, empty. Transparent background, no text.",
+        "width": 240,
+        "height": 240
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s003",
+      "text": "Где коро́ва? Коро́вы нет!"
+     },
+     {
+      "id": "ru-mir-01-l03-s004",
+      "text": "Воро́та там, а коро́вы нет.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l03-img-vorota",
+        "anchor_text": "Воро́та",
+        "label": "воро́та",
+        "src": "media/vignettes/ru-mir-01-l03-img-vorota.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "Wooden double gate of a Russian peasant yard, one leaf half open, a simple wooden latch. Transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-vorota"
+        ],
+        "width": 320,
+        "height": 220
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s005",
+      "text": "— Коро́вы нет! — кричи́т мать. — Где на́ша коро́ва? Почему́ коро́вы нет?",
+      "paragraph_start": true,
+      "speaker": "char-marya",
+      "pins": [
+       {
+        "start": 25,
+        "end": 29,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s006",
+      "text": "Коро́ва — наш хлеб!",
+      "speaker": "char-marya",
+      "pins": [
+       {
+        "start": 10,
+        "end": 13,
+        "token": "наш",
+        "lemma": "наш",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 14,
+        "end": 18,
+        "token": "хлеб",
+        "lemma": "хлеб",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s007",
+      "text": "Вот изба́ Соколо́вых, ста́рый дом.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "изба́",
+        "gloss": "изба́ = дом в дере́вне",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-izba",
+         "ru-dom"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 22,
+        "end": 29,
+        "token": "ста́рый",
+        "lemma": "старый",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 30,
+        "end": 33,
+        "token": "дом",
+        "lemma": "дом",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s008",
+      "text": "Изба́ ма́ленькая, а семья́ больша́я."
+     },
+     {
+      "id": "ru-mir-01-l03-s009",
+      "text": "Вот печь: печь больша́я и бе́лая.",
+      "inference_aids": [
+       {
+        "type": "diagram",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l03-svg-izba",
+        "anchor_text": "печь",
+        "src": "media/diagrams/ru-mir-01-l03-svg-izba.svg",
+        "label": "изба́",
+        "alt": "Plan of an izba with Russian labels: печь, кра́сный у́гол (ико́на), стол, окно́, дверь.",
+        "status": "draft",
+        "width": 320,
+        "height": 260,
+        "covers_lexeme_ids": [
+         "ru-izba",
+         "ru-pech",
+         "ru-ph-krasnyj-ugol",
+         "ru-ugol",
+         "ru-ikona",
+         "ru-okno",
+         "ru-dver"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 4,
+        "end": 8,
+        "token": "печь",
+        "lemma": "печь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 14,
+        "token": "печь",
+        "lemma": "печь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s010",
+      "text": "А вот кра́сный у́гол, и там ико́на.",
+      "pins": [
+       {
+        "start": 6,
+        "end": 14,
+        "token": "кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 15,
+        "end": 20,
+        "token": "у́гол",
+        "lemma": "угол",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s011",
+      "text": "Вот стол, вот окно́, вот дверь.",
+      "pins": [
+       {
+        "start": 4,
+        "end": 8,
+        "token": "стол",
+        "lemma": "стол",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 14,
+        "end": 19,
+        "token": "окно́",
+        "lemma": "окно",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 25,
+        "end": 30,
+        "token": "дверь",
+        "lemma": "дверь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s012",
+      "text": "Кто где?",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s013",
+      "text": "Оте́ц стои́т у кра́сного угла́.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "кра́сного угла́",
+        "gloss": "кра́сный у́гол → у кра́сного угла́",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-ph-krasnyj-ugol"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s014",
+      "text": "Дед сиди́т у пе́чи.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пе́чи",
+        "gloss": "печь → у пе́чи",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-pech"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s015",
+      "text": "А у окна́ сиди́т Ива́н, и у него́ — доска́ На́сти."
+     },
+     {
+      "id": "ru-mir-01-l03-s016",
+      "text": "Мать и На́стя у две́ри.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s017",
+      "text": "— Ма́ма, а почему́ «кра́сный у́гол»? — спра́шивает она́. — Он не кра́сный!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 20,
+        "end": 28,
+        "token": "кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 29,
+        "end": 34,
+        "token": "у́гол",
+        "lemma": "угол",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 65,
+        "end": 73,
+        "token": "кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s018",
+      "text": "— Кра́сный, потому́ что там ико́на, — отвеча́ет дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Кра́сный",
+        "gloss": "кра́сный (ста́рое) = краси́вый",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-krasnyj"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 10,
+        "token": "Кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 20,
+        "end": 23,
+        "token": "что",
+        "lemma": "что",
+        "feats": {
+         "pos": "NPRO",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s019",
+      "text": "— Чьи воро́та? — спра́шивает оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Чьи",
+        "gloss": "чей? чья? чьё? чьи?",
+        "gloss_kind": "paradigm",
+        "covers_lexeme_ids": [
+         "ru-chej"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Чьи",
+        "lemma": "чей",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s020",
+      "text": "— На́ши.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 2,
+        "end": 7,
+        "token": "На́ши",
+        "lemma": "наш",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s021",
+      "text": "— А чья вина́?",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "вина́",
+        "gloss": "вина́: Кто винова́т?",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-vina"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s022",
+      "text": "— Не моя́! У меня́ — доска́.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l03-s023",
+      "text": "— И не моя́! — говори́т Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l03-s024",
+      "text": "— И не моя́! — говори́т Да́рья.",
+      "paragraph_start": true,
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l03-s025",
+      "text": "А Ша́рик? Ша́рик во дворе́, и он спит.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s026",
+      "text": "Ша́рик не винова́т."
+     },
+     {
+      "id": "ru-mir-01-l03-s027",
+      "text": "— Вина́ — не коро́ва, — говори́т дед. — Где коро́ва?",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l03-x1-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "у + genitive: -а/-я (м., ср.), -ы/-и (ж.); -ь nouns (ж.) → -и.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "сосе́д → у сосе́да · коро́ва → у коро́вы · печь → у пе́чи",
+       "prompt": "Дед сиди́т у пе́ч___.",
+       "answer": "и"
+      },
+      "items": [
+       {
+        "prompt": "Оте́ц стои́т у стол___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́"
+        ],
+        "explanation": "Оте́ц стои́т у стола́.",
+        "id": "x1-1-1"
+       },
+       {
+        "prompt": "Ива́н сиди́т у окн___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́"
+        ],
+        "explanation": "Ива́н сиди́т у окна́.",
+        "id": "x1-1-2"
+       },
+       {
+        "prompt": "На́стя стои́т у две́р___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "На́стя стои́т у две́ри.",
+        "id": "x1-1-3"
+       },
+       {
+        "prompt": "Коро́вы нет у сосе́д___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Коро́вы нет у сосе́да.",
+        "id": "x1-1-4"
+       },
+       {
+        "prompt": "Ша́рик спит у коро́в___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ы"
+        ],
+        "explanation": "Ша́рик спит у коро́вы.",
+        "id": "x1-1-5"
+       },
+       {
+        "prompt": "Фёдор стои́т у ла́вк___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Фёдор стои́т у ла́вки.",
+        "id": "x1-1-6"
+       },
+       {
+        "prompt": "Сила́нтий стои́т у огоро́д___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Сила́нтий стои́т у огоро́да.",
+        "id": "x1-1-7"
+       },
+       {
+        "prompt": "Коро́вы нет и у це́ркв___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Коро́вы нет и у це́ркви (це́рковь → це́ркви: о выпада́ет).",
+        "id": "x1-1-8"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x1-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "Whose? Put the owner in the genitive after the thing.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Чей стол? — стол де́да",
+       "prompt": "Э́то стол ___ (дед).",
+       "answer": "де́да"
+      },
+      "items": [
+       {
+        "prompt": "Э́то доска́ ___ (На́стя).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "На́сти"
+        ],
+        "id": "x1-2-1"
+       },
+       {
+        "prompt": "Э́то ла́вка ___ (Сила́нтий).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Сила́нтия"
+        ],
+        "id": "x1-2-2"
+       },
+       {
+        "prompt": "Э́то изба́ ___ (оте́ц).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "отца́"
+        ],
+        "common_wrong": [
+         {
+          "answer": "оте́ца",
+          "hint": "оте́ц → отца́"
+         }
+        ],
+        "id": "x1-2-3"
+       },
+       {
+        "prompt": "Э́то коро́ва ___ (Ма́рья).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ма́рьи"
+        ],
+        "id": "x1-2-4"
+       },
+       {
+        "prompt": "Э́то соба́ка ___ (сосе́д).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сосе́да"
+        ],
+        "id": "x1-2-5"
+       },
+       {
+        "prompt": "Э́то огоро́д ___ (хозя́ин).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хозя́ина"
+        ],
+        "id": "x1-2-6"
+       },
+       {
+        "prompt": "Э́то ико́на ___ (дед).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "де́да"
+        ],
+        "id": "x1-2-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x1-3",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Спроси́: чей, чья, чьё, чьи?",
+      "hint_en": "чей (м.), чья (ж.), чьё (ср.), чьи (мн.).",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "чей стол · чья коро́ва · чьё окно́ · чьи воро́та",
+       "prompt": "___ воро́та? (чей)",
+       "answer": "Чьи"
+      },
+      "items": [
+       {
+        "prompt": "___ вина́? (чей)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чья"
+        ],
+        "id": "x1-3-1"
+       },
+       {
+        "prompt": "___ стол? (чей)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чей"
+        ],
+        "id": "x1-3-2"
+       },
+       {
+        "prompt": "___ окно́? (чей)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чьё"
+        ],
+        "id": "x1-3-3"
+       },
+       {
+        "prompt": "___ коро́ва? (чей)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чья"
+        ],
+        "id": "x1-3-4"
+       },
+       {
+        "prompt": "___ де́ти? (чей)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чьи"
+        ],
+        "id": "x1-3-5"
+       },
+       {
+        "prompt": "___ огоро́д? (чей)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чей"
+        ],
+        "id": "x1-3-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x1-4",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́: у кого́ есть …?",
+      "hint_en": "X has Y: у + genitive + есть + nominative.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Сила́нтий — ла́вка → У Сила́нтия есть ла́вка.",
+       "prompt": "(Сила́нтий) ла́вка →",
+       "answer": "У Сила́нтия есть ла́вка."
+      },
+      "items": [
+       {
+        "prompt": "(сосе́д) соба́ка →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У сосе́да есть соба́ка."
+        ],
+        "id": "x1-4-1"
+       },
+       {
+        "prompt": "(На́стя) доска́ →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У На́сти есть доска́."
+        ],
+        "id": "x1-4-2"
+       },
+       {
+        "prompt": "(Фёдор) жена́ →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У Фёдора есть жена́."
+        ],
+        "id": "x1-4-3"
+       },
+       {
+        "prompt": "(Ма́рья) коро́ва →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У Ма́рьи есть коро́ва."
+        ],
+        "id": "x1-4-4"
+       },
+       {
+        "prompt": "(оте́ц) рубль →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У отца́ есть рубль."
+        ],
+        "id": "x1-4-5"
+       },
+       {
+        "prompt": "(дед) печь →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У де́да есть печь."
+        ],
+        "id": "x1-4-6"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l03-sec2",
+    "title": "У кого́ коро́ва?",
+    "segments": [
+     {
+      "id": "ru-mir-01-l03-s028",
+      "text": "Фёдор и Ива́н и́щут.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "и́щут",
+        "gloss": "и́щут: «Где? Где?»",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-iskat"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s029",
+      "text": "Где коро́ва? В дере́вне? В по́ле? У сосе́да?",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "сосе́да",
+        "gloss": "сосе́д: его́ дом — здесь",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-sosed"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s030",
+      "text": "— Твоя́ коро́ва? Нет, твое́й коро́вы здесь нет, — говори́т сосе́д.",
+      "paragraph_start": true,
+      "speaker": "char-sosed",
+      "pins": [
+       {
+        "start": 22,
+        "end": 28,
+        "token": "твое́й",
+        "lemma": "твой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (after 'нет' → gent); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s031",
+      "text": "Вот коро́ва сосе́да, но э́то не та коро́ва: на́ша — бе́лая.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "та",
+        "gloss": "э́та ↔ та",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-tot"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 12,
+        "end": 19,
+        "token": "сосе́да",
+        "lemma": "сосед",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       },
+       {
+        "start": 24,
+        "end": 28,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s032",
+      "text": "У це́ркви? У це́ркви то́же нет коро́вы."
+     },
+     {
+      "id": "ru-mir-01-l03-s033",
+      "text": "У шко́лы? И у шко́лы нет. У уса́дьбы? И там нет."
+     },
+     {
+      "id": "ru-mir-01-l03-s034",
+      "text": "— Чья вина́? Твоя́, Ва́нька! — говори́т Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l03-s035",
+      "text": "— Почему́ моя́?",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l03-s036",
+      "text": "— Потому́ что у окна́ — ты, а воро́та — там!",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 10,
+        "end": 13,
+        "token": "что",
+        "lemma": "что",
+        "feats": {
+         "pos": "NPRO",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s037",
+      "text": "Фёдор и Ива́н и́щут, и́щут…",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s038",
+      "text": "А вот ла́вка.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l03-img-lavka",
+        "anchor_text": "ла́вка",
+        "label": "ла́вка",
+        "src": "media/vignettes/ru-mir-01-l03-img-lavka.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "A small village shop of 1913: a log building with a wide door, a sign board, sacks and a barrel by the door. Transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-lavka"
+        ],
+        "width": 320,
+        "height": 220
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s039",
+      "text": "Чья ла́вка? Ла́вка Сила́нтия.",
+      "pins": [
+       {
+        "start": 19,
+        "end": 28,
+        "token": "Сила́нтия",
+        "lemma": "силантий",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s040",
+      "text": "А чей тот дом? Чей тот огоро́д? То́же Сила́нтия.",
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "чей",
+        "lemma": "чей",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 6,
+        "end": 9,
+        "token": "тот",
+        "lemma": "тот",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 13,
+        "token": "дом",
+        "lemma": "дом",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 15,
+        "end": 18,
+        "token": "Чей",
+        "lemma": "чей",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 19,
+        "end": 22,
+        "token": "тот",
+        "lemma": "тот",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 23,
+        "end": 30,
+        "token": "огоро́д",
+        "lemma": "огород",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 38,
+        "end": 47,
+        "token": "Сила́нтия",
+        "lemma": "силантий",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s041",
+      "text": "У Сила́нтия Кузьмича́ есть ла́вка, дом и огоро́д.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "огоро́д",
+        "gloss": "огоро́д: капу́ста",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-ogorod"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 12,
+        "end": 21,
+        "token": "Кузьмича́",
+        "lemma": "кузьмич",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (after 'у' → gent); reviewed by the writer"
+       },
+       {
+        "start": 35,
+        "end": 38,
+        "token": "дом",
+        "lemma": "дом",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 41,
+        "end": 48,
+        "token": "огоро́д",
+        "lemma": "огород",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s042",
+      "text": "Он хозя́ин ла́вки, хозя́ин до́ма и хозя́ин огоро́да.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "хозя́ин",
+        "gloss": "Пётр — хозя́ин избы́",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-khozyain"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 11,
+        "end": 17,
+        "token": "ла́вки",
+        "lemma": "лавка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 27,
+        "end": 32,
+        "token": "до́ма",
+        "lemma": "дом",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s043",
+      "text": "А в огоро́де…",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l03-img-korova-kapusta",
+        "src": "media/images/ru-mir-01-l03-img-korova-kapusta.webp",
+        "alt": "The Sokolovs' white cow stands in Silanty's cabbage garden munching; Silanty in his shop apron throws up his arms; Fyodor and Ivan lean over the fence.",
+        "status": "planned",
+        "art_brief": "A village vegetable garden behind a log shop, early May 1913. Rows of young cabbages, several eaten to stumps. A white cow with a brown patch chews a cabbage leaf, unconcerned. Silanty Kuzmich (about 50, trimmed beard, waistcoat, shop apron, boots) throws up his arms. At the wattle fence Fyodor (27, dark beard) and Ivan (19, fair) look on, Ivan almost laughing. No text.",
+        "characters": [
+         "char-silantij",
+         "char-fyodor",
+         "char-ivan"
+        ],
+        "covers_lexeme_ids": [
+         "ru-korova",
+         "ru-kapusta",
+         "ru-ogorod",
+         "ru-khozyain"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s044",
+      "text": "— Вот она́! — кричи́т Ива́н. — Вот на́ша коро́ва, на́ша бе́лая коро́ва!",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l03-s045",
+      "text": "Коро́ва стои́т и ест.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ест",
+        "gloss": "ест: хлеб, капу́ста…",
+        "gloss_kind": "example"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s046",
+      "text": "Вот коро́ва! А капу́сты нет!",
+      "pins": [
+       {
+        "start": 15,
+        "end": 23,
+        "token": "капу́сты",
+        "lemma": "капуста",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s047",
+      "text": "— Чужо́й огоро́д, чужа́я капу́ста… — говори́т Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Чужо́й",
+        "gloss": "чужо́й ↔ свой",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-chuzhoj",
+         "ru-svoj"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "Чужо́й",
+        "lemma": "чужой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 9,
+        "end": 16,
+        "token": "огоро́д",
+        "lemma": "огород",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s048",
+      "text": "А у своего́ огоро́да стои́т хозя́ин.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s049",
+      "text": "Э́то его́ огоро́д и его́ капу́ста.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       },
+       {
+        "start": 5,
+        "end": 9,
+        "token": "его́",
+        "lemma": "его",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 17,
+        "token": "огоро́д",
+        "lemma": "огород",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 20,
+        "end": 24,
+        "token": "его́",
+        "lemma": "его",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l03-x2-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "нет + genitive.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Коро́ва здесь. ↔ Коро́вы нет.",
+       "prompt": "Капу́ст___ нет.",
+       "answer": "ы"
+      },
+      "items": [
+       {
+        "prompt": "Коро́в___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ы"
+        ],
+        "explanation": "Коро́вы нет.",
+        "id": "x2-1-1"
+       },
+       {
+        "prompt": "Сосе́д___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Сосе́да нет.",
+        "id": "x2-1-2"
+       },
+       {
+        "prompt": "Рубл___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "я́"
+        ],
+        "explanation": "Рубля́ нет.",
+        "id": "x2-1-3"
+       },
+       {
+        "prompt": "Хле́б___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Хле́ба нет.",
+        "id": "x2-1-4"
+       },
+       {
+        "prompt": "Доск___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́"
+        ],
+        "explanation": "Доски́ нет.",
+        "id": "x2-1-5"
+       },
+       {
+        "prompt": "Окн___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́"
+        ],
+        "explanation": "Окна́ нет.",
+        "id": "x2-1-6"
+       },
+       {
+        "prompt": "Две́р___ нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Две́ри нет.",
+        "id": "x2-1-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x2-2",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́: есть → нет.",
+      "hint_en": "Negate: у X есть Y → у X нет + genitive.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "есть коро́ва → нет коро́вы",
+       "prompt": "У сосе́да есть коро́ва. →",
+       "answer": "У сосе́да нет коро́вы."
+      },
+      "items": [
+       {
+        "prompt": "У Сила́нтия есть капу́ста. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У Сила́нтия нет капу́сты.",
+         "У Сила́нтия капу́сты нет.",
+         "Капу́сты у Сила́нтия нет."
+        ],
+        "id": "x2-2-1"
+       },
+       {
+        "prompt": "У На́сти есть доска́. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У На́сти нет доски́.",
+         "У На́сти доски́ нет.",
+         "Доски́ у На́сти нет."
+        ],
+        "id": "x2-2-2"
+       },
+       {
+        "prompt": "У отца́ есть рубль. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У отца́ нет рубля́.",
+         "У отца́ рубля́ нет.",
+         "Рубля́ у отца́ нет."
+        ],
+        "id": "x2-2-3"
+       },
+       {
+        "prompt": "У меня́ есть хлеб. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У меня́ нет хле́ба.",
+         "У меня́ хле́ба нет.",
+         "Хле́ба у меня́ нет."
+        ],
+        "id": "x2-2-4"
+       },
+       {
+        "prompt": "У Фёдора есть дом. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У Фёдора нет до́ма.",
+         "У Фёдора до́ма нет.",
+         "До́ма у Фёдора нет."
+        ],
+        "id": "x2-2-5"
+       },
+       {
+        "prompt": "У де́да есть ико́на. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У де́да нет ико́ны.",
+         "У де́да ико́ны нет.",
+         "Ико́ны у де́да нет."
+        ],
+        "id": "x2-2-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x2-3",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь местоиме́ние в ну́жную фо́рму.",
+      "hint_en": "After у: у меня́, у тебя́; third-person pronouns add н-: у него́, у неё, у них.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "он → у него́ · она́ → у неё",
+       "prompt": "У ___ (он) есть ла́вка.",
+       "answer": "него́"
+      },
+      "items": [
+       {
+        "prompt": "У ___ (она́) есть коро́ва.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "неё"
+        ],
+        "id": "x2-3-1"
+       },
+       {
+        "prompt": "У ___ (я) нет рубля́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "меня́"
+        ],
+        "id": "x2-3-2"
+       },
+       {
+        "prompt": "У ___ (ты) есть доска́?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "тебя́"
+        ],
+        "id": "x2-3-3"
+       },
+       {
+        "prompt": "У ___ (они́) есть огоро́д.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "них"
+        ],
+        "id": "x2-3-4"
+       },
+       {
+        "prompt": "У ___ (кто) есть ла́вка?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кого́"
+        ],
+        "id": "x2-3-5"
+       },
+       {
+        "prompt": "У ___ (он) нет капу́сты.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "него́"
+        ],
+        "id": "x2-3-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x2-4",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть по те́ксту.",
+      "hint_en": "Answer from the story: у + genitive.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "У кого́? — У Сила́нтия.",
+       "prompt": "У кого́ есть ла́вка? — У ___.",
+       "answer": "Сила́нтия"
+      },
+      "items": [
+       {
+        "prompt": "Где нет на́шей коро́вы? — У ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сосе́да",
+         "це́ркви",
+         "шко́лы",
+         "сосе́да и у це́ркви",
+         "сосе́да, у це́ркви и у шко́лы"
+        ],
+        "id": "x2-4-1",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s030"
+        ]
+       },
+       {
+        "prompt": "Где сиди́т дед? — У ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "пе́чи"
+        ],
+        "id": "x2-4-2",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s014"
+        ]
+       },
+       {
+        "prompt": "Где стои́т оте́ц? — У ___ угла́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кра́сного"
+        ],
+        "id": "x2-4-3",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s013"
+        ]
+       },
+       {
+        "prompt": "Где сиди́т Ива́н? — У ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "окна́"
+        ],
+        "id": "x2-4-4",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s015"
+        ]
+       },
+       {
+        "prompt": "Где стои́т хозя́ин? — У своего́ ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "огоро́да"
+        ],
+        "id": "x2-4-5",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s048"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l03-sec3",
+    "title": "Два рубля́",
+    "segments": [
+     {
+      "id": "ru-mir-01-l03-s050",
+      "text": "— Чья коро́ва? — спра́шивает Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l03-s051",
+      "text": "— На́ша.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l03-s052",
+      "text": "— А чья капу́ста? Моя́! Своя́, не чужа́я!",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l03-s053",
+      "text": "У меня́ есть ла́вка, у меня́ есть огоро́д… и у меня́ нет капу́сты!",
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 34,
+        "end": 41,
+        "token": "огоро́д",
+        "lemma": "огород",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s054",
+      "text": "Капу́сты нет!",
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 0,
+        "end": 8,
+        "token": "Капу́сты",
+        "lemma": "капуста",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s055",
+      "text": "— Два рубля́! — говори́т Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "рубля́",
+        "gloss": "оди́н рубль, два рубля́",
+        "gloss_kind": "number",
+        "covers_lexeme_ids": [
+         "ru-rubl"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Два",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s056",
+      "text": "— Не три, не четы́ре — два! Де́ньги есть?",
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 5,
+        "end": 8,
+        "token": "три",
+        "lemma": "три",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 13,
+        "end": 20,
+        "token": "четы́ре",
+        "lemma": "четыре",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 23,
+        "end": 26,
+        "token": "два",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 28,
+        "end": 35,
+        "token": "Де́ньги",
+        "lemma": "деньга",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "nominative plural (Деньги? Вот деньги; Деньги есть?), reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s057",
+      "text": "Два рубля́? Но у Соколо́вых нет де́нег.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "нет де́нег",
+        "gloss": "де́ньги → нет де́нег",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-dengi"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 0,
+        "end": 3,
+        "token": "Два",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s058",
+      "text": "Вот и оте́ц, у две́ри ла́вки.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 22,
+        "end": 28,
+        "token": "ла́вки",
+        "lemma": "лавка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (after 'у' → gent); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s059",
+      "text": "Вот оди́н рубль, вот одна́ копе́йка, две копе́йки, три копе́йки, четы́ре копе́йки.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "копе́йка",
+        "gloss": "рубль, копе́йка: де́ньги",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-kopejka"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l03-img-dengi",
+        "src": "media/images/ru-mir-01-l03-img-dengi.webp",
+        "alt": "At the door of Silanty's shop Pyotr counts coins on his palm: one silver rouble and four copper kopecks; Silanty, Fyodor and Ivan watch.",
+        "status": "planned",
+        "art_brief": "Close view at the door of a village shop, early May 1913. Pyotr Sokolov (55, grey-brown beard, belted shirt) holds out his large rough palm with one silver rouble coin and four small copper kopeck coins of 1913. Silanty (shop apron) leans in to look; Fyodor (arms crossed, red in the face) and Ivan stand behind. No text other than the coin markings.",
+        "characters": [
+         "char-pyotr",
+         "char-silantij",
+         "char-fyodor"
+        ],
+        "covers_lexeme_ids": [
+         "ru-rubl",
+         "ru-kopejka",
+         "ru-dengi"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 4,
+        "end": 9,
+        "token": "оди́н",
+        "lemma": "один",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 15,
+        "token": "рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 37,
+        "end": 40,
+        "token": "две",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 41,
+        "end": 49,
+        "token": "копе́йки",
+        "lemma": "копейка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 51,
+        "end": 54,
+        "token": "три",
+        "lemma": "три",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 55,
+        "end": 63,
+        "token": "копе́йки",
+        "lemma": "копейка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 65,
+        "end": 72,
+        "token": "четы́ре",
+        "lemma": "четыре",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 73,
+        "end": 81,
+        "token": "копе́йки",
+        "lemma": "копейка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s060",
+      "text": "Рубль и четы́ре копе́йки — а не два рубля́.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 5,
+        "token": "Рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 8,
+        "end": 15,
+        "token": "четы́ре",
+        "lemma": "четыре",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 16,
+        "end": 24,
+        "token": "копе́йки",
+        "lemma": "копейка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 32,
+        "end": 35,
+        "token": "два",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s061",
+      "text": "— Рубль и три копе́йки… нет, четы́ре, — говори́т Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 2,
+        "end": 7,
+        "token": "Рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 13,
+        "token": "три",
+        "lemma": "три",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 14,
+        "end": 22,
+        "token": "копе́йки",
+        "lemma": "копейка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 29,
+        "end": 36,
+        "token": "четы́ре",
+        "lemma": "четыре",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s062",
+      "text": "— Де́ньги? Вот де́ньги, Сила́нтий Кузьми́ч, — говори́т оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 2,
+        "end": 9,
+        "token": "Де́ньги",
+        "lemma": "деньга",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "nominative plural (Деньги? Вот деньги; Деньги есть?), reviewed by the writer"
+       },
+       {
+        "start": 15,
+        "end": 22,
+        "token": "де́ньги",
+        "lemma": "деньга",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "nominative plural (Деньги? Вот деньги; Деньги есть?), reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s063",
+      "text": "— Рубль и четы́ре копе́йки. А второ́го рубля́ у меня́ нет.",
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "второ́го",
+        "gloss": "второ́й → второ́го",
+        "gloss_kind": "form"
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 7,
+        "token": "Рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 17,
+        "token": "четы́ре",
+        "lemma": "четыре",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 18,
+        "end": 26,
+        "token": "копе́йки",
+        "lemma": "копейка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 30,
+        "end": 38,
+        "token": "второ́го",
+        "lemma": "второй",
+        "feats": {
+         "pos": "ADJF",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (override); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s064",
+      "text": "— Ла́дно. Оди́н рубль — и два дня.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "дня",
+        "gloss": "день → два дня",
+        "gloss_kind": "form"
+       }
+      ],
+      "pins": [
+       {
+        "start": 10,
+        "end": 15,
+        "token": "Оди́н",
+        "lemma": "один",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 16,
+        "end": 21,
+        "token": "рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 26,
+        "end": 29,
+        "token": "два",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s065",
+      "text": "Фёдор у меня́, в огоро́де.",
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l03-s066",
+      "text": "— Я? Два дня? Почему́ я?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 5,
+        "end": 8,
+        "token": "Два",
+        "lemma": "два",
+        "feats": {
+         "pos": "NUMR",
+         "case": "nomn"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s067",
+      "text": "— Потому́ что ты большо́й.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 10,
+        "end": 13,
+        "token": "что",
+        "lemma": "что",
+        "feats": {
+         "pos": "NPRO",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 17,
+        "end": 25,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s068",
+      "text": "— А Ива́н?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l03-s069",
+      "text": "— А у Ива́на — доска́.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l03-s070",
+      "text": "Фёдор не говори́т.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s071",
+      "text": "Он кра́сный, о́чень кра́сный.",
+      "pins": [
+       {
+        "start": 3,
+        "end": 11,
+        "token": "кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 20,
+        "end": 28,
+        "token": "кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s072",
+      "text": "У Сила́нтия есть ла́вка, дом и огоро́д. А Фёдор — у Сила́нтия, в огоро́де.",
+      "pins": [
+       {
+        "start": 25,
+        "end": 28,
+        "token": "дом",
+        "lemma": "дом",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 31,
+        "end": 38,
+        "token": "огоро́д",
+        "lemma": "огород",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s073",
+      "text": "Коро́ва во дворе́, а семья́ в избе́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s074",
+      "text": "— Ма́ма, коро́ва здесь! — кричи́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l03-s075",
+      "text": "Мать у пе́чи.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s076",
+      "text": "— Здесь, здесь… А где рубль? — спра́шивает она́.",
+      "paragraph_start": true,
+      "speaker": "char-marya",
+      "pins": [
+       {
+        "start": 22,
+        "end": 27,
+        "token": "рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s077",
+      "text": "— Ма́ма, рубль — у Сила́нтия!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 9,
+        "end": 14,
+        "token": "рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s078",
+      "text": "Вот кра́сный у́гол, вот ико́на, вот оте́ц.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 4,
+        "end": 12,
+        "token": "кра́сный",
+        "lemma": "красный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 13,
+        "end": 18,
+        "token": "у́гол",
+        "lemma": "угол",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s079",
+      "text": "— Своя́ коро́ва, чужа́я капу́ста… — говори́т он.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l03-s080",
+      "text": "— Коро́ва на́ша, а рубль — Сила́нтия.",
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 19,
+        "end": 24,
+        "token": "рубль",
+        "lemma": "рубль",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 27,
+        "end": 36,
+        "token": "Сила́нтия",
+        "lemma": "силантий",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "sing"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s081",
+      "text": "— А воро́та чьи? А вина́ чья? — спра́шивает дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej",
+      "pins": [
+       {
+        "start": 12,
+        "end": 15,
+        "token": "чьи",
+        "lemma": "чей",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-s082",
+      "text": "А Ша́рик спит.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l03-s083",
+      "text": "Ша́рик не винова́т, и он зна́ет."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l03-x3-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "2, 3, 4 + genitive singular.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "оди́н рубль → два рубля́ · одна́ копе́йка → две копе́йки",
+       "prompt": "два рубл___",
+       "answer": "я́"
+      },
+      "items": [
+       {
+        "prompt": "три копе́йк___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "три копе́йки",
+        "id": "x3-1-1"
+       },
+       {
+        "prompt": "четы́ре копе́йк___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "четы́ре копе́йки",
+        "id": "x3-1-2"
+       },
+       {
+        "prompt": "два сосе́д___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "два сосе́да",
+        "id": "x3-1-3"
+       },
+       {
+        "prompt": "три коро́в___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ы"
+        ],
+        "explanation": "три коро́вы",
+        "id": "x3-1-4"
+       },
+       {
+        "prompt": "две ико́н___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ы"
+        ],
+        "explanation": "две ико́ны",
+        "id": "x3-1-5"
+       },
+       {
+        "prompt": "два до́м___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "два до́ма",
+        "id": "x3-1-6"
+       },
+       {
+        "prompt": "четы́ре окн___",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́"
+        ],
+        "explanation": "четы́ре окна́",
+        "id": "x3-1-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x3-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму: два и́ли две?",
+      "hint_en": "два + м./ср., две + ж.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "два рубля́ · две копе́йки",
+       "prompt": "___ копе́йки (2)",
+       "answer": "две"
+      },
+      "items": [
+       {
+        "prompt": "___ рубля́ (2)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "два"
+        ],
+        "id": "x3-2-1"
+       },
+       {
+        "prompt": "___ коро́вы (2)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "две"
+        ],
+        "id": "x3-2-2"
+       },
+       {
+        "prompt": "___ окна́ (2)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "два"
+        ],
+        "id": "x3-2-3"
+       },
+       {
+        "prompt": "___ ико́ны (2)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "две"
+        ],
+        "id": "x3-2-4"
+       },
+       {
+        "prompt": "___ сосе́да (2)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "два"
+        ],
+        "id": "x3-2-5"
+       },
+       {
+        "prompt": "___ избы́ (2)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "две"
+        ],
+        "id": "x3-2-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x3-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Соедини́ два предложе́ния: потому́ что.",
+      "hint_en": "Join with потому́ что (because).",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "…, потому́ что …",
+       "prompt": "У́гол кра́сный. Там ико́на. (потому́ что)",
+       "answer": "У́гол кра́сный, потому́ что там ико́на."
+      },
+      "items": [
+       {
+        "prompt": "У Сила́нтия нет капу́сты. Коро́ва в огоро́де. (потому́ что)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "У Сила́нтия нет капу́сты, потому́ что коро́ва в огоро́де."
+        ],
+        "id": "x3-3-1"
+       },
+       {
+        "prompt": "Фёдор у Сила́нтия. У отца́ оди́н рубль, а не два. (потому́ что)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдор у Сила́нтия, потому́ что у отца́ оди́н рубль, а не два."
+        ],
+        "id": "x3-3-2"
+       },
+       {
+        "prompt": "Сила́нтий — хозя́ин. У него́ есть ла́вка и огоро́д. (потому́ что)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Сила́нтий — хозя́ин, потому́ что у него́ есть ла́вка и огоро́д."
+        ],
+        "id": "x3-3-3"
+       },
+       {
+        "prompt": "Капу́сты нет. Коро́ва в огоро́де. (потому́ что)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Капу́сты нет, потому́ что коро́ва в огоро́де."
+        ],
+        "id": "x3-3-4"
+       },
+       {
+        "prompt": "Дом Сила́нтия большо́й. Он хозя́ин ла́вки. (потому́ что)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Дом Сила́нтия большо́й, потому́ что он хозя́ин ла́вки."
+        ],
+        "id": "x3-3-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x3-4",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть: свой и́ли чужо́й?",
+      "hint_en": "свой (one's own) ↔ чужо́й (someone else's): choose by meaning and make it agree.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "своя́ коро́ва ↔ чужа́я капу́ста",
+       "prompt": "Э́то не на́ша капу́ста, э́то ___ капу́ста.",
+       "answer": "чужа́я"
+      },
+      "items": [
+       {
+        "prompt": "Сила́нтий говори́т: «Э́то моя́ капу́ста, ___, не чужа́я!»",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "своя́"
+        ],
+        "id": "x3-4-1"
+       },
+       {
+        "prompt": "Фёдор говори́т: «Э́то не наш огоро́д, э́то ___ огоро́д».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "чужо́й"
+        ],
+        "id": "x3-4-2"
+       },
+       {
+        "prompt": "У Соколо́вых есть ___ дом.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "свой"
+        ],
+        "id": "x3-4-3"
+       },
+       {
+        "prompt": "Коро́ва Соколо́вых в огоро́де Сила́нтия: для неё огоро́д ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "чужо́й"
+        ],
+        "id": "x3-4-4"
+       },
+       {
+        "prompt": "Э́то не твоя́ доска́, э́то ___ доска́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "чужа́я"
+        ],
+        "id": "x3-4-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-napishi",
+      "type": "napishi",
+      "title": "Напиши́",
+      "mode": "productive",
+      "prompt": "Что у тебя́ есть? Чего́ у тебя́ нет? Чей э́то дом? Напиши́.",
+      "length_hint": "3–5 предложе́ний",
+      "hint_en": "Write 3–5 sentences: what you have and do not have, and whose things are whose.",
+      "model_answers": [
+       "У меня́ есть дом и огоро́д. Но у меня́ нет коро́вы. Э́то дом отца́. У отца́ есть ла́вка, а у меня́ нет ла́вки.",
+       "У меня́ есть брат и сестра́. У сестры́ есть доска́, а у бра́та нет доски́. Э́то изба́ де́да: у де́да есть печь и две ико́ны."
+      ],
+      "rubric": [
+       "у + genitive + есть (у меня́ есть, у отца́ есть)",
+       "нет + genitive (нет коро́вы, нет рубля́)",
+       "whose: noun + genitive (дом отца́, изба́ де́да)"
+      ],
+      "rubric_lang": "en",
+      "key_terms": [
+       "ru-u",
+       "ru-byt",
+       "ru-net"
+      ],
+      "typical_errors": [
+       {
+        "wrong": "У меня́ нет коро́ва.",
+        "right": "У меня́ нет коро́вы.",
+        "note": "нет + genitive",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "У он есть дом.",
+        "right": "У него́ есть дом.",
+        "note": "after у: него́, неё, них",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "дом оте́ца",
+        "right": "дом отца́",
+        "note": "оте́ц → отца́ (the е drops)",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "две рубля́",
+        "right": "два рубля́",
+        "note": "рубль is masculine: два",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Я есть дом.",
+        "right": "У меня́ есть дом.",
+        "note": "'I have' = у меня́ есть",
+        "note_lang": "en"
+       }
+      ],
+      "elicits": [
+       "G03",
+       "G02"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "words_with_history": {
+  "title": "Слова́ с исто́рией",
+  "word": "хозя́ин",
+  "text": [
+   "Пётр Матве́евич — хозя́ин избы́. Сила́нтий Кузьми́ч — хозя́ин ла́вки, до́ма и огоро́да.",
+   "А Ма́рья Степа́новна смо́трит и говори́т: «Хозя́ин? Хозя́йка до́ма — коро́ва!»"
+  ],
+  "proverb": "Без хозя́ина дом — сирота́.",
+  "lexeme_ids": [
+   "ru-khozyain"
+  ],
+  "note_en": "Хозя́ин is the master of a household, the owner of a shop, the host of a guest; хозя́йка is the woman of the house. The proverb: 'without its master a house is an orphan'."
+ },
+ "grammar": {
+  "title": "У кого́? Чей?",
+  "rule": "коро́ва → у коро́вы, нет коро́вы · сосе́д → у сосе́да · печь → у пе́чи · окно́ → у окна́ · он → у него́ · два рубля́, две копе́йки",
+  "tables": [
+   {
+    "caption": "кто? что? → у кого́? у чего́?",
+    "header": [
+     "кто? что?",
+     "у кого́? нет чего́?"
+    ],
+    "rows": [
+     [
+      "сосе́д",
+      "у сосе́да"
+     ],
+     [
+      "рубль",
+      "нет рубля́"
+     ],
+     [
+      "оте́ц",
+      "у отца́"
+     ],
+     [
+      "Сила́нтий",
+      "у Сила́нтия"
+     ],
+     [
+      "коро́ва",
+      "нет коро́вы"
+     ],
+     [
+      "копе́йка",
+      "нет копе́йки"
+     ],
+     [
+      "печь",
+      "у пе́чи"
+     ],
+     [
+      "це́рковь",
+      "у це́ркви"
+     ],
+     [
+      "окно́",
+      "у окна́"
+     ]
+    ]
+   },
+   {
+    "caption": "твоя́ коро́ва → нет твое́й коро́вы",
+    "header": [
+     "кто? что?",
+     "чего́? кого́?"
+    ],
+    "rows": [
+     [
+      "кра́сный у́гол",
+      "у кра́сного угла́"
+     ],
+     [
+      "свой огоро́д",
+      "у своего́ огоро́да"
+     ],
+     [
+      "наш дом",
+      "у на́шего до́ма"
+     ],
+     [
+      "твоя́ коро́ва",
+      "нет твое́й коро́вы"
+     ],
+     [
+      "на́ша изба́",
+      "у на́шей избы́"
+     ]
+    ]
+   },
+   {
+    "caption": "я → у меня́",
+    "header": [
+     "кто?",
+     "у кого́?"
+    ],
+    "rows": [
+     [
+      "я",
+      "у меня́"
+     ],
+     [
+      "ты",
+      "у тебя́"
+     ],
+     [
+      "он",
+      "у него́"
+     ],
+     [
+      "она́",
+      "у неё"
+     ],
+     [
+      "они́",
+      "у них"
+     ],
+     [
+      "кто",
+      "у кого́"
+     ]
+    ]
+   },
+   {
+    "caption": "1 · 2 · 3 · 4",
+    "header": [
+     "1",
+     "2 · 3 · 4"
+    ],
+    "rows": [
+     [
+      "оди́н рубль",
+      "два, три, четы́ре рубля́"
+     ],
+     [
+      "одна́ копе́йка",
+      "две, три, четы́ре копе́йки"
+     ],
+     [
+      "оди́н дом",
+      "два до́ма"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "ru-mir-01-l03-s013"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s014"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s003"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s030"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s041"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s042"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s055"
+   },
+   {
+    "segment_id": "ru-mir-01-l03-s059"
+   }
+  ],
+  "note_en": "The genitive answers 'whose?' and 'of what?': изба́ отца́, хозя́ин ла́вки. It follows у ('at, by'; у меня́ есть = I have) and нет ('there is no': коро́вы нет). Endings: м./ср. -а/-я, ж. -ы/-и. After 2, 3, 4 a noun stands in the genitive singular (два рубля́, две копе́йки). Third-person pronouns add н- after у: у него́, у неё, у них."
+ },
+ "pensa": {
+  "A": {
+   "id": "ru-mir-01-l03-pa",
+   "title": "Пе́нсум A — Фо́рмы",
+   "blocks": [
+    {
+     "obrazec": {
+      "prompt": "У ___ есть соба́ка. (сосе́д)",
+      "answer": "сосе́да"
+     },
+     "items": [
+      {
+       "prompt": "У ___ есть ла́вка. (Сила́нтий)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "Сила́нтия"
+       ],
+       "choices": [
+        "Сила́нтий",
+        "Сила́нтия"
+       ],
+       "id": "a1",
+       "source_segment_ids": [
+        "ru-mir-01-l03-s041"
+       ]
+      },
+      {
+       "prompt": "___ нет! (коро́ва)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "Коро́вы"
+       ],
+       "choices": [
+        "Коро́ва",
+        "Коро́вы"
+       ],
+       "id": "a2",
+       "source_segment_ids": [
+        "ru-mir-01-l03-s003"
+       ]
+      },
+      {
+       "prompt": "Э́то изба́ ___. (оте́ц)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "отца́"
+       ],
+       "choices": [
+        "оте́ц",
+        "оте́ца",
+        "отца́"
+       ],
+       "id": "a3"
+      },
+      {
+       "prompt": "У ___ есть доска́. (она́)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "неё"
+       ],
+       "choices": [
+        "она́",
+        "её",
+        "неё"
+       ],
+       "id": "a4"
+      },
+      {
+       "prompt": "два ___ (рубль)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "рубля́"
+       ],
+       "choices": [
+        "рубль",
+        "рубля́"
+       ],
+       "id": "a5"
+      },
+      {
+       "prompt": "___ копе́йки (2)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "две"
+       ],
+       "choices": [
+        "два",
+        "две"
+       ],
+       "id": "a6"
+      },
+      {
+       "prompt": "У сосе́да нет ___. (коро́ва)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "коро́вы"
+       ],
+       "id": "a7"
+      },
+      {
+       "prompt": "___ вина́? (чей)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Чья"
+       ],
+       "id": "a8"
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "Изба́ ___. (ста́рый)",
+      "answer": "ста́рая"
+     },
+     "items": [
+      {
+       "prompt": "Печь ___, а дом ___. (бе́лый, ста́рый)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "blanks": [
+        [
+         "бе́лая"
+        ],
+        [
+         "ста́рый"
+        ]
+       ],
+       "recall_of": "G01",
+       "id": "a9"
+      },
+      {
+       "prompt": "Окно́ ___, а ико́на то́же ___. (ма́ленький)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "blanks": [
+        [
+         "ма́ленькое"
+        ],
+        [
+         "ма́ленькая"
+        ]
+       ],
+       "recall_of": "G01",
+       "id": "a10"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "ru-mir-01-l03-pb",
+   "title": "Пе́нсум B — Слова́",
+   "word_bank": [
+    "бе́лый",
+    "дверь",
+    "ико́на",
+    "капу́ста",
+    "коро́ва",
+    "кра́сный",
+    "ла́вка",
+    "огоро́д",
+    "окно́",
+    "печь",
+    "рубль",
+    "сосе́д",
+    "хозя́ин",
+    "чужо́й"
+   ],
+   "items": [
+    {
+     "prompt": "Хлеб в избе́, а ___ — в огоро́де.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "капу́ста",
+      "коро́ва"
+     ],
+     "id": "b1"
+    },
+    {
+     "prompt": "У Соколо́вых есть ___: она́ во дворе́, и она́ бе́лая.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "коро́ва"
+     ],
+     "id": "b2"
+    },
+    {
+     "prompt": "Ла́вка Сила́нтия. Сила́нтий — её ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "хозя́ин"
+     ],
+     "id": "b3"
+    },
+    {
+     "prompt": "Э́то не наш дом, э́то дом ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "сосе́да",
+      "хозя́ина"
+     ],
+     "id": "b4"
+    },
+    {
+     "prompt": "Изба́ ма́ленькая, но ___ больша́я и бе́лая: у неё сиди́т дед.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "печь"
+     ],
+     "id": "b5"
+    },
+    {
+     "prompt": "Копе́йка ма́ленькая, а ___ большо́й.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "рубль"
+     ],
+     "id": "b6"
+    },
+    {
+     "prompt": "У избы́ есть дверь и ___: оно́ ма́ленькое.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "окно́"
+     ],
+     "id": "b7"
+    },
+    {
+     "prompt": "Э́то не на́ша капу́ста, она́ ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "чужа́я"
+     ],
+     "id": "b8"
+    },
+    {
+     "prompt": "Кра́сный у́гол — там ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ико́на"
+     ],
+     "id": "b9"
+    }
+   ]
+  },
+  "C": {
+   "id": "ru-mir-01-l03-pc",
+   "title": "Пе́нсум C — Вопро́сы",
+   "items": [
+    {
+     "prompt": "Мать во дворе́ кричи́т: «___»",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Коро́вы нет! Где на́ша коро́ва?",
+     "model_answers": [
+      "Коро́вы нет! Где на́ша коро́ва?",
+      "Коро́вы нет!"
+     ],
+     "rubric": "She cries that the cow is not there.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-korova",
+      "ru-net"
+     ],
+     "id": "c1",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s005"
+     ]
+    },
+    {
+     "prompt": "Кто где в избе́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Оте́ц у кра́сного угла́, дед у пе́чи, Ива́н у окна́.",
+     "model_answers": [
+      "Оте́ц у кра́сного угла́, дед у пе́чи, Ива́н у окна́.",
+      "Дед у пе́чи, а Ива́н у окна́."
+     ],
+     "rubric": "At least two people with у + genitive (у пе́чи, у окна́, у кра́сного угла́).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-u"
+     ],
+     "id": "c2",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s012"
+     ]
+    },
+    {
+     "prompt": "Почему́ у́гол «кра́сный»?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Потому́ что там ико́на.",
+     "model_answers": [
+      "Потому́ что там ико́на.",
+      "У́гол кра́сный, потому́ что там ико́на."
+     ],
+     "rubric": "Because the icon is there ('red' meant 'beautiful').",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-ph-potomu-chto",
+      "ru-ikona"
+     ],
+     "id": "c3",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s018"
+     ]
+    },
+    {
+     "prompt": "Где нет на́шей коро́вы? А где она́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "У сосе́да на́шей коро́вы нет, и у це́ркви нет. Она́ в огоро́де Сила́нтия.",
+     "model_answers": [
+      "У сосе́да на́шей коро́вы нет, и у це́ркви нет. Она́ в огоро́де Сила́нтия."
+     ],
+     "rubric": "Not at the neighbour's or the church; in Silanty's garden.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-sosed",
+      "ru-ogorod"
+     ],
+     "id": "c4",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s030"
+     ]
+    },
+    {
+     "prompt": "Чья капу́ста? Чей огоро́д?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Сила́нтия.",
+     "model_answers": [
+      "Сила́нтия.",
+      "Э́то капу́ста и огоро́д Сила́нтия Кузьмича́."
+     ],
+     "rubric": "Silanty's (genitive: Сила́нтия).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-chej"
+     ],
+     "id": "c5",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s039"
+     ]
+    },
+    {
+     "prompt": "Что у отца́ есть? — У отца́ ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "рубль и четы́ре копе́йки",
+      "оди́н рубль и четы́ре копе́йки",
+      "есть рубль и четы́ре копе́йки",
+      "есть оди́н рубль и четы́ре копе́йки"
+     ],
+     "id": "c6",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s060"
+     ]
+    },
+    {
+     "prompt": "Почему́ Фёдор у Сила́нтия, в огоро́де?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Потому́ что у отца́ оди́н рубль, а не два.",
+     "model_answers": [
+      "Потому́ что у отца́ оди́н рубль, а не два."
+     ],
+     "rubric": "Because the family has no money: only one rouble, not two.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-dengi",
+      "ru-rubl"
+     ],
+     "id": "c7",
+     "source_segment_ids": [
+      "ru-mir-01-l03-s064"
+     ]
+    },
+    {
+     "prompt": "А ты? Что у тебя́ есть? Чего́ у тебя́ нет?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "У меня́ есть дом, но у меня́ нет коро́вы.",
+     "model_answers": [
+      "У меня́ есть дом, но у меня́ нет коро́вы.",
+      "У меня́ есть сестра́ и соба́ка, а огоро́да у меня́ нет."
+     ],
+     "rubric": "One thing you have (у меня́ есть …) and one you do not (у меня́ нет + genitive).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-u",
+      "ru-byt"
+     ],
+     "id": "c8"
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "ru-izba",
+   "citation_form": "изба́",
+   "part_of_speech": "noun",
+   "current_sense": "peasant house, izba",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-pech",
+   "citation_form": "печь",
+   "part_of_speech": "noun",
+   "current_sense": "(Russian) stove",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-ugol",
+   "citation_form": "у́гол",
+   "part_of_speech": "noun",
+   "current_sense": "corner",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-ph-krasnyj-ugol",
+   "citation_form": "кра́сный у́гол",
+   "part_of_speech": "phrase",
+   "current_sense": "icon corner (the 'beautiful corner')",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ikona",
+   "citation_form": "ико́на",
+   "part_of_speech": "noun",
+   "current_sense": "icon",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-krasnyj",
+   "citation_form": "кра́сный",
+   "part_of_speech": "adj",
+   "current_sense": "red; (old) beautiful",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-okno",
+   "citation_form": "окно́",
+   "part_of_speech": "noun",
+   "current_sense": "window",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-dver",
+   "citation_form": "дверь",
+   "part_of_speech": "noun",
+   "current_sense": "door",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-vorota",
+   "citation_form": "воро́та",
+   "part_of_speech": "noun",
+   "current_sense": "gate",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "pl"
+  },
+  {
+   "lexeme_id": "ru-korova",
+   "citation_form": "коро́ва",
+   "part_of_speech": "noun",
+   "current_sense": "cow",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-ogorod",
+   "citation_form": "огоро́д",
+   "part_of_speech": "noun",
+   "current_sense": "vegetable garden",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-kapusta",
+   "citation_form": "капу́ста",
+   "part_of_speech": "noun",
+   "current_sense": "cabbage",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-lavka",
+   "citation_form": "ла́вка",
+   "part_of_speech": "noun",
+   "current_sense": "(village) shop",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-khozyain",
+   "citation_form": "хозя́ин",
+   "part_of_speech": "noun",
+   "current_sense": "master, owner, head of household",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-sosed",
+   "citation_form": "сосе́д",
+   "part_of_speech": "noun",
+   "current_sense": "neighbour",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-vina",
+   "citation_form": "вина́",
+   "part_of_speech": "noun",
+   "current_sense": "fault, guilt",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-u",
+   "citation_form": "у",
+   "part_of_speech": "prep",
+   "current_sense": "at, by; (у + gen есть) to have",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-byt",
+   "citation_form": "быть",
+   "part_of_speech": "verb",
+   "current_sense": "to be; есть = there is; у меня́ есть = I have",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-dengi",
+   "citation_form": "де́ньги",
+   "part_of_speech": "noun",
+   "current_sense": "money",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "pl"
+  },
+  {
+   "lexeme_id": "ru-rubl",
+   "citation_form": "рубль",
+   "part_of_speech": "noun",
+   "current_sense": "rouble",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-kopejka",
+   "citation_form": "копе́йка",
+   "part_of_speech": "noun",
+   "current_sense": "kopeck",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-chej",
+   "citation_form": "чей",
+   "part_of_speech": "pron",
+   "current_sense": "whose",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-svoj",
+   "citation_form": "свой",
+   "part_of_speech": "pron",
+   "current_sense": "one's own",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-chuzhoj",
+   "citation_form": "чужо́й",
+   "part_of_speech": "adj",
+   "current_sense": "someone else's, alien",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ph-potomu-chto",
+   "citation_form": "потому́ что",
+   "part_of_speech": "phrase",
+   "current_sense": "because",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-odin",
+   "citation_form": "оди́н",
+   "part_of_speech": "num",
+   "current_sense": "one",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-dva",
+   "citation_form": "два",
+   "part_of_speech": "num",
+   "current_sense": "two",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-tri",
+   "citation_form": "три",
+   "part_of_speech": "num",
+   "current_sense": "three",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-chetyre",
+   "citation_form": "четы́ре",
+   "part_of_speech": "num",
+   "current_sense": "four",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pochemu",
+   "citation_form": "почему́",
+   "part_of_speech": "adv",
+   "current_sense": "why",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-dom",
+   "citation_form": "дом",
+   "part_of_speech": "noun",
+   "current_sense": "house, home",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-belyj",
+   "citation_form": "бе́лый",
+   "part_of_speech": "adj",
+   "current_sense": "white",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-iskat",
+   "citation_form": "иска́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to look for, search",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-tot",
+   "citation_form": "тот",
+   "part_of_speech": "pron",
+   "current_sense": "that (one)",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-mama",
+   "citation_form": "ма́ма",
+   "part_of_speech": "noun",
+   "current_sense": "mum, mother",
+   "first_introduced_lesson": "ru-mir-01-l03",
+   "new": true,
+   "gender": "f"
+  }
+ ],
+ "media": {
+  "status": "partial",
+  "cover": "ru-mir-01-l03-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 3,
+   "margin_diagram": 1,
+   "margin_gloss": 18
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-03/silero/manifest.json",
+    "default": true
+   }
+  ]
+ },
+ "completion": {
+  "button_label": "Гото́во"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "ru-mir-01",
+   "glava-03",
+   "chast-1"
+  ]
+ },
+ "metrics": {
+  "running_words": 487,
+  "sentences": 83,
+  "word_target": 550,
+  "word_window": [
+   495,
+   605
+  ]
+ }
+}

@@ -1,0 +1,3938 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "ru-mir-01-l02",
+ "course_id": "ru-mir-01",
+ "order": 2,
+ "title": "Семья́ Соколо́вых",
+ "part": 1,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "0.1.0-pilot",
+ "provenance": {
+  "author": "pilot writer (Claude, model-written)",
+  "model": "claude-opus-5-5",
+  "prompt": "prompts/russian-block-writer-brief.md; content/ru/plan/chapters.json row 2; docs/russian-mir-lesson-shape.md",
+  "review_required": "Codex cross-model review (applied, see docs/reviews/russian-pilot-log-2026-10-18.md) and native-speaker review before text_status: reviewed",
+  "notes": [
+   "Verbless in principle (LLPSI cap. II); the action runs on the G02 whitelist of 3rd-person present verbs (говори́т, кричи́т, пла́чет, сиди́т, стои́т, лежи́т, смо́трит, спит, и́щет, зна́ет, спра́шивает, отвеча́ет), each glossed at first use and declared incidental. No accusative (G04): nobody looks *at* anything; смо́трит stands alone.",
+   "In this household Шарик sleeps on straw in the yard (во дворе́), not under the table; the cover brief shows him at the open door.",
+   "Planted: «Царь не зна́ет» (Дед, comic here) is the Глава 29 theme «the Tsar does not know»; Ivan cannot read «Росси́я» on Nastya's slate (Главы 5–6); Pyotr makes Ivan mend the slate (Глава 3 opens with it).",
+   "Pensum C has no «Почему́?» item although the checker asks for one from Глава 2: почему́ is a Глава 3 lexeme (Codex: using it here would be unlicensed); the «why» question is «Где доска́? Кто винова́т?».",
+   "Warnings left, with reasons: gloss density 4.1/100 (every whitelisted verb is glossed at its first use, as the brief requires); prior coverage 46.6% (bootstrap floor 60%): Глава 2 introduces the household, the pronouns and the possessives at once (35 planned lexemes, 23 of them known to the owner per plan/baseline.json), and its incidental verbs count as aided, not prior; Pensum A a10 recalls G01 one chapter back, as plan/recall.json prescribes for Глава 2 (the checker expects 2–6); new-cluster in 6 sentences (household introductions); stress-unverified by design.",
+   "Words used once with a gloss in their segment (Часть 1 has no open slots, so they are not lexemes): полови́на (= ½), соло́ма, тесноте́/оби́де (proverb), двена́дцать, бу́квы (Глава 5 lexeme)."
+  ],
+  "review_questions": [
+   {
+    "quote": "Э́то царь.",
+    "question": "[?] Material culture: a small printed portrait of the Tsar in a peasant izba of 1913 (common beside icons?), Nastya's school slate in a wooden frame, and the dog's straw bed in the yard are assumed for this household; please confirm or correct.",
+    "segment_id": "ru-mir-01-l02-s028"
+   },
+   {
+    "quote": "В тесноте́, да не в оби́де",
+    "question": "Proverb at a crowded supper table: natural for a peasant father in 1913?",
+    "segment_id": "ru-mir-01-l02-s004"
+   },
+   {
+    "quote": "Ты, сын. Ты большо́й.",
+    "question": "Father assigning the mending ('you are big, you do it'): does «Ты большо́й» read as 'you're the grown-up one' here?",
+    "segment_id": "ru-mir-01-l02-s075"
+   },
+   {
+    "quote": "о́чень винова́тый",
+    "question": "«Он … о́чень винова́тый» for a guilty-looking dog (long form as predicate): natural colloquial, or «вид у него́ винова́тый» (genitive construction, Глава 3)?",
+    "segment_id": "ru-mir-01-l02-s065"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G02",
+  "primary_new_grammar": {
+   "id": "G02",
+   "label": "Nominative plural (-ы/-и/-а) of nouns and adjectives; кто? что? какой?; он/она/оно/они; мой/твой/наш, этот (nom.)",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01"
+  ],
+  "incidental": [
+   {
+    "form": "говори́т, спра́шивает, отвеча́ет, кричи́т, пла́чет, пла́чут, сиди́т, стои́т, лежи́т, смо́трит, спит, и́щет, зна́ет — 3rd-person present from the G02 whitelist (glossed, never tested)"
+   },
+   {
+    "form": "зна́ю, зна́ешь — present of знать, baseline-licensed (Не зна́ю)"
+   },
+   {
+    "form": "Соколо́вых — surname genitive plural chunk (L02), glossed"
+   },
+   {
+    "form": "Кто винова́т? винова́т, винова́ты — short-adjective chunk (L04)"
+   },
+   {
+    "form": "В семье́ и ка́ша гу́ще — the plan's proverb, shown only in Слова с историей (receptive, translated in its note)"
+   }
+  ],
+  "new_lexeme_ids": [
+   "ru-semya",
+   "ru-otets",
+   "ru-mat",
+   "ru-syn",
+   "ru-doch",
+   "ru-brat",
+   "ru-sestra",
+   "ru-ded",
+   "ru-zhena",
+   "ru-rebyonok",
+   "ru-sobaka",
+   "ru-stol",
+   "ru-khleb",
+   "ru-tsar",
+   "ru-doska",
+   "ru-dvor",
+   "ru-kto",
+   "ru-chto",
+   "ru-kakoj",
+   "ru-ya",
+   "ru-ty",
+   "ru-on",
+   "ru-ona",
+   "ru-oni",
+   "ru-moj",
+   "ru-tvoj",
+   "ru-nash",
+   "ru-etot",
+   "ru-ego",
+   "ru-eyo",
+   "ru-ikh",
+   "ru-ochen",
+   "ru-razbityj",
+   "ru-ono",
+   "ru-vinovatyj"
+  ],
+  "recycle_lexeme_ids": [
+   "ru-eto",
+   "ru-vot",
+   "ru-gde",
+   "ru-zdes",
+   "ru-tam",
+   "ru-bolshoj",
+   "ru-malenkij",
+   "ru-staryj",
+   "ru-novyj",
+   "ru-shkola",
+   "ru-derevnya",
+   "ru-ne",
+   "ru-a",
+   "ru-no",
+   "ru-khorosho"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "ru-semya",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-otets",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-mat",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-syn",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-doch",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-brat",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-sestra",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-ded",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-zhena",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-rebyonok",
+    "how": "picture(svg)+context",
+    "segment_id": "ru-mir-01-l02-s001"
+   },
+   {
+    "lexeme_id": "ru-sobaka",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l02-s061"
+   },
+   {
+    "lexeme_id": "ru-stol",
+    "how": "picture(cover)+context",
+    "segment_id": "ru-mir-01-l02-s003"
+   },
+   {
+    "lexeme_id": "ru-khleb",
+    "how": "picture(cover)+context",
+    "segment_id": "ru-mir-01-l02-s006"
+   },
+   {
+    "lexeme_id": "ru-tsar",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l02-s028"
+   },
+   {
+    "lexeme_id": "ru-doska",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l02-s033"
+   },
+   {
+    "lexeme_id": "ru-dvor",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l02-s061"
+   },
+   {
+    "lexeme_id": "ru-kto",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s067"
+   },
+   {
+    "lexeme_id": "ru-chto",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s010"
+   },
+   {
+    "lexeme_id": "ru-kakoj",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s037"
+   },
+   {
+    "lexeme_id": "ru-ya",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s050"
+   },
+   {
+    "lexeme_id": "ru-ty",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s080"
+   },
+   {
+    "lexeme_id": "ru-on",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s013"
+   },
+   {
+    "lexeme_id": "ru-ona",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s010"
+   },
+   {
+    "lexeme_id": "ru-oni",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s017"
+   },
+   {
+    "lexeme_id": "ru-moj",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s045"
+   },
+   {
+    "lexeme_id": "ru-tvoj",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s042"
+   },
+   {
+    "lexeme_id": "ru-nash",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s006"
+   },
+   {
+    "lexeme_id": "ru-etot",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s046"
+   },
+   {
+    "lexeme_id": "ru-ego",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s018"
+   },
+   {
+    "lexeme_id": "ru-eyo",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s025"
+   },
+   {
+    "lexeme_id": "ru-ikh",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s019"
+   },
+   {
+    "lexeme_id": "ru-ochen",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s013"
+   },
+   {
+    "lexeme_id": "ru-razbityj",
+    "how": "picture(vignette)+context",
+    "segment_id": "ru-mir-01-l02-s033"
+   },
+   {
+    "lexeme_id": "ru-ono",
+    "how": "context",
+    "segment_id": "ru-mir-01-l02-s006"
+   },
+   {
+    "lexeme_id": "ru-vinovatyj",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l02-s043"
+   }
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "ru-mir-01-l02-cover",
+   "src": "media/images/ru-mir-01-l02-cover.webp",
+   "status": "planned",
+   "presentation": "inline_scene",
+   "alt": "The Sokolov family at supper in their izba: the father at the head of the table under the icons and a small portrait of the Tsar, the mother standing with a ladle, the grandfather by the stove, the elder son and his wife with two small children, Ivan, and Nastya holding half of a broken slate; the dog looks in at the open door.",
+   "art_brief": "Interior of a Ryazan peasant izba, late April 1913, evening light from one small window and a lamp. A long plank table with a round loaf. At its head Pyotr Matveyevich (about 55, grey-brown beard, belted shirt) under the icon corner with a small framed portrait of Nicholas II. Marya Stepanovna (about 50, dark kerchief) standing with a wooden ladle. Ded Matvei (70, white beard) sitting by the big white stove. Fyodor (27, broad, dark beard) and Darya (25, kerchief) with Misha (6) and Liza (4) on the bench. Ivan (19, tall, fair, beardless). Nastya (12, braid, kerchief) holding up half of a wooden-framed school slate, mouth open. Shaggy grey-and-white mongrel Sharik peeking in at the open door from the yard. No text.",
+   "characters": [
+    "char-pyotr",
+    "char-marya",
+    "char-ded-matvej",
+    "char-fyodor",
+    "char-darya",
+    "char-misha",
+    "char-liza",
+    "char-ivan",
+    "char-nastya"
+   ],
+   "covers_lexeme_ids": [
+    "ru-semya",
+    "ru-stol",
+    "ru-khleb",
+    "ru-tsar"
+   ]
+  },
+  "sections": [
+   {
+    "id": "ru-mir-01-l02-sec1",
+    "title": "Кто э́то?",
+    "segments": [
+     {
+      "id": "ru-mir-01-l02-s001",
+      "text": "Вот семья́ Соколо́вых.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Соколо́вых",
+        "gloss": "Соколо́вых ← Соколо́вы: Пётр, Ма́рья, Ива́н…",
+        "gloss_kind": "form"
+       },
+       {
+        "type": "diagram",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l02-svg-semya",
+        "anchor_text": "семья́",
+        "src": "media/diagrams/ru-mir-01-l02-svg-semya.svg",
+        "label": "семья́ Соколо́вых",
+        "alt": "Family tree with Russian labels: дед Матве́й; оте́ц Пётр Матве́евич and мать Ма́рья Степа́новна; their children Фёдор (with his wife Да́рья and their children Ми́ша and Ли́за), Ива́н and На́стя.",
+        "status": "draft",
+        "width": 320,
+        "height": 260,
+        "covers_lexeme_ids": [
+         "ru-semya",
+         "ru-otets",
+         "ru-mat",
+         "ru-syn",
+         "ru-doch",
+         "ru-brat",
+         "ru-sestra",
+         "ru-ded",
+         "ru-zhena",
+         "ru-rebyonok"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s002",
+      "text": "Семья́ больша́я, а стол ма́ленький.",
+      "pins": [
+       {
+        "start": 19,
+        "end": 23,
+        "token": "стол",
+        "lemma": "стол",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 24,
+        "end": 34,
+        "token": "ма́ленький",
+        "lemma": "маленький",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s003",
+      "text": "На столе́ — хлеб.",
+      "pins": [
+       {
+        "start": 12,
+        "end": 16,
+        "token": "хлеб",
+        "lemma": "хлеб",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s004",
+      "text": "— В тесноте́, да не в оби́де, — говори́т оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "В тесноте́, да не в оби́де",
+        "gloss": "= стол ма́ленький, но семья́ здесь",
+        "gloss_kind": "paraphrase"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "говори́т",
+        "gloss": "говори́т: «В тесноте́…»",
+        "gloss_kind": "example"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s005",
+      "text": "— Хлеб на столе́, а по́ле — там.",
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "Хлеб",
+        "lemma": "хлеб",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 20,
+        "end": 25,
+        "token": "по́ле",
+        "lemma": "поле",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s006",
+      "text": "Оно́ ма́ленькое, но оно́ на́ше. Оно́ — наш хлеб.",
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 5,
+        "end": 15,
+        "token": "ма́ленькое",
+        "lemma": "маленький",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 25,
+        "end": 30,
+        "token": "на́ше",
+        "lemma": "наш",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 39,
+        "end": 42,
+        "token": "наш",
+        "lemma": "наш",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 43,
+        "end": 47,
+        "token": "хлеб",
+        "lemma": "хлеб",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s007",
+      "text": "Кто э́то? Э́то оте́ц, Пётр Матве́евич.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 10,
+        "end": 14,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s008",
+      "text": "А э́то мать, Ма́рья Степа́новна.",
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       },
+       {
+        "start": 7,
+        "end": 11,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s009",
+      "text": "Оте́ц сиди́т, а мать не сиди́т: она́ стои́т.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "стои́т",
+        "gloss": "сиди́т ↔ стои́т",
+        "gloss_kind": "antonym"
+       }
+      ],
+      "pins": [
+       {
+        "start": 16,
+        "end": 20,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s010",
+      "text": "Она́ смо́трит: что на столе́?",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "смо́трит",
+        "gloss": "смо́трит ← смотре́ть",
+        "gloss_kind": "form"
+       }
+      ],
+      "pins": [
+       {
+        "start": 15,
+        "end": 18,
+        "token": "что",
+        "lemma": "что",
+        "feats": {
+         "pos": "NPRO",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s011",
+      "text": "— Где хлеб? Где де́ти? — спра́шивает мать.",
+      "paragraph_start": true,
+      "speaker": "char-marya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "спра́шивает",
+        "gloss": "спра́шивает: «Где?»",
+        "gloss_kind": "example"
+       }
+      ],
+      "pins": [
+       {
+        "start": 6,
+        "end": 10,
+        "token": "хлеб",
+        "lemma": "хлеб",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 37,
+        "end": 41,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s012",
+      "text": "А э́то дед, дед Матве́й.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s013",
+      "text": "Он ста́рый, о́чень ста́рый.",
+      "pins": [
+       {
+        "start": 3,
+        "end": 10,
+        "token": "ста́рый",
+        "lemma": "старый",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 19,
+        "end": 26,
+        "token": "ста́рый",
+        "lemma": "старый",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s014",
+      "text": "Дед спит? Нет, дед не спит: он смо́трит и зна́ет.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "спит",
+        "gloss": "спит: «Хр-р-р…»",
+        "gloss_kind": "example"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s015",
+      "text": "Фёдор и Ива́н — сыновья́. Пётр Матве́евич — их оте́ц, а Ма́рья Степа́новна — их мать.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "сыновья́",
+        "gloss": "сын → сыновья́",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-syn"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 44,
+        "end": 46,
+        "token": "их",
+        "lemma": "их",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       },
+       {
+        "start": 77,
+        "end": 79,
+        "token": "их",
+        "lemma": "их",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       },
+       {
+        "start": 80,
+        "end": 84,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s016",
+      "text": "Фёдор и Ива́н — бра́тья.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "бра́тья",
+        "gloss": "брат → бра́тья",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-brat"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s017",
+      "text": "Они́ больши́е, о́чень больши́е.",
+      "pins": [
+       {
+        "start": 5,
+        "end": 13,
+        "token": "больши́е",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 22,
+        "end": 30,
+        "token": "больши́е",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s018",
+      "text": "Вот Фёдор. Да́рья — его́ жена́.",
+      "pins": [
+       {
+        "start": 20,
+        "end": 24,
+        "token": "его́",
+        "lemma": "его",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s019",
+      "text": "Ми́ша и Ли́за — их де́ти.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "де́ти",
+        "gloss": "оди́н ребёнок → де́ти",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-rebyonok"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 16,
+        "end": 18,
+        "token": "их",
+        "lemma": "их",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s020",
+      "text": "Они́ ма́ленькие.",
+      "pins": [
+       {
+        "start": 5,
+        "end": 15,
+        "token": "ма́ленькие",
+        "lemma": "маленький",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s021",
+      "text": "А Ива́н? Он — сын и брат."
+     },
+     {
+      "id": "ru-mir-01-l02-s022",
+      "text": "А вот На́стя.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l02-s023",
+      "text": "На́стя — дочь и сестра́.",
+      "pins": [
+       {
+        "start": 9,
+        "end": 13,
+        "token": "дочь",
+        "lemma": "дочь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s024",
+      "text": "— Моя́ шко́ла в дере́вне, а моя́ доска́ здесь, на столе́! — говори́т она́.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l02-s025",
+      "text": "Её шко́ла — но́вая, и её доска́ то́же но́вая.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 2,
+        "token": "Её",
+        "lemma": "её",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       },
+       {
+        "start": 22,
+        "end": 24,
+        "token": "её",
+        "lemma": "её",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s026",
+      "text": "— Мне двена́дцать лет! — говори́т дочь.",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "двена́дцать",
+        "gloss": "двена́дцать = 12",
+        "gloss_kind": "number"
+       }
+      ],
+      "pins": [
+       {
+        "start": 34,
+        "end": 38,
+        "token": "дочь",
+        "lemma": "дочь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s027",
+      "text": "А кто э́то, вот там?",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l02-s028",
+      "text": "Э́то царь.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l02-img-tsar",
+        "anchor_text": "царь",
+        "label": "царь",
+        "src": "media/vignettes/ru-mir-01-l02-img-tsar.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "A small framed lithograph portrait of Emperor Nicholas II in uniform, as hung in peasant izbas in 1913, slightly faded. Transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-tsar"
+        ],
+        "width": 240,
+        "height": 240
+       }
+      ],
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s029",
+      "text": "Царь то́же здесь, и он то́же смо́трит."
+     },
+     {
+      "id": "ru-mir-01-l02-s030",
+      "text": "— Оте́ц, а где Ша́рик? — спра́шивает Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 15,
+        "end": 21,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s031",
+      "text": "— Ша́рик — соба́ка, а соба́ка — во дворе́, — отвеча́ет оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "отвеча́ет",
+        "gloss": "спра́шивает ↔ отвеча́ет",
+        "gloss_kind": "antonym"
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s032",
+      "text": "Ша́рик лежи́т во дворе́ и смо́трит.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "лежи́т",
+        "gloss": "лежи́т ↔ стои́т",
+        "gloss_kind": "antonym"
+       }
+      ],
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l02-x1-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Regular plurals: -ы; -и after к, г, х, ж, ш, ч, щ and usually for -я/-ь nouns; neuter -о/-е usually → -а/-я; some masculine nouns take -а.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "стол → столы́ · доска́ → до́ски · по́ле → поля́",
+       "prompt": "Вот стол, а вот стол___.",
+       "answer": "ы́"
+      },
+      "items": [
+       {
+        "prompt": "Вот доска́, а вот до́ск___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Вот доска́, а вот до́ски.",
+        "id": "x1-1-1"
+       },
+       {
+        "prompt": "Вот шко́ла, а вот шко́л___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ы"
+        ],
+        "explanation": "Вот шко́ла, а вот шко́лы.",
+        "id": "x1-1-2"
+       },
+       {
+        "prompt": "Вот дере́вня, а вот дере́вн___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Вот дере́вня, а вот дере́вни.",
+        "id": "x1-1-3"
+       },
+       {
+        "prompt": "Вот река́, а вот ре́к___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Вот река́, а вот ре́ки.",
+        "id": "x1-1-4"
+       },
+       {
+        "prompt": "Вот по́ле, а вот пол___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "я́"
+        ],
+        "explanation": "Вот по́ле, а вот поля́.",
+        "id": "x1-1-5"
+       },
+       {
+        "prompt": "Вот го́род, а вот город___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ы",
+          "hint": "го́род → города́: -а"
+         }
+        ],
+        "explanation": "Вот го́род, а вот города́.",
+        "id": "x1-1-6"
+       },
+       {
+        "prompt": "Вот соба́ка, а вот соба́к___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ы",
+          "hint": "к + и: соба́ки"
+         }
+        ],
+        "explanation": "Вот соба́ка, а вот соба́ки.",
+        "id": "x1-1-7"
+       },
+       {
+        "prompt": "Вот уе́зд, а вот уе́зд___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ы"
+        ],
+        "explanation": "Вот уе́зд, а вот уе́зды.",
+        "id": "x1-1-8"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x1-2",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́: стол → столы́.",
+      "hint_en": "Make noun and adjective plural.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "ма́ленький стол → ма́ленькие столы́",
+       "prompt": "Э́то ма́ленький стол. →",
+       "answer": "Э́то ма́ленькие столы́."
+      },
+      "items": [
+       {
+        "prompt": "Э́то но́вая шко́ла. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то но́вые шко́лы."
+        ],
+        "id": "x1-2-1"
+       },
+       {
+        "prompt": "Э́то ста́рый го́род. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то ста́рые города́."
+        ],
+        "id": "x1-2-2"
+       },
+       {
+        "prompt": "Э́то больша́я река́. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то больши́е ре́ки."
+        ],
+        "id": "x1-2-3"
+       },
+       {
+        "prompt": "Э́то ру́сская дере́вня. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то ру́сские дере́вни."
+        ],
+        "id": "x1-2-4"
+       },
+       {
+        "prompt": "Э́то большо́е по́ле. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то больши́е поля́."
+        ],
+        "id": "x1-2-5"
+       },
+       {
+        "prompt": "Э́то ма́ленькая соба́ка. →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то ма́ленькие соба́ки."
+        ],
+        "id": "x1-2-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x1-3",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с: он, она́, оно́, они́.",
+      "hint_en": "Replace the noun with он, она́, оно́ or они́.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "стол → он · доска́ → она́ · по́ле → оно́ · де́ти → они́",
+       "prompt": "Где стол? — ___ здесь.",
+       "answer": "Он"
+      },
+      "items": [
+       {
+        "prompt": "Где доска́? — ___ здесь.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Она́"
+        ],
+        "id": "x1-3-1"
+       },
+       {
+        "prompt": "Где по́ле? — ___ там.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Оно́"
+        ],
+        "id": "x1-3-2"
+       },
+       {
+        "prompt": "Где де́ти? — ___ там.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Они́"
+        ],
+        "id": "x1-3-3"
+       },
+       {
+        "prompt": "Где Ша́рик? — ___ во дворе́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Он"
+        ],
+        "id": "x1-3-4"
+       },
+       {
+        "prompt": "Где мать? — ___ здесь.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Она́"
+        ],
+        "id": "x1-3-5"
+       },
+       {
+        "prompt": "Где хлеб? — ___ на столе́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Он"
+        ],
+        "id": "x1-3-6"
+       },
+       {
+        "prompt": "Где Фёдор и Да́рья? — ___ здесь.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Они́"
+        ],
+        "id": "x1-3-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x1-4",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "мой/моя́/моё/мои́, твой…, наш… agree with the noun.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "мой стол · моя́ доска́ · моё по́ле · мои́ де́ти",
+       "prompt": "Вот ___ (мой) доска́.",
+       "answer": "моя́"
+      },
+      "items": [
+       {
+        "prompt": "Вот ___ (мой) стол.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мой"
+        ],
+        "id": "x1-4-1"
+       },
+       {
+        "prompt": "Вот ___ (мой) по́ле.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "моё"
+        ],
+        "common_wrong": [
+         {
+          "answer": "мой",
+          "hint": "по́ле — ср.: моё"
+         }
+        ],
+        "id": "x1-4-2"
+       },
+       {
+        "prompt": "Вот ___ (мой) де́ти.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мои́"
+        ],
+        "id": "x1-4-3"
+       },
+       {
+        "prompt": "Вот ___ (наш) семья́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "на́ша"
+        ],
+        "id": "x1-4-4"
+       },
+       {
+        "prompt": "Вот ___ (наш) Ша́рик.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "наш"
+        ],
+        "id": "x1-4-5"
+       },
+       {
+        "prompt": "Вот ___ (твой) хлеб.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "твой"
+        ],
+        "id": "x1-4-6"
+       },
+       {
+        "prompt": "Вот ___ (наш) по́ле.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "на́ше"
+        ],
+        "id": "x1-4-7"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l02-sec2",
+    "title": "Моя́ доска́!",
+    "segments": [
+     {
+      "id": "ru-mir-01-l02-s033",
+      "text": "— Моя́ доска́! — кричи́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "кричи́т",
+        "gloss": "кричи́т: «А-а-а!»",
+        "gloss_kind": "example"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l02-img-doska",
+        "anchor_text": "доска́",
+        "label": "доска́",
+        "src": "media/vignettes/ru-mir-01-l02-img-doska.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "A child's school slate of 1913: a dark grey slate board in a plain wooden frame, broken across into two halves, one corner chewed. Transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-doska",
+         "ru-razbityj"
+        ],
+        "width": 240,
+        "height": 240
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s034",
+      "text": "— Вот моя́ доска́, но она́ разби́тая!",
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l02-s035",
+      "text": "Э́то не доска́, э́то полови́на!",
+      "speaker": "char-nastya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "полови́на",
+        "gloss": "полови́на = ½",
+        "gloss_kind": "paraphrase"
+       }
+      ],
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       },
+       {
+        "start": 16,
+        "end": 20,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s036",
+      "text": "Где моя́ доска́?",
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l02-s037",
+      "text": "Кака́я доска́? Э́та доска́, её доска́.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 28,
+        "end": 30,
+        "token": "её",
+        "lemma": "её",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s038",
+      "text": "Дочь кричи́т, а мать смо́трит.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Дочь",
+        "lemma": "дочь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 16,
+        "end": 20,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s039",
+      "text": "Семья́ смо́трит: оте́ц смо́трит, мать смо́трит, дед смо́трит.",
+      "pins": [
+       {
+        "start": 33,
+        "end": 37,
+        "token": "мать",
+        "lemma": "мать",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s040",
+      "text": "Кто винова́т?"
+     },
+     {
+      "id": "ru-mir-01-l02-s041",
+      "text": "— Э́то они́! — кричи́т На́стя. — Ми́ша и Ли́за!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s042",
+      "text": "Твои́ де́ти, Да́рья! Де́ти винова́ты!",
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 0,
+        "end": 5,
+        "token": "Твои́",
+        "lemma": "твой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s043",
+      "text": "Ми́ша пла́чет, Ли́за то́же пла́чет.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пла́чет",
+        "gloss": "пла́чет: «У-у-у!»",
+        "gloss_kind": "example"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l02-img-kto-vinovat",
+        "src": "media/images/ru-mir-01-l02-img-kto-vinovat.webp",
+        "alt": "The blame round at the supper table: Nastya points at the two small children, Darya shields them with her arms, the children cry, Ivan raises his hands, Fyodor points at Ivan, and everyone else looks round.",
+        "status": "planned",
+        "art_brief": "The same izba interior, evening. Nastya (12) standing, holding half a broken slate, pointing accusingly at Misha (6) and Liza (4), who are crying; Darya (25) spreads her arms in front of them; Fyodor (27, dark beard) points at Ivan; Ivan (19, tall, fair) raises both hands, 'not me'; Pyotr at the head of the table and Ded Matvei by the stove watch; the small portrait of the Tsar on the wall seems to watch too. No text.",
+        "characters": [
+         "char-nastya",
+         "char-darya",
+         "char-fyodor",
+         "char-ivan",
+         "char-misha",
+         "char-liza"
+        ],
+        "covers_lexeme_ids": [
+         "ru-sestra",
+         "ru-zhena",
+         "ru-rebyonok",
+         "ru-brat",
+         "ru-vinovatyj"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s044",
+      "text": "— Что? Каки́е де́ти? Мои́ де́ти? — кричи́т Да́рья.",
+      "paragraph_start": true,
+      "speaker": "char-darya",
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Что",
+        "lemma": "что",
+        "feats": {
+         "pos": "NPRO",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 7,
+        "end": 13,
+        "token": "Каки́е",
+        "lemma": "какой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 21,
+        "end": 25,
+        "token": "Мои́",
+        "lemma": "мой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s045",
+      "text": "— Мои́ де́ти не винова́ты!",
+      "speaker": "char-darya",
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "Мои́",
+        "lemma": "мой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s046",
+      "text": "Э́ти де́ти — ма́ленькие!",
+      "speaker": "char-darya",
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Э́ти",
+        "lemma": "этот",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 13,
+        "end": 23,
+        "token": "ма́ленькие",
+        "lemma": "маленький",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s047",
+      "text": "Фёдор смо́трит: сестра́ кричи́т, жена́ кричи́т, де́ти пла́чут.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l02-s048",
+      "text": "— Да, мои́ де́ти не винова́ты, — говори́т Фёдор. — Моя́ жена́ зна́ет.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 6,
+        "end": 10,
+        "token": "мои́",
+        "lemma": "мой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s049",
+      "text": "Э́то Ива́н. Ива́н большо́й, а доска́ ма́ленькая.",
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 0,
+        "end": 4,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       },
+       {
+        "start": 18,
+        "end": 26,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s050",
+      "text": "— Я? Брат, э́то не я! Я не винова́т!",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 11,
+        "end": 15,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s051",
+      "text": "— Не ты? А кто?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l02-s052",
+      "text": "— Царь, кто винова́т? — спра́шивает Ли́за.",
+      "paragraph_start": true,
+      "speaker": "char-liza"
+     },
+     {
+      "id": "ru-mir-01-l02-s053",
+      "text": "Но царь не говори́т.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l02-s054",
+      "text": "Царь смо́трит, но не зна́ет."
+     },
+     {
+      "id": "ru-mir-01-l02-s055",
+      "text": "— Царь не зна́ет, — говори́т дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l02-s056",
+      "text": "— Царь в Петербу́рге, а доска́ — здесь.",
+      "speaker": "char-ded-matvej"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l02-x2-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Adjectives in the plural: -ые; after к, г, х, ж, ш, ч, щ: -ие.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "ста́рый → ста́рые · ма́ленький → ма́ленькие",
+       "prompt": "Де́ти ма́леньк___.",
+       "answer": "ие"
+      },
+      "items": [
+       {
+        "prompt": "Бра́тья больш___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́е"
+        ],
+        "explanation": "Бра́тья больши́е.",
+        "id": "x2-1-1"
+       },
+       {
+        "prompt": "Города́ ста́р___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ые"
+        ],
+        "explanation": "Города́ ста́рые.",
+        "id": "x2-1-2"
+       },
+       {
+        "prompt": "Шко́лы но́в___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ые"
+        ],
+        "explanation": "Шко́лы но́вые.",
+        "id": "x2-1-3"
+       },
+       {
+        "prompt": "Ре́ки ру́сск___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ие"
+        ],
+        "explanation": "Ре́ки ру́сские.",
+        "id": "x2-1-4"
+       },
+       {
+        "prompt": "Стол ма́леньк___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ий"
+        ],
+        "explanation": "Стол ма́ленький.",
+        "id": "x2-1-5"
+       },
+       {
+        "prompt": "Доска́ разби́т___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ая"
+        ],
+        "explanation": "Доска́ разби́тая.",
+        "id": "x2-1-6"
+       },
+       {
+        "prompt": "До́ски разби́т___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ые"
+        ],
+        "explanation": "До́ски разби́тые.",
+        "id": "x2-1-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x2-2",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́: он → они́.",
+      "hint_en": "Two people: make the adjective plural.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "Ми́ша ма́ленький. → Ми́ша и Ли́за ма́ленькие.",
+       "prompt": "Ми́ша ма́ленький. (Ми́ша и Ли́за) →",
+       "answer": "Ми́ша и Ли́за ма́ленькие."
+      },
+      "items": [
+       {
+        "prompt": "Фёдор большо́й. (Фёдор и Ива́н) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдор и Ива́н больши́е."
+        ],
+        "id": "x2-2-1"
+       },
+       {
+        "prompt": "Дед ста́рый. (Дед и оте́ц) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Дед и оте́ц ста́рые."
+        ],
+        "id": "x2-2-2"
+       },
+       {
+        "prompt": "Доска́ но́вая. (Доска́ и стол) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Доска́ и стол но́вые."
+        ],
+        "id": "x2-2-3"
+       },
+       {
+        "prompt": "Во́лга больша́я. (Во́лга и Ока́) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Во́лга и Ока́ больши́е."
+        ],
+        "id": "x2-2-4"
+       },
+       {
+        "prompt": "Ша́рик ма́ленький. (Ша́рик и Ли́за) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ша́рик и Ли́за ма́ленькие."
+        ],
+        "id": "x2-2-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x2-3",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с. Сло́во в ско́бках поста́вь в ну́жную фо́рму.",
+      "hint_en": "Како́й? Кака́я? Како́е? Каки́е? — the adjective agrees.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "Кака́я доска́? — но́вая доска́",
+       "prompt": "Кака́я доска́? (но́вый) — ___ доска́.",
+       "answer": "Но́вая"
+      },
+      "items": [
+       {
+        "prompt": "Како́й стол? (ма́ленький) — ___ стол.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ма́ленький"
+        ],
+        "id": "x2-3-1"
+       },
+       {
+        "prompt": "Каки́е де́ти? (ма́ленький) — ___ де́ти.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ма́ленькие"
+        ],
+        "id": "x2-3-2"
+       },
+       {
+        "prompt": "Како́е по́ле? (большо́й) — ___ по́ле.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Большо́е"
+        ],
+        "id": "x2-3-3"
+       },
+       {
+        "prompt": "Каки́е бра́тья? (большо́й) — ___ бра́тья.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Больши́е"
+        ],
+        "id": "x2-3-4"
+       },
+       {
+        "prompt": "Кака́я семья́? (большо́й) — ___ семья́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Больша́я"
+        ],
+        "id": "x2-3-5"
+       },
+       {
+        "prompt": "Каки́е города́? (ста́рый) — ___ города́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ста́рые"
+        ],
+        "id": "x2-3-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x2-4",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Спроси́: како́й, кака́я, како́е, каки́е?",
+      "hint_en": "Ask with the right form of како́й.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "како́й стол · кака́я доска́ · како́е по́ле · каки́е де́ти",
+       "prompt": "___ доска́? (како́й)",
+       "answer": "Кака́я"
+      },
+      "items": [
+       {
+        "prompt": "___ де́ти? (како́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Каки́е"
+        ],
+        "id": "x2-4-1"
+       },
+       {
+        "prompt": "___ по́ле? (како́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Како́е"
+        ],
+        "id": "x2-4-2"
+       },
+       {
+        "prompt": "___ хлеб? (како́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Како́й"
+        ],
+        "id": "x2-4-3"
+       },
+       {
+        "prompt": "___ сыновья́? (како́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Каки́е"
+        ],
+        "id": "x2-4-4"
+       },
+       {
+        "prompt": "___ семья́? (како́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Кака́я"
+        ],
+        "id": "x2-4-5"
+       },
+       {
+        "prompt": "___ го́род? (како́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Како́й"
+        ],
+        "id": "x2-4-6"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l02-sec3",
+    "title": "Кто винова́т?",
+    "segments": [
+     {
+      "id": "ru-mir-01-l02-s057",
+      "text": "Дед не сиди́т.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l02-s058",
+      "text": "Дед во дворе́, и он и́щет.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "и́щет",
+        "gloss": "и́щет: «Где? Где?»",
+        "gloss_kind": "example"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s059",
+      "text": "Где доска́?"
+     },
+     {
+      "id": "ru-mir-01-l02-s060",
+      "text": "Вот Ша́рик, а вот его́ соло́ма.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l02-img-soloma",
+        "anchor_text": "соло́ма",
+        "label": "соло́ма",
+        "src": "media/vignettes/ru-mir-01-l02-img-soloma.svg",
+        "alt": "",
+        "status": "draft",
+        "art_brief": "A dog's bed of straw in the corner of a peasant yard by a wooden fence. Transparent background, no text.",
+        "width": 240,
+        "height": 240
+       }
+      ],
+      "pins": [
+       {
+        "start": 4,
+        "end": 10,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 18,
+        "end": 22,
+        "token": "его́",
+        "lemma": "его",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s061",
+      "text": "А на соло́ме лежи́т… доска́!",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "соло́ме",
+        "gloss": "соло́ма → на соло́ме",
+        "gloss_kind": "form"
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l02-img-ded-doska",
+        "src": "media/images/ru-mir-01-l02-img-ded-doska.webp",
+        "alt": "Grandfather Matvei in the yard holds up the second half of the broken slate over the dog's straw bed; the corner is chewed; Sharik lies on the straw and looks guilty; the family crowds at the door.",
+        "status": "planned",
+        "art_brief": "A peasant yard in late April 1913, evening. Ded Matvei (70, white beard, sheepskin waistcoat) bends over a dog's bed of straw by a log wall and holds up half of a wooden-framed school slate with a chewed corner. Sharik (shaggy grey-and-white mongrel) lies on the straw, ears down, eyes up, very guilty. In the open door of the izba: Nastya with the other half, Ivan, Fyodor, Darya with Misha and Liza, Marya. No text.",
+        "characters": [
+         "char-ded-matvej",
+         "char-nastya",
+         "char-ivan"
+        ],
+        "covers_lexeme_ids": [
+         "ru-doska",
+         "ru-dvor",
+         "ru-sobaka"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s062",
+      "text": "Вот она́ — разби́тая доска́!"
+     },
+     {
+      "id": "ru-mir-01-l02-s063",
+      "text": "— Ша́рик, э́то твоя́ доска́? — спра́шивает дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej",
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 14,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s064",
+      "text": "Ша́рик лежи́т и смо́трит.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s065",
+      "text": "Он ма́ленький, о́чень ма́ленький, и о́чень винова́тый.",
+      "pins": [
+       {
+        "start": 3,
+        "end": 13,
+        "token": "ма́ленький",
+        "lemma": "маленький",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 22,
+        "end": 32,
+        "token": "ма́ленький",
+        "lemma": "маленький",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 43,
+        "end": 53,
+        "token": "винова́тый",
+        "lemma": "виноватый",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s066",
+      "text": "— Ша́рик! Э́то ты! — говори́т Ли́за.",
+      "paragraph_start": true,
+      "speaker": "char-liza",
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 14,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s067",
+      "text": "— Вот кто винова́т! — говори́т дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l02-s068",
+      "text": "— Не де́ти, не Ива́н, а наш Ша́рик. Э́тот Ша́рик!",
+      "speaker": "char-ded-matvej",
+      "pins": [
+       {
+        "start": 24,
+        "end": 27,
+        "token": "наш",
+        "lemma": "наш",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 28,
+        "end": 34,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 36,
+        "end": 41,
+        "token": "Э́тот",
+        "lemma": "этот",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       },
+       {
+        "start": 42,
+        "end": 48,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s069",
+      "text": "— Мои́ де́ти не винова́ты! — говори́т Да́рья. — Я зна́ю!",
+      "paragraph_start": true,
+      "speaker": "char-darya",
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "Мои́",
+        "lemma": "мой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "plur"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s070",
+      "text": "— Хорошо́, — говори́т оте́ц. — Де́ти не винова́ты, и Ива́н не винова́т.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l02-s071",
+      "text": "— А моя́ доска́? — спра́шивает На́стя. — Оте́ц, но́вая доска́?",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l02-s072",
+      "text": "— Но́вая? Кака́я но́вая? Нет, — отвеча́ет оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l02-s073",
+      "text": "— Вот твоя́ доска́, На́стя, а вот Ива́н.",
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l02-s074",
+      "text": "— Я?",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l02-s075",
+      "text": "— Ты, сын. Ты большо́й.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 14,
+        "end": 22,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s076",
+      "text": "Ива́н сиди́т, а На́стя, его́ сестра́, смо́трит.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 24,
+        "end": 28,
+        "token": "его́",
+        "lemma": "его",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "auto (possessive его/её/их); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s077",
+      "text": "Вот доска́, разби́тая."
+     },
+     {
+      "id": "ru-mir-01-l02-s078",
+      "text": "А что на доске́? Бу́квы.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Бу́квы",
+        "gloss": "бу́квы: А, Б, В…",
+        "gloss_kind": "example"
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "что",
+        "lemma": "что",
+        "feats": {
+         "pos": "NPRO",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s079",
+      "text": "— На́стя, что э́то?",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l02-s080",
+      "text": "— Э́то «Росси́я». Ты не зна́ешь?",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 2,
+        "end": 6,
+        "token": "Э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "auto (это particle); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s081",
+      "text": "— Не зна́ю.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l02-s082",
+      "text": "На́стя зна́ет, а Ива́н не зна́ет.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l02-s083",
+      "text": "Ша́рик то́же не зна́ет: он соба́ка.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "Ша́рик",
+        "lemma": "шарик",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "auto (default nomn); reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-s084",
+      "text": "А Ива́н не соба́ка."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l02-x3-1",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Скажи́: его́, её, их.",
+      "hint_en": "его́ (his), её (her), их (their) never change.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "Да́рья — жена́. (Фёдор) → Да́рья — его́ жена́.",
+       "prompt": "Да́рья — жена́. (Фёдор) →",
+       "answer": "Да́рья — его́ жена́."
+      },
+      "items": [
+       {
+        "prompt": "Ми́ша и Ли́за — де́ти. (Фёдор и Да́рья) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ми́ша и Ли́за — их де́ти."
+        ],
+        "id": "x3-1-1"
+       },
+       {
+        "prompt": "Э́то доска́. (На́стя) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то её доска́."
+        ],
+        "id": "x3-1-2"
+       },
+       {
+        "prompt": "Э́то хлеб. (Ша́рик) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Э́то его́ хлеб."
+        ],
+        "id": "x3-1-3"
+       },
+       {
+        "prompt": "Пётр — оте́ц. (Фёдор и Ива́н) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Пётр — их оте́ц."
+        ],
+        "id": "x3-1-4"
+       },
+       {
+        "prompt": "Ма́рья — мать. (На́стя) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ма́рья — её мать."
+        ],
+        "id": "x3-1-5"
+       },
+       {
+        "prompt": "Ива́н — брат. (Фёдор) →",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н — его́ брат."
+        ],
+        "id": "x3-1-6"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x3-2",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "мой/моя́/мои́, твой/твоя́/твои́, наш/на́ша/на́ше/на́ши.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "мой → моя́ (ж.) → мои́",
+       "prompt": "Э́то мо___ доска́.",
+       "answer": "я́"
+      },
+      "items": [
+       {
+        "prompt": "Э́то тво___ хлеб.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "й"
+        ],
+        "explanation": "Э́то твой хлеб.",
+        "id": "x3-2-1"
+       },
+       {
+        "prompt": "Э́то на́ш___ по́ле.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "explanation": "Э́то на́ше по́ле.",
+        "id": "x3-2-2"
+       },
+       {
+        "prompt": "Э́то мо___ де́ти.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́"
+        ],
+        "explanation": "Э́то мои́ де́ти.",
+        "id": "x3-2-3"
+       },
+       {
+        "prompt": "Э́то на́ш___ семья́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "explanation": "Э́то на́ша семья́.",
+        "id": "x3-2-4"
+       },
+       {
+        "prompt": "Э́то тво___ бра́тья.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́"
+        ],
+        "explanation": "Э́то твои́ бра́тья.",
+        "id": "x3-2-5"
+       },
+       {
+        "prompt": "Э́то на́ш___ сыновья́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "explanation": "Э́то на́ши сыновья́.",
+        "id": "x3-2-6"
+       },
+       {
+        "prompt": "Э́то тво___ сестра́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "я́"
+        ],
+        "explanation": "Э́то твоя́ сестра́.",
+        "id": "x3-2-7"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x3-3",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть по те́ксту.",
+      "hint_en": "Answer from the story with a name.",
+      "grammar_target_ids": [
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "Кто? — На́стя / Ива́н / дед …",
+       "prompt": "Кто кричи́т: «Моя́ доска́!»? — ___.",
+       "answer": "На́стя"
+      },
+      "items": [
+       {
+        "prompt": "Кто пла́чет? — ___ и Ли́за.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ми́ша"
+        ],
+        "id": "x3-3-1",
+        "source_segment_ids": [
+         "ru-mir-01-l02-s043"
+        ]
+       },
+       {
+        "prompt": "Кто говори́т: «Ива́н большо́й»? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдор"
+        ],
+        "id": "x3-3-2",
+        "source_segment_ids": [
+         "ru-mir-01-l02-s049"
+        ]
+       },
+       {
+        "prompt": "Кто спра́шивает: «Царь, кто винова́т?» — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ли́за"
+        ],
+        "id": "x3-3-3",
+        "source_segment_ids": [
+         "ru-mir-01-l02-s052"
+        ]
+       },
+       {
+        "prompt": "Кто и́щет во дворе́? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Дед",
+         "Дед Матве́й",
+         "Матве́й"
+        ],
+        "id": "x3-3-4",
+        "source_segment_ids": [
+         "ru-mir-01-l02-s058"
+        ]
+       },
+       {
+        "prompt": "Кто винова́т? — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ша́рик",
+         "Наш Ша́рик"
+        ],
+        "id": "x3-3-5",
+        "source_segment_ids": [
+         "ru-mir-01-l02-s067"
+        ]
+       },
+       {
+        "prompt": "«Не зна́ю», — говори́т ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н"
+        ],
+        "id": "x3-3-6",
+        "source_segment_ids": [
+         "ru-mir-01-l02-s082"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-x3-4",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Соедини́ два предложе́ния: а.",
+      "hint_en": "Join with а (contrast).",
+      "grammar_target_ids": [
+       "G01",
+       "G02"
+      ],
+      "obrazec": {
+       "rule": "…, а …",
+       "prompt": "На́стя зна́ет. Ива́н не зна́ет. (а)",
+       "answer": "На́стя зна́ет, а Ива́н не зна́ет."
+      },
+      "items": [
+       {
+        "prompt": "Фёдор большо́й. Ми́ша ма́ленький. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдор большо́й, а Ми́ша ма́ленький.",
+         "Ми́ша ма́ленький, а Фёдор большо́й."
+        ],
+        "id": "x3-4-1"
+       },
+       {
+        "prompt": "Фёдор большо́й. Доска́ ма́ленькая. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдор большо́й, а доска́ ма́ленькая.",
+         "Доска́ ма́ленькая, а Фёдор большо́й."
+        ],
+        "id": "x3-4-2"
+       },
+       {
+        "prompt": "Царь в Петербу́рге. Доска́ здесь. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Царь в Петербу́рге, а доска́ здесь.",
+         "Доска́ здесь, а Царь в Петербу́рге."
+        ],
+        "id": "x3-4-3"
+       },
+       {
+        "prompt": "Семья́ больша́я. Стол ма́ленький. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Семья́ больша́я, а стол ма́ленький.",
+         "Стол ма́ленький, а Семья́ больша́я."
+        ],
+        "id": "x3-4-4"
+       },
+       {
+        "prompt": "Де́ти здесь. Ша́рик во дворе́. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Де́ти здесь, а Ша́рик во дворе́.",
+         "Ша́рик во дворе́, а Де́ти здесь."
+        ],
+        "id": "x3-4-5"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l02-napishi",
+      "type": "napishi",
+      "title": "Напиши́",
+      "mode": "productive",
+      "prompt": "Твоя́ семья́: кто э́то? Каки́е они́? Напиши́.",
+      "length_hint": "3–5 предложе́ний",
+      "hint_en": "Write 3–5 sentences about your family: who they are and what they are like (plurals, мой/моя́/мои́).",
+      "model_answers": [
+       "Вот моя́ семья́. Э́то мой оте́ц и моя́ мать. Они́ ста́рые. А э́то мои́ бра́тья. Они́ больши́е, а моя́ сестра́ ма́ленькая.",
+       "Моя́ семья́ ма́ленькая: мать, оте́ц, я и на́ша соба́ка. Соба́ка ма́ленькая, но о́чень винова́тая!"
+      ],
+      "rubric": [
+       "plural nouns and adjectives that agree (мои́ бра́тья больши́е, де́ти ма́ленькие)",
+       "мой / моя́ / моё / мои́ (and наш, твой) agreeing with the noun",
+       "он / она́ / оно́ / они́ instead of the noun"
+      ],
+      "rubric_lang": "en",
+      "key_terms": [
+       "ru-semya",
+       "ru-moj",
+       "ru-oni"
+      ],
+      "typical_errors": [
+       {
+        "wrong": "мой мать",
+        "right": "моя́ мать",
+        "note": "мать is feminine: моя́",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "мои́ бра́ты",
+        "right": "мои́ бра́тья",
+        "note": "брат → бра́тья (irregular)",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "ребёнки",
+        "right": "де́ти",
+        "note": "ребёнок → де́ти",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Де́ти ма́ленький.",
+        "right": "Де́ти ма́ленькие.",
+        "note": "a plural noun takes a plural adjective",
+        "note_lang": "en"
+       },
+       {
+        "wrong": "Оте́ц? Она́ ста́рый.",
+        "right": "Оте́ц? Он ста́рый.",
+        "note": "оте́ц is masculine: он",
+        "note_lang": "en"
+       }
+      ],
+      "elicits": [
+       "G02",
+       "G01"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "words_with_history": {
+  "title": "Слова́ с исто́рией",
+  "word": "семья́ / двор",
+  "text": [
+   "Ма́рья Степа́новна говори́т «семья́»: вот стол, вот хлеб, вот де́ти.",
+   "Пётр Матве́евич говори́т «двор»: двор — э́то семья́, хлеб и по́ле.",
+   "А Ша́рик лежи́т во дворе́: э́то его́ двор."
+  ],
+  "proverb": "В семье́ и ка́ша гу́ще.",
+  "lexeme_ids": [
+   "ru-semya",
+   "ru-dvor"
+  ],
+  "note_en": "A двор was also a peasant household: its head, here Pyotr, answered for it and spoke at the village assembly (сход). Семья́ is the people at the table. The proverb: 'in a family even the porridge is thicker'."
+ },
+ "grammar": {
+  "title": "Стол — столы́, доска́ — до́ски",
+  "rule": "стол → столы́, шко́ла → шко́лы · доска́ → до́ски, дере́вня → дере́вни · по́ле → поля́ · брат → бра́тья, ребёнок → де́ти · ста́рые, больши́е",
+  "tables": [
+   {
+    "caption": "стол → столы́",
+    "header": [
+     "кто? что?",
+     "мн."
+    ],
+    "rows": [
+     [
+      "стол",
+      "столы́"
+     ],
+     [
+      "шко́ла",
+      "шко́лы"
+     ],
+     [
+      "доска́",
+      "до́ски"
+     ],
+     [
+      "соба́ка",
+      "соба́ки"
+     ],
+     [
+      "дере́вня",
+      "дере́вни"
+     ],
+     [
+      "по́ле",
+      "поля́"
+     ],
+     [
+      "го́род",
+      "города́"
+     ],
+     [
+      "брат",
+      "бра́тья"
+     ],
+     [
+      "сын",
+      "сыновья́"
+     ],
+     [
+      "ребёнок",
+      "де́ти"
+     ]
+    ]
+   },
+   {
+    "caption": "како́й? → каки́е?",
+    "header": [
+     "м. ж. ср.",
+     "мн."
+    ],
+    "rows": [
+     [
+      "ста́рый, ста́рая, ста́рое",
+      "ста́рые"
+     ],
+     [
+      "большо́й, больша́я, большо́е",
+      "больши́е"
+     ],
+     [
+      "ма́ленький, ма́ленькая, ма́ленькое",
+      "ма́ленькие"
+     ],
+     [
+      "мой, моя́, моё",
+      "мои́"
+     ],
+     [
+      "твой, твоя́, твоё",
+      "твои́"
+     ],
+     [
+      "наш, на́ша, на́ше",
+      "на́ши"
+     ],
+     [
+      "э́тот, э́та, э́то",
+      "э́ти"
+     ],
+     [
+      "он, она́, оно́",
+      "они́"
+     ]
+    ]
+   },
+   {
+    "caption": "его́, её, их",
+    "header": [
+     "кто?",
+     "его́, её, их"
+    ],
+    "rows": [
+     [
+      "Фёдор",
+      "его́ жена́, его́ де́ти"
+     ],
+     [
+      "На́стя",
+      "её доска́"
+     ],
+     [
+      "Фёдор и Да́рья",
+      "их де́ти"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "ru-mir-01-l02-s015"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s016"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s017"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s019"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s020"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s045"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s046"
+   },
+   {
+    "segment_id": "ru-mir-01-l02-s006"
+   }
+  ],
+  "note_en": "Regular plurals: -ы, but -и after к, г, х, ж, ш, ч, щ and usually for nouns in -я/-ь (до́ски, дере́вни); neuter -о/-е usually gives -а/-я (поля́). Some masculine nouns take stressed -а (города́); some plurals are irregular (бра́тья, сыновья́, де́ти; мать and дочь change more). Adjectives: -ые, or -ие after к, г, х, ж, ш, ч, щ (больши́е, ма́ленькие). Stress often moves (доска́ → до́ски). его́, её, их never change."
+ },
+ "pensa": {
+  "A": {
+   "id": "ru-mir-01-l02-pa",
+   "title": "Пе́нсум A — Фо́рмы",
+   "blocks": [
+    {
+     "obrazec": {
+      "prompt": "стол → ___",
+      "answer": "столы́"
+     },
+     "items": [
+      {
+       "prompt": "доска́ → ___",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "до́ски"
+       ],
+       "choices": [
+        "до́ски",
+        "доскы́"
+       ],
+       "common_wrong": [
+        {
+         "answer": "доскы́",
+         "hint": "к + и: до́ски"
+        }
+       ],
+       "id": "a1"
+      },
+      {
+       "prompt": "брат → ___",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "бра́тья"
+       ],
+       "choices": [
+        "бра́ты",
+        "бра́тья"
+       ],
+       "id": "a2"
+      },
+      {
+       "prompt": "ребёнок → ___",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "де́ти"
+       ],
+       "choices": [
+        "ребёнки",
+        "де́ти"
+       ],
+       "id": "a3"
+      },
+      {
+       "prompt": "сын → ___",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "сыновья́"
+       ],
+       "choices": [
+        "сыны́",
+        "сыновья́"
+       ],
+       "id": "a4"
+      },
+      {
+       "prompt": "по́ле → ___",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "поля́"
+       ],
+       "id": "a5"
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "Где стол? — ___ здесь.",
+      "answer": "Он"
+     },
+     "items": [
+      {
+       "prompt": "Где доска́? — ___ здесь.",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "Она́"
+       ],
+       "choices": [
+        "Он",
+        "Она́",
+        "Оно́",
+        "Они́"
+       ],
+       "id": "a6"
+      },
+      {
+       "prompt": "Где по́ле? — ___ там.",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "Оно́"
+       ],
+       "choices": [
+        "Он",
+        "Она́",
+        "Оно́",
+        "Они́"
+       ],
+       "id": "a7"
+      },
+      {
+       "prompt": "___ де́ти! (мой)",
+       "mode": "productive",
+       "answer_mode": "choice",
+       "accepted_answers": [
+        "Мои́"
+       ],
+       "choices": [
+        "Мой",
+        "Моя́",
+        "Моё",
+        "Мои́"
+       ],
+       "id": "a8"
+      },
+      {
+       "prompt": "Де́ти ___. (ма́ленький)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ма́ленькие"
+       ],
+       "id": "a9"
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "Росси́я — ___ страна́. (большо́й)",
+      "answer": "больша́я"
+     },
+     "items": [
+      {
+       "prompt": "Дере́вня ___, но це́рковь ___. (ма́ленький, большо́й)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "blanks": [
+        [
+         "ма́ленькая"
+        ],
+        [
+         "больша́я"
+        ]
+       ],
+       "recall_of": "G01",
+       "id": "a10"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "ru-mir-01-l02-pb",
+   "title": "Пе́нсум B — Слова́",
+   "word_bank": [
+    "бра́тья",
+    "двор",
+    "дед",
+    "де́ти",
+    "доска́",
+    "дочь",
+    "жена́",
+    "семья́",
+    "сестра́",
+    "соба́ка",
+    "стол",
+    "хлеб",
+    "царь"
+   ],
+   "items": [
+    {
+     "prompt": "Ива́н — сын, а На́стя — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "дочь"
+     ],
+     "id": "b1"
+    },
+    {
+     "prompt": "Фёдор — брат, а На́стя — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "сестра́"
+     ],
+     "id": "b2"
+    },
+    {
+     "prompt": "Ша́рик — не брат и не сын. Ша́рик — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "соба́ка"
+     ],
+     "id": "b3"
+    },
+    {
+     "prompt": "Ми́ша и Ли́за ма́ленькие: они́ ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "де́ти"
+     ],
+     "id": "b4"
+    },
+    {
+     "prompt": "Хлеб на ___, а Ша́рик во дворе́.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "столе́"
+     ],
+     "id": "b5"
+    },
+    {
+     "prompt": "Да́рья и Фёдор — не брат и сестра́: она́ его́ ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "жена́"
+     ],
+     "id": "b6"
+    },
+    {
+     "prompt": "Матве́й ста́рый, о́чень ста́рый: он не оте́ц, он ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "дед"
+     ],
+     "id": "b7"
+    },
+    {
+     "prompt": "На́стя кричи́т: «Где моя́ ___?» — она́ и́щет.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "доска́"
+     ],
+     "id": "b8"
+    },
+    {
+     "prompt": "В Петербу́рге — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "царь"
+     ],
+     "id": "b9"
+    },
+    {
+     "prompt": "Оте́ц, мать, де́ти и дед — э́то ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "семья́"
+     ],
+     "id": "b10"
+    }
+   ]
+  },
+  "C": {
+   "id": "ru-mir-01-l02-pc",
+   "title": "Пе́нсум C — Вопро́сы",
+   "items": [
+    {
+     "prompt": "___ сиди́т, а ___ стои́т.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "blanks": [
+      [
+       "Оте́ц",
+       "Пётр Матве́евич"
+      ],
+      [
+       "мать",
+       "Ма́рья Степа́новна"
+      ]
+     ],
+     "id": "c1",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s009"
+     ]
+    },
+    {
+     "prompt": "Кто говори́т: «Мне двена́дцать лет»?",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "На́стя",
+      "Э́то На́стя.",
+      "Дочь, На́стя.",
+      "Дочь"
+     ],
+     "id": "c2",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s026"
+     ]
+    },
+    {
+     "prompt": "Где Ша́рик? — Ша́рик ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "во дворе́"
+     ],
+     "id": "c3",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s032"
+     ]
+    },
+    {
+     "prompt": "Кака́я доска́ у На́сти?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Разби́тая.",
+     "model_answers": [
+      "Разби́тая.",
+      "Её доска́ но́вая, но разби́тая."
+     ],
+     "rubric": "Broken (разби́тая); new before.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-razbityj",
+      "ru-doska"
+     ],
+     "id": "c4",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s034"
+     ]
+    },
+    {
+     "prompt": "Кто винова́т: Ми́ша и Ли́за, Ива́н и́ли Ша́рик? — Винова́т ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Ша́рик",
+      "наш Ша́рик"
+     ],
+     "id": "c5",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s067"
+     ]
+    },
+    {
+     "prompt": "Где доска́? Кто винова́т?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Разби́тая доска́ во дворе́, а там Ша́рик. Э́то Ша́рик!",
+     "model_answers": [
+      "Разби́тая доска́ во дворе́, а там Ша́рик. Э́то Ша́рик!",
+      "Доска́ во дворе́, и Ша́рик там."
+     ],
+     "rubric": "The other half of the slate is on Sharik's straw in the yard, so Sharik is to blame.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-dvor",
+      "ru-doska"
+     ],
+     "id": "c6",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s061"
+     ]
+    },
+    {
+     "prompt": "Что на доске́? Кто зна́ет, а кто не зна́ет?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "На доске́ «Росси́я». На́стя зна́ет, а Ива́н не зна́ет.",
+     "model_answers": [
+      "На доске́ «Росси́я». На́стя зна́ет, а Ива́н не зна́ет."
+     ],
+     "rubric": "«Росси́я» is written on it; Nastya can read it, Ivan cannot.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-doska"
+     ],
+     "id": "c7",
+     "source_segment_ids": [
+      "ru-mir-01-l02-s082"
+     ]
+    },
+    {
+     "prompt": "А ты? Твоя́ семья́ больша́я и́ли ма́ленькая? Кто э́то?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answer": "Моя́ семья́ ма́ленькая: мать, оте́ц и я.",
+     "model_answers": [
+      "Моя́ семья́ ма́ленькая: мать, оте́ц и я.",
+      "Моя́ семья́ больша́я: мать, оте́ц, бра́тья и сестра́."
+     ],
+     "rubric": "Big or small, and who: plural nouns where needed (бра́тья, де́ти).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-semya"
+     ],
+     "id": "c8"
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "ru-semya",
+   "citation_form": "семья́",
+   "part_of_speech": "noun",
+   "current_sense": "family",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-otets",
+   "citation_form": "оте́ц",
+   "part_of_speech": "noun",
+   "current_sense": "father",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-mat",
+   "citation_form": "мать",
+   "part_of_speech": "noun",
+   "current_sense": "mother",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-syn",
+   "citation_form": "сын",
+   "part_of_speech": "noun",
+   "current_sense": "son",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-doch",
+   "citation_form": "дочь",
+   "part_of_speech": "noun",
+   "current_sense": "daughter",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-brat",
+   "citation_form": "брат",
+   "part_of_speech": "noun",
+   "current_sense": "brother",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-sestra",
+   "citation_form": "сестра́",
+   "part_of_speech": "noun",
+   "current_sense": "sister",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-ded",
+   "citation_form": "дед",
+   "part_of_speech": "noun",
+   "current_sense": "grandfather, old man",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-zhena",
+   "citation_form": "жена́",
+   "part_of_speech": "noun",
+   "current_sense": "wife",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-rebyonok",
+   "citation_form": "ребёнок",
+   "part_of_speech": "noun",
+   "current_sense": "child (pl. де́ти)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-sobaka",
+   "citation_form": "соба́ка",
+   "part_of_speech": "noun",
+   "current_sense": "dog",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-stol",
+   "citation_form": "стол",
+   "part_of_speech": "noun",
+   "current_sense": "table",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-khleb",
+   "citation_form": "хлеб",
+   "part_of_speech": "noun",
+   "current_sense": "bread",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-tsar",
+   "citation_form": "царь",
+   "part_of_speech": "noun",
+   "current_sense": "tsar",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-doska",
+   "citation_form": "доска́",
+   "part_of_speech": "noun",
+   "current_sense": "board; (school) slate",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-dvor",
+   "citation_form": "двор",
+   "part_of_speech": "noun",
+   "current_sense": "yard; household",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-kto",
+   "citation_form": "кто",
+   "part_of_speech": "pron",
+   "current_sense": "who",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-chto",
+   "citation_form": "что",
+   "part_of_speech": "pron",
+   "current_sense": "what",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-kakoj",
+   "citation_form": "како́й",
+   "part_of_speech": "pron",
+   "current_sense": "which, what kind of",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ya",
+   "citation_form": "я",
+   "part_of_speech": "pron",
+   "current_sense": "I",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ty",
+   "citation_form": "ты",
+   "part_of_speech": "pron",
+   "current_sense": "you (sg., familiar)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-on",
+   "citation_form": "он",
+   "part_of_speech": "pron",
+   "current_sense": "he, it",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ona",
+   "citation_form": "она́",
+   "part_of_speech": "pron",
+   "current_sense": "she, it",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-oni",
+   "citation_form": "они́",
+   "part_of_speech": "pron",
+   "current_sense": "they",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-moj",
+   "citation_form": "мой",
+   "part_of_speech": "pron",
+   "current_sense": "my",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-tvoj",
+   "citation_form": "твой",
+   "part_of_speech": "pron",
+   "current_sense": "your (sg.)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nash",
+   "citation_form": "наш",
+   "part_of_speech": "pron",
+   "current_sense": "our",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-etot",
+   "citation_form": "э́тот",
+   "part_of_speech": "pron",
+   "current_sense": "this",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ego",
+   "citation_form": "его́",
+   "part_of_speech": "pron",
+   "current_sense": "his, its (invariable)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-eyo",
+   "citation_form": "её",
+   "part_of_speech": "pron",
+   "current_sense": "her (invariable)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ikh",
+   "citation_form": "их",
+   "part_of_speech": "pron",
+   "current_sense": "their (invariable)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ochen",
+   "citation_form": "о́чень",
+   "part_of_speech": "adv",
+   "current_sense": "very",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-razbityj",
+   "citation_form": "разби́тый",
+   "part_of_speech": "adj",
+   "current_sense": "broken",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ono",
+   "citation_form": "оно́",
+   "part_of_speech": "pron",
+   "current_sense": "it (neuter)",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-vinovatyj",
+   "citation_form": "винова́тый",
+   "part_of_speech": "adj",
+   "current_sense": "guilty, to blame (here only «Кто винова́т?» / винова́т(а))",
+   "first_introduced_lesson": "ru-mir-01-l02",
+   "new": true
+  }
+ ],
+ "media": {
+  "status": "partial",
+  "cover": "ru-mir-01-l02-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 3,
+   "margin_diagram": 1,
+   "margin_gloss": 19
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-02/silero/manifest.json",
+    "default": true
+   }
+  ]
+ },
+ "completion": {
+  "button_label": "Гото́во"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "ru-mir-01",
+   "glava-02",
+   "chast-1"
+  ]
+ },
+ "metrics": {
+  "running_words": 466,
+  "sentences": 84,
+  "word_target": 500,
+  "word_window": [
+   450,
+   550
+  ]
+ }
+}

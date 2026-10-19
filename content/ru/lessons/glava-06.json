@@ -7,7 +7,7 @@
  "part": 1,
  "status": "draft",
  "text_status": "draft",
- "content_version": "0.1.0-calibration",
+ "content_version": "0.1.1-pilot-revision",
  "provenance": {
   "author": "curriculum planner (Claude, model-written) as the design's calibration chapter",
   "model": "claude-opus-5-5",
@@ -18,7 +18,10 @@
    "Licensing self-check: every token checked with pymorphy3 against the cumulative plan lexicon and grammar-map.json through G06 (scratch simulator); the remaining licensed-incidental forms are the G05 imperative chunks (Чита́йте, Чита́й, пиши́) and the 1pl classroom commands (Пи́шем!, Повторя́ем!).",
    "Present-tense narration (before Глава 10). No dative except the baseline-licensed тебе́ (Тебе́ легко́); no instrumental; locatives only in -е (в окне́, в шко́ле, на доске́, на уро́ке, в избе́).",
    "The proverb in words_with_history is a quotation (уче́нье, свет, тьма are not course lexemes); it is a margin box, glossed by its context, never tested.",
-   "Assumption flagged for the integrator: segment 'tableau' marks the four-line dictation tableau (the Welsh Mae-run exemption) although Russian has no Mae ratio; it documents the deliberate parallel structure."
+   "Assumption flagged for the integrator: segment 'tableau' marks the four-line dictation tableau (the Welsh Mae-run exemption) although Russian has no Mae ratio; it documents the deliberate parallel structure.",
+   "Pilot revision (2026-10-18, after Главы 1–5 were written): segment IDs kept; new segments get new IDs (s130 onwards) and are inserted in reading order.",
+   "Continuity with Главы 1–5: Ivan works in the field in the morning and goes to school in the evening, as he told his father in Глава 5 («А ве́чером — шко́ла»); the school map of Глава 5 hangs there and, as in Глава 1, Берёзовка is not on it, but Ivan knows where it is; Шарик sleeps in the yard (Глава 2) and Ivan keeps the mended slate from him («Нет, Ша́рик, э́то не твоя́ доска́!», a callback to Дед's «Ша́рик, э́то твоя́ доска́?»).",
+   "Two planner pins corrected: «большо́й» in s012 and s024 is nominative masculine, not genitive feminine."
   ],
   "review_questions": [
    {
@@ -50,6 +53,11 @@
     "segment_id": "ru-mir-01-l06-s100",
     "quote": "Ты гра́мотный?",
     "question": "Would a village priest of 1913 say «Ты гра́мотный?» to a peasant of 19? (Register check: ты from priest to parishioner assumed.)"
+   },
+   {
+    "segment_id": "ru-mir-01-l06-s130",
+    "quote": "ка́рта",
+    "question": "[?] The wall map in a village zemstvo school of 1913 (plausible; a museum zemstvo school in Konstantinovo shows an 1895 map) is not documented in the history notes."
    }
   ]
  },
@@ -172,7 +180,7 @@
    {
     "lexeme_id": "ru-vecherom",
     "how": "context",
-    "segment_id": "ru-mir-01-l06-s004"
+    "segment_id": "ru-mir-01-l06-s005"
    },
    {
     "lexeme_id": "ru-lampa",
@@ -335,23 +343,35 @@
      },
      {
       "id": "ru-mir-01-l06-s004",
-      "text": "Ве́чером Ива́н рабо́тает в по́ле.",
+      "text": "У́тром Ива́н рабо́тает в по́ле.",
       "pins": [
        {
         "start": 0,
-        "end": 8,
-        "token": "Ве́чером",
-        "lemma": "вечером",
+        "end": 6,
+        "token": "У́тром",
+        "lemma": "утром",
         "feats": {
          "pos": "ADVB"
         },
-        "note": "syncretic form; reading chosen from context"
+        "note": "auto (only licensed); reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l06-s005",
-      "text": "А сего́дня он здесь."
+      "text": "А ве́чером — шко́ла.",
+      "pins": [
+       {
+        "start": 2,
+        "end": 10,
+        "token": "ве́чером",
+        "lemma": "вечером",
+        "feats": {
+         "pos": "ADVB"
+        },
+        "note": "auto (only licensed); reviewed by the writer"
+       }
+      ]
      },
      {
       "id": "ru-mir-01-l06-s006",
@@ -363,13 +383,15 @@
         "ref": "ru-mir-01-l06-img-lampa",
         "anchor_text": "ла́мпа",
         "label": "ла́мпа",
-        "src": "media/vignettes/ru-mir-01-l06-img-lampa.webp",
+        "src": "media/vignettes/ru-mir-01-l06-img-lampa.svg",
         "alt": "",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "A kerosene table lamp with a glass chimney, lit, warm yellow glow. Transparent background, no text.",
         "covers_lexeme_ids": [
          "ru-lampa"
-        ]
+        ],
+        "width": 240,
+        "height": 240
        }
       ]
      },
@@ -471,12 +493,11 @@
         "token": "большо́й",
         "lemma": "большой",
         "feats": {
-         "case": "gent",
-         "form": "long",
+         "case": "nomn",
          "number": "sing",
          "pos": "ADJF"
         },
-        "note": "syncretic form; reading chosen from context"
+        "note": "nominative masculine (corrected in the pilot revision; the earlier pin chose a genitive reading)"
        }
       ]
      },
@@ -994,12 +1015,11 @@
         "token": "большо́й",
         "lemma": "большой",
         "feats": {
-         "case": "gent",
-         "form": "long",
+         "case": "nomn",
          "number": "sing",
          "pos": "ADJF"
         },
-        "note": "syncretic form; reading chosen from context"
+        "note": "nominative masculine (corrected in the pilot revision; the earlier pin chose a genitive reading)"
        }
       ]
      },
@@ -1013,15 +1033,21 @@
         "ref": "ru-mir-01-l06-img-mel",
         "anchor_text": "мел",
         "label": "мел",
-        "src": "media/vignettes/ru-mir-01-l06-img-mel.webp",
+        "src": "media/vignettes/ru-mir-01-l06-img-mel.svg",
         "alt": "",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "A stick of white chalk on a dark slate surface. Transparent background, no text.",
         "covers_lexeme_ids": [
          "ru-mel"
-        ]
+        ],
+        "width": 240,
+        "height": 160
        }
       ]
+     },
+     {
+      "id": "ru-mir-01-l06-s130",
+      "text": "А там — ка́рта: Росси́я, Москва́ и Во́лга, ру́сская река́."
      },
      {
       "id": "ru-mir-01-l06-s026",
@@ -1037,13 +1063,15 @@
         "ref": "ru-mir-01-l06-img-tetrad",
         "anchor_text": "тетра́ди",
         "label": "тетра́дь",
-        "src": "media/vignettes/ru-mir-01-l06-img-tetrad.webp",
+        "src": "media/vignettes/ru-mir-01-l06-img-tetrad.svg",
         "alt": "",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "A thin school exercise book of 1913 with a plain paper cover, open on lined pages. Transparent background, no text.",
         "covers_lexeme_ids": [
          "ru-tetrad"
-        ]
+        ],
+        "width": 320,
+        "height": 220
        }
       ],
       "pins": [
@@ -1694,8 +1722,22 @@
      },
      {
       "id": "ru-mir-01-l06-s060",
-      "text": "— Я говорю́, а вы пи́шете.",
-      "speaker": "char-vera"
+      "text": "— Я пишу́ на доске́, а вы смо́трите и пи́шете.",
+      "speaker": "char-vera",
+      "pins": [
+       {
+        "start": 13,
+        "end": 19,
+        "token": "доске́",
+        "lemma": "доска",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'на' → loct); reviewed by the writer"
+       }
+      ]
      },
      {
       "id": "ru-mir-01-l06-s061",
@@ -1866,6 +1908,28 @@
      {
       "id": "ru-mir-01-l06-s083",
       "text": "Берёзовка — его́ дере́вня."
+     },
+     {
+      "id": "ru-mir-01-l06-s131",
+      "text": "Ива́н смо́трит на ка́рту: где губе́рния, где уе́зд и уе́здный го́род?"
+     },
+     {
+      "id": "ru-mir-01-l06-s134",
+      "text": "Берёзовки на ка́рте нет. Где она́? Ива́н зна́ет!",
+      "pins": [
+       {
+        "start": 13,
+        "end": 19,
+        "token": "ка́рте",
+        "lemma": "карта",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing"
+        },
+        "note": "auto (after 'на' → loct); reviewed by the writer"
+       }
+      ]
      },
      {
       "id": "ru-mir-01-l06-s084",
@@ -2523,12 +2587,22 @@
      },
      {
       "id": "ru-mir-01-l06-s118",
-      "text": "Ша́рик лежи́т у две́ри."
+      "text": "Ша́рик лежи́т во дворе́, у две́ри."
      },
      {
       "id": "ru-mir-01-l06-s119",
       "text": "Ива́н берёт до́ску На́сти и мел.",
       "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l06-s132",
+      "text": "Ша́рик смо́трит в окно́: доска́!"
+     },
+     {
+      "id": "ru-mir-01-l06-s133",
+      "text": "— Нет, Ша́рик, э́то не твоя́ доска́! — ти́хо говори́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
      },
      {
       "id": "ru-mir-01-l06-s120",
@@ -3778,7 +3852,7 @@
   }
  ],
  "media": {
-  "status": "planned",
+  "status": "partial",
   "cover": "ru-mir-01-l06-cover",
   "counts": {
    "cover": 1,
@@ -3786,7 +3860,15 @@
    "margin_vignette": 3,
    "margin_diagram": 1,
    "margin_gloss": 19
-  }
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-06/silero/manifest.json",
+    "default": true
+   }
+  ]
  },
  "completion": {
   "button_label": "Гото́во"
