@@ -1,0 +1,7391 @@
+{
+ "id": "grc-diagnostic-stage-1",
+ "version": "1.0.0",
+ "title": "Ancient Greek placement diagnostic, stage 1",
+ "notes": "Item bank for docs/greek-diagnostic-spec.md. Sources, choices, verification and per-item doubts: content/grc/diagnostic/authoring-notes.md. Unlisted items p2b, p2b-q1–q6 and w1b replace p2, p2-q1–q6 and w1 when the learner has read Anabasis 3.",
+ "sections": [
+  {
+   "id": "s0",
+   "title": "About you",
+   "kind": "intake",
+   "intro_en": "Before any Greek: a few questions about what you have read, so the test can avoid passages you already know. Then one untimed practice round to get used to typing Greek. Allow about 35 minutes initially; you can stop at a section boundary and resume. Taking longer does not lower your placement."
+  },
+  {
+   "id": "s1",
+   "title": "Reading",
+   "intro_en": "Two passages of Xenophon, the first written for this test, the second as he wrote it. Read each at your own pace; the text stays on screen while you answer, and rereading is expected. If a question can't be answered, leave it rather than guess.",
+   "items": [
+    "p1",
+    "p1-q1",
+    "p1-q2",
+    "p1-q3",
+    "p1-q4",
+    "p1-q5",
+    "p1-q6",
+    "p2",
+    "p2-q1",
+    "p2-q2",
+    "p2-q3",
+    "p2-q4",
+    "p2-q5",
+    "p2-q6"
+   ]
+  },
+  {
+   "id": "s2",
+   "title": "Where did you get stuck?",
+   "kind": "retry",
+   "passages": [
+    "p1",
+    "p2"
+   ],
+   "intro_en": "Mark up to five places where your reading stopped, and say what you think they mean, even if that is 'no idea'. Help then arrives in steps: a few word meanings, then the shape of the sentence, then a translation."
+  },
+  {
+   "id": "s3",
+   "title": "Forms in context",
+   "intro_en": "Short sentences, each with one decision that changes the meaning, then eight gaps to fill. Accents and breathings are optional when you type.",
+   "items": [
+    "r1",
+    "r2",
+    "r3",
+    "r4",
+    "r5",
+    "r6",
+    "r7",
+    "r8",
+    "c1",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "c6",
+    "c7",
+    "c8"
+   ]
+  },
+  {
+   "id": "s4",
+   "title": "Words",
+   "intro_en": "Fourteen words, each in a short phrase. Pick the meaning and say how sure you are; 'unknown' is a perfectly good answer.",
+   "items": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14"
+   ]
+  },
+  {
+   "id": "s5",
+   "title": "Writing Greek",
+   "intro_en": "Three short pieces of Greek and an optional fourth. The passages are there to borrow from. What matters first is that the meaning comes across; the forms are looked at separately.",
+   "items": [
+    "w1",
+    "w2",
+    "w3",
+    "w4"
+   ]
+  },
+  {
+   "id": "m1",
+   "title": "Optional: Plato",
+   "optional": true,
+   "intro_en": "About five minutes: Socrates thinking aloud in the Apology.",
+   "items": [
+    "p3",
+    "p3-q1",
+    "p3-q2",
+    "p3-q3",
+    "p3-q4"
+   ]
+  },
+  {
+   "id": "m2",
+   "title": "Optional: Aeschylus",
+   "optional": true,
+   "intro_en": "About five minutes: the watchman who opens the Agamemnon. Poetic words are glossed with their everyday prose equivalents.",
+   "items": [
+    "p4",
+    "p4-q1",
+    "p4-q2",
+    "p4-q3"
+   ]
+  }
+ ],
+ "intake": {
+  "texts_read": [
+   "Anabasis 1",
+   "Anabasis 2",
+   "Anabasis 3",
+   "Anabasis 4",
+   "Apology",
+   "Agamemnon"
+  ],
+  "fallbacks": {
+   "p2": {
+    "if_read": "Anabasis 3",
+    "use": "p2b",
+    "familiar_if": "Anabasis 1"
+   }
+  }
+ },
+ "practice": [
+  {
+   "kind": "passage",
+   "id": "pr-p",
+   "label": "Practice",
+   "source": "written for this test (after Athenaze ch. 1)",
+   "authentic": false,
+   "context_en": "A warm-up: two sentences about an old friend from Athenaze.",
+   "sentences": [
+    {
+     "id": "pr-s1",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Δικαιόπολις",
+       "lemma": "Δικαιόπολις",
+       "gloss": "Dicaeopolis"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "to"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἀγρὸν",
+       "lemma": "ἀγρός",
+       "gloss": "field, farm"
+      },
+      {
+       "t": "βαδίζει·",
+       "lemma": "βαδίζω",
+       "gloss": "walks"
+      }
+     ],
+     "translation_en": "Dicaeopolis walks to the field;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 5,
+        "label": "main"
+       }
+      ],
+      "subject": [
+       0,
+       1
+      ],
+      "main_verb": [
+       5
+      ]
+     }
+    },
+    {
+     "id": "pr-s2",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "Ξανθίας",
+       "lemma": "Ξανθίας",
+       "gloss": "Xanthias"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "βοῦς",
+       "lemma": "βοῦς",
+       "gloss": "oxen"
+      },
+      {
+       "t": "ἐλαύνει.",
+       "lemma": "ἐλαύνω",
+       "gloss": "drives"
+      }
+     ],
+     "translation_en": "and Xanthias drives the oxen.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 5,
+        "label": "main"
+       }
+      ],
+      "subject": [
+       0,
+       2
+      ],
+      "main_verb": [
+       5
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "kind": "mc",
+   "id": "pr-mc",
+   "passage": "pr-p",
+   "gist": false,
+   "prompt_en": "Who is driving the oxen?",
+   "options": [
+    "Xanthias",
+    "Dicaeopolis",
+    "Dicaeopolis and Xanthias together",
+    "Nobody: the oxen are walking to the field"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ὁ δὲ Ξανθίας is the subject of ἐλαύνει.",
+    "Dicaeopolis is walking to the field; ὁ δέ switches to a new subject.",
+    "Each sentence has its own subject and verb.",
+    "τοὺς βοῦς is accusative: the oxen are being driven."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.omitted-subject",
+   "tags": [
+    "d.omitted-subject"
+   ],
+   "ablation": "Practice item (unscored)."
+  },
+  {
+   "kind": "span",
+   "id": "pr-span",
+   "passage": "pr-p",
+   "prompt_en": "Select the words that say where Dicaeopolis is going.",
+   "answer": {
+    "sentence": "pr-s1",
+    "start": 2,
+    "end": 4
+   },
+   "min_overlap": 0.6,
+   "why": "εἰς τὸν ἀγρόν, 'to the field'.",
+   "domain": "D3",
+   "primary_tag": "n.prep-case",
+   "tags": [
+    "n.prep-case"
+   ],
+   "ablation": "Practice item (unscored)."
+  },
+  {
+   "kind": "cloze",
+   "id": "pr-cloze",
+   "subtype": "specified",
+   "greek": "ἐν δὲ τῷ ἀγρῷ ὁ Δικαιόπολις τοὺς βοῦς ___.",
+   "lemma": "λύω",
+   "target_en": "present indicative active, 3rd singular",
+   "accepted": [
+    "λύει"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "λυεισ"
+     ],
+     "label": "2nd person instead of 3rd"
+    },
+    {
+     "match": [
+      "λυουσι",
+      "λυουσιν"
+     ],
+     "label": "plural instead of singular"
+    },
+    {
+     "match": [
+      "λυω"
+     ],
+     "label": "1st person instead of 3rd"
+    }
+   ],
+   "domain": "D2",
+   "primary_tag": "v.pres-impf",
+   "tags": [
+    "v.pres-impf"
+   ],
+   "ablation": "n/a (practice)"
+  },
+  {
+   "kind": "vocab",
+   "id": "pr-vocab",
+   "greek": "ὁ Δικαιόπολις τὸν λίθον [[αἴρει]].",
+   "lemma": "αἴρω",
+   "options": [
+    "lifts",
+    "throws",
+    "breaks",
+    "finds"
+   ],
+   "answer": 0,
+   "band": "practice",
+   "rank_source": "practice item (Athenaze ch. 1); DCC core rank 389",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  {
+   "kind": "write",
+   "id": "pr-write",
+   "subtype": "free",
+   "prompt_en": "Type any short Greek sentence: for example, what Dicaeopolis does next. Try the keys h = η, w = ω, q = θ, c = ξ, y = ψ, f = φ, x = χ.",
+   "model_answers": [
+    "ὁ Δικαιόπολις τὸν λίθον αἴρει καὶ ἐκβάλλει."
+   ],
+   "rubric": "Practice only: nothing is scored.",
+   "shape": "free",
+   "domain": "D2",
+   "primary_tag": "v.pres-impf",
+   "tags": [
+    "v.pres-impf"
+   ],
+   "ablation": "n/a (production)"
+  }
+ ],
+ "items": {
+  "p1": {
+   "kind": "passage",
+   "id": "p1",
+   "label": "At the ford (written for this test, after Xenophon)",
+   "source": "new Attic narrative written for this diagnostic in the manner of Xenophon's Anabasis",
+   "authentic": false,
+   "context_en": "A new passage written in Xenophon's style. A Greek army marching through hostile country has come to a river.",
+   "sentences": [
+    {
+     "id": "p1-s1",
+     "tokens": [
+      {
+       "t": "ἐπεὶ",
+       "lemma": "ἐπεί",
+       "gloss": "when"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "οἱ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ἕλληνες",
+       "lemma": "Ἕλλην",
+       "gloss": "Greeks"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "to"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ποταμὸν",
+       "lemma": "ποταμός",
+       "gloss": "river"
+      },
+      {
+       "t": "ἀφίκοντο,",
+       "lemma": "ἀφικνέομαι",
+       "gloss": "arrived"
+      },
+      {
+       "t": "ἐφαίνετο",
+       "lemma": "φαίνω",
+       "gloss": "appeared, seemed"
+      },
+      {
+       "t": "βαθὺς",
+       "lemma": "βαθύς",
+       "gloss": "deep"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "οὐδαμῇ",
+       "lemma": "οὐδαμῇ",
+       "gloss": "nowhere"
+      },
+      {
+       "t": "διαβατός.",
+       "lemma": "διαβατός",
+       "gloss": "crossable, fordable"
+      }
+     ],
+     "translation_en": "When the Greeks reached the river, it looked deep and nowhere fordable.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 7,
+        "label": "temporal clause"
+       },
+       {
+        "start": 8,
+        "end": 12,
+        "label": "main clause; subject unexpressed"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       8
+      ]
+     }
+    },
+    {
+     "id": "p1-s2",
+     "tokens": [
+      {
+       "t": "πάντων",
+       "lemma": "πᾶς",
+       "gloss": "all"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ἀπορούντων",
+       "lemma": "ἀπορέω",
+       "gloss": "be at a loss"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "στρατηγὸς",
+       "lemma": "στρατηγός",
+       "gloss": "general"
+      },
+      {
+       "t": "λοχαγόν",
+       "lemma": "λοχαγός",
+       "gloss": "captain (of a company)"
+      },
+      {
+       "t": "τινα",
+       "lemma": "τις",
+       "gloss": "a, one"
+      },
+      {
+       "t": "σὺν",
+       "lemma": "σύν",
+       "gloss": "with"
+      },
+      {
+       "t": "εἴκοσι",
+       "lemma": "εἴκοσι",
+       "gloss": "twenty"
+      },
+      {
+       "t": "πελτασταῖς",
+       "lemma": "πελταστής",
+       "gloss": "peltasts (light-armed troops)"
+      },
+      {
+       "t": "ἔπεμψε",
+       "lemma": "πέμπω",
+       "gloss": "sent"
+      },
+      {
+       "t": "πόρον",
+       "lemma": "πόρος",
+       "gloss": "a ford"
+      },
+      {
+       "t": "ζητήσοντα.",
+       "lemma": "ζητέω",
+       "gloss": "seek, look for"
+      }
+     ],
+     "translation_en": "Since everyone was at a loss, the general sent a captain with twenty peltasts to look for a ford.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "genitive absolute"
+       },
+       {
+        "start": 3,
+        "end": 10,
+        "label": "main clause"
+       },
+       {
+        "start": 11,
+        "end": 12,
+        "label": "participle phrase"
+       }
+      ],
+      "subject": [
+       3,
+       4
+      ],
+      "main_verb": [
+       10
+      ]
+     }
+    },
+    {
+     "id": "p1-s3",
+     "tokens": [
+      {
+       "t": "οἱ",
+       "lemma": "ὁ",
+       "gloss": "they"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "παρὰ",
+       "lemma": "παρά",
+       "gloss": "along"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ποταμὸν",
+       "lemma": "ποταμός",
+       "gloss": "river"
+      },
+      {
+       "t": "πορευόμενοι",
+       "lemma": "πορεύομαι",
+       "gloss": "march"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "to"
+      },
+      {
+       "t": "κώμην",
+       "lemma": "κώμη",
+       "gloss": "village"
+      },
+      {
+       "t": "μικρὰν",
+       "lemma": "μικρός",
+       "gloss": "small"
+      },
+      {
+       "t": "ἀφικνοῦνται",
+       "lemma": "ἀφικνέομαι",
+       "gloss": "arrive"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ἐκεῖ",
+       "lemma": "ἐκεῖ",
+       "gloss": "there"
+      },
+      {
+       "t": "γέροντά",
+       "lemma": "γέρων",
+       "gloss": "old man"
+      },
+      {
+       "t": "τινα",
+       "lemma": "τις",
+       "gloss": "an, a certain"
+      },
+      {
+       "t": "ἐν",
+       "lemma": "ἐν",
+       "gloss": "in"
+      },
+      {
+       "t": "οἰκίᾳ",
+       "lemma": "οἰκία",
+       "gloss": "house"
+      },
+      {
+       "t": "κρυπτόμενον",
+       "lemma": "κρύπτω",
+       "gloss": "hide"
+      },
+      {
+       "t": "λαμβάνουσιν.",
+       "lemma": "λαμβάνω",
+       "gloss": "they catch"
+      }
+     ],
+     "translation_en": "They, marching along the river, come to a small village, and there they catch an old man hiding in a house.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 2,
+        "end": 5,
+        "label": "participle phrase"
+       },
+       {
+        "start": 6,
+        "end": 9,
+        "label": "main clause (cont.)"
+       },
+       {
+        "start": 10,
+        "end": 17,
+        "label": "second main clause"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       9,
+       17
+      ]
+     }
+    },
+    {
+     "id": "p1-s4",
+     "tokens": [
+      {
+       "t": "τοῦτον",
+       "lemma": "οὗτος",
+       "gloss": "him"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ἤροντο",
+       "lemma": "ἔρομαι",
+       "gloss": "they asked"
+      },
+      {
+       "t": "εἴ",
+       "lemma": "εἰ",
+       "gloss": "if, whether"
+      },
+      {
+       "t": "πῃ",
+       "lemma": "πῃ",
+       "gloss": "anywhere"
+      },
+      {
+       "t": "διαβατὸς",
+       "lemma": "διαβατός",
+       "gloss": "fordable"
+      },
+      {
+       "t": "εἴη",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ποταμός.",
+       "lemma": "ποταμός",
+       "gloss": "river"
+      }
+     ],
+     "translation_en": "They asked him whether the river was fordable anywhere.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause; subject unexpressed"
+       },
+       {
+        "start": 3,
+        "end": 8,
+        "label": "indirect question"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       2
+      ]
+     }
+    },
+    {
+     "id": "p1-s5",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ",
+       "gloss": "he"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ἔφη",
+       "lemma": "φημί",
+       "gloss": "said"
+      },
+      {
+       "t": "πόρον",
+       "lemma": "πόρος",
+       "gloss": "a ford"
+      },
+      {
+       "t": "εἶναι",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "οὐ",
+       "lemma": "οὐ",
+       "gloss": "not"
+      },
+      {
+       "t": "πολὺ",
+       "lemma": "πολύς",
+       "gloss": "much, far"
+      },
+      {
+       "t": "ἀνωτέρω,",
+       "lemma": "ἀνωτέρω",
+       "gloss": "higher up (the river)"
+      },
+      {
+       "t": "φυλάττεσθαι",
+       "lemma": "φυλάττω",
+       "gloss": "guard"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ",
+       "gloss": "but"
+      },
+      {
+       "t": "αὐτὸν",
+       "lemma": "αὐτός",
+       "gloss": "him, it"
+      },
+      {
+       "t": "ὑπὸ",
+       "lemma": "ὑπό",
+       "gloss": "by"
+      },
+      {
+       "t": "ἱππέων.",
+       "lemma": "ἱππεύς",
+       "gloss": "horsemen"
+      }
+     ],
+     "translation_en": "He said that there was a ford not far upstream, but that it was guarded by horsemen.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause"
+       },
+       {
+        "start": 3,
+        "end": 7,
+        "label": "indirect statement"
+       },
+       {
+        "start": 8,
+        "end": 12,
+        "label": "second indirect statement"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       2
+      ]
+     }
+    },
+    {
+     "id": "p1-s6",
+     "tokens": [
+      {
+       "t": "ἀκούσας",
+       "lemma": "ἀκούω",
+       "gloss": "hear"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ταῦτα",
+       "lemma": "οὗτος",
+       "gloss": "this"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "λοχαγὸς",
+       "lemma": "λοχαγός",
+       "gloss": "captain"
+      },
+      {
+       "t": "ἐκέλευσεν",
+       "lemma": "κελεύω",
+       "gloss": "ordered"
+      },
+      {
+       "t": "αὐτὸν",
+       "lemma": "αὐτός",
+       "gloss": "him, it"
+      },
+      {
+       "t": "ἡγεῖσθαι,",
+       "lemma": "ἡγέομαι",
+       "gloss": "lead the way"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "διὰ",
+       "lemma": "διά",
+       "gloss": "through"
+      },
+      {
+       "t": "τῆς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "νυκτὸς",
+       "lemma": "νύξ",
+       "gloss": "night"
+      },
+      {
+       "t": "ἐπορεύοντο.",
+       "lemma": "πορεύομαι",
+       "gloss": "they marched"
+      }
+     ],
+     "translation_en": "Having heard this, the captain ordered him to lead the way, and they marched through the night.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "participle phrase"
+       },
+       {
+        "start": 3,
+        "end": 7,
+        "label": "main clause"
+       },
+       {
+        "start": 8,
+        "end": 12,
+        "label": "second main clause; subject unexpressed"
+       }
+      ],
+      "subject": [
+       3,
+       4
+      ],
+      "main_verb": [
+       5,
+       12
+      ]
+     }
+    },
+    {
+     "id": "p1-s7",
+     "tokens": [
+      {
+       "t": "ἅμα",
+       "lemma": "ἅμα",
+       "gloss": "at the same time as"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "τῇ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἡμέρᾳ,",
+       "lemma": "ἡμέρα",
+       "gloss": "day(break)"
+      },
+      {
+       "t": "τῶν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἱππέων",
+       "lemma": "ἱππεύς",
+       "gloss": "horsemen"
+      },
+      {
+       "t": "ἔτι",
+       "lemma": "ἔτι",
+       "gloss": "still"
+      },
+      {
+       "t": "καθευδόντων,",
+       "lemma": "καθεύδω",
+       "gloss": "sleep"
+      },
+      {
+       "t": "οἱ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πελτασταὶ",
+       "lemma": "πελταστής",
+       "gloss": "peltasts"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "into"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ποταμὸν",
+       "lemma": "ποταμός",
+       "gloss": "river"
+      },
+      {
+       "t": "εἰσέβησαν.",
+       "lemma": "εἰσβαίνω",
+       "gloss": "went in, stepped in"
+      }
+     ],
+     "translation_en": "At daybreak, while the horsemen were still asleep, the peltasts went into the river.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "time expression"
+       },
+       {
+        "start": 4,
+        "end": 7,
+        "label": "genitive absolute"
+       },
+       {
+        "start": 8,
+        "end": 13,
+        "label": "main clause"
+       }
+      ],
+      "subject": [
+       8,
+       9
+      ],
+      "main_verb": [
+       13
+      ]
+     }
+    },
+    {
+     "id": "p1-s8",
+     "tokens": [
+      {
+       "t": "ἦν",
+       "lemma": "εἰμί",
+       "gloss": "was"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "τὸ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ὕδωρ",
+       "lemma": "ὕδωρ",
+       "gloss": "water"
+      },
+      {
+       "t": "μέχρι",
+       "lemma": "μέχρι",
+       "gloss": "up to"
+      },
+      {
+       "t": "τῶν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "μαστῶν·",
+       "lemma": "μαστός",
+       "gloss": "breasts, chest"
+      }
+     ],
+     "translation_en": "The water came up to their chests;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 6,
+        "label": "main clause"
+       }
+      ],
+      "subject": [
+       2,
+       3
+      ],
+      "main_verb": [
+       0
+      ]
+     }
+    },
+    {
+     "id": "p1-s9",
+     "tokens": [
+      {
+       "t": "τὰς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "πέλτας",
+       "lemma": "πέλτη",
+       "gloss": "(light) shields"
+      },
+      {
+       "t": "ὑπὲρ",
+       "lemma": "ὑπέρ",
+       "gloss": "above"
+      },
+      {
+       "t": "τῶν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "κεφαλῶν",
+       "lemma": "κεφαλή",
+       "gloss": "heads"
+      },
+      {
+       "t": "ἔχοντες",
+       "lemma": "ἔχω",
+       "gloss": "hold"
+      },
+      {
+       "t": "διέβαινον.",
+       "lemma": "διαβαίνω",
+       "gloss": "they made their way across"
+      }
+     ],
+     "translation_en": "and, holding their shields above their heads, they made their way across.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 6,
+        "label": "participle phrase"
+       },
+       {
+        "start": 7,
+        "end": 7,
+        "label": "main clause; subject unexpressed"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       7
+      ]
+     }
+    },
+    {
+     "id": "p1-s10",
+     "tokens": [
+      {
+       "t": "οἱ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ἱππεῖς",
+       "lemma": "ἱππεύς",
+       "gloss": "horsemen"
+      },
+      {
+       "t": "ὑπὸ",
+       "lemma": "ὑπό",
+       "gloss": "by, because of"
+      },
+      {
+       "t": "τοῦ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "θορύβου",
+       "lemma": "θόρυβος",
+       "gloss": "noise"
+      },
+      {
+       "t": "ἐγερθέντες,",
+       "lemma": "ἐγείρω",
+       "gloss": "wake, rouse"
+      },
+      {
+       "t": "ὡς",
+       "lemma": "ὡς",
+       "gloss": "when"
+      },
+      {
+       "t": "εἶδον",
+       "lemma": "ὁράω",
+       "gloss": "they saw"
+      },
+      {
+       "t": "αὐτοὺς",
+       "lemma": "αὐτός",
+       "gloss": "them"
+      },
+      {
+       "t": "ἤδη",
+       "lemma": "ἤδη",
+       "gloss": "already"
+      },
+      {
+       "t": "ἐν",
+       "lemma": "ἐν",
+       "gloss": "in"
+      },
+      {
+       "t": "μέσῳ",
+       "lemma": "μέσος",
+       "gloss": "middle"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ποταμῷ",
+       "lemma": "ποταμός",
+       "gloss": "river"
+      },
+      {
+       "t": "ὄντας,",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "ἀναπηδήσαντες",
+       "lemma": "ἀναπηδάω",
+       "gloss": "leap up"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "onto"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἵππους",
+       "lemma": "ἵππος",
+       "gloss": "horses"
+      },
+      {
+       "t": "ἔφυγον.",
+       "lemma": "φεύγω",
+       "gloss": "fled"
+      }
+     ],
+     "translation_en": "The horsemen, woken by the noise, when they saw them already in the middle of the river, leapt onto their horses and fled.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 3,
+        "end": 6,
+        "label": "participle phrase"
+       },
+       {
+        "start": 7,
+        "end": 15,
+        "label": "temporal clause"
+       },
+       {
+        "start": 16,
+        "end": 19,
+        "label": "participle phrase"
+       },
+       {
+        "start": 20,
+        "end": 20,
+        "label": "main clause (cont.)"
+       }
+      ],
+      "subject": [
+       0,
+       2
+      ],
+      "main_verb": [
+       20
+      ]
+     }
+    },
+    {
+     "id": "p1-s11",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "λοχαγὸς",
+       "lemma": "λοχαγός",
+       "gloss": "captain"
+      },
+      {
+       "t": "διαβὰς",
+       "lemma": "διαβαίνω",
+       "gloss": "cross"
+      },
+      {
+       "t": "ἕνα",
+       "lemma": "εἷς",
+       "gloss": "one"
+      },
+      {
+       "t": "τῶν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πελταστῶν",
+       "lemma": "πελταστής",
+       "gloss": "peltasts"
+      },
+      {
+       "t": "πρὸς",
+       "lemma": "πρός",
+       "gloss": "to"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "στρατηγὸν",
+       "lemma": "στρατηγός",
+       "gloss": "general"
+      },
+      {
+       "t": "ἔπεμψεν",
+       "lemma": "πέμπω",
+       "gloss": "sent"
+      },
+      {
+       "t": "ἀγγελοῦντα",
+       "lemma": "ἀγγέλλω",
+       "gloss": "report, announce"
+      },
+      {
+       "t": "ὅτι",
+       "lemma": "ὅτι",
+       "gloss": "that"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πόρος",
+       "lemma": "πόρος",
+       "gloss": "ford"
+      },
+      {
+       "t": "ἔρημος",
+       "lemma": "ἔρημος",
+       "gloss": "unguarded, deserted"
+      },
+      {
+       "t": "εἴη.",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      }
+     ],
+     "translation_en": "The captain, having crossed, sent one of the peltasts to the general to report that the ford was unguarded.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 3,
+        "end": 3,
+        "label": "participle"
+       },
+       {
+        "start": 4,
+        "end": 10,
+        "label": "main clause (cont.)"
+       },
+       {
+        "start": 11,
+        "end": 11,
+        "label": "participle"
+       },
+       {
+        "start": 12,
+        "end": 16,
+        "label": "indirect statement (ὅτι-clause)"
+       }
+      ],
+      "subject": [
+       0,
+       2
+      ],
+      "main_verb": [
+       10
+      ]
+     }
+    },
+    {
+     "id": "p1-s12",
+     "tokens": [
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "γέροντα,",
+       "lemma": "γέρων",
+       "gloss": "old man"
+      },
+      {
+       "t": "ἐπεὶ",
+       "lemma": "ἐπεί",
+       "gloss": "since"
+      },
+      {
+       "t": "πιστὸς",
+       "lemma": "πιστός",
+       "gloss": "trustworthy"
+      },
+      {
+       "t": "ἐφάνη,",
+       "lemma": "φαίνω",
+       "gloss": "appear, prove (to be)"
+      },
+      {
+       "t": "δῶρα",
+       "lemma": "δῶρον",
+       "gloss": "gifts"
+      },
+      {
+       "t": "δοὺς",
+       "lemma": "δίδωμι",
+       "gloss": "give"
+      },
+      {
+       "t": "ἀφῆκεν.",
+       "lemma": "ἀφίημι",
+       "gloss": "he let go"
+      }
+     ],
+     "translation_en": "As for the old man, since he had proved trustworthy, he gave him gifts and let him go.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause: object"
+       },
+       {
+        "start": 3,
+        "end": 5,
+        "label": "causal clause"
+       },
+       {
+        "start": 6,
+        "end": 7,
+        "label": "participle phrase"
+       },
+       {
+        "start": 8,
+        "end": 8,
+        "label": "main clause (cont.); subject unexpressed"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       8
+      ]
+     }
+    }
+   ]
+  },
+  "p1-q1": {
+   "kind": "mc",
+   "id": "p1-q1",
+   "passage": "p1",
+   "gist": true,
+   "prompt_en": "What happens in this passage, in brief?",
+   "options": [
+    "A small party sent ahead finds a ford with a local man's help and gets across it.",
+    "The whole army crosses the river by night at a ford the local man shows them.",
+    "A local man leads the scouting party into an ambush, and they barely escape.",
+    "The scouts fail to find a ford and return to the general with a prisoner."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: twenty peltasts under a captain, an old man who knows the ford, a crossing at dawn.",
+    "Only the scouting party crosses; the army is still with the general, who is sent a message.",
+    "The old man tells the truth (he 'proved trustworthy') and is rewarded.",
+    "They do find a ford and cross it; the old man is let go."
+   ],
+   "domain": "D5",
+   "primary_tag": "s.main-clause",
+   "tags": [
+    "s.main-clause",
+    "d.omitted-subject"
+   ],
+   "ablation": "The gist depends on following the chain of main verbs (ἔπεμψε, ἀφικνοῦνται, λαμβάνουσιν, εἰσέβησαν, διέβαινον, ἔφυγον, ἀφῆκεν); a reader who loses the main clauses among the participles cannot tell who crossed or whether the guide was loyal."
+  },
+  "p1-q2": {
+   "kind": "mc",
+   "id": "p1-q2",
+   "passage": "p1",
+   "gist": false,
+   "prompt_en": "On their way to the village, which way did the scouting party march?",
+   "options": [
+    "Along the river",
+    "Away from the river, inland",
+    "Across the river to the far bank",
+    "Down to the river from the hills"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: παρά + accusative with a verb of motion = along, beside (παρὰ τὸν ποταμόν).",
+    "'From the river' would need παρά + genitive (or ἀπό); here the case is accusative.",
+    "Crossing comes later (εἰσέβησαν, διέβαινον); 'across' would be διά or πέραν.",
+    "Motion to the river would be ἐπί / πρὸς τὸν ποταμόν; they are already at it."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.prep-case",
+   "tags": [
+    "n.prep-case"
+   ],
+   "ablation": "Only the case after παρά decides between 'along' (accusative) and 'from beside' (genitive); the story itself makes 'away from' or 'to' the river equally plausible."
+  },
+  "p1-q3": {
+   "kind": "mc",
+   "id": "p1-q3",
+   "passage": "p1",
+   "gist": false,
+   "prompt_en": "In φυλάττεσθαι δὲ αὐτὸν and then ἐκέλευσεν αὐτὸν ἡγεῖσθαι, whom or what does αὐτόν refer to each time?",
+   "options": [
+    "First the ford; then the old man",
+    "First the old man; then the ford",
+    "The ford in both places",
+    "The old man in both places"
+   ],
+   "answer": 0,
+   "why": [
+    "The ford is guarded; the captain orders the old man to guide them.",
+    "This reverses the two references.",
+    "The second αὐτόν is the person ordered to guide the party.",
+    "The first αὐτόν refers back to πόρον."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.pron-autos",
+   "tags": [
+    "n.pron-autos",
+    "s.inf-ind",
+    "n.prep-case",
+    "v.voice"
+   ],
+   "ablation": "The two identical forms must each be resolved from their roles: the first is subject of the passive infinitive φυλάττεσθαι in the old man's report (picking up πόρον), the second is object of ἐκέλευσεν and subject of ἡγεῖσθαι (the old man). Without tracking reference, B–D are equally available."
+  },
+  "p1-q4": {
+   "kind": "mc",
+   "id": "p1-q4",
+   "passage": "p1",
+   "gist": false,
+   "prompt_en": "At daybreak, when the peltasts went into the river, what was the situation?",
+   "options": [
+    "The horsemen were still asleep as the peltasts went in.",
+    "The peltasts were still half asleep as they went in.",
+    "The peltasts went in and then waited for the horsemen to fall asleep.",
+    "The peltasts went in so as to catch the horsemen asleep."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: τῶν ἱππέων ἔτι καθευδόντων is a genitive absolute with its own subject, the horsemen.",
+    "The sleeping belongs to τῶν ἱππέων (genitive), not to the nominative οἱ πελτασταί.",
+    "ἔτι καθευδόντων: the horsemen were already, and still, asleep; nothing is waited for.",
+    "A genitive absolute gives circumstance, not purpose; the text says only that they were asleep."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.gen-abs",
+   "tags": [
+    "s.gen-abs",
+    "s.ptc-attachment",
+    "v.aspect"
+   ],
+   "ablation": "If τῶν ἱππέων … καθευδόντων is not read as a genitive absolute with its own subject, the sleeping can be pinned on the peltasts (B) or read as an aim (D)."
+  },
+  "p1-q5": {
+   "kind": "span",
+   "id": "p1-q5",
+   "passage": "p1",
+   "prompt_en": "Select the words that say what the horsemen saw.",
+   "answer": {
+    "sentence": "p1-s10",
+    "start": 9,
+    "end": 15,
+    "require": [
+     15
+    ]
+   },
+   "min_overlap": 0.6,
+   "why": "αὐτοὺς ἤδη ἐν μέσῳ τῷ ποταμῷ ὄντας: 'them (the peltasts) already in the middle of the river'. The participle ὄντας after a verb of seeing gives what was seen.",
+   "domain": "D4",
+   "primary_tag": "s.ptc-suppl",
+   "tags": [
+    "s.ptc-suppl",
+    "n.pron-autos",
+    "n.attr-pred-position"
+   ],
+   "ablation": "The object of εἶδον is the accusative-and-participle phrase αὐτοὺς … ὄντας; without recognising the supplementary participle, readers stop at αὐτούς or run on into ἀναπηδήσαντες."
+  },
+  "p1-q6": {
+   "kind": "mc",
+   "id": "p1-q6",
+   "passage": "p1",
+   "gist": false,
+   "prompt_en": "Who let the old man go, and why?",
+   "options": [
+    "The captain, because the old man had proved trustworthy",
+    "The peltast sent to the general, because the old man had proved trustworthy",
+    "The captain, because the old man had guided him to the general",
+    "The captain, because the old man had given him gifts"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ἀφῆκεν has no expressed subject, so it carries on from ὁ λοχαγός; ἐπεὶ πιστὸς ἐφάνη gives the reason.",
+    "ἕνα τῶν πελταστῶν is the object of ἔπεμψεν in the previous sentence, not the new subject.",
+    "The old man guided them to the ford; the general is not where they are.",
+    "δοὺς is nominative singular, like the subject of ἀφῆκεν: the captain gave the gifts."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.omitted-subject",
+   "tags": [
+    "d.omitted-subject",
+    "s.ptc-attachment"
+   ],
+   "ablation": "ἀφῆκεν has no expressed subject; it must be carried over from ὁ λοχαγός past the accusatives ἕνα τῶν πελταστῶν and τὸν στρατηγόν. Ignore that and the peltast or the general are live candidates."
+  },
+  "p2": {
+   "kind": "passage",
+   "id": "p2",
+   "label": "Xenophon, Anabasis 3.1.4–7",
+   "source": "Perseus tlg0032.tlg006.perseus-grc2 3.1.4–7 (canonical-greekLit; Marchant OCT text)",
+   "authentic": true,
+   "context_en": "Here Xenophon, the author, first brings himself into his own story.",
+   "sentences": [
+    {
+     "id": "p2-s1",
+     "tokens": [
+      {
+       "t": "ἦν",
+       "lemma": "εἰμί",
+       "gloss": "there was"
+      },
+      {
+       "t": "δέ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "τις",
+       "lemma": "τις",
+       "gloss": "a certain"
+      },
+      {
+       "t": "ἐν",
+       "lemma": "ἐν",
+       "gloss": "in"
+      },
+      {
+       "t": "τῇ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "στρατιᾷ",
+       "lemma": "στρατιά",
+       "gloss": "army"
+      },
+      {
+       "t": "Ξενοφῶν",
+       "lemma": "Ξενοφῶν",
+       "gloss": "Xenophon"
+      },
+      {
+       "t": "Ἀθηναῖος,",
+       "lemma": "Ἀθηναῖος",
+       "gloss": "an Athenian"
+      },
+      {
+       "t": "ὃς",
+       "lemma": "ὅς",
+       "gloss": "who"
+      },
+      {
+       "t": "οὔτε",
+       "lemma": "οὔτε",
+       "gloss": "neither"
+      },
+      {
+       "t": "στρατηγὸς",
+       "lemma": "στρατηγός",
+       "gloss": "general"
+      },
+      {
+       "t": "οὔτε",
+       "lemma": "οὔτε",
+       "gloss": "nor"
+      },
+      {
+       "t": "λοχαγὸς",
+       "lemma": "λοχαγός",
+       "gloss": "captain"
+      },
+      {
+       "t": "οὔτε",
+       "lemma": "οὔτε",
+       "gloss": "nor"
+      },
+      {
+       "t": "στρατιώτης",
+       "lemma": "στρατιώτης",
+       "gloss": "soldier"
+      },
+      {
+       "t": "ὢν",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "συνηκολούθει,",
+       "lemma": "συνακολουθέω",
+       "gloss": "was going along with"
+      },
+      {
+       "t": "ἀλλὰ",
+       "lemma": "ἀλλά",
+       "gloss": "but"
+      },
+      {
+       "t": "Πρόξενος",
+       "lemma": "Πρόξενος",
+       "gloss": "Proxenus"
+      },
+      {
+       "t": "αὐτὸν",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "μετεπέμψατο",
+       "lemma": "μεταπέμπω",
+       "gloss": "sent for"
+      },
+      {
+       "t": "οἴκοθεν",
+       "lemma": "οἴκοθεν",
+       "gloss": "from home"
+      },
+      {
+       "t": "ξένος",
+       "lemma": "ξένος",
+       "gloss": "guest-friend"
+      },
+      {
+       "t": "ὢν",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "ἀρχαῖος·",
+       "lemma": "ἀρχαῖος",
+       "gloss": "of long standing"
+      }
+     ],
+     "translation_en": "There was in the army a certain Xenophon, an Athenian, who was going along neither as general nor as captain nor as soldier; rather, Proxenus had sent for him from home, being an old guest-friend of his;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 7,
+        "label": "main clause"
+       },
+       {
+        "start": 8,
+        "end": 16,
+        "label": "relative clause"
+       },
+       {
+        "start": 17,
+        "end": 21,
+        "label": "ἀλλά-clause"
+       },
+       {
+        "start": 22,
+        "end": 24,
+        "label": "participle phrase"
+       }
+      ],
+      "subject": [
+       6
+      ],
+      "main_verb": [
+       0
+      ]
+     }
+    },
+    {
+     "id": "p2-s2",
+     "tokens": [
+      {
+       "t": "ὑπισχνεῖτο",
+       "lemma": "ὑπισχνέομαι",
+       "gloss": "he was promising"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "αὐτῷ,",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "εἰ",
+       "lemma": "εἰ",
+       "gloss": "if"
+      },
+      {
+       "t": "ἔλθοι,",
+       "lemma": "ἔρχομαι",
+       "gloss": "come"
+      },
+      {
+       "t": "φίλον",
+       "lemma": "φίλος",
+       "gloss": "a friend"
+      },
+      {
+       "t": "αὐτὸν",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "Κύρῳ",
+       "lemma": "Κῦρος",
+       "gloss": "Cyrus"
+      },
+      {
+       "t": "ποιήσειν,",
+       "lemma": "ποιέω",
+       "gloss": "make"
+      },
+      {
+       "t": "ὃν",
+       "lemma": "ὅς",
+       "gloss": "who, whom"
+      },
+      {
+       "t": "αὐτὸς",
+       "lemma": "αὐτός",
+       "gloss": "self, himself"
+      },
+      {
+       "t": "ἔφη",
+       "lemma": "φημί",
+       "gloss": "said"
+      },
+      {
+       "t": "κρείττω",
+       "lemma": "κρείττων",
+       "gloss": "better, worth more"
+      },
+      {
+       "t": "ἑαυτῷ",
+       "lemma": "ἑαυτοῦ",
+       "gloss": "himself"
+      },
+      {
+       "t": "νομίζειν",
+       "lemma": "νομίζω",
+       "gloss": "consider"
+      },
+      {
+       "t": "τῆς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πατρίδος.",
+       "lemma": "πατρίς",
+       "gloss": "homeland"
+      }
+     ],
+     "translation_en": "And he was promising him that, if he came, he would make him a friend to Cyrus, who, he himself said, was worth more to him than his homeland.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause; subject unexpressed"
+       },
+       {
+        "start": 3,
+        "end": 4,
+        "label": "conditional clause"
+       },
+       {
+        "start": 5,
+        "end": 8,
+        "label": "infinitive phrase"
+       },
+       {
+        "start": 9,
+        "end": 16,
+        "label": "relative clause"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       0
+      ]
+     }
+    },
+    {
+     "id": "p2-s3",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "μέντοι",
+       "lemma": "μέντοι",
+       "gloss": "however"
+      },
+      {
+       "t": "Ξενοφῶν",
+       "lemma": "Ξενοφῶν",
+       "gloss": "Xenophon"
+      },
+      {
+       "t": "ἀναγνοὺς",
+       "lemma": "ἀναγιγνώσκω",
+       "gloss": "read"
+      },
+      {
+       "t": "τὴν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἐπιστολὴν",
+       "lemma": "ἐπιστολή",
+       "gloss": "letter"
+      },
+      {
+       "t": "ἀνακοινοῦται",
+       "lemma": "ἀνακοινόω",
+       "gloss": "consults"
+      },
+      {
+       "t": "Σωκράτει",
+       "lemma": "Σωκράτης",
+       "gloss": "Socrates"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ἀθηναίῳ",
+       "lemma": "Ἀθηναῖος",
+       "gloss": "the Athenian"
+      },
+      {
+       "t": "περὶ",
+       "lemma": "περί",
+       "gloss": "about"
+      },
+      {
+       "t": "τῆς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πορείας.",
+       "lemma": "πορεία",
+       "gloss": "journey"
+      }
+     ],
+     "translation_en": "Xenophon, however, having read the letter, consults Socrates the Athenian about the journey.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 3,
+        "end": 5,
+        "label": "participle phrase"
+       },
+       {
+        "start": 6,
+        "end": 12,
+        "label": "main clause (cont.)"
+       }
+      ],
+      "subject": [
+       0,
+       2
+      ],
+      "main_verb": [
+       6
+      ]
+     }
+    },
+    {
+     "id": "p2-s4",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Σωκράτης",
+       "lemma": "Σωκράτης",
+       "gloss": "Socrates"
+      },
+      {
+       "t": "ὑποπτεύσας",
+       "lemma": "ὑποπτεύω",
+       "gloss": "suspect"
+      },
+      {
+       "t": "μή",
+       "lemma": "μή",
+       "gloss": "not; lest"
+      },
+      {
+       "t": "τι",
+       "lemma": "τις",
+       "gloss": "something, at all"
+      },
+      {
+       "t": "πρὸς",
+       "lemma": "πρός",
+       "gloss": "from, at the hands of"
+      },
+      {
+       "t": "τῆς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πόλεως",
+       "lemma": "πόλις",
+       "gloss": "city"
+      },
+      {
+       "t": "ὑπαίτιον",
+       "lemma": "ὑπαίτιος",
+       "gloss": "open to blame, a ground for accusation"
+      },
+      {
+       "t": "εἴη",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "Κύρῳ",
+       "lemma": "Κῦρος",
+       "gloss": "to Cyrus"
+      },
+      {
+       "t": "φίλον",
+       "lemma": "φίλος",
+       "gloss": "a friend"
+      },
+      {
+       "t": "γενέσθαι,",
+       "lemma": "γίγνομαι",
+       "gloss": "become"
+      },
+      {
+       "t": "ὅτι",
+       "lemma": "ὅτι",
+       "gloss": "that; because"
+      },
+      {
+       "t": "ἐδόκει",
+       "lemma": "δοκέω",
+       "gloss": "was thought"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Κῦρος",
+       "lemma": "Κῦρος",
+       "gloss": "Cyrus"
+      },
+      {
+       "t": "προθύμως",
+       "lemma": "προθύμως",
+       "gloss": "eagerly"
+      },
+      {
+       "t": "τοῖς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Λακεδαιμονίοις",
+       "lemma": "Λακεδαιμόνιος",
+       "gloss": "Spartans"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "against"
+      },
+      {
+       "t": "τὰς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ἀθήνας",
+       "lemma": "Ἀθῆναι",
+       "gloss": "Athens"
+      },
+      {
+       "t": "συμπολεμῆσαι,",
+       "lemma": "συμπολεμέω",
+       "gloss": "join in making war"
+      },
+      {
+       "t": "συμβουλεύει",
+       "lemma": "συμβουλεύω",
+       "gloss": "advises"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ξενοφῶντι",
+       "lemma": "Ξενοφῶν",
+       "gloss": "Xenophon"
+      },
+      {
+       "t": "ἐλθόντα",
+       "lemma": "ἔρχομαι",
+       "gloss": "go"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "to"
+      },
+      {
+       "t": "Δελφοὺς",
+       "lemma": "Δελφοί",
+       "gloss": "Delphi"
+      },
+      {
+       "t": "ἀνακοινῶσαι",
+       "lemma": "ἀνακοινόω",
+       "gloss": "consult, refer"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "θεῷ",
+       "lemma": "θεός",
+       "gloss": "god"
+      },
+      {
+       "t": "περὶ",
+       "lemma": "περί",
+       "gloss": "about"
+      },
+      {
+       "t": "τῆς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πορείας.",
+       "lemma": "πορεία",
+       "gloss": "journey"
+      }
+     ],
+     "translation_en": "And Socrates, suspecting that becoming a friend to Cyrus might be something the city would hold against him, because Cyrus was thought to have eagerly joined the Spartans in their war against Athens, advises Xenophon to go to Delphi and consult the god about the journey.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 3,
+        "end": 3,
+        "label": "participle"
+       },
+       {
+        "start": 4,
+        "end": 13,
+        "label": "fear clause dependent on ὑποπτεύσας"
+       },
+       {
+        "start": 14,
+        "end": 24,
+        "label": "causal clause"
+       },
+       {
+        "start": 25,
+        "end": 27,
+        "label": "main clause (cont.)"
+       },
+       {
+        "start": 28,
+        "end": 36,
+        "label": "participle and infinitive phrase"
+       }
+      ],
+      "subject": [
+       1,
+       2
+      ],
+      "main_verb": [
+       25
+      ]
+     }
+    },
+    {
+     "id": "p2-s5",
+     "tokens": [
+      {
+       "t": "ἐλθὼν",
+       "lemma": "ἔρχομαι",
+       "gloss": "go"
+      },
+      {
+       "t": "δʼ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ξενοφῶν",
+       "lemma": "Ξενοφῶν",
+       "gloss": "Xenophon"
+      },
+      {
+       "t": "ἐπήρετο",
+       "lemma": "ἐπέρομαι",
+       "gloss": "asked"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ἀπόλλω",
+       "lemma": "Ἀπόλλων",
+       "gloss": "Apollo"
+      },
+      {
+       "t": "τίνι",
+       "lemma": "τίς",
+       "gloss": "which?"
+      },
+      {
+       "t": "ἂν",
+       "lemma": "ἄν",
+       "gloss": "(modal particle)"
+      },
+      {
+       "t": "θεῶν",
+       "lemma": "θεός",
+       "gloss": "gods"
+      },
+      {
+       "t": "θύων",
+       "lemma": "θύω",
+       "gloss": "sacrifice"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "εὐχόμενος",
+       "lemma": "εὔχομαι",
+       "gloss": "pray"
+      },
+      {
+       "t": "κάλλιστα",
+       "lemma": "καλός",
+       "gloss": "most finely (adv.)"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ἄριστα",
+       "lemma": "ἀγαθός",
+       "gloss": "best (adv.)"
+      },
+      {
+       "t": "ἔλθοι",
+       "lemma": "ἔρχομαι",
+       "gloss": "go"
+      },
+      {
+       "t": "τὴν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ὁδὸν",
+       "lemma": "ὁδός",
+       "gloss": "journey, road"
+      },
+      {
+       "t": "ἣν",
+       "lemma": "ὅς",
+       "gloss": "which"
+      },
+      {
+       "t": "ἐπινοεῖ",
+       "lemma": "ἐπινοέω",
+       "gloss": "he has in mind"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "καλῶς",
+       "lemma": "καλῶς",
+       "gloss": "well"
+      },
+      {
+       "t": "πράξας",
+       "lemma": "πράσσω",
+       "gloss": "fare"
+      },
+      {
+       "t": "σωθείη.",
+       "lemma": "σῴζω",
+       "gloss": "keep safe; come through safely"
+      }
+     ],
+     "translation_en": "Having gone there, Xenophon asked Apollo to which of the gods he should sacrifice and pray in order to make the journey he had in mind in the finest and best way, and to come home safe after faring well.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 0,
+        "label": "participle"
+       },
+       {
+        "start": 1,
+        "end": 6,
+        "label": "main clause"
+       },
+       {
+        "start": 7,
+        "end": 18,
+        "label": "indirect question"
+       },
+       {
+        "start": 19,
+        "end": 20,
+        "label": "relative clause"
+       },
+       {
+        "start": 21,
+        "end": 24,
+        "label": "indirect question (cont.)"
+       }
+      ],
+      "subject": [
+       2,
+       3
+      ],
+      "main_verb": [
+       4
+      ]
+     }
+    },
+    {
+     "id": "p2-s6",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ἀνεῖλεν",
+       "lemma": "ἀναιρέω",
+       "gloss": "answered (of an oracle)"
+      },
+      {
+       "t": "αὐτῷ",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Ἀπόλλων",
+       "lemma": "Ἀπόλλων",
+       "gloss": "Apollo"
+      },
+      {
+       "t": "θεοῖς",
+       "lemma": "θεός",
+       "gloss": "gods"
+      },
+      {
+       "t": "οἷς",
+       "lemma": "ὅς",
+       "gloss": "who, which"
+      },
+      {
+       "t": "ἔδει",
+       "lemma": "δεῖ",
+       "gloss": "it was necessary"
+      },
+      {
+       "t": "θύειν.",
+       "lemma": "θύω",
+       "gloss": "sacrifice"
+      }
+     ],
+     "translation_en": "And Apollo answered him with the gods to whom he had to sacrifice.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 4,
+        "label": "main clause"
+       },
+       {
+        "start": 5,
+        "end": 8,
+        "label": "dative noun with relative clause"
+       }
+      ],
+      "subject": [
+       3,
+       4
+      ],
+      "main_verb": [
+       1
+      ]
+     }
+    },
+    {
+     "id": "p2-s7",
+     "tokens": [
+      {
+       "t": "ἐπεὶ",
+       "lemma": "ἐπεί",
+       "gloss": "when"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "πάλιν",
+       "lemma": "πάλιν",
+       "gloss": "back"
+      },
+      {
+       "t": "ἦλθε,",
+       "lemma": "ἔρχομαι",
+       "gloss": "he came"
+      },
+      {
+       "t": "λέγει",
+       "lemma": "λέγω",
+       "gloss": "he tells"
+      },
+      {
+       "t": "τὴν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "μαντείαν",
+       "lemma": "μαντεία",
+       "gloss": "oracle's reply"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Σωκράτει.",
+       "lemma": "Σωκράτης",
+       "gloss": "Socrates"
+      }
+     ],
+     "translation_en": "When he came back, he tells the oracle's reply to Socrates.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "temporal clause"
+       },
+       {
+        "start": 4,
+        "end": 8,
+        "label": "main clause; subject unexpressed"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       4
+      ]
+     }
+    },
+    {
+     "id": "p2-s8",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ",
+       "gloss": "he"
+      },
+      {
+       "t": "δʼ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ἀκούσας",
+       "lemma": "ἀκούω",
+       "gloss": "hear"
+      },
+      {
+       "t": "ᾐτιᾶτο",
+       "lemma": "αἰτιάομαι",
+       "gloss": "blamed"
+      },
+      {
+       "t": "αὐτὸν",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "ὅτι",
+       "lemma": "ὅτι",
+       "gloss": "because"
+      },
+      {
+       "t": "οὐ",
+       "lemma": "οὐ",
+       "gloss": "not"
+      },
+      {
+       "t": "τοῦτο",
+       "lemma": "οὗτος",
+       "gloss": "this"
+      },
+      {
+       "t": "πρῶτον",
+       "lemma": "πρῶτος",
+       "gloss": "first"
+      },
+      {
+       "t": "ἠρώτα",
+       "lemma": "ἐρωτάω",
+       "gloss": "he was asking"
+      },
+      {
+       "t": "πότερον",
+       "lemma": "πότερον",
+       "gloss": "whether"
+      },
+      {
+       "t": "λῷον",
+       "lemma": "λῴων",
+       "gloss": "better"
+      },
+      {
+       "t": "εἴη",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "αὐτῷ",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "πορεύεσθαι",
+       "lemma": "πορεύομαι",
+       "gloss": "go"
+      },
+      {
+       "t": "ἢ",
+       "lemma": "ἤ",
+       "gloss": "or"
+      },
+      {
+       "t": "μένειν,",
+       "lemma": "μένω",
+       "gloss": "stay"
+      },
+      {
+       "t": "ἀλλʼ",
+       "lemma": "ἀλλά",
+       "gloss": "but"
+      },
+      {
+       "t": "αὐτὸς",
+       "lemma": "αὐτός",
+       "gloss": "himself"
+      },
+      {
+       "t": "κρίνας",
+       "lemma": "κρίνω",
+       "gloss": "decide, judge"
+      },
+      {
+       "t": "ἰτέον",
+       "lemma": "ἰτέον",
+       "gloss": "one must go"
+      },
+      {
+       "t": "εἶναι",
+       "lemma": "εἰμί",
+       "gloss": "be"
+      },
+      {
+       "t": "τοῦτʼ",
+       "lemma": "οὗτος",
+       "gloss": "this"
+      },
+      {
+       "t": "ἐπυνθάνετο",
+       "lemma": "πυνθάνομαι",
+       "gloss": "he was inquiring"
+      },
+      {
+       "t": "ὅπως",
+       "lemma": "ὅπως",
+       "gloss": "how"
+      },
+      {
+       "t": "ἂν",
+       "lemma": "ἄν",
+       "gloss": "(modal particle)"
+      },
+      {
+       "t": "κάλλιστα",
+       "lemma": "καλός",
+       "gloss": "most finely (adv.)"
+      },
+      {
+       "t": "πορευθείη.",
+       "lemma": "πορεύομαι",
+       "gloss": "go"
+      }
+     ],
+     "translation_en": "And he, having heard it, blamed him because he had not first asked this—whether it was better for him to go or to stay—but, having decided by himself that he must go, was inquiring this: how he might go in the finest way.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 2,
+        "end": 2,
+        "label": "participle"
+       },
+       {
+        "start": 3,
+        "end": 4,
+        "label": "main clause (cont.)"
+       },
+       {
+        "start": 5,
+        "end": 9,
+        "label": "causal clause"
+       },
+       {
+        "start": 10,
+        "end": 16,
+        "label": "indirect question"
+       },
+       {
+        "start": 17,
+        "end": 23,
+        "label": "causal clause (cont.)"
+       },
+       {
+        "start": 24,
+        "end": 27,
+        "label": "indirect question"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       3
+      ]
+     }
+    },
+    {
+     "id": "p2-s9",
+     "tokens": [
+      {
+       "t": "ἐπεὶ",
+       "lemma": "ἐπεί",
+       "gloss": "since"
+      },
+      {
+       "t": "μέντοι",
+       "lemma": "μέντοι",
+       "gloss": "however, all the same"
+      },
+      {
+       "t": "οὕτως",
+       "lemma": "οὕτως",
+       "gloss": "in this way"
+      },
+      {
+       "t": "ἤρου,",
+       "lemma": "ἔρομαι",
+       "gloss": "you asked"
+      },
+      {
+       "t": "ταῦτʼ,",
+       "lemma": "οὗτος",
+       "gloss": "these things"
+      },
+      {
+       "t": "ἔφη,",
+       "lemma": "φημί",
+       "gloss": "he said"
+      },
+      {
+       "t": "χρὴ",
+       "lemma": "χρή",
+       "gloss": "it is necessary, one must"
+      },
+      {
+       "t": "ποιεῖν",
+       "lemma": "ποιέω",
+       "gloss": "do"
+      },
+      {
+       "t": "ὅσα",
+       "lemma": "ὅσος",
+       "gloss": "as many as, all that"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "θεὸς",
+       "lemma": "θεός",
+       "gloss": "god"
+      },
+      {
+       "t": "ἐκέλευσεν.",
+       "lemma": "κελεύω",
+       "gloss": "ordered"
+      }
+     ],
+     "translation_en": "'Since, however, you did ask it this way,' he said, 'you must do whatever the god ordered.'",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "causal clause (quoted)"
+       },
+       {
+        "start": 4,
+        "end": 4,
+        "label": "main clause (quoted): object"
+       },
+       {
+        "start": 5,
+        "end": 5,
+        "label": "parenthetic verb of saying"
+       },
+       {
+        "start": 6,
+        "end": 7,
+        "label": "main clause (quoted, cont.)"
+       },
+       {
+        "start": 8,
+        "end": 11,
+        "label": "relative clause"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       6
+      ]
+     }
+    }
+   ]
+  },
+  "p2-q1": {
+   "kind": "mc",
+   "id": "p2-q1",
+   "passage": "p2",
+   "gist": true,
+   "prompt_en": "What happens in this passage, in brief?",
+   "options": [
+    "Xenophon, invited to join Cyrus, consults Socrates and then the oracle, and reports back to Socrates.",
+    "Xenophon, ordered by Cyrus to join him, consults the oracle, which forbids the journey.",
+    "Socrates, invited to join Cyrus, sends Xenophon to Delphi to ask the god on his behalf.",
+    "Xenophon consults Socrates, who persuades him to stay at home rather than join Cyrus."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: Proxenus's letter, Socrates's advice, the visit to Delphi, the return to Socrates.",
+    "The invitation comes from Proxenus, and the oracle names gods to sacrifice to; it forbids nothing.",
+    "The invitation is to Xenophon (αὐτὸν μετεπέμψατο), and Xenophon asks for himself.",
+    "Socrates sends him to Delphi and finally tells him to do what the god ordered."
+   ],
+   "domain": "D5",
+   "primary_tag": "s.main-clause",
+   "tags": [
+    "s.main-clause",
+    "d.omitted-subject"
+   ],
+   "ablation": "The gist depends on following the main verbs (μετεπέμψατο, ἀνακοινοῦται, συμβουλεύει, ἐπήρετο, ἀνεῖλεν, λέγει, ᾐτιᾶτο) through long participial and subordinate material."
+  },
+  "p2-q2": {
+   "kind": "mc",
+   "id": "p2-q2",
+   "passage": "p2",
+   "gist": false,
+   "prompt_en": "What did Proxenus promise Xenophon?",
+   "options": [
+    "That if Xenophon came, he would make him a friend of Cyrus",
+    "That if Xenophon came, Cyrus would make him a general",
+    "That since Xenophon had come, he had already made him Cyrus's friend",
+    "That if Xenophon became Cyrus's friend, Proxenus himself would come"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ποιήσειν is a future infinitive after ὑπισχνεῖτο, with the condition εἰ ἔλθοι.",
+    "The subject of ποιήσειν is Proxenus (unexpressed, same as the main verb), and the promise is friendship, not a command.",
+    "ποιήσειν is future: a promise, not something already done; εἰ ἔλθοι is a condition, not a cause.",
+    "εἰ ἔλθοι belongs to Xenophon coming; φίλον αὐτὸν Κύρῳ ποιήσειν is what Proxenus would do."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.inf-ind",
+   "tags": [
+    "s.inf-ind",
+    "s.cond",
+    "s.seq-opt",
+    "v.fut"
+   ],
+   "ablation": "The promise is carried by the future infinitive ποιήσειν with its reported condition εἰ ἔλθοι; without that, promise and accomplished fact (C), and who does what (D), cannot be told apart."
+  },
+  "p2-q3": {
+   "kind": "mc",
+   "id": "p2-q3",
+   "passage": "p2",
+   "gist": false,
+   "prompt_en": "What did Proxenus say he himself thought?",
+   "options": [
+    "That Cyrus was worth more to him than his own homeland",
+    "That Cyrus thought Proxenus worth more to him than his own homeland",
+    "That Xenophon would find Cyrus worth more to him than his homeland",
+    "That his homeland was worth more to him than Cyrus"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ὃν = Cyrus (object), αὐτός and ἑαυτῷ = Proxenus, τῆς πατρίδος = 'than his homeland'.",
+    "ὃν is accusative: Cyrus is the one being valued, not the one valuing.",
+    "αὐτὸς ἔφη: Proxenus is speaking about his own view; Xenophon is not the subject.",
+    "τῆς πατρίδος is a genitive of comparison after κρείττω: the homeland is what Cyrus is worth more than."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.pron-rel",
+   "tags": [
+    "n.pron-rel",
+    "n.pron-autos",
+    "n.pron-refl",
+    "n.case-fn",
+    "s.inf-ind"
+   ],
+   "ablation": "ὃν (accusative) must be taken back to Κύρῳ, αὐτός/ἑαυτῷ to Proxenus, and τῆς πατρίδος as a genitive of comparison; drop the relative's case and B is as good as A."
+  },
+  "p2-q4": {
+   "kind": "mc",
+   "id": "p2-q4",
+   "passage": "p2",
+   "gist": false,
+   "prompt_en": "What did Socrates suspect?",
+   "options": [
+    "That becoming Cyrus's friend might be held against Xenophon by Athens",
+    "That becoming Cyrus's friend would not be held against Xenophon by Athens",
+    "That Cyrus might hold it against Xenophon that he was an Athenian",
+    "That Xenophon's friendship might lead Cyrus to make war on Athens"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: μή after ὑποπτεύσας introduces a feared possibility, 'that perhaps … might', with πρὸς τῆς πόλεως 'in the eyes of the city'.",
+    "μή here is not a plain 'not': after a verb of suspecting or fearing it means 'that (perhaps)'.",
+    "πρὸς τῆς πόλεως: the blame would come from the city, not from Cyrus.",
+    "The ὅτι clause looks back: Cyrus was thought to have helped Sparta against Athens already."
+   ],
+   "domain": "D5",
+   "primary_tag": "s.fear",
+   "tags": [
+    "s.fear",
+    "s.seq-opt",
+    "n.prep-case"
+   ],
+   "ablation": "μή after ὑποπτεύσας introduces a feared possibility ('that perhaps … might'), not a negation; reading μή as 'not' gives B."
+  },
+  "p2-q5": {
+   "kind": "span",
+   "id": "p2-q5",
+   "passage": "p2",
+   "prompt_en": "Socrates says there was a question Xenophon should have asked first. Select the Greek words of that question.",
+   "answer": {
+    "sentence": "p2-s8",
+    "start": 10,
+    "end": 16,
+    "require": [
+     10
+    ]
+   },
+   "min_overlap": 0.6,
+   "why": "πότερον λῷον εἴη αὐτῷ πορεύεσθαι ἢ μένειν: 'whether it was better for him to go or to stay'. What Xenophon actually asked was ὅπως ἂν κάλλιστα πορευθείη.",
+   "domain": "D5",
+   "primary_tag": "s.ind-question",
+   "tags": [
+    "s.ind-question",
+    "s.seq-opt",
+    "s.neg-scope"
+   ],
+   "ablation": "Two indirect questions compete (πότερον … μένειν and ὅπως … πορευθείη); only by seeing that οὐ τοῦτο πρῶτον ἠρώτα governs the first can one pick it, and the second (what Xenophon actually asked) is the tempting choice."
+  },
+  "p2-q6": {
+   "kind": "mc",
+   "id": "p2-q6",
+   "passage": "p2",
+   "gist": false,
+   "prompt_en": "According to Socrates's complaint, who had already decided that the journey must be made?",
+   "options": [
+    "Xenophon himself",
+    "Socrates",
+    "Apollo",
+    "Proxenus"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: αὐτὸς κρίνας goes with ἐπυνθάνετο, whose subject is still Xenophon (the αὐτόν Socrates blamed).",
+    "Socrates is the subject of ᾐτιᾶτο; inside the ὅτι clause the subject is the man he blamed.",
+    "Apollo answered a question; the decision to go was taken before the question was put.",
+    "Proxenus invited him, but the 'deciding by himself' belongs to the one asking the oracle."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.omitted-subject",
+   "tags": [
+    "d.omitted-subject",
+    "n.pron-autos"
+   ],
+   "ablation": "αὐτὸς κρίνας has no noun; it must be read as subject of ἐπυνθάνετο, which continues the subject of ἠρώτα (Xenophon, the αὐτόν of ᾐτιᾶτο). Without that tracking, Socrates (the nearest nominative, ὁ δ') is the natural guess."
+  },
+  "r1": {
+   "kind": "mc",
+   "id": "r1",
+   "gist": false,
+   "greek": "οἱ δὲ στρατιῶται [[ἐπαύσαντο]] τοὺς αἰχμαλώτους βάλλοντες.",
+   "prompt_en": "Who stopped doing what?",
+   "options": [
+    "The soldiers stopped pelting the prisoners.",
+    "The soldiers stopped the prisoners from pelting them.",
+    "The prisoners made the soldiers stop pelting.",
+    "The soldiers, while pelting, stopped the prisoners."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: middle ἐπαύσαντο = 'stopped (themselves)'; the nominative participle βάλλοντες says what they stopped doing.",
+    "Stopping someone else would be active ἔπαυσαν with an accusative participle (τοὺς αἰχμαλώτους βάλλοντας).",
+    "οἱ στρατιῶται is the subject; the prisoners are the accusative object of βάλλοντες.",
+    "The participle gives the activity that ceased, not something done at the same time."
+   ],
+   "domain": "D2",
+   "primary_tag": "v.voice",
+   "tags": [
+    "v.voice",
+    "s.ptc-suppl"
+   ],
+   "ablation": "Only the middle voice of ἐπαύσαντο (with the nominative participle) decides between 'stopped pelting' and 'stopped someone'."
+  },
+  "r2": {
+   "kind": "mc",
+   "id": "r2",
+   "gist": false,
+   "greek": "ὁ δὲ Κλέαρχος ἔφη αὐτὸς [[ἀποκτενεῖν]] τὸν αἰχμάλωτον.",
+   "prompt_en": "What did Clearchus say?",
+   "options": [
+    "That he would kill the prisoner himself",
+    "That he had killed the prisoner himself",
+    "That he was killing the prisoner at that very moment",
+    "That the prisoner would kill him"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ἀποκτενεῖν is the contracted (liquid) future infinitive: 'that he would kill'.",
+    "'Had killed' would be the aorist infinitive ἀποκτεῖναι.",
+    "'Was killing' would be the present infinitive ἀποκτείνειν.",
+    "αὐτός (nominative) makes Clearchus the subject; τὸν αἰχμάλωτον is the object."
+   ],
+   "domain": "D2",
+   "primary_tag": "v.fut",
+   "tags": [
+    "v.fut",
+    "s.inf-ind"
+   ],
+   "ablation": "The decision rests on recognising ἀποκτενεῖν as a liquid future (vs. aorist ἀποκτεῖναι, present ἀποκτείνειν); the rest of the sentence fits all three."
+  },
+  "r3": {
+   "kind": "mc",
+   "id": "r3",
+   "gist": false,
+   "greek": "[[οἱ ἐν τῇ κώμῃ]], ὡς εἶδον τοὺς Ἕλληνας, ἔφυγον εἰς τὰ ὄρη.",
+   "prompt_en": "Who fled to the mountains?",
+   "options": [
+    "The people in the village",
+    "The Greeks who were in the village",
+    "The Greeks, from the village",
+    "Both the Greeks and the villagers"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: οἱ ἐν τῇ κώμῃ = 'those in the village'; they saw the Greeks and fled.",
+    "The Greeks are the object (τοὺς Ἕλληνας) of εἶδον; they are what was seen.",
+    "ἐν τῇ κώμῃ is attached to οἱ ('those in the village'), not to a verb of fleeing.",
+    "Only one subject is expressed: οἱ ἐν τῇ κώμῃ."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.article-substantive",
+   "tags": [
+    "n.article-substantive",
+    "n.case-fn"
+   ],
+   "ablation": "The article οἱ turns the phrase ἐν τῇ κώμῃ into the subject ('those in the village'); ignore that and 'the Greeks in the village' (B, C) is a natural misreading."
+  },
+  "r4": {
+   "kind": "mc",
+   "id": "r4",
+   "gist": false,
+   "greek": "ὁ στρατηγὸς ἐπῄνεσε τὸν λοχαγὸν [[ᾧ]] μάλιστα ἐπίστευεν.",
+   "prompt_en": "What does the sentence say?",
+   "options": [
+    "The general praised the captain whom he trusted most.",
+    "The general praised the captain who trusted him most.",
+    "The general praised the captain and from then on trusted him most.",
+    "The general praised the captain because the captain trusted him."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ᾧ is dative, the object of ἐπίστευεν (πιστεύω takes the dative); the general is the one trusting.",
+    "'Who trusted him' would need the nominative ὅς.",
+    "ᾧ is a relative pronoun linking to τὸν λοχαγόν, not 'and'.",
+    "A relative clause describes the captain; it gives no reason."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.pron-rel",
+   "tags": [
+    "n.pron-rel",
+    "n.case-fn"
+   ],
+   "ablation": "Only the case of the relative (ᾧ, dative object of πιστεύω) decides who trusts whom; with ὅς the meaning would flip to B."
+  },
+  "r5": {
+   "kind": "mc",
+   "id": "r5",
+   "gist": false,
+   "greek": "ὁ λοχαγὸς τῷ στρατηγῷ [[ἀπιόντι]] τὰ γενόμενα ἔλεγεν.",
+   "prompt_en": "Who was leaving?",
+   "options": [
+    "The general",
+    "The captain",
+    "Both the captain and the general",
+    "The men involved in what had happened"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ἀπιόντι is dative, agreeing with τῷ στρατηγῷ.",
+    "The captain is nominative (ὁ λοχαγός); a participle for him would be ἀπιών.",
+    "The participle is singular and dative: one person, the general.",
+    "τὰ γενόμενα is neuter: 'the things that had happened', not people."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.ptc-attachment",
+   "tags": [
+    "s.ptc-attachment",
+    "v.eimi-eimi-oida"
+   ],
+   "ablation": "Only the dative case of ἀπιόντι attaches the leaving to the general; without it, the speaker (the captain) is the obvious guess."
+  },
+  "r6": {
+   "kind": "mc",
+   "id": "r6",
+   "gist": false,
+   "greek": "ὁ δὲ Κλέαρχος ἔγνω [[ἐξηπατημένος]] ὑπὸ τοῦ Τισσαφέρνους.",
+   "prompt_en": "What did Clearchus realise?",
+   "options": [
+    "That he had been deceived by Tissaphernes",
+    "That he had deceived Tissaphernes",
+    "That Tissaphernes was deceiving someone else",
+    "He realised it at the moment he was being deceived"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: after ἔγνω, a nominative participle gives what the subject realised about himself; ἐξηπατημένος is perfect passive, with ὑπό + genitive for the agent.",
+    "The participle is passive (ὑπὸ τοῦ Τισσαφέρνους = by Tissaphernes).",
+    "The participle is nominative and agrees with Clearchus: he is the one deceived.",
+    "With γιγνώσκω, the participle gives the content of the realisation, not its timing."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.ptc-suppl",
+   "tags": [
+    "s.ptc-suppl",
+    "v.voice",
+    "v.perf-plpf"
+   ],
+   "ablation": "Reading ἐξηπατημένος as a supplementary participle (content of ἔγνω) rather than a circumstantial one is what turns 'he realised, being deceived' into 'he realised he had been deceived'."
+  },
+  "r7": {
+   "kind": "mc",
+   "id": "r7",
+   "gist": false,
+   "greek": "οὕτω ταχέως ἐπορεύοντο [[ὥστε οὐδεὶς αὐτοὺς εἶδεν]].",
+   "prompt_en": "What does the underlined clause tell us?",
+   "options": [
+    "That in fact no one saw them",
+    "What they were aiming at: that no one should see them",
+    "Why they marched so fast: no one had seen them",
+    "What would have happened if they had marched fast"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ὥστε with an indicative (εἶδεν) states an actual result.",
+    "Aim would be a purpose clause (ἵνα / ὅπως + subjunctive or optative).",
+    "A cause would be ὅτι or ἐπεί + indicative; ὥστε gives a consequence.",
+    "There is no ἄν and no condition; the clause states a fact."
+   ],
+   "domain": "D5",
+   "primary_tag": "s.result",
+   "tags": [
+    "s.result",
+    "s.purpose"
+   ],
+   "ablation": "The indicative after ὥστε is what makes this an actual result; with the mood ignored, purpose (B) is just as natural in English."
+  },
+  "r8": {
+   "kind": "mc",
+   "id": "r8",
+   "gist": false,
+   "greek": "εἰ μὴ νὺξ ἐπεγένετο, [[οὐκ ἂν ἐσώθησαν]] οἱ πελτασταί.",
+   "prompt_en": "Were the peltasts saved?",
+   "options": [
+    "Yes: night came on, and that saved them.",
+    "No: night did not come on, so they were lost.",
+    "Not yet: they will be saved only if night comes on.",
+    "Yes, although night did not come on."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: εἰ μή + aorist indicative … ἄν + aorist indicative is a past contrary-to-fact condition, so both clauses are denied: night did come, and they were saved.",
+    "Contrary to fact: 'if night had not come on, they would not have been saved', so in fact it did.",
+    "Aorist indicatives with ἄν point to the past, not a future possibility.",
+    "The condition is εἰ μή: the night's coming is exactly what saved them."
+   ],
+   "domain": "D5",
+   "primary_tag": "s.cond",
+   "tags": [
+    "s.cond",
+    "s.potential",
+    "v.aor-pass"
+   ],
+   "ablation": "Only recognising the past contrary-to-fact pattern (εἰ μή + aorist indicative, ἄν + aorist indicative) reverses the surface negatives into 'night came; they were saved'."
+  },
+  "c1": {
+   "kind": "cloze",
+   "id": "c1",
+   "subtype": "specified",
+   "greek": "μάχῃ δὲ νικήσας ὁ Κλέαρχος τὸ χωρίον ___.",
+   "lemma": "αἱρέω",
+   "target_en": "aorist indicative active, 3rd singular",
+   "accepted": [
+    "εἷλε",
+    "εἷλεν"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "ηρει"
+     ],
+     "label": "imperfect (present stem with augment): 'was taking'"
+    },
+    {
+     "match": [
+      "αιρει"
+     ],
+     "label": "present stem, no augment"
+    },
+    {
+     "match": [
+      "ηρησε",
+      "ηρησεν"
+     ],
+     "label": "1st-aorist ending on the present/future stem (no 2nd-aorist ἑλ- stem)"
+    },
+    {
+     "match": [
+      "ελε",
+      "ελεν"
+     ],
+     "label": "2nd-aorist stem without the augment"
+    },
+    {
+     "match": [
+      "ειλον"
+     ],
+     "label": "1st singular / 3rd plural ending instead of 3rd singular"
+    },
+    {
+     "match": [
+      "ειλετο"
+     ],
+     "label": "middle voice ('chose') instead of active"
+    },
+    {
+     "match": [
+      "αιρησει"
+     ],
+     "label": "future instead of aorist"
+    },
+    {
+     "match": [
+      "ηρηκε",
+      "ηρηκεν"
+     ],
+     "label": "perfect instead of aorist"
+    }
+   ],
+   "notes": "εἷλε and εἷλεν (movable nu) are both standard Attic.",
+   "domain": "D2",
+   "primary_tag": "v.aor2",
+   "tags": [
+    "v.aor2"
+   ],
+   "ablation": "n/a for specified-form retrieval"
+  },
+  "c2": {
+   "kind": "cloze",
+   "id": "c2",
+   "subtype": "specified",
+   "greek": "οἱ δὲ κωμῆται τοῖς Ἕλλησι σῖτον καὶ οἶνον ___.",
+   "lemma": "δίδωμι",
+   "target_en": "aorist indicative active, 3rd plural",
+   "accepted": [
+    "ἔδοσαν",
+    "ἔδωκαν"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "εδιδοσαν",
+      "εδιδουν"
+     ],
+     "label": "imperfect (present stem δίδο- / διδου-) instead of aorist"
+    },
+    {
+     "match": [
+      "διδοασι",
+      "διδοασιν"
+     ],
+     "label": "present instead of aorist"
+    },
+    {
+     "match": [
+      "εδωσαν"
+     ],
+     "label": "long-vowel stem with -σαν: mixes the κ-aorist and root-aorist forms"
+    },
+    {
+     "match": [
+      "εδωκε",
+      "εδωκεν"
+     ],
+     "label": "singular instead of plural"
+    },
+    {
+     "match": [
+      "δωσουσι",
+      "δωσουσιν"
+     ],
+     "label": "future instead of aorist"
+    },
+    {
+     "match": [
+      "δεδωκασι",
+      "δεδωκασιν"
+     ],
+     "label": "perfect instead of aorist"
+    },
+    {
+     "match": [
+      "εδοντο",
+      "εδοτο"
+     ],
+     "label": "middle ending instead of active"
+    }
+   ],
+   "notes": "ἔδοσαν is the regular Attic plural; ἔδωκαν (κ-aorist extended to the plural) is a real classical variant, attested in Xenophon (Anabasis 5.5.14 ξένια ἔδωκαν, 7.7.37 οἱ θεοί σοι ἔδωκαν) and later Attic, so both are accepted.",
+   "domain": "D2",
+   "primary_tag": "v.mi",
+   "tags": [
+    "v.mi",
+    "v.aor1"
+   ],
+   "ablation": "n/a for specified-form retrieval"
+  },
+  "c3": {
+   "kind": "cloze",
+   "id": "c3",
+   "subtype": "specified",
+   "greek": "ὁ δὲ κατάσκοπος ὑπὸ τῶν φυλάκων ___.",
+   "lemma": "λαμβάνω",
+   "target_en": "aorist indicative passive, 3rd singular",
+   "accepted": [
+    "ἐλήφθη"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "ελαβε",
+      "ελαβεν"
+     ],
+     "label": "active voice instead of passive"
+    },
+    {
+     "match": [
+      "ελαμβανετο"
+     ],
+     "label": "imperfect passive (present stem) instead of aorist passive"
+    },
+    {
+     "match": [
+      "ελαβετο"
+     ],
+     "label": "aorist middle ('took hold of') instead of passive"
+    },
+    {
+     "match": [
+      "εληφθησαν"
+     ],
+     "label": "plural instead of singular"
+    },
+    {
+     "match": [
+      "ελημφθη"
+     ],
+     "label": "Koine/Ionic nasalised stem (ἐλήμφθην); Attic is ἐλήφθην"
+    },
+    {
+     "match": [
+      "εληπθη",
+      "εληψθη"
+     ],
+     "label": "wrong stem consonant before -θη- (Attic λη-φ-θη-)"
+    },
+    {
+     "match": [
+      "ληφθησεται"
+     ],
+     "label": "future passive instead of aorist passive"
+    },
+    {
+     "match": [
+      "ειληπται",
+      "ειληφθαι"
+     ],
+     "label": "perfect passive instead of aorist passive"
+    }
+   ],
+   "domain": "D2",
+   "primary_tag": "v.aor-pass",
+   "tags": [
+    "v.aor-pass",
+    "v.voice"
+   ],
+   "ablation": "n/a for specified-form retrieval"
+  },
+  "c4": {
+   "kind": "cloze",
+   "id": "c4",
+   "subtype": "specified",
+   "greek": "οἱ δὲ βάρβαροι ___ τοὺς ὁπλίτας εἰς τὴν ὕλην κατέφυγον.",
+   "lemma": "ὁράω",
+   "target_en": "aorist participle active, nominative masculine plural",
+   "accepted": [
+    "ἰδόντες"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "ορωντεσ"
+     ],
+     "label": "present participle (present stem) instead of aorist"
+    },
+    {
+     "match": [
+      "ειδοντεσ"
+     ],
+     "label": "augmented stem (εἰδ-) carried into the participle"
+    },
+    {
+     "match": [
+      "ειδοτεσ"
+     ],
+     "label": "perfect participle of οἶδα ('knowing') instead of aorist of ὁράω"
+    },
+    {
+     "match": [
+      "ιδοντασ",
+      "ιδοντων",
+      "ιδουσι",
+      "ιδουσιν"
+     ],
+     "label": "wrong case: the participle must agree with nominative οἱ βάρβαροι"
+    },
+    {
+     "match": [
+      "ιδων"
+     ],
+     "label": "singular instead of plural"
+    },
+    {
+     "match": [
+      "ιδουσαι"
+     ],
+     "label": "feminine instead of masculine"
+    },
+    {
+     "match": [
+      "οφθεντεσ"
+     ],
+     "label": "aorist passive participle ('having been seen') instead of active"
+    },
+    {
+     "match": [
+      "ιδομενοι"
+     ],
+     "label": "middle form instead of active"
+    },
+    {
+     "match": [
+      "ειδον"
+     ],
+     "label": "finite verb instead of a participle"
+    }
+   ],
+   "domain": "D2",
+   "primary_tag": "v.ptc",
+   "tags": [
+    "v.ptc",
+    "v.aor2",
+    "s.ptc-circ"
+   ],
+   "ablation": "n/a for specified-form retrieval"
+  },
+  "c5": {
+   "kind": "cloze",
+   "id": "c5",
+   "subtype": "specified",
+   "greek": "ἐπεὶ δὲ ἐπὶ τὸν λόφον ἀφίκετο, ὁ στρατηγὸς ___ καὶ ἐσκόπει τοὺς πολεμίους.",
+   "lemma": "ἵστημι",
+   "target_en": "aorist indicative active, 3rd singular, intransitive ('stood still, halted')",
+   "accepted": [
+    "ἔστη"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "εστησε",
+      "εστησεν"
+     ],
+     "label": "transitive 1st aorist ('set up, halted something') instead of intransitive"
+    },
+    {
+     "match": [
+      "ιστη"
+     ],
+     "label": "imperfect active (transitive, present stem)"
+    },
+    {
+     "match": [
+      "ιστατο"
+     ],
+     "label": "present-stem middle ('was standing up / halting') instead of aorist"
+    },
+    {
+     "match": [
+      "εστηκε",
+      "εστηκεν"
+     ],
+     "label": "perfect ('stands, is standing') instead of aorist"
+    },
+    {
+     "match": [
+      "ειστηκει",
+      "εστηκει"
+     ],
+     "label": "pluperfect ('was standing') instead of aorist"
+    },
+    {
+     "match": [
+      "εσταθη"
+     ],
+     "label": "aorist passive form; the requested active intransitive form is ἔστη"
+    },
+    {
+     "match": [
+      "στησει"
+     ],
+     "label": "future instead of aorist"
+    },
+    {
+     "match": [
+      "εστημεν",
+      "εστησαν"
+     ],
+     "label": "wrong person/number"
+    }
+   ],
+   "domain": "D2",
+   "primary_tag": "v.mi",
+   "tags": [
+    "v.mi",
+    "v.aor2",
+    "v.voice"
+   ],
+   "ablation": "n/a for specified-form retrieval"
+  },
+  "c6": {
+   "kind": "cloze",
+   "id": "c6",
+   "subtype": "meaning",
+   "greek": "τῶν δὲ πολεμίων ___, οἱ Ἕλληνες εἰς τάξιν καθίσταντο.",
+   "lemma": "προσέρχομαι",
+   "meaning_en": "as the enemy were approaching / came up",
+   "accepted": [
+    "προσιόντων",
+    "προσερχομένων",
+    "προσελθόντων"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "προσελθοντεσ",
+      "προσερχομενοι",
+      "προσιοντεσ"
+     ],
+     "label": "nominative participle: not attached to the genitive τῶν πολεμίων (no genitive absolute)"
+    },
+    {
+     "match": [
+      "προσελθοντασ",
+      "προσερχομενουσ",
+      "προσιοντασ"
+     ],
+     "label": "accusative participle: does not agree with τῶν πολεμίων"
+    },
+    {
+     "match": [
+      "προσελθοντοσ",
+      "προσερχομενου",
+      "προσιοντοσ"
+     ],
+     "label": "singular participle: τῶν πολεμίων is plural"
+    },
+    {
+     "match": [
+      "προσελθουσων",
+      "προσιουσων"
+     ],
+     "label": "feminine participle: οἱ πολέμιοι is masculine"
+    },
+    {
+     "match": [
+      "προσερχονται",
+      "προσηεσαν",
+      "προσηλθον",
+      "προσησαν"
+     ],
+     "label": "finite verb where a participle is needed"
+    },
+    {
+     "match": [
+      "προσελθειν",
+      "προσερχεσθαι",
+      "προσιεναι"
+     ],
+     "label": "infinitive where a participle is needed"
+    }
+   ],
+   "notes": "προσιόντων (from πρόσειμι, the usual Attic present participle for ἔρχομαι compounds) and προσερχομένων (grammatical, commoner outside Attic prose) give 'as they were approaching'; aorist προσελθόντων ('when they had come up') also fits the English and the imperfect καθίσταντο. All three are accepted.",
+   "domain": "D4",
+   "primary_tag": "s.gen-abs",
+   "tags": [
+    "s.gen-abs",
+    "v.ptc",
+    "v.eimi-eimi-oida"
+   ],
+   "ablation": "A completion that ignores the genitive absolute (a nominative or finite form) leaves τῶν πολεμίων stranded; the gap can only be filled by a genitive plural participle agreeing with it."
+  },
+  "c7": {
+   "kind": "cloze",
+   "id": "c7",
+   "subtype": "meaning",
+   "greek": "ὁ δὲ αὐτόμολος ἔφη τοὺς πολεμίους ἤδη ___.",
+   "lemma": "ἀπέρχομαι",
+   "meaning_en": "had already gone away",
+   "accepted": [
+    "ἀπελθεῖν",
+    "ἀπεληλυθέναι"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "απερχονται",
+      "απηλθε",
+      "απηλθεν",
+      "απηλθον",
+      "απιασι",
+      "απιασιν"
+     ],
+     "label": "finite verb: φημί takes an infinitive in indirect statement"
+    },
+    {
+     "match": [
+      "απελθοντασ",
+      "απιοντασ"
+     ],
+     "label": "participle: φημί takes an infinitive, not a participle"
+    },
+    {
+     "match": [
+      "απιεναι"
+     ],
+     "label": "present/future infinitive ἀπιέναι: 'were leaving / would leave', not 'had already gone'"
+    },
+    {
+     "match": [
+      "απερχεσθαι"
+     ],
+     "label": "present infinitive: 'were going away', not 'had already gone'"
+    },
+    {
+     "match": [
+      "απελευσεσθαι"
+     ],
+     "label": "future infinitive: 'would go away'"
+    }
+   ],
+   "notes": "Aorist ἀπελθεῖν (past in indirect statement) and perfect ἀπεληλυθέναι ('were gone') both mean 'had already left'. ἀπιέναι is not accepted because in indirect statement it means 'were leaving' or 'would leave'.",
+   "domain": "D4",
+   "primary_tag": "s.inf-ind",
+   "tags": [
+    "s.inf-ind",
+    "v.inf",
+    "v.aor2",
+    "v.aspect"
+   ],
+   "ablation": "The gap sits inside an accusative-and-infinitive after ἔφη; a learner who ignores the construction writes a finite verb (ἀπῆλθον), which the item records as a separate error class."
+  },
+  "c8": {
+   "kind": "cloze",
+   "id": "c8",
+   "subtype": "meaning",
+   "greek": "ὁ δὲ στρατηγὸς φύλακας κατέστησεν, ὅπως μηδεὶς τῶν αἰχμαλώτων ___.",
+   "lemma": "φεύγω",
+   "meaning_en": "should run away, escape",
+   "accepted": [
+    "φύγοι",
+    "φύγῃ",
+    "φεύγοι",
+    "φεύγῃ",
+    "ἀποφύγοι",
+    "ἀποφύγῃ",
+    "ἀποφεύγοι",
+    "ἀποφεύγῃ",
+    "φεύξεται",
+    "φευξεῖται",
+    "ἀποφεύξεται",
+    "ἀποφευξεῖται"
+   ],
+   "collapsed": [],
+   "error_patterns": [
+    {
+     "match": [
+      "εφευγε",
+      "εφευγεν",
+      "εφυγε",
+      "εφυγεν"
+     ],
+     "label": "indicative: states a fact, not the purpose"
+    },
+    {
+     "match": [
+      "φευγειν",
+      "φυγειν"
+     ],
+     "label": "infinitive: ὅπως needs a finite verb"
+    },
+    {
+     "match": [
+      "φευγει"
+     ],
+     "label": "present indicative instead of subjunctive or optative"
+    },
+    {
+     "match": [
+      "φευγοιεν",
+      "φευγωσι",
+      "φευγωσιν",
+      "φυγοιεν",
+      "φυγωσι",
+      "φυγωσιν"
+     ],
+     "label": "plural: μηδείς is singular"
+    },
+    {
+     "match": [
+      "φευγων",
+      "φυγων"
+     ],
+     "label": "participle where a finite verb is needed"
+    },
+    {
+     "match": [
+      "φυγηται",
+      "φυγοιτο"
+     ],
+     "label": "Aorist middle ending: the aorist of φεύγω is active, φύγῃ / φύγοι; its future is middle"
+    }
+   ],
+   "notes": "After a past main verb (κατέστησεν) Attic uses either the optative (φύγοι) or the 'vivid' subjunctive (φύγῃ); aorist and present aspect are both grammatical, and the compound ἀποφεύγω gives the same meaning. All are accepted. The corresponding present forms of ἀποφεύγω are also accepted. Final ὅπως can take a future indicative, including in Xenophon (Smyth 2203); both the uncontracted and Attic contracted futures are accepted.",
+   "domain": "D5",
+   "primary_tag": "s.purpose",
+   "tags": [
+    "s.purpose",
+    "s.seq-opt",
+    "v.subj",
+    "v.opt"
+   ],
+   "ablation": "The learner must supply a singular finite form appropriate to the intended purpose: a subjunctive, optative or future indicative."
+  },
+  "v1": {
+   "kind": "vocab",
+   "id": "v1",
+   "greek": "οἱ δὲ κωμῆται [[ἐδέοντο]] τοῦ στρατηγοῦ μὴ καίειν τὰς οἰκίας.",
+   "lemma": "δέομαι",
+   "options": [
+    "begged",
+    "ordered",
+    "persuaded",
+    "allowed"
+   ],
+   "answer": 0,
+   "band": "dcc-1-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 64 (δέω, mid. δέομαι 'ask, beg')",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v2": {
+   "kind": "vocab",
+   "id": "v2",
+   "greek": "οἱ Ἕλληνες ταῖς ναυσὶ [[ἐχρῶντο]].",
+   "lemma": "χράομαι",
+   "options": [
+    "used",
+    "approached",
+    "attacked",
+    "followed"
+   ],
+   "answer": 0,
+   "band": "dcc-1-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 104",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v3": {
+   "kind": "vocab",
+   "id": "v3",
+   "greek": "ὁ Πρόξενος [[ἔτυχε]] παρὼν ἐν τῇ σκηνῇ.",
+   "lemma": "τυγχάνω",
+   "options": [
+    "happened (to be)",
+    "pretended (to be)",
+    "refused (to be)",
+    "was ordered (to be)"
+   ],
+   "answer": 0,
+   "band": "dcc-1-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 144",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v4": {
+   "kind": "vocab",
+   "id": "v4",
+   "greek": "ταῦτα [[συνέβη]] τοῖς πελτασταῖς ἐν τῇ ὁδῷ.",
+   "lemma": "συμβαίνω",
+   "options": [
+    "happened to",
+    "benefited",
+    "pleased",
+    "belonged to"
+   ],
+   "answer": 0,
+   "band": "dcc-1-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 154",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v5": {
+   "kind": "vocab",
+   "id": "v5",
+   "greek": "[[οἴονται]] τὸν βασιλέα ἐγγὺς εἶναι.",
+   "lemma": "οἴομαι",
+   "options": [
+    "they suppose",
+    "they deny",
+    "they hope",
+    "they announce"
+   ],
+   "answer": 0,
+   "band": "dcc-1-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 171",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v6": {
+   "kind": "vocab",
+   "id": "v6",
+   "greek": "οἱ αἰχμάλωτοι πολλὰ καὶ δεινὰ [[ἔπαθον]].",
+   "lemma": "πάσχω",
+   "options": [
+    "suffered",
+    "did",
+    "saw",
+    "said"
+   ],
+   "answer": 0,
+   "band": "dcc-1-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 173",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v7": {
+   "kind": "vocab",
+   "id": "v7",
+   "greek": "ὁ λοχαγὸς [[ἠξίου]] τοὺς στρατιώτας ἕπεσθαι.",
+   "lemma": "ἀξιόω",
+   "options": [
+    "required",
+    "forbade",
+    "persuaded",
+    "taught"
+   ],
+   "answer": 0,
+   "band": "dcc-251-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 267",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v8": {
+   "kind": "vocab",
+   "id": "v8",
+   "greek": "οἱ φύλακες οὐκ [[εἴων]] τοὺς Ἕλληνας διαβαίνειν.",
+   "lemma": "ἐάω",
+   "options": [
+    "allowed",
+    "ordered",
+    "saw",
+    "helped"
+   ],
+   "answer": 0,
+   "band": "dcc-251-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 375",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v9": {
+   "kind": "vocab",
+   "id": "v9",
+   "greek": "οἱ πολέμιοι οὐκ [[ᾔσθοντο]] τοὺς Ἕλληνας ἀπιόντας.",
+   "lemma": "αἰσθάνομαι",
+   "options": [
+    "noticed",
+    "feared",
+    "allowed",
+    "followed"
+   ],
+   "answer": 0,
+   "band": "dcc-251-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 377",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v10": {
+   "kind": "vocab",
+   "id": "v10",
+   "greek": "οἱ κατάσκοποι [[ἔλαθον]] τοὺς φύλακας διαβάντες.",
+   "lemma": "λανθάνω",
+   "options": [
+    "escaped the notice of",
+    "frightened",
+    "deceived",
+    "found"
+   ],
+   "answer": 0,
+   "band": "dcc-251-500",
+   "rank_source": "DCC Greek Core Vocabulary (dcc.dickinson.edu/greek-core-list; media-src/grc/dcc-src/greek-core-list.csv) rank 424",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v11": {
+   "kind": "vocab",
+   "id": "v11",
+   "greek": "οἱ στρατιῶται [[τὰ ἐπιτήδεια]] ἐκ τῶν κωμῶν ἐλάμβανον.",
+   "lemma": "ἐπιτήδειος",
+   "options": [
+    "provisions",
+    "weapons",
+    "captives",
+    "horses"
+   ],
+   "answer": 0,
+   "band": "outside-dcc-anabasis-apology",
+   "rank_source": "not in the DCC core; Gorman treebank lemma counts (Anabasis 1.1–9 + 3; Apology): Anabasis 16, frequent throughout the Anabasis as τὰ ἐπιτήδεια",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v12": {
+   "kind": "vocab",
+   "id": "v12",
+   "greek": "οἱ Ῥόδιοι [[ἐπίστανται]] σφενδονᾶν.",
+   "lemma": "ἐπίσταμαι",
+   "options": [
+    "know how (to)",
+    "are unwilling (to)",
+    "are ordered (to)",
+    "are afraid (to)"
+   ],
+   "answer": 0,
+   "band": "outside-dcc-anabasis-apology",
+   "rank_source": "not in the DCC core; Gorman treebank lemma counts (Anabasis 1.1–9 + 3; Apology): Anabasis 14, Apology 5",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v13": {
+   "kind": "vocab",
+   "id": "v13",
+   "greek": "[[κινδυνεύει]] ὁ ἀνὴρ ἀληθῆ λέγειν.",
+   "lemma": "κινδυνεύω",
+   "options": [
+    "is likely (to)",
+    "refuses (to)",
+    "pretends (to)",
+    "is forbidden (to)"
+   ],
+   "answer": 0,
+   "band": "outside-dcc-anabasis-apology",
+   "rank_source": "not in the DCC core (κίνδυνος is, rank 430); Gorman treebank lemma counts (Anabasis 1.1–9 + 3; Apology): Apology 9, Anabasis 5",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "v14": {
+   "kind": "vocab",
+   "id": "v14",
+   "greek": "αὕτη ἡ [[διαβολὴ]] πολλοὺς καὶ ἀγαθοὺς ἄνδρας ἀπώλεσεν.",
+   "lemma": "διαβολή",
+   "options": [
+    "slander",
+    "plague",
+    "war",
+    "poverty"
+   ],
+   "answer": 0,
+   "band": "outside-dcc-anabasis-apology",
+   "rank_source": "not in the DCC core; Gorman treebank lemma counts (Anabasis 1.1–9 + 3; Apology): Apology 12",
+   "domain": "D1",
+   "primary_tag": "lex",
+   "tags": [
+    "lex"
+   ],
+   "ablation": "n/a (lexical item; the phrase is built so that all four options fit it)"
+  },
+  "w1": {
+   "kind": "write",
+   "id": "w1",
+   "subtype": "supported",
+   "passage": "p2",
+   "prompt_en": "Tell this part of the story as Xenophon, in the first person: what did you do at Delphi, and how did Socrates react when you came back? One or two Greek sentences.",
+   "model_answers": [
+    "ἐλθὼν εἰς Δελφοὺς ἐπηρόμην τὸν Ἀπόλλω τίνι ἂν θεῶν θύων κάλλιστα ἔλθοιμι τὴν ὁδόν. ἐπεὶ δὲ πάλιν ἦλθον, ὁ Σωκράτης ᾐτιᾶτό με ὅτι οὐ τοῦτο πρῶτον ἠρώτων.",
+    "ἦλθον εἰς Δελφοὺς καὶ ἠρόμην τὸν θεὸν τίσι θεοῖς δεῖ θύειν· ὁ δὲ Σωκράτης ᾐτιᾶτό με."
+   ],
+   "rubric": "Communication: (1) Xenophon went to Delphi and asked Apollo which god(s) to sacrifice to for the journey; (2) Socrates blamed him (for not asking first whether to go). Either half alone counts as partly communicated. Forms looked at: first-person singular aorists (ἦλθον; ἐπηρόμην or ἠρόμην, or ἠρώτησα), the first-person object (με / ἐμέ) with ᾐτιᾶτο, and, if the question is kept indirect, an optative in the 1st person (ἔλθοιμι). Do not penalise choosing a different but correct construction.",
+   "shape": "answer-about-passage-change-person",
+   "domain": "D2",
+   "primary_tag": "v.aor2",
+   "tags": [
+    "v.aor2",
+    "v.voice",
+    "n.pron-autos",
+    "s.ind-question"
+   ],
+   "ablation": "n/a (production)"
+  },
+  "w2": {
+   "kind": "write",
+   "id": "w2",
+   "subtype": "supported",
+   "passage": "p1",
+   "prompt_en": "What exactly did the old man say to the scouts? Turn his reported statement into direct speech, in one or two Greek sentences.",
+   "model_answers": [
+    "πόρος ἐστὶν οὐ πολὺ ἀνωτέρω, φυλάττεται δὲ ὑπὸ ἱππέων.",
+    "ἔστι πόρος ὀλίγον ἀνωτέρω· ἀλλʼ ἱππεῖς αὐτὸν φυλάττουσιν."
+   ],
+   "rubric": "Communication: there is a ford a little way upstream, and horsemen guard it. Forms looked at: the indirect-statement infinitives turned into finite present indicatives (ἐστί; φυλάττεται 3rd sg passive with ὑπό + genitive, or active φυλάττουσι with ἱππεῖς as nominative subject). Either voice is correct; mixing them (φυλάττεται … ἱππεῖς) is a voice/agent error.",
+   "shape": "answer-about-passage-change-to-direct-speech",
+   "domain": "D5",
+   "primary_tag": "s.ind-state",
+   "tags": [
+    "s.ind-state",
+    "s.inf-ind",
+    "v.voice",
+    "n.prep-case"
+   ],
+   "ablation": "n/a (production)"
+  },
+  "w3": {
+   "kind": "write",
+   "id": "w3",
+   "subtype": "combine",
+   "prompt_en": "Join these two sentences into one, turning the first into a participle phrase (for example a genitive absolute).",
+   "givens": [
+    "ὁ σαλπικτὴς ἐσήμηνεν.",
+    "οἱ στρατιῶται ἀνέλαβον τὰ ὅπλα."
+   ],
+   "model_answers": [
+    "τοῦ σαλπικτοῦ σημήναντος οἱ στρατιῶται ἀνέλαβον τὰ ὅπλα.",
+    "οἱ στρατιῶται, τοῦ σαλπικτοῦ σημήναντος, ἀνέλαβον τὰ ὅπλα."
+   ],
+   "accepted": [
+    "οι στρατιωται σημαινοντοσ του σαλπικτου ανελαβον τα οπλα",
+    "οι στρατιωται σημαινοντοσ του σαλπικτου τα οπλα ανελαβον",
+    "οι στρατιωται σημηναντοσ του σαλπικτου ανελαβον τα οπλα",
+    "οι στρατιωται σημηναντοσ του σαλπικτου τα οπλα ανελαβον",
+    "οι στρατιωται του σαλπικτου σημαινοντοσ ανελαβον τα οπλα",
+    "οι στρατιωται του σαλπικτου σημαινοντοσ τα οπλα ανελαβον",
+    "οι στρατιωται του σαλπικτου σημηναντοσ ανελαβον τα οπλα",
+    "οι στρατιωται του σαλπικτου σημηναντοσ τα οπλα ανελαβον",
+    "σημαινοντοσ του σαλπικτου ανελαβον οι στρατιωται τα οπλα",
+    "σημαινοντοσ του σαλπικτου οι στρατιωται ανελαβον τα οπλα",
+    "σημαινοντοσ του σαλπικτου οι στρατιωται τα οπλα ανελαβον",
+    "σημηναντοσ δε του σαλπικτου ανελαβον οι στρατιωται τα οπλα",
+    "σημηναντοσ δε του σαλπικτου οι στρατιωται ανελαβον τα οπλα",
+    "σημηναντοσ δε του σαλπικτου οι στρατιωται τα οπλα ανελαβον",
+    "σημηναντοσ του σαλπικτου ανελαβον οι στρατιωται τα οπλα",
+    "σημηναντοσ του σαλπικτου οι στρατιωται ανελαβον τα οπλα",
+    "σημηναντοσ του σαλπικτου οι στρατιωται τα οπλα ανελαβον",
+    "του δε σαλπικτου σημηναντοσ ανελαβον οι στρατιωται τα οπλα",
+    "του δε σαλπικτου σημηναντοσ οι στρατιωται ανελαβον τα οπλα",
+    "του δε σαλπικτου σημηναντοσ οι στρατιωται τα οπλα ανελαβον",
+    "του σαλπικτου σημαινοντοσ ανελαβον οι στρατιωται τα οπλα",
+    "του σαλπικτου σημαινοντοσ οι στρατιωται ανελαβον τα οπλα",
+    "του σαλπικτου σημαινοντοσ οι στρατιωται τα οπλα ανελαβον",
+    "του σαλπικτου σημηναντοσ ανελαβον οι στρατιωται τα οπλα",
+    "του σαλπικτου σημηναντοσ οι στρατιωται ανελαβον τα οπλα",
+    "του σαλπικτου σημηναντοσ οι στρατιωται τα οπλα ανελαβον"
+   ],
+   "rubric": "Communication: the soldiers took up their arms when/after the trumpeter sounded. Forms looked at: the genitive absolute (genitive subject + genitive participle, here the liquid aorist σημήναντος or present σημαίνοντος) and the unchanged main clause. Other participial solutions (e.g. ἀκούσαντες τοῦ σαλπικτοῦ σημήναντος / ἀκούσαντες τῆς σάλπιγγος) are correct and go to review; a nominative participle for the trumpeter (ὁ σαλπικτὴς σημήνας …) is a construction error.",
+   "shape": "join-with-participle",
+   "domain": "D4",
+   "primary_tag": "s.gen-abs",
+   "tags": [
+    "s.gen-abs",
+    "v.ptc",
+    "v.aor1"
+   ],
+   "ablation": "n/a (production)"
+  },
+  "w4": {
+   "kind": "write",
+   "id": "w4",
+   "subtype": "free",
+   "prompt_en": "Optional: write one Greek sentence about anything you like (something you did today, a plan, a line about one of the passages).",
+   "model_answers": [
+    "ἐχθὲς τὸ τρίτον βιβλίον τῆς Ἀναβάσεως ἀνέγνων.",
+    "αὔριον εἰς τὴν ἀγορὰν εἶμι σῖτον ὠνησόμενος."
+   ],
+   "rubric": "Qualitative only, not counted toward any domain level. Note what the learner chooses to attempt (tense, participles, subordination) and any systematic errors; communication and morphology are noted separately.",
+   "shape": "free",
+   "domain": "D2",
+   "primary_tag": "v.aspect",
+   "tags": [
+    "v.aspect"
+   ],
+   "ablation": "n/a (production)"
+  },
+  "p3": {
+   "kind": "passage",
+   "id": "p3",
+   "label": "Plato, Apology 21a–b",
+   "source": "Perseus tlg0059.tlg002.perseus-grc2 21a–b (canonical-greekLit; Burnet OCT text), from καὶ ἴστε δὴ to ἐτραπόμην",
+   "authentic": true,
+   "context_en": "Socrates is defending himself before an Athenian jury in 399 BC. He has just mentioned his old friend Chaerephon, now dead.",
+   "sentences": [
+    {
+     "id": "p3-s1",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ἴστε",
+       "lemma": "οἶδα",
+       "gloss": "you know"
+      },
+      {
+       "t": "δὴ",
+       "lemma": "δή",
+       "gloss": "(emphatic) indeed"
+      },
+      {
+       "t": "οἷος",
+       "lemma": "οἷος",
+       "gloss": "what sort of man"
+      },
+      {
+       "t": "ἦν",
+       "lemma": "εἰμί",
+       "gloss": "was"
+      },
+      {
+       "t": "Χαιρεφῶν,",
+       "lemma": "Χαιρεφῶν",
+       "gloss": "Chaerephon"
+      },
+      {
+       "t": "ὡς",
+       "lemma": "ὡς",
+       "gloss": "how"
+      },
+      {
+       "t": "σφοδρὸς",
+       "lemma": "σφοδρός",
+       "gloss": "vehement, impetuous"
+      },
+      {
+       "t": "ἐφʼ",
+       "lemma": "ἐπί",
+       "gloss": "in, about"
+      },
+      {
+       "t": "ὅτι",
+       "lemma": "ὅστις",
+       "gloss": "whatever"
+      },
+      {
+       "t": "ὁρμήσειεν.",
+       "lemma": "ὁρμάω",
+       "gloss": "he set out on (optative)"
+      }
+     ],
+     "translation_en": "And you know what sort of man Chaerephon was, how impetuous in whatever he set out to do.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "main"
+       },
+       {
+        "start": 3,
+        "end": 5,
+        "label": "indirect question: what sort of man Chaerephon was"
+       },
+       {
+        "start": 6,
+        "end": 7,
+        "label": "indirect question (cont.): how impetuous"
+       },
+       {
+        "start": 8,
+        "end": 10,
+        "label": "relative: in whatever he set out to do"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       1
+      ]
+     }
+    },
+    {
+     "id": "p3-s2",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "δή",
+       "lemma": "δή",
+       "gloss": "in fact"
+      },
+      {
+       "t": "ποτε",
+       "lemma": "ποτέ",
+       "gloss": "once"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "actually"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "to"
+      },
+      {
+       "t": "Δελφοὺς",
+       "lemma": "Δελφοί",
+       "gloss": "Delphi"
+      },
+      {
+       "t": "ἐλθὼν",
+       "lemma": "ἔρχομαι",
+       "gloss": "having gone"
+      },
+      {
+       "t": "ἐτόλμησε",
+       "lemma": "τολμάω",
+       "gloss": "dared"
+      },
+      {
+       "t": "τοῦτο",
+       "lemma": "οὗτος",
+       "gloss": "this"
+      },
+      {
+       "t": "μαντεύσασθαι—",
+       "lemma": "μαντεύομαι",
+       "gloss": "to ask the oracle"
+      },
+      {
+       "t": "καί,",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ὅπερ",
+       "lemma": "ὅσπερ",
+       "gloss": "as"
+      },
+      {
+       "t": "λέγω,",
+       "lemma": "λέγω",
+       "gloss": "I say"
+      },
+      {
+       "t": "μὴ",
+       "lemma": "μή",
+       "gloss": "do not"
+      },
+      {
+       "t": "θορυβεῖτε,",
+       "lemma": "θορυβέω",
+       "gloss": "make an uproar"
+      },
+      {
+       "t": "ὦ",
+       "lemma": "ὦ",
+       "gloss": "O"
+      },
+      {
+       "t": "ἄνδρες—",
+       "lemma": "ἀνήρ",
+       "gloss": "gentlemen"
+      },
+      {
+       "t": "ἤρετο",
+       "lemma": "ἔρομαι",
+       "gloss": "he asked"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "you see, for"
+      },
+      {
+       "t": "δὴ",
+       "lemma": "δή",
+       "gloss": "indeed"
+      },
+      {
+       "t": "εἴ",
+       "lemma": "εἰ",
+       "gloss": "whether"
+      },
+      {
+       "t": "τις",
+       "lemma": "τις",
+       "gloss": "anyone"
+      },
+      {
+       "t": "ἐμοῦ",
+       "lemma": "ἐγώ",
+       "gloss": "than me"
+      },
+      {
+       "t": "εἴη",
+       "lemma": "εἰμί",
+       "gloss": "was (optative)"
+      },
+      {
+       "t": "σοφώτερος.",
+       "lemma": "σοφός",
+       "gloss": "wiser"
+      }
+     ],
+     "translation_en": "And once he actually went to Delphi and dared to put this question to the oracle — and, as I say, don't make an uproar, gentlemen — he asked, you see, whether anyone was wiser than me.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main (opening)"
+       },
+       {
+        "start": 4,
+        "end": 6,
+        "label": "participle: having gone to Delphi"
+       },
+       {
+        "start": 7,
+        "end": 9,
+        "label": "main (cont.)"
+       },
+       {
+        "start": 10,
+        "end": 16,
+        "label": "parenthesis: and, as I say, don't make an uproar, gentlemen"
+       },
+       {
+        "start": 17,
+        "end": 19,
+        "label": "explanation (γάρ): he asked"
+       },
+       {
+        "start": 20,
+        "end": 24,
+        "label": "indirect question: whether anyone was wiser than me"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       7
+      ]
+     }
+    },
+    {
+     "id": "p3-s3",
+     "tokens": [
+      {
+       "t": "ἀνεῖλεν",
+       "lemma": "ἀναιρέω",
+       "gloss": "answered (of an oracle)"
+      },
+      {
+       "t": "οὖν",
+       "lemma": "οὖν",
+       "gloss": "well, so"
+      },
+      {
+       "t": "ἡ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Πυθία",
+       "lemma": "Πυθία",
+       "gloss": "the Pythia (the priestess)"
+      },
+      {
+       "t": "μηδένα",
+       "lemma": "μηδείς",
+       "gloss": "no one"
+      },
+      {
+       "t": "σοφώτερον",
+       "lemma": "σοφός",
+       "gloss": "wiser"
+      },
+      {
+       "t": "εἶναι.",
+       "lemma": "εἰμί",
+       "gloss": "was"
+      }
+     ],
+     "translation_en": "Well, the Pythia answered that no one was wiser.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main"
+       },
+       {
+        "start": 4,
+        "end": 6,
+        "label": "indirect statement: that no one was wiser"
+       }
+      ],
+      "subject": [
+       2,
+       3
+      ],
+      "main_verb": [
+       0
+      ]
+     }
+    },
+    {
+     "id": "p3-s4",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τούτων",
+       "lemma": "οὗτος",
+       "gloss": "these things"
+      },
+      {
+       "t": "πέρι",
+       "lemma": "περί",
+       "gloss": "about (placed after its noun)"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἀδελφὸς",
+       "lemma": "ἀδελφός",
+       "gloss": "brother"
+      },
+      {
+       "t": "ὑμῖν",
+       "lemma": "σύ",
+       "gloss": "to you"
+      },
+      {
+       "t": "αὐτοῦ",
+       "lemma": "αὐτός",
+       "gloss": "his"
+      },
+      {
+       "t": "οὑτοσὶ",
+       "lemma": "οὑτοσί",
+       "gloss": "here (pointing)"
+      },
+      {
+       "t": "μαρτυρήσει,",
+       "lemma": "μαρτυρέω",
+       "gloss": "will testify"
+      },
+      {
+       "t": "ἐπειδὴ",
+       "lemma": "ἐπειδή",
+       "gloss": "since"
+      },
+      {
+       "t": "ἐκεῖνος",
+       "lemma": "ἐκεῖνος",
+       "gloss": "he (Chaerephon)"
+      },
+      {
+       "t": "τετελεύτηκεν.",
+       "lemma": "τελευτάω",
+       "gloss": "has died"
+      }
+     ],
+     "translation_en": "And about these things his brother here will testify to you, since he himself has died.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 8,
+        "label": "main"
+       },
+       {
+        "start": 9,
+        "end": 11,
+        "label": "causal: since he has died"
+       }
+      ],
+      "subject": [
+       3,
+       4
+      ],
+      "main_verb": [
+       8
+      ]
+     }
+    },
+    {
+     "id": "p3-s5",
+     "tokens": [
+      {
+       "t": "σκέψασθε",
+       "lemma": "σκέπτομαι",
+       "gloss": "consider"
+      },
+      {
+       "t": "δὴ",
+       "lemma": "δή",
+       "gloss": "now"
+      },
+      {
+       "t": "ὧν",
+       "lemma": "ὅς",
+       "gloss": "which (things)"
+      },
+      {
+       "t": "ἕνεκα",
+       "lemma": "ἕνεκα",
+       "gloss": "for the sake of"
+      },
+      {
+       "t": "ταῦτα",
+       "lemma": "οὗτος",
+       "gloss": "these things"
+      },
+      {
+       "t": "λέγω·",
+       "lemma": "λέγω",
+       "gloss": "I am saying"
+      }
+     ],
+     "translation_en": "Now consider why I am telling you this:",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "main"
+       },
+       {
+        "start": 2,
+        "end": 5,
+        "label": "relative/indirect question: for what reasons I say this"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       0
+      ]
+     }
+    },
+    {
+     "id": "p3-s6",
+     "tokens": [
+      {
+       "t": "μέλλω",
+       "lemma": "μέλλω",
+       "gloss": "I am going"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "for"
+      },
+      {
+       "t": "ὑμᾶς",
+       "lemma": "σύ",
+       "gloss": "you"
+      },
+      {
+       "t": "διδάξειν",
+       "lemma": "διδάσκω",
+       "gloss": "to show, teach"
+      },
+      {
+       "t": "ὅθεν",
+       "lemma": "ὅθεν",
+       "gloss": "from where"
+      },
+      {
+       "t": "μοι",
+       "lemma": "ἐγώ",
+       "gloss": "for me, against me"
+      },
+      {
+       "t": "ἡ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "διαβολὴ",
+       "lemma": "διαβολή",
+       "gloss": "slander, prejudice"
+      },
+      {
+       "t": "γέγονεν.",
+       "lemma": "γίγνομαι",
+       "gloss": "has arisen"
+      }
+     ],
+     "translation_en": "for I am going to show you where the prejudice against me has come from.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main"
+       },
+       {
+        "start": 4,
+        "end": 8,
+        "label": "indirect question: where the prejudice against me has come from"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       0
+      ]
+     }
+    },
+    {
+     "id": "p3-s7",
+     "tokens": [
+      {
+       "t": "ταῦτα",
+       "lemma": "οὗτος",
+       "gloss": "this"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "for"
+      },
+      {
+       "t": "ἐγὼ",
+       "lemma": "ἐγώ",
+       "gloss": "I"
+      },
+      {
+       "t": "ἀκούσας",
+       "lemma": "ἀκούω",
+       "gloss": "having heard"
+      },
+      {
+       "t": "ἐνεθυμούμην",
+       "lemma": "ἐνθυμέομαι",
+       "gloss": "I kept turning it over"
+      },
+      {
+       "t": "οὑτωσί·",
+       "lemma": "οὑτωσί",
+       "gloss": "like this"
+      }
+     ],
+     "translation_en": "For when I heard this, I kept turning it over like this:",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "participle phrase (object): this"
+       },
+       {
+        "start": 2,
+        "end": 2,
+        "label": "main (subject)"
+       },
+       {
+        "start": 3,
+        "end": 3,
+        "label": "participle: having heard"
+       },
+       {
+        "start": 4,
+        "end": 5,
+        "label": "main (cont.)"
+       }
+      ],
+      "subject": [
+       2
+      ],
+      "main_verb": [
+       4
+      ]
+     }
+    },
+    {
+     "id": "p3-s8",
+     "tokens": [
+      {
+       "t": "«τί",
+       "lemma": "τίς",
+       "gloss": "what"
+      },
+      {
+       "t": "ποτε",
+       "lemma": "ποτε",
+       "gloss": "ever, on earth"
+      },
+      {
+       "t": "λέγει",
+       "lemma": "λέγω",
+       "gloss": "means, says"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "θεός,",
+       "lemma": "θεός",
+       "gloss": "god"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τί",
+       "lemma": "τίς",
+       "gloss": "what"
+      },
+      {
+       "t": "ποτε",
+       "lemma": "ποτε",
+       "gloss": "ever"
+      },
+      {
+       "t": "αἰνίττεται;",
+       "lemma": "αἰνίσσομαι",
+       "gloss": "is he hinting at (in riddles)"
+      }
+     ],
+     "translation_en": "'What on earth does the god mean, and what is he hinting at?",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 4,
+        "label": "direct question 1"
+       },
+       {
+        "start": 5,
+        "end": 8,
+        "label": "direct question 2"
+       }
+      ],
+      "subject": [
+       3,
+       4
+      ],
+      "main_verb": [
+       2,
+       8
+      ]
+     }
+    },
+    {
+     "id": "p3-s9",
+     "tokens": [
+      {
+       "t": "ἐγὼ",
+       "lemma": "ἐγώ",
+       "gloss": "I"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "for"
+      },
+      {
+       "t": "δὴ",
+       "lemma": "δή",
+       "gloss": "indeed"
+      },
+      {
+       "t": "οὔτε",
+       "lemma": "οὔτε",
+       "gloss": "neither"
+      },
+      {
+       "t": "μέγα",
+       "lemma": "μέγας",
+       "gloss": "in a great way"
+      },
+      {
+       "t": "οὔτε",
+       "lemma": "οὔτε",
+       "gloss": "nor"
+      },
+      {
+       "t": "σμικρὸν",
+       "lemma": "σμικρός",
+       "gloss": "in a small way"
+      },
+      {
+       "t": "σύνοιδα",
+       "lemma": "σύνοιδα",
+       "gloss": "am conscious, know (with)"
+      },
+      {
+       "t": "ἐμαυτῷ",
+       "lemma": "ἐμαυτοῦ",
+       "gloss": "myself"
+      },
+      {
+       "t": "σοφὸς",
+       "lemma": "σοφός",
+       "gloss": "wise"
+      },
+      {
+       "t": "ὤν·",
+       "lemma": "εἰμί",
+       "gloss": "being"
+      }
+     ],
+     "translation_en": "For I am not conscious of being wise in anything, great or small.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 8,
+        "label": "main"
+       },
+       {
+        "start": 9,
+        "end": 10,
+        "label": "participle (what I am conscious of): of being wise"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       7
+      ]
+     }
+    },
+    {
+     "id": "p3-s10",
+     "tokens": [
+      {
+       "t": "τί",
+       "lemma": "τίς",
+       "gloss": "what"
+      },
+      {
+       "t": "οὖν",
+       "lemma": "οὖν",
+       "gloss": "then"
+      },
+      {
+       "t": "ποτε",
+       "lemma": "ποτε",
+       "gloss": "ever, on earth"
+      },
+      {
+       "t": "λέγει",
+       "lemma": "λέγω",
+       "gloss": "does he mean"
+      },
+      {
+       "t": "φάσκων",
+       "lemma": "φάσκω",
+       "gloss": "asserting"
+      },
+      {
+       "t": "ἐμὲ",
+       "lemma": "ἐγώ",
+       "gloss": "me"
+      },
+      {
+       "t": "σοφώτατον",
+       "lemma": "σοφός",
+       "gloss": "wisest"
+      },
+      {
+       "t": "εἶναι;",
+       "lemma": "εἰμί",
+       "gloss": "to be"
+      }
+     ],
+     "translation_en": "What on earth, then, does he mean by asserting that I am the wisest?",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main question"
+       },
+       {
+        "start": 4,
+        "end": 4,
+        "label": "participle: by asserting"
+       },
+       {
+        "start": 5,
+        "end": 7,
+        "label": "indirect statement: that I am the wisest"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       3
+      ]
+     }
+    },
+    {
+     "id": "p3-s11",
+     "tokens": [
+      {
+       "t": "οὐ",
+       "lemma": "οὐ",
+       "gloss": "not"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "for"
+      },
+      {
+       "t": "δήπου",
+       "lemma": "δήπου",
+       "gloss": "surely"
+      },
+      {
+       "t": "ψεύδεταί",
+       "lemma": "ψεύδω",
+       "gloss": "he is lying (middle)"
+      },
+      {
+       "t": "γε·",
+       "lemma": "γε",
+       "gloss": "of course, at any rate"
+      }
+     ],
+     "translation_en": "For surely he is not lying, at any rate;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 4,
+        "label": "main"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       3
+      ]
+     }
+    },
+    {
+     "id": "p3-s12",
+     "tokens": [
+      {
+       "t": "οὐ",
+       "lemma": "οὐ",
+       "gloss": "not"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "for"
+      },
+      {
+       "t": "θέμις",
+       "lemma": "θέμις",
+       "gloss": "right, permitted (by divine law)"
+      },
+      {
+       "t": "αὐτῷ.»",
+       "lemma": "αὐτός",
+       "gloss": "for him"
+      }
+     ],
+     "translation_en": "that is not permitted to him.'",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "impersonal construction; ἐστί and ψεύδεσθαι understood"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p3-s13",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "πολὺν",
+       "lemma": "πολύς",
+       "gloss": "long"
+      },
+      {
+       "t": "μὲν",
+       "lemma": "μέν"
+      },
+      {
+       "t": "χρόνον",
+       "lemma": "χρόνος",
+       "gloss": "time"
+      },
+      {
+       "t": "ἠπόρουν",
+       "lemma": "ἀπορέω",
+       "gloss": "I was at a loss"
+      },
+      {
+       "t": "τί",
+       "lemma": "τίς",
+       "gloss": "what"
+      },
+      {
+       "t": "ποτε",
+       "lemma": "ποτε",
+       "gloss": "ever"
+      },
+      {
+       "t": "λέγει·",
+       "lemma": "λέγω",
+       "gloss": "he means"
+      }
+     ],
+     "translation_en": "And for a long time I was at a loss as to what he meant;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 4,
+        "label": "main"
+       },
+       {
+        "start": 5,
+        "end": 7,
+        "label": "indirect question: what he meant"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       4
+      ]
+     }
+    },
+    {
+     "id": "p3-s14",
+     "tokens": [
+      {
+       "t": "ἔπειτα",
+       "lemma": "ἔπειτα",
+       "gloss": "then"
+      },
+      {
+       "t": "μόγις",
+       "lemma": "μόγις",
+       "gloss": "reluctantly, with difficulty"
+      },
+      {
+       "t": "πάνυ",
+       "lemma": "πάνυ",
+       "gloss": "very"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "to"
+      },
+      {
+       "t": "ζήτησιν",
+       "lemma": "ζήτησις",
+       "gloss": "investigation"
+      },
+      {
+       "t": "αὐτοῦ",
+       "lemma": "αὐτός",
+       "gloss": "of it"
+      },
+      {
+       "t": "τοιαύτην",
+       "lemma": "τοιοῦτος",
+       "gloss": "of this kind"
+      },
+      {
+       "t": "τινὰ",
+       "lemma": "τις",
+       "gloss": "a, some"
+      },
+      {
+       "t": "ἐτραπόμην.",
+       "lemma": "τρέπω",
+       "gloss": "I turned (middle)"
+      }
+     ],
+     "translation_en": "then, very reluctantly, I turned to investigating it, in some such way as this.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 8,
+        "label": "main"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       8
+      ]
+     }
+    }
+   ]
+  },
+  "p3-q1": {
+   "kind": "mc",
+   "id": "p3-q1",
+   "passage": "p3",
+   "gist": false,
+   "prompt_en": "What did Chaerephon ask at Delphi, and what was the answer?",
+   "options": [
+    "Whether anyone was wiser than Socrates; the answer was that no one was.",
+    "Whether Socrates was wiser than anyone; the answer was that he was not.",
+    "Who was wiser than Socrates; the answer named Chaerephon himself.",
+    "Whether anyone was wiser than Socrates; the answer was 'no one but the god'."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ἐμοῦ is a genitive of comparison after σοφώτερος, and μηδένα is the subject of εἶναι.",
+    "That reverses the comparison: the question is whether anyone (τις) was wiser than him (ἐμοῦ).",
+    "εἰ introduces a yes/no question ('whether'), and the reply names nobody.",
+    "The Pythia's reply is just μηδένα σοφώτερον εἶναι; the god is not mentioned in it."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.case-fn",
+   "tags": [
+    "n.case-fn",
+    "s.ind-question",
+    "s.inf-ind",
+    "r.plato"
+   ],
+   "ablation": "Who is compared with whom depends on reading ἐμοῦ as a genitive of comparison and τις / μηδένα as subjects; ignore the cases and B is as good as A."
+  },
+  "p3-q2": {
+   "kind": "mc",
+   "id": "p3-q2",
+   "passage": "p3",
+   "gist": false,
+   "prompt_en": "Why, according to Socrates, is he telling the jury this story?",
+   "options": [
+    "To show them where the prejudice against him came from",
+    "To prove to them that he is the wisest of men",
+    "To show them what a reckless man Chaerephon was",
+    "To explain why the god is angry with Athens"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: σκέψασθε δὴ ὧν ἕνεκα ταῦτα λέγω· μέλλω γὰρ … διδάξειν ὅθεν μοι ἡ διαβολὴ γέγονεν. The γάρ gives the reason.",
+    "He goes on to say he is not aware of being wise at all; the story explains the διαβολή.",
+    "Chaerephon's character is an aside (οἷος ἦν Χαιρεφῶν), not the point of the story.",
+    "Nothing is said about the god's anger."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.argument",
+   "tags": [
+    "d.argument",
+    "d.particle",
+    "s.ind-question",
+    "r.plato"
+   ],
+   "ablation": "The link between the oracle story and the διαβολή is made only by ὧν ἕνεκα and the explanatory γάρ; without them, B (a story about the oracle proving his wisdom) is the natural reading."
+  },
+  "p3-q3": {
+   "kind": "mc",
+   "id": "p3-q3",
+   "passage": "p3",
+   "gist": false,
+   "prompt_en": "Why is Socrates puzzled by the oracle?",
+   "options": [
+    "He is not conscious of being wise in anything, great or small, yet the god calls him the wisest.",
+    "He knows he is wise in small matters but not in great ones, yet the god calls him the wisest.",
+    "He is aware of being wise, but others say he knows nothing.",
+    "He knows that the god is wise in all things, great and small, yet speaks in riddles."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: οὔτε μέγα οὔτε σμικρὸν negates σύνοιδα ἐμαυτῷ σοφὸς ὤν: he is not conscious of being wise in anything, great or small.",
+    "οὔτε … οὔτε denies both: neither in great things nor in small.",
+    "The participle phrase is negated; and others' opinion does not come in until later.",
+    "The nominative σοφὸς ὤν goes with ἐγώ, the subject of σύνοιδα, not with the god."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.ptc-suppl",
+   "tags": [
+    "s.ptc-suppl",
+    "s.neg-scope",
+    "d.argument",
+    "r.plato"
+   ],
+   "ablation": "The content of Socrates's self-knowledge is in the supplementary participle σοφὸς ὤν after σύνοιδα ἐμαυτῷ, under οὔτε … οὔτε; attach it to the god (D) or misread the double negative (B, C) and the puzzle changes."
+  },
+  "p3-q4": {
+   "kind": "mc",
+   "id": "p3-q4",
+   "passage": "p3",
+   "gist": false,
+   "prompt_en": "Socrates says: οὐ γὰρ δήπου ψεύδεταί γε· οὐ γὰρ θέμις αὐτῷ. What do these words do in his reasoning?",
+   "options": [
+    "They rule out the easy way out (that the god is simply lying), so the puzzle stands.",
+    "They suggest that the god may well be lying, which would solve the puzzle.",
+    "They state Socrates's conclusion that he really is the wisest of men.",
+    "They report what the Pythia said when Chaerephon pressed her further."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: οὐ … δήπου … γε is 'surely he is not lying, of course', and the second γάρ gives the ground (it is not permitted to him).",
+    "δήπου with οὐ marks the idea as obviously false, not as a live possibility.",
+    "The next sentence says he was at a loss for a long time: no conclusion has been reached.",
+    "These are Socrates's own thoughts (ἐνεθυμούμην οὑτωσί), not the Pythia's words."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.argument",
+   "tags": [
+    "d.argument",
+    "d.particle",
+    "r.plato"
+   ],
+   "ablation": "The learner must recognise that ruling out divine falsehood leaves the oracle's meaning unresolved; this item does not independently diagnose understanding of δήπου or γε."
+  },
+  "p4": {
+   "kind": "passage",
+   "id": "p4",
+   "label": "Aeschylus, Agamemnon 1–11 (line 7 omitted)",
+   "source": "Perseus tlg0085.tlg005.perseus-grc2 lines 1–6, 8–11 (canonical-greekLit; Smyth 1926 text). Line 7, bracketed as spurious in that edition and deleted by most editors, is left out; the printed τό in line 8 is corrected to τὸ. A full stop is supplied after line 6 following omission of line 7.",
+   "authentic": true,
+   "verse": true,
+   "word_help": [
+    {
+     "greek": "ἔτειος",
+     "en": "= ἐνιαύσιος, year-long"
+    },
+    {
+     "greek": "ἄγκαθεν",
+     "en": "'on the elbows' or 'up aloft' (disputed)"
+    },
+    {
+     "greek": "Ἀτρεῖδαι",
+     "en": "the sons of Atreus (Agamemnon and Menelaus)"
+    },
+    {
+     "greek": "κάτοιδα",
+     "en": "= οἶδα, know well"
+    },
+    {
+     "greek": "νύκτερος",
+     "en": "= νυκτερινός, of the night"
+    },
+    {
+     "greek": "ὁμήγυρις",
+     "en": "= σύλλογος, gathering, assembly"
+    },
+    {
+     "greek": "χεῖμα",
+     "en": "= χειμών, winter"
+    },
+    {
+     "greek": "βροτός",
+     "en": "= ἄνθρωπος, mortal"
+    },
+    {
+     "greek": "δυνάστης",
+     "en": "lord, potentate"
+    },
+    {
+     "greek": "ἐμπρέπω",
+     "en": "be conspicuous"
+    },
+    {
+     "greek": "λαμπάς",
+     "en": "torch, beacon"
+    },
+    {
+     "greek": "αὐγή",
+     "en": "gleam, blaze"
+    },
+    {
+     "greek": "φάτις, βάξις",
+     "en": "= φήμη, report, tidings"
+    },
+    {
+     "greek": "ἁλώσιμος",
+     "en": "announcing capture"
+    },
+    {
+     "greek": "ἀνδρόβουλος",
+     "en": "having a man's resolve"
+    },
+    {
+     "greek": "κέαρ",
+     "en": "= καρδία, heart"
+    }
+   ],
+   "context_en": "The opening of Aeschylus's Agamemnon (458 BC): a watchman speaks, alone, at night, in Argos. (Line 7, which most editors delete, is left out.)",
+   "sentences": [
+    {
+     "id": "p4-l1",
+     "tokens": [
+      {
+       "t": "θεοὺς",
+       "lemma": "θεός",
+       "gloss": "the gods"
+      },
+      {
+       "t": "μὲν",
+       "lemma": "μέν"
+      },
+      {
+       "t": "αἰτῶ",
+       "lemma": "αἰτέω",
+       "gloss": "I ask"
+      },
+      {
+       "t": "τῶνδʼ",
+       "lemma": "ὅδε",
+       "gloss": "these"
+      },
+      {
+       "t": "ἀπαλλαγὴν",
+       "lemma": "ἀπαλλαγή",
+       "gloss": "release"
+      },
+      {
+       "t": "πόνων",
+       "lemma": "πόνος",
+       "gloss": "toils"
+      }
+     ],
+     "translation_en": "(1) I ask the gods for release from these toils,",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 5,
+        "label": "main"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       2
+      ]
+     }
+    },
+    {
+     "id": "p4-l2",
+     "tokens": [
+      {
+       "t": "φρουρᾶς",
+       "lemma": "φρουρά",
+       "gloss": "of (my) watch"
+      },
+      {
+       "t": "ἐτείας",
+       "lemma": "ἔτειος",
+       "gloss": "year-long (poetic; prose ἐνιαύσιος)"
+      },
+      {
+       "t": "μῆκος,",
+       "lemma": "μῆκος",
+       "gloss": "the length"
+      },
+      {
+       "t": "ἣν",
+       "lemma": "ὅς",
+       "gloss": "during which (= the watch)"
+      },
+      {
+       "t": "κοιμώμενος",
+       "lemma": "κοιμάω",
+       "gloss": "lying (middle: 'bedded down')"
+      }
+     ],
+     "translation_en": "(2) a year-long watch in length, during which, lying",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "apposition: (release from) a year-long watch's length"
+       },
+       {
+        "start": 3,
+        "end": 3,
+        "label": "relative: during which (its verb is κάτοιδα, line 4)"
+       },
+       {
+        "start": 4,
+        "end": 4,
+        "label": "participle: lying (continues in line 3)"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p4-l3",
+     "tokens": [
+      {
+       "t": "στέγαις",
+       "lemma": "στέγη",
+       "gloss": "on the roof (poetic dative of place; prose ἐπὶ τῆς στέγης)"
+      },
+      {
+       "t": "Ἀτρειδῶν",
+       "lemma": "Ἀτρείδης",
+       "gloss": "of the sons of Atreus"
+      },
+      {
+       "t": "ἄγκαθεν,",
+       "lemma": "ἄγκαθεν",
+       "gloss": "on my elbows (poetic; some take it as 'up aloft')"
+      },
+      {
+       "t": "κυνὸς",
+       "lemma": "κύων",
+       "gloss": "of a dog"
+      },
+      {
+       "t": "δίκην,",
+       "lemma": "δίκη",
+       "gloss": "like (δίκην + genitive = 'in the manner of')"
+      }
+     ],
+     "translation_en": "(3) on the roof of the Atreidae, on my elbows, like a dog,",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 4,
+        "label": "participle phrase (cont.): on the roof… like a dog"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p4-l4",
+     "tokens": [
+      {
+       "t": "ἄστρων",
+       "lemma": "ἄστρον",
+       "gloss": "of the stars"
+      },
+      {
+       "t": "κάτοιδα",
+       "lemma": "κάτοιδα",
+       "gloss": "I know well (poetic; prose οἶδα)"
+      },
+      {
+       "t": "νυκτέρων",
+       "lemma": "νύκτερος",
+       "gloss": "of the night (poetic; prose νυκτερινός)"
+      },
+      {
+       "t": "ὁμήγυριν,",
+       "lemma": "ὁμήγυρις",
+       "gloss": "gathering, assembly (poetic; prose σύλλογος)"
+      }
+     ],
+     "translation_en": "(4) I have come to know the assembly of the night's stars,",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "relative clause (cont.), its verb κάτοιδα: I know well the stars' assembly"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p4-l5",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "φέροντας",
+       "lemma": "φέρω",
+       "gloss": "that bring"
+      },
+      {
+       "t": "χεῖμα",
+       "lemma": "χεῖμα",
+       "gloss": "winter (poetic; prose χειμών)"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "θέρος",
+       "lemma": "θέρος",
+       "gloss": "summer"
+      },
+      {
+       "t": "βροτοῖς",
+       "lemma": "βροτός",
+       "gloss": "to mortals (poetic; prose ἄνθρωποι)"
+      }
+     ],
+     "translation_en": "(5) and those that bring winter and summer to mortals,",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 6,
+        "label": "second object of κάτοιδα: and those that bring winter and summer…"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p4-l6",
+     "tokens": [
+      {
+       "t": "λαμπροὺς",
+       "lemma": "λαμπρός",
+       "gloss": "bright"
+      },
+      {
+       "t": "δυνάστας,",
+       "lemma": "δυνάστης",
+       "gloss": "lords, potentates"
+      },
+      {
+       "t": "ἐμπρέποντας",
+       "lemma": "ἐμπρέπω",
+       "gloss": "conspicuous (in) (poetic)"
+      },
+      {
+       "t": "αἰθέρι.",
+       "lemma": "αἰθήρ",
+       "gloss": "in the upper air, the sky"
+      }
+     ],
+     "translation_en": "(6) the bright lords, conspicuous in the sky. [Line 7 is omitted.]",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "second object (cont.): the bright lords"
+       },
+       {
+        "start": 2,
+        "end": 3,
+        "label": "participle: conspicuous in the sky"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p4-l8",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "νῦν",
+       "lemma": "νῦν",
+       "gloss": "now"
+      },
+      {
+       "t": "φυλάσσω",
+       "lemma": "φυλάσσω",
+       "gloss": "I watch for"
+      },
+      {
+       "t": "λαμπάδος",
+       "lemma": "λαμπάς",
+       "gloss": "of a torch, beacon"
+      },
+      {
+       "t": "τὸ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "σύμβολον,",
+       "lemma": "σύμβολον",
+       "gloss": "signal"
+      }
+     ],
+     "translation_en": "(8) And now I am watching for the beacon's signal,",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 5,
+        "label": "main"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       2
+      ]
+     }
+    },
+    {
+     "id": "p4-l9",
+     "tokens": [
+      {
+       "t": "αὐγὴν",
+       "lemma": "αὐγή",
+       "gloss": "gleam, blaze (poetic)"
+      },
+      {
+       "t": "πυρὸς",
+       "lemma": "πῦρ",
+       "gloss": "of fire"
+      },
+      {
+       "t": "φέρουσαν",
+       "lemma": "φέρω",
+       "gloss": "bringing"
+      },
+      {
+       "t": "ἐκ",
+       "lemma": "ἐκ",
+       "gloss": "from"
+      },
+      {
+       "t": "Τροίας",
+       "lemma": "Τροία",
+       "gloss": "Troy"
+      },
+      {
+       "t": "φάτιν",
+       "lemma": "φάτις",
+       "gloss": "report (poetic; prose φήμη)"
+      }
+     ],
+     "translation_en": "(9) the blaze of fire bringing word from Troy",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "apposition to σύμβολον: the blaze of fire"
+       },
+       {
+        "start": 2,
+        "end": 5,
+        "label": "participle: bringing word from Troy"
+       }
+      ],
+      "subject": [],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p4-l10",
+     "tokens": [
+      {
+       "t": "ἁλώσιμόν",
+       "lemma": "ἁλώσιμος",
+       "gloss": "of capture (poetic: 'telling of the city's fall')"
+      },
+      {
+       "t": "τε",
+       "lemma": "τε",
+       "gloss": "and"
+      },
+      {
+       "t": "βάξιν·",
+       "lemma": "βάξις",
+       "gloss": "tidings (poetic)"
+      },
+      {
+       "t": "ὧδε",
+       "lemma": "ὧδε",
+       "gloss": "so, thus"
+      },
+      {
+       "t": "γὰρ",
+       "lemma": "γάρ",
+       "gloss": "for"
+      },
+      {
+       "t": "κρατεῖ",
+       "lemma": "κρατέω",
+       "gloss": "commands, holds power"
+      }
+     ],
+     "translation_en": "(10) and tidings of its capture; for so commands",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 2,
+        "label": "participle's second object: and tidings of capture"
+       },
+       {
+        "start": 3,
+        "end": 5,
+        "label": "main (new sentence): for so commands…"
+       }
+      ],
+      "subject": [],
+      "main_verb": [
+       5
+      ]
+     }
+    },
+    {
+     "id": "p4-l11",
+     "tokens": [
+      {
+       "t": "γυναικὸς",
+       "lemma": "γυνή",
+       "gloss": "of a woman"
+      },
+      {
+       "t": "ἀνδρόβουλον",
+       "lemma": "ἀνδρόβουλος",
+       "gloss": "with a man's will (poetic)"
+      },
+      {
+       "t": "ἐλπίζον",
+       "lemma": "ἐλπίζω",
+       "gloss": "hoping, expectant"
+      },
+      {
+       "t": "κέαρ.",
+       "lemma": "κέαρ",
+       "gloss": "heart (poetic; prose καρδία)"
+      }
+     ],
+     "translation_en": "(11) a woman's expectant heart, that plans like a man's.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "subject of κρατεῖ (line 10): a woman's man-counselling, expectant heart"
+       }
+      ],
+      "subject": [
+       0,
+       1,
+       2,
+       3
+      ],
+      "main_verb": []
+     }
+    }
+   ]
+  },
+  "p4-q1": {
+   "kind": "mc",
+   "id": "p4-q1",
+   "passage": "p4",
+   "gist": false,
+   "prompt_en": "Where and how has the watchman spent his year of nights?",
+   "options": [
+    "Lying on the roof of the Atreidae's palace, like a dog",
+    "Curled up inside the Atreidae's palace, beside the dogs",
+    "On the palace roof, keeping watch over the Atreidae's dogs",
+    "At the city gate, lying awake like the Atreidae's guard-dog"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: στέγαις Ἀτρειδῶν is a dative of place ('on the roof of the Atreidae'), and κυνὸς δίκην is 'like a dog'.",
+    "στέγαις (στέγη 'roof') puts him on top of the building, and the dog is a comparison, not company.",
+    "κυνὸς δίκην (δίκην + genitive) means 'in the manner of a dog'; he is not guarding dogs.",
+    "στέγαις Ἀτρειδῶν is the palace roof, not a gate."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.case-fn",
+   "tags": [
+    "n.case-fn",
+    "r.poetic-diction",
+    "r.trimeter"
+   ],
+   "ablation": "The place depends on the bare dative στέγαις (a poetic dative of place, no preposition) and the manner on the adverbial accusative δίκην + genitive; misread either case and B or C follow."
+  },
+  "p4-q2": {
+   "kind": "mc",
+   "id": "p4-q2",
+   "passage": "p4",
+   "gist": false,
+   "prompt_en": "What exactly is he watching for now?",
+   "options": [
+    "A beacon's signal: a blaze of fire bringing word from Troy, news of its capture",
+    "A torch to be carried from Troy by a messenger announcing its capture",
+    "The bright stars that bring news of winter and summer to mortals",
+    "A fire at Troy that would tell the Trojans the Greeks were captured"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: αὐγὴν πυρός stands in apposition to λαμπάδος τὸ σύμβολον, and φέρουσαν (feminine) agrees with αὐγήν: the fire itself brings the news.",
+    "φέρουσαν agrees with αὐγήν (the blaze), so the fire is the bringer; no messenger is mentioned.",
+    "The stars belong to the previous sentence (what he has come to know); καὶ νῦν turns to what he waits for.",
+    "ἐκ Τροίας: the word comes from Troy to Argos, and ἁλώσιμον is about Troy's capture."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.ptc-attachment",
+   "tags": [
+    "s.ptc-attachment",
+    "n.agreement-discontinuous",
+    "r.poetic-diction",
+    "r.trimeter"
+   ],
+   "ablation": "φέρουσαν must be attached to αὐγήν (feminine accusative) and φάτιν / βάξιν taken as its objects; detach the participle and the bringer could be a messenger (B) or the stars (C)."
+  },
+  "p4-q3": {
+   "kind": "mc",
+   "id": "p4-q3",
+   "passage": "p4",
+   "gist": false,
+   "prompt_en": "Why is he keeping this watch, according to the last two lines?",
+   "options": [
+    "A woman with a man's will, full of expectation, commands it.",
+    "He hopes to win a woman's heart by bringing the news.",
+    "A man who plans like a woman rules the palace.",
+    "The men of the house hope that the woman will soon rule."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: κέαρ ('heart', neuter) is the subject of κρατεῖ; ἀνδρόβουλον and ἐλπίζον (neuter) agree with it; γυναικός says whose heart.",
+    "The heart is the subject that commands, not something to be won; ἐλπίζον belongs to the heart.",
+    "ἀνδρόβουλον agrees with κέαρ ('a heart of manly counsel'), and the heart is a woman's (γυναικός).",
+    "κρατεῖ is present: she already commands; ἐλπίζον describes her heart, not the men's hope."
+   ],
+   "domain": "D3",
+   "primary_tag": "n.agreement-discontinuous",
+   "tags": [
+    "n.agreement-discontinuous",
+    "d.particle",
+    "r.poetic-diction",
+    "r.trimeter"
+   ],
+   "ablation": "Only the neuter agreement of ἀνδρόβουλον and ἐλπίζον with κέαρ, and γυναικός as its genitive, says whose heart commands and which is 'man-counselling'; without it, B–D are possible arrangements of the same words."
+  },
+  "p2b": {
+   "kind": "passage",
+   "id": "p2b",
+   "label": "Xenophon, Anabasis 1.5.11–13",
+   "source": "Perseus tlg0032.tlg006.perseus-grc2 1.5.11–13 (canonical-greekLit; Marchant OCT text)",
+   "authentic": true,
+   "context_en": "Cyrus's army is camped by a river in Mesopotamia; Clearchus and Menon each command a contingent of Greek mercenaries.",
+   "sentences": [
+    {
+     "id": "p2b-s1",
+     "tokens": [
+      {
+       "t": "ἀμφιλεξάντων",
+       "lemma": "ἀμφιλέγω",
+       "gloss": "dispute"
+      },
+      {
+       "t": "δέ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "τι",
+       "lemma": "τις",
+       "gloss": "something"
+      },
+      {
+       "t": "ἐνταῦθα",
+       "lemma": "ἐνταῦθα",
+       "gloss": "here, at this point"
+      },
+      {
+       "t": "τῶν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "τε",
+       "lemma": "τε"
+      },
+      {
+       "t": "τοῦ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Μένωνος",
+       "lemma": "Μένων",
+       "gloss": "Menon"
+      },
+      {
+       "t": "στρατιωτῶν",
+       "lemma": "στρατιώτης",
+       "gloss": "soldiers"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τῶν",
+       "lemma": "ὁ",
+       "gloss": "those"
+      },
+      {
+       "t": "τοῦ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Κλεάρχου",
+       "lemma": "Κλέαρχος",
+       "gloss": "Clearchus"
+      },
+      {
+       "t": "ὁ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Κλέαρχος",
+       "lemma": "Κλέαρχος",
+       "gloss": "Clearchus"
+      },
+      {
+       "t": "κρίνας",
+       "lemma": "κρίνω",
+       "gloss": "judge"
+      },
+      {
+       "t": "ἀδικεῖν",
+       "lemma": "ἀδικέω",
+       "gloss": "do wrong, be in the wrong"
+      },
+      {
+       "t": "τὸν",
+       "lemma": "ὁ",
+       "gloss": "the (one)"
+      },
+      {
+       "t": "τοῦ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Μένωνος",
+       "lemma": "Μένων",
+       "gloss": "Menon"
+      },
+      {
+       "t": "πληγὰς",
+       "lemma": "πληγή",
+       "gloss": "blows"
+      },
+      {
+       "t": "ἐνέβαλεν·",
+       "lemma": "ἐμβάλλω",
+       "gloss": "dealt, laid on"
+      }
+     ],
+     "translation_en": "When some of Menon's soldiers and some of Clearchus's had a dispute here about something, Clearchus, judging Menon's man to be in the wrong, gave him a beating;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 12,
+        "label": "genitive absolute"
+       },
+       {
+        "start": 13,
+        "end": 14,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 15,
+        "end": 19,
+        "label": "participle and infinitive phrase"
+       },
+       {
+        "start": 20,
+        "end": 21,
+        "label": "main clause (cont.)"
+       }
+      ],
+      "subject": [
+       13,
+       14
+      ],
+      "main_verb": [
+       21
+      ]
+     }
+    },
+    {
+     "id": "p2b-s2",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ",
+       "gloss": "he"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "ἐλθὼν",
+       "lemma": "ἔρχομαι",
+       "gloss": "go"
+      },
+      {
+       "t": "πρὸς",
+       "lemma": "πρός",
+       "gloss": "to"
+      },
+      {
+       "t": "τὸ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἑαυτοῦ",
+       "lemma": "ἑαυτοῦ",
+       "gloss": "his own"
+      },
+      {
+       "t": "στράτευμα",
+       "lemma": "στράτευμα",
+       "gloss": "contingent, troops"
+      },
+      {
+       "t": "ἔλεγεν·",
+       "lemma": "λέγω",
+       "gloss": "was telling"
+      }
+     ],
+     "translation_en": "and he went to his own contingent and told them;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 2,
+        "end": 6,
+        "label": "participle phrase"
+       },
+       {
+        "start": 7,
+        "end": 7,
+        "label": "main clause (cont.)"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       7
+      ]
+     }
+    },
+    {
+     "id": "p2b-s3",
+     "tokens": [
+      {
+       "t": "ἀκούσαντες",
+       "lemma": "ἀκούω",
+       "gloss": "hear"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "οἱ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "στρατιῶται",
+       "lemma": "στρατιώτης",
+       "gloss": "soldiers"
+      },
+      {
+       "t": "ἐχαλέπαινον",
+       "lemma": "χαλεπαίνω",
+       "gloss": "were indignant"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ὠργίζοντο",
+       "lemma": "ὀργίζω",
+       "gloss": "were angry"
+      },
+      {
+       "t": "ἰσχυρῶς",
+       "lemma": "ἰσχυρῶς",
+       "gloss": "violently"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Κλεάρχῳ.",
+       "lemma": "Κλέαρχος",
+       "gloss": "Clearchus"
+      }
+     ],
+     "translation_en": "and the soldiers, hearing it, were indignant and violently angry with Clearchus.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 1,
+        "label": "participle"
+       },
+       {
+        "start": 2,
+        "end": 9,
+        "label": "main clause"
+       }
+      ],
+      "subject": [
+       2,
+       3
+      ],
+      "main_verb": [
+       4,
+       6
+      ]
+     }
+    },
+    {
+     "id": "p2b-s4",
+     "tokens": [
+      {
+       "t": "τῇ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "αὐτῇ",
+       "lemma": "αὐτός",
+       "gloss": "same"
+      },
+      {
+       "t": "ἡμέρᾳ",
+       "lemma": "ἡμέρα",
+       "gloss": "day"
+      },
+      {
+       "t": "Κλέαρχος",
+       "lemma": "Κλέαρχος",
+       "gloss": "Clearchus"
+      },
+      {
+       "t": "ἐλθὼν",
+       "lemma": "ἔρχομαι",
+       "gloss": "go"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "to"
+      },
+      {
+       "t": "τὴν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "διάβασιν",
+       "lemma": "διάβασις",
+       "gloss": "crossing-place"
+      },
+      {
+       "t": "τοῦ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ποταμοῦ",
+       "lemma": "ποταμός",
+       "gloss": "river"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ἐκεῖ",
+       "lemma": "ἐκεῖ",
+       "gloss": "there"
+      },
+      {
+       "t": "κατασκεψάμενος",
+       "lemma": "κατασκέπτομαι",
+       "gloss": "inspect"
+      },
+      {
+       "t": "τὴν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἀγορὰν",
+       "lemma": "ἀγορά",
+       "gloss": "market"
+      },
+      {
+       "t": "ἀφιππεύει",
+       "lemma": "ἀφιππεύω",
+       "gloss": "rides off"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "to"
+      },
+      {
+       "t": "τὴν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἑαυτοῦ",
+       "lemma": "ἑαυτοῦ",
+       "gloss": "his own"
+      },
+      {
+       "t": "σκηνὴν",
+       "lemma": "σκηνή",
+       "gloss": "tent"
+      },
+      {
+       "t": "διὰ",
+       "lemma": "διά",
+       "gloss": "through"
+      },
+      {
+       "t": "τοῦ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Μένωνος",
+       "lemma": "Μένων",
+       "gloss": "Menon"
+      },
+      {
+       "t": "στρατεύματος",
+       "lemma": "στράτευμα",
+       "gloss": "camp, troops"
+      },
+      {
+       "t": "σὺν",
+       "lemma": "σύν",
+       "gloss": "with"
+      },
+      {
+       "t": "ὀλίγοις",
+       "lemma": "ὀλίγος",
+       "gloss": "a few"
+      },
+      {
+       "t": "τοῖς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "περὶ",
+       "lemma": "περί",
+       "gloss": "around"
+      },
+      {
+       "t": "αὐτόν·",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      }
+     ],
+     "translation_en": "On the same day Clearchus, having gone to the river crossing and inspected the market there, rides off to his own tent through Menon's camp, with a few of his attendants;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "time expression"
+       },
+       {
+        "start": 4,
+        "end": 4,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 5,
+        "end": 15,
+        "label": "participle phrases"
+       },
+       {
+        "start": 16,
+        "end": 29,
+        "label": "main clause (cont.)"
+       }
+      ],
+      "subject": [
+       4
+      ],
+      "main_verb": [
+       16
+      ]
+     }
+    },
+    {
+     "id": "p2b-s5",
+     "tokens": [
+      {
+       "t": "Κῦρος",
+       "lemma": "Κῦρος",
+       "gloss": "Cyrus"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "οὔπω",
+       "lemma": "οὔπω",
+       "gloss": "not yet"
+      },
+      {
+       "t": "ἧκεν,",
+       "lemma": "ἥκω",
+       "gloss": "had come"
+      },
+      {
+       "t": "ἀλλʼ",
+       "lemma": "ἀλλά",
+       "gloss": "but"
+      },
+      {
+       "t": "ἔτι",
+       "lemma": "ἔτι",
+       "gloss": "still"
+      },
+      {
+       "t": "προσήλαυνε·",
+       "lemma": "προσελαύνω",
+       "gloss": "was riding up"
+      }
+     ],
+     "translation_en": "Cyrus had not yet arrived, but was still riding up;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main clause"
+       },
+       {
+        "start": 4,
+        "end": 6,
+        "label": "second main clause"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       3,
+       6
+      ]
+     }
+    },
+    {
+     "id": "p2b-s6",
+     "tokens": [
+      {
+       "t": "τῶν",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "Μένωνος",
+       "lemma": "Μένων",
+       "gloss": "Menon"
+      },
+      {
+       "t": "στρατιωτῶν",
+       "lemma": "στρατιώτης",
+       "gloss": "soldiers"
+      },
+      {
+       "t": "ξύλα",
+       "lemma": "ξύλον",
+       "gloss": "wood"
+      },
+      {
+       "t": "σχίζων",
+       "lemma": "σχίζω",
+       "gloss": "split"
+      },
+      {
+       "t": "τις",
+       "lemma": "τις",
+       "gloss": "someone"
+      },
+      {
+       "t": "ὡς",
+       "lemma": "ὡς",
+       "gloss": "when"
+      },
+      {
+       "t": "εἶδε",
+       "lemma": "ὁράω",
+       "gloss": "he saw"
+      },
+      {
+       "t": "Κλέαρχον",
+       "lemma": "Κλέαρχος",
+       "gloss": "Clearchus"
+      },
+      {
+       "t": "διελαύνοντα,",
+       "lemma": "διελαύνω",
+       "gloss": "ride through"
+      },
+      {
+       "t": "ἵησι",
+       "lemma": "ἵημι",
+       "gloss": "lets fly, throws"
+      },
+      {
+       "t": "τῇ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἀξίνῃ·",
+       "lemma": "ἀξίνη",
+       "gloss": "axe"
+      }
+     ],
+     "translation_en": "and one of Menon's soldiers who was splitting wood, when he saw Clearchus riding through, lets fly at him with his axe;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main clause: partitive genitive"
+       },
+       {
+        "start": 4,
+        "end": 5,
+        "label": "participle phrase"
+       },
+       {
+        "start": 6,
+        "end": 6,
+        "label": "main clause: subject"
+       },
+       {
+        "start": 7,
+        "end": 10,
+        "label": "temporal clause"
+       },
+       {
+        "start": 11,
+        "end": 13,
+        "label": "main clause (cont.)"
+       }
+      ],
+      "subject": [
+       6
+      ],
+      "main_verb": [
+       11
+      ]
+     }
+    },
+    {
+     "id": "p2b-s7",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "οὗτος",
+       "lemma": "οὗτος",
+       "gloss": "this man"
+      },
+      {
+       "t": "μὲν",
+       "lemma": "μέν"
+      },
+      {
+       "t": "αὐτοῦ",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "ἥμαρτεν·",
+       "lemma": "ἁμαρτάνω",
+       "gloss": "missed"
+      }
+     ],
+     "translation_en": "and this man missed him;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 4,
+        "label": "main clause"
+       }
+      ],
+      "subject": [
+       1
+      ],
+      "main_verb": [
+       4
+      ]
+     }
+    },
+    {
+     "id": "p2b-s8",
+     "tokens": [
+      {
+       "t": "ἄλλος",
+       "lemma": "ἄλλος",
+       "gloss": "another (man)"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "λίθῳ",
+       "lemma": "λίθος",
+       "gloss": "stone"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "ἄλλος,",
+       "lemma": "ἄλλος",
+       "gloss": "another"
+      },
+      {
+       "t": "εἶτα",
+       "lemma": "εἶτα",
+       "gloss": "then"
+      },
+      {
+       "t": "πολλοί,",
+       "lemma": "πολύς",
+       "gloss": "many"
+      },
+      {
+       "t": "κραυγῆς",
+       "lemma": "κραυγή",
+       "gloss": "a shout"
+      },
+      {
+       "t": "γενομένης.",
+       "lemma": "γίγνομαι",
+       "gloss": "arise, happen"
+      }
+     ],
+     "translation_en": "but another (threw) a stone, and another, then many, as a shout went up.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 6,
+        "label": "main clause; verb not expressed"
+       },
+       {
+        "start": 7,
+        "end": 8,
+        "label": "genitive absolute"
+       }
+      ],
+      "subject": [
+       0,
+       4,
+       6
+      ],
+      "main_verb": []
+     }
+    },
+    {
+     "id": "p2b-s9",
+     "tokens": [
+      {
+       "t": "ὁ",
+       "lemma": "ὁ",
+       "gloss": "he"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "καταφεύγει",
+       "lemma": "καταφεύγω",
+       "gloss": "takes refuge"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "in(to)"
+      },
+      {
+       "t": "τὸ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἑαυτοῦ",
+       "lemma": "ἑαυτοῦ",
+       "gloss": "his own"
+      },
+      {
+       "t": "στράτευμα,",
+       "lemma": "στράτευμα",
+       "gloss": "troops"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "εὐθὺς",
+       "lemma": "εὐθύς",
+       "gloss": "at once"
+      },
+      {
+       "t": "παραγγέλλει",
+       "lemma": "παραγγέλλω",
+       "gloss": "passes the order"
+      },
+      {
+       "t": "εἰς",
+       "lemma": "εἰς",
+       "gloss": "to"
+      },
+      {
+       "t": "τὰ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ὅπλα·",
+       "lemma": "ὅπλον",
+       "gloss": "arms"
+      }
+     ],
+     "translation_en": "He takes refuge with his own troops, and at once passes the order 'to arms';",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 6,
+        "label": "main clause"
+       },
+       {
+        "start": 7,
+        "end": 12,
+        "label": "second main clause"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       2,
+       9
+      ]
+     }
+    },
+    {
+     "id": "p2b-s10",
+     "tokens": [
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "μὲν",
+       "lemma": "μέν"
+      },
+      {
+       "t": "ὁπλίτας",
+       "lemma": "ὁπλίτης",
+       "gloss": "hoplites"
+      },
+      {
+       "t": "αὐτοῦ",
+       "lemma": "αὐτός",
+       "gloss": "him, his"
+      },
+      {
+       "t": "ἐκέλευσε",
+       "lemma": "κελεύω",
+       "gloss": "he ordered"
+      },
+      {
+       "t": "μεῖναι",
+       "lemma": "μένω",
+       "gloss": "stay"
+      },
+      {
+       "t": "τὰς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἀσπίδας",
+       "lemma": "ἀσπίς",
+       "gloss": "shields"
+      },
+      {
+       "t": "πρὸς",
+       "lemma": "πρός",
+       "gloss": "against"
+      },
+      {
+       "t": "τὰ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "γόνατα",
+       "lemma": "γόνυ",
+       "gloss": "knees"
+      },
+      {
+       "t": "θέντας,",
+       "lemma": "τίθημι",
+       "gloss": "set, place"
+      },
+      {
+       "t": "αὐτὸς",
+       "lemma": "αὐτός",
+       "gloss": "himself"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "λαβὼν",
+       "lemma": "λαμβάνω",
+       "gloss": "take"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Θρᾷκας",
+       "lemma": "Θρᾷξ",
+       "gloss": "Thracians"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ἱππέας",
+       "lemma": "ἱππεύς",
+       "gloss": "horsemen"
+      },
+      {
+       "t": "οἳ",
+       "lemma": "ὅς",
+       "gloss": "who"
+      },
+      {
+       "t": "ἦσαν",
+       "lemma": "εἰμί",
+       "gloss": "were"
+      },
+      {
+       "t": "αὐτῷ",
+       "lemma": "αὐτός",
+       "gloss": "him"
+      },
+      {
+       "t": "ἐν",
+       "lemma": "ἐν",
+       "gloss": "in"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "στρατεύματι",
+       "lemma": "στράτευμα",
+       "gloss": "army"
+      },
+      {
+       "t": "πλείους",
+       "lemma": "πολύς",
+       "gloss": "more"
+      },
+      {
+       "t": "ἢ",
+       "lemma": "ἤ",
+       "gloss": "than"
+      },
+      {
+       "t": "τετταράκοντα,",
+       "lemma": "τετταράκοντα",
+       "gloss": "forty"
+      },
+      {
+       "t": "τούτων",
+       "lemma": "οὗτος",
+       "gloss": "these"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "οἱ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πλεῖστοι",
+       "lemma": "πολύς",
+       "gloss": "most"
+      },
+      {
+       "t": "Θρᾷκες,",
+       "lemma": "Θρᾷξ",
+       "gloss": "Thracians"
+      },
+      {
+       "t": "ἤλαυνεν",
+       "lemma": "ἐλαύνω",
+       "gloss": "rode, charged"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "against"
+      },
+      {
+       "t": "τοὺς",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "Μένωνος,",
+       "lemma": "Μένων",
+       "gloss": "Menon"
+      },
+      {
+       "t": "ὥστʼ",
+       "lemma": "ὥστε",
+       "gloss": "so that"
+      },
+      {
+       "t": "ἐκείνους",
+       "lemma": "ἐκεῖνος",
+       "gloss": "those, they"
+      },
+      {
+       "t": "ἐκπεπλῆχθαι",
+       "lemma": "ἐκπλήσσω",
+       "gloss": "strike with panic"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "αὐτὸν",
+       "lemma": "αὐτός",
+       "gloss": "himself"
+      },
+      {
+       "t": "Μένωνα,",
+       "lemma": "Μένων",
+       "gloss": "Menon"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "and"
+      },
+      {
+       "t": "τρέχειν",
+       "lemma": "τρέχω",
+       "gloss": "run"
+      },
+      {
+       "t": "ἐπὶ",
+       "lemma": "ἐπί",
+       "gloss": "to"
+      },
+      {
+       "t": "τὰ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "ὅπλα·",
+       "lemma": "ὅπλον",
+       "gloss": "arms"
+      }
+     ],
+     "translation_en": "His hoplites he ordered to stay where they were, resting their shields against their knees, while he himself, taking the Thracians and the horsemen who were with him in the army, more than forty, most of them Thracians, charged at Menon's men, so that they were panic-struck, Menon himself too, and ran to their arms;",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 6,
+        "label": "main clause; subject unexpressed"
+       },
+       {
+        "start": 7,
+        "end": 12,
+        "label": "participle phrase"
+       },
+       {
+        "start": 13,
+        "end": 14,
+        "label": "second main clause: subject"
+       },
+       {
+        "start": 15,
+        "end": 20,
+        "label": "participle phrase"
+       },
+       {
+        "start": 21,
+        "end": 29,
+        "label": "relative clause"
+       },
+       {
+        "start": 30,
+        "end": 34,
+        "label": "parenthesis"
+       },
+       {
+        "start": 35,
+        "end": 38,
+        "label": "second main clause (cont.)"
+       },
+       {
+        "start": 39,
+        "end": 49,
+        "label": "result clause"
+       }
+      ],
+      "subject": [
+       13
+      ],
+      "main_verb": [
+       5,
+       35
+      ]
+     }
+    },
+    {
+     "id": "p2b-s11",
+     "tokens": [
+      {
+       "t": "οἱ",
+       "lemma": "ὁ",
+       "gloss": "they, some"
+      },
+      {
+       "t": "δὲ",
+       "lemma": "δέ"
+      },
+      {
+       "t": "καὶ",
+       "lemma": "καί",
+       "gloss": "even, just"
+      },
+      {
+       "t": "ἕστασαν",
+       "lemma": "ἵστημι",
+       "gloss": "stood"
+      },
+      {
+       "t": "ἀποροῦντες",
+       "lemma": "ἀπορέω",
+       "gloss": "be at a loss"
+      },
+      {
+       "t": "τῷ",
+       "lemma": "ὁ"
+      },
+      {
+       "t": "πράγματι.",
+       "lemma": "πρᾶγμα",
+       "gloss": "affair, business"
+      }
+     ],
+     "translation_en": "and some just stood there, at a loss what to make of it.",
+     "structure": {
+      "clauses": [
+       {
+        "start": 0,
+        "end": 3,
+        "label": "main clause"
+       },
+       {
+        "start": 4,
+        "end": 6,
+        "label": "participle phrase"
+       }
+      ],
+      "subject": [
+       0
+      ],
+      "main_verb": [
+       3
+      ]
+     }
+    }
+   ]
+  },
+  "p2b-q1": {
+   "kind": "mc",
+   "id": "p2b-q1",
+   "passage": "p2b",
+   "gist": true,
+   "prompt_en": "What happens in this passage, in brief?",
+   "options": [
+    "A quarrel among two generals' soldiers nearly turns into a fight between their whole contingents.",
+    "Clearchus's men raid Menon's camp to punish a theft, and Menon's men flee.",
+    "Cyrus arrives and turns a quarrel between two generals into open fighting.",
+    "Menon's soldiers, attacked by local people at the river crossing, run to their arms."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: a beating, stones thrown at Clearchus, and Clearchus charging Menon's men.",
+    "No theft; Clearchus himself is attacked first while riding through.",
+    "Cyrus has not yet arrived (οὔπω ἧκεν).",
+    "The attackers are Greeks of the other contingent, not locals."
+   ],
+   "domain": "D5",
+   "primary_tag": "s.main-clause",
+   "tags": [
+    "s.main-clause",
+    "d.omitted-subject"
+   ],
+   "ablation": "The gist depends on tracking the main verbs (ἐνέβαλεν, ἔλεγεν, ἀφιππεύει, ἵησι, καταφεύγει, ἤλαυνεν) and who is subject of each."
+  },
+  "p2b-q2": {
+   "kind": "mc",
+   "id": "p2b-q2",
+   "passage": "p2b",
+   "gist": false,
+   "prompt_en": "How did the trouble start?",
+   "options": [
+    "Menon's soldiers quarrelled with Clearchus's; Clearchus judged Menon's man in the wrong and beat him.",
+    "Menon quarrelled with Clearchus; Clearchus judged Menon's man in the wrong and beat him.",
+    "Menon's soldiers quarrelled among themselves; Clearchus judged Menon's man in the wrong and beat him.",
+    "Clearchus's soldiers quarrelled among themselves; Clearchus judged Menon's man in the wrong and beat him."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: the genitive absolute has two subjects joined by τε … καί, the soldiers of both contingents: τῶν τε τοῦ Μένωνος στρατιωτῶν καὶ τῶν τοῦ Κλεάρχου.",
+    "The generals themselves do not quarrel: the genitives are their soldiers (στρατιωτῶν), not Μένων and Κλέαρχος.",
+    "τε … καί joins two groups: Menon's soldiers and Clearchus's (τῶν τοῦ Κλεάρχου), not Menon's contingent alone.",
+    "τε … καί joins two groups: Clearchus's soldiers and Menon's, not Clearchus's contingent alone."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.gen-abs",
+   "tags": [
+    "s.gen-abs",
+    "n.article-substantive",
+    "s.inf-ind"
+   ],
+   "ablation": "All options preserve the main clause; identifying the disputants requires reading the subjects of ἀμφιλεξάντων in the genitive absolute."
+  },
+  "p2b-q3": {
+   "kind": "mc",
+   "id": "p2b-q3",
+   "passage": "p2b",
+   "gist": false,
+   "prompt_en": "Who went off to his own contingent and told what had happened?",
+   "options": [
+    "The soldier of Menon's whom Clearchus had beaten",
+    "Clearchus",
+    "Menon",
+    "One of Clearchus's soldiers who had seen it"
+   ],
+   "answer": 0,
+   "why": [
+    "Right: ὁ δέ switches to a new subject, the last person mentioned, τὸν τοῦ Μένωνος.",
+    "ὁ δέ marks a change of subject away from Clearchus.",
+    "Menon himself has not appeared yet; τὸν τοῦ Μένωνος is 'Menon's man'.",
+    "Clearchus's soldiers are not singled out; the man who 'goes to his own contingent' is the beaten one."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.omitted-subject",
+   "tags": [
+    "d.omitted-subject",
+    "n.article-substantive",
+    "n.pron-refl"
+   ],
+   "ablation": "ὁ δέ switches the subject to the last-mentioned person (τὸν τοῦ Μένωνος); a reader who carries over the previous subject picks Clearchus."
+  },
+  "p2b-q4": {
+   "kind": "mc",
+   "id": "p2b-q4",
+   "passage": "p2b",
+   "gist": false,
+   "prompt_en": "What happened as Clearchus rode through Menon's camp?",
+   "options": [
+    "One of Menon's soldiers, who was splitting wood, saw him riding through and threw his axe at him.",
+    "Clearchus, riding through, threw an axe at one of Menon's soldiers who was splitting wood.",
+    "One of Menon's soldiers threw his axe at Clearchus, who had stopped to split wood.",
+    "One of Menon's soldiers, riding through, saw Clearchus splitting wood and threw his axe at him."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: σχίζων (nominative) goes with τις, διελαύνοντα (accusative) with Κλέαρχον.",
+    "The subject of ἵησι is τις, the soldier; Clearchus is the object of εἶδε.",
+    "σχίζων is nominative: the wood-splitter is the thrower, not Clearchus.",
+    "διελαύνοντα is accusative and belongs to Κλέαρχον; σχίζων belongs to the soldier."
+   ],
+   "domain": "D4",
+   "primary_tag": "s.ptc-attachment",
+   "tags": [
+    "s.ptc-attachment",
+    "s.ptc-suppl",
+    "v.mi"
+   ],
+   "ablation": "σχίζων (nominative, with τις) and διελαύνοντα (accusative, with Κλέαρχον) must each be attached to the right person; ignoring case agreement, B–D are all readings of the same words."
+  },
+  "p2b-q5": {
+   "kind": "span",
+   "id": "p2b-q5",
+   "passage": "p2b",
+   "prompt_en": "Select the words that say what effect Clearchus's charge had on Menon's side.",
+   "answer": {
+    "sentence": "p2b-s10",
+    "start": 39,
+    "end": 49,
+    "require": [
+     39
+    ]
+   },
+   "min_overlap": 0.6,
+   "why": "ὥστʼ ἐκείνους ἐκπεπλῆχθαι καὶ αὐτὸν Μένωνα, καὶ τρέχειν ἐπὶ τὰ ὅπλα: 'so that they were panic-struck, Menon himself too, and ran to their arms'.",
+   "domain": "D5",
+   "primary_tag": "s.result",
+   "tags": [
+    "s.result",
+    "s.inf-ind"
+   ],
+   "ablation": "The effect is in the ὥστε + infinitive clause; without recognising it as a result clause, the following sentence (οἱ δὲ … ἕστασαν) or the charge itself is an equally tempting span."
+  },
+  "p2b-q6": {
+   "kind": "mc",
+   "id": "p2b-q6",
+   "passage": "p2b",
+   "gist": false,
+   "prompt_en": "What happened after the axe missed?",
+   "options": [
+    "Another man threw a stone, then another, then many, as a shout went up.",
+    "Another man hit Clearchus with a stone, and then many others did too.",
+    "Another man threw a stone at the axe-thrower, and then many joined in.",
+    "The axe-thrower threw a stone as well, and then many others did."
+   ],
+   "answer": 0,
+   "why": [
+    "Right: supply 'threw' (from ἵησι) with each new subject; Clearchus is still the target.",
+    "The text says they threw; it does not say anyone hit him.",
+    "The target does not change: they are all throwing at Clearchus.",
+    "ἄλλος means another man; οὗτος (the axe-thrower) has already had his turn."
+   ],
+   "domain": "D6",
+   "primary_tag": "d.ellipsis",
+   "tags": [
+    "d.ellipsis",
+    "s.gen-abs"
+   ],
+   "ablation": "ἄλλος δὲ λίθῳ has no verb: the reader must supply 'threw' from ἵησι, with the same target; without supplying it, the sentence is a list of nominatives and a dative with no event."
+  },
+  "w1b": {
+   "kind": "write",
+   "id": "w1b",
+   "subtype": "supported",
+   "passage": "p2b",
+   "prompt_en": "Tell this part of the story as Clearchus, in the first person: what happened to you as you rode through Menon's camp, and what did you do next? One or two Greek sentences.",
+   "model_answers": [
+    "διελαύνοντί μοι διὰ τοῦ Μένωνος στρατεύματος στρατιώτης τις ἧκε τὴν ἀξίνην· ἐγὼ δὲ κατέφυγον εἰς τὸ ἐμαυτοῦ στράτευμα καὶ εὐθὺς παρήγγειλα εἰς τὰ ὅπλα.",
+    "ἐπεὶ διὰ τοῦ Μένωνος στρατεύματος ἤλαυνον, ἔβαλλόν με λίθοις· ἐγὼ δὲ κατέφυγον πρὸς τοὺς ἐμαυτοῦ στρατιώτας."
+   ],
+   "rubric": "Communication: (1) Menon's men threw an axe / stones at Clearchus as he rode through; (2) he took refuge with his own troops and called them to arms. Forms looked at: first-person singular aorists (κατέφυγον 2nd aorist; παρήγγειλα liquid aorist), the first-person pronoun as object or dative (με, μοι), and the reflexive ἐμαυτοῦ for 'my own'.",
+   "shape": "answer-about-passage-change-person",
+   "domain": "D2",
+   "primary_tag": "v.aor2",
+   "tags": [
+    "v.aor2",
+    "v.aor1",
+    "n.pron-refl"
+   ],
+   "ablation": "n/a (production)"
+  }
+ }
+}
