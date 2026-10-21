@@ -18,7 +18,8 @@
       "Thread thr-mali-reads planted: 'Mae Mali'n darllen, ac mae Elen yn darllen. Ond Arth? Ond Cai?' Negatives arrive in Pennod 4, so the contrast is a pair of fragment questions.",
       "'Ha!' is Cai's and Arth's sword cry; the coverage checker resolves it (h-prothesis of a), which is harmless.",
       "Callback joke 'Gwellt yw enw'r dyn gwellt!' echoes Pennod 2's 'Cath yw enw'r gath!'.",
-      "Geese appear in pictures only (no lexeme), as the plan beat needs them only as scenery."
+      "Geese appear in pictures only (no lexeme), as the plan beat needs them only as scenery.",
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): the narrator's question-and-fragment tour ('Ble mae X? Yn Y.') ran eight times; two plain ones are now statements (cut s020 'A Mali?' and s031 'Ble mae'r gogyddes?'; s021 'A dyma Mali, wrth ddrws y gegin.' keeps a pointing opener so the Mae run stays ≤ 5; s032 names the subject). Kept: s006–s007 and s015–s016 (the tour's first steps; cutting s015 too made a seven-sentence Mae run and packed new words together), s029–s030 (the reading-thread plant), s041–s042 (Arth sees the sword), s034/s077 'A Pero?' (each answered by a full sentence; s077 turns the chapter) and the closing s088. Meta-language: 'dim newid / dim treiglad' (dim is Pennod 6) replaced by arrows (b → b) in the rule, table caption, Treigladau row and A a1/a5 hints; the rule's no-change example is now bwyta (rhedeg starts with rh, which never mutates after yn, so it showed nothing). Pensa: b1 'Pero … ___ wrth y wal' also fitted bwyta/yfed, now cued by nos da; b6 'Mae ___ mawr yn y neuadd' also fitted cleddyf, now contrasts the small window with the hall's ___ (drws); A a3 and C c1–c4, c6 accept fronted identification, pronoun subjects and fuller answers."
     ],
     "review_questions": [
       {
@@ -580,13 +581,8 @@
             "text": "Mae'r hen geffyl gwyn yn yfed y dŵr yn y stabl, ac mae ceffyl ifanc Cai'n bwyta gwellt."
           },
           {
-            "id": "cy-brenin-01-l03-s020",
-            "text": "A Mali?",
-            "paragraph_start": true
-          },
-          {
             "id": "cy-brenin-01-l03-s021",
-            "text": "Wrth ddrws y gegin.",
+            "text": "A dyma Mali, wrth ddrws y gegin.",
             "inference_aids": [
               {
                 "type": "gloss",
@@ -598,7 +594,8 @@
                   "cy-drws"
                 ]
               }
-            ]
+            ],
+            "paragraph_start": true
           },
           {
             "id": "cy-brenin-01-l03-s022",
@@ -659,13 +656,9 @@
             "text": "Ond Cai?"
           },
           {
-            "id": "cy-brenin-01-l03-s031",
-            "text": "Ble mae'r gogyddes?",
-            "paragraph_start": true
-          },
-          {
             "id": "cy-brenin-01-l03-s032",
-            "text": "Yn y gegin, wrth y ffenest."
+            "text": "Mae'r gogyddes yn y gegin, wrth y ffenest.",
+            "paragraph_start": true
           },
           {
             "id": "cy-brenin-01-l03-s033",
@@ -1080,7 +1073,7 @@
   },
   "grammar": {
     "title_cy": "Mae Arth yn rhedeg",
-    "rule_cy": "Mae … yn + mawr → yn fawr (treiglad). — Mae … yn + rhedeg → yn rhedeg (dim treiglad).",
+    "rule_cy": "Mae … yn + mawr → yn fawr (m → f). — Mae … yn + bwyta → yn bwyta (b → b).",
     "tables": [
       {
         "caption": "yn gyflym ↔ yn rhedeg",
@@ -1108,7 +1101,7 @@
         ]
       },
       {
-        "caption": "yn + berf: dim newid",
+        "caption": "yn + berf: g → g, b → b, d → d, c → c",
         "header": [
           "",
           ""
@@ -1168,7 +1161,7 @@
           ],
           [
             "Mae … yn + gweld, bwyta, darllen",
-            "yn gweld, yn bwyta, yn darllen (dim newid)",
+            "yn gweld, yn bwyta, yn darllen",
             "Pennod 3"
           ],
           [
@@ -1228,7 +1221,7 @@
               "common_wrong": [
                 {
                   "answer": "Mae Mali'n ddarllen.",
-                  "hint": "yn + berf → dim treiglad"
+                  "hint": "yn + darllen → yn darllen"
                 }
               ]
             },
@@ -1272,7 +1265,7 @@
               "common_wrong": [
                 {
                   "answer": "Mae Cai'n fwyta.",
-                  "hint": "yn + berf → dim treiglad"
+                  "hint": "yn + bwyta → yn bwyta"
                 }
               ]
             },
@@ -1299,7 +1292,8 @@
               "prompt": "Pero · enw'r ci →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Pero yw enw'r ci."
+                "Pero yw enw'r ci.",
+                "Enw'r ci yw Pero."
               ],
               "explanation": "enw'r ci = un peth → … yw …",
               "common_wrong": [
@@ -1377,7 +1371,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae Pero'n hen gi, ac yn y bore mae e'n ___ wrth y wal.",
+          "prompt": "Mae hi'n nos, ac mae Pero'n ___ wrth y drws: nos da, Pero!",
           "answer_mode": "exact",
           "accepted_answers": [
             "cysgu"
@@ -1417,7 +1411,7 @@
         },
         {
           "id": "b6",
-          "prompt": "Mae ___ mawr yn y neuadd, a ffenest fach yn y gegin.",
+          "prompt": "Mae'r ffenest yn fach, ond mae ___ y neuadd yn fawr.",
           "answer_mode": "exact",
           "accepted_answers": [
             "drws"
@@ -1460,7 +1454,10 @@
           "answer_mode": "exact",
           "accepted_answers": [
             "Yn y buarth",
-            "Mae Cai yn y buarth"
+            "Mae Cai yn y buarth",
+            "Mae e yn y buarth",
+            "Mae Cai'n chwarae yn y buarth",
+            "Mae e'n chwarae yn y buarth"
           ],
           "model_answer": "Mae Cai yn y buarth.",
           "source_segment_ids": [
@@ -1475,7 +1472,10 @@
             "I'r stabl",
             "I'r ceffylau",
             "I'r stabl, i'r ceffylau",
-            "Mae Arth yn cario dŵr i'r stabl"
+            "Mae Arth yn cario dŵr i'r stabl",
+            "Mae e'n cario dŵr i'r stabl",
+            "O'r afon i'r stabl",
+            "Mae Arth yn cario dŵr o'r afon i'r stabl"
           ],
           "model_answer": "I'r stabl, i'r ceffylau.",
           "source_segment_ids": [
@@ -1491,7 +1491,11 @@
             "Wrth y drws",
             "Mae Mali'n darllen wrth ddrws y gegin",
             "Mae Mali wrth ddrws y gegin",
-            "Mae Mali wrth y drws"
+            "Mae Mali wrth y drws",
+            "Mae hi'n darllen wrth ddrws y gegin",
+            "Mae hi'n darllen wrth y drws",
+            "Mae Mali'n darllen wrth y drws",
+            "Mae hi wrth ddrws y gegin"
           ],
           "model_answer": "Mae Mali'n darllen wrth ddrws y gegin.",
           "source_segment_ids": [
@@ -1505,7 +1509,8 @@
           "accepted_answers": [
             "Arth",
             "Arth yw'r bachgen cyflym",
-            "Arth yw e"
+            "Arth yw e",
+            "Arth yw'r bachgen"
           ],
           "model_answer": "Arth yw'r bachgen cyflym.",
           "source_segment_ids": [
@@ -1533,7 +1538,8 @@
           "accepted_answers": [
             "Gwellt",
             "Gwellt yw enw'r dyn gwellt",
-            "Enw'r dyn gwellt yw Gwellt"
+            "Enw'r dyn gwellt yw Gwellt",
+            "Gwellt yw e"
           ],
           "model_answer": "Gwellt yw enw'r dyn gwellt!"
         },
@@ -2188,7 +2194,20 @@
       "margin_vignette": 5,
       "margin_diagram": 1,
       "margin_gloss": 14
-    }
+    },
+    "audio_sources": [
+      {
+        "id": "lleisiau",
+        "label": "Nia ac Aled (dau lais)",
+        "manifest": "media/audio/pennod-03/lleisiau/manifest.json",
+        "default": true
+      },
+      {
+        "id": "nia",
+        "label": "Nia (un llais)",
+        "manifest": "media/audio/pennod-03/nia/manifest.json"
+      }
+    ]
   },
   "completion": {
     "button_label": "Gorffen y bennod"
@@ -2204,7 +2223,7 @@
   },
   "metrics": {
     "running_words": 601,
-    "sentences": 88,
+    "sentences": 86,
     "word_target": 600,
     "word_window": [
       540,

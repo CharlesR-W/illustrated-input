@@ -18,7 +18,8 @@
       "Elen hands Mali the lamp and does not call Pero; she looks at the forest. This is a silent hint that she knows about the tower (consistent with sec-dafi note that Cynyr and Elen suspect).",
       "The sneeze is rendered as 'A… a… Atishŵ!' with a define gloss (sŵn + mwg) because tisian is Pennod 5. Segment speaker is char-dafi for audio only; the reader does not yet know who it is.",
       "Lint: 'Mae mwg' with an indefinite subject is affirmative mae, which is correct; the negative of indefinite subjects (Does dim) is Pennod 6, and this chapter avoids indefinite negatives entirely.",
-      "No 'A ti?' item: second-person forms arrive in Pennod 5."
+      "No 'A ti?' item: second-person forms arrive in Pennod 5.",
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): glosses no longer use a word before the reader meets it. s001's 'oer ↔ cynnes' (cynnes first at s003) moves to s003 as 'cynnes ↔ oer', beside the fire vignette; s036's 'pell ↔ agos' (agos first at s037) is now 'pell: Cwm Helyg … Llundain' (the Pennod 1 map), and s037 gets 'agos ↔ pell'; the yma/yno gloss at s049 came after both first uses, so s013 now has 'yma = yn y stabl' and s024 'yno ↔ yma'. Meta-language: Gramadeg header 'Ateb' (a Pennod 12 word) is now '✓ / ✗'; 'dim newid' is now 'll → ll'. Pensa: A a10 'yn ___ (llwyd) → llwyd' gave the answer in the cue; it is now a two-gap item that sets unchanged llwyd beside dawel (Enghraifft likewise: hen … dywyll); b1 also fitted agor, now cued by the cold; A a6/a8/a9/a11 and C c1/c3/c6 accept full answers, pronouns, the fronted identification and 'ar y llwybr' (where Pero runs at s086)."
     ],
     "review_questions": [
       {
@@ -167,12 +168,12 @@
       },
       {
         "lexeme_id": "cy-oer",
-        "how": "picture(cover)+gloss",
+        "how": "context (nos; closing the window) + contrast at s003 (tân → yn gynnes; gloss cynnes ↔ oer)",
         "segment_id": "cy-brenin-01-l04-s001"
       },
       {
         "lexeme_id": "cy-cynnes",
-        "how": "gloss",
+        "how": "picture(vignette: tân) + gloss (cynnes ↔ oer)",
         "segment_id": "cy-brenin-01-l04-s003"
       },
       {
@@ -192,17 +193,17 @@
       },
       {
         "lexeme_id": "cy-pell",
-        "how": "gloss",
+        "how": "gloss (pell: Cwm Helyg … Llundain, the Pennod 1 map)",
         "segment_id": "cy-brenin-01-l04-s036"
       },
       {
         "lexeme_id": "cy-agos",
-        "how": "context",
+        "how": "contrast + gloss (agos ↔ pell)",
         "segment_id": "cy-brenin-01-l04-s037"
       },
       {
         "lexeme_id": "cy-yma",
-        "how": "context",
+        "how": "context + gloss (yma = yn y stabl)",
         "segment_id": "cy-brenin-01-l04-s013"
       },
       {
@@ -263,20 +264,7 @@
           {
             "id": "cy-brenin-01-l04-s001",
             "text": "Mae hi'n nos yn Llys Cynyr, ac mae hi'n oer.",
-            "paragraph_start": true,
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "oer",
-                "gloss": "oer ↔ cynnes",
-                "gloss_kind": "antonym",
-                "covers_lexeme_ids": [
-                  "cy-oer",
-                  "cy-cynnes"
-                ]
-              }
-            ]
+            "paragraph_start": true
           },
           {
             "id": "cy-brenin-01-l04-s002",
@@ -294,6 +282,17 @@
                 "gloss_kind": "radical",
                 "covers_lexeme_ids": [
                   "cy-cynnes"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gynnes",
+                "gloss": "cynnes ↔ oer",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "cy-cynnes",
+                  "cy-oer"
                 ]
               },
               {
@@ -375,6 +374,16 @@
                 "anchor_text": "dyw Pero ddim",
                 "gloss": "Mae … ↔ Dyw … ddim",
                 "gloss_kind": "antonym"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "yma",
+                "gloss": "yma = yn y stabl",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "cy-yma"
+                ]
               }
             ]
           },
@@ -431,7 +440,20 @@
             "id": "cy-brenin-01-l04-s024",
             "text": "\"Nac ydy, dyw Pero ddim yno.",
             "paragraph_start": true,
-            "speaker": "char-arth"
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "yno",
+                "gloss": "yno ↔ yma",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "cy-yno",
+                  "cy-yma"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l04-s025",
@@ -554,11 +576,10 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "bell",
-                "gloss": "pell ↔ agos",
-                "gloss_kind": "antonym",
+                "gloss": "pell: Cwm Helyg … Llundain",
+                "gloss_kind": "define",
                 "covers_lexeme_ids": [
-                  "cy-pell",
-                  "cy-agos"
+                  "cy-pell"
                 ]
               }
             ]
@@ -567,7 +588,19 @@
             "id": "cy-brenin-01-l04-s037",
             "text": "\"Nac ydy, mae'r goedwig yn agos.\"",
             "paragraph_start": true,
-            "speaker": "char-arth"
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "agos",
+                "gloss": "agos ↔ pell",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "cy-agos"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l04-s038",
@@ -688,20 +721,7 @@
             "id": "cy-brenin-01-l04-s049",
             "text": "\"Nac ydy, dyw e ddim yma.\"",
             "paragraph_start": true,
-            "speaker": "char-arth",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "yma",
-                "gloss": "yma ↔ yno",
-                "gloss_kind": "antonym",
-                "covers_lexeme_ids": [
-                  "cy-yma",
-                  "cy-yno"
-                ]
-              }
-            ]
+            "speaker": "char-arth"
           },
           {
             "id": "cy-brenin-01-l04-s050",
@@ -1115,7 +1135,7 @@
         "caption": "Mae … ↔ Ydy …? ↔ Dyw … ddim",
         "header": [
           "?",
-          "Ateb",
+          "✓ / ✗",
           "Dyw … ddim"
         ],
         "rows": [
@@ -1145,7 +1165,7 @@
         "caption": "Ydy …? ↔ … yw e?",
         "header": [
           "?",
-          "Ateb"
+          "✓ / ✗"
         ],
         "rows": [
           [
@@ -1181,7 +1201,7 @@
           ],
           [
             "Mae … yn + llwyd",
-            "yn llwyd (ll: dim newid)",
+            "yn llwyd (ll → ll)",
             "Pennod 1"
           ],
           [
@@ -1286,7 +1306,8 @@
               "prompt": "\"Ydy'r goedwig ar dân?\" (✗) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Nac ydy"
+                "Nac ydy",
+                "Nac ydy. Dyw'r goedwig ddim ar dân"
               ],
               "common_wrong": [
                 {
@@ -1314,7 +1335,8 @@
               "prompt": "\"Tŵr carreg yw e?\" (✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Ie"
+                "Ie",
+                "Ie, tŵr carreg yw e"
               ],
               "common_wrong": [
                 {
@@ -1328,7 +1350,8 @@
               "prompt": "\"Ydy'r lamp yn gynnes?\" (✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Ydy"
+                "Ydy",
+                "Ydy, mae'r lamp yn gynnes"
               ],
               "common_wrong": [
                 {
@@ -1341,25 +1364,34 @@
         },
         {
           "enghraifft": {
-            "prompt": "Mae'r tŵr yn ___. (uchel)",
-            "answer": "uchel"
+            "prompt": "Mae'r tŵr yn ___ ac yn ___. (hen · tywyll)",
+            "answer": "hen … dywyll"
           },
           "mutation_hint": true,
           "items": [
             {
               "id": "a10",
-              "prompt": "Mae'r cerrig yn ___. (llwyd)",
+              "prompt": "Mae'r cerrig yn ___, ac mae'r goedwig yn ___. (llwyd · tawel)",
               "answer_mode": "exact",
-              "accepted_answers": [
-                "llwyd"
-              ],
               "recall_of": "G01",
-              "explanation": "ll: dim newid ar ôl 'yn'",
+              "explanation": "yn + llwyd → yn llwyd (ll → ll) · yn + tawel → yn dawel",
               "common_wrong": [
                 {
                   "answer": "lwyd",
-                  "hint": "yn + ll → ll (dim newid)"
+                  "hint": "yn + ll → yn llwyd"
+                },
+                {
+                  "answer": "tawel",
+                  "hint": "yn + t → d"
                 }
+              ],
+              "blanks": [
+                [
+                  "llwyd"
+                ],
+                [
+                  "dawel"
+                ]
               ]
             },
             {
@@ -1367,7 +1399,8 @@
               "prompt": "Mali · merch Cynyr →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mali yw merch Cynyr."
+                "Mali yw merch Cynyr.",
+                "Merch Cynyr yw Mali."
               ],
               "recall_of": "G02"
             }
@@ -1396,7 +1429,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae hi'n nos, ac mae Elen yn ___ y ffenest.",
+          "prompt": "Mae hi'n nos ac mae hi'n oer: mae Elen yn ___ y ffenest.",
           "answer_mode": "exact",
           "accepted_answers": [
             "cau"
@@ -1481,7 +1514,10 @@
             "Nac ydy",
             "Nac ydy. Dyw Pero ddim yn y stabl",
             "Dyw Pero ddim yn y stabl",
-            "Nac ydy. Dyw e ddim yn y stabl"
+            "Nac ydy. Dyw e ddim yn y stabl",
+            "Dyw e ddim yn y stabl",
+            "Nac ydy. Dyw e ddim yno",
+            "Nac ydy. Dyw Pero ddim yno"
           ],
           "model_answer": "Nac ydy. Dyw Pero ddim yn y stabl.",
           "source_segment_ids": [
@@ -1510,7 +1546,10 @@
             "Nac ydy",
             "Nac ydy. Mae mwg, ond dyw'r coed ddim ar dân",
             "Dyw'r goedwig ddim ar dân",
-            "Nac ydy. Dyw'r goedwig ddim ar dân"
+            "Nac ydy. Dyw'r goedwig ddim ar dân",
+            "Nac ydy. Dyw'r coed ddim ar dân",
+            "Dyw'r coed ddim ar dân",
+            "Nac ydy. Mae mwg, ond dyw'r goedwig ddim ar dân"
           ],
           "model_answer": "Nac ydy. Mae mwg, ond dyw'r coed ddim ar dân.",
           "source_segment_ids": [
@@ -1552,7 +1591,13 @@
             "Wrth y drws gwyrdd",
             "Mae Pero wrth y tŵr",
             "Mae Pero wrth y drws gwyrdd, wrth y tŵr",
-            "Mae Pero wrth y drws gwyrdd"
+            "Mae Pero wrth y drws gwyrdd",
+            "Mae e wrth y drws",
+            "Mae e wrth y tŵr",
+            "Wrth y drws gwyrdd, wrth y tŵr",
+            "Mae e wrth y drws gwyrdd",
+            "Yn y goedwig, wrth y tŵr",
+            "Ar y llwybr"
           ],
           "model_answer": "Mae Pero wrth y drws gwyrdd, wrth y tŵr.",
           "source_segment_ids": [
@@ -1973,8 +2018,21 @@
       "inline_scene": 1,
       "margin_vignette": 4,
       "margin_diagram": 0,
-      "margin_gloss": 22
-    }
+      "margin_gloss": 24
+    },
+    "audio_sources": [
+      {
+        "id": "lleisiau",
+        "label": "Nia ac Aled (dau lais)",
+        "manifest": "media/audio/pennod-04/lleisiau/manifest.json",
+        "default": true
+      },
+      {
+        "id": "nia",
+        "label": "Nia (un llais)",
+        "manifest": "media/audio/pennod-04/nia/manifest.json"
+      }
+    ]
   },
   "completion": {
     "button_label": "Gorffen y bennod"

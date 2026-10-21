@@ -20,7 +20,8 @@
       "Running words about 980 against 900 (window 810–990): besides the episode, the chapter carries next-five-chapter recall for Penodau 4–8 (chwilio, clywed, sŵn, cau ar gau; hud, dysgu, sut, dewin; mainc, gwag, menyn, caws, wy, gofyn, sefyll, bwced, dail, distaw, prysur, coes, clust; marchogaeth, tarian, aur, arian, ffrind, cryf, gwan, trwm, anrheg, pen-blwydd, pymtheg oed). Each sits inside an event (Cai riding to the river, the bench, the empty bucket, Pero shaking himself dry, Cai claiming a birthday fish).",
       "Applied gpt-6-astra review (2026-10-12): Pensum C c3 answer key corrected (Dafi can fly, but not far); B b2 now cues swimming; C c1/c5/c6 accept further correct answers; glosses that were associations rather than synonyms rewritten as define glosses (byw, pysgota, pawb); Gramadeg and the Ydych gloss now show both answer persons (Ydych / Ydyn; Ydw / Ydyn); cy-llyn sense now 'lake; pool'. Not taken: 'mae e'n nofio'n gyflym' for 'mae'r coesau'n gyflym yn y dŵr' (grammatical, and it carries coes recall for Pennod 7).",
       "Continuity with Pennod 11 (written in parallel): Myrddin comes to the river without his hat (it stays by the kitchen fire); Dafi rides in Arth's hair and can fly short hops, so that at the end of Pennod 10 he can fly home alone ahead of the others.",
-      "Planted for Pennod 10: 'pysgodyn mawr iawn yn y llyn' under the bridge (the pike); the small yellow fish."
+      "Planted for Pennod 10: 'pysgodyn mawr iawn yn y llyn' under the bridge (the pike); the small yellow fish.",
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): the s034–s048 question volley gave Myrddin three river deflections in a row; the middle exchange (s042 'Ond ble dych chi'n byw?' / s043 'Ble mae'r afon yn byw, Mali?') is cut, keeping 'yn y byd…', the age answer (quoted in the Gramadeg) and 'Ydy'r afon yn afon go iawn?' (the continuity log for Pennod 9 still quotes s043 as an example of his sideways answers). Cai's s090 recall inventory ('pysgod a bara, caws a mêl, menyn ac wy!') is now 'Dw i'n hoffi pysgod i frecwast!' (food words recur in Penodau 8 and 11). Glosses that came after first use moved: byw from s038 to s034 (Arth's first question); the pysgodyn · pysgod number gloss and vignette from s068 to s052, Dafi's 'Pysgod!', so s056 and the pysgota gloss at s058 ('eisiau dal pysgod') follow a known word. Pensa: C c3 now accepts 'Ydy, mae Dafi'n gallu hedfan' and similar full answers; A a5 was trivial (the answer was the prompt), now 'Dych chi'n gallu nofio? (Pero)' → 'Wyt ti'n gallu nofio?'; b7 also fitted llyn, now excluded by 'dyn nhw ddim yn y dŵr'; c1/c5/c6 accept 'wrth y bont', pronoun subjects and fuller answers. The review question on s043 is dropped with the segment (it asked: [?] 'Ble mae'r afon yn byw?' (Where does the river live?) as Myrddin's playful counter-question: understandable and natural?). Running words 987 → 967, sentences 140 → 138."
     ],
     "review_questions": [
       {
@@ -37,11 +38,6 @@
         "segment_id": "cy-brenin-01-l09-s037",
         "question": "[?] 'Dim ti: chi!' (not ti: chi!) as Mali's correction: natural, or would she say 'Dim ti, ond chi!'?",
         "resolution": "Model review (gpt-6-astra, 2026-10-12): retain: natural clipped correction."
-      },
-      {
-        "segment_id": "cy-brenin-01-l09-s043",
-        "question": "[?] 'Ble mae'r afon yn byw?' (Where does the river live?) as Myrddin's playful counter-question: understandable and natural?",
-        "resolution": "Model review (gpt-6-astra, 2026-10-12): retain: grammatical personification."
       },
       {
         "segment_id": "cy-brenin-01-l09-s060",
@@ -140,8 +136,8 @@
       },
       {
         "lexeme_id": "cy-pysgodyn",
-        "how": "picture(vignette)+gloss(number)",
-        "segment_id": "cy-brenin-01-l09-s068"
+        "how": "picture(vignette)+gloss(number), on Dafi's 'Pysgod!'",
+        "segment_id": "cy-brenin-01-l09-s052"
       },
       {
         "lexeme_id": "cy-byd",
@@ -151,7 +147,7 @@
       {
         "lexeme_id": "cy-byw",
         "how": "gloss(define)+context",
-        "segment_id": "cy-brenin-01-l09-s038"
+        "segment_id": "cy-brenin-01-l09-s034"
       },
       {
         "lexeme_id": "cy-pysgota",
@@ -518,7 +514,16 @@
             "id": "cy-brenin-01-l09-s034",
             "text": "\"Myrddin,\" meddai Arth, \"wyt ti'n byw yn y tŵr?\"",
             "paragraph_start": true,
-            "speaker": "char-arth"
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "byw",
+                "gloss": "byw yn y tŵr: tŷ Myrddin",
+                "gloss_kind": "define"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l09-s035",
@@ -547,16 +552,7 @@
             "id": "cy-brenin-01-l09-s038",
             "text": "\"Myrddin, dych chi'n byw yn y tŵr?\"",
             "paragraph_start": true,
-            "speaker": "char-mali",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "byw",
-                "gloss": "byw yn y tŵr: tŷ Myrddin",
-                "gloss_kind": "define"
-              }
-            ]
+            "speaker": "char-mali"
           },
           {
             "id": "cy-brenin-01-l09-s039",
@@ -580,18 +576,6 @@
                 "gloss_kind": "define"
               }
             ]
-          },
-          {
-            "id": "cy-brenin-01-l09-s042",
-            "text": "\"Ond ble dych chi'n byw?\"",
-            "paragraph_start": true,
-            "speaker": "char-mali"
-          },
-          {
-            "id": "cy-brenin-01-l09-s043",
-            "text": "\"Ble mae'r afon yn byw, Mali?\"",
-            "paragraph_start": true,
-            "speaker": "char-myrddin"
           },
           {
             "id": "cy-brenin-01-l09-s044",
@@ -640,7 +624,32 @@
             "id": "cy-brenin-01-l09-s052",
             "text": "\"Pysgod!\"",
             "paragraph_start": true,
-            "speaker": "char-dafi"
+            "speaker": "char-dafi",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Pysgod",
+                "gloss": "pysgodyn, pysgod",
+                "gloss_kind": "number"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l09-img-pysgodyn",
+                "anchor_text": "Pysgod",
+                "label": "pysgodyn · pysgod",
+                "src": "media/vignettes/cy-brenin-01-l09-img-pysgodyn.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "One small river fish (a trout) on its own, and beside it a little shoal of three fish. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-pysgodyn"
+                ],
+                "width": 400,
+                "height": 160
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l09-s053",
@@ -768,32 +777,7 @@
             "id": "cy-brenin-01-l09-s068",
             "text": "\"Dyn ni ddim yn gweld pysgod,\" meddai Mali.",
             "paragraph_start": true,
-            "speaker": "char-mali",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "pysgod",
-                "gloss": "pysgodyn, pysgod",
-                "gloss_kind": "number"
-              },
-              {
-                "type": "image",
-                "presentation": "margin_vignette",
-                "ref": "cy-brenin-01-l09-img-pysgodyn",
-                "anchor_text": "pysgod",
-                "label": "pysgodyn · pysgod",
-                "src": "media/vignettes/cy-brenin-01-l09-img-pysgodyn.webp",
-                "alt": "",
-                "status": "draft",
-                "art_brief": "One small river fish (a trout) on its own, and beside it a little shoal of three fish. Ink line and watercolour, transparent background, no text.",
-                "covers_lexeme_ids": [
-                  "cy-pysgodyn"
-                ],
-                "width": 400,
-                "height": 160
-              }
-            ]
+            "speaker": "char-mali"
           },
           {
             "id": "cy-brenin-01-l09-s069",
@@ -918,7 +902,7 @@
           },
           {
             "id": "cy-brenin-01-l09-s090",
-            "text": "\"Dw i'n hoffi pysgod i frecwast: pysgod a bara, caws a mêl, menyn ac wy!\"",
+            "text": "\"Dw i'n hoffi pysgod i frecwast!\"",
             "inference_aids": [
               {
                 "type": "gloss",
@@ -1400,13 +1384,19 @@
             },
             {
               "id": "a5",
-              "prompt": "Wyt ti'n gallu nofio? (Pero) →",
+              "prompt": "Dych chi'n gallu nofio? (Pero) →",
               "answer_mode": "exact",
               "accepted_answers": [
                 "Wyt ti'n gallu nofio?"
               ],
-              "explanation": "Pero = ci: ti",
-              "source_segment_ids": []
+              "explanation": "Pero = ci, un: ti",
+              "source_segment_ids": [],
+              "common_wrong": [
+                {
+                  "answer": "Dych chi'n gallu nofio?",
+                  "hint": "Pero = ci, un → ti"
+                }
+              ]
             }
           ]
         },
@@ -1560,7 +1550,7 @@
         },
         {
           "id": "b7",
-          "prompt": "Dyw Arth a Mali ddim ar y lan: maen nhw yn y ___.",
+          "prompt": "Dyw Arth a Mali ddim ar y lan, a dyn nhw ddim yn y dŵr: maen nhw yn y ___.",
           "answer_mode": "exact",
           "accepted_answers": [
             "cwch"
@@ -1598,7 +1588,10 @@
             "Ar lan yr afon",
             "Mae'r wers wrth yr afon",
             "Ar y lan",
-            "Mae'r wers ar lan yr afon"
+            "Mae'r wers ar lan yr afon",
+            "Wrth y bont",
+            "Wrth Afon Helyg",
+            "Mae'r wers wrth Afon Helyg"
           ],
           "model_answer": "Mae'r wers wrth yr afon.",
           "source_segment_ids": [
@@ -1626,7 +1619,12 @@
           "accepted_answers": [
             "Ydy",
             "Ydy, ond dyw e ddim yn hedfan yn bell",
-            "Ydy. Ond dyw e ddim yn hedfan yn bell"
+            "Ydy. Ond dyw e ddim yn hedfan yn bell",
+            "Ydy, mae Dafi'n gallu hedfan",
+            "Ydy, mae e'n gallu hedfan",
+            "Ydy, mae Dafi'n gallu hedfan, ond dyw e ddim yn hedfan yn bell",
+            "Ydy, mae e'n gallu hedfan, ond dyw e ddim yn hedfan yn bell",
+            "Ydy, ond mae e'n fach ac yn wan"
           ],
           "model_answer": "Ydy, ond dyw e ddim yn hedfan yn bell."
         },
@@ -1649,7 +1647,10 @@
             "Nac ydy",
             "Nac ydy. Mae e'n sych",
             "Nac ydy, dyw e ddim yn wlyb",
-            "Nac ydy. Dyw e ddim yn wlyb"
+            "Nac ydy. Dyw e ddim yn wlyb",
+            "Nac ydy. Mae Myrddin yn sych",
+            "Nac ydy. Dyw Myrddin ddim yn wlyb",
+            "Nac ydy. Mae e'n sych, ac mae'r farf yn sych hefyd"
           ],
           "model_answer": "Nac ydy. Mae e'n sych."
         },
@@ -1662,7 +1663,10 @@
             "Dan y bont",
             "Yn y llyn, dan y bont",
             "Mae'r pysgodyn mawr iawn yn y llyn",
-            "Mae'r pysgodyn mawr iawn dan y bont"
+            "Mae'r pysgodyn mawr iawn dan y bont",
+            "Mae e yn y llyn",
+            "Mae e yn y llyn, dan y bont",
+            "Mae'r pysgodyn mawr yn y llyn"
           ],
           "model_answer": "Yn y llyn, dan y bont."
         },
@@ -2025,7 +2029,20 @@
       "margin_vignette": 4,
       "margin_diagram": 0,
       "margin_gloss": 21
-    }
+    },
+    "audio_sources": [
+      {
+        "id": "lleisiau",
+        "label": "Nia ac Aled (dau lais)",
+        "manifest": "media/audio/pennod-09/lleisiau/manifest.json",
+        "default": true
+      },
+      {
+        "id": "nia",
+        "label": "Nia (un llais)",
+        "manifest": "media/audio/pennod-09/nia/manifest.json"
+      }
+    ]
   },
   "completion": {
     "button_label": "Gorffen y bennod"
@@ -2040,8 +2057,8 @@
     ]
   },
   "metrics": {
-    "running_words": 987,
-    "sentences": 140,
+    "running_words": 967,
+    "sentences": 138,
     "word_target": 900,
     "word_window": [
       810,

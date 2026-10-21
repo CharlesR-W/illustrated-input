@@ -180,6 +180,34 @@ function stressOn(lesson = state.current) {
   const saved = store(courseKey(`stress:part-${lessonPart(lesson)}`));
   return saved === null ? stressDefault(lesson) : saved === "1";
 }
+// `stress.strip_everywhere`: with the toggle off, no rendered text anywhere (titles, grammar
+// tables, glosses, vocabulary, feedback) shows an acute. A MutationObserver strips U+0301 from
+// text as it is added; the stored data and the audio keep their stress. Turning the toggle on
+// re-renders, and the observer then leaves the new text alone.
+const ACUTE_RE = /\u0301/g;
+function stressHiddenEverywhere() {
+  const config = stressConfig();
+  return Boolean(config?.strip_everywhere) && !stressOn(state.current || null);
+}
+function stripStressNodes(root) {
+  if (root.nodeType === Node.TEXT_NODE) { if (root.nodeValue.includes(ACUTE)) root.nodeValue = root.nodeValue.replace(ACUTE_RE, ""); return; }
+  if (root.nodeType !== Node.ELEMENT_NODE) return;
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let node;
+  while ((node = walker.nextNode())) if (node.nodeValue.includes(ACUTE)) node.nodeValue = node.nodeValue.replace(ACUTE_RE, "");
+}
+function installStressStripper() {
+  if (typeof MutationObserver === "undefined") return;
+  const observer = new MutationObserver((records) => {
+    if (!stressHiddenEverywhere()) return;
+    for (const record of records) {
+      if (record.type === "characterData") stripStressNodes(record.target);
+      else for (const node of record.addedNodes) stripStressNodes(node);
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+}
+
 // Text for a surface: stress stripped when the toggle is off and the surface is toggled.
 function disp(text, area = "story") {
   if (text === undefined || text === null) return text;
@@ -2297,6 +2325,8 @@ async function init() {
   state.oral = setting("oral", "pensa-oral") === "1";
   state.english = setting("english", "english-chrome") === "1";
   applyChrome();
+  installStressStripper();
+  if (stressHiddenEverywhere()) stripStressNodes(document.body);
   await route();
 }
 

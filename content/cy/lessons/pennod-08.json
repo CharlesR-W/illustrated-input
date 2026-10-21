@@ -23,7 +23,8 @@
       "Applied gpt-6-astra review (2026-10-12): 'rhedeg i Arth' (calque) recast as 'Mae Dafi'n dod o'r het ac yn rhedeg yn gyflym'; Pensa A a5 now cues possession (a book that is Mali's), B b6 now needs hoffi (gallu cannot take a noun object), C c1/c2/c6 accept further correct answers; gydag rule stated as 'before a vowel sound'. 'Pam rwyt ti …?' kept (Mynediad De form). Not taken: 'taro' for the sword hitting the straw man (new word); 'mae e'n mynd i'r dyn gwellt' stays, with the scene picture carrying the impact.",
       "Age pattern 'Dim ond pymtheg / un ar ddeg oed wyt ti / dw i' is emphatic fronting before G29: model review judges it natural; recorded here as a limited exception for age statements (integrator: add to the fronting rule's whitelist).",
       "Checker warnings left: recall for pen-blwydd and marchog (each recurs in Pennod 9 or 10 here; the second recurrence must come from Penodau 11–13, written by other writers).",
-      "Running words about 930 against 850 (window 765–935, at the top): the chapter also carries next-five-chapter recall for Penodau 3–7 (breakfast foods, yfed, gardd, gweithio, chwarae, chwilio, galw, oer, carreg, sŵn; Pennod 7 sefyll, cymryd, bwced, gwynt, dail, adar, distaw, prysur, clust). Each recall item sits inside an event (birthday breakfast, Cai riding, the evening search for Arth)."
+      "Running words about 930 against 850 (window 765–935, at the top): the chapter also carries next-five-chapter recall for Penodau 3–7 (breakfast foods, yfed, gardd, gweithio, chwarae, chwilio, galw, oer, carreg, sŵn; Pennod 7 sefyll, cymryd, bwced, gwynt, dail, adar, distaw, prysur, clust). Each recall item sits inside an event (birthday breakfast, Cai riding, the evening search for Arth).",
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): Pensa bank ambiguities fixed: b9 'does dim ___ gyda fe' fitted both arian and the bank word aur, so aur leaves the bank (12 words, still 3 spare); b7 'mae e'n ___ i Arth' also fitted anrheg, now cued by mutual liking (→ ffrind). A a10 accepts the short 'Ydw'; C c1 accepts 'Cai yw'r marchog'."
     ],
     "review_questions": [
       {
@@ -1592,7 +1593,8 @@
               "prompt": "\"Wyt ti'n gryf?\" (✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Ydw, dw i'n gryf."
+                "Ydw, dw i'n gryf.",
+                "Ydw"
               ],
               "recall_of": "G05",
               "source_segment_ids": []
@@ -1610,7 +1612,6 @@
         "clogyn",
         "arian",
         "tarian",
-        "aur",
         "trwm",
         "cryf",
         "newydd",
@@ -1673,7 +1674,7 @@
         },
         {
           "id": "b7",
-          "prompt": "Mae Dafi'n eistedd yn y gwallt mawr: mae e'n ___ i Arth.",
+          "prompt": "Mae Arth yn hoffi Dafi, ac mae Dafi'n hoffi Arth: mae Dafi'n ___ i Arth.",
           "answer_mode": "exact",
           "accepted_answers": [
             "ffrind"
@@ -1708,7 +1709,9 @@
           "accepted_answers": [
             "Cai",
             "Cai yw'r marchog newydd",
-            "Cai yw e"
+            "Cai yw e",
+            "Cai yw'r marchog",
+            "Cai, mab Cynyr"
           ],
           "model_answer": "Cai yw'r marchog newydd.",
           "source_segment_ids": [
@@ -2220,7 +2223,20 @@
       "margin_vignette": 4,
       "margin_diagram": 0,
       "margin_gloss": 23
-    }
+    },
+    "audio_sources": [
+      {
+        "id": "lleisiau",
+        "label": "Nia ac Aled (dau lais)",
+        "manifest": "media/audio/pennod-08/lleisiau/manifest.json",
+        "default": true
+      },
+      {
+        "id": "nia",
+        "label": "Nia (un llais)",
+        "manifest": "media/audio/pennod-08/nia/manifest.json"
+      }
+    ]
   },
   "completion": {
     "button_label": "Gorffen y bennod"

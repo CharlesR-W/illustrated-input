@@ -23,7 +23,8 @@
       "Applied gpt-6-astra review (2026-10-12): Rhan 1 mutation table now says feminine singular for the article, adjective and un rows, gives the ll-/rh- exceptions (yn llawn, y llaw, un llaw), excludes verb-nouns after yn, and names the imperative's direct object; Pensa A a1–a8 accept the forms without the echo pronoun, B b7 accepts brenin, B b8 accepts asgell, C c1/c2 accept further correct answers; '=' glosses that were associations (cuddio, Dyma fi) are now define glosses; cy-asgell sense now 'fin (of a fish); wing'; Mali's tail now 'o dan y garreg'; nodyn says the echo pronoun is optional.",
       "Checker warnings left: lemma-validation for penhwyad (already in chapters.json validation.not_in_corcencc); media-manifest for the hand-authored SVG (media/manifest.json is not owned by this writer; integrator to add the entry); recall warnings for ein / eich / eu, cefn, corff, cen, dwfn, which depend on Penodau 11–15 (other writers).",
       "SVG margin diagram cy-brenin-01-l10-img-corff.svg (boy ↔ fish, Welsh labels) is authored and on disk (status draft); the cover, scene and vignettes are planned raster art.",
-      "Continuity fix (2026-10-17): Dafi cannot really fly (Pennod 9 'dwyt ti ddim yn hedfan yn bell'; Pennod 16 'Adenydd bach … Bach iawn!'), so s150 now has him hop from Pero to the bridge and run home through the trees, instead of flying alone to the llys."
+      "Continuity fix (2026-10-17): Dafi cannot really fly (Pennod 9 'dwyt ti ddim yn hedfan yn bell'; Pennod 16 'Adenydd bach … Bach iawn!'), so s150 now has him hop from Pero to the bridge and run home through the trees, instead of flying alone to the llys.",
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): achub was used unglossed at s102 and glossed only at s114, with a false equation ('achub: codi o'r dŵr'). s102 is now 'Mae Arth yn gweld Mali, ac mae e'n ddewr.' (echoes Mali's s067; his rescue is shown by s103–s109), so achub first appears at s114 with the gloss 'achub: o geg y penhwyad', and Mali's s136 then names both rescues. Pensa: b7 accepted two bank words (penhwyad/brenin), now 'mae e'n dal ___ mawr, gwyrdd' → penhwyad only; b8 'mae ___ gyda fe' fitted ceg, trwyn, corff and cefn too, now cued by swimming (esgyll); b1 now uses the chapter's own 'ei ___ e' (→ geg) instead of 'agor y geg'; C c1–c3 accept 'Pysgod yw Arth a Mali', 'Penhwyad' and fuller answers."
     ],
     "review_questions": [
       {
@@ -1088,7 +1089,7 @@
           },
           {
             "id": "cy-brenin-01-l10-s102",
-            "text": "Mae Arth yn gweld Mali, ac mae e eisiau achub Mali.",
+            "text": "Mae Arth yn gweld Mali, ac mae e'n ddewr.",
             "paragraph_start": true
           },
           {
@@ -1188,8 +1189,11 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "achub",
-                "gloss": "achub: codi o'r dŵr",
-                "gloss_kind": "define"
+                "gloss": "achub: o geg y penhwyad",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "cy-achub"
+                ]
               }
             ]
           },
@@ -1742,12 +1746,12 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae Cai eisiau bwyd: mae e'n agor y ___, ac mae e'n bwyta'r bastai.",
+          "prompt": "Mae Cai eisiau bwyd: mae e'n agor ei ___ e, ac mae e'n bwyta'r bastai.",
           "answer_mode": "exact",
           "accepted_answers": [
             "geg"
           ],
-          "explanation": "y + ceg (b.) → y geg"
+          "explanation": "ei (e) + ceg → ei geg e"
         },
         {
           "id": "b2",
@@ -1793,16 +1797,15 @@
         },
         {
           "id": "b7",
-          "prompt": "Mae'r ___ yn byw yn y dŵr dwfn, ac mae ei ddannedd e'n finiog.",
+          "prompt": "Mae Cai'n pysgota, ac mae e'n dal ___ mawr, gwyrdd!",
           "answer_mode": "exact",
           "accepted_answers": [
-            "penhwyad",
-            "brenin"
+            "penhwyad"
           ]
         },
         {
           "id": "b8",
-          "prompt": "Does dim dwylo gyda'r pysgodyn, ond mae ___ gyda fe.",
+          "prompt": "Does dim dwylo gyda'r pysgodyn, ond mae ___ gyda fe, ac mae e'n nofio'n gyflym.",
           "answer_mode": "exact",
           "accepted_answers": [
             "esgyll",
@@ -1831,7 +1834,9 @@
           "accepted_answers": [
             "Pysgod",
             "Maen nhw'n bysgod",
-            "Pysgod ydyn nhw"
+            "Pysgod ydyn nhw",
+            "Pysgod yw Arth a Mali",
+            "Maen nhw'n bysgod bach"
           ],
           "model_answer": "Maen nhw'n bysgod.",
           "source_segment_ids": [
@@ -1846,7 +1851,9 @@
             "Nac oes",
             "Nac oes. Mae esgyll gyda fe",
             "Nac oes. Does dim dwylo gyda fe",
-            "Nac oes, does dim dwylo gyda fe"
+            "Nac oes, does dim dwylo gyda fe",
+            "Nac oes. Does dim dwylo gydag Arth",
+            "Nac oes. Mae esgyll a chynffon gyda fe"
           ],
           "model_answer": "Nac oes. Mae esgyll gyda fe.",
           "source_segment_ids": [
@@ -1860,7 +1867,9 @@
           "accepted_answers": [
             "Y penhwyad",
             "Y penhwyad yw e",
-            "Y penhwyad yw brenin yr afon"
+            "Y penhwyad yw brenin yr afon",
+            "Penhwyad",
+            "Y penhwyad yw'r brenin"
           ],
           "model_answer": "Y penhwyad yw brenin yr afon.",
           "source_segment_ids": [
@@ -2328,7 +2337,20 @@
       "margin_vignette": 4,
       "margin_diagram": 1,
       "margin_gloss": 28
-    }
+    },
+    "audio_sources": [
+      {
+        "id": "lleisiau",
+        "label": "Nia ac Aled (dau lais)",
+        "manifest": "media/audio/pennod-10/lleisiau/manifest.json",
+        "default": true
+      },
+      {
+        "id": "nia",
+        "label": "Nia (un llais)",
+        "manifest": "media/audio/pennod-10/nia/manifest.json"
+      }
+    ]
   },
   "completion": {
     "button_label": "Gorffen y bennod"

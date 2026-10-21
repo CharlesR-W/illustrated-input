@@ -21,9 +21,20 @@
       "Lemma-validation warnings for pluen and blinedig concern planned lexemes (chapters.json); flagged for the fluent reviewer, not changed.",
       "New form licensed in the delta: gwelaist ti (cy-gweld, 2sg preterite, for the question Welaist ti …?), because the -aist suffix is only registered from Pennod 13.",
       "Codex review 2026-10-12, verdicts on the [?] questions: s044 already reads 'a wnes i' (the question quoted a superseded text); s045 speaker-labelled diary fragments accepted; s090 vocative 'Ferch' accepted (curt, fits the stranger); s030 'Dim eto' accepted (eto 'yet' recorded as cy-eto-s2 in the Pennod 11 delta); s124 objectless 'Wyt ti'n ofni?' accepted; s046 'gyda chen … ac asgell' correct; s073 object SM after ces/gwelais correct; s102 noun ateb accepted, lexical entry repaired (cy-ateb-s2, gender m, plural atebion).",
-      "Applied from the Codex review (2026-10-12): s021 'dw i'n cofio'r diwrnod ac yn ysgrifennu yn y llyfr' (no calque 'ysgrifennu'r diwrnod'; am is not available until 16) and the C.c1 model answer to match; s129 'Dyw'r gannwyll ddim yn llosgi nawr'; wedi ↔ ddoe table relabelled Dw i wedi … / Wnes i … · Es i … and A.a8 cue/hint no longer imply that heddiw or nawr selects wedi; 'weithiau' removed from the object-mutation row; A.a10 ag hint now says vowel sound; A.a1–a7 accept Gwnes i / Gwelais i variants and the supplied ddoe/neithiwr cue; C.c2 and C.c4 accept full sentences."
+      "Applied from the Codex review (2026-10-12): s021 'dw i'n cofio'r diwrnod ac yn ysgrifennu yn y llyfr' (no calque 'ysgrifennu'r diwrnod'; am is not available until 16) and the C.c1 model answer to match; s129 'Dyw'r gannwyll ddim yn llosgi nawr'; wedi ↔ ddoe table relabelled Dw i wedi … / Wnes i … · Es i … and A.a8 cue/hint no longer imply that heddiw or nawr selects wedi; 'weithiau' removed from the object-mutation row; A.a10 ag hint now says vowel sound; A.a1–a7 accept Gwnes i / Gwelais i variants and the supplied ddoe/neithiwr cue; C.c2 and C.c4 accept full sentences.",
+      "Recall pass 2026-10-18: recurrence added for cy-ph-dim-ond (Pennod 8) in s011 (Mali: 'Dim ond inc yw e'). No other changes.",
+      "Audit-fix pass 2026-10-19: cut the recall-pass ink-sniffing bolt-on (s009–s011, 'Dim ond inc yw e'); s012 now dips the quill in the ink (inc keeps three uses). The diary's unannounced 'Name: speech' lines (s045, s068, s090, s092, s132) now use tense-neutral meddai ('Wedyn, meddai Myrddin: …'; s092 'Wnes i ateb: …', which also makes ateb inferable before s099). Glosses: cofio glossed at its first use (s021), the cofio ↔ anghofio pair moved to anghofio's first use (s056); yn gyntaf (s042) no longer glossed with words not yet met, the 1 → 2 → 3 sequence now sits on yn olaf (s050); rhyfedd's opaque '? ! ?' replaced by 'Pwy? Pam? Beth?'; redundant Atishŵ gloss removed (declared incidental). s102 'Ateb yw e, ond …' removes the progressive/noun ambiguity. Cut s136 (a third 'Wedyn, wnes i …' in the Neithiwr entry) and dropped 'Yn gyntaf' from s085 so the third entry is not the same chain again. The tiredness drill after the climax is gone: s127 is now Mali's 'A fi hefyd' (she is afraid too); blinedig keeps three uses because s003 now opens 'Mae Mali'n flinedig, ond dyw hi ddim yn cysgu', which Arth's s015 echoes. s035 object question 'beth wyt ti'n guddio'. Pensa: B.b8 rewritten so only ofnadwy fits (rhyfedd no longer); C.c4 asks where Mali saw the stranger (s130 says the road is now empty); C.c2, A.a4, A.a5 accept further answers. Gramadeg: 'dim newid' replaced by n → n · a → a · ch → ch; the 'wedi ↔ ddoe' caption no longer keys the tense to a time word."
     ],
-    "review_questions": []
+    "review_questions": [
+      {
+        "segment_id": "cy-brenin-01-l12-s045",
+        "question": "is 'meddai X:' acceptable before an unquoted line inside Mali's read-aloud diary (as in news style 'Meddai'r …: …'), or should the diary use inner quotation marks? (The tokenizer treats ‘ ’ as apostrophes, so inner quotes were avoided.)"
+      },
+      {
+        "segment_id": "cy-brenin-01-l12-s035",
+        "question": "object-question mutation 'beth wyt ti'n guddio' (as standardised in the 21–40 reviews) versus common spoken unmutated 'beth wyt ti'n cuddio'."
+      }
+    ]
   },
   "learning_contract": {
     "grammar_target_id": "G12",
@@ -40,7 +51,11 @@
       "G10",
       "G11"
     ],
-    "incidental": [],
+    "incidental": [
+      {
+        "form": "Atishŵ! (Dafi's sneeze; known since Pennod 5, the same sentence names tisian)"
+      }
+    ],
     "new_lexeme_ids": [
       "cy-ddoe",
       "cy-neithiwr",
@@ -145,13 +160,13 @@
       },
       {
         "lexeme_id": "cy-cofio",
-        "how": "antonym gloss (cofio ↔ anghofio)",
-        "segment_id": "cy-brenin-01-l12-s060"
+        "how": "define gloss (cofio = gweld eto, yn y pen)+context",
+        "segment_id": "cy-brenin-01-l12-s021"
       },
       {
         "lexeme_id": "cy-anghofio",
-        "how": "antonym gloss (cofio ↔ anghofio)",
-        "segment_id": "cy-brenin-01-l12-s062"
+        "how": "antonym gloss (anghofio ↔ cofio)",
+        "segment_id": "cy-brenin-01-l12-s056"
       },
       {
         "lexeme_id": "cy-teimlo",
@@ -161,11 +176,11 @@
       {
         "lexeme_id": "cy-ateb",
         "how": "context (question → answer in the diary)",
-        "segment_id": "cy-brenin-01-l12-s100"
+        "segment_id": "cy-brenin-01-l12-s092"
       },
       {
         "lexeme_id": "cy-rhyfedd",
-        "how": "define gloss (? ! ?)+context",
+        "how": "define gloss (Pwy? Pam? Beth?)+context",
         "segment_id": "cy-brenin-01-l12-s086"
       },
       {
@@ -181,7 +196,7 @@
       {
         "lexeme_id": "cy-blinedig",
         "how": "gloss+context (dw i ddim yn gallu cysgu)",
-        "segment_id": "cy-brenin-01-l12-s015"
+        "segment_id": "cy-brenin-01-l12-s003"
       },
       {
         "lexeme_id": "cy-cyfrinachol",
@@ -256,8 +271,17 @@
           },
           {
             "id": "cy-brenin-01-l12-s003",
-            "text": "Ond dyw Mali ddim yn cysgu.",
-            "paragraph_start": true
+            "text": "Mae Mali'n flinedig, ond dyw hi ddim yn cysgu.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "flinedig",
+                "gloss": "yn flinedig ← blinedig",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l12-s004",
@@ -338,24 +362,8 @@
             "paragraph_start": true
           },
           {
-            "id": "cy-brenin-01-l12-s009",
-            "text": "\"Bwyd?\" meddai Dafi, ac mae e'n arogli'r inc.",
-            "paragraph_start": true,
-            "speaker": "char-dafi"
-          },
-          {
-            "id": "cy-brenin-01-l12-s010",
-            "text": "\"Nage, Dafi!\" meddai Mali.",
-            "paragraph_start": true,
-            "speaker": "char-mali"
-          },
-          {
-            "id": "cy-brenin-01-l12-s011",
-            "text": "\"Inc yw e, dim bwyd.\""
-          },
-          {
             "id": "cy-brenin-01-l12-s012",
-            "text": "Mae Mali'n codi'r bluen, ac mae hi'n ysgrifennu yn y llyfr bach.",
+            "text": "Mae Mali'n rhoi'r bluen yn yr inc, ac mae hi'n ysgrifennu yn y llyfr bach.",
             "paragraph_start": true,
             "inference_aids": [
               {
@@ -387,16 +395,7 @@
           },
           {
             "id": "cy-brenin-01-l12-s015",
-            "text": "\"Dw i'n flinedig, ond dw i ddim yn gallu cysgu.\"",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "flinedig",
-                "gloss": "yn flinedig ← blinedig",
-                "gloss_kind": "radical"
-              }
-            ]
+            "text": "\"Dw i'n flinedig, ond dw i ddim yn gallu cysgu.\""
           },
           {
             "id": "cy-brenin-01-l12-s016",
@@ -434,6 +433,13 @@
                 "presentation": "margin_gloss",
                 "anchor_text": "diwrnod",
                 "gloss": "diwrnod: bore → nos",
+                "gloss_kind": "define"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "cofio'r",
+                "gloss": "cofio = gweld eto, yn y pen",
                 "gloss_kind": "define"
               }
             ]
@@ -532,7 +538,7 @@
           },
           {
             "id": "cy-brenin-01-l12-s035",
-            "text": "\"Diolch. A beth wyt ti'n cuddio dan y bwrdd?\" meddai Cai.",
+            "text": "\"Diolch. A beth wyt ti'n guddio dan y bwrdd?\" meddai Cai.",
             "paragraph_start": true,
             "speaker": "char-cai"
           },
@@ -632,7 +638,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "Yn gyntaf",
-                "gloss": "yn gyntaf → wedyn → yn olaf",
+                "gloss": "yn gyntaf = 1",
                 "gloss_kind": "paradigm"
               }
             ]
@@ -665,11 +671,11 @@
           },
           {
             "id": "cy-brenin-01-l12-s045",
-            "text": "Wedyn, Myrddin: Dych chi eisiau gweld y byd dan y dŵr?"
+            "text": "Wedyn, meddai Myrddin: Dych chi eisiau gweld y byd dan y dŵr?"
           },
           {
             "id": "cy-brenin-01-l12-s046",
-            "text": "Wedyn, wnes i nofio dan y dŵr: pysgodyn bach, gyda chen ar fy nghorff i ac asgell ar fy nghefn i!",
+            "text": "Wnes i nofio dan y dŵr: pysgodyn bach, gyda chen ar fy nghorff i ac asgell ar fy nghefn i!",
             "inference_aids": [
               {
                 "type": "gloss",
@@ -686,7 +692,7 @@
           },
           {
             "id": "cy-brenin-01-l12-s132",
-            "text": "Y pysgod: Mae ein brenin ni yn y llyn!"
+            "text": "Ac meddai'r pysgod: Mae ein brenin ni yn y llyn!"
           },
           {
             "id": "cy-brenin-01-l12-s047",
@@ -731,6 +737,13 @@
                 "presentation": "margin_gloss",
                 "anchor_text": "des i",
                 "gloss": "dod → des i",
+                "gloss_kind": "paradigm"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Yn olaf",
+                "gloss": "yn gyntaf (1) → wedyn (2) → yn olaf (3)",
                 "gloss_kind": "paradigm"
               }
             ]
@@ -777,7 +790,16 @@
           },
           {
             "id": "cy-brenin-01-l12-s056",
-            "text": "\"A dw i wedi anghofio'r bont.\""
+            "text": "\"A dw i wedi anghofio'r bont.\"",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "anghofio'r",
+                "gloss": "anghofio ↔ cofio",
+                "gloss_kind": "antonym"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l12-s057",
@@ -798,16 +820,7 @@
             "id": "cy-brenin-01-l12-s060",
             "text": "\"Wyt ti'n cofio'r gegin hefyd?\" meddai Arth.",
             "paragraph_start": true,
-            "speaker": "char-arth",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "cofio",
-                "gloss": "cofio ↔ anghofio",
-                "gloss_kind": "antonym"
-              }
-            ]
+            "speaker": "char-arth"
           },
           {
             "id": "cy-brenin-01-l12-s061",
@@ -872,24 +885,11 @@
           },
           {
             "id": "cy-brenin-01-l12-s068",
-            "text": "Modlen: Draig yn fy nghegin i!"
+            "text": "Meddai Modlen: Draig yn fy nghegin i!"
           },
           {
             "id": "cy-brenin-01-l12-s069",
             "text": "Wedyn, wnes i ffeindio olion traed bach yn y blawd, a wnes i achub Pero."
-          },
-          {
-            "id": "cy-brenin-01-l12-s136",
-            "text": "Wedyn, wnes i olchi'r gyllell gyda Arth.",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "olchi",
-                "gloss": "wnes i olchi ← golchi",
-                "gloss_kind": "radical"
-              }
-            ]
           },
           {
             "id": "cy-brenin-01-l12-s070",
@@ -985,12 +985,12 @@
           },
           {
             "id": "cy-brenin-01-l12-s085",
-            "text": "Yn gyntaf, clywais i sŵn ceffyl.",
+            "text": "Clywais i sŵn ceffyl.",
             "inference_aids": [
               {
                 "type": "gloss",
                 "presentation": "margin_gloss",
-                "anchor_text": "clywais i",
+                "anchor_text": "Clywais i",
                 "gloss": "clywed → clywais i",
                 "gloss_kind": "paradigm"
               }
@@ -1011,7 +1011,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "rhyfedd",
-                "gloss": "rhyfedd: ? ! ?",
+                "gloss": "rhyfedd: Pwy? Pam? Beth?",
                 "gloss_kind": "define"
               }
             ]
@@ -1030,7 +1030,7 @@
           },
           {
             "id": "cy-brenin-01-l12-s090",
-            "text": "Y dieithryn: Ferch, oes bachgen un ar ddeg oed yn y cwm?"
+            "text": "Meddai'r dieithryn: Ferch, oes bachgen un ar ddeg oed yn y cwm?"
           },
           {
             "id": "cy-brenin-01-l12-s091",
@@ -1038,7 +1038,7 @@
           },
           {
             "id": "cy-brenin-01-l12-s092",
-            "text": "Fi: Mae bachgen pymtheg oed yn y llys."
+            "text": "Wnes i ateb: Mae bachgen pymtheg oed yn y llys."
           },
           {
             "id": "cy-brenin-01-l12-s093",
@@ -1116,7 +1116,7 @@
           },
           {
             "id": "cy-brenin-01-l12-s102",
-            "text": "\"Mae e'n ateb, ond dyw e ddim yn ateb da.\""
+            "text": "\"Ateb yw e, ond dyw e ddim yn ateb da.\""
           },
           {
             "id": "cy-brenin-01-l12-s103",
@@ -1240,23 +1240,14 @@
           },
           {
             "id": "cy-brenin-01-l12-s127",
-            "text": "\"Dwyt ti ddim yn flinedig, ond dw i'n flinedig,\" meddai Mali.",
+            "text": "\"A fi hefyd,\" meddai Mali.",
             "paragraph_start": true,
             "speaker": "char-mali"
           },
           {
             "id": "cy-brenin-01-l12-s128",
             "text": "Ond mae Dafi'n cysgu wrth y ffwrn, ac yn sydyn mae e'n tisian: \"Atishŵ!\"",
-            "paragraph_start": true,
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "Atishŵ",
-                "gloss": "= Mae Dafi'n tisian.",
-                "gloss_kind": "synonym"
-              }
-            ]
+            "paragraph_start": true
           },
           {
             "id": "cy-brenin-01-l12-s129",
@@ -1306,7 +1297,7 @@
           [
             "Dw i'n nofio · ateb · chwerthin.",
             "Wnes i nofio · ateb · chwerthin.",
-            "dim newid"
+            "n → n · a → a · ch → ch"
           ]
         ]
       },
@@ -1367,7 +1358,7 @@
         ]
       },
       {
-        "caption": "wedi ↔ ddoe",
+        "caption": "Dw i wedi … ↔ Wnes i …",
         "header": [
           "Dw i wedi …",
           "Wnes i … · Es i …"
@@ -1518,7 +1509,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Wnest ti fwyta'r cawl?",
-                "Wnest ti fwyta'r cawl neithiwr?"
+                "Wnest ti fwyta'r cawl neithiwr?",
+                "Neithiwr, wnest ti fwyta'r cawl?"
               ],
               "common_wrong": [
                 {
@@ -1534,7 +1526,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Wnest ti ddarllen y llyfr?",
-                "Wnest ti ddarllen y llyfr ddoe?"
+                "Wnest ti ddarllen y llyfr ddoe?",
+                "Ddoe, wnest ti ddarllen y llyfr?"
               ],
               "mutation_hint": true
             }
@@ -1732,7 +1725,7 @@
         },
         {
           "id": "b8",
-          "prompt": "Mae'r cawl wedi llosgi, ac mae'r jwg wedi torri: noson ___!",
+          "prompt": "Dyw'r cawl ddim yn dda: mae e'n ddu ac wedi llosgi. Cawl ___!",
           "answer_mode": "exact",
           "accepted_answers": [
             "ofnadwy"
@@ -1782,7 +1775,9 @@
           "accepted_answers": [
             "Es i i'r afon",
             "I'r afon",
-            "Es i i'r afon gyda Myrddin, Arth a Pero"
+            "Es i i'r afon gyda Myrddin, Arth a Pero",
+            "I'r afon gyda Myrddin, Arth a Pero",
+            "Ddoe, es i i'r afon"
           ],
           "model_answer": "Es i i'r afon.",
           "source_segment_ids": [
@@ -1807,15 +1802,16 @@
         },
         {
           "id": "c4",
-          "prompt": "Ble mae'r dieithryn?",
+          "prompt": "Ble welaist ti'r dieithryn, Mali?",
           "answer_mode": "exact",
           "accepted_answers": [
             "Ar y ffordd",
             "Ar y ffordd wrth y llys",
-            "Mae e ar y ffordd",
-            "Mae e ar y ffordd wrth y llys",
-            "Mae'r dieithryn ar y ffordd",
-            "Mae'r dieithryn ar y ffordd wrth y llys"
+            "Gwelais i'r dieithryn ar y ffordd",
+            "Gwelais i'r dieithryn ar y ffordd wrth y llys",
+            "Wnes i weld y dieithryn ar y ffordd",
+            "Wnes i weld y dieithryn ar y ffordd wrth y llys",
+            "Gwelais i e ar y ffordd"
           ],
           "model_answer": "Ar y ffordd wrth y llys.",
           "source_segment_ids": [
@@ -2110,7 +2106,7 @@
         "lesson": "cy-brenin-01-l12",
         "front": "inc (g.)",
         "back": "ink",
-        "example_segment_id": "cy-brenin-01-l12-s011"
+        "example_segment_id": "cy-brenin-01-l12-s004"
       },
       {
         "lexeme_id": "cy-pluen",
@@ -2273,7 +2269,20 @@
       "margin_vignette": 2,
       "margin_diagram": 0,
       "margin_gloss": 31
-    }
+    },
+    "audio_sources": [
+      {
+        "id": "lleisiau",
+        "label": "Nia ac Aled (dau lais)",
+        "manifest": "media/audio/pennod-12/lleisiau/manifest.json",
+        "default": true
+      },
+      {
+        "id": "nia",
+        "label": "Nia (un llais)",
+        "manifest": "media/audio/pennod-12/nia/manifest.json"
+      }
+    ]
   },
   "completion": {
     "button_label": "Gorffen y bennod"
@@ -2288,8 +2297,8 @@
     ]
   },
   "metrics": {
-    "running_words": 1127,
-    "sentences": 135,
+    "running_words": 1105,
+    "sentences": 131,
     "word_target": 1033,
     "word_window": [
       930,

@@ -14,36 +14,51 @@
   "prompt": "docs/welsh-v2-design.md §5, §6, §7, §11.3; prompts/welsh-block-writer-brief.md (B5, Wave 2, 2026-10-17 notes)",
   "review_required": "fluent southern-Welsh review",
   "notes": [
-   "Beat as planned: the lords' council in the hall argues who drew the sword ('Myrddin wnaeth e! Hud oedd e!' — 'Nid hud oedd e.' — 'Fi welodd e.'). Witnesses: the priest, the young champion knight (the strongest knight of 28, speaker char-marchog-ifanc) and the innkeeper, who brings Cai's forgotten gold-hilted sword from under his bench (closing the 26 thread). Barf Goch (28) is the plan's loudest accuser; he accuses Cynyr of twyll. The old white-haired lord defends Cynyr (he knew him at Uthr's court). Cai stands: 'Fi oedd ar fai. Arth dynnodd y cleddyf, nid fi.' Barf Goch withdraws ('Dyw lleidr ddim yn dweud hynny … dw i ddim yn cyhuddo Cynyr nawr … dw i ddim yn penlinio i fachgen chwaith. Dim eto.'); the council judges Cynyr dieuog and sets one last test on Calan morning.",
+   "Beat as planned: the lords' council in the hall argues who drew the sword ('Myrddin wnaeth e! Hud oedd e!' — 'Nid hud oedd e.' — 'Fi welodd e.'). Witnesses: the priest, the young champion knight (the strongest knight of 28, speaker char-marchog-cryf) and the innkeeper, who brings Cai's forgotten gold-hilted sword from under his bench (closing the 26 thread). Barf Goch (28) is the plan's loudest accuser; he accuses Cynyr of twyll. The old white-haired lord defends Cynyr (he knew him at Uthr's court). Cai stands: 'Fi oedd ar fai. Arth dynnodd y cleddyf, nid fi.' Barf Goch withdraws ('Dyw lleidr ddim yn dweud hynny … dw i ddim yn cyhuddo Cynyr nawr … dw i ddim yn penlinio i fachgen chwaith. Dim eto.'); the council judges Cynyr dieuog and sets one last test on Calan morning.",
    "Pero payoff: Modlen arrives with Pero and three carts of food for the Calan feast ('tair cert'); asked for the truth, she confesses 'nid Pero fwytodd y pasteiod … a nid Pero fwytodd yr afalau yn y ffair chwaith! Y ddraig fwytodd nhw', and the lords laugh at 'the mad cook'. Dafi stays hidden; the lords do not believe in the dragon. Mali: 'Nid Pero oedd ar fai, Dad. Byth.'",
    "Myrddin enters at the end (he had been absent from the camp); Elen knows ('Mae'r amser yn dod.' — 'Dw i'n gwybod.'); Mali senses the secret. Last lines: 'Ond nid Arth yw ei enw e … Arthur dynnodd e.' — 'Arthur?'",
    "Productive focus core: subject + SM verb (Myrddin wnaeth, Fi welodd, fi gloiodd, fi aeth, Cynyr ddaeth, Cynyr roddodd, Arth dynnodd, Pero fwytodd, Y ddraig fwytodd, Arthur dynnodd), X oedd … (Hud oedd e, Fi oedd ar fai, Tystiolaeth oedd hi), nid (8×), chwaith (6×). Receptive only and glossed: ai (3×), taw (3×); neither is tested in Pensa A.",
    "'Cynyr roddodd' uses the rhoddodd form registered in the 27 delta; 'fi gloiodd' uses the regular -odd past of cloi (26).",
    "Local-density warning at s051: the old lord's defence (amddiffyn, barn, dieuog, taw, barnu) is the council's legal vocabulary in one speech; each item is glossed there and recurs ≥3 times.",
-   "Checked against 21–23 on disk: Elen travelled with the party (21) and sits in the council with Cynyr; Modlen and Pero stayed at the llys (21) and now arrive with the food carts for the Calan feast (Pero ran beside the carts). Myrddin, who lodged with the family at the inn by the church (23), has been missing since the tournament (26 seeds this: 'Ble roedd Myrddin? Doedd neb yn gwybod').",
+   "Checked against 21–23 on disk: Elen travelled with the party (21) and sits in the council with Cynyr; Modlen and Pero stayed at the llys (21; Pero too old for the ride) and now arrive with the food carts for the Calan feast (Pero travelled in the cart with the pies). Myrddin, who lodged with the family at the inn by the church (23), has been missing since the tournament (26 seeds this: 'Ble roedd Myrddin? Doedd neb yn gwybod').",
    "Codex (gpt-6-astra) review applied: taw gloss corrected (taw introduces a clause with a fronted element; it is not a southern replacement for bod), table row 'Cai oedd ar fai', 'a fi oedd ar fai', Pensa A accepts the optional relative particle (Y marchog a welodd …), C1/C6 widened.",
-   "C8 keeps the course-wide formula 'A ti?' (the checker requires it); Codex flags standard 'A thi?': a course-wide decision for the integrator."
+   "C8 keeps the course-wide formula 'A ti?' (the checker requires it); Codex flags standard 'A thi?': a course-wide decision for the integrator.",
+   "Continuity audit 2026-10-18 applied: champion renamed 'y marchog cryf' (speaker char-marchog-cryf), Barf Goch's speaker id is 24's char-arglwydd-coch, Pero 'teithiodd e yn y gert, gyda'r pasteiod' (simple past rather than the audit's pluperfect, which is taught in 30).",
+   "Full Codex Welsh review (docs/reviews/welsh-review-26-31-full-2026-10-18.md) applied; its verdicts on the writer's [?] questions are recorded as resolutions (all accepted, none deferred to a human beyond the general fluent sign-off). Applied: 'Barf Goch yn' (s041, s094, B5), the focus rule now states the third-person verb form (Fi welodd e, Ni wnaeth e) in rule, table, nodyn and pattern card, A4/C4 accept retained relative a and the quoted 'Fi oedd ar fai'.",
+   "For the integrator: the published card cy-pattern-g29 could not be changed from the delta (lexicon-merge identity check). Proposed back text, to apply in lexicon.json and this delta together: \"It was Arth who drew the sword, not me. · It was I who was at fault. · Myrddin did it! — It wasn't magic. · It wasn't Pero who ate the pies! (verb always in the he/she form: Fi welodd e, Ni wnaeth e)\"",
+   "Recall pass 2026-10-18: recurrences added. The tafarnwr: byr (s033), clo (s037). Cai: allor (s064). The old lord: the full form sydd (s107). Modlen: gwaeth in her triple-negative fingerprint (s108), taro (s110: she strikes the bench instead of only raising the spoon). Pero: llithro (s145). Dafi's whispered callback to his 25 line, 'Y ddraig leiaf, ond y mwyaf peryglus…' (lleiaf, mwyaf; s146), now motivates Mali's hand on her cloak in s119. No gloss symbols to replace.",
+   "Audit-fix pass 2026-10-19: bai glossed at its first use (s009, 'pwy wnaeth y drwg?'; was first glossed at s058); tystiolaeth no longer glossed with tystion before tystion appears; euog defined in known words instead of the not-yet-seen dieuog (the pair now sits on ddieuog, s052); amddiffyn no longer glossed with the untaught rhywun; s052 (three glosses) split at its sentence break into new s147 'Dw i'n amddiffyn Cynyr.' + s052; taw gloss drops the untracked 'o flaen'; late radical gloss ddadlau (s094) removed. Pensa: A a9 accepts 'Mae rhaid …' as Pennod 27 does; C c6 object question mutated and past (Beth farnodd …?), c3/c7 asked in the past."
   ],
   "review_questions": [
    {
     "segment_id": "cy-brenin-01-l29-s015",
-    "question": "[?] 'Twyll yw hyn!' (This is trickery!) — natural identification order for an exclamation?"
+    "question": "[?] 'Twyll yw hyn!' (This is trickery!) — natural identification order for an exclamation?",
+    "resolved": true,
+    "resolution": "Codex (gpt-6-astra) full review 2026-10-18: accept."
    },
    {
     "segment_id": "cy-brenin-01-l29-s036",
-    "question": "[?] 'Ddoe, fi gloiodd y drws, a fi aeth i'r twrnamaint' — natural chain of subject-focus clauses for a witness?"
+    "question": "[?] 'Ddoe, fi gloiodd y drws, a fi aeth i'r twrnamaint' — natural chain of subject-focus clauses for a witness?",
+    "resolved": true,
+    "resolution": "Codex (gpt-6-astra) full review 2026-10-18: accept (both verbs correctly 3sg)."
    },
    {
     "segment_id": "cy-brenin-01-l29-s044",
-    "question": "[?] 'euog o dwyll' and 'cyhuddo Cynyr o dwyll' — natural collocations?"
+    "question": "[?] 'euog o dwyll' and 'cyhuddo Cynyr o dwyll' — natural collocations?",
+    "resolved": true,
+    "resolution": "Codex (gpt-6-astra) full review 2026-10-18: accept (correct collocations)."
    },
    {
     "segment_id": "cy-brenin-01-l29-s088",
-    "question": "[?] 'Dw i ddim yn amddiffyn Cynyr: mae fy mab i wedi fy amddiffyn i' (Cynyr speaking of himself in the third person for humour) — clear?"
+    "question": "[?] 'Dw i ddim yn amddiffyn Cynyr: mae fy mab i wedi fy amddiffyn i' (Cynyr speaking of himself in the third person for humour) — clear?",
+    "resolved": true,
+    "resolution": "Codex (gpt-6-astra) full review 2026-10-18: accept."
    },
    {
     "segment_id": "cy-brenin-01-l29-s140",
-    "question": "[?] 'taw'r bachgen hwn dynnodd' — elision taw + 'r: acceptable in writing?"
+    "question": "[?] 'taw'r bachgen hwn dynnodd' — elision taw + 'r: acceptable in writing?",
+    "resolved": true,
+    "resolution": "Codex (gpt-6-astra) full review 2026-10-18: accept (taw'r normal written elision)."
    }
   ]
  },
@@ -123,7 +138,7 @@
    },
    {
     "lexeme_id": "cy-tystiolaeth",
-    "how": "gloss(radical)+context (tystion)",
+    "how": "gloss(radical+define)+context",
     "segment_id": "cy-brenin-01-l29-s025"
    },
    {
@@ -143,7 +158,7 @@
    },
    {
     "lexeme_id": "cy-euog",
-    "how": "gloss(antonym)",
+    "how": "gloss(define)",
     "segment_id": "cy-brenin-01-l29-s043"
    },
    {
@@ -159,7 +174,7 @@
    {
     "lexeme_id": "cy-amddiffyn",
     "how": "gloss",
-    "segment_id": "cy-brenin-01-l29-s052"
+    "segment_id": "cy-brenin-01-l29-s147"
    },
    {
     "lexeme_id": "cy-taw",
@@ -173,8 +188,8 @@
    },
    {
     "lexeme_id": "cy-bai",
-    "how": "gloss(radical)+context",
-    "segment_id": "cy-brenin-01-l29-s058"
+    "how": "gloss(define)+context; radical at s058",
+    "segment_id": "cy-brenin-01-l29-s009"
    },
    {
     "lexeme_id": "cy-ph-mewn-gwirionedd",
@@ -217,15 +232,15 @@
    "status": "planned",
    "presentation": "inline_scene",
    "alt": "In a crowded timber hall, lords on benches shout and point while Cai stands up alone by the long hearth, one hand raised, and the red-bearded lord stops with his mouth open.",
-   "art_brief": "A big timber hall in Caerllion in winter (Caerllion palette inside: dark beams, limewashed walls with red-brick bands, a long central hearth with smoke rising, daylight from high unglazed shuttered openings). Lords and nobles in rich cloaks sit on benches along both walls; several are on their feet shouting and pointing: a council in uproar. The very tall lord with a long red beard and a black fur-trimmed cloak (Barf Goch) stands nearest, finger jabbing, caught with his mouth open. By the hearth Cai (15, tall, gangly, beardless, straight ginger-blond hair to the jaw, rust-red tunic, red cloak) stands up alone, one hand raised for silence, face red but steady. On a bench at the side: Arth (11, untidy brown hair with cowlick, grey eyes, moss-green tunic) with the shining sword across his knees, astonished; Mali (12, long dark braid, dark-blue dress) beside him, a wisp of smoke from her cloak; Cynyr (huge golden-blond beard, brown cloak) and the old white-haired lord in a green cloak at the head of the hearth; a plump innkeeper in an apron holds up a second sword with a gold hilt. No text.",
+   "art_brief": "Inside the great hall of the castle at Caerllion in winter (thick grey stone walls banded with red Roman brick, a high roof of dark timber beams, a long central hearth with smoke rising, daylight from high unglazed shuttered openings, the empty throne on its dais). Lords and nobles in rich cloaks sit on benches along both walls; several are on their feet shouting and pointing: a council in uproar. The very tall lord with a long red beard and a black cloak trimmed with grey fur (Barf Goch) stands nearest, finger jabbing, caught with his mouth open. By the hearth Cai (15, tall, gangly, beardless, straight ginger-blond hair to the jaw, rust-red tunic, red cloak) stands up alone, one hand raised for silence, face red but steady. On a bench at the side: Arth (11, untidy brown hair with cowlick, grey eyes, moss-green tunic) with the shining sword across his knees, astonished; Mali (12, long dark braid, dark-blue dress, oatmeal-grey cloak) beside him, a wisp of smoke from her cloak; Cynyr (huge golden-blond beard, brown cloak) and Elen (white veil, green dress) on a bench, and the old white-haired lord in a green cloak seated by the fire. No text.",
    "characters": [
     "char-cai",
-    "char-barf-goch",
+    "char-arglwydd-coch",
     "char-arth",
     "char-mali",
     "char-cynyr",
     "char-hen-arglwydd",
-    "char-tafarnwr"
+    "char-elen"
    ],
    "covers_lexeme_ids": [
     "cy-cyngor",
@@ -284,7 +299,16 @@
      },
      {
       "id": "cy-brenin-01-l29-s009",
-      "text": "\"Ond pwy dynnodd y cleddyf yn gyntaf, ddoe yn y bore? A bai pwy oedd y celwydd? Dyna'r cwestiynau.\""
+      "text": "\"Ond pwy dynnodd y cleddyf yn gyntaf, ddoe yn y bore? A bai pwy oedd y celwydd? Dyna'r cwestiynau.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "bai pwy",
+        "gloss": "bai pwy: pwy wnaeth y drwg?",
+        "gloss_kind": "define"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l29-s010",
@@ -295,7 +319,7 @@
       "id": "cy-brenin-01-l29-s011",
       "text": "\"Myrddin wnaeth e!\" meddai Barf Goch.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s012",
@@ -333,18 +357,18 @@
      },
      {
       "id": "cy-brenin-01-l29-s016",
-      "text": "\"Nage!\" meddai'r marchog ifanc, y marchog cryfaf.",
+      "text": "\"Nage!\" meddai'r marchog cryf, y marchog cryfaf yng Nghaerllion.",
       "paragraph_start": true,
-      "speaker": "char-marchog-ifanc"
+      "speaker": "char-marchog-cryf"
      },
      {
       "id": "cy-brenin-01-l29-s017",
-      "text": "\"Nid hud oedd e.\"",
+      "text": "\"Yn y fynwent, ro'n i'n dweud: mae hud ar y garreg. Ond nid hud oedd e.\"",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "Nid",
+        "anchor_text": "nid",
         "gloss": "Nid hud = dim hud",
         "gloss_kind": "define"
        }
@@ -367,7 +391,7 @@
       "id": "cy-brenin-01-l29-s019",
       "text": "\"Ble mae Myrddin, felly?\" meddai Barf Goch.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s020",
@@ -425,7 +449,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "dystiolaeth",
-        "gloss": "dystiolaeth ← tystiolaeth: beth welodd y tystion",
+        "gloss": "dystiolaeth ← tystiolaeth: beth welodd pobl",
         "gloss_kind": "radical"
        }
       ]
@@ -457,7 +481,7 @@
       "id": "cy-brenin-01-l29-s029",
       "text": "\"Ai tyst yw offeiriad?\" meddai Barf Goch.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch",
+      "speaker": "char-arglwydd-coch",
       "inference_aids": [
        {
         "type": "gloss",
@@ -474,9 +498,9 @@
      },
      {
       "id": "cy-brenin-01-l29-s031",
-      "text": "\"Fi welodd e hefyd!\" meddai'r marchog ifanc.",
+      "text": "\"Fi welodd e hefyd!\" meddai'r marchog cryf.",
       "paragraph_start": true,
-      "speaker": "char-marchog-ifanc"
+      "speaker": "char-marchog-cryf"
      },
      {
       "id": "cy-brenin-01-l29-s032",
@@ -484,7 +508,7 @@
      },
      {
       "id": "cy-brenin-01-l29-s033",
-      "text": "Wedyn daeth dyn bach, crwn at y tân, gyda chleddyf yn ei ddwylo fe.",
+      "text": "Wedyn daeth dyn byr, crwn at y tân, gyda chleddyf yn ei ddwylo fe.",
       "paragraph_start": true
      },
      {
@@ -512,7 +536,7 @@
      },
      {
       "id": "cy-brenin-01-l29-s037",
-      "text": "\"Yn y nos, wnes i ffeindio'r cleddyf hwn dan fy mainc i. Cleddyf y bachgen mawr yw e: Cai, mab Cynyr.\""
+      "text": "\"Yn y nos, wnes i agor y clo, a wnes i ffeindio'r cleddyf hwn dan fy mainc i. Cleddyf y bachgen mawr yw e: Cai, mab Cynyr.\""
      },
      {
       "id": "cy-brenin-01-l29-s038",
@@ -529,11 +553,11 @@
         "presentation": "inline_scene",
         "ref": "cy-brenin-01-l29-img-tafarnwr",
         "alt": "In the council hall, a small round innkeeper in an apron holds up a sword with gold on its hilt, and Cai points at it in recognition while the lords lean forward.",
-        "art_brief": "Inside the big timber hall at Caerllion (dark beams, limewash with red-brick bands, long hearth, smoke, daylight from high unglazed openings). By the hearth, a small, round, bald innkeeper in a stained leather apron (char-tafarnwr) holds up in both hands a long sword with gold on the hilt (Cai's birthday sword). Cai (15, ginger-blond, rust-red tunic, red cloak, empty sheath) points at it, mouth open in recognition. Lords on the benches lean forward; the very tall red-bearded lord (Barf Goch) frowns with folded arms; the old white-haired lord in a green cloak nods; the thin old priest stands by. On a side bench Arth (11, untidy brown hair, grey eyes, moss-green tunic) holds the plain shining sword from the stone across his knees; Mali (12, long dark braid) beside him. No text.",
+        "art_brief": "Inside the great hall of the castle at Caerllion in winter (thick grey stone walls banded with red Roman brick, a high roof of dark timber beams, a long central hearth with smoke rising, daylight from high unglazed shuttered openings, the empty throne on its dais). By the hearth, a small, round, bald innkeeper in a stained leather apron (char-tafarnwr) holds up in both hands a long sword with gold on the hilt (Cai's birthday sword). Cai (15, ginger-blond, rust-red tunic, red cloak, empty sheath) points at it, mouth open in recognition. Lords on the benches lean forward; the very tall red-bearded lord (Barf Goch) frowns with folded arms; the old white-haired lord in a green cloak nods; the thin old priest stands by. On a side bench Arth (11, untidy brown hair, grey eyes, moss-green tunic) holds the plain shining sword from the stone across his knees; Mali (12, long dark braid) beside him. No text.",
         "characters": [
          "char-tafarnwr",
          "char-cai",
-         "char-barf-goch",
+         "char-arglwydd-coch",
          "char-hen-arglwydd",
          "char-offeiriad",
          "char-arth",
@@ -556,13 +580,13 @@
      },
      {
       "id": "cy-brenin-01-l29-s041",
-      "text": "Ond roedd Barf Goch'n dadlau eto."
+      "text": "Ond roedd Barf Goch yn dadlau eto."
      },
      {
       "id": "cy-brenin-01-l29-s042",
       "text": "\"Ffrind i Cynyr yw'r tafarnwr hefyd!\" meddai Barf Goch.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s043",
@@ -579,8 +603,8 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "euog",
-        "gloss": "euog ↔ dieuog",
-        "gloss_kind": "antonym"
+        "gloss": "euog: wedi gwneud y drwg",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -638,28 +662,34 @@
       "text": "\"Roedd e'n was da, ac roedd e'n dweud y gwir bob amser.\""
      },
      {
-      "id": "cy-brenin-01-l29-s052",
-      "text": "\"Dw i'n amddiffyn Cynyr. Yn fy marn i, mae e'n ddieuog, a dw i'n credu taw Arth wnaeth e.\"",
+      "id": "cy-brenin-01-l29-s147",
+      "text": "\"Dw i'n amddiffyn Cynyr.\"",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "amddiffyn",
-        "gloss": "amddiffyn: sefyll gyda rhywun",
+        "gloss": "amddiffyn: sefyll gyda Cynyr",
         "gloss_kind": "define"
-       },
+       }
+      ]
+     },
+     {
+      "id": "cy-brenin-01-l29-s052",
+      "text": "\"Yn fy marn i, mae e'n ddieuog, a dw i'n credu taw Arth wnaeth e.\"",
+      "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "ddieuog",
-        "gloss": "ddieuog ← dieuog",
+        "gloss": "ddieuog ← dieuog ↔ euog",
         "gloss_kind": "radical"
        },
        {
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "taw",
-        "gloss": "taw = bod, o flaen ffocws",
+        "gloss": "taw = bod + ffocws",
         "gloss_kind": "define"
        }
       ]
@@ -710,7 +740,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "Fi oedd ar fai",
-        "gloss": "fai ← bai: wedi gwneud drwg",
+        "gloss": "fai ← bai",
         "gloss_kind": "radical",
         "covers_lexeme_ids": [
          "cy-bai"
@@ -743,7 +773,7 @@
      },
      {
       "id": "cy-brenin-01-l29-s064",
-      "text": "\"Yn yr eglwys, wnes i ddim tyngu llw: doedd y llw ddim yn wir.\""
+      "text": "\"Yn yr eglwys, wrth yr allor, wnes i ddim tyngu llw: doedd y llw ddim yn wir.\""
      },
      {
       "id": "cy-brenin-01-l29-s065",
@@ -784,7 +814,7 @@
       "id": "cy-brenin-01-l29-s069",
       "text": "\"Pam rwyt ti'n dweud hyn, fachgen?\" meddai Barf Goch yn araf.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s070",
@@ -837,7 +867,7 @@
       "id": "cy-brenin-01-l29-s076",
       "text": "\"A'r ferch?\" meddai Barf Goch, ac edrychodd e ar Mali.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s077",
@@ -876,7 +906,7 @@
       "id": "cy-brenin-01-l29-s084",
       "text": "\"Dyw lleidr ddim yn dweud hynny,\" meddai e.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s085",
@@ -923,16 +953,7 @@
      },
      {
       "id": "cy-brenin-01-l29-s094",
-      "text": "Wnaeth neb ddadlau, a doedd neb yn cyhuddo Cynyr, ond roedd Barf Goch'n dawel iawn.",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "ddadlau",
-        "gloss": "ddadlau ← dadlau",
-        "gloss_kind": "radical"
-       }
-      ]
+      "text": "Wnaeth neb ddadlau, a doedd neb yn cyhuddo Cynyr, ond roedd Barf Goch yn dawel iawn."
      },
      {
       "id": "cy-brenin-01-l29-s095",
@@ -989,7 +1010,11 @@
      },
      {
       "id": "cy-brenin-01-l29-s103",
-      "text": "Roedd Pero'n ei dilyn hi, yn wlyb ac yn hapus: rhedodd e wrth y ceirt o Gwm Helyg."
+      "text": "Roedd Pero'n ei dilyn hi, yn wlyb ac yn hapus: teithiodd e yn y gert, gyda'r pasteiod."
+     },
+     {
+      "id": "cy-brenin-01-l29-s145",
+      "text": "Llithrodd e ar yr eira wrth y drws, a chwympodd e wrth draed Barf Goch."
      },
      {
       "id": "cy-brenin-01-l29-s104",
@@ -1009,11 +1034,11 @@
      },
      {
       "id": "cy-brenin-01-l29-s107",
-      "text": "\"Dyn ni'n gofyn: pwy wnaeth y drwg? Pwy sy ar fai? A dyn ni eisiau'r gwir, dim celwydd.\""
+      "text": "\"Dyn ni'n gofyn: pwy wnaeth y drwg? Pwy sydd ar fai? A dyn ni eisiau'r gwir, dim celwydd.\""
      },
      {
       "id": "cy-brenin-01-l29-s108",
-      "text": "\"Cyngor!\" meddai Modlen. \"Dw i ddim yn hoffi cynghorau: dynion yn siarad, a dim bwyd!\"",
+      "text": "\"Cyngor!\" meddai Modlen. \"Dw i ddim yn hoffi cynghorau: dynion yn siarad, a dim bwyd! Does dim byd yn waeth!\"",
       "paragraph_start": true,
       "speaker": "char-modlen",
       "inference_aids": [
@@ -1033,7 +1058,7 @@
      },
      {
       "id": "cy-brenin-01-l29-s110",
-      "text": "Wedyn cododd hi ei llwy bren."
+      "text": "Wedyn trawodd hi'r fainc gyda'i llwy bren."
      },
      {
       "id": "cy-brenin-01-l29-s111",
@@ -1053,7 +1078,7 @@
       "id": "cy-brenin-01-l29-s114",
       "text": "\"Draig?\" meddai Barf Goch.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s115",
@@ -1062,17 +1087,23 @@
      },
      {
       "id": "cy-brenin-01-l29-s116",
-      "text": "Wedyn roedd yr hen arglwydd yn chwerthin, ac roedd y marchog ifanc yn chwerthin, ac roedd y cyngor yn chwerthin: Barf Goch hefyd."
+      "text": "Wedyn roedd yr hen arglwydd yn chwerthin, ac roedd y marchog cryf yn chwerthin, ac roedd y cyngor yn chwerthin: Barf Goch hefyd."
      },
      {
       "id": "cy-brenin-01-l29-s117",
-      "text": "\"Draig yn y gegin!\" meddai'r marchog ifanc.",
+      "text": "\"Draig yn y gegin!\" meddai'r marchog cryf.",
       "paragraph_start": true,
-      "speaker": "char-marchog-ifanc"
+      "speaker": "char-marchog-cryf"
      },
      {
       "id": "cy-brenin-01-l29-s118",
       "text": "\"Mae'r gogyddes yn wallgof!\""
+     },
+     {
+      "id": "cy-brenin-01-l29-s146",
+      "text": "\"Y ddraig leiaf, ond y mwyaf peryglus…\" sibrydodd llais bach dan glogyn Mali.",
+      "paragraph_start": true,
+      "speaker": "char-dafi"
      },
      {
       "id": "cy-brenin-01-l29-s119",
@@ -1090,12 +1121,12 @@
        {
         "presentation": "inline_scene",
         "ref": "cy-brenin-01-l29-img-modlen",
-        "alt": "Modlen bursts into the council hall with snow on her clothes, raising her wooden spoon, wet Pero behind her and loaded carts at the door, while the lords roar with laughter.",
-        "art_brief": "The great doors of the timber council hall at Caerllion thrown open; outside in the snow, three loaded wooden carts (sacks of bread, cheeses, baskets of pies) and steaming horses. In the doorway Modlen (short, round, rosy, brown dress, long white apron, white headscarf, snow on her shoulders) raises her big wooden spoon like a sceptre, mid-shout; old Pero (shaggy black-and-white hound, grey muzzle, wet) trots in wagging. Inside, the lords on their benches are roaring with laughter, slapping knees; even the very tall red-bearded lord (Barf Goch) laughs despite himself. Mali (12, long dark braid, dark-blue dress) clutches her cloak shut where a curl of smoke escapes; Cai and Cynyr laugh; Arth (grey eyes, moss-green tunic, the sword on his knees) grins as Pero puts his head on his lap. No text.",
+        "alt": "Modlen has burst into the council hall with snow on her clothes and raises her wooden spoon, loaded carts at the open door behind her; the lords roar with laughter, and wet Pero rests his head on Arth's knees.",
+        "art_brief": "The great doors of the great hall of the castle at Caerllion in winter (thick grey stone walls banded with red Roman brick, a high roof of dark timber beams, a long central hearth with smoke rising, daylight from high unglazed shuttered openings, the empty throne on its dais) thrown open; outside in the snow, three loaded wooden carts (sacks of bread, cheeses, baskets of pies) and steaming horses, snow blowing in. Just inside, Modlen (short, round, rosy, brown dress, long white apron, white headscarf, snow on her shoulders) has just banged a bench with her big wooden spoon and holds it up like a sceptre, mid-shout. The lords on their benches are roaring with laughter, slapping knees; even the very tall red-bearded lord (Barf Goch) laughs despite himself. On a side bench Arth (moss-green tunic, the sword on his knees) grins as old Pero (shaggy black-and-white hound, grey muzzle, wet from the journey) rests his head on Arth's knees, tail thumping the bench. Mali (12, long dark braid, dark-blue dress) beside him clutches her oatmeal-grey cloak shut where a curl of smoke escapes; Cai and Cynyr laugh. No text.",
         "characters": [
          "char-modlen",
          "char-pero",
-         "char-barf-goch",
+         "char-arglwydd-coch",
          "char-mali",
          "char-cai",
          "char-cynyr",
@@ -1183,7 +1214,7 @@
       "id": "cy-brenin-01-l29-s135",
       "text": "\"Ai ti wnaeth yr hud, ddewin?\" meddai Barf Goch.",
       "paragraph_start": true,
-      "speaker": "char-barf-goch"
+      "speaker": "char-arglwydd-coch"
      },
      {
       "id": "cy-brenin-01-l29-s136",
@@ -1234,7 +1265,7 @@
  },
  "grammar": {
   "title_cy": "Arth wnaeth e!",
-  "rule_cy": "Pwy …? → X + berf (treiglad meddal): Arth dynnodd y cleddyf. · Fi oedd ar fai. · Nid X: Nid Pero fwytodd y pasteiod. · … ddim … chwaith.",
+  "rule_cy": "Pwy …? → X + berf (treiglad meddal), a'r ferf yn y trydydd person (fe/hi): Arth dynnodd y cleddyf. · Gwelais i e → Fi welodd e. · Fi oedd ar fai. · Nid X: Nid Pero fwytodd y pasteiod. · … ddim … chwaith.",
   "tables": [
    {
     "caption": "trefn arferol ↔ ffocws",
@@ -1266,6 +1297,10 @@
      [
       "Roedd e'n hud.",
       "Hud oedd e."
+     ],
+     [
+      "Gwnaethon ni e.",
+      "Ni wnaeth e. (dim 'wnaethon')"
      ]
     ]
    },
@@ -1366,7 +1401,7 @@
     "segment_id": "cy-brenin-01-l29-s143"
    }
   ],
-  "nodyn_en": "To stress who did something, put that person first and soft-mutate the verb: Arth dynnodd y cleddyf (It was Arth who drew it); with bod: Fi oedd ar fai. Answer Pwy …? the same way. Nid negates the fronted part: Nid Pero fwytodd y pasteiod. Chwaith = 'either' after a negative. Ai …? and taw: reading only for now."
+  "nodyn_en": "To stress who did something, put that person first, soft-mutate the verb and use the he/she form of the verb for every person: Arth dynnodd y cleddyf; Gwelais i e → Fi (a) welodd e. With bod: Fi oedd ar fai. Nid negates the fronted part. Chwaith = 'either' after a negative. Ai …? and taw: reading only."
  },
  "pensa": {
   "A": {
@@ -1420,7 +1455,8 @@
        "prompt": "Roedd Cai ar fai. (Cai!) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cai oedd ar fai."
+        "Cai oedd ar fai.",
+        "Cai a oedd ar fai."
        ]
       }
      ]
@@ -1494,7 +1530,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Rhaid i'r cyngor farnu.",
-        "Mae'n rhaid i'r cyngor farnu."
+        "Mae'n rhaid i'r cyngor farnu.",
+        "Mae rhaid i'r cyngor farnu."
        ],
        "mutation_hint": true,
        "recall_of": "G27"
@@ -1582,7 +1619,7 @@
     },
     {
      "id": "b5",
-     "prompt": "Mae Barf Goch'n dweud: \"Cynyr wnaeth y twyll!\" Mae e'n ___ Cynyr.",
+     "prompt": "Mae Barf Goch yn dweud: \"Cynyr wnaeth y twyll!\" Mae e'n ___ Cynyr.",
      "answer_mode": "exact",
      "accepted_answers": [
       "cyhuddo"
@@ -1655,8 +1692,8 @@
      "id": "c2",
      "prompt": "Pwy welodd Arth yn tynnu'r cleddyf?",
      "answer_mode": "self_check",
-     "model_answer": "Yr offeiriad welodd e, a'r marchog ifanc, a'r cyngor.",
-     "rubric": "Ateb gyda ffocws: X welodd e (yr offeiriad / y marchog ifanc).",
+     "model_answer": "Yr offeiriad welodd e, a'r marchog cryf, a'r cyngor.",
+     "rubric": "Ateb gyda ffocws: X welodd e (yr offeiriad / y marchog cryf).",
      "key_terms": [
       "cy-offeiriad"
      ],
@@ -1666,7 +1703,7 @@
     },
     {
      "id": "c3",
-     "prompt": "Beth sy gyda'r tafarnwr yn ei ddwylo?",
+     "prompt": "Beth oedd gyda'r tafarnwr yn ei ddwylo?",
      "answer_mode": "self_check",
      "model_answer": "Cleddyf Cai, gydag aur ar y carn.",
      "rubric": "Ateb: cleddyf Cai.",
@@ -1685,7 +1722,9 @@
       "Fe",
       "Cai",
       "Cai oedd ar fai",
-      "Fe oedd ar fai"
+      "Fe oedd ar fai",
+      "Cai a oedd ar fai",
+      "Fi oedd ar fai"
      ],
      "model_answer": "Cai oedd ar fai.",
      "source_segment_ids": [
@@ -1707,25 +1746,28 @@
     },
     {
      "id": "c6",
-     "prompt": "Beth mae'r cyngor yn barnu am Cynyr?",
+     "prompt": "Beth farnodd y cyngor am Cynyr?",
      "answer_mode": "exact",
      "accepted_answers": [
       "Dieuog",
+      "Roedd e'n ddieuog",
+      "Roedd Cynyr yn ddieuog",
       "Mae e'n ddieuog",
       "Mae Cynyr yn ddieuog",
       "Bod Cynyr yn ddieuog",
-      "Bod e'n ddieuog"
+      "Bod e'n ddieuog",
+      "Ei fod e'n ddieuog"
      ],
-     "model_answer": "Mae Cynyr yn ddieuog.",
+     "model_answer": "Roedd Cynyr yn ddieuog.",
      "source_segment_ids": [
       "cy-brenin-01-l29-s093"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Pam mae'r cyngor yn chwerthin?",
+     "prompt": "Pam roedd y cyngor yn chwerthin?",
      "answer_mode": "self_check",
-     "model_answer": "Mae Modlen yn dweud: Nid Pero fwytodd y pasteiod: y ddraig fwytodd nhw! Dyw'r arglwyddi ddim yn credu bod draig yn y gegin.",
+     "model_answer": "Dwedodd Modlen: Nid Pero fwytodd y pasteiod: y ddraig fwytodd nhw! Doedd yr arglwyddi ddim yn credu bod draig yn y gegin.",
      "rubric": "Ateb: Modlen a'r ddraig / nid Pero fwytodd y pasteiod.",
      "key_terms": [
       "cy-pastai",
@@ -2077,7 +2119,7 @@
     "id": "pattern-g29",
     "lesson": "cy-brenin-01-l29",
     "front": "Arth dynnodd y cleddyf, nid fi. · Fi oedd ar fai. · Myrddin wnaeth e! — Nid hud oedd e. · Nid Pero fwytodd y pasteiod!",
-    "back": "It was Arth who drew the sword, not me. · It was I who was at fault. · Myrddin did it! — It wasn't magic. · It wasn't Pero who ate the pies!",
+    "back": "It was Arth who drew the sword, not me. · It was I who was at fault. · Myrddin did it! — It wasn't magic. · It wasn't Pero who ate the pies! (verb always in the he/she form: Fi welodd e, Ni wnaeth e)",
     "example_segment_id": "cy-brenin-01-l29-s065",
     "example_segment_ids": [
      "cy-brenin-01-l29-s065",
@@ -2096,7 +2138,20 @@
    "margin_vignette": 0,
    "margin_diagram": 0,
    "margin_gloss": 27
-  }
+  },
+  "audio_sources": [
+   {
+    "id": "lleisiau",
+    "label": "Nia ac Aled (dau lais)",
+    "manifest": "media/audio/pennod-29/lleisiau/manifest.json",
+    "default": true
+   },
+   {
+    "id": "nia",
+    "label": "Nia (un llais)",
+    "manifest": "media/audio/pennod-29/nia/manifest.json"
+   }
+  ]
  },
  "completion": {
   "button_label": "Gorffen y bennod"
@@ -2111,8 +2166,8 @@
   ]
  },
  "metrics": {
-  "running_words": 1475,
-  "sentences": 144,
+  "running_words": 1533,
+  "sentences": 147,
   "word_target": 1570,
   "word_window": [
    1413,

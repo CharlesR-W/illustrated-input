@@ -15,24 +15,31 @@
   "review_required": "Codex cross-model review (applied, see docs/reviews/russian-pilot-log-2026-10-18.md) and native-speaker review before text_status: reviewed",
   "notes": [
    "Bootstrap map chapter (design §3.2): no finite verb is licensed by G01, so the prose is verbless (LLPSI cap. I); movement comes from the narrator's question chain and the turn to Ivan, who speaks in baseline chunks (Здра́вствуйте, Меня́ зову́т, Мне … лет, Как вас зову́т?).",
-   "Restricted locative only (в/на + -е): в Москве́, на Во́лге, на Оке́, в уе́зде, на реке́, в дере́вне, в по́ле, на ка́рте, в го́роде, в Евро́пе (exercises), в Берёзовке; «в Росси́и» is the declared G01 chunk, glossed; never в Ряза́ни / в губе́рнии / в лесу́.",
+   "Inductive-clarity pass 2026-10-19 (docs/editorial-decisions.md, Russian pilot): section I is a walk across the labelled cover map, one new word per sentence, вот → э́то → здесь/там (question chain) → большо́й; губе́рния is located between страна́ and го́род in three sentences; доро́га precedes желе́зная доро́га; ма́ленький first appears against the губе́рния/уе́зд zoom diagram, the only visibly small thing in the chapter; exercises use only words read by the end of their section; two drills of 5–6 items per section plus Напиши (Codex fix pass 2026-10-19).",
+   "Cover: the hand-authored SVG map ru-mir-01-l01-svg-cover-map (labels Росси́я, Евро́па, А́зия, Во́лга, Ока́, Москва́, Петербу́рг, Ряза́нь, желе́зная доро́га, Берёзовка) replaces the planned raster cover ru-mir-01-l01-cover (media/images/ru-mir-01-l01-cover.webp), which is dropped from story.cover; the margin map ru-mir-01-l01-svg-karta is redundant beside it and is no longer referenced (file kept). The Beryozovka panorama (media/images/ru-mir-01-l01-img-berezovka.webp) is wired as a draft inline scene at s040 and anchors the village pointing (s049, s055, s063); the Ivan portrait stays planned, so Ivan introduces himself (s060) before «Кто э́то? Э́то Ива́н.»",
+   "Restricted locative only (в/на + -е): в Евро́пе, на Во́лге, на Оке́, в уе́зде, на реке́, в дере́вне, в по́ле, на ка́рте, в Москве́, в Берёзовке, в го́роде (exercises); never в Ряза́ни / в губе́рнии / в лесу́. The former glossed chunk «в Росси́и» (-ии is G07) is no longer used.",
    "Pronouns (он, она́) are Глава 2 lexemes and do not appear; the narrator repeats the noun instead, which is also the LLPSI cap. I texture.",
-   "Stress was marked from the writer's knowledge (Zaliznyak-type forms) and cross-checked by Codex; `stress-unverified` lists inflected forms the lexicon does not list (by design only irregular or mobile-stress forms are listed). RUAccent (scripts/ru/stress.py) could not load its model on 2026-10-18.",
-   "Warnings left, with reasons: length 347 words against 360–440 (advisory; the bootstrap chapter has no verbs and every further sentence would restate a proposition); new-cluster in about 30 sentences (every word of Глава 1 is new, including и, а, не, в, на; unavoidable in the map chapter); answer-unknown / prompt-unknown for желе́зная (the phrase lexeme ru-ph-zheleznaya-doroga is not phrase-matched in answers) and for the baseline chunks Меня́ зову́т, Мне … лет in the «А ты?» item (chunks are not chunk-matched in answers): checker limitations, reported to the integrator.",
+   "Stress was marked from the writer's knowledge (Zaliznyak-type forms); `stress-unverified` lists inflected forms the lexicon does not list (by design only irregular or mobile-stress forms are listed).",
    "«Желе́зная доро́га — но́вая» is relative: the Moscow–Ryazan line (1860s) is new beside the centuries-old road; no newly built branch is implied (Codex review).",
    "Recall: губе́рния and желе́зная доро́га recur only once in Главы 2–6 (Главы 6 and 5); the plan brings them back in Глава 8 (the fair in the district town) and Глава 12 (the station).",
-   "Глава 6 dictates Глава 1's sentences: «Э́то Росси́я.», «Росси́я — больша́я страна́.», «Э́то Москва́, большо́й го́род.», «Берёзовка — дере́вня. Дере́вня ма́ленькая, но це́рковь больша́я.» all occur here verbatim."
+   "Глава 6 dictates Глава 1's sentences: «Э́то Росси́я.», «Росси́я — больша́я страна́.», «Э́то Москва́, большо́й го́род.», «Берёзовка — дере́вня. Дере́вня ма́ленькая, но це́рковь больша́я.» all occur here verbatim; Глава 5 quotes «Мне девятна́дцать лет».",
+   "по́ле and лес have hand-authored vignettes (ru-mir-01-l01-img-pole, -les) beside their first mentions; шко́ла (baseline known) rests on the panorama and the ста́рая ↔ но́вая contrast."
   ],
   "review_questions": [
    {
-    "quote": "Петербу́рг — но́вый",
+    "quote": "А Петербу́рг — но́вый го́род.",
     "question": "Petersburg (1703) as «но́вый го́род» against Moscow: acceptable as a child's-map contrast, or does it jar?",
-    "segment_id": "ru-mir-01-l01-s022"
+    "segment_id": "ru-mir-01-l01-s022c"
    },
    {
-    "quote": "То́же да!",
-    "question": "«То́же да!» as a playful second answer: natural spoken Russian, or should it be «И э́то да!» / «Да, и А́зия»?",
-    "segment_id": "ru-mir-01-l01-s008"
+    "quote": "Росси́я здесь и там.",
+    "question": "«Росси́я здесь и там» as a map-pointing sentence before «и Евро́па, и А́зия»: natural, or should it be «Росси́я и здесь, и там»?",
+    "segment_id": "ru-mir-01-l01-s006g"
+   },
+   {
+    "quote": "Где уе́здный го́род? В уе́зде.",
+    "question": "Tautological question used only to show в уе́зде: acceptable, or cut?",
+    "segment_id": "ru-mir-01-l01-s030a"
    }
   ]
  },
@@ -44,11 +51,7 @@
    "minimum_demonstrations": 8
   },
   "recycled_grammar": [],
-  "incidental": [
-   {
-    "form": "в Росси́и — glossed chunk (-ии locative is G07)"
-   }
-  ],
+  "incidental": [],
   "new_lexeme_ids": [
    "ru-eto",
    "ru-vot",
@@ -90,163 +93,163 @@
   "introductions": [
    {
     "lexeme_id": "ru-eto",
-    "how": "context",
+    "how": "context (Что э́то? — Э́то Росси́я, after Вот Росси́я)",
     "segment_id": "ru-mir-01-l01-s004"
    },
    {
     "lexeme_id": "ru-vot",
-    "how": "context",
+    "how": "picture(cover map)+context",
     "segment_id": "ru-mir-01-l01-s001"
    },
    {
     "lexeme_id": "ru-i",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s009"
+    "how": "context (здесь и там → и Евро́па, и А́зия)",
+    "segment_id": "ru-mir-01-l01-s006g"
    },
    {
     "lexeme_id": "ru-a",
-    "how": "context",
+    "how": "picture(cover map)+context (Вот Евро́па, а вот А́зия)",
     "segment_id": "ru-mir-01-l01-s006"
    },
    {
     "lexeme_id": "ru-no",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s046"
+    "how": "contrast (не страна́, но то́же больша́я)",
+    "segment_id": "ru-mir-01-l01-s028"
    },
    {
     "lexeme_id": "ru-ne",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s044"
+    "how": "context (Нет, Москва́ не на Во́лге)",
+    "segment_id": "ru-mir-01-l01-s020"
    },
    {
     "lexeme_id": "ru-tozhe",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s022"
+    "how": "context (Евро́па больша́я, и А́зия то́же больша́я)",
+    "segment_id": "ru-mir-01-l01-s006e"
    },
    {
     "lexeme_id": "ru-gde",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s017"
+    "how": "context (question answered by здесь)",
+    "segment_id": "ru-mir-01-l01-s006b"
    },
    {
     "lexeme_id": "ru-zdes",
-    "how": "gloss(antonym)+context",
-    "segment_id": "ru-mir-01-l01-s020"
+    "how": "picture(cover map)+gloss(antonym)+question chain",
+    "segment_id": "ru-mir-01-l01-s006b"
    },
    {
     "lexeme_id": "ru-tam",
-    "how": "gloss(antonym)+context",
-    "segment_id": "ru-mir-01-l01-s020"
+    "how": "picture(cover map)+gloss(antonym)+question chain",
+    "segment_id": "ru-mir-01-l01-s006d"
    },
    {
     "lexeme_id": "ru-v",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s047"
+    "how": "gloss(form)+picture(cover map)",
+    "segment_id": "ru-mir-01-l01-s017"
    },
    {
     "lexeme_id": "ru-na",
-    "how": "context",
-    "segment_id": "ru-mir-01-l01-s024"
+    "how": "gloss(form)+picture(cover map)",
+    "segment_id": "ru-mir-01-l01-s019"
    },
    {
     "lexeme_id": "ru-da",
-    "how": "context",
+    "how": "context (yes after a map question)",
     "segment_id": "ru-mir-01-l01-s007"
    },
    {
     "lexeme_id": "ru-net",
-    "how": "context",
+    "how": "context (Москва́ на Во́лге? Нет)",
     "segment_id": "ru-mir-01-l01-s020"
    },
    {
     "lexeme_id": "ru-strana",
-    "how": "gloss(example)+context",
-    "segment_id": "ru-mir-01-l01-s005"
+    "how": "picture(cover map)+context (baseline known)",
+    "segment_id": "ru-mir-01-l01-s004a"
    },
    {
     "lexeme_id": "ru-gorod",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s005"
+    "how": "gloss(example)+picture(cover map)",
+    "segment_id": "ru-mir-01-l01-s016"
    },
    {
     "lexeme_id": "ru-reka",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s005"
+    "how": "gloss(example)+picture(cover map)",
+    "segment_id": "ru-mir-01-l01-s010"
    },
    {
     "lexeme_id": "ru-derevnya",
-    "how": "picture(scene)+context",
-    "segment_id": "ru-mir-01-l01-s040"
+    "how": "contrast (го́род и́ли дере́вня?)+gloss(antonym)+picture(svg)",
+    "segment_id": "ru-mir-01-l01-s038"
    },
    {
     "lexeme_id": "ru-tserkov",
-    "how": "picture(scene)+context",
-    "segment_id": "ru-mir-01-l01-s040"
+    "how": "picture(vignette)+picture(panorama)+contrast",
+    "segment_id": "ru-mir-01-l01-s046"
    },
    {
     "lexeme_id": "ru-shkola",
-    "how": "picture(scene)+context",
-    "segment_id": "ru-mir-01-l01-s040"
+    "how": "picture(panorama)+contrast ста́рая ↔ но́вая (baseline known)",
+    "segment_id": "ru-mir-01-l01-s047"
    },
    {
     "lexeme_id": "ru-pole",
-    "how": "picture(scene)+context",
-    "segment_id": "ru-mir-01-l01-s040"
+    "how": "picture(vignette)+picture(panorama)",
+    "segment_id": "ru-mir-01-l01-s050"
    },
    {
     "lexeme_id": "ru-les",
-    "how": "picture(scene)+context",
-    "segment_id": "ru-mir-01-l01-s040"
+    "how": "picture(vignette)+picture(panorama)",
+    "segment_id": "ru-mir-01-l01-s050a"
    },
    {
     "lexeme_id": "ru-doroga",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s027"
+    "how": "picture(svg zoom map)+contrast (ста́рая ↔ желе́зная доро́га но́вая)",
+    "segment_id": "ru-mir-01-l01-s034"
    },
    {
     "lexeme_id": "ru-karta",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s005"
+    "how": "picture(cover map)",
+    "segment_id": "ru-mir-01-l01-s001"
    },
    {
     "lexeme_id": "ru-usadba",
-    "how": "picture(scene)+context",
-    "segment_id": "ru-mir-01-l01-s040"
+    "how": "picture(vignette)+contrast",
+    "segment_id": "ru-mir-01-l01-s053"
    },
    {
     "lexeme_id": "ru-guberniya",
-    "how": "picture(svg)+context",
+    "how": "picture(svg)+gloss(radical)+contrast (не страна́, не го́род)",
     "segment_id": "ru-mir-01-l01-s027"
    },
    {
     "lexeme_id": "ru-uezd",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s027"
-   },
-   {
-    "lexeme_id": "ru-uezdnyj",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s027"
-   },
-   {
-    "lexeme_id": "ru-bolshoj",
-    "how": "gloss(antonym)+context",
+    "how": "picture(svg)+contrast (губе́рния больша́я, уе́зд ма́ленький)",
     "segment_id": "ru-mir-01-l01-s029"
    },
    {
+    "lexeme_id": "ru-uezdnyj",
+    "how": "gloss(radical)+picture(svg)",
+    "segment_id": "ru-mir-01-l01-s030"
+   },
+   {
+    "lexeme_id": "ru-bolshoj",
+    "how": "picture(cover map)+context",
+    "segment_id": "ru-mir-01-l01-s005"
+   },
+   {
     "lexeme_id": "ru-malenkij",
-    "how": "gloss(antonym)+context",
+    "how": "gloss(antonym)+picture(svg)",
     "segment_id": "ru-mir-01-l01-s029"
    },
    {
     "lexeme_id": "ru-staryj",
-    "how": "gloss(antonym)+context",
-    "segment_id": "ru-mir-01-l01-s022"
+    "how": "gloss(antonym)+contrast",
+    "segment_id": "ru-mir-01-l01-s022b"
    },
    {
     "lexeme_id": "ru-novyj",
-    "how": "gloss(antonym)+context",
-    "segment_id": "ru-mir-01-l01-s022"
+    "how": "gloss(antonym)+contrast",
+    "segment_id": "ru-mir-01-l01-s022c"
    },
    {
     "lexeme_id": "ru-russkij",
@@ -255,8 +258,8 @@
    },
    {
     "lexeme_id": "ru-ph-zheleznaya-doroga",
-    "how": "picture(svg)+context",
-    "segment_id": "ru-mir-01-l01-s027"
+    "how": "picture(vignette)+picture(cover map label)+contrast with доро́га",
+    "segment_id": "ru-mir-01-l01-s033"
    },
    {
     "lexeme_id": "ru-ili",
@@ -268,16 +271,21 @@
  },
  "story": {
   "cover": {
-   "ref": "ru-mir-01-l01-cover",
-   "src": "media/images/ru-mir-01-l01-cover.webp",
-   "status": "planned",
+   "type": "image",
    "presentation": "inline_scene",
-   "alt": "A large hand-drawn wall map of European Russia: the Volga and the Oka, Moscow, Petersburg and Ryazan marked, a thin railway line, no lettering.",
-   "art_brief": "A large hand-drawn wall map of European Russia as hung in a zemstvo school around 1913: pale paper, the Volga and the Oka as blue lines, Moscow, Petersburg and Ryazan as dots, a thin black-and-white railway line from Moscow south-east to Ryazan, forests as small green trees, a wooden pointer leaning on it. Warm watercolour, Bilibin-like line but plain. No lettering in the image (labels come from the SVG).",
+   "ref": "ru-mir-01-l01-svg-cover-map",
+   "src": "media/diagrams/ru-mir-01-l01-svg-cover-map.svg",
+   "status": "draft",
+   "width": 1200,
+   "height": 800,
+   "alt": "Labelled map of European Russia: Petersburg in the north-west, Moscow in the centre, the Volga flowing east and south, the Oka joining it with Ryazan on its bank, a thin railway line from Moscow through Ryazan to a district town, a tiny dot for Beryozovka, and a dashed line marking the border of Europe and Asia. Russian labels only.",
+   "art_brief": "Hand-authored SVG map of European Russia with Russian labels only (Росси́я, Евро́па, А́зия, Во́лга, Ока́, Москва́, Петербу́рг, Ряза́нь, желе́зная доро́га, Берёзовка): pale paper ground, rivers as blue lines, cities as dots, a thin black-and-white railway line Москва́ — Ряза́нь — the district town, Берёзовка as a very small red dot south-east of Ryazan, a dashed Europe/Asia line on the right. Labels at least 14 px; viewBox, <title> and <desc>; no raster. Reused by the Глава 1 narrator's walk (section I) and the Pensa.",
    "covers_lexeme_ids": [
     "ru-karta",
+    "ru-strana",
     "ru-reka",
-    "ru-strana"
+    "ru-gorod",
+    "ru-ph-zheleznaya-doroga"
    ]
   },
   "sections": [
@@ -291,8 +299,8 @@
       "paragraph_start": true
      },
      {
-      "id": "ru-mir-01-l01-s002",
-      "text": "Ка́рта больша́я, а на ка́рте — страна́."
+      "id": "ru-mir-01-l01-s001a",
+      "text": "Вот Росси́я."
      },
      {
       "id": "ru-mir-01-l01-s003",
@@ -310,79 +318,55 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        }
       ]
      },
      {
+      "id": "ru-mir-01-l01-s004a",
+      "text": "Росси́я — страна́."
+     },
+     {
       "id": "ru-mir-01-l01-s005",
-      "text": "Росси́я — больша́я страна́.",
+      "text": "Росси́я — больша́я страна́."
+     },
+     {
+      "id": "ru-mir-01-l01-s006",
+      "text": "Вот Евро́па, а вот А́зия.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l01-s006b",
+      "text": "Где Евро́па? Евро́па здесь."
+     },
+     {
+      "id": "ru-mir-01-l01-s006d",
+      "text": "А где А́зия? А́зия там.",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "страна́",
-        "gloss": "страна́: Росси́я, А́нглия, Герма́ния",
-        "gloss_kind": "example",
+        "anchor_text": "там",
+        "gloss": "здесь ↔ там",
+        "gloss_kind": "antonym",
         "covers_lexeme_ids": [
-         "ru-strana"
-        ]
-       },
-       {
-        "type": "diagram",
-        "presentation": "margin_diagram",
-        "ref": "ru-mir-01-l01-svg-karta",
-        "anchor_text": "Росси́я",
-        "src": "media/diagrams/ru-mir-01-l01-svg-karta.svg",
-        "label": "Росси́я на ка́рте",
-        "alt": "Outline map of European Russia with Russian labels: Росси́я, Евро́па, А́зия, Москва́, Петербу́рг, Во́лга, Ока́, Ряза́нь.",
-        "status": "draft",
-        "width": 320,
-        "height": 240,
-        "covers_lexeme_ids": [
-         "ru-karta",
-         "ru-reka",
-         "ru-gorod"
+         "ru-zdes",
+         "ru-tam"
         ]
        }
       ]
      },
      {
-      "id": "ru-mir-01-l01-s006",
-      "text": "Вот Евро́па, а вот А́зия: Евро́па здесь, а А́зия там.",
-      "paragraph_start": true
+      "id": "ru-mir-01-l01-s006f",
+      "text": "Евро́па здесь, а А́зия там."
      },
      {
-      "id": "ru-mir-01-l01-s007",
-      "text": "Росси́я — э́то Евро́па? Да.",
-      "pins": [
-       {
-        "start": 10,
-        "end": 14,
-        "token": "э́то",
-        "lemma": "это",
-        "feats": {
-         "pos": "PRCL"
-        },
-        "note": "auto (это particle); reviewed by the writer"
-       }
-      ]
+      "id": "ru-mir-01-l01-s006e",
+      "text": "Евро́па больша́я, и А́зия то́же больша́я."
      },
      {
-      "id": "ru-mir-01-l01-s008",
-      "text": "Росси́я — э́то А́зия? То́же да!",
-      "pins": [
-       {
-        "start": 10,
-        "end": 14,
-        "token": "э́то",
-        "lemma": "это",
-        "feats": {
-         "pos": "PRCL"
-        },
-        "note": "auto (это particle); reviewed by the writer"
-       }
-      ]
+      "id": "ru-mir-01-l01-s006g",
+      "text": "Росси́я? Росси́я здесь и там."
      },
      {
       "id": "ru-mir-01-l01-s009",
@@ -390,12 +374,8 @@
      },
      {
       "id": "ru-mir-01-l01-s010",
-      "text": "А что э́то?",
-      "paragraph_start": true
-     },
-     {
-      "id": "ru-mir-01-l01-s011",
-      "text": "Э́то река́.",
+      "text": "А что э́то? Э́то Во́лга. Во́лга — река́.",
+      "paragraph_start": true,
       "inference_aids": [
        {
         "type": "gloss",
@@ -410,32 +390,20 @@
       ],
       "pins": [
        {
-        "start": 0,
-        "end": 4,
+        "start": 12,
+        "end": 16,
         "token": "Э́то",
         "lemma": "это",
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s012",
-      "text": "Река́ больша́я: э́то Во́лга.",
-      "pins": [
-       {
-        "start": 16,
-        "end": 20,
-        "token": "э́то",
-        "lemma": "это",
-        "feats": {
-         "pos": "PRCL"
-        },
-        "note": "auto (это particle); reviewed by the writer"
-       }
-      ]
+      "text": "Во́лга — больша́я река́."
      },
      {
       "id": "ru-mir-01-l01-s013",
@@ -467,13 +435,13 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s015",
-      "text": "Ока́ не Во́лга, но то́же больша́я ру́сская река́.",
+      "text": "Ока́ — то́же река́, то́же больша́я.",
       "pins": [
        {
         "start": 0,
@@ -485,7 +453,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -502,7 +470,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        },
        {
         "start": 14,
@@ -514,7 +482,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 23,
@@ -526,23 +494,19 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s017",
-      "text": "Где Москва́?"
-     },
-     {
-      "id": "ru-mir-01-l01-s018",
-      "text": "Москва́ здесь, в Росси́и, в Евро́пе.",
+      "text": "Где Москва́? Москва́ здесь, в Евро́пе.",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "в Росси́и",
-        "gloss": "Росси́я → в Росси́и",
+        "anchor_text": "в Евро́пе",
+        "gloss": "Евро́па → в Евро́пе",
         "gloss_kind": "form"
        }
       ]
@@ -562,20 +526,7 @@
      },
      {
       "id": "ru-mir-01-l01-s020",
-      "text": "Нет, Москва́ не на Во́лге: Москва́ здесь, а Во́лга там.",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "там",
-        "gloss": "здесь ↔ там",
-        "gloss_kind": "antonym",
-        "covers_lexeme_ids": [
-         "ru-zdes",
-         "ru-tam"
-        ]
-       }
-      ]
+      "text": "Нет, Москва́ не на Во́лге: Москва́ здесь, а Во́лга там."
      },
      {
       "id": "ru-mir-01-l01-s021",
@@ -592,13 +543,103 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s022",
-      "text": "Петербу́рг то́же большо́й го́род, но Москва́ — ста́рый го́род, а Петербу́рг — но́вый.",
+      "text": "Петербу́рг то́же большо́й го́род.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 10,
+        "token": "Петербу́рг",
+        "lemma": "петербург",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 17,
+        "end": 25,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 26,
+        "end": 32,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s007",
+      "text": "Петербу́рг то́же в Евро́пе? Да.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 10,
+        "token": "Петербу́рг",
+        "lemma": "петербург",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s022b",
+      "text": "Москва́ — ста́рый го́род.",
+      "pins": [
+       {
+        "start": 10,
+        "end": 17,
+        "token": "ста́рый",
+        "lemma": "старый",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 18,
+        "end": 24,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s022c",
+      "text": "А Петербу́рг — но́вый го́род.",
       "inference_aids": [
        {
         "type": "gloss",
@@ -614,8 +655,8 @@
       ],
       "pins": [
        {
-        "start": 0,
-        "end": 10,
+        "start": 2,
+        "end": 12,
         "token": "Петербу́рг",
         "lemma": "петербург",
         "feats": {
@@ -623,71 +664,11 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
-        "start": 17,
-        "end": 25,
-        "token": "большо́й",
-        "lemma": "большой",
-        "feats": {
-         "pos": "ADJF",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 26,
-        "end": 32,
-        "token": "го́род",
-        "lemma": "город",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 47,
-        "end": 54,
-        "token": "ста́рый",
-        "lemma": "старый",
-        "feats": {
-         "pos": "ADJF",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 55,
-        "end": 61,
-        "token": "го́род",
-        "lemma": "город",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 65,
-        "end": 75,
-        "token": "Петербу́рг",
-        "lemma": "петербург",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 78,
-        "end": 84,
+        "start": 15,
+        "end": 21,
         "token": "но́вый",
         "lemma": "новый",
         "feats": {
@@ -695,345 +676,22 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
-       }
-      ]
-     }
-    ],
-    "exercises": [
-     {
-      "id": "ru-mir-01-l01-x1-1",
-      "type": "okonchaniya",
-      "title": "Оконча́ния",
-      "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "Adjectives agree with the noun: -ый/-ой/-ий (м.), -ая (ж.), -ое (ср.).",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "го́род (м.) → большо́й · страна́ (ж.) → больша́я · по́ле (ср.) → большо́е",
-       "prompt": "Росси́я — больш___ страна́.",
-       "answer": "а́я"
-      },
-      "items": [
-       {
-        "prompt": "Москва́ — больш___ го́род.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "о́й"
-        ],
-        "explanation": "Москва́ — большо́й го́род.",
-        "id": "x1-1-1"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
-        "prompt": "Петербу́рг — но́в___ го́род.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ый"
-        ],
-        "explanation": "Петербу́рг — но́вый го́род.",
-        "id": "x1-1-2"
-       },
-       {
-        "prompt": "Во́лга — ру́сск___ река́.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ая"
-        ],
-        "explanation": "Во́лга — ру́сская река́.",
-        "id": "x1-1-3"
-       },
-       {
-        "prompt": "Ка́рта больш___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "а́я"
-        ],
-        "explanation": "Ка́рта больша́я.",
-        "id": "x1-1-4"
-       },
-       {
-        "prompt": "По́ле больш___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "о́е"
-        ],
-        "common_wrong": [
-         {
-          "answer": "ая",
-          "hint": "по́ле — ср.: большо́е"
-         }
-        ],
-        "explanation": "По́ле большо́е.",
-        "id": "x1-1-5"
-       },
-       {
-        "prompt": "Москва́ — ста́р___ го́род.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ый"
-        ],
-        "explanation": "Москва́ — ста́рый го́род.",
-        "id": "x1-1-6"
-       },
-       {
-        "prompt": "Ока́ — то́же больш___ река́.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "а́я"
-        ],
-        "explanation": "Ока́ — то́же больша́я река́.",
-        "id": "x1-1-7"
-       },
-       {
-        "prompt": "Ряза́нь — ста́р___ ру́сский го́род.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ый"
-        ],
-        "explanation": "Ряза́нь — ста́рый ру́сский го́род.",
-        "id": "x1-1-8"
+        "start": 22,
+        "end": 28,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
-     {
-      "id": "ru-mir-01-l01-x1-2",
-      "type": "podstanovka",
-      "title": "Подстано́вка",
-      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "Make the adjective agree: м. -ый/-ой/-ий, ж. -ая, ср. -ое.",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "лес (м.) → ста́рый лес · река́ (ж.) → ста́рая река́",
-       "prompt": "Вот ___ (ста́рый) река́.",
-       "answer": "ста́рая"
-      },
-      "items": [
-       {
-        "prompt": "Вот ___ (ста́рый) го́род.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ста́рый"
-        ],
-        "id": "x1-2-1"
-       },
-       {
-        "prompt": "Вот ___ (большо́й) по́ле.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "большо́е"
-        ],
-        "common_wrong": [
-         {
-          "answer": "большо́й",
-          "hint": "по́ле — ср.: большо́е"
-         }
-        ],
-        "id": "x1-2-2"
-       },
-       {
-        "prompt": "Вот ___ (но́вый) ка́рта.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "но́вая"
-        ],
-        "id": "x1-2-3"
-       },
-       {
-        "prompt": "Вот ___ (ма́ленький) лес.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ма́ленький"
-        ],
-        "id": "x1-2-4"
-       },
-       {
-        "prompt": "Вот ___ (ру́сский) дере́вня.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ру́сская"
-        ],
-        "id": "x1-2-5"
-       },
-       {
-        "prompt": "Вот ___ (большо́й) страна́.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "больша́я"
-        ],
-        "id": "x1-2-6"
-       },
-       {
-        "prompt": "Вот ___ (но́вый) шко́ла.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "но́вая"
-        ],
-        "id": "x1-2-7"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-x1-3",
-      "type": "preobrazovanie",
-      "title": "Преобразова́ние",
-      "instruction": "Скажи́: река́ (ж.), по́ле (ср.), го́род (м.).",
-      "hint_en": "Replace the noun with the one in brackets and make the adjective agree.",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "ста́рый го́род → ста́рая река́",
-       "prompt": "Э́то ста́рый го́род. (река́) →",
-       "answer": "Э́то ста́рая река́."
-      },
-      "items": [
-       {
-        "prompt": "Э́то большо́й го́род. (страна́) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Э́то больша́я страна́."
-        ],
-        "id": "x1-3-1"
-       },
-       {
-        "prompt": "Э́то ма́ленькая дере́вня. (лес) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Э́то ма́ленький лес."
-        ],
-        "id": "x1-3-2"
-       },
-       {
-        "prompt": "Э́то но́вая шко́ла. (го́род) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Э́то но́вый го́род."
-        ],
-        "id": "x1-3-3"
-       },
-       {
-        "prompt": "Э́то большо́й лес. (по́ле) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Э́то большо́е по́ле."
-        ],
-        "id": "x1-3-4"
-       },
-       {
-        "prompt": "Э́то ру́сский го́род. (река́) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Э́то ру́сская река́."
-        ],
-        "id": "x1-3-5"
-       },
-       {
-        "prompt": "Э́то ста́рая ка́рта. (уе́зд) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Э́то ста́рый уе́зд."
-        ],
-        "id": "x1-3-6"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-x1-4",
-      "type": "soedini",
-      "title": "Соедини́",
-      "instruction": "Соедини́ два предложе́ния: а.",
-      "hint_en": "Join the two sentences with а (contrast); you may leave out the repeated noun.",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "…, а …",
-       "prompt": "Москва́ — ста́рый го́род. Петербу́рг — но́вый го́род. (а)",
-       "answer": "Москва́ — ста́рый го́род, а Петербу́рг — но́вый го́род."
-      },
-      "items": [
-       {
-        "prompt": "Во́лга там. Москва́ здесь. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Во́лга там, а Москва́ здесь.",
-         "Москва́ здесь, а Во́лга там."
-        ],
-        "id": "x1-4-1"
-       },
-       {
-        "prompt": "Ка́рта больша́я. Берёзовка ма́ленькая. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Ка́рта больша́я, а Берёзовка ма́ленькая.",
-         "Берёзовка ма́ленькая, а Ка́рта больша́я."
-        ],
-        "id": "x1-4-2"
-       },
-       {
-        "prompt": "Губе́рния больша́я. Уе́зд ма́ленький. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Губе́рния больша́я, а уе́зд ма́ленький.",
-         "Уе́зд ма́ленький, а Губе́рния больша́я."
-        ],
-        "id": "x1-4-3"
-       },
-       {
-        "prompt": "Це́рковь ста́рая. Шко́ла но́вая. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Це́рковь ста́рая, а шко́ла но́вая.",
-         "Шко́ла но́вая, а Це́рковь ста́рая."
-        ],
-        "id": "x1-4-4"
-       },
-       {
-        "prompt": "Вот Евро́па. Вот А́зия. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Вот Евро́па, а вот А́зия.",
-         "Вот А́зия, а Вот Евро́па."
-        ],
-        "id": "x1-4-5"
-       }
-      ]
-     }
-    ]
-   },
-   {
-    "id": "ru-mir-01-l01-sec2",
-    "title": "Ряза́нская губе́рния",
-    "segments": [
      {
       "id": "ru-mir-01-l01-s023",
       "text": "Где Ряза́нь?",
@@ -1049,7 +707,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -1067,7 +725,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -1085,7 +743,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 10,
@@ -1097,7 +755,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 18,
@@ -1109,7 +767,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 27,
@@ -1121,7 +779,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -1139,10 +797,210 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
+     {
+      "id": "ru-mir-01-l01-s026a",
+      "text": "Москва́, Петербу́рг, Ряза́нь, Во́лга, Ока́ — на ка́рте.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "на ка́рте",
+        "gloss": "ка́рта → на ка́рте",
+        "gloss_kind": "form"
+       }
+      ],
+      "pins": [
+       {
+        "start": 9,
+        "end": 19,
+        "token": "Петербу́рг",
+        "lemma": "петербург",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 21,
+        "end": 28,
+        "token": "Ряза́нь",
+        "lemma": "рязань",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 38,
+        "end": 42,
+        "token": "Ока́",
+        "lemma": "ока",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l01-x1-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Adjectives agree with the noun: -ый/-ой (м.), -ая (ж.).",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "го́род (м.) → большо́й · страна́ (ж.) → больша́я",
+       "prompt": "Росси́я — больш___ страна́.",
+       "answer": "а́я"
+      },
+      "items": [
+       {
+        "id": "x1-1-1",
+        "prompt": "Москва́ — больш___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́й"
+        ],
+        "explanation": "Москва́ — большо́й го́род."
+       },
+       {
+        "id": "x1-1-2",
+        "prompt": "Петербу́рг — но́в___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ый"
+        ],
+        "explanation": "Петербу́рг — но́вый го́род."
+       },
+       {
+        "id": "x1-1-3",
+        "prompt": "Во́лга — ру́сск___ река́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ая"
+        ],
+        "explanation": "Во́лга — ру́сская река́."
+       },
+       {
+        "id": "x1-1-4",
+        "prompt": "Ка́рта больш___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́я"
+        ],
+        "explanation": "Ка́рта больша́я."
+       },
+       {
+        "id": "x1-1-6",
+        "prompt": "Москва́ — ста́р___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ый"
+        ],
+        "explanation": "Москва́ — ста́рый го́род."
+       },
+       {
+        "id": "x1-1-7",
+        "prompt": "Ока́ — то́же больш___ река́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́я"
+        ],
+        "explanation": "Ока́ — то́же больша́я река́."
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x1-4",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Соедини́ два предложе́ния: а.",
+      "hint_en": "Join the two sentences with а (contrast), in the order given.",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "…, а …",
+       "prompt": "Евро́па здесь. А́зия там. (а)",
+       "answer": "Евро́па здесь, а А́зия там."
+      },
+      "items": [
+       {
+        "id": "x1-4-1",
+        "prompt": "Во́лга там. Москва́ здесь. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Во́лга там, а Москва́ здесь."
+        ]
+       },
+       {
+        "id": "x1-4-5",
+        "prompt": "Вот Евро́па. Вот А́зия. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вот Евро́па, а вот А́зия."
+        ]
+       },
+       {
+        "id": "x1-4-6",
+        "prompt": "Москва́ — ста́рый го́род. Петербу́рг — но́вый го́род. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Москва́ — ста́рый го́род, а Петербу́рг — но́вый го́род.",
+         "Москва́ — ста́рый го́род, а Петербу́рг — но́вый."
+        ]
+       },
+       {
+        "id": "x1-4-7",
+        "prompt": "Ряза́нь не на Во́лге. Ряза́нь на Оке́. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ряза́нь не на Во́лге, а на Оке́.",
+         "Ряза́нь не на Во́лге, а Ряза́нь на Оке́."
+        ]
+       },
+       {
+        "id": "x1-4-8",
+        "prompt": "Во́лга — река́. Москва́ — го́род. (а)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Во́лга — река́, а Москва́ — го́род."
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l01-sec2",
+    "title": "Ряза́нская губе́рния",
+    "segments": [
      {
       "id": "ru-mir-01-l01-s027",
       "text": "А э́то Ряза́нская губе́рния.",
@@ -1184,7 +1042,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        }
       ]
      },
@@ -1193,8 +1051,51 @@
       "text": "Губе́рния — не страна́, но губе́рния то́же больша́я."
      },
      {
+      "id": "ru-mir-01-l01-s028a",
+      "text": "Ряза́нь — го́род, губе́рния — не го́род.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 7,
+        "token": "Ряза́нь",
+        "lemma": "рязань",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 10,
+        "end": 16,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 33,
+        "end": 39,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
       "id": "ru-mir-01-l01-s029",
       "text": "А вот уе́зд: губе́рния больша́я, а уе́зд ма́ленький.",
+      "paragraph_start": true,
       "inference_aids": [
        {
         "type": "gloss",
@@ -1219,7 +1120,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 35,
@@ -1231,7 +1132,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 41,
@@ -1243,7 +1144,49 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s029b",
+      "text": "Где уе́зд? Уе́зд здесь, а Ряза́нь там.",
+      "pins": [
+       {
+        "start": 4,
+        "end": 9,
+        "token": "уе́зд",
+        "lemma": "уезд",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 11,
+        "end": 16,
+        "token": "Уе́зд",
+        "lemma": "уезд",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 26,
+        "end": 33,
+        "token": "Ряза́нь",
+        "lemma": "рязань",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -1274,7 +1217,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 13,
@@ -1286,7 +1229,37 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s030a",
+      "text": "Где уе́здный го́род? В уе́зде.",
+      "pins": [
+       {
+        "start": 4,
+        "end": 12,
+        "token": "уе́здный",
+        "lemma": "уездный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 13,
+        "end": 19,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -1304,7 +1277,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 9,
@@ -1316,7 +1289,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 34,
@@ -1328,13 +1301,22 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
-      "id": "ru-mir-01-l01-s032",
-      "text": "Уе́здный го́род ма́ленький, но там желе́зная доро́га.",
+      "id": "ru-mir-01-l01-s034",
+      "text": "А вот доро́га.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l01-s034a",
+      "text": "Доро́га ста́рая."
+     },
+     {
+      "id": "ru-mir-01-l01-s033",
+      "text": "А э́то желе́зная доро́га: Москва́, Ряза́нь, уе́здный го́род.",
       "inference_aids": [
        {
         "type": "image",
@@ -1355,6 +1337,62 @@
       ],
       "pins": [
        {
+        "start": 2,
+        "end": 6,
+        "token": "э́то",
+        "lemma": "это",
+        "feats": {
+         "pos": "PRCL"
+        },
+        "note": "э́то particle (course default); reviewed by the writer"
+       },
+       {
+        "start": 35,
+        "end": 42,
+        "token": "Ряза́нь",
+        "lemma": "рязань",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 44,
+        "end": 52,
+        "token": "уе́здный",
+        "lemma": "уездный",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 53,
+        "end": 59,
+        "token": "го́род",
+        "lemma": "город",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s035",
+      "text": "Доро́га ста́рая, а желе́зная доро́га — но́вая."
+     },
+     {
+      "id": "ru-mir-01-l01-s032",
+      "text": "Уе́здный го́род ма́ленький, но там желе́зная доро́га.",
+      "pins": [
+       {
         "start": 0,
         "end": 8,
         "token": "Уе́здный",
@@ -1364,7 +1402,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 9,
@@ -1376,7 +1414,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 16,
@@ -1388,139 +1426,13 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
-     },
-     {
-      "id": "ru-mir-01-l01-s033",
-      "text": "Вот желе́зная доро́га: Москва́, Ряза́нь, уе́здный го́род.",
-      "paragraph_start": true,
-      "pins": [
-       {
-        "start": 32,
-        "end": 39,
-        "token": "Ряза́нь",
-        "lemma": "рязань",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 41,
-        "end": 49,
-        "token": "уе́здный",
-        "lemma": "уездный",
-        "feats": {
-         "pos": "ADJF",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 50,
-        "end": 56,
-        "token": "го́род",
-        "lemma": "город",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-s034",
-      "text": "А вот доро́га: уе́здный го́род, по́ле, лес, по́ле — и дере́вня.",
-      "paragraph_start": true,
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "доро́га",
-        "gloss": "доро́га: го́род — дере́вня",
-        "gloss_kind": "example",
-        "covers_lexeme_ids": [
-         "ru-doroga"
-        ]
-       }
-      ],
-      "pins": [
-       {
-        "start": 15,
-        "end": 23,
-        "token": "уе́здный",
-        "lemma": "уездный",
-        "feats": {
-         "pos": "ADJF",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 24,
-        "end": 30,
-        "token": "го́род",
-        "lemma": "город",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 32,
-        "end": 37,
-        "token": "по́ле",
-        "lemma": "поле",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 39,
-        "end": 42,
-        "token": "лес",
-        "lemma": "лес",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 44,
-        "end": 49,
-        "token": "по́ле",
-        "lemma": "поле",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-s035",
-      "text": "Доро́га ста́рая, а желе́зная доро́га — но́вая."
      },
      {
       "id": "ru-mir-01-l01-s036",
-      "text": "Ока́ — река́ и́ли го́род? Река́.",
+      "text": "Ока́ — река́ и́ли го́род? Река́. Ряза́нь — река́ и́ли го́род? Го́род.",
       "paragraph_start": true,
       "inference_aids": [
        {
@@ -1545,7 +1457,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 18,
@@ -1557,17 +1469,11 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-s037",
-      "text": "Ряза́нь — река́ и́ли го́род? Го́род.",
-      "pins": [
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
        {
-        "start": 0,
-        "end": 7,
+        "start": 33,
+        "end": 40,
         "token": "Ряза́нь",
         "lemma": "рязань",
         "feats": {
@@ -1575,11 +1481,11 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
-        "start": 21,
-        "end": 27,
+        "start": 54,
+        "end": 60,
         "token": "го́род",
         "lemma": "город",
         "feats": {
@@ -1587,11 +1493,11 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
-        "start": 29,
-        "end": 35,
+        "start": 62,
+        "end": 68,
         "token": "Го́род",
         "lemma": "город",
         "feats": {
@@ -1599,17 +1505,30 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s038",
-      "text": "А Берёзовка — го́род и́ли дере́вня?",
+      "text": "Берёзовка — го́род и́ли дере́вня? Дере́вня!",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "дере́вня",
+        "gloss": "го́род ↔ дере́вня",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-gorod",
+         "ru-derevnya"
+        ]
+       }
+      ],
       "pins": [
        {
-        "start": 14,
-        "end": 20,
+        "start": 12,
+        "end": 18,
         "token": "го́род",
         "lemma": "город",
         "feats": {
@@ -1617,249 +1536,83 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
-     },
-     {
-      "id": "ru-mir-01-l01-s039",
-      "text": "Дере́вня!"
      }
     ],
     "exercises": [
-     {
-      "id": "ru-mir-01-l01-x2-1",
-      "type": "okonchaniya",
-      "title": "Оконча́ния",
-      "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "For these nouns: что? -а/-я; где? в/на + -е.",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "Вот Ока́. → Где? На Оке́.",
-       "prompt": "Ряза́нь на Ок___.",
-       "answer": "е́"
-      },
-      "items": [
-       {
-        "prompt": "Вот Ок___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "а́"
-        ],
-        "explanation": "Вот Ока́.",
-        "id": "x2-1-1"
-       },
-       {
-        "prompt": "Вот дере́вн___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "я"
-        ],
-        "explanation": "Вот дере́вня.",
-        "id": "x2-1-2"
-       },
-       {
-        "prompt": "Где Ива́н? В дере́вн___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "е"
-        ],
-        "explanation": "Где Ива́н? В дере́вне.",
-        "id": "x2-1-3"
-       },
-       {
-        "prompt": "Вот Москв___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "а́"
-        ],
-        "explanation": "Вот Москва́.",
-        "id": "x2-1-4"
-       },
-       {
-        "prompt": "Ива́н не в Москв___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "е́"
-        ],
-        "explanation": "Ива́н не в Москве́.",
-        "id": "x2-1-5"
-       },
-       {
-        "prompt": "Вот река́. Берёзовка на рек___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "е́"
-        ],
-        "explanation": "Вот река́. Берёзовка на реке́.",
-        "id": "x2-1-6"
-       },
-       {
-        "prompt": "Вот Во́лг___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "а"
-        ],
-        "explanation": "Вот Во́лга.",
-        "id": "x2-1-7"
-       },
-       {
-        "prompt": "Москва́ не на Во́лг___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "е"
-        ],
-        "explanation": "Москва́ не на Во́лге.",
-        "id": "x2-1-8"
-       }
-      ]
-     },
      {
       "id": "ru-mir-01-l01-x2-2",
       "type": "otvet",
       "title": "Отве́ть",
       "instruction": "Отве́ть на вопро́с. Сло́во в ско́бках поста́вь в ну́жную фо́рму.",
-      "hint_en": "For these nouns: где? в/на + -е (Москва́ → в Москве́; a town on a river: на Оке́).",
+      "hint_en": "Where? в/на + -е (Москва́ → в Москве́; a town on a river: на Оке́).",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
-       "rule": "Где? в Москве́, на Оке́",
-       "prompt": "Где Ряза́нь? (Ока́) — Ряза́нь на ___.",
-       "answer": "Оке́"
+       "rule": "Где? в Евро́пе, на Оке́",
+       "prompt": "Где Москва́? (Евро́па) — Москва́ в ___.",
+       "answer": "Евро́пе"
       },
       "items": [
        {
-        "prompt": "Где Ива́н? (дере́вня) — Ива́н в ___.",
+        "id": "x2-2-7",
+        "prompt": "Где Ряза́нь? (Ока́) — Ряза́нь на ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "дере́вне"
+         "Оке́"
         ],
-        "id": "x2-2-1",
         "source_segment_ids": [
-         "ru-mir-01-l01-s059"
+         "ru-mir-01-l01-s024"
         ]
        },
        {
-        "prompt": "Где шко́ла? (Берёзовка) — Шко́ла в ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Берёзовке"
-        ],
-        "id": "x2-2-2"
-       },
-       {
-        "prompt": "Где Петербу́рг? (Евро́па) — Петербу́рг в ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Евро́пе"
-        ],
-        "id": "x2-2-3"
-       },
-       {
-        "prompt": "Где Берёзовка? (уе́зд) — Берёзовка в ___.",
+        "id": "x2-2-8",
+        "prompt": "Где уе́здный го́род? (уе́зд) — Уе́здный го́род в ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "уе́зде"
         ],
-        "id": "x2-2-4"
+        "source_segment_ids": [
+         "ru-mir-01-l01-s030a"
+        ]
        },
        {
-        "prompt": "Где желе́зная доро́га? (го́род) — Желе́зная доро́га в ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "го́роде"
-        ],
-        "id": "x2-2-5"
-       },
-       {
-        "prompt": "Где Москва́? (ка́рта) — Москва́ на ___.",
+        "id": "x2-2-10",
+        "prompt": "Где Берёзовка? (ка́рта) — Берёзовка на ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "ка́рте"
         ],
-        "id": "x2-2-6"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-x2-3",
-      "type": "soedini",
-      "title": "Соедини́",
-      "instruction": "Соедини́ два предложе́ния: но.",
-      "hint_en": "Join with но (but).",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "…, но …",
-       "prompt": "Уе́здный го́род ма́ленький. Там желе́зная доро́га. (но)",
-       "answer": "Уе́здный го́род ма́ленький, но там желе́зная доро́га."
-      },
-      "items": [
-       {
-        "prompt": "Губе́рния — не страна́. Губе́рния то́же больша́я. (но)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Губе́рния — не страна́, но губе́рния то́же больша́я.",
-         "Губе́рния — не страна́, но то́же больша́я."
-        ],
-        "id": "x2-3-1"
+        "source_segment_ids": [
+         "ru-mir-01-l01-s026a"
+        ]
        },
        {
-        "prompt": "Ока́ не Во́лга. Ока́ то́же больша́я река́. (но)",
+        "id": "x2-2-3",
+        "prompt": "Где Петербу́рг? (Евро́па) — Петербу́рг в ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Ока́ не Во́лга, но Ока́ то́же больша́я река́.",
-         "Ока́ не Во́лга, но то́же больша́я река́."
-        ],
-        "id": "x2-3-2"
+         "Евро́пе"
+        ]
        },
        {
-        "prompt": "Берёзовка ма́ленькая. Там це́рковь и шко́ла. (но)",
+        "id": "x2-2-9",
+        "prompt": "Где Ряза́нь? (Во́лга) — Ряза́нь не на ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Берёзовка ма́ленькая, но там це́рковь и шко́ла."
+         "Во́лге"
         ],
-        "id": "x2-3-3"
-       },
-       {
-        "prompt": "Доро́га ста́рая. Желе́зная доро́га но́вая. (но)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Доро́га ста́рая, но желе́зная доро́га но́вая."
-        ],
-        "id": "x2-3-4"
-       },
-       {
-        "prompt": "Уса́дьба больша́я. Уса́дьба не в дере́вне. (но)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Уса́дьба больша́я, но не в дере́вне.",
-         "Уса́дьба больша́я, но уса́дьба не в дере́вне."
-        ],
-        "id": "x2-3-5"
+        "source_segment_ids": [
+         "ru-mir-01-l01-s026"
+        ]
        }
       ]
      },
@@ -1879,49 +1632,49 @@
       },
       "items": [
        {
+        "id": "x2-4-1",
         "prompt": "Ряза́нь — го́род. (дере́вня) →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Ряза́нь — го́род и́ли дере́вня?"
-        ],
-        "id": "x2-4-1"
+        ]
        },
        {
+        "id": "x2-4-2",
         "prompt": "Росси́я — страна́. (губе́рния) →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Росси́я — страна́ и́ли губе́рния?"
-        ],
-        "id": "x2-4-2"
+        ]
        },
        {
+        "id": "x2-4-3",
         "prompt": "Во́лга — река́. (го́род) →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Во́лга — река́ и́ли го́род?"
-        ],
-        "id": "x2-4-3"
+        ]
        },
        {
-        "prompt": "Шко́ла но́вая. (ста́рая) →",
+        "id": "x2-4-6",
+        "prompt": "Доро́га ста́рая. (но́вая) →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Шко́ла но́вая и́ли ста́рая?"
-        ],
-        "id": "x2-4-4"
+         "Доро́га ста́рая и́ли но́вая?"
+        ]
        },
        {
+        "id": "x2-4-5",
         "prompt": "Уе́зд ма́ленький. (большо́й) →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Уе́зд ма́ленький и́ли большо́й?"
-        ],
-        "id": "x2-4-5"
+        ]
        }
       ]
      }
@@ -1933,7 +1686,7 @@
     "segments": [
      {
       "id": "ru-mir-01-l01-s040",
-      "text": "Вот доро́га, вот по́ле, вот лес — и вот Берёзовка.",
+      "text": "Вот доро́га — и вот Берёзовка.",
       "paragraph_start": true,
       "inference_aids": [
        {
@@ -1942,7 +1695,7 @@
         "ref": "ru-mir-01-l01-img-berezovka",
         "src": "media/images/ru-mir-01-l01-img-berezovka.webp",
         "alt": "The village of Beryozovka seen from a hill: a small river, a wooden church, a new log school, a row of izbas, fields and a forest, and far off a manor house among trees.",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "Late spring 1913, morning light. View from a low hill over a Ryazan village of about sixty log houses (izbas) along a small river with willows and a footbridge. A wooden church with one onion dome in the middle; a new log school with a plank roof at the edge; vegetable gardens; narrow strips of fields beyond; a dark pine-and-birch forest on the right; far off, among old trees, a white two-storey manor house with columns. A dirt road leaves the village towards the horizon. No people in focus, no text.",
         "covers_lexeme_ids": [
          "ru-derevnya",
@@ -1951,39 +1704,15 @@
          "ru-pole",
          "ru-les",
          "ru-usadba"
-        ]
-       }
-      ],
-      "pins": [
-       {
-        "start": 17,
-        "end": 22,
-        "token": "по́ле",
-        "lemma": "поле",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
-       {
-        "start": 28,
-        "end": 31,
-        "token": "лес",
-        "lemma": "лес",
-        "feats": {
-         "pos": "NOUN",
-         "case": "nomn",
-         "number": "sing"
-        },
-        "note": "auto (default nomn); reviewed by the writer"
+        ],
+        "width": 1600,
+        "height": 1073
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s041",
-      "text": "Где Берёзовка? На ка́рте? Нет!"
+      "text": "Берёзовка на ка́рте? Да, вот Берёзовка."
      },
      {
       "id": "ru-mir-01-l01-s042",
@@ -2005,7 +1734,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        },
        {
         "start": 38,
@@ -2017,7 +1746,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -2058,7 +1787,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -2076,7 +1805,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -2094,7 +1823,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -2112,14 +1841,32 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s050",
-      "text": "Вот по́ле, а там — лес.",
+      "text": "Вот по́ле.",
       "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l01-img-pole",
+        "anchor_text": "по́ле",
+        "label": "по́ле",
+        "src": "media/vignettes/ru-mir-01-l01-img-pole.svg",
+        "alt": "A flat open field under a wide sky, strips of ploughed and green land, no buildings.",
+        "status": "draft",
+        "art_brief": "Hand-authored SVG vignette: an open field with narrow strips, central Russia, spring; no text.",
+        "covers_lexeme_ids": [
+         "ru-pole"
+        ],
+        "width": 320,
+        "height": 200
+       }
+      ],
       "pins": [
        {
         "start": 4,
@@ -2131,11 +1878,35 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
-       },
+        "note": "nominative in an identification sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s050a",
+      "text": "А там — лес.",
+      "inference_aids": [
        {
-        "start": 19,
-        "end": 22,
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l01-img-les",
+        "anchor_text": "лес",
+        "label": "лес",
+        "src": "media/vignettes/ru-mir-01-l01-img-les.svg",
+        "alt": "A dense wood of pines and birches at the edge of a field.",
+        "status": "draft",
+        "art_brief": "Hand-authored SVG vignette: a pine-and-birch forest edge, central Russia; no text.",
+        "covers_lexeme_ids": [
+         "ru-les"
+        ],
+        "width": 320,
+        "height": 200
+       }
+      ],
+      "pins": [
+       {
+        "start": 8,
+        "end": 11,
         "token": "лес",
         "lemma": "лес",
         "feats": {
@@ -2143,7 +1914,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -2161,7 +1932,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in an identification sentence; reviewed by the writer"
        },
        {
         "start": 6,
@@ -2173,7 +1944,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 18,
@@ -2185,7 +1956,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 28,
@@ -2197,14 +1968,13 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s052",
       "text": "А что там?",
-      "paragraph_start": true,
       "pins": [
        {
         "start": 2,
@@ -2216,7 +1986,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "interrogative что; reviewed by the writer"
        }
       ]
      },
@@ -2250,7 +2020,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        }
       ]
      },
@@ -2263,8 +2033,32 @@
       "text": "Уса́дьба — не дере́вня: уса́дьба там, а дере́вня здесь."
      },
      {
+      "id": "ru-mir-01-l01-s055a",
+      "text": "Це́рковь и шко́ла — в дере́вне, а уса́дьба — не в дере́вне.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 8,
+        "token": "Це́рковь",
+        "lemma": "церковь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-s060",
+      "text": "— Здра́вствуйте! Меня́ зову́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
       "id": "ru-mir-01-l01-s056",
-      "text": "А кто э́то?",
+      "text": "Кто э́то?",
       "paragraph_start": true
      },
      {
@@ -2279,7 +2073,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        }
       ]
      },
@@ -2297,13 +2091,13 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s059",
-      "text": "Где Ива́н? В по́ле? Нет. В уса́дьбе? Нет! Ива́н здесь, в Берёзовке.",
+      "text": "Где Ива́н? В Москве́? Нет. В по́ле? Нет. Ива́н здесь, в Берёзовке.",
       "inference_aids": [
        {
         "type": "image",
@@ -2311,34 +2105,31 @@
         "ref": "ru-mir-01-l01-img-ivan",
         "src": "media/images/ru-mir-01-l01-img-ivan.webp",
         "alt": "Ivan, a tall young peasant of nineteen, stands at the open door of a log house in the morning, cap in hand, looking at the reader.",
-        "status": "planned",
+        "status": "draft",
         "art_brief": "Spring 1913, early morning. The low door of a grey log izba with carved window frames. Ivan Sokolov (19, tall, fair-haired, beardless, belted linen shirt, dark trousers tucked into boots, peaked cap in his hand) stands in the doorway and looks straight out, friendly and a little shy. A dog's nose (Шарик, a shaggy grey-and-white mongrel) peeks from behind his legs. No text.",
         "characters": [
          "char-ivan"
         ],
         "covers_lexeme_ids": [
          "ru-russkij"
-        ]
+        ],
+        "width": 1600,
+        "height": 1073
        }
       ]
      },
      {
-      "id": "ru-mir-01-l01-s060",
-      "text": "— Здра́вствуйте! Меня́ зову́т Ива́н.",
-      "paragraph_start": true,
-      "speaker": "char-ivan"
-     },
-     {
       "id": "ru-mir-01-l01-s061",
-      "text": "Мне девятна́дцать лет.",
+      "text": "— Мне девятна́дцать лет.",
+      "paragraph_start": true,
       "speaker": "char-ivan",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "девятна́дцать",
-        "gloss": "девятна́дцать = 19",
-        "gloss_kind": "number"
+        "gloss": "девятна́дцать: 19",
+        "gloss_kind": "example"
        }
       ]
      },
@@ -2355,7 +2146,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        },
        {
         "start": 20,
@@ -2365,7 +2156,7 @@
         "feats": {
          "pos": "PRCL"
         },
-        "note": "auto (это particle); reviewed by the writer"
+        "note": "э́то particle (course default); reviewed by the writer"
        }
       ]
      },
@@ -2384,7 +2175,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 30,
@@ -2396,7 +2187,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in an identification sentence; reviewed by the writer"
        },
        {
         "start": 38,
@@ -2408,18 +2199,23 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s064",
-      "text": "Где Москва́? Москва́ там, и Ряза́нь то́же там.",
+      "text": "Где Москва́? Москва́ там.",
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l01-s064a",
+      "text": "Ряза́нь то́же там, и Петербу́рг то́же там.",
       "speaker": "char-ivan",
       "pins": [
        {
-        "start": 28,
-        "end": 35,
+        "start": 0,
+        "end": 7,
         "token": "Ряза́нь",
         "lemma": "рязань",
         "feats": {
@@ -2427,7 +2223,19 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
+       },
+       {
+        "start": 21,
+        "end": 31,
+        "token": "Петербу́рг",
+        "lemma": "петербург",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing"
+        },
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
@@ -2446,7 +2254,7 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        },
        {
         "start": 19,
@@ -2458,109 +2266,17 @@
          "case": "nomn",
          "number": "sing"
         },
-        "note": "auto (default nomn); reviewed by the writer"
+        "note": "nominative in a verbless G01 sentence; reviewed by the writer"
        }
       ]
      },
      {
       "id": "ru-mir-01-l01-s066",
-      "text": "А как вас зову́т?",
+      "text": "Меня́ зову́т Ива́н. А как вас зову́т?",
       "speaker": "char-ivan"
      }
     ],
     "exercises": [
-     {
-      "id": "ru-mir-01-l01-x3-1",
-      "type": "okonchaniya",
-      "title": "Оконча́ния",
-      "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "Adjective endings (-ый/-ой/-ий, -ая, -ое) and в/на + -е.",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "По́ле большо́е. · Це́рковь (ж.) ста́рая.",
-       "prompt": "Це́рковь ста́р___.",
-       "answer": "ая"
-      },
-      "items": [
-       {
-        "prompt": "Шко́ла но́в___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ая"
-        ],
-        "explanation": "Шко́ла но́вая.",
-        "id": "x3-1-1"
-       },
-       {
-        "prompt": "По́ле больш___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "о́е"
-        ],
-        "explanation": "По́ле большо́е.",
-        "id": "x3-1-2"
-       },
-       {
-        "prompt": "Лес то́же больш___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "о́й"
-        ],
-        "explanation": "Лес то́же большо́й.",
-        "id": "x3-1-3"
-       },
-       {
-        "prompt": "Ива́н не в по́л___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "е"
-        ],
-        "explanation": "Ива́н не в по́ле.",
-        "id": "x3-1-4"
-       },
-       {
-        "prompt": "Берёзовка в уе́зд___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "е"
-        ],
-        "explanation": "Берёзовка в уе́зде.",
-        "id": "x3-1-5"
-       },
-       {
-        "prompt": "Уса́дьба больш___ и ста́р___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "blanks": [
-         [
-          "ая"
-         ],
-         [
-          "ая"
-         ]
-        ],
-        "explanation": "Уса́дьба больша́я и ста́рая.",
-        "id": "x3-1-6"
-       },
-       {
-        "prompt": "Река́ ма́леньк___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ая"
-        ],
-        "explanation": "Река́ ма́ленькая.",
-        "id": "x3-1-7"
-       }
-      ]
-     },
      {
       "id": "ru-mir-01-l01-x3-2",
       "type": "preobrazovanie",
@@ -2577,197 +2293,114 @@
       },
       "items": [
        {
+        "id": "x3-2-1",
         "prompt": "Шко́ла здесь. →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Где шко́ла?"
-        ],
-        "id": "x3-2-1"
+        ]
        },
        {
+        "id": "x3-2-2",
         "prompt": "Лес там. →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Где лес?"
-        ],
-        "id": "x3-2-2"
+        ]
        },
        {
-        "prompt": "Москва́ в Росси́и. →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Где Москва́?"
-        ],
-        "id": "x3-2-3"
-       },
-       {
+        "id": "x3-2-4",
         "prompt": "Ряза́нь на Оке́. →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Где Ряза́нь?"
-        ],
-        "id": "x3-2-4"
+        ]
        },
        {
+        "id": "x3-2-5",
         "prompt": "Уса́дьба там. →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Где уса́дьба?"
-        ],
-        "id": "x3-2-5"
+        ]
        },
        {
+        "id": "x3-2-6",
         "prompt": "Берёзовка на реке́. →",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Где Берёзовка?"
-        ],
-        "id": "x3-2-6"
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l01-x3-3",
-      "type": "otvet",
-      "title": "Отве́ть",
-      "instruction": "Отве́ть по те́ксту: здесь и́ли там?",
-      "hint_en": "Answer from the story: здесь or там.",
-      "grammar_target_ids": [
-       "G01"
-      ],
-      "obrazec": {
-       "rule": "здесь ↔ там",
-       "prompt": "Уса́дьба там, а дере́вня ___.",
-       "answer": "здесь"
-      },
-      "items": [
-       {
-        "prompt": "Шко́ла здесь, а це́рковь ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "там"
-        ],
-        "id": "x3-3-1",
-        "source_segment_ids": [
-         "ru-mir-01-l01-s049"
-        ]
-       },
-       {
-        "prompt": "Во́лга там, а Москва́ ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "здесь"
-        ],
-        "id": "x3-3-2",
-        "source_segment_ids": [
-         "ru-mir-01-l01-s020"
-        ]
-       },
-       {
-        "prompt": "Вот по́ле, а ___ — лес.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "там"
-        ],
-        "id": "x3-3-3",
-        "source_segment_ids": [
-         "ru-mir-01-l01-s050"
-        ]
-       },
-       {
-        "prompt": "Где Ива́н? В по́ле? Нет, Ива́н ___, в Берёзовке.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "здесь"
-        ],
-        "id": "x3-3-4",
-        "source_segment_ids": [
-         "ru-mir-01-l01-s059"
-        ]
-       },
-       {
-        "prompt": "Где Ряза́нь? Вот Ряза́нь, ___, на Оке́.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "здесь"
-        ],
-        "id": "x3-3-5",
-        "source_segment_ids": [
-         "ru-mir-01-l01-s024"
         ]
        }
       ]
      },
      {
-      "id": "ru-mir-01-l01-x3-4",
+      "id": "ru-mir-01-l01-x3-5",
       "type": "soedini",
       "title": "Соедини́",
-      "instruction": "Соедини́ два предложе́ния: не … и не ….",
-      "hint_en": "Join two negatives: «не A и не B».",
+      "instruction": "Соедини́ два предложе́ния: но.",
+      "hint_en": "Join with но (but), in the order given.",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
-       "rule": "не … и не …",
-       "prompt": "Э́то не Во́лга. Э́то не Ока́. →",
-       "answer": "Э́то не Во́лга и не Ока́."
+       "rule": "…, но …",
+       "prompt": "Уе́здный го́род ма́ленький. Там желе́зная доро́га. (но)",
+       "answer": "Уе́здный го́род ма́ленький, но там желе́зная доро́га."
       },
       "items": [
        {
-        "prompt": "Уе́здный го́род — не Москва́. Уе́здный го́род — не Ряза́нь. →",
+        "id": "x3-5-1",
+        "prompt": "Губе́рния — не страна́. Губе́рния то́же больша́я. (но)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Уе́здный го́род — не Москва́ и не Ряза́нь."
-        ],
-        "id": "x3-4-1"
+         "Губе́рния — не страна́, но губе́рния то́же больша́я.",
+         "Губе́рния — не страна́, но то́же больша́я."
+        ]
        },
        {
-        "prompt": "Берёзовка — не го́род. Берёзовка — не губе́рния. →",
+        "id": "x3-5-2",
+        "prompt": "Ока́ — не Во́лга. Ока́ то́же больша́я река́. (но)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Берёзовка — не го́род и не губе́рния."
-        ],
-        "id": "x3-4-2"
+         "Ока́ — не Во́лга, но Ока́ то́же больша́я река́.",
+         "Ока́ — не Во́лга, но то́же больша́я река́."
+        ]
        },
        {
-        "prompt": "Ива́н не в по́ле. Ива́н не в Москве́. →",
+        "id": "x3-5-3",
+        "prompt": "Берёзовка ма́ленькая. Там це́рковь и шко́ла. (но)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Ива́н не в по́ле и не в Москве́."
-        ],
-        "id": "x3-4-3"
+         "Берёзовка ма́ленькая, но там це́рковь и шко́ла."
+        ]
        },
        {
-        "prompt": "Уса́дьба — не шко́ла. Уса́дьба — не це́рковь. →",
+        "id": "x3-5-4",
+        "prompt": "Доро́га ста́рая. Желе́зная доро́га но́вая. (но)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Уса́дьба — не шко́ла и не це́рковь."
-        ],
-        "id": "x3-4-4"
+         "Доро́га ста́рая, но желе́зная доро́га но́вая."
+        ]
        },
        {
-        "prompt": "Ока́ — не го́род. Ока́ — не дере́вня. →",
+        "id": "x3-5-5",
+        "prompt": "Уса́дьба больша́я. Уса́дьба не в дере́вне. (но)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Ока́ — не го́род и не дере́вня."
-        ],
-        "id": "x3-4-5"
+         "Уса́дьба больша́я, но уса́дьба не в дере́вне.",
+         "Уса́дьба больша́я, но не в дере́вне."
+        ]
        }
       ]
      },
@@ -3669,13 +3302,13 @@
   }
  ],
  "media": {
-  "status": "partial",
-  "cover": "ru-mir-01-l01-cover",
+  "status": "draft",
+  "cover": "ru-mir-01-l01-svg-cover-map",
   "counts": {
    "cover": 1,
    "inline_scene": 2,
-   "margin_vignette": 3,
-   "margin_diagram": 2,
+   "margin_vignette": 5,
+   "margin_diagram": 1,
    "margin_gloss": 13
   },
   "audio_sources": [
@@ -3700,8 +3333,8 @@
   ]
  },
  "metrics": {
-  "running_words": 345,
-  "sentences": 66,
+  "running_words": 386,
+  "sentences": 77,
   "word_target": 400,
   "word_window": [
    360,
