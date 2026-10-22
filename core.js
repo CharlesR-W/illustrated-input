@@ -290,6 +290,105 @@
     get buildAnkiCards() { return buildRuAnkiCards; }, get isCourse() { return isRussianCourse; }
   };
 
+  // Icelandic §8.3: accents and ö are phonemic, never folded for correctness.
+  function isNormalise(value) {
+    return String(value ?? "").normalize("NFC").toLowerCase()
+      .replace(/\p{P}/gu, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function isFixLookalikes(value) {
+    const letters = { ø: "ö", đ: "ð", ä: "æ", Ø: "Ö", Đ: "Ð", Ä: "Æ" };
+    const found = [];
+    const text = String(value ?? "").replace(/[øđäØĐÄ]/g, (letter) => {
+      found.push(letter); return letters[letter];
+    });
+    return { text, found };
+  }
+
+  // Match only a documented keyboard substitution in the direction typed → expected.
+  // Do not merge d/ð or o/ö on both sides: an actual Icelandic word stays a wrong answer.
+  function isKeyboardMatch(typed, expected) {
+    const substitutions = { þ: ["th"], ð: ["dh", "d"], æ: ["ae"], ö: ["oe", "o"] };
+    const pattern = [...expected].map((letter) => substitutions[letter]
+      ? `(?:${[letter, ...substitutions[letter]].map(escapeRegExp).join("|")})` : escapeRegExp(letter)).join("");
+    return new RegExp(`^${pattern}$`, "u").test(typed);
+  }
+
+  function isFoldAcute(value) {
+    return String(value).normalize("NFD").replace(/\u0301/g, "").normalize("NFC");
+  }
+
+  function isCheckSlot(value, answers, item, options = {}) {
+    const fixed = isFixLookalikes(value);
+    const lookalike = fixed.found;
+    const typed = isNormalise(fixed.text);
+    if (!typed) return { status: "empty", lookalike };
+    const originals = asList(answers);
+    const expected = originals.map(isNormalise);
+    if (expected.includes(typed)) return { status: "correct", lookalike };
+    for (const wrong of asList(item?.common_wrong)) {
+      const answer = typeof wrong === "string" ? wrong : wrong?.answer;
+      if (answer && isNormalise(isFixLookalikes(answer).text) === typed) return { status: "common_wrong", hint: wrong.hint || "", lookalike };
+    }
+    const tokens = typed.split(" ");
+    for (let i = 0; i < expected.length; i += 1) {
+      if (!isKeyboardMatch(typed, expected[i])) continue;
+      const target = expected[i].split(" ");
+      const changed = tokens.filter((token, index) => token !== target[index]);
+      // A missing dictionary result is unknown, not proof that a word is invalid.
+      const invalid = changed.every((token) => options.validWords?.[token] === false);
+      return { status: invalid ? "correct_letters" : "ambiguous_letters", answer: originals[i], lookalike };
+    }
+    if (expected.some((answer) => isFoldAcute(answer) === isFoldAcute(typed))) return { status: "accent", lookalike };
+    for (const answer of expected) {
+      const target = answer.split(" ");
+      if (target.length !== tokens.length) continue;
+      const different = target.map((token, i) => token === tokens[i] ? -1 : i).filter((i) => i >= 0);
+      if (different.length !== 1) continue;
+      const index = different[0];
+      const entry = options.forms?.[target[index]];
+      if (!entry || Array.isArray(entry)) continue;
+      const forms = asList(entry.forms).map((form) => typeof form === "string" ? form : form.form);
+      if (!forms.some((form) => isNormalise(form) === tokens[index])) continue;
+      // Feature hints are safe only when each form has a single analysis.
+      const expectedFeatures = entry.features_by_form?.[target[index]];
+      const typedFeatures = entry.features_by_form?.[tokens[index]];
+      let feature;
+      if (expectedFeatures && typedFeatures && !Array.isArray(expectedFeatures) && !Array.isArray(typedFeatures)) {
+        const differences = [...new Set([...Object.keys(expectedFeatures), ...Object.keys(typedFeatures)])]
+          .filter((key) => expectedFeatures[key] !== typedFeatures[key]);
+        if (differences.length === 1 && ["case", "number", "tense", "mood"].includes(differences[0])) feature = differences[0];
+      }
+      return { status: "ending", feature, tokenIndex: index, token: tokens[index], lookalike };
+    }
+    return { status: "wrong", lookalike };
+  }
+
+  function isCheckResponse(item, values, options = {}) {
+    const given = asList(values);
+    const slots = slotAnswers(item).map((answers, i) => isCheckSlot(given[i] ?? "", answers, item, options));
+    const good = (slot) => ["correct", "correct_letters"].includes(slot.status);
+    const failure = slots.find((slot) => !good(slot));
+    const selected = failure || slots.find((slot) => slot.status === "correct_letters") || slots[0];
+    const status = slots.every((slot) => slot.status === "empty") ? "empty" : selected.status === "empty" ? "wrong" : selected.status;
+    return { ...selected, status, slots, hint: selected.hint || "", token: selected.token || "",
+      lookalike: [...new Set(slots.flatMap((slot) => slot.lookalike || []))] };
+  }
+
+  const is = { normalise: isNormalise, fixLookalikes: isFixLookalikes, checkSlot: isCheckSlot, checkResponse: isCheckResponse };
+
+  function answerChecker(course) {
+    const lang = course?.answer_checker || course?.lang || course?.language?.code || "cy";
+    if (lang === "ru") return ru;
+    if (lang === "is") return is;
+    if (lang === "cy") return { normalise, checkResponse };
+    throw new Error(`Unsupported answer checker: ${lang}`);
+  }
+
+  function isInflectingCourse(course) {
+    return course?.capabilities?.inflecting === true || course?.anki?.mode === "inflecting" || isRussianCourse(course);
+  }
+
   // --------------------------------------------------------------- anchors
 
   function escapeRegExp(value) {
@@ -502,12 +601,12 @@
 
   const ruKey = (value) => ruFoldYo(ruNormalise(value));
 
-  function ruBold(sentence, target) {
+  function ruBold(sentence, target, key = ruKey) {
     const text = String(sentence ?? "").normalize("NFC");
-    const want = ruKey(target);
+    const want = key(target);
     if (!want) return escapeHtml(text);
     for (const match of text.matchAll(/[\p{L}\u0300-\u036f]+(?:-[\p{L}\u0300-\u036f]+)*/gu)) {
-      if (ruKey(match[0]) !== want) continue;
+      if (key(match[0]) !== want) continue;
       const end = match.index + match[0].length;
       return `${escapeHtml(text.slice(0, match.index))}<b>${escapeHtml(match[0])}</b>${escapeHtml(text.slice(end))}`;
     }
@@ -523,8 +622,13 @@
   function buildRuAnkiCards({ course, lexicon, lessons, lessonIds, lessonLabels = {}, known = [], includeKnown = false } = {}) {
     const courseId = course?.id || lexicon?.course_id || "course";
     const lessonMap = asLessonMap(lessons);
-    const knownSet = new Set(includeKnown ? [] : asList(known).map((k) => (/^[a-z]{2,3}-/.test(k) ? k : ruKey(k))));
-    const isKnown = (entry) => entry && (knownSet.has(entry.id) || (entry.lemma && knownSet.has(ruKey(entry.lemma))));
+    const legacyRussian = isRussianCourse(course);
+    const checker = answerChecker(course);
+    const key = legacyRussian ? ruKey : checker.normalise;
+    const chapterTag = course?.anki?.chapter_tag || (legacyRussian ? "glava" : "chapter");
+    const partTag = course?.anki?.part_tag || (legacyRussian ? "chast" : "part");
+    const knownSet = new Set(includeKnown ? [] : asList(known).map((k) => (/^[a-z]{2,3}-/.test(k) ? k : key(k))));
+    const isKnown = (entry) => entry && (knownSet.has(entry.id) || (entry.lemma && knownSet.has(key(entry.lemma))));
     const all = lexiconStages(lexicon);
     const base = course?.anki?.tags_base?.length ? course.anki.tags_base : [courseId];
     const cards = [];
@@ -535,7 +639,7 @@
       const order = lesson?.order ?? Number((/-l(\d+)$/.exec(lessonId) || [])[1]);
       const part = lesson?.part ?? lesson?.rhan;
       const label = lessonLabels[lessonId] || "";
-      const lessonTags = [`glava-${String(order).padStart(2, "0")}`, ...(part ? [`chast-${part}`] : []), ...asList(lesson?.anki_export?.tags)];
+      const lessonTags = [`${chapterTag}-${String(order).padStart(2, "0")}`, ...(part ? [`${partTag}-${part}`] : []), ...asList(lesson?.anki_export?.tags)];
       for (const stage of all.filter((st) => st.lesson === lessonId)) {
         const entry = stage._entry;
         const stageId = stage.id || "base";
@@ -547,12 +651,12 @@
         const exampleIds = asList(stage.example_segment_ids?.length ? stage.example_segment_ids : stage.example_segment_id);
         const boldTarget = stage.cloze?.answer || headWord(stage.front);
         const examples = exampleIds.map((id) => segments.get(id)?.text).filter(Boolean)
-          .map((text) => (isPattern ? escapeHtml(text) : ruBold(text, boldTarget)));
+          .map((text) => (isPattern ? escapeHtml(text) : ruBold(text, boldTarget, key)));
         if (!examples.length && stage.example) examples.push(escapeHtml(stage.example));
         let back = escapeHtml(stage.back);
         if (examples.length) back += `<br><br>${examples.join("<br>")}`;
         if (label) back += `<br><small>${escapeHtml(label)}</small>`;
-        const recognition = `${courseId}:${lexemeId}:${stageId}:recognition`;
+        const recognition = `${courseId}:${lexemeId}:${stageId}${legacyRussian ? ":recognition" : ""}`;
         if (lexemeId && !seen.has(recognition)) {
           seen.add(recognition);
           cards.push({ guid: recognition, front: escapeHtml(stage.front), back, tags: tags("recognition"), source: lessonId });
@@ -563,7 +667,7 @@
         const range = findAnchor(sentence, String(cloze.answer).normalize("NFC")); // whole word, never inside one
         const at = range ? range.start : -1;
         const answer = range ? sentence.slice(range.start, range.end) : "";
-        const production = `${courseId}:${lexemeId}:${stageId}:production`;
+        const production = `${courseId}:${lexemeId}:${stageId}${legacyRussian ? ":production" : "-production"}`;
         if (at < 0 || seen.has(production)) continue;
         seen.add(production);
         const hint = cloze.hint || headWord(stage.front);
@@ -577,7 +681,7 @@
   }
 
   function ankiExport(options = {}) {
-    if (isRussianCourse(options.course)) {
+    if (isInflectingCourse(options.course)) {
       const cards = buildRuAnkiCards(options);
       const headers = options.headers ?? options.course?.anki?.file_headers;
       return { cards, text: buildAnkiTsv(cards, { deck: options.deck ?? ankiDeckName(options.course), notetype: options.notetype, headers }) };
@@ -599,7 +703,7 @@
     containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, normaliseRu: ruNormalise
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
@@ -608,7 +712,7 @@
       containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, normaliseRu: ruNormalise
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
     };
   }
   root.IllustratedCore = api;

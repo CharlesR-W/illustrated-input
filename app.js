@@ -14,6 +14,8 @@ const UI_DEFAULTS = {
   listen: "Listen", stop: "Stop", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
   in_story: "in the story", pensa: "Exercises", oral_mode: "Oral mode", check: "Check", reveal: "Show",
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
+  correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
+  case_hint: "Almost! Case?", number_hint: "Almost! Number?", tense_hint: "Almost! Tense?", mood_hint: "Almost! Mood?",
   accent_hint: "Almost: check the accents.", mutation_hint: "Almost: mutation?",
   wrong: "Not yet.", empty: "Type an answer first.", answer: "Answer", model_answer: "Answer",
   rubric: "Check", self_yes: "I had it", self_no: "Not yet", key_terms: "Key words", word_bank: "Word bank",
@@ -28,8 +30,8 @@ const UI_DEFAULTS = {
   gender_n: "n.", course_select: "Course", stress_marks: "Stress marks", workbook: "Workbook", obrazec: "Example",
   skip_exercise: "Skip", skipped: "Skipped", unskip: "Undo", correct_yo: "Correct! (ё)", ending_hint: "Almost! The ending?",
   aspect_hint: "Almost! Aspect?", lookalike_warning: "Latin letters ({chars}) were replaced by Cyrillic ones.",
-  latin_warning: "Latin letters: {chars}. Switch the keyboard layout?",
-  stepper: "Steps", step_read: "Read {n}", step_exercises: "Workbook {n}", step_grammar: "Grammar",
+  latin_warning: "Latin letters: {chars}. Switch the keyboard layout?", pronunciation: "Pronunciation",
+  stepper: "Steps", step_listen: "Listen {n}", step_read: "Read {n}", step_exercises: "Workbook {n}", step_grammar: "Grammar",
   step_pensa: "Exercises", step_write: "Write", step_reread: "Re-read", step_anki: "Anki", step_done: "Done",
   step_mark: "Step done", step_marked: "Done", step_next: "Next: {step}", continue_step: "{lesson} · {step}",
   export_timing: "Export timing (JSON)", words_with_history: "Words with a history", note_en: "Note (English)",
@@ -151,10 +153,8 @@ function courseString(key, vars) {
 
 // ------------------------------------------------------------------ course features
 
-function usesRuChecker() {
-  const checker = state.course?.answer_checker;
-  return checker ? checker === "ru" : targetLang() === "ru";
-}
+function inflectingCourse() { return Core.isInflectingCourse(state.course); }
+function courseChecker() { return Core.answerChecker(state.course); }
 function cyrillicCourse() {
   const script = state.course?.language?.script || state.course?.script;
   return script ? /^cyrl/i.test(script) : ["ru", "uk", "be", "bg", "sr", "mk"].includes(targetLang());
@@ -330,7 +330,7 @@ function formsTable(lesson, ru) {
 }
 
 function lexemeFormsIndex(lesson, lexicon, ru) {
-  const key = (value) => ru.foldYo(ru.normalise(value));
+  const key = (value) => ru.foldYo ? ru.foldYo(ru.normalise(value)) : ru.normalise(value);
   const byLexeme = new Map();
   const add = (id, forms) => {
     if (!id) return;
@@ -378,7 +378,7 @@ function knownList(baseline, plan) {
 
 // ------------------------------------------------------------------ chapter steps (design §9)
 
-const STEP_KINDS = ["read", "exercises", "grammar", "pensa", "write", "reread", "anki", "done"];
+const STEP_KINDS = ["listen", "read", "exercises", "grammar", "pensa", "write", "reread", "anki", "done"];
 
 function isWorkbookExercise(exercise) { return Boolean(exercise && (exercise.section_id || exercise.type || exercise.obrazec)); }
 function isNapishi(exercise) { return /^(napishi|writing)$/i.test(String(exercise?.type || "")); }
@@ -399,11 +399,15 @@ function napishiOf(lesson, sections) {
   return pool.filter(isNapishi).at(-1) || null;
 }
 
-function buildSteps(lesson, { core = globalThis.IllustratedCore, roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"] } = {}) {
+function buildSteps(lesson, { core = globalThis.IllustratedCore, course = null, roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"] } = {}) {
   const sections = core.storySections(lesson);
   const steps = [];
   sections.forEach((section, i) => {
     const n = roman[i] || String(i + 1);
+    // Audio-first parts get a Listen step, unless the lesson is known to have no audio (_audio null).
+    if (course?.capabilities?.audio_first_through_part >= Number(lesson.part ?? lesson._entry?.part ?? 1) && lesson._audio !== null) {
+      steps.push({ id: `listen-${i + 1}`, kind: "listen", n });
+    }
     steps.push({ id: `read-${i + 1}`, kind: "read", n });
     if (sectionExercises(lesson, section, i).length) steps.push({ id: `ex-${i + 1}`, kind: "exercises", n });
   });
@@ -598,6 +602,15 @@ function focusHeading(selector) {
 
 // ------------------------------------------------------------------ intro
 
+function courseCredits() {
+  const credits = state.course?.credits || [];
+  if (!credits.length) return null;
+  return h("div", { class: "course-credits" }, credits.map((credit) =>
+    h("p", { lang: credit.lang || "en" }, credit.text, " ",
+      credit.url ? h("a", { href: credit.url, rel: "noopener" }, credit.link_text || new URL(credit.url).hostname) : null,
+      credit.license ? ` · ${credit.license}` : null)));
+}
+
 function showIntro(focus) {
   const text = introText();
   const paragraphs = Array.isArray(text) ? text : String(text).split(/\n\s*\n/);
@@ -616,7 +629,7 @@ function showIntro(focus) {
     h("div", { class: "intro-card", lang: "en" },
       h("p", { class: "eyebrow", lang: targetLang() }, state.course.title || ""),
       h("h1", { id: "intro-title" }, state.course.intro_title_en || "How to read this book"),
-      body,
+      body, courseCredits(),
       h("div", { class: "intro-actions" }, ui("button", "start", { class: "button primary", type: "button", onclick: done })))
   );
   showView("intro");
@@ -710,6 +723,7 @@ function showOverview(focus) {
       whatsNext() ? ui("a", "whats_next", { class: "button secondary", href: "#whats-next" }) : null,
       stepperCourse() ? ui("button", "export_timing", { type: "button", class: "button secondary", onclick: exportTiming }) : null),
     otherCourses(),
+    courseCredits(),
     stepperCourse() ? timingSummary() : null,
     h("div", { class: "overview-progress" },
       h("div", { class: "progress-copy" }, ui("span", "course_progress", { id: "overview-progress-label" }), h("strong", null, `${count} / ${total}`)),
@@ -749,7 +763,7 @@ async function fetchLesson(entry) {
   const lesson = await loadJSON(resolve(entryPath(entry)));
   lesson._entry = entry;
   lesson._audio = await loadAudioSources(lesson);
-  if (usesRuChecker()) await loadAnswerForms(lesson, entry);
+  if (inflectingCourse()) await loadAnswerForms(lesson, entry);
   state.lessons.set(entry.id, lesson);
   return lesson;
 }
@@ -763,13 +777,14 @@ async function loadAnswerForms(lesson, entry) {
     try {
       const data = await loadJSON(resolve(path));
       const table = data.answer_forms || data.forms || data;
-      lesson.answer_forms = Object.fromEntries(Object.entries(table).filter(([token]) => !token.startsWith("_")));
+      lesson.answer_forms = Object.fromEntries(Object.entries(table).filter(([token]) => !token.startsWith("_") && token !== "valid_words"));
       if (data.lexeme_forms && !lesson.lexeme_forms) lesson.lexeme_forms = data.lexeme_forms;
+      if (data.valid_words && !lesson.answer_valid_words) lesson.answer_valid_words = data.valid_words;
     } catch { /* no table: the ladder skips the ending and aspect rungs */ }
   }
   const lexicon = await loadLexicon();
-  lesson._formsTable = formsTable(lesson, Core.ru);
-  lesson._lexemeForms = lexemeFormsIndex(lesson, lexicon, Core.ru);
+  lesson._formsTable = formsTable(lesson, courseChecker());
+  lesson._lexemeForms = lexemeFormsIndex(lesson, lexicon, courseChecker());
 }
 
 async function openLesson(entry, focus = true, stepId = null) {
@@ -889,6 +904,16 @@ function renderCover(lesson) {
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 
+// One pronunciation rule per chapter (lesson.pronunciation_note), above the first section's prose.
+function renderPronunciationNote(note) {
+  const words = (note.words || []).filter(Boolean);
+  return h("p", { class: "pronunciation-note", role: "note" },
+    ui("span", "pronunciation", { class: "note-label" }), " ",
+    h("span", { lang: note.rule_lang || "en" }, disp(note.rule, "glosses")),
+    words.length ? h("span", { class: "pronunciation-words", lang: targetLang() }, ": ", words.map((word) => disp(word, "glosses")).join(", ")) : null,
+    note.note ? h("span", { class: "pronunciation-extra", lang: note.rule_lang || "en" }, " ", disp(note.note, "glosses")) : null);
+}
+
 function renderStory(lesson) {
   const sections = Core.storySections(lesson);
   const manifest = lesson._audio?.selected?.data;
@@ -922,7 +947,9 @@ function renderStory(lesson) {
         h("span", { class: "section-number", "aria-hidden": "true" }, `${ROMAN[sectionIndex] || sectionIndex + 1}.`), ` ${disp(section.title)}`)
       : null;
     return h("section", { class: "story-section", id: section.id || `section-${sectionIndex + 1}`, "aria-labelledby": heading ? heading.id : null, "data-section": String(sectionIndex + 1) },
-      heading, h("div", { class: "section-body" }, prose, margin),
+      heading, stepEnd(lesson, `listen-${sectionIndex + 1}`),
+      sectionIndex === 0 && lesson.pronunciation_note ? renderPronunciationNote(lesson.pronunciation_note) : null,
+      h("div", { class: "section-body" }, prose, margin),
       stepEnd(lesson, `read-${sectionIndex + 1}`),
       renderWorkbook(lesson, section, sectionIndex));
   }));
@@ -1130,12 +1157,12 @@ function bindStoryObservers(article) {
 function stepperCourse() { return state.course?.stepper === true; }
 function stepperFor(lesson) {
   if (!lesson || state.course?.stepper === false) return false;
-  return stepperCourse() || buildSteps(lesson, { core: Core, roman: ROMAN }).some((step) => step.kind === "exercises");
+  return stepperCourse() || buildSteps(lesson, { core: Core, course: state.course, roman: ROMAN }).some((step) => step.kind === "exercises");
 }
-function lessonSteps(lesson) { return lesson._steps ||= buildSteps(lesson, { core: Core, roman: ROMAN }); }
+function lessonSteps(lesson) { return lesson._steps ||= buildSteps(lesson, { core: Core, course: state.course, roman: ROMAN }); }
 function stepTicks(lessonId) { return readJSONStore("steps")[lessonId] || {}; }
 function stepLabel(step) {
-  const key = { read: "step_read", exercises: "step_exercises", grammar: "step_grammar", pensa: "step_pensa", write: "step_write", reread: "step_reread", anki: "step_anki", done: "step_done" }[step.kind];
+  const key = { listen: "step_listen", read: "step_read", exercises: "step_exercises", grammar: "step_grammar", pensa: "step_pensa", write: "step_write", reread: "step_reread", anki: "step_anki", done: "step_done" }[step.kind];
   return tl(key, { n: step.n ?? "" }).map((value, i) => (i === 0 ? String(value).trim() : value));
 }
 function stepDone(lesson, step, ticks = stepTicks(lesson.id)) {
@@ -1158,7 +1185,7 @@ function setTick(lesson, stepId, on) {
 
 function stepTarget(stepId) {
   const [kind, n] = stepId.split("-");
-  if (kind === "read") return document.querySelector(`#lesson [data-section="${n}"]`);
+  if (kind === "read" || kind === "listen") return document.querySelector(`#lesson [data-section="${n}"]`);
   if (kind === "ex") return document.getElementById(`wb-${n}`);
   if (kind === "grammar") return document.getElementById("words-history") || document.getElementById("grammar");
   if (kind === "pensa") return document.getElementById("pensa");
@@ -1179,6 +1206,10 @@ function enterStep(lesson, stepId) {
     renderLesson(lesson);
   }
   const scrolled = scrollToStep(stepId);
+  if (stepId.startsWith("listen-") && lesson._audio) {
+    const section = Core.storySections(lesson)[Number(stepId.split("-")[1]) - 1];
+    if (section) playSegments((section.segments || []).map((segment) => segment.id).filter((id) => lesson._audio.selected?.data?.segments?.[id]), lesson, true);
+  }
   if (reread && lesson._audio && (lesson._audio.selected?.data?.lesson || Object.keys(lesson._audio.selected?.data?.segments || {}).length)) playLesson(lesson);
   return scrolled;
 }
@@ -1260,7 +1291,7 @@ function markStepRegions(article, lesson) {
   const steps = new Set(lessonSteps(lesson).map((step) => step.id));
   const mark = (el, ids) => { const list = ids.filter((id) => steps.has(id)); if (el && list.length) el.dataset.steps = list.join(" "); };
   mark(article.querySelector(".scene.cover"), ["read-1", "reread"]);
-  for (const section of article.querySelectorAll(".story-section[data-section]")) mark(section, [`read-${section.dataset.section}`, "reread"]);
+  for (const section of article.querySelectorAll(".story-section[data-section]")) mark(section, [`listen-${section.dataset.section}`, `read-${section.dataset.section}`, "reread"]);
   for (const block of article.querySelectorAll(".workbook")) mark(block, [`ex-${block.id.replace("wb-", "")}`]);
   mark(article.querySelector("#words-history"), ["grammar"]);
   mark(article.querySelector("#grammar"), ["grammar"]);
@@ -1501,7 +1532,7 @@ function renderObrazec(example, area) {
   const prompt = typeof example === "string" ? example : example.prompt;
   const answer = typeof example === "string" ? "" : example.answer;
   return h("div", { class: "enghraifft" },
-    ui("span", usesRuChecker() ? "obrazec" : "example", { class: "enghraifft-label" }),
+    ui("span", inflectingCourse() ? "obrazec" : "example", { class: "enghraifft-label" }),
     h("span", { lang: targetLang() }, disp(prompt, area), answer ? [" ", h("strong", null, disp(answer, area))] : null));
 }
 
@@ -1562,26 +1593,26 @@ function fillFromBank(groupEl, word) {
   field.focus();
 }
 
-// Answer check: the Russian §8.3 ladder from core.js for courses that use it; otherwise
-// the original (Welsh) checker, unchanged.
+// Dispatch to each course's normaliser and feedback ladder; Welsh remains unchanged.
 function checkAnswer(item, values, group, lesson) {
-  if (usesRuChecker() && Core.ru?.checkResponse) {
-    return Core.ru.checkResponse(item, values, { forms: lesson._formsTable || formsTable(lesson, Core.ru) });
-  }
-  return Core.checkResponse(item, values, { mutationHint: Boolean(item.mutation_hint ?? group.mutation_hint), unmutation: state.course?.unmutation });
+  return courseChecker().checkResponse(item, values, {
+    forms: lesson._formsTable || formsTable(lesson, courseChecker()), validWords: lesson.answer_valid_words,
+    mutationHint: Boolean(item.mutation_hint ?? group.mutation_hint), unmutation: state.course?.unmutation
+  });
 }
 
 // Typed token with the differing ending marked (design §8.3 "highlight the ending").
 function markedEnding(item, slotIndex, result) {
   const lang = targetLang();
   const typed = result.token || "";
-  const ru = Core.ru;
+  const checker = courseChecker();
+  const key = (value) => checker.foldYo ? checker.foldYo(checker.normalise(value)) : checker.normalise(value);
   const answers = Core.slotAnswers(item)[slotIndex] || [];
   let prefix = Math.max(typed.length - 1, 0);
   for (const answer of answers) {
-    const tokens = ru.foldYo(ru.normalise(answer)).split(" ");
+    const tokens = key(answer).split(" ");
     const expected = tokens[result.tokenIndex];
-    if (expected !== undefined) { prefix = Math.min(commonPrefix(ru.foldYo(typed), expected), Math.max(typed.length - 1, 0)); break; }
+    if (expected !== undefined) { prefix = Math.min(commonPrefix(key(typed), expected), Math.max(typed.length - 1, 0)); break; }
   }
   return h("span", { class: "typed", lang }, typed.slice(0, prefix), h("mark", null, typed.slice(prefix)));
 }
@@ -1599,7 +1630,7 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
   memory.set(key, saved);
   const mode = Core.answerMode(item);
   const lang = targetLang();
-  const ruLadder = usesRuChecker() && Boolean(Core.ru?.checkResponse);
+  const inflectingLadder = inflectingCourse();
   const prefix = String(group.key).startsWith(lesson.id) ? group.key : `${lesson.id}-${group.key}`;
   const baseId = `${prefix}-${item.id || number}`.replace(/[^\w-]/g, "-");
   const feedback = h("div", { class: "feedback", id: `${baseId}-fb`, "aria-live": "polite" });
@@ -1678,7 +1709,7 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
   const actions = h("div", { class: "item-actions" });
   lesson._segments ||= Core.segmentIndex(lesson);
   const sourceIds = (item.source_segment_ids || []).filter((id) => lesson._segments.has(id));
-  const retry = ruLadder || opts.retry
+  const retry = inflectingLadder || opts.retry
     ? ui("button", "retry", { type: "button", class: "small-button retry-button", hidden: true, onclick: () => {
       fields.forEach((field, i) => { field.value = ""; saved.values[i] = ""; });
       clearState(); warnLatin();
@@ -1704,18 +1735,18 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
     const values = fields.map((field) => field.value);
     const result = checkAnswer(item, values, group, lesson);
     saved.checked = true;
-    const good = (status) => status === "correct" || status === "correct_yo";
+    const good = (status) => status === "correct" || status === "correct_yo" || status === "correct_letters";
     fields.forEach((field, i) => {
       const status = result.slots[i]?.status;
       field.classList.toggle("is-correct", good(status));
       field.classList.toggle("is-wrong", Boolean(status) && !good(status) && status !== "empty");
     });
     feedback.className = `feedback status-${result.status}`;
-    const messages = { correct: "correct", correct_yo: "correct_yo", accent: "accent_hint", mutation: "mutation_hint", ending: "ending_hint", aspect: "aspect_hint", wrong: "wrong", empty: "empty" };
+    const messages = { correct_letters: "correct_letters", ambiguous_letters: "ambiguous_letters", correct: "correct", correct_yo: "correct_yo", accent: "accent_hint", mutation: "mutation_hint", ending: "ending_hint", aspect: "aspect_hint", wrong: "wrong", empty: "empty" };
     if (result.status === "common_wrong") {
       feedback.replaceChildren(h("span", { lang }, disp(result.hint, area) || t("wrong")));
     } else {
-      const content = [ruLadder ? h("span", { "aria-hidden": "true" }, good(result.status) ? "✓ " : result.status === "empty" ? "" : "• ") : null, ui("span", messages[result.status] || "wrong")].filter(Boolean);
+      const content = [inflectingLadder ? h("span", { "aria-hidden": "true" }, good(result.status) ? "✓ " : result.status === "empty" ? "" : "• ") : null, ui("span", result.status === "ending" && result.feature ? `${result.feature}_hint` : messages[result.status] || "wrong", {}, { answer: result.answer || "" })].filter(Boolean);
       if (result.status === "mutation" && result.token) {
         content.push(" ", h("span", { class: "typed", lang }, h("mark", null, result.token.slice(0, 1)), result.token.slice(1)));
       }
@@ -1792,8 +1823,8 @@ function keyTermsLine(ids, getText, lesson) {
     const typed = getText();
     line.replaceChildren(ui("span", "key_terms", { class: "answer-label" }), " ", ...ids.map((id) => {
       const lemma = lemmaFor(id);
-      const found = Boolean(typed.trim()) && (usesRuChecker() && Core.ru
-        ? containsLexeme(typed, lesson._lexemeForms || lexemeFormsIndex(lesson, state.lexicon, Core.ru), id, lemma)
+      const found = Boolean(typed.trim()) && (inflectingCourse()
+        ? containsLexeme(typed, lesson._lexemeForms || lexemeFormsIndex(lesson, state.lexicon, courseChecker()), id, lemma)
         : Core.containsLemma(typed, lemma, state.course?.unmutation));
       return h("span", { class: `term${found ? " found" : ""}`, lang }, found ? "✓ " : "", lemma);
     }));
@@ -2114,7 +2145,7 @@ function renderFinish(lesson, order) {
   });
   const cumulative = order > 1 ? ui("button", "anki_cumulative", { type: "button", class: "button secondary", onclick: () => downloadAnki(lesson, true) }, { n: order }) : null;
   let includeKnown = null;
-  if (ruAnki()) {
+  if (inflectingAnki()) {
     const box = h("input", { type: "checkbox", id: "anki-include-known", checked: setting("anki-include-known") === "1" });
     box.addEventListener("change", () => store(courseKey("anki-include-known"), box.checked ? "1" : "0"));
     includeKnown = h("label", { class: "anki-known", for: "anki-include-known" }, box, " ", ui("span", "anki_include_known"));
@@ -2148,7 +2179,7 @@ async function loadLexicon() {
   return state.lexicon;
 }
 
-function ruAnki() { return Boolean(Core.ru?.isCourse?.(state.course)); }
+function inflectingAnki() { return Core.isInflectingCourse(state.course); }
 
 // Known lexemes for the Russian export: baseline_path (default plan/baseline.json) plus, when
 // the plan is reachable (serving the source repository), its rows marked known. The public
@@ -2170,7 +2201,7 @@ async function downloadAnki(lesson, cumulative) {
   ]);
   const labels = {};
   list.forEach((entry) => { labels[entry.id] = `${courseString("lesson")} ${entry.order ?? ""}`.trim(); });
-  const extra = ruAnki() ? { known: await loadKnown(), includeKnown: setting("anki-include-known") === "1" } : {};
+  const extra = inflectingAnki() ? { known: await loadKnown(), includeKnown: setting("anki-include-known") === "1" } : {};
   const { cards, text } = Core.ankiExport({
     course: state.course, lexicon, lessons: lessons.filter(Boolean), lessonIds: list.map((entry) => entry.id),
     lessonLabels: labels, unmutation: state.course?.unmutation, ...extra
@@ -2191,7 +2222,8 @@ async function downloadAnki(lesson, cumulative) {
 
 async function loadAudioSources(lesson) {
   const media = lesson.media || {};
-  const declared = media.audio_sources || (media.audio_manifest ? [{ id: "default", label: "Default", manifest: media.audio_manifest, default: true }] : []);
+  const declared = media.audio_sources || (media.audio_manifest ? [{ id: "default", label: "Default", manifest: media.audio_manifest, default: true }]
+    : state.course?.audio?.lesson_sources?.[lesson.id] || []);
   const sources = (await Promise.all(declared.map(async (source) => {
     try {
       const url = resolve(source.manifest);

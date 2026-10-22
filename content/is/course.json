@@ -1,0 +1,1091 @@
+{
+  "schema_version": "0.1.0",
+  "id": "is-kvold-01",
+  "lang": "is",
+  "language": {
+    "code": "is",
+    "name": "Íslenska",
+    "english_name": "Icelandic"
+  },
+  "title": "Kvöldvakan",
+  "subtitle": "Jökuldalur 1874–1882",
+  "status": "draft",
+  "content_version": "0.1.0-mvp",
+  "lesson_count": 40,
+  "capabilities": {
+    "inflecting": true,
+    "audio_first_through_part": 1
+  },
+  "answer_checker": "is",
+  "lexicon_path": "lexicon.json",
+  "plan_path": "plan/chapters.json",
+  "grammar_map_path": "plan/grammar-map.json",
+  "grammar_licensing": "advisory",
+  "special_characters": [
+    "á",
+    "é",
+    "í",
+    "ó",
+    "ú",
+    "ý",
+    "þ",
+    "æ",
+    "ö",
+    "ð",
+    "Á",
+    "É",
+    "Í",
+    "Ó",
+    "Ú",
+    "Ý",
+    "Þ",
+    "Æ",
+    "Ö",
+    "Ð"
+  ],
+  "ui_strings": {
+    "is": {
+      "skip": "Á textann",
+      "nav_lessons": "Kaflar",
+      "contents": "Efnisyfirlit",
+      "course_progress": "Framvinda",
+      "continue": "Halda áfram",
+      "start": "Byrja að lesa",
+      "how_to_read": "Hvernig á að lesa þessa bók",
+      "part": "Hluti",
+      "lesson": "Kafli",
+      "lessons_range": "Kaflar {from}–{to}",
+      "planned": "Væntanlegt",
+      "hide_notes": "Fela skýringar",
+      "show_notes": "Sýna skýringar",
+      "notes": "Skýringar",
+      "listen": "Hlusta",
+      "stop": "Stöðva",
+      "voice": "Rödd",
+      "grammar": "Málfræði",
+      "grammar_note_en": "Skýring (English)",
+      "in_story": "í textanum",
+      "pensa": "Verkefni",
+      "oral_mode": "Munnlega",
+      "check": "Athuga",
+      "reveal": "Sýna",
+      "retry": "Aftur",
+      "reveal_all": "Sýna allt",
+      "example": "Dæmi",
+      "correct": "Rétt!",
+      "ending_hint": "Næstum! Ending?",
+      "accent_hint": "Næstum! Broddur?",
+      "wrong": "Ekki enn. Aftur?",
+      "empty": "Skrifaðu svar fyrst.",
+      "answer": "Svar",
+      "model_answer": "Dæmi um svar",
+      "rubric": "Athugaðu svarið",
+      "self_yes": "Rétt hjá mér",
+      "self_no": "Ekki enn",
+      "key_terms": "Lykilorð",
+      "word_bank": "Orðabanki",
+      "item": "Spurning {n}",
+      "blank": "eyða {n}",
+      "vocabulary": "Orðaforði",
+      "words_count": "{n} orð",
+      "finish": "Ljúka kafla",
+      "finished_state": "Lokið",
+      "english_toggle": "English",
+      "finished_announce": "{title}: lokið.",
+      "unfinished_announce": "{title}: merking fjarlægð.",
+      "anki_lesson": "Anki: þessi kafli",
+      "anki_cumulative": "Anki: kaflar 1–{n}",
+      "anki_done": "Anki: {n} spjöld",
+      "anki_empty": "Engin spjöld fyrir þennan kafla enn.",
+      "next": "Næsti kafli",
+      "previous": "Fyrri kafli",
+      "enlarge": "Stækka mynd",
+      "close": "Loka",
+      "loading": "Opna bókina…",
+      "status_draft": "drög",
+      "status_reviewed": "yfirfarið",
+      "status_published": "útgefið",
+      "gender_m": "kk.",
+      "gender_f": "kvk.",
+      "gender_n": "hk.",
+      "workbook": "Æfingar",
+      "obrazec": "Dæmi",
+      "skip_exercise": "Sleppa",
+      "skipped": "Sleppt",
+      "unskip": "Afturkalla",
+      "lookalike_warning": "Stöfunum {chars} var skipt út fyrir íslenska stafi.",
+      "stepper": "Vinnuröð",
+      "step_listen": "Hlusta {n}",
+      "step_read": "Lesa {n}",
+      "step_exercises": "Æfingar {n}",
+      "step_grammar": "Málfræði og orð með sögu",
+      "step_pensa": "Verkefni A, B, C",
+      "step_write": "Skrifa",
+      "step_reread": "Lesa aftur",
+      "step_anki": "Anki",
+      "step_done": "Lokið",
+      "step_mark": "Ljúka skrefi",
+      "step_marked": "Lokið",
+      "step_next": "Næst: {step}",
+      "continue_step": "{lesson} · {step}",
+      "export_timing": "Sækja tímaskrá (JSON)",
+      "words_with_history": "Orð með sögu",
+      "note_en": "Skýring (English)",
+      "afterword": "Eftirmáli (English)",
+      "whats_next": "Hvað næst?",
+      "napishi": "Skrifaðu",
+      "napishi_draft": "Textinn þinn",
+      "napishi_rewrite": "Leiðréttur texti",
+      "napishi_mark": "Finndu eina eða tvær villur og skrifaðu setningarnar aftur.",
+      "napishi_typical": "Algengar villur",
+      "my_error": "Ég skrifaði þetta",
+      "model_answers": "Dæmi um svör",
+      "copy_feedback": "Afrita til yfirferðar",
+      "copied": "Afritað.",
+      "copy_failed": "Ekki tókst að afrita. Veldu textann og afritaðu hann.",
+      "feedback_task": "Verkefni",
+      "feedback_text": "Texti nemandans",
+      "feedback_rewrite": "Leiðréttur texti nemandans",
+      "feedback_prompt": "Þú kennir íslensku sem annað mál. Leiðréttu textann án þess að breyta merkingu hans. Útskýrðu hverja villu stuttlega og gefðu eitt stutt verkefni til æfingar.",
+      "timing_summary": "Tími eftir köflum",
+      "timing_total": "Samtals:",
+      "minutes": "{n} mín",
+      "words_typed": "{n} orð",
+      "course_select": "Námskeið",
+      "course_contents": "Efnisyfirlit",
+      "chapter": "Kafli",
+      "story": "Sagan",
+      "nodyn": "Skýring (English)",
+      "exercises": "Æfingar",
+      "pensum": "Verkefni",
+      "try_again": "Aftur",
+      "almost_circumflex": "Næstum! Broddur?",
+      "almost_ending": "Næstum! Ending?",
+      "mutation_hint": "Næstum! Ending?",
+      "self_check_yes": "Rétt hjá mér",
+      "self_check_no": "Ekki enn",
+      "finished": "✓ Lokið",
+      "anki": "Sækja Anki-spjöld",
+      "anki_include_known": "Taka með þekkt orð",
+      "audio_play": "Hlusta",
+      "audio_source": "Rödd",
+      "proverb": "Málsháttur",
+      "hint_toggle": "Vísbending (English)",
+      "pensum_a": "Verkefni A — Beygingar",
+      "pensum_b": "Verkefni B — Orð",
+      "pensum_c": "Verkefni C — Spurningar",
+      "next_step": "Næsta skref",
+      "steps": "Skref",
+      "section_n": "Textahluti {n}",
+      "write_box": "Textinn þinn",
+      "length_hint": "Lengd",
+      "typical_errors": "Algengar villur",
+      "correction_mark": "Finndu eina eða tvær villur í textanum.",
+      "correction_rewrite": "Skrifaðu þessar setningar rétt.",
+      "correction_box": "Leiðréttur texti",
+      "copy_for_feedback": "Afrita til yfirferðar",
+      "baseline_known": "þekkt",
+      "baseline_uncertain": "næstum þekkt",
+      "baseline_new": "nýtt",
+      "draft_notice": "Drög: textinn hefur ekki verið yfirfarinn af íslenskum málhafa.",
+      "correct_letters": "Rétt, en: {answer}",
+      "ambiguous_letters": "Áttu við {answer}?",
+      "case_hint": "Næstum! Fall?",
+      "number_hint": "Næstum! Tala?",
+      "tense_hint": "Næstum! Tíð?",
+      "mood_hint": "Næstum! Háttur?",
+      "about": "Um námskeiðið",
+      "exercise_okonchaniya": "Beygingar",
+      "ex_type_okonchaniya": "Beygingar",
+      "exercise_preobrazovanie": "Breyttu",
+      "ex_type_preobrazovanie": "Breyttu",
+      "exercise_podstanovka": "Settu inn",
+      "ex_type_podstanovka": "Settu inn",
+      "exercise_otvet": "Svaraðu",
+      "ex_type_otvet": "Svaraðu",
+      "exercise_soedini": "Tengdu",
+      "ex_type_soedini": "Tengdu",
+      "exercise_rasstav": "Raðaðu orðunum",
+      "ex_type_rasstav": "Raðaðu orðunum",
+      "exercise_napishi": "Skrifaðu",
+      "ex_type_napishi": "Skrifaðu",
+      "pronunciation": "Framburður"
+    },
+    "en": {
+      "nav_lessons": "Chapters",
+      "contents": "Contents",
+      "course_progress": "Progress",
+      "lesson": "Chapter",
+      "part": "Part",
+      "lessons_range": "Chapters {from}–{to}",
+      "pensa": "Pensum",
+      "oral_mode": "Oral mode",
+      "grammar": "Grammar",
+      "correct": "Correct!",
+      "ending_hint": "Almost! The ending?",
+      "wrong": "Not yet. Again?",
+      "retry": "Again",
+      "english_toggle": "Íslenska",
+      "finish": "Finish chapter",
+      "workbook": "Workbook",
+      "obrazec": "Example",
+      "skip_exercise": "Skip",
+      "skipped": "Skipped",
+      "unskip": "Undo",
+      "lookalike_warning": "Look-alike letters ({chars}) were replaced by Icelandic letters.",
+      "stepper": "Steps",
+      "step_read": "Read {n}",
+      "step_exercises": "Workbook {n}",
+      "step_grammar": "Grammar and words with a history",
+      "step_pensa": "Pensum A, B, C",
+      "step_write": "Write",
+      "step_reread": "Re-read",
+      "step_anki": "Anki",
+      "step_done": "Done",
+      "step_mark": "Step done",
+      "step_marked": "Done",
+      "step_next": "Next: {step}",
+      "continue_step": "{lesson} · {step}",
+      "export_timing": "Export timing (JSON)",
+      "words_with_history": "Words with a history",
+      "note_en": "Note (English)",
+      "afterword": "Afterword",
+      "whats_next": "What next",
+      "napishi": "Write",
+      "napishi_draft": "Your text",
+      "napishi_rewrite": "Corrected version",
+      "napishi_mark": "Mark one or two of your own errors and rewrite those sentences below.",
+      "napishi_typical": "Typical errors",
+      "my_error": "I did this",
+      "model_answers": "Model answers",
+      "copy_feedback": "Copy for feedback",
+      "copied": "Copied.",
+      "copy_failed": "Could not copy. Select the text below and copy it yourself.",
+      "timing_summary": "Time per chapter",
+      "timing_total": "Total:",
+      "minutes": "{n} min",
+      "words_typed": "{n} words",
+      "course_select": "Course",
+      "model_answer": "Model answer",
+      "rubric": "Check yourself",
+      "key_terms": "Key words",
+      "word_bank": "Word bank",
+      "vocabulary": "Vocabulary",
+      "ex_type_okonchaniya": "Endings",
+      "ex_type_preobrazovanie": "Transform",
+      "ex_type_podstanovka": "Substitute",
+      "ex_type_otvet": "Answer",
+      "ex_type_soedini": "Join",
+      "ex_type_rasstav": "Word order",
+      "ex_type_napishi": "Write",
+      "course_contents": "Contents",
+      "continue": "Continue",
+      "chapter": "Chapter",
+      "story": "The story",
+      "nodyn": "Note (English)",
+      "exercises": "Exercises",
+      "pensum": "Exercise",
+      "example": "Example",
+      "check": "Check",
+      "reveal": "Show",
+      "try_again": "Again",
+      "almost_circumflex": "Almost! Check your accents.",
+      "almost_ending": "Almost! Ending?",
+      "mutation_hint": "Almost! Ending?",
+      "empty": "Write an answer first.",
+      "self_check_yes": "I had it",
+      "self_check_no": "Not yet",
+      "hide_notes": "Hide margin notes",
+      "show_notes": "Show margin notes",
+      "finished": "✓ Finished",
+      "next": "Next chapter",
+      "previous": "Previous chapter",
+      "anki": "Download Anki cards",
+      "anki_cumulative": "Anki cards: chapters 1–N",
+      "anki_include_known": "Include words I already know",
+      "audio_play": "Listen",
+      "audio_source": "Voice",
+      "start": "Start reading",
+      "planned": "coming soon",
+      "notes": "Notes",
+      "enlarge": "Enlarge picture",
+      "close": "Close",
+      "item": "Question {n}",
+      "blank": "blank {n}",
+      "words_count": "{n} words",
+      "anki_done": "Anki: {n} cards",
+      "stop": "Stop",
+      "proverb": "Proverb",
+      "skip": "Skip",
+      "hint_toggle": "Hint (English)",
+      "exercise_okonchaniya": "Endings",
+      "exercise_preobrazovanie": "Transform",
+      "exercise_podstanovka": "Substitute",
+      "exercise_otvet": "Answer",
+      "exercise_soedini": "Join",
+      "exercise_rasstav": "Word order",
+      "exercise_napishi": "Write",
+      "pensum_a": "Exercise A — Forms",
+      "pensum_b": "Exercise B — Words",
+      "pensum_c": "Exercise C — Questions",
+      "next_step": "Next step",
+      "steps": "Steps",
+      "section_n": "Section {n}",
+      "write_box": "Your text",
+      "length_hint": "Length",
+      "typical_errors": "Typical mistakes",
+      "correction_mark": "Mark one or two of your own mistakes against the checklist.",
+      "correction_rewrite": "Rewrite those sentences correctly.",
+      "correction_box": "Corrected text",
+      "copy_for_feedback": "Copy for feedback",
+      "baseline_known": "already known",
+      "baseline_uncertain": "half-known",
+      "baseline_new": "new",
+      "draft_notice": "Draft: not yet checked by a native speaker.",
+      "accent_hint": "Almost! Check your accents.",
+      "correct_letters": "Correct, but use: {answer}",
+      "ambiguous_letters": "Did you mean {answer}?",
+      "case_hint": "Almost! Case?",
+      "number_hint": "Almost! Number?",
+      "tense_hint": "Almost! Tense?",
+      "mood_hint": "Almost! Mood?",
+      "step_listen": "Listen {n}",
+      "about": "About this course",
+      "anki_lesson": "Anki: this chapter",
+      "listen": "Listen",
+      "pronunciation": "Pronunciation"
+    }
+  },
+  "baseline_chunks": [
+    {
+      "text": "Já",
+      "lexeme_id": "is-ph-ja",
+      "from": 1
+    },
+    {
+      "text": "Nei",
+      "lexeme_id": "is-ph-nei",
+      "from": 1
+    },
+    {
+      "text": "Jú",
+      "lexeme_id": "is-ph-ju",
+      "from": 1
+    },
+    {
+      "text": "Góðan daginn",
+      "lexeme_id": "is-ph-godan-daginn",
+      "from": 1
+    },
+    {
+      "text": "Gott kvöld",
+      "lexeme_id": "is-ph-gott-kvold",
+      "from": 1
+    },
+    {
+      "text": "Góða nótt",
+      "lexeme_id": "is-ph-goda-nott",
+      "from": 1
+    },
+    {
+      "text": "Takk",
+      "lexeme_id": "is-ph-takk",
+      "from": 1
+    },
+    {
+      "text": "Takk fyrir",
+      "lexeme_id": "is-ph-takk-fyrir",
+      "from": 1
+    },
+    {
+      "text": "Gerðu svo vel",
+      "lexeme_id": "is-ph-gerdu-svo-vel",
+      "from": 1
+    },
+    {
+      "text": "Komdu sæll",
+      "lexeme_id": "is-ph-komdu-saell",
+      "from": 1
+    },
+    {
+      "text": "Komdu sæl",
+      "lexeme_id": "is-ph-komdu-sael",
+      "from": 1
+    },
+    {
+      "text": "Vertu sæll",
+      "lexeme_id": "is-ph-vertu-saell",
+      "from": 1
+    },
+    {
+      "text": "Vertu sæl",
+      "lexeme_id": "is-ph-vertu-sael",
+      "from": 1
+    },
+    {
+      "text": "Bless",
+      "lexeme_id": "is-ph-bless",
+      "from": 1
+    },
+    {
+      "text": "Hvað heitir þú?",
+      "lexeme_id": "is-ph-hvad-heitir-thu",
+      "from": 1
+    },
+    {
+      "text": "Ég heiti",
+      "lexeme_id": "is-ph-eg-heiti",
+      "from": 1
+    },
+    {
+      "text": "Hvað er þetta?",
+      "lexeme_id": "is-ph-hvad-er-thetta",
+      "from": 1
+    },
+    {
+      "text": "Guð blessi þig",
+      "lexeme_id": "is-ph-gud-blessi-thig",
+      "from": 1
+    }
+  ],
+  "incidental_verbs": [
+    {
+      "lemma": "heita",
+      "forms": [
+        "heitir"
+      ],
+      "lexeme_id": "is-heita",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "sjá",
+      "forms": [
+        "sér"
+      ],
+      "lexeme_id": "is-sja",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "koma",
+      "forms": [
+        "kemur"
+      ],
+      "lexeme_id": "is-koma",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "fara",
+      "forms": [
+        "fer"
+      ],
+      "lexeme_id": "is-fara",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "segja",
+      "forms": [
+        "segir"
+      ],
+      "lexeme_id": "is-segja",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "spyrja",
+      "forms": [
+        "spyr"
+      ],
+      "lexeme_id": "is-spyrja",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "eiga",
+      "forms": [
+        "á"
+      ],
+      "lexeme_id": "is-eiga",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "hafa",
+      "forms": [
+        "hefur"
+      ],
+      "lexeme_id": "is-hafa",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "sitja",
+      "forms": [
+        "situr"
+      ],
+      "lexeme_id": "is-sitja",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "standa",
+      "forms": [
+        "stendur"
+      ],
+      "lexeme_id": "is-standa",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "liggja",
+      "forms": [
+        "liggur"
+      ],
+      "lexeme_id": "is-liggja",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "sofa",
+      "forms": [
+        "sefur"
+      ],
+      "lexeme_id": "is-sofa",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "lemma": "lesa",
+      "forms": [
+        "les"
+      ],
+      "lexeme_id": "is-lesa",
+      "from": 1,
+      "to": 3
+    }
+  ],
+  "place_chunks": [
+    {
+      "text": "á Íslandi",
+      "lexeme_id": "is-ph-a-islandi",
+      "from": 1
+    },
+    {
+      "text": "á Jökuldal",
+      "lexeme_id": "is-ph-a-jokuldal",
+      "from": 1
+    },
+    {
+      "text": "á túninu",
+      "lexeme_id": "is-ph-a-tuninu",
+      "from": 1
+    },
+    {
+      "text": "í bænum",
+      "lexeme_id": "is-ph-i-baenum",
+      "from": 1
+    },
+    {
+      "text": "í kirkjunni",
+      "lexeme_id": "is-ph-i-kirkjunni",
+      "from": 1
+    },
+    {
+      "text": "í Ásgarði",
+      "lexeme_id": "is-ph-i-asgardi",
+      "from": 1
+    },
+    {
+      "text": "í Reykjavík",
+      "lexeme_id": "is-ph-i-reykjavik",
+      "from": 2
+    }
+  ],
+  "names_personal": [
+    "Siggi",
+    "Sigurður",
+    "Bjarni",
+    "Guðrún",
+    "Einar",
+    "Helga",
+    "Ásta",
+    "Ástríður",
+    "Óli",
+    "Ólafur",
+    "Þórunn",
+    "Manga",
+    "Margrét",
+    "Jón",
+    "Sólveig",
+    "Ketill",
+    "Þorvaldur",
+    "Hallur",
+    "Hansen",
+    "Kristján",
+    "Snati"
+  ],
+  "names_place": [
+    "Ísland",
+    "Austurland",
+    "Jökuldalur",
+    "Hamrar",
+    "Jökulsá",
+    "Hofteigur",
+    "Reykjavík",
+    "Ásgarður",
+    "Vopnafjörður",
+    "Seyðisfjörður",
+    "Jökuldalsheiði"
+  ],
+  "names_other": [
+    "Óðinn",
+    "Sleipnir"
+  ],
+  "function_words": {
+    "og": 1,
+    "en": 1,
+    "ekki": 1,
+    "hér": 1,
+    "þar": 1,
+    "hvar": 1,
+    "hvað": 1,
+    "hann": 1,
+    "hún": 1,
+    "það": 1,
+    "þetta": 1,
+    "líka": 2,
+    "nú": 2,
+    "hver": 2,
+    "þessi": 2,
+    "voff": 1,
+    "ha": 2
+  },
+  "credits": [
+    {
+      "text": "Beygingarlýsing íslensks nútímamáls. Stofnun Árna Magnússonar í íslenskum fræðum. Höfundur og ritstjóri Kristín Bjarnadóttir.",
+      "url": "https://bin.arnastofnun.is",
+      "lang": "is",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "text": "Talrómur speech corpus, Reykjavík University; Piper is_IS voices (salka, ugla, steinn, bui).",
+      "url": "https://huggingface.co/rhasspy/piper-voices",
+      "lang": "en",
+      "license": "CC-BY-4.0"
+    }
+  ],
+  "parts": [
+    {
+      "number": 1,
+      "part": 1,
+      "title": "Heima",
+      "from": 1,
+      "to": 10,
+      "dates": "August 1874 – Easter 1875"
+    },
+    {
+      "number": 2,
+      "part": 2,
+      "title": "Askan",
+      "from": 11,
+      "to": 20,
+      "dates": "Easter 1875 – July 1876"
+    },
+    {
+      "number": 3,
+      "part": 3,
+      "title": "Bréf að vestan",
+      "from": 21,
+      "to": 30,
+      "dates": "1876–1879"
+    },
+    {
+      "number": 4,
+      "part": 4,
+      "title": "Iðjagræn jörð",
+      "from": 31,
+      "to": 40,
+      "dates": "1880–1882"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "is-kvold-01-l01",
+      "order": 1,
+      "title": "Hamrar",
+      "part": 1,
+      "status": "draft",
+      "grammar_target_id": "G01",
+      "path": "lessons/kafli-01.json"
+    },
+    {
+      "id": "is-kvold-01-l02",
+      "order": 2,
+      "title": "Fjölskyldan",
+      "part": 1,
+      "status": "draft",
+      "grammar_target_id": "G02",
+      "path": "lessons/kafli-02.json"
+    }
+  ],
+  "anki": {
+    "unit": "lesson",
+    "format": "tsv",
+    "deck": "Íslenska::Kvöldvakan",
+    "file_headers": [
+      "#separator:tab",
+      "#html:true",
+      "#guid column:1",
+      "#tags column:4",
+      "#deck:Íslenska::Kvöldvakan"
+    ],
+    "fields": [
+      "guid",
+      "front",
+      "back",
+      "tags",
+      "source"
+    ],
+    "identity": "course_id + lexeme_id + card_stage",
+    "guid_pattern": "is-kvold-01:{lexeme_id}:{stage_id}",
+    "source": "lexicon.card_stages where lesson == this lesson id",
+    "cumulative_export": true,
+    "tags_base": [
+      "is-kvold-01"
+    ],
+    "card_kinds": [
+      "recognition",
+      "production"
+    ],
+    "skip_baseline_known_default": true,
+    "tag_pattern": "is-kvold-01 kafli-NN hluti-N <pos> recognition|production",
+    "mode": "inflecting",
+    "chapter_tag": "kafli",
+    "part_tag": "hluti"
+  },
+  "audio": {
+    "engine": "piper",
+    "narrator_voice": "salka",
+    "speaker_voices": {
+      "char-afi": {
+        "voice": "bui",
+        "pitch": 0.94
+      },
+      "char-bjarni": "steinn",
+      "char-oli": "bui",
+      "char-siggi": {
+        "voice": "steinn",
+        "pitch": 1.2
+      },
+      "char-gudrun": "ugla",
+      "char-thorunn": {
+        "voice": "ugla",
+        "pitch": 0.94
+      },
+      "char-helga": {
+        "voice": "ugla",
+        "pitch": 1.07
+      },
+      "char-asta": {
+        "voice": "ugla",
+        "pitch": 1.22
+      }
+    },
+    "length_scale": 1,
+    "part_length_scales": {
+      "1": 1.12
+    },
+    "license": "CC-BY-4.0",
+    "attribution": "Talrómur speech corpus, Reykjavík University; Piper is_IS voices (salka, ugla, steinn, bui).",
+    "source": "https://huggingface.co/rhasspy/piper-voices",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "pronunciation_overrides": {},
+    "voice_notes": "Draft casting, pick by ear: narrator salka; afi bui (lowered), Bjarni steinn, Óli bui, Siggi steinn raised; Guðrún ugla, Þórunn ugla (lowered), Helga ugla (raised a little), Ásta ugla raised. Snati (Voff!) uses the narrator.",
+    "source_label": "Piper (Talrómur)",
+    "lesson_sources": {
+      "is-kvold-01-l01": [
+        {
+          "id": "piper",
+          "label": "Piper (Talrómur)",
+          "manifest": "media/audio/kafli-01/piper/manifest.json",
+          "default": true
+        }
+      ],
+      "is-kvold-01-l02": [
+        {
+          "id": "piper",
+          "label": "Piper (Talrómur)",
+          "manifest": "media/audio/kafli-02/piper/manifest.json",
+          "default": true
+        }
+      ]
+    }
+  },
+  "grading": {
+    "recurrence": {
+      "min_uses_in_chapter": 3,
+      "recall_in_next_five_min": 2
+    },
+    "coverage": {
+      "unlicensed_tokens_max": 0
+    },
+    "by_rhan": {
+      "1": {
+        "chapters": [
+          1,
+          10
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "gloss_per_100": [
+          2,
+          4
+        ],
+        "exercises_per_section": [
+          0,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ],
+        "word_targets": {
+          "1": 350,
+          "2": 420,
+          "3": 475,
+          "4": 530,
+          "5": 585,
+          "6": 640,
+          "7": 695,
+          "8": 750,
+          "9": 800,
+          "10": 850
+        }
+      },
+      "2": {
+        "chapters": [
+          11,
+          20
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "gloss_per_100": [
+          0.5,
+          2
+        ],
+        "exercises_per_section": [
+          0,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ]
+      },
+      "3": {
+        "chapters": [
+          21,
+          30
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "gloss_per_100": [
+          0.5,
+          2
+        ],
+        "exercises_per_section": [
+          0,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ]
+      },
+      "4": {
+        "chapters": [
+          31,
+          40
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "gloss_per_100": [
+          0.5,
+          2
+        ],
+        "exercises_per_section": [
+          0,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ]
+      }
+    }
+  },
+  "stepper": true,
+  "names_declensions": {
+    "Siggi": [
+      "Siggi",
+      "Sigga"
+    ],
+    "Bjarni": [
+      "Bjarni",
+      "Bjarna"
+    ],
+    "Guðrún": [
+      "Guðrún",
+      "Guðrúnu",
+      "Guðrúnar"
+    ],
+    "Helga": [
+      "Helga",
+      "Helgu"
+    ],
+    "Ásta": [
+      "Ásta",
+      "Ástu"
+    ],
+    "Óli": [
+      "Óli",
+      "Óla"
+    ],
+    "Þórunn": [
+      "Þórunn",
+      "Þórunni",
+      "Þórunnar"
+    ],
+    "Snati": [
+      "Snati",
+      "Snata"
+    ],
+    "Kristján": [
+      "Kristján",
+      "Kristjáni",
+      "Kristjáns"
+    ],
+    "Óðinn": [
+      "Óðinn",
+      "Óðin",
+      "Óðni",
+      "Óðins"
+    ],
+    "Sleipnir": [
+      "Sleipnir",
+      "Sleipni",
+      "Sleipnis"
+    ],
+    "Hamrar": [
+      "Hamrar",
+      "Hamra",
+      "Hömrum"
+    ],
+    "Jökuldalur": [
+      "Jökuldalur",
+      "Jökuldal",
+      "Jökuldals"
+    ],
+    "Jökulsá": [
+      "Jökulsá",
+      "Jökulsár"
+    ],
+    "Ísland": [
+      "Ísland",
+      "Íslandi",
+      "Íslands"
+    ],
+    "Ásgarður": [
+      "Ásgarður",
+      "Ásgarð",
+      "Ásgarði",
+      "Ásgarðs"
+    ],
+    "Reykjavík": [
+      "Reykjavík",
+      "Reykjavíkur"
+    ]
+  },
+  "instruction_vocabulary": {
+    "note": "Fixed exercise directions and labels, licensed from Kafli 1 in titles, instructions, length hints and Dæmi rules only (never in story text or expected answers). The English hint sits behind the toggle (hint_en).",
+    "phrases": [
+      "Dæmi",
+      "Æfing",
+      "Æfingar",
+      "Verkefni",
+      "Form",
+      "Orð",
+      "Spurningar",
+      "Málfræði",
+      "Orð með sögu",
+      "Settu orðið í rétt form.",
+      "Veldu rétt orð.",
+      "Skrifaðu endinguna.",
+      "Svaraðu spurningunni.",
+      "Skrifaðu setninguna með",
+      "Tengdu setningarnar með",
+      "Breyttu setningunni.",
+      "Raðaðu orðunum.",
+      "Skrifaðu",
+      "Svaraðu",
+      "Tengdu",
+      "Breyttu",
+      "Raðaðu",
+      "Endingar",
+      "Rétt form",
+      "Rétt fall",
+      "Hann, hún eða það?",
+      "Hver, hvað eða hvar?",
+      "Maður eða maðurinn?",
+      "eða",
+      "setning",
+      "setningar",
+      "Algengar villur",
+      "afi segir",
+      "Af hverju",
+      "En þú?",
+      "kk.",
+      "kvk.",
+      "hk."
+    ]
+  },
+  "names_all": [
+    "Siggi",
+    "Sigurður",
+    "Bjarni",
+    "Guðrún",
+    "Einar",
+    "Helga",
+    "Ásta",
+    "Ástríður",
+    "Óli",
+    "Ólafur",
+    "Þórunn",
+    "Manga",
+    "Margrét",
+    "Jón",
+    "Sólveig",
+    "Ketill",
+    "Þorvaldur",
+    "Hallur",
+    "Hansen",
+    "Kristján",
+    "Snati",
+    "Ísland",
+    "Austurland",
+    "Jökuldalur",
+    "Hamrar",
+    "Jökulsá",
+    "Hofteigur",
+    "Reykjavík",
+    "Ásgarður",
+    "Vopnafjörður",
+    "Seyðisfjörður",
+    "Jökuldalsheiði",
+    "Óðinn",
+    "Sleipnir"
+  ]
+}

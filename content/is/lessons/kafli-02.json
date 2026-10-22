@@ -1,0 +1,2186 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "is-kvold-01-l02",
+  "course_id": "is-kvold-01",
+  "order": 2,
+  "title": "Fjölskyldan",
+  "part": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "0.1.0-mvp",
+  "provenance": {
+    "author": "MVP writer (Claude, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "prompts/icelandic-mvp-writer-brief.md; docs/icelandic-kvoldvaka-design.md §6 row 2; content/is/plan/chapters.json row 2",
+    "review_required": "Codex cross-model language review and fluent native review before text_status: reviewed",
+    "notes": [
+      "G02: the suffixed article in the nominative singular, met first on second mention (Nú kemur maður … Maðurinn er Bjarni) and on things already known (konungurinn, presturinn, skotthúfan).",
+      "Ásta's problem changed from sweeping the yard (design §6 row 2) to dressing up in her new skotthúfa and waiting on the home field: sópa is not a licensed verb before G04, and the cap is the one Siggi cuts in Kafli 15.",
+      "Óðinn is linked to Sleipnir by „Óðinn situr á Sleipni“ (á + dat. of place, glossed Sleipni ← Sleipnir) instead of the genitive hestur Óðins (G10).",
+      "Added place chunk í Reykjavík (glossed by the Kafli 1 map); Kemur hann á Jökuldal? is the direction reading of the same string (supported use).",
+      "segir það / Afi segir það líka: accusative það, identical in form to the nominative (supported use before G05).",
+      "Incidental verbs added: stendur, fer, liggur (9 of 13 used by the end of Kafli 2)."
+    ],
+    "review_questions": [
+      {
+        "quote": "„Óðinn situr á Sleipni.“",
+        "question": "Natural for a grandfather telling a child (vs ríður Sleipni)?"
+      },
+      {
+        "quote": "Bjarni er pabbi, og Guðrún er mamma.",
+        "question": "Acceptable without a possessor from the children's point of view?"
+      },
+      {
+        "quote": "„Kemur hann á Jökuldal?“",
+        "question": "Natural for a six-year-old asking whether the king will come to the valley?"
+      },
+      {
+        "quote": "„Sagan er hér,“ segir afi.",
+        "question": "Does this read as afi pointing to his head / memory (intended)?"
+      },
+      {
+        "quote": "Nú kemur hún. Skotthúfan er ný.",
+        "question": "Does the article read as “her (new) cap” here?"
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G02",
+    "primary_new_grammar": {
+      "id": "G02",
+      "label": "Suffixed definite article, nominative singular (-inn, -in, -ið: maðurinn, konan, barnið); þessi nom.; Hver er …?",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G01"
+    ],
+    "incidental": [
+      {
+        "form": "stendur",
+        "gloss_segment_id": "is-kvold-01-l02-s004"
+      },
+      {
+        "form": "fer",
+        "gloss_segment_id": "is-kvold-01-l02-s031"
+      },
+      {
+        "form": "liggur",
+        "gloss_segment_id": "is-kvold-01-l02-s062"
+      },
+      {
+        "form": "í Reykjavík",
+        "gloss_segment_id": "is-kvold-01-l02-s045"
+      },
+      {
+        "form": "Gott kvöld",
+        "gloss_segment_id": "is-kvold-01-l02-s008"
+      },
+      {
+        "form": "Góða nótt",
+        "gloss_segment_id": "is-kvold-01-l02-s061"
+      }
+    ],
+    "new_lexeme_ids": [
+      "is-nu",
+      "is-kvold",
+      "is-lika",
+      "is-madur",
+      "is-kona",
+      "is-barn",
+      "is-pabbi",
+      "is-mamma",
+      "is-vinnumadur",
+      "is-vinnukona",
+      "is-konungur",
+      "is-prestur",
+      "is-ph-i-dag",
+      "is-ph-af-hverju",
+      "is-hver",
+      "is-finn",
+      "is-nyr",
+      "is-skotthufa",
+      "is-saga",
+      "is-nott",
+      "is-fjolskylda",
+      "is-heimili"
+    ],
+    "recycle_lexeme_ids": [
+      "is-thessi",
+      "is-vera",
+      "is-hvad",
+      "is-stor",
+      "is-litill",
+      "is-gamall",
+      "is-ungur",
+      "is-her",
+      "is-thar",
+      "is-hvar",
+      "is-og",
+      "is-en",
+      "is-ekki",
+      "is-hann",
+      "is-hun",
+      "is-thad",
+      "is-baer",
+      "is-afi",
+      "is-fjall",
+      "is-hestur",
+      "is-kind",
+      "is-dagur",
+      "is-ph-atta-faetur"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "is-standa",
+        "how": "SVG stendur · liggur · fer",
+        "segment_id": "is-kvold-01-l02-s004"
+      },
+      {
+        "lexeme_id": "is-fara",
+        "how": "SVG stendur · liggur · fer",
+        "segment_id": "is-kvold-01-l02-s031"
+      },
+      {
+        "lexeme_id": "is-liggja",
+        "how": "SVG stendur · liggur · fer",
+        "segment_id": "is-kvold-01-l02-s062"
+      },
+      {
+        "lexeme_id": "is-ph-i-reykjavik",
+        "how": "map (Kafli 1 cover, Reykjavík label)",
+        "segment_id": "is-kvold-01-l02-s045"
+      },
+      {
+        "lexeme_id": "is-ph-gott-kvold",
+        "how": "baseline chunk (course.json)",
+        "segment_id": "is-kvold-01-l02-s008"
+      },
+      {
+        "lexeme_id": "is-ph-goda-nott",
+        "how": "baseline chunk (course.json)",
+        "segment_id": "is-kvold-01-l02-s061"
+      },
+      {
+        "lexeme_id": "is-nu",
+        "how": "context (Nú er kvöld … Nú kemur …)",
+        "segment_id": "is-kvold-01-l02-s001"
+      },
+      {
+        "lexeme_id": "is-kvold",
+        "how": "antonym gloss dagur ↔ kvöld; Gott kvöld",
+        "segment_id": "is-kvold-01-l02-s001"
+      },
+      {
+        "lexeme_id": "is-lika",
+        "how": "context (Siggi situr …, og afi situr þar líka)",
+        "segment_id": "is-kvold-01-l02-s002"
+      },
+      {
+        "lexeme_id": "is-madur",
+        "how": "context („Pabbi!“) + household diagram; maður ↔ kona",
+        "segment_id": "is-kvold-01-l02-s005"
+      },
+      {
+        "lexeme_id": "is-kona",
+        "how": "antonym gloss maður ↔ kona („Mamma!“)",
+        "segment_id": "is-kvold-01-l02-s011"
+      },
+      {
+        "lexeme_id": "is-barn",
+        "how": "example gloss barn: Ásta, Siggi",
+        "segment_id": "is-kvold-01-l02-s014"
+      },
+      {
+        "lexeme_id": "is-pabbi",
+        "how": "household diagram (Bjarni · pabbi)",
+        "segment_id": "is-kvold-01-l02-s006"
+      },
+      {
+        "lexeme_id": "is-mamma",
+        "how": "household diagram (Guðrún · mamma)",
+        "segment_id": "is-kvold-01-l02-s012"
+      },
+      {
+        "lexeme_id": "is-vinnumadur",
+        "how": "household diagram (Óli · vinnumaður) + maður known",
+        "segment_id": "is-kvold-01-l02-s018"
+      },
+      {
+        "lexeme_id": "is-vinnukona",
+        "how": "household diagram (Þórunn · vinnukona) + kona known",
+        "segment_id": "is-kvold-01-l02-s019"
+      },
+      {
+        "lexeme_id": "is-konungur",
+        "how": "SVG crown vignette konungur; Kristján",
+        "segment_id": "is-kvold-01-l02-s022"
+      },
+      {
+        "lexeme_id": "is-prestur",
+        "how": "define: prestur = maður í kirkjunni",
+        "segment_id": "is-kvold-01-l02-s024"
+      },
+      {
+        "lexeme_id": "is-ph-i-dag",
+        "how": "define: í dag = þessi dagur",
+        "segment_id": "is-kvold-01-l02-s025"
+      },
+      {
+        "lexeme_id": "is-ph-af-hverju",
+        "how": "question answered at once (Af hverju kemur konungurinn ekki? — Hann er í Reykjavík.)",
+        "segment_id": "is-kvold-01-l02-s044"
+      },
+      {
+        "lexeme_id": "is-hver",
+        "how": "contrast hver? (Kristján, Óðinn) ↔ hvað? (hestur, kind)",
+        "segment_id": "is-kvold-01-l02-s027"
+      },
+      {
+        "lexeme_id": "is-finn",
+        "how": "define: fín = ný skotthúfa + scene",
+        "segment_id": "is-kvold-01-l02-s033"
+      },
+      {
+        "lexeme_id": "is-nyr",
+        "how": "antonym gloss gamall ↔ nýr",
+        "segment_id": "is-kvold-01-l02-s032"
+      },
+      {
+        "lexeme_id": "is-skotthufa",
+        "how": "SVG vignette skotthúfa",
+        "segment_id": "is-kvold-01-l02-s032"
+      },
+      {
+        "lexeme_id": "is-saga",
+        "how": "cognate (saga) + example: Óðinn, Sleipnir, Ásgarður",
+        "segment_id": "is-kvold-01-l02-s058"
+      },
+      {
+        "lexeme_id": "is-nott",
+        "how": "antonym gloss dagur ↔ nótt; Góða nótt",
+        "segment_id": "is-kvold-01-l02-s049"
+      },
+      {
+        "lexeme_id": "is-fjolskylda",
+        "how": "example in the text (Afi, pabbi, mamma, Helga, Siggi og Ásta: þetta er fjölskylda.) + household diagram",
+        "segment_id": "is-kvold-01-l02-s021"
+      },
+      {
+        "lexeme_id": "is-heimili",
+        "how": "Orð með sögu: heimili = fjölskylda, og Óli, Þórunn og Snati (not in the story prose: met in words_with_history)"
+      }
+    ],
+    "swaps": []
+  },
+  "media": {
+    "status": "draft",
+    "cover": "is-kvold-01-l02-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 3,
+      "margin_vignette": 2,
+      "margin_diagram": 3,
+      "margin_gloss": 11
+    },
+    "notes": "Five deterministic SVGs (household, stendur/liggur/fer, Reykjavík map, konungur, skotthúfa) by the writer; cover and three inline scenes are planned rasters (the Óðinn scene in the myth woodcut style); no sentence depends on them. No lamp is lit: lamp-lighting belongs to Kafli 6."
+  },
+  "metrics": {
+    "running_words": 424,
+    "sentences": 108,
+    "word_target": 420,
+    "word_window": [
+      378,
+      462
+    ]
+  },
+  "story": {
+    "cover": {
+      "type": "image",
+      "presentation": "inline_scene",
+      "ref": "is-kvold-01-l02-cover",
+      "src": "media/images/is-kvold-01-l02-cover.webp",
+      "alt": "Evening at Hamrar: the household comes home from church. Bjarni rides into the yard first on a big brown horse; behind him Guðrún and Helga on horses, little Ásta riding in front of Guðrún; the farmhand Óli and the maid Þórunn on foot. Siggi stands on the home field waving, afi beside him; Snati barks.",
+      "status": "draft",
+      "art_brief": "Evening of Sunday 2 August 1874, golden low light from the north-west, the valley in shadow. The yard (hlað) and home field of the turf farm Hamrar with its wooden gables. Arriving along the track from down the valley: first Bjarni (44, broad, dark beard, Sunday dark coat and hat) on a big brown Icelandic horse; then Guðrún (38, dark peysuföt with a black skotthúfa) on a grey horse with little Ásta (6, round face, fair plaits) sitting in front of her; Helga (18, tall, light-brown hair in plaits, dark Sunday dress and skotthúfa) on a dun horse; on foot behind, Óli (24, big, red-cheeked, grinning, cap pushed back) and Þórunn (36, thin, dark shawl). Foreground: Siggi on the home field (bandaged foot) waving, toy horse in hand; afi standing beside him; Snati standing and barking. Recognisable from the character sheets; no text.",
+      "characters": [
+        "char-bjarni",
+        "char-gudrun",
+        "char-helga",
+        "char-asta",
+        "char-oli",
+        "char-thorunn",
+        "char-siggi",
+        "char-afi",
+        "char-snati"
+      ],
+      "covers_lexeme_ids": [
+        "is-madur",
+        "is-kona",
+        "is-barn",
+        "is-hestur"
+      ],
+      "width": 1600,
+      "height": 1073
+    },
+    "sections": [
+      {
+        "id": "is-kvold-01-l02-sec1",
+        "title": "Gott kvöld",
+        "segments": [
+          {
+            "id": "is-kvold-01-l02-s001",
+            "text": "Nú er kvöld á Jökuldal.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "kvöld",
+                "gloss": "dagur ↔ kvöld",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-kvold"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s002",
+            "text": "Siggi situr á túninu, og afi situr þar líka."
+          },
+          {
+            "id": "is-kvold-01-l02-s003",
+            "text": "Snati sefur, en afi sefur ekki."
+          },
+          {
+            "id": "is-kvold-01-l02-s004",
+            "text": "„Voff!“ segir Snati, og hann stendur.",
+            "paragraph_start": true,
+            "speaker": "char-snati",
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l02-svg-stendur-liggur-fer",
+                "anchor_text": "stendur",
+                "src": "media/diagrams/is-kvold-01-l02-svg-stendur-liggur-fer.svg",
+                "label": "stendur · liggur · fer",
+                "alt": "Three small figures: standing (stendur), lying on a bench (liggur), walking away from a turf house (fer).",
+                "status": "draft",
+                "width": 520,
+                "height": 240,
+                "covers_lexeme_ids": [
+                  "is-standa",
+                  "is-liggja",
+                  "is-fara"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s005",
+            "text": "Nú kemur hestur, og nú kemur maður."
+          },
+          {
+            "id": "is-kvold-01-l02-s006",
+            "text": "„Pabbi!“ segir Siggi.",
+            "speaker": "char-siggi",
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l02-svg-heimilid",
+                "anchor_text": "Pabbi",
+                "src": "media/diagrams/is-kvold-01-l02-svg-heimilid.svg",
+                "label": "afi · pabbi · mamma · Helga · Siggi · Ásta · Óli · Þórunn",
+                "alt": "Household diagram: afi at the top; Bjarni (pabbi) and Guðrún (mamma); their children Helga, Siggi and Ásta; Óli (vinnumaður) and Þórunn (vinnukona) in a dashed box beside them.",
+                "status": "draft",
+                "width": 480,
+                "height": 680,
+                "covers_lexeme_ids": [
+                  "is-pabbi",
+                  "is-mamma",
+                  "is-vinnumadur",
+                  "is-vinnukona",
+                  "is-fjolskylda"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s007",
+            "text": "Maðurinn er Bjarni.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Maðurinn",
+                "gloss": "maður → maðurinn",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g02"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s008",
+            "text": "„Gott kvöld,“ segir Bjarni.",
+            "speaker": "char-bjarni"
+          },
+          {
+            "id": "is-kvold-01-l02-s009",
+            "text": "Hann er stór, og hesturinn er líka stór."
+          },
+          {
+            "id": "is-kvold-01-l02-s010",
+            "text": "„Þessi hestur er stór, pabbi!“ segir Siggi. „En Sleipnir er lítill.“",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l02-s011",
+            "text": "Nú kemur kona.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l02-s012",
+            "text": "„Mamma!“ segir Siggi.",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l02-s013",
+            "text": "Konan er Guðrún.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Konan",
+                "gloss": "maður ↔ kona · kona → konan",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-kona"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s014",
+            "text": "Og hér er barn. Barnið heitir Ásta.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "barn",
+                "gloss": "barn: Ásta, Siggi",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "is-barn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s015",
+            "text": "Það er lítið."
+          },
+          {
+            "id": "is-kvold-01-l02-s016",
+            "text": "Helga kemur líka. Hún er ekki barn. Hún er ung kona."
+          },
+          {
+            "id": "is-kvold-01-l02-s017",
+            "text": "Óli kemur, og Þórunn kemur.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l02-s018",
+            "text": "Óli er ungur maður, en hann er ekki pabbi, og hann er ekki afi. Hann er vinnumaður."
+          },
+          {
+            "id": "is-kvold-01-l02-s019",
+            "text": "Þórunn er ekki mamma. Hún er vinnukona."
+          },
+          {
+            "id": "is-kvold-01-l02-s020",
+            "text": "Bjarni er pabbi, og Guðrún er mamma."
+          },
+          {
+            "id": "is-kvold-01-l02-s021",
+            "text": "Afi, pabbi, mamma, Helga, Siggi og Ásta: þetta er fjölskylda."
+          }
+        ],
+        "exercises": [
+          {
+            "id": "is-kvold-01-l02-x1-1",
+            "type": "podstanovka",
+            "title": "Rétt form",
+            "instruction": "Settu orðið í rétt form.",
+            "hint_en": "Second mention: the noun takes the article: maður → maðurinn, kona → konan, barn → barnið.",
+            "grammar_target_ids": [
+              "G02"
+            ],
+            "obrazec": {
+              "rule": "maður → maðurinn · kona → konan · barn → barnið",
+              "prompt": "Nú kemur maður. ___ er Bjarni. (maður)",
+              "answer": "Maðurinn"
+            },
+            "items": [
+              {
+                "id": "x1-1-1",
+                "prompt": "Nú kemur kona. ___ er Guðrún. (kona)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Konan"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "Kona",
+                    "hint": "second mention → -n"
+                  },
+                  {
+                    "answer": "Konain",
+                    "hint": "kona + -n"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-2",
+                "prompt": "Hér er barn. ___ heitir Ásta. (barn)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Barnið"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "Barn",
+                    "hint": "second mention → -ið"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-3",
+                "prompt": "Nú kemur hestur. ___ er stór. (hestur)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Hesturinn"
+                ]
+              },
+              {
+                "id": "x1-1-4",
+                "prompt": "Helga er kona. ___ er ung. (kona)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Konan"
+                ]
+              },
+              {
+                "id": "x1-1-5",
+                "prompt": "Nú kemur hestur, og ___ er stór. (hestur)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "hesturinn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-x1-2",
+            "type": "podstanovka",
+            "title": "Maður eða maðurinn?",
+            "instruction": "Veldu rétt orð.",
+            "hint_en": "First mention without the article (a man), second mention with it (the man).",
+            "grammar_target_ids": [
+              "G02"
+            ],
+            "obrazec": {
+              "rule": "Nú kemur maður. → Maðurinn er Bjarni.",
+              "prompt": "Nú kemur ___. (maður / maðurinn)",
+              "answer": "maður"
+            },
+            "items": [
+              {
+                "id": "x1-2-1",
+                "prompt": "Nú kemur ___, og nú kemur maður.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "hestur"
+                ],
+                "choices": [
+                  "hestur",
+                  "hesturinn",
+                  "konan"
+                ]
+              },
+              {
+                "id": "x1-2-2",
+                "prompt": "Nú kemur maður. ___ er Bjarni.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Maðurinn"
+                ],
+                "choices": [
+                  "Maður",
+                  "Maðurinn",
+                  "Konan"
+                ]
+              },
+              {
+                "id": "x1-2-3",
+                "prompt": "Og hér er ___. Barnið heitir Ásta.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "barn"
+                ],
+                "choices": [
+                  "barn",
+                  "barnið",
+                  "konan"
+                ]
+              },
+              {
+                "id": "x1-2-4",
+                "prompt": "Nú kemur kona. ___ er Guðrún.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Konan"
+                ],
+                "choices": [
+                  "Kona",
+                  "Konan",
+                  "Maðurinn"
+                ]
+              },
+              {
+                "id": "x1-2-5",
+                "prompt": "Helga er ekki barn. Hún er ung ___.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "kona"
+                ],
+                "choices": [
+                  "kona",
+                  "konan",
+                  "barnið"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "konan",
+                    "hint": "saying what someone is: no article"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "is-kvold-01-l02-sec2",
+        "title": "Konungurinn",
+        "segments": [
+          {
+            "id": "is-kvold-01-l02-s022",
+            "text": "„Siggi! Konungurinn er á Íslandi!“ segir vinnumaðurinn.",
+            "paragraph_start": true,
+            "speaker": "char-oli",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "is-kvold-01-l02-svg-konungur",
+                "anchor_text": "Konungurinn",
+                "label": "konungur",
+                "src": "media/diagrams/is-kvold-01-l02-svg-konungur.svg",
+                "alt": "A golden crown; label konungur.",
+                "status": "draft",
+                "width": 240,
+                "height": 230,
+                "covers_lexeme_ids": [
+                  "is-konungur"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s023",
+            "text": "„Konungurinn?“ spyr Siggi.",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l02-s024",
+            "text": "„Já,“ segir Helga. „Presturinn segir það í kirkjunni.“",
+            "speaker": "char-helga",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Presturinn",
+                "gloss": "prestur: maður í kirkjunni",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "is-prestur"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s025",
+            "text": "„Presturinn segir: ‚Í dag er stór dagur. Konungurinn er á Íslandi, og Ísland er gamalt.‘“",
+            "speaker": "char-helga",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Í dag",
+                "gloss": "í dag: þessi dagur",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "is-ph-i-dag"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s026",
+            "text": "„Stór dagur í dag! Afi segir það líka!“ segir Siggi.",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l02-s027",
+            "text": "„Hver er konungurinn?“ spyr Ásta.",
+            "paragraph_start": true,
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s028",
+            "text": "„Konungurinn heitir Kristján,“ segir Bjarni.",
+            "speaker": "char-bjarni"
+          },
+          {
+            "id": "is-kvold-01-l02-s029",
+            "text": "„Kemur hann á Jökuldal?“",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s030",
+            "text": "„Já, já!“ segir Óli.",
+            "speaker": "char-oli"
+          },
+          {
+            "id": "is-kvold-01-l02-s031",
+            "text": "Ásta fer.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l02-s032",
+            "text": "Nú kemur hún. Skotthúfan er ný.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "is-kvold-01-l02-svg-skotthufa",
+                "anchor_text": "Skotthúfan",
+                "label": "skotthúfa",
+                "src": "media/diagrams/is-kvold-01-l02-svg-skotthufa.svg",
+                "alt": "A small black knitted cap with a long tail, a silver tassel holder and a black tassel; label skotthúfa.",
+                "status": "draft",
+                "width": 260,
+                "height": 240,
+                "covers_lexeme_ids": [
+                  "is-skotthufa"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ný",
+                "gloss": "gamall ↔ nýr",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-nyr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s033",
+            "text": "Ásta er fín.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fín",
+                "gloss": "fín: ný skotthúfa",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "is-finn"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s034",
+            "text": "Ásta stendur á túninu.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l02-img-asta-bidur",
+                "src": "media/images/is-kvold-01-l02-img-asta-bidur.webp",
+                "alt": "Little Ásta in her new black tasselled cap stands very straight on the home field, looking down the empty valley track; Snati sits beside her and a ewe wanders up; behind, at the house, Óli is laughing and Þórunn has her hand over her mouth.",
+                "status": "draft",
+                "art_brief": "Same evening, a little later, the sun lower. Ásta (6) stands alone and very straight in the middle of the home field, hands folded, wearing her best dark dress and a NEW small black knitted skotthúfa with a long tail, a shiny silver tassel holder and a black silk tassel; she gazes solemnly down the empty track along the valley. Snati sits beside her; a curious ewe has come up to her. Background at the farmhouse door: Óli doubled up laughing, Þórunn coming towards Ásta with one hand over her mouth, trying not to laugh. Gentle comedy, never mocking. Same style; no text.",
+                "characters": [
+                  "char-asta",
+                  "char-snati",
+                  "char-oli",
+                  "char-thorunn"
+                ],
+                "covers_lexeme_ids": [
+                  "is-skotthufa",
+                  "is-finn",
+                  "is-nyr"
+                ],
+                "width": 1600,
+                "height": 1073
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s035",
+            "text": "Nú kemur Snati. En konungurinn kemur ekki."
+          },
+          {
+            "id": "is-kvold-01-l02-s036",
+            "text": "Nú kemur kind. En konungurinn kemur ekki."
+          },
+          {
+            "id": "is-kvold-01-l02-s037",
+            "text": "Nú kemur Þórunn. En konungurinn kemur ekki."
+          },
+          {
+            "id": "is-kvold-01-l02-s038",
+            "text": "„Ásta, hvað er þetta?“ spyr vinnukonan.",
+            "paragraph_start": true,
+            "speaker": "char-thorunn"
+          },
+          {
+            "id": "is-kvold-01-l02-s039",
+            "text": "„Konungurinn kemur!“ segir Ásta.",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s040",
+            "text": "„Ha, ha!“ segir Þórunn.",
+            "speaker": "char-thorunn"
+          },
+          {
+            "id": "is-kvold-01-l02-s041",
+            "text": "„Ha, ha, ha! Ásta er fín!“ segir Óli.",
+            "speaker": "char-oli"
+          },
+          {
+            "id": "is-kvold-01-l02-s042",
+            "text": "„Óli!“ segir Ásta.",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s043",
+            "text": "Nú kemur Helga.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l02-s044",
+            "text": "„Helga, af hverju kemur konungurinn ekki?“ spyr Ásta.",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s045",
+            "text": "„Ásta, konungurinn er ekki hér,“ segir Helga. „Hann er í Reykjavík.“",
+            "speaker": "char-helga",
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l02-svg-reykjavik",
+                "anchor_text": "Reykjavík",
+                "src": "media/diagrams/is-kvold-01-l02-svg-reykjavik.svg",
+                "label": "Reykjavík · Jökuldalur",
+                "alt": "Outline map of Iceland with Reykjavík in the south-west and Jökuldalur in the east; Icelandic labels only.",
+                "status": "draft",
+                "width": 480,
+                "height": 300,
+                "covers_lexeme_ids": [
+                  "is-ph-i-reykjavik"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s046",
+            "text": "„Reykjavík er þar, og Jökuldalur er hér. Ísland er stórt.“",
+            "speaker": "char-helga"
+          },
+          {
+            "id": "is-kvold-01-l02-s047",
+            "text": "„Og skotthúfan? Hún er ný!“",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s048",
+            "text": "„Skotthúfan er ný og fín, Ásta,“ segir Guðrún.",
+            "speaker": "char-gudrun"
+          }
+        ],
+        "exercises": [
+          {
+            "id": "is-kvold-01-l02-x2-1",
+            "type": "podstanovka",
+            "title": "Hver, hvað eða hvar?",
+            "instruction": "Veldu rétt orð.",
+            "hint_en": "hver? asks about a person, hvað? about a thing, hvar? about a place.",
+            "grammar_target_ids": [
+              "G02"
+            ],
+            "obrazec": {
+              "rule": "hver? Kristján · hvað? skotthúfa · hvar? í Reykjavík",
+              "prompt": "___ er þetta? — Þetta er hestur.",
+              "answer": "Hvað"
+            },
+            "items": [
+              {
+                "id": "x2-1-1",
+                "prompt": "___ er konungurinn? — Kristján.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Hver"
+                ],
+                "choices": [
+                  "Hver",
+                  "Hvað",
+                  "Hvar"
+                ]
+              },
+              {
+                "id": "x2-1-2",
+                "prompt": "___ er þetta? — Þetta er skotthúfa.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Hvað"
+                ],
+                "choices": [
+                  "Hver",
+                  "Hvað",
+                  "Hvar"
+                ]
+              },
+              {
+                "id": "x2-1-3",
+                "prompt": "___ kemur? — Þórunn.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Hver"
+                ],
+                "choices": [
+                  "Hver",
+                  "Hvað",
+                  "Hvar"
+                ]
+              },
+              {
+                "id": "x2-1-4",
+                "prompt": "___ er konungurinn? — Í Reykjavík.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Hvar"
+                ],
+                "choices": [
+                  "Hver",
+                  "Hvað",
+                  "Hvar"
+                ]
+              },
+              {
+                "id": "x2-1-5",
+                "prompt": "___ er presturinn? — Í kirkjunni.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Hvar"
+                ],
+                "choices": [
+                  "Hver",
+                  "Hvað",
+                  "Hvar"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-x2-2",
+            "type": "okonchaniya",
+            "title": "Endingar",
+            "instruction": "Skrifaðu endinguna.",
+            "hint_en": "The article: kk. -inn, kvk. -in (after -a only -n), hk. -ið.",
+            "grammar_target_ids": [
+              "G02"
+            ],
+            "obrazec": {
+              "rule": "kk. -inn · kvk. -n · hk. -ið",
+              "prompt": "Maður___ er Bjarni.",
+              "answer": "inn"
+            },
+            "items": [
+              {
+                "id": "x2-2-1",
+                "prompt": "Konungur___ heitir Kristján.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "inn"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "in",
+                    "hint": "konungur (kk.) → -inn"
+                  }
+                ]
+              },
+              {
+                "id": "x2-2-2",
+                "prompt": "Skotthúfa___ er ný.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "n"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "in",
+                    "hint": "-a + n: skotthúfan"
+                  }
+                ]
+              },
+              {
+                "id": "x2-2-3",
+                "prompt": "Barn___ heitir Ásta.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ið"
+                ]
+              },
+              {
+                "id": "x2-2-4",
+                "prompt": "Prestur___ segir það í kirkjunni.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "inn"
+                ]
+              },
+              {
+                "id": "x2-2-5",
+                "prompt": "Kona___ er Guðrún.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "n"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "in",
+                    "hint": "-a + n: konan"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "is-kvold-01-l02-sec3",
+        "title": "Konungur í Ásgarði",
+        "segments": [
+          {
+            "id": "is-kvold-01-l02-s049",
+            "text": "Nú er nótt á Jökuldal.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l02-img-badstofa",
+                "src": "media/images/is-kvold-01-l02-img-badstofa.webp",
+                "alt": "The household of Hamrar at night in the baðstofa, in the pale light of an August night through a small window: afi on his bed with Siggi holding the toy horse, Ásta sitting up in bed asking a question, Guðrún tucking her in.",
+                "status": "draft",
+                "art_brief": "Night of 2 August 1874, the baðstofa of Hamrar (long low room under a turf roof, wooden panelling, beds along both walls), NO lamp is lit (summer: lamps are first lit at the start of winter, Kafli 6): the only light is the pale blue-grey August night light (about 11 p.m., 65° N, still twilight) through one small four-paned window in the roof slope; soft shadows. Afi sits on the edge of his bed, Siggi beside him holding up the eight-legged toy horse. Opposite, Ásta (6) sits up in bed in a white nightshirt, her skotthúfa on the bedpost, asking a question with wide eyes; Guðrún bends to tuck her in. Helga, Bjarni, Óli and Þórunn are dim shapes further down the room. Same farm watercolour style as the visual bible; no text.",
+                "characters": [
+                  "char-afi",
+                  "char-siggi",
+                  "char-asta",
+                  "char-gudrun"
+                ],
+                "covers_lexeme_ids": [
+                  "is-nott"
+                ],
+                "width": 1600,
+                "height": 1073
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nótt",
+                "gloss": "dagur ↔ nótt",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-nott"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s050",
+            "text": "Ásta er í bænum. Afi er þar, og Siggi er þar líka."
+          },
+          {
+            "id": "is-kvold-01-l02-s051",
+            "text": "„Ásta, konungurinn er í Reykjavík,“ segir afi. „En í Ásgarði er líka konungur.“",
+            "speaker": "char-afi"
+          },
+          {
+            "id": "is-kvold-01-l02-s052",
+            "text": "„Í Ásgarði? Hvar er Ásgarður?“ spyr Ásta.",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s053",
+            "text": "„Ásgarður er ekki á Íslandi,“ segir Siggi. „Sleipnir er í Ásgarði.“",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l02-s054",
+            "text": "„Já,“ segir afi. „Og konungurinn í Ásgarði heitir Óðinn.“",
+            "paragraph_start": true,
+            "speaker": "char-afi"
+          },
+          {
+            "id": "is-kvold-01-l02-s055",
+            "text": "„Óðinn situr á Sleipni.“",
+            "speaker": "char-afi",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l02-img-odinn",
+                "src": "media/images/is-kvold-01-l02-img-odinn.webp",
+                "alt": "As the household imagines it, in a woodcut style: Óðinn, a king with a long beard, a broad hat and a spear, rides the eight-legged horse Sleipnir across the sky; a hall in Ásgarður below.",
+                "status": "draft",
+                "art_brief": "MYTH STYLE (visual bible §myth: black-and-white woodcut / 19th-century Icelandic printed-book margin illustration, not the farm watercolour): Óðinn as a king, long beard, one eye, broad-brimmed hat and cloak, a crown visible under the hat brim or a circlet, a spear in his hand, riding the grey horse Sleipnir with EIGHT legs clearly countable, galloping over stylised clouds; below, small, a great gabled hall (Ásgarður). Framed like a book illustration; no text, no letters.",
+                "characters": [
+                  "char-odinn"
+                ],
+                "covers_lexeme_ids": [
+                  "is-konungur"
+                ],
+                "width": 1600,
+                "height": 1073
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "á Sleipni",
+                "gloss": "Sleipnir → á Sleipni",
+                "gloss_kind": "form"
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s056",
+            "text": "„Átta fætur og konungur!“ segir Siggi.",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l02-s057",
+            "text": "„Konungurinn er í Reykjavík, og Óðinn er í Ásgarði,“ segir Ásta. „En hver er Óðinn?“",
+            "paragraph_start": true,
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s058",
+            "text": "„Óðinn?“ segir afi. „Það er saga, Ásta.“",
+            "speaker": "char-afi",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "saga",
+                "gloss": "saga: Óðinn, Sleipnir og Ásgarður",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "is-saga"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-s059",
+            "text": "„Saga? Hvar er sagan, afi?“",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s060",
+            "text": "„Sagan er hér,“ segir afi.",
+            "speaker": "char-afi"
+          },
+          {
+            "id": "is-kvold-01-l02-s061",
+            "text": "„Góða nótt, Ásta,“ segir Guðrún.",
+            "speaker": "char-gudrun"
+          },
+          {
+            "id": "is-kvold-01-l02-s062",
+            "text": "Ásta liggur, en hún sefur ekki.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l02-s063",
+            "text": "„Afi, hver er Óðinn?“",
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l02-s064",
+            "text": "„Góða nótt, Ásta,“ segir afi.",
+            "speaker": "char-afi"
+          }
+        ],
+        "exercises": [
+          {
+            "id": "is-kvold-01-l02-x3-1",
+            "type": "podstanovka",
+            "title": "Rétt form",
+            "instruction": "Settu orðið í rétt form.",
+            "hint_en": "lítill (kk.), lítil (kvk.), lítið (hk.): barnið is neuter.",
+            "grammar_target_ids": [
+              "G02"
+            ],
+            "obrazec": {
+              "rule": "hesturinn: lítill · konan: lítil · barnið: lítið",
+              "prompt": "Barnið er ___. (lítill)",
+              "answer": "lítið"
+            },
+            "items": [
+              {
+                "id": "x3-1-1",
+                "prompt": "Ásta er ___. (lítill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "lítil"
+                ]
+              },
+              {
+                "id": "x3-1-2",
+                "prompt": "Sleipnir er ___. (lítill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "lítill"
+                ]
+              },
+              {
+                "id": "x3-1-3",
+                "prompt": "Konan er ___. (lítill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "lítil"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "lítið",
+                    "hint": "konan (kvk.) → lítil"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-4",
+                "prompt": "Hesturinn er ___. (stór)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "stór"
+                ]
+              },
+              {
+                "id": "x3-1-5",
+                "prompt": "Skotthúfan er ___. (nýr)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ný"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "nýr",
+                    "hint": "skotthúfan (kvk.) → ný"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-x3-2",
+            "type": "preobrazovanie",
+            "title": "Breyttu",
+            "instruction": "Breyttu setningunni.",
+            "hint_en": "Turn “this is a …” into “the … is here”: the noun takes the article.",
+            "grammar_target_ids": [
+              "G02"
+            ],
+            "obrazec": {
+              "rule": "Þetta er maður. → Maðurinn er hér.",
+              "prompt": "Þetta er maður. →",
+              "answer": "Maðurinn er hér."
+            },
+            "items": [
+              {
+                "id": "x3-2-1",
+                "prompt": "Þetta er saga. →",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Sagan er hér.",
+                  "Hér er sagan."
+                ]
+              },
+              {
+                "id": "x3-2-2",
+                "prompt": "Þetta er konungur. →",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Konungurinn er hér.",
+                  "Hér er konungurinn."
+                ]
+              },
+              {
+                "id": "x3-2-3",
+                "prompt": "Þetta er skotthúfa. →",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Skotthúfan er hér.",
+                  "Hér er skotthúfan."
+                ]
+              },
+              {
+                "id": "x3-2-4",
+                "prompt": "Þetta er barn. →",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Barnið er hér.",
+                  "Hér er barnið."
+                ]
+              },
+              {
+                "id": "x3-2-5",
+                "prompt": "Þetta er hestur. →",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Hesturinn er hér.",
+                  "Hér er hesturinn."
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l02-napishi",
+            "type": "napishi",
+            "title": "Skrifaðu",
+            "mode": "productive",
+            "prompt": "Hamrar: hver er hver? Skrifaðu.",
+            "length_hint": "3–5 setningar",
+            "hint_en": "Write 3–5 sentences about the household at Hamrar: who is who (pabbi, mamma, barn, vinnumaður …). Give a noun the article when it has been mentioned already.",
+            "model_answers": [
+              "Bjarni er pabbi, og Guðrún er mamma. Ásta er barn. Barnið er lítið. Helga er ung kona.",
+              "Nú kemur maður. Maðurinn er Óli. Óli er vinnumaður, og Þórunn er vinnukona. Afi er gamall, en Siggi er ungur."
+            ],
+            "rubric": [
+              "the article on a noun already mentioned (maður → maðurinn, barn → barnið, kona → konan)",
+              "no article when saying what someone is (Ásta er barn; Óli er vinnumaður)",
+              "hann / hún / það and adjective agreement (lítill, lítil, lítið)"
+            ],
+            "rubric_lang": "en",
+            "key_terms": [
+              "is-madur",
+              "is-kona",
+              "is-barn",
+              "is-pabbi",
+              "is-mamma"
+            ],
+            "typical_errors": [
+              {
+                "wrong": "Barnið er lítil.",
+                "right": "Barnið er lítið.",
+                "note": "barnið is neuter (hk.): lítið",
+                "note_lang": "en"
+              },
+              {
+                "wrong": "Konainn er Guðrún.",
+                "right": "Konan er Guðrún.",
+                "note": "kona → konan (-a + n)",
+                "note_lang": "en"
+              },
+              {
+                "wrong": "Ásta er barnið.",
+                "right": "Ásta er barn.",
+                "note": "For “Ásta is a child” use Ásta er barn; Ásta er barnið means “Ásta is the child”.",
+                "note_lang": "en"
+              }
+            ],
+            "elicits": [
+              "G02"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "words_with_history": {
+    "title": "Orð með sögu",
+    "word": "fjölskylda · heimili",
+    "text": [
+      "Fjölskylda: afi, pabbi, mamma, Helga, Siggi og Ásta.",
+      "Heimili: fjölskylda — og Óli, Þórunn og Snati líka."
+    ],
+    "lexeme_ids": [
+      "is-fjolskylda",
+      "is-heimili"
+    ],
+    "note_en": "In 1874 a farm household (heimili) counted everyone under one roof: the family, the hired servants (vinnumaður, vinnukona), paupers boarded by the parish and guests. Fjölskylda is the kin; heimili is the household. Servants were hired by the year and changed farms on 14 May."
+  },
+  "grammar": {
+    "title": "maður → maðurinn",
+    "rule": "kk. -inn (maðurinn) · kvk. -in, -n (konan) · hk. -ið (barnið)",
+    "tables": [
+      {
+        "caption": "-inn · -in · -ið",
+        "header": [
+          "kk.",
+          "kvk.",
+          "hk."
+        ],
+        "rows": [
+          [
+            "maður → maðurinn",
+            "kona → konan",
+            "barn → barnið"
+          ],
+          [
+            "hestur → hesturinn",
+            "skotthúfa → skotthúfan",
+            ""
+          ],
+          [
+            "konungur → konungurinn",
+            "saga → sagan",
+            ""
+          ],
+          [
+            "prestur → presturinn",
+            "",
+            ""
+          ]
+        ]
+      },
+      {
+        "caption": "Nú kemur maður. Maðurinn er Bjarni.",
+        "header": [
+          "…",
+          "…"
+        ],
+        "rows": [
+          [
+            "Nú kemur maður.",
+            "Maðurinn er Bjarni."
+          ],
+          [
+            "Nú kemur kona.",
+            "Konan er Guðrún."
+          ],
+          [
+            "Og hér er barn.",
+            "Barnið heitir Ásta."
+          ],
+          [
+            "Barnið heitir Ásta.",
+            "Það er lítið."
+          ]
+        ]
+      },
+      {
+        "caption": "hver? · hvað?",
+        "header": [
+          "hver?",
+          "hvað?"
+        ],
+        "rows": [
+          [
+            "Hver er konungurinn? — Kristján.",
+            "Hvað er þetta? — Þetta er skotthúfa."
+          ],
+          [
+            "Hver er Óðinn? — Það er saga.",
+            ""
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "is-kvold-01-l02-s007"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s009"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s013"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s014"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s022"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s032"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s015"
+      },
+      {
+        "segment_id": "is-kvold-01-l02-s010"
+      }
+    ],
+    "note_en": "Icelandic has no word for “a”: hestur is “a horse”. “The” is an ending: hestur-inn, kona-n, barn-ið (kk. -inn, kvk. -in, after -a just -n, hk. -ið). A noun takes it when we already know which one: Nú kemur maður. Maðurinn er Bjarni. Saying what someone is takes none: Ásta er barn. Hver? asks about people, hvað? about things; þessi (this) stands before the noun."
+  },
+  "pensa": {
+    "A": {
+      "id": "is-kvold-01-l02-pa",
+      "title": "Verkefni A — Form",
+      "blocks": [
+        {
+          "obrazec": {
+            "prompt": "Nú kemur maður. ___ er Bjarni. (maður)",
+            "answer": "Maðurinn"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Nú kemur kona. ___ heitir Guðrún. (kona)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "Konan"
+              ],
+              "choices": [
+                "Kona",
+                "Konan",
+                "Maðurinn"
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "Hér er barn. ___ er lítið. (barn)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "Barnið"
+              ],
+              "choices": [
+                "Barn",
+                "Barnið",
+                "Konan"
+              ]
+            },
+            {
+              "id": "a3",
+              "prompt": "„___ er á Íslandi!“ segir Óli. (konungur)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "Konungurinn"
+              ],
+              "choices": [
+                "Konungur",
+                "Konungurinn",
+                "Presturinn"
+              ]
+            },
+            {
+              "id": "a4",
+              "prompt": "Helga er ung ___. (kona)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "kona"
+              ],
+              "choices": [
+                "kona",
+                "konan",
+                "barnið"
+              ]
+            }
+          ]
+        },
+        {
+          "obrazec": {
+            "prompt": "Þar er fjall. ___ er stórt.",
+            "answer": "Það"
+          },
+          "items": [
+            {
+              "id": "a5",
+              "prompt": "Þetta er skotthúfa. ___ er ný.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Hún"
+              ],
+              "recall_of": "G01",
+              "common_wrong": [
+                {
+                  "answer": "Það",
+                  "hint": "skotthúfa (kvk.) → hún"
+                }
+              ]
+            },
+            {
+              "id": "a6",
+              "prompt": "Barnið er ___. (lítill)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "lítið"
+              ],
+              "recall_of": "G01",
+              "common_wrong": [
+                {
+                  "answer": "lítil",
+                  "hint": "barnið (hk.) → lítið"
+                }
+              ]
+            },
+            {
+              "id": "a7",
+              "prompt": "„___ heitir Kristján,“ segir Bjarni. (konungur)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Konungurinn"
+              ]
+            },
+            {
+              "id": "a8",
+              "prompt": "„___ er ný og fín, Ásta,“ segir Guðrún. (skotthúfa)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Skotthúfan"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Skotthúfain",
+                  "hint": "-a + n"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "is-kvold-01-l02-pb",
+      "title": "Verkefni B — Orð",
+      "word_bank": [
+        "barn",
+        "fjölskylda",
+        "konungur",
+        "kvöld",
+        "mamma",
+        "nótt",
+        "pabbi",
+        "prestur",
+        "saga",
+        "skotthúfa",
+        "vinnumaður"
+      ],
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Bjarni er ___, og Guðrún er mamma.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "pabbi"
+          ]
+        },
+        {
+          "id": "b2",
+          "prompt": "Guðrún er ___, og Bjarni er pabbi.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "mamma"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Ásta er ekki kona. Hún er ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "barn"
+          ]
+        },
+        {
+          "id": "b4",
+          "prompt": "Óli er ekki pabbi. Hann er ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "vinnumaður"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Kristján er ___. Hann er í Reykjavík.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "konungur"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "„Í dag er stór dagur,“ segir ___ í kirkjunni.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "presturinn",
+            "prestur"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Óðinn, Sleipnir og Ásgarður: þetta er ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "saga"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "„Góða ___, Ásta,“ segir Guðrún.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "nótt"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "is-kvold-01-l02-pc",
+      "title": "Verkefni C — Spurningar",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Hver er Óli?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Óli er vinnumaður.",
+          "model_answers": [
+            "Óli er vinnumaður.",
+            "Hann er vinnumaður. Hann er ungur maður."
+          ],
+          "rubric": "Óli is the farmhand (vinnumaður), a young man, not pabbi or afi.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-vinnumadur"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l02-s018"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Hvar er Kristján?",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Í Reykjavík.",
+            "Kristján er í Reykjavík.",
+            "Konungurinn er í Reykjavík.",
+            "Hann er í Reykjavík.",
+            "Á Íslandi, í Reykjavík.",
+            "Á Íslandi.",
+            "Kristján er á Íslandi.",
+            "Hann er á Íslandi.",
+            "Konungurinn er á Íslandi."
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l02-s045"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Kemur konungurinn á Jökuldal?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Nei. Konungurinn kemur ekki. Hann er í Reykjavík.",
+          "model_answers": [
+            "Nei. Konungurinn kemur ekki. Hann er í Reykjavík.",
+            "Nei, hann kemur ekki. Hann er í Reykjavík."
+          ],
+          "rubric": "Says no: the king is not coming; he is in Reykjavík (Helga).",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-konungur",
+            "is-ekki"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l02-s045"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Af hverju er Ásta fín?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Óli segir: „Já, já!“ Konungurinn kemur — en hann kemur ekki.",
+          "model_answers": [
+            "Óli segir: „Já, já!“ Konungurinn kemur — en hann kemur ekki.",
+            "Ásta: „Konungurinn kemur!“ Skotthúfan er ný."
+          ],
+          "rubric": "Óli has told her, as a joke, that the king is coming to Jökuldalur, so she puts on her new skotthúfa and waits on the home field.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-konungur",
+            "is-skotthufa"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l02-s030"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Hver er konungurinn í Ásgarði?",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Óðinn.",
+            "Hann heitir Óðinn.",
+            "Konungurinn í Ásgarði er Óðinn.",
+            "Konungurinn í Ásgarði heitir Óðinn.",
+            "Óðinn er konungurinn í Ásgarði.",
+            "Konungurinn heitir Óðinn.",
+            "Hann er Óðinn.",
+            "Konungurinn er Óðinn.",
+            "Óðinn er konungurinn.",
+            "Óðinn er konungur í Ásgarði."
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l02-s054"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Bjarni er pabbi, og Guðrún er mamma. En þú? Hvað heitir pabbi, og hvað heitir mamma?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Pabbi heitir …, og mamma heitir ….",
+          "model_answers": [
+            "Pabbi heitir …, og mamma heitir …."
+          ],
+          "rubric": "Any names, in the frame Pabbi heitir …, og mamma heitir … (personal transfer).",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-pabbi",
+            "is-mamma"
+          ]
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "is-standa",
+      "citation_form": "stendur (standa)",
+      "part_of_speech": "verb",
+      "current_sense": "stands, stands up (standa: to stand)",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-fara",
+      "citation_form": "fer (fara)",
+      "part_of_speech": "verb",
+      "current_sense": "goes (away) (fara: to go)",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-liggja",
+      "citation_form": "liggur (liggja)",
+      "part_of_speech": "verb",
+      "current_sense": "lies (down) (liggja: to lie)",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-ph-i-reykjavik",
+      "citation_form": "í Reykjavík",
+      "part_of_speech": "phrase",
+      "current_sense": "in Reykjavík",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-ph-gott-kvold",
+      "citation_form": "Gott kvöld",
+      "part_of_speech": "phrase",
+      "current_sense": "good evening",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-ph-goda-nott",
+      "citation_form": "Góða nótt",
+      "part_of_speech": "phrase",
+      "current_sense": "good night",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-nu",
+      "citation_form": "nú",
+      "part_of_speech": "adv",
+      "current_sense": "now",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-kvold",
+      "citation_form": "kvöld (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "evening",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-lika",
+      "citation_form": "líka",
+      "part_of_speech": "adv",
+      "current_sense": "too, also",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-madur",
+      "citation_form": "maður (kk.)",
+      "part_of_speech": "noun",
+      "current_sense": "man; person",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kk."
+    },
+    {
+      "lexeme_id": "is-kona",
+      "citation_form": "kona (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "woman",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-barn",
+      "citation_form": "barn (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "child",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-pabbi",
+      "citation_form": "pabbi (kk.)",
+      "part_of_speech": "noun",
+      "current_sense": "dad, father",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kk."
+    },
+    {
+      "lexeme_id": "is-mamma",
+      "citation_form": "mamma (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "mum, mother",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-vinnumadur",
+      "citation_form": "vinnumaður (kk.)",
+      "part_of_speech": "noun",
+      "current_sense": "farmhand, male servant (hired by the year)",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kk."
+    },
+    {
+      "lexeme_id": "is-vinnukona",
+      "citation_form": "vinnukona (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "maidservant, female farm servant",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-konungur",
+      "citation_form": "konungur (kk.)",
+      "part_of_speech": "noun",
+      "current_sense": "king",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kk."
+    },
+    {
+      "lexeme_id": "is-prestur",
+      "citation_form": "prestur (kk.)",
+      "part_of_speech": "noun",
+      "current_sense": "priest",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kk."
+    },
+    {
+      "lexeme_id": "is-ph-i-dag",
+      "citation_form": "í dag",
+      "part_of_speech": "phrase",
+      "current_sense": "today",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-ph-af-hverju",
+      "citation_form": "af hverju?",
+      "part_of_speech": "phrase",
+      "current_sense": "why?",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-hver",
+      "citation_form": "hver?",
+      "part_of_speech": "pron",
+      "current_sense": "who?",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-finn",
+      "citation_form": "fínn (kvk. fín)",
+      "part_of_speech": "adj",
+      "current_sense": "fine, smart, dressed up",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-nyr",
+      "citation_form": "nýr (kvk. ný)",
+      "part_of_speech": "adj",
+      "current_sense": "new",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-skotthufa",
+      "citation_form": "skotthúfa (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "skotthúfa, the women's and girls' tasselled cap",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-saga",
+      "citation_form": "saga (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "story; saga",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-nott",
+      "citation_form": "nótt (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "night",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-fjolskylda",
+      "citation_form": "fjölskylda (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "family",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-heimili",
+      "citation_form": "heimili (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "home; household",
+      "first_introduced_lesson": "is-kvold-01-l02",
+      "new": true,
+      "gender": "hk."
+    }
+  ],
+  "completion": {
+    "button_label": "Búið"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "is-kvold-01",
+      "kafli-02",
+      "hluti-1"
+    ]
+  }
+}

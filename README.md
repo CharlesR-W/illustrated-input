@@ -10,6 +10,11 @@ those files reference:
 
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Мир (`ru-mir-01`, draft): `content/ru/`
+- Kvöldvakan (`is-kvold-01`, draft): `content/is/`
+
+Standalone pages (not courses):
+
+- Greek placement diagnostic: `tools/grc-diagnostic/`
 
 GitHub Pages serves it from the root of the `main` branch. No build step, account or API
 key is needed; to read it locally run `python -m http.server` here and open
