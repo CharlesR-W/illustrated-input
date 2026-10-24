@@ -666,8 +666,14 @@
     const isKnown = (entry) => entry && (knownSet.has(entry.id) || (entry.lemma && knownSet.has(key(entry.lemma))));
     const all = lexiconStages(lexicon);
     const base = course?.anki?.tags_base?.length ? course.anki.tags_base : [courseId];
+    // anki.card_kinds limits which kinds are emitted; anki.skip_patterns drops grammar-pattern
+    // stages; anki.strip_stress removes acute stress marks from both sides.
+    const kinds = new Set(asList(course?.anki?.card_kinds).length ? asList(course.anki.card_kinds) : ["recognition", "production"]);
+    const skipPatterns = course?.anki?.skip_patterns === true;
+    const unstress = course?.anki?.strip_stress === true ? ruStripStress : (text) => text;
     const cards = [];
     const seen = new Set();
+    const push = (card) => cards.push({ ...card, front: unstress(card.front), back: unstress(card.back) });
     for (const lessonId of asList(lessonIds)) {
       const lesson = lessonMap.get(lessonId);
       const segments = lesson ? segmentIndex(lesson) : new Map();
@@ -679,6 +685,7 @@
         const entry = stage._entry;
         const stageId = stage.id || "base";
         const isPattern = String(stageId).startsWith("pattern");
+        if (isPattern && skipPatterns) continue;
         if (!isPattern && isKnown(entry)) continue;
         const lexemeId = stage.lexeme_id;
         const pos = ruPos(entry, stageId);
@@ -692,12 +699,12 @@
         if (examples.length) back += `<br><br>${examples.join("<br>")}`;
         if (label) back += `<br><small>${escapeHtml(label)}</small>`;
         const recognition = `${courseId}:${lexemeId}:${stageId}${legacyRussian ? ":recognition" : ""}`;
-        if (lexemeId && !seen.has(recognition)) {
+        if (lexemeId && kinds.has("recognition") && !seen.has(recognition)) {
           seen.add(recognition);
-          cards.push({ guid: recognition, front: escapeHtml(stage.front), back, tags: tags("recognition"), source: lessonId });
+          push({ guid: recognition, front: escapeHtml(stage.front), back, tags: tags("recognition"), source: lessonId });
         }
         const cloze = stage.cloze;
-        if (!cloze || stage.production === false) continue;
+        if (!cloze || stage.production === false || !kinds.has("production")) continue;
         const sentence = String(segments.get(cloze.segment_id || exampleIds[0])?.text ?? "").normalize("NFC");
         const range = findAnchor(sentence, String(cloze.answer).normalize("NFC")); // whole word, never inside one
         const at = range ? range.start : -1;
@@ -709,7 +716,7 @@
         const front = `${escapeHtml(sentence.slice(0, at))}___${escapeHtml(sentence.slice(at + answer.length))}${hint ? ` <i>(${escapeHtml(hint)})</i>` : ""}`;
         let prodBack = `<b>${escapeHtml(answer)}</b><br><br>${escapeHtml(sentence.slice(0, at))}<b>${escapeHtml(answer)}</b>${escapeHtml(sentence.slice(at + answer.length))}<br>${escapeHtml(stage.back)}`;
         if (label) prodBack += `<br><small>${escapeHtml(label)}</small>`;
-        cards.push({ guid: production, front, back: prodBack, tags: tags("production"), source: lessonId });
+        push({ guid: production, front, back: prodBack, tags: tags("production"), source: lessonId });
       }
     }
     return cards;
