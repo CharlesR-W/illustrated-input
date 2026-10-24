@@ -1867,9 +1867,8 @@ function bindAccentBar(section) {
   section.addEventListener("focusin", (event) => {
     if (event.target.matches(ANSWER_FIELDS)) showAccentBar(event.target);
   });
-  section.addEventListener("focusout", () => {
-    setTimeout(() => { if (!document.activeElement?.matches?.(ANSWER_FIELDS)) hideAccentBar(); }, 0);
-  });
+  // The bar stays put on blur: removing it would pull Check and Show up under the pointer
+  // between mousedown and click, so the click lands on the wrong button or none.
 }
 
 function renderObrazec(example, area) {
@@ -2043,7 +2042,10 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
   } else if (parts.length === 1) {
     li.append(h("div", { class: "answer-line" }, makeInput(0, false)));
   }
-  if (mode === "choice" && item.choices?.length) {
+  // Owner, 2026-10-23: one-word answers are typed, never picked from a word bank.
+  const choiceTexts = (item.choices || []).map((choice) => typeof choice === "string" ? choice : choice.text || "");
+  const oneWordChoices = choiceTexts.every((text) => !/\s/.test(text.trim()));
+  if (mode === "choice" && item.choices?.length && !oneWordChoices) {
     li.append(h("div", { class: "choices", role: "group", "aria-label": t("word_bank") }, item.choices.map((choice) => {
       const value = disp(typeof choice === "string" ? choice : choice.text, area);
       return chip(value, () => {
@@ -2257,8 +2259,10 @@ function recordOutcome(lesson, exerciseId, item, status) {
 }
 
 function exerciseTitle(exercise) {
-  if (exercise.title) return [disp(exercise.title, "exercises"), targetLang()];
-  return tl(`ex_type_${String(exercise.type || "").toLowerCase()}`);
+  const typeKey = `ex_type_${String(exercise.type || "").toLowerCase()}`;
+  const typeLabel = lookup(courseStrings("en"), typeKey) ?? UI_DEFAULTS[typeKey];
+  if (exercise.title && !(state.english && typeLabel)) return [disp(exercise.title, "exercises"), targetLang()];
+  return tl(typeKey);
 }
 
 function renderWorkbook(lesson, section, sectionIndex) {
@@ -2725,14 +2729,15 @@ async function init() {
   const picked = pickCourse(state.index);
   state.baseUrl = picked.base;
   state.indexEntry = picked.entry;
-  state.english = store("english-chrome") === "1";
+  state.english = store("english-chrome") !== "0";
   try {
     state.course = await loadJSON(new URL("course.json", state.baseUrl).href);
   } catch (error) { showError(error); return; }
   if (state.course.id && (state.index?.courses || []).some((course) => course.id === state.course.id)) store("last-course", state.course.id);
   state.notesHidden = setting("notes-hidden", "notes-hidden") === "1";
   state.oral = setting("oral", "pensa-oral") === "1";
-  state.english = setting("english", "english-chrome") === "1";
+  // English interface by default: the toggle opts into target-language chrome.
+  state.english = setting("english", "english-chrome") !== "0";
   applyChrome();
   installStressStripper();
   if (stressHiddenEverywhere()) stripStressNodes(document.body);
