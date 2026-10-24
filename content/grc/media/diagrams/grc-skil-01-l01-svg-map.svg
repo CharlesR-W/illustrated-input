@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" role="img" aria-labelledby="t d">
+  <title id="t">Σκιλλοῦς καὶ Ὀλυμπία</title>
+  <desc id="d">Sketch map, not to scale: the river Alpheios flows west; Olympia lies on its north bank; Scillus lies to the south on the small river Selinus, about twenty stades from Olympia; Elis is far to the north-west.</desc>
+  <style>
+    text { font-family: "Gentium Plus", "GFS Didot", "Noto Serif", "Times New Roman", serif; fill: #3b2f22; }
+    .big { font-size: 22px; font-weight: 600; }
+    .mid { font-size: 18px; }
+    .river { font-size: 16px; font-style: italic; fill: #2d5f7a; }
+    .small { font-size: 15px; }
+  </style>
+  <rect x="0" y="0" width="560" height="420" rx="14" fill="#f6efe1" stroke="#c9b48f" stroke-width="2"/>
+  <!-- hills -->
+  <path d="M300 300 q30 -40 60 0 q25 -30 50 0" fill="none" stroke="#8a7a5a" stroke-width="2"/>
+  <path d="M120 120 q25 -30 50 0 q20 -25 40 0" fill="none" stroke="#8a7a5a" stroke-width="2"/>
+  <!-- Alpheios, flowing west (right to left) -->
+  <path d="M560 175 C 480 165, 440 205, 360 195 S 230 160, 160 190 S 60 215, 0 200" fill="none" stroke="#5b9cc0" stroke-width="9" stroke-linecap="round"/>
+  <path d="M90 214 l-22 -6 l18 -12" fill="none" stroke="#2d5f7a" stroke-width="2.5" stroke-linejoin="round"/>
+  <text class="river" x="470" y="160">Ἀλφειός</text>
+  <!-- Selinus, small stream from the south into the Alpheios -->
+  <path d="M330 400 C 335 360, 300 330, 312 300 S 290 240, 300 196" fill="none" stroke="#5b9cc0" stroke-width="4" stroke-linecap="round"/>
+  <text class="river" x="338" y="372">Σελινοῦς</text>
+  <!-- Olympia, north bank -->
+  <g transform="translate(250 112)">
+    <path d="M-22 0 L0 -16 L22 0 Z" fill="#e3d4b0" stroke="#3b2f22" stroke-width="2"/>
+    <rect x="-20" y="0" width="40" height="4" fill="#3b2f22"/>
+    <line x1="-14" y1="4" x2="-14" y2="22" stroke="#3b2f22" stroke-width="3"/>
+    <line x1="-5" y1="4" x2="-5" y2="22" stroke="#3b2f22" stroke-width="3"/>
+    <line x1="5" y1="4" x2="5" y2="22" stroke="#3b2f22" stroke-width="3"/>
+    <line x1="14" y1="4" x2="14" y2="22" stroke="#3b2f22" stroke-width="3"/>
+    <rect x="-22" y="22" width="44" height="4" fill="#3b2f22"/>
+  </g>
+  <text class="big" x="250" y="76" text-anchor="middle">Ὀλυμπία</text>
+  <!-- Scillus, south -->
+  <circle cx="262" cy="318" r="9" fill="#b5523b" stroke="#3b2f22" stroke-width="2"/>
+  <text class="big" x="246" y="354" text-anchor="end">Σκιλλοῦς</text>
+  <!-- twenty stades -->
+  <path d="M258 306 L252 142" fill="none" stroke="#3b2f22" stroke-width="2" stroke-dasharray="6 6"/>
+  <text class="mid" x="232" y="262" text-anchor="end">εἴκοσι στάδια</text>
+  <!-- Elis, far to the north-west -->
+  <path d="M96 66 L36 26" fill="none" stroke="#3b2f22" stroke-width="2.5"/>
+  <path d="M36 26 l14 2 m-14 -2 l4 13" fill="none" stroke="#3b2f22" stroke-width="2.5" stroke-linecap="round"/>
+  <text class="mid" x="102" y="78">Ἦλις</text>
+  <!-- compass -->
+  <g transform="translate(510 60)">
+    <path d="M0 22 L0 -22" stroke="#3b2f22" stroke-width="2"/>
+    <path d="M0 -22 l-6 10 l12 0 z" fill="#3b2f22"/>
+    <text class="small" x="0" y="44" text-anchor="middle">ἄρκτος</text>
+  </g>
+</svg>

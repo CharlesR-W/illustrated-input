@@ -11,6 +11,7 @@ those files reference:
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Мир (`ru-mir-01`, draft): `content/ru/`
 - Kvöldvakan (`is-kvold-01`, draft): `content/is/`
+- Ἐν Σκιλλοῦντι (`grc-skil-01`, draft): `content/grc/`
 
 Standalone pages (not courses):
 
