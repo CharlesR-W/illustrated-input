@@ -51,7 +51,9 @@ const UI_DEFAULTS = {
   kata_failed: "Try again", kata_new: "New session", families: "Word families",
   family_non_compositional: "The meaning cannot be predicted from the parts.", reveal_english: "English meaning",
   vocabulary_knew: "Knew it", vocabulary_context: "Got it from context", vocabulary_no: "No",
-  vocabulary_export: "Export self-check (JSON)"
+  vocabulary_export: "Export self-check (JSON)", chapters: "Chapters", back_to_chapter: "Back to the chapter",
+  back_to_exercise: "Back to the exercise", no_exercises: "This chapter has no workbook exercises.",
+  open_workbook: "Workbook for this chapter"
 };
 const PENSA_HINTS_EN = {
   A: "Change each sentence as in the example.",
@@ -67,7 +69,7 @@ const POS_EN = {
 const state = {
   baseUrl: null, course: null, lessons: new Map(), lexicon: undefined, current: null,
   english: false, notesHidden: false, oral: false, pensa: new Map(), activeField: null, view: null,
-  index: null, indexEntry: null, rereadView: null, known: undefined, kataSessions: new Map()
+  index: null, indexEntry: null, rereadView: null, book: "chapter", navBook: null, known: undefined, kataSessions: new Map()
 };
 const $ = (selector, root = document) => root.querySelector(selector);
 
@@ -424,7 +426,19 @@ function knownList(baseline, plan) {
 
 // ------------------------------------------------------------------ chapter steps (design §9)
 
-const STEP_KINDS = ["listen", "read", "exercises", "grammar", "pensa", "write", "reread", "anki", "done"];
+const STEP_KINDS = ["listen", "read", "exercises", "grammar", "pensa", "write", "workbook", "reread", "anki", "done"];
+
+// The workbook is a separate book (as LLPSI's Exercitia): a chapter is its story, grammar
+// and Pensa, and the section exercises and kata live on #<lesson>/workbook, reached from
+// the course bar. Courses with section exercises or kata get it unless exercise_book: false.
+function exerciseBook(course) {
+  return Boolean(course) && (course.exercise_book ?? (course.stepper === true || course.capabilities?.kata === true));
+}
+function lessonKata(lesson, course) { return course?.capabilities?.kata === true && Array.isArray(lesson?.grammar?.kata) ? lesson.grammar.kata : []; }
+function hasWorkbook(lesson, course, core = globalThis.IllustratedCore) {
+  return core.storySections(lesson).some((section, i) => sectionExercises(lesson, section, i).length) || lessonKata(lesson, course).length > 0;
+}
+function isWorkbookStep(stepId) { return stepId === "workbook" || stepId === "kata" || /^ex-\d+$/.test(String(stepId || "")); }
 
 function isWorkbookExercise(exercise) { return Boolean(exercise && (exercise.section_id || exercise.type || exercise.obrazec)); }
 function isNapishi(exercise) { return /^(napishi|writing)$/i.test(String(exercise?.type || "")); }
@@ -447,6 +461,7 @@ function napishiOf(lesson, sections) {
 
 function buildSteps(lesson, { core = globalThis.IllustratedCore, course = null, roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"] } = {}) {
   const sections = core.storySections(lesson);
+  const book = exerciseBook(course);
   const steps = [];
   sections.forEach((section, i) => {
     const n = roman[i] || String(i + 1);
@@ -455,13 +470,14 @@ function buildSteps(lesson, { core = globalThis.IllustratedCore, course = null, 
       steps.push({ id: `listen-${i + 1}`, kind: "listen", n });
     }
     steps.push({ id: `read-${i + 1}`, kind: "read", n });
-    if (sectionExercises(lesson, section, i).length) steps.push({ id: `ex-${i + 1}`, kind: "exercises", n });
+    if (!book && sectionExercises(lesson, section, i).length) steps.push({ id: `ex-${i + 1}`, kind: "exercises", n });
   });
   const pensa = lesson?.pensa || (Array.isArray(lesson?.exercises) && !lesson.exercises.some(isWorkbookExercise) ? lesson.exercises : null);
   if (lesson?.grammar || lesson?.grammar_observation || lesson?.words_with_history) steps.push({ id: "grammar", kind: "grammar" });
   const hasPensaItems = pensa && Object.values(pensa).some((group) => Array.isArray(group) ? group.length : group?.items?.length);
   if (pensa && Object.keys(pensa).length && (!course?.capabilities?.kata || hasPensaItems)) steps.push({ id: "pensa", kind: "pensa" });
   if (napishiOf(lesson, sections)) steps.push({ id: "write", kind: "write" });
+  if (book && hasWorkbook(lesson, course, core)) steps.push({ id: "workbook", kind: "workbook" });
   steps.push({ id: "reread", kind: "reread" }, { id: "anki", kind: "anki" }, { id: "done", kind: "done" });
   return steps;
 }
@@ -592,12 +608,24 @@ function renderNav() {
   $(".progress-track").setAttribute("aria-valuetext", `${count} / ${total}`);
   const nav = $("#lesson-nav");
   nav.setAttribute("aria-label", t("nav_lessons"));
+  // Two books in the course bar: chapters and their workbook. The list follows the open
+  // book until a tab is chosen; the tabs only switch the list, they do not navigate.
+  const books = exerciseBook(state.course);
+  const navBook = books ? state.navBook || (state.view === "lesson" ? state.book : "chapter") : "chapter";
+  const switcher = $("#book-switch");
+  switcher.hidden = !books;
+  if (books) {
+    switcher.replaceChildren(...[["chapter", "chapters"], ["workbook", "workbook"]].map(([book, key]) =>
+      ui("button", key, { type: "button", class: "book-tab", "aria-pressed": String(navBook === book),
+        onclick: () => { state.navBook = book; renderNav(); } })));
+  }
+  const suffix = navBook === "workbook" ? "/workbook" : "";
   nav.replaceChildren(...parts().map((part) => h("section", { class: "nav-part" },
     part.number !== "" ? h("h2", { class: "nav-part-title" },
       h("span", { lang: tl("part")[1] }, `${t("part")} ${part.number}`),
       part.title ? h("span", { lang: targetLang() }, ` · ${part.title}`) : null) : null,
     h("ol", { class: "lesson-list" }, part.members.map(({ entry, order }) => {
-      const isCurrent = state.current?.id === entry.id && state.view === "lesson";
+      const isCurrent = state.current?.id === entry.id && state.view === "lesson" && (!books || state.book === navBook);
       const finished = done.has(entry.id);
       const inner = [
         h("span", { class: "lesson-number", "aria-hidden": "true" }, pad(order)),
@@ -607,7 +635,7 @@ function renderNav() {
       if (!available(entry)) {
         return h("li", null, h("span", { class: "lesson-link planned" }, inner, ui("span", "planned", { class: "visually-hidden" })));
       }
-      return h("li", null, h("a", { class: "lesson-link", href: `#${encodeURIComponent(entry.id)}`, "aria-current": isCurrent ? "page" : null }, inner));
+      return h("li", null, h("a", { class: "lesson-link", href: `#${encodeURIComponent(entry.id)}${suffix}`, "aria-current": isCurrent ? "page" : null }, inner));
     })))));
 }
 
@@ -841,17 +869,24 @@ async function openLesson(entry, focus = true, stepId = null) {
     const lesson = await fetchLesson(entry);
     stopAudio();
     state.current = lesson;
+    state.book = exerciseBook(state.course) && isWorkbookStep(stepId) ? "workbook" : "chapter";
+    state.navBook = null;
     if (capability("kata")) kataStore().register(lesson);
     store(`${state.course.id}:last-lesson`, lesson.id);
     renderLesson(lesson);
     showView("lesson");
     renderNav();
     window.scrollTo(0, 0);
-    document.title = `${lesson.title} · ${state.course.title || "Illustrated Input"}`;
+    setLessonTitle(lesson);
     state.rereadView = null;
     if (stepId && enterStep(lesson, stepId)) { /* scrolled */ } else if (focus) focusHeading("#lesson-title");
     startStepTimer(lesson);
   } catch (error) { showError(error); }
+}
+
+function setLessonTitle(lesson) {
+  const book = state.book === "workbook" ? `${t("workbook")} · ` : "";
+  document.title = `${book}${lesson.title} · ${state.course.title || "Illustrated Input"}`;
 }
 
 function renderLesson(lesson) {
@@ -859,6 +894,13 @@ function renderLesson(lesson) {
   const order = lesson.order ?? lesson._entry?.order;
   const part = partOf(lesson);
   article.classList.toggle("notes-hidden", state.notesHidden);
+  const inWorkbook = state.book === "workbook" && exerciseBook(state.course);
+  article.classList.toggle("is-workbook", inWorkbook);
+  if (inWorkbook) {
+    article.replaceChildren(...renderWorkbookBook(lesson, order, part).filter(Boolean));
+    markStepRegions(article, lesson);
+    return;
+  }
   const lastOfPart = part && part.members.at(-1)?.entry.id === lesson.id;
   article.replaceChildren(...[
     renderLessonHeader(lesson, order, part),
@@ -871,6 +913,7 @@ function renderLesson(lesson) {
     renderFamilies(lesson),
     renderPensa(lesson),
     renderNapishi(lesson),
+    renderWorkbookLink(lesson),
     renderVocabulary(lesson),
     renderFinish(lesson, order),
     lastOfPart ? renderAfterword(part) : null,
@@ -1002,7 +1045,7 @@ function renderStory(lesson) {
       sectionIndex === 0 && lesson.pronunciation_note ? renderPronunciationNote(lesson.pronunciation_note) : null,
       h("div", { class: "section-body" }, prose, margin),
       stepEnd(lesson, `read-${sectionIndex + 1}`),
-      renderWorkbook(lesson, section, sectionIndex));
+      exerciseBook(state.course) ? null : renderWorkbook(lesson, section, sectionIndex));
   }));
 }
 
@@ -1224,12 +1267,12 @@ function bindStoryObservers(article) {
 function stepperCourse() { return state.course?.stepper === true; }
 function stepperFor(lesson) {
   if (!lesson || state.course?.stepper === false) return false;
-  return stepperCourse() || buildSteps(lesson, { core: Core, course: state.course, roman: ROMAN }).some((step) => step.kind === "exercises");
+  return stepperCourse() || buildSteps(lesson, { core: Core, course: state.course, roman: ROMAN }).some((step) => step.kind === "exercises" || step.kind === "workbook");
 }
 function lessonSteps(lesson) { return lesson._steps ||= buildSteps(lesson, { core: Core, course: state.course, roman: ROMAN }); }
 function stepTicks(lessonId) { return readJSONStore("steps")[lessonId] || {}; }
 function stepLabel(step) {
-  const key = { listen: "step_listen", read: "step_read", exercises: "step_exercises", grammar: "step_grammar", pensa: "step_pensa", write: "step_write", reread: "step_reread", anki: "step_anki", done: "step_done" }[step.kind];
+  const key = { listen: "step_listen", read: "step_read", exercises: "step_exercises", grammar: "step_grammar", pensa: "step_pensa", write: "step_write", workbook: "workbook", reread: "step_reread", anki: "step_anki", done: "step_done" }[step.kind];
   return tl(key, { n: step.n ?? "" }).map((value, i) => (i === 0 ? String(value).trim() : value));
 }
 function stepDone(lesson, step, ticks = stepTicks(lesson.id)) {
@@ -1254,6 +1297,8 @@ function stepTarget(stepId) {
   const [kind, n] = stepId.split("-");
   if (kind === "read" || kind === "listen") return document.querySelector(`#lesson [data-section="${n}"]`);
   if (kind === "ex") return document.getElementById(`wb-${n}`);
+  if (kind === "workbook") return document.getElementById("workbook-book");
+  if (kind === "kata") return document.getElementById("kata");
   if (kind === "grammar") return document.getElementById("words-history") || document.getElementById("grammar");
   if (kind === "pensa") return document.getElementById("pensa");
   if (kind === "write") return document.getElementById("napishi");
@@ -1265,13 +1310,20 @@ function stepTarget(stepId) {
 // Opening a step from the stepper. Перечитать (design §9: whole chapter, continuous audio,
 // stress off) shows the chapter without stress for this view only (the saved toggle is
 // unchanged) and starts continuous audio when the chapter has a manifest.
-function enterStep(lesson, stepId) {
+function enterStep(lesson, stepId, { restoreY = null } = {}) {
   const reread = stepId === "reread";
   const wanted = reread && stressConfig() ? lesson.id : null;
-  if ((state.rereadView || null) !== wanted) {
+  const book = exerciseBook(state.course) && isWorkbookStep(stepId) ? "workbook" : "chapter";
+  closeNav(false);
+  if ((state.rereadView || null) !== wanted || state.book !== book) {
+    const switching = state.book !== book;
     state.rereadView = wanted;
+    state.book = book;
+    state.navBook = null;
     renderLesson(lesson);
+    if (switching) { setLessonTitle(lesson); renderNav(); window.scrollTo(0, 0); }
   }
+  if (typeof restoreY === "number") { window.scrollTo(0, restoreY); return true; }
   const scrolled = scrollToStep(stepId);
   if (stepId.startsWith("listen-") && lesson._audio) {
     const section = Core.storySections(lesson)[Number(stepId.split("-")[1]) - 1];
@@ -1284,10 +1336,13 @@ function enterStep(lesson, stepId) {
 // A step link scrolls in place and records #<lesson>/<step> as a history entry, so the URL
 // can be shared and Back returns to the previous step (see the hashchange handler).
 function goToStep(event, lesson, stepId) {
-  if (!enterStep(lesson, stepId)) return;
-  event.preventDefault();
+  if (navigateStep(lesson, stepId)) event.preventDefault();
+}
+function navigateStep(lesson, stepId) {
+  if (!enterStep(lesson, stepId)) return false;
   const hash = `#${encodeURIComponent(lesson.id)}/${stepId}`;
   if (location.hash !== hash) history.pushState(null, "", hash);
+  return true;
 }
 
 function scrollToStep(stepId) {
@@ -1345,7 +1400,7 @@ function stepEnd(lesson, stepId) {
     button.addEventListener("click", () => {
       const now = !stepDone(lesson, step);
       setTick(lesson, stepId, now);
-      if (now) { const after = lessonNextStep(lesson); if (after) enterStep(lesson, after.id); }
+      if (now) { const after = lessonNextStep(lesson); if (after) navigateStep(lesson, after.id); }
     });
     const nextLink = done && next ? h("a", { class: "step-next", href: `#${encodeURIComponent(lesson.id)}/${next.id}`, lang: stepLabel(next)[1],
       onclick: (event) => goToStep(event, lesson, next.id) }, t("step_next", { step: stepLabel(next)[0] }), h("span", { "aria-hidden": "true" }, " ↓")) : null;
@@ -1369,6 +1424,7 @@ function markStepRegions(article, lesson) {
   mark(article.querySelector(".scene.cover"), ["read-1", "reread"]);
   for (const section of article.querySelectorAll(".story-section[data-section]")) mark(section, [`listen-${section.dataset.section}`, `read-${section.dataset.section}`, "reread"]);
   for (const block of article.querySelectorAll(".workbook")) mark(block, [`ex-${block.id.replace("wb-", "")}`]);
+  for (const block of article.querySelectorAll(".workbook, #kata")) mark(block, ["workbook"]);
   mark(article.querySelector("#words-history"), ["grammar"]);
   mark(article.querySelector("#grammar"), ["grammar"]);
   mark(article.querySelector("#pensa"), ["pensa"]);
@@ -1577,7 +1633,10 @@ function richParagraphs(text, lesson, attrs = {}) {
 function richText(text, lesson) { return linkSegmentRefs(String(text ?? ""), segmentRefs(lesson)); }
 
 function storyLink(segmentId) {
-  return h("a", { class: "story-link", href: `#${segmentId}`, lang: tl("in_story")[1], onclick: (event) => { event.preventDefault(); scrollToSegment(segmentId); } },
+  return h("a", { class: "story-link", href: `#${segmentId}`, lang: tl("in_story")[1], onclick: (event) => {
+    event.preventDefault();
+    if (state.book === "workbook" && state.current) jumpToStory(state.current, segmentId); else scrollToSegment(segmentId);
+  } },
     h("span", { "aria-hidden": "true" }, "↑ "), t("in_story"));
 }
 
@@ -1820,7 +1879,7 @@ function renderGrammar(lesson) {
       h("h3", { lang }, grammar.parergon.title || ""),
       richParagraphs(grammar.parergon.body_en || "", lesson, { lang: "en" }),
       grammar.parergon.table ? renderGrammarTable(grammar.parergon.table) : null) : null,
-    capability("kata") && grammar.kata?.length ? h("section", { class: "kata-section", "aria-label": t("kata") },
+    capability("kata") && grammar.kata?.length && !exerciseBook(state.course) ? h("section", { class: "kata-section", "aria-label": t("kata") },
       ui("h3", "kata"), grammar.kata.map((kata) => renderKata(kata, lesson))) : null,
     stepEnd(lesson, "grammar"));
 }
@@ -2265,17 +2324,19 @@ function exerciseTitle(exercise) {
   return tl(typeKey);
 }
 
-function renderWorkbook(lesson, section, sectionIndex) {
+function renderWorkbook(lesson, section, sectionIndex, { book = false } = {}) {
   const exercises = sectionExercises(lesson, section, sectionIndex);
   if (!exercises.length) return null;
   const n = ROMAN[sectionIndex] || sectionIndex + 1;
   const id = `wb-${sectionIndex + 1}`;
   const memory = pensaStore(lesson);
   const aids = Core.lessonAidIndex(lesson);
+  // In the workbook book each block is named after the story section it practises.
+  const heading = book
+    ? h("h2", { id: `${id}-title`, lang: targetLang() }, h("span", { class: "section-number" }, `${n}.`), section.title ? ` ${disp(section.title)}` : "")
+    : h("h3", { id: `${id}-title` }, h("span", { lang: tl("workbook")[1] }, t("workbook")), ` ${n}`);
   const block = h("section", { class: `workbook${state.oral ? " oral" : ""}`, id, "aria-labelledby": `${id}-title` },
-    h("header", { class: "workbook-head" },
-      h("h3", { id: `${id}-title` }, h("span", { lang: tl("workbook")[1] }, t("workbook")), ` ${n}`),
-      oralToggle()),
+    h("header", { class: "workbook-head" }, heading, oralToggle()),
     exercises.map((exercise, i) => renderExercise(exercise, i + 1, lesson, memory, aids, sectionIndex)),
     stepEnd(lesson, `ex-${sectionIndex + 1}`));
   bindAccentBar(block);
@@ -2499,6 +2560,59 @@ function exportVocabulary() {
 
 // ------------------------------------------------------------------ finish & Anki
 
+// ------------------------------------------------------------------ workbook book
+
+function renderWorkbookBook(lesson, order, part) {
+  const groups = Core.storySections(lesson).map((section, i) => renderWorkbook(lesson, section, i, { book: true })).filter(Boolean);
+  const kata = lessonKata(lesson, state.course);
+  const kataBlock = kata.length ? h("section", { class: "kata-section workbook-kata", id: "kata", "aria-labelledby": "kata-title" },
+    ui("h2", "kata", { id: "kata-title" }), kata.map((item) => renderKata(item, lesson))) : null;
+  const statusKey = `status_${lesson.status || "draft"}`;
+  return [
+    h("header", { class: "lesson-header", id: "workbook-book" },
+      h("p", { class: "eyebrow" },
+        h("span", { lang: tl("workbook")[1] }, `${t("workbook")} · `),
+        part && part.number !== "" ? h("span", { lang: tl("part")[1] }, `${t("part")} ${part.number} · `) : null,
+        h("span", { lang: tl("lesson")[1] }, lessonLabel(order))),
+      h("h1", { id: "lesson-title", lang: targetLang(), tabindex: "-1" }, lesson.title || ""),
+      lesson.status && lesson.status !== "published" ? ui("span", statusKey, { class: "status-badge" }) : null),
+    h("p", { class: "workbook-back" }, h("a", { href: `#${encodeURIComponent(lesson.id)}` },
+      h("span", { "aria-hidden": "true" }, "← "), ui("span", "back_to_chapter"))),
+    stressConfig() ? h("div", { class: "lesson-toolbar" }, renderStressToggle(lesson)) : null,
+    renderStepper(lesson),
+    ...groups,
+    kataBlock,
+    groups.length || kataBlock ? null : ui("p", "no_exercises", { class: "status-card" }),
+    stepEnd(lesson, "workbook"),
+    renderPagination(lesson, "/workbook")
+  ];
+}
+
+function renderWorkbookLink(lesson) {
+  if (!exerciseBook(state.course) || !hasWorkbook(lesson, state.course, Core)) return null;
+  return h("p", { class: "workbook-link" }, h("a", { class: "button secondary", href: `#${encodeURIComponent(lesson.id)}/workbook` },
+    ui("span", "open_workbook"), h("span", { "aria-hidden": "true" }, " →")));
+}
+
+// "↑ in the story" from the workbook opens the chapter at that sentence. The workbook's
+// history entry keeps its scroll position, so Back (or the floating button) returns there.
+function jumpToStory(lesson, segmentId) {
+  const here = location.hash.includes("/") ? location.hash : `#${encodeURIComponent(lesson.id)}/workbook`;
+  history.replaceState({ ...(history.state || {}), scrollY: window.scrollY }, "", here);
+  history.pushState({ fromWorkbook: true, segment: segmentId }, "", `#${encodeURIComponent(lesson.id)}`);
+  showStoryFromWorkbook(lesson, segmentId);
+}
+function showStoryFromWorkbook(lesson, segmentId) {
+  state.book = "chapter";
+  state.navBook = null;
+  renderLesson(lesson);
+  setLessonTitle(lesson);
+  renderNav();
+  $("#lesson").append(h("button", { type: "button", class: "button primary return-to-workbook", onclick: () => history.back() },
+    h("span", { "aria-hidden": "true" }, "← "), ui("span", "back_to_exercise")));
+  requestAnimationFrame(() => scrollToSegment(segmentId));
+}
+
 function renderFinish(lesson, order) {
   const finished = completed().has(lesson.id);
   const label = lesson.completion?.button_label;
@@ -2535,13 +2649,13 @@ function renderFinish(lesson, order) {
       cumulative, includeKnown));
 }
 
-function renderPagination(lesson) {
+function renderPagination(lesson, suffix = "") {
   const list = entries();
   const index = list.findIndex((entry) => entry.id === lesson.id);
   const previous = list.slice(0, index).reverse().find(available);
   const next = list.slice(index + 1).find(available);
   const link = (entry, key, rel) => (entry
-    ? h("a", { class: `page-link ${rel}`, href: `#${encodeURIComponent(entry.id)}`, rel },
+    ? h("a", { class: `page-link ${rel}`, href: `#${encodeURIComponent(entry.id)}${suffix}`, rel },
       rel === "prev" ? h("span", { "aria-hidden": "true" }, "← ") : null,
       ui("span", key), h("span", { class: "page-title", lang: targetLang() }, ` · ${entry.title}`),
       rel === "next" ? h("span", { "aria-hidden": "true" }, " →") : null)
@@ -2784,7 +2898,17 @@ function boot() {
     if (document.getElementById(hash)?.classList.contains("seg")) return;
     // Back/forward between steps of the open lesson scrolls instead of re-rendering it.
     const [lessonHash, stepHash] = hash.split("/");
-    if (stepHash && state.view === "lesson" && state.current?.id === lessonHash && enterStep(state.current, stepHash)) return;
+    const restoreY = typeof history.state?.scrollY === "number" ? history.state.scrollY : null;
+    if (stepHash && state.view === "lesson" && state.current?.id === lessonHash && enterStep(state.current, stepHash, { restoreY })) return;
+    // Back from the workbook to a chapter of the open lesson: switch books without a refetch.
+    if (!stepHash && state.view === "lesson" && state.current?.id === lessonHash && state.book === "workbook") {
+      closeNav(false);
+      if (history.state?.fromWorkbook && history.state.segment) return showStoryFromWorkbook(state.current, history.state.segment);
+      state.book = "chapter"; state.navBook = null;
+      renderLesson(state.current); setLessonTitle(state.current); renderNav();
+      window.scrollTo(0, restoreY ?? 0);
+      return;
+    }
     if (state.course) route();
   });
   window.addEventListener("resize", () => {
@@ -2807,6 +2931,7 @@ function boot() {
 globalThis.IllustratedReader = {
   stripStress, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
   knownList, isWorkbookExercise, isNapishi, sectionExercises, napishiOf, buildSteps, nextStep, addTime, timingExport, STEP_KINDS,
+  exerciseBook, hasWorkbook, isWorkbookStep,
   UI_DEFAULTS
 };
 if (typeof document !== "undefined" && document.getElementById?.("main")) boot();

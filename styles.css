@@ -415,6 +415,18 @@ main:focus { outline: none; }
 .greek-preview { display: block; min-height: 1.2em; color: var(--muted); font-size: .85em; white-space: pre-wrap; overflow-wrap: anywhere; }
 .input-preview:has(textarea) { width: 100%; }
 .kata-section { margin-top: 1.5rem; }
+/* Workbook book: the course bar's second book (section exercises and kata per chapter). */
+.book-switch { display: flex; gap: .25rem; margin: 0 0 1rem; padding: .2rem; border: 1px solid var(--line); border-radius: 99px; background: var(--card); }
+.book-tab { flex: 1; padding: .35rem .6rem; border: 0; border-radius: 99px; background: none; color: var(--muted); font-size: .85rem; font-weight: 700; cursor: pointer; }
+.book-tab[aria-pressed="true"] { background: var(--forest); color: var(--on-forest); }
+.workbook-back { margin: -.4rem 0 1rem; font-size: .92rem; }
+.lesson.is-workbook .workbook { max-width: 57rem; }
+.lesson.is-workbook .workbook-head h2 { margin: 0; font: 700 1.25rem var(--serif); color: var(--forest); }
+.lesson.is-workbook .workbook-kata { max-width: 57rem; margin-top: 2rem; }
+.lesson.is-workbook .workbook-kata > h2 { font: 700 1.4rem var(--serif); color: var(--forest); }
+.workbook-link { margin: 1.5rem 0; }
+.lesson > [id], .lesson .workbook { scroll-margin-top: calc(var(--header) + 1rem); }
+.return-to-workbook { position: fixed; left: 50%; bottom: 1rem; z-index: 20; transform: translateX(-50%); box-shadow: var(--shadow); }
 .kata { margin: 1.5rem 0; padding-top: 1rem; border-top: 1px solid var(--line); }
 /* Table and items share a row only when the table fits at its natural width beside at
    least 18rem of items; otherwise the items wrap below and the table becomes a sticky
