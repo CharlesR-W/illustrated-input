@@ -18,7 +18,8 @@
    "1st-conjugation present only in productive use (рабо́тать, знать, де́лать, ждать, се́ять, паха́ть, понима́ть, ду́мать, дава́ть, брать, хрома́ть, гуля́ть, тяну́ть, идти́); 2nd-conjugation verbs only in the 3rd-person forms of the G02 whitelist (говори́т, стои́т, сиди́т, смо́трит, кричи́т, спит). мы/вы are Глава 5 lexemes, so exercises use я, ты, он, она́, они́; the story has the pronoun-less classroom-style «Тя́нем!».",
    "No dative (Глава 8) and no animate masculine accusative (Глава 6): nobody gives anything *to* someone; «мо́жно ло́шадь на день?» (L46).",
    "Quotable lines for Глава 40: «Весна́ не ждёт.» «Земля́ ждёт.» «Ло́шадь хрома́ет.» «Ша́рик то́же рабо́тает? — Нет, Ша́рик гуля́ет.» «Мир ду́мает, а я рабо́таю.»",
-   "мир (commune) is a declared one-word chunk, glossed «мир = вся дере́вня»; the lexeme comes in Глава 9."
+   "мир (commune) is a declared one-word chunk, glossed «мир = вся дере́вня»; the lexeme comes in Глава 9.",
+   "Exercise retrofit (2026-10-23, prompts/russian-exercise-retrofit-brief.md): Напиши and Pensa C removed (no free production); every item one gap in a story sentence with help shown before the attempt, staged per section from choices → lemma + Russian label + first letters → lemma only; no English in cues; Соедини / Преобразование items turned into one-gap а/но and question-word items; table ids added; kata ru-mir-01-k04-nastoyashchee (type, scheduled) and ru-mir-01-k04-vinitelnyj (choose)."
   ],
   "review_questions": [
    {
@@ -708,125 +709,285 @@
     "exercises": [
      {
       "id": "ru-mir-01-l04-x1-1",
-      "type": "okonchaniya",
-      "title": "Оконча́ния",
-      "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "Present tense of идти́ and of verbs like гуля́ть: я -у/-ю, ты -ёшь/-ешь, он -ёт/-ет, они́ -у́т/-ют.",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+      "hint_en": "идти́: я иду́, ты идёшь, он/она́ идёт, они́ иду́т. рабо́тать, гуля́ть: он -ет, они́ -ют.",
       "grammar_target_ids": [
        "G04"
       ],
       "obrazec": {
        "rule": "идти́: я иду́ · ты идёшь · он идёт · они́ иду́т",
-       "prompt": "Ло́шадь ид___.",
-       "answer": "ёт"
+       "prompt": "И Ша́рик то́же ___.",
+       "answer": "идёт"
       },
       "items": [
        {
         "id": "x1-1-1",
-        "prompt": "Ива́н ид___ в по́ле.",
+        "prompt": "У́тром оте́ц и Ива́н ___ в по́ле.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "ёт"
+         "иду́т"
         ],
-        "explanation": "Ива́н идёт в по́ле."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s004"
+        ],
+        "choices": [
+         "идёт",
+         "иду́т"
+        ]
        },
        {
         "id": "x1-1-2",
-        "prompt": "Оте́ц и Ива́н ид___ в по́ле.",
+        "prompt": "Ло́шадь то́же ___, а коро́ва — во дворе́.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "у́т"
+         "идёт"
         ],
-        "explanation": "Оте́ц и Ива́н иду́т в по́ле."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s005"
+        ],
+        "choices": [
+         "идёт",
+         "иду́т"
+        ]
        },
        {
         "id": "x1-1-3",
-        "prompt": "Ты ид___ в по́ле?",
+        "prompt": "— Куда́ ты ___, Ива́н? — спра́шивает На́стя.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "ёшь"
+         "идёшь"
         ],
-        "explanation": "Ты идёшь в по́ле?"
+        "source_segment_ids": [
+         "ru-mir-01-l04-s008"
+        ],
+        "choices": [
+         "иду́",
+         "идёшь",
+         "идёт"
+        ]
        },
        {
         "id": "x1-1-4",
-        "prompt": "Я ид___ в по́ле.",
+        "prompt": "— Я то́же ___ в по́ле! Вот хлеб.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "у́"
+         "иду́"
         ],
-        "explanation": "Я иду́ в по́ле."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s014"
+        ],
+        "choices": [
+         "иду́",
+         "идёт",
+         "иду́т"
+        ]
        },
        {
         "id": "x1-1-5",
-        "prompt": "Ша́рик гуля́___.",
+        "prompt": "— Нет, Ша́рик ___, — говори́т Ива́н.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "ет"
+         "гуля́ет"
         ],
-        "explanation": "Ша́рик гуля́ет."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s017"
+        ],
+        "choices": [
+         "гуля́ют",
+         "гуля́ет"
+        ]
        },
        {
         "id": "x1-1-6",
-        "prompt": "Оте́ц и Ива́н рабо́та___.",
+        "prompt": "Оте́ц и Ива́н ___, а Ша́рик здесь, там, в по́ле: он гуля́ет.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "ют"
+         "рабо́тают"
         ],
-        "explanation": "Оте́ц и Ива́н рабо́тают."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s017a"
+        ],
+        "choices": [
+         "рабо́тает",
+         "рабо́тают"
+        ]
        }
       ]
      },
      {
       "id": "ru-mir-01-l04-x1-2",
-      "type": "otvet",
-      "title": "Отве́ть",
-      "instruction": "Отве́ть по те́ксту.",
-      "hint_en": "Куда́? (where to) takes в + the accusative: в по́ле; где? (where) takes the forms you know: во дворе́, у Сила́нтия.",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "где? — the place forms you know: во дворе́, в мешке́, в по́ле; у + genitive: у Сила́нтия, у дере́вни.",
       "grammar_target_ids": [
-       "G04",
        "G03"
       ],
       "obrazec": {
-       "rule": "Куда́? — в по́ле · Где? — во дворе́",
-       "prompt": "Куда́ иду́т оте́ц и Ива́н? — В ___.",
-       "answer": "по́ле"
+       "rule": "где? двор → во дворе́ · Сила́нтий → у Сила́нтия",
+       "prompt": "Дед ещё спит, а оте́ц во ___ (двор, где?).",
+       "answer": "дворе́"
       },
       "items": [
        {
         "id": "x1-2-1",
-        "prompt": "Где коро́ва? — Во ___.",
+        "prompt": "Ло́шадь то́же идёт, а коро́ва — во ___ (двор, где?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "дворе́"
         ],
+        "first_letters": 2,
         "source_segment_ids": [
          "ru-mir-01-l04-s005"
         ]
        },
        {
         "id": "x1-2-2",
-        "prompt": "Что в мешке́? — ___.",
+        "prompt": "Вот мешо́к. Что в ___ (мешо́к, где?)? Овёс.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Овёс",
-         "овёс"
+         "мешке́"
         ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l04-s007"
         ]
        },
        {
         "id": "x1-2-3",
-        "prompt": "Куда́ идёт На́стя? — В ___.",
+        "prompt": "Оте́ц и Ива́н рабо́тают, а Ша́рик в ___ (по́ле, где?): он гуля́ет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "по́ле"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s017a"
+        ]
+       },
+       {
+        "id": "x1-2-4",
+        "prompt": "У́тром Фёдор рабо́тает у ___ (Сила́нтий, где?).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Сила́нтия"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s013b"
+        ]
+       },
+       {
+        "id": "x1-2-5",
+        "prompt": "У Соколо́вых три полосы́: одна́ здесь, у ___ (дере́вня, где?), а э́та — у реки́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "дере́вни"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s009b"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l04-x1-3",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "что? / куда́? (accusative): -а → -у (соха́ → соху́, полоса́ → по́лосу); masculine and neuter things do not change (мешо́к, хлеб, овёс, по́ле).",
+      "grammar_target_ids": [
+       "G04"
+      ],
+      "obrazec": {
+       "rule": "что? соха́ → соху́ · мешо́к → мешо́к",
+       "prompt": "Вот соха́. Ива́н берёт ___ (соха́, что?).",
+       "answer": "соху́"
+      },
+      "items": [
+       {
+        "id": "x1-3-1",
+        "prompt": "Вот мешо́к. Оте́ц берёт ___ (мешо́к, что?).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мешо́к"
+        ],
+        "common_wrong": [
+         {
+          "answer": "мешка́",
+          "hint": "мешо́к — что? → мешо́к"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s006"
+        ]
+       },
+       {
+        "id": "x1-3-2",
+        "prompt": "Вот хлеб. На́стя берёт ___ (хлеб, что?).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хлеб"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s014"
+        ]
+       },
+       {
+        "id": "x1-3-3",
+        "prompt": "Вот полоса́. Оте́ц и Ива́н иду́т на ___ (полоса́, куда́?).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "по́лосу"
+        ],
+        "common_wrong": [
+         {
+          "answer": "полоса́",
+          "hint": "полоса́ — куда́? → на по́лосу"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s009d"
+        ]
+       },
+       {
+        "id": "x1-3-4",
+        "prompt": "Что ест ло́шадь? Ло́шадь ест ___ (овёс, что?).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "овёс"
+        ],
+        "common_wrong": [
+         {
+          "answer": "овса́",
+          "hint": "овёс — что? → овёс"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s002c"
+        ]
+       },
+       {
+        "id": "x1-3-5",
+        "prompt": "— Я то́же иду́ в ___ (по́ле, куда́?)! — говори́т На́стя.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
@@ -834,116 +995,6 @@
         ],
         "source_segment_ids": [
          "ru-mir-01-l04-s014"
-        ]
-       },
-       {
-        "id": "x1-2-4",
-        "prompt": "Где Фёдор у́тром? — У ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Сила́нтия"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l04-s013b"
-        ]
-       },
-       {
-        "id": "x1-2-5",
-        "prompt": "Кто гуля́ет? — ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Ша́рик"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l04-s017"
-        ]
-       },
-       {
-        "id": "x1-2-6",
-        "prompt": "Куда́ идёт Ива́н? — На да́льнюю ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "по́лосу"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l04-s009d"
-        ]
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l04-x1-3",
-      "type": "preobrazovanie",
-      "title": "Преобразова́ние",
-      "instruction": "Сде́лай одно́ предложе́ние.",
-      "hint_en": "Put the noun in brackets after the verb (accusative): -а → -у; masculine inanimate nouns do not change.",
-      "grammar_target_ids": [
-       "G04"
-      ],
-      "obrazec": {
-       "rule": "соха́ → берёт соху́",
-       "prompt": "Вот соха́. (Ива́н берёт …) →",
-       "answer": "Ива́н берёт соху́."
-      },
-      "items": [
-       {
-        "id": "x1-3-1",
-        "prompt": "Вот мешо́к. (Оте́ц берёт …) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Оте́ц берёт мешо́к."
-        ],
-        "common_wrong": [
-         {
-          "answer": "Оте́ц берёт мешка́.",
-          "hint": "мешо́к — что? → мешо́к"
-         }
-        ]
-       },
-       {
-        "id": "x1-3-2",
-        "prompt": "Вот хлеб. (На́стя берёт …) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "На́стя берёт хлеб."
-        ]
-       },
-       {
-        "id": "x1-3-3",
-        "prompt": "Вот полоса́. (Они́ иду́т на …) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Они́ иду́т на по́лосу."
-        ],
-        "common_wrong": [
-         {
-          "answer": "Они́ иду́т на полоса́.",
-          "hint": "полоса́ — что? куда́? → по́лосу"
-         }
-        ]
-       },
-       {
-        "id": "x1-3-4",
-        "prompt": "Вот овёс. (Ло́шадь ест …) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Ло́шадь ест овёс."
-        ]
-       },
-       {
-        "id": "x1-3-5",
-        "prompt": "Вот по́ле. (Оте́ц и Ива́н иду́т в …) →",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Оте́ц и Ива́н иду́т в по́ле."
         ]
        }
       ]
@@ -1304,221 +1355,317 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
-      "hint_en": "он/она́ -ет (-ёт), они́ -ют (-ут); паха́ть → па́шет, ждать → ждёт.",
+      "hint_en": "он/она́ -ет (-ёт), они́ -ют (-ут); some stems change: паха́ть → па́ш-, ждать → жд-.",
       "grammar_target_ids": [
        "G04"
       ],
       "obrazec": {
-       "rule": "рабо́тать: он рабо́тает, они́ рабо́тают",
-       "prompt": "Ло́шадь ___ (идти́).",
+       "rule": "рабо́тать: он рабо́тает · они́ рабо́тают",
+       "prompt": "Ло́шадь идёт, и соха́ ___.",
        "answer": "идёт"
       },
       "items": [
        {
         "id": "x2-1-1",
-        "prompt": "Ива́н ___ (паха́ть).",
+        "prompt": "Ива́н рабо́тает: он ___.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
          "па́шет"
         ],
-        "common_wrong": [
-         {
-          "answer": "паха́ет",
-          "hint": "паха́ть → па́шет (х → ш)"
-         }
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022"
+        ],
+        "choices": [
+         "па́шут",
+         "па́шет",
+         "пашу́"
         ]
        },
        {
         "id": "x2-1-2",
-        "prompt": "Оте́ц ___ (се́ять) овёс.",
+        "prompt": "Ло́шадь ___ соху́.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "се́ет"
+         "тя́нет"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022a"
+        ],
+        "choices": [
+         "тя́нет",
+         "тя́нут"
         ]
        },
        {
         "id": "x2-1-3",
-        "prompt": "Ло́шадь ___ (хрома́ть).",
+        "prompt": "А оте́ц ___: овёс — в зе́млю.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "хрома́ет"
+         "се́ет"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022b"
+        ],
+        "choices": [
+         "се́ют",
+         "се́ет"
         ]
        },
        {
         "id": "x2-1-4",
-        "prompt": "Земля́ ___ (ждать).",
+        "prompt": "Ша́рик сиди́т и ___: где Ива́н, где оте́ц?",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
          "ждёт"
         ],
-        "common_wrong": [
-         {
-          "answer": "жда́ет",
-          "hint": "ждать → ждёт"
-         }
+        "source_segment_ids": [
+         "ru-mir-01-l04-s018c"
+        ],
+        "choices": [
+         "ждут",
+         "ждёт"
         ]
        },
        {
         "id": "x2-1-5",
-        "prompt": "Оте́ц и Ива́н ___ (рабо́тать).",
+        "prompt": "— Я ___, — говори́т Ива́н.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "рабо́тают"
+         "зна́ю"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s038"
+        ],
+        "choices": [
+         "зна́ет",
+         "зна́ю"
         ]
        },
        {
         "id": "x2-1-6",
-        "prompt": "Я ___ (знать).",
+        "prompt": "Оте́ц зна́ет, а Ива́н ___.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "зна́ю"
+         "ду́мает"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s039"
+        ],
+        "choices": [
+         "ду́мает",
+         "ду́мают"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l04-x2-3",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "Choose the form that fits: a location after на, an object, or a direction after в.",
+      "grammar_target_ids": [
+       "G04",
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "где? на полосе́ · что? соху́ · куда́? в зе́млю",
+       "prompt": "Ло́шадь тя́нет ___.",
+       "answer": "соху́"
+      },
+      "items": [
+       {
+        "id": "x2-3-1",
+        "prompt": "Ша́рик уже́ на ___, а оте́ц и Ива́н ещё на доро́ге.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "полосе́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s018b"
+        ],
+        "choices": [
+         "полосе́",
+         "по́лосу"
+        ]
+       },
+       {
+        "id": "x2-3-2",
+        "prompt": "Ло́шадь тя́нет ___.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "соху́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022a"
+        ],
+        "choices": [
+         "соха́",
+         "соху́"
+        ]
+       },
+       {
+        "id": "x2-3-3",
+        "prompt": "Оте́ц смо́трит ___.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "но́гу"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s029"
+        ],
+        "choices": [
+         "нога́",
+         "но́гу"
+        ]
+       },
+       {
+        "id": "x2-3-4",
+        "prompt": "А оте́ц се́ет: овёс — в ___.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "зе́млю"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022b"
+        ],
+        "choices": [
+         "зе́млю",
+         "земля́"
+        ]
+       },
+       {
+        "id": "x2-3-5",
+        "prompt": "Три ноги́ рабо́тают, а одна́ ___ не рабо́тает.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "нога́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s030"
+        ],
+        "choices": [
+         "но́гу",
+         "нога́"
         ]
        }
       ]
      },
      {
       "id": "ru-mir-01-l04-x2-2",
-      "type": "okonchaniya",
-      "title": "Оконча́ния",
-      "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "What? (accusative): -а → -у, -я → -ю. The subject keeps -а / -я.",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "что? / куда́? (accusative): -а → -у, -я → -ю (соху́, но́гу, в зе́млю); где? keeps the -е you know (на полосе́).",
       "grammar_target_ids": [
-       "G04"
+       "G04",
+       "G03"
       ],
       "obrazec": {
-       "rule": "соха́ → берёт соху́ · земля́ → в зе́млю",
-       "prompt": "Ива́н берёт сох___.",
-       "answer": "у́"
+       "rule": "что? соха́ → соху́ · куда́? земля́ → в зе́млю · где? полоса́ → на полосе́",
+       "prompt": "Ива́н берёт ___ (соха́, что?).",
+       "answer": "соху́"
       },
       "items": [
        {
         "id": "x2-2-1",
-        "prompt": "Ло́шадь тя́нет сох___.",
+        "prompt": "Ло́шадь тя́нет ___ (соха́, что?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "у́"
+         "соху́"
         ],
-        "explanation": "Ло́шадь тя́нет соху́."
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022a"
+        ]
        },
        {
         "id": "x2-2-2",
-        "prompt": "Оте́ц смо́трит но́г___.",
+        "prompt": "Оте́ц смо́трит ___ (нога́, что?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "у"
+         "но́гу"
         ],
-        "explanation": "Оте́ц смо́трит но́гу."
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s029"
+        ]
        },
        {
         "id": "x2-2-3",
-        "prompt": "Они́ иду́т на по́лос___.",
+        "prompt": "А оте́ц се́ет: овёс — в ___ (земля́, куда́?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "у"
+         "зе́млю"
         ],
-        "explanation": "Они́ иду́т на по́лосу."
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022b"
+        ]
        },
        {
         "id": "x2-2-4",
-        "prompt": "Оте́ц се́ет: овёс — в зе́мл___.",
+        "prompt": "Ша́рик уже́ на ___ (полоса́, где?), а оте́ц и Ива́н ещё на доро́ге.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ю"
+         "полосе́"
         ],
-        "explanation": "Оте́ц се́ет: овёс — в зе́млю."
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "по́лосу",
+          "hint": "где? → на полосе́ · куда́? → на по́лосу"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s018b"
+        ]
        },
        {
         "id": "x2-2-5",
-        "prompt": "Земл___ ждёт.",
+        "prompt": "Оте́ц и Ива́н иду́т на да́льнюю ___ (полоса́, куда́?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "я́"
+         "по́лосу"
         ],
-        "explanation": "Земля́ ждёт."
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "полосе́",
+          "hint": "куда́? → на по́лосу · где? → на полосе́"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s009d"
+        ]
        },
        {
         "id": "x2-2-6",
-        "prompt": "Полос___ ма́ленькая.",
+        "prompt": "Оте́ц се́ет ___ (овёс, что?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "а́"
+         "овёс"
         ],
-        "explanation": "Полоса́ ма́ленькая."
-       }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l04-x2-3",
-      "type": "soedini",
-      "title": "Соедини́",
-      "instruction": "Соедини́ два предложе́ния: а и́ли но (в ско́бках).",
-      "hint_en": "Join with а (contrast) or но (but); keep the order of the two sentences.",
-      "grammar_target_ids": [
-       "G01",
-       "G04"
-      ],
-      "obrazec": {
-       "rule": "…, а … · …, но …",
-       "prompt": "Ло́шадь хрома́ет. Земля́ ждёт. (а)",
-       "answer": "Ло́шадь хрома́ет, а земля́ ждёт."
-      },
-      "items": [
-       {
-        "id": "x2-3-1",
-        "prompt": "Полоса́ ма́ленькая. По́ле большо́е. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Полоса́ ма́ленькая, а по́ле большо́е."
-        ]
-       },
-       {
-        "id": "x2-3-2",
-        "prompt": "Ива́н па́шет. Оте́ц се́ет. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Ива́н па́шет, а оте́ц се́ет."
-        ]
-       },
-       {
-        "id": "x2-3-3",
-        "prompt": "Оте́ц зна́ет. Ива́н ду́мает. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Оте́ц зна́ет, а Ива́н ду́мает."
-        ]
-       },
-       {
-        "id": "x2-3-4",
-        "prompt": "Ещё у́тро. Ло́шадь уже́ стои́т. (а)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Ещё у́тро, а ло́шадь уже́ стои́т."
-        ]
-       },
-       {
-        "id": "x2-3-5",
-        "prompt": "Ива́н ду́мает. Он не понима́ет. (но)",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "Ива́н ду́мает, но он не понима́ет.",
-         "Ива́н ду́мает, но не понима́ет."
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022b"
         ]
        }
       ]
@@ -1854,82 +2001,11 @@
     ],
     "exercises": [
      {
-      "id": "ru-mir-01-l04-x3-1",
-      "type": "otvet",
-      "title": "Отве́ть",
-      "instruction": "Отве́ть на вопро́с. Сло́во в ско́бках поста́вь в ну́жную фо́рму.",
-      "hint_en": "Что де́лает…? — the verb in the он/она́ form (+ accusative).",
-      "grammar_target_ids": [
-       "G04"
-      ],
-      "obrazec": {
-       "rule": "Что де́лает Ива́н? (паха́ть) — Ива́н па́шет.",
-       "prompt": "Что де́лает Ива́н? (тяну́ть бо́рону) — Ива́н ___.",
-       "answer": "тя́нет бо́рону"
-      },
-      "items": [
-       {
-        "id": "x3-1-1",
-        "prompt": "Что де́лает оте́ц? (се́ять овёс) — Оте́ц ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "се́ет овёс"
-        ]
-       },
-       {
-        "id": "x3-1-2",
-        "prompt": "Что де́лает Ша́рик? (гуля́ть) — Ша́рик ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "гуля́ет"
-        ]
-       },
-       {
-        "id": "x3-1-3",
-        "prompt": "Что де́лает ло́шадь? (хрома́ть) — Ло́шадь ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "хрома́ет"
-        ]
-       },
-       {
-        "id": "x3-1-4",
-        "prompt": "Что де́лает земля́? (ждать) — Земля́ ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ждёт"
-        ]
-       },
-       {
-        "id": "x3-1-5",
-        "prompt": "Что де́лает Сила́нтий? (дава́ть ло́шадь) — Сила́нтий ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "даёт ло́шадь"
-        ]
-       },
-       {
-        "id": "x3-1-6",
-        "prompt": "Что де́лает Ива́н? (идти́ в по́ле) — Ива́н ___.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "идёт в по́ле"
-        ]
-       }
-      ]
-     },
-     {
       "id": "ru-mir-01-l04-x3-2",
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "Feminine possessives and adjectives in the accusative: моя́ → мою́, на́ша → на́шу, своя́ → свою́, больша́я → большу́ю, да́льняя → да́льнюю; masculine things do not change.",
+      "hint_en": "Feminine adjectives and possessives with что? / куда́? (accusative): -ая → -ую, -яя → -юю, на́ша → на́шу, своя́ → свою́. Masculine things do not change (свой мешо́к); the subject does not change (моя́ ло́шадь рабо́тает).",
       "grammar_target_ids": [
        "G04"
       ],
@@ -1941,56 +2017,199 @@
       "items": [
        {
         "id": "x3-2-1",
-        "prompt": "Они́ тя́нут ___ (на́ша) бо́рону.",
+        "prompt": "Ива́н и На́стя тя́нут ___ (больша́я) бо́рону, а оте́ц се́ет.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "на́шу"
-        ]
-       },
-       {
-        "id": "x3-2-2",
-        "prompt": "Ива́н тя́нет ___ (больша́я) бо́рону.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
+         "большу́ю"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s062"
+        ],
+        "choices": [
+         "больша́я",
          "большу́ю"
         ]
        },
        {
-        "id": "x3-2-3",
-        "prompt": "Сосе́д не даёт ___ (своя́) ло́шадь.",
+        "id": "x3-2-2",
+        "prompt": "У сосе́да есть ло́шадь, но он не даёт ___ (своя́) ло́шадь.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
          "свою́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s046"
+        ],
+        "choices": [
+         "свою́",
+         "своя́"
         ]
        },
        {
-        "id": "x3-2-4",
-        "prompt": "Они́ иду́т на ___ (да́льняя) по́лосу.",
+        "id": "x3-2-3",
+        "prompt": "Оте́ц и Ива́н иду́т на ___ (да́льняя) по́лосу.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
+         "да́льнюю"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s009d"
+        ],
+        "choices": [
+         "да́льняя",
          "да́льнюю"
         ]
        },
        {
-        "id": "x3-2-5",
-        "prompt": "Оте́ц берёт ___ (мой) мешо́к.",
+        "id": "x3-2-4",
+        "prompt": "Ива́н берёт ___ (своя́) соху́.",
         "mode": "productive",
-        "answer_mode": "exact",
+        "answer_mode": "choice",
         "accepted_answers": [
-         "мой"
+         "свою́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s006"
+        ],
+        "choices": [
+         "своя́",
+         "свою́"
+        ]
+       },
+       {
+        "id": "x3-2-5",
+        "prompt": "Оте́ц берёт ___ (свой) мешо́к.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "свой"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s006"
+        ],
+        "choices": [
+         "свою́",
+         "свой"
         ]
        },
        {
         "id": "x3-2-6",
-        "prompt": "Ива́н берёт ___ (своя́) соху́.",
+        "prompt": "— Нет: сего́дня ___ (моя́) ло́шадь рабо́тает.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "моя́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s047"
+        ],
+        "choices": [
+         "моя́",
+         "мою́"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l04-x3-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+      "hint_en": "я -ю/-у, ты -ешь/-ёшь, он -ет/-ёт, они́ -ют/-ут. Some stems change: дава́ть → да-, тяну́ть → тян-. The table is on screen.",
+      "grammar_target_ids": [
+       "G04"
+      ],
+      "obrazec": {
+       "rule": "Что де́лает Ива́н? — Он па́шет.",
+       "prompt": "Что де́лает Ива́н? Ива́н ___ (тяну́ть) бо́рону.",
+       "answer": "тя́нет"
+      },
+      "items": [
+       {
+        "id": "x3-1-1",
+        "prompt": "Что де́лает оте́ц? Он ___ (се́ять).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "свою́"
+         "се́ет"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s042a"
+        ]
+       },
+       {
+        "id": "x3-1-2",
+        "prompt": "— Кто ___ (дава́ть) ло́шадь на день?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "даёт"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "дава́ет",
+          "hint": "дава́ть → даёт"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s044"
+        ]
+       },
+       {
+        "id": "x3-1-3",
+        "prompt": "— Ива́н па́шет, я ___ (се́ять), — говори́т оте́ц.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "се́ю"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s058"
+        ]
+       },
+       {
+        "id": "x3-1-4",
+        "prompt": "— И я ___ (тяну́ть)! — кричи́т На́стя.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "тяну́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s061"
+        ]
+       },
+       {
+        "id": "x3-1-5",
+        "prompt": "Ива́н и На́стя ___ (тяну́ть) большу́ю бо́рону, а оте́ц се́ет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "тя́нут"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s062"
+        ]
+       },
+       {
+        "id": "x3-1-6",
+        "prompt": "— Ша́рик, что ты де́лаешь? Ты не ___ (рабо́тать)!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "рабо́таешь"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s071"
         ]
        }
       ]
@@ -1998,66 +2217,101 @@
      {
       "id": "ru-mir-01-l04-x3-3",
       "type": "preobrazovanie",
-      "title": "Преобразова́ние",
-      "instruction": "Спроси́: что? и́ли куда́?",
-      "hint_en": "Ask about the object (что?) or the direction (куда́?).",
+      "title": "Спроси́",
+      "instruction": "Спроси́: что? кто? и́ли куда́?",
+      "hint_en": "Use the question word that fits the reply. The first letter is shown.",
       "grammar_target_ids": [
        "G04"
       ],
       "obrazec": {
        "rule": "Ива́н берёт соху́. → Что берёт Ива́н? · Ива́н идёт в по́ле. → Куда́ идёт Ива́н?",
-       "prompt": "Ива́н берёт соху́. →",
-       "answer": "Что берёт Ива́н?"
+       "prompt": "___ берёт Ива́н? — Соху́.",
+       "answer": "Что"
       },
       "items": [
        {
         "id": "x3-3-1",
-        "prompt": "Оте́ц и Ива́н иду́т в по́ле. →",
+        "prompt": "___ иду́т оте́ц и Ива́н? — В по́ле.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Куда́ иду́т оте́ц и Ива́н?",
-         "Куда́ оте́ц и Ива́н иду́т?"
+         "Куда́",
+         "куда́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s004"
         ]
        },
        {
         "id": "x3-3-2",
-        "prompt": "На́стя тя́нет бо́рону. →",
+        "prompt": "___ тя́нет На́стя? — Бо́рону.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Что тя́нет На́стя?",
-         "Что На́стя тя́нет?"
+         "Что",
+         "что"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s062"
         ]
        },
        {
         "id": "x3-3-3",
-        "prompt": "Ива́н идёт в дере́вню. →",
+        "prompt": "___ идёт Ива́н? — В дере́вню.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Куда́ идёт Ива́н?",
-         "Куда́ Ива́н идёт?"
+         "Куда́",
+         "куда́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s045"
         ]
        },
        {
         "id": "x3-3-4",
-        "prompt": "Оте́ц се́ет овёс. →",
+        "prompt": "___ тя́нет бо́рону? — Ива́н и На́стя.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Что се́ет оте́ц?",
-         "Что оте́ц се́ет?"
+         "Кто",
+         "кто"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s058",
+         "ru-mir-01-l04-s062"
         ]
        },
        {
         "id": "x3-3-5",
-        "prompt": "Ива́н идёт в ла́вку. →",
+        "prompt": "___ се́ет оте́ц? — Овёс.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Куда́ идёт Ива́н?",
-         "Куда́ Ива́н идёт?"
+         "Что",
+         "что"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022b"
+        ]
+       },
+       {
+        "id": "x3-3-6",
+        "prompt": "___ де́лает оте́ц? — Он се́ет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Что",
+         "что"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s042a"
         ]
        }
       ]
@@ -2295,75 +2549,99 @@
     "exercises": [
      {
       "id": "ru-mir-01-l04-x4-1",
-      "type": "otvet",
-      "title": "Отве́ть",
-      "instruction": "Отве́ть по те́ксту.",
-      "hint_en": "Fill the gap from the story.",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+      "hint_en": "брать → берёт, тяну́ть → тя́нут, дава́ть → даёт, ждать → ждёт; я -ю, ты -ешь, они́ -ют/-ут.",
       "grammar_target_ids": [
        "G04"
       ],
       "obrazec": {
-       "rule": "Фёдор берёт ___. → бо́рону",
-       "prompt": "Фёдор берёт ___.",
-       "answer": "бо́рону"
+       "rule": "брать: он берёт · тяну́ть: они́ тя́нут",
+       "prompt": "Фёдор ___ (брать) бо́рону.",
+       "answer": "берёт"
       },
       "items": [
        {
         "id": "x4-1-1",
-        "prompt": "«Земля́ — э́то ___», — говори́т Фёдор.",
+        "prompt": "Фёдор и Ива́н ___ (тяну́ть), а оте́ц се́ет.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "рабо́та"
+         "тя́нут"
         ],
+        "first_letters": 2,
         "source_segment_ids": [
-         "ru-mir-01-l04-s082"
+         "ru-mir-01-l04-s080"
         ]
        },
        {
         "id": "x4-1-2",
-        "prompt": "«Мир ду́мает, а я ___», — говори́т Фёдор.",
+        "prompt": "— Мир ду́мает, а я ___ (рабо́тать).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "рабо́таю"
         ],
+        "first_letters": 4,
         "source_segment_ids": [
          "ru-mir-01-l04-s086"
         ]
        },
        {
         "id": "x4-1-3",
-        "prompt": "Оте́ц ___ и не говори́т.",
+        "prompt": "На́стя ___ (дава́ть) хлеб.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "се́ет"
+         "даёт"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "дава́ет",
+          "hint": "дава́ть → даёт"
+         }
         ],
         "source_segment_ids": [
-         "ru-mir-01-l04-s087"
+         "ru-mir-01-l04-s088"
         ]
        },
        {
         "id": "x4-1-4",
-        "prompt": "Полоса́ уже́ не ___.",
+        "prompt": "Полоса́ уже́ не ___ (ждать).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "ждёт"
         ],
+        "first_letters": 2,
         "source_segment_ids": [
          "ru-mir-01-l04-s091"
         ]
        },
        {
         "id": "x4-1-5",
-        "prompt": "«Я ду́маю не так. Ты не ___, Ва́нька».",
+        "prompt": "Фёдор и Ива́н ___ (идти́) в дере́вню.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "иду́т"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l04-s093"
+        ]
+       },
+       {
+        "id": "x4-1-6",
+        "prompt": "— Да. Я ду́маю не так. Ты не ___ (понима́ть), Ва́нька.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "понима́ешь"
         ],
+        "first_letters": 4,
         "source_segment_ids": [
          "ru-mir-01-l04-s095"
         ]
@@ -2372,202 +2650,167 @@
      },
      {
       "id": "ru-mir-01-l04-x4-2",
-      "type": "okonchaniya",
-      "title": "Оконча́ния",
-      "instruction": "Допиши́ оконча́ние.",
-      "hint_en": "брать, тяну́ть, идти́, ждать: the stem changes; endings -у/-ю, -ёт/-ет, -у́т/-ут.",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "что? / куда́? (accusative): борона́ → бо́рону, дере́вня → в дере́вню, на́ша → на́шу, больша́я → большу́ю; где? в земле́.",
       "grammar_target_ids": [
-       "G04"
+       "G04",
+       "G03"
       ],
       "obrazec": {
-       "rule": "брать: он берёт · тяну́ть: я тяну́, они́ тя́нут",
-       "prompt": "Фёдор бер___ бо́рону.",
-       "answer": "ёт"
+       "rule": "что? борона́ → бо́рону · куда́? дере́вня → в дере́вню",
+       "prompt": "Фёдор берёт ___ (борона́, что?).",
+       "answer": "бо́рону"
       },
       "items": [
        {
         "id": "x4-2-1",
-        "prompt": "Они́ ид___ в дере́вню.",
+        "prompt": "Фёдор и Ива́н иду́т в ___ (дере́вня, куда́?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "у́т"
+         "дере́вню"
         ],
-        "explanation": "Они́ иду́т в дере́вню."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s093"
+        ]
        },
        {
         "id": "x4-2-2",
-        "prompt": "Земля́ жд___.",
+        "prompt": "На́стя даёт ___ (хлеб, что?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ёт"
+         "хлеб"
         ],
-        "explanation": "Земля́ ждёт."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s088"
+        ]
        },
        {
         "id": "x4-2-3",
-        "prompt": "Я тян___ бо́рону.",
+        "prompt": "Полоса́ уже́ не ждёт: овёс — в ___ (земля́, где?).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "у́"
+         "земле́"
         ],
-        "explanation": "Я тяну́ бо́рону."
+        "common_wrong": [
+         {
+          "answer": "зе́млю",
+          "hint": "где? → в земле́ · куда́? → в зе́млю"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s091",
+         "ru-mir-01-l04-s091a"
+        ]
        },
        {
         "id": "x4-2-4",
-        "prompt": "Фёдор и Ива́н тя́н___ бо́рону.",
+        "prompt": "Фёдор смо́трит на ___ (на́ша) по́лосу.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ут"
+         "на́шу"
         ],
-        "explanation": "Фёдор и Ива́н тя́нут бо́рону."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s083"
+        ]
        },
        {
         "id": "x4-2-5",
-        "prompt": "Я ид___ в по́ле.",
+        "prompt": "Фёдор берёт ___ (больша́я) бо́рону.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "у́"
+         "большу́ю"
         ],
-        "explanation": "Я иду́ в по́ле."
-       },
-       {
-        "id": "x4-2-6",
-        "prompt": "Сила́нтий да___ ло́шадь.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "ёт"
-        ],
-        "explanation": "Сила́нтий даёт ло́шадь."
+        "source_segment_ids": [
+         "ru-mir-01-l04-s079",
+         "ru-mir-01-l04-s062"
+        ]
        }
       ]
      },
      {
       "id": "ru-mir-01-l04-x4-3",
-      "type": "soedini",
-      "title": "Соедини́",
-      "instruction": "Соедини́ два предложе́ния: а.",
-      "hint_en": "Join with а (contrast); keep the order.",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть по те́ксту. Сло́во в ско́бках поста́вь в ну́жную фо́рму.",
+      "hint_en": "Questions on the whole chapter; one word, in the right form.",
       "grammar_target_ids": [
        "G04"
       ],
       "obrazec": {
-       "rule": "…, а …",
-       "prompt": "Мир ду́мает. Я рабо́таю. (а)",
-       "answer": "Мир ду́мает, а я рабо́таю."
+       "rule": "Что де́лает оте́ц? — Оте́ц се́ет.",
+       "prompt": "Что де́лает оте́ц? — Оте́ц ___ (се́ять).",
+       "answer": "се́ет"
       },
       "items": [
        {
         "id": "x4-3-1",
-        "prompt": "Оте́ц ду́мает так. Ты — не так. (а)",
+        "prompt": "Почему́ Ива́н и На́стя тя́нут бо́рону? — Ло́шадь ___ (хрома́ть).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Оте́ц ду́мает так, а ты — не так.",
-         "Оте́ц ду́мает так, а ты не так."
+         "хрома́ет"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s043",
+         "ru-mir-01-l04-s062"
         ]
        },
        {
         "id": "x4-3-2",
-        "prompt": "Фёдор и Ива́н тя́нут. Оте́ц се́ет. (а)",
+        "prompt": "У кого́ есть ло́шадь? — У ___ (сосе́д), но он не даёт свою́ ло́шадь.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Фёдор и Ива́н тя́нут, а оте́ц се́ет."
+         "сосе́да"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s046"
         ]
        },
        {
         "id": "x4-3-3",
-        "prompt": "Ива́н тя́нет. Ша́рик гуля́ет. (а)",
+        "prompt": "Что де́лает Ша́рик у́тром? — Ша́рик ___ (гуля́ть).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Ива́н тя́нет, а Ша́рик гуля́ет."
+         "гуля́ет"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s017"
         ]
        },
        {
         "id": "x4-3-4",
-        "prompt": "Фёдор рабо́тает. Ива́н ду́мает. (а)",
+        "prompt": "Что де́лает Ива́н у́тром? — Он ___ (паха́ть).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Фёдор рабо́тает, а Ива́н ду́мает."
+         "па́шет"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s022"
         ]
        },
        {
         "id": "x4-3-5",
-        "prompt": "Я иду́ в по́ле. Ты идёшь в дере́вню. (а)",
+        "prompt": "Куда́ иду́т оте́ц и Ива́н у́тром? — На да́льнюю ___ (полоса́).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "Я иду́ в по́ле, а ты идёшь в дере́вню."
+         "по́лосу"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l04-s004",
+         "ru-mir-01-l04-s009d"
         ]
        }
-      ]
-     },
-     {
-      "id": "ru-mir-01-l04-napishi",
-      "type": "napishi",
-      "title": "Напиши́",
-      "mode": "productive",
-      "prompt": "Что ты де́лаешь сего́дня? Куда́ ты идёшь? Что ты берёшь? Напиши́.",
-      "length_hint": "3–5 предложе́ний",
-      "hint_en": "Write 3–5 sentences about your day: what you do, where you go, what you take.",
-      "model_answers": [
-       "Сего́дня я рабо́таю. У́тром я иду́ в по́ле. Я беру́ соху́ и мешо́к. Оте́ц се́ет овёс, а я пашу́.",
-       "Весна́, и я не гуля́ю. Ло́шадь хрома́ет, и я беру́ бо́рону. Я тяну́, а земля́ ждёт. Я ду́маю: где Фёдор?"
-      ],
-      "rubric": [
-       "present tense with я: рабо́таю, беру́, иду́, пашу́, тяну́",
-       "accusative objects: соху́, бо́рону (-а → -у), мешо́к (masc. inanimate, unchanged), ло́шадь (fem. -ь, unchanged)",
-       "куда́? в/на + accusative: в по́ле, в дере́вню"
-      ],
-      "rubric_lang": "en",
-      "key_terms": [
-       "ru-rabotat",
-       "ru-brat-v",
-       "ru-idti"
-      ],
-      "typical_errors": [
-       {
-        "wrong": "Я рабо́тает.",
-        "right": "Я рабо́таю.",
-        "note": "я → -ю",
-        "note_lang": "en"
-       },
-       {
-        "wrong": "Я беру́ соха́.",
-        "right": "Я беру́ соху́.",
-        "note": "what? (accusative): -а → -у",
-        "note_lang": "en"
-       },
-       {
-        "wrong": "Я беру́ ло́шадю.",
-        "right": "Я беру́ ло́шадь.",
-        "note": "-ь feminine nouns do not change",
-        "note_lang": "en"
-       },
-       {
-        "wrong": "Я паха́ю.",
-        "right": "Я пашу́.",
-        "note": "паха́ть → пашу́, па́шешь",
-        "note_lang": "en"
-       },
-       {
-        "wrong": "Я дава́ю хлеб.",
-        "right": "Я даю́ хлеб.",
-        "note": "дава́ть → даю́, даёшь",
-        "note_lang": "en"
-       }
-      ],
-      "elicits": [
-       "G04",
-       "G03"
       ]
      }
     ]
@@ -2593,6 +2836,7 @@
   "rule": "рабо́тать: я рабо́таю, ты рабо́таешь, они́ рабо́тают · что? соха́ → соху́, земля́ → зе́млю; мешо́к, ло́шадь → мешо́к, ло́шадь",
   "tables": [
    {
+    "id": "rabotat-nastoyashchee",
     "caption": "рабо́тать",
     "header": [
      "кто?",
@@ -2626,6 +2870,7 @@
     ]
    },
    {
+    "id": "osnovy-glagolov",
     "caption": "ждать · брать · дава́ть · паха́ть · тяну́ть · идти́",
     "header": [
      "",
@@ -2679,6 +2924,7 @@
     ]
    },
    {
+    "id": "vinitelnyj-chto",
     "caption": "берёт …",
     "header": [
      "кто? что?",
@@ -2746,7 +2992,407 @@
     "segment_id": "ru-mir-01-l04-s044"
    }
   ],
-  "note_en": "Present tense of verbs like рабо́тать: я -ю, ты -ешь, он -ет, мы -ем, вы -ете, они́ -ют. Some stems change: ждать → жду, брать → беру́, дава́ть → даю́, паха́ть → пашу́. The object (accusative): -а → -у, -я → -ю (соху́, зе́млю); masculine and neuter inanimate nouns do not change (мешо́к, по́ле), and neither do feminine nouns in -ь, animate or not (ло́шадь). Stress can move: борона́ → бо́рону. Куда́? + в/на + accusative: в по́ле, в дере́вню."
+  "note_en": "Present tense of verbs like рабо́тать: я -ю, ты -ешь, он -ет, мы -ем, вы -ете, они́ -ют. Some stems change: ждать → жду, брать → беру́, дава́ть → даю́, паха́ть → пашу́. The object (accusative): -а → -у, -я → -ю (соху́, зе́млю); masculine and neuter inanimate nouns do not change (мешо́к, по́ле), and neither do feminine nouns in -ь, animate or not (ло́шадь). Stress can move: борона́ → бо́рону. Куда́? + в/на + accusative: в по́ле, в дере́вню.",
+  "kata": [
+   {
+    "id": "ru-mir-01-k04-nastoyashchee",
+    "title": "Что де́лает? я · ты · он · они́",
+    "shape": "type",
+    "scheduled": true,
+    "table_ref": "rabotat-nastoyashchee",
+    "pool": [
+     {
+      "id": "k04-01",
+      "prompt": "— Мир ду́мает, а я ___.",
+      "lemma": "рабо́тать",
+      "label": "я",
+      "stem_hint": "я → -ю",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 0,
+       "col": 1
+      },
+      "answer": "рабо́таю",
+      "accepted": [
+       "рабо́таю"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-02",
+      "prompt": "— Ша́рик, ты не ___!",
+      "lemma": "рабо́тать",
+      "label": "ты",
+      "stem_hint": "ты → -ешь",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 1,
+       "col": 1
+      },
+      "answer": "рабо́таешь",
+      "accepted": [
+       "рабо́таешь"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-03",
+      "prompt": "Ша́рик не рабо́тает: он ___.",
+      "lemma": "гуля́ть",
+      "label": "он",
+      "stem_hint": "он → -ет",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 2,
+       "col": 1
+      },
+      "answer": "гуля́ет",
+      "accepted": [
+       "гуля́ет"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-04",
+      "prompt": "Оте́ц и Ива́н ___ в по́ле.",
+      "lemma": "рабо́тать",
+      "label": "они́",
+      "stem_hint": "они́ → -ют",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 5,
+       "col": 1
+      },
+      "answer": "рабо́тают",
+      "accepted": [
+       "рабо́тают"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-05",
+      "prompt": "— Я ___, — говори́т Ива́н.",
+      "lemma": "знать",
+      "label": "я",
+      "stem_hint": "я → -ю",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 0,
+       "col": 1
+      },
+      "answer": "зна́ю",
+      "accepted": [
+       "зна́ю"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-06",
+      "prompt": "— Ты не ___, Ва́нька.",
+      "lemma": "понима́ть",
+      "label": "ты",
+      "stem_hint": "ты → -ешь",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 1,
+       "col": 1
+      },
+      "answer": "понима́ешь",
+      "accepted": [
+       "понима́ешь"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-07",
+      "prompt": "Оте́ц ___ так, а Фёдор — не так.",
+      "lemma": "ду́мать",
+      "label": "он",
+      "stem_hint": "он → -ет",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 2,
+       "col": 1
+      },
+      "answer": "ду́мает",
+      "accepted": [
+       "ду́мает"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-08",
+      "prompt": "А что ___ брат и сестра́?",
+      "lemma": "де́лать",
+      "label": "они́",
+      "stem_hint": "они́ → -ют",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 5,
+       "col": 1
+      },
+      "answer": "де́лают",
+      "accepted": [
+       "де́лают"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-09",
+      "prompt": "— Я ___ не так, — говори́т Фёдор.",
+      "lemma": "ду́мать",
+      "label": "я",
+      "stem_hint": "я → -ю",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 0,
+       "col": 1
+      },
+      "answer": "ду́маю",
+      "accepted": [
+       "ду́маю"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-10",
+      "prompt": "— Ша́рик, что ты ___?",
+      "lemma": "де́лать",
+      "label": "ты",
+      "stem_hint": "ты → -ешь",
+      "cell": {
+       "table": "rabotat-nastoyashchee",
+       "row": 1,
+       "col": 1
+      },
+      "answer": "де́лаешь",
+      "accepted": [
+       "де́лаешь"
+      ],
+      "collapsed": []
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-k04-vinitelnyj",
+    "title": "Что? Куда́? соха́ → соху́",
+    "shape": "choose",
+    "scheduled": false,
+    "table_ref": "vinitelnyj-chto",
+    "pool": [
+     {
+      "id": "k04-11",
+      "prompt": "Ло́шадь тя́нет ___.",
+      "lemma": "соха́",
+      "label": "что?",
+      "options": [
+       "соху́",
+       "соха́"
+      ],
+      "stem_hint": "-а → -у",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 0,
+       "col": 1
+      },
+      "answer": "соху́",
+      "accepted": [
+       "соху́"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-12",
+      "prompt": "Фёдор берёт ___.",
+      "lemma": "борона́",
+      "label": "что?",
+      "options": [
+       "борона́",
+       "бо́рону"
+      ],
+      "stem_hint": "-а → -у",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 1,
+       "col": 1
+      },
+      "answer": "бо́рону",
+      "accepted": [
+       "бо́рону"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-13",
+      "prompt": "Оте́ц се́ет: овёс — в ___.",
+      "lemma": "земля́",
+      "label": "куда́?",
+      "options": [
+       "зе́млю",
+       "земля́"
+      ],
+      "stem_hint": "-я → -ю",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 2,
+       "col": 1
+      },
+      "answer": "зе́млю",
+      "accepted": [
+       "зе́млю"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-14",
+      "prompt": "Оте́ц и Ива́н иду́т на ___.",
+      "lemma": "да́льняя полоса́",
+      "label": "куда́?",
+      "options": [
+       "да́льняя полоса́",
+       "да́льнюю по́лосу"
+      ],
+      "stem_hint": "-яя -а → -юю -у",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 3,
+       "col": 1
+      },
+      "answer": "да́льнюю по́лосу",
+      "accepted": [
+       "да́льнюю по́лосу"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-15",
+      "prompt": "Оте́ц берёт ___.",
+      "lemma": "мешо́к",
+      "label": "что?",
+      "options": [
+       "мешо́к",
+       "мешке́"
+      ],
+      "stem_hint": "мешо́к → мешо́к",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 4,
+       "col": 1
+      },
+      "answer": "мешо́к",
+      "accepted": [
+       "мешо́к"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-16",
+      "prompt": "Ива́н берёт ___.",
+      "lemma": "соха́",
+      "label": "что?",
+      "options": [
+       "соха́",
+       "соху́"
+      ],
+      "stem_hint": "-а → -у",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 0,
+       "col": 1
+      },
+      "answer": "соху́",
+      "accepted": [
+       "соху́"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-17",
+      "prompt": "Ива́н берёт соху́, а оте́ц берёт ___.",
+      "lemma": "мешо́к",
+      "label": "что?",
+      "options": [
+       "мешке́",
+       "мешо́к"
+      ],
+      "stem_hint": "мешо́к → мешо́к",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 4,
+       "col": 1
+      },
+      "answer": "мешо́к",
+      "accepted": [
+       "мешо́к"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-18",
+      "prompt": "У сосе́да есть ло́шадь, но он не даёт свою́ ___.",
+      "lemma": "ло́шадь",
+      "label": "кого́?",
+      "options": [
+       "ло́шади",
+       "ло́шадь"
+      ],
+      "stem_hint": "-ь → -ь",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 7,
+       "col": 1
+      },
+      "answer": "ло́шадь",
+      "accepted": [
+       "ло́шадь"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-19",
+      "prompt": "Ло́шадь хрома́ет, и ___ тя́нут Фёдор и Ива́н.",
+      "lemma": "борона́",
+      "label": "что?",
+      "options": [
+       "бо́рону",
+       "борона́"
+      ],
+      "stem_hint": "-а → -у",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 1,
+       "col": 1
+      },
+      "answer": "бо́рону",
+      "accepted": [
+       "бо́рону"
+      ],
+      "collapsed": []
+     },
+     {
+      "id": "k04-20",
+      "prompt": "Оте́ц смо́трит на ___.",
+      "lemma": "земля́",
+      "label": "куда́?",
+      "options": [
+       "земля́",
+       "зе́млю"
+      ],
+      "stem_hint": "-я → -ю",
+      "cell": {
+       "table": "vinitelnyj-chto",
+       "row": 2,
+       "col": 1
+      },
+      "answer": "зе́млю",
+      "accepted": [
+       "зе́млю"
+      ],
+      "collapsed": []
+     }
+    ]
+   }
+  ]
  },
  "pensa": {
   "A": {
@@ -2755,12 +3401,13 @@
    "blocks": [
     {
      "obrazec": {
-      "prompt": "Ива́н берёт ___. (соха́)",
+      "prompt": "Ива́н берёт ___ (соха́).",
       "answer": "соху́"
      },
      "items": [
       {
-       "prompt": "Оте́ц берёт ___. (мешо́к)",
+       "id": "a1",
+       "prompt": "Оте́ц берёт ___ (мешо́к).",
        "mode": "productive",
        "answer_mode": "choice",
        "accepted_answers": [
@@ -2768,12 +3415,12 @@
        ],
        "choices": [
         "мешо́к",
-        "мешка́"
-       ],
-       "id": "a1"
+        "мешке́"
+       ]
       },
       {
-       "prompt": "Они́ тя́нут ___. (борона́)",
+       "id": "a2",
+       "prompt": "Они́ тя́нут ___ (борона́).",
        "mode": "productive",
        "answer_mode": "choice",
        "accepted_answers": [
@@ -2782,11 +3429,11 @@
        "choices": [
         "борона́",
         "бо́рону"
-       ],
-       "id": "a2"
+       ]
       },
       {
-       "prompt": "Сила́нтий даёт ___. (ло́шадь)",
+       "id": "a3",
+       "prompt": "Ло́шадь хрома́ет: оте́ц смо́трит ___ (ло́шадь).",
        "mode": "productive",
        "answer_mode": "choice",
        "accepted_answers": [
@@ -2794,102 +3441,108 @@
        ],
        "choices": [
         "ло́шадь",
-        "ло́шадю"
-       ],
-       "id": "a3"
+        "ло́шади"
+       ]
       },
       {
-       "prompt": "На́стя берёт ___. (доска́)",
+       "id": "a4",
+       "prompt": "Ива́н смо́трит на ___ (земля́).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "до́ску"
+        "зе́млю"
        ],
-       "id": "a4"
+       "first_letters": 2
       },
       {
-       "prompt": "Оте́ц се́ет ___. (овёс)",
+       "id": "a5",
+       "prompt": "Оте́ц се́ет ___ (овёс).",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "овёс"
        ],
-       "choices": [
-        "овёс",
-        "овса́"
-       ],
-       "id": "a5"
+       "first_letters": 2
       }
      ]
     },
     {
      "obrazec": {
-      "prompt": "Я ___ (рабо́тать).",
+      "prompt": "— Мир ду́мает, а я ___ (рабо́тать).",
       "answer": "рабо́таю"
      },
      "items": [
       {
-       "prompt": "Я ___ (паха́ть).",
+       "id": "a6",
+       "prompt": "— Я ___ (тяну́ть)! — говори́т Ива́н.",
        "mode": "productive",
        "answer_mode": "choice",
        "accepted_answers": [
-        "пашу́"
+        "тяну́"
        ],
        "choices": [
-        "паха́ю",
-        "пашу́"
-       ],
-       "id": "a6"
+        "тя́нет",
+        "тяну́"
+       ]
       },
       {
-       "prompt": "Ты ___ (ждать)?",
+       "id": "a7",
+       "prompt": "— Ты ___ (идти́) в по́ле? — спра́шивает На́стя.",
        "mode": "productive",
        "answer_mode": "choice",
        "accepted_answers": [
-        "ждёшь"
+        "идёшь"
        ],
        "choices": [
-        "ждёшь",
-        "жда́ешь"
-       ],
-       "id": "a7"
+        "идёшь",
+        "идёт"
+       ]
       },
       {
-       "prompt": "Они́ ___ (рабо́тать).",
+       "id": "a8",
+       "prompt": "Фёдор и Ива́н ___ (рабо́тать).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "рабо́тают"
        ],
-       "id": "a8"
+       "first_letters": 4
       }
      ]
     },
     {
      "obrazec": {
-      "prompt": "доска́ → ___",
-      "answer": "до́ски"
+      "prompt": "Три полосы́ — и все ___ (ма́ленький)!",
+      "answer": "ма́ленькие"
      },
      "items": [
       {
-       "prompt": "полоса́ → ___",
+       "id": "a9",
+       "prompt": "Всё по́ле — ___ (полоса́).",
        "mode": "productive",
-       "answer_mode": "exact",
+       "answer_mode": "choice",
        "accepted_answers": [
         "по́лосы"
        ],
        "recall_of": "G02",
-       "id": "a9"
+       "source_segment_ids": [
+        "ru-mir-01-l04-s035a"
+       ],
+       "choices": [
+        "полоса́",
+        "по́лосы"
+       ]
       },
       {
-       "prompt": "Полоса́ ма́ленькая, а поля́ ___. (большо́й)",
+       "id": "a10",
+       "prompt": "Полоса́ ма́ленькая, а поля́ ___ (большо́й).",
        "mode": "productive",
        "answer_mode": "exact",
-       "recall_of": "G02",
-       "id": "a10",
        "accepted_answers": [
         "больши́е"
-       ]
+       ],
+       "first_letters": 3,
+       "recall_of": "G02"
       }
      ]
     }
@@ -2910,230 +3563,135 @@
     "полоса́",
     "рабо́та",
     "соха́",
-    "хлеб"
+    "хлеб",
+    "час"
    ],
    "items": [
     {
+     "id": "b1",
      "prompt": "Ло́шадь хрома́ет: одна́ ___ не рабо́тает.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "нога́"
      ],
-     "id": "b1"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s030"
+     ]
     },
     {
+     "id": "b2",
      "prompt": "Ива́н па́шет: он берёт ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "соху́"
      ],
-     "id": "b2"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s006"
+     ]
     },
     {
-     "prompt": "Оте́ц се́ет. Что в мешке́? ___.",
+     "id": "b3",
+     "prompt": "Что в мешке́? В мешке́ — ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
-      "Овёс"
+      "овёс"
      ],
-     "id": "b3"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s007"
+     ]
     },
     {
-     "prompt": "Где овёс? В ___.",
+     "id": "b4",
+     "prompt": "Оте́ц берёт ___: там овёс.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
-      "мешке́",
-      "земле́"
+      "мешо́к"
      ],
-     "id": "b4"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s006"
+     ]
     },
     {
-     "prompt": "Оте́ц и Ива́н се́ют овёс, потому́ что ___.",
+     "id": "b5",
+     "prompt": "Сего́дня ___: оте́ц се́ет овёс.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "весна́"
      ],
-     "id": "b5"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s001"
+     ],
+     "first_letters": 2
     },
     {
+     "id": "b6",
      "prompt": "Ло́шадь хрома́ет, и ___ тя́нут Фёдор и Ива́н.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "бо́рону"
      ],
-     "id": "b6"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s080"
+     ]
     },
     {
+     "id": "b7",
      "prompt": "Здесь не дом и не лес: э́то на́ша ___, ма́ленькая и да́льняя.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "полоса́"
      ],
-     "id": "b7"
+     "first_letters": 2
     },
     {
+     "id": "b8",
      "prompt": "Три полосы́ — э́то на́ша ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "земля́"
      ],
-     "id": "b8"
+     "source_segment_ids": [
+      "ru-mir-01-l04-s083"
+     ],
+     "first_letters": 2
     },
     {
+     "id": "b9",
      "prompt": "Ша́рик гуля́ет, а Ива́н не гуля́ет: у него́ ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "рабо́та"
      ],
-     "id": "b9"
+     "first_letters": 2
+    },
+    {
+     "id": "b10",
+     "prompt": "Ло́шадь хрома́ет: она́ не рабо́тает весь ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "день"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l04-s031"
+     ],
+     "first_letters": 1
     }
    ]
   },
   "C": {
    "id": "ru-mir-01-l04-pc",
    "title": "Пе́нсум C — Вопро́сы",
-   "items": [
-    {
-     "prompt": "Куда́ иду́т оте́ц и Ива́н у́тром?",
-     "mode": "productive",
-     "answer_mode": "self_check",
-     "model_answer": "В по́ле, на да́льнюю по́лосу.",
-     "model_answers": [
-      "В по́ле, на да́льнюю по́лосу.",
-      "Оте́ц и Ива́н иду́т в по́ле."
-     ],
-     "rubric": "To the field, to the far strip (в по́ле / на да́льнюю по́лосу).",
-     "rubric_lang": "en",
-     "key_terms": [
-      "ru-idti",
-      "ru-kuda"
-     ],
-     "id": "c1",
-     "source_segment_ids": [
-      "ru-mir-01-l04-s004"
-     ]
-    },
-    {
-     "prompt": "Что де́лает Ша́рик у́тром?",
-     "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Гуля́ет.",
-      "Ша́рик гуля́ет.",
-      "Он гуля́ет.",
-      "Ша́рик гуля́ет, а не рабо́тает."
-     ],
-     "id": "c2",
-     "source_segment_ids": [
-      "ru-mir-01-l04-s017"
-     ]
-    },
-    {
-     "prompt": "Почему́ Ива́н и На́стя тя́нут бо́рону?",
-     "mode": "productive",
-     "answer_mode": "self_check",
-     "model_answer": "Потому́ что ло́шадь хрома́ет.",
-     "model_answers": [
-      "Потому́ что ло́шадь хрома́ет.",
-      "Ло́шадь хрома́ет: одна́ нога́ не рабо́тает."
-     ],
-     "rubric": "The horse is lame, so nobody else can pull the harrow.",
-     "rubric_lang": "en",
-     "key_terms": [
-      "ru-khromat",
-      "ru-loshad"
-     ],
-     "id": "c3",
-     "source_segment_ids": [
-      "ru-mir-01-l04-s062"
-     ]
-    },
-    {
-     "prompt": "Кто даёт ло́шадь? А что говори́т оте́ц?",
-     "mode": "productive",
-     "answer_mode": "self_check",
-     "model_answer": "Сила́нтий: «Рубль и́ли два дня». Оте́ц: «Нет!»",
-     "model_answers": [
-      "Сила́нтий: «Рубль и́ли два дня». Оте́ц: «Нет!»",
-      "Сила́нтий даёт ло́шадь на день, но оте́ц: «Нет!»"
-     ],
-     "rubric": "Silanty would lend it for a rouble or two days' work; the father refuses.",
-     "rubric_lang": "en",
-     "key_terms": [
-      "ru-davat",
-      "ru-loshad"
-     ],
-     "id": "c4",
-     "source_segment_ids": [
-      "ru-mir-01-l04-s055"
-     ]
-    },
-    {
-     "prompt": "Кто тя́нет бо́рону?",
-     "mode": "productive",
-     "answer_mode": "self_check",
-     "model_answer": "Ива́н и На́стя, а ещё Фёдор и Ива́н.",
-     "model_answers": [
-      "Ива́н и На́стя, а ещё Фёдор и Ива́н.",
-      "Ива́н и На́стя тя́нут бо́рону"
-     ],
-     "rubric": "Ivan and Nastya, later Fyodor with Ivan.",
-     "rubric_lang": "en",
-     "key_terms": [
-      "ru-tyanut",
-      "ru-borona"
-     ],
-     "id": "c5",
-     "source_segment_ids": [
-      "ru-mir-01-l04-s062"
-     ]
-    },
-    {
-     "prompt": "Что ду́мает Фёдор? Где для него́ вся земля́?",
-     "mode": "productive",
-     "answer_mode": "self_check",
-     "model_answer": "Фёдор ду́мает: вся земля́ — здесь, и ло́шадь, и дом.",
-     "model_answers": [
-      "Фёдор ду́мает: вся земля́ — здесь, и ло́шадь, и дом.",
-      "Вся земля́ здесь, а не три полосы́."
-     ],
-     "rubric": "All his land in one place, with the horse and the house.",
-     "rubric_lang": "en",
-     "key_terms": [
-      "ru-zemlya",
-      "ru-dumat"
-     ],
-     "id": "c6",
-     "source_segment_ids": [
-      "ru-mir-01-l04-s084"
-     ]
-    },
-    {
-     "prompt": "А ты? Что ты де́лаешь сего́дня? Куда́ ты идёшь?",
-     "mode": "productive",
-     "answer_mode": "self_check",
-     "model_answer": "Сего́дня я рабо́таю. Я иду́ в по́ле.",
-     "model_answers": [
-      "Сего́дня я рабо́таю. Я иду́ в по́ле.",
-      "Сего́дня я гуля́ю: я иду́ в лес."
-     ],
-     "rubric": "Two present-tense я forms (рабо́таю, иду́, гуля́ю) and one куда́? answer (в по́ле, в лес).",
-     "rubric_lang": "en",
-     "key_terms": [
-      "ru-delat",
-      "ru-idti"
-     ],
-     "id": "c7"
-    }
-   ]
+   "items": []
   }
  },
  "vocabulary": [

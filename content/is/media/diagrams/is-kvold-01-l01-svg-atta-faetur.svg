@@ -1,27 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250" width="340" height="250" role="img" aria-labelledby="t d">
-<title id="t">Sleipnir: átta fætur</title>
-<desc id="d">A small carved wooden toy horse seen from the side, with eight legs numbered 1 to 8; labels Sleipnir and átta fætur.</desc>
-<rect x="0" y="0" width="340" height="250" fill="#f6f0e2"/>
-<rect x="70" y="70" width="190" height="55" rx="22" fill="#c8a06a" stroke="#2b2622" stroke-width="2.5"/>
-<path d="M 245 80 L 280 40 L 300 48 L 292 66 L 262 100 Z" fill="#c8a06a" stroke="#2b2622" stroke-width="2.5" stroke-linejoin="round"/>
-<circle cx="284" cy="52" r="3" fill="#2b2622"/>
-<path d="M 72 82 C 50 90 40 110 44 130" fill="none" stroke="#2b2622" stroke-width="5" stroke-linecap="round"/>
-<line x1="84" y1="122" x2="84" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="84" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">1</text>
-<line x1="104" y1="122" x2="104" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="104" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">2</text>
-<line x1="124" y1="122" x2="124" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="124" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">3</text>
-<line x1="144" y1="122" x2="144" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="144" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">4</text>
-<line x1="186" y1="122" x2="186" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="186" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">5</text>
-<line x1="206" y1="122" x2="206" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="206" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">6</text>
-<line x1="226" y1="122" x2="226" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="226" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">7</text>
-<line x1="246" y1="122" x2="246" y2="178" stroke="#2b2622" stroke-width="6" stroke-linecap="round"/>
-<text x="246" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="20" text-anchor="middle" font-weight="normal" fill="#2b2622">8</text>
-<text x="170" y="40" font-family="Georgia, 'Times New Roman', serif" font-size="22" text-anchor="middle" font-weight="bold" fill="#2b2622">Sleipnir</text>
-<text x="170" y="232" font-family="Georgia, 'Times New Roman', serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#2b2622">átta fætur</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 214" width="340" height="214" role="img" aria-labelledby="t d">
+  <title id="t">Sleipnir: átta fætur</title>
+  <desc id="d">Siggi's toy horse Sleipnir, carved from pale driftwood, seen from the side: a chunky wooden horse with a carved mane, a short tail and a burnt-dot eye, standing on eight straight peg legs, four under the chest and four under the hindquarters. The legs are numbered 1 to 8.</desc>
+  <!-- Redrawn 2026-10-21 (agent AIDS) after owner review: the toy of media-src/is/visual-bible.md §6 and
+       reference/prop-sleipnir.png, in strict profile so that all eight pegs can be counted at margin size
+       (a Gemini raster could not keep them countable below ~260 px). -->
+  <style>
+    text { font-family: 'Noto Serif', 'PT Serif', Georgia, serif; fill: #2b2b2b; font-size: 19px; }
+    .i { stroke: #3b2f27; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+    .g { fill: none; stroke: #c4ab80; stroke-width: 1.4; stroke-linecap: round; }
+    .p { fill: #dccaa4; }
+  </style>
+  <rect x="1" y="1" width="338" height="212" fill="#fbf7ee" stroke="#c9bb9a"/>
+  <path d="M40 178 H300" stroke="#c9bb9a" stroke-width="1.5"/>
+  <g class="i">
+    <!-- far-side tail and pegs are drawn first, then the body over their tops -->
+    <path d="M268 86 C284 92 292 108 290 132 C286 134 281 132 279 128 C280 114 276 102 266 96 Z" fill="#e6d6b4"/>
+    <path d="M281 104 C284 112 285 120 284 128" class="g"/>
+    <rect class="p" x="92" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="108" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="124" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="140" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="206" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="222" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="238" y="116" width="11" height="62" rx="4"/>
+    <rect class="p" x="254" y="116" width="11" height="62" rx="4"/>
+    <!-- one carved silhouette: chest, neck, head, back, rump -->
+    <path d="M100 128 C92 120 88 104 86 92 C84 84 80 78 74 74 C66 78 56 84 46 82 C38 80 36 70 40 64 C46 54 56 42 64 35 L66 18 L76 30 C96 32 112 44 122 60 C128 70 134 76 146 78 L246 76 C262 76 272 86 272 100 L270 120 C268 128 262 130 252 130 L216 130 C196 126 168 126 150 130 L104 130 Z" fill="#ece0c6"/>
+    <path d="M70 30 L77 22 L82 33 Z" fill="#e2d2ae"/>
+    <!-- carved mane along the crest -->
+    <path d="M76 30 C96 32 112 44 122 60 C128 70 134 76 146 78 C138 82 128 80 122 76 C121 72 116 70 114 66 C115 61 110 58 108 54 C108 49 102 47 100 44 C99 40 93 39 90 37 C88 34 82 34 80 34 Z" fill="#d9c49c"/>
+    <circle cx="62" cy="50" r="3" fill="#4a3a2c" stroke="none"/>
+    <circle cx="44.5" cy="69" r="1.7" fill="#6b5640" stroke="none"/>
+  </g>
+  <!-- grain and knife facets -->
+  <path class="g" d="M126 94 C152 90 180 96 214 92 M140 108 C170 104 200 110 238 104 M222 88 C234 86 246 88 256 92 M96 106 C102 102 108 102 114 104 M74 74 C70 67 70 60 73 53 M46 78 C50 79 53 78 55 77"/>
+  <path d="M232 98 C238 95 244 96 246 99 C242 101 236 101 232 98 Z" fill="#b89b6c"/>
+  <text x="97.5" y="202" text-anchor="middle">1</text>
+  <text x="113.5" y="202" text-anchor="middle">2</text>
+  <text x="129.5" y="202" text-anchor="middle">3</text>
+  <text x="145.5" y="202" text-anchor="middle">4</text>
+  <text x="211.5" y="202" text-anchor="middle">5</text>
+  <text x="227.5" y="202" text-anchor="middle">6</text>
+  <text x="243.5" y="202" text-anchor="middle">7</text>
+  <text x="259.5" y="202" text-anchor="middle">8</text>
 </svg>

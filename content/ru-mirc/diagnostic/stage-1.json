@@ -1,0 +1,6160 @@
+{
+  "language": "ru",
+  "id": "ru-mirc-diagnostic-stage-1",
+  "version": "1.0.0",
+  "title": "Russian placement diagnostic (Мир, custom track), stage 1",
+  "notes": "Item bank for docs/russian-mir-custom-design.md §6.1, in the format of content/grc/diagnostic/FORMAT.md with the Russian deltas listed in content/ru-mirc/diagnostic/authoring-notes.md (sources, word counts, tag list, sampling, answer checks, doubts). No stress marks anywhere; ё printed where standard.",
+  "sections": [
+    {
+      "id": "s0",
+      "title": "About you",
+      "kind": "intake",
+      "intro_en": "This short test helps choose where the course's reading starts and shows where Russian reading gets hard. The core is three passages with five questions each (about 15 minutes), then a page where you mark the places that stopped you. An optional 8-minute section on words and forms follows. Nothing here is timed, and you can stop at any section break and come back. First, one untimed practice round. Typing needs a Russian keyboard layout; stress marks are never needed, and е for ё is fine."
+    },
+    {
+      "id": "s1",
+      "title": "Reading",
+      "items": [
+        "p1",
+        "p1-q1",
+        "p1-q2",
+        "p1-q3",
+        "p1-q4",
+        "p1-q5",
+        "p2",
+        "p2-q1",
+        "p2-q2",
+        "p2-q3",
+        "p2-q4",
+        "p2-q5",
+        "p3",
+        "p3-q1",
+        "p3-q2",
+        "p3-q3",
+        "p3-q4",
+        "p3-q5"
+      ],
+      "intro_en": "Three passages, each a little harder than the one before: a story written for this test, a shortened story by Tolstoy, and a short piece by Turgenev exactly as he wrote it. Read at your own pace; the text stays on screen while you answer, and rereading is expected. A few rarer words are glossed under each passage. If a question can't be answered, leave it rather than guess."
+    },
+    {
+      "id": "s2",
+      "title": "Where did you get stuck?",
+      "kind": "retry",
+      "passages": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "intro_en": "Mark up to five places where your reading stopped, and say what you think they mean, even if that is 'no idea'. Help then arrives in steps: a few word meanings, then the shape of the sentence, then a translation."
+    },
+    {
+      "id": "m1",
+      "title": "Optional: words and forms",
+      "optional": true,
+      "stop_after_blank_streak": 3,
+      "items": [
+        "v1",
+        "c1",
+        "v2",
+        "c2",
+        "v3",
+        "c3",
+        "v4",
+        "c4",
+        "v5",
+        "c5",
+        "v6",
+        "c6",
+        "v7",
+        "c7",
+        "v8",
+        "c8",
+        "v9",
+        "v10"
+      ],
+      "intro_en": "About 8 minutes. Words in short Russian sentences (pick the meaning and say how sure you are; 'unknown' is a perfectly good answer), mixed with gaps where you type a form of the word given in brackets. The section ends by itself after three blanks or 'unknown's in a row; that is expected, not a failure."
+    }
+  ],
+  "intake": {
+    "texts_read": []
+  },
+  "practice": [
+    {
+      "kind": "passage",
+      "id": "pr-p",
+      "label": "Practice",
+      "source": "written for this test",
+      "authentic": false,
+      "context_en": "A warm-up: two sentences about a boy and his dog.",
+      "sentences": [
+        {
+          "id": "pr-s1",
+          "tokens": [
+            {
+              "t": "Шарик",
+              "lemma": "Шарик",
+              "gloss": "Sharik (a dog's name)"
+            },
+            {
+              "t": "бежит",
+              "lemma": "бежать",
+              "gloss": "runs"
+            },
+            {
+              "t": "к",
+              "lemma": "к",
+              "gloss": "to"
+            },
+            {
+              "t": "реке.",
+              "lemma": "река",
+              "gloss": "the river"
+            }
+          ],
+          "translation_en": "Sharik runs to the river.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "pr-s2",
+          "tokens": [
+            {
+              "t": "Мальчик",
+              "lemma": "мальчик",
+              "gloss": "the boy"
+            },
+            {
+              "t": "идёт",
+              "lemma": "идти",
+              "gloss": "walks, goes"
+            },
+            {
+              "t": "за",
+              "lemma": "за",
+              "gloss": "after"
+            },
+            {
+              "t": "ним",
+              "lemma": "он",
+              "gloss": "him"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "смеётся.",
+              "lemma": "смеяться",
+              "gloss": "laughs"
+            }
+          ],
+          "translation_en": "The boy walks after him and laughs.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "kind": "mc",
+      "id": "pr-mc",
+      "passage": "pr-p",
+      "gist": false,
+      "prompt_en": "Who is following whom?",
+      "options": [
+        "The boy is following Sharik.",
+        "Sharik is following the boy.",
+        "The boy and Sharik are walking side by side.",
+        "The boy is following his father."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: мальчик идёт за ним, 'the boy goes after him', and ним is Шарик.",
+        "Шарик runs ahead to the river; за ним puts the boy behind.",
+        "за ним is 'after him', not 'with him'.",
+        "There is no father here; ним refers back to Шарик."
+      ],
+      "domain": "R1",
+      "primary_tag": "case.gov",
+      "tags": [
+        "case.gov"
+      ],
+      "ablation": "Practice item (unscored)."
+    },
+    {
+      "kind": "cloze",
+      "id": "pr-cloze",
+      "subtype": "specified",
+      "greek": "Мальчик ___ за собакой к реке.",
+      "lemma": "идти",
+      "target_en": "present",
+      "accepted": [
+        "идёт"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "иду"
+          ],
+          "label": "1st person instead of 3rd"
+        },
+        {
+          "match": [
+            "идут"
+          ],
+          "label": "plural instead of singular"
+        },
+        {
+          "match": [
+            "идешь"
+          ],
+          "label": "2nd person instead of 3rd"
+        },
+        {
+          "match": [
+            "шел"
+          ],
+          "label": "past instead of present"
+        }
+      ],
+      "domain": "R3",
+      "primary_tag": "v.pres",
+      "tags": [
+        "v.pres"
+      ],
+      "ablation": "n/a (practice)"
+    },
+    {
+      "kind": "vocab",
+      "id": "pr-vocab",
+      "greek": "Шарик [[нашёл]] в траве старый мяч.",
+      "lemma": "найти",
+      "options": [
+        "found",
+        "lost",
+        "buried",
+        "chewed"
+      ],
+      "answer": 0,
+      "band": "practice",
+      "rank_source": "practice item; baseline known; OpenSubtitles 2018 lemma rank 98",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    }
+  ],
+  "items": {
+    "p1": {
+      "kind": "passage",
+      "id": "p1",
+      "label": "Нина едет к бабушке (written for this test)",
+      "source": "new narrative written for this diagnostic at the level of the later LingQ Mini Stories (past-tense retelling, everyday vocabulary)",
+      "authentic": false,
+      "context_en": "A young woman who has moved to Moscow hears from her grandmother in the village.",
+      "sentences": [
+        {
+          "id": "p1-s1",
+          "tokens": [
+            {
+              "t": "Прошлой",
+              "lemma": "прошлый",
+              "gloss": "last"
+            },
+            {
+              "t": "осенью",
+              "lemma": "осень",
+              "gloss": "in autumn"
+            },
+            {
+              "t": "Нина",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "переехала",
+              "lemma": "переехать",
+              "gloss": "moved"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "to"
+            },
+            {
+              "t": "Москву.",
+              "lemma": "Москва",
+              "gloss": "Moscow"
+            }
+          ],
+          "translation_en": "Last autumn Nina moved to Moscow.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              2
+            ],
+            "main_verb": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "p1-s2",
+          "tokens": [
+            {
+              "t": "Она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "нашла",
+              "lemma": "найти",
+              "gloss": "found"
+            },
+            {
+              "t": "работу",
+              "lemma": "работа",
+              "gloss": "a job"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "in"
+            },
+            {
+              "t": "большом",
+              "lemma": "большой",
+              "gloss": "big"
+            },
+            {
+              "t": "магазине",
+              "lemma": "магазин",
+              "gloss": "shop"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "сняла",
+              "lemma": "снять",
+              "gloss": "rented"
+            },
+            {
+              "t": "маленькую",
+              "lemma": "маленький",
+              "gloss": "small"
+            },
+            {
+              "t": "квартиру",
+              "lemma": "квартира",
+              "gloss": "flat"
+            },
+            {
+              "t": "недалеко",
+              "lemma": "недалеко",
+              "gloss": "not far"
+            },
+            {
+              "t": "от",
+              "lemma": "от",
+              "gloss": "from"
+            },
+            {
+              "t": "центра.",
+              "lemma": "центр",
+              "gloss": "the centre"
+            }
+          ],
+          "translation_en": "She found a job in a big shop and rented a small flat not far from the centre.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              },
+              {
+                "start": 6,
+                "end": 12,
+                "label": "main (cont.)"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              7
+            ]
+          }
+        },
+        {
+          "id": "p1-s3",
+          "tokens": [
+            {
+              "t": "Работа",
+              "lemma": "работа",
+              "gloss": "the work"
+            },
+            {
+              "t": "была",
+              "lemma": "быть",
+              "gloss": "was"
+            },
+            {
+              "t": "трудная,",
+              "lemma": "трудный",
+              "gloss": "hard"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "по",
+              "lemma": "по",
+              "gloss": "in (the)"
+            },
+            {
+              "t": "вечерам",
+              "lemma": "вечер",
+              "gloss": "evenings"
+            },
+            {
+              "t": "Нина",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "очень",
+              "lemma": "очень",
+              "gloss": "very"
+            },
+            {
+              "t": "уставала.",
+              "lemma": "уставать",
+              "gloss": "got tired (again and again)"
+            }
+          ],
+          "translation_en": "The work was hard, and in the evenings Nina got very tired.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 2,
+                "label": "main"
+              },
+              {
+                "start": 3,
+                "end": 8,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              0,
+              6
+            ],
+            "main_verb": [
+              1,
+              8
+            ]
+          }
+        },
+        {
+          "id": "p1-s4",
+          "tokens": [
+            {
+              "t": "Однажды",
+              "lemma": "однажды",
+              "gloss": "once, one day"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "on"
+            },
+            {
+              "t": "субботу",
+              "lemma": "суббота",
+              "gloss": "Saturday"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "получила",
+              "lemma": "получить",
+              "gloss": "received"
+            },
+            {
+              "t": "письмо",
+              "lemma": "письмо",
+              "gloss": "a letter"
+            },
+            {
+              "t": "от",
+              "lemma": "от",
+              "gloss": "from"
+            },
+            {
+              "t": "бабушки.",
+              "lemma": "бабушка",
+              "gloss": "grandmother"
+            }
+          ],
+          "translation_en": "One Saturday she received a letter from her grandmother.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              3
+            ],
+            "main_verb": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "p1-s5",
+          "tokens": [
+            {
+              "t": "Бабушка",
+              "lemma": "бабушка",
+              "gloss": "grandmother"
+            },
+            {
+              "t": "жила",
+              "lemma": "жить",
+              "gloss": "lived"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "in"
+            },
+            {
+              "t": "деревне",
+              "lemma": "деревня",
+              "gloss": "a village"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "любила",
+              "lemma": "любить",
+              "gloss": "liked"
+            },
+            {
+              "t": "телефон,",
+              "lemma": "телефон",
+              "gloss": "the telephone"
+            },
+            {
+              "t": "поэтому",
+              "lemma": "поэтому",
+              "gloss": "so, therefore"
+            },
+            {
+              "t": "всегда",
+              "lemma": "всегда",
+              "gloss": "always"
+            },
+            {
+              "t": "писала",
+              "lemma": "писать",
+              "gloss": "wrote"
+            },
+            {
+              "t": "письма.",
+              "lemma": "письмо",
+              "gloss": "letters"
+            }
+          ],
+          "translation_en": "Grandmother lived in a village and didn't like the telephone, so she always wrote letters.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              },
+              {
+                "start": 8,
+                "end": 11,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              6,
+              10
+            ]
+          }
+        },
+        {
+          "id": "p1-s6",
+          "tokens": [
+            {
+              "t": "Нина",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "начала",
+              "lemma": "начать",
+              "gloss": "began"
+            },
+            {
+              "t": "читать",
+              "lemma": "читать",
+              "gloss": "to read"
+            },
+            {
+              "t": "письмо",
+              "lemma": "письмо",
+              "gloss": "the letter"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "on"
+            },
+            {
+              "t": "автобусе,",
+              "lemma": "автобус",
+              "gloss": "the bus"
+            },
+            {
+              "t": "но",
+              "lemma": "но",
+              "gloss": "but"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "дочитала:",
+              "lemma": "дочитать",
+              "gloss": "finished reading"
+            },
+            {
+              "t": "ей",
+              "lemma": "она",
+              "gloss": "for her"
+            },
+            {
+              "t": "нужно",
+              "lemma": "нужно",
+              "gloss": "necessary"
+            },
+            {
+              "t": "было",
+              "lemma": "быть",
+              "gloss": "it was"
+            },
+            {
+              "t": "выходить.",
+              "lemma": "выходить",
+              "gloss": "to get off, go out"
+            }
+          ],
+          "translation_en": "Nina began reading the letter on the bus but didn't finish it: she had to get off.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              },
+              {
+                "start": 6,
+                "end": 8,
+                "label": "main (cont.)"
+              },
+              {
+                "start": 9,
+                "end": 12,
+                "label": "explanation: she had to get off"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              8
+            ]
+          }
+        },
+        {
+          "id": "p1-s7",
+          "tokens": [
+            {
+              "t": "Дома",
+              "lemma": "дома",
+              "gloss": "at home"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "прочитала",
+              "lemma": "прочитать",
+              "gloss": "read (through)"
+            },
+            {
+              "t": "его",
+              "lemma": "оно",
+              "gloss": "it"
+            },
+            {
+              "t": "до",
+              "lemma": "до",
+              "gloss": "to, until"
+            },
+            {
+              "t": "конца.",
+              "lemma": "конец",
+              "gloss": "the end"
+            }
+          ],
+          "translation_en": "At home she read it to the end.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "p1-s8",
+          "tokens": [
+            {
+              "t": "Бабушка",
+              "lemma": "бабушка",
+              "gloss": "grandmother"
+            },
+            {
+              "t": "писала,",
+              "lemma": "писать",
+              "gloss": "wrote"
+            },
+            {
+              "t": "что",
+              "lemma": "что",
+              "gloss": "that"
+            },
+            {
+              "t": "у",
+              "lemma": "у",
+              "gloss": "with, at"
+            },
+            {
+              "t": "её",
+              "lemma": "её",
+              "gloss": "her"
+            },
+            {
+              "t": "кошки",
+              "lemma": "кошка",
+              "gloss": "cat"
+            },
+            {
+              "t": "родились",
+              "lemma": "родиться",
+              "gloss": "were born"
+            },
+            {
+              "t": "котята",
+              "lemma": "котёнок",
+              "gloss": "kittens"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "что",
+              "lemma": "что",
+              "gloss": "that"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "уже",
+              "lemma": "уже",
+              "gloss": "already"
+            },
+            {
+              "t": "отдала",
+              "lemma": "отдать",
+              "gloss": "gave (away)"
+            },
+            {
+              "t": "двух",
+              "lemma": "два",
+              "gloss": "two"
+            },
+            {
+              "t": "котят",
+              "lemma": "котёнок",
+              "gloss": "kittens"
+            },
+            {
+              "t": "детям",
+              "lemma": "ребёнок",
+              "gloss": "to children"
+            },
+            {
+              "t": "из",
+              "lemma": "из",
+              "gloss": "from"
+            },
+            {
+              "t": "школы.",
+              "lemma": "школа",
+              "gloss": "the school"
+            }
+          ],
+          "translation_en": "Grandmother wrote that her cat had had kittens and that she had already given two kittens to children from the school.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 1,
+                "label": "main"
+              },
+              {
+                "start": 2,
+                "end": 7,
+                "label": "reported 1: что…"
+              },
+              {
+                "start": 8,
+                "end": 17,
+                "label": "reported 2: что…"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "p1-s9",
+          "tokens": [
+            {
+              "t": "Ещё",
+              "lemma": "ещё",
+              "gloss": "also, besides"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "писала,",
+              "lemma": "писать",
+              "gloss": "wrote"
+            },
+            {
+              "t": "что",
+              "lemma": "что",
+              "gloss": "that"
+            },
+            {
+              "t": "скучает",
+              "lemma": "скучать",
+              "gloss": "(she) misses (her)"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "очень",
+              "lemma": "очень",
+              "gloss": "very much"
+            },
+            {
+              "t": "ждёт",
+              "lemma": "ждать",
+              "gloss": "is waiting for, expects"
+            },
+            {
+              "t": "Нину",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "as a"
+            },
+            {
+              "t": "гости.",
+              "lemma": "гость",
+              "gloss": "guest (в гости: to visit)"
+            }
+          ],
+          "translation_en": "She also wrote that she missed her and was really looking forward to Nina's visit.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 2,
+                "label": "main"
+              },
+              {
+                "start": 3,
+                "end": 10,
+                "label": "reported: что…"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "p1-s10",
+          "tokens": [
+            {
+              "t": "Нина",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "подумала:",
+              "lemma": "подумать",
+              "gloss": "thought"
+            },
+            {
+              "t": "«Я",
+              "lemma": "я",
+              "gloss": "I"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "была",
+              "lemma": "быть",
+              "gloss": "was, have been"
+            },
+            {
+              "t": "у",
+              "lemma": "у",
+              "gloss": "at (someone's place)"
+            },
+            {
+              "t": "бабушки",
+              "lemma": "бабушка",
+              "gloss": "grandmother's"
+            },
+            {
+              "t": "целый",
+              "lemma": "целый",
+              "gloss": "a whole"
+            },
+            {
+              "t": "год!»",
+              "lemma": "год",
+              "gloss": "year"
+            }
+          ],
+          "translation_en": "Nina thought: \"I haven't been to Grandmother's for a whole year!\"",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 1,
+                "label": "main"
+              },
+              {
+                "start": 2,
+                "end": 8,
+                "label": "direct speech"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "p1-s11",
+          "tokens": [
+            {
+              "t": "В",
+              "lemma": "в",
+              "gloss": "on"
+            },
+            {
+              "t": "понедельник",
+              "lemma": "понедельник",
+              "gloss": "Monday"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "попросила",
+              "lemma": "попросить",
+              "gloss": "asked for"
+            },
+            {
+              "t": "у",
+              "lemma": "у",
+              "gloss": "from"
+            },
+            {
+              "t": "начальника",
+              "lemma": "начальник",
+              "gloss": "the boss"
+            },
+            {
+              "t": "три",
+              "lemma": "три",
+              "gloss": "three"
+            },
+            {
+              "t": "выходных",
+              "lemma": "выходной",
+              "gloss": "days off"
+            },
+            {
+              "t": "дня.",
+              "lemma": "день",
+              "gloss": "days"
+            }
+          ],
+          "translation_en": "On Monday she asked her boss for three days off.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 8,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              2
+            ],
+            "main_verb": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "p1-s12",
+          "tokens": [
+            {
+              "t": "Начальник",
+              "lemma": "начальник",
+              "gloss": "the boss"
+            },
+            {
+              "t": "сначала",
+              "lemma": "сначала",
+              "gloss": "at first"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "хотел",
+              "lemma": "хотеть",
+              "gloss": "wanted"
+            },
+            {
+              "t": "её",
+              "lemma": "она",
+              "gloss": "her"
+            },
+            {
+              "t": "отпускать,",
+              "lemma": "отпускать",
+              "gloss": "to let go"
+            },
+            {
+              "t": "но",
+              "lemma": "но",
+              "gloss": "but"
+            },
+            {
+              "t": "потом",
+              "lemma": "потом",
+              "gloss": "then, later"
+            },
+            {
+              "t": "согласился.",
+              "lemma": "согласиться",
+              "gloss": "agreed"
+            }
+          ],
+          "translation_en": "At first the boss didn't want to let her go, but then he agreed.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              },
+              {
+                "start": 6,
+                "end": 8,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              3,
+              8
+            ]
+          }
+        },
+        {
+          "id": "p1-s13",
+          "tokens": [
+            {
+              "t": "В",
+              "lemma": "в",
+              "gloss": "on"
+            },
+            {
+              "t": "пятницу",
+              "lemma": "пятница",
+              "gloss": "Friday"
+            },
+            {
+              "t": "Нина",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "купила",
+              "lemma": "купить",
+              "gloss": "bought"
+            },
+            {
+              "t": "подарки:",
+              "lemma": "подарок",
+              "gloss": "presents"
+            },
+            {
+              "t": "тёплый",
+              "lemma": "тёплый",
+              "gloss": "warm"
+            },
+            {
+              "t": "платок",
+              "lemma": "платок",
+              "gloss": "shawl, headscarf"
+            },
+            {
+              "t": "для",
+              "lemma": "для",
+              "gloss": "for"
+            },
+            {
+              "t": "бабушки",
+              "lemma": "бабушка",
+              "gloss": "grandmother"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "конфеты",
+              "lemma": "конфета",
+              "gloss": "sweets"
+            },
+            {
+              "t": "для",
+              "lemma": "для",
+              "gloss": "for"
+            },
+            {
+              "t": "соседских",
+              "lemma": "соседский",
+              "gloss": "the neighbours'"
+            },
+            {
+              "t": "детей.",
+              "lemma": "ребёнок",
+              "gloss": "children"
+            }
+          ],
+          "translation_en": "On Friday Nina bought presents: a warm shawl for Grandmother and sweets for the neighbours' children.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "main"
+              },
+              {
+                "start": 5,
+                "end": 13,
+                "label": "list"
+              }
+            ],
+            "subject": [
+              2
+            ],
+            "main_verb": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "p1-s14",
+          "tokens": [
+            {
+              "t": "Утром",
+              "lemma": "утро",
+              "gloss": "in the morning"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "села",
+              "lemma": "сесть",
+              "gloss": "got (on), sat down"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "onto"
+            },
+            {
+              "t": "поезд,",
+              "lemma": "поезд",
+              "gloss": "the train"
+            },
+            {
+              "t": "а",
+              "lemma": "а",
+              "gloss": "and, while"
+            },
+            {
+              "t": "от",
+              "lemma": "от",
+              "gloss": "from"
+            },
+            {
+              "t": "станции",
+              "lemma": "станция",
+              "gloss": "the station"
+            },
+            {
+              "t": "до",
+              "lemma": "до",
+              "gloss": "to, as far as"
+            },
+            {
+              "t": "деревни",
+              "lemma": "деревня",
+              "gloss": "the village"
+            },
+            {
+              "t": "шла",
+              "lemma": "идти",
+              "gloss": "went, walked"
+            },
+            {
+              "t": "пешком.",
+              "lemma": "пешком",
+              "gloss": "on foot"
+            }
+          ],
+          "translation_en": "In the morning she got on the train, and from the station to the village she walked.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "main"
+              },
+              {
+                "start": 5,
+                "end": 11,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2,
+              10
+            ]
+          }
+        },
+        {
+          "id": "p1-s15",
+          "tokens": [
+            {
+              "t": "Она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "перешла",
+              "lemma": "перейти",
+              "gloss": "crossed"
+            },
+            {
+              "t": "через",
+              "lemma": "через",
+              "gloss": "across"
+            },
+            {
+              "t": "реку",
+              "lemma": "река",
+              "gloss": "the river"
+            },
+            {
+              "t": "по",
+              "lemma": "по",
+              "gloss": "by, along"
+            },
+            {
+              "t": "старому",
+              "lemma": "старый",
+              "gloss": "old"
+            },
+            {
+              "t": "мосту,",
+              "lemma": "мост",
+              "gloss": "bridge"
+            },
+            {
+              "t": "обошла",
+              "lemma": "обойти",
+              "gloss": "went round"
+            },
+            {
+              "t": "большое",
+              "lemma": "большой",
+              "gloss": "big"
+            },
+            {
+              "t": "поле",
+              "lemma": "поле",
+              "gloss": "field"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "вошла",
+              "lemma": "войти",
+              "gloss": "went in, entered"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "into"
+            },
+            {
+              "t": "деревню.",
+              "lemma": "деревня",
+              "gloss": "the village"
+            }
+          ],
+          "translation_en": "She crossed the river by the old bridge, went round a big field and entered the village.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 13,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              7,
+              11
+            ]
+          }
+        },
+        {
+          "id": "p1-s16",
+          "tokens": [
+            {
+              "t": "Бабушка",
+              "lemma": "бабушка",
+              "gloss": "grandmother"
+            },
+            {
+              "t": "стояла",
+              "lemma": "стоять",
+              "gloss": "was standing"
+            },
+            {
+              "t": "у",
+              "lemma": "у",
+              "gloss": "by"
+            },
+            {
+              "t": "дома",
+              "lemma": "дом",
+              "gloss": "the house"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "разговаривала",
+              "lemma": "разговаривать",
+              "gloss": "was talking"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "with"
+            },
+            {
+              "t": "соседками.",
+              "lemma": "соседка",
+              "gloss": "(women) neighbours"
+            }
+          ],
+          "translation_en": "Grandmother was standing by the house, talking with some neighbours.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              5
+            ]
+          }
+        },
+        {
+          "id": "p1-s17",
+          "tokens": [
+            {
+              "t": "Когда",
+              "lemma": "когда",
+              "gloss": "when"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "увидела",
+              "lemma": "увидеть",
+              "gloss": "saw"
+            },
+            {
+              "t": "Нину,",
+              "lemma": "Нина",
+              "gloss": "Nina"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "she"
+            },
+            {
+              "t": "сначала",
+              "lemma": "сначала",
+              "gloss": "at first"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "поверила",
+              "lemma": "поверить",
+              "gloss": "believed"
+            },
+            {
+              "t": "своим",
+              "lemma": "свой",
+              "gloss": "her (own)"
+            },
+            {
+              "t": "глазам,",
+              "lemma": "глаз",
+              "gloss": "eyes"
+            },
+            {
+              "t": "а",
+              "lemma": "а",
+              "gloss": "and"
+            },
+            {
+              "t": "потом",
+              "lemma": "потом",
+              "gloss": "then"
+            },
+            {
+              "t": "заплакала",
+              "lemma": "заплакать",
+              "gloss": "began to cry"
+            },
+            {
+              "t": "от",
+              "lemma": "от",
+              "gloss": "from, for"
+            },
+            {
+              "t": "радости.",
+              "lemma": "радость",
+              "gloss": "joy"
+            }
+          ],
+          "translation_en": "When she saw Nina, at first she didn't believe her eyes, and then she burst into tears of joy.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "when-clause"
+              },
+              {
+                "start": 4,
+                "end": 9,
+                "label": "main"
+              },
+              {
+                "start": 10,
+                "end": 14,
+                "label": "main (cont.)"
+              }
+            ],
+            "subject": [
+              4
+            ],
+            "main_verb": [
+              7,
+              12
+            ]
+          }
+        }
+      ],
+      "word_help": [
+        {
+          "greek": "снять (квартиру)",
+          "en": "to rent (a flat)"
+        },
+        {
+          "greek": "скучать",
+          "en": "to miss (someone)"
+        },
+        {
+          "greek": "котёнок, мн. котята",
+          "en": "kitten"
+        },
+        {
+          "greek": "платок",
+          "en": "shawl, headscarf"
+        }
+      ]
+    },
+    "p1-q1": {
+      "kind": "mc",
+      "id": "p1-q1",
+      "passage": "p1",
+      "gist": true,
+      "prompt_en": "What happens in this passage, in brief?",
+      "options": [
+        "Nina, who now lives in Moscow, gets a letter from her grandmother, takes a few days off and goes to the village to see her.",
+        "Nina's grandmother moves to Moscow to be near her, and Nina meets her at the station with presents for her and the neighbours.",
+        "Nina writes to her grandmother every week, and one Friday her grandmother comes to Moscow by train to stay for three days.",
+        "Nina loses her job at the shop in Moscow and goes back by train to live with her grandmother in the village."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: письмо от бабушки, три выходных дня, поезд, деревня.",
+        "Nina moved to Moscow (переехала); her grandmother lives in the village and stays there.",
+        "It is the grandmother who writes (всегда писала письма), and Nina goes to her.",
+        "Nina keeps her job: the boss lets her go for three days (согласился)."
+      ],
+      "domain": "R1",
+      "primary_tag": "gist",
+      "tags": [
+        "gist"
+      ],
+      "ablation": "The gist depends on following the chain of main verbs and their subjects (переехала, получила, попросила, села, вошла); a reader who loses who moved, who wrote and who travelled picks B–D."
+    },
+    "p1-q2": {
+      "kind": "mc",
+      "id": "p1-q2",
+      "passage": "p1",
+      "gist": false,
+      "prompt_en": "Where did Nina finish reading the letter?",
+      "options": [
+        "At home",
+        "On the bus",
+        "At work",
+        "She never finished it"
+      ],
+      "answer": 0,
+      "why": [
+        "Right: on the bus она начала читать … но не дочитала; at home она прочитала его до конца.",
+        "не дочитала: she did not get to the end on the bus; that is where she only began (начала читать).",
+        "Work is not where she read it; the letter came on a Saturday and she read it on the bus and at home.",
+        "The bus reading was cut short, but дома она прочитала его до конца."
+      ],
+      "domain": "R1",
+      "primary_tag": "aspect",
+      "tags": [
+        "aspect",
+        "prefix.other"
+      ],
+      "ablation": "The answer rests on telling начала читать / не дочитала (began, did not complete) from прочитала до конца (completed); if all three are just 'read', B and C stay open."
+    },
+    "p1-q3": {
+      "kind": "mc",
+      "id": "p1-q3",
+      "passage": "p1",
+      "gist": false,
+      "prompt_en": "What did Grandmother's letter say about the kittens?",
+      "options": [
+        "Her cat had had kittens, and she had already given two of them to some children from the school.",
+        "Some children from the school had given her two kittens for her cat to look after.",
+        "Her cat had had kittens, but she had not given any away yet.",
+        "She had taken two of the kittens to the school to show the children."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: она уже отдала двух котят детям из школы — детям is 'to (the) children'.",
+        "The subject of отдала is она (Grandmother); детям is dative plural, the people who receive.",
+        "уже отдала: she had already given two away.",
+        "из школы says which children, not where she took the kittens; отдала means 'gave (away)'."
+      ],
+      "domain": "R1",
+      "primary_tag": "obl.pl",
+      "tags": [
+        "obl.pl",
+        "case.gov"
+      ],
+      "ablation": "Only the dative plural ending of детям marks the children as the receivers rather than the givers (B); the aspect and adverb of уже отдала exclude C."
+    },
+    "p1-q4": {
+      "kind": "mc",
+      "id": "p1-q4",
+      "passage": "p1",
+      "gist": false,
+      "prompt_en": "How did Nina get from the station into the village?",
+      "options": [
+        "On foot: she crossed the river by the old bridge, went round a big field and walked into the village.",
+        "On foot: she walked along the river as far as the old bridge, went straight across a big field and came into the village.",
+        "On foot: she crossed the river by the old bridge, went straight across a big field and walked on past the village.",
+        "By bus: it crossed the river by the old bridge and drove round a big field into the village."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: перешла через реку (across), обошла поле (round), вошла в деревню (in).",
+        "пере- with через реку is 'across' the river, and об- in обошла is 'round' the field, not across it.",
+        "об- is 'round' the field, and в- in вошла в деревню is 'into', not past.",
+        "от станции до деревни шла пешком: she walked."
+      ],
+      "domain": "R1",
+      "primary_tag": "prefix.motion",
+      "tags": [
+        "prefix.motion"
+      ],
+      "ablation": "B and C differ from A only in what the prefixes пере- (across), об- (round) and в- (into) say about the route; пешком rules out D."
+    },
+    "p1-q5": {
+      "kind": "mc",
+      "id": "p1-q5",
+      "passage": "p1",
+      "gist": false,
+      "prompt_en": "What was Grandmother doing when Nina arrived, and how did she react?",
+      "options": [
+        "She was standing by the house talking with some neighbours; at first she couldn't believe her eyes, then she burst into tears of joy.",
+        "She was standing by the house talking with some neighbours; she did not recognise Nina, so she carried on talking.",
+        "When she saw Nina she went to stand by the house and talk with the neighbours; only later did she cry with joy.",
+        "She was talking with the neighbours and had been crying with joy all along, even before Nina came."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: стояла … разговаривала (ongoing when Nina came); не поверила своим глазам, then заплакала (began to cry).",
+        "не поверила своим глазам: she could not believe her eyes, not that she failed to recognise her.",
+        "стояла and разговаривала are imperfective: what she was already doing at that moment, not new steps after seeing Nina.",
+        "заплакала is perfective with за-: she began to cry at that point, after first not believing it."
+      ],
+      "domain": "R1",
+      "primary_tag": "aspect",
+      "tags": [
+        "aspect",
+        "prefix.other",
+        "obl.pl"
+      ],
+      "ablation": "C and D are what a reader gets by treating the imperfectives стояла/разговаривала as new events in sequence, or the perfective заплакала (began to cry) as a state that was already going on."
+    },
+    "p2": {
+      "kind": "passage",
+      "id": "p2",
+      "label": "По Л. Н. Толстому, «Прыжок» (shortened)",
+      "source": "L. N. Tolstoy, «Прыжок», a story for children (dated 1880 on Wikisource). Text: Собрание сочинений в 22 т., т. 10, М.: Художественная литература, 1982, via ru.wikisource.org/wiki/Прыжок_(Толстой). Public domain. Shortened from about 530 to about 240 words; see authoring-notes.md for every change.",
+      "authentic": false,
+      "context_en": "A story by Tolstoy for children, shortened. A sailing ship is on its way home, and the whole crew is on deck.",
+      "sentences": [
+        {
+          "id": "p2-s1",
+          "tokens": [
+            {
+              "t": "Один",
+              "lemma": "один",
+              "gloss": "a, one"
+            },
+            {
+              "t": "корабль",
+              "lemma": "корабль",
+              "gloss": "ship"
+            },
+            {
+              "t": "обошёл",
+              "lemma": "обойти",
+              "gloss": "went round"
+            },
+            {
+              "t": "вокруг",
+              "lemma": "вокруг",
+              "gloss": "around"
+            },
+            {
+              "t": "света",
+              "lemma": "свет",
+              "gloss": "the world"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "возвращался",
+              "lemma": "возвращаться",
+              "gloss": "was returning"
+            },
+            {
+              "t": "домой.",
+              "lemma": "домой",
+              "gloss": "home"
+            }
+          ],
+          "translation_en": "A ship had sailed round the world and was returning home.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2,
+              6
+            ]
+          }
+        },
+        {
+          "id": "p2-s2",
+          "tokens": [
+            {
+              "t": "Весь",
+              "lemma": "весь",
+              "gloss": "all"
+            },
+            {
+              "t": "народ",
+              "lemma": "народ",
+              "gloss": "the people"
+            },
+            {
+              "t": "был",
+              "lemma": "быть",
+              "gloss": "was"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "on"
+            },
+            {
+              "t": "палубе.",
+              "lemma": "палуба",
+              "gloss": "deck"
+            }
+          ],
+          "translation_en": "All the people were on deck.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "p2-s3",
+          "tokens": [
+            {
+              "t": "Посреди",
+              "lemma": "посреди",
+              "gloss": "in the middle of"
+            },
+            {
+              "t": "народа",
+              "lemma": "народ",
+              "gloss": "the people, crowd"
+            },
+            {
+              "t": "вертелась",
+              "lemma": "вертеться",
+              "gloss": "was spinning about"
+            },
+            {
+              "t": "большая",
+              "lemma": "большой",
+              "gloss": "big"
+            },
+            {
+              "t": "обезьяна",
+              "lemma": "обезьяна",
+              "gloss": "monkey"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "забавляла",
+              "lemma": "забавлять",
+              "gloss": "was amusing"
+            },
+            {
+              "t": "всех.",
+              "lemma": "весь",
+              "gloss": "everyone"
+            }
+          ],
+          "translation_en": "In the middle of the crowd a big monkey was spinning about and amusing everyone.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              4
+            ],
+            "main_verb": [
+              2,
+              6
+            ]
+          }
+        },
+        {
+          "id": "p2-s4",
+          "tokens": [
+            {
+              "t": "Она",
+              "lemma": "она",
+              "gloss": "it (the monkey)"
+            },
+            {
+              "t": "подпрыгнула",
+              "lemma": "подпрыгнуть",
+              "gloss": "jumped up"
+            },
+            {
+              "t": "к",
+              "lemma": "к",
+              "gloss": "to"
+            },
+            {
+              "t": "двенадцатилетнему",
+              "lemma": "двенадцатилетний",
+              "gloss": "twelve-year-old"
+            },
+            {
+              "t": "мальчику,",
+              "lemma": "мальчик",
+              "gloss": "boy"
+            },
+            {
+              "t": "сыну",
+              "lemma": "сын",
+              "gloss": "son"
+            },
+            {
+              "t": "капитана,",
+              "lemma": "капитан",
+              "gloss": "of the captain"
+            },
+            {
+              "t": "сорвала",
+              "lemma": "сорвать",
+              "gloss": "tore off"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "from"
+            },
+            {
+              "t": "его",
+              "lemma": "его",
+              "gloss": "his"
+            },
+            {
+              "t": "головы",
+              "lemma": "голова",
+              "gloss": "head"
+            },
+            {
+              "t": "шляпу",
+              "lemma": "шляпа",
+              "gloss": "hat"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "живо",
+              "lemma": "живо",
+              "gloss": "quickly, nimbly"
+            },
+            {
+              "t": "взобралась",
+              "lemma": "взобраться",
+              "gloss": "climbed up"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "onto"
+            },
+            {
+              "t": "мачту.",
+              "lemma": "мачта",
+              "gloss": "the mast"
+            }
+          ],
+          "translation_en": "It jumped up to a twelve-year-old boy, the captain's son, tore the hat off his head and nimbly climbed up the mast.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 16,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              7,
+              14
+            ]
+          }
+        },
+        {
+          "id": "p2-s5",
+          "tokens": [
+            {
+              "t": "Все",
+              "lemma": "весь",
+              "gloss": "everyone"
+            },
+            {
+              "t": "засмеялись,",
+              "lemma": "засмеяться",
+              "gloss": "burst out laughing"
+            },
+            {
+              "t": "а",
+              "lemma": "а",
+              "gloss": "and, while"
+            },
+            {
+              "t": "мальчик",
+              "lemma": "мальчик",
+              "gloss": "the boy"
+            },
+            {
+              "t": "покраснел,",
+              "lemma": "покраснеть",
+              "gloss": "went red"
+            },
+            {
+              "t": "скинул",
+              "lemma": "скинуть",
+              "gloss": "threw off"
+            },
+            {
+              "t": "куртку",
+              "lemma": "куртка",
+              "gloss": "jacket"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "бросился",
+              "lemma": "броситься",
+              "gloss": "rushed"
+            },
+            {
+              "t": "за",
+              "lemma": "за",
+              "gloss": "after"
+            },
+            {
+              "t": "обезьяной",
+              "lemma": "обезьяна",
+              "gloss": "the monkey"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "onto"
+            },
+            {
+              "t": "мачту.",
+              "lemma": "мачта",
+              "gloss": "the mast"
+            }
+          ],
+          "translation_en": "Everyone burst out laughing, and the boy went red, threw off his jacket and rushed up the mast after the monkey.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 1,
+                "label": "main"
+              },
+              {
+                "start": 2,
+                "end": 12,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              0,
+              3
+            ],
+            "main_verb": [
+              1,
+              4,
+              5,
+              8
+            ]
+          }
+        },
+        {
+          "id": "p2-s6",
+          "tokens": [
+            {
+              "t": "В",
+              "lemma": "в",
+              "gloss": "in"
+            },
+            {
+              "t": "одну",
+              "lemma": "один",
+              "gloss": "one"
+            },
+            {
+              "t": "минуту",
+              "lemma": "минута",
+              "gloss": "minute"
+            },
+            {
+              "t": "обезьяна",
+              "lemma": "обезьяна",
+              "gloss": "the monkey"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "мальчик",
+              "lemma": "мальчик",
+              "gloss": "the boy"
+            },
+            {
+              "t": "добрались",
+              "lemma": "добраться",
+              "gloss": "got (as far as), reached"
+            },
+            {
+              "t": "до",
+              "lemma": "до",
+              "gloss": "to"
+            },
+            {
+              "t": "самого",
+              "lemma": "самый",
+              "gloss": "the very"
+            },
+            {
+              "t": "верха.",
+              "lemma": "верх",
+              "gloss": "top"
+            }
+          ],
+          "translation_en": "In one minute the monkey and the boy got right to the top.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 9,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              3,
+              5
+            ],
+            "main_verb": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "p2-s7",
+          "tokens": [
+            {
+              "t": "Там",
+              "lemma": "там",
+              "gloss": "there"
+            },
+            {
+              "t": "обезьяна",
+              "lemma": "обезьяна",
+              "gloss": "the monkey"
+            },
+            {
+              "t": "повесила",
+              "lemma": "повесить",
+              "gloss": "hung"
+            },
+            {
+              "t": "шляпу",
+              "lemma": "шляпа",
+              "gloss": "the hat"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "on"
+            },
+            {
+              "t": "край",
+              "lemma": "край",
+              "gloss": "the end, edge"
+            },
+            {
+              "t": "перекладины,",
+              "lemma": "перекладина",
+              "gloss": "crossbar (of the mast)"
+            },
+            {
+              "t": "а",
+              "lemma": "а",
+              "gloss": "while"
+            },
+            {
+              "t": "сама",
+              "lemma": "сам",
+              "gloss": "(it) itself"
+            },
+            {
+              "t": "взобралась",
+              "lemma": "взобраться",
+              "gloss": "climbed up"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "onto"
+            },
+            {
+              "t": "макушку",
+              "lemma": "макушка",
+              "gloss": "the top, tip"
+            },
+            {
+              "t": "мачты",
+              "lemma": "мачта",
+              "gloss": "of the mast"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "оттуда",
+              "lemma": "оттуда",
+              "gloss": "from there"
+            },
+            {
+              "t": "показывала",
+              "lemma": "показывать",
+              "gloss": "was showing"
+            },
+            {
+              "t": "зубы.",
+              "lemma": "зуб",
+              "gloss": "teeth"
+            }
+          ],
+          "translation_en": "There the monkey hung the hat on the end of the crossbar, while it climbed onto the very tip of the mast and bared its teeth from there.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 6,
+                "label": "main"
+              },
+              {
+                "start": 7,
+                "end": 16,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2,
+              9,
+              15
+            ]
+          }
+        },
+        {
+          "id": "p2-s8",
+          "tokens": [
+            {
+              "t": "Достать",
+              "lemma": "достать",
+              "gloss": "to reach, get"
+            },
+            {
+              "t": "шляпу",
+              "lemma": "шляпа",
+              "gloss": "the hat"
+            },
+            {
+              "t": "нельзя",
+              "lemma": "нельзя",
+              "gloss": "impossible"
+            },
+            {
+              "t": "было",
+              "lemma": "быть",
+              "gloss": "was"
+            },
+            {
+              "t": "иначе,",
+              "lemma": "иначе",
+              "gloss": "otherwise"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "than, except"
+            },
+            {
+              "t": "выпустить",
+              "lemma": "выпустить",
+              "gloss": "to let go"
+            },
+            {
+              "t": "из",
+              "lemma": "из",
+              "gloss": "out of"
+            },
+            {
+              "t": "рук",
+              "lemma": "рука",
+              "gloss": "hands"
+            },
+            {
+              "t": "верёвку",
+              "lemma": "верёвка",
+              "gloss": "the rope"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "мачту.",
+              "lemma": "мачта",
+              "gloss": "the mast"
+            }
+          ],
+          "translation_en": "There was no way to reach the hat except by letting go of the rope and the mast.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "main"
+              },
+              {
+                "start": 5,
+                "end": 11,
+                "label": "only way: (except) by…"
+              }
+            ],
+            "subject": [],
+            "main_verb": [
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "id": "p2-s9",
+          "tokens": [
+            {
+              "t": "Но",
+              "lemma": "но",
+              "gloss": "but"
+            },
+            {
+              "t": "мальчик",
+              "lemma": "мальчик",
+              "gloss": "the boy"
+            },
+            {
+              "t": "бросил",
+              "lemma": "бросить",
+              "gloss": "let go of, dropped"
+            },
+            {
+              "t": "мачту",
+              "lemma": "мачта",
+              "gloss": "the mast"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "ступил",
+              "lemma": "ступить",
+              "gloss": "stepped"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "onto"
+            },
+            {
+              "t": "перекладину.",
+              "lemma": "перекладина",
+              "gloss": "the crossbar"
+            }
+          ],
+          "translation_en": "But the boy let go of the mast and stepped onto the crossbar.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2,
+              5
+            ]
+          }
+        },
+        {
+          "id": "p2-s10",
+          "tokens": [
+            {
+              "t": "На",
+              "lemma": "на",
+              "gloss": "on"
+            },
+            {
+              "t": "палубе",
+              "lemma": "палуба",
+              "gloss": "deck"
+            },
+            {
+              "t": "все",
+              "lemma": "весь",
+              "gloss": "everyone"
+            },
+            {
+              "t": "смотрели",
+              "lemma": "смотреть",
+              "gloss": "were watching"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "смеялись;",
+              "lemma": "смеяться",
+              "gloss": "were laughing"
+            },
+            {
+              "t": "но",
+              "lemma": "но",
+              "gloss": "but"
+            },
+            {
+              "t": "когда",
+              "lemma": "когда",
+              "gloss": "when"
+            },
+            {
+              "t": "увидели,",
+              "lemma": "увидеть",
+              "gloss": "(they) saw"
+            },
+            {
+              "t": "что",
+              "lemma": "что",
+              "gloss": "that"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "идёт",
+              "lemma": "идти",
+              "gloss": "is walking"
+            },
+            {
+              "t": "по",
+              "lemma": "по",
+              "gloss": "along"
+            },
+            {
+              "t": "перекладине,",
+              "lemma": "перекладина",
+              "gloss": "the crossbar"
+            },
+            {
+              "t": "покачивая",
+              "lemma": "покачивать",
+              "gloss": "swaying, balancing (with)"
+            },
+            {
+              "t": "руками,",
+              "lemma": "рука",
+              "gloss": "his arms"
+            },
+            {
+              "t": "все",
+              "lemma": "весь",
+              "gloss": "everyone"
+            },
+            {
+              "t": "замерли",
+              "lemma": "замереть",
+              "gloss": "froze"
+            },
+            {
+              "t": "от",
+              "lemma": "от",
+              "gloss": "from, with"
+            },
+            {
+              "t": "страха.",
+              "lemma": "страх",
+              "gloss": "fear"
+            }
+          ],
+          "translation_en": "On deck everyone was watching and laughing; but when they saw him walking along the crossbar, balancing with his arms, they all froze with fear.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              },
+              {
+                "start": 6,
+                "end": 8,
+                "label": "when-clause"
+              },
+              {
+                "start": 9,
+                "end": 13,
+                "label": "reported: что…"
+              },
+              {
+                "start": 14,
+                "end": 15,
+                "label": "verbal adverb phrase"
+              },
+              {
+                "start": 16,
+                "end": 19,
+                "label": "main (cont.)"
+              }
+            ],
+            "subject": [
+              2,
+              16
+            ],
+            "main_verb": [
+              3,
+              5,
+              17
+            ]
+          }
+        },
+        {
+          "id": "p2-s11",
+          "tokens": [
+            {
+              "t": "Стоило",
+              "lemma": "стоить",
+              "gloss": "it was enough, (he) only had (to)"
+            },
+            {
+              "t": "ему",
+              "lemma": "он",
+              "gloss": "for him"
+            },
+            {
+              "t": "только",
+              "lemma": "только",
+              "gloss": "only"
+            },
+            {
+              "t": "оступиться",
+              "lemma": "оступиться",
+              "gloss": "to miss his footing"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "бы",
+              "lemma": "бы",
+              "gloss": "would (have)"
+            },
+            {
+              "t": "вдребезги",
+              "lemma": "вдребезги",
+              "gloss": "to pieces"
+            },
+            {
+              "t": "разбился",
+              "lemma": "разбиться",
+              "gloss": "been smashed"
+            },
+            {
+              "t": "о",
+              "lemma": "о",
+              "gloss": "against"
+            },
+            {
+              "t": "палубу.",
+              "lemma": "палуба",
+              "gloss": "the deck"
+            }
+          ],
+          "translation_en": "He had only to miss his footing, and he would have been smashed to pieces against the deck.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "condition"
+              },
+              {
+                "start": 5,
+                "end": 11,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              6
+            ],
+            "main_verb": [
+              9
+            ]
+          }
+        },
+        {
+          "id": "p2-s12",
+          "tokens": [
+            {
+              "t": "В",
+              "lemma": "в",
+              "gloss": "at"
+            },
+            {
+              "t": "это",
+              "lemma": "этот",
+              "gloss": "this"
+            },
+            {
+              "t": "время",
+              "lemma": "время",
+              "gloss": "time"
+            },
+            {
+              "t": "из",
+              "lemma": "из",
+              "gloss": "out of"
+            },
+            {
+              "t": "каюты",
+              "lemma": "каюта",
+              "gloss": "the cabin"
+            },
+            {
+              "t": "вышел",
+              "lemma": "выйти",
+              "gloss": "came out"
+            },
+            {
+              "t": "капитан,",
+              "lemma": "капитан",
+              "gloss": "the captain"
+            },
+            {
+              "t": "отец",
+              "lemma": "отец",
+              "gloss": "father"
+            },
+            {
+              "t": "мальчика.",
+              "lemma": "мальчик",
+              "gloss": "of the boy"
+            }
+          ],
+          "translation_en": "At that moment the captain, the boy's father, came out of the cabin.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 8,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              6
+            ],
+            "main_verb": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "p2-s13",
+          "tokens": [
+            {
+              "t": "Он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "нёс",
+              "lemma": "нести",
+              "gloss": "was carrying"
+            },
+            {
+              "t": "ружьё,",
+              "lemma": "ружьё",
+              "gloss": "a gun"
+            },
+            {
+              "t": "чтобы",
+              "lemma": "чтобы",
+              "gloss": "in order to"
+            },
+            {
+              "t": "стрелять",
+              "lemma": "стрелять",
+              "gloss": "shoot"
+            },
+            {
+              "t": "чаек.",
+              "lemma": "чайка",
+              "gloss": "gulls"
+            }
+          ],
+          "translation_en": "He was carrying a gun to shoot gulls.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 2,
+                "label": "main"
+              },
+              {
+                "start": 3,
+                "end": 5,
+                "label": "purpose: чтобы…"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "p2-s14",
+          "tokens": [
+            {
+              "t": "Он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "увидел",
+              "lemma": "увидеть",
+              "gloss": "saw"
+            },
+            {
+              "t": "сына",
+              "lemma": "сын",
+              "gloss": "his son"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "on"
+            },
+            {
+              "t": "мачте,",
+              "lemma": "мачта",
+              "gloss": "the mast"
+            },
+            {
+              "t": "тотчас",
+              "lemma": "тотчас",
+              "gloss": "at once"
+            },
+            {
+              "t": "прицелился",
+              "lemma": "прицелиться",
+              "gloss": "took aim"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "at"
+            },
+            {
+              "t": "него",
+              "lemma": "он",
+              "gloss": "him"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "закричал:",
+              "lemma": "закричать",
+              "gloss": "shouted"
+            },
+            {
+              "t": "«В",
+              "lemma": "в",
+              "gloss": "into"
+            },
+            {
+              "t": "воду!",
+              "lemma": "вода",
+              "gloss": "the water"
+            },
+            {
+              "t": "Прыгай",
+              "lemma": "прыгать",
+              "gloss": "jump"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "into"
+            },
+            {
+              "t": "воду!",
+              "lemma": "вода",
+              "gloss": "the water"
+            },
+            {
+              "t": "Застрелю!»",
+              "lemma": "застрелить",
+              "gloss": "I'll shoot (you)"
+            }
+          ],
+          "translation_en": "He saw his son on the mast, at once took aim at him and shouted: \"Into the water! Jump into the water! I'll shoot!\"",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 10,
+                "label": "main"
+              },
+              {
+                "start": 11,
+                "end": 16,
+                "label": "direct speech"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              6,
+              10
+            ]
+          }
+        },
+        {
+          "id": "p2-s15",
+          "tokens": [
+            {
+              "t": "Мальчик",
+              "lemma": "мальчик",
+              "gloss": "the boy"
+            },
+            {
+              "t": "шатался,",
+              "lemma": "шататься",
+              "gloss": "was swaying"
+            },
+            {
+              "t": "но",
+              "lemma": "но",
+              "gloss": "but"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "понимал.",
+              "lemma": "понимать",
+              "gloss": "understood"
+            }
+          ],
+          "translation_en": "The boy was swaying, but did not understand.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              4
+            ]
+          }
+        },
+        {
+          "id": "p2-s16",
+          "tokens": [
+            {
+              "t": "«Прыгай",
+              "lemma": "прыгать",
+              "gloss": "jump"
+            },
+            {
+              "t": "или",
+              "lemma": "или",
+              "gloss": "or"
+            },
+            {
+              "t": "застрелю!..",
+              "lemma": "застрелить",
+              "gloss": "I'll shoot"
+            },
+            {
+              "t": "Раз,",
+              "lemma": "раз",
+              "gloss": "one"
+            },
+            {
+              "t": "два…»",
+              "lemma": "два",
+              "gloss": "two"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "as"
+            },
+            {
+              "t": "только",
+              "lemma": "только",
+              "gloss": "soon as"
+            },
+            {
+              "t": "отец",
+              "lemma": "отец",
+              "gloss": "his father"
+            },
+            {
+              "t": "крикнул",
+              "lemma": "крикнуть",
+              "gloss": "shouted"
+            },
+            {
+              "t": "«три»,",
+              "lemma": "три",
+              "gloss": "three"
+            },
+            {
+              "t": "мальчик",
+              "lemma": "мальчик",
+              "gloss": "the boy"
+            },
+            {
+              "t": "прыгнул",
+              "lemma": "прыгнуть",
+              "gloss": "jumped"
+            },
+            {
+              "t": "головой",
+              "lemma": "голова",
+              "gloss": "head"
+            },
+            {
+              "t": "вниз.",
+              "lemma": "вниз",
+              "gloss": "down(wards)"
+            }
+          ],
+          "translation_en": "\"Jump or I'll shoot! One, two…\" — and as soon as his father shouted \"three\", the boy jumped head first.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "direct speech"
+              },
+              {
+                "start": 6,
+                "end": 11,
+                "label": "as-soon-as clause"
+              },
+              {
+                "start": 12,
+                "end": 15,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              12
+            ],
+            "main_verb": [
+              13
+            ]
+          }
+        },
+        {
+          "id": "p2-s17",
+          "tokens": [
+            {
+              "t": "Не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "успели",
+              "lemma": "успеть",
+              "gloss": "had time to, managed to"
+            },
+            {
+              "t": "волны",
+              "lemma": "волна",
+              "gloss": "the waves"
+            },
+            {
+              "t": "закрыть",
+              "lemma": "закрыть",
+              "gloss": "close (over), cover"
+            },
+            {
+              "t": "его,",
+              "lemma": "он",
+              "gloss": "him"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "when, than"
+            },
+            {
+              "t": "уже",
+              "lemma": "уже",
+              "gloss": "already"
+            },
+            {
+              "t": "двадцать",
+              "lemma": "двадцать",
+              "gloss": "twenty"
+            },
+            {
+              "t": "матросов",
+              "lemma": "матрос",
+              "gloss": "sailors"
+            },
+            {
+              "t": "спрыгнули",
+              "lemma": "спрыгнуть",
+              "gloss": "jumped down, jumped off"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "from, off"
+            },
+            {
+              "t": "корабля",
+              "lemma": "корабль",
+              "gloss": "the ship"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "into"
+            },
+            {
+              "t": "море.",
+              "lemma": "море",
+              "gloss": "the sea"
+            }
+          ],
+          "translation_en": "The waves had not yet closed over him when twenty sailors had already jumped from the ship into the sea.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 4,
+                "label": "not-yet clause"
+              },
+              {
+                "start": 5,
+                "end": 13,
+                "label": "main: как…"
+              }
+            ],
+            "subject": [
+              7,
+              8
+            ],
+            "main_verb": [
+              9
+            ]
+          }
+        },
+        {
+          "id": "p2-s18",
+          "tokens": [
+            {
+              "t": "Секунд",
+              "lemma": "секунда",
+              "gloss": "seconds"
+            },
+            {
+              "t": "через",
+              "lemma": "через",
+              "gloss": "after"
+            },
+            {
+              "t": "сорок",
+              "lemma": "сорок",
+              "gloss": "forty"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "они",
+              "lemma": "они",
+              "gloss": "they"
+            },
+            {
+              "t": "долги",
+              "lemma": "долгий",
+              "gloss": "long"
+            },
+            {
+              "t": "показались",
+              "lemma": "показаться",
+              "gloss": "seemed"
+            },
+            {
+              "t": "всем",
+              "lemma": "весь",
+              "gloss": "to everyone"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "вынырнуло",
+              "lemma": "вынырнуть",
+              "gloss": "surfaced, came up"
+            },
+            {
+              "t": "тело",
+              "lemma": "тело",
+              "gloss": "the body"
+            },
+            {
+              "t": "мальчика.",
+              "lemma": "мальчик",
+              "gloss": "of the boy"
+            }
+          ],
+          "translation_en": "About forty seconds later (they seemed long to everyone) the boy's body came up to the surface.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "main"
+              },
+              {
+                "start": 4,
+                "end": 8,
+                "label": "aside"
+              },
+              {
+                "start": 9,
+                "end": 11,
+                "label": "main (cont.)"
+              }
+            ],
+            "subject": [
+              4,
+              10
+            ],
+            "main_verb": [
+              6,
+              9
+            ]
+          }
+        },
+        {
+          "id": "p2-s19",
+          "tokens": [
+            {
+              "t": "Его",
+              "lemma": "он",
+              "gloss": "him"
+            },
+            {
+              "t": "вытащили",
+              "lemma": "вытащить",
+              "gloss": "(they) pulled out"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "onto"
+            },
+            {
+              "t": "корабль,",
+              "lemma": "корабль",
+              "gloss": "the ship"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "через",
+              "lemma": "через",
+              "gloss": "after"
+            },
+            {
+              "t": "несколько",
+              "lemma": "несколько",
+              "gloss": "a few"
+            },
+            {
+              "t": "минут",
+              "lemma": "минута",
+              "gloss": "minutes"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "стал",
+              "lemma": "стать",
+              "gloss": "began"
+            },
+            {
+              "t": "дышать.",
+              "lemma": "дышать",
+              "gloss": "to breathe"
+            }
+          ],
+          "translation_en": "They pulled him out onto the ship, and a few minutes later he began to breathe.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "main"
+              },
+              {
+                "start": 4,
+                "end": 10,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              8
+            ],
+            "main_verb": [
+              1,
+              9
+            ]
+          }
+        },
+        {
+          "id": "p2-s20",
+          "tokens": [
+            {
+              "t": "Когда",
+              "lemma": "когда",
+              "gloss": "when"
+            },
+            {
+              "t": "капитан",
+              "lemma": "капитан",
+              "gloss": "the captain"
+            },
+            {
+              "t": "увидел",
+              "lemma": "увидеть",
+              "gloss": "saw"
+            },
+            {
+              "t": "это,",
+              "lemma": "это",
+              "gloss": "this"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "вдруг",
+              "lemma": "вдруг",
+              "gloss": "suddenly"
+            },
+            {
+              "t": "закричал,",
+              "lemma": "закричать",
+              "gloss": "cried out"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "as"
+            },
+            {
+              "t": "будто",
+              "lemma": "будто",
+              "gloss": "if"
+            },
+            {
+              "t": "его",
+              "lemma": "он",
+              "gloss": "him"
+            },
+            {
+              "t": "что-то",
+              "lemma": "что-то",
+              "gloss": "something"
+            },
+            {
+              "t": "душило,",
+              "lemma": "душить",
+              "gloss": "was choking"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "убежал",
+              "lemma": "убежать",
+              "gloss": "ran off"
+            },
+            {
+              "t": "к",
+              "lemma": "к",
+              "gloss": "to"
+            },
+            {
+              "t": "себе",
+              "lemma": "себя",
+              "gloss": "his own"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "into"
+            },
+            {
+              "t": "каюту,",
+              "lemma": "каюта",
+              "gloss": "cabin"
+            },
+            {
+              "t": "чтобы",
+              "lemma": "чтобы",
+              "gloss": "so that"
+            },
+            {
+              "t": "никто",
+              "lemma": "никто",
+              "gloss": "no one"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "видел,",
+              "lemma": "видеть",
+              "gloss": "would see"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "how"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "плачет.",
+              "lemma": "плакать",
+              "gloss": "is crying"
+            }
+          ],
+          "translation_en": "When the captain saw this, he suddenly cried out as if something were choking him, and ran off to his cabin so that no one would see him crying.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "when-clause"
+              },
+              {
+                "start": 4,
+                "end": 6,
+                "label": "main"
+              },
+              {
+                "start": 7,
+                "end": 11,
+                "label": "as-if clause"
+              },
+              {
+                "start": 12,
+                "end": 17,
+                "label": "main (cont.)"
+              },
+              {
+                "start": 18,
+                "end": 21,
+                "label": "purpose: чтобы…"
+              },
+              {
+                "start": 22,
+                "end": 24,
+                "label": "reported: как…"
+              }
+            ],
+            "subject": [
+              4
+            ],
+            "main_verb": [
+              6,
+              13
+            ]
+          }
+        }
+      ],
+      "word_help": [
+        {
+          "greek": "корабль",
+          "en": "ship"
+        },
+        {
+          "greek": "палуба",
+          "en": "deck"
+        },
+        {
+          "greek": "обезьяна",
+          "en": "monkey"
+        },
+        {
+          "greek": "мачта",
+          "en": "mast"
+        },
+        {
+          "greek": "перекладина",
+          "en": "crossbar (yard) of a mast"
+        },
+        {
+          "greek": "верёвка",
+          "en": "rope"
+        },
+        {
+          "greek": "оступиться",
+          "en": "to miss one's footing"
+        },
+        {
+          "greek": "вдребезги",
+          "en": "to pieces"
+        },
+        {
+          "greek": "каюта",
+          "en": "cabin"
+        },
+        {
+          "greek": "ружьё",
+          "en": "gun"
+        },
+        {
+          "greek": "чайка",
+          "en": "gull"
+        },
+        {
+          "greek": "матрос",
+          "en": "sailor"
+        },
+        {
+          "greek": "нырять",
+          "en": "to dive"
+        }
+      ]
+    },
+    "p2-q1": {
+      "kind": "mc",
+      "id": "p2-q1",
+      "passage": "p2",
+      "gist": true,
+      "prompt_en": "What happens in this passage, in brief?",
+      "options": [
+        "A monkey snatches the captain's son's hat; chasing it, the boy ends up on a high crossbar, and his father makes him jump into the sea at gunpoint, where sailors rescue him.",
+        "A monkey steals the captain's hat and climbs the mast; the captain comes out with a gun and shoots at the monkey, and his son, who has climbed after it, falls into the sea.",
+        "The captain's son climbs the mast for a bet with the sailors; he slips on the crossbar and falls onto the deck, and the sailors carry him to his father's cabin.",
+        "A monkey falls from the top of the mast into the sea, and the captain's son jumps in to save it while the sailors laugh; the captain then fishes them both out."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: сорвала … шляпу, бросился за обезьяной, прицелился в него, прыгнул, вытащили на корабль.",
+        "The hat is the boy's (с его головы, his = the boy's), and the father aims at his son, not the monkey.",
+        "There is no bet, and he does not fall: the danger is what would happen if he did (он бы разбился); he jumps into the sea.",
+        "The monkey stays on top of the mast; it is the boy who goes into the sea."
+      ],
+      "domain": "R1",
+      "primary_tag": "gist",
+      "tags": [
+        "gist"
+      ],
+      "ablation": "The gist depends on following who does what in the chain of main clauses (сорвала, бросился, ступил, прицелился, прыгнул, спрыгнули, вытащили); a reader who takes the unreal разбился as fact or loses the subjects picks B–D."
+    },
+    "p2-q2": {
+      "kind": "mc",
+      "id": "p2-q2",
+      "passage": "p2",
+      "gist": false,
+      "prompt_en": "What does «Стоило ему только оступиться — и он бы вдребезги разбился о палубу» tell us?",
+      "options": [
+        "One false step, and he would have been smashed to pieces on the deck.",
+        "He missed his footing and was smashed to pieces on the deck.",
+        "He only had to step down onto the deck, and he would be safe.",
+        "Missing his footing cost him dearly: he was badly hurt on the deck."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: стоило … только + infinitive, 'it would only have taken …', and бы makes разбился an outcome that did not happen.",
+        "бы makes разбился unreal: what would have happened. He is still on the crossbar in the next sentences.",
+        "оступиться is to miss one's footing, not to step down; the deck is where he would have landed.",
+        "стоило here is not 'cost'; and бы means the fall did not happen."
+      ],
+      "domain": "R1",
+      "primary_tag": "cond",
+      "tags": [
+        "cond"
+      ],
+      "ablation": "Without бы, разбился reads as a real event (B, D); only the particle (with стоило … только) marks the fall as unreal. оступиться and вдребезги are glossed under the passage so the item turns on the construction."
+    },
+    "p2-q3": {
+      "kind": "mc",
+      "id": "p2-q3",
+      "passage": "p2",
+      "gist": false,
+      "prompt_en": "What did the sailors do, and when?",
+      "options": [
+        "Before the waves had even closed over the boy, twenty sailors had already jumped from the ship into the sea.",
+        "They waited until the waves had closed over the boy, and then twenty of them jumped into the sea.",
+        "Twenty sailors climbed down the mast after the boy before he hit the water.",
+        "The waves were too high for them, so twenty sailors stayed on the ship and threw down ropes."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: Не успели волны закрыть его, как уже … спрыгнули: the sailors were in before the waves closed.",
+        "Не успели …, как уже puts the jump before the waves had time to close, not after.",
+        "спрыгнули с корабля в море: they jumped off the ship into the sea; the boy was already in the water.",
+        "It is the waves that 'did not have time' (не успели волны), not the sailors who failed."
+      ],
+      "domain": "R1",
+      "primary_tag": "conj.subord",
+      "tags": [
+        "conj.subord",
+        "prefix.motion"
+      ],
+      "ablation": "Не успели X, как уже Y places Y before X is complete; read as two plain past statements it gives B or D, and the direction с корабля в море excludes C."
+    },
+    "p2-q4": {
+      "kind": "mc",
+      "id": "p2-q4",
+      "passage": "p2",
+      "gist": false,
+      "prompt_en": "What happened after about forty seconds?",
+      "options": [
+        "The boy's body came up to the surface.",
+        "The boy's body sank out of sight.",
+        "The sailors dived down after the boy's body.",
+        "The boy swam back to the ship by himself."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: вы- 'out' + нырнуть 'dive': the body came up out of the water.",
+        "вы- means out: the body came out of the water, not down into it.",
+        "тело мальчика is the subject of вынырнуло (subject after the verb); the sailors are not in this sentence.",
+        "He is pulled out (вытащили), and only then starts to breathe."
+      ],
+      "domain": "R1",
+      "primary_tag": "prefix.other",
+      "tags": [
+        "prefix.other"
+      ],
+      "ablation": "With нырять 'to dive' glossed under the passage, only the prefix вы- ('out') separates surfacing (A) from diving down (B, C)."
+    },
+    "p2-q5": {
+      "kind": "mc",
+      "id": "p2-q5",
+      "passage": "p2",
+      "gist": false,
+      "prompt_en": "Why did the captain run off to his cabin?",
+      "options": [
+        "So that no one would see him crying.",
+        "To put the gun away before anyone saw it.",
+        "Because he could not bear to watch the sailors trying to bring his son round.",
+        "Because nobody had noticed that he was crying."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: чтобы никто не видел, как он плачет: purpose.",
+        "The gun is not mentioned again; the purpose clause is about his crying.",
+        "His son was already breathing (он стал дышать) when he ran off.",
+        "чтобы gives a purpose, 'so that'; it is not что, 'that'."
+      ],
+      "domain": "R1",
+      "primary_tag": "conj.subord",
+      "tags": [
+        "conj.subord"
+      ],
+      "ablation": "чтобы никто не видел states a purpose; read as что ('that') it turns into the statement in D, and the reason for running off is lost."
+    },
+    "p3": {
+      "kind": "passage",
+      "id": "p3",
+      "label": "И. С. Тургенев, «Воробей» (1878)",
+      "source": "I. S. Turgenev, «Воробей», from Стихотворения в прозе (Senilia), dated April 1878, first published in Вестник Европы, 1882. Text: Полное собрание сочинений и писем в 30 т., Сочинения т. 10, via ru.wikisource.org/wiki/Воробей_(Тургенев). Public domain. Complete and unchanged except that ё is printed where standard.",
+      "authentic": true,
+      "context_en": "A complete prose poem by Turgenev, as he wrote it. The narrator is walking home through a garden with his hunting dog.",
+      "sentences": [
+        {
+          "id": "p3-s1",
+          "tokens": [
+            {
+              "t": "Я",
+              "lemma": "я",
+              "gloss": "I"
+            },
+            {
+              "t": "возвращался",
+              "lemma": "возвращаться",
+              "gloss": "was returning"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "from"
+            },
+            {
+              "t": "охоты",
+              "lemma": "охота",
+              "gloss": "hunting"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "шёл",
+              "lemma": "идти",
+              "gloss": "was walking"
+            },
+            {
+              "t": "по",
+              "lemma": "по",
+              "gloss": "along"
+            },
+            {
+              "t": "аллее",
+              "lemma": "аллея",
+              "gloss": "avenue (tree-lined path)"
+            },
+            {
+              "t": "сада.",
+              "lemma": "сад",
+              "gloss": "of the garden"
+            }
+          ],
+          "translation_en": "I was coming back from hunting and walking along an avenue of the garden.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 8,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              5
+            ]
+          }
+        },
+        {
+          "id": "p3-s2",
+          "tokens": [
+            {
+              "t": "Собака",
+              "lemma": "собака",
+              "gloss": "the dog"
+            },
+            {
+              "t": "бежала",
+              "lemma": "бежать",
+              "gloss": "was running"
+            },
+            {
+              "t": "впереди",
+              "lemma": "впереди",
+              "gloss": "ahead of"
+            },
+            {
+              "t": "меня.",
+              "lemma": "я",
+              "gloss": "me"
+            }
+          ],
+          "translation_en": "My dog was running ahead of me.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "p3-s3",
+          "tokens": [
+            {
+              "t": "Вдруг",
+              "lemma": "вдруг",
+              "gloss": "suddenly"
+            },
+            {
+              "t": "она",
+              "lemma": "она",
+              "gloss": "he (the dog; собака is feminine)"
+            },
+            {
+              "t": "уменьшила",
+              "lemma": "уменьшить",
+              "gloss": "made smaller, slowed"
+            },
+            {
+              "t": "свои",
+              "lemma": "свой",
+              "gloss": "his"
+            },
+            {
+              "t": "шаги",
+              "lemma": "шаг",
+              "gloss": "steps"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "начала",
+              "lemma": "начать",
+              "gloss": "began"
+            },
+            {
+              "t": "красться,",
+              "lemma": "красться",
+              "gloss": "to creep"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "as"
+            },
+            {
+              "t": "бы",
+              "lemma": "бы",
+              "gloss": "if"
+            },
+            {
+              "t": "зачуяв",
+              "lemma": "зачуять",
+              "gloss": "having scented"
+            },
+            {
+              "t": "перед",
+              "lemma": "перед",
+              "gloss": "in front of"
+            },
+            {
+              "t": "собою",
+              "lemma": "себя",
+              "gloss": "himself"
+            },
+            {
+              "t": "дичь.",
+              "lemma": "дичь",
+              "gloss": "game (birds)"
+            }
+          ],
+          "translation_en": "Suddenly he slowed his pace and began to creep, as if he had scented game in front of him.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              },
+              {
+                "start": 8,
+                "end": 13,
+                "label": "as-if, verbal adverb phrase"
+              }
+            ],
+            "subject": [
+              1
+            ],
+            "main_verb": [
+              2,
+              6
+            ]
+          }
+        },
+        {
+          "id": "p3-s4",
+          "tokens": [
+            {
+              "t": "Я",
+              "lemma": "я",
+              "gloss": "I"
+            },
+            {
+              "t": "глянул",
+              "lemma": "глянуть",
+              "gloss": "glanced"
+            },
+            {
+              "t": "вдоль",
+              "lemma": "вдоль",
+              "gloss": "along"
+            },
+            {
+              "t": "аллеи",
+              "lemma": "аллея",
+              "gloss": "the avenue"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "увидел",
+              "lemma": "увидеть",
+              "gloss": "saw"
+            },
+            {
+              "t": "молодого",
+              "lemma": "молодой",
+              "gloss": "young"
+            },
+            {
+              "t": "воробья",
+              "lemma": "воробей",
+              "gloss": "sparrow"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "with"
+            },
+            {
+              "t": "желтизной",
+              "lemma": "желтизна",
+              "gloss": "yellowness"
+            },
+            {
+              "t": "около",
+              "lemma": "около",
+              "gloss": "around"
+            },
+            {
+              "t": "клюва",
+              "lemma": "клюв",
+              "gloss": "its beak"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "пухом",
+              "lemma": "пух",
+              "gloss": "down (soft feathers)"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "on"
+            },
+            {
+              "t": "голове.",
+              "lemma": "голова",
+              "gloss": "its head"
+            }
+          ],
+          "translation_en": "I glanced along the avenue and saw a young sparrow with yellow round its beak and down on its head.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 15,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              5
+            ]
+          }
+        },
+        {
+          "id": "p3-s5",
+          "tokens": [
+            {
+              "t": "Он",
+              "lemma": "он",
+              "gloss": "it (the sparrow)"
+            },
+            {
+              "t": "упал",
+              "lemma": "упасть",
+              "gloss": "had fallen"
+            },
+            {
+              "t": "из",
+              "lemma": "из",
+              "gloss": "out of"
+            },
+            {
+              "t": "гнезда",
+              "lemma": "гнездо",
+              "gloss": "the nest"
+            },
+            {
+              "t": "(ветер",
+              "lemma": "ветер",
+              "gloss": "the wind"
+            },
+            {
+              "t": "сильно",
+              "lemma": "сильно",
+              "gloss": "hard"
+            },
+            {
+              "t": "качал",
+              "lemma": "качать",
+              "gloss": "was shaking"
+            },
+            {
+              "t": "берёзы",
+              "lemma": "берёза",
+              "gloss": "the birches"
+            },
+            {
+              "t": "аллеи)",
+              "lemma": "аллея",
+              "gloss": "of the avenue"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "сидел",
+              "lemma": "сидеть",
+              "gloss": "was sitting"
+            },
+            {
+              "t": "неподвижно,",
+              "lemma": "неподвижно",
+              "gloss": "motionless"
+            },
+            {
+              "t": "беспомощно",
+              "lemma": "беспомощно",
+              "gloss": "helplessly"
+            },
+            {
+              "t": "растопырив",
+              "lemma": "растопырить",
+              "gloss": "having spread out"
+            },
+            {
+              "t": "едва",
+              "lemma": "едва",
+              "gloss": "barely"
+            },
+            {
+              "t": "прораставшие",
+              "lemma": "прорастать",
+              "gloss": "sprouting, that were growing"
+            },
+            {
+              "t": "крылышки.",
+              "lemma": "крылышко",
+              "gloss": "little wings"
+            }
+          ],
+          "translation_en": "It had fallen out of the nest (the wind was shaking the birches of the avenue hard) and was sitting motionless, helplessly spreading its barely sprouting little wings.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "main"
+              },
+              {
+                "start": 4,
+                "end": 8,
+                "label": "aside"
+              },
+              {
+                "start": 9,
+                "end": 11,
+                "label": "main (cont.)"
+              },
+              {
+                "start": 12,
+                "end": 16,
+                "label": "verbal adverb phrase"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              10
+            ]
+          }
+        },
+        {
+          "id": "p3-s6",
+          "tokens": [
+            {
+              "t": "Моя",
+              "lemma": "мой",
+              "gloss": "my"
+            },
+            {
+              "t": "собака",
+              "lemma": "собака",
+              "gloss": "dog"
+            },
+            {
+              "t": "медленно",
+              "lemma": "медленно",
+              "gloss": "slowly"
+            },
+            {
+              "t": "приближалась",
+              "lemma": "приближаться",
+              "gloss": "was approaching"
+            },
+            {
+              "t": "к",
+              "lemma": "к",
+              "gloss": "to"
+            },
+            {
+              "t": "нему,",
+              "lemma": "он",
+              "gloss": "it"
+            },
+            {
+              "t": "как",
+              "lemma": "как",
+              "gloss": "when"
+            },
+            {
+              "t": "вдруг,",
+              "lemma": "вдруг",
+              "gloss": "suddenly"
+            },
+            {
+              "t": "сорвавшись",
+              "lemma": "сорваться",
+              "gloss": "having broken away"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "from"
+            },
+            {
+              "t": "близкого",
+              "lemma": "близкий",
+              "gloss": "nearby"
+            },
+            {
+              "t": "дерева,",
+              "lemma": "дерево",
+              "gloss": "tree"
+            },
+            {
+              "t": "старый",
+              "lemma": "старый",
+              "gloss": "old"
+            },
+            {
+              "t": "черногрудый",
+              "lemma": "черногрудый",
+              "gloss": "black-breasted"
+            },
+            {
+              "t": "воробей",
+              "lemma": "воробей",
+              "gloss": "sparrow"
+            },
+            {
+              "t": "камнем",
+              "lemma": "камень",
+              "gloss": "like a stone"
+            },
+            {
+              "t": "упал",
+              "lemma": "упасть",
+              "gloss": "fell"
+            },
+            {
+              "t": "перед",
+              "lemma": "перед",
+              "gloss": "in front of"
+            },
+            {
+              "t": "самой",
+              "lemma": "самый",
+              "gloss": "the very"
+            },
+            {
+              "t": "её",
+              "lemma": "её",
+              "gloss": "his (the dog's)"
+            },
+            {
+              "t": "мордой",
+              "lemma": "морда",
+              "gloss": "muzzle"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "весь",
+              "lemma": "весь",
+              "gloss": "all"
+            },
+            {
+              "t": "взъерошенный,",
+              "lemma": "взъерошить",
+              "gloss": "ruffled"
+            },
+            {
+              "t": "искажённый,",
+              "lemma": "исказить",
+              "gloss": "distorted"
+            },
+            {
+              "t": "с",
+              "lemma": "с",
+              "gloss": "with"
+            },
+            {
+              "t": "отчаянным",
+              "lemma": "отчаянный",
+              "gloss": "a desperate"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "жалким",
+              "lemma": "жалкий",
+              "gloss": "pitiful"
+            },
+            {
+              "t": "писком",
+              "lemma": "писк",
+              "gloss": "squeak"
+            },
+            {
+              "t": "прыгнул",
+              "lemma": "прыгнуть",
+              "gloss": "hopped, jumped"
+            },
+            {
+              "t": "раза",
+              "lemma": "раз",
+              "gloss": "times"
+            },
+            {
+              "t": "два",
+              "lemma": "два",
+              "gloss": "two (раза два: twice or so)"
+            },
+            {
+              "t": "в",
+              "lemma": "в",
+              "gloss": "in"
+            },
+            {
+              "t": "направлении",
+              "lemma": "направление",
+              "gloss": "the direction"
+            },
+            {
+              "t": "зубастой",
+              "lemma": "зубастый",
+              "gloss": "toothy"
+            },
+            {
+              "t": "раскрытой",
+              "lemma": "раскрыть",
+              "gloss": "opened, open"
+            },
+            {
+              "t": "пасти.",
+              "lemma": "пасть",
+              "gloss": "jaws (of an animal)"
+            }
+          ],
+          "translation_en": "My dog was slowly approaching it when suddenly, breaking away from a nearby tree, an old black-breasted sparrow dropped like a stone right in front of his muzzle — and, all ruffled, distorted, with a desperate and pitiful squeak, it hopped twice or so towards the toothy open jaws.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              },
+              {
+                "start": 6,
+                "end": 7,
+                "label": "main 2: как вдруг…"
+              },
+              {
+                "start": 8,
+                "end": 11,
+                "label": "verbal adverb phrase"
+              },
+              {
+                "start": 12,
+                "end": 21,
+                "label": "main 2 (cont.)"
+              },
+              {
+                "start": 22,
+                "end": 38,
+                "label": "main 2 (cont.)"
+              }
+            ],
+            "subject": [
+              1,
+              14
+            ],
+            "main_verb": [
+              3,
+              16,
+              31
+            ]
+          }
+        },
+        {
+          "id": "p3-s7",
+          "tokens": [
+            {
+              "t": "Он",
+              "lemma": "он",
+              "gloss": "it (the old sparrow)"
+            },
+            {
+              "t": "ринулся",
+              "lemma": "ринуться",
+              "gloss": "rushed"
+            },
+            {
+              "t": "спасать,",
+              "lemma": "спасать",
+              "gloss": "to save"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "it"
+            },
+            {
+              "t": "заслонил",
+              "lemma": "заслонить",
+              "gloss": "shielded"
+            },
+            {
+              "t": "собою",
+              "lemma": "себя",
+              "gloss": "with itself"
+            },
+            {
+              "t": "своё",
+              "lemma": "свой",
+              "gloss": "its"
+            },
+            {
+              "t": "детище…",
+              "lemma": "детище",
+              "gloss": "offspring"
+            },
+            {
+              "t": "но",
+              "lemma": "но",
+              "gloss": "but"
+            },
+            {
+              "t": "всё",
+              "lemma": "весь",
+              "gloss": "whole"
+            },
+            {
+              "t": "его",
+              "lemma": "его",
+              "gloss": "its"
+            },
+            {
+              "t": "маленькое",
+              "lemma": "маленький",
+              "gloss": "little"
+            },
+            {
+              "t": "тело",
+              "lemma": "тело",
+              "gloss": "body"
+            },
+            {
+              "t": "трепетало",
+              "lemma": "трепетать",
+              "gloss": "was trembling"
+            },
+            {
+              "t": "от",
+              "lemma": "от",
+              "gloss": "from, with"
+            },
+            {
+              "t": "ужаса,",
+              "lemma": "ужас",
+              "gloss": "horror"
+            },
+            {
+              "t": "голосок",
+              "lemma": "голосок",
+              "gloss": "little voice"
+            },
+            {
+              "t": "одичал",
+              "lemma": "одичать",
+              "gloss": "went wild"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "охрип,",
+              "lemma": "охрипнуть",
+              "gloss": "went hoarse"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "it"
+            },
+            {
+              "t": "замирал,",
+              "lemma": "замирать",
+              "gloss": "was faint, froze"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "it"
+            },
+            {
+              "t": "жертвовал",
+              "lemma": "жертвовать",
+              "gloss": "was sacrificing"
+            },
+            {
+              "t": "собою!",
+              "lemma": "себя",
+              "gloss": "itself"
+            }
+          ],
+          "translation_en": "It rushed to save, it shielded its offspring with itself… but its whole little body was trembling with horror, its little voice had gone wild and hoarse, it was faint, it was sacrificing itself!",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 2,
+                "label": "main"
+              },
+              {
+                "start": 3,
+                "end": 7,
+                "label": "main 2"
+              },
+              {
+                "start": 8,
+                "end": 15,
+                "label": "main 3"
+              },
+              {
+                "start": 16,
+                "end": 19,
+                "label": "main 4"
+              },
+              {
+                "start": 20,
+                "end": 21,
+                "label": "main 5"
+              },
+              {
+                "start": 22,
+                "end": 24,
+                "label": "main 6"
+              }
+            ],
+            "subject": [
+              0,
+              3,
+              12,
+              16,
+              20,
+              22
+            ],
+            "main_verb": [
+              1,
+              4,
+              13,
+              17,
+              19,
+              21,
+              23
+            ]
+          }
+        },
+        {
+          "id": "p3-s8",
+          "tokens": [
+            {
+              "t": "Каким",
+              "lemma": "какой",
+              "gloss": "what (a)"
+            },
+            {
+              "t": "громадным",
+              "lemma": "громадный",
+              "gloss": "huge"
+            },
+            {
+              "t": "чудовищем",
+              "lemma": "чудовище",
+              "gloss": "monster"
+            },
+            {
+              "t": "должна",
+              "lemma": "должный",
+              "gloss": "must"
+            },
+            {
+              "t": "была",
+              "lemma": "быть",
+              "gloss": "have (been)"
+            },
+            {
+              "t": "ему",
+              "lemma": "он",
+              "gloss": "to it (the old sparrow)"
+            },
+            {
+              "t": "казаться",
+              "lemma": "казаться",
+              "gloss": "seem"
+            },
+            {
+              "t": "собака!",
+              "lemma": "собака",
+              "gloss": "the dog"
+            }
+          ],
+          "translation_en": "What a huge monster the dog must have seemed to it!",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              7
+            ],
+            "main_verb": [
+              4,
+              6
+            ]
+          }
+        },
+        {
+          "id": "p3-s9",
+          "tokens": [
+            {
+              "t": "И",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "всё-таки",
+              "lemma": "всё-таки",
+              "gloss": "yet, all the same"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "it"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "not"
+            },
+            {
+              "t": "мог",
+              "lemma": "мочь",
+              "gloss": "could"
+            },
+            {
+              "t": "усидеть",
+              "lemma": "усидеть",
+              "gloss": "stay sitting, keep its seat"
+            },
+            {
+              "t": "на",
+              "lemma": "на",
+              "gloss": "on"
+            },
+            {
+              "t": "своей",
+              "lemma": "свой",
+              "gloss": "its"
+            },
+            {
+              "t": "высокой,",
+              "lemma": "высокий",
+              "gloss": "high"
+            },
+            {
+              "t": "безопасной",
+              "lemma": "безопасный",
+              "gloss": "safe"
+            },
+            {
+              "t": "ветке…",
+              "lemma": "ветка",
+              "gloss": "branch"
+            }
+          ],
+          "translation_en": "And yet it could not stay sitting on its high, safe branch…",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 10,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              2
+            ],
+            "main_verb": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "p3-s10",
+          "tokens": [
+            {
+              "t": "Сила,",
+              "lemma": "сила",
+              "gloss": "a force, power"
+            },
+            {
+              "t": "сильнее",
+              "lemma": "сильный",
+              "gloss": "stronger than"
+            },
+            {
+              "t": "его",
+              "lemma": "его",
+              "gloss": "its"
+            },
+            {
+              "t": "воли,",
+              "lemma": "воля",
+              "gloss": "will"
+            },
+            {
+              "t": "сбросила",
+              "lemma": "сбросить",
+              "gloss": "threw down"
+            },
+            {
+              "t": "его",
+              "lemma": "он",
+              "gloss": "it"
+            },
+            {
+              "t": "оттуда.",
+              "lemma": "оттуда",
+              "gloss": "from there"
+            }
+          ],
+          "translation_en": "A force stronger than its will threw it down from there.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 0,
+                "label": "main"
+              },
+              {
+                "start": 1,
+                "end": 3,
+                "label": "aside"
+              },
+              {
+                "start": 4,
+                "end": 6,
+                "label": "main (cont.)"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "p3-s11",
+          "tokens": [
+            {
+              "t": "Мой",
+              "lemma": "мой",
+              "gloss": "my"
+            },
+            {
+              "t": "Трезор",
+              "lemma": "Трезор",
+              "gloss": "Trezor (the dog's name)"
+            },
+            {
+              "t": "остановился,",
+              "lemma": "остановиться",
+              "gloss": "stopped"
+            },
+            {
+              "t": "попятился…",
+              "lemma": "попятиться",
+              "gloss": "backed away"
+            },
+            {
+              "t": "Видно,",
+              "lemma": "видно",
+              "gloss": "evidently"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "too, also"
+            },
+            {
+              "t": "он",
+              "lemma": "он",
+              "gloss": "he"
+            },
+            {
+              "t": "признал",
+              "lemma": "признать",
+              "gloss": "acknowledged"
+            },
+            {
+              "t": "эту",
+              "lemma": "этот",
+              "gloss": "this"
+            },
+            {
+              "t": "силу.",
+              "lemma": "сила",
+              "gloss": "force"
+            }
+          ],
+          "translation_en": "My Trezor stopped and backed away… Evidently he too acknowledged this force.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 3,
+                "label": "main"
+              },
+              {
+                "start": 4,
+                "end": 9,
+                "label": "main 2"
+              }
+            ],
+            "subject": [
+              1,
+              6
+            ],
+            "main_verb": [
+              2,
+              3,
+              7
+            ]
+          }
+        },
+        {
+          "id": "p3-s12",
+          "tokens": [
+            {
+              "t": "Я",
+              "lemma": "я",
+              "gloss": "I"
+            },
+            {
+              "t": "поспешил",
+              "lemma": "поспешить",
+              "gloss": "hurried"
+            },
+            {
+              "t": "отозвать",
+              "lemma": "отозвать",
+              "gloss": "to call off, call away"
+            },
+            {
+              "t": "смущённого",
+              "lemma": "смутить",
+              "gloss": "abashed, embarrassed"
+            },
+            {
+              "t": "пса",
+              "lemma": "пёс",
+              "gloss": "dog"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "удалился,",
+              "lemma": "удалиться",
+              "gloss": "went away"
+            },
+            {
+              "t": "благоговея.",
+              "lemma": "благоговеть",
+              "gloss": "feeling reverence"
+            }
+          ],
+          "translation_en": "I hurried to call off the abashed dog — and walked away, full of reverence.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 5,
+                "label": "main"
+              },
+              {
+                "start": 6,
+                "end": 7,
+                "label": "main (cont.)"
+              },
+              {
+                "start": 8,
+                "end": 8,
+                "label": "verbal adverb"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1,
+              7
+            ]
+          }
+        },
+        {
+          "id": "p3-s13",
+          "tokens": [
+            {
+              "t": "Да;",
+              "lemma": "да",
+              "gloss": "yes"
+            },
+            {
+              "t": "не",
+              "lemma": "не",
+              "gloss": "don't"
+            },
+            {
+              "t": "смейтесь.",
+              "lemma": "смеяться",
+              "gloss": "laugh"
+            }
+          ],
+          "translation_en": "Yes; don't laugh.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 2,
+                "label": "main"
+              }
+            ],
+            "subject": [],
+            "main_verb": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "p3-s14",
+          "tokens": [
+            {
+              "t": "Я",
+              "lemma": "я",
+              "gloss": "I"
+            },
+            {
+              "t": "благоговел",
+              "lemma": "благоговеть",
+              "gloss": "felt reverence"
+            },
+            {
+              "t": "перед",
+              "lemma": "перед",
+              "gloss": "before"
+            },
+            {
+              "t": "той",
+              "lemma": "тот",
+              "gloss": "that"
+            },
+            {
+              "t": "маленькой",
+              "lemma": "маленький",
+              "gloss": "small"
+            },
+            {
+              "t": "героической",
+              "lemma": "героический",
+              "gloss": "heroic"
+            },
+            {
+              "t": "птицей,",
+              "lemma": "птица",
+              "gloss": "bird"
+            },
+            {
+              "t": "перед",
+              "lemma": "перед",
+              "gloss": "before"
+            },
+            {
+              "t": "любовным",
+              "lemma": "любовный",
+              "gloss": "loving"
+            },
+            {
+              "t": "её",
+              "lemma": "её",
+              "gloss": "its"
+            },
+            {
+              "t": "порывом.",
+              "lemma": "порыв",
+              "gloss": "impulse, outburst"
+            }
+          ],
+          "translation_en": "I felt reverence before that small heroic bird, before its loving impulse.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 10,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": [
+              1
+            ]
+          }
+        },
+        {
+          "id": "p3-s15",
+          "tokens": [
+            {
+              "t": "Любовь,",
+              "lemma": "любовь",
+              "gloss": "love"
+            },
+            {
+              "t": "думал",
+              "lemma": "думать",
+              "gloss": "thought"
+            },
+            {
+              "t": "я,",
+              "lemma": "я",
+              "gloss": "I"
+            },
+            {
+              "t": "сильнее",
+              "lemma": "сильный",
+              "gloss": "(is) stronger than"
+            },
+            {
+              "t": "смерти",
+              "lemma": "смерть",
+              "gloss": "death"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "страха",
+              "lemma": "страх",
+              "gloss": "fear"
+            },
+            {
+              "t": "смерти.",
+              "lemma": "смерть",
+              "gloss": "of death"
+            }
+          ],
+          "translation_en": "Love, I thought, is stronger than death and the fear of death.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 0,
+                "label": "main"
+              },
+              {
+                "start": 1,
+                "end": 2,
+                "label": "aside"
+              },
+              {
+                "start": 3,
+                "end": 7,
+                "label": "main ('is' left out)"
+              }
+            ],
+            "subject": [
+              0
+            ],
+            "main_verb": []
+          }
+        },
+        {
+          "id": "p3-s16",
+          "tokens": [
+            {
+              "t": "Только",
+              "lemma": "только",
+              "gloss": "only"
+            },
+            {
+              "t": "ею,",
+              "lemma": "она",
+              "gloss": "by it"
+            },
+            {
+              "t": "только",
+              "lemma": "только",
+              "gloss": "only"
+            },
+            {
+              "t": "любовью",
+              "lemma": "любовь",
+              "gloss": "by love"
+            },
+            {
+              "t": "держится",
+              "lemma": "держаться",
+              "gloss": "holds together"
+            },
+            {
+              "t": "и",
+              "lemma": "и",
+              "gloss": "and"
+            },
+            {
+              "t": "движется",
+              "lemma": "двигаться",
+              "gloss": "moves"
+            },
+            {
+              "t": "жизнь.",
+              "lemma": "жизнь",
+              "gloss": "life"
+            }
+          ],
+          "translation_en": "Only by it, only by love does life hold together and move.",
+          "structure": {
+            "clauses": [
+              {
+                "start": 0,
+                "end": 7,
+                "label": "main"
+              }
+            ],
+            "subject": [
+              7
+            ],
+            "main_verb": [
+              4,
+              6
+            ]
+          }
+        }
+      ],
+      "word_help": [
+        {
+          "greek": "охота",
+          "en": "hunting"
+        },
+        {
+          "greek": "аллея",
+          "en": "avenue, tree-lined path"
+        },
+        {
+          "greek": "красться",
+          "en": "to creep"
+        },
+        {
+          "greek": "дичь",
+          "en": "game (birds)"
+        },
+        {
+          "greek": "воробей",
+          "en": "sparrow"
+        },
+        {
+          "greek": "клюв",
+          "en": "beak"
+        },
+        {
+          "greek": "пух",
+          "en": "down, fluff"
+        },
+        {
+          "greek": "гнездо",
+          "en": "nest"
+        },
+        {
+          "greek": "прорастать",
+          "en": "to sprout, begin to grow"
+        },
+        {
+          "greek": "крылышко",
+          "en": "little wing"
+        },
+        {
+          "greek": "морда",
+          "en": "muzzle"
+        },
+        {
+          "greek": "писк",
+          "en": "squeak"
+        },
+        {
+          "greek": "пасть",
+          "en": "jaws (of an animal)"
+        },
+        {
+          "greek": "детище",
+          "en": "offspring, child"
+        },
+        {
+          "greek": "чудовище",
+          "en": "monster"
+        },
+        {
+          "greek": "ветка",
+          "en": "branch"
+        },
+        {
+          "greek": "Трезор",
+          "en": "the dog's name"
+        },
+        {
+          "greek": "благоговеть",
+          "en": "to feel reverence"
+        },
+        {
+          "greek": "порыв",
+          "en": "impulse"
+        }
+      ]
+    },
+    "p3-q1": {
+      "kind": "mc",
+      "id": "p3-q1",
+      "passage": "p3",
+      "gist": true,
+      "prompt_en": "What happens in this passage, in brief?",
+      "options": [
+        "A young sparrow has fallen from its nest; as the narrator's dog creeps up to it, an old sparrow throws itself down in front of the dog to protect it, the dog backs away, and the narrator, moved, calls the dog off.",
+        "The narrator's dog catches a young sparrow that has fallen from its nest, although an old sparrow flies down and tries to drive the dog away, and the narrator, upset, leaves the garden.",
+        "An old sparrow pushes a young one out of the nest to teach it to fly; the narrator's dog creeps up, but the young bird flies off, and the narrator laughs at the dog.",
+        "The narrator finds a young sparrow that has fallen from its nest, chases off his dog when it creeps up, and puts the bird back in the nest, moved by its courage."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: упал из гнезда; старый воробей камнем упал перед … мордой; Трезор … попятился; я поспешил отозвать … пса.",
+        "The dog does not catch anything: it stops and backs away (остановился, попятился).",
+        "The wind shook the birches and the young bird fell (упал); it was not pushed, and it cannot fly (сидел неподвижно).",
+        "It is the old sparrow that faces the dog down; the narrator only calls his dog off and leaves, and nobody touches the young bird."
+      ],
+      "domain": "R1",
+      "primary_tag": "gist",
+      "tags": [
+        "gist"
+      ],
+      "ablation": "The gist depends on keeping the two sparrows apart and following the main verbs through the participle and verbal-adverb phrases (упал, приближалась, упал, прыгнул, заслонил, остановился, попятился, отозвать)."
+    },
+    "p3-q2": {
+      "kind": "mc",
+      "id": "p3-q2",
+      "passage": "p3",
+      "gist": false,
+      "prompt_en": "What were the young sparrow's wings like?",
+      "options": [
+        "They had barely begun to grow.",
+        "They had been broken in the fall.",
+        "They were fully grown, and it was beating them to fly back up.",
+        "They had been torn by the wind."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: едва прораставшие крылышки, 'little wings that were barely sprouting'.",
+        "Nothing is broken: it sat still, wings spread (растопырив).",
+        "It sat without moving (сидел неподвижно); its wings were only just growing.",
+        "The wind shook the birches (качал берёзы); it did not damage the wings."
+      ],
+      "domain": "R1",
+      "primary_tag": "prtf",
+      "tags": [
+        "prtf",
+        "grnd"
+      ],
+      "ablation": "The only description of the wings is the participle прораставшие ('that were sprouting', with едва 'barely'); прорастать is glossed, so the item turns on reading the participle as an adjective on крылышки."
+    },
+    "p3-q3": {
+      "kind": "mc",
+      "id": "p3-q3",
+      "passage": "p3",
+      "gist": false,
+      "prompt_en": "Who came down from the nearby tree, and how?",
+      "options": [
+        "The old sparrow: it dropped like a stone right in front of the dog's muzzle.",
+        "The young sparrow: it fell like a stone straight into the dog's open jaws.",
+        "A stone, knocked off the tree by the old sparrow, which fell in front of the dog's muzzle.",
+        "The old sparrow: it flew down slowly and landed on the dog's head."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: сорвавшись с близкого дерева shares its subject with упал: старый черногрудый воробей. камнем is 'like a stone'.",
+        "The young bird was already on the ground (упал из гнезда, сидел неподвижно); сорвавшись goes with the old sparrow.",
+        "камнем is instrumental of manner, 'like a stone': no stone falls.",
+        "камнем упал: it dropped, not flew slowly; перед самой её мордой is 'right in front of her muzzle'."
+      ],
+      "domain": "R1",
+      "primary_tag": "grnd",
+      "tags": [
+        "grnd",
+        "case.instr"
+      ],
+      "ablation": "сорвавшись has no subject of its own; it takes the subject of the main verb упал (старый воробей). Attaching it to the young sparrow gives B, and reading камнем as a noun subject gives C."
+    },
+    "p3-q4": {
+      "kind": "mc",
+      "id": "p3-q4",
+      "passage": "p3",
+      "gist": false,
+      "prompt_en": "In «Каким громадным чудовищем должна была ему казаться собака!», who seemed what to whom?",
+      "options": [
+        "The dog must have seemed a huge monster to the old sparrow.",
+        "The old sparrow, in its fury, must have seemed a huge monster to the dog.",
+        "The narrator must have seemed a huge monster to the old sparrow.",
+        "The dog must have seemed a huge monster to the young sparrow."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: собака (nominative) is what seemed; ему (dative) is the one it seemed to, the old sparrow the paragraph is about; чудовищем (instrumental) is what it seemed.",
+        "This swaps the roles: собака is nominative, the one that seems; ему, 'to him', is the sparrow.",
+        "The narrator is not in this sentence; собака is its subject.",
+        "ему continues the old sparrow of the sentences before (он ринулся … он жертвовал собою); the young one is not mentioned here."
+      ],
+      "domain": "R1",
+      "primary_tag": "case.gov",
+      "tags": [
+        "case.gov",
+        "case.instr"
+      ],
+      "ablation": "The cases decide between A, B and C: собака nominative (who seems), ему dative (to whom), чудовищем instrumental (seems what); swapping them gives B, missing the subject gives C. D tests whether ему is tracked back to the old sparrow."
+    },
+    "p3-q5": {
+      "kind": "mc",
+      "id": "p3-q5",
+      "passage": "p3",
+      "gist": false,
+      "prompt_en": "How does the encounter end?",
+      "options": [
+        "The dog stops and backs away; the narrator hurries to call the abashed dog off and walks away, full of reverence.",
+        "The dog stops and backs away; the narrator calls the dog over to him and then goes up to the birds, feeling embarrassed.",
+        "The dog stops and backs away; the narrator hurries to pick up the young sparrow and carries it off reverently.",
+        "The dog keeps creeping forward; the narrator urges it on, then turns away in embarrassment."
+      ],
+      "answer": 0,
+      "why": [
+        "Right: остановился, попятился (backed away); отозвать (call off); смущённого пса (the abashed dog); удалился (went away), благоговея.",
+        "от- in отозвать is 'away, off', and у- in удалился is 'away': he leaves the birds. It is the dog that is abashed (смущённого пса).",
+        "He touches nothing: he calls the dog away (отозвать) and leaves (удалился).",
+        "по-пятиться is to back away; and смущённого describes the dog (пса), not the narrator."
+      ],
+      "domain": "R1",
+      "primary_tag": "prefix.other",
+      "tags": [
+        "prefix.other",
+        "prtf",
+        "grnd"
+      ],
+      "ablation": "The ending is carried by prefixed verbs (попятиться 'back away', отозвать 'call off', удалиться 'move away') and the participle смущённого (agreeing with пса). Read as their roots ('heel', 'call', 'far') and with the participle on the wrong noun, B–D are as good as A."
+    },
+    "v1": {
+      "kind": "vocab",
+      "id": "v1",
+      "greek": "Я [[записал]] его номер телефона.",
+      "lemma": "записать",
+      "options": [
+        "wrote down",
+        "forgot",
+        "dialled",
+        "asked for"
+      ],
+      "answer": 0,
+      "band": "known",
+      "rank_source": "content/ru/plan/baseline.json pool 'known' (2026-10-18); OpenSubtitles 2018 lemma rank 1249 (content/ru/plan/frequency.json); draw 3 of the known pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.known"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v2": {
+      "kind": "vocab",
+      "id": "v2",
+      "greek": "Друзья всегда [[поддерживали]] его в трудное время.",
+      "lemma": "поддерживать",
+      "options": [
+        "supported",
+        "avoided",
+        "visited",
+        "criticised"
+      ],
+      "answer": 0,
+      "band": "uncertain",
+      "rank_source": "content/ru/plan/baseline.json pool 'uncertain' (2026-10-18); OpenSubtitles 2018 lemma rank 1312 (content/ru/plan/frequency.json); draw 4 of the uncertain pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.uncertain"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v3": {
+      "kind": "vocab",
+      "id": "v3",
+      "greek": "На концерте мы сидели в первом [[ряду]].",
+      "lemma": "ряд",
+      "options": [
+        "row",
+        "hall",
+        "box",
+        "tier"
+      ],
+      "answer": 0,
+      "band": "suspended",
+      "rank_source": "content/ru/plan/baseline.json pool 'suspended' (2026-10-18); OpenSubtitles 2018 lemma rank 2406 (content/ru/plan/frequency.json); draw 1 of the suspended-only pool; prepositional in -у",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.suspended"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v4": {
+      "kind": "vocab",
+      "id": "v4",
+      "greek": "Наша [[поездка]] закончилась вчера.",
+      "lemma": "поездка",
+      "options": [
+        "trip",
+        "meeting",
+        "argument",
+        "game"
+      ],
+      "answer": 0,
+      "band": "known",
+      "rank_source": "content/ru/plan/baseline.json pool 'known' (2026-10-18); OpenSubtitles 2018 lemma rank 1405 (content/ru/plan/frequency.json); draw 4 of the known pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.known"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v5": {
+      "kind": "vocab",
+      "id": "v5",
+      "greek": "Утром небо было [[серым]], а к обеду выглянуло солнце.",
+      "lemma": "серый",
+      "options": [
+        "grey",
+        "dark",
+        "cold",
+        "low"
+      ],
+      "answer": 0,
+      "band": "uncertain",
+      "rank_source": "content/ru/plan/baseline.json pool 'uncertain' (2026-10-18); OpenSubtitles 2018 lemma rank 3597 (content/ru/plan/frequency.json); draw 6 of the uncertain pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.uncertain"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v6": {
+      "kind": "vocab",
+      "id": "v6",
+      "greek": "Каждое утро я делаю [[упражнения]] для спины.",
+      "lemma": "упражнение",
+      "options": [
+        "exercises",
+        "massages",
+        "compresses",
+        "injections"
+      ],
+      "answer": 0,
+      "band": "suspended",
+      "rank_source": "content/ru/plan/baseline.json pool 'suspended' (2026-10-18); OpenSubtitles 2018 lemma rank 4908 (content/ru/plan/frequency.json); draw 4 of the suspended-only pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.suspended"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v7": {
+      "kind": "vocab",
+      "id": "v7",
+      "greek": "[[В отличие от]] брата, Олег любит читать.",
+      "lemma": "отличие",
+      "options": [
+        "Unlike",
+        "Like",
+        "Thanks to",
+        "Together with"
+      ],
+      "answer": 0,
+      "band": "suspended",
+      "rank_source": "content/ru/plan/baseline.json pool 'suspended' (2026-10-18); OpenSubtitles 2018 lemma rank 2667 (content/ru/plan/frequency.json); draw 3 of the suspended-only pool; tested in the set phrase в отличие от",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.suspended"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v8": {
+      "kind": "vocab",
+      "id": "v8",
+      "greek": "На шее у неё было красивое [[украшение]].",
+      "lemma": "украшение",
+      "options": [
+        "piece of jewellery",
+        "scarf",
+        "scar",
+        "ribbon"
+      ],
+      "answer": 0,
+      "band": "uncertain",
+      "rank_source": "content/ru/plan/baseline.json pool 'uncertain' (2026-10-18); OpenSubtitles 2018 lemma rank 4484 (content/ru/plan/frequency.json); draw 1 of the uncertain pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.uncertain"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v9": {
+      "kind": "vocab",
+      "id": "v9",
+      "greek": "Соседи подарили детям [[щенка]].",
+      "lemma": "щенок",
+      "options": [
+        "a puppy",
+        "a kitten",
+        "a bicycle",
+        "a ball"
+      ],
+      "answer": 0,
+      "band": "known",
+      "rank_source": "content/ru/plan/baseline.json pool 'known' (2026-10-18); OpenSubtitles 2018 lemma rank 4619 (content/ru/plan/frequency.json); draw 7 of the known pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.known"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "v10": {
+      "kind": "vocab",
+      "id": "v10",
+      "greek": "[[Порой]] мне кажется, что он меня не слышит.",
+      "lemma": "порой",
+      "options": [
+        "At times",
+        "Clearly",
+        "Lately",
+        "Rarely"
+      ],
+      "answer": 0,
+      "band": "suspended",
+      "rank_source": "content/ru/plan/baseline.json pool 'suspended' (2026-10-18); OpenSubtitles 2018 lemma rank 3781 (content/ru/plan/frequency.json); draw 2 of the suspended-only pool",
+      "domain": "R2",
+      "primary_tag": "lex",
+      "tags": [
+        "lex",
+        "pool.suspended"
+      ],
+      "ablation": "n/a (lexical item; the sentence is built so that all four options fit it)"
+    },
+    "c1": {
+      "kind": "cloze",
+      "id": "c1",
+      "subtype": "specified",
+      "greek": "Вчера вечером Анна ___ домой пешком и по дороге встретила старого друга.",
+      "lemma": "идти",
+      "target_en": "past",
+      "accepted": [
+        "шла"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "шел"
+          ],
+          "label": "masculine past instead of feminine (Анна)"
+        },
+        {
+          "match": [
+            "шли"
+          ],
+          "label": "plural past instead of singular"
+        },
+        {
+          "match": [
+            "шло"
+          ],
+          "label": "neuter past instead of feminine"
+        },
+        {
+          "match": [
+            "идла",
+            "идтила",
+            "идела",
+            "ишла"
+          ],
+          "label": "past built on the infinitive or present stem; идти has the irregular past шёл, шла"
+        },
+        {
+          "match": [
+            "идет",
+            "иду"
+          ],
+          "label": "present instead of past"
+        },
+        {
+          "match": [
+            "пошла"
+          ],
+          "label": "perfective пойти ('set off'): right irregular stem ш-л, but a different verb from the one given"
+        },
+        {
+          "match": [
+            "ходила"
+          ],
+          "label": "ходить (round trips, habits) instead of идти; not the verb given"
+        },
+        {
+          "match": [
+            "идти"
+          ],
+          "label": "infinitive left unchanged"
+        }
+      ],
+      "notes": "Вчера and Анна force a feminine past; the background imperfective is natural before the perfective встретила. Ordered first because the past is the form the owner has read most (LingQ stories 30–34).",
+      "domain": "R3",
+      "primary_tag": "v.past",
+      "tags": [
+        "v.past"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c2": {
+      "kind": "cloze",
+      "id": "c2",
+      "subtype": "specified",
+      "greek": "В субботу папа купил новую ___.",
+      "lemma": "машина",
+      "target_en": "accusative sg",
+      "accepted": [
+        "машину"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "машина"
+          ],
+          "label": "nominative (dictionary form) instead of accusative"
+        },
+        {
+          "match": [
+            "машины"
+          ],
+          "label": "genitive singular or nominative/accusative plural instead of accusative singular"
+        },
+        {
+          "match": [
+            "машиной"
+          ],
+          "label": "instrumental instead of accusative"
+        },
+        {
+          "match": [
+            "машине"
+          ],
+          "label": "dative or prepositional instead of accusative"
+        }
+      ],
+      "notes": "купил + новую forces feminine accusative singular, so the label only confirms what the sentence already asks for.",
+      "domain": "R3",
+      "primary_tag": "n.sg.acc",
+      "tags": [
+        "n.sg.acc"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c3": {
+      "kind": "cloze",
+      "id": "c3",
+      "subtype": "specified",
+      "greek": "Мы живём в большом ___.",
+      "lemma": "город",
+      "target_en": "prepositional sg",
+      "accepted": [
+        "городе"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "город"
+          ],
+          "label": "nominative/accusative instead of prepositional"
+        },
+        {
+          "match": [
+            "города"
+          ],
+          "label": "genitive singular or nominative/accusative plural instead of prepositional"
+        },
+        {
+          "match": [
+            "городу"
+          ],
+          "label": "dative instead of prepositional"
+        },
+        {
+          "match": [
+            "городом"
+          ],
+          "label": "instrumental instead of prepositional"
+        },
+        {
+          "match": [
+            "городах"
+          ],
+          "label": "prepositional plural; большом is singular"
+        }
+      ],
+      "notes": "в + большом forces the prepositional singular (location).",
+      "domain": "R3",
+      "primary_tag": "n.sg.prep",
+      "tags": [
+        "n.sg.prep"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c4": {
+      "kind": "cloze",
+      "id": "c4",
+      "subtype": "specified",
+      "greek": "Не волнуйся, завтра я всё ___ маме.",
+      "lemma": "сказать",
+      "target_en": "future",
+      "accepted": [
+        "скажу"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "сказаю",
+            "сказу"
+          ],
+          "label": "1st-person ending without the з → ж change (сказать → скажу)"
+        },
+        {
+          "match": [
+            "скажет"
+          ],
+          "label": "3rd person singular instead of 1st (я)"
+        },
+        {
+          "match": [
+            "скажешь"
+          ],
+          "label": "2nd person singular instead of 1st (я)"
+        },
+        {
+          "match": [
+            "скажем"
+          ],
+          "label": "1st person plural instead of singular"
+        },
+        {
+          "match": [
+            "сказал"
+          ],
+          "label": "past instead of future"
+        },
+        {
+          "match": [
+            "сказать"
+          ],
+          "label": "infinitive left unchanged"
+        },
+        {
+          "match": [
+            "буду сказать"
+          ],
+          "label": "буду + perfective infinitive: a perfective verb makes its future from the present-tense endings, without буду"
+        },
+        {
+          "match": [
+            "буду говорить"
+          ],
+          "label": "imperfective future of говорить: good Russian ('I'll be telling'), but not the perfective сказать given"
+        },
+        {
+          "match": [
+            "говорю"
+          ],
+          "label": "imperfective present of говорить instead of the perfective future of сказать"
+        },
+        {
+          "match": [
+            "расскажу"
+          ],
+          "label": "perfective future of рассказать ('tell, recount'): right form type, different verb"
+        }
+      ],
+      "notes": "завтра and я force the 1st singular future; the lemma is perfective, so the answer is its present-tense form. расскажу (рассказать) is a fine verb here but not the one given.",
+      "domain": "R3",
+      "primary_tag": "v.fut-pf",
+      "tags": [
+        "v.fut-pf",
+        "aspect"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c5": {
+      "kind": "cloze",
+      "id": "c5",
+      "subtype": "specified",
+      "greek": "Вчера я ходил в кино со старшим ___.",
+      "lemma": "брат",
+      "target_en": "instrumental sg",
+      "accepted": [
+        "братом"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "брат"
+          ],
+          "label": "nominative instead of instrumental"
+        },
+        {
+          "match": [
+            "брата"
+          ],
+          "label": "genitive/accusative instead of instrumental"
+        },
+        {
+          "match": [
+            "брату"
+          ],
+          "label": "dative instead of instrumental"
+        },
+        {
+          "match": [
+            "брате"
+          ],
+          "label": "prepositional instead of instrumental"
+        },
+        {
+          "match": [
+            "братем"
+          ],
+          "label": "soft-stem ending -ем; брат has a hard stem and takes -ом"
+        },
+        {
+          "match": [
+            "братьями",
+            "братьям"
+          ],
+          "label": "plural of брат; со старшим needs the instrumental singular братом"
+        }
+      ],
+      "notes": "со + старшим forces the instrumental singular ('with my older brother').",
+      "domain": "R3",
+      "primary_tag": "n.sg.instr",
+      "tags": [
+        "n.sg.instr"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c6": {
+      "kind": "cloze",
+      "id": "c6",
+      "subtype": "specified",
+      "greek": "Профессор дал всем ___ новое задание.",
+      "lemma": "студент",
+      "target_en": "dative pl",
+      "accepted": [
+        "студентам"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "студентов"
+          ],
+          "label": "genitive/accusative plural (as after много, пять) instead of dative"
+        },
+        {
+          "match": [
+            "студенты"
+          ],
+          "label": "nominative plural instead of dative"
+        },
+        {
+          "match": [
+            "студентами"
+          ],
+          "label": "instrumental plural instead of dative"
+        },
+        {
+          "match": [
+            "студентах"
+          ],
+          "label": "prepositional plural instead of dative"
+        },
+        {
+          "match": [
+            "студенту"
+          ],
+          "label": "dative singular; всем is plural"
+        },
+        {
+          "match": [
+            "студента",
+            "студентом"
+          ],
+          "label": "a singular case form; всем needs the plural"
+        }
+      ],
+      "notes": "дал + всем forces the dative plural (the receivers).",
+      "domain": "R3",
+      "primary_tag": "obl.pl",
+      "tags": [
+        "obl.pl",
+        "n.pl.dat"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c7": {
+      "kind": "cloze",
+      "id": "c7",
+      "subtype": "specified",
+      "greek": "У Анны в Москве много ___.",
+      "lemma": "подруга",
+      "target_en": "genitive pl",
+      "accepted": [
+        "подруг"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "подруги"
+          ],
+          "label": "genitive singular or nominative plural; много needs the genitive plural"
+        },
+        {
+          "match": [
+            "подругов"
+          ],
+          "label": "masculine ending -ов on a feminine -а noun (its genitive plural has no ending)"
+        },
+        {
+          "match": [
+            "подругей"
+          ],
+          "label": "-ей is for soft-stem nouns (e.g. ночей); подруга has no ending"
+        },
+        {
+          "match": [
+            "подругам",
+            "подругах",
+            "подругами"
+          ],
+          "label": "another plural case; много needs the genitive"
+        },
+        {
+          "match": [
+            "подружек"
+          ],
+          "label": "diminutive подружка: a correct genitive plural, but of a different word"
+        },
+        {
+          "match": [
+            "подруга"
+          ],
+          "label": "nominative singular (dictionary form)"
+        }
+      ],
+      "notes": "много forces the genitive plural; feminine nouns in -а take a zero ending (подруг).",
+      "domain": "R3",
+      "primary_tag": "obl.pl",
+      "tags": [
+        "obl.pl",
+        "n.pl.gen"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    },
+    "c8": {
+      "kind": "cloze",
+      "id": "c8",
+      "subtype": "specified",
+      "greek": "Вечером мы долго говорили о наших старых ___.",
+      "lemma": "друг",
+      "target_en": "prepositional pl",
+      "accepted": [
+        "друзьях"
+      ],
+      "collapsed": [],
+      "error_patterns": [
+        {
+          "match": [
+            "другах"
+          ],
+          "label": "regular ending on the singular stem; the plural of друг is built on друзь- (друзья)"
+        },
+        {
+          "match": [
+            "друзях",
+            "друзьах"
+          ],
+          "label": "plural stem without the soft sign, or with a hard ending: друзь-ях"
+        },
+        {
+          "match": [
+            "друзей"
+          ],
+          "label": "genitive/accusative plural instead of prepositional"
+        },
+        {
+          "match": [
+            "друзьям"
+          ],
+          "label": "dative plural instead of prepositional"
+        },
+        {
+          "match": [
+            "друзьями"
+          ],
+          "label": "instrumental plural instead of prepositional"
+        },
+        {
+          "match": [
+            "друзья"
+          ],
+          "label": "nominative plural instead of prepositional"
+        },
+        {
+          "match": [
+            "друге"
+          ],
+          "label": "prepositional singular; наших старых is plural"
+        },
+        {
+          "match": [
+            "другов",
+            "друзьов"
+          ],
+          "label": "a plural built on the wrong stem or ending"
+        }
+      ],
+      "notes": "о + наших старых forces the prepositional plural, on the irregular plural stem друзь-. Last because it is the hardest.",
+      "domain": "R3",
+      "primary_tag": "obl.pl",
+      "tags": [
+        "obl.pl",
+        "n.pl.prep"
+      ],
+      "ablation": "n/a for specified-form retrieval"
+    }
+  }
+}

@@ -225,6 +225,14 @@
     return { text, found };
   }
 
+  const Russian = typeof module !== "undefined" && module.exports ? require("./russian.js") : root.RussianInput;
+  // Mixed Cyrillic text retains keyboard-lookalike repair; Latin-only text is phonetic.
+  function ruInput(value) {
+    const fixed = /\p{Script=Cyrillic}/u.test(String(value ?? ""))
+      ? ruFixLookalikes(value) : { text: String(value ?? ""), found: [] };
+    return { text: Russian.transliterate(fixed.text), found: fixed.found };
+  }
+
   // Forms-table entry for an expected token (answer_forms; keys normalised, ё kept).
   function ruFormsEntry(forms, token) {
     if (!forms) return null;
@@ -239,7 +247,7 @@
   // Status: empty | correct | correct_yo | common_wrong | ending | aspect | wrong;
   // `lookalike` lists Latin letters that were replaced before checking (warn, never fail).
   function ruCheckSlot(value, answers, item, options = {}) {
-    const fixed = ruFixLookalikes(value);
+    const fixed = ruInput(value);
     const lookalike = fixed.found;
     const typed = ruNormalise(fixed.text);
     if (!typed) return { status: "empty", lookalike };
@@ -286,7 +294,7 @@
 
   const ru = {
     normalise: ruNormalise, foldYo: ruFoldYo, stripStress: ruStripStress, fixLookalikes: ruFixLookalikes,
-    formsEntry: ruFormsEntry, checkSlot: ruCheckSlot, checkResponse: ruCheckResponse,
+    transliterate: value => ruInput(value).text, formsEntry: ruFormsEntry, checkSlot: ruCheckSlot, checkResponse: ruCheckResponse,
     get buildAnkiCards() { return buildRuAnkiCards; }, get isCourse() { return isRussianCourse; }
   };
 
@@ -377,10 +385,30 @@
 
   const is = { normalise: isNormalise, fixLookalikes: isFixLookalikes, checkSlot: isCheckSlot, checkResponse: isCheckResponse };
 
+  // Reuse the diagnostic's exact transliteration and ambiguity rules.
+  const Greek = typeof module !== "undefined" && module.exports ? require("./greek.js") : root.GreekInput;
+  function grcCheckSlot(value, answers, item = {}) {
+    const forms = [...new Set([...asList(answers), ...asList(item.accepted)])];
+    const result = Greek.scoreCloze({ accepted: forms, collapsed: (item.collapsed || []).map(Greek.normalise) }, value);
+    return { ...result, status: result.status === "not_assessable" ? "accent" : result.status };
+  }
+  function grcCheckResponse(item, values) {
+    const given = asList(values);
+    const slots = slotAnswers(item).map((answers, i) => grcCheckSlot(given[i] ?? "", answers, item));
+    const selected = slots.find((slot) => slot.status !== "correct") || slots[0];
+    const status = slots.every((slot) => slot.status === "empty") ? "empty" : selected.status === "empty" ? "wrong" : selected.status;
+    return { ...selected, status, slots, hint: "" };
+  }
+  const grc = {
+    normalise: (value) => Greek.normalise(Greek.transliterate(value)),
+    checkSlot: grcCheckSlot, checkResponse: grcCheckResponse, checkItem: grcCheckResponse
+  };
+
   function answerChecker(course) {
-    const lang = course?.answer_checker || course?.lang || course?.language?.code || "cy";
+    const lang = course?.answer_checker || course?.capabilities?.answer_checker || course?.lang || course?.language?.code || "cy";
     if (lang === "ru") return ru;
     if (lang === "is") return is;
+    if (lang === "grc") return grc;
     if (lang === "cy") return { normalise, checkResponse };
     throw new Error(`Unsupported answer checker: ${lang}`);
   }
@@ -581,10 +609,17 @@
       "#columns:guid\tfront\tback\ttags\tsource"
     ];
     const has = (prefix) => lines.some((line) => String(line).startsWith(prefix));
+    const routed = cards.some(card => card.deck);
+    if (routed) {
+      for (let i = lines.length - 1; i >= 0; i--) if (/^#(?:columns:|deck column:)/.test(lines[i])) lines.splice(i, 1);
+      lines.push("#deck column:6", "#columns:guid\tfront\tback\ttags\tsource\tdeck");
+    }
     if (notetype && !has("#notetype:")) lines.push(`#notetype:${notetype}`);
     if (deck && !has("#deck:")) lines.push(`#deck:${deck}`);
     for (const card of cards) {
-      lines.push([card.guid, card.front, card.back, card.tags, card.source].map(ankiField).join("\t"));
+      const fields = [card.guid, card.front, card.back, card.tags, card.source];
+      if (routed) fields.push(card.deck || deck || "");
+      lines.push(fields.map(ankiField).join("\t"));
     }
     return `${lines.join("\n")}\n`;
   }
@@ -680,7 +715,66 @@
     return cards;
   }
 
+  // Capability-independent export mode reusable by any scaffolded production course.
+  // A stage repeated in later units updates its existing GUID; the newest unit wins.
+  function buildScaffoldedAnkiCards({ course, lexicon, lessons, lessonIds, lessonLabels = {}, known = [], includeKnown = false } = {}) {
+    const courseId = course?.id || lexicon?.course_id || "course";
+    const lessonMap = asLessonMap(lessons);
+    const entries = new Map((lexicon?.entries || []).map(entry => [entry.id, entry]));
+    const all = lexiconStages(lexicon);
+    const cards = new Map();
+    const deck = ankiDeckName(course);
+    const key = answerChecker(course).normalise;
+    const knownSet = new Set(includeKnown ? [] : asList(known).map(value => /^[a-z]{2,3}-/.test(value) ? value : key(value)));
+    const skipKinds = new Set(course?.anki?.skip_known_kinds ?? ["recognition", "production"]);
+    const skipKnown = (entry, kind) => skipKinds.has(kind) && entry &&
+      (knownSet.has(entry.id) || (entry.lemma && knownSet.has(key(entry.lemma))));
+    const ids = [...asList(lessonIds)].sort((a, b) => (lessonMap.get(a)?.order || 0) - (lessonMap.get(b)?.order || 0));
+    for (const lessonId of ids) {
+      const lesson = lessonMap.get(lessonId);
+      const segments = lesson ? segmentIndex(lesson) : new Map();
+      const delta = lesson?.lexicon_delta;
+      const deltaEntries = new Map((delta?.entries || []).map(entry => [entry.id, entry]));
+      const stages = new Map();
+      for (const stage of [...lexiconStages(delta), ...all].filter(stage => stage.lesson === lessonId || !stage.lesson)) {
+        stages.set(`${stage.lexeme_id}:${stage.id || "base"}`, stage);
+      }
+      for (const stage of stages.values()) {
+        const entry = stage._entry || entries.get(stage.lexeme_id) || deltaEntries.get(stage.lexeme_id);
+        if (!stage.lexeme_id) continue;
+        const guid = `${courseId}:${stage.lexeme_id}:${stage.id || "base"}`;
+        const citation = stage.front || entry?.lemma || "";
+        const pos = entry?.part_of_speech || "";
+        const exampleIds = asList(stage.example_segment_ids?.length ? stage.example_segment_ids : stage.example_segment_id);
+        const segment = segments.get(stage.cloze?.segment_id || exampleIds[0]);
+        const sentence = String(segment?.text || stage.example || "").normalize("NFC");
+        const target = stage.cloze?.answer || headWord(citation);
+        const aids = [...(segment?.inference_aids || []), ...[...segments.values()].flatMap(seg => seg.inference_aids || [])];
+        const gloss = aids.find(aid => aid.gloss && (aid.covers_lexeme_ids?.includes(stage.lexeme_id) || (aid.anchor_text && aid.anchor_text === target)))?.gloss || "";
+        const label = lessonLabels[lessonId] || `${course?.ui_strings?.[course?.lang]?.lesson || "Unit"} ${lesson?.order || ""}`;
+        const tags = kind => [...new Set([...(course?.anki?.tags_base || [courseId]), `${course?.anki?.chapter_tag || "chapter"}-${String(lesson?.order || 0).padStart(2, "0")}`, ...(lesson?.part ? [`${course?.anki?.part_tag || "part"}-${lesson.part}`] : []), ...asList(lesson?.anki_export?.tags), ...asList(stage.tags), pos, kind].map(tagSafe).filter(Boolean))].join(" ");
+        const back = [escapeHtml(stage.back), escapeHtml(gloss), escapeHtml(sentence), `<small>${escapeHtml(label)}</small>`].filter(Boolean).join("<br><br>");
+        cards.delete(guid);
+        if (!skipKnown(entry, "recognition")) cards.set(guid, {guid, front: `${escapeHtml(citation)}${pos ? `<br><small>${escapeHtml(pos)}</small>` : ""}`, back, tags: tags("recognition"), source: lessonId, deck});
+        // Only the lexeme's explicit production flag opts into this deck.
+        cards.delete(`${guid}-production`);
+        if (skipKnown(entry, "production") || entry?.production !== true || stage.production === false || !stage.cloze) continue;
+        const range = findAnchor(sentence, String(stage.cloze.answer).normalize("NFC"));
+        if (!range) continue;
+        const answer = sentence.slice(range.start, range.end);
+        const letters = (answer.match(/\p{L}\p{M}*/gu) || []).slice(0, 2).join("");
+        const front = `${escapeHtml(sentence.slice(0, range.start))}${escapeHtml(letters)}___${escapeHtml(sentence.slice(range.end))}<br><i>${escapeHtml(stage.back)}</i>`;
+        cards.set(`${guid}-production`, {guid: `${guid}-production`, front, back: `${escapeHtml(sentence)}<br><br>${escapeHtml(citation)}<br><small>${escapeHtml(label)}</small>`, tags: tags("production"), source: lessonId, deck: `${deck}::${course?.anki?.production_deck_suffix || "Production"}`});
+      }
+    }
+    return [...cards.values()];
+  }
+
   function ankiExport(options = {}) {
+    if (options.course?.anki?.mode === "scaffolded") {
+      const cards = buildScaffoldedAnkiCards(options);
+      return { cards, text: buildAnkiTsv(cards, { deck: options.deck ?? ankiDeckName(options.course), notetype: options.notetype, headers: options.headers ?? options.course?.anki?.file_headers }) };
+    }
     if (isInflectingCourse(options.course)) {
       const cards = buildRuAnkiCards(options);
       const headers = options.headers ?? options.course?.anki?.file_headers;
@@ -703,7 +797,7 @@
     containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
@@ -712,7 +806,7 @@
       containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
     };
   }
   root.IllustratedCore = api;

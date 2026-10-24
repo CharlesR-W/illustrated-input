@@ -7,8 +7,10 @@
 (function main() {
   const G = window.GreekInput;
   const C = window.GrcDiagnosticCore;
-  const STATE_FORMAT = "grc-diagnostic-state/1";
-  const DEFAULT_BANK = "content/grc/diagnostic/stage-1.json";
+  let language = document.body.dataset.language || "grc";
+  const languageName = () => language === "ru" ? "Russian" : "Greek";
+  let STATE_FORMAT = `${language}-diagnostic-state/1`;
+  const DEFAULT_BANK = document.body.dataset.bank || "content/grc/diagnostic/stage-1.json";
   const MAX_SPANS = 5;
   const MAX_GLOSSES = 3;
 
@@ -45,10 +47,10 @@
     return el;
   }
 
-  const greek = (text, tag = "span", cls = "greek") => h(tag, { class: cls, lang: "grc" }, text);
+  const greek = (text, tag = "span", cls = "greek") => h(tag, { class: cls, lang: language }, text);
 
   function marked(text, tag = "p", cls = "dx-greek") {
-    return h(tag, { class: cls, lang: "grc" }, C.parseMarked(text).map((seg) => (seg.mark ? h("u", { class: "dx-marked" }, seg.text) : seg.text)));
+    return h(tag, { class: cls, lang: language }, C.parseMarked(text).map((seg) => (seg.mark ? h("u", { class: "dx-marked" }, seg.text) : seg.text)));
   }
 
   function toast(message) {
@@ -214,7 +216,7 @@
     switch (item(id).kind) {
       case "mc": case "vocab": return r.choice != null || Boolean(r.dont_know);
       case "span": return r.selection?.from != null;
-      default: return Boolean(G.normalise(G.transliterate(r.text ?? "")));
+      default: return Boolean(C.normaliseResponse(language === "ru" ? r.text : G.transliterate(r.text ?? ""), language));
     }
   }
 
@@ -302,7 +304,16 @@
     const label = next.label ?? (last ? (sec.optional ? "Finish and submit module" : "Finish section") : "Next");
     const nextButton = h("button", {
       class: "button primary", type: "button", id: "next", disabled: next.enabled === false,
-      onclick: () => { if (next.onClick) next.onClick(); else if (last) finishSection(sec); else go(sec.id, index + 1); }
+      onclick: () => {
+        if (screens[index]?.type === "item" && C.shouldStopSection(bank, sec,
+          screens.slice(0, index + 1).filter((s) => s.type === "item").map((s) => s.id), state.responses)) {
+          const completed = new Set(screens.slice(0, index + 1).filter((s) => s.type === "item").map((s) => s.id));
+          state.not_reached = [...new Set([...(state.not_reached ?? []), ...questionIds(sec).filter((id) => !completed.has(id))])];
+          finishSection(sec);
+          toast("Section ended after consecutive blank or unknown answers.");
+          return;
+        }
+        if (next.onClick) next.onClick(); else if (last) finishSection(sec); else go(sec.id, index + 1); }
     }, label);
     const back = index > 0
       ? h("button", { class: "button quiet", type: "button", id: "back", onclick: () => go(sec.id, index - 1) }, "Back") : null;
@@ -343,13 +354,13 @@
   function renderIntake(sec, screens, index) {
     const intake = state.intake ?? {};
     const shell = screenShell(sec, "Before you start", {
-      lede: "A few questions about what you have read, so the test can avoid passages you already know. About 35 minutes in all; you can stop at the end of any section and come back — everything saves in this browser."
+      lede: language === "ru" ? "A few questions about what you have read. About 15 minutes of reading plus an optional 8 minutes of vocabulary and production. You can return later; answers save in this browser." : "A few questions about what you have read, so the test can avoid passages you already know. About 35 minutes in all; you can stop at the end of any section and come back — everything saves in this browser."
     });
     const read = new Set(intake.texts_read ?? []);
     const form = h("form", { class: "dx-card", id: "intake-form", onsubmit: (e) => { e.preventDefault(); submit(); } },
-      h("label", { class: "dx-field" }, h("span", {}, "Last Athenaze chapter you finished"),
+      language === "ru" ? null : h("label", { class: "dx-field" }, h("span", {}, "Last Athenaze chapter you finished"),
         h("input", { class: "dx-input", id: "intake-chapter", name: "chapter", inputmode: "numeric", autocomplete: "off", value: intake.last_athenaze_chapter ?? "", style: "max-width:10rem" })),
-      h("fieldset", { class: "dx-field" }, h("legend", {}, "Texts you have already read in Greek"),
+      h("fieldset", { class: "dx-field" }, h("legend", {}, `Texts you have already read in ${languageName()}`),
         h("div", { class: "dx-checks" }, (bank.intake.texts_read ?? []).map((text, i) =>
           h("label", { class: "dx-check" }, h("input", { type: "checkbox", name: "texts", value: text, id: `intake-text-${i}`, checked: read.has(text) }), text)))),
       h("label", { class: "dx-field" }, h("span", {}, "Anything else you have read ", h("small", {}, "(optional)")),
@@ -361,7 +372,7 @@
     function submit() {
       const fd = new FormData(form);
       state.intake = {
-        last_athenaze_chapter: $("#intake-chapter").value.trim(),
+        ...(language === "ru" ? {} : { last_athenaze_chapter: $("#intake-chapter").value.trim() }),
         texts_read: fd.getAll("texts"),
         other_texts: $("#intake-other").value.trim(),
         sticky_features: $("#intake-sticky").value.trim(),
@@ -372,11 +383,12 @@
       replan();
       go(sec.id, index + 1);
       if (plan.fallbacks_applied.some((f) => f.familiarity_affected)) {
-        showNotice([h("span", {}, "Both available Xenophon passages come from books you have read. P2b is retained, but its results are marked familiarity-affected and do not independently establish your level on unfamiliar prose.")]);
+        showNotice([h("span", {}, "The alternative passage is also from a text you have read. Its results are marked familiarity-affected and do not independently establish your level on unfamiliar prose.")]);
       } else if (plan.fallbacks_applied.length) {
-        showNotice([h("span", {}, "Swapped to the alternative Xenophon passage. Familiarity will be recorded in the report.")]);
+        showNotice([h("span", {}, "Swapped to the alternative passage. Familiarity will be recorded in the report.")]);
       }
     }
+    if (language === "ru") shell.append(keyHelp(false));
     shell.append(form, navBar(sec, screens, index, { label: "Continue to practice", onClick: submit, hint: "" }));
     return shell;
   }
@@ -384,6 +396,13 @@
   // ----------------------------------------------------------------- practice
 
   function keyHelp(open = false) {
+    if (language === "ru") return h("details", { class: "dx-keyhelp", open },
+      h("summary", {}, "How to type Russian"),
+      h("p", { class: "dx-cue" }, "Type Latin phonetic letters or Cyrillic. The preview shows your Russian answer. Stress is optional; е and ё score alike."),
+      h("div", { class: "dx-keytable" }, Object.entries(window.RussianInput.LATIN)
+        .filter(([key]) => key !== "|")
+        .map(([latin, ru]) => h("span", {}, h("kbd", {}, latin), " ", greek(ru)))),
+      h("p", { class: "dx-cue" }, "Longer combinations win. Use | to separate letters: s|h → сх, c|h → цх, e|' → еь. e/ye → е; e'/eh → э; y → ы; j → й; w → щ. Capitals work too."));
     const pairs = Object.entries(G.LATIN).map(([latin, gr]) => h("span", {}, h("kbd", {}, latin), " ", greek(gr)));
     const marks = [["(", "rough ἁ"], [")", "smooth ἀ"], ["/", "acute ά"], ["\\", "grave ὰ"], ["=", "circumflex ᾶ"], ["|", "iota sub. ᾳ"], ["+", "diaeresis ϊ"]];
     return h("details", { class: "dx-keyhelp", open },
@@ -436,7 +455,7 @@
       return { good: res.status === "omitted" ? null : res.status === "correct", nodes: [res.status === "omitted" ? "Select some words first. " : `${Math.round(res.overlap * 100)}% overlap. `, "Key: ", greek(key?.greek ?? "")] };
     }
     if (it.kind === "cloze") {
-      const res = C.scoreCloze(it, store.text);
+      const res = C.scoreCloze(it, store.text, language);
       const words = { correct: "Right.", wrong: "Not the expected form.", not_assessable: "Without accents this could be another form, so it would count as not assessable.", review: "This would go to review.", omitted: "Type an answer first." };
       return { good: res.status === "correct" ? true : res.status === "wrong" ? false : null, nodes: [words[res.status] ?? res.status, res.label ? ` (${res.label})` : "", " Accepted: ", greek(it.accepted.join(", ")), "."] };
     }
@@ -456,7 +475,7 @@
     const lo = sel?.from != null ? Math.min(sel.from, sel.to) : -1;
     const hi = sel?.from != null ? Math.max(sel.from, sel.to) : -2;
     let flat = 0;
-    const body = h(passage.verse ? "div" : "p", { class: passage.verse ? "dx-verse" : "dx-prose", lang: "grc" });
+    const body = h(passage.verse ? "div" : "p", { class: passage.verse ? "dx-verse" : "dx-prose", lang: language });
     passage.sentences.forEach((sentence, si) => {
       const span = h("span", { class: "dx-sentence", "data-sentence": sentence.id });
       sentence.tokens.forEach((token, ti) => {
@@ -478,7 +497,7 @@
       passage.context_en ? h("p", { class: "dx-context" }, passage.context_en) : null,
       body,
       passage.word_help?.length ? h("dl", { class: "dx-word-help", "aria-label": "Word help" },
-        passage.word_help.map((w) => h("div", {}, h("dt", { lang: "grc" }, w.greek), h("dd", {}, w.en)))) : null);
+        passage.word_help.map((w) => h("div", {}, h("dt", { lang: language }, w.greek), h("dd", {}, w.en)))) : null);
     if (selectable) {
       const current = C.describeSelection(passage, sel);
       panel.append(h("p", { class: "dx-selection", "aria-live": "polite" },
@@ -580,7 +599,7 @@
     beginVisit(id);
     const response = state.responses[id] ??= {};
     const passage = it.passage ? item(it.passage) : null;
-    const titles = { mc: it.greek ? "Read the sentence" : "Question", span: "Point to the Greek", cloze: "Fill the gap", vocab: "What does the word mean here?", write: "Write in Greek" };
+    const titles = { mc: it.greek ? "Read the sentence" : "Question", span: `Point to the ${languageName()}`, cloze: "Fill the gap", vocab: "What does the word mean here?", write: `Write in ${languageName()}` };
     const qNumber = questionIds(sec).indexOf(id) + 1;
     const shell = screenShell(sec, titles[it.kind] ?? "Question", { eyebrow: `${sec.title} · ${qNumber} of ${questionIds(sec).length}`, wide: Boolean(passage) });
     const ctx = {
@@ -659,11 +678,11 @@
   }
 
   function greekPreview(input, multiline) {
-    const out = h("output", { lang: "grc" });
-    const update = () => { out.textContent = G.transliterate(input.value); };
+    const out = h("output", { lang: language });
+    const update = () => { out.textContent = (language === "ru" ? window.RussianInput : G).transliterate(input.value); };
     input.addEventListener("input", update);
     update();
-    return h("p", { class: "dx-preview" }, multiline ? "Greek: " : "Greek: ", out);
+    return h("p", { class: "dx-preview" }, language === "ru" ? "Cyrillic: " : "Greek: ", out);
   }
 
   function clozeBody(it, ctx) {
@@ -671,7 +690,7 @@
     const [before, after] = C.splitGap(it.greek);
     const name = `${ctx.practice ? "practice-" : ""}${it.id}`;
     const input = h("input", {
-      type: "text", id: `${name}-input`, "data-fk": `${name}-input`, autocomplete: "off", autocapitalize: "off", spellcheck: "false",
+      type: "text", lang: language, id: `${name}-input`, "data-fk": `${name}-input`, autocomplete: "off", autocapitalize: "off", spellcheck: "false",
       "aria-label": "Your answer for the gap", value: r.text ?? "",
       oninput: () => { r.text = input.value; ctx.onChange(); }
     });
@@ -679,7 +698,7 @@
       ? ["(", greek(it.lemma), " · meaning: ", it.meaning_en, ")"]
       : ["(", greek(it.lemma), " · ", it.target_en, ")"];
     return [
-      h("p", { class: "dx-cloze", lang: "grc" }, before, input, after),
+      h("p", { class: "dx-cloze", lang: language }, before, input, after),
       h("p", { class: "dx-cue" }, cue),
       greekPreview(input, false),
       ctx.practice ? null : keyHelp(false)
@@ -690,12 +709,12 @@
     const r = ctx.response;
     const name = `${ctx.practice ? "practice-" : ""}${it.id}`;
     const area = h("textarea", {
-      class: "dx-textarea greek", id: `${name}-input`, "data-fk": `${name}-input`, spellcheck: "false", autocapitalize: "off", "aria-label": "Your Greek", value: r.text ?? "",
+      class: "dx-textarea greek", lang: language, id: `${name}-input`, "data-fk": `${name}-input`, spellcheck: "false", autocapitalize: "off", "aria-label": `Your ${languageName()}`, value: r.text ?? "",
       oninput: () => { r.text = area.value; ctx.onChange(); }
     });
     return [
       h("p", { class: "dx-prompt" }, it.prompt_en),
-      it.givens?.length ? h("ol", { class: "dx-givens", lang: "grc" }, it.givens.map((g) => h("li", {}, g))) : null,
+      it.givens?.length ? h("ol", { class: "dx-givens", lang: language }, it.givens.map((g) => h("li", {}, g))) : null,
       area,
       greekPreview(area, true),
       ctx.practice ? null : keyHelp(false)
@@ -759,7 +778,7 @@
     const step = (name, extra = {}) => span.steps.push({ step: name, at: iso(), ...extra });
     const card = h("div", { class: "dx-span-card", id: `${span.id}-card` },
       h("h3", {}, `Sticking point ${span.id.replace("span-", "")} · ${passage.label}`),
-      h("p", { class: "dx-span-greek", lang: "grc" }, sel.greek));
+      h("p", { class: "dx-span-greek", lang: language }, sel.greek));
     const history = span.steps.filter((s) => s.text != null);
     if (history.length) card.append(h("ol", { class: "dx-history" }, history.map((s) => h("li", {}, `${s.step.replaceAll("_", " ")}: “${s.text}”`))));
 
@@ -772,7 +791,7 @@
           type: "button", class: "dx-chip", "aria-pressed": String(isOpen), "data-fk": `${span.id}-chip-${tok.flat}`,
           disabled: !usable || (!isOpen && (span.revealed.length >= MAX_GLOSSES || span.stage !== "glosses")) || isOpen,
           onclick: () => { span.revealed.push(tok.flat); step("gloss_revealed", { token: { sentence: tok.sentence, index: tok.ti, t: tok.t, lemma: tok.lemma ?? null, gloss: tok.gloss } }); render(); }
-        }, h("span", { lang: "grc" }, tok.t), isOpen ? h("small", {}, ` ${tok.lemma ? `${tok.lemma} · ` : ""}${tok.gloss}`) : null);
+        }, h("span", { lang: language }, tok.t), isOpen ? h("small", {}, ` ${tok.lemma ? `${tok.lemma} · ` : ""}${tok.gloss}`) : null);
       });
       card.append(h("p", { class: "dx-cue" }, span.stage === "glosses" ? `Choose up to ${MAX_GLOSSES} words to gloss (${span.revealed.length} used).` : "Glosses:"), h("div", { class: "dx-chips" }, chips));
     }
@@ -818,7 +837,7 @@
     const subject = new Set(st.subject ?? []);
     const verb = new Set(st.main_verb ?? []);
     const clauses = st.clauses ?? [];
-    const p = h("p", { class: "dx-structure", lang: "grc" });
+    const p = h("p", { class: "dx-structure", lang: language });
     sentence.tokens.forEach((token, i) => {
       if (i) p.append(" ");
       for (const clause of clauses.filter((c) => c.start === i).sort((a, b) => b.end - a.end)) {
@@ -851,7 +870,7 @@
 
   // ------------------------------------------------------------------ results
 
-  const STATUS_TEXT = { correct: "Correct", wrong: "Not right", not_assessable: "Not assessable", review: "For review", omitted: "Left blank", skipped: "Skipped", not_submitted: "Not submitted" };
+  const STATUS_TEXT = { correct: "Correct", wrong: "Not right", not_assessable: "Not assessable", review: "For review", omitted: "Left blank", skipped: "Skipped", not_reached: "Not reached", not_submitted: "Not submitted" };
 
   function results() { flushVisit(); return C.buildResults(bank, state, { bankUrl: bankRel }); }
 
@@ -865,7 +884,7 @@
 
     const offers = optionalSections().filter((s) => !state.submitted[s.id]);
     if (offers.length) {
-      shell.append(h("div", { class: "dx-card" }, h("h2", {}, "Optional modules"), h("p", { class: "dx-cue" }, "About five minutes each. Answers stay hidden until you submit the module."),
+      shell.append(h("div", { class: "dx-card" }, h("h2", {}, "Optional modules"), h("p", { class: "dx-cue" }, language === "ru" ? "Optional vocabulary and production: about eight minutes. Answers stay hidden until submission." : "About five minutes each. Answers stay hidden until you submit the module."),
         offers.map((s) => h("div", { class: "dx-row", style: "margin:.5rem 0" },
           h("button", { class: "button secondary", type: "button", id: `start-${s.id}`, onclick: () => {
             state.modules[s.id] = "started"; state.view = "test";
@@ -875,9 +894,9 @@
     }
 
     const summaryRows = Object.entries(out.summary.by_section).map(([id, t]) =>
-      h("tr", {}, h("td", {}, section(id)?.title ?? id), ...["correct", "wrong", "not_assessable", "review", "omitted", "skipped", "total"].map((k) => h("td", {}, String(t[k])))));
+      h("tr", {}, h("td", {}, section(id)?.title ?? id), ...["correct", "wrong", "not_assessable", "review", "omitted", "skipped", "not_reached", "total"].map((k) => h("td", {}, String(t[k])))));
     shell.append(h("div", { class: "dx-card" }, h("h2", {}, "Summary"), h("div", { class: "dx-table-wrap" }, h("table", { class: "dx-summary" },
-      h("thead", {}, h("tr", {}, ["Section", "Correct", "Wrong", "N/A", "Review", "Blank", "Skipped", "Total"].map((t) => h("th", {}, t)))),
+      h("thead", {}, h("tr", {}, ["Section", "Correct", "Wrong", "N/A", "Review", "Blank", "Skipped", "Not reached", "Total"].map((t) => h("th", {}, t)))),
       h("tbody", {}, summaryRows)))));
 
     const bySection = {};
@@ -900,7 +919,7 @@
     if (out.retry.length) {
       const card = h("div", { class: "dx-card" }, h("h2", {}, "Sticking points"));
       for (const span of out.retry) {
-        card.append(h("h3", { lang: "grc", class: "greek" }, span.selection?.greek ?? span.id),
+        card.append(h("h3", { lang: language, class: "greek" }, span.selection?.greek ?? span.id),
           h("ol", { class: "dx-history" }, span.steps.filter((s) => s.text != null).map((s) => h("li", {}, `${s.step.replaceAll("_", " ")}: “${s.text}”`))),
           h("p", { class: "dx-translation" }, span.reference_translation ?? ""));
       }
@@ -928,14 +947,14 @@
         h("p", {}, "Key: ", greek(key.greek)), it.why ? h("p", { class: "dx-cue" }, it.why) : null);
     } else if (it.kind === "cloze") {
       const [before, after] = C.splitGap(it.greek);
-      box.append(h("p", { class: "dx-greek", lang: "grc" }, before, h("u", { class: "dx-marked" }, it.accepted[0]), after),
+      box.append(h("p", { class: "dx-greek", lang: language }, before, h("u", { class: "dx-marked" }, it.accepted[0]), after),
         h("p", { class: "dx-cue" }, "(", greek(it.lemma), " · ", it.subtype === "meaning" ? `meaning: ${it.meaning_en}` : it.target_en, ")"),
         h("p", {}, "You typed: ", h("code", {}, row.response.raw || "—"), row.response.raw ? [" → ", greek(row.response.greek)] : null),
         s.label ? h("p", {}, "Pattern: ", s.label) : null,
         h("p", { class: "dx-cue" }, "Accepted: ", greek(it.accepted.join(", "))));
     } else if (it.kind === "write") {
       box.append(h("p", { class: "dx-prompt" }, it.prompt_en),
-        it.givens?.length ? h("ol", { class: "dx-givens", lang: "grc" }, it.givens.map((g) => h("li", {}, g))) : null,
+        it.givens?.length ? h("ol", { class: "dx-givens", lang: language }, it.givens.map((g) => h("li", {}, g))) : null,
         h("p", {}, "You wrote: ", row.response.greek ? greek(row.response.greek) : "—"),
         (it.model_answers ?? []).length ? h("p", {}, "Model: ", greek(it.model_answers.join(" / "))) : null,
         it.rubric ? h("p", { class: "dx-cue" }, it.rubric) : null);
@@ -945,11 +964,11 @@
 
   function exportCard(out) {
     const json = JSON.stringify(out, null, 2);
-    const filename = `grc-diagnostic-results-${(state.submitted.core ?? iso()).slice(0, 10)}.json`;
+    const filename = `${language}-diagnostic-results-${(state.submitted.core ?? iso()).slice(0, 10)}.json`;
     const area = h("textarea", { readonly: true, id: "export-json", "aria-label": "Results JSON", value: json });
     return h("div", { class: "dx-card dx-export" },
       h("h2", {}, "Export"),
-      h("p", { class: "dx-cue" }, `Everything: intake, each response (raw, Greek, normalised), scores and labels, timings, sticking-point steps, self-ratings, and bank ${bank.id} v${bank.version}.`),
+      h("p", { class: "dx-cue" }, `Everything: intake, each response (raw, ${languageName()}, normalised), scores and labels, timings, sticking-point steps, self-ratings, and bank ${bank.id} v${bank.version}.`),
       h("div", { class: "dx-row" },
         h("button", { class: "button primary", type: "button", id: "download-json", onclick: () => {
           const blob = new Blob([JSON.stringify(results(), null, 2)], { type: "application/json" });
@@ -1012,11 +1031,17 @@
       const status = $("#status");
       status.classList.add("error");
       status.replaceChildren(h("strong", {}, "Couldn’t load the item bank. "), `${url.pathname}: ${error.message}. `,
-        params.get("bank") ? "" : h("span", {}, "To try the page with the test fixture, open ", h("a", { href: "?bank=tests/fixtures/grc-diagnostic-fixture.json" }, "?bank=tests/fixtures/grc-diagnostic-fixture.json"), "."));
+        params.get("bank") ? "" : h("span", {}, "To try the page with the test fixture, open ", h("a", { href: `?bank=tests/fixtures/${language}-diagnostic-fixture.json` }, `?bank=tests/fixtures/${language}-diagnostic-fixture.json`), "."));
       $("#bank-label").textContent = "No item bank";
       return;
     }
-    storageKey = `grc-diagnostic:${bank.id}:${new URL(bankRel, root).pathname}`;
+    language = C.languageOf(bank);
+    STATE_FORMAT = `${language}-diagnostic-state/1`;
+    document.title = `${languageName()} placement diagnostic`;
+    $(".dx-brand strong").textContent = document.title;
+    $(".dx-mark").textContent = language === "ru" ? "Ру" : "Ἑλ";
+    $(".dx-mark").lang = language;
+    storageKey = C.storageKeyFor(bank, new URL(bankRel, root).pathname);
     $("#bank-label").textContent = `${bank.title ?? bank.id} · v${bank.version}`;
     $("#status").hidden = true;
     plan = C.planBank(bank, null);

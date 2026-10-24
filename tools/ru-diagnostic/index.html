@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Russian placement diagnostic: reading, sticking points, forms, words and writing.">
+  <meta name="color-scheme" content="light dark">
+  <title>Russian placement diagnostic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="../grc-diagnostic/diagnostic.css">
+</head>
+<body data-language="ru" data-bank="content/ru-mirc/diagnostic/stage-1.json">
+  <a class="skip-link" href="#main">Skip to the test</a>
+  <header class="dx-header">
+    <div class="dx-brand">
+      <span class="dx-mark" aria-hidden="true" lang="ru">Ру</span>
+      <span><strong>Russian placement diagnostic</strong><small id="bank-label">Loading…</small></span>
+    </div>
+    <div class="dx-actions">
+      <button id="pause-toggle" class="pill" type="button" aria-pressed="false" hidden title="Stops the timers while you are interrupted">Pause</button>
+      <button id="start-over" class="pill" type="button" aria-expanded="false" aria-controls="confirm-reset" hidden>Start over</button>
+    </div>
+  </header>
+  <div id="confirm-reset" class="dx-confirm" role="region" aria-label="Confirm start over" hidden>
+    <p><strong>Erase every answer and start again?</strong> This can’t be undone. Export your results first if you want to keep them.</p>
+    <div class="dx-row">
+      <button id="confirm-reset-yes" class="button danger" type="button">Erase and start over</button>
+      <button id="confirm-reset-no" class="button secondary" type="button">Keep my answers</button>
+    </div>
+  </div>
+  <nav id="progress" class="dx-progress" aria-label="Sections" hidden></nav>
+  <main id="main" tabindex="-1">
+    <div id="notice" class="dx-notice" role="status" hidden></div>
+    <div id="status" class="dx-card" role="status">Loading the item bank…</div>
+    <div id="screen"></div>
+  </main>
+  <div id="pause-overlay" class="dx-overlay" hidden>
+    <div class="dx-card dx-overlay-card" role="dialog" aria-modal="true" aria-labelledby="pause-title">
+      <h2 id="pause-title">Paused</h2>
+      <p>The timers have stopped and the passage is hidden. Take as long as you need.</p>
+      <button id="resume" class="button primary" type="button">Resume</button>
+    </div>
+  </div>
+  <div id="toast" class="dx-toast" role="status" aria-live="polite"></div>
+  <script src="../../greek.js"></script>
+  <script src="../../russian.js"></script>
+  <script src="../grc-diagnostic/diagnostic-core.js"></script>
+  <script src="../grc-diagnostic/diagnostic.js"></script>
+</body>
+</html>

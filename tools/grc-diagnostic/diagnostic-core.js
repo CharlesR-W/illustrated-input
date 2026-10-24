@@ -7,7 +7,36 @@
 (function expose(root) {
   const Greek = (typeof module !== "undefined" && module.exports) ? require("../../greek.js") : root.GreekInput;
 
+  const Russian = (typeof module !== "undefined" && module.exports) ? require("../../russian.js") : root.RussianInput;
+
   const RESULTS_FORMAT = "grc-diagnostic-results/1";
+
+  const languageOf = (bank) => bank?.language === "ru" ? "ru" : "grc";
+  const storageKeyFor = (bank, pathname) => `${languageOf(bank)}-diagnostic:${bank.id}:${pathname}`;
+  function normaliseResponse(text, language = "grc") {
+    if (language !== "ru") return Greek.normalise(text);
+    return Russian.normalise(text);
+  }
+
+  function isBlankResponse(item, response = {}, language = "grc") {
+    if (response.confidence === "unknown" || response.dont_know) return true;
+    if (item.kind === "mc" || item.kind === "vocab") return response.choice == null;
+    if (item.kind === "span") return response.selection?.from == null;
+    return !normaliseResponse(language === "ru" ? Russian.transliterate(response.text) : response.text, language);
+  }
+
+  // Count only the screens the learner is advancing past. Recomputing the suffix
+  // makes Back/edit/Next idempotent and lets an answered item reset the streak.
+  function shouldStopSection(bank, section, completedIds, responses = {}) {
+    if (!section.stop_after_blank_streak) return false;
+    let streak = 0;
+    for (const id of completedIds) {
+      const item = bank.items[id];
+      if (!item || item.kind === "passage") continue;
+      streak = isBlankResponse(item, responses[id], languageOf(bank)) ? streak + 1 : 0;
+    }
+    return streak >= section.stop_after_blank_streak;
+  }
 
   // --------------------------------------------------------------- text helpers
 
@@ -116,15 +145,28 @@
 
   // `combine` answers matching a listed normalised string are correct; everything else
   // written goes to Claude's review.
-  function scoreWrite(item, raw) {
-    const greek = Greek.transliterate(raw ?? "");
-    const normalised = Greek.normalise(greek);
-    if (!normalised) return { status: "omitted", greek, normalised };
-    if (item.subtype === "combine" && (item.accepted ?? []).includes(normalised)) return { status: "correct", greek, normalised };
-    return { status: "review", greek, normalised };
+  function scoreWrite(item, raw, language = "grc") {
+    const greek = language === "ru" ? Russian.transliterate(raw) : Greek.transliterate(raw ?? "");
+    const normalised = normaliseResponse(greek, language);
+    const extra = language === "ru" ? { cyrillic: greek } : {};
+    if (!normalised) return { status: "omitted", greek, normalised, ...extra };
+    if (item.subtype === "combine" && (item.accepted ?? []).some((a) => normaliseResponse(a, language) === normalised)) return { status: "correct", greek, normalised, ...extra };
+    return { status: "review", greek, normalised, ...extra };
   }
 
-  function scoreCloze(item, raw) {
+  function scoreCloze(item, raw, language = "grc") {
+    if (language === "ru") {
+      const cyrillic = Russian.transliterate(raw);
+      const normalised = Russian.normalise(cyrillic);
+      const base = { raw: String(raw ?? ""), greek: cyrillic, cyrillic, normalised, label: null };
+      if (!normalised) return { ...base, status: "omitted" };
+      if ((item.collapsed ?? []).includes(normalised)) return { ...base, status: "not_assessable" };
+      if (item.accepted.some((a) => normaliseResponse(a, language) === normalised)) return { ...base, status: "correct", matched: "normalised" };
+      for (const pattern of item.error_patterns ?? []) {
+        if (pattern.match.includes(normalised)) return { ...base, status: "wrong", label: pattern.label ?? null };
+      }
+      return { ...base, status: item.subtype === "meaning" ? "review" : "wrong" };
+    }
     const result = Greek.scoreCloze(item, raw ?? "");
     return { ...result, status: result.status === "empty" ? "omitted" : result.status };
   }
@@ -173,7 +215,7 @@
         }
         passages = passages.map((id) => (id === swap.original ? swap.use : id));
       }
-      return { id: section.id, title: section.title, kind, optional: Boolean(section.optional), intro_en: section.intro_en ?? null, items, passages };
+      return { id: section.id, title: section.title, kind, optional: Boolean(section.optional), intro_en: section.intro_en ?? null, ...(section.stop_after_blank_streak ? { stop_after_blank_streak: section.stop_after_blank_streak } : {}), items, passages };
     });
     return { sections, fallbacks_applied: swaps };
   }
@@ -203,8 +245,8 @@
       case "mc": return scoreMc(item, r.choice);
       case "vocab": return scoreMc(item, r.choice);
       case "span": return scoreSpan(item, bank.items[item.passage], r.selection);
-      case "cloze": return scoreCloze(item, r.text);
-      case "write": return scoreWrite(item, r.text);
+      case "cloze": return scoreCloze(item, r.text, languageOf(bank));
+      case "write": return scoreWrite(item, r.text, languageOf(bank));
       default: return { status: "n/a" };
     }
   }
@@ -221,14 +263,15 @@
       out.selection = describeSelection(bank.items[item.passage], r.selection);
     } else if (TEXT_KINDS.has(item.kind)) {
       out.raw = r.text ?? "";
-      out.greek = Greek.transliterate(r.text ?? "");
-      out.normalised = Greek.normalise(out.greek);
+      out.greek = languageOf(bank) === "ru" ? Russian.transliterate(r.text) : Greek.transliterate(r.text ?? "");
+      if (languageOf(bank) === "ru") out.cyrillic = out.greek;
+      out.normalised = normaliseResponse(out.greek, languageOf(bank));
     }
     return out;
   }
 
   function emptyTally() {
-    return { total: 0, correct: 0, wrong: 0, not_assessable: 0, review: 0, omitted: 0, skipped: 0 };
+    return { total: 0, correct: 0, wrong: 0, not_assessable: 0, review: 0, omitted: 0, skipped: 0, not_reached: 0 };
   }
 
   function tally(target, status) {
@@ -274,6 +317,7 @@
         const response = state.responses?.[id];
         let score = sectionSubmitted(section) ? scoreItem(bank, item, response) : { status: "not_submitted" };
         if (skipped(item) && score.status === "omitted") score = { status: "skipped", reason: "self-rating below 50%; learner chose to skip" };
+        if (state.not_reached?.includes(id)) score = { status: "not_reached", reason: "section stopped after consecutive blank or unknown responses" };
         const row = {
           id, section: section.id, kind: item.kind,
           subtype: item.subtype ?? null,
@@ -342,11 +386,11 @@
 
     const pauses = state.pauses ?? [];
     return {
-      format: RESULTS_FORMAT,
+      format: `${languageOf(bank)}-diagnostic-results/1`,
       exported_at: options.now ?? new Date().toISOString(),
       how_to_read: [
-        "score.status: correct | wrong | not_assessable (diacritic-free answer collides with a distinct form) | review (Claude to judge) | omitted (no answer) | skipped (passage self-rated below 50% and learner skipped) | not_submitted.",
-        "Cloze/write responses keep raw (as typed), greek (after transliteration) and normalised (no diacritics) forms; score.label is the matched error pattern, null if unclassified.",
+        "score.status: correct | wrong | not_assessable (diacritic-free answer collides with a distinct form) | review (Claude to judge) | omitted (no answer) | skipped (passage self-rated below 50% and learner skipped) | not_reached (section stopped after blank streak) | not_submitted.",
+        languageOf(bank) === "ru" ? "Cloze/write responses keep raw (as typed), cyrillic (after transliteration), greek (a compatibility alias for cyrillic), and normalised (lowercase, stress removed, ё folded to е, whitespace collapsed, edge punctuation removed); score.label is the matched error pattern." : "Cloze/write responses keep raw (as typed), greek (after transliteration) and normalised (no diacritics) forms; score.label is the matched error pattern, null if unclassified.",
         "Span selections give sentence ids and 0-based token indices (inclusive); score.overlap is intersection-over-union with the key; correct also needs every key.require token selected (score.missing_required lists any that were not).",
         "familiarity_affected: true marks a fallback passage (and its items) from a book the learner has also read; keep those results but do not let them independently establish the level on unfamiliar prose (plan.fallbacks_applied says why).",
         "Timings are active milliseconds (pauses excluded); latency is descriptive only.",
@@ -356,7 +400,7 @@
       bank: { id: bank.id, version: bank.version, url: options.bankUrl ?? state.bank?.url ?? null },
       intake: state.intake ?? null,
       plan: {
-        sections: plan.sections.map((s) => ({ id: s.id, title: s.title, kind: s.kind, optional: s.optional, items: s.items, passages: s.passages })),
+        sections: plan.sections.map((s) => ({ id: s.id, title: s.title, kind: s.kind, optional: s.optional, items: s.items, passages: s.passages, ...(s.stop_after_blank_streak ? { stop_after_blank_streak: s.stop_after_blank_streak } : {}) })),
         fallbacks_applied: plan.fallbacks_applied
       },
       session: {
@@ -379,7 +423,7 @@
   }
 
   const api = {
-    RESULTS_FORMAT, displayOrder, parseMarked, stripMarks, splitGap, passageTokens, flatIndex, describeSelection,
+    RESULTS_FORMAT, languageOf, storageKeyFor, normaliseResponse, isBlankResponse, shouldStopSection, displayOrder, parseMarked, stripMarks, splitGap, passageTokens, flatIndex, describeSelection,
     scoreMc, spanOverlap, scoreSpan, scoreWrite, scoreCloze, scoreItem, resolvePractice, planBank, buildResults
   };
   if (typeof module !== "undefined" && module.exports) module.exports = api;

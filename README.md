@@ -15,6 +15,7 @@ those files reference:
 Standalone pages (not courses):
 
 - Greek placement diagnostic: `tools/grc-diagnostic/`
+- Russian placement diagnostic: `tools/ru-diagnostic/`
 
 GitHub Pages serves it from the root of the `main` branch. No build step, account or API
 key is needed; to read it locally run `python -m http.server` here and open

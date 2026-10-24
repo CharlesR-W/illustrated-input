@@ -177,6 +177,10 @@ main:focus { outline: none; }
 .story-link { margin-left: .2rem; font: 700 .78rem var(--sans); white-space: nowrap; }
 .nodyn summary { cursor: pointer; font-weight: 700; color: var(--forest); }
 .nodyn p { margin: .5rem 0 0; color: var(--muted); }
+.seg-ref { padding: 0 .12em; border-radius: .2rem; color: var(--forest); text-decoration: none; }
+.seg-ref:not(.seg-ref-words) { font: 700 .8em var(--sans); }
+.seg-ref-words { font-family: var(--serif); text-decoration: underline dotted; text-underline-offset: .2em; }
+.seg-ref:hover { background: var(--mint); }
 
 /* ---------- pensa */
 .pensa { margin: 3rem 0; }
@@ -201,6 +205,7 @@ main:focus { outline: none; }
 .answer-field.line { width: min(100%, 30rem); }
 .answer-field.self { width: min(100%, 34rem); resize: vertical; }
 .answer-field:focus { outline: 3px solid rgba(201,138,46,.35); outline-offset: 1px; border-color: var(--amber); }
+.answer-field::placeholder { color: var(--muted); opacity: 1; font-weight: 600; letter-spacing: .03em; }
 .answer-field.is-correct { border-color: #2c8a5b; background: #eef8f1; }
 .answer-field.is-wrong { border-color: #b4574a; background: #fdf1ee; }
 .answer-line { margin: 0 0 .45rem; }
@@ -368,3 +373,70 @@ main:focus { outline: none; }
 .timing-summary .timing-total { margin: .35rem 0 0; }
 .anki-known { display: inline-flex; align-items: center; gap: .3rem; font-size: .88rem; font-weight: 600; color: var(--forest); }
 .anki-known input { width: 1.1rem; height: 1.1rem; }
+
+/* Capability-driven practice features shared by every custom course. */
+.custom-tag { display: inline-block; padding: .1rem .45rem; border: 1px solid var(--line); border-radius: 1rem; font: .7rem var(--sans); }
+.seg.receptive { font-style: italic; background: var(--amber-soft); box-decoration-break: clone; }
+.preview-marker { font: .8rem var(--sans); text-decoration: none; }
+.english-reveal { display: block; margin-top: .35rem; font: .85rem/1.5 var(--sans); }
+.english-reveal summary { width: fit-content; color: var(--muted); cursor: pointer; }
+.input-preview { display: inline-flex; flex-direction: column; vertical-align: middle; max-width: 100%; }
+.greek-preview { display: block; min-height: 1.2em; color: var(--muted); font-size: .85em; white-space: pre-wrap; overflow-wrap: anywhere; }
+.input-preview:has(textarea) { width: 100%; }
+.kata-section { margin-top: 1.5rem; }
+.kata { margin: 1.5rem 0; padding-top: 1rem; border-top: 1px solid var(--line); }
+/* Table and items share a row only when the table fits at its natural width beside at
+   least 18rem of items; otherwise the items wrap below and the table becomes a sticky
+   band above them (watchKataLayout adds .is-stacked), so it is always in view. */
+.kata-layout { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: flex-start; }
+.kata-reference { position: sticky; top: calc(var(--header) + 1rem); z-index: 2; flex: 0 1 auto; min-width: 0; max-width: 100%; }
+.kata-practice { flex: 1 1 18rem; }
+@media (min-width: 701px) {
+  .kata-layout.is-stacked .kata-reference { flex-basis: 100%; max-height: 45vh; overflow: auto; padding-bottom: .4rem; background: #fff; box-shadow: 0 10px 12px -10px rgba(23, 79, 66, .35); }
+  .kata-layout.is-stacked .kata-reference .table-wrap { margin-bottom: 0; }
+}
+.kata-reference > summary { display: none; }
+.kata-reference .table-wrap { margin-top: 0; }
+.kata-reference td.kata-cell-highlight { background: #ffe0a1; box-shadow: inset 0 0 0 2px #927026; font-weight: 700; }
+.kata-practice { min-width: min(100%, 18rem); }
+.kata-items { margin: 0; padding-left: 1.6rem; }
+.kata-item { padding: .5rem 0 1rem; border-bottom: 1px solid var(--line); }
+.kata-prompt { margin: .25rem 0; font: 1.08rem/1.6 var(--serif); }
+.kata-lemma { font-size: .9rem; color: var(--muted); margin: .35rem 0; }
+.kata-choices { display: flex; flex-wrap: wrap; gap: .4rem; }
+.kata-choices [aria-pressed="true"], .vocabulary-self-check [aria-pressed="true"] { color: var(--ink); background: var(--amber-soft); border-color: var(--amber); box-shadow: 0 0 0 1px var(--amber); }
+.kata-choices .small-button { font: 1rem var(--serif); color: var(--ink); }
+.kata-choices .small-button.is-right { color: #1d6e45; background: #eef8f1; border-color: #2c8a5b; box-shadow: 0 0 0 1px #2c8a5b; }
+.kata-choices .small-button.is-wrong { color: #a43e31; background: #fdf1ee; border-color: #b4574a; box-shadow: 0 0 0 1px #b4574a; }
+.kata-choices .is-right::before { content: "✓ "; font-family: var(--sans); font-weight: 900; }
+.kata-choices .is-wrong::before { content: "✗ "; font-family: var(--sans); font-weight: 900; }
+.kata-choices .small-button:disabled { cursor: default; }
+.kata-stem, .kata-answer { padding: .35rem .6rem; background: var(--amber-soft); }
+.kata-finish { margin-top: 1rem; }
+.kata-result { font-family: var(--sans); }
+.kata-queue { margin: 2rem 0; padding: 1rem; border: 1px solid var(--line); border-radius: .8rem; }
+.kata-queue h2 { font-size: 1.2rem; }
+.families { margin: 2rem 0; }
+.families h2 { margin: 0 0 .6rem; font: 700 1.6rem var(--serif); }
+.kata-section > h3, .parergon h3, .family h3 { margin: 1rem 0 .5rem; font: 700 1.3rem var(--serif); color: var(--forest); }
+.kata > h4, .family-member h4 { font: 700 1.1rem var(--serif); }
+.family { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.family-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.family-member h4 { margin-bottom: .5rem; }
+.family-example { font-size: .95em; }
+.family-diagram { margin: 1rem auto; text-align: center; }
+.family-diagram img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.parergon { border-top: 1px solid var(--line); margin-top: 1.5rem; padding-top: 1rem; }
+.vocabulary-self-check { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
+.vocabulary-export { margin-top: 1rem; }
+@media (max-width: 700px) {
+  .kata-layout { display: flex; flex-direction: column; gap: .7rem; }
+  .kata-reference { position: static; width: 100%; }
+  .kata-reference > summary { display: list-item; cursor: pointer; padding: .5rem 0; }
+  .kata-practice { width: 100%; }
+  .family-pair { grid-template-columns: 1fr; }
+}
+
+/* Greek capitals carry no accents or breathings, which text-transform keeps; Greek labels
+   therefore stay in their written case (`lang` is inherited from the course content). */
+:lang(grc), :lang(el) { text-transform: none !important; }
