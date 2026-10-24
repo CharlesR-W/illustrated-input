@@ -2739,7 +2739,22 @@ async function init() {
   await route();
 }
 
+function applyTheme() {
+  const light = document.documentElement.dataset.theme === "light";
+  const button = $("#theme-toggle");
+  button.textContent = light ? "☾" : "☀";
+  button.setAttribute("aria-label", light ? "Switch to night mode" : "Switch to day mode");
+  button.title = button.getAttribute("aria-label");
+}
+
 function boot() {
+  applyTheme();
+  $("#theme-toggle").addEventListener("click", () => {
+    const light = document.documentElement.dataset.theme !== "light";
+    if (light) document.documentElement.dataset.theme = "light"; else delete document.documentElement.dataset.theme;
+    store("theme", light ? "light" : null);
+    applyTheme();
+  });
   $("#nav-toggle").addEventListener("click", () => {
     if ($("#course-nav").classList.contains("open")) closeNav(true); else openNav();
   });

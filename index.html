@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Illustrated Input — graded illustrated readers for language learners.">
   <title>Illustrated Input</title>
+  <script>try { if (localStorage.getItem("illustrated-input:theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,6 +16,7 @@
       <span><strong id="brand-title">Illustrated Input</strong><small id="brand-subtitle" lang="en">Learn through the story</small></span>
     </a>
     <div class="header-actions">
+      <button id="theme-toggle" class="pill theme-toggle" type="button" lang="en"></button>
       <button id="english-toggle" class="pill" type="button" aria-pressed="false" lang="en" hidden>English</button>
       <button class="nav-toggle pill" id="nav-toggle" type="button" aria-expanded="false" aria-controls="course-nav" data-ui="nav_lessons">Lessons</button>
     </div>

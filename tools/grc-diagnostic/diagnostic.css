@@ -1,4 +1,5 @@
-/* Greek placement diagnostic. Colour tokens follow the reader's styles.css, plus a dark theme. */
+/* Greek placement diagnostic. Colour tokens follow the reader's styles.css, plus a dark theme that is
+   the default, as in the reader; data-theme="light" (the reader's stored choice) opts out. */
 :root {
   --ink: #1d2926; --muted: #5c6a66; --paper: #fbfaf5; --card: #fff; --card-2: #f4f6f1;
   --line: #dce2dc; --forest: #174f42; --forest-2: #0e3a31; --on-forest: #fff; --mint: #dcefe5;
@@ -11,8 +12,8 @@
   --sans: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --header: 60px;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
+@media screen {
+  :root:not([data-theme="light"]) {
     --ink: #e4ebe7; --muted: #9db0a9; --paper: #111715; --card: #18201d; --card-2: #1e2824;
     --line: #2d3a35; --forest: #86cdb1; --forest-2: #a9e0ca; --on-forest: #0d1f19; --mint: #1d3a30;
     --amber: #e2b462; --amber-soft: #2c2516; --coral: #ec9a89; --coral-soft: #3a211c; --focus: #86b6ff;
