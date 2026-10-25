@@ -11,7 +11,7 @@ const UI_DEFAULTS = {
   continue: "Continue", start: "Start reading", how_to_read: "How to read this book",
   part: "Part", lesson: "Lesson", lessons_range: "Lessons {from}–{to}", planned: "coming soon",
   finished: "finished", hide_notes: "Hide notes", show_notes: "Show notes", notes: "Notes",
-  play_sentence: "Play the sentence", listen: "Listen", stop: "Stop", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
+  play_sentence: "Play the sentence", listen: "Listen", stop: "Stop", pause: "Pause", resume: "Play", audio: "Audio", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
   in_story: "in the story", pensa: "Exercises", oral_mode: "Oral mode", check: "Check", reveal: "Show",
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
   correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
@@ -2763,7 +2763,9 @@ async function loadAudioSources(lesson) {
 }
 
 const player = typeof Audio === "undefined" ? null : new Audio();
-const audioState = { queue: [], lesson: null, active: null, button: null };
+// on: something is playing or paused (the dock shows); continuous: a whole chapter or part
+// is queued (the toolbar button reads Stop); paused: the learner paused it from the dock.
+const audioState = { queue: [], lesson: null, active: null, button: null, on: false, continuous: false, paused: false };
 
 function renderAudioControls(lesson) {
   const audio = lesson._audio;
@@ -2775,10 +2777,10 @@ function renderAudioControls(lesson) {
     listen.replaceChildren(h("span", { "aria-hidden": "true" }, playing ? "■ " : "▶ "), ui("span", playing ? "stop" : "listen"));
     listen.setAttribute("aria-pressed", String(playing));
   };
-  setListen(false);
+  setListen(audioState.continuous);
   audioState.button = setListen;
   listen.addEventListener("click", () => {
-    if (!player.paused || audioState.queue.length) { stopAudio(); return; }
+    if (audioState.continuous) { stopAudio(); return; }
     playLesson(lesson);
   });
   const controls = [listen];
@@ -2804,7 +2806,13 @@ function segmentOrder(lesson) {
 
 function playLesson(lesson) {
   const data = lesson._audio?.selected?.data;
-  if (data?.lesson) { playFile(new URL(data.lesson, lesson._audio.selected.base).href, null); audioState.button?.(true); return; }
+  if (data?.lesson) {
+    stopAudio();
+    audioState.continuous = true;
+    playFile(new URL(data.lesson, lesson._audio.selected.base).href, null);
+    audioState.button?.(true);
+    return;
+  }
   playSegments(segmentOrder(lesson).filter((id) => data?.segments?.[id]), lesson, true);
 }
 
@@ -2812,6 +2820,7 @@ function playSegments(ids, lesson, continuous = false) {
   stopAudio();
   audioState.queue = [...ids];
   audioState.lesson = lesson;
+  audioState.continuous = continuous;
   if (continuous) audioState.button?.(true);
   advanceQueue();
 }
@@ -2829,8 +2838,34 @@ function playFile(src, target) {
   audioState.active?.classList.remove("audio-playing");
   audioState.active = target;
   target?.classList.add("audio-playing");
+  audioState.on = true;
+  audioState.paused = false;
+  updateDock();
   player.src = src;
   player.play().catch(() => advanceQueue());
+}
+
+function toggleAudioPause() {
+  if (!audioState.on) return;
+  audioState.paused = !audioState.paused;
+  if (audioState.paused) player.pause(); else player.play().catch(() => advanceQueue());
+  updateDock();
+}
+
+function updateDock() {
+  const dock = $("#audio-dock");
+  if (!dock) return;
+  dock.hidden = !audioState.on;
+  document.body.classList.toggle("audio-docked", audioState.on);
+  dock.setAttribute("aria-label", t("audio"));
+  const main = $("#audio-pause");
+  main.textContent = audioState.paused ? "▶" : "❚❚";
+  main.setAttribute("aria-label", t(audioState.paused ? "resume" : "pause"));
+  main.title = main.getAttribute("aria-label");
+  const stop = $("#audio-stop");
+  stop.textContent = "■";
+  stop.setAttribute("aria-label", t("stop"));
+  stop.title = stop.getAttribute("aria-label");
 }
 
 function stopAudio() {
@@ -2838,12 +2873,27 @@ function stopAudio() {
   player.pause();
   audioState.active?.classList.remove("audio-playing");
   audioState.active = null;
+  audioState.on = audioState.continuous = audioState.paused = false;
   audioState.button?.(false);
+  updateDock();
 }
 player?.addEventListener("ended", () => { audioState.active?.classList.remove("audio-playing"); if (audioState.queue.length) advanceQueue(); else stopAudio(); });
 player?.addEventListener("error", () => { if (audioState.queue.length) advanceQueue(); else stopAudio(); });
 
 // ------------------------------------------------------------------ navigation drawer
+
+// Narrow screens open the course panel as a drawer; wide screens fold the sidebar away.
+const narrowNav = () => window.matchMedia?.("(max-width: 860px)").matches;
+function syncNavToggle() {
+  const expanded = narrowNav() ? $("#course-nav").classList.contains("open") : !document.documentElement.classList.contains("nav-collapsed");
+  $("#nav-toggle").setAttribute("aria-expanded", String(expanded));
+}
+function toggleSidebar() {
+  const collapsed = document.documentElement.classList.toggle("nav-collapsed");
+  store("nav-collapsed", collapsed ? "1" : null);
+  syncNavToggle();
+  scheduleAlign();
+}
 
 function openNav() {
   $("#course-nav").classList.add("open");
@@ -2856,6 +2906,7 @@ function closeNav(returnFocus) {
   $("#course-nav").classList.remove("open");
   $("#nav-toggle").setAttribute("aria-expanded", "false");
   $("#main").inert = false;
+  syncNavToggle();
   if (returnFocus) $("#nav-toggle").focus();
 }
 
@@ -2905,9 +2956,13 @@ function boot() {
     store("theme", light ? "light" : null);
     applyTheme();
   });
+  syncNavToggle();
   $("#nav-toggle").addEventListener("click", () => {
-    if ($("#course-nav").classList.contains("open")) closeNav(true); else openNav();
+    if (!narrowNav()) toggleSidebar();
+    else if ($("#course-nav").classList.contains("open")) closeNav(true); else openNav();
   });
+  $("#audio-pause").addEventListener("click", toggleAudioPause);
+  $("#audio-stop").addEventListener("click", stopAudio);
   $("#english-toggle").addEventListener("click", () => {
     state.english = !state.english;
     store(courseKey("english"), state.english ? "1" : "0");
@@ -2918,6 +2973,7 @@ function boot() {
     else if (state.view === "intro") showIntro(false);
     else if (state.view === "whats-next") showWhatsNext(false);
     window.scrollTo(0, scroll);
+    updateDock();
     $("#english-toggle").focus();
   });
   document.addEventListener("keydown", (event) => {
@@ -2943,6 +2999,8 @@ function boot() {
     if (state.course) route();
   });
   window.addEventListener("resize", () => {
+    if (!narrowNav()) closeNav(false);
+    syncNavToggle();
     if (window.innerWidth > 700) for (const reference of document.querySelectorAll(".kata-reference")) reference.open = true;
     scheduleAlign();
   });

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Illustrated Input — graded illustrated readers for language learners.">
   <title>Illustrated Input</title>
-  <script>try { if (localStorage.getItem("illustrated-input:theme") === "light") document.documentElement.dataset.theme = "light"; } catch {}</script>
-  <link rel="stylesheet" href="styles.css?v=cd7b679457">
+  <script>try { if (localStorage.getItem("illustrated-input:theme") === "light") document.documentElement.dataset.theme = "light"; if (localStorage.getItem("illustrated-input:nav-collapsed") === "1") document.documentElement.classList.add("nav-collapsed"); } catch {}</script>
+  <link rel="stylesheet" href="styles.css?v=c8138930e9">
 </head>
 <body>
   <a class="skip-link" href="#main" data-ui="skip">Skip to the text</a>
@@ -57,10 +57,14 @@
     <form method="dialog"><button class="button secondary" type="submit" id="lightbox-close" data-ui="close">Close</button></form>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="audio-dock" class="audio-dock" role="group" hidden>
+    <button id="audio-pause" class="audio-dock-main" type="button"></button>
+    <button id="audio-stop" class="audio-dock-stop" type="button"></button>
+  </div>
   <script src="greek.js?v=b377390089" defer></script>
   <script src="russian.js?v=45affd5821" defer></script>
   <script src="kata.js?v=be16a1f3bd" defer></script>
   <script src="core.js?v=61c7ce30e7" defer></script>
-  <script src="app.js?v=356091d862" defer></script>
+  <script src="app.js?v=af06303fd7" defer></script>
 </body>
 </html>

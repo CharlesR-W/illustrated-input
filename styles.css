@@ -61,7 +61,6 @@ img { max-width: 100%; }
 .pill { border: 1px solid var(--line); background: var(--card); border-radius: 99px; padding: .42rem .85rem; color: var(--forest); font-size: .85rem; font-weight: 700; }
 .theme-toggle { min-width: 2.3rem; font-size: 1rem; line-height: 1.2; }
 .pill[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); color: var(--on-forest); }
-.nav-toggle { display: none; }
 .app-shell { min-height: calc(100vh - var(--header)); display: grid; grid-template-columns: minmax(250px, 300px) minmax(0, 1fr); }
 .course-panel { padding: 2rem 1.25rem; background: var(--panel); border-right: 1px solid var(--line); height: calc(100vh - var(--header)); overflow-y: auto; position: sticky; top: var(--header); }
 .course-title { margin: .1rem 0 .4rem; font: 700 1.45rem/1.15 var(--serif); }
@@ -291,10 +290,24 @@ main:focus { outline: none; }
 .page-title { font-family: var(--serif); font-weight: 400; }
 .toast { position: fixed; right: 1rem; bottom: 1rem; z-index: 40; max-width: calc(100vw - 2rem); padding: .7rem 1rem; color: var(--on-forest); background: var(--forest-2); border-radius: .5rem; box-shadow: var(--shadow); opacity: 0; transform: translateY(10px); pointer-events: none; transition: .2s; }
 .toast.show { opacity: 1; transform: none; }
+.audio-docked .toast { bottom: 5rem; }
+
+/* ---------- audio dock: follows the screen while anything is playing or paused */
+.audio-dock { position: fixed; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 30; display: flex; gap: .35rem; padding: .3rem; background: var(--card); border: 1px solid var(--line); border-radius: 99px; box-shadow: var(--shadow); }
+.audio-dock[hidden] { display: none; }
+.audio-dock button { width: 2.75rem; height: 2.75rem; display: grid; place-items: center; border: 0; border-radius: 50%; font-size: 1rem; line-height: 1; cursor: pointer; }
+.audio-dock-main { background: var(--forest); color: var(--on-forest); }
+.audio-dock-stop { background: var(--surface); color: var(--forest); }
+.audio-dock button:hover { filter: brightness(1.08); }
+
+/* ---------- wide screens: the Lessons button folds the sidebar away */
+@media (min-width: 861px) {
+  .nav-collapsed .app-shell { grid-template-columns: minmax(0, 1fr); }
+  .nav-collapsed .course-panel { display: none; }
+}
 
 /* ---------- small screens */
 @media (max-width: 860px) {
-  .nav-toggle { display: inline-block; }
   .app-shell { display: block; }
   .course-panel { display: none; position: fixed; inset: var(--header) 0 0; z-index: 9; height: auto; border: 0; padding: 1.25rem 1rem 2rem; }
   .course-panel.open { display: block; }
@@ -312,13 +325,14 @@ main:focus { outline: none; }
   .site-header { padding: 0 1rem; }
   .pill { padding: .35rem .65rem; font-size: .8rem; }
   .brand-mark { width: 32px; height: 32px; font-size: 1rem; }
+  body:has(.return-to-workbook) .audio-dock { bottom: 4.5rem; }
   .brand strong { font-size: .92rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
 @media print {
-  .site-header, .course-panel, .lesson-toolbar, .pensa, .lesson-finish, .lesson-pagination, .toast { display: none !important; }
+  .site-header, .course-panel, .lesson-toolbar, .pensa, .lesson-finish, .lesson-pagination, .toast, .audio-dock { display: none !important; }
   .app-shell { display: block; }
 }
 
