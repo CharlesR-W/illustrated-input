@@ -859,43 +859,43 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "Adjectives agree with the noun: го́род (м.) → -ый/-ой, страна́ (ж.) → -ая. See the table.",
+      "hint_en": "Adjectives agree with the noun: го́род (м.) → -ый/-ой, страна́ (ж.) → -ая. The first letters are given. See the table большо́й, больша́я, большо́е.",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
        "rule": "го́род (м.) → большо́й · страна́ (ж.) → больша́я",
-       "prompt": "Росси́я — ___ страна́.",
+       "prompt": "Росси́я — ___ (большо́й) страна́.",
        "answer": "больша́я"
       },
       "items": [
        {
         "id": "x1-1-1",
-        "prompt": "Э́то Москва́, ___ го́род.",
+        "prompt": "Э́то Москва́, ___ (большо́й) го́род.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "большо́й"
         ],
-        "choices": [
-         "большо́й",
-         "больша́я"
-        ],
+        "first_letters": 4,
         "source_segment_ids": [
          "ru-mir-01-l01-s016"
         ]
        },
        {
         "id": "x1-1-4",
-        "prompt": "Евро́па ___, и А́зия то́же больша́я.",
+        "prompt": "Евро́па ___ (большо́й), и А́зия то́же больша́я.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "больша́я"
         ],
-        "choices": [
-         "большо́й",
-         "больша́я"
+        "first_letters": 4,
+        "common_wrong": [
+         {
+          "answer": "большо́й",
+          "hint": "Евро́па — ж."
+         }
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s006e"
@@ -903,66 +903,155 @@
        },
        {
         "id": "x1-1-3",
-        "prompt": "Во́лга — ___ река́.",
+        "prompt": "Во́лга — ___ (ру́сский) река́.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "ру́сская"
         ],
-        "choices": [
-         "ру́сский",
-         "ру́сская"
-        ],
+        "first_letters": 4,
         "source_segment_ids": [
          "ru-mir-01-l01-s013"
         ]
        },
        {
         "id": "x1-1-6",
-        "prompt": "Москва́ — ___ го́род.",
+        "prompt": "Москва́ — ___ (ста́рый) го́род.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "ста́рый"
         ],
-        "choices": [
-         "ста́рый",
-         "но́вый"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l01-s022b"
         ]
        },
        {
         "id": "x1-1-2",
-        "prompt": "А Петербу́рг — ___ го́род.",
+        "prompt": "А Петербу́рг — ___ (но́вый) го́род.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "но́вый"
         ],
-        "choices": [
-         "но́вый",
-         "ста́рый"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l01-s022c"
         ]
        },
        {
         "id": "x1-1-7",
-        "prompt": "Ока́ — то́же ___ река́.",
+        "prompt": "Ока́ — то́же ___ (большо́й) река́.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "больша́я"
         ],
-        "choices": [
-         "большо́й",
-         "больша́я"
+        "first_letters": 4,
+        "common_wrong": [
+         {
+          "answer": "большо́й",
+          "hint": "река́ — ж."
+         }
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s015"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x1-5",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Type the whole word; its stem is shown. м. -ый/-ой/-ий, ж. -ая. See the table большо́й, больша́я, большо́е.",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "большо́й го́род · больша́я страна́",
+       "prompt": "Росси́я — ___ страна́.",
+       "answer": "больша́я"
+      },
+      "items": [
+       {
+        "id": "x1-5-1",
+        "prompt": "Москва́ — ___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "большо́й"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s016"
+        ]
+       },
+       {
+        "id": "x1-5-2",
+        "prompt": "Во́лга — ___ река́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ру́сская"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s013"
+        ]
+       },
+       {
+        "id": "x1-5-3",
+        "prompt": "Ряза́нь — ___ ру́сский го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ста́рый"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s025"
+        ]
+       },
+       {
+        "id": "x1-5-4",
+        "prompt": "Ряза́нь — ста́рый ___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ру́сский"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s025"
+        ]
+       },
+       {
+        "id": "x1-5-5",
+        "prompt": "Ока́ — то́же ___ река́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "больша́я"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s015"
+        ]
+       },
+       {
+        "id": "x1-5-6",
+        "prompt": "Петербу́рг — ___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но́вый"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s022c"
         ]
        }
       ]
@@ -972,76 +1061,58 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Отве́ть по те́ксту.",
-      "hint_en": "Use the reading and the noun endings. The paired constructions here are и …, и … and не …, а ….",
+      "hint_en": "а sets two things side by side (here …, there …); и adds (и А́зия то́же). и …, и … = both … and …; не …, а … = not …, but ….",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
        "rule": "не …, а … · и …, и …",
-       "prompt": "Ряза́нь не на Во́лге, ___ на Оке́.",
+       "prompt": "Вот Евро́па, ___ (а / и) вот А́зия.",
        "answer": "а"
       },
       "items": [
        {
-        "id": "x1-4-5",
-        "prompt": "Вот ___, а вот А́зия.",
+        "id": "x1-4-11",
+        "prompt": "Евро́па здесь, ___ (а / и) А́зия там.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "Евро́па"
-        ],
-        "choices": [
-         "Евро́па",
-         "Евро́пе"
+         "а"
         ],
         "source_segment_ids": [
-         "ru-mir-01-l01-s006"
+         "ru-mir-01-l01-s006f"
         ]
        },
        {
-        "id": "x1-4-9",
-        "prompt": "Петербу́рг — большо́й го́род, и Москва́ то́же ___ го́род.",
+        "id": "x1-4-12",
+        "prompt": "Евро́па больша́я, ___ (а / и) А́зия то́же больша́я.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "большо́й"
-        ],
-        "choices": [
-         "большо́й",
-         "больша́я"
+         "и"
         ],
         "source_segment_ids": [
-         "ru-mir-01-l01-s016",
-         "ru-mir-01-l01-s022"
+         "ru-mir-01-l01-s006e"
         ]
        },
        {
-        "id": "x1-4-1",
-        "prompt": "Во́лга там, а Москва́ в ___ (Евро́па).",
+        "id": "x1-4-13",
+        "prompt": "Росси́я? Росси́я здесь ___ (а / и) там.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "Евро́пе"
-        ],
-        "choices": [
-         "Евро́па",
-         "Евро́пе"
+         "и"
         ],
         "source_segment_ids": [
-         "ru-mir-01-l01-s020",
-         "ru-mir-01-l01-s017"
+         "ru-mir-01-l01-s006g"
         ]
        },
        {
         "id": "x1-4-10",
-        "prompt": "Росси́я — и Евро́па, ___ А́зия.",
+        "prompt": "Росси́я — и Евро́па, ___ (а / и) А́зия.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "и"
-        ],
-        "choices": [
-         "а",
          "и"
         ],
         "source_segment_ids": [
@@ -1049,16 +1120,12 @@
         ]
        },
        {
-        "id": "x1-4-6",
-        "prompt": "Москва́ — ___ го́род, а Петербу́рг — но́вый го́род.",
+        "id": "x1-4-14",
+        "prompt": "Москва́ — ста́рый го́род, ___ (а / и) Петербу́рг — но́вый го́род.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "ста́рый"
-        ],
-        "choices": [
-         "ста́рый",
-         "но́вый"
+         "а"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s022b",
@@ -1067,15 +1134,11 @@
        },
        {
         "id": "x1-4-7",
-        "prompt": "Ряза́нь не на Во́лге, ___ на Оке́.",
+        "prompt": "Ряза́нь не на Во́лге, ___ (а / и) на Оке́.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "а"
-        ],
-        "choices": [
-         "а",
-         "и"
         ],
         "common_wrong": [
          {
@@ -1085,6 +1148,107 @@
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s026"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x1-7",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Play the sentence and type the missing word. The first letters are given.",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Вот ___.",
+       "answer": "ка́рта"
+      },
+      "items": [
+       {
+        "id": "x1-7-1",
+        "prompt": "Росси́я — ___ страна́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "больша́я"
+        ],
+        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l01-s005",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s005"
+        ]
+       },
+       {
+        "id": "x1-7-2",
+        "prompt": "А что э́то? Э́то Во́лга. Во́лга — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "река́"
+        ],
+        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l01-s010",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s010"
+        ]
+       },
+       {
+        "id": "x1-7-3",
+        "prompt": "Во́лга — ___ река́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ру́сская"
+        ],
+        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l01-s013",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s013"
+        ]
+       },
+       {
+        "id": "x1-7-4",
+        "prompt": "Где Москва́? Москва́ здесь, в ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Евро́пе"
+        ],
+        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l01-s017",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s017"
+        ]
+       },
+       {
+        "id": "x1-7-5",
+        "prompt": "А Петербу́рг — ___ го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но́вый"
+        ],
+        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l01-s022c",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s022c"
+        ]
+       },
+       {
+        "id": "x1-7-6",
+        "prompt": "Вот Ряза́нь, здесь, на ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Оке́"
+        ],
+        "first_letters": 1,
+        "audio_segment_id": "ru-mir-01-l01-s024",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s024"
         ]
        }
       ]
@@ -1641,59 +1805,88 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Отве́ть по те́ксту.",
-      "hint_en": "Use the reading and adjective agreement. In a question offering alternatives, и́ли links them; не …, а … corrects an identification.",
+      "hint_en": "In a question offering alternatives, и́ли links them; не …, а … corrects an identification; но = but (still).",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
-       "rule": "… и́ли …? · не …, а …",
-       "prompt": "Ока́ — река́ ___ го́род? — Река́.",
+       "rule": "… и́ли …? · не …, а … · …, но …",
+       "prompt": "Ока́ — река́ ___ (а / но / и́ли) го́род? — Река́.",
        "answer": "и́ли"
       },
       "items": [
        {
-        "id": "x2-4-2",
-        "prompt": "Губе́рния больша́я, а уе́зд ___.",
+        "id": "x2-4-8",
+        "prompt": "Губе́рния — не страна́, ___ (а / но / и́ли) губе́рния то́же больша́я.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "ма́ленький"
-        ],
-        "choices": [
-         "ма́ленький",
-         "большо́й"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l01-s029"
-        ]
-       },
-       {
-        "id": "x2-4-1",
-        "prompt": "Губе́рния — не страна́, но губе́рния то́же ___.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "больша́я"
-        ],
-        "choices": [
-         "большо́й",
-         "больша́я"
+         "но"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s028"
         ]
        },
        {
-        "id": "x2-4-6",
-        "prompt": "Берёзовка — го́род ___ дере́вня? — Дере́вня!",
+        "id": "x2-4-12",
+        "prompt": "Где уе́зд? Уе́зд здесь, ___ (а / но / и́ли) Ряза́нь там.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s029b"
+        ]
+       },
+       {
+        "id": "x2-4-10",
+        "prompt": "Уе́здный го́род ма́ленький, ___ (а / но / и́ли) там желе́зная доро́га.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s032"
+        ]
+       },
+       {
+        "id": "x2-4-13",
+        "prompt": "Ряза́нь — не губе́рния, ___ (а / но / и́ли) го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s028a"
+        ],
+        "common_wrong": [
+         {
+          "answer": "но",
+          "hint": "не …, а …"
+         }
+        ]
+       },
+       {
+        "id": "x2-4-3",
+        "prompt": "Ряза́нь — река́ ___ (а / но / и́ли) го́род? — Го́род.",
+        "mode": "productive",
+        "answer_mode": "exact",
         "accepted_answers": [
          "и́ли"
         ],
-        "choices": [
-         "а",
-         "но",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s036"
+        ]
+       },
+       {
+        "id": "x2-4-6",
+        "prompt": "Берёзовка — го́род ___ (а / но / и́ли) дере́вня? — Дере́вня!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
          "и́ли"
         ],
         "source_segment_ids": [
@@ -1702,52 +1895,20 @@
        },
        {
         "id": "x2-4-7",
-        "prompt": "Берёзовка — не го́род, ___ дере́вня.",
+        "prompt": "Берёзовка — не го́род, ___ (а / но / и́ли) дере́вня.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "а"
         ],
-        "choices": [
-         "а",
-         "и́ли"
+        "common_wrong": [
+         {
+          "answer": "но",
+          "hint": "не …, а …"
+         }
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s038"
-        ]
-       },
-       {
-        "id": "x2-4-5",
-        "prompt": "Ока́ — не Во́лга, но Ока́ то́же ___ река́.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "больша́я"
-        ],
-        "choices": [
-         "большо́й",
-         "больша́я"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l01-s012",
-         "ru-mir-01-l01-s015"
-        ]
-       },
-       {
-        "id": "x2-4-3",
-        "prompt": "Ряза́нь — река́ ___ го́род? — Го́род.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "и́ли"
-        ],
-        "choices": [
-         "а",
-         "но",
-         "и́ли"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l01-s036"
         ]
        }
       ]
@@ -1757,28 +1918,25 @@
       "type": "otvet",
       "title": "Отве́ть",
       "instruction": "Отве́ть на вопро́с. Сло́во в ско́бках поста́вь в ну́жную фо́рму.",
-      "hint_en": "Где? → в/на + -е (Евро́па → в Евро́пе). A town on a river: на (на Оке́). See the table.",
+      "hint_en": "Где? → в/на + -е (Евро́па → в Евро́пе). A town on a river: на (на Оке́). See the table Где? — в / на + -е.",
       "grammar_target_ids": [
        "G01"
       ],
       "obrazec": {
        "rule": "Где? Евро́па → в Евро́пе · Ока́ → на Оке́",
-       "prompt": "Где Москва́? — Москва́ в ___ (Евро́па).",
+       "prompt": "Где Москва́? — Москва́ в ___ (Евро́па, где?).",
        "answer": "Евро́пе"
       },
       "items": [
        {
         "id": "x2-2-7",
-        "prompt": "Где Ряза́нь? — Ряза́нь на ___ (Ока́).",
+        "prompt": "Где Ряза́нь? — Ряза́нь на ___ (Ока́, где?).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "Оке́"
         ],
-        "choices": [
-         "Ока́",
-         "Оке́"
-        ],
+        "first_letters": 2,
         "common_wrong": [
          {
           "answer": "Ока́",
@@ -1791,16 +1949,13 @@
        },
        {
         "id": "x2-2-8",
-        "prompt": "Где уе́здный го́род? — Уе́здный го́род в ___ (уе́зд).",
+        "prompt": "Где уе́здный го́род? — Уе́здный го́род в ___ (уе́зд, где?).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "уе́зде"
         ],
-        "choices": [
-         "уе́зд",
-         "уе́зде"
-        ],
+        "first_letters": 3,
         "common_wrong": [
          {
           "answer": "уе́зд",
@@ -1813,30 +1968,23 @@
        },
        {
         "id": "x2-2-3",
-        "prompt": "Петербу́рг то́же в ___ (Евро́па)? Да.",
+        "prompt": "Петербу́рг то́же в ___ (Евро́па, где?)? — Да.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "Евро́пе"
         ],
-        "choices": [
-         "Евро́па",
-         "Евро́пе"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l01-s007"
         ]
        },
        {
         "id": "x2-2-10",
-        "prompt": "Москва́, Петербу́рг, Ряза́нь — на ___ (ка́рта).",
+        "prompt": "Москва́, Петербу́рг, Ряза́нь — на ___ (ка́рта, где?).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "ка́рте"
-        ],
-        "choices": [
-         "ка́рта",
          "ка́рте"
         ],
         "source_segment_ids": [
@@ -1845,18 +1993,213 @@
        },
        {
         "id": "x2-2-9",
-        "prompt": "Ряза́нь не на ___ (Во́лга), а на Оке́.",
+        "prompt": "Ряза́нь не на ___ (Во́лга, где?), а на Оке́.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "Во́лге"
-        ],
-        "choices": [
-         "Во́лга",
          "Во́лге"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s026"
+        ]
+       },
+       {
+        "id": "x2-2-11",
+        "prompt": "Где желе́зная доро́га? — Там, в ___ (уе́зд, где?).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уе́зде"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s032"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x2-5",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "Same pattern, new noun: make the adjective agree with it (м. -ый/-ой/-ий, ж. -ая).",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "река́ (ж.) → го́род (м.)",
+       "prompt": "Во́лга — больша́я река́. → Москва́ — ___ го́род. (большо́й)",
+       "answer": "большо́й"
+      },
+      "items": [
+       {
+        "id": "x2-5-1",
+        "prompt": "Уе́зд ма́ленький. → Губе́рния не ___. (ма́ленький)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́ленькая"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s029"
+        ]
+       },
+       {
+        "id": "x2-5-2",
+        "prompt": "Губе́рния больша́я. → Уе́зд не ___. (большо́й)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "большо́й"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s029"
+        ]
+       },
+       {
+        "id": "x2-5-7",
+        "prompt": "Доро́га ста́рая. → Петербу́рг не ___. (ста́рый)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ста́рый"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s034a",
+         "ru-mir-01-l01-s022c"
+        ]
+       },
+       {
+        "id": "x2-5-4",
+        "prompt": "Петербу́рг — но́вый го́род. → Желе́зная доро́га — ___ доро́га. (но́вый)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но́вая"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s035"
+        ]
+       },
+       {
+        "id": "x2-5-8",
+        "prompt": "Ряза́нь — ру́сский го́род. → Во́лга — ___ река́. (ру́сский)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ру́сская"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s025",
+         "ru-mir-01-l01-s013"
+        ]
+       },
+       {
+        "id": "x2-5-9",
+        "prompt": "Уе́здный го́род ма́ленький. → Ока́ не ___. (ма́ленький)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́ленькая"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s032",
+         "ru-mir-01-l01-s015"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x2-7",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Play the sentence and type the missing word.",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Вот ___.",
+       "answer": "ка́рта"
+      },
+      "items": [
+       {
+        "id": "x2-7-1",
+        "prompt": "Ряза́нь — го́род, губе́рния — не ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "го́род"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s028a",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s028a"
+        ]
+       },
+       {
+        "id": "x2-7-2",
+        "prompt": "А вот уе́зд: губе́рния больша́я, а уе́зд ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́ленький"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s029",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s029"
+        ]
+       },
+       {
+        "id": "x2-7-3",
+        "prompt": "Где уе́здный го́род? В ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уе́зде"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s030a",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s030a"
+        ]
+       },
+       {
+        "id": "x2-7-4",
+        "prompt": "Доро́га ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ста́рая"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s034a",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s034a"
+        ]
+       },
+       {
+        "id": "x2-7-5",
+        "prompt": "Доро́га ста́рая, а желе́зная доро́га — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но́вая"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s035",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s035"
+        ]
+       },
+       {
+        "id": "x2-7-6",
+        "prompt": "Берёзовка — го́род и́ли ___? Дере́вня!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "дере́вня"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s038",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s038"
         ]
        }
       ]
@@ -2462,7 +2805,7 @@
     "exercises": [
      {
       "id": "ru-mir-01-l01-x3-2",
-      "type": "podstanovka",
+      "type": "soedini",
       "title": "Спроси́",
       "instruction": "Спроси́.",
       "hint_en": "Look at the answer: здесь / там / в … → Где?; Э́то + a person → Кто?; Э́то + a thing → Что?",
@@ -2471,39 +2814,39 @@
       ],
       "obrazec": {
        "rule": "Где? — здесь, там · Что э́то? — Э́то ка́рта.",
-       "prompt": "___ э́то? — Э́то ка́рта.",
-       "answer": "Что"
+       "prompt": "___? — Э́то ка́рта.",
+       "answer": "Что э́то"
       },
       "items": [
        {
-        "id": "x3-2-1",
-        "prompt": "___ шко́ла? — Шко́ла здесь, а це́рковь там.",
-        "mode": "productive",
+        "id": "x3-2-6",
+        "prompt": "___? — Шко́ла здесь, а це́рковь там.",
+        "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Где"
+         "Где шко́ла"
         ],
         "choices": [
-         "Где",
-         "Что",
-         "Кто"
+         "Где шко́ла",
+         "Что э́то",
+         "Кто э́то"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s049"
         ]
        },
        {
-        "id": "x3-2-2",
-        "prompt": "А ___ там? — Э́то уса́дьба.",
-        "mode": "productive",
+        "id": "x3-2-7",
+        "prompt": "А ___? — Э́то уса́дьба.",
+        "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "что"
+         "что там"
         ],
         "choices": [
-         "где",
-         "что",
-         "кто"
+         "что там",
+         "кто там",
+         "где уса́дьба"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s052",
@@ -2511,21 +2854,21 @@
         ]
        },
        {
-        "id": "x3-2-3",
-        "prompt": "___ э́то? — Э́то Ива́н.",
-        "mode": "productive",
+        "id": "x3-2-8",
+        "prompt": "___? — Э́то Ива́н.",
+        "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Кто"
+         "Кто э́то"
         ],
         "choices": [
-         "Где",
-         "Что",
-         "Кто"
+         "Кто э́то",
+         "Что э́то",
+         "Где Ива́н"
         ],
         "common_wrong": [
          {
-          "answer": "Что",
+          "answer": "Что э́то",
           "hint": "Ива́н → Кто?"
          }
         ],
@@ -2535,37 +2878,54 @@
         ]
        },
        {
-        "id": "x3-2-4",
-        "prompt": "___ Ива́н? — Ива́н здесь, в Берёзовке.",
-        "mode": "productive",
+        "id": "x3-2-9",
+        "prompt": "___? — Ива́н здесь, в Берёзовке.",
+        "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Где"
+         "Где Ива́н"
         ],
         "choices": [
-         "Где",
-         "Что",
-         "Кто"
+         "Где Ива́н",
+         "Кто э́то",
+         "Что там"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s059"
         ]
        },
        {
-        "id": "x3-2-5",
-        "prompt": "___ э́то? — Э́то по́ле.",
-        "mode": "productive",
+        "id": "x3-2-10",
+        "prompt": "___? — Э́то по́ле.",
+        "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Что"
+         "Что э́то"
         ],
         "choices": [
-         "Где",
-         "Что",
-         "Кто"
+         "Что э́то",
+         "Кто э́то",
+         "Где по́ле"
         ],
         "source_segment_ids": [
          "ru-mir-01-l01-s050"
+        ]
+       },
+       {
+        "id": "x3-2-11",
+        "prompt": "___? — Здесь, в уе́зде, на реке́.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Где Берёзовка"
+        ],
+        "choices": [
+         "Где Берёзовка",
+         "Что э́то",
+         "Кто э́то"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s043"
         ]
        }
       ]
@@ -2575,7 +2935,7 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "м. -ый/-ой/-ий, ж. -ая, ср. -ое. це́рковь (-ь) is ж.; по́ле is ср. See the table.",
+      "hint_en": "м. -ый/-ой/-ий, ж. -ая, ср. -ое. це́рковь (-ь) is ж.; по́ле is ср. See the table большо́й, больша́я, большо́е.",
       "grammar_target_ids": [
        "G01"
       ],
@@ -2625,10 +2985,13 @@
         "accepted_answers": [
          "большо́е"
         ],
-        "first_letters": 4,
         "common_wrong": [
          {
           "answer": "больша́я",
+          "hint": "по́ле — ср."
+         },
+         {
+          "answer": "большо́й",
           "hint": "по́ле — ср."
          }
         ],
@@ -2644,7 +3007,6 @@
         "accepted_answers": [
          "ру́сская"
         ],
-        "first_letters": 2,
         "source_segment_ids": [
          "ru-mir-01-l01-s058"
         ]
@@ -2657,9 +3019,142 @@
         "accepted_answers": [
          "большо́й"
         ],
-        "first_letters": 4,
         "source_segment_ids": [
          "ru-mir-01-l01-s065"
+        ]
+       },
+       {
+        "id": "x3-6-6",
+        "prompt": "Шко́ла ___ (но́вый), а це́рковь ста́рая.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но́вая"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s048"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x3-8",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Type the whole word; its stem is shown. м. -ый/-ой/-ий, ж. -ая, ср. -ое. See the table большо́й, больша́я, большо́е.",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "по́ле (ср.) → большо́е · уса́дьба (ж.) → больша́я",
+       "prompt": "Уса́дьба ___ и ста́рая.",
+       "answer": "больша́я"
+      },
+      "items": [
+       {
+        "id": "x3-8-1",
+        "prompt": "Вот по́ле. По́ле ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "большо́е"
+        ],
+        "first_letters": 5,
+        "common_wrong": [
+         {
+          "answer": "больша́я",
+          "hint": "по́ле — ср."
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s050",
+         "ru-mir-01-l01-s051"
+        ]
+       },
+       {
+        "id": "x3-8-2",
+        "prompt": "А там лес. Лес то́же ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "большо́й"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s050a",
+         "ru-mir-01-l01-s051"
+        ]
+       },
+       {
+        "id": "x3-8-3",
+        "prompt": "В дере́вне це́рковь ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ста́рая"
+        ],
+        "first_letters": 4,
+        "common_wrong": [
+         {
+          "answer": "ста́рый",
+          "hint": "це́рковь — ж."
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s048"
+        ]
+       },
+       {
+        "id": "x3-8-4",
+        "prompt": "Берёзовка — ___ дере́вня.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́ленькая"
+        ],
+        "first_letters": 7,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s065"
+        ]
+       },
+       {
+        "id": "x3-8-5",
+        "prompt": "Уе́зд ___, а губе́рния больша́я.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́ленький"
+        ],
+        "first_letters": 7,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s029"
+        ]
+       },
+       {
+        "id": "x3-8-6",
+        "prompt": "Шко́ла в дере́вне ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "но́вая"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s048"
+        ]
+       },
+       {
+        "id": "x3-8-7",
+        "prompt": "Ива́н — ___, и Берёзовка — ру́сская дере́вня.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ру́сский"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s058"
         ]
        }
       ]
@@ -2669,7 +3164,7 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "Где? → в/на + -е (дере́вня → в дере́вне, река́ → на реке́). See the table.",
+      "hint_en": "Где? → в/на + -е (дере́вня → в дере́вне, река́ → на реке́); по́ле stays в по́ле. See the table Где? — в / на + -е.",
       "grammar_target_ids": [
        "G01"
       ],
@@ -2726,7 +3221,18 @@
         "accepted_answers": [
          "Москве́"
         ],
-        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l01-s059"
+        ]
+       },
+       {
+        "id": "x3-7-6",
+        "prompt": "Где Ива́н? В Москве́? Нет. В ___ (по́ле, где?)? Нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "по́ле"
+        ],
         "source_segment_ids": [
          "ru-mir-01-l01-s059"
         ]
@@ -2739,9 +3245,115 @@
         "accepted_answers": [
          "Берёзовке"
         ],
-        "first_letters": 4,
         "source_segment_ids": [
          "ru-mir-01-l01-s059"
+        ]
+       },
+       {
+        "id": "x3-7-7",
+        "prompt": "Берёзовка на ___ (ка́рта, где?)? Да, вот Берёзовка.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ка́рте"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l01-s041"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l01-x3-10",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Play the sentence and type the missing word.",
+      "grammar_target_ids": [
+       "G01"
+      ],
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Вот ___.",
+       "answer": "ка́рта"
+      },
+      "items": [
+       {
+        "id": "x3-10-1",
+        "prompt": "Берёзовка — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "дере́вня"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s045",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s045"
+        ]
+       },
+       {
+        "id": "x3-10-2",
+        "prompt": "Дере́вня ма́ленькая, но ___ больша́я.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "це́рковь"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s046",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s046"
+        ]
+       },
+       {
+        "id": "x3-10-3",
+        "prompt": "А там — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "лес"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s050a",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s050a"
+        ]
+       },
+       {
+        "id": "x3-10-4",
+        "prompt": "Э́то ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уса́дьба"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s053",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s053"
+        ]
+       },
+       {
+        "id": "x3-10-5",
+        "prompt": "Уса́дьба — не дере́вня: уса́дьба там, а дере́вня ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "здесь"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s055",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s055"
+        ]
+       },
+       {
+        "id": "x3-10-6",
+        "prompt": "Меня́ зову́т ___. А как вас зову́т?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́н"
+        ],
+        "audio_segment_id": "ru-mir-01-l01-s066",
+        "source_segment_ids": [
+         "ru-mir-01-l01-s066"
         ]
        }
       ]
@@ -2893,451 +3505,7 @@
     "segment_id": "ru-mir-01-l01-s047"
    }
   ],
-  "note_en": "The ending usually shows the gender: no ending (го́род) is usually masculine, -а/-я (страна́, дере́вня) usually feminine, -о/-е (по́ле) neuter; -ь can be either (це́рковь is feminine). Adjectives agree: большо́й го́род, больша́я страна́, большо́е по́ле. In present-tense sentences that say what something is, Russian normally leaves out 'is': Росси́я — больша́я страна́. For the nouns of this chapter, Где? is answered with в/на + -е: в Москве́, в дере́вне; a town on a river is на: на Оке́.",
-  "kata": [
-   {
-    "id": "ru-mir-01-k01-rod-prilagatelnyh",
-    "title": "Большо́й · больша́я · большо́е",
-    "shape": "choose",
-    "scheduled": true,
-    "table_ref": "rod-prilagatelnyh",
-    "pool": [
-     {
-      "id": "k01-01",
-      "prompt": "Москва́ — ___ го́род.",
-      "lemma": "большо́й",
-      "label": "го́род — м.",
-      "options": [
-       "большо́й",
-       "больша́я",
-       "большо́е"
-      ],
-      "stem_hint": "больш-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 0,
-       "col": 0
-      },
-      "answer": "большо́й",
-      "accepted": [
-       "большо́й"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-02",
-      "prompt": "Росси́я — ___ страна́.",
-      "lemma": "большо́й",
-      "label": "страна́ — ж.",
-      "options": [
-       "большо́й",
-       "больша́я",
-       "большо́е"
-      ],
-      "stem_hint": "больш-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 0,
-       "col": 1
-      },
-      "answer": "больша́я",
-      "accepted": [
-       "больша́я"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-03",
-      "prompt": "По́ле ___.",
-      "lemma": "большо́й",
-      "label": "по́ле — ср.",
-      "options": [
-       "большо́й",
-       "больша́я",
-       "большо́е"
-      ],
-      "stem_hint": "больш-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 0,
-       "col": 2
-      },
-      "answer": "большо́е",
-      "accepted": [
-       "большо́е"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-04",
-      "prompt": "Ряза́нь — ___ ру́сский го́род.",
-      "lemma": "ста́рый",
-      "label": "го́род — м.",
-      "options": [
-       "ста́рый",
-       "ста́рая"
-      ],
-      "stem_hint": "стар-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 1,
-       "col": 0
-      },
-      "answer": "ста́рый",
-      "accepted": [
-       "ста́рый"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-05",
-      "prompt": "Це́рковь ___.",
-      "lemma": "ста́рый",
-      "label": "це́рковь — ж.",
-      "options": [
-       "ста́рый",
-       "ста́рая"
-      ],
-      "stem_hint": "стар-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 1,
-       "col": 1
-      },
-      "answer": "ста́рая",
-      "accepted": [
-       "ста́рая"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-06",
-      "prompt": "Уе́зд ___.",
-      "lemma": "ма́ленький",
-      "label": "уе́зд — м.",
-      "options": [
-       "ма́ленький",
-       "ма́ленькая"
-      ],
-      "stem_hint": "ма́леньк-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 2,
-       "col": 0
-      },
-      "answer": "ма́ленький",
-      "accepted": [
-       "ма́ленький"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-07",
-      "prompt": "Берёзовка — ___ дере́вня.",
-      "lemma": "ма́ленький",
-      "label": "дере́вня — ж.",
-      "options": [
-       "ма́ленький",
-       "ма́ленькая"
-      ],
-      "stem_hint": "ма́леньк-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 2,
-       "col": 1
-      },
-      "answer": "ма́ленькая",
-      "accepted": [
-       "ма́ленькая"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-08",
-      "prompt": "Ряза́нь — ста́рый ___ го́род.",
-      "lemma": "ру́сский",
-      "label": "го́род — м.",
-      "options": [
-       "ру́сский",
-       "ру́сская"
-      ],
-      "stem_hint": "русск-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 3,
-       "col": 0
-      },
-      "answer": "ру́сский",
-      "accepted": [
-       "ру́сский"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-09",
-      "prompt": "Во́лга — ___ река́.",
-      "lemma": "ру́сский",
-      "label": "река́ — ж.",
-      "options": [
-       "ру́сский",
-       "ру́сская"
-      ],
-      "stem_hint": "русск-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 3,
-       "col": 1
-      },
-      "answer": "ру́сская",
-      "accepted": [
-       "ру́сская"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-10",
-      "prompt": "Уса́дьба ___ и ста́рая.",
-      "lemma": "большо́й",
-      "label": "уса́дьба — ж.",
-      "options": [
-       "большо́й",
-       "больша́я",
-       "большо́е"
-      ],
-      "stem_hint": "больш-",
-      "cell": {
-       "table": "rod-prilagatelnyh",
-       "row": 0,
-       "col": 1
-      },
-      "answer": "больша́я",
-      "accepted": [
-       "больша́я"
-      ],
-      "collapsed": []
-     }
-    ]
-   },
-   {
-    "id": "ru-mir-01-k01-gde",
-    "title": "Где? — в / на + -е",
-    "shape": "choose",
-    "scheduled": false,
-    "table_ref": "gde-v-na",
-    "pool": [
-     {
-      "id": "k01-11",
-      "prompt": "Где Ива́н? В ___? Нет.",
-      "lemma": "Москва́",
-      "label": "где?",
-      "options": [
-       "Москва́",
-       "Москве́"
-      ],
-      "stem_hint": "Москв-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 0,
-       "col": 1
-      },
-      "answer": "Москве́",
-      "accepted": [
-       "Москве́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-12",
-      "prompt": "Ива́н здесь, в ___.",
-      "lemma": "Берёзовка",
-      "label": "где?",
-      "options": [
-       "Берёзовка",
-       "Берёзовке"
-      ],
-      "stem_hint": "Берёзовк-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 1,
-       "col": 1
-      },
-      "answer": "Берёзовке",
-      "accepted": [
-       "Берёзовке"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-13",
-      "prompt": "В ___ — це́рковь и шко́ла.",
-      "lemma": "дере́вня",
-      "label": "где?",
-      "options": [
-       "дере́вня",
-       "дере́вне"
-      ],
-      "stem_hint": "дере́вн-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 2,
-       "col": 1
-      },
-      "answer": "дере́вне",
-      "accepted": [
-       "дере́вне"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-14",
-      "prompt": "Уе́здный го́род в ___.",
-      "lemma": "уе́зд",
-      "label": "где?",
-      "options": [
-       "уе́зд",
-       "уе́зде"
-      ],
-      "stem_hint": "уе́зд-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 3,
-       "col": 1
-      },
-      "answer": "уе́зде",
-      "accepted": [
-       "уе́зде"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-15",
-      "prompt": "Ряза́нь на ___.",
-      "lemma": "Ока́",
-      "label": "где?",
-      "options": [
-       "Ока́",
-       "Оке́"
-      ],
-      "stem_hint": "Ок-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 5,
-       "col": 1
-      },
-      "answer": "Оке́",
-      "accepted": [
-       "Оке́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-16",
-      "prompt": "Берёзовка на ___.",
-      "lemma": "река́",
-      "label": "где?",
-      "options": [
-       "река́",
-       "реке́"
-      ],
-      "stem_hint": "рек-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 6,
-       "col": 1
-      },
-      "answer": "реке́",
-      "accepted": [
-       "реке́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-17",
-      "prompt": "Берёзовка на ___? Да, вот Берёзовка.",
-      "lemma": "ка́рта",
-      "label": "где?",
-      "options": [
-       "ка́рта",
-       "ка́рте"
-      ],
-      "stem_hint": "карт-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 7,
-       "col": 1
-      },
-      "answer": "ка́рте",
-      "accepted": [
-       "ка́рте"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-18",
-      "prompt": "Ряза́нь здесь, на ___.",
-      "lemma": "Ока́",
-      "label": "где?",
-      "options": [
-       "Ока́",
-       "Оке́"
-      ],
-      "stem_hint": "Ок-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 5,
-       "col": 1
-      },
-      "answer": "Оке́",
-      "accepted": [
-       "Оке́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-19",
-      "prompt": "Це́рковь и шко́ла — в ___.",
-      "lemma": "дере́вня",
-      "label": "где?",
-      "options": [
-       "дере́вня",
-       "дере́вне"
-      ],
-      "stem_hint": "дере́вн-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 2,
-       "col": 1
-      },
-      "answer": "дере́вне",
-      "accepted": [
-       "дере́вне"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k01-20",
-      "prompt": "Ряза́нь на Оке́, а Берёзовка на ___.",
-      "lemma": "река́",
-      "label": "где?",
-      "options": [
-       "река́",
-       "реке́"
-      ],
-      "stem_hint": "рек-",
-      "cell": {
-       "table": "gde-v-na",
-       "row": 6,
-       "col": 1
-      },
-      "answer": "реке́",
-      "accepted": [
-       "реке́"
-      ],
-      "collapsed": []
-     }
-    ]
-   }
-  ]
+  "note_en": "Gender usually shows in the ending: none (го́род) masculine, -а/-я (страна́, дере́вня) feminine, -о/-е (по́ле) neuter; -ь can be either (це́рковь is feminine). Adjectives agree: большо́й го́род, больша́я страна́, большо́е по́ле. Present-tense 'is' is left out: Росси́я — больша́я страна́. Где? → в/на + -е: в Москве́, на Оке́. Dialogue: a dash at the start of a line opens speech; a second dash closes it before the speech tag: «— Хорошо́! — говори́т оте́ц.» «» quote speech inside a sentence."
  },
  "pensa": {
   "A": {
@@ -3346,96 +3514,93 @@
    "blocks": [
     {
      "obrazec": {
-      "prompt": "Росси́я — ___ страна́. (большо́й)",
+      "prompt": "Росси́я — ___ (большо́й) страна́.",
       "answer": "больша́я"
      },
      "items": [
       {
-       "prompt": "Москва́ — ___ го́род. (большо́й)",
+       "id": "a1",
+       "prompt": "Москва́ — ___ (большо́й) го́род.",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "большо́й"
        ],
-       "choices": [
-        "большо́й",
-        "больша́я",
-        "большо́е"
-       ],
-       "id": "a1",
+       "first_letters": 4,
        "source_segment_ids": [
         "ru-mir-01-l01-s016"
        ]
       },
       {
-       "prompt": "Це́рковь ___. (ста́рый)",
+       "id": "a2",
+       "prompt": "Це́рковь ___ (ста́рый).",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "ста́рая"
        ],
-       "choices": [
-        "ста́рый",
-        "ста́рая"
-       ],
+       "first_letters": 3,
        "common_wrong": [
         {
          "answer": "ста́рый",
          "hint": "це́рковь — ж."
         }
-       ],
-       "id": "a2"
+       ]
       },
       {
-       "prompt": "По́ле ___. (большо́й)",
+       "id": "a3",
+       "prompt": "По́ле ___ (большо́й), а уса́дьба ста́рая.",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "большо́е"
        ],
-       "choices": [
-        "большо́й",
-        "больша́я",
-        "большо́е"
-       ],
-       "id": "a3"
+       "first_letters": 4,
+       "common_wrong": [
+        {
+         "answer": "больша́я",
+         "hint": "по́ле — ср."
+        }
+       ]
       },
       {
-       "prompt": "Шко́ла ___. (но́вый)",
+       "id": "a4",
+       "prompt": "Шко́ла ___ (но́вый).",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "но́вая"
        ],
-       "choices": [
-        "но́вый",
-        "но́вая"
-       ],
-       "id": "a4"
-      },
+       "first_letters": 3
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "Губе́рния больша́я, а уе́зд ___ (ма́ленький).",
+      "answer": "ма́ленький"
+     },
+     "items": [
       {
-       "prompt": "Уе́зд ___. (ма́ленький)",
+       "id": "a5",
+       "prompt": "Берёзовка — ___ (ма́ленький) дере́вня.",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
-        "ма́ленький"
-       ],
-       "choices": [
-        "ма́ленький",
         "ма́ленькая"
-       ],
-       "id": "a5"
+       ]
       },
       {
+       "id": "a6",
        "prompt": "Ока́ — ___ (ру́сский) река́.",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "ру́сская"
-       ],
-       "id": "a6"
+       ]
       },
       {
+       "id": "a7",
        "prompt": "Ряза́нь — ___ (ста́рый) го́род.",
        "mode": "productive",
        "answer_mode": "exact",
@@ -3447,51 +3612,43 @@
          "answer": "ста́рая",
          "hint": "го́род — м.: ста́рый"
         }
-       ],
-       "id": "a7"
+       ]
       }
      ]
     },
     {
      "obrazec": {
-      "prompt": "Где Ряза́нь? — На ___. (Ока́)",
+      "prompt": "Где Ряза́нь? — На ___ (Ока́, где?).",
       "answer": "Оке́"
      },
      "items": [
       {
-       "prompt": "Где Ива́н? — В ___. (Берёзовка)",
+       "id": "a8",
+       "prompt": "Где Ива́н? — В ___ (Берёзовка, где?).",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "Берёзовке"
        ],
-       "choices": [
-        "Берёзовка",
-        "Берёзовке"
-       ],
-       "id": "a8"
+       "first_letters": 3
       },
       {
-       "prompt": "Где шко́ла? — В ___. (дере́вня)",
+       "id": "a9",
+       "prompt": "Где шко́ла? — В ___ (дере́вня, где?).",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "дере́вне"
-       ],
-       "choices": [
-        "дере́вня",
-        "дере́вне"
-       ],
-       "id": "a9"
+       ]
       },
       {
+       "id": "a10",
        "prompt": "Где Берёзовка? — На ___ (река́, где?).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "реке́"
-       ],
-       "id": "a10"
+       ]
       }
      ]
     }
@@ -3508,11 +3665,13 @@
     "лес",
     "ма́ленький",
     "но́вый",
+    "по́ле",
     "река́",
     "ста́рый",
     "страна́",
     "уе́зд",
-    "це́рковь"
+    "це́рковь",
+    "шко́ла"
    ],
    "items": [
     {
@@ -3561,7 +3720,7 @@
      "id": "b5"
     },
     {
-     "prompt": "Губе́рния больша́я, а уе́здный го́род в ___.",
+     "prompt": "Губе́рния больша́я, а уе́зд ма́ленький; уе́здный го́род — в ___.",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
@@ -3589,13 +3748,148 @@
      ],
      "id": "b8",
      "first_letters": 2
+    },
+    {
+     "id": "b11",
+     "prompt": "В Берёзовке ста́рая ___ и но́вая шко́ла.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "це́рковь"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l01-s048"
+     ]
+    },
+    {
+     "id": "b10",
+     "prompt": "Здесь по́ле, а там ___ — ста́рый и большо́й.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "лес"
+     ],
+     "first_letters": 1
     }
    ]
   },
   "C": {
    "id": "ru-mir-01-l01-pc",
    "title": "Пе́нсум C — Вопро́сы",
-   "items": []
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Росси́я — ма́ленькая страна́? — Нет, Росси́я — ___ страна́.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "больша́я"
+     ],
+     "first_letters": 3,
+     "source_segment_ids": [
+      "ru-mir-01-l01-s005"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Где Москва́? — Москва́ в ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Евро́пе"
+     ],
+     "first_letters": 3,
+     "source_segment_ids": [
+      "ru-mir-01-l01-s017"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Петербу́рг — ста́рый го́род? — Нет, Петербу́рг — ___ го́род.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "но́вый"
+     ],
+     "first_letters": 2,
+     "source_segment_ids": [
+      "ru-mir-01-l01-s022c"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Где Ряза́нь? — Ряза́нь ___.",
+     "mode": "recognition",
+     "answer_mode": "choice",
+     "accepted_answers": [
+      "на Оке́"
+     ],
+     "choices": [
+      "на Во́лге",
+      "на Оке́"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l01-s024",
+      "ru-mir-01-l01-s026"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Губе́рния больша́я. А уе́зд? — Уе́зд ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ма́ленький"
+     ],
+     "first_letters": 3,
+     "source_segment_ids": [
+      "ru-mir-01-l01-s029"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Берёзовка — го́род и́ли дере́вня? — ___.",
+     "mode": "recognition",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Дере́вня"
+     ],
+     "first_letters": 2,
+     "source_segment_ids": [
+      "ru-mir-01-l01-s038"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Что в дере́вне? — В дере́вне це́рковь и ___.",
+     "mode": "recognition",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "шко́ла"
+     ],
+     "first_letters": 2,
+     "source_segment_ids": [
+      "ru-mir-01-l01-s047"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "Где Ива́н? — Ива́н ___.",
+     "mode": "recognition",
+     "answer_mode": "choice",
+     "accepted_answers": [
+      "в Берёзовке"
+     ],
+     "choices": [
+      "в Москве́",
+      "в по́ле",
+      "в Берёзовке"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l01-s059"
+     ]
+    }
+   ]
   }
  },
  "vocabulary": [

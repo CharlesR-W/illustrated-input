@@ -11,7 +11,7 @@ const UI_DEFAULTS = {
   continue: "Continue", start: "Start reading", how_to_read: "How to read this book",
   part: "Part", lesson: "Lesson", lessons_range: "Lessons {from}–{to}", planned: "coming soon",
   finished: "finished", hide_notes: "Hide notes", show_notes: "Show notes", notes: "Notes",
-  listen: "Listen", stop: "Stop", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
+  play_sentence: "Play the sentence", listen: "Listen", stop: "Stop", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
   in_story: "in the story", pensa: "Exercises", oral_mode: "Oral mode", check: "Check", reveal: "Show",
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
   correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
@@ -42,7 +42,7 @@ const UI_DEFAULTS = {
   feedback_task: "Task", feedback_text: "Learner's text", feedback_rewrite: "Learner's corrected version",
   feedback_prompt: "You are an experienced language teacher. Correct the learner's text below: rewrite it correctly with as few changes as possible, list each error as wrong → right with a short explanation of the rule, say what is good, and give one short exercise on the most important error.",
   words_typed: "{n} words", ex_type_okonchaniya: "Endings", ex_type_preobrazovanie: "Transform",
-  ex_type_podstanovka: "Substitute", ex_type_otvet: "Answer", ex_type_soedini: "Join", ex_type_rasstav: "Word order",
+  ex_type_podstanovka: "Substitute", ex_type_otvet: "Answer", ex_type_soedini: "Join", ex_type_rasstav: "Word order", ex_type_diktant: "Dictation",
   ex_type_napishi: "Write", timing_summary: "Time per chapter", timing_total: "Total:", minutes: "{n} min",
   anki_include_known: "Include words I already know",
   custom: "custom", kata: "Kata", kata_due: "Kata due: {n}", kata_more: "Three more?",
@@ -474,8 +474,8 @@ function buildSteps(lesson, { core = globalThis.IllustratedCore, course = null, 
   });
   const pensa = lesson?.pensa || (Array.isArray(lesson?.exercises) && !lesson.exercises.some(isWorkbookExercise) ? lesson.exercises : null);
   if (lesson?.grammar || lesson?.grammar_observation || lesson?.words_with_history) steps.push({ id: "grammar", kind: "grammar" });
-  const hasPensaItems = pensa && Object.values(pensa).some((group) => Array.isArray(group) ? group.length : group?.items?.length);
-  if (pensa && Object.keys(pensa).length && (!course?.capabilities?.kata || hasPensaItems)) steps.push({ id: "pensa", kind: "pensa" });
+  const hasPensaItems = pensa && Object.values(pensa).some((group) => Array.isArray(group) ? group.length : pensumItemCount(group));
+  if (pensa && Object.keys(pensa).length && hasPensaItems) steps.push({ id: "pensa", kind: "pensa" });
   if (napishiOf(lesson, sections)) steps.push({ id: "write", kind: "write" });
   if (book && hasWorkbook(lesson, course, core)) steps.push({ id: "workbook", kind: "workbook" });
   steps.push({ id: "reread", kind: "reread" }, { id: "anki", kind: "anki" }, { id: "done", kind: "done" });
@@ -1915,6 +1915,11 @@ function pensaGroups(pensa) {
   }).filter(Boolean);
 }
 
+function pensumItemCount(group) {
+  if (Array.isArray(group)) return group.length;
+  return (group?.items || group?.questions || []).length + (group?.blocks || []).reduce((n, block) => n + (block.items || []).length, 0);
+}
+
 function pensaStore(lesson) {
   if (!state.pensa.has(lesson.id)) state.pensa.set(lesson.id, new Map());
   return state.pensa.get(lesson.id);
@@ -1959,7 +1964,9 @@ function renderObrazec(example, area) {
 }
 
 function renderPensa(lesson) {
-  const groups = pensaGroups(lessonPensa(lesson)).filter((group) => !capability("kata") || group.items?.length);
+  // A Pensum may hold its items directly or in blocks (each with its own Образец); an
+  // emptied Pensum is not shown.
+  const groups = pensaGroups(lessonPensa(lesson)).filter((group) => pensumItemCount(group));
   if (!groups.length) return null;
   const memory = pensaStore(lesson);
   const aids = Core.lessonAidIndex(lesson);
@@ -2107,6 +2114,11 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
     });
   } else {
     prompt.append(h("span", { id: promptTextId }, parts.join("___")));
+  }
+  if (item.audio_segment_id && lesson._audio?.selected?.data?.segments?.[item.audio_segment_id]) {
+    const play = h("button", { type: "button", class: "small-button item-audio", "aria-label": t("play_sentence") }, "▶");
+    play.addEventListener("click", () => playSegments([item.audio_segment_id], lesson));
+    li.append(play);
   }
   li.append(prompt);
 

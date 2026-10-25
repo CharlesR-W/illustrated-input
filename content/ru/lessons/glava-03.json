@@ -1069,7 +1069,7 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "у and нет take the genitive. Adjectives and pronouns have their own genitive forms too.",
+      "hint_en": "у and нет take the genitive. Adjectives and pronouns have their own genitive forms too. The first letters are shown.",
       "grammar_target_ids": [
        "G03"
       ],
@@ -1080,33 +1080,14 @@
       },
       "items": [
        {
-        "id": "x1-1-1",
-        "prompt": "Оте́ц стои́т у ___ (кра́сный) угла́.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "кра́сного"
-        ],
-        "choices": [
-         "кра́сный",
-         "кра́сного"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l03-s013"
-        ]
-       },
-       {
         "id": "x1-1-2",
         "prompt": "А у ___ (окно́) сиди́т Ива́н.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "окна́"
         ],
-        "choices": [
-         "окно́",
-         "окна́"
-        ],
+        "first_letters": 2,
         "source_segment_ids": [
          "ru-mir-01-l03-s015"
         ]
@@ -1115,14 +1096,11 @@
         "id": "x1-1-3",
         "prompt": "Мать и На́стя у ___ (дверь).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "две́ри"
         ],
-        "choices": [
-         "дверь",
-         "две́ри"
-        ],
+        "first_letters": 2,
         "source_segment_ids": [
          "ru-mir-01-l03-s016"
         ]
@@ -1131,45 +1109,55 @@
         "id": "x1-1-4",
         "prompt": "Где коро́ва? ___ (коро́ва) нет!",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "Коро́вы"
         ],
-        "choices": [
-         "Коро́ва",
-         "Коро́вы"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l03-s003"
         ]
        },
        {
         "id": "x1-1-5",
-        "prompt": "Дед сиди́т у ___ (печь).",
+        "prompt": "Ма́рья Степа́новна во дворе́, у ___ (изба́).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "пе́чи"
+         "избы́"
         ],
-        "choices": [
-         "печь",
-         "пе́чи"
-        ],
+        "first_letters": 2,
         "source_segment_ids": [
-         "ru-mir-01-l03-s014"
+         "ru-mir-01-l03-s001"
+        ]
+       },
+       {
+        "id": "x1-1-1",
+        "prompt": "Оте́ц стои́т у ___ (кра́сный) угла́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кра́сного"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s013"
         ]
        },
        {
         "id": "x1-1-6",
         "prompt": "У ___ (он) доска́: э́то доска́ На́сти.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "него́"
         ],
-        "choices": [
-         "он",
-         "него́"
+        "first_letters": 1,
+        "common_wrong": [
+         {
+          "answer": "его́",
+          "hint": "у + н-: у него́"
+         }
         ],
         "source_segment_ids": [
          "ru-mir-01-l03-s015a"
@@ -1188,96 +1176,158 @@
       ],
       "obrazec": {
        "rule": "чей стол · чья коро́ва · чьё окно́ · чьи воро́та",
-       "prompt": "— ___ воро́та? — спра́шивает оте́ц.",
+       "prompt": "— ___ (чей) воро́та? — спра́шивает оте́ц.",
        "answer": "Чьи"
       },
       "items": [
        {
         "id": "x1-3-1",
-        "prompt": "— А ___ вина́? — Не моя́!",
+        "prompt": "— А ___ (чей) вина́? — Не моя́!",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "Чья"
         ],
-        "choices": [
-         "Чей",
-         "Чья",
-         "Чьё"
-        ],
+        "first_letters": 2,
         "source_segment_ids": [
          "ru-mir-01-l03-s021",
          "ru-mir-01-l03-s022"
         ]
        },
        {
-        "id": "x1-3-2",
-        "prompt": "— ___ стол? — Наш.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "Чей"
-        ],
-        "choices": [
-         "Чей",
-         "Чья",
-         "Чьи"
-        ]
-       },
-       {
         "id": "x1-3-3",
-        "prompt": "— ___ окно́? — На́ше.",
+        "prompt": "— ___ (чей) окно́? — На́ше.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "Чьё"
         ],
-        "choices": [
-         "Чей",
-         "Чьё",
-         "Чья"
-        ]
-       },
-       {
-        "id": "x1-3-4",
-        "prompt": "— ___ коро́ва? — На́ша.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "Чья"
-        ],
-        "choices": [
-         "Чья",
-         "Чьё",
-         "Чьи"
-        ]
+        "first_letters": 2
        },
        {
         "id": "x1-3-5",
-        "prompt": "— ___ де́ти? — Мои́! — говори́т Да́рья.",
+        "prompt": "— ___ (чей) де́ти? — Мои́! — говори́т Да́рья.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "Чьи"
         ],
-        "choices": [
-         "Чей",
-         "Чья",
-         "Чьи"
+        "first_letters": 2
+       },
+       {
+        "id": "x1-3-4",
+        "prompt": "— ___ (чей) коро́ва? — На́ша.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чья"
+        ]
+       },
+       {
+        "id": "x1-3-2",
+        "prompt": "— ___ (чей) стол? — Наш.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Чей"
         ]
        },
        {
         "id": "x1-3-6",
-        "prompt": "— ___ дом? — Дом отца́.",
+        "prompt": "— ___ (чей) изба́? — Изба́ отца́.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "Чей"
+         "Чья"
         ],
-        "choices": [
-         "Чей",
-         "Чьё",
-         "Чьи"
+        "source_segment_ids": [
+         "ru-mir-01-l03-s007"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x1-6",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "Where something is not: нет + genitive. The thing that is missing moves to the genitive.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Коро́ва здесь. → Коро́вы нет.",
+       "prompt": "Коро́ва во дворе́. → ___ во дворе́ нет. (коро́ва)",
+       "answer": "Коро́вы"
+      },
+      "items": [
+       {
+        "id": "x1-6-1",
+        "prompt": "Ша́рик во дворе́. → ___ во дворе́ нет. (Ша́рик)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ша́рика"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s025"
+        ]
+       },
+       {
+        "id": "x1-6-2",
+        "prompt": "Доска́ у Ива́на. → ___ у Ива́на нет. (доска́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Доски́"
+        ]
+       },
+       {
+        "id": "x1-6-3",
+        "prompt": "Дед у пе́чи. → ___ у пе́чи нет. (дед)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Де́да"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s014"
+        ]
+       },
+       {
+        "id": "x1-6-4",
+        "prompt": "Ико́на там. → ___ там нет. (ико́на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ико́ны"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s010a"
+        ]
+       },
+       {
+        "id": "x1-6-5",
+        "prompt": "Оте́ц здесь. → ___ здесь нет. (оте́ц)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Отца́"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Оте́ца",
+          "hint": "оте́ц → отца́"
+         }
+        ]
+       },
+       {
+        "id": "x1-6-6",
+        "prompt": "Стол там. → ___ там нет. (стол)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Стола́"
         ]
        }
       ]
@@ -1287,14 +1337,14 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "The genitive follows у and also names the owner after a noun. The first letters are shown.",
+      "hint_en": "The genitive also names the owner after a noun: изба́ отца́. The first letters are shown at first, then only the word in brackets.",
       "grammar_target_ids": [
        "G03"
       ],
       "obrazec": {
-       "rule": "чья изба́? — изба́ отца́ · чья доска́? — доска́ На́сти · печь → у пе́чи",
-       "prompt": "Вот изба́ ___ (оте́ц).",
-       "answer": "отца́"
+       "rule": "чья изба́? — изба́ отца́ · чья доска́? — доска́ На́сти",
+       "prompt": "Э́то ико́на ___ (дед).",
+       "answer": "де́да"
       },
       "items": [
        {
@@ -1330,19 +1380,6 @@
         ]
        },
        {
-        "id": "x1-2-3",
-        "prompt": "Дед сиди́т у ___ (печь).",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "пе́чи"
-        ],
-        "first_letters": 2,
-        "source_segment_ids": [
-         "ru-mir-01-l03-s014"
-        ]
-       },
-       {
         "id": "x1-2-4",
         "prompt": "Оте́ц стои́т у кра́сного ___ (у́гол).",
         "mode": "productive",
@@ -1351,34 +1388,142 @@
          "угла́"
         ],
         "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "у́гола",
+          "hint": "у́гол → угла́"
+         }
+        ],
         "source_segment_ids": [
          "ru-mir-01-l03-s013"
         ]
        },
        {
-        "id": "x1-2-5",
-        "prompt": "Мать и На́стя у ___ (дверь).",
+        "id": "x1-2-7",
+        "prompt": "Э́то вина́ ___ (Ша́рик)? Нет, Ша́рик не винова́т.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ша́рика"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s026"
+        ]
+       },
+       {
+        "id": "x1-2-8",
+        "prompt": "Вот дверь ___ (изба́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "избы́"
+        ]
+       },
+       {
+        "id": "x1-2-9",
+        "prompt": "Э́то не доска́ ___ (Фёдор): э́то доска́ На́сти.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдора"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s015a"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x1-4",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Play the sentence and type the missing word.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Ма́рья Степа́новна во ___.",
+       "answer": "дворе́"
+      },
+      "items": [
+       {
+        "id": "x1-4-1",
+        "prompt": "Где коро́ва? ___ нет!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Коро́вы"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s003",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s003"
+        ]
+       },
+       {
+        "id": "x1-4-2",
+        "prompt": "Изба́ ___, а семья́ больша́я.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́ленькая"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s008",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s008"
+        ]
+       },
+       {
+        "id": "x1-4-3",
+        "prompt": "Дед сиди́т у ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "пе́чи"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s014",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s014"
+        ]
+       },
+       {
+        "id": "x1-4-4",
+        "prompt": "Мать и На́стя у ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "две́ри"
         ],
-        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l03-s016",
         "source_segment_ids": [
          "ru-mir-01-l03-s016"
         ]
        },
        {
-        "id": "x1-2-6",
-        "prompt": "У ___ (он) доска́: э́то доска́ На́сти.",
+        "id": "x1-4-5",
+        "prompt": "— ___ воро́та? — спра́шивает оте́ц.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "него́"
+         "Чьи"
         ],
-        "first_letters": 2,
+        "audio_segment_id": "ru-mir-01-l03-s019",
         "source_segment_ids": [
-         "ru-mir-01-l03-s015a"
+         "ru-mir-01-l03-s019"
+        ]
+       },
+       {
+        "id": "x1-4-6",
+        "prompt": "— Не моя́! У ___ — доска́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "меня́"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s022",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s022"
         ]
        }
       ]
@@ -1972,16 +2117,133 @@
     ],
     "exercises": [
      {
-      "id": "ru-mir-01-l03-x2-1",
-      "type": "podstanovka",
-      "title": "Подстано́вка",
-      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "The genitive follows нет and у; it also names the owner or the thing owned after a noun.",
+      "id": "ru-mir-01-l03-x2-5",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Pick the reply that fits the story.",
       "grammar_target_ids": [
        "G03"
       ],
       "obrazec": {
-       "rule": "Коро́ва здесь. ↔ Коро́вы нет. · сосе́д → сосе́да нет · дверь → две́ри нет",
+       "rule": "Вы́бери отве́т.",
+       "prompt": "— Где хлеб? — Хлеб ___.",
+       "answer": "в по́ле"
+      },
+      "items": [
+       {
+        "id": "x2-5-1",
+        "prompt": "— Коро́ва сосе́да бе́лая? — ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Не бе́лая"
+        ],
+        "choices": [
+         "Не бе́лая",
+         "Бе́лая"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s031a"
+        ]
+       },
+       {
+        "id": "x2-5-2",
+        "prompt": "— Где коро́ва? У це́ркви? — Нет, у це́ркви ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "нет коро́вы"
+        ],
+        "choices": [
+         "нет коро́вы",
+         "нет коро́ва"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s032"
+        ]
+       },
+       {
+        "id": "x2-5-3",
+        "prompt": "— Чья ла́вка? — ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Ла́вка Сила́нтия"
+        ],
+        "choices": [
+         "Ла́вка Сила́нтия",
+         "Изба́ отца́",
+         "Коро́ва сосе́да"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s039"
+        ]
+       },
+       {
+        "id": "x2-5-4",
+        "prompt": "— Кто хозя́ин ла́вки? — ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Сила́нтий Кузьми́ч"
+        ],
+        "choices": [
+         "Сила́нтий Кузьми́ч",
+         "Фёдор",
+         "Сосе́д"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s041",
+         "ru-mir-01-l03-s042"
+        ]
+       },
+       {
+        "id": "x2-5-5",
+        "prompt": "— Чья коро́ва в огоро́де? — ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Коро́ва Соколо́вых"
+        ],
+        "choices": [
+         "Коро́ва Соколо́вых",
+         "Коро́ва сосе́да"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s044"
+        ]
+       },
+       {
+        "id": "x2-5-6",
+        "prompt": "— Чей огоро́д? — ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Огоро́д Сила́нтия"
+        ],
+        "choices": [
+         "Огоро́д Сила́нтия",
+         "Наш огоро́д"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s047",
+         "ru-mir-01-l03-s049"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x2-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "The genitive follows нет and у; it also names the owner or the thing owned after a noun. The first letters are shown.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Коро́ва здесь. ↔ Коро́вы нет. · сосе́д → сосе́да нет",
        "prompt": "Вот коро́ва! А ___ (капу́ста) нет!",
        "answer": "капу́сты"
       },
@@ -1990,14 +2252,11 @@
         "id": "x2-1-1",
         "prompt": "У це́ркви то́же нет ___ (коро́ва).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "коро́вы"
         ],
-        "choices": [
-         "коро́ва",
-         "коро́вы"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l03-s032"
         ]
@@ -2006,78 +2265,63 @@
         "id": "x2-1-2",
         "prompt": "— Сосе́д здесь? — Нет, ___ (сосе́д) здесь нет.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "сосе́да"
         ],
-        "choices": [
-         "сосе́д",
-         "сосе́да"
-        ]
+        "first_letters": 3
        },
        {
-        "id": "x2-1-3",
-        "prompt": "У Сила́нтия есть дом. Он хозя́ин ___ (дом).",
+        "id": "x2-1-8",
+        "prompt": "И у ___ (уса́дьба) нет коро́вы.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "до́ма"
+         "уса́дьбы"
         ],
-        "choices": [
-         "дом",
-         "до́ма"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
-         "ru-mir-01-l03-s041",
-         "ru-mir-01-l03-s042"
+         "ru-mir-01-l03-s033"
         ]
        },
        {
         "id": "x2-1-4",
         "prompt": "Сила́нтий — хозя́ин ___ (ла́вка).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
          "ла́вки"
         ],
-        "choices": [
-         "ла́вка",
-         "ла́вки"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l03-s039a"
         ]
        },
        {
-        "id": "x2-1-5",
-        "prompt": "А у ___ (окно́) сиди́т Ива́н.",
+        "id": "x2-1-3",
+        "prompt": "У Сила́нтия есть дом. Он хозя́ин ___ (дом).",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "окна́"
+         "до́ма"
         ],
-        "choices": [
-         "окно́",
-         "окна́"
-        ],
+        "first_letters": 2,
         "source_segment_ids": [
-         "ru-mir-01-l03-s015"
+         "ru-mir-01-l03-s041",
+         "ru-mir-01-l03-s042"
         ]
        },
        {
-        "id": "x2-1-6",
-        "prompt": "Мать и На́стя у ___ (дверь).",
+        "id": "x2-1-7",
+        "prompt": "А у ___ (огоро́д) стои́т хозя́ин.",
         "mode": "productive",
-        "answer_mode": "choice",
+        "answer_mode": "exact",
         "accepted_answers": [
-         "две́ри"
+         "огоро́да"
         ],
-        "choices": [
-         "дверь",
-         "две́ри"
-        ],
+        "first_letters": 3,
         "source_segment_ids": [
-         "ru-mir-01-l03-s016"
+         "ru-mir-01-l03-s048"
         ]
        }
       ]
@@ -2108,18 +2352,6 @@
        "answer": "две́ри"
       },
       "items": [
-       {
-        "id": "x2-4-1",
-        "prompt": "У ___ (це́рковь) то́же нет коро́вы.",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "це́ркви"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l03-s032"
-        ]
-       },
        {
         "id": "x2-4-2",
         "prompt": "Где сиди́т дед? — Дед сиди́т у ___.",
@@ -2157,121 +2389,232 @@
         ]
        },
        {
-        "id": "x2-4-5",
-        "prompt": "Где стои́т хозя́ин? — Хозя́ин стои́т у ___.",
+        "id": "x2-4-1",
+        "prompt": "Коро́ва у це́ркви? — Нет, у ___ коро́вы нет.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "огоро́да"
+         "це́ркви"
         ],
         "source_segment_ids": [
-         "ru-mir-01-l03-s048"
+         "ru-mir-01-l03-s032"
+        ]
+       },
+       {
+        "id": "x2-4-5",
+        "prompt": "У кого́ коро́ва не бе́лая? — У ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сосе́да"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s031a"
         ]
        },
        {
         "id": "x2-4-6",
-        "prompt": "Чья ла́вка? — Ла́вка ___.",
+        "prompt": "Чья капу́ста в огоро́де? — Капу́ста ___.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "Сила́нтия"
         ],
         "source_segment_ids": [
-         "ru-mir-01-l03-s039"
+         "ru-mir-01-l03-s042",
+         "ru-mir-01-l03-s049"
         ]
        }
       ]
      },
      {
-      "id": "ru-mir-01-l03-x2-2",
+      "id": "ru-mir-01-l03-x2-7",
       "type": "podstanovka",
       "title": "Подстано́вка",
-      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "The genitive follows нет and у; it also names the owner or the thing owned after a noun. The first letters are shown.",
+      "instruction": "Поста́вь местоиме́ние в ну́жную фо́рму.",
+      "hint_en": "After у the pronouns он, она́, они́ add н-: у него́, у неё, у них.",
       "grammar_target_ids": [
        "G03"
       ],
       "obrazec": {
-       "rule": "нет коро́вы · у сосе́да · хозя́ин ла́вки",
-       "prompt": "У це́ркви то́же нет ___ (коро́ва).",
-       "answer": "коро́вы"
+       "rule": "я → у меня́ · он → у него́ · она́ → у неё · кто → у кого́",
+       "prompt": "Ива́н у окна́. У ___ (он) доска́.",
+       "answer": "него́"
       },
       "items": [
        {
-        "id": "x2-2-1",
-        "prompt": "Вот коро́ва! А ___ (капу́ста) нет!",
+        "id": "x2-7-1",
+        "prompt": "— Не моя́! У ___ (я) — доска́.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "капу́сты"
+         "меня́"
         ],
-        "first_letters": 3,
+        "first_letters": 1,
         "source_segment_ids": [
-         "ru-mir-01-l03-s046"
+         "ru-mir-01-l03-s022"
         ]
        },
        {
-        "id": "x2-2-2",
-        "prompt": "У него́ доска́: э́то доска́ ___ (На́стя).",
+        "id": "x2-7-2",
+        "prompt": "Ма́рья Степа́новна — мать. У ___ (она́) есть сын, Фёдор.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "На́сти"
+         "неё"
         ],
-        "first_letters": 3,
-        "source_segment_ids": [
-         "ru-mir-01-l03-s015a"
+        "first_letters": 1,
+        "common_wrong": [
+         {
+          "answer": "её",
+          "hint": "у + н-: у неё"
+         }
         ]
        },
        {
-        "id": "x2-2-4",
-        "prompt": "У ___ (сосе́д) есть коро́ва.",
+        "id": "x2-7-3",
+        "prompt": "У ___ (кто) коро́ва? В дере́вне? У сосе́да?",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "сосе́да"
+         "кого́"
         ],
-        "first_letters": 2,
+        "first_letters": 1,
         "source_segment_ids": [
-         "ru-mir-01-l03-s031"
+         "ru-mir-01-l03-s029"
         ]
        },
        {
-        "id": "x2-2-5",
-        "prompt": "У Сила́нтия есть дом: он хозя́ин ___ (дом).",
+        "id": "x2-7-4",
+        "prompt": "Сила́нтий — хозя́ин. У ___ (он) есть ла́вка.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "него́"
+        ],
+        "common_wrong": [
+         {
+          "answer": "его́",
+          "hint": "у + н-: у него́"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s040"
+        ]
+       },
+       {
+        "id": "x2-7-5",
+        "prompt": "На́стя — сестра́. У ___ (она́) есть брат.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "неё"
+        ],
+        "common_wrong": [
+         {
+          "answer": "её",
+          "hint": "у + н-: у неё"
+         }
+        ]
+       },
+       {
+        "id": "x2-7-6",
+        "prompt": "Фёдор и Ива́н и́щут. У ___ (они́) нет коро́вы.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "них"
+        ],
+        "common_wrong": [
+         {
+          "answer": "их",
+          "hint": "у + н-: у них"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s028"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x2-6",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "у X есть Y (Y in the nominative) ↔ у X нет Y (Y in the genitive).",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "У Сила́нтия есть ла́вка. → У отца́ нет ла́вки.",
+       "prompt": "У Сила́нтия есть ла́вка. → У отца́ нет ___. (ла́вка)",
+       "answer": "ла́вки"
+      },
+      "items": [
+       {
+        "id": "x2-6-1",
+        "prompt": "У Сила́нтия есть дом. → У Ша́рика нет ___. (дом)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "до́ма"
         ],
-        "first_letters": 2,
         "source_segment_ids": [
-         "ru-mir-01-l03-s041",
-         "ru-mir-01-l03-s042"
+         "ru-mir-01-l03-s040a"
         ]
        },
        {
-        "id": "x2-2-7",
-        "prompt": "Сила́нтий — хозя́ин ___ (ла́вка).",
+        "id": "x2-6-2",
+        "prompt": "У Ива́на есть доска́. → У Фёдора нет ___. (доска́)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "ла́вки"
-        ],
-        "first_letters": 2,
-        "source_segment_ids": [
-         "ru-mir-01-l03-s039a"
+         "доски́"
         ]
        },
        {
-        "id": "x2-2-8",
-        "prompt": "А у ___ (огоро́д) стои́т хозя́ин.",
+        "id": "x2-6-3",
+        "prompt": "В огоро́де есть капу́ста. → В огоро́де нет ___. (капу́ста)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "капу́сты"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s045a",
+         "ru-mir-01-l03-s046"
+        ]
+       },
+       {
+        "id": "x2-6-4",
+        "prompt": "У Сила́нтия есть огоро́д. → У Ша́рика нет ___. (огоро́д)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "огоро́да"
         ],
-        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s040a"
+        ]
+       },
+       {
+        "id": "x2-6-5",
+        "prompt": "Фёдор в по́ле. → ___ в по́ле нет. (Фёдор)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдора"
+        ]
+       },
+       {
+        "id": "x2-6-6",
+        "prompt": "Хозя́ин в огоро́де. → ___ в огоро́де нет. (хозя́ин)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Хозя́ина"
+        ],
         "source_segment_ids": [
          "ru-mir-01-l03-s048"
         ]
@@ -3346,108 +3689,112 @@
       "id": "ru-mir-01-l03-x3-2",
       "type": "podstanovka",
       "title": "Подстано́вка",
-      "instruction": "Поста́вь сло́во в ну́жную фо́рму: два и́ли две?",
+      "instruction": "Вы́бери отве́т: два и́ли две?",
       "hint_en": "два + м./ср., две + ж.; after 2–4 the noun is genitive singular.",
       "grammar_target_ids": [
        "G03"
       ],
       "obrazec": {
        "rule": "оди́н рубль → два рубля́ · одна́ копе́йка → две копе́йки",
-       "prompt": "Вот одна́ копе́йка, ___ копе́йки, три копе́йки.",
-       "answer": "две"
+       "prompt": "Вот оди́н стол, а вот ___.",
+       "answer": "два стола́"
       },
       "items": [
        {
         "id": "x3-2-1",
-        "prompt": "— Не оди́н рубль — ___ рубля́! — говори́т Сила́нтий.",
+        "prompt": "— Не оди́н рубль — ___! — говори́т Сила́нтий.",
         "mode": "productive",
         "answer_mode": "choice",
         "accepted_answers": [
-         "два"
+         "два рубля́"
         ],
         "choices": [
-         "два",
-         "две"
+         "два рубля́",
+         "две рубля́",
+         "два рубль"
         ],
         "source_segment_ids": [
          "ru-mir-01-l03-s056"
         ]
        },
        {
-        "id": "x3-2-2",
-        "prompt": "Вот одна́ копе́йка, ___ копе́йки, три копе́йки.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "две"
-        ],
-        "choices": [
-         "два",
-         "две"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l03-s059"
-        ]
-       },
-       {
-        "id": "x3-2-3",
-        "prompt": "Вот оди́н рубль, а не ___ рубля́.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "два"
-        ],
-        "choices": [
-         "два",
-         "две"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l03-s063a"
-        ]
-       },
-       {
-        "id": "x3-2-4",
-        "prompt": "Фёдор рабо́тает у Сила́нтия ___ дня.",
-        "mode": "productive",
-        "answer_mode": "choice",
-        "accepted_answers": [
-         "два"
-        ],
-        "choices": [
-         "два",
-         "две"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l03-s065"
-        ]
-       },
-       {
         "id": "x3-2-7",
-        "prompt": "Оди́н оте́ц и ___ сы́на: Фёдор и Ива́н.",
+        "prompt": "Оди́н оте́ц и ___: Фёдор и Ива́н.",
         "mode": "productive",
         "answer_mode": "choice",
         "accepted_answers": [
-         "два"
+         "два сы́на"
         ],
         "choices": [
-         "два",
-         "две"
+         "два сы́на",
+         "две сы́на",
+         "два сын"
         ],
         "source_segment_ids": [
          "ru-mir-01-l03-s058a"
         ]
        },
        {
-        "id": "x3-2-6",
-        "prompt": "Вот ___ избы́: изба́ Соколо́вых и изба́ сосе́да.",
+        "id": "x3-2-2",
+        "prompt": "Вот одна́ копе́йка, ___, три копе́йки.",
         "mode": "productive",
         "answer_mode": "choice",
         "accepted_answers": [
-         "две"
+         "две копе́йки"
         ],
         "choices": [
-         "два",
-         "две"
+         "две копе́йки",
+         "два копе́йки",
+         "две копе́йка"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s059"
+        ]
+       },
+       {
+        "id": "x3-2-8",
+        "prompt": "Рубль и ___ — а не два рубля́.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "четы́ре копе́йки"
+        ],
+        "choices": [
+         "четы́ре копе́йки",
+         "четы́ре копе́йка"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s060"
+        ]
+       },
+       {
+        "id": "x3-2-3",
+        "prompt": "— Ла́дно. Оди́н рубль — и ___.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "два дня"
+        ],
+        "choices": [
+         "два дня",
+         "две дня"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s064"
+        ]
+       },
+       {
+        "id": "x3-2-6",
+        "prompt": "Вот ___: изба́ Соколо́вых и изба́ сосе́да.",
+        "mode": "productive",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "две избы́"
+        ],
+        "choices": [
+         "две избы́",
+         "два избы́",
+         "две изба́"
         ]
        }
       ]
@@ -3457,7 +3804,7 @@
       "type": "podstanovka",
       "title": "Подстано́вка",
       "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-      "hint_en": "свой and чужо́й agree with their noun like adjectives: свой/своя́, чужо́й/чужа́я. The first letters are shown.",
+      "hint_en": "свой and чужо́й agree with their noun like adjectives: свой/своя́, чужо́й/чужа́я; genitive своего́, чужо́го.",
       "grammar_target_ids": [
        "G03"
       ],
@@ -3508,23 +3855,25 @@
        },
        {
         "id": "x3-4-4",
-        "prompt": "Огоро́д Сила́нтия не наш: он ___ (чужо́й).",
-        "mode": "productive",
-        "answer_mode": "exact",
-        "accepted_answers": [
-         "чужо́й"
-        ],
-        "first_letters": 3
-       },
-       {
-        "id": "x3-4-5",
-        "prompt": "Э́то не твоя́ доска́, э́то ___ (чужо́й) доска́.",
+        "prompt": "Капу́ста Сила́нтия не на́ша: она́ ___ (чужо́й).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "чужа́я"
+        ]
+       },
+       {
+        "id": "x3-4-5",
+        "prompt": "Сила́нтий стои́т у ___ (свой) огоро́да.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "своего́"
         ],
-        "first_letters": 3
+        "source_segment_ids": [
+         "ru-mir-01-l03-s048",
+         "ru-mir-01-l03-s049"
+        ]
        },
        {
         "id": "x3-4-6",
@@ -3534,9 +3883,136 @@
         "accepted_answers": [
          "Своя́"
         ],
-        "first_letters": 3,
         "source_segment_ids": [
          "ru-mir-01-l03-s079"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x3-6",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "The stem is shown; type the whole word. м. -∅ → -а, -ь/-ий → -я/-ия; ж. -а → -ы (after к: -и, копе́йки), -ь → -и; ср. -о → -а. оте́ц → отца́, це́рковь → це́ркви.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "кто? что? → у кого́? нет чего́?",
+       "prompt": "Где коро́ва? ___ (коро́ва) нет!",
+       "answer": "Коро́вы"
+      },
+      "items": [
+       {
+        "id": "x3-6-1",
+        "prompt": "Рубль и четы́ре копе́йки — а не два ___ (рубль).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "рубля́"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s060"
+        ]
+       },
+       {
+        "id": "x3-6-2",
+        "prompt": "Вот коро́ва ___ (сосе́д), но э́то не та коро́ва.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сосе́да"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s031"
+        ]
+       },
+       {
+        "id": "x3-6-3",
+        "prompt": "Вот де́ньги ___ (оте́ц): рубль и четы́ре копе́йки.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "отца́"
+        ],
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "оте́ца",
+          "hint": "оте́ц → отца́"
+         }
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s062",
+         "ru-mir-01-l03-s063"
+        ]
+       },
+       {
+        "id": "x3-6-4",
+        "prompt": "Э́то ла́вка ___ (Сила́нтий).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Сила́нтия"
+        ],
+        "first_letters": 7,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s039"
+        ]
+       },
+       {
+        "id": "x3-6-5",
+        "prompt": "Вот одна́ копе́йка, а вот две ___ (копе́йка).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "копе́йки"
+        ],
+        "first_letters": 6,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s059"
+        ]
+       },
+       {
+        "id": "x3-6-6",
+        "prompt": "Мать у ___ (печь).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "пе́чи"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s075"
+        ]
+       },
+       {
+        "id": "x3-6-7",
+        "prompt": "У ___ (це́рковь) то́же нет коро́вы.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "це́ркви"
+        ],
+        "first_letters": 5,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s032"
+        ]
+       },
+       {
+        "id": "x3-6-8",
+        "prompt": "Вот ико́на, а у ___ (ико́на) — оте́ц.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ико́ны"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l03-s078a"
         ]
        }
       ]
@@ -3563,6 +4039,21 @@
         "answer_mode": "exact",
         "accepted_answers": [
          "капу́сты"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s053"
+        ]
+       },
+       {
+        "id": "x3-3-8",
+        "prompt": "— А у ___ (ты) де́ньги есть, Фёдор? Нет?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "тебя́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l03-s065a"
         ]
        },
        {
@@ -3626,6 +4117,101 @@
         "source_segment_ids": [
          "ru-mir-01-l03-s035",
          "ru-mir-01-l03-s036"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l03-x3-8",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Play the sentence and type the missing word.",
+      "grammar_target_ids": [
+       "G03"
+      ],
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Капу́сты ___!",
+       "answer": "нет"
+      },
+      "items": [
+       {
+        "id": "x3-8-1",
+        "prompt": "— Два ___! — говори́т Сила́нтий.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "рубля́"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s055",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s055"
+        ]
+       },
+       {
+        "id": "x3-8-2",
+        "prompt": "Вот и оте́ц, у две́ри ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ла́вки"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s058",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s058"
+        ]
+       },
+       {
+        "id": "x3-8-3",
+        "prompt": "Рубль большо́й, а ___ — ма́ленькая.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "копе́йка"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s059a",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s059a"
+        ]
+       },
+       {
+        "id": "x3-8-4",
+        "prompt": "— А у ___ — доска́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́на"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s069",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s069"
+        ]
+       },
+       {
+        "id": "x3-8-5",
+        "prompt": "Коро́ва во дворе́, а семья́ в ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "избе́"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s073",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s073"
+        ]
+       },
+       {
+        "id": "x3-8-6",
+        "prompt": "— Коро́ва на́ша, а рубль — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Сила́нтия"
+        ],
+        "audio_segment_id": "ru-mir-01-l03-s080",
+        "source_segment_ids": [
+         "ru-mir-01-l03-s080"
         ]
        }
       ]
@@ -3818,405 +4404,7 @@
     "segment_id": "ru-mir-01-l03-s059"
    }
   ],
-  "note_en": "The genitive answers 'whose?' and 'of what?': изба́ отца́, хозя́ин ла́вки. It follows у ('at, by'; у меня́ есть = I have) and нет ('there is no': коро́вы нет). Endings: м./ср. -а/-я, ж. -ы/-и. After 2, 3, 4 a noun stands in the genitive singular (два рубля́, две копе́йки). Third-person pronouns add н- after у: у него́, у неё, у них.",
-  "kata": [
-   {
-    "id": "ru-mir-01-k03-roditelnyj",
-    "title": "У кого́? Чей?",
-    "shape": "choose",
-    "scheduled": true,
-    "table_ref": "roditelnyj-sushchestvitelnyh",
-    "pool": [
-     {
-      "id": "k03-01",
-      "prompt": "Ива́н и Фёдор у ___.",
-      "lemma": "сосе́д",
-      "label": "у кого́?",
-      "options": [
-       "сосе́д",
-       "сосе́да"
-      ],
-      "stem_hint": "м. -∅ → -а",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 0,
-       "col": 1
-      },
-      "answer": "сосе́да",
-      "accepted": [
-       "сосе́да"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-02",
-      "prompt": "Не оди́н рубль — два ___!",
-      "lemma": "рубль",
-      "label": "два …",
-      "options": [
-       "рубль",
-       "рубля́"
-      ],
-      "stem_hint": "м. -ь → -я",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 1,
-       "col": 1
-      },
-      "answer": "рубля́",
-      "accepted": [
-       "рубля́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-03",
-      "prompt": "Вот изба́ ___.",
-      "lemma": "оте́ц",
-      "label": "чья?",
-      "options": [
-       "оте́ц",
-       "отца́"
-      ],
-      "stem_hint": "оте́ц → отц-",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 2,
-       "col": 1
-      },
-      "answer": "отца́",
-      "accepted": [
-       "отца́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-04",
-      "prompt": "Э́то ла́вка ___.",
-      "lemma": "Сила́нтий",
-      "label": "чья?",
-      "options": [
-       "Сила́нтий",
-       "Сила́нтия"
-      ],
-      "stem_hint": "-ий → -ия",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 3,
-       "col": 1
-      },
-      "answer": "Сила́нтия",
-      "accepted": [
-       "Сила́нтия"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-05",
-      "prompt": "Где коро́ва? ___ нет!",
-      "lemma": "коро́ва",
-      "label": "нет",
-      "options": [
-       "Коро́ва",
-       "Коро́вы"
-      ],
-      "stem_hint": "ж. -а → -ы",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 4,
-       "col": 1
-      },
-      "answer": "Коро́вы",
-      "accepted": [
-       "Коро́вы"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-06",
-      "prompt": "Вот одна́ копе́йка, а вот две ___.",
-      "lemma": "копе́йка",
-      "label": "две …",
-      "options": [
-       "копе́йка",
-       "копе́йки"
-      ],
-      "stem_hint": "ж. -ка → -ки",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 5,
-       "col": 1
-      },
-      "answer": "копе́йки",
-      "accepted": [
-       "копе́йки"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-07",
-      "prompt": "Дед сиди́т у ___.",
-      "lemma": "печь",
-      "label": "где? у …",
-      "options": [
-       "печь",
-       "пе́чи"
-      ],
-      "stem_hint": "ж. -ь → -и",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 6,
-       "col": 1
-      },
-      "answer": "пе́чи",
-      "accepted": [
-       "пе́чи"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-08",
-      "prompt": "У ___ то́же нет коро́вы.",
-      "lemma": "це́рковь",
-      "label": "где? у …",
-      "options": [
-       "це́рковь",
-       "це́ркви"
-      ],
-      "stem_hint": "це́рковь → церкв-",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 7,
-       "col": 1
-      },
-      "answer": "це́ркви",
-      "accepted": [
-       "це́ркви"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-09",
-      "prompt": "А у ___ сиди́т Ива́н.",
-      "lemma": "окно́",
-      "label": "где? у …",
-      "options": [
-       "окно́",
-       "окна́"
-      ],
-      "stem_hint": "ср. -о → -а",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 8,
-       "col": 1
-      },
-      "answer": "окна́",
-      "accepted": [
-       "окна́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-10",
-      "prompt": "Вот коро́ва! А ___ нет!",
-      "lemma": "капу́ста",
-      "label": "нет",
-      "options": [
-       "капу́ста",
-       "капу́сты"
-      ],
-      "stem_hint": "ж. -а → -ы",
-      "cell": {
-       "table": "roditelnyj-sushchestvitelnyh",
-       "row": 9,
-       "col": 1
-      },
-      "answer": "капу́сты",
-      "accepted": [
-       "капу́сты"
-      ],
-      "collapsed": []
-     }
-    ]
-   },
-   {
-    "id": "ru-mir-01-k03-u-menya",
-    "title": "У меня́, у него́",
-    "shape": "choose",
-    "scheduled": false,
-    "table_ref": "u-menya",
-    "pool": [
-     {
-      "id": "k03-11",
-      "prompt": "— Не моя́! У ___ — доска́.",
-      "lemma": "я",
-      "label": "у кого́?",
-      "options": [
-       "я",
-       "меня́"
-      ],
-      "stem_hint": "Меня́ зову́т… → у меня́",
-      "cell": {
-       "table": "u-menya",
-       "row": 0,
-       "col": 1
-      },
-      "answer": "меня́",
-      "accepted": [
-       "меня́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-12",
-      "prompt": "— А у ___ де́ньги есть, Фёдор?",
-      "lemma": "ты",
-      "label": "у кого́?",
-      "options": [
-       "ты",
-       "тебя́"
-      ],
-      "stem_hint": "Как тебя́ зову́т? → у тебя́",
-      "cell": {
-       "table": "u-menya",
-       "row": 1,
-       "col": 1
-      },
-      "answer": "тебя́",
-      "accepted": [
-       "тебя́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-13",
-      "prompt": "Ива́н у окна́. У ___ доска́.",
-      "lemma": "он",
-      "label": "у кого́?",
-      "options": [
-       "его́",
-       "него́"
-      ],
-      "stem_hint": "у + н-",
-      "cell": {
-       "table": "u-menya",
-       "row": 2,
-       "col": 1
-      },
-      "answer": "него́",
-      "accepted": [
-       "него́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-14",
-      "prompt": "На́стя — сестра́. У ___ есть брат.",
-      "lemma": "она́",
-      "label": "у кого́?",
-      "options": [
-       "её",
-       "неё"
-      ],
-      "stem_hint": "у + н-",
-      "cell": {
-       "table": "u-menya",
-       "row": 3,
-       "col": 1
-      },
-      "answer": "неё",
-      "accepted": [
-       "неё"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-15",
-      "prompt": "У ___ коро́ва? У сосе́да?",
-      "lemma": "кто",
-      "label": "у кого́?",
-      "options": [
-       "кто",
-       "кого́"
-      ],
-      "stem_hint": "кто → кого́",
-      "cell": {
-       "table": "u-menya",
-       "row": 5,
-       "col": 1
-      },
-      "answer": "кого́",
-      "accepted": [
-       "кого́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-16",
-      "prompt": "Сила́нтий — хозя́ин. У ___ есть ла́вка.",
-      "lemma": "он",
-      "label": "у кого́?",
-      "options": [
-       "его́",
-       "него́"
-      ],
-      "stem_hint": "у + н-",
-      "cell": {
-       "table": "u-menya",
-       "row": 2,
-       "col": 1
-      },
-      "answer": "него́",
-      "accepted": [
-       "него́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-17",
-      "prompt": "— Фёдор рабо́тает у ___, в огоро́де, — говори́т Сила́нтий.",
-      "lemma": "я",
-      "label": "у кого́?",
-      "options": [
-       "я",
-       "меня́"
-      ],
-      "stem_hint": "Меня́ зову́т… → у меня́",
-      "cell": {
-       "table": "u-menya",
-       "row": 0,
-       "col": 1
-      },
-      "answer": "меня́",
-      "accepted": [
-       "меня́"
-      ],
-      "collapsed": []
-     },
-     {
-      "id": "k03-18",
-      "prompt": "На́стя — дочь. У ___ есть оте́ц.",
-      "lemma": "она́",
-      "label": "у кого́?",
-      "options": [
-       "её",
-       "неё"
-      ],
-      "stem_hint": "у + н-",
-      "cell": {
-       "table": "u-menya",
-       "row": 3,
-       "col": 1
-      },
-      "answer": "неё",
-      "accepted": [
-       "неё"
-      ],
-      "collapsed": []
-     }
-    ]
-   }
-  ]
+  "note_en": "The genitive answers 'whose?' and 'of what?': изба́ отца́, хозя́ин ла́вки. It follows у ('at, by'; у меня́ есть = I have) and нет ('there is no': коро́вы нет). Endings: м./ср. -а/-я, ж. -ы/-и. After 2, 3, 4 a noun stands in the genitive singular (два рубля́, две копе́йки). Third-person pronouns add н- after у: у него́, у неё, у них."
  },
  "pensa": {
   "A": {
@@ -4225,135 +4413,146 @@
    "blocks": [
     {
      "obrazec": {
+      "rule": "у кого́? нет чего́? сосе́д → у сосе́да · коро́ва → нет коро́вы",
       "prompt": "У ___ (сосе́д) есть соба́ка.",
       "answer": "сосе́да"
      },
      "items": [
       {
+       "id": "a1",
        "prompt": "У ___ (Сила́нтий) есть ла́вка.",
        "mode": "productive",
-       "answer_mode": "choice",
+       "answer_mode": "exact",
        "accepted_answers": [
         "Сила́нтия"
        ],
-       "choices": [
-        "Сила́нтий",
-        "Сила́нтия"
-       ],
-       "id": "a1",
+       "first_letters": 4,
        "source_segment_ids": [
-        "ru-mir-01-l03-s041"
+        "ru-mir-01-l03-s040"
        ]
       },
       {
+       "id": "a2",
        "prompt": "Где на́ша коро́ва? ___ (коро́ва) нет!",
        "mode": "productive",
-       "answer_mode": "choice",
-       "accepted_answers": [
-        "Коро́вы"
-       ],
-       "choices": [
-        "Коро́ва",
-        "Коро́вы"
-       ],
-       "id": "a2",
-       "source_segment_ids": [
-        "ru-mir-01-l03-s003"
-       ]
-      },
-      {
-       "prompt": "Э́то изба́ ___ (оте́ц).",
-       "mode": "productive",
-       "answer_mode": "choice",
-       "accepted_answers": [
-        "отца́"
-       ],
-       "choices": [
-        "оте́ц",
-        "отца́"
-       ],
-       "id": "a3"
-      },
-      {
-       "prompt": "На́стя — сестра́. У ___ (она́) есть брат.",
-       "mode": "productive",
-       "answer_mode": "choice",
-       "accepted_answers": [
-        "неё"
-       ],
-       "choices": [
-        "она́",
-        "её",
-        "неё"
-       ],
-       "id": "a4"
-      },
-      {
-       "prompt": "Не оди́н рубль — два ___ (рубль)!",
-       "mode": "productive",
-       "answer_mode": "choice",
-       "accepted_answers": [
-        "рубля́"
-       ],
-       "choices": [
-        "рубль",
-        "рубля́"
-       ],
-       "id": "a5",
-       "source_segment_ids": [
-        "ru-mir-01-l03-s056"
-       ]
-      },
-      {
-       "prompt": "Вот одна́ копе́йка, а вот ___ копе́йки.",
-       "mode": "productive",
-       "answer_mode": "choice",
-       "accepted_answers": [
-        "две"
-       ],
-       "choices": [
-        "два",
-        "две"
-       ],
-       "id": "a6"
-      },
-      {
-       "prompt": "У це́ркви нет ___ (коро́ва).",
-       "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "коро́вы"
+        "Коро́вы"
        ],
-       "id": "a7",
        "first_letters": 3,
        "source_segment_ids": [
-        "ru-mir-01-l03-s032"
+        "ru-mir-01-l03-s003",
+        "ru-mir-01-l03-s005"
        ]
       },
       {
-       "prompt": "— А ___ (чей) вина́? — Не моя́!",
+       "id": "a3",
+       "prompt": "Э́то изба́ ___ (оте́ц).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Чья"
+        "отца́"
        ],
-       "id": "a8",
        "first_letters": 2,
+       "common_wrong": [
+        {
+         "answer": "оте́ца",
+         "hint": "оте́ц → отца́"
+        }
+       ],
        "source_segment_ids": [
-        "ru-mir-01-l03-s021",
-        "ru-mir-01-l03-s022"
+        "ru-mir-01-l03-s007"
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "У ___ (шко́ла) то́же нет коро́вы.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "шко́лы"
+       ],
+       "source_segment_ids": [
+        "ru-mir-01-l03-s033"
        ]
       }
      ]
     },
     {
      "obrazec": {
+      "rule": "я → у меня́ · она́ → у неё · чей → чья, чьи · оди́н рубль → два рубля́",
+      "prompt": "— Не моя́! У ___ (я) — доска́.",
+      "answer": "меня́"
+     },
+     "items": [
+      {
+       "id": "a4",
+       "prompt": "Вот На́стя. У ___ (она́) нет доски́: доска́ у Ива́на.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "неё"
+       ],
+       "first_letters": 1,
+       "common_wrong": [
+        {
+         "answer": "её",
+         "hint": "у + н-: у неё"
+        }
+       ],
+       "source_segment_ids": [
+        "ru-mir-01-l03-s015a"
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "— А воро́та ___ (чей)? А вина́ чья? — спра́шивает дед.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "чьи"
+       ],
+       "first_letters": 2,
+       "source_segment_ids": [
+        "ru-mir-01-l03-s081"
+       ]
+      },
+      {
+       "id": "a5",
+       "prompt": "Не оди́н рубль — два ___ (рубль)!",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "рубля́"
+       ],
+       "source_segment_ids": [
+        "ru-mir-01-l03-s056"
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Вот одна́ копе́йка, а вот ___ (два) копе́йки.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "две"
+       ],
+       "source_segment_ids": [
+        "ru-mir-01-l03-s059"
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "rule": "м. -ый/-ой · ж. -ая · ср. -ое",
       "prompt": "Изба́ ___ (ста́рый).",
       "answer": "ста́рая"
      },
      "items": [
       {
-       "prompt": "Печь ___, а у́гол — кра́сный.",
+       "id": "a9",
+       "prompt": "Печь ___ (бе́лый), а у́гол — кра́сный.",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
@@ -4361,21 +4560,23 @@
        ],
        "first_letters": 2,
        "recall_of": "G01",
-       "id": "a9",
        "source_segment_ids": [
         "ru-mir-01-l03-s010b"
        ]
       },
       {
+       "id": "a10",
        "prompt": "Окно́ ___ (ма́ленький), а печь больша́я.",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "ма́ленькое"
        ],
-       "first_letters": 2,
        "recall_of": "G01",
-       "id": "a10"
+       "source_segment_ids": [
+        "ru-mir-01-l03-s011",
+        "ru-mir-01-l03-s009a"
+       ]
       }
      ]
     }
@@ -4406,7 +4607,7 @@
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
-      "Капу́ста"
+      "капу́ста"
      ],
      "id": "b1",
      "source_segment_ids": [
@@ -4495,7 +4696,130 @@
   "C": {
    "id": "ru-mir-01-l03-pc",
    "title": "Пе́нсум C — Вопро́сы",
-   "items": []
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "— Где сиди́т дед? — Дед сиди́т ___.",
+     "mode": "recognition",
+     "answer_mode": "choice",
+     "accepted_answers": [
+      "у пе́чи"
+     ],
+     "choices": [
+      "у пе́чи",
+      "у окна́",
+      "у две́ри"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l03-s014"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "— Чья доска́ у Ива́на? — Э́то доска́ ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "На́сти"
+     ],
+     "first_letters": 2,
+     "source_segment_ids": [
+      "ru-mir-01-l03-s015a"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "— Чьи воро́та? — Воро́та ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "на́ши"
+     ],
+     "first_letters": 2,
+     "source_segment_ids": [
+      "ru-mir-01-l03-s019",
+      "ru-mir-01-l03-s020"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "— Где коро́ва? — Коро́ва ___.",
+     "mode": "recognition",
+     "answer_mode": "choice",
+     "accepted_answers": [
+      "в огоро́де"
+     ],
+     "choices": [
+      "в огоро́де",
+      "у це́ркви",
+      "у шко́лы"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l03-s043",
+      "ru-mir-01-l03-s044"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "— Кто хозя́ин огоро́да? — Хозя́ин огоро́да — ___.",
+     "mode": "recognition",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Сила́нтий",
+      "Сила́нтий Кузьми́ч"
+     ],
+     "first_letters": 3,
+     "source_segment_ids": [
+      "ru-mir-01-l03-s042",
+      "ru-mir-01-l03-s049"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "— Что у отца́? — Рубль и четы́ре ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "копе́йки"
+     ],
+     "first_letters": 3,
+     "source_segment_ids": [
+      "ru-mir-01-l03-s060",
+      "ru-mir-01-l03-s063"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "— Кто рабо́тает у Сила́нтия? — У Сила́нтия рабо́тает ___.",
+     "mode": "recognition",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "Фёдор"
+     ],
+     "first_letters": 2,
+     "source_segment_ids": [
+      "ru-mir-01-l03-s065"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "— Где рубль? — Рубль ___.",
+     "mode": "recognition",
+     "answer_mode": "choice",
+     "accepted_answers": [
+      "у Сила́нтия"
+     ],
+     "choices": [
+      "у Сила́нтия",
+      "у отца́",
+      "у Ива́на"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l03-s076",
+      "ru-mir-01-l03-s077"
+     ]
+    }
+   ]
   }
  },
  "vocabulary": [

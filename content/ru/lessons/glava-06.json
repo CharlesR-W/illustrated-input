@@ -627,118 +627,110 @@
         ],
         "exercises": [
           {
-            "id": "ru-mir-01-l06-x1-4",
-            "type": "podstanovka",
-            "title": "Подстано́вка",
-            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-            "hint_en": "Choose the form. Masculine people and animals: -а/-я; things: no change; nouns in -а/-я: -у/-ю.",
-            "grammar_target_ids": [
-              "G06"
-            ],
+            "id": "ru-mir-01-l06-x1-2",
+            "type": "soedini",
+            "title": "Соедини́",
+            "instruction": "Вы́бери отве́т.",
+            "hint_en": "Choose the phrase that fits the story.",
             "obrazec": {
-              "rule": "кого́? Его́р → Его́ра · что? окно́ → окно́ · что? ла́мпа → ла́мпу",
-              "prompt": "Ива́н ви́дит ___. (Его́р / Его́ра)",
-              "answer": "Его́ра"
+              "rule": "Ива́н рабо́тает … → в по́ле",
+              "prompt": "У́тром Ива́н рабо́тает ___.",
+              "answer": "в по́ле"
             },
             "items": [
               {
-                "id": "x1-4-1",
-                "prompt": "Ива́н ви́дит ___, ви́дит окно́, ви́дит Его́ра.",
-                "mode": "productive",
+                "id": "x1-2-1",
+                "prompt": "Ве́чером Ива́н стои́т ___.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "ла́мпу"
+                  "у шко́лы"
+                ],
+                "choices": [
+                  "у шко́лы",
+                  "в по́ле"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s005",
+                  "ru-mir-01-l06-s003"
+                ]
+              },
+              {
+                "id": "x1-2-2",
+                "prompt": "В окне́ — ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "ла́мпа"
                 ],
                 "choices": [
                   "ла́мпа",
-                  "ла́мпу"
+                  "Ве́ра Никола́евна"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s009"
+                  "ru-mir-01-l06-s006"
                 ]
               },
               {
-                "id": "x1-4-2",
-                "prompt": "Ива́н ви́дит ла́мпу, ви́дит ___, ви́дит Его́ра.",
-                "mode": "productive",
+                "id": "x1-2-3",
+                "prompt": "Там сидя́т взро́слые: Его́р и ___.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "окно́"
+                  "два сосе́да"
                 ],
                 "choices": [
-                  "окно́",
-                  "окне́"
+                  "два сосе́да",
+                  "На́стя"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s009"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "окне́",
-                    "hint": "что? окно́ → окно́"
-                  }
+                  "ru-mir-01-l06-s008"
                 ]
               },
               {
-                "id": "x1-4-3",
-                "prompt": "Вот идёт На́стя. Она́ ви́дит ___.",
-                "mode": "productive",
+                "id": "x1-2-4",
+                "prompt": "Ве́ру Никола́евну он не ви́дит, ___ её.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "Ива́на"
+                  "но слы́шит"
                 ],
                 "choices": [
-                  "Ива́н",
-                  "Ива́на"
-                ],
-                "source_segment_ids": [
-                  "ru-mir-01-l06-s016",
-                  "ru-mir-01-l06-s017"
-                ]
-              },
-              {
-                "id": "x1-4-4",
-                "prompt": "___ Никола́евну он не ви́дит, но слы́шит её.",
-                "mode": "productive",
-                "answer_mode": "choice",
-                "accepted_answers": [
-                  "Ве́ру"
-                ],
-                "choices": [
-                  "Ве́ра",
-                  "Ве́ру"
+                  "но слы́шит",
+                  "и не слы́шит"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s012"
                 ]
               },
               {
-                "id": "x1-4-5",
-                "prompt": "— Кого́ ты ждёшь? ___?",
-                "mode": "productive",
+                "id": "x1-2-5",
+                "prompt": "— Кого́ ты ждёшь? Его́ра? — Нет… ___.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "Его́ра"
+                  "Не зна́ю"
                 ],
                 "choices": [
-                  "Его́р",
-                  "Его́ра"
+                  "Не зна́ю",
+                  "Сосе́да жду"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s020"
+                  "ru-mir-01-l06-s020",
+                  "ru-mir-01-l06-s021"
                 ]
               },
               {
-                "id": "x1-4-6",
-                "prompt": "Она́ берёт ___ за́ руку.",
-                "mode": "productive",
+                "id": "x1-2-6",
+                "prompt": "Рука́ На́сти ма́ленькая, а рука́ Ива́на ___.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "бра́та"
+                  "больша́я"
                 ],
                 "choices": [
-                  "брат",
-                  "бра́та"
+                  "больша́я",
+                  "то́же ма́ленькая"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s023"
@@ -747,11 +739,110 @@
             ]
           },
           {
+            "id": "ru-mir-01-l06-x1-4",
+            "type": "podstanovka",
+            "title": "Подстано́вка",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+            "hint_en": "One frame, a new noun each time. Masculine people and animals: -а/-я; masculine and neuter things: no change; nouns in -а/-я: -у/-ю.",
+            "grammar_target_ids": [
+              "G06"
+            ],
+            "obrazec": {
+              "rule": "кого́? Ива́н → Ива́на · что? окно́ → окно́ · что? ла́мпа → ла́мпу",
+              "prompt": "На́стя ви́дит ___ (Ива́н, кого́?).",
+              "answer": "Ива́на"
+            },
+            "items": [
+              {
+                "id": "x1-4-1",
+                "prompt": "На́стя ви́дит ___ (Его́р, кого́?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Его́ра"
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x1-4-2",
+                "prompt": "На́стя ви́дит ___ (ла́мпа, что?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ла́мпу"
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x1-4-3",
+                "prompt": "На́стя ви́дит ___ (окно́, что?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "окно́"
+                ],
+                "first_letters": 2,
+                "common_wrong": [
+                  {
+                    "answer": "окне́",
+                    "hint": "что? окно́ → окно́"
+                  }
+                ]
+              },
+              {
+                "id": "x1-4-4",
+                "prompt": "На́стя ви́дит ___ (брат, кого́?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "бра́та"
+                ],
+                "first_letters": 3,
+                "common_wrong": [
+                  {
+                    "answer": "брат",
+                    "hint": "кого́? брат → бра́та"
+                  }
+                ]
+              },
+              {
+                "id": "x1-4-5",
+                "prompt": "На́стя ви́дит ___ (шко́ла, что?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "шко́лу"
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x1-4-6",
+                "prompt": "На́стя ви́дит ___ (Ва́ня, кого́?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ва́ню"
+                ],
+                "first_letters": 2
+              },
+              {
+                "id": "x1-4-7",
+                "prompt": "На́стя ви́дит ___ (сосе́д, кого́?).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "сосе́да"
+                ],
+                "first_letters": 3
+              }
+            ]
+          },
+          {
             "id": "ru-mir-01-l06-x1-3",
             "type": "preobrazovanie",
             "title": "Преобразова́ние",
             "instruction": "Скажи́ коро́че: он → его́, она́ → её.",
-            "hint_en": "Replace the object with a pronoun before the verb: он → его́, она́ → её.",
+            "hint_en": "Replace the object with a pronoun before the verb: он → его́, она́ → её. The pronoun in brackets is the кто? form.",
             "grammar_target_ids": [
               "G06"
             ],
@@ -763,34 +854,26 @@
             "items": [
               {
                 "id": "x1-3-1",
-                "prompt": "Ива́н слы́шит Ве́ру. → Ива́н ___ слы́шит.",
+                "prompt": "Ива́н слы́шит Ве́ру. → Ива́н ___ слы́шит. (она́)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "её"
                 ],
-                "choices": [
-                  "его́",
-                  "её",
-                  "она́"
-                ],
+                "first_letters": 1,
                 "source_segment_ids": [
                   "ru-mir-01-l06-s012"
                 ]
               },
               {
                 "id": "x1-3-2",
-                "prompt": "Мать лю́бит Ива́на. → Мать ___ лю́бит.",
+                "prompt": "Мать лю́бит Ива́на. → Мать ___ лю́бит. (он)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "его́"
                 ],
-                "choices": [
-                  "он",
-                  "его́",
-                  "её"
-                ],
+                "first_letters": 1,
                 "common_wrong": [
                   {
                     "answer": "он",
@@ -800,30 +883,20 @@
               },
               {
                 "id": "x1-3-3",
-                "prompt": "Его́р ждёт Ве́ру Никола́евну. → Его́р ___ ждёт.",
+                "prompt": "Его́р ждёт Ве́ру Никола́евну. → Его́р ___ ждёт. (она́)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "её"
-                ],
-                "choices": [
-                  "его́",
-                  "её",
-                  "она́"
                 ]
               },
               {
                 "id": "x1-3-4",
-                "prompt": "На́стя ви́дит ла́мпу. → На́стя ___ ви́дит.",
+                "prompt": "На́стя ви́дит ла́мпу. → На́стя ___ ви́дит. (она́)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "её"
-                ],
-                "choices": [
-                  "она́",
-                  "её",
-                  "его́"
                 ],
                 "common_wrong": [
                   {
@@ -834,118 +907,120 @@
               },
               {
                 "id": "x1-3-5",
-                "prompt": "Ива́н ви́дит Его́ра. → Ива́н ___ ви́дит.",
+                "prompt": "Ива́н ви́дит Его́ра. → Ива́н ___ ви́дит. (он)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "его́"
                 ],
-                "choices": [
-                  "его́",
-                  "её",
-                  "он"
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s009",
+                  "ru-mir-01-l06-s010"
+                ]
+              },
+              {
+                "id": "x1-3-6",
+                "prompt": "На́стя берёт бра́та за́ руку. → На́стя ___ берёт за́ руку. (он)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "его́"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s009"
+                  "ru-mir-01-l06-s023"
                 ]
               }
             ]
           },
           {
-            "id": "ru-mir-01-l06-x1-1",
-            "type": "podstanovka",
-            "title": "Подстано́вка",
-            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-            "hint_en": "Singular objects: masculine people and animals take the genitive form -а/-я; masculine and neuter things stay unchanged; nouns in -а take -у.",
-            "grammar_target_ids": [
-              "G06"
-            ],
+            "id": "ru-mir-01-l06-x1-5",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
             "obrazec": {
-              "rule": "кого́? Его́р → Его́ра · что? окно́ → окно́",
-              "prompt": "Ива́н ви́дит ___ (Его́р).",
-              "answer": "Его́ра"
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "Ива́н стои́т у ___.",
+              "answer": "шко́лы"
             },
             "items": [
               {
-                "id": "x1-1-1",
-                "prompt": "На́стя ждёт ___ (брат).",
+                "id": "x1-5-1",
+                "audio_segment_id": "ru-mir-01-l06-s009",
+                "prompt": "Ива́н ви́дит ла́мпу, ви́дит окно́, ви́дит ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "бра́та"
+                  "Его́ра"
                 ],
-                "first_letters": 2,
-                "common_wrong": [
-                  {
-                    "answer": "брат",
-                    "hint": "кого́? брат → бра́та"
-                  }
-                ]
-              },
-              {
-                "id": "x1-1-2",
-                "prompt": "Ива́н ви́дит ___ (окно́).",
-                "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "окно́"
-                ],
-                "first_letters": 2,
-                "source_segment_ids": [
-                  "ru-mir-01-l06-s009"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "окне́",
-                    "hint": "что? окно́ → окно́"
-                  }
-                ]
-              },
-              {
-                "id": "x1-1-3",
-                "prompt": "Мать лю́бит ___ (сын).",
-                "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "сы́на"
-                ],
-                "first_letters": 2
-              },
-              {
-                "id": "x1-1-4",
-                "prompt": "Ива́н ви́дит ___ (ла́мпа).",
-                "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "ла́мпу"
-                ],
-                "first_letters": 2,
                 "source_segment_ids": [
                   "ru-mir-01-l06-s009"
                 ]
               },
               {
-                "id": "x1-1-5",
-                "prompt": "Ива́н слы́шит ___ (Ве́ра).",
+                "id": "x1-5-2",
+                "audio_segment_id": "ru-mir-01-l06-s010",
+                "prompt": "А Его́р ___ не ви́дит.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Ве́ру"
+                  "его́"
                 ],
-                "first_letters": 2,
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s012"
+                  "ru-mir-01-l06-s010"
                 ]
               },
               {
-                "id": "x1-1-6",
-                "prompt": "На́стя ждёт ___ (сосе́д).",
+                "id": "x1-5-3",
+                "audio_segment_id": "ru-mir-01-l06-s011",
+                "prompt": "Ива́н не идёт в ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "сосе́да"
+                  "шко́лу"
                 ],
-                "first_letters": 3
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s011"
+                ]
+              },
+              {
+                "id": "x1-5-4",
+                "audio_segment_id": "ru-mir-01-l06-s017",
+                "prompt": "Она́ ви́дит ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ива́на"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s017"
+                ]
+              },
+              {
+                "id": "x1-5-5",
+                "audio_segment_id": "ru-mir-01-l06-s018",
+                "prompt": "— Ва́ня! Ты ___ слы́шишь? Почему́ ты стои́шь?",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "меня́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s018"
+                ]
+              },
+              {
+                "id": "x1-5-6",
+                "audio_segment_id": "ru-mir-01-l06-s020",
+                "prompt": "— ___ ты ждёшь? Его́ра?",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Кого́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s020"
+                ]
               }
             ]
           }
@@ -1347,103 +1422,105 @@
         ],
         "exercises": [
           {
-            "id": "ru-mir-01-l06-x2-1",
-            "type": "preobrazovanie",
-            "title": "Преобразова́ние",
-            "instruction": "Спроси́: кого́? и́ли что?",
-            "hint_en": "People and animals: кого́? Things: что?",
+            "id": "ru-mir-01-l06-x2-2",
+            "type": "okonchaniya",
+            "title": "Оконча́ния",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+            "hint_en": "The first letters show the stem; type the whole word. Кого́? -а for masculine people; что? masculine things do not change; nouns in -а/-я take -у/-ю.",
             "grammar_target_ids": [
               "G06"
             ],
             "obrazec": {
-              "rule": "Ве́ру → кого́? · ла́мпу → что?",
-              "prompt": "Ива́н ви́дит Ве́ру. → ___ ви́дит Ива́н?",
-              "answer": "Кого́"
+              "rule": "Его́р → Его́ра · стол → стол · На́стя → На́стю",
+              "prompt": "На́стя ви́дит ___ (Его́р).",
+              "answer": "Его́ра"
             },
             "items": [
               {
-                "id": "x2-1-1",
-                "prompt": "Ве́ра ви́дит ла́мпу. → ___ ви́дит Ве́ра?",
+                "id": "x2-2-1",
+                "prompt": "Ученики́ ви́дят ___ (Ива́н) и гро́мко смею́тся.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
-                  "Что"
+                  "Ива́на"
                 ],
-                "choices": [
-                  "Кого́",
-                  "Что"
-                ]
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s140"
+                ],
+                "first_letters": 4
               },
               {
-                "id": "x2-1-2",
-                "prompt": "Его́р ждёт сосе́да. → ___ ждёт Его́р?",
+                "id": "x2-2-2",
+                "prompt": "Ве́ра Никола́евна смо́трит на ___ (Его́р).",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
-                  "Кого́"
+                  "Его́ра"
                 ],
-                "choices": [
-                  "Кого́",
-                  "Что"
-                ]
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s036"
+                ],
+                "first_letters": 4
               },
               {
-                "id": "x2-1-3",
-                "prompt": "На́стя берёт мел. → ___ берёт На́стя?",
+                "id": "x2-2-3",
+                "prompt": "Ива́н смо́трит на ___ (учи́тельница) и ти́хо отвеча́ет.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
-                  "Что"
+                  "учи́тельницу"
                 ],
-                "choices": [
-                  "Кого́",
-                  "Что"
-                ]
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s049"
+                ],
+                "first_letters": 10
               },
               {
-                "id": "x2-1-4",
-                "prompt": "Ве́ра Никола́евна ви́дит ученика́. → ___ ви́дит Ве́ра Никола́евна?",
+                "id": "x2-2-4",
+                "prompt": "— Что вы ви́дите здесь? — Ла́мпу. ___ (стол). До́ску. Мел.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
-                  "Кого́"
+                  "Стол"
                 ],
-                "choices": [
-                  "Кого́",
-                  "Что"
-                ]
-              },
-              {
-                "id": "x2-1-5",
-                "prompt": "Ива́н лю́бит бу́квы. → ___ лю́бит Ива́н?",
-                "mode": "productive",
-                "answer_mode": "choice",
-                "accepted_answers": [
-                  "Что"
-                ],
-                "choices": [
-                  "Кого́",
-                  "Что"
-                ]
-              },
-              {
-                "id": "x2-1-6",
-                "prompt": "Мать ждёт сы́на. → ___ ждёт мать?",
-                "mode": "productive",
-                "answer_mode": "choice",
-                "accepted_answers": [
-                  "Кого́"
-                ],
-                "choices": [
-                  "Кого́",
-                  "Что"
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s045",
+                  "ru-mir-01-l06-s047"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "Что",
-                    "hint": "сын — кто? → кого́?"
+                    "answer": "Стола́",
+                    "hint": "что? стол → стол"
                   }
-                ]
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x2-2-5",
+                "prompt": "Она́ ви́дит Ива́на и ___ (На́стя), свою́ учени́цу.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "На́стю"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s031"
+                ],
+                "first_letters": 4
+              },
+              {
+                "id": "x2-2-6",
+                "prompt": "— Что вы ви́дите здесь? — ___ (ла́мпа). Стол. До́ску. Мел.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ла́мпу"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s045",
+                  "ru-mir-01-l06-s047"
+                ],
+                "first_letters": 4
               }
             ]
           },
@@ -1526,98 +1603,170 @@
             ]
           },
           {
-            "id": "ru-mir-01-l06-x2-2",
-            "type": "podstanovka",
-            "title": "Подстано́вка",
-            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-            "hint_en": "Кого́? for people and animals, что? for things. The word in brackets is in the кто? что? form.",
+            "id": "ru-mir-01-l06-x2-1",
+            "type": "preobrazovanie",
+            "title": "Преобразова́ние",
+            "instruction": "Спроси́: кого́? и́ли что?",
+            "hint_en": "People and animals: кого́? Things: что? Both words are in brackets.",
             "grammar_target_ids": [
               "G06"
             ],
             "obrazec": {
-              "rule": "кто? Его́р → кого́? Его́ра · что? стол → что? стол",
-              "prompt": "На́стя ви́дит ___ (Его́р).",
-              "answer": "Его́ра"
+              "rule": "Ве́ру → кого́? · ла́мпу → что?",
+              "prompt": "Ива́н ви́дит Ве́ру. → ___ ви́дит Ива́н? (кого́ / что)",
+              "answer": "Кого́"
             },
             "items": [
               {
-                "id": "x2-2-1",
-                "prompt": "Ученики́ ви́дят ___ (Ива́н) и гро́мко смею́тся.",
+                "id": "x2-1-1",
+                "prompt": "Ве́ра ви́дит ла́мпу. → ___ ви́дит Ве́ра? (кого́ / что)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Ива́на"
-                ],
-                "source_segment_ids": [
-                  "ru-mir-01-l06-s140"
+                  "Что"
                 ]
               },
               {
-                "id": "x2-2-2",
-                "prompt": "Ве́ра Никола́евна смо́трит на ___ (Его́р).",
+                "id": "x2-1-2",
+                "prompt": "Его́р ждёт сосе́да. → ___ ждёт Его́р? (кого́ / что)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Его́ра"
-                ],
-                "source_segment_ids": [
-                  "ru-mir-01-l06-s036"
+                  "Кого́"
                 ]
               },
               {
-                "id": "x2-2-3",
-                "prompt": "Ива́н смо́трит на ___ (учи́тельница) и ти́хо отвеча́ет.",
+                "id": "x2-1-3",
+                "prompt": "На́стя берёт мел. → ___ берёт На́стя? (кого́ / что)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "учи́тельницу"
-                ],
-                "source_segment_ids": [
-                  "ru-mir-01-l06-s049"
+                  "Что"
                 ]
               },
               {
-                "id": "x2-2-4",
-                "prompt": "— Что вы ви́дите здесь? — Ла́мпу. ___ (стол). До́ску. Мел.",
+                "id": "x2-1-4",
+                "prompt": "Ве́ра Никола́евна ви́дит ученика́. → ___ ви́дит Ве́ра Никола́евна? (кого́ / что)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Стол"
-                ],
-                "source_segment_ids": [
-                  "ru-mir-01-l06-s045",
-                  "ru-mir-01-l06-s047"
+                  "Кого́"
+                ]
+              },
+              {
+                "id": "x2-1-5",
+                "prompt": "Ива́н лю́бит бу́квы. → ___ лю́бит Ива́н? (кого́ / что)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Что"
+                ]
+              },
+              {
+                "id": "x2-1-6",
+                "prompt": "Мать ждёт сы́на. → ___ ждёт мать? (кого́ / что)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Кого́"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "Стола́",
-                    "hint": "что? стол → стол"
+                    "answer": "Что",
+                    "hint": "сын — кто? → кого́?"
                   }
                 ]
-              },
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l06-x2-5",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
+            "obrazec": {
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "На столе́ — ла́мпа и ___.",
+              "answer": "мел"
+            },
+            "items": [
               {
-                "id": "x2-2-5",
-                "prompt": "Она́ ви́дит Ива́на и ___ (На́стя), свою́ учени́цу.",
+                "id": "x2-5-1",
+                "audio_segment_id": "ru-mir-01-l06-s024",
+                "prompt": "В шко́ле большо́й ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "На́стю"
+                  "стол"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s031"
+                  "ru-mir-01-l06-s024"
                 ]
               },
               {
-                "id": "x2-2-6",
-                "prompt": "— Что вы ви́дите здесь? — ___ (ла́мпа). Стол. До́ску. Мел.",
+                "id": "x2-5-2",
+                "audio_segment_id": "ru-mir-01-l06-s037",
+                "prompt": "И тепе́рь Его́р не ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Ла́мпу"
+                  "смеётся"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s045",
-                  "ru-mir-01-l06-s047"
+                  "ru-mir-01-l06-s037"
+                ]
+              },
+              {
+                "id": "x2-5-3",
+                "audio_segment_id": "ru-mir-01-l06-s141",
+                "prompt": "Его́р и сосе́ди смо́трят на ___ ученика́.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "но́вого"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s141"
+                ]
+              },
+              {
+                "id": "x2-5-4",
+                "audio_segment_id": "ru-mir-01-l06-s042",
+                "prompt": "На́стя стои́т у ___ и смо́трит.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "две́ри"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s042"
+                ]
+              },
+              {
+                "id": "x2-5-5",
+                "audio_segment_id": "ru-mir-01-l06-s048",
+                "prompt": "— Пра́вильно. А ___ вы ви́дите?",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "кого́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s048"
+                ]
+              },
+              {
+                "id": "x2-5-6",
+                "audio_segment_id": "ru-mir-01-l06-s041",
+                "prompt": "Ива́н сиди́т у ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "стола́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s041"
                 ]
               }
             ]
@@ -2000,112 +2149,112 @@
         ],
         "exercises": [
           {
-            "id": "ru-mir-01-l06-x3-2",
-            "type": "preobrazovanie",
-            "title": "Преобразова́ние",
-            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
-            "hint_en": "The adjective follows its noun: но́вого ученика́, молоду́ю учи́тельницу, but большо́й стол.",
-            "grammar_target_ids": [
-              "G06"
-            ],
+            "id": "ru-mir-01-l06-x3-5",
+            "type": "soedini",
+            "title": "Соедини́",
+            "instruction": "Вы́бери отве́т.",
+            "hint_en": "Choose the phrase that fits the story.",
             "obrazec": {
-              "rule": "но́вый учени́к → но́вого ученика́ · молода́я учи́тельница → молоду́ю учи́тельницу · большо́й стол → большо́й стол",
-              "prompt": "Э́то но́вый учени́к. → Его́р ви́дит ___ ученика́.",
-              "answer": "но́вого"
+              "rule": "Тепе́рь смеётся … → не Его́р",
+              "prompt": "Тепе́рь смеётся ___!",
+              "answer": "не Его́р"
             },
             "items": [
               {
-                "id": "x3-2-1",
-                "prompt": "Э́то но́вый сосе́д. → Его́р ждёт ___ сосе́да.",
-                "mode": "productive",
+                "id": "x3-5-1",
+                "prompt": "— Тепе́рь пи́шем! — говори́т ___.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "но́вого"
+                  "Ве́ра Никола́евна"
                 ],
                 "choices": [
-                  "но́вый",
-                  "но́вого"
-                ]
-              },
-              {
-                "id": "x3-2-2",
-                "prompt": "Э́то молода́я учи́тельница. → Ива́н ви́дит ___ учи́тельницу.",
-                "mode": "productive",
-                "answer_mode": "choice",
-                "accepted_answers": [
-                  "молоду́ю"
-                ],
-                "choices": [
-                  "молода́я",
-                  "молоду́ю"
-                ]
-              },
-              {
-                "id": "x3-2-3",
-                "prompt": "Э́то но́вый учени́к. → Его́р ви́дит ___ ученика́.",
-                "mode": "productive",
-                "answer_mode": "choice",
-                "accepted_answers": [
-                  "но́вого"
-                ],
-                "choices": [
-                  "но́вый",
-                  "но́вого"
+                  "Ве́ра Никола́евна",
+                  "Его́р"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s040",
-                  "ru-mir-01-l06-s141"
+                  "ru-mir-01-l06-s059"
                 ]
               },
               {
-                "id": "x3-2-4",
-                "prompt": "Э́то ста́рший брат. → На́стя смо́трит на ___ бра́та.",
-                "mode": "productive",
+                "id": "x3-5-2",
+                "prompt": "Взро́слые не говоря́т: они́ ___ учи́тельницу.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "ста́ршего"
+                  "слу́шают"
                 ],
                 "choices": [
-                  "ста́рший",
-                  "ста́ршего"
+                  "слу́шают",
+                  "не слу́шают"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s144"
+                  "ru-mir-01-l06-s061"
                 ]
               },
               {
-                "id": "x3-2-5",
-                "prompt": "Э́то большо́й стол. → Ве́ра ви́дит ___ стол.",
-                "mode": "productive",
+                "id": "x3-5-3",
+                "prompt": "— Тебе́ легко́, а ___, — говори́т Ива́н.",
+                "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "большо́й"
+                  "мне тру́дно"
                 ],
                 "choices": [
-                  "большо́й",
-                  "больша́я"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "больша́я",
-                    "hint": "стол — что? → большо́й стол"
-                  }
-                ]
-              },
-              {
-                "id": "x3-2-6",
-                "prompt": "Э́то её учени́ца. → Ве́ра Никола́евна ви́дит На́стю, ___ учени́цу.",
-                "mode": "productive",
-                "answer_mode": "choice",
-                "accepted_answers": [
-                  "свою́"
-                ],
-                "choices": [
-                  "свой",
-                  "свою́"
+                  "мне тру́дно",
+                  "мне легко́"
                 ],
                 "source_segment_ids": [
-                  "ru-mir-01-l06-s031"
+                  "ru-mir-01-l06-s068"
+                ]
+              },
+              {
+                "id": "x3-5-4",
+                "prompt": "— Его́р, пра́вильно? — спра́шивает она́. — ___, — говори́т Его́р.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Непра́вильно"
+                ],
+                "choices": [
+                  "Непра́вильно",
+                  "О́чень хорошо́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s078",
+                  "ru-mir-01-l06-s079"
+                ]
+              },
+              {
+                "id": "x3-5-5",
+                "prompt": "А Ива́н пи́шет пра́вильно, но ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "ме́дленно"
+                ],
+                "choices": [
+                  "ме́дленно",
+                  "о́чень гро́мко"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s080"
+                ]
+              },
+              {
+                "id": "x3-5-6",
+                "prompt": "— Пра́вильно! ___, Ива́н Петро́вич!",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "О́чень хорошо́"
+                ],
+                "choices": [
+                  "О́чень хорошо́",
+                  "Непра́вильно"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s086"
                 ]
               }
             ]
@@ -2207,6 +2356,95 @@
             ]
           },
           {
+            "id": "ru-mir-01-l06-x3-2",
+            "type": "preobrazovanie",
+            "title": "Преобразова́ние",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+            "hint_en": "The adjective changes with its noun: но́вого ученика́, молоду́ю учи́тельницу, but большо́й стол. The word in brackets is the кто? что? form.",
+            "grammar_target_ids": [
+              "G06"
+            ],
+            "obrazec": {
+              "rule": "но́вый учени́к → но́вого ученика́ · молода́я учи́тельница → молоду́ю учи́тельницу · большо́й стол → большо́й стол",
+              "prompt": "Э́то мой брат. → На́стя ви́дит ___ бра́та. (мой)",
+              "answer": "моего́"
+            },
+            "items": [
+              {
+                "id": "x3-2-1",
+                "prompt": "Э́то но́вый сосе́д. → Его́р ждёт ___ сосе́да. (но́вый)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "но́вого"
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x3-2-2",
+                "prompt": "Э́то молода́я учи́тельница. → Ива́н ви́дит ___ учи́тельницу. (молодо́й)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "молоду́ю"
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x3-2-3",
+                "prompt": "Э́то но́вый учени́к. → Его́р ви́дит ___ ученика́. (но́вый)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "но́вого"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s040",
+                  "ru-mir-01-l06-s141"
+                ]
+              },
+              {
+                "id": "x3-2-4",
+                "prompt": "Э́то ста́рший брат. → На́стя смо́трит на ___ бра́та. (ста́рший)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ста́ршего"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s144"
+                ]
+              },
+              {
+                "id": "x3-2-5",
+                "prompt": "Э́то большо́й стол. → Ве́ра ви́дит ___ стол. (большо́й)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "большо́й"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "больша́я",
+                    "hint": "стол — что? → большо́й стол"
+                  }
+                ]
+              },
+              {
+                "id": "x3-2-6",
+                "prompt": "Э́то её учени́ца. → Ве́ра Никола́евна ви́дит На́стю, ___ учени́цу. (свой)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "свою́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s031"
+                ]
+              }
+            ]
+          },
+          {
             "id": "ru-mir-01-l06-x3-3",
             "type": "otvet",
             "title": "Отве́ть",
@@ -2283,6 +2521,98 @@
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "бра́та"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l06-x3-4",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
+            "obrazec": {
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "Писа́ть ___!",
+              "answer": "тру́дно"
+            },
+            "items": [
+              {
+                "id": "x3-4-1",
+                "audio_segment_id": "ru-mir-01-l06-s054",
+                "prompt": "Его́р чита́ет гро́мко, но ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "непра́вильно"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s054"
+                ]
+              },
+              {
+                "id": "x3-4-2",
+                "audio_segment_id": "ru-mir-01-l06-s057",
+                "prompt": "Взро́слые чита́ют ___: «Росси́я».",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ме́дленно"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s057"
+                ]
+              },
+              {
+                "id": "x3-4-3",
+                "audio_segment_id": "ru-mir-01-l06-s144",
+                "prompt": "На́стя смо́трит на ста́ршего ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "бра́та"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s144"
+                ]
+              },
+              {
+                "id": "x3-4-4",
+                "audio_segment_id": "ru-mir-01-l06-s077",
+                "prompt": "Ве́ра Никола́евна ___ ждёт.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "их"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s077"
+                ]
+              },
+              {
+                "id": "x3-4-5",
+                "audio_segment_id": "ru-mir-01-l06-s084",
+                "prompt": "Он пи́шет и не смо́трит на ___ учи́тельницу.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "молоду́ю"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s084"
+                ]
+              },
+              {
+                "id": "x3-4-6",
+                "audio_segment_id": "ru-mir-01-l06-s067",
+                "prompt": "— Э́то не тру́дно, э́то ___, Ва́ня! — ти́хо говори́т На́стя.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "легко́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s067"
                 ]
               }
             ]
@@ -2650,13 +2980,13 @@
             "type": "otvet",
             "title": "Отве́ть",
             "instruction": "Отве́ть по те́ксту.",
-            "hint_en": "Answer from the story; choose the word and form that fit.",
+            "hint_en": "Answer from the story. The first letters are shown.",
             "grammar_target_ids": [
               "G06"
             ],
             "obrazec": {
               "rule": "Кого́ …? — … Ива́на / Ве́ру / ба́тюшку",
-              "prompt": "Кого́ ви́дит На́стя у шко́лы? — Она́ ви́дит ___. (Ива́на / Его́ра)",
+              "prompt": "Кого́ ви́дит На́стя у шко́лы? — Она́ ви́дит ___.",
               "answer": "Ива́на"
             },
             "items": [
@@ -2664,14 +2994,9 @@
                 "id": "x4-2-1",
                 "prompt": "Кого́ ви́дит Ве́ра Никола́евна в окне́? — Она́ ви́дит ___.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "ба́тюшку"
-                ],
-                "choices": [
-                  "ба́тюшка",
-                  "ба́тюшку",
-                  "Его́ра"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s093"
@@ -2681,90 +3006,76 @@
                     "answer": "ба́тюшка",
                     "hint": "ба́тюшка → ба́тюшку, как Ве́ра → Ве́ру"
                   }
-                ]
+                ],
+                "first_letters": 3
               },
               {
                 "id": "x4-2-3",
                 "prompt": "Кого́ лю́бит На́стя? — Она́ лю́бит ___.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "учи́тельницу"
-                ],
-                "choices": [
-                  "учи́тельницу",
-                  "Его́ра"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s114",
                   "ru-mir-01-l06-s115"
-                ]
+                ],
+                "first_letters": 3
               },
               {
                 "id": "x4-2-4",
                 "prompt": "Кого́ ждёт Ша́рик у две́ри? — Он ждёт ___.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "Ва́ню"
                 ],
-                "choices": [
-                  "Ва́ню",
-                  "На́стю"
-                ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s118"
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x4-2-6",
                 "prompt": "Что ви́дит Ша́рик в окне́? — Он ви́дит ___.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "до́ску"
                 ],
-                "choices": [
-                  "до́ску",
-                  "ла́мпу"
-                ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s132"
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x4-2-5",
                 "prompt": "Что пи́шет Ива́н ве́чером в избе́? — Он пи́шет: «___».",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "Ива́н"
-                ],
-                "choices": [
-                  "Ива́н",
-                  "Росси́я"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s122",
                   "ru-mir-01-l06-s124"
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x4-2-7",
                 "prompt": "Почему́ Ива́н не идёт в шко́лу? — Там Его́р, а Его́р лю́бит ___.",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "смея́ться"
-                ],
-                "choices": [
-                  "смея́ться",
-                  "учи́ться"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s011",
                   "ru-mir-01-l06-s014"
-                ]
+                ],
+                "first_letters": 3
               }
             ]
           },
@@ -2773,7 +3084,7 @@
             "type": "podstanovka",
             "title": "Подстано́вка",
             "instruction": "Поста́вь местоиме́ние в ну́жную фо́рму.",
-            "hint_en": "я → меня́, ты → тебя́, мы → нас, вы → вас, они́ → их.",
+            "hint_en": "я → меня́, ты → тебя́, он → его́, она́ → её, мы → нас, вы → вас, они́ → их, кто → кого́.",
             "grammar_target_ids": [
               "G06"
             ],
@@ -2848,13 +3159,154 @@
               },
               {
                 "id": "x4-1-6",
-                "prompt": "Ша́рик ___ (он) лю́бит.",
+                "prompt": "Ша́рик ждёт Ва́ню. Ша́рик ___ (он) лю́бит.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "его́"
                 ],
-                "first_letters": 1
+                "first_letters": 1,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s118"
+                ]
+              },
+              {
+                "id": "x4-1-7",
+                "prompt": "Ве́ру Никола́евну он не ви́дит, но слы́шит ___ (она́).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "её"
+                ],
+                "first_letters": 1,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s012"
+                ]
+              },
+              {
+                "id": "x4-1-8",
+                "prompt": "— ___ (кто) ты ждёшь? Его́ра?",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Кого́"
+                ],
+                "first_letters": 1,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s020"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l06-x4-5",
+            "type": "okonchaniya",
+            "title": "Оконча́ния",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+            "hint_en": "The first letters show the stem; type the whole word. -а for masculine people and animals, -у/-ю for nouns in -а/-я, no change for things like окно́.",
+            "grammar_target_ids": [
+              "G06"
+            ],
+            "obrazec": {
+              "rule": "ба́тюшка → ба́тюшку · Ша́рик → Ша́рика · окно́ → окно́",
+              "prompt": "Ба́тюшка ви́дит ___ (Его́р).",
+              "answer": "Его́ра"
+            },
+            "items": [
+              {
+                "id": "x4-5-1",
+                "prompt": "Ива́н лю́бит ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "шко́лу"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s107",
+                  "ru-mir-01-l06-s108"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "шко́ла",
+                    "hint": "что? шко́ла → шко́лу"
+                  }
+                ]
+              },
+              {
+                "id": "x4-5-2",
+                "prompt": "Он ви́дит ___ Никола́евну, ви́дит Его́ра, ви́дит и Ива́на.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ве́ру"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s092"
+                ]
+              },
+              {
+                "id": "x4-5-3",
+                "prompt": "Ша́рик лежи́т во дворе́, у две́ри: он ждёт ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ва́ню"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s118"
+                ]
+              },
+              {
+                "id": "x4-5-4",
+                "prompt": "Ша́рик смо́трит в ___: доска́!",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "окно́"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s132"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "окне́",
+                    "hint": "в окно́, как в шко́лу"
+                  }
+                ]
+              },
+              {
+                "id": "x4-5-5",
+                "prompt": "Ва́ня лю́бит ___ и мать.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "отца́"
+                ],
+                "first_letters": 3,
+                "common_wrong": [
+                  {
+                    "answer": "оте́ца",
+                    "hint": "оте́ц → отца́"
+                  }
+                ]
+              },
+              {
+                "id": "x4-5-6",
+                "prompt": "Ива́н ви́дит ___ в окне́.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ша́рика"
+                ],
+                "first_letters": 5,
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s132",
+                  "ru-mir-01-l06-s133"
+                ]
               }
             ]
           },
@@ -2956,6 +3408,98 @@
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l06-s119"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l06-x4-6",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
+            "obrazec": {
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "Он ___.",
+              "answer": "ду́мает"
+            },
+            "items": [
+              {
+                "id": "x4-6-1",
+                "audio_segment_id": "ru-mir-01-l06-s101",
+                "prompt": "— Нет, ба́тюшка. Я ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "учу́сь"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s101"
+                ]
+              },
+              {
+                "id": "x4-6-2",
+                "audio_segment_id": "ru-mir-01-l06-s105",
+                "prompt": "Ве́чером На́стя и Ива́н иду́т ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "домо́й"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s105"
+                ]
+              },
+              {
+                "id": "x4-6-3",
+                "audio_segment_id": "ru-mir-01-l06-s106",
+                "prompt": "На́стя берёт своего́ ___ за́ руку.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "бра́та"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s106"
+                ]
+              },
+              {
+                "id": "x4-6-4",
+                "audio_segment_id": "ru-mir-01-l06-s117",
+                "prompt": "Оте́ц, мать и дед уже́ ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "лежа́т"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s117"
+                ]
+              },
+              {
+                "id": "x4-6-5",
+                "audio_segment_id": "ru-mir-01-l06-s126",
+                "prompt": "Рука́ уже́ зна́ет ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "бу́квы"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s126"
+                ]
+              },
+              {
+                "id": "x4-6-6",
+                "audio_segment_id": "ru-mir-01-l06-s129",
+                "prompt": "Ша́рик смо́трит на Ива́на, а Ива́н смо́трит на ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "до́ску"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l06-s129"
                 ]
               }
             ]
@@ -3132,386 +3676,7 @@
         "segment_id": "ru-mir-01-l06-s113"
       }
     ],
-    "note_en": "In the singular, masculine nouns for people and animals (except those in -а/-я) take the genitive form as objects: Ива́на, бра́та, Ша́рика. Masculine and neuter nouns for things stay unchanged (стол, окно́). Every noun in -а/-я, masculine or feminine, animate or not, takes -у/-ю (ба́тюшку, Ва́ню, Ве́ру, ла́мпу). Adjectives follow: но́вого ученика́. Object pronouns usually precede the verb: Я тебя́ зна́ю.",
-    "kata": [
-      {
-        "id": "ru-mir-01-k06-kogo-chto",
-        "title": "Кого́? Что?",
-        "shape": "choose",
-        "scheduled": false,
-        "table_ref": "kogo-chto",
-        "pool": [
-          {
-            "id": "k06-01",
-            "prompt": "Ученики́ ви́дят ___ и смею́тся.",
-            "lemma": "Ива́н",
-            "label": "кого́?",
-            "options": [
-              "Ива́н",
-              "Ива́на"
-            ],
-            "stem_hint": "Ива́н + а",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 0,
-              "col": 1
-            },
-            "answer": "Ива́на",
-            "accepted": [
-              "Ива́на"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-02",
-            "prompt": "Ве́ра Никола́евна смо́трит на ___.",
-            "lemma": "Его́р",
-            "label": "кого́?",
-            "options": [
-              "Его́р",
-              "Его́ра"
-            ],
-            "stem_hint": "Его́р + а",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 1,
-              "col": 1
-            },
-            "answer": "Его́ра",
-            "accepted": [
-              "Его́ра"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-03",
-            "prompt": "Ва́ня лю́бит ___.",
-            "lemma": "оте́ц",
-            "label": "кого́?",
-            "options": [
-              "оте́ц",
-              "отца́"
-            ],
-            "stem_hint": "оте́ц → отц- + а",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 2,
-              "col": 1
-            },
-            "answer": "отца́",
-            "accepted": [
-              "отца́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-04",
-            "prompt": "Его́р смо́трит на ___.",
-            "lemma": "ба́тюшка",
-            "label": "кого́?",
-            "options": [
-              "ба́тюшка",
-              "ба́тюшку"
-            ],
-            "stem_hint": "-а → -у, как Ве́ра → Ве́ру",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 4,
-              "col": 1
-            },
-            "answer": "ба́тюшку",
-            "accepted": [
-              "ба́тюшку"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-05",
-            "prompt": "Ша́рик ждёт ___ у две́ри.",
-            "lemma": "Ва́ня",
-            "label": "кого́?",
-            "options": [
-              "Ва́ня",
-              "Ва́ню"
-            ],
-            "stem_hint": "-я → -ю",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 5,
-              "col": 1
-            },
-            "answer": "Ва́ню",
-            "accepted": [
-              "Ва́ню"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-06",
-            "prompt": "Ива́н слы́шит ___ Никола́евну.",
-            "lemma": "Ве́ра",
-            "label": "кого́?",
-            "options": [
-              "Ве́ра",
-              "Ве́ру"
-            ],
-            "stem_hint": "-а → -у",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 6,
-              "col": 1
-            },
-            "answer": "Ве́ру",
-            "accepted": [
-              "Ве́ру"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-07",
-            "prompt": "Ива́н ви́дит большо́й ___.",
-            "lemma": "стол",
-            "label": "что?",
-            "options": [
-              "стол",
-              "стола́"
-            ],
-            "stem_hint": "что? стол → стол",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 7,
-              "col": 1
-            },
-            "answer": "стол",
-            "accepted": [
-              "стол"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-08",
-            "prompt": "Ива́н ви́дит ___.",
-            "lemma": "окно́",
-            "label": "что?",
-            "options": [
-              "окно́",
-              "окне́"
-            ],
-            "stem_hint": "что? окно́ → окно́",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 8,
-              "col": 1
-            },
-            "answer": "окно́",
-            "accepted": [
-              "окно́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-09",
-            "prompt": "Ива́н ви́дит в окне́ ___.",
-            "lemma": "ла́мпа",
-            "label": "что?",
-            "options": [
-              "ла́мпа",
-              "ла́мпу"
-            ],
-            "stem_hint": "-а → -у",
-            "cell": {
-              "table": "kogo-chto",
-              "row": 9,
-              "col": 1
-            },
-            "answer": "ла́мпу",
-            "accepted": [
-              "ла́мпу"
-            ],
-            "collapsed": []
-          }
-        ]
-      },
-      {
-        "id": "ru-mir-01-k06-mestoimeniya",
-        "title": "я → меня́",
-        "shape": "type",
-        "scheduled": true,
-        "table_ref": "mestoimeniya",
-        "pool": [
-          {
-            "id": "k06-10",
-            "prompt": "— Ва́ня! Ты ___ слы́шишь?",
-            "lemma": "я",
-            "label": "кого́?",
-            "stem_hint": "у меня́ → меня́",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 0,
-              "col": 1
-            },
-            "answer": "меня́",
-            "accepted": [
-              "меня́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-11",
-            "prompt": "— Я ___ зна́ю, Ва́ня!",
-            "lemma": "ты",
-            "label": "кого́?",
-            "stem_hint": "у тебя́ → тебя́",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 1,
-              "col": 1
-            },
-            "answer": "тебя́",
-            "accepted": [
-              "тебя́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-12",
-            "prompt": "Ива́н ви́дит Его́ра. А Его́р ___ не ви́дит.",
-            "lemma": "он",
-            "label": "кого́?",
-            "stem_hint": "у него́ → его́",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 2,
-              "col": 1
-            },
-            "answer": "его́",
-            "accepted": [
-              "его́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-13",
-            "prompt": "Ве́ру Никола́евну он не ви́дит, но слы́шит ___.",
-            "lemma": "она́",
-            "label": "кого́?",
-            "stem_hint": "у неё → её",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 3,
-              "col": 1
-            },
-            "answer": "её",
-            "accepted": [
-              "её"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-14",
-            "prompt": "— Здра́вствуйте, ба́тюшка! Вы ___ слы́шите?",
-            "lemma": "мы",
-            "label": "кого́?",
-            "stem_hint": "у нас → нас",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 4,
-              "col": 1
-            },
-            "answer": "нас",
-            "accepted": [
-              "нас"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-15",
-            "prompt": "— Ве́ра Никола́евна, я ___ слы́шу.",
-            "lemma": "вы",
-            "label": "кого́?",
-            "stem_hint": "у вас → вас",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 5,
-              "col": 1
-            },
-            "answer": "вас",
-            "accepted": [
-              "вас"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-16",
-            "prompt": "Его́р и сосе́ди пи́шут. Ве́ра Никола́евна ___ ждёт.",
-            "lemma": "они́",
-            "label": "кого́?",
-            "stem_hint": "у них → их",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 6,
-              "col": 1
-            },
-            "answer": "их",
-            "accepted": [
-              "их"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-17",
-            "prompt": "— ___ ты ждёшь? Его́ра?",
-            "lemma": "кто",
-            "label": "кого́?",
-            "stem_hint": "у кого́ → кого́",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 7,
-              "col": 1
-            },
-            "answer": "Кого́",
-            "accepted": [
-              "Кого́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-18",
-            "prompt": "— Люблю́. И она́ ___ лю́бит.",
-            "lemma": "я",
-            "label": "кого́?",
-            "stem_hint": "у меня́ → меня́",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 0,
-              "col": 1
-            },
-            "answer": "меня́",
-            "accepted": [
-              "меня́"
-            ],
-            "collapsed": []
-          },
-          {
-            "id": "k06-19",
-            "prompt": "А ___ она́ лю́бит?",
-            "lemma": "ты",
-            "label": "кого́?",
-            "stem_hint": "у тебя́ → тебя́",
-            "cell": {
-              "table": "mestoimeniya",
-              "row": 1,
-              "col": 1
-            },
-            "answer": "тебя́",
-            "accepted": [
-              "тебя́"
-            ],
-            "collapsed": []
-          }
-        ]
-      }
-    ]
+    "note_en": "In the singular, masculine nouns for people and animals (except those in -а/-я) take the genitive form as objects: Ива́на, бра́та, Ша́рика. Masculine and neuter nouns for things stay unchanged (стол, окно́). Every noun in -а/-я, masculine or feminine, animate or not, takes -у/-ю (ба́тюшку, Ва́ню, Ве́ру, ла́мпу). Adjectives follow: но́вого ученика́. Object pronouns usually precede the verb: Я тебя́ зна́ю."
   },
   "pensa": {
     "A": {
@@ -3526,25 +3691,22 @@
           "items": [
             {
               "id": "a1",
-              "prompt": "На́стя ви́дит ___ (брат).",
+              "prompt": "На́стя ви́дит ___ (брат, кого́?).",
               "mode": "productive",
-              "answer_mode": "choice",
+              "answer_mode": "exact",
               "accepted_answers": [
                 "бра́та"
               ],
               "source_segment_ids": [
                 "ru-mir-01-l06-s023"
               ],
-              "choices": [
-                "брат",
-                "бра́та"
-              ]
+              "first_letters": 2
             },
             {
               "id": "a2",
-              "prompt": "На́стя ви́дит ___ (стол).",
+              "prompt": "На́стя ви́дит ___ (стол, что?).",
               "mode": "productive",
-              "answer_mode": "choice",
+              "answer_mode": "exact",
               "accepted_answers": [
                 "стол"
               ],
@@ -3554,16 +3716,13 @@
                   "hint": "что? стол → стол"
                 }
               ],
-              "choices": [
-                "стол",
-                "стола́"
-              ]
+              "first_letters": 2
             },
             {
               "id": "a3",
-              "prompt": "Ве́ра Никола́евна ви́дит ___ (ба́тюшка).",
+              "prompt": "Ве́ра Никола́евна ви́дит ___ (ба́тюшка, кого́?).",
               "mode": "productive",
-              "answer_mode": "choice",
+              "answer_mode": "exact",
               "accepted_answers": [
                 "ба́тюшку"
               ],
@@ -3576,24 +3735,7 @@
               "source_segment_ids": [
                 "ru-mir-01-l06-s093"
               ],
-              "choices": [
-                "ба́тюшка",
-                "ба́тюшку"
-              ]
-            },
-            {
-              "id": "a5",
-              "prompt": "Ива́н ви́дит ___ (мел).",
-              "mode": "productive",
-              "answer_mode": "exact",
-              "accepted_answers": [
-                "мел"
-              ],
-              "source_segment_ids": [
-                "ru-mir-01-l06-s045",
-                "ru-mir-01-l06-s047"
-              ],
-              "first_letters": 1
+              "first_letters": 3
             },
             {
               "id": "a4",
@@ -3602,9 +3744,6 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "сосе́да"
-              ],
-              "source_segment_ids": [
-                "ru-mir-01-l06-s009"
               ]
             },
             {
@@ -3632,28 +3771,30 @@
           "items": [
             {
               "id": "a7",
-              "prompt": "Вы ви́дите На́стю? — Да, я ___ ви́жу.",
+              "prompt": "Вы ви́дите На́стю? — Да, я ___ (она́) ви́жу.",
               "mode": "productive",
-              "answer_mode": "choice",
+              "answer_mode": "exact",
               "accepted_answers": [
                 "её"
               ],
-              "choices": [
-                "она́",
-                "её"
-              ]
+              "first_letters": 1
             },
             {
               "id": "a8",
-              "prompt": "Ве́ра Никола́евна зна́ет Ива́на и Его́ра? — Да, она́ ___ зна́ет.",
+              "prompt": "Ве́ра Никола́евна зна́ет Ива́на и Его́ра? — Да, она́ ___ (они́) зна́ет.",
               "mode": "productive",
-              "answer_mode": "choice",
+              "answer_mode": "exact",
               "accepted_answers": [
                 "их"
-              ],
-              "choices": [
-                "они́",
-                "их"
+              ]
+            },
+            {
+              "id": "a11",
+              "prompt": "На́стя, ты ___ (я) ви́дишь?",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "меня́"
               ]
             }
           ]
@@ -3802,7 +3943,122 @@
     "C": {
       "id": "ru-mir-01-l06-pc",
       "title": "Пе́нсум C — Вопро́сы",
-      "items": []
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Где Ива́н рабо́тает у́тром? — В ___.",
+          "mode": "recognition",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "по́ле"
+          ],
+          "first_letters": 2,
+          "source_segment_ids": [
+            "ru-mir-01-l06-s004"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Кто берёт Ива́на за́ руку? — ___.",
+          "mode": "recognition",
+          "answer_mode": "choice",
+          "accepted_answers": [
+            "На́стя"
+          ],
+          "choices": [
+            "На́стя",
+            "Ве́ра Никола́евна",
+            "мать"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l06-s023"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "У кого́ доска́ На́сти? — У ___.",
+          "mode": "recognition",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Ива́на"
+          ],
+          "first_letters": 2,
+          "source_segment_ids": [
+            "ru-mir-01-l06-s028"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Ива́н зна́ет бу́квы? — Да, он зна́ет ___ бу́квы.",
+          "mode": "recognition",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "три"
+          ],
+          "first_letters": 1,
+          "source_segment_ids": [
+            "ru-mir-01-l06-s044"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Кто чита́ет «Росси́я» гро́мко, но непра́вильно? — ___.",
+          "mode": "recognition",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Его́р"
+          ],
+          "first_letters": 2,
+          "source_segment_ids": [
+            "ru-mir-01-l06-s054"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Кто стои́т у окна́ и слу́шает? — ___.",
+          "mode": "recognition",
+          "answer_mode": "choice",
+          "accepted_answers": [
+            "оте́ц Алексе́й"
+          ],
+          "choices": [
+            "оте́ц Алексе́й",
+            "Его́р",
+            "мать"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l06-s090",
+            "ru-mir-01-l06-s091"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "Что лю́бит Ива́н? — «Я люблю́ ___», — говори́т он.",
+          "mode": "recognition",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "бу́квы"
+          ],
+          "first_letters": 2,
+          "source_segment_ids": [
+            "ru-mir-01-l06-s112"
+          ]
+        },
+        {
+          "id": "c8",
+          "prompt": "Что пи́шет Ива́н ве́чером в избе́? — Своё ___.",
+          "mode": "recognition",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "и́мя"
+          ],
+          "first_letters": 1,
+          "source_segment_ids": [
+            "ru-mir-01-l06-s122",
+            "ru-mir-01-l06-s123"
+          ]
+        }
+      ]
     }
   },
   "vocabulary": [
