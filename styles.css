@@ -58,6 +58,13 @@ img { max-width: 100%; }
 .brand strong { font-family: var(--serif); }
 .brand small { color: var(--muted); font-size: .72rem; letter-spacing: .05em; }
 .header-actions { display: flex; gap: .5rem; flex: none; }
+.header-start { display: flex; align-items: center; gap: .6rem; min-width: 0; }
+.nav-toggle { flex: none; display: grid; place-items: center; width: 2.4rem; height: 2.4rem; margin-left: -.4rem; padding: 0; border: 0; border-radius: .5rem; background: transparent; color: var(--forest); cursor: pointer; }
+.nav-toggle:hover { background: var(--hover-mint); }
+.nav-toggle svg { width: 1.4rem; height: 1.4rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nav-toggle .pane { stroke: none; fill: transparent; transition: fill .15s; }
+.nav-toggle[aria-expanded="true"] .pane { fill: currentColor; opacity: .3; }
+.nav-toggle .icon-menu, .nav-toggle .icon-close { display: none; }
 .pill { border: 1px solid var(--line); background: var(--card); border-radius: 99px; padding: .42rem .85rem; color: var(--forest); font-size: .85rem; font-weight: 700; }
 .theme-toggle { min-width: 2.3rem; font-size: 1rem; line-height: 1.2; }
 .pill[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); color: var(--on-forest); }
@@ -308,6 +315,10 @@ main:focus { outline: none; }
 
 /* ---------- small screens */
 @media (max-width: 860px) {
+  .nav-toggle .icon-panel { display: none; }
+  .nav-toggle .icon-menu { display: block; }
+  .nav-toggle[aria-expanded="true"] .icon-menu { display: none; }
+  .nav-toggle[aria-expanded="true"] .icon-close { display: block; }
   .app-shell { display: block; }
   .course-panel { display: none; position: fixed; inset: var(--header) 0 0; z-index: 9; height: auto; border: 0; padding: 1.25rem 1rem 2rem; }
   .course-panel.open { display: block; }

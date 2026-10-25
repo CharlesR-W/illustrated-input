@@ -6,19 +6,25 @@
   <meta name="description" content="Illustrated Input — graded illustrated readers for language learners.">
   <title>Illustrated Input</title>
   <script>try { if (localStorage.getItem("illustrated-input:theme") === "light") document.documentElement.dataset.theme = "light"; if (localStorage.getItem("illustrated-input:nav-collapsed") === "1") document.documentElement.classList.add("nav-collapsed"); } catch {}</script>
-  <link rel="stylesheet" href="styles.css?v=c8138930e9">
+  <link rel="stylesheet" href="styles.css?v=0f4f3f9a79">
 </head>
 <body>
   <a class="skip-link" href="#main" data-ui="skip">Skip to the text</a>
   <header class="site-header">
-    <a class="brand" href="#contents" id="brand">
-      <span class="brand-mark" aria-hidden="true">Ii</span>
-      <span><strong id="brand-title">Illustrated Input</strong><small id="brand-subtitle" lang="en">Learn through the story</small></span>
-    </a>
+    <div class="header-start">
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="course-nav" data-ui-label="nav_lessons" aria-label="Lessons" title="Lessons">
+        <svg class="icon-panel" viewBox="0 0 24 24" aria-hidden="true"><rect class="pane" x="3.5" y="4.5" width="5.5" height="15" rx="1"/><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M9 4v16"/></svg>
+        <svg class="icon-menu" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="brand" href="#contents" id="brand">
+        <span class="brand-mark" aria-hidden="true">Ii</span>
+        <span><strong id="brand-title">Illustrated Input</strong><small id="brand-subtitle" lang="en">Learn through the story</small></span>
+      </a>
+    </div>
     <div class="header-actions">
       <button id="theme-toggle" class="pill theme-toggle" type="button" lang="en"></button>
       <button id="english-toggle" class="pill" type="button" aria-pressed="false" lang="en" hidden>English</button>
-      <button class="nav-toggle pill" id="nav-toggle" type="button" aria-expanded="false" aria-controls="course-nav" data-ui="nav_lessons">Lessons</button>
     </div>
   </header>
 
@@ -65,6 +71,6 @@
   <script src="russian.js?v=45affd5821" defer></script>
   <script src="kata.js?v=be16a1f3bd" defer></script>
   <script src="core.js?v=61c7ce30e7" defer></script>
-  <script src="app.js?v=af06303fd7" defer></script>
+  <script src="app.js?v=0c623efef9" defer></script>
 </body>
 </html>

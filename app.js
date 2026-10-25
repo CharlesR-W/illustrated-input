@@ -575,6 +575,10 @@ function applyChrome() {
     const [text, lang] = tl(el.dataset.ui);
     el.textContent = text; el.lang = lang;
   }
+  for (const el of document.querySelectorAll("[data-ui-label]")) {
+    const [text] = tl(el.dataset.uiLabel);
+    el.setAttribute("aria-label", text); el.title = text;
+  }
   const language = typeof course.language === "object" ? course.language : {};
   $("#course-language").textContent = language.name || course.language || "";
   $("#course-language").lang = targetLang();
