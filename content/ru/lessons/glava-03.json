@@ -4699,124 +4699,165 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "— Где сиди́т дед? — Дед сиди́т ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "у пе́чи"
+     "prompt": "Чего́ нет во дворе́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Во дворе́ нет коро́вы.",
+      "Коро́вы во дворе́ нет, а воро́та там."
      ],
-     "choices": [
-      "у пе́чи",
-      "у окна́",
-      "у две́ри"
+     "rubric": "нет + genitive: коро́вы, not коро́ва.",
+     "key_terms": [
+      "ru-net",
+      "ru-korova",
+      "ru-dvor"
      ],
      "source_segment_ids": [
-      "ru-mir-01-l03-s014"
+      "ru-mir-01-l03-s003",
+      "ru-mir-01-l03-s004"
      ]
     },
     {
      "id": "c2",
-     "prompt": "— Чья доска́ у Ива́на? — Э́то доска́ ___.",
+     "prompt": "Где Ива́н, и что у него́?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "На́сти"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н у окна́. У него́ доска́ На́сти.",
+      "Ива́н у окна́, и у него́ доска́ На́сти."
      ],
-     "first_letters": 2,
+     "rubric": "Two genitives: у окна́ (place) and доска́ На́сти (whose board).",
+     "key_terms": [
+      "ru-u",
+      "ru-okno",
+      "ru-doska"
+     ],
      "source_segment_ids": [
+      "ru-mir-01-l03-s015",
       "ru-mir-01-l03-s015a"
      ]
     },
     {
      "id": "c3",
-     "prompt": "— Чьи воро́та? — Воро́та ___.",
+     "prompt": "Почему́ кра́сный у́гол — «кра́сный»?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "на́ши"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Потому́ что там ико́на: кра́сный — э́то краси́вый.",
+      "Кра́сный у́гол — краси́вый, потому́ что там ико́на."
      ],
-     "first_letters": 2,
+     "rubric": "потому́ что + the reason: there is an icon there; кра́сный here means краси́вый.",
+     "key_terms": [
+      "ru-ph-potomu-chto",
+      "ru-ikona",
+      "ru-ph-krasnyj-ugol"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l03-s019",
-      "ru-mir-01-l03-s020"
+      "ru-mir-01-l03-s017",
+      "ru-mir-01-l03-s018"
      ]
     },
     {
      "id": "c4",
-     "prompt": "— Где коро́ва? — Коро́ва ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "в огоро́де"
+     "prompt": "Кака́я коро́ва у сосе́да?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "У сосе́да своя́ коро́ва, но она́ не бе́лая.",
+      "Коро́ва сосе́да не бе́лая, а на́ша коро́ва — бе́лая."
      ],
-     "choices": [
-      "в огоро́де",
-      "у це́ркви",
-      "у шко́лы"
+     "rubric": "у сосе́да (genitive after у) or коро́ва сосе́да, and the colour: not white, unlike ours.",
+     "key_terms": [
+      "ru-sosed",
+      "ru-svoj",
+      "ru-belyj"
      ],
      "source_segment_ids": [
-      "ru-mir-01-l03-s043",
-      "ru-mir-01-l03-s044"
+      "ru-mir-01-l03-s031",
+      "ru-mir-01-l03-s031a"
      ]
     },
     {
      "id": "c5",
-     "prompt": "— Кто хозя́ин огоро́да? — Хозя́ин огоро́да — ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Сила́нтий",
-      "Сила́нтий Кузьми́ч"
+     "prompt": "Что есть у Сила́нтия?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "У Сила́нтия есть ла́вка, дом и огоро́д.",
+      "У Сила́нтия Кузьмича́ есть ла́вка, дом и огоро́д."
      ],
-     "first_letters": 3,
+     "rubric": "у + genitive (Сила́нтия) + есть + the three things in the nominative.",
+     "key_terms": [
+      "ru-u",
+      "ru-byt",
+      "ru-lavka"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l03-s042",
-      "ru-mir-01-l03-s049"
+      "ru-mir-01-l03-s040",
+      "ru-mir-01-l03-s040a",
+      "ru-mir-01-l03-s041"
      ]
     },
     {
      "id": "c6",
-     "prompt": "— Что у отца́? — Рубль и четы́ре ___.",
+     "prompt": "Где коро́ва Соколо́вых, и чей э́то огоро́д?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "копе́йки"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Коро́ва в огоро́де Сила́нтия, а огоро́д — чужо́й.",
+      "Она́ в огоро́де. Э́то огоро́д Сила́нтия, не наш."
      ],
-     "first_letters": 3,
+     "rubric": "в огоро́де Сила́нтия: name the owner with a possessive genitive; чужо́й / не наш is optional.",
+     "key_terms": [
+      "ru-ogorod",
+      "ru-chuzhoj"
+     ],
      "source_segment_ids": [
+      "ru-mir-01-l03-s043",
+      "ru-mir-01-l03-s044",
+      "ru-mir-01-l03-s047",
+      "ru-mir-01-l03-s049"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Что есть у отца́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "У отца́ есть рубль и четы́ре копе́йки.",
+      "У отца́ рубль и четы́ре копе́йки, а не два рубля́."
+     ],
+     "rubric": "у отца́ (genitive) and the sum: рубль и четы́ре копе́йки (genitive singular after четы́ре).",
+     "key_terms": [
+      "ru-rubl",
+      "ru-chetyre",
+      "ru-kopejka"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l03-s059",
       "ru-mir-01-l03-s060",
       "ru-mir-01-l03-s063"
      ]
     },
     {
-     "id": "c7",
-     "prompt": "— Кто рабо́тает у Сила́нтия? — У Сила́нтия рабо́тает ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Фёдор"
-     ],
-     "first_letters": 2,
-     "source_segment_ids": [
-      "ru-mir-01-l03-s065"
-     ]
-    },
-    {
      "id": "c8",
-     "prompt": "— Где рубль? — Рубль ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "у Сила́нтия"
+     "prompt": "Кто рабо́тает у Сила́нтия в огоро́де?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Фёдор рабо́тает у Сила́нтия в огоро́де два дня.",
+      "Фёдор. Он два дня в огоро́де Сила́нтия."
      ],
-     "choices": [
-      "у Сила́нтия",
-      "у отца́",
-      "у Ива́на"
+     "rubric": "Фёдор, у Сила́нтия (genitive), and два дня (genitive singular after два).",
+     "key_terms": [
+      "ru-u",
+      "ru-ogorod",
+      "ru-dva"
      ],
      "source_segment_ids": [
-      "ru-mir-01-l03-s076",
-      "ru-mir-01-l03-s077"
+      "ru-mir-01-l03-s064",
+      "ru-mir-01-l03-s065"
      ]
     }
    ]

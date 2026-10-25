@@ -1302,6 +1302,13 @@ function stepDone(lesson, step, ticks = stepTicks(lesson.id)) {
   return Boolean(ticks[step.id]) || (step.id === "done" && completed().has(lesson.id));
 }
 function lessonNextStep(lesson) { return nextStep(lessonSteps(lesson), stepTicks(lesson.id), completed().has(lesson.id)); }
+// The first unticked step after stepId: "Step done" only ever moves forward, never back to
+// an earlier step the learner left unticked.
+function nextStepAfter(lesson, stepId) {
+  const steps = lessonSteps(lesson);
+  const after = steps.slice(steps.findIndex((step) => step.id === stepId) + 1);
+  return nextStep(after, stepTicks(lesson.id), completed().has(lesson.id));
+}
 
 function setTick(lesson, stepId, on) {
   if (stepId === "done") {
@@ -1408,7 +1415,7 @@ function paintStepper(nav, lesson) {
     })));
 }
 
-// "Step done" at the end of a step's block: ticks it and moves to the next unticked step.
+// "Step done" at the end of a step's block: ticks it and moves on to the next unticked step.
 function stepEnd(lesson, stepId) {
   if (!stepperFor(lesson)) return null;
   const step = lessonSteps(lesson).find((item) => item.id === stepId);
@@ -1416,14 +1423,14 @@ function stepEnd(lesson, stepId) {
   const box = h("div", { class: "step-end", "data-step": stepId });
   box._paint = () => {
     const done = stepDone(lesson, step);
-    const next = lessonNextStep(lesson);
+    const next = nextStepAfter(lesson, stepId);
     const button = h("button", { type: "button", class: "small-button step-done", "aria-pressed": String(done) },
       h("span", { "aria-hidden": "true" }, done ? "✓ " : "○ "), ui("span", done ? "step_marked" : "step_mark"),
       h("span", { class: "visually-hidden", lang: stepLabel(step)[1] }, ` · ${stepLabel(step)[0]}`));
     button.addEventListener("click", () => {
       const now = !stepDone(lesson, step);
       setTick(lesson, stepId, now);
-      if (now) { const after = lessonNextStep(lesson); if (after) navigateStep(lesson, after.id); }
+      if (now) { const after = nextStepAfter(lesson, stepId); if (after) navigateStep(lesson, after.id); }
     });
     const nextLink = done && next ? h("a", { class: "step-next", href: `#${encodeURIComponent(lesson.id)}/${next.id}`, lang: stepLabel(next)[1],
       onclick: (event) => goToStep(event, lesson, next.id) }, t("step_next", { step: stepLabel(next)[0] }), h("span", { "aria-hidden": "true" }, " ↓")) : null;

@@ -4189,114 +4189,155 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Кто но́вая учи́тельница? — Ве́ра ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Никола́евна"
+     "prompt": "Что де́лают де́ти у шко́лы?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Де́ти стоя́т у шко́лы и смо́трят.",
+      "Они́ стоя́т у шко́лы и смо́трят на учи́тельницу."
      ],
-     "first_letters": 3,
+     "rubric": "Two verbs: стоя́т and смо́трят (2nd conjugation, они́ -ят/-ят); у шко́лы.",
+     "key_terms": [
+      "ru-stoyat",
+      "ru-smotret"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l05-s009"
+      "ru-mir-01-l05-s003"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Учи́тельница из Москвы́? — Нет, из ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Ряза́ни"
+     "prompt": "Кто но́вая учи́тельница?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Но́вая учи́тельница — Ве́ра Никола́евна Ле́бедева.",
+      "Э́то Ве́ра Никола́евна, зе́мская учи́тельница."
      ],
-     "first_letters": 3,
+     "rubric": "Name and patronymic: Ве́ра Никола́евна (surname Ле́бедева).",
+     "key_terms": [
+      "ru-uchitelnitsa",
+      "ru-zemskij"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l05-s009",
+      "ru-mir-01-l05-s022b",
+      "ru-mir-01-l05-s053"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Почему́ На́стя — Анаста́сия Петро́вна?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Потому́ что её оте́ц — Пётр.",
+      "Петро́вна — э́то о́тчество: оте́ц На́сти — Пётр."
+     ],
+     "rubric": "The reason: her father is Пётр, so her отчество is Петро́вна.",
+     "key_terms": [
+      "ru-otchestvo",
+      "ru-otets"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l05-s018",
+      "ru-mir-01-l05-s019",
+      "ru-mir-01-l05-s020"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Учи́тельница из Москвы́ и́ли из Ряза́ни?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Учи́тельница не из Москвы́, а из Ряза́ни.",
+      "Ве́ра Никола́евна из Ряза́ни. Ряза́нь — на Оке́."
+     ],
+     "rubric": "из Ряза́ни (genitive after из), ideally with не … а … against из Москвы́.",
+     "key_terms": [
+      "ru-uchitelnitsa"
+     ],
      "source_segment_ids": [
       "ru-mir-01-l05-s026",
       "ru-mir-01-l05-s027"
      ]
     },
     {
-     "id": "c3",
-     "prompt": "А где Ряза́нь? — ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "на Оке́"
+     "id": "c5",
+     "prompt": "Мать говори́т «Ва́ня». А что кричи́т Фёдор и что говори́т учи́тельница?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Фёдор кричи́т «Ва́нька», а учи́тельница говори́т «Ива́н Петро́вич».",
+      "Фёдор кричи́т «Ва́нька». Учи́тельница говори́т «Ива́н Петро́вич»."
      ],
-     "choices": [
-      "в уе́зде",
-      "на Оке́",
-      "в Москве́"
+     "rubric": "Both names: Ва́нька (Фёдор) and Ива́н Петро́вич (the teacher); кричи́т, говори́т.",
+     "key_terms": [
+      "ru-govorit"
      ],
      "source_segment_ids": [
-      "ru-mir-01-l05-s027"
-     ]
-    },
-    {
-     "id": "c4",
-     "prompt": "Мать говори́т «Ва́ня». А учи́тельница? — Она́ говори́т «Ива́н ___».",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Петро́вич"
-     ],
-     "first_letters": 3,
-     "source_segment_ids": [
+      "ru-mir-01-l05-s036",
+      "ru-mir-01-l05-s037",
       "ru-mir-01-l05-s046",
       "ru-mir-01-l05-s048"
      ]
     },
     {
-     "id": "c5",
-     "prompt": "Ива́н уме́ет чита́ть? — Нет, он не ___ чита́ть.",
-     "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "уме́ет"
-     ],
-     "first_letters": 2,
-     "source_segment_ids": [
-      "ru-mir-01-l05-s063"
-     ]
-    },
-    {
      "id": "c6",
-     "prompt": "Кто мо́жет чита́ть? — ___ мо́жет.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "На́стя"
+     "prompt": "Кто уме́ет чита́ть, а кто не уме́ет?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "На́стя уме́ет чита́ть, а Ива́н не уме́ет.",
+      "Ива́н не уме́ет чита́ть, а На́стя уже́ уме́ет."
      ],
-     "first_letters": 2,
+     "rubric": "На́стя уме́ет, Ива́н не уме́ет: уме́ть + infinitive чита́ть, не before the verb.",
+     "key_terms": [
+      "ru-umet",
+      "ru-chitat"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l05-s063b",
-      "ru-mir-01-l05-s064"
+      "ru-mir-01-l05-s063",
+      "ru-mir-01-l05-s064",
+      "ru-mir-01-l05-s066a"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Кто не уме́ет чита́ть, но хо́чет? — Отцы́ и ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "сосе́ди"
+     "prompt": "Что де́лает Ива́н до́ма? Что он хо́чет де́лать?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н сиди́т и смо́трит на до́ску. Он хо́чет учи́ться.",
+      "Он сиди́т и смо́трит на до́ску: он хо́чет чита́ть."
      ],
-     "first_letters": 3,
+     "rubric": "сиди́т и смо́трит на до́ску, then хо́чет + infinitive (учи́ться / чита́ть).",
+     "key_terms": [
+      "ru-sidet",
+      "ru-khotet",
+      "ru-uchitsya"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l05-s072",
-      "ru-mir-01-l05-s073"
+      "ru-mir-01-l05-s081",
+      "ru-mir-01-l05-s085",
+      "ru-mir-01-l05-s086",
+      "ru-mir-01-l05-s097"
      ]
     },
     {
      "id": "c8",
-     "prompt": "Где лежи́т доска́ На́сти? — На ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "столе́"
+     "prompt": "А ты? Как тебя́ зову́т? Как твоё о́тчество?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Меня́ зову́т Пётр. Мой оте́ц — Никола́й: я Пётр Никола́евич.",
+      "Меня́ зову́т Ве́ра. Мой оте́ц — Пётр: я Ве́ра Петро́вна."
      ],
-     "first_letters": 3,
-     "source_segment_ids": [
-      "ru-mir-01-l05-s079"
+     "rubric": "Меня́ зову́т + your name, then an отчество from your father's name (-ович / -овна, -евич / -евна).",
+     "key_terms": [
+      "ru-ph-menya-zovut",
+      "ru-otets"
      ]
     }
    ]

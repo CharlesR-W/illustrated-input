@@ -155,6 +155,7 @@
   // Unique (by normalisation) display answers for reveal.
   function revealAnswers(item) {
     if (item?.model_answer) return [item.model_answer];
+    if (Array.isArray(item?.model_answers) && item.model_answers.length) return item.model_answers;
     const slots = slotAnswers(item);
     if (slots.length > 1) return [slots.map((answers) => answers[0] ?? "").join(" … ")];
     const seen = new Set();

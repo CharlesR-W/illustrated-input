@@ -4078,117 +4078,164 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Что на столе́? — На столе́ ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "хлеб"
+     "prompt": "Кака́я семья́ и како́й стол?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Семья́ больша́я, а стол ма́ленький.",
+      "Стол ма́ленький, а семья́ больша́я."
      ],
-     "first_letters": 1,
+     "rubric": "больша́я семья́ (f.) against ма́ленький стол (m.), joined by а: the adjective agrees with its noun.",
+     "key_terms": [
+      "ru-semya",
+      "ru-stol",
+      "ru-malenkij"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l02-s003"
+      "ru-mir-01-l02-s002"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Где Ша́рик? — Ша́рик ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "во дворе́"
+     "prompt": "Кто Фёдор и Ива́н? Каки́е они́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Фёдор и Ива́н — сыновья́ и бра́тья. Они́ больши́е.",
+      "Они́ бра́тья, и они́ о́чень больши́е."
      ],
-     "choices": [
-      "на столе́",
-      "во дворе́",
-      "в Петербу́рге"
+     "rubric": "Plural nouns сыновья́ / бра́тья and plural adjective больши́е (not большо́й) after они́.",
+     "key_terms": [
+      "ru-syn",
+      "ru-brat",
+      "ru-oni"
      ],
      "source_segment_ids": [
-      "ru-mir-01-l02-s031",
-      "ru-mir-01-l02-s032"
+      "ru-mir-01-l02-s015",
+      "ru-mir-01-l02-s016",
+      "ru-mir-01-l02-s017"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Кто кричи́т: «Моя́ доска́!»? — ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "На́стя"
+     "prompt": "Ми́ша и Ли́за — де́ти. Кто их оте́ц, а кто их мать?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Их оте́ц — Фёдор, а их мать — Да́рья.",
+      "Фёдор — их оте́ц, а Да́рья — их мать."
      ],
-     "first_letters": 1,
+     "rubric": "Фёдор is the father, Да́рья the mother; их (unchanging) before оте́ц and мать.",
+     "key_terms": [
+      "ru-ikh",
+      "ru-otets",
+      "ru-mat"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l02-s033"
+      "ru-mir-01-l02-s018",
+      "ru-mir-01-l02-s019"
      ]
     },
     {
      "id": "c4",
-     "prompt": "На́стя кричи́т: «Э́то они́!» Кто они́? — Ми́ша и ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Ли́за"
+     "prompt": "Кто На́стя? Кто её брат?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "На́стя — дочь и сестра́, а Ива́н — её брат.",
+      "Она́ дочь и сестра́. Её брат — Ива́н."
      ],
-     "first_letters": 1,
+     "rubric": "дочь и сестра́, and Ива́н as her brother: её брат (её never changes).",
+     "key_terms": [
+      "ru-doch",
+      "ru-sestra",
+      "ru-eyo"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l02-s041"
+      "ru-mir-01-l02-s023",
+      "ru-mir-01-l02-s023a"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Где царь? — Царь в ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Петербу́рге"
+     "prompt": "На́стя кричи́т: «Моя́ доска́!» Кака́я её доска́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Её доска́ но́вая, но разби́тая.",
+      "Доска́ но́вая, но она́ разби́тая."
      ],
-     "first_letters": 3,
+     "rubric": "но́вая and разби́тая, both feminine to agree with доска́, joined by но.",
+     "key_terms": [
+      "ru-doska",
+      "ru-novyj",
+      "ru-razbityj"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l02-s056"
+      "ru-mir-01-l02-s034",
+      "ru-mir-01-l02-s037",
+      "ru-mir-01-l02-s037a"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Где доска́? — Полови́на на столе́, а полови́на на ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "соло́ме"
+     "prompt": "Что кричи́т Да́рья? Каки́е её де́ти?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Да́рья кричи́т: «Мои́ де́ти — ма́ленькие!»",
+      "Она́ кричи́т: «Э́ти де́ти ма́ленькие! Э́то твой брат!»"
      ],
-     "first_letters": 3,
+     "rubric": "Plural мои́ / э́ти де́ти with ма́ленькие; blaming Ива́н (твой брат) is optional.",
+     "key_terms": [
+      "ru-moj",
+      "ru-etot",
+      "ru-malenkij"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l02-s062"
+      "ru-mir-01-l02-s044",
+      "ru-mir-01-l02-s045",
+      "ru-mir-01-l02-s046",
+      "ru-mir-01-l02-s046a"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Кто винова́т? — ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "Ша́рик"
+     "prompt": "Кто винова́т?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Э́то не де́ти и не Ива́н: э́то Ша́рик, на́ша соба́ка.",
+      "Э́то Ша́рик, на́ша соба́ка."
      ],
-     "choices": [
-      "Ми́ша и Ли́за",
-      "Ива́н",
-      "Ша́рик"
+     "rubric": "Ша́рик, the dog, not the children or Ива́н: на́ша (f.) agrees with соба́ка.",
+     "key_terms": [
+      "ru-nash",
+      "ru-sobaka"
      ],
      "source_segment_ids": [
       "ru-mir-01-l02-s067",
-      "ru-mir-01-l02-s068"
+      "ru-mir-01-l02-s068",
+      "ru-mir-01-l02-s068a"
      ]
     },
     {
      "id": "c8",
-     "prompt": "Что на доске́? — На доске́ «___».",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Росси́я"
+     "prompt": "Что на доске́? Кто зна́ет, а кто не зна́ет?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "На доске́ «Росси́я». На́стя зна́ет, а Ива́н не зна́ет."
      ],
-     "first_letters": 2,
+     "rubric": "«Росси́я» is written on the board; На́стя knows it and Ива́н does not (а … не зна́ет).",
+     "key_terms": [
+      "ru-doska",
+      "ru-ne"
+     ],
      "source_segment_ids": [
       "ru-mir-01-l02-s078",
-      "ru-mir-01-l02-s080"
+      "ru-mir-01-l02-s080",
+      "ru-mir-01-l02-s082"
      ]
     }
    ]

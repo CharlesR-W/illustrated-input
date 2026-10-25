@@ -3946,29 +3946,38 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Где Ива́н рабо́тает у́тром? — В ___.",
-          "mode": "recognition",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "по́ле"
+          "prompt": "Почему́ Ива́н не идёт в шко́лу?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Потому́ что там Его́р, а Его́р лю́бит смея́ться.",
+            "Там Его́р, сосе́д, а он лю́бит смея́ться."
           ],
-          "first_letters": 2,
+          "rubric": "The reason the text gives: Егор is there and likes to laugh (потому́ что + reason).",
+          "key_terms": [
+            "ru-ph-potomu-chto",
+            "ru-smeyatsya"
+          ],
           "source_segment_ids": [
-            "ru-mir-01-l06-s004"
+            "ru-mir-01-l06-s011",
+            "ru-mir-01-l06-s014"
           ]
         },
         {
           "id": "c2",
-          "prompt": "Кто берёт Ива́на за́ руку? — ___.",
-          "mode": "recognition",
-          "answer_mode": "choice",
-          "accepted_answers": [
-            "На́стя"
+          "prompt": "Кто берёт Ива́на за́ руку?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "На́стя берёт Ива́на за́ руку.",
+            "На́стя берёт бра́та за́ руку.",
+            "Его́ берёт за́ руку На́стя."
           ],
-          "choices": [
-            "На́стя",
-            "Ве́ра Никола́евна",
-            "мать"
+          "rubric": "Настя; the object in the animate accusative: Ива́на / бра́та / его́ (not Ива́н, брат).",
+          "key_terms": [
+            "ru-brat-v",
+            "ru-za",
+            "ru-ruka"
           ],
           "source_segment_ids": [
             "ru-mir-01-l06-s023"
@@ -3976,86 +3985,115 @@
         },
         {
           "id": "c3",
-          "prompt": "У кого́ доска́ На́сти? — У ___.",
-          "mode": "recognition",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Ива́на"
+          "prompt": "Кого́ ви́дят ученики́ и что они́ де́лают?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ученики́ ви́дят Ива́на и гро́мко смею́тся.",
+            "Они́ ви́дят Ива́на и смею́тся."
           ],
-          "first_letters": 2,
+          "rubric": "They see Ива́на (animate accusative) and laugh: смею́тся, with -ся.",
+          "key_terms": [
+            "ru-uchenik",
+            "ru-smeyatsya",
+            "ru-gromko"
+          ],
           "source_segment_ids": [
-            "ru-mir-01-l06-s028"
+            "ru-mir-01-l06-s140"
           ]
         },
         {
           "id": "c4",
-          "prompt": "Ива́н зна́ет бу́квы? — Да, он зна́ет ___ бу́квы.",
-          "mode": "recognition",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "три"
+          "prompt": "Ве́ра Никола́евна спра́шивает: «Кого́ вы ви́дите?» Что отвеча́ет Ива́н?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ива́н ти́хо отвеча́ет: «Вас».",
+            "Он отвеча́ет «Вас»: он ви́дит учи́тельницу."
           ],
-          "first_letters": 1,
+          "rubric": "Вас (accusative of вы): he sees the teacher herself; if you name her, учи́тельницу / Ве́ру Никола́евну.",
+          "key_terms": [
+            "ru-otvechat",
+            "ru-tikho"
+          ],
           "source_segment_ids": [
-            "ru-mir-01-l06-s044"
+            "ru-mir-01-l06-s048",
+            "ru-mir-01-l06-s049",
+            "ru-mir-01-l06-s050"
           ]
         },
         {
           "id": "c5",
-          "prompt": "Кто чита́ет «Росси́я» гро́мко, но непра́вильно? — ___.",
-          "mode": "recognition",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Его́р"
+          "prompt": "Как Ива́н пи́шет на уро́ке?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ива́н пи́шет пра́вильно, но ме́дленно.",
+            "Он пи́шет ме́дленно, но пра́вильно."
           ],
-          "first_letters": 2,
+          "rubric": "Both halves: пра́вильно and ме́дленно, joined by но.",
+          "key_terms": [
+            "ru-pisat",
+            "ru-pravilno",
+            "ru-medlenno"
+          ],
           "source_segment_ids": [
-            "ru-mir-01-l06-s054"
+            "ru-mir-01-l06-s065",
+            "ru-mir-01-l06-s080"
           ]
         },
         {
           "id": "c6",
-          "prompt": "Кто стои́т у окна́ и слу́шает? — ___.",
-          "mode": "recognition",
-          "answer_mode": "choice",
-          "accepted_answers": [
-            "оте́ц Алексе́й"
+          "prompt": "Кто стои́т у окна́ и кого́ он ви́дит?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "У окна́ стои́т ба́тюшка, оте́ц Алексе́й. Он ви́дит Ве́ру Никола́евну, Его́ра и Ива́на.",
+            "Ба́тюшка стои́т у окна́ и ви́дит Ива́на."
           ],
-          "choices": [
-            "оте́ц Алексе́й",
-            "Его́р",
-            "мать"
+          "rubric": "Ба́тюшка (оте́ц Алексе́й); name someone he sees in the accusative, e.g. Ива́на; the full list is optional.",
+          "key_terms": [
+            "ru-batyushka",
+            "ru-videt"
           ],
           "source_segment_ids": [
             "ru-mir-01-l06-s090",
-            "ru-mir-01-l06-s091"
+            "ru-mir-01-l06-s091",
+            "ru-mir-01-l06-s092"
           ]
         },
         {
           "id": "c7",
-          "prompt": "Что лю́бит Ива́н? — «Я люблю́ ___», — говори́т он.",
-          "mode": "recognition",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "бу́квы"
+          "prompt": "Кого́ лю́бит На́стя?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "На́стя лю́бит учи́тельницу, и учи́тельница её лю́бит.",
+            "Она́ лю́бит учи́тельницу."
           ],
-          "first_letters": 2,
+          "rubric": "учи́тельницу (accusative -у); a fuller answer adds that the teacher loves her: её лю́бит.",
+          "key_terms": [
+            "ru-lyubit",
+            "ru-uchitelnitsa"
+          ],
           "source_segment_ids": [
-            "ru-mir-01-l06-s112"
+            "ru-mir-01-l06-s114",
+            "ru-mir-01-l06-s115"
           ]
         },
         {
           "id": "c8",
-          "prompt": "Что пи́шет Ива́н ве́чером в избе́? — Своё ___.",
-          "mode": "recognition",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "и́мя"
+          "prompt": "А ты? Кого́ ты ви́дишь ве́чером?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ве́чером я ви́жу ма́му, отца́ и бра́та.",
+            "Ве́чером я ви́жу жену́, сы́на и соба́ку."
           ],
-          "first_letters": 1,
-          "source_segment_ids": [
-            "ru-mir-01-l06-s122",
-            "ru-mir-01-l06-s123"
+          "rubric": "Your own evening: я ви́жу + people or animals in the accusative (masc. -а: отца́, бра́та; fem. -у: ма́му, жену́).",
+          "key_terms": [
+            "ru-videt",
+            "ru-vecherom"
           ]
         }
       ]

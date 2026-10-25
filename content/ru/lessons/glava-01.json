@@ -3779,54 +3779,57 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Росси́я — ма́ленькая страна́? — Нет, Росси́я — ___ страна́.",
+     "prompt": "Росси́я — больша́я и́ли ма́ленькая страна́?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "больша́я"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Росси́я — больша́я страна́: и Евро́па, и А́зия.",
+      "Росси́я — больша́я страна́."
      ],
-     "first_letters": 3,
+     "rubric": "больша́я, feminine to agree with страна́ (not большо́й); zero copula with a dash.",
+     "key_terms": [
+      "ru-bolshoj",
+      "ru-strana"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l01-s005"
+      "ru-mir-01-l01-s005",
+      "ru-mir-01-l01-s009"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Где Москва́? — Москва́ в ___.",
+     "prompt": "Где Москва́?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Евро́пе"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Москва́ здесь, в Евро́пе, но не на Во́лге.",
+      "Москва́ в Евро́пе. Москва́ — большо́й го́род."
      ],
-     "first_letters": 3,
+     "rubric": "в Евро́пе (locative in -е); a fuller answer adds не на Во́лге.",
+     "key_terms": [
+      "ru-zdes",
+      "ru-v",
+      "ru-ne"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l01-s017"
+      "ru-mir-01-l01-s017",
+      "ru-mir-01-l01-s020"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Петербу́рг — ста́рый го́род? — Нет, Петербу́рг — ___ го́род.",
+     "prompt": "Где Ряза́нь: на Во́лге и́ли на Оке́?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "но́вый"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ряза́нь не на Во́лге, а на Оке́.",
+      "Ряза́нь на Оке́. Ряза́нь — ста́рый ру́сский го́род."
      ],
-     "first_letters": 2,
-     "source_segment_ids": [
-      "ru-mir-01-l01-s022c"
-     ]
-    },
-    {
-     "id": "c4",
-     "prompt": "Где Ряза́нь? — Ряза́нь ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "на Оке́"
-     ],
-     "choices": [
-      "на Во́лге",
-      "на Оке́"
+     "rubric": "на Оке́ (locative in -е); не X, а Y for the contrast.",
+     "key_terms": [
+      "ru-na",
+      "ru-ne",
+      "ru-a"
      ],
      "source_segment_ids": [
       "ru-mir-01-l01-s024",
@@ -3834,56 +3837,94 @@
      ]
     },
     {
-     "id": "c5",
-     "prompt": "Губе́рния больша́я. А уе́зд? — Уе́зд ___.",
+     "id": "c4",
+     "prompt": "Губе́рния больша́я. А уе́зд?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "ма́ленький"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Губе́рния больша́я, а уе́зд ма́ленький.",
+      "А уе́зд ма́ленький."
      ],
-     "first_letters": 3,
+     "rubric": "ма́ленький, masculine to agree with уе́зд; а for the contrast.",
+     "key_terms": [
+      "ru-uezd",
+      "ru-malenkij"
+     ],
      "source_segment_ids": [
       "ru-mir-01-l01-s029"
      ]
     },
     {
-     "id": "c6",
-     "prompt": "Берёзовка — го́род и́ли дере́вня? — ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Дере́вня"
+     "id": "c5",
+     "prompt": "Доро́га ста́рая. А желе́зная доро́га?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Доро́га ста́рая, а желе́зная доро́га — но́вая.",
+      "А желе́зная доро́га но́вая."
      ],
-     "first_letters": 2,
+     "rubric": "но́вая, feminine like доро́га; а for the contrast.",
+     "key_terms": [
+      "ru-ph-zheleznaya-doroga",
+      "ru-novyj"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l01-s038"
+      "ru-mir-01-l01-s035"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Где Берёзовка?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Берёзовка здесь, в уе́зде, на реке́.",
+      "Берёзовка — ма́ленькая дере́вня, здесь, в уе́зде."
+     ],
+     "rubric": "в уе́зде and/or на реке́ (locative in -е).",
+     "key_terms": [
+      "ru-uezd",
+      "ru-reka",
+      "ru-v"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l01-s043",
+      "ru-mir-01-l01-s045"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Что в дере́вне? — В дере́вне це́рковь и ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "шко́ла"
+     "prompt": "Что в дере́вне?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "В дере́вне це́рковь и шко́ла: це́рковь ста́рая, а шко́ла но́вая.",
+      "В дере́вне — це́рковь и шко́ла."
      ],
-     "first_letters": 2,
+     "rubric": "це́рковь и шко́ла, both nominative; ста́рая/но́вая feminine (це́рковь is feminine despite -ь).",
+     "key_terms": [
+      "ru-tserkov",
+      "ru-shkola",
+      "ru-derevnya"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l01-s047"
+      "ru-mir-01-l01-s047",
+      "ru-mir-01-l01-s048"
      ]
     },
     {
      "id": "c8",
-     "prompt": "Где Ива́н? — Ива́н ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "в Берёзовке"
+     "prompt": "Где Ива́н?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н здесь, в Берёзовке, а не в Москве́.",
+      "Ива́н в Берёзовке. Берёзовка — ру́сская дере́вня."
      ],
-     "choices": [
-      "в Москве́",
-      "в по́ле",
-      "в Берёзовке"
+     "rubric": "в Берёзовке (locative in -е); не в Москве́ is a good contrast.",
+     "key_terms": [
+      "ru-zdes",
+      "ru-v"
      ],
      "source_segment_ids": [
       "ru-mir-01-l01-s059"

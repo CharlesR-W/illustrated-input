@@ -3963,115 +3963,167 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Что ест ло́шадь? — ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Овёс"
+     "prompt": "Что берёт Ива́н, а что берёт оте́ц?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н берёт соху́, а оте́ц берёт мешо́к.",
+      "Ива́н берёт соху́, а оте́ц — мешо́к."
      ],
-     "first_letters": 2,
+     "rubric": "Both objects in the accusative: соху́ (-а → -у), мешо́к (unchanged); берёт, not брать.",
+     "key_terms": [
+      "ru-brat-v",
+      "ru-sokha",
+      "ru-meshok"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l04-s002c"
+      "ru-mir-01-l04-s006"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Где коро́ва? — ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "Во дворе́"
+     "prompt": "Куда́ иду́т у́тром оте́ц и Ива́н?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "У́тром оте́ц и Ива́н иду́т в по́ле.",
+      "Они́ иду́т в по́ле, на да́льнюю по́лосу.",
+      "Оте́ц и Ива́н иду́т на по́лосу, у реки́."
      ],
-     "choices": [
-      "В по́ле",
-      "Во дворе́"
-     ],
-     "source_segment_ids": [
-      "ru-mir-01-l04-s005"
-     ]
-    },
-    {
-     "id": "c3",
-     "prompt": "Где да́льняя полоса́? — ___.",
-     "mode": "recognition",
-     "answer_mode": "choice",
-     "accepted_answers": [
-      "У реки́"
-     ],
-     "choices": [
-      "У дере́вни",
-      "У реки́"
+     "rubric": "Куда́? → в/на + accusative: в по́ле, на по́лосу (not на полосе́); иду́т for two people.",
+     "key_terms": [
+      "ru-idti",
+      "ru-pole",
+      "ru-polosa"
      ],
      "source_segment_ids": [
-      "ru-mir-01-l04-s009b",
+      "ru-mir-01-l04-s004",
+      "ru-mir-01-l04-s009",
       "ru-mir-01-l04-s009d"
      ]
     },
     {
-     "id": "c4",
-     "prompt": "Что у ло́шади не рабо́тает? — Одна́ ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "нога́"
+     "id": "c3",
+     "prompt": "Что де́лают на полосе́ Ива́н, оте́ц и ло́шадь?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н па́шет, ло́шадь тя́нет соху́, а оте́ц се́ет овёс."
      ],
-     "first_letters": 2,
+     "rubric": "Three present-tense verbs: па́шет (пах- → паш-), тя́нет, се́ет; соху́ in the accusative.",
+     "key_terms": [
+      "ru-pakhat",
+      "ru-seyat",
+      "ru-tyanut"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l04-s022",
+      "ru-mir-01-l04-s022a",
+      "ru-mir-01-l04-s022b"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Что у ло́шади не рабо́тает?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "У ло́шади одна́ нога́ не рабо́тает: она́ хрома́ет.",
+      "Одна́ нога́ не рабо́тает, и ло́шадь хрома́ет."
+     ],
+     "rubric": "Одна́ нога́ (one leg) + хрома́ет; у ло́шади for 'the horse has'.",
+     "key_terms": [
+      "ru-noga",
+      "ru-khromat",
+      "ru-rabotat"
+     ],
      "source_segment_ids": [
       "ru-mir-01-l04-s029a",
-      "ru-mir-01-l04-s030"
+      "ru-mir-01-l04-s030",
+      "ru-mir-01-l04-s027"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Кто реша́ет: э́та полоса́ — на́ша, а та — сосе́да? — ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Мир"
+     "prompt": "Кто не даёт свою́ ло́шадь?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Сосе́д не даёт свою́ ло́шадь: сего́дня она́ рабо́тает.",
+      "Сосе́д не даёт свою́ ло́шадь."
      ],
-     "first_letters": 1,
+     "rubric": "Сосе́д + не даёт (дава́ть: даёт); свою́ ло́шадь, accusative feminine -ю (ло́шадь unchanged).",
+     "key_terms": [
+      "ru-sosed",
+      "ru-davat",
+      "ru-svoj"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l04-s037a"
+      "ru-mir-01-l04-s046",
+      "ru-mir-01-l04-s047"
      ]
     },
     {
      "id": "c6",
-     "prompt": "У кого́ мо́жно ло́шадь на день? — У ___.",
-     "mode": "recognition",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Сила́нтия"
+     "prompt": "Почему́ оте́ц не берёт ло́шадь у Сила́нтия?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ло́шадь у Сила́нтия — рубль и́ли ещё два дня у Сила́нтия.",
+      "Потому́ что чужа́я ло́шадь — рубль, а своя́ хрома́ет."
      ],
-     "first_letters": 3,
+     "rubric": "The price the father refuses: a рубль or two more days' work for Сила́нтий.",
+     "key_terms": [
+      "ru-rubl",
+      "ru-chuzhoj",
+      "ru-ph-potomu-chto"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l04-s050",
-      "ru-mir-01-l04-s051"
+      "ru-mir-01-l04-s051",
+      "ru-mir-01-l04-s052",
+      "ru-mir-01-l04-s055",
+      "ru-mir-01-l04-s056",
+      "ru-mir-01-l04-s056a"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Что берёт Фёдор? — Фёдор берёт ___.",
+     "prompt": "Кто тя́нет бо́рону, а кто се́ет?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "бо́рону"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н и На́стя тя́нут бо́рону, а оте́ц се́ет.",
+      "Бо́рону тя́нут Ива́н и На́стя, а оте́ц се́ет овёс."
      ],
-     "first_letters": 2,
+     "rubric": "Two people → тя́нут; бо́рону in the accusative (stress on бо́-); оте́ц се́ет.",
+     "key_terms": [
+      "ru-tyanut",
+      "ru-borona",
+      "ru-seyat"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l04-s079"
+      "ru-mir-01-l04-s058",
+      "ru-mir-01-l04-s062"
      ]
     },
     {
      "id": "c8",
-     "prompt": "Куда́ иду́т Фёдор и Ива́н? — В ___.",
+     "prompt": "Что ду́мает Фёдор: что хорошо́, а что не хорошо́?",
      "mode": "productive",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "дере́вню"
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Три полосы́ — не хорошо́, а хорошо́ — вся земля́ здесь.",
+      "Фёдор ду́мает так: три полосы́ — не хорошо́, а вся земля́ здесь — хорошо́."
      ],
-     "first_letters": 3,
+     "rubric": "Both halves: three strips are not good; good is all the land in one place (вся земля́ здесь).",
+     "key_terms": [
+      "ru-polosa",
+      "ru-zemlya",
+      "ru-ves"
+     ],
      "source_segment_ids": [
-      "ru-mir-01-l04-s093"
+      "ru-mir-01-l04-s083b",
+      "ru-mir-01-l04-s084"
      ]
     }
    ]
