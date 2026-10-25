@@ -1016,11 +1016,12 @@ function renderStory(lesson) {
     let paragraph = null;
     let speaker = null;
     let pendingScenes = [];
+    let pendingFloats = [];
     const seenGlosses = new Set();
     const closeParagraph = () => {
-      if (paragraph) prose.append(paragraph);
+      if (paragraph) prose.append(...pendingFloats, paragraph);
       for (const scene of pendingScenes) prose.append(scene);
-      paragraph = null; pendingScenes = [];
+      paragraph = null; pendingScenes = []; pendingFloats = [];
     };
     for (const segment of section.segments || []) {
       const turn = segment.speaker && segment.speaker !== speaker;
@@ -1029,10 +1030,11 @@ function renderStory(lesson) {
         paragraph = h("p", { class: `story-para${segment.speaker ? " turn" : ""}` });
         speaker = segment.speaker || null;
       }
-      const { sentence, notes, scenes } = renderSegment(segment, manifest, lesson, seenGlosses);
+      const { sentence, notes, scenes, floats } = renderSegment(segment, manifest, lesson, seenGlosses);
       if (paragraph.childNodes.length) paragraph.append(" ");
       paragraph.append(sentence);
       margin.append(...notes);
+      pendingFloats.push(...floats);
       pendingScenes.push(...scenes);
     }
     closeParagraph();
@@ -1129,6 +1131,16 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
     sentence.append(marker);
   }
   const scenes = aids.filter((aid) => aid.presentation === "inline_scene").map((aid) => renderScene(aid)).filter(Boolean);
+  // Narrow screens hide the margin column; its pictures float small beside the paragraph instead.
+  const floats = [...ranges.flatMap((range, k) => range.items.map((item) => ({ ...item, anchorId: `${segment.id}-a${k}` }))),
+    ...loose.map((item) => ({ ...item, anchorId: segment.id }))]
+    .filter(({ aid }) => aid.presentation !== "margin_gloss" && aid.src)
+    .map(({ aid, index, anchorId }) => {
+      const figure = buildNote(aid, `${segment.id}-n${index}`, anchorId, true);
+      figure.classList.add("note-float");
+      figure.querySelector("figcaption")?.remove(); // the label stays on the button and in the lightbox
+      return figure;
+    });
 
   const audioFile = manifest?.segments?.[segment.id];
   if (audioFile) {
@@ -1144,7 +1156,7 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
     sentence.addEventListener("click", play);
     sentence.addEventListener("keydown", play);
   }
-  return { sentence, notes, scenes };
+  return { sentence, notes, scenes, floats };
 }
 
 function glossContent(text) {
@@ -1199,11 +1211,18 @@ function wireAnchor(anchor, items, sentence, noteEls) {
       for (const note of noteEls) { note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
       return;
     }
+    // Pictures already float beside the paragraph; the drawer carries only the text notes.
+    const textItems = items.filter(({ aid }) => aid.presentation === "margin_gloss" || !aid.src);
+    if (!textItems.length) {
+      const floats = sectionBodyOf(anchor)?.querySelectorAll(`.note-float[data-anchor="${anchor.id}"], .note-float[data-anchor="${sentence.id}"]`) || [];
+      for (const note of floats) { note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
+      return;
+    }
     const drawerId = `${anchor.id}-drawer`;
     const open = document.getElementById(drawerId);
     if (open) { closeDrawer(open); return; }
     const drawer = h("span", { class: "inline-notes", id: drawerId, role: "note" },
-      items.map(({ aid, index }) => buildNote(aid, `${sentence.id}-n${index}`, anchor.id, true)));
+      textItems.map(({ aid, index }) => buildNote(aid, `${sentence.id}-n${index}`, anchor.id, true)));
     drawer.dataset.anchor = anchor.id;
     let after = sentence;
     while (after.nextElementSibling?.classList.contains("inline-notes")) after = after.nextElementSibling;

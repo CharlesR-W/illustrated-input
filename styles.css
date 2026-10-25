@@ -165,7 +165,13 @@ main:focus { outline: none; }
 .note-diagram img { display: block; width: 100%; height: auto; border-radius: .3rem; background: var(--diagram-bg); }
 .note figcaption { margin-top: .15rem; font: italic .9rem/1.3 var(--serif); color: var(--note-muted); }
 .note.missing figcaption { display: inline-block; padding: .2rem .55rem; border: 1px dashed var(--amber-line); border-radius: .4rem; font-style: normal; background: var(--amber-soft); }
+.prose-col { display: flow-root; }
+.prose-col .scene { clear: both; }
+.note-float { float: right; clear: right; width: 5.5rem; margin: .35rem 0 .3rem .8rem; }
+.note-float.note-diagram { width: 9rem; }
+.note-float .enlarge { width: 100%; }
 .notes-hidden .margin-col { visibility: hidden; }
+.notes-hidden .note-float { display: none; }
 .notes-hidden .anchor { text-decoration: none; cursor: inherit; pointer-events: none; background: none; }
 .notes-hidden .note-marker, .notes-hidden .inline-notes { display: none; }
 
@@ -177,7 +183,7 @@ main:focus { outline: none; }
   .margin-col .note-vignette { float: right; clear: right; width: 6.5rem; margin-left: .6rem; }
   .margin-col .note-vignette .enlarge { width: 100%; }
   .margin-col .note-diagram { clear: both; }
-  .note-marker, .inline-notes { display: none; }
+  .note-marker, .inline-notes, .note-float { display: none; }
   .anchor { cursor: default; }
   .scene.cover, .lesson-toolbar, .lesson-header { max-width: 57rem; }
 }
