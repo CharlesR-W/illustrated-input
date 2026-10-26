@@ -11,7 +11,7 @@ const UI_DEFAULTS = {
   continue: "Continue", start: "Start reading", how_to_read: "How to read this book",
   part: "Part", lesson: "Lesson", lessons_range: "Lessons {from}–{to}", planned: "coming soon",
   finished: "finished", hide_notes: "Hide notes", show_notes: "Show notes", notes: "Notes",
-  play_sentence: "Play the sentence", play_paragraph: "Play the paragraph", listen: "Listen", stop: "Stop", pause: "Pause", resume: "Play", audio: "Audio", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
+  play_sentence: "Play the sentence", listen: "Listen", stop: "Stop", pause: "Pause", resume: "Play", audio: "Audio", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
   in_story: "in the story", pensa: "Exercises", oral_mode: "Oral mode", check: "Check", reveal: "Show",
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
   correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
@@ -45,7 +45,7 @@ const UI_DEFAULTS = {
   ex_type_podstanovka: "Substitute", ex_type_otvet: "Answer", ex_type_soedini: "Join", ex_type_rasstav: "Word order", ex_type_diktant: "Dictation",
   ex_type_napishi: "Write", timing_summary: "Time per chapter", timing_total: "Total:", minutes: "{n} min",
   anki_include_known: "Include words I already know",
-  custom: "custom", kata: "Kata",
+  custom: "custom", kata: "Kata", kata_due: "Kata due: {n}", kata_more: "Three more?",
   kata_table: "Reference table", kata_hint: "Show me", kata_finish: "Finish session",
   kata_complete: "Complete all five items first.", kata_comfortable: "Comfortable", kata_passed: "Passed",
   kata_failed: "Try again", kata_new: "New session", families: "Word families",
@@ -313,22 +313,21 @@ function courseHref(course) {
   return url.href;
 }
 
-// The sidebar is the one place to change course: every visible course, the current marked.
 function renderCourseSwitch() {
   const box = $("#course-switch");
   if (!box) return;
   const list = visibleCourses();
   const current = state.course?.id;
-  const tagged = (course) => (course.id === current ? Boolean(state.course?.custom || course.custom) && capability("custom_tag") : course.custom && course.capabilities?.custom_tag === true);
-  const listed = list.some((course) => course.id === current) ? list : [{ id: current, title: state.course?.title, language: targetLang() }, ...list];
-  if (listed.length < 2 && !tagged(listed[0] || {})) { box.hidden = true; box.replaceChildren(); return; }
-  box.replaceChildren(ui("p", "course_select", { class: "course-switch-label", id: "course-switch-label" }),
-    h("ul", { class: "course-options", id: "course-select" }, listed.map((course) => h("li", null,
-      h("a", { class: "course-option", href: courseHref(course), "aria-current": course.id === current ? "page" : null },
-        h("span", { class: "course-option-title", lang: course.language || null }, course.title || course.id),
-        course.language_name ? h("small", { lang: course.language || null }, course.language_name) : null,
-        // The current course's tag follows its capability; others' tags are plain text.
-        tagged(course) ? (course.id === current ? ui("span", "custom", { class: "custom-tag" }) : h("small", null, t("custom"))) : null)))));
+  if (list.length < 2 && list.every((course) => course.id === current) && !(state.course?.custom && capability("custom_tag"))) { box.hidden = true; box.replaceChildren(); return; }
+  const select = h("select", { id: "course-select" }, list.map((course) =>
+    h("option", { value: course.id, lang: course.language || null, selected: course.id === current }, `${course.title || course.id}${course.custom && (course.id === current ? capability("custom_tag") : course.capabilities?.custom_tag === true) ? ` · ${t("custom")}` : ""}`)));
+  if (!list.some((course) => course.id === current)) select.prepend(h("option", { value: "", selected: true, lang: targetLang() }, state.course?.title || current || ""));
+  select.addEventListener("change", () => {
+    const course = list.find((item) => item.id === select.value);
+    if (course) location.href = courseHref(course);
+  });
+  box.replaceChildren(h("label", { class: "course-switch-label", for: "course-select" }, ui("span", "course_select")), select);
+  if (state.course?.custom && capability("custom_tag")) box.append(ui("span", "custom", { class: "custom-tag" }));
   box.hidden = false;
 }
 
@@ -652,7 +651,6 @@ function whatsNext() { return state.course?.whats_next || (state.course?.whats_n
 
 const VIEWS = ["intro", "overview", "lesson", "whats-next"];
 function showView(name) {
-  closeGloss();
   if (state.view === "lesson" && name !== "lesson") stopStepTimer();
   state.view = name;
   for (const id of VIEWS) if ($(`#${id}`)) $(`#${id}`).hidden = id !== name;
@@ -803,7 +801,9 @@ function showOverview(focus) {
       introText() ? ui("a", "how_to_read", { class: "button secondary", href: "#intro" }) : null,
       whatsNext() ? ui("a", "whats_next", { class: "button secondary", href: "#whats-next" }) : null,
       stepperCourse() ? ui("button", "export_timing", { type: "button", class: "button secondary", onclick: exportTiming }) : null),
+    otherCourses(),
     courseCredits(),
+    capability("kata") ? renderKataQueue() : null,
     stepperCourse() ? timingSummary() : null,
     h("div", { class: "overview-progress" },
       h("div", { class: "progress-copy" }, ui("span", "course_progress", { id: "overview-progress-label" }), h("strong", null, `${count} / ${total}`)),
@@ -894,7 +894,6 @@ function setLessonTitle(lesson) {
 }
 
 function renderLesson(lesson) {
-  closeGloss();
   const article = $("#lesson");
   const order = lesson.order ?? lesson._entry?.order;
   const part = partOf(lesson);
@@ -926,7 +925,6 @@ function renderLesson(lesson) {
   ].filter(Boolean));
   markStepRegions(article, lesson);
   bindStoryObservers(article);
-  rebindAudio();
   scheduleAlign();
 }
 
@@ -952,8 +950,8 @@ function renderToolbar(lesson) {
     state.notesHidden = !state.notesHidden;
     store(courseKey("notes-hidden"), state.notesHidden ? "1" : "0");
     $("#lesson").classList.toggle("notes-hidden", state.notesHidden);
-    for (const marker of document.querySelectorAll("#lesson .note-marker")) marker.tabIndex = state.notesHidden ? -1 : 0;
-    unlightNotes();
+    for (const anchor of document.querySelectorAll("#lesson .anchor, #lesson .note-marker")) anchor.tabIndex = state.notesHidden ? -1 : 0;
+    for (const drawer of document.querySelectorAll("#lesson .inline-notes")) closeDrawer(drawer);
     setLabel();
     scheduleAlign();
   });
@@ -1016,38 +1014,34 @@ function renderPronunciationNote(note) {
 function renderStory(lesson) {
   const sections = Core.storySections(lesson);
   const manifest = lesson._audio?.selected?.data;
-  const story = h("div", { class: "story", id: "story" }, sections.map((section, sectionIndex) => {
+  return h("div", { class: "story", id: "story" }, sections.map((section, sectionIndex) => {
     const prose = h("div", { class: "prose-col", lang: targetLang() });
     const margin = h("div", { class: "margin-col", role: "complementary", "aria-label": t("notes") });
+    let paragraph = null;
+    let speaker = null;
+    let pendingScenes = [];
+    let pendingFloats = [];
     const seenGlosses = new Set();
-    // A paragraph opens at paragraph_start or at a change of speaker.
-    const paragraphs = [];
+    const closeParagraph = () => {
+      if (paragraph) prose.append(...pendingFloats, paragraph);
+      for (const scene of pendingScenes) prose.append(scene);
+      paragraph = null; pendingScenes = []; pendingFloats = [];
+    };
     for (const segment of section.segments || []) {
-      const last = paragraphs.at(-1);
-      if (!last || segment.paragraph_start || (segment.speaker && segment.speaker !== last.speaker)) paragraphs.push({ speaker: segment.speaker || null, segments: [segment] });
-      else last.segments.push(segment);
+      const turn = segment.speaker && segment.speaker !== speaker;
+      if (!paragraph || segment.paragraph_start || turn) {
+        closeParagraph();
+        paragraph = h("p", { class: `story-para${segment.speaker ? " turn" : ""}` });
+        speaker = segment.speaker || null;
+      }
+      const { sentence, notes, scenes, floats } = renderSegment(segment, manifest, lesson, seenGlosses);
+      if (paragraph.childNodes.length) paragraph.append(" ");
+      paragraph.append(sentence);
+      margin.append(...notes);
+      pendingFloats.push(...floats);
+      pendingScenes.push(...scenes);
     }
-    for (const { speaker, segments } of paragraphs) {
-      const paragraph = h("p", { class: `story-para${speaker ? " turn" : ""}` });
-      const voiced = segments.map((segment) => segment.id).filter((id) => manifest?.segments?.[id]);
-      if (voiced.length) paragraph.append(paragraphPlayButton(voiced, lesson), " ");
-      const floats = [];
-      const scenes = [];
-      const strip = [];
-      segments.forEach((segment, i) => {
-        const rendered = renderSegment(segment, manifest, lesson, seenGlosses);
-        if (i) paragraph.append(" ");
-        paragraph.append(rendered.sentence);
-        margin.append(...rendered.notes);
-        strip.push(...rendered.strip);
-        floats.push(...rendered.floats);
-        scenes.push(...rendered.scenes);
-      });
-      prose.append(...floats, paragraph);
-      // Narrow screens hide the margin column; its text notes run under the paragraph instead.
-      if (strip.length) prose.append(h("p", { class: "para-notes" }, strip.flatMap((note, i) => (i ? [" ", note] : [note]))));
-      prose.append(...scenes);
-    }
+    closeParagraph();
     const heading = section.title
       ? h("h2", { class: "section-title", id: `${section.id || `section-${sectionIndex}`}-title`, lang: targetLang() },
         h("span", { class: "section-number", "aria-hidden": "true" }, `${ROMAN[sectionIndex] || sectionIndex + 1}.`), ` ${disp(section.title)}`)
@@ -1059,24 +1053,19 @@ function renderStory(lesson) {
       stepEnd(lesson, `read-${sectionIndex + 1}`),
       exerciseBook(state.course) ? null : renderWorkbook(lesson, section, sectionIndex));
   }));
-  wireStoryWords(story, lesson);
-  return story;
 }
 
 const MARGIN = new Set(["margin_gloss", "margin_vignette", "margin_diagram"]);
 
 // Anchor lookup for a segment. Courses with a stress block match on the stress-free text
 // (anchors may be written with or without marks) and map back through the offset map when
-// stress is shown; other courses use the plain lookup unchanged. `map[i]` is the source
-// offset of display character i, so tapped words resolve in the stored (stressed) text.
+// stress is shown; other courses use the plain lookup unchanged.
 function anchorLocator(source) {
-  const same = Array.from({ length: source.length + 1 }, (_, i) => i);
-  if (!stressConfig()) return { text: source, map: same, find: (anchor) => Core.findAnchor(source, anchor) };
+  if (!stressConfig()) return { text: source, find: (anchor) => Core.findAnchor(source, anchor) };
   const stripped = stripStress(source);
   const shown = disp(source, "story") !== source || !source.includes(ACUTE) ? "plain" : "stressed";
   return {
     text: shown === "plain" ? stripped.text : source,
-    map: shown === "plain" ? stripped.map : same,
     find: (anchor) => {
       const found = Core.findAnchor(stripped.text, stripStress(anchor).text);
       if (!found || shown === "plain") return found;
@@ -1087,39 +1076,21 @@ function anchorLocator(source) {
 
 // Several sentences of one subsection may carry the same margin gloss for the same word
 // (e.g. "δεκάτη = τὸ δέκατον μέρος" three times). Only the first is shown in a subsection.
-function marginGlossKey(aid) {
+function glossKey(aid) {
   if (aid.presentation !== "margin_gloss" || !(aid.gloss || aid.text)) return null;
   const target = aid.covers_lexeme_ids?.length ? [...aid.covers_lexeme_ids].sort().join(",") : String(aid.anchor_text || "").normalize("NFC").toLocaleLowerCase();
   return `${String(aid.gloss || aid.text).normalize("NFC").trim()}\u0000${target}`;
 }
 
-// Display text [from, to) as word spans (docs/reader-glosses.md tokens) and the text between
-// them. data-at is the word's source offset, which the dictionary popup looks up.
-function wordNodes(text, from, to, words, map) {
-  const nodes = [];
-  let cursor = from;
-  for (const word of words) {
-    if (word.end <= from || word.start >= to) continue;
-    const start = Math.max(word.start, from);
-    const end = Math.min(word.end, to);
-    if (start > cursor) nodes.push(text.slice(cursor, start));
-    nodes.push(h("span", { class: "w", "data-at": String(map[word.start]) }, text.slice(start, end)));
-    cursor = end;
-  }
-  if (cursor < to) nodes.push(text.slice(cursor, to));
-  return nodes;
-}
-
 function renderSegment(segment, manifest, lesson, seenGlosses = null) {
   const locator = anchorLocator(segment.text || "");
   const text = locator.text;
-  const words = Core.glossTokens(text);
   const aids = Core.presentedAids(segment);
   const ranges = [];
   const loose = [];
   aids.forEach((aid, index) => {
     if (!MARGIN.has(aid.presentation)) return;
-    const key = seenGlosses ? marginGlossKey(aid) : null;
+    const key = seenGlosses ? glossKey(aid) : null;
     if (key && seenGlosses.has(key)) return;
     if (key) seenGlosses.add(key);
     const found = aid.anchor_text ? locator.find(aid.anchor_text) : null;
@@ -1135,14 +1106,6 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
 
   const sentence = h("span", { class: "seg", id: segment.id, "data-segment": segment.id });
   const notes = [];
-  // Text notes again, for the strip under the paragraph on narrow screens (pictures float).
-  const strip = [];
-  const stripNotes = (items, anchorId) => {
-    for (const { aid, index } of items) {
-      if (aid.presentation !== "margin_gloss" && aid.src) continue;
-      strip.push(buildNote(aid, `${segment.id}-n${index}`, anchorId, true, "span"));
-    }
-  };
   if (capability("segment_annotations")) {
     if (segment.receptive) sentence.classList.add("receptive");
     if (segment.preview) notes.push(h("a", { class: "note preview-marker", href: "#grammar", "data-anchor": segment.id,
@@ -1150,28 +1113,25 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
   }
   let cursor = 0;
   ranges.forEach((range, k) => {
-    if (range.start > cursor) sentence.append(...wordNodes(text, cursor, range.start, words, locator.map));
+    if (range.start > cursor) sentence.append(text.slice(cursor, range.start));
     const anchorId = `${segment.id}-a${k}`;
     const noteEls = range.items.map(({ aid, index }) => buildNote(aid, `${segment.id}-n${index}`, anchorId));
     notes.push(...noteEls);
-    stripNotes(range.items, anchorId);
-    // Not a button: its words are the tap targets; tapping one opens the dictionary and
-    // lights its note (wireStoryWords). The words carry the note as their description.
-    const anchor = h("span", { class: "anchor", id: anchorId }, wordNodes(text, range.start, range.end, words, locator.map));
-    for (const word of anchor.querySelectorAll(".w")) word.setAttribute("aria-describedby", noteEls.map((note) => note.id).join(" "));
-    wireAnchor(anchor, noteEls);
+    const anchor = h("button", {
+      type: "button", class: "anchor", id: anchorId, tabindex: state.notesHidden ? "-1" : "0",
+      "aria-describedby": noteEls.map((note) => note.id).join(" ")
+    }, text.slice(range.start, range.end));
+    wireAnchor(anchor, range.items, sentence, noteEls);
     sentence.append(anchor);
     cursor = range.end;
   });
-  if (cursor < text.length) sentence.append(...wordNodes(text, cursor, text.length, words, locator.map));
+  if (cursor < text.length) sentence.append(text.slice(cursor));
   if (loose.length) {
     const markerId = `${segment.id}-m`;
     const noteEls = loose.map(({ aid, index }) => buildNote(aid, `${segment.id}-n${index}`, segment.id));
     notes.push(...noteEls);
-    stripNotes(loose, segment.id);
     const marker = h("button", { type: "button", class: "note-marker", id: markerId, tabindex: state.notesHidden ? "-1" : "0", "aria-label": t("notes"), "aria-describedby": noteEls.map((note) => note.id).join(" ") }, "*");
-    wireAnchor(marker, noteEls);
-    marker.addEventListener("click", (event) => { event.stopPropagation(); unlightNotes(); lightNotes(segment.id, sentence, marker); });
+    wireAnchor(marker, loose, sentence, noteEls);
     sentence.append(marker);
   }
   const scenes = aids.filter((aid) => aid.presentation === "inline_scene").map((aid) => renderScene(aid)).filter(Boolean);
@@ -1186,23 +1146,34 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
       return figure;
     });
 
-  // Audio is per paragraph (paragraphPlayButton); a tap on a word opens the dictionary.
-  if (manifest?.segments?.[segment.id]) sentence.classList.add("has-audio");
-  return { sentence, notes, strip, scenes, floats };
+  const audioFile = manifest?.segments?.[segment.id];
+  if (audioFile) {
+    sentence.classList.add("has-audio");
+    sentence.tabIndex = 0;
+    const play = (event) => {
+      if (event.target.closest(".anchor, .note-marker, .inline-notes")) return;
+      if (event.type === "keydown" && event.key !== "Enter" && event.key !== " ") return;
+      if (event.type === "keydown" && event.target !== sentence) return;
+      event.preventDefault();
+      playSegments([segment.id], lesson);
+    };
+    sentence.addEventListener("click", play);
+    sentence.addEventListener("keydown", play);
+  }
+  return { sentence, notes, scenes, floats };
 }
 
 function glossContent(text) {
   return String(text ?? "").split(/(←|↔|→|=)/).map((part) => (/^(←|↔|→|=)$/.test(part) ? h("span", { class: "gloss-op" }, part) : part));
 }
 
-function buildNote(aid, id, anchorId, inline = false, tag = "div") {
+function buildNote(aid, id, anchorId, inline = false) {
   const lang = targetLang();
   if (aid.presentation === "margin_gloss") {
-    return h(tag, { class: `note note-gloss gloss-${aid.gloss_kind || "note"}`, id: inline ? null : id, "data-anchor": anchorId, lang }, glossContent(disp(aid.gloss || aid.text, "glosses")), capability("gloss_reveal") && aid.reveal_en ? revealEnglish(aid.reveal_en) : null);
+    return h("div", { class: `note note-gloss gloss-${aid.gloss_kind || "note"}`, id: inline ? null : id, "data-anchor": anchorId, lang }, glossContent(disp(aid.gloss || aid.text, "glosses")), capability("gloss_reveal") && aid.reveal_en ? revealEnglish(aid.reveal_en) : null);
   }
   const kind = aid.presentation === "margin_vignette" ? "vignette" : "diagram";
   const label = disp(aid.label || "", "glosses");
-  if (tag === "span") return h("span", { class: "note note-gloss", "data-anchor": anchorId, lang }, label || aid.alt || "");
   const caption = label ? h("figcaption", { lang }, label) : null;
   const figure = h("figure", { class: `note note-${kind}`, id: inline ? null : id, "data-anchor": anchorId });
   if (!aid.src) { figure.classList.add("missing"); figure.append(caption || ""); return figure; }
@@ -1224,206 +1195,51 @@ function isNarrow(el) {
   return !col || getComputedStyle(col).display === "none";
 }
 
-// Hovering or focusing an anchor pairs it with its notes (margin or strip), and back.
-function wireAnchor(anchor, noteEls) {
+function wireAnchor(anchor, items, sentence, noteEls) {
   const pair = (on) => {
     anchor.classList.toggle("paired", on);
     for (const note of noteEls) note.classList.toggle("paired", on);
   };
   anchor.addEventListener("mouseenter", () => pair(true));
-  anchor.addEventListener("mouseleave", () => { if (!anchor.classList.contains("lit")) pair(false); });
+  anchor.addEventListener("mouseleave", () => pair(false));
+  anchor.addEventListener("focus", () => pair(true));
+  anchor.addEventListener("blur", () => pair(false));
   for (const note of noteEls) {
     note.addEventListener("mouseenter", () => pair(true));
     note.addEventListener("mouseleave", () => pair(false));
   }
-}
-
-// Light an anchor's notes where they are visible: the margin column on wide screens, the
-// strip under the paragraph and any floated picture on narrow ones. The anchor stays lit
-// until the dictionary popup closes (unlightNotes).
-function lightNotes(anchorId, sentence, lit = document.getElementById(anchorId)) {
-  if (state.notesHidden) return;
-  const body = sectionBodyOf(sentence);
-  if (!body) return;
-  const where = isNarrow(sentence) ? ".para-notes .note, .note-float" : ".margin-col .note";
-  const notes = [...body.querySelectorAll(where)].filter((note) => note.dataset.anchor === anchorId);
-  lit?.classList.add("paired", "lit");
-  for (const note of notes) { note.classList.add("paired"); note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
-}
-function unlightNotes() {
-  for (const el of document.querySelectorAll("#lesson .lit, #lesson .note.paired")) el.classList.remove("paired", "lit");
-}
-
-// ------------------------------------------------------------------ tap-to-gloss (docs/reader-glosses.md)
-// Words of the chapter's story open a small dictionary popup. The glosses load on the first
-// touch of the story (forms.json once per course, the lesson layer once per lesson); a
-// missing file means no popups. Keyboard: one word of the story is in the tab order, the
-// arrow keys move between words, Enter or Space opens the popup and Escape closes it.
-// A word inside a margin-gloss anchor also lights that note.
-
-const glossFiles = new Map();
-function glossFile(path) {
-  const url = resolve(path);
-  if (!glossFiles.has(url)) glossFiles.set(url, loadJSON(url).catch(() => null));
-  return glossFiles.get(url);
-}
-function lessonGlosses(lesson) {
-  if (!lesson._entry) return Promise.resolve(null);
-  const file = entryPath(lesson._entry).split("/").pop();
-  return Promise.all([glossFile("glosses/forms.json"), glossFile(`glosses/${file}`)]).then(([forms, layer]) =>
-    (forms?.forms || layer?.segments ? { forms: forms?.forms || {}, segments: layer?.segments || {} } : null));
-}
-
-function wireStoryWords(story, lesson) {
-  const first = story.querySelector(".w");
-  if (first) first.setAttribute("tabindex", "0");
-  const warm = () => lessonGlosses(lesson).then((data) => story.classList.toggle("has-glosses", Boolean(data)));
-  story.addEventListener("pointerdown", warm, { once: true });
-  story.addEventListener("focusin", warm, { once: true });
-  story.addEventListener("click", (event) => {
-    const word = event.target.closest?.(".w");
-    if (word) openWord(word, lesson);
-  });
-  story.addEventListener("keydown", (event) => {
-    const word = event.target.closest?.(".w");
-    if (!word) return;
-    if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openWord(word, lesson); return; }
-    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
-    const all = [...story.querySelectorAll(".w")];
-    const next = all[all.indexOf(word) + (event.key === "ArrowRight" ? 1 : -1)];
-    if (!next) return;
-    event.preventDefault();
-    const open = Boolean(glossPop);
-    rove(next);
-    next.focus();
-    if (open) openWord(next, lesson);
-  });
-}
-
-function rove(word) {
-  const story = word.closest(".story");
-  for (const old of story?.querySelectorAll('.w[tabindex="0"]') || []) if (old !== word) old.setAttribute("tabindex", "-1");
-  word.setAttribute("tabindex", "0");
-}
-
-let glossPop = null;
-let glossSeq = 0;
-async function openWord(word, lesson) {
-  closeGloss();
-  rove(word);
-  const sentence = word.closest(".seg");
-  const anchor = word.closest(".anchor");
-  if (anchor) lightNotes(anchor.id, sentence);
-  const seq = glossSeq;
-  const data = await lessonGlosses(lesson);
-  if (seq !== glossSeq || !data || !word.isConnected) return;
-  word.closest(".story")?.classList.add("has-glosses");
-  const segment = (lesson._segmentIndex ||= Core.segmentIndex(lesson)).get(sentence.dataset.segment);
-  const found = segment ? Core.glossAt(segment.text || "", Number(word.dataset.at), data.forms, data.segments[segment.id]) : null;
-  if (found) showGloss(word, sentence, found);
-}
-
-function glossEntry(analysis, surface, extra = "") {
-  const lang = targetLang();
-  const lemma = analysis.lemma && Core.glossKey(analysis.lemma) !== Core.glossKey(surface) ? analysis.lemma : null;
-  const grammar = [analysis.pos, analysis.form].filter(Boolean).join(" ");
-  return h("div", { class: `gloss-entry${extra}` },
-    h("p", { class: "gloss-head" },
-      h("span", { class: "gloss-word", lang }, disp(surface)),
-      lemma ? [" ", h("span", { class: "gloss-lemma", lang }, disp(lemma, "glosses"))] : null,
-      grammar ? [" ", h("span", { class: "gloss-pos", lang: "en" }, grammar)] : null),
-    analysis.en ? h("p", { class: "gloss-en", lang: "en" }, analysis.en) : null,
-    analysis.note ? h("p", { class: "gloss-note", lang: "en" }, analysis.note) : null);
-}
-
-function showGloss(word, sentence, found) {
-  const lang = targetLang();
-  const from = found.phrase?.start ?? found.start;
-  const to = found.phrase?.end ?? found.end;
-  const active = [...sentence.querySelectorAll(".w")].filter((w) => Number(w.dataset.at) >= from && Number(w.dataset.at) < to);
-  for (const w of active) w.classList.add("w-active");
-  const pop = h("div", { class: "gloss-pop", id: "gloss-pop", role: "dialog", "aria-label": disp(found.phrase?.text || found.word) },
-    found.phrase ? glossEntry(found.phrase, found.phrase.text, " gloss-phrase") : null,
-    found.main ? glossEntry(found.main, found.word) : null,
-    found.alternatives.length ? h("ul", { class: "gloss-alts" }, found.alternatives.map((alt) => h("li", null,
-      h("span", { class: "gloss-lemma", lang }, disp(alt.lemma || "", "glosses")), " ",
-      h("span", { class: "gloss-pos", lang: "en" }, [alt.pos, alt.form].filter(Boolean).join(" ")), " ",
-      h("span", { lang: "en" }, alt.en || "")))) : null);
-  document.body.append(pop);
-  const described = word.getAttribute("aria-describedby");
-  word.setAttribute("aria-describedby", [described, "gloss-pop"].filter(Boolean).join(" "));
-  glossPop = { pop, word, active, described };
-  placeGloss();
-}
-
-// Below the word, or above it when that side has more room; inside the visible area (the
-// visual viewport on iOS, less the sticky header and the audio dock). When neither side
-// fits, the popup is capped and scrolls, overlapping the word only if it must.
-function placeGloss() {
-  if (!glossPop) return;
-  const { pop, word } = glossPop;
-  const rect = word.getClientRects()[0] || word.getBoundingClientRect();
-  const view = window.visualViewport;
-  const viewTop = view ? view.offsetTop : 0;
-  const viewLeft = view ? view.offsetLeft : 0;
-  const viewWidth = view ? view.width : document.documentElement.clientWidth;
-  const viewHeight = view ? view.height : window.innerHeight;
-  const ceiling = Math.max(viewTop, $(".site-header")?.getBoundingClientRect().bottom || 0) + 6;
-  const dock = $("#audio-dock");
-  const floor = viewTop + viewHeight - (dock && !dock.hidden ? dock.offsetHeight + 16 : 8);
-  pop.style.maxHeight = "";
-  const natural = pop.offsetHeight;
-  const below = floor - rect.bottom - 6;
-  const above = rect.top - 6 - ceiling;
-  const up = natural > below && above > below;
-  const room = up ? above : below;
-  const height = natural <= room ? natural : room >= 72 ? room : Math.min(natural, floor - ceiling);
-  if (height < natural) pop.style.maxHeight = `${Math.max(Math.floor(height), 40)}px`;
-  const tall = pop.offsetHeight;
-  const top = Math.min(Math.max(up ? rect.top - 6 - tall : rect.bottom + 6, ceiling), Math.max(ceiling, floor - tall));
-  const left = Math.max(viewLeft + 8, Math.min(rect.left + rect.width / 2 - pop.offsetWidth / 2, viewLeft + viewWidth - pop.offsetWidth - 8));
-  pop.style.left = `${Math.round(left + window.scrollX)}px`;
-  pop.style.top = `${Math.round(top + window.scrollY)}px`;
-  pop.classList.toggle("above", top < rect.top);
-}
-
-function closeGloss() {
-  glossSeq += 1;
-  unlightNotes();
-  if (!glossPop) return;
-  const { pop, word, active, described } = glossPop;
-  glossPop = null;
-  pop.remove();
-  for (const w of active) w.classList.remove("w-active");
-  if (described) word.setAttribute("aria-describedby", described); else word.removeAttribute("aria-describedby");
-}
-
-// ------------------------------------------------------------------ paragraph audio
-
-// One play/pause button per story paragraph with audio. It plays the paragraph's sentences
-// in turn; while anything plays inside its paragraph (also continuous playback) it pauses
-// and resumes instead.
-function paragraphPlayButton(ids, lesson) {
-  const button = h("button", { type: "button", class: "para-play", "aria-label": t("play_paragraph"), title: t("play_paragraph") }, "▶");
-  button.addEventListener("click", (event) => {
+  anchor.addEventListener("click", (event) => {
     event.stopPropagation();
-    if (audioState.on && audioState.active?.closest(".story-para") === button.parentNode) toggleAudioPause();
-    else playSegments(ids, lesson);
+    if (state.notesHidden) return;
+    if (!isNarrow(anchor)) {
+      for (const note of noteEls) { note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
+      return;
+    }
+    // Pictures already float beside the paragraph; the drawer carries only the text notes.
+    const textItems = items.filter(({ aid }) => aid.presentation === "margin_gloss" || !aid.src);
+    if (!textItems.length) {
+      const floats = sectionBodyOf(anchor)?.querySelectorAll(`.note-float[data-anchor="${anchor.id}"], .note-float[data-anchor="${sentence.id}"]`) || [];
+      for (const note of floats) { note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
+      return;
+    }
+    const drawerId = `${anchor.id}-drawer`;
+    const open = document.getElementById(drawerId);
+    if (open) { closeDrawer(open); return; }
+    const drawer = h("span", { class: "inline-notes", id: drawerId, role: "note" },
+      textItems.map(({ aid, index }) => buildNote(aid, `${sentence.id}-n${index}`, anchor.id, true)));
+    drawer.dataset.anchor = anchor.id;
+    let after = sentence;
+    while (after.nextElementSibling?.classList.contains("inline-notes")) after = after.nextElementSibling;
+    after.after(drawer);
+    anchor.setAttribute("aria-expanded", "true");
+    anchor.setAttribute("aria-controls", drawerId);
   });
-  return button;
 }
 
-function syncParaButtons() {
-  const para = audioState.on ? audioState.active?.closest?.(".story-para") : null;
-  for (const button of document.querySelectorAll("#lesson .para-play")) {
-    const mine = Boolean(para) && button.parentNode === para;
-    const playing = mine && !audioState.paused;
-    const label = t(playing ? "pause" : mine ? "resume" : "play_paragraph");
-    button.textContent = playing ? "❚❚" : "▶";
-    button.classList.toggle("is-active", mine);
-    button.setAttribute("aria-label", label);
-    button.title = label;
-  }
+function closeDrawer(drawer) {
+  const anchor = document.getElementById(drawer.dataset.anchor);
+  anchor?.setAttribute("aria-expanded", "false");
+  drawer.remove();
 }
 
 // Margin alignment: each note sits level with its anchor's line; later notes are pushed
@@ -1756,6 +1572,13 @@ async function updateContinueStep(target, order) {
   } catch { /* keep the plain lesson link */ }
 }
 
+function otherCourses() {
+  const others = visibleCourses().filter((course) => course.id !== state.course?.id);
+  if (!others.length) return null;
+  return h("p", { class: "other-courses" }, ui("span", "course_select"), ": ",
+    others.map((course, i) => [i ? " · " : "", h("a", { href: courseHref(course), lang: course.language || null }, course.title || course.id)]));
+}
+
 // ------------------------------------------------------------------ lightbox
 
 function openLightbox(aid) {
@@ -2015,6 +1838,53 @@ function watchKataLayout(layout) {
   };
   new ResizeObserver(update).observe(layout);
 }
+function renderKataQueue() {
+  kataStore().reconcile(entries().filter(available).map((entry) => entry.id));
+  const queue = h("section", { class: "kata-queue", "aria-labelledby": "kata-due-title" });
+  const heading = ui("h2", "kata_due", { id: "kata-due-title" }, { n: kataStore().due().length });
+  const body = h("div", { class: "kata-due-sessions" });
+  const shown = new Set();
+  const refresh = () => {
+    const due = kataStore().due();
+    const [label, lang] = tl("kata_due", { n: due.length });
+    heading.textContent = label; heading.lang = lang;
+    more.hidden = !due.some((record) => !shown.has(record.id));
+  };
+  const offer = async () => {
+    more.disabled = true;
+    const batch = window.Kata.batch(kataStore().due().filter((record) => !shown.has(record.id)));
+    for (const record of batch) {
+      const entry = entries().find((entry) => entry.id === record.lesson_id && available(entry));
+      if (!entry) continue;
+      try {
+        const lesson = await fetchLesson(entry);
+        kataStore().register(lesson);
+        const kata = lesson.grammar?.kata?.find((kata) => kata.id === record.id && kata.scheduled);
+        if (kata) {
+          shown.add(kata.id);
+          body.append(h("div", { class: "kata-due-session" },
+            h("a", { href: `#${encodeURIComponent(lesson.id)}`, lang: targetLang() }, lesson.title),
+            renderKata(kata, lesson, refresh)));
+        }
+      } catch (error) { body.append(h("p", { class: "error", role: "status" }, t("load_error"))); }
+    }
+    more.disabled = false; refresh();
+  };
+  const more = ui("button", "kata_more", { type: "button", class: "small-button kata-more", onclick: offer });
+  queue.append(heading, body, more);
+  more.hidden = true;
+  heading.textContent = t("loading");
+  // Refresh only units already represented in the queue. Merely visiting the course
+  // overview must never register a unit the reader has not opened.
+  const opened = [...new Set(Object.values(kataStore().read().kata).map((record) => record.lesson_id))];
+  Promise.all(opened.map(async (id) => {
+    const entry = entries().find((entry) => entry.id === id);
+    if (!entry) return;
+    try { kataStore().register(await fetchLesson(entry)); } catch { /* retain due practice until its unit can be fetched */ }
+  })).then(offer);
+  return queue;
+}
+
 function renderGrammar(lesson) {
   let grammar = lesson.grammar || lesson.grammar_observation;
   if (!grammar) return null;
@@ -2906,9 +2776,7 @@ async function loadAudioSources(lesson) {
 const player = typeof Audio === "undefined" ? null : new Audio();
 // on: something is playing or paused (the dock shows); continuous: a whole chapter or part
 // is queued (the toolbar button reads Stop); paused: the learner paused it from the dock.
-// activeId is the sentence being heard: kept by ID so a re-render (stress marks, interface
-// language) can find it again (rebindAudio). offsets: the chapter file's lesson_offsets.
-const audioState = { queue: [], lesson: null, active: null, activeId: null, offsets: null, button: null, on: false, continuous: false, paused: false };
+const audioState = { queue: [], lesson: null, active: null, button: null, on: false, continuous: false, paused: false };
 
 function renderAudioControls(lesson) {
   const audio = lesson._audio;
@@ -2952,7 +2820,6 @@ function playLesson(lesson) {
   if (data?.lesson) {
     stopAudio();
     audioState.continuous = true;
-    audioState.offsets = data.lesson_offsets && Object.keys(data.lesson_offsets).length ? data.lesson_offsets : null;
     playFile(new URL(data.lesson, lesson._audio.selected.base).href, null);
     audioState.button?.(true);
     return;
@@ -2975,31 +2842,13 @@ function advanceQueue() {
   if (!id || !lesson?._audio) { stopAudio(); return; }
   const file = lesson._audio.selected.data.segments?.[id];
   if (!file) { advanceQueue(); return; }
-  playFile(new URL(file, lesson._audio.selected.base).href, id);
+  playFile(new URL(file, lesson._audio.selected.base).href, document.getElementById(id));
 }
 
-function markActive(id) {
+function playFile(src, target) {
   audioState.active?.classList.remove("audio-playing");
-  audioState.activeId = id || null;
-  audioState.active = id ? document.getElementById(id) : null;
-  audioState.active?.classList.add("audio-playing");
-}
-function rebindAudio() {
-  if (!audioState.on) return;
-  markActive(audioState.activeId);
-  syncParaButtons();
-}
-
-// The segment heard at `time` in a chapter file: the last one started, so the pause between
-// two sentences still belongs to the first.
-function segmentAt(offsets, time) {
-  let found = null;
-  for (const [id, [start]] of Object.entries(offsets || {})) if (start <= time && (!found || start >= found.start)) found = { id, start };
-  return found?.id || null;
-}
-
-function playFile(src, segmentId) {
-  markActive(segmentId);
+  audioState.active = target;
+  target?.classList.add("audio-playing");
   audioState.on = true;
   audioState.paused = false;
   updateDock();
@@ -3028,24 +2877,18 @@ function updateDock() {
   stop.textContent = "■";
   stop.setAttribute("aria-label", t("stop"));
   stop.title = stop.getAttribute("aria-label");
-  syncParaButtons();
 }
 
 function stopAudio() {
   audioState.queue = [];
   player.pause();
-  markActive(null);
-  audioState.offsets = null;
+  audioState.active?.classList.remove("audio-playing");
+  audioState.active = null;
   audioState.on = audioState.continuous = audioState.paused = false;
   audioState.button?.(false);
   updateDock();
 }
 player?.addEventListener("ended", () => { audioState.active?.classList.remove("audio-playing"); if (audioState.queue.length) advanceQueue(); else stopAudio(); });
-player?.addEventListener("timeupdate", () => {
-  if (!audioState.offsets || !audioState.on) return;
-  const id = segmentAt(audioState.offsets, player.currentTime);
-  if (id !== audioState.activeId) { markActive(id); syncParaButtons(); }
-});
 player?.addEventListener("error", () => { if (audioState.queue.length) advanceQueue(); else stopAudio(); });
 
 // ------------------------------------------------------------------ navigation drawer
@@ -3145,14 +2988,8 @@ function boot() {
     $("#english-toggle").focus();
   });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && glossPop) { event.preventDefault(); closeGloss(); return; }
-    if (event.key === "Escape") closeGloss(); // also cancels a lookup still loading
     if (event.key === "Escape" && $("#course-nav").classList.contains("open")) { event.preventDefault(); closeNav(true); }
   });
-  // A tap outside the popup and the story's words closes it (a word opens its own).
-  document.addEventListener("pointerdown", (event) => {
-    if (!event.target.closest?.(".gloss-pop, .story .w, .note-marker")) closeGloss();
-  }, true);
   $("#lightbox").addEventListener("click", (event) => { if (event.target === event.currentTarget) event.currentTarget.close(); });
   window.addEventListener("hashchange", () => {
     const hash = decodeURIComponent(location.hash.slice(1));
@@ -3176,11 +3013,9 @@ function boot() {
     if (!narrowNav()) closeNav(false);
     syncNavToggle();
     if (window.innerWidth > 700) for (const reference of document.querySelectorAll(".kata-reference")) reference.open = true;
-    placeGloss();
     scheduleAlign();
   });
   document.fonts?.ready?.then(scheduleAlign);
-  window.visualViewport?.addEventListener("resize", placeGloss);
   // Timing: any input counts as activity; leaving the page saves the time so far.
   for (const type of ["scroll", "keydown", "pointerdown", "pointermove", "touchstart", "input"]) {
     window.addEventListener(type, noteActivity, { passive: true, capture: true });
@@ -3194,7 +3029,7 @@ function boot() {
 
 // Pure helpers for Node tests (tests/static-app.test.cjs loads this file in a vm).
 globalThis.IllustratedReader = {
-  stripStress, segmentAt, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
+  stripStress, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
   knownList, isWorkbookExercise, isNapishi, sectionExercises, napishiOf, buildSteps, nextStep, addTime, timingExport, STEP_KINDS,
   exerciseBook, hasWorkbook, isWorkbookStep,
   UI_DEFAULTS

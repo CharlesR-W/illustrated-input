@@ -1,0 +1,4176 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "ru-mir-01-l07",
+ "course_id": "ru-mir-01",
+ "order": 7,
+ "title": "О чём говоря́т в дере́вне",
+ "part": 1,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "0.1.0-loop-draft",
+ "provenance": {
+  "author": "loop writer (Claude, model-written), step write, chapter 7",
+  "model": "claude-opus-5-5",
+  "prompt": "loop/briefs/20261025T233720046-ru-mir-01-write-c07.md; content/ru/plan/chapters.json row 7; docs/russian-mir-design.md; docs/russian-mir-lesson-shape.md",
+  "review_required": "Codex cross-model review and a fluent Russian reader before the chapter leaves draft",
+  "notes": [
+   "Attempt 20261025T233720046-ru-mir-01-write-c07 (the previous attempt 20261025T220254622 was interrupted and saved nothing). Written from the frozen plan row: four places where the village talks (колодец, лавка, у батюшки, у печи); the rumour mutates in three named steps: Дарья «Фёдор хочет отруб» (true, the wife's news) → Егор, who hears only «Фёдор не хочет жить…», «он хочет жить в Москве, на фабрике» → Силантий's joke at the priest's «Может быть, он продаёт землю? Наверное, мне!», overheard by a woman and carried to the well, where Fyodor hears it.",
+   "Stress correction: the land-plot sense is о́труб (об о́трубе), not the plan row's отру́б (which is the cut face of a log); the row itself flagged «отру́б: not in dictionary». Evidence: Кузнецов, Большой толковый словарь, s.v. о́труб (lexicography.online), and the Stolypin-reform plural отруба́; Codex prose review 1025-165639-24213 raised it. The checker's stress-lexicon warning against the plan stress is therefore expected until the delta is merged.",
+   "Present tense throughout (past is G10). No dative except the baseline мне/тебе́ (Тебе́ хорошо́; Наве́рное, мне!); «продаёт зе́млю Сила́нтию» (dative) is rendered «продаёт зе́млю, а Сила́нтий её берёт». No instrumental except inside the proverb (quotation segment). «уезжает» replaced by «хо́чет жить в Москве́» as the row asks.",
+   "Declared incidentals: мир / ми́ра / о ми́ре / на миру́ (the commune, glossed «мир = вся дере́вня» as in Глава 4; на миру́ is the set phrase, after the Codex review: «в ми́ре» read as 'in peace'); сход / на схо́де (planted for Глава 9, glossed); продаёт / продаю́ (row incidental, glossed); the proverb.",
+   "Warnings left, with reasons: stress-lexicon о́труб (see above) and миру́ (loc2 на миру́; the lexicon's ми́ру is a dative); по́лосы is the nominative plural (the lexicon lists the genitive singular полосы́); register про (the row marks про colloquial and asks for it in the women's speech; course.json's whitelist is not mine to edit); media-coverage но́вость and студе́нт (introduced by context: «А у нас но́вость. Мой Фёдор хо́чет о́труб», «у́чится в университе́те… Он студе́нт»; glosses dropped to keep density inside 2–4 per 100); stress-unverified (no RUAccent model on this host; stresses set by hand and checked by Codex).",
+   "Media: the ведро́ vignette reuses media/vignettes/ru-mir-01-l03-img-vedro.svg (already drawn, so the word is supported by a picture that renders); колодец vignette, cover and two scenes are planned; the rumour map ru-mir-01-l07-svg-slukh.svg is drawn here (Russian labels, 17–20 px in a 290 px viewBox).",
+   "Workbook: three exercises of six items per section (12 exercises, 72 items); every item one gap with visible help (bracketed lemma, first letters, (в / на) or phrase choices of at most two words); drilled forms appear in the story by the end of their section. Pensum A 10 (2 recall: G05 говоря́т, G02 ба́бы), B 10 with a 13-word bank, C 8 open questions in story order with one Почему́? and «А ты?» last.",
+   "Continuity: Ivan knows the truth from Глава 4 (Фёдор: «вся земля — здесь, своя земля»); Дарья is proud of it; Пётр is silent at the priest's and at supper; Дед has known Moscow (winter factory work) [?]; Misha (7) carries the first version; Силантий's joke plants his later land-buying (Глава 37).",
+   "Fix 20261026T013800027-ru-mir-01-fix (review 20261026T012947150): F004 adds a margin gloss on s122 («ты за о́труб = ты хо́чешь о́труб») for the new 'in favour of' sense of за; gloss density is now 4.1 per 100 words, just over the Часть 1 target 2–4, accepted because the sense is not resolvable from за́ руку / за уро́к and the owner is learning from scratch. media.counts.margin_gloss 32 → 33 accordingly."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "ru-mir-01-l07-s028",
+    "quote": "Земля́ — его́, а не ми́ра.",
+    "question": "Is «Земля́ — его́, а не ми́ра» a natural peasant way to say the отруб takes the land out of commune tenure (личная собственность)?"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s046",
+    "quote": "на миру́",
+    "question": "«Бе́дные, но на миру́» / «На миру́ и бе́дный не оди́н»: idiomatic for commune solidarity in 1913, or does на миру́ read only as 'in public'?"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s097",
+    "quote": "не хо́чет зимо́й на фа́брику",
+    "question": "Elliptical «хо́чет на фа́брику» (motion implied) in Ivan's mouth: natural?"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s122",
+    "quote": "Ты за о́труб, а оте́ц — за мир.",
+    "question": "за + accusative 'in favour of' is a new sense of за (Глава 6 had за́ руку, за уро́к); is it clear enough unglossed here?"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s084",
+    "quote": "Дед зна́ет Москву́.",
+    "question": "[?] New fact: Дед Матвей knows Moscow (winter factory work, отход). Not in the history notes or the ledger; plausible for a Ryazan peasant born 1843. Keep or soften to «Дед зна́ет про Москву́»?"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s003",
+    "quote": "Вот коло́дец",
+    "question": "[?] A sweep well (журавль) at the Sokolovs' end of Берёзовка: plausible for a Ryazan black-earth village (vs a wheel well); not in the history notes."
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s118",
+    "quote": "Слу́хом земля́ по́лнится",
+    "question": "Proverb kept verbatim as a quotation segment (instrumental слу́хом is outside the chapter's grammar)."
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s115",
+    "quote": "на схо́де",
+    "question": "Fyodor is a married son, not a household head (Глава 9 row): «Я хочу́ говори́ть об о́трубе на схо́де» states intent only; consistent with Глава 9's family-division procedure?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G07",
+  "primary_new_grammar": {
+   "id": "G07",
+   "label": "Prepositional case complete: sg all genders, soft stems -и, pl -ах/-ях; о/об + prep.; в vs на; prepositional of pronouns, adjectives, possessives",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01",
+   "G02",
+   "G03",
+   "G04",
+   "G05",
+   "G06"
+  ],
+  "incidental": [
+   {
+    "form": "мир, ми́ра, о ми́ре, на миру́ — the commune, a glossed one-word chunk as in Глава 4, glossed «мир = вся дере́вня»; на миру́ is the set phrase; the lexeme ru-mir-commune is planned for Глава 9; never asked for in an exercise",
+    "gloss_segment_id": "ru-mir-01-l07-s028"
+   },
+   {
+    "form": "сход, на схо́де — planted for Глава 9 (ru-skhod), glossed «сход: хозя́ева дере́вни говоря́т о земле́»",
+    "gloss_segment_id": "ru-mir-01-l07-s115"
+   },
+   {
+    "form": "продаёт, продаю́ — present of продава́ть (lexeme ru-prodavat, Глава 8), plan incidental_allowed; glossed «продаёт: даёт зе́млю, берёт де́ньги»",
+    "gloss_segment_id": "ru-mir-01-l07-s075"
+   },
+   {
+    "form": "Слу́хом земля́ по́лнится — proverb, quotation segment; по́лнится glossed, слу́хом (instr.) never tested",
+    "gloss_segment_id": "ru-mir-01-l07-s118"
+   },
+   {
+    "form": "Тебе́ хорошо́; мне — baseline dative pronouns (G08)",
+    "gloss_segment_id": "ru-mir-01-l07-s044"
+   }
+  ],
+  "new_lexeme_ids": [
+   "ru-o",
+   "ru-pro",
+   "ru-zhit",
+   "ru-kolodets",
+   "ru-voda",
+   "ru-vedro",
+   "ru-baba",
+   "ru-muzhik",
+   "ru-slukh",
+   "ru-novost",
+   "ru-fabrika",
+   "ru-pomeshchik",
+   "ru-universitet",
+   "ru-student",
+   "ru-kniga",
+   "ru-gazeta",
+   "ru-otrub",
+   "ru-zakon",
+   "ru-pravda",
+   "ru-navernoe",
+   "ru-ph-mozhet-byt",
+   "ru-ph-govoryat-chto",
+   "ru-bogatyj",
+   "ru-bednyj",
+   "ru-noch",
+   "ru-nochyu",
+   "ru-zima",
+   "ru-zimoj",
+   "ru-drugoj",
+   "ru-delo",
+   "ru-razgovor",
+   "ru-mesto",
+   "ru-tut",
+   "ru-malchik",
+   "ru-tolko"
+  ],
+  "recycle_lexeme_ids": [
+   "ru-uchitelnitsa",
+   "ru-shkola",
+   "ru-chitat",
+   "ru-gorod",
+   "ru-zemlya",
+   "ru-polosa",
+   "ru-lavka",
+   "ru-khozyain",
+   "ru-otets",
+   "ru-ded",
+   "ru-pech",
+   "ru-batyushka",
+   "ru-dengi",
+   "ru-sosed",
+   "ru-govorit",
+   "ru-znat",
+   "ru-dumat"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "ru-o",
+    "how": "context (Ба́бы говоря́т об учи́тельнице; then о ней, о бра́те, о Фёдоре)",
+    "segment_id": "ru-mir-01-l07-s008"
+   },
+   {
+    "lexeme_id": "ru-pro",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l07-s016"
+   },
+   {
+    "lexeme_id": "ru-zhit",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s009"
+   },
+   {
+    "lexeme_id": "ru-kolodets",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s003"
+   },
+   {
+    "lexeme_id": "ru-voda",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l07-s003"
+   },
+   {
+    "lexeme_id": "ru-vedro",
+    "how": "picture (Глава 3 pail vignette, rendered) + context",
+    "segment_id": "ru-mir-01-l07-s005"
+   },
+   {
+    "lexeme_id": "ru-baba",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l07-s004"
+   },
+   {
+    "lexeme_id": "ru-muzhik",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l07-s033"
+   },
+   {
+    "lexeme_id": "ru-slukh",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l07-s078"
+   },
+   {
+    "lexeme_id": "ru-novost",
+    "how": "context (А у нас но́вость. Мой Фёдор хо́чет о́труб.) + но́вый known",
+    "segment_id": "ru-mir-01-l07-s023"
+   },
+   {
+    "lexeme_id": "ru-fabrika",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s052"
+   },
+   {
+    "lexeme_id": "ru-pomeshchik",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s017"
+   },
+   {
+    "lexeme_id": "ru-universitet",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s017"
+   },
+   {
+    "lexeme_id": "ru-student",
+    "how": "context (у́чится в университе́те, the sentence before) + internationalism",
+    "segment_id": "ru-mir-01-l07-s018"
+   },
+   {
+    "lexeme_id": "ru-kniga",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s013"
+   },
+   {
+    "lexeme_id": "ru-gazeta",
+    "how": "picture(scene)+context",
+    "segment_id": "ru-mir-01-l07-s034"
+   },
+   {
+    "lexeme_id": "ru-otrub",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s029"
+   },
+   {
+    "lexeme_id": "ru-zakon",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s036"
+   },
+   {
+    "lexeme_id": "ru-pravda",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l07-s011"
+   },
+   {
+    "lexeme_id": "ru-navernoe",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s019"
+   },
+   {
+    "lexeme_id": "ru-ph-mozhet-byt",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s018"
+   },
+   {
+    "lexeme_id": "ru-ph-govoryat-chto",
+    "how": "context (говори́ть + что, both known)",
+    "segment_id": "ru-mir-01-l07-s016"
+   },
+   {
+    "lexeme_id": "ru-bogatyj",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s044"
+   },
+   {
+    "lexeme_id": "ru-bednyj",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l07-s045"
+   },
+   {
+    "lexeme_id": "ru-noch",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s010"
+   },
+   {
+    "lexeme_id": "ru-nochyu",
+    "how": "form (ночь → но́чью), ночь glossed in the sentence before",
+    "segment_id": "ru-mir-01-l07-s011"
+   },
+   {
+    "lexeme_id": "ru-zima",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l07-s085"
+   },
+   {
+    "lexeme_id": "ru-zimoj",
+    "how": "form (зима́ → зимо́й), зима́ glossed in the sentence before",
+    "segment_id": "ru-mir-01-l07-s086"
+   },
+   {
+    "lexeme_id": "ru-drugoj",
+    "how": "contrast (одна́ ба́ба ↔ друга́я)",
+    "segment_id": "ru-mir-01-l07-s011"
+   },
+   {
+    "lexeme_id": "ru-delo",
+    "how": "gloss(form)+context",
+    "segment_id": "ru-mir-01-l07-s067"
+   },
+   {
+    "lexeme_id": "ru-razgovor",
+    "how": "gloss(form)+context",
+    "segment_id": "ru-mir-01-l07-s050"
+   },
+   {
+    "lexeme_id": "ru-mesto",
+    "how": "gloss(antonym)+context",
+    "segment_id": "ru-mir-01-l07-s027"
+   },
+   {
+    "lexeme_id": "ru-tut",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l07-s050"
+   },
+   {
+    "lexeme_id": "ru-malchik",
+    "how": "context (Ми́ша, сын Фёдора: он ещё ма́льчик) + scene coverage",
+    "segment_id": "ru-mir-01-l07-s007"
+   },
+   {
+    "lexeme_id": "ru-tolko",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l07-s045"
+   }
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "ru-mir-01-l07-cover",
+   "src": "media/images/ru-mir-01-l07-cover.webp",
+   "status": "draft",
+   "presentation": "inline_scene",
+   "alt": "Women at the village sweep well on the feast of Pokrov, heads together over their pails; behind them the shop, with men on its step.",
+   "art_brief": "Berezovka, Ryazan province, 1 October 1913 (Pokrov), late morning after church, clear autumn light, birches yellow. Foreground: the village sweep well (log well-head, tall forked post, long sweep beam with a bucket). Three peasant women in feast-day kerchiefs and padded jackets, two with yokes and wooden pails, heads together talking: Darya (about 25, Fyodor's wife, red kerchief) in the middle; Nastya (12, kerchief, one small pail) listening; a small boy, Misha (7, cap too big), at Darya's skirt. Background across the dusty street: Silanty's log shop with a board over the door and three men in caps sitting on its step, looking towards the well. No text in the image.",
+   "covers_lexeme_ids": [
+    "ru-kolodets",
+    "ru-baba",
+    "ru-vedro",
+    "ru-voda"
+   ],
+   "width": 1600,
+   "height": 1073
+  },
+  "sections": [
+   {
+    "id": "ru-mir-01-l07-sec1",
+    "title": "У коло́дца",
+    "segments": [
+     {
+      "id": "ru-mir-01-l07-s001",
+      "text": "Покро́в.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s002",
+      "text": "У́тром вся дере́вня в це́ркви, а сейча́с вся дере́вня говори́т.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "У́тром",
+        "lemma": "утром",
+        "feats": {
+         "pos": "ADVB"
+        }
+       },
+       {
+        "start": 7,
+        "end": 10,
+        "token": "вся",
+        "lemma": "весь",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "femn"
+        }
+       },
+       {
+        "start": 22,
+        "end": 29,
+        "token": "це́ркви",
+        "lemma": "церковь",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       },
+       {
+        "start": 41,
+        "end": 44,
+        "token": "вся",
+        "lemma": "весь",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s003",
+      "text": "Вот коло́дец: в нём вода́, как в реке́.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "вода́",
+        "gloss": "вода́: в реке́, в Оке́",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-voda"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "коло́дец",
+        "gloss": "коло́дец: вода́ в земле́, у до́ма",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-kolodets"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l07-img-kolodets",
+        "anchor_text": "коло́дец",
+        "label": "коло́дец",
+        "src": "media/vignettes/ru-mir-01-l07-img-kolodets.svg",
+        "alt": "A village sweep well with its long beam and bucket.",
+        "status": "draft",
+        "art_brief": "A Russian village sweep well (журавль), Ryazan province 1913: a square log well-head, a tall forked wooden post, a long sweep beam pivoting on it with a wooden bucket hanging from a pole at one end and a counterweight log at the other. Ink outline with watercolour wash, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-kolodets"
+        ],
+        "width": 240,
+        "height": 240
+       }
+      ],
+      "pins": [
+       {
+        "start": 33,
+        "end": 38,
+        "token": "реке́",
+        "lemma": "река",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s004",
+      "text": "У коло́дца стоя́т ба́бы: Да́рья, жена́ Фёдора, и ещё две ба́бы.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ба́бы",
+        "gloss": "ба́бы: жёны, ма́тери",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-baba"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s005",
+      "text": "У Да́рьи ведро́, а в ведре́ вода́.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l07-img-vedro",
+        "anchor_text": "ведро́",
+        "label": "ведро́",
+        "src": "media/vignettes/ru-mir-01-l03-img-vedro.svg",
+        "alt": "A wooden peasant pail with iron hoops and a rope handle.",
+        "status": "draft",
+        "art_brief": "Reuses the Глава 3 pail vignette (wooden staves, two iron hoops, rope handle); no new raster needed.",
+        "covers_lexeme_ids": [
+         "ru-vedro"
+        ],
+        "width": 240,
+        "height": 240
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s006",
+      "text": "На́стя то́же здесь."
+     },
+     {
+      "id": "ru-mir-01-l07-s007",
+      "text": "И Ми́ша здесь, сын Фёдора: он ещё ма́льчик."
+     },
+     {
+      "id": "ru-mir-01-l07-s008",
+      "text": "Ба́бы говоря́т об учи́тельнице.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s009",
+      "text": "Она́ живёт в шко́ле, и ве́чером там уро́к.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "живёт",
+        "gloss": "живёт: её дом — шко́ла",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-zhit"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 13,
+        "end": 19,
+        "token": "шко́ле",
+        "lemma": "школа",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       },
+       {
+        "start": 23,
+        "end": 31,
+        "token": "ве́чером",
+        "lemma": "вечером",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s010",
+      "text": "— Ночь, все лежа́т, а она́ чита́ет! — говори́т одна́ ба́ба.",
+      "paragraph_start": true,
+      "speaker": "char-baba",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Ночь",
+        "gloss": "ночь: не ве́чер, все уже́ лежа́т",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-noch"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s011",
+      "text": "— Пра́вда, она́ и но́чью чита́ет, — говори́т друга́я.",
+      "paragraph_start": true,
+      "speaker": "char-baba-2",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Пра́вда",
+        "gloss": "пра́вда = так и есть",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-pravda"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 18,
+        "end": 24,
+        "token": "но́чью",
+        "lemma": "ночью",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s012",
+      "text": "— В окне́ шко́лы — ла́мпа.",
+      "speaker": "char-baba-2"
+     },
+     {
+      "id": "ru-mir-01-l07-s013",
+      "text": "А кни́ги!",
+      "speaker": "char-baba-2",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "кни́ги",
+        "gloss": "кни́ги: там слова́, их чита́ют",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-kniga"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s014",
+      "text": "Кни́ги на столе́, на окне́, в углу́…",
+      "speaker": "char-baba-2",
+      "pins": [
+       {
+        "start": 30,
+        "end": 35,
+        "token": "углу́",
+        "lemma": "угол",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s015",
+      "text": "Она́ из Ряза́ни, а Ряза́нь — большо́й го́род.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 5,
+        "end": 7,
+        "token": "из",
+        "lemma": "из",
+        "feats": {
+         "pos": "PREP"
+        }
+       },
+       {
+        "start": 29,
+        "end": 37,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "masc"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s016",
+      "text": "Но говоря́т, что она́ всё зна́ет и про Москву́.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "про",
+        "gloss": "про Москву́ = о Москве́",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-pro"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s017",
+      "text": "— В Москве́ университе́т, и там у́чится Никола́й, сын поме́щика Орло́ва.",
+      "paragraph_start": true,
+      "speaker": "char-baba",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "университе́т",
+        "gloss": "университе́т: больша́я шко́ла в го́роде",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-universitet"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "поме́щика",
+        "gloss": "поме́щик: хозя́ин уса́дьбы",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-pomeshchik"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s018",
+      "text": "Он студе́нт. Мо́жет быть, она́ его́ зна́ет!",
+      "speaker": "char-baba",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Мо́жет быть",
+        "gloss": "мо́жет быть: да? нет? не зна́ю",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-ph-mozhet-byt"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s019",
+      "text": "— Наве́рное, зна́ет!",
+      "paragraph_start": true,
+      "speaker": "char-baba-2",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Наве́рное",
+        "gloss": "наве́рное: ду́маю, что да",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-navernoe"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s020",
+      "text": "Ба́бы смею́тся.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s021",
+      "text": "На́стя ду́мает о бра́те, а Да́рья — о Фёдоре."
+     },
+     {
+      "id": "ru-mir-01-l07-s022",
+      "text": "— Всё о ней и о ней! — говори́т Да́рья.",
+      "paragraph_start": true,
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l07-s023",
+      "text": "— А у нас но́вость.",
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l07-s024",
+      "text": "Мой Фёдор хо́чет о́труб.",
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l07-s025",
+      "text": "— О́труб? Что э́то?",
+      "paragraph_start": true,
+      "speaker": "char-baba-2"
+     },
+     {
+      "id": "ru-mir-01-l07-s026",
+      "text": "— Сейча́с на́ша земля́ и здесь, и там: три полосы́.",
+      "paragraph_start": true,
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l07-s027",
+      "text": "А Фёдор хо́чет так: вся земля́ — в одно́м ме́сте.",
+      "speaker": "char-darya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ме́сте",
+        "gloss": "в одно́м ме́сте ↔ здесь и там",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-mesto"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 20,
+        "end": 23,
+        "token": "вся",
+        "lemma": "весь",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s028",
+      "text": "Земля́ — его́, а не ми́ра.",
+      "speaker": "char-darya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ми́ра",
+        "gloss": "мир = вся дере́вня",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s029",
+      "text": "Э́то и есть о́труб.",
+      "speaker": "char-darya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "о́труб",
+        "gloss": "о́труб: вся земля́ в одно́м ме́сте",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-otrub"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s030",
+      "text": "— В одно́м ме́сте? Кака́я но́вость!",
+      "paragraph_start": true,
+      "speaker": "char-baba"
+     },
+     {
+      "id": "ru-mir-01-l07-s031",
+      "text": "У Ми́ши копе́йка, и он идёт в ла́вку.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s032",
+      "text": "Тепе́рь у ма́льчика и копе́йка, и но́вость!"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l07-x1-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Where? / about whom? — prepositional: most nouns -е; це́рковь → -и; у́гол → в углу́.",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "шко́ла → в шко́ле",
+       "prompt": "Учи́тельница живёт в шко́л___.",
+       "answer": "е"
+      },
+      "items": [
+       {
+        "id": "x1-1-1",
+        "prompt": "У́тром вся дере́вня в це́ркв___ (це́рковь).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s002"
+        ],
+        "common_wrong": [
+         {
+          "answer": "е",
+          "hint": "це́рковь → в це́ркви"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-2",
+        "prompt": "У Да́рьи ведро́, а в ведр___ (ведро́) вода́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s005"
+        ]
+       },
+       {
+        "id": "x1-1-3",
+        "prompt": "Кни́ги на стол___ (стол) и на окне́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s014"
+        ]
+       },
+       {
+        "id": "x1-1-4",
+        "prompt": "Кни́ги и в угл___ (у́гол).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "у́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s014"
+        ],
+        "common_wrong": [
+         {
+          "answer": "е",
+          "hint": "у́гол → в углу́"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-5",
+        "prompt": "Никола́й у́чится в университе́т___ (университе́т).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s017"
+        ]
+       },
+       {
+        "id": "x1-1-6",
+        "prompt": "Ба́бы говоря́т об учи́тельниц___ (учи́тельница).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s008"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x1-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "о ком? о чём? — о (об before а, о, у, э, и) + prepositional.",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "о ком? брат → о бра́те · о чём? Москва́ → о Москве́",
+       "prompt": "На́стя ду́мает о ___ (брат).",
+       "answer": "бра́те"
+      },
+      "items": [
+       {
+        "id": "x1-2-1",
+        "prompt": "Да́рья ду́мает о ___ (Фёдор).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдоре"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s021"
+        ]
+       },
+       {
+        "id": "x1-2-2",
+        "prompt": "Ба́бы говоря́т об ___ (учи́тельница).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "учи́тельнице"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s008"
+        ]
+       },
+       {
+        "id": "x1-2-3",
+        "prompt": "Учи́тельница всё зна́ет о ___ (Москва́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Москве́"
+        ],
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "Москву́",
+          "hint": "про Москву́, но о Москве́"
+         }
+        ]
+       },
+       {
+        "id": "x1-2-4",
+        "prompt": "Ба́бы говоря́т о ___ (она́): «Она́ живёт в шко́ле».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ней"
+        ],
+        "first_letters": 1,
+        "common_wrong": [
+         {
+          "answer": "неё",
+          "hint": "о ком? она́ → о ней"
+         }
+        ]
+       },
+       {
+        "id": "x1-2-5",
+        "prompt": "Фёдор хо́чет так: вся земля́ — в одно́м ___ (ме́сто).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ме́сте"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s027"
+        ]
+       },
+       {
+        "id": "x1-2-6",
+        "prompt": "Никола́й у́чится в ___ (университе́т).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "университе́те"
+        ],
+        "first_letters": 4
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x1-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "obrazec": {
+       "rule": "Ба́бы стоя́т … → у коло́дца",
+       "prompt": "Ба́бы стоя́т ___.",
+       "answer": "у коло́дца"
+      },
+      "items": [
+       {
+        "id": "x1-3-1",
+        "prompt": "Учи́тельница живёт ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "в шко́ле"
+        ],
+        "choices": [
+         "в шко́ле",
+         "в Москве́",
+         "в коло́дце"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s009"
+        ]
+       },
+       {
+        "id": "x1-3-2",
+        "prompt": "Но́чью учи́тельница ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "чита́ет кни́ги"
+        ],
+        "choices": [
+         "чита́ет кни́ги",
+         "идёт в ла́вку",
+         "стои́т у коло́дца"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s011",
+         "ru-mir-01-l07-s013"
+        ]
+       },
+       {
+        "id": "x1-3-3",
+        "prompt": "Учи́тельница — ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "из Ряза́ни"
+        ],
+        "choices": [
+         "из Ряза́ни",
+         "из Москвы́",
+         "из Берёзовки"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s015"
+        ]
+       },
+       {
+        "id": "x1-3-4",
+        "prompt": "Никола́й Орло́в у́чится ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "в университе́те"
+        ],
+        "choices": [
+         "в университе́те",
+         "в шко́ле",
+         "в ла́вке"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s017",
+         "ru-mir-01-l07-s018"
+        ]
+       },
+       {
+        "id": "x1-3-5",
+        "prompt": "Фёдор ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "хо́чет о́труб"
+        ],
+        "choices": [
+         "хо́чет о́труб",
+         "хо́чет ла́вку",
+         "живёт в шко́ле"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s027"
+        ]
+       },
+       {
+        "id": "x1-3-6",
+        "prompt": "У Ми́ши копе́йка, и он идёт ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "в ла́вку"
+        ],
+        "choices": [
+         "в ла́вку",
+         "в шко́лу",
+         "в це́рковь"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s031"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l07-sec2",
+    "title": "В ла́вке",
+    "segments": [
+     {
+      "id": "ru-mir-01-l07-s033",
+      "text": "Ба́бы говоря́т у коло́дца, а мужики́ — в ла́вке.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "мужики́",
+        "gloss": "мужики́ ↔ ба́бы",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-muzhik"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 41,
+        "end": 47,
+        "token": "ла́вке",
+        "lemma": "лавка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s034",
+      "text": "В ла́вке Сила́нтия мешки́, и мужики́ сидя́т на мешка́х.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l07-img-lavka",
+        "src": "media/images/ru-mir-01-l07-img-lavka.webp",
+        "status": "draft",
+        "alt": "The village shop: Silanty behind the counter with a newspaper, peasant men sitting on sacks, a small boy in the doorway.",
+        "art_brief": "Interior of Silanty Kuzmich's village shop, Berezovka, Ryazan province, October 1913, afternoon light from one small window. Silanty (about 50, stout, dark waistcoat over a belted shirt, neat grey beard) stands behind a plank counter holding an open newspaper. Four peasant men in belted shirts and caps sit on grain sacks along the wall, turned towards him; grey-bearded Egor among them. In the doorway a small boy, Misha (7, cap too big), holds up one kopeck. Shelves with salt, nails and tea; scales on the counter. No text in the image.",
+        "covers_lexeme_ids": [
+         "ru-muzhik",
+         "ru-gazeta",
+         "ru-malchik"
+        ],
+        "width": 1600,
+        "height": 1073
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "ла́вке",
+        "lemma": "лавка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s035",
+      "text": "Сила́нтий стои́т у стола́ и чита́ет газе́ту.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "газе́ту",
+        "gloss": "газе́та: там но́вости из го́рода",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-gazeta"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s036",
+      "text": "— Вот, в газе́те пи́шут о земле́, — говори́т Сила́нтий. — О зако́не.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "зако́не",
+        "gloss": "зако́н: что мо́жно, что нет",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-zakon"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 9,
+        "end": 16,
+        "token": "газе́те",
+        "lemma": "газета",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s037",
+      "text": "— О како́м зако́не? — спра́шивает сосе́д.",
+      "paragraph_start": true,
+      "speaker": "char-sosed"
+     },
+     {
+      "id": "ru-mir-01-l07-s038",
+      "text": "— Зако́н говори́т: мо́жно рабо́тать на свое́й земле́, как поме́щик.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 39,
+        "end": 45,
+        "token": "свое́й",
+        "lemma": "свой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s039",
+      "text": "Вся земля́ — в одно́м ме́сте.",
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 0,
+        "end": 3,
+        "token": "Вся",
+        "lemma": "весь",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s040",
+      "text": "А у две́ри стои́т ма́льчик.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s041",
+      "text": "Э́то Ми́ша."
+     },
+     {
+      "id": "ru-mir-01-l07-s042",
+      "text": "— А мой оте́ц хо́чет о́труб! — говори́т он.",
+      "paragraph_start": true,
+      "speaker": "char-misha"
+     },
+     {
+      "id": "ru-mir-01-l07-s043",
+      "text": "— Вот и но́вость! Фёдор — хозя́ин. А хозя́ин на свое́й земле́ живёт хорошо́.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 48,
+        "end": 54,
+        "token": "свое́й",
+        "lemma": "свой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       },
+       {
+        "start": 55,
+        "end": 61,
+        "token": "земле́",
+        "lemma": "земля",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s044",
+      "text": "— Тебе́ хорошо́, Сила́нтий Кузьми́ч: ты бога́тый.",
+      "paragraph_start": true,
+      "speaker": "char-sosed",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "бога́тый",
+        "gloss": "бога́тый: у него́ де́ньги, ла́вка, дом",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-bogatyj"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s045",
+      "text": "— Бога́тый, потому́ что рабо́таю. А у вас то́лько по́лосы, и все бе́дные.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "то́лько",
+        "gloss": "то́лько по́лосы = по́лосы, и всё",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-tolko"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "бе́дные",
+        "gloss": "бе́дный ↔ бога́тый",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-bednyj"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s046",
+      "text": "— Бе́дные, но на миру́, — отвеча́ет сосе́д.",
+      "paragraph_start": true,
+      "speaker": "char-sosed",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "миру́",
+        "gloss": "мир = вся дере́вня",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s047",
+      "text": "— А Фёдор не хо́чет жить, как мы.",
+      "speaker": "char-sosed"
+     },
+     {
+      "id": "ru-mir-01-l07-s048",
+      "text": "В ла́вку идёт Его́р.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s049",
+      "text": "Он слы́шит то́лько: «Фёдор не хо́чет жить…»"
+     },
+     {
+      "id": "ru-mir-01-l07-s050",
+      "text": "— О чём тут разгово́р? — гро́мко спра́шивает он.",
+      "paragraph_start": true,
+      "speaker": "char-egor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "тут",
+        "gloss": "тут = здесь",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-tut"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "разгово́р",
+        "gloss": "разгово́р: оди́н говори́т, друго́й отвеча́ет",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-razgovor"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s051",
+      "text": "— Фёдор не хо́чет жить в дере́вне?",
+      "speaker": "char-egor",
+      "pins": [
+       {
+        "start": 25,
+        "end": 33,
+        "token": "дере́вне",
+        "lemma": "деревня",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s052",
+      "text": "Наве́рное, он хо́чет жить в Москве́, на фа́брике!",
+      "speaker": "char-egor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "фа́брике",
+        "gloss": "фа́брика: большо́й дом, там рабо́тают",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-fabrika"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 40,
+        "end": 48,
+        "token": "фа́брике",
+        "lemma": "фабрика",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s053",
+      "text": "— В Москве́? Кака́я но́вость!",
+      "paragraph_start": true,
+      "speaker": "char-sosed"
+     },
+     {
+      "id": "ru-mir-01-l07-s054",
+      "text": "— Не в Москве́! — говори́т Ми́ша.",
+      "paragraph_start": true,
+      "speaker": "char-misha"
+     },
+     {
+      "id": "ru-mir-01-l07-s055",
+      "text": "Но кто слу́шает ма́льчика?"
+     },
+     {
+      "id": "ru-mir-01-l07-s056",
+      "text": "А Сила́нтий ду́мает: «Фёдор в Москве́, на фа́брике…",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 42,
+        "end": 50,
+        "token": "фа́брике",
+        "lemma": "фабрика",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s057",
+      "text": "А земля́ Фёдора?»"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l07-x2-1",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "Answer with the bracketed word in the prepositional (plural -ах: мешки́ → на мешка́х).",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "где? ла́вка → в ла́вке",
+       "prompt": "Где мужики́? — Мужики́ в ___ (ла́вка).",
+       "answer": "ла́вке"
+      },
+      "items": [
+       {
+        "id": "x2-1-1",
+        "prompt": "Где сидя́т мужики́? — Мужики́ сидя́т на ___ (мешки́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мешка́х"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s034"
+        ],
+        "common_wrong": [
+         {
+          "answer": "мешке́",
+          "hint": "мешки́ — мн.: на мешка́х"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-2",
+        "prompt": "Где пи́шут о зако́не? — О зако́не пи́шут в ___ (газе́та).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "газе́те"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s036"
+        ]
+       },
+       {
+        "id": "x2-1-3",
+        "prompt": "О чём пи́шут в газе́те? — О ___ (земля́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "земле́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s036"
+        ]
+       },
+       {
+        "id": "x2-1-4",
+        "prompt": "Где хозя́ин живёт хорошо́? — На ___ (своя́) земле́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "свое́й"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s043"
+        ]
+       },
+       {
+        "id": "x2-1-5",
+        "prompt": "Где Фёдор хо́чет жить? Его́р говори́т: «В Москве́, на ___ (фа́брика)!»",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "фа́брике"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s052"
+        ]
+       },
+       {
+        "id": "x2-1-6",
+        "prompt": "— О ___ (како́й) зако́не? — спра́шивает сосе́д.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "како́м"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s037"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x2-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "в or на? в for inside (в ла́вке, в газе́те, в шко́ле); на for a surface (на мешка́х, на земле́). Some places simply take на: learn на фа́брике with the word.",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "в ла́вке, в газе́те · на мешка́х, на фа́брике",
+       "prompt": "Мужики́ сидя́т ___ ла́вке. (в / на)",
+       "answer": "в"
+      },
+      "items": [
+       {
+        "id": "x2-2-1",
+        "prompt": "Мужики́ сидя́т ___ мешка́х. (в / на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "на"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s034"
+        ]
+       },
+       {
+        "id": "x2-2-2",
+        "prompt": "Сила́нтий чита́ет: ___ газе́те пи́шут о зако́не. (в / на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "в"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s036"
+        ]
+       },
+       {
+        "id": "x2-2-3",
+        "prompt": "Хозя́ин живёт ___ свое́й земле́. (в / на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "на"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s043"
+        ]
+       },
+       {
+        "id": "x2-2-4",
+        "prompt": "Его́р ду́мает, что Фёдор хо́чет жить ___ фа́брике. (в / на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "на"
+        ]
+       },
+       {
+        "id": "x2-2-5",
+        "prompt": "Вода́ ___ ведре́. (в / на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "в"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s005"
+        ]
+       },
+       {
+        "id": "x2-2-6",
+        "prompt": "Ми́ша стои́т у две́ри, а мужики́ ___ ла́вке. (в / на)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "в"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s033"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x2-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "obrazec": {
+       "rule": "Сила́нтий стои́т … → у стола́",
+       "prompt": "Сила́нтий стои́т ___.",
+       "answer": "у стола́"
+      },
+      "items": [
+       {
+        "id": "x2-3-1",
+        "prompt": "Сила́нтий стои́т у стола́ и ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "чита́ет газе́ту"
+        ],
+        "choices": [
+         "чита́ет газе́ту",
+         "пи́шет кни́гу",
+         "смо́трит в окно́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s035"
+        ]
+       },
+       {
+        "id": "x2-3-2",
+        "prompt": "Зако́н говори́т: мо́жно рабо́тать на ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "свое́й земле́"
+        ],
+        "choices": [
+         "свое́й земле́",
+         "фа́брике",
+         "мешка́х"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s038"
+        ]
+       },
+       {
+        "id": "x2-3-3",
+        "prompt": "Сила́нтий говори́т, что он бога́тый, потому́ что ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "он рабо́тает"
+        ],
+        "choices": [
+         "он рабо́тает",
+         "он чита́ет газе́ту",
+         "у него́ о́труб"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s045"
+        ]
+       },
+       {
+        "id": "x2-3-4",
+        "prompt": "Его́р слы́шит то́лько: «Фёдор ___…»",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "не хо́чет"
+        ],
+        "choices": [
+         "не хо́чет",
+         "хо́чет о́труб",
+         "в Москве́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s049"
+        ]
+       },
+       {
+        "id": "x2-3-5",
+        "prompt": "Его́р ду́мает, что Фёдор хо́чет жить ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "в Москве́"
+        ],
+        "choices": [
+         "в Москве́",
+         "в дере́вне",
+         "в избе́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s052"
+        ]
+       },
+       {
+        "id": "x2-3-6",
+        "prompt": "Сила́нтий ду́мает: «Фёдор в Москве́… А ___?»",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "земля́ Фёдора"
+        ],
+        "choices": [
+         "земля́ Фёдора",
+         "газе́та ба́тюшки",
+         "ла́вка Сила́нтия"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s057"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l07-sec3",
+    "title": "У ба́тюшки",
+    "segments": [
+     {
+      "id": "ru-mir-01-l07-s058",
+      "text": "У до́ма ба́тюшки сидя́т оте́ц Алексе́й и Пётр.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s059",
+      "text": "Разгово́р у них не о Фёдоре, а о ми́ре и о шко́ле."
+     },
+     {
+      "id": "ru-mir-01-l07-s060",
+      "text": "— На миру́ и бе́дный не оди́н, ба́тюшка, — говори́т Пётр.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l07-s061",
+      "text": "— Пра́вда. А Ве́ра Никола́евна рабо́тает хорошо́: и твой Ива́н уже́ чита́ет.",
+      "paragraph_start": true,
+      "speaker": "char-otets-aleksej"
+     },
+     {
+      "id": "ru-mir-01-l07-s062",
+      "text": "Но её кни́ги…",
+      "speaker": "char-otets-aleksej"
+     },
+     {
+      "id": "ru-mir-01-l07-s063",
+      "text": "Не все её кни́ги я люблю́.",
+      "speaker": "char-otets-aleksej"
+     },
+     {
+      "id": "ru-mir-01-l07-s064",
+      "text": "Таки́е кни́ги чита́ют студе́нты в университе́те.",
+      "speaker": "char-otets-aleksej"
+     },
+     {
+      "id": "ru-mir-01-l07-s065",
+      "text": "— А что в них, ба́тюшка?",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l07-s066",
+      "text": "— О земле́, о царе́, о мужика́х и о поме́щиках…",
+      "paragraph_start": true,
+      "speaker": "char-otets-aleksej"
+     },
+     {
+      "id": "ru-mir-01-l07-s067",
+      "text": "Сло́во, Пётр, — то́же де́ло.",
+      "speaker": "char-otets-aleksej",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "де́ло",
+        "gloss": "де́ло: де́лаем, а не то́лько говори́м",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-delo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s068",
+      "text": "Пётр ду́мает о кни́гах и о сы́не.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s069",
+      "text": "Вот и Сила́нтий.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s070",
+      "text": "У него́ газе́та ба́тюшки."
+     },
+     {
+      "id": "ru-mir-01-l07-s071",
+      "text": "— Ба́тюшка, вот ва́ша газе́та.",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l07-s072",
+      "text": "А у нас тут но́вость!",
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l07-s073",
+      "text": "Пётр Матве́евич, говоря́т, что ваш Фёдор хо́чет жить в Москве́.",
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l07-s074",
+      "text": "Пётр не отвеча́ет.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s075",
+      "text": "— А земля́? Мо́жет быть, он продаёт зе́млю? Наве́рное, мне! — смеётся Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-silantij",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "продаёт",
+        "gloss": "продаёт: даёт зе́млю, берёт де́ньги",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s076",
+      "text": "А у до́ма стои́т ба́ба и всё слы́шит."
+     },
+     {
+      "id": "ru-mir-01-l07-s077",
+      "text": "— Оди́н говори́т одно́, друго́й — друго́е, — ти́хо говори́т ба́тюшка.",
+      "paragraph_start": true,
+      "speaker": "char-otets-aleksej",
+      "pins": [
+       {
+        "start": 24,
+        "end": 31,
+        "token": "друго́й",
+        "lemma": "другой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "masc"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s078",
+      "text": "— Слух, Сила́нтий Кузьми́ч, — ещё не пра́вда.",
+      "speaker": "char-otets-aleksej",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Слух",
+        "gloss": "слух: «говоря́т, что…»",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-slukh"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s079",
+      "text": "Пётр идёт домо́й.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s080",
+      "text": "А ба́ба уже́ идёт в дере́вню, и слух то́же."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l07-x3-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Plural prepositional: -ах (кни́гах, мужика́х); singular -е.",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "кни́га → о кни́ге · кни́ги → о кни́гах",
+       "prompt": "Ба́тюшка говори́т о кни́г___ учи́тельницы. (мн.)",
+       "answer": "ах"
+      },
+      "items": [
+       {
+        "id": "x3-1-1",
+        "prompt": "Пётр ду́мает о кни́г___ и о сы́не. (мн.)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ах"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s068"
+        ]
+       },
+       {
+        "id": "x3-1-2",
+        "prompt": "Пётр ду́мает о кни́гах и о сы́н___ (сын).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s068"
+        ]
+       },
+       {
+        "id": "x3-1-3",
+        "prompt": "В кни́гах пи́шут о мужик___. (мн.)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́х"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s066"
+        ]
+       },
+       {
+        "id": "x3-1-4",
+        "prompt": "В кни́гах пи́шут и о поме́щик___. (мн.)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ах"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s066"
+        ]
+       },
+       {
+        "id": "x3-1-5",
+        "prompt": "Разгово́р у них и о шко́л___ (шко́ла).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s059"
+        ]
+       },
+       {
+        "id": "x3-1-6",
+        "prompt": "В кни́гах пи́шут о цар___ (царь).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s066"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x3-2",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "где? в + prepositional (в ла́вке) ↔ куда́? в + accusative (в ла́вку).",
+      "grammar_target_ids": [
+       "G07",
+       "G04"
+      ],
+      "obrazec": {
+       "rule": "где? в ла́вке → куда́? в ла́вку",
+       "prompt": "Мужики́ в ла́вке. → Его́р то́же идёт в ___.",
+       "answer": "ла́вку"
+      },
+      "items": [
+       {
+        "id": "x3-2-1",
+        "prompt": "Сила́нтий в ла́вке. → Ми́ша идёт в ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ла́вку"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s031"
+        ]
+       },
+       {
+        "id": "x3-2-2",
+        "prompt": "Ба́ба у до́ма ба́тюшки. → Ба́ба идёт в ___ (дере́вня).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "дере́вню"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s080"
+        ],
+        "common_wrong": [
+         {
+          "answer": "дере́вне",
+          "hint": "куда́? → в дере́вню"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-3",
+        "prompt": "Ива́н ве́чером в шко́ле. → Ве́чером Ива́н идёт в ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "шко́лу"
+        ],
+        "first_letters": 2
+       },
+       {
+        "id": "x3-2-4",
+        "prompt": "У́тром вся дере́вня в це́ркви. → У́тром вся дере́вня идёт в ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "це́рковь"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "це́ркву",
+          "hint": "це́рковь → в це́рковь (как ло́шадь)"
+         },
+         {
+          "answer": "це́ркви",
+          "hint": "куда́? → в це́рковь"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-5",
+        "prompt": "На́стя в избе́. → На́стя идёт в ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "избу́"
+        ],
+        "first_letters": 2
+       },
+       {
+        "id": "x3-2-6",
+        "prompt": "Фёдор в Москве́? → Фёдор идёт в ___?",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Москву́"
+        ],
+        "first_letters": 2
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x3-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "obrazec": {
+       "rule": "У до́ма ба́тюшки сидя́т … → ба́тюшка и Пётр",
+       "prompt": "У до́ма ба́тюшки сидя́т ___.",
+       "answer": "ба́тюшка и Пётр"
+      },
+      "items": [
+       {
+        "id": "x3-3-1",
+        "prompt": "Ба́тюшка и Пётр говоря́т ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "о шко́ле"
+        ],
+        "choices": [
+         "о шко́ле",
+         "о фа́брике",
+         "о Москве́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s059"
+        ]
+       },
+       {
+        "id": "x3-3-2",
+        "prompt": "Таки́е кни́ги чита́ют студе́нты ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "в университе́те"
+        ],
+        "choices": [
+         "в университе́те",
+         "в ла́вке",
+         "у коло́дца"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s064"
+        ]
+       },
+       {
+        "id": "x3-3-3",
+        "prompt": "Ба́тюшка ду́мает, что учи́тельница ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "рабо́тает хорошо́"
+        ],
+        "choices": [
+         "рабо́тает хорошо́",
+         "не уме́ет чита́ть",
+         "живёт в Москве́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s061"
+        ]
+       },
+       {
+        "id": "x3-3-4",
+        "prompt": "Но не все её кни́ги ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "ба́тюшка лю́бит"
+        ],
+        "choices": [
+         "ба́тюшка лю́бит",
+         "Пётр чита́ет",
+         "Сила́нтий берёт"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s063"
+        ]
+       },
+       {
+        "id": "x3-3-5",
+        "prompt": "Сила́нтий смеётся: «Мо́жет быть, он продаёт зе́млю? ___»",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "Наве́рное, мне!"
+        ],
+        "choices": [
+         "Наве́рное, мне!",
+         "Э́то не пра́вда!",
+         "Я не зна́ю!"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s075"
+        ]
+       },
+       {
+        "id": "x3-3-6",
+        "prompt": "Ба́тюшка говори́т: «Слух — ещё ___».",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "не пра́вда"
+        ],
+        "choices": [
+         "не пра́вда",
+         "не де́ло",
+         "не но́вость"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s078"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l07-sec4",
+    "title": "У пе́чи",
+    "segments": [
+     {
+      "id": "ru-mir-01-l07-s081",
+      "text": "Ве́чер.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s082",
+      "text": "В избе́ Соколо́вых у пе́чи сидя́т дед, Ива́н и На́стя.",
+      "pins": [
+       {
+        "start": 2,
+        "end": 7,
+        "token": "избе́",
+        "lemma": "изба",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       },
+       {
+        "start": 8,
+        "end": 18,
+        "token": "Соколо́вых",
+        "lemma": "соколов",
+        "feats": {
+         "pos": "NOUN",
+         "case": "gent",
+         "number": "plur"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s083",
+      "text": "Говоря́т о Москве́."
+     },
+     {
+      "id": "ru-mir-01-l07-s084",
+      "text": "Дед зна́ет Москву́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s085",
+      "text": "Зима́ идёт, а зима́ — не весна́: на поля́х рабо́ты нет.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Зима́",
+        "gloss": "зима́: на поля́х всё бе́лое",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-zima"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s086",
+      "text": "И зимо́й мужики́ из дере́вни рабо́тают в Москве́, на фа́бриках.",
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "зимо́й",
+        "lemma": "зимой",
+        "feats": {
+         "pos": "ADVB"
+        }
+       },
+       {
+        "start": 17,
+        "end": 19,
+        "token": "из",
+        "lemma": "из",
+        "feats": {
+         "pos": "PREP"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s087",
+      "text": "А в и́збах зимо́й то́лько ба́бы и де́ти.",
+      "pins": [
+       {
+        "start": 11,
+        "end": 17,
+        "token": "зимо́й",
+        "lemma": "зимой",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s088",
+      "text": "— А учи́тельница всё зна́ет про Москву́ и про университе́т! — говори́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l07-s089",
+      "text": "— Москва́ бога́тая, — говори́т дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l07-s090",
+      "text": "— Там студе́нты чита́ют, а мужики́ рабо́тают.",
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l07-s091",
+      "text": "Де́ньги есть, а до́ма нет.",
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l07-s092",
+      "text": "Мать стои́т у пе́чи и ду́мает о Фёдоре, о Да́рье, о де́тях.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s093",
+      "text": "— Говоря́т, что Фе́дя хо́чет жить в Москве́, — говори́т она́.",
+      "paragraph_start": true,
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l07-s094",
+      "text": "— Зима́ в Москве́, без семьи́?",
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l07-s095",
+      "text": "Мо́жет быть, э́то пра́вда, Ва́ня?",
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l07-s096",
+      "text": "— Нет, ма́ма.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l07-s097",
+      "text": "Фёдор не хо́чет зимо́й на фа́брику.",
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 16,
+        "end": 22,
+        "token": "зимо́й",
+        "lemma": "зимой",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s098",
+      "text": "Он и но́чью ду́мает о земле́, о свое́й земле́.",
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 5,
+        "end": 11,
+        "token": "но́чью",
+        "lemma": "ночью",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s099",
+      "text": "А у коло́дца — Фёдор, и у него́ ведро́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s100",
+      "text": "Уже́ ночь.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l07-img-fyodor-kolodets",
+        "src": "media/images/ru-mir-01-l07-img-fyodor-kolodets.webp",
+        "status": "draft",
+        "alt": "Dusk at the well: two women whispering, and behind them Fyodor, angry, his pail falling and water spilling.",
+        "art_brief": "The sweep well at the edge of Berezovka at dusk, October 1913, last orange light behind the log izbas. Two peasant women in kerchiefs and padded jackets, heads together, one whispering with a hand at her mouth, neither looking behind her. Behind them Fyodor (27, tall, short dark beard, cap, belted shirt) has just let his wooden pail slip: it is tipping off the well-head and water is splashing to the ground; his face is red and angry, eyes on the women. No text in the image.",
+        "covers_lexeme_ids": [
+         "ru-kolodets",
+         "ru-vedro",
+         "ru-voda",
+         "ru-baba"
+        ],
+        "width": 1600,
+        "height": 1067
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s101",
+      "text": "Там ещё две ба́бы."
+     },
+     {
+      "id": "ru-mir-01-l07-s102",
+      "text": "Они́ не ви́дят Фёдора."
+     },
+     {
+      "id": "ru-mir-01-l07-s103",
+      "text": "— Ты зна́ешь но́вость?",
+      "paragraph_start": true,
+      "speaker": "char-baba"
+     },
+     {
+      "id": "ru-mir-01-l07-s104",
+      "text": "Фёдор Соколо́в продаёт зе́млю, а Сила́нтий её берёт!",
+      "speaker": "char-baba",
+      "pins": [
+       {
+        "start": 6,
+        "end": 14,
+        "token": "Соколо́в",
+        "lemma": "соколов",
+        "feats": {
+         "pos": "NOUN",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "masc"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s105",
+      "text": "А Фёдор — в Москву́!",
+      "speaker": "char-baba"
+     },
+     {
+      "id": "ru-mir-01-l07-s106",
+      "text": "Ведро́ — на земле́, и вода́ — на земле́.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 12,
+        "end": 18,
+        "token": "земле́",
+        "lemma": "земля",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       },
+       {
+        "start": 33,
+        "end": 39,
+        "token": "земле́",
+        "lemma": "земля",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s107",
+      "text": "— Что?! — Фёдор кра́сный, о́чень кра́сный. — Кто э́то говори́т?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l07-s108",
+      "text": "— Все… Тут все зна́ют, — ти́хо отвеча́ет ба́ба.",
+      "paragraph_start": true,
+      "speaker": "char-baba"
+     },
+     {
+      "id": "ru-mir-01-l07-s109",
+      "text": "Тепе́рь вся семья́ у стола́.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 8,
+        "end": 11,
+        "token": "вся",
+        "lemma": "весь",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s110",
+      "text": "— Вся дере́вня говори́т про меня́! — говори́т Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Вся",
+        "lemma": "весь",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s111",
+      "text": "— У коло́дца, в ла́вке, у ба́тюшки.",
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 16,
+        "end": 22,
+        "token": "ла́вке",
+        "lemma": "лавка",
+        "feats": {
+         "pos": "NOUN",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s112",
+      "text": "Говоря́т, что я хочу́ жить в Москве́. Говоря́т, что я продаю́ зе́млю.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l07-svg-slukh",
+        "src": "media/diagrams/ru-mir-01-l07-svg-slukh.svg",
+        "status": "draft",
+        "alt": "A map of how the rumour travels: the well, the shop, the priest's house and back to the well, with the three versions of the news on the arrows.",
+        "covers_lexeme_ids": [
+         "ru-slukh",
+         "ru-kolodets"
+        ],
+        "width": 360,
+        "height": 300
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s113",
+      "text": "Э́то не пра́вда! Я хочу́ о́труб, и э́то моё де́ло.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "моё де́ло",
+        "gloss": "моё де́ло: моя́ земля́, моя́ рабо́та",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-delo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s114",
+      "text": "— Его́ де́ло, — ти́хо говори́т Да́рья.",
+      "paragraph_start": true,
+      "speaker": "char-darya"
+     },
+     {
+      "id": "ru-mir-01-l07-s115",
+      "text": "— Я хочу́ говори́ть об о́трубе на схо́де. Вот и весь разгово́р.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "схо́де",
+        "gloss": "сход: хозя́ева дере́вни говоря́т о земле́",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s116",
+      "text": "Пётр не отвеча́ет.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s117",
+      "text": "Он смо́трит на сы́на."
+     },
+     {
+      "id": "ru-mir-01-l07-s118",
+      "text": "— Слу́хом земля́ по́лнится, — говори́т дед.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej",
+      "quotation": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Слу́хом земля́ по́лнится",
+        "gloss": "оди́н говори́т — все повторя́ют",
+        "gloss_kind": "define"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s119",
+      "text": "— Ва́нька, ты ведь зна́ешь пра́вду! Говори́!",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l07-s120",
+      "text": "Ива́н смо́трит на бра́та и на отца́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s121",
+      "text": "— Я зна́ю, — ти́хо говори́т он.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l07-s122",
+      "text": "— Ты за о́труб, а оте́ц — за мир.",
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "за о́труб",
+        "gloss": "ты за о́труб = ты хо́чешь о́труб",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-za"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s123",
+      "text": "А я?",
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l07-s124",
+      "text": "Ночь.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l07-s125",
+      "text": "Все уже́ лежа́т, но Ива́н и но́чью ду́мает о бра́те и об отце́.",
+      "pins": [
+       {
+        "start": 28,
+        "end": 34,
+        "token": "но́чью",
+        "lemma": "ночью",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-s126",
+      "text": "А Ша́рик лежи́т у пе́чи и ду́мает то́лько о хле́бе."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l07-x4-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Plural prepositional -ах/-ях (поля́ → на поля́х, де́ти → о де́тях); singular -е.",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "фа́брики → на фа́бриках · поля́ → на поля́х",
+       "prompt": "Мужики́ рабо́тают на фа́брик___. (мн.)",
+       "answer": "ах"
+      },
+      "items": [
+       {
+        "id": "x4-1-1",
+        "prompt": "Зимо́й на пол___ рабо́ты нет. (мн.)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "я́х"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s085"
+        ],
+        "common_wrong": [
+         {
+          "answer": "е",
+          "hint": "поля́ — мн.: на поля́х"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-2",
+        "prompt": "А в и́зб___ зимо́й то́лько ба́бы и де́ти. (мн.)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ах"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s087"
+        ]
+       },
+       {
+        "id": "x4-1-3",
+        "prompt": "Мать ду́мает о де́т___. (мн.)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ях"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s092"
+        ]
+       },
+       {
+        "id": "x4-1-4",
+        "prompt": "Мать ду́мает и о Да́рь___ (Да́рья).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s092"
+        ]
+       },
+       {
+        "id": "x4-1-5",
+        "prompt": "— Я хочу́ говори́ть об о́труб___ (о́труб) на схо́де.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s115"
+        ]
+       },
+       {
+        "id": "x4-1-6",
+        "prompt": "Ведро́ — на земл___ (земля́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s106"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x4-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "о + prepositional; об before а, о, у, э, и: об отце́, об о́трубе.",
+      "grammar_target_ids": [
+       "G07"
+      ],
+      "obrazec": {
+       "rule": "о бра́те · об отце́",
+       "prompt": "Ива́н ду́мает об ___ (оте́ц).",
+       "answer": "отце́"
+      },
+      "items": [
+       {
+        "id": "x4-2-1",
+        "prompt": "Ива́н ду́мает о ___ (брат).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "бра́те"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s125"
+        ]
+       },
+       {
+        "id": "x4-2-2",
+        "prompt": "Фёдор говори́т об ___ (о́труб).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́трубе"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s115"
+        ]
+       },
+       {
+        "id": "x4-2-3",
+        "prompt": "Ша́рик ду́мает то́лько о ___ (хлеб).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "хле́бе"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s126"
+        ]
+       },
+       {
+        "id": "x4-2-4",
+        "prompt": "Мать ду́мает о ___ (де́ти).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "де́тях"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s092"
+        ],
+        "common_wrong": [
+         {
+          "answer": "де́тах",
+          "hint": "де́ти → о де́тях"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-5",
+        "prompt": "Дед и На́стя говоря́т о ___ (Москва́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Москве́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s083"
+        ]
+       },
+       {
+        "id": "x4-2-6",
+        "prompt": "Фёдор и зимо́й, и но́чью ду́мает о ___ (земля́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "земле́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l07-s098"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l07-x4-3",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Listen to the story sentence and type the missing word.",
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Мать стои́т у ___.",
+       "answer": "пе́чи"
+      },
+      "items": [
+       {
+        "id": "x4-3-1",
+        "audio_segment_id": "ru-mir-01-l07-s085",
+        "prompt": "Зима́ идёт, а зима́ — не весна́: на ___ рабо́ты нет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "поля́х"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s085"
+        ]
+       },
+       {
+        "id": "x4-3-2",
+        "audio_segment_id": "ru-mir-01-l07-s092",
+        "prompt": "Мать стои́т у пе́чи и ду́мает о Фёдоре, о Да́рье, о ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "де́тях"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s092"
+        ]
+       },
+       {
+        "id": "x4-3-3",
+        "audio_segment_id": "ru-mir-01-l07-s098",
+        "prompt": "— Он и но́чью ду́мает о земле́, о свое́й ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "земле́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s098"
+        ]
+       },
+       {
+        "id": "x4-3-4",
+        "audio_segment_id": "ru-mir-01-l07-s106",
+        "prompt": "Ведро́ — на земле́, и ___ — на земле́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "вода́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s106"
+        ]
+       },
+       {
+        "id": "x4-3-5",
+        "audio_segment_id": "ru-mir-01-l07-s110",
+        "prompt": "— Вся дере́вня говори́т про ___! — говори́т Фёдор.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "меня́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s110"
+        ]
+       },
+       {
+        "id": "x4-3-6",
+        "audio_segment_id": "ru-mir-01-l07-s115",
+        "prompt": "— Я хочу́ говори́ть об ___ на схо́де. Вот и весь разгово́р.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́трубе"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l07-s115"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "words_with_history": {
+  "title": "Слова́ с исто́рией",
+  "word": "слух",
+  "text": [
+   "У коло́дца ба́бы говоря́т: «Говоря́т, что…» Э́то слух.",
+   "В ла́вке мужики́ говоря́т: «Кака́я но́вость!»",
+   "Ба́тюшка говори́т: «Слух — ещё не пра́вда. Сло́во — то́же де́ло».",
+   "А газе́та? В дере́вне её чита́ют Сила́нтий и ба́тюшка."
+  ],
+  "proverb": "Слу́хом земля́ по́лнится.",
+  "lexeme_ids": [
+   "ru-slukh",
+   "ru-novost",
+   "ru-gazeta"
+  ],
+  "note_en": "In 1913 few villagers read a newspaper; news came by word of mouth from the well, the shop, the church porch and men back from winter work in the towns. The proverb says the earth fills with rumour. Молва́ also means this kind of widespread talk."
+ },
+ "grammar": {
+  "title": "Где? О ком? О чём?",
+  "rule": "в шко́ле, в ла́вке, на земле́ · в Ряза́ни, в це́ркви · на мешка́х, в и́збах, о де́тях · в одно́м ме́сте, на свое́й земле́ · о ней, в них",
+  "tables": [
+   {
+    "id": "gde-e-i",
+    "caption": "где? о чём? -е · -и · в углу́",
+    "header": [
+     "кто? что?",
+     "где? о ком? о чём?"
+    ],
+    "rows": [
+     [
+      "шко́ла",
+      "в шко́ле"
+     ],
+     [
+      "ла́вка",
+      "в ла́вке"
+     ],
+     [
+      "ведро́",
+      "в ведре́"
+     ],
+     [
+      "Фёдор",
+      "о Фёдоре"
+     ],
+     [
+      "Ряза́нь",
+      "в Ряза́ни"
+     ],
+     [
+      "це́рковь",
+      "в це́ркви"
+     ],
+     [
+      "у́гол",
+      "в углу́"
+     ]
+    ]
+   },
+   {
+    "id": "gde-mn",
+    "caption": "мн.: -ах / -ях",
+    "header": [
+     "кто? что? (мн.)",
+     "где? о ком? о чём?"
+    ],
+    "rows": [
+     [
+      "мешки́",
+      "на мешка́х"
+     ],
+     [
+      "кни́ги",
+      "о кни́гах"
+     ],
+     [
+      "и́збы",
+      "в и́збах"
+     ],
+     [
+      "фа́брики",
+      "на фа́бриках"
+     ],
+     [
+      "мужики́",
+      "о мужика́х"
+     ],
+     [
+      "поля́",
+      "на поля́х"
+     ],
+     [
+      "де́ти",
+      "о де́тях"
+     ]
+    ]
+   },
+   {
+    "id": "gde-prilagatelnye",
+    "caption": "како́й? → в како́м? · она́ → о ней",
+    "header": [
+     "кто? что?",
+     "где? о ком? о чём?"
+    ],
+    "rows": [
+     [
+      "одно́ ме́сто",
+      "в одно́м ме́сте"
+     ],
+     [
+      "своя́ земля́",
+      "на свое́й земле́"
+     ],
+     [
+      "како́й зако́н",
+      "о како́м зако́не"
+     ],
+     [
+      "она́",
+      "о ней"
+     ],
+     [
+      "они́",
+      "в них"
+     ],
+     [
+      "оте́ц",
+      "об отце́"
+     ],
+     [
+      "о́труб",
+      "об о́трубе"
+     ]
+    ]
+   },
+   {
+    "id": "v-na",
+    "caption": "в / на: где? ↔ куда́?",
+    "header": [
+     "где?",
+     "куда́?"
+    ],
+    "rows": [
+     [
+      "в ла́вке",
+      "в ла́вку"
+     ],
+     [
+      "в дере́вне",
+      "в дере́вню"
+     ],
+     [
+      "в Москве́",
+      "в Москву́"
+     ],
+     [
+      "на земле́",
+      "на зе́млю"
+     ],
+     [
+      "на фа́брике",
+      "на фа́брику"
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "ru-mir-01-l07-s002"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s034"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s036"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s037"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s043"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s068"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s087"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s092"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s022"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s065"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s115"
+   },
+   {
+    "segment_id": "ru-mir-01-l07-s031"
+   }
+  ],
+  "note_en": "The prepositional answers где? (after в, на) and о ком? о чём? (after о; об before a vowel sound: об отце́). Most singular nouns take -е (о царе́); feminine nouns in -ь take -и (в це́ркви); nouns in -ия, -ий, -ие take -ии. Plural -ах/-ях. Adjectives and possessives: -ом/-ем, -ой/-ей, plural -ых/-их. Some masculines have a location form in -у́ after в/на: в углу́. With в/на, куда́? takes the accusative: в ла́вку. Про + accusative is a colloquial о."
+ },
+ "pensa": {
+  "A": {
+   "id": "ru-mir-01-l07-pa",
+   "title": "Пе́нсум A — Фо́рмы",
+   "blocks": [
+    {
+     "obrazec": {
+      "prompt": "Ба́бы стоя́т у коло́дца, а вода́ в ___ (ведро́).",
+      "answer": "ведре́"
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Учи́тельница живёт в ___ (шко́ла).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "шко́ле"
+       ],
+       "first_letters": 3,
+       "source_segment_ids": [
+        "ru-mir-01-l07-s009"
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Мужики́ сидя́т на ___ (мешки́).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "мешка́х"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "мешке́",
+         "hint": "мешки́ — мн.: на мешка́х"
+        }
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "У́тром вся дере́вня в ___ (це́рковь).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "це́ркви"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "це́ркве",
+         "hint": "це́рковь → в це́ркви"
+        }
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Ряза́нь — большо́й го́род. В ___ (Ряза́нь) больши́е шко́лы.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Ряза́ни"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Ряза́не",
+         "hint": "Ряза́нь → в Ряза́ни"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "На́стя ду́мает о ___ (брат).",
+      "answer": "бра́те"
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "В ла́вке говоря́т о ___ (Фёдор).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Фёдоре"
+       ],
+       "first_letters": 3
+      },
+      {
+       "id": "a6",
+       "prompt": "— О ___ (како́й) зако́не вы говори́те?",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "како́м"
+       ],
+       "first_letters": 2
+      },
+      {
+       "id": "a7",
+       "prompt": "Хозя́ин живёт хорошо́ на ___ (своя́) земле́.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "свое́й"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "свою́",
+         "hint": "где? на свое́й земле́"
+        }
+       ]
+      },
+      {
+       "id": "a8",
+       "prompt": "Ба́тюшка ду́мает о кни́гах: что в ___ (они́)?",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "них"
+       ],
+       "first_letters": 1,
+       "common_wrong": [
+        {
+         "answer": "их",
+         "hint": "в + они́ → в них"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "Ба́бы ___ (смея́ться).",
+      "answer": "смею́тся"
+     },
+     "items": [
+      {
+       "id": "a9",
+       "prompt": "Мужики́ в ла́вке ___ (говори́ть) о Фёдоре.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "говоря́т"
+       ],
+       "first_letters": 4,
+       "recall_of": "G05",
+       "common_wrong": [
+        {
+         "answer": "говори́т",
+         "hint": "мужики́ — они́: говоря́т"
+        }
+       ]
+      },
+      {
+       "id": "a10",
+       "prompt": "У коло́дца стоя́т ___ (ба́ба, мн.).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ба́бы"
+       ],
+       "first_letters": 2,
+       "recall_of": "G02"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "ru-mir-01-l07-pb",
+   "title": "Пе́нсум B — Слова́",
+   "word_bank": [
+    "коло́дец",
+    "ведро́",
+    "ба́ба",
+    "мужи́к",
+    "кни́га",
+    "газе́та",
+    "зако́н",
+    "о́труб",
+    "фа́брика",
+    "бога́тый",
+    "бе́дный",
+    "молодо́й",
+    "слух"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Ба́бы стоя́т у ___ и говоря́т.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "коло́дца"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b2",
+     "prompt": "Да́рья берёт ___, а в нём вода́.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ведро́"
+     ],
+     "first_letters": 2
+    },
+    {
+     "id": "b3",
+     "prompt": "У коло́дца говоря́т ___, а в ла́вке — мужики́.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ба́бы"
+     ],
+     "first_letters": 2
+    },
+    {
+     "id": "b4",
+     "prompt": "В ла́вке Сила́нтия сидя́т ___: Его́р и сосе́ди.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "мужики́",
+      "бе́дные"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b5",
+     "prompt": "В ___ Сила́нтий чита́ет но́вости из го́рода. (ед.)",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "газе́те"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b6",
+     "prompt": "На столе́ у учи́тельницы не газе́ты, а ___: она́ их чита́ет и но́чью.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "кни́ги"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b7",
+     "prompt": "Земля́ хозя́ина в одно́м ме́сте — э́то ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "о́труб"
+     ],
+     "first_letters": 2
+    },
+    {
+     "id": "b8",
+     "prompt": "Зимо́й мужики́ рабо́тают в Москве́, на ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "фа́брике",
+      "фа́бриках"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b9",
+     "prompt": "У Сила́нтия есть де́ньги, ла́вка и дом: он ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "бога́тый"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b10",
+     "prompt": "«Фёдор продаёт зе́млю» — э́то не пра́вда, э́то то́лько ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "слух"
+     ],
+     "first_letters": 2
+    }
+   ]
+  },
+  "C": {
+   "id": "ru-mir-01-l07-pc",
+   "title": "Пе́нсум C — Вопро́сы",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Где живёт учи́тельница и что она́ де́лает но́чью?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Она́ живёт в шко́ле, а но́чью чита́ет кни́ги.",
+      "Учи́тельница живёт в шко́ле. Но́чью она́ чита́ет."
+     ],
+     "rubric": "Where: в шко́ле (prepositional -е). At night she reads (books).",
+     "key_terms": [
+      "ru-zhit",
+      "ru-nochyu",
+      "ru-kniga"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s009",
+      "ru-mir-01-l07-s011"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "О чём Да́рья говори́т у коло́дца?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Она́ говори́т о Фёдоре: он хо́чет о́труб.",
+      "Об о́трубе: Фёдор хо́чет всю зе́млю в одно́м ме́сте."
+     ],
+     "rubric": "о Фёдоре / об о́трубе (о + prepositional, об before a vowel); what an о́труб is: all the land in one place.",
+     "key_terms": [
+      "ru-o",
+      "ru-otrub",
+      "ru-mesto"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s024",
+      "ru-mir-01-l07-s027"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "О чём пи́шут в газе́те?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "В газе́те пи́шут о земле́ и о зако́не.",
+      "О зако́не: хозя́ин мо́жет жить на свое́й земле́."
+     ],
+     "rubric": "о земле́, о зако́не (prepositional); a fuller answer gives what the law allows.",
+     "key_terms": [
+      "ru-gazeta",
+      "ru-zakon"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s036"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Почему́ Его́р ду́мает, что Фёдор хо́чет жить в Москве́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Потому́ что он слы́шит то́лько: «Фёдор не хо́чет жить…»",
+      "Его́р слы́шит не всё: он слы́шит то́лько «не хо́чет жить»."
+     ],
+     "rubric": "The reason: Egor comes in late and hears only half a sentence (потому́ что + reason).",
+     "key_terms": [
+      "ru-ph-potomu-chto",
+      "ru-tolko"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s049",
+      "ru-mir-01-l07-s052"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "О чём говоря́т ба́тюшка и Пётр?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Они́ говоря́т о шко́ле и о кни́гах учи́тельницы.",
+      "Они́ говоря́т о шко́ле: учи́тельница рабо́тает хорошо́, но не все её кни́ги ба́тюшка лю́бит."
+     ],
+     "rubric": "о шко́ле, о кни́гах (prepositional after о); the commune (мир) may be named too.",
+     "key_terms": [
+      "ru-o",
+      "ru-kniga"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s059",
+      "ru-mir-01-l07-s063"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Что говоря́т ба́бы у коло́дца но́чью?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Говоря́т, что Фёдор продаёт зе́млю, а Сила́нтий её берёт.",
+      "Они́ говоря́т, что Фёдор продаёт зе́млю и хо́чет в Москву́."
+     ],
+     "rubric": "The third version of the rumour: Fyodor sells his land and Silanty takes it (говоря́т, что …).",
+     "key_terms": [
+      "ru-ph-govoryat-chto",
+      "ru-slukh"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s103"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Что Фёдор говори́т у стола́?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Он говори́т, что э́то не пра́вда и что он хо́чет о́труб.",
+      "Он говори́т: «Я хочу́ говори́ть об о́трубе на схо́де»."
+     ],
+     "rubric": "It is not true; he wants an о́труб and wants to speak about it at the сход (об о́трубе, на схо́де).",
+     "key_terms": [
+      "ru-pravda",
+      "ru-otrub"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l07-s113",
+      "ru-mir-01-l07-s115"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "А ты? О чём говоря́т у тебя́ в го́роде или в дере́вне?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "У нас в го́роде говоря́т о рабо́те и о деньга́х.",
+      "У нас в дере́вне говоря́т о земле́ и о шко́ле."
+     ],
+     "rubric": "Your own place: где? в го́роде / в дере́вне; о чём? о + prepositional (о рабо́те, о шко́ле, о деньга́х).",
+     "key_terms": [
+      "ru-o",
+      "ru-ph-govoryat-chto"
+     ]
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "ru-o",
+   "citation_form": "о",
+   "part_of_speech": "prep",
+   "current_sense": "about (+ prepositional); об before a vowel",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pro",
+   "citation_form": "про",
+   "part_of_speech": "prep",
+   "current_sense": "about (+ accusative), colloquial",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-zhit",
+   "citation_form": "жить",
+   "part_of_speech": "verb",
+   "current_sense": "to live",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-kolodets",
+   "citation_form": "коло́дец",
+   "part_of_speech": "noun",
+   "current_sense": "well",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-voda",
+   "citation_form": "вода́",
+   "part_of_speech": "noun",
+   "current_sense": "water",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-vedro",
+   "citation_form": "ведро́",
+   "part_of_speech": "noun",
+   "current_sense": "bucket, pail",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-baba",
+   "citation_form": "ба́ба",
+   "part_of_speech": "noun",
+   "current_sense": "(peasant) woman",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-muzhik",
+   "citation_form": "мужи́к",
+   "part_of_speech": "noun",
+   "current_sense": "peasant, man",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-slukh",
+   "citation_form": "слух",
+   "part_of_speech": "noun",
+   "current_sense": "rumour",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-novost",
+   "citation_form": "но́вость",
+   "part_of_speech": "noun",
+   "current_sense": "(piece of) news",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-fabrika",
+   "citation_form": "фа́брика",
+   "part_of_speech": "noun",
+   "current_sense": "factory",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-pomeshchik",
+   "citation_form": "поме́щик",
+   "part_of_speech": "noun",
+   "current_sense": "landowner",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-universitet",
+   "citation_form": "университе́т",
+   "part_of_speech": "noun",
+   "current_sense": "university",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-student",
+   "citation_form": "студе́нт",
+   "part_of_speech": "noun",
+   "current_sense": "student",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-kniga",
+   "citation_form": "кни́га",
+   "part_of_speech": "noun",
+   "current_sense": "book",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-gazeta",
+   "citation_form": "газе́та",
+   "part_of_speech": "noun",
+   "current_sense": "newspaper",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-otrub",
+   "citation_form": "о́труб",
+   "part_of_speech": "noun",
+   "current_sense": "consolidated plot held outside the commune (Stolypin reform)",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-zakon",
+   "citation_form": "зако́н",
+   "part_of_speech": "noun",
+   "current_sense": "law",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-pravda",
+   "citation_form": "пра́вда",
+   "part_of_speech": "noun",
+   "current_sense": "truth; (it's) true",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-navernoe",
+   "citation_form": "наве́рное",
+   "part_of_speech": "adv",
+   "current_sense": "probably",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ph-mozhet-byt",
+   "citation_form": "мо́жет быть",
+   "part_of_speech": "phrase",
+   "current_sense": "maybe",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-ph-govoryat-chto",
+   "citation_form": "говоря́т, что",
+   "part_of_speech": "phrase",
+   "current_sense": "they say that …",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-bogatyj",
+   "citation_form": "бога́тый",
+   "part_of_speech": "adj",
+   "current_sense": "rich",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-bednyj",
+   "citation_form": "бе́дный",
+   "part_of_speech": "adj",
+   "current_sense": "poor",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-noch",
+   "citation_form": "ночь",
+   "part_of_speech": "noun",
+   "current_sense": "night",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-nochyu",
+   "citation_form": "но́чью",
+   "part_of_speech": "adv",
+   "current_sense": "at night",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-zima",
+   "citation_form": "зима́",
+   "part_of_speech": "noun",
+   "current_sense": "winter",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "f"
+  },
+  {
+   "lexeme_id": "ru-zimoj",
+   "citation_form": "зимо́й",
+   "part_of_speech": "adv",
+   "current_sense": "in winter",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-drugoj",
+   "citation_form": "друго́й",
+   "part_of_speech": "adj",
+   "current_sense": "other, another",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-delo",
+   "citation_form": "де́ло",
+   "part_of_speech": "noun",
+   "current_sense": "matter, business, affair",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-razgovor",
+   "citation_form": "разгово́р",
+   "part_of_speech": "noun",
+   "current_sense": "conversation, talk",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-mesto",
+   "citation_form": "ме́сто",
+   "part_of_speech": "noun",
+   "current_sense": "place, spot",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "n"
+  },
+  {
+   "lexeme_id": "ru-tut",
+   "citation_form": "тут",
+   "part_of_speech": "adv",
+   "current_sense": "here (colloquial)",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-malchik",
+   "citation_form": "ма́льчик",
+   "part_of_speech": "noun",
+   "current_sense": "boy",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true,
+   "gender": "m"
+  },
+  {
+   "lexeme_id": "ru-tolko",
+   "citation_form": "то́лько",
+   "part_of_speech": "adv",
+   "current_sense": "only",
+   "first_introduced_lesson": "ru-mir-01-l07",
+   "new": true
+  }
+ ],
+ "media": {
+  "status": "draft",
+  "cover": "ru-mir-01-l07-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 2,
+   "margin_diagram": 1,
+   "margin_gloss": 33
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-07/silero/manifest.json",
+    "default": true
+   }
+  ]
+ },
+ "completion": {
+  "button_label": "Гото́во"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "ru-mir-01",
+   "glava-07",
+   "chast-1"
+  ]
+ },
+ "metrics": {
+  "running_words": 0,
+  "sentences": 126,
+  "word_target": 750,
+  "word_window": [
+   675,
+   825
+  ]
+ }
+}

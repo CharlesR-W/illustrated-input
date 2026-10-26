@@ -1,0 +1,4519 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "ru-mir-01-l08",
+ "course_id": "ru-mir-01",
+ "order": 8,
+ "title": "Кому́ что ну́жно",
+ "part": 1,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "0.1.0-loop-draft",
+ "provenance": {
+  "author": "loop writer (Claude, model-written), step write, chapter 8",
+  "model": "claude-opus-5-5",
+  "prompt": "loop/briefs/20261026T005124478-ru-mir-01-write-c08.md; content/ru/plan/chapters.json row 8; docs/russian-mir-design.md; docs/russian-mir-lesson-shape.md",
+  "review_required": "Codex cross-model review and a fluent Russian reader before the chapter leaves draft",
+  "notes": [
+   "Attempt 20261026T005124478-ru-mir-01-write-c08. The previous attempt (20261026T001606715) was rejected only for out-of-scope edits: running the checker regenerates content/ru/analysis/glava-01..07 sidecars, because merging this chapter's lexicon delta changes every lesson's input digest. This attempt ran the checker and then restored those seven sidecars byte for byte from a copy taken before the first run, and removed its own analysis/glava-08 sidecars at the end (the runner's check regenerates them).",
+   "Written from the frozen plan row: four sections (the cart to the fair; the smith; Ivan and Nastya at the stalls, Fyodor and Silanty at the cart; the argument at the cart, the turn, home and Vera). Timeline: the cart leaves at night («Ночь, и уже́ хо́лодно»), the fair is in the morning (the district town is a day's cart ride, continuity.json); home and Vera's school on the next evening. Problem: three roubles for four needs (four new shoes with the work 2 r., Nastya's slate, Ivan's presents, Fyodor's 3 r. to stay in town and wait for his отруб business). Turn: Pyotr gives his three roubles to Fyodor («Я не за о́труб. Но ты мой сын. Сын помога́ет отцу́, а оте́ц — сы́ну»); the horse keeps limping («Ло́шадь хрома́ет и ждёт», echoing Глава 4's «Земля́ ждёт»); Ivan buys the пряник and then the slate with his own rouble and kopecks. Consequence: Fyodor stays in town with the money («его́ де́ло — не на я́рмарке»; at home «Фёдора нет: он ещё в го́роде») («Мой овёс — твой.» — «Э́то не пода́рок, Фёдор.»); Vera gets no present, Ivan asks her for a book and gets an азбука («Э́то не пода́рок. Э́то кни́га шко́лы.»).",
+   "Present tense throughout (past is G10). Perfectives only as the licensed infinitives купи́ть / прода́ть after на́до / хо́чет (no дать / сказа́ть anywhere). Dative singular and pronoun datives only (вам once); no dative plural. No instrumental (у́тром, ве́чером, но́чью pinned as adverbs). Prices only 1–4 with genitive singular (два рубля́, две копе́йки, четы́ре копе́йки); ages through the baseline chunk with лет (12, 19, 70).",
+   "Slate continuity: Nastya's mended slate from Глава 2 is the one Ivan uses in Vera's class (Главы 5–6), so Nastya now needs her own («Моя́ доска́ тепе́рь у Ива́на!»); Ivan buys the new slate.",
+   "Warnings left, with reasons: recurrence ru-nuzhda (1 use in the story, in the proverb; the row plans нужда́ for the Слово, where it occurs four more times); new-cluster s039 «Мне на́до купи́ть подко́вы… Но и Фёдору нужны́ де́ньги» (на́до and купи́ть are glossed here; нужны́ and подко́ва are already known from s006; splitting would break Pyotr's one turn); stress-unverified (no RUAccent model on this host; stresses set by hand from the lexicon and Главы 1–7 and checked in the language pass); continuity warning on glava-07's log is the runner's merge, not this chapter.",
+   "Media: cover and two inline scenes planned (smith with the two horseshoes; Ivan counting kopecks at the gingerbread stall); three margin vignettes planned (теле́га, подко́ва, пря́ник), each with a text gloss so that no sentence depends on a planned picture; the dative arrow diagram ru-mir-01-l08-svg-komu.svg is drawn here (Ivan and Nastya as clothed figures in the l02 style, labels 17–20 px in a 300 px viewBox).",
+   "Workbook: three exercises per section in sections 1–3, three in section 4 (12 exercises, 72 items); every item one gap with visible help (bracketed lemma or pronoun, first letters, or a choice of two-word phrases); drilled forms appear in the story by the end of their section. Pensum A 10 (2 recall: G06 Кузне́ц смо́трит на Ива́на, G03 нет пода́рка), B 10 with a 13-word bank, C 8 open questions in story order with one Почему́? (c5) and «А ты?» last.",
+   "Prices and costs are marked [?] in review_questions: two roubles for a new shoe with the shoeing, one rouble for a sack of oats called cheap, three roubles for the отруб business in town, two roubles for a book at a fair stall. docs/russian-mir-history.md has no 1913 fair prices.",
+   "Codex review 1025-181628-32404 (read-only) applied: timeline spread over night/morning/next day; horseshoe price made «четы́ре подко́вы и рабо́та — два рубля́» (Codex cites 60 kop. a hoof in a 1911 Tomsk advertisement) and the confusing old-shoe offer removed; Fyodor's three roubles explained as staying in town to wait; independent infinitive questions reframed («А что ему́ на́до купи́ть…?»; «Ты не мо́жешь прода́ть овёс?»); glosses fixed (что ну́жно? example instead of a false equation; цена́ by example; пьёт во́ду, а ест овёс as examples, not antonyms; се́мьдесят = 70; нужда́: де́нег нет, а хлеб ну́жен; по glossed at its first use по доро́ге); Nastya goes to the smith with the others; им added (Де́ду и На́сте ве́село: им нра́вится пря́ник); x2-1-5 hint, x3-3-3 choices, c6 model, Russian in rubrics stressed; diktant items given first letters as visible help until audio exists.",
+   "Codex findings not applied, with reasons: (1) нау́чит in the proverb — the plan row prescribes «Нужда́ всему́ нау́чит»; the segment is a quotation (the course's mechanism, as Глава 7's «Слу́хом земля́ по́лнится»), glossed and never tested. (2) Stress marks in the SVG labels — earlier diagrams (l06 kogo-chto, l07 slukh) carry none and the course strips stress everywhere by default; kept consistent."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "ru-mir-01-l08-s018",
+    "quote": "— Зима́ идёт, — говори́т оте́ц. — Кому́ что ну́жно…",
+    "question": "Pyotr's sigh «Кому́ что ну́жно…» after «Зима́ идёт»: natural as a weary half-proverb, or does it need a fuller line?"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s035",
+    "quote": "— Четы́ре подко́вы и рабо́та — два рубля́.",
+    "question": "Price check [?]: two roubles for shoeing all four hooves with new shoes at a district fair in 1913? The plan fixes «two roubles» for a horseshoe; Codex cited a 1911 Tomsk advertisement at 60 kopecks a hoof, so the text makes it four shoes + work."
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s011",
+    "quote": "— Мне нужны́ де́ньги.",
+    "question": "«Мне нужны́ де́ньги. Три рубля́.» and later «Фёдору нужны́ три рубля́»: is нужны́ with три рубля́ acceptable here, or should a reviewer prefer ну́жно три рубля́? (нужны́ kept to keep the agreement lesson clean.)"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s014",
+    "quote": "— На о́труб. О́труб — э́то де́ло в го́роде, а в го́роде всё до́рого.",
+    "question": "Fyodor needs three roubles «на о́труб» [?]: the text explains it as staying in the district town to wait for his business («Мне на́до жить в го́роде и ждать: там моё де́ло»); what an applicant actually paid in 1913 is unverified."
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s082",
+    "quote": "— Овёс? Рубль за мешо́к, — говори́т Сила́нтий.",
+    "question": "Price check [?]: one rouble for a sack of oats called cheap at an autumn fair in 1913 (a 5-pood sack at 1913 oat prices would fetch more): plausible as Silanty's low offer?"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s053",
+    "quote": "Ему́ ну́жен пода́рок сестре́.",
+    "question": "«Ему́ ну́жен пода́рок сестре́» (dative of the recipient after a noun): natural, or prefer «пода́рок для сестры́»? Dative kept for the chapter's target."
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s083",
+    "quote": "— Рубль? Э́то не цена́! Э́то дёшево.",
+    "question": "«Это не цена́!» as a peasant's retort to a low offer: idiomatic for 1913?"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s113",
+    "quote": "— До́ску На́сте покупа́ю я!",
+    "question": "Present imperfective «покупа́ю» for an immediate decision (perfective future is G13): natural?"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s136",
+    "quote": "— Нет, э́то не пода́рок. Э́то кни́га шко́лы.",
+    "question": "«Э́то кни́га шко́лы» (the school's book): natural, or would Vera say «шко́льная кни́га» / «кни́га из шко́лы»?"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s089",
+    "quote": "— Нужда́ всему́ нау́чит, Фёдор Петро́вич.",
+    "question": "Proverb given to Silanty, who uses it cynically (need will make Fyodor sell cheap): does the attribution sit right with the Слово, where Пётр, Фёдор and Силантий each read нужда́ differently?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G08",
+  "primary_new_grammar": {
+   "id": "G08",
+   "label": "Dative: кому́?; дава́ть, говори́ть, помога́ть, нра́виться, пока́зывать, писа́ть + dat; на́до/ну́жно/мо́жно/нельзя́ + dat; ну́жен/нужна́/ну́жно/нужны́; age (Ему́ два́дцать лет); мне хо́лодно; dative of adjectives, possessives, pronouns",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01",
+   "G02",
+   "G03",
+   "G04",
+   "G05",
+   "G06",
+   "G07"
+  ],
+  "incidental": [
+   {
+    "form": "купи́ть, прода́ть — perfective infinitives after на́до / хо́чет (row incidental_allowed, L16); glossed («купи́ть: ты даёшь де́ньги — и подко́ва твоя́», «прода́ть pf. ← продава́ть»); never in narration as finite forms",
+    "gloss_segment_id": "ru-mir-01-l08-s039"
+   },
+   {
+    "form": "Ско́лько сто́ит? — present of сто́ить (row incidental_allowed); prices only 1–4 (два рубля́, две копе́йки)",
+    "gloss_segment_id": "ru-mir-01-l08-s034"
+   },
+   {
+    "form": "Нужда́ всему́ нау́чит — proverb, quotation segment; нау́чит (perfective future) and всему́ glossed with the proverb, never tested",
+    "gloss_segment_id": "ru-mir-01-l08-s089"
+   },
+   {
+    "form": "лет after numbers (baseline chunk «Мне … лет», «Ско́лько тебе́ лет?»); ages 12, 19, 70",
+    "gloss_segment_id": "ru-mir-01-l08-s043"
+   },
+   {
+    "form": "у Соколо́вых — surname chunk (grammar-map formula from Глава 2)",
+    "gloss_segment_id": "ru-mir-01-l08-s114"
+   }
+  ],
+  "new_lexeme_ids": [
+   "ru-yarmarka",
+   "ru-nuzhda",
+   "ru-nuzhnyj",
+   "ru-nado",
+   "ru-nuzhno",
+   "ru-nelzya",
+   "ru-nravitsya",
+   "ru-pokazyvat",
+   "ru-pomogat",
+   "ru-prodavat",
+   "ru-pokupat",
+   "ru-kupit",
+   "ru-prodat",
+   "ru-podkova",
+   "ru-kuznets",
+   "ru-podarok",
+   "ru-pryanik",
+   "ru-platok",
+   "ru-tsena",
+   "ru-dorogo",
+   "ru-dyoshevo",
+   "ru-k",
+   "ru-po",
+   "ru-god",
+   "ru-dvenadtsat",
+   "ru-devyatnadtsat",
+   "ru-semdesyat",
+   "ru-veselo",
+   "ru-skuchno",
+   "ru-kholodno",
+   "ru-telega",
+   "ru-pit",
+   "ru-est-eat",
+   "ru-azbuka",
+   "ru-chaj-tea"
+  ],
+  "recycle_lexeme_ids": [
+   "ru-loshad",
+   "ru-khromat",
+   "ru-ovyos",
+   "ru-meshok",
+   "ru-dengi",
+   "ru-rubl",
+   "ru-kopejka",
+   "ru-dva",
+   "ru-tri",
+   "ru-chetyre",
+   "ru-doska",
+   "ru-kniga",
+   "ru-otrub",
+   "ru-davat",
+   "ru-brat-v",
+   "ru-khotet",
+   "ru-moch",
+   "ru-govorit"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "ru-yarmarka",
+    "how": "gloss(example)+cover picture",
+    "segment_id": "ru-mir-01-l08-s004"
+   },
+   {
+    "lexeme_id": "ru-nuzhda",
+    "how": "gloss(define) in the proverb + Слова с историей",
+    "segment_id": "ru-mir-01-l08-s089"
+   },
+   {
+    "lexeme_id": "ru-nuzhnyj",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s006"
+   },
+   {
+    "lexeme_id": "ru-nado",
+    "how": "gloss(paraphrase: на́до = ну́жно)",
+    "segment_id": "ru-mir-01-l08-s039"
+   },
+   {
+    "lexeme_id": "ru-nuzhno",
+    "how": "gloss(paraphrase)+context",
+    "segment_id": "ru-mir-01-l08-s010"
+   },
+   {
+    "lexeme_id": "ru-nelzya",
+    "how": "gloss(antonym)",
+    "segment_id": "ru-mir-01-l08-s098"
+   },
+   {
+    "lexeme_id": "ru-nravitsya",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s062"
+   },
+   {
+    "lexeme_id": "ru-pokazyvat",
+    "how": "gloss(example)+scene",
+    "segment_id": "ru-mir-01-l08-s032"
+   },
+   {
+    "lexeme_id": "ru-pomogat",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s041"
+   },
+   {
+    "lexeme_id": "ru-prodavat",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s015"
+   },
+   {
+    "lexeme_id": "ru-pokupat",
+    "how": "gloss(antonym: ↔ продаёт)",
+    "segment_id": "ru-mir-01-l08-s080"
+   },
+   {
+    "lexeme_id": "ru-kupit",
+    "how": "gloss(define)+context (infinitive chunk, L16)",
+    "segment_id": "ru-mir-01-l08-s039"
+   },
+   {
+    "lexeme_id": "ru-prodat",
+    "how": "gloss(aspect_pair)+context (infinitive chunk, L16)",
+    "segment_id": "ru-mir-01-l08-s079"
+   },
+   {
+    "lexeme_id": "ru-podkova",
+    "how": "gloss(define)+vignette+scene",
+    "segment_id": "ru-mir-01-l08-s006"
+   },
+   {
+    "lexeme_id": "ru-kuznets",
+    "how": "gloss(define)+scene",
+    "segment_id": "ru-mir-01-l08-s027"
+   },
+   {
+    "lexeme_id": "ru-podarok",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l08-s053"
+   },
+   {
+    "lexeme_id": "ru-pryanik",
+    "how": "gloss(define)+vignette+scene",
+    "segment_id": "ru-mir-01-l08-s050"
+   },
+   {
+    "lexeme_id": "ru-platok",
+    "how": "gloss(example)",
+    "segment_id": "ru-mir-01-l08-s025"
+   },
+   {
+    "lexeme_id": "ru-tsena",
+    "how": "gloss(paraphrase: цена́ = ско́лько сто́ит?)",
+    "segment_id": "ru-mir-01-l08-s034"
+   },
+   {
+    "lexeme_id": "ru-dorogo",
+    "how": "gloss(example)+context",
+    "segment_id": "ru-mir-01-l08-s014"
+   },
+   {
+    "lexeme_id": "ru-dyoshevo",
+    "how": "gloss(antonym)",
+    "segment_id": "ru-mir-01-l08-s037"
+   },
+   {
+    "lexeme_id": "ru-k",
+    "how": "gloss(example: к ↔ у)",
+    "segment_id": "ru-mir-01-l08-s027"
+   },
+   {
+    "lexeme_id": "ru-po",
+    "how": "gloss(example: по доро́ге; again «по я́рмарке: и здесь, и там»)",
+    "segment_id": "ru-mir-01-l08-s002"
+   },
+   {
+    "lexeme_id": "ru-god",
+    "how": "gloss(paradigm: год → два го́да → девятна́дцать лет) + baseline chunk «Мне … лет»",
+    "segment_id": "ru-mir-01-l08-s048"
+   },
+   {
+    "lexeme_id": "ru-dvenadtsat",
+    "how": "context (known from Глава 2: «Мне двена́дцать лет»)",
+    "segment_id": "ru-mir-01-l08-s057"
+   },
+   {
+    "lexeme_id": "ru-devyatnadtsat",
+    "how": "context (known from Главы 1 and 5: «Мне девятна́дцать лет»)",
+    "segment_id": "ru-mir-01-l08-s044"
+   },
+   {
+    "lexeme_id": "ru-semdesyat",
+    "how": "gloss(paraphrase: = 70)",
+    "segment_id": "ru-mir-01-l08-s064"
+   },
+   {
+    "lexeme_id": "ru-veselo",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s026"
+   },
+   {
+    "lexeme_id": "ru-skuchno",
+    "how": "gloss(antonym)",
+    "segment_id": "ru-mir-01-l08-s049"
+   },
+   {
+    "lexeme_id": "ru-kholodno",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s001"
+   },
+   {
+    "lexeme_id": "ru-telega",
+    "how": "gloss(define)+vignette+cover",
+    "segment_id": "ru-mir-01-l08-s002"
+   },
+   {
+    "lexeme_id": "ru-pit",
+    "how": "gloss(antonym: пьёт во́ду ↔ ест овёс)",
+    "segment_id": "ru-mir-01-l08-s040"
+   },
+   {
+    "lexeme_id": "ru-est-eat",
+    "how": "context (ест met in Глава 4: «Что ест ло́шадь? Овёс.»; contrast пьёт во́ду ↔ ест овёс)",
+    "segment_id": "ru-mir-01-l08-s061"
+   },
+   {
+    "lexeme_id": "ru-azbuka",
+    "how": "gloss(define)+context",
+    "segment_id": "ru-mir-01-l08-s133"
+   },
+   {
+    "lexeme_id": "ru-chaj-tea",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l08-s065"
+   }
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "ru-mir-01-l08-cover",
+   "src": "media/images/ru-mir-01-l08-cover.webp",
+   "status": "draft",
+   "presentation": "inline_scene",
+   "alt": "The autumn fair in the district town: carts, horses, stalls, an open smithy and a gingerbread stall, the church dome behind; the Sokolovs arrive on their cart.",
+   "art_brief": "A Russian district town (уездный город), Ryazan province, the autumn fair, late October 1913 O.S., morning, cold clear light, the first frost on the ground, bare birches. A broad unpaved square crowded with peasant carts (телеги) and horses, sacks of grain on the carts; plain wooden stalls under canvas: one with rows of round brown gingerbreads, one with red kerchiefs hanging on a rail; at the left an open-fronted smithy with a glowing forge and a smith at the anvil. Behind everything a white stone church with a green onion dome. In the right foreground the Sokolovs arrive on their own cart pulled by a bay horse that favours one foreleg: Pyotr (about 50, grey-streaked beard, brown homespun coat, cap) holds the reins; Fyodor (27, dark beard, soldier's bearing, dark coat, cap) sits on two grain sacks; Ivan (19, fair, cap, short padded coat over a red shirt) and Nastya (12, kerchief, padded jacket) sit at the back, Nastya pointing excitedly at the stalls. No text in the image.",
+   "covers_lexeme_ids": [
+    "ru-yarmarka",
+    "ru-telega",
+    "ru-kuznets"
+   ],
+   "width": 1600,
+   "height": 1073
+  },
+  "sections": [
+   {
+    "id": "ru-mir-01-l08-sec1",
+    "title": "На я́рмарку",
+    "segments": [
+     {
+      "id": "ru-mir-01-l08-s001",
+      "text": "Ночь, и уже́ хо́лодно.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "хо́лодно",
+        "gloss": "хо́лодно: как зимо́й",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-kholodno"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s002",
+      "text": "По доро́ге идёт теле́га, а на теле́ге сидя́т Пётр, Фёдор, Ива́н и На́стя.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "По доро́ге",
+        "gloss": "по доро́ге: теле́га на доро́ге",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-po"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "теле́га",
+        "gloss": "теле́га: её тя́нет ло́шадь",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-telega"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l08-img-telega",
+        "label": "теле́га",
+        "src": "media/vignettes/ru-mir-01-l08-img-telega.svg",
+        "alt": "A four-wheeled wooden peasant cart.",
+        "status": "draft",
+        "art_brief": "A Russian peasant cart (телега), Ryazan province 1913, seen from the side: four spoked wooden wheels, a long plank box with low slatted sides, two shafts in front with a wooden shaft-bow (дуга) and no horse; a grain sack lying in the box. Ink outline with watercolour wash, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-telega"
+        ],
+        "width": 240,
+        "height": 240,
+        "anchor_text": "теле́га"
+       }
+      ],
+      "pins": [
+       {
+        "start": 0,
+        "end": 2,
+        "token": "По",
+        "lemma": "по",
+        "feats": {
+         "pos": "PREP"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s003",
+      "text": "В теле́ге два мешка́: э́то овёс."
+     },
+     {
+      "id": "ru-mir-01-l08-s004",
+      "text": "У́тром в уе́здном го́роде я́рмарка.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "я́рмарка",
+        "gloss": "я́рмарка: ла́вки и мужики́ у це́ркви",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-yarmarka"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "У́тром",
+        "lemma": "утром",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s005",
+      "text": "Ло́шадь идёт ме́дленно: она́ ещё хрома́ет.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s006",
+      "text": "— На́шей ло́шади нужна́ подко́ва, — говори́т оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "подко́ва",
+        "gloss": "подко́ва: она́ на ноге́ у ло́шади",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-podkova"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "нужна́",
+        "gloss": "нужна́: без неё ло́шадь не мо́жет",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-nuzhnyj"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l08-img-podkova",
+        "label": "подко́ва",
+        "src": "media/vignettes/ru-mir-01-l08-img-podkova.svg",
+        "alt": "An iron horseshoe with its nail holes.",
+        "status": "draft",
+        "art_brief": "One iron horseshoe lying flat, open end down, eight nail holes, slightly worn, dark grey iron with a dull shine; two square horseshoe nails beside it. Ink outline with watercolour wash, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-podkova"
+        ],
+        "width": 240,
+        "height": 240,
+        "anchor_text": "подко́ва"
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 8,
+        "token": "На́шей",
+        "lemma": "наш",
+        "feats": {
+         "pos": "ADJF",
+         "case": "datv",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s007",
+      "text": "— А мне нужна́ доска́, — говори́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l08-s008",
+      "text": "— Моя́ доска́ тепе́рь у Ива́на!",
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l08-s009",
+      "text": "Э́то пра́вда: ве́чером в шко́ле Ива́н пи́шет на доске́ На́сти.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 14,
+        "end": 22,
+        "token": "ве́чером",
+        "lemma": "вечером",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s010",
+      "text": "— А тебе́, Фе́дя? Что тебе́ ну́жно?",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ну́жно",
+        "gloss": "что ну́жно? — подко́ва, доска́…",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-nuzhno"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s011",
+      "text": "— Мне нужны́ де́ньги.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s012",
+      "text": "Три рубля́.",
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s013",
+      "text": "— А на что?",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s014",
+      "text": "— На о́труб. О́труб — э́то де́ло в го́роде, а в го́роде всё до́рого.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "до́рого",
+        "gloss": "до́рого: рубль — э́то не копе́йка!",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-dorogo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s015",
+      "text": "Там я продаю́ овёс.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "продаю́",
+        "gloss": "продаю́: даю́ овёс, беру́ де́ньги",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-prodavat"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s016",
+      "text": "Оте́ц не отвеча́ет.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s017",
+      "text": "— Мне хо́лодно, — говори́т На́стя.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l08-s018",
+      "text": "— Зима́ идёт, — говори́т оте́ц. — Кому́ что ну́жно…",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s019",
+      "text": "А Ива́н? Что ему́ ну́жно?",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s020",
+      "text": "Ива́н ду́мает о Ве́ре Никола́евне."
+     },
+     {
+      "id": "ru-mir-01-l08-s021",
+      "text": "А ей что ну́жно?",
+      "pins": [
+       {
+        "start": 2,
+        "end": 4,
+        "token": "ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s022",
+      "text": "Он не зна́ет."
+     },
+     {
+      "id": "ru-mir-01-l08-s023",
+      "text": "У́тро. Вот и го́род, вот и я́рмарка.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s024",
+      "text": "У це́ркви теле́ги, ло́шади, мужики́ и ба́бы."
+     },
+     {
+      "id": "ru-mir-01-l08-s025",
+      "text": "Здесь продаю́т хлеб, овёс, капу́сту и платки́.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "платки́",
+        "gloss": "плато́к: в це́ркви он на ма́ме",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-platok"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s026",
+      "text": "На́сте уже́ не хо́лодно: На́сте ве́село.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ве́село",
+        "gloss": "ве́село: всё хорошо́, все смею́тся",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-veselo"
+        ]
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l08-x1-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "кому́? — dative: masculines in a consonant, -й or -ь → -у/-ю; most -а/-я nouns → -е (Фе́дя → Фе́де too); -ь feminines → -и (мать → ма́тери).",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "На́стя → На́сте",
+       "prompt": "На́ст___ ве́село.",
+       "answer": "е"
+      },
+      "items": [
+       {
+        "id": "x1-1-1",
+        "prompt": "Ло́шад___ нужна́ подко́ва. (ло́шадь)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s006"
+        ],
+        "common_wrong": [
+         {
+          "answer": "е",
+          "hint": "ло́шадь → ло́шади"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-2",
+        "prompt": "Фёдор___ нужны́ де́ньги. (Фёдор)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "у"
+        ],
+        "common_wrong": [
+         {
+          "answer": "а",
+          "hint": "кому́? Фёдор → Фёдору"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-3",
+        "prompt": "Что ну́жно Ве́р___ Никола́евне? (Ве́ра)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s021"
+        ]
+       },
+       {
+        "id": "x1-1-4",
+        "prompt": "Отц___ нужна́ подко́ва. (оте́ц)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "у́"
+        ],
+        "common_wrong": [
+         {
+          "answer": "а",
+          "hint": "кому́? оте́ц → отцу́"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-5",
+        "prompt": "На́ст___ хо́лодно. (На́стя)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s017"
+        ]
+       },
+       {
+        "id": "x1-1-6",
+        "prompt": "Фе́д___ ну́жен о́труб. (Фе́дя)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "common_wrong": [
+         {
+          "answer": "и",
+          "hint": "кому́? Фе́дя → Фе́де (как На́стя → На́сте)"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x1-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь местоиме́ние в ну́жную фо́рму.",
+      "hint_en": "Dative pronouns: я → мне, ты → тебе́, он → ему́, она́ → ей, кто → кому́.",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "кому́? я → мне",
+       "prompt": "— ___ хо́лодно, — говори́т На́стя. (я)",
+       "answer": "Мне"
+      },
+      "items": [
+       {
+        "id": "x1-2-1",
+        "prompt": "Что ___ ну́жно, Фе́дя? (ты)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "тебе́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s010"
+        ]
+       },
+       {
+        "id": "x1-2-2",
+        "prompt": "На́стя говори́т: «___ нужна́ доска́». (я)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мне"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s007"
+        ]
+       },
+       {
+        "id": "x1-2-3",
+        "prompt": "А Ива́н? Что ___ ну́жно? (он)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ему́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s019"
+        ],
+        "common_wrong": [
+         {
+          "answer": "его́",
+          "hint": "кому́? он → ему́"
+         }
+        ]
+       },
+       {
+        "id": "x1-2-4",
+        "prompt": "Ива́н ду́мает о Ве́ре Никола́евне: что ___ ну́жно? (она́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ей"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s021"
+        ],
+        "common_wrong": [
+         {
+          "answer": "её",
+          "hint": "кому́? она́ → ей"
+         }
+        ]
+       },
+       {
+        "id": "x1-2-5",
+        "prompt": "Ло́шадь хрома́ет: ___ нужна́ подко́ва. (она́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ей"
+        ],
+        "first_letters": 1
+       },
+       {
+        "id": "x1-2-6",
+        "prompt": "Оте́ц ду́мает: «___ что ну́жно…» (кто)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кому́"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s018"
+        ],
+        "common_wrong": [
+         {
+          "answer": "кого́",
+          "hint": "кому́? — не кого́?"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x1-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "obrazec": {
+       "rule": "Сего́дня я́рмарка … → в го́роде",
+       "prompt": "Сего́дня я́рмарка ___.",
+       "answer": "в го́роде"
+      },
+      "items": [
+       {
+        "id": "x1-3-1",
+        "prompt": "Ло́шади нужна́ ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "но́вая подко́ва"
+        ],
+        "choices": [
+         "но́вая подко́ва",
+         "но́вая доска́",
+         "но́вая теле́га"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s006"
+        ]
+       },
+       {
+        "id": "x1-3-2",
+        "prompt": "Фёдору нужны́ ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "три рубля́"
+        ],
+        "choices": [
+         "три рубля́",
+         "два мешка́",
+         "две доски́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s012"
+        ]
+       },
+       {
+        "id": "x1-3-3",
+        "prompt": "Доска́ На́сти тепе́рь ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "у Ива́на"
+        ],
+        "choices": [
+         "у Ива́на",
+         "у Фёдора",
+         "на теле́ге"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s008"
+        ]
+       },
+       {
+        "id": "x1-3-4",
+        "prompt": "В теле́ге ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "два мешка́"
+        ],
+        "choices": [
+         "два мешка́",
+         "три рубля́",
+         "две ло́шади"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s003"
+        ]
+       },
+       {
+        "id": "x1-3-5",
+        "prompt": "О́труб — э́то де́ло ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "в го́роде"
+        ],
+        "choices": [
+         "в го́роде",
+         "в дере́вне",
+         "в шко́ле"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s014"
+        ]
+       },
+       {
+        "id": "x1-3-6",
+        "prompt": "Ве́чером в шко́ле Ива́н пи́шет ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "на доске́"
+        ],
+        "choices": [
+         "на доске́",
+         "на теле́ге",
+         "в газе́те"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s009"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l08-sec2",
+    "title": "У кузнеца́",
+    "segments": [
+     {
+      "id": "ru-mir-01-l08-s027",
+      "text": "Пётр, Ива́н и На́стя иду́т к кузнецу́.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "кузнецу́",
+        "gloss": "кузне́ц: он де́лает подко́вы",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-kuznets"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "к",
+        "gloss": "иду́т к кузнецу́ → стоя́т у кузнеца́",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-k"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s028",
+      "text": "Кузне́ц — большо́й мужи́к, и ру́ки у него́ больши́е.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 10,
+        "end": 18,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "masc"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s029",
+      "text": "Он смо́трит на но́гу ло́шади."
+     },
+     {
+      "id": "ru-mir-01-l08-s030",
+      "text": "— Хрома́ет, — говори́т он. — Подко́ва ста́рая.",
+      "paragraph_start": true,
+      "speaker": "char-kuznets"
+     },
+     {
+      "id": "ru-mir-01-l08-s031",
+      "text": "Твое́й ло́шади нужна́ но́вая подко́ва.",
+      "speaker": "char-kuznets",
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "Твое́й",
+        "lemma": "твой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "datv",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s032",
+      "text": "Кузне́ц пока́зывает Петру́ но́вую подко́ву.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пока́зывает",
+        "gloss": "пока́зывает: «Смотри́! Вот…»",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-pokazyvat"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l08-img-kuznets",
+        "src": "media/images/ru-mir-01-l08-img-kuznets.webp",
+        "status": "planned",
+        "alt": "At the fair the smith holds up a new horseshoe to Pyotr, the lame horse's hoof on his knee; Ivan holds the horse.",
+        "art_brief": "District-town autumn fair, Ryazan province, late October 1913 O.S., late morning, cold grey light. Foreground: an open-fronted wooden smithy at the edge of the fair, a glowing forge and an anvil behind. The smith (kuznets, about 45, very broad, leather apron over a dark shirt, sleeves rolled, short dark beard) half-crouches with the Sokolovs' bay horse's left foreleg lifted and its hoof resting on his knee; in his raised right hand he holds up one new dark horseshoe towards Pyotr; the worn old shoe is still on the lifted hoof. Pyotr Matveyevich (about 50, grey-streaked beard, brown homespun coat, cap) looks at the horseshoes with a careful, worried face. Ivan (19, red shirt under a short padded coat, cap, fair hair) stands at the horse's head holding the bridle. Behind them, a few steps away, Nastya (12, kerchief, padded jacket) leans bored against a cart wheel. In the background carts and the fair. A wooden pail of water by the horse. No text in the image.",
+        "covers_lexeme_ids": [
+         "ru-kuznets",
+         "ru-podkova",
+         "ru-pokazyvat"
+        ],
+        "width": 1600,
+        "height": 1067
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s033",
+      "text": "— Вот така́я подко́ва ей нужна́.",
+      "paragraph_start": true,
+      "speaker": "char-kuznets",
+      "pins": [
+       {
+        "start": 22,
+        "end": 24,
+        "token": "ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s034",
+      "text": "— Кака́я цена́? Ско́лько сто́ит?",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "цена́",
+        "gloss": "цена́: рубль? два рубля́?",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-tsena"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s035",
+      "text": "— Четы́ре подко́вы и рабо́та — два рубля́.",
+      "paragraph_start": true,
+      "speaker": "char-kuznets"
+     },
+     {
+      "id": "ru-mir-01-l08-s036",
+      "text": "— Два рубля́! До́рого.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s037",
+      "text": "— До́рого? Нет, э́то дёшево: четы́ре подко́вы!",
+      "paragraph_start": true,
+      "speaker": "char-kuznets",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "дёшево",
+        "gloss": "дёшево ↔ до́рого",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-dyoshevo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s038",
+      "text": "Пётр смо́трит на ло́шадь и ду́мает.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s039",
+      "text": "— Мне на́до купи́ть подко́вы, — говори́т он ти́хо. — Но и Фёдору нужны́ де́ньги.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "на́до",
+        "gloss": "на́до = ну́жно",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-nado"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "купи́ть",
+        "gloss": "купи́ть: даёшь де́ньги — подко́ва твоя́",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-kupit"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s040",
+      "text": "А ло́шадь пьёт во́ду из ведра́.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пьёт",
+        "gloss": "пьёт во́ду, а ест овёс",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-pit"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 21,
+        "end": 23,
+        "token": "из",
+        "lemma": "из",
+        "feats": {
+         "pos": "PREP"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s041",
+      "text": "Ива́н стои́т у ло́шади и помога́ет кузнецу́.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "помога́ет",
+        "gloss": "помога́ет: рабо́тает для кузнеца́",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-pomogat"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s042",
+      "text": "Кузне́ц смо́трит на Ива́на.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s043",
+      "text": "— Ты хорошо́ рабо́таешь. Ско́лько тебе́ лет?",
+      "paragraph_start": true,
+      "speaker": "char-kuznets"
+     },
+     {
+      "id": "ru-mir-01-l08-s044",
+      "text": "— Девятна́дцать.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 2,
+        "end": 15,
+        "token": "Девятна́дцать",
+        "lemma": "девятнадцать",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s045",
+      "text": "— Девятна́дцать! А ру́ки — как у меня́.",
+      "paragraph_start": true,
+      "speaker": "char-kuznets",
+      "pins": [
+       {
+        "start": 2,
+        "end": 15,
+        "token": "Девятна́дцать",
+        "lemma": "девятнадцать",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s046",
+      "text": "Мне ну́жен тако́й учени́к.",
+      "speaker": "char-kuznets",
+      "pins": [
+       {
+        "start": 11,
+        "end": 17,
+        "token": "тако́й",
+        "lemma": "такой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn",
+         "number": "sing",
+         "gender": "masc"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s047",
+      "text": "— Я уже́ учени́к, — смеётся Ива́н. — В шко́ле!",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s048",
+      "text": "— Ему́ девятна́дцать лет, а он ещё в шко́ле, — говори́т оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "лет",
+        "gloss": "год → два го́да → девятна́дцать лет",
+        "gloss_kind": "paradigm",
+        "covers_lexeme_ids": [
+         "ru-god"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 7,
+        "end": 20,
+        "token": "девятна́дцать",
+        "lemma": "девятнадцать",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s049",
+      "text": "А На́сте у кузнеца́ ску́чно: тут то́лько ло́шади и подко́вы.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ску́чно",
+        "gloss": "ску́чно ↔ ве́село",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-skuchno"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s050",
+      "text": "— Ва́ня, мне ску́чно! А там пря́ники!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пря́ники",
+        "gloss": "пря́ник: как хлеб, его́ лю́бят де́ти",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-pryanik"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l08-img-pryanik",
+        "label": "пря́ник",
+        "src": "media/vignettes/ru-mir-01-l08-img-pryanik.svg",
+        "alt": "A large round Russian gingerbread with a stamped pattern.",
+        "status": "draft",
+        "art_brief": "One large round Russian printed gingerbread (печатный пряник), honey-brown, a simple stamped pattern of a flower in a ring on its face, a pale sugar glaze; beside it two small round gingerbreads. Ink outline with watercolour wash, transparent background, no text, no lettering on the stamp.",
+        "covers_lexeme_ids": [
+         "ru-pryanik"
+        ],
+        "width": 240,
+        "height": 240,
+        "anchor_text": "пря́ники"
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l08-x2-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "кого́? (accusative: смо́трит на, ви́дит) ↔ кому́? (dative: помога́ет, пока́зывает, говори́т).",
+      "grammar_target_ids": [
+       "G08",
+       "G06"
+      ],
+      "obrazec": {
+       "rule": "кого́? кузне́ц → кузнеца́ · кому́? кузне́ц → кузнецу́",
+       "prompt": "Пётр ви́дит ___ (кузне́ц).",
+       "answer": "кузнеца́"
+      },
+      "items": [
+       {
+        "id": "x2-1-1",
+        "prompt": "Ива́н помога́ет ___ (кузне́ц).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кузнецу́"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s041"
+        ],
+        "common_wrong": [
+         {
+          "answer": "кузнеца́",
+          "hint": "помога́ет кому́? → кузнецу́"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-2",
+        "prompt": "Кузне́ц пока́зывает ___ но́вую подко́ву (Пётр).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петру́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s032"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Петра́",
+          "hint": "пока́зывает кому́? → Петру́"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-3",
+        "prompt": "Кузне́ц смо́трит на ___ (Ива́н).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ива́на"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s042"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Ива́ну",
+          "hint": "смо́трит на кого́? → Ива́на"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-4",
+        "prompt": "Пётр говори́т ___ (кузне́ц): «Два рубля́! До́рого».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кузнецу́"
+        ],
+        "first_letters": 4,
+        "common_wrong": [
+         {
+          "answer": "кузнеца́",
+          "hint": "говори́т кому́? → кузнецу́"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-5",
+        "prompt": "Пётр смо́трит на ___ (ло́шадь) и ду́мает.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ло́шадь"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s038"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ло́шади",
+          "hint": "смо́трит на кого́? → ло́шадь (как дверь → дверь)"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-6",
+        "prompt": "Кузне́ц ви́дит ___ (Пётр) и его́ ло́шадь.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петра́"
+        ],
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "Петру́",
+          "hint": "ви́дит кого́? → Петра́"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x2-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "Answer in the frame: кому́? → dative.",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "кому́? Ива́н → Ива́ну",
+       "prompt": "Ско́лько лет Ива́ну? — ___ (Ива́н) девятна́дцать лет.",
+       "answer": "Ива́ну"
+      },
+      "items": [
+       {
+        "id": "x2-2-1",
+        "prompt": "Кому́ ну́жен учени́к? — Учени́к ну́жен ___ (кузне́ц).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кузнецу́"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s046"
+        ]
+       },
+       {
+        "id": "x2-2-2",
+        "prompt": "Кому́ ску́чно у кузнеца́? — ___ (На́стя) ску́чно.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "На́сте"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s049"
+        ]
+       },
+       {
+        "id": "x2-2-3",
+        "prompt": "Ско́лько лет Ива́ну? — ___ (он) девятна́дцать лет.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ему́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s048"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Его́",
+          "hint": "кому́? он → ему́"
+         }
+        ]
+       },
+       {
+        "id": "x2-2-4",
+        "prompt": "Кому́ нужны́ де́ньги? — Де́ньги нужны́ ___ (Фёдор).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдору"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s039"
+        ]
+       },
+       {
+        "id": "x2-2-5",
+        "prompt": "Что пьёт ло́шадь? — Ло́шадь пьёт ___ (вода́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "во́ду"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s040"
+        ],
+        "common_wrong": [
+         {
+          "answer": "вода́",
+          "hint": "пьёт что? → во́ду"
+         }
+        ]
+       },
+       {
+        "id": "x2-2-6",
+        "prompt": "Ско́лько сто́ят четы́ре подко́вы и рабо́та? — Два ___ (рубль).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "рубля́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s035"
+        ],
+        "common_wrong": [
+         {
+          "answer": "рубль",
+          "hint": "два → рубля́ (как два бра́та)"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x2-3",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "ну́жен / нужна́ / ну́жно / нужны́ agrees with the thing needed, not the person.",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "ну́жен (он) · нужна́ (она́) · ну́жно (оно́, что?) · нужны́ (они́)",
+       "prompt": "Ло́шади ___ подко́ва. (ну́жен)",
+       "answer": "нужна́"
+      },
+      "items": [
+       {
+        "id": "x2-3-1",
+        "prompt": "Кузнецу́ ___ учени́к. (ну́жен)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ну́жен"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s046"
+        ]
+       },
+       {
+        "id": "x2-3-2",
+        "prompt": "Фёдору ___ де́ньги. (ну́жен)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "нужны́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s039"
+        ],
+        "common_wrong": [
+         {
+          "answer": "нужна́",
+          "hint": "де́ньги — они́: нужны́"
+         },
+         {
+          "answer": "ну́жен",
+          "hint": "де́ньги — они́: нужны́"
+         }
+        ]
+       },
+       {
+        "id": "x2-3-3",
+        "prompt": "Что тебе́ ___? (ну́жен)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ну́жно"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s010"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ну́жен",
+          "hint": "что? → ну́жно"
+         }
+        ]
+       },
+       {
+        "id": "x2-3-4",
+        "prompt": "На́сте ___ доска́. (ну́жен)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "нужна́"
+        ],
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "ну́жен",
+          "hint": "доска́ — она́: нужна́"
+         }
+        ]
+       },
+       {
+        "id": "x2-3-5",
+        "prompt": "Твое́й ло́шади ___ но́вая подко́ва. (ну́жен)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "нужна́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s031"
+        ]
+       },
+       {
+        "id": "x2-3-6",
+        "prompt": "— Пря́ники! Мне ___ пря́ник! (ну́жен)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ну́жен"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "нужна́",
+          "hint": "пря́ник — он: ну́жен"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l08-sec3",
+    "title": "Пода́рок",
+    "segments": [
+     {
+      "id": "ru-mir-01-l08-s051",
+      "text": "Ива́н и На́стя гуля́ют по я́рмарке.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "по",
+        "gloss": "по я́рмарке: и здесь, и там",
+        "gloss_kind": "example"
+       }
+      ],
+      "pins": [
+       {
+        "start": 23,
+        "end": 25,
+        "token": "по",
+        "lemma": "по",
+        "feats": {
+         "pos": "PREP"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s052",
+      "text": "У Ива́на свои́ де́ньги: рубль и четы́ре копе́йки."
+     },
+     {
+      "id": "ru-mir-01-l08-s053",
+      "text": "Ему́ ну́жен пода́рок сестре́.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пода́рок",
+        "gloss": "пода́рок: даю́, а ты — «Спаси́бо!»",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-podarok"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s054",
+      "text": "Вот ба́ба, у неё пря́ники.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s055",
+      "text": "Она́ пока́зывает На́сте большо́й пря́ник.",
+      "pins": [
+       {
+        "start": 24,
+        "end": 32,
+        "token": "большо́й",
+        "lemma": "большой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "accs",
+         "number": "sing",
+         "gender": "masc",
+         "animacy": "inan"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s056",
+      "text": "— Сестре́ ну́жен пода́рок, — говори́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s057",
+      "text": "— Ей двена́дцать лет.",
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 2,
+        "end": 4,
+        "token": "Ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       },
+       {
+        "start": 5,
+        "end": 16,
+        "token": "двена́дцать",
+        "lemma": "двенадцать",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s058",
+      "text": "— Двена́дцать? Ей ну́жен пря́ник! Две копе́йки.",
+      "paragraph_start": true,
+      "speaker": "char-baba",
+      "pins": [
+       {
+        "start": 2,
+        "end": 13,
+        "token": "Двена́дцать",
+        "lemma": "двенадцать",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       },
+       {
+        "start": 15,
+        "end": 17,
+        "token": "Ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s059",
+      "text": "Ива́н смо́трит на свои́ копе́йки в руке́: одна́, две, три, четы́ре.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l08-img-pryanik",
+        "src": "media/images/ru-mir-01-l08-img-pryanik.webp",
+        "status": "draft",
+        "alt": "Ivan at the gingerbread stall with Nastya, counting kopecks in his open palm while a woman holds out a big gingerbread.",
+        "art_brief": "The same autumn fair, early afternoon, cold clear light, the white church with a green dome in the background. A gingerbread stall: a trestle table under a canvas awning, rows of round brown printed gingerbreads (no lettering). The stallholder, a stout peasant woman (about 40, red-and-white kerchief, padded jacket), holds out one large gingerbread across the table. Ivan (19, cap, short padded coat over a red shirt) stands at the table looking down into his open left palm, where four small copper kopecks lie; with his right forefinger he is counting them. Nastya (12, kerchief, padded jacket, plait) stands close beside him, on tiptoe, eyes fixed on the gingerbread, delighted. Beyond the stall: a rack of red kerchiefs, and further on a man with a small table of thin books. No text in the image.",
+        "covers_lexeme_ids": [
+         "ru-pryanik",
+         "ru-podarok"
+        ],
+        "width": 1600,
+        "height": 1073
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s060",
+      "text": "Он даёт ба́бе две копе́йки, а пря́ник даёт На́сте.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l08-svg-komu",
+        "src": "media/diagrams/ru-mir-01-l08-svg-komu.svg",
+        "status": "draft",
+        "alt": "Ivan, Nastya and a gingerbread: an arrow from Ivan through the gingerbread to Nastya, labelled кто? Иван, даёт, что? пряник, кому? Насте.",
+        "covers_lexeme_ids": [
+         "ru-pryanik"
+        ],
+        "width": 300,
+        "height": 230
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s061",
+      "text": "На́стя ест пря́ник. Тепе́рь ей ве́село.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 28,
+        "end": 30,
+        "token": "ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s062",
+      "text": "— Тебе́ нра́вится?",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "нра́вится",
+        "gloss": "нра́вится: она́ ест и хо́чет ещё",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-nravitsya"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s063",
+      "text": "— О́чень нра́вится! Ва́ня, а на́шему де́ду? Де́ду то́же пря́ник!",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l08-s064",
+      "text": "— Де́ду се́мьдесят лет.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "се́мьдесят",
+        "gloss": "се́мьдесят = 70",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-semdesyat"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 8,
+        "end": 18,
+        "token": "се́мьдесят",
+        "lemma": "семьдесят",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s065",
+      "text": "Ему́ ну́жен чай, а не пря́ник.",
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "чай",
+        "gloss": "чай: его́ пьют, как во́ду",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-chaj-tea"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s066",
+      "text": "А что ему́ на́до купи́ть Ве́ре Никола́евне?",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s067",
+      "text": "Вот кра́сные платки́."
+     },
+     {
+      "id": "ru-mir-01-l08-s068",
+      "text": "Мо́жет быть, ей ну́жен плато́к?",
+      "pins": [
+       {
+        "start": 13,
+        "end": 15,
+        "token": "ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s069",
+      "text": "Нет: у неё есть плато́к."
+     },
+     {
+      "id": "ru-mir-01-l08-s070",
+      "text": "Ей нужны́ кни́ги.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 2,
+        "token": "Ей",
+        "lemma": "она",
+        "feats": {
+         "case": "datv",
+         "number": "sing",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s071",
+      "text": "Вот и кни́ги: они́ лежа́т на столе́ у мужика́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s072",
+      "text": "Ива́н берёт кни́гу и смо́трит."
+     },
+     {
+      "id": "ru-mir-01-l08-s073",
+      "text": "Бу́квы, бу́квы… Он чита́ет ме́дленно: чита́ть ему́ тру́дно."
+     },
+     {
+      "id": "ru-mir-01-l08-s074",
+      "text": "— А что в э́той кни́ге? Кака́я цена́?",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 10,
+        "end": 15,
+        "token": "э́той",
+        "lemma": "этот",
+        "feats": {
+         "pos": "ADJF",
+         "case": "loct",
+         "number": "sing",
+         "gender": "femn"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s075",
+      "text": "— Всё! Два рубля́.",
+      "paragraph_start": true,
+      "speaker": "char-muzhik"
+     },
+     {
+      "id": "ru-mir-01-l08-s076",
+      "text": "— До́рого…",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s077",
+      "text": "У Ива́на то́лько рубль и две копе́йки.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s078",
+      "text": "Он даёт кни́гу мужику́."
+     },
+     {
+      "id": "ru-mir-01-l08-s079",
+      "text": "А у теле́ги Фёдор хо́чет прода́ть овёс.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "прода́ть",
+        "gloss": "прода́ть pf. ← продава́ть",
+        "gloss_kind": "aspect_pair",
+        "covers_lexeme_ids": [
+         "ru-prodat"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s080",
+      "text": "Здесь все продаю́т овёс, а покупа́ет то́лько Сила́нтий.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "покупа́ет",
+        "gloss": "покупа́ет ↔ продаёт",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-pokupat"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 27,
+        "end": 36,
+        "token": "покупа́ет",
+        "lemma": "покупать",
+        "feats": {
+         "aspect": "impf",
+         "mood": "indc",
+         "number": "sing",
+         "person": "3per",
+         "pos": "VERB",
+         "tense": "pres",
+         "verbform": "fin"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s081",
+      "text": "Он сиди́т на мешке́ и пьёт чай."
+     },
+     {
+      "id": "ru-mir-01-l08-s082",
+      "text": "— Овёс? Рубль за мешо́к, — говори́т Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l08-s083",
+      "text": "— Рубль? Э́то не цена́! Э́то дёшево.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s084",
+      "text": "— Дёшево. Но кому́ ты хо́чешь прода́ть овёс?",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l08-s085",
+      "text": "Здесь все продаю́т, а покупа́ю то́лько я.",
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 22,
+        "end": 30,
+        "token": "покупа́ю",
+        "lemma": "покупать",
+        "feats": {
+         "aspect": "impf",
+         "mood": "indc",
+         "number": "sing",
+         "person": "1per",
+         "pos": "VERB",
+         "tense": "pres",
+         "verbform": "fin"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s086",
+      "text": "— Тебе́, Сила́нтий Кузьми́ч, я овёс не продаю́.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s087",
+      "text": "Ты и зе́млю мою́ хо́чешь купи́ть, как говоря́т.",
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s088",
+      "text": "— Ну, ну. — Сила́нтий пьёт чай.",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l08-s089",
+      "text": "— Нужда́ всему́ нау́чит, Фёдор Петро́вич.",
+      "speaker": "char-silantij",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Нужда́ всему́ нау́чит",
+        "gloss": "нужда́: де́нег нет — у́чишься де́лать всё",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-nuzhda"
+        ]
+       }
+      ],
+      "quotation": true
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l08-x3-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Dative of possessives and nouns: наш → на́шему (м.), на́шей (ж.); сестра́ → сестре́; мужи́к → мужику́.",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "на́ша ло́шадь → на́шей ло́шади",
+       "prompt": "На́ш___ ло́шади нужна́ подко́ва.",
+       "answer": "ей"
+      },
+      "items": [
+       {
+        "id": "x3-1-1",
+        "prompt": "Тво___ ло́шади нужна́ но́вая подко́ва. (твоя́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е́й"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s031"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ю",
+          "hint": "кому́? твоя́ ло́шадь → твое́й ло́шади"
+         }
+        ]
+       },
+       {
+        "id": "x3-1-2",
+        "prompt": "А на́ш___ де́ду? Де́ду то́же пря́ник! (наш)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ему"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s063"
+        ],
+        "common_wrong": [
+         {
+          "answer": "его",
+          "hint": "кому́? наш дед → на́шему де́ду"
+         }
+        ]
+       },
+       {
+        "id": "x3-1-3",
+        "prompt": "Ве́р___ Никола́евне нужны́ кни́ги. (Ве́ра)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s070"
+        ]
+       },
+       {
+        "id": "x3-1-4",
+        "prompt": "Сестр___ ну́жен пода́рок. (сестра́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s056"
+        ]
+       },
+       {
+        "id": "x3-1-5",
+        "prompt": "Ива́н даёт кни́гу мужик___. (мужи́к)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "у́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s078"
+        ],
+        "common_wrong": [
+         {
+          "answer": "а",
+          "hint": "даёт кому́? → мужику́"
+         }
+        ]
+       },
+       {
+        "id": "x3-1-6",
+        "prompt": "Он даёт ба́б___ две копе́йки. (ба́ба)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "е"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s060"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x3-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь местоиме́ние в ну́жную фо́рму.",
+      "hint_en": "нра́вится / ну́жен / лет take the person in the dative: ей нра́вится, ему́ ну́жен, ей двена́дцать лет.",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "кому́? она́ → ей",
+       "prompt": "На́стя ест пря́ник: ___ нра́вится. (она́)",
+       "answer": "ей"
+      },
+      "items": [
+       {
+        "id": "x3-2-1",
+        "prompt": "— ___ нра́вится? — спра́шивает Ива́н. (ты)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Тебе́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s062"
+        ]
+       },
+       {
+        "id": "x3-2-2",
+        "prompt": "Де́ду се́мьдесят лет. ___ ну́жен чай. (он)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ему́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s065"
+        ]
+       },
+       {
+        "id": "x3-2-3",
+        "prompt": "У Ива́на свои́ де́ньги: ___ ну́жен пода́рок сестре́. (он)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ему́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s053"
+        ],
+        "common_wrong": [
+         {
+          "answer": "его́",
+          "hint": "кому́? он → ему́"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-4",
+        "prompt": "У Ве́ры Никола́евны есть плато́к. ___ нужны́ кни́ги. (она́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ей"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s070"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Её",
+          "hint": "кому́? она́ → ей"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-5",
+        "prompt": "— Сестре́ ну́жен пода́рок. ___ двена́дцать лет. (она́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ей"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s057"
+        ]
+       },
+       {
+        "id": "x3-2-6",
+        "prompt": "Ива́н смо́трит на кни́гу. ___ нужна́ кни́га, но два рубля́ — до́рого. (он)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ему́"
+        ],
+        "first_letters": 1,
+        "common_wrong": [
+         {
+          "answer": "Его́",
+          "hint": "кому́? он → ему́"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x3-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "obrazec": {
+       "rule": "Ива́н даёт ба́бе … → две копе́йки",
+       "prompt": "Ива́н даёт ба́бе ___.",
+       "answer": "две копе́йки"
+      },
+      "items": [
+       {
+        "id": "x3-3-1",
+        "prompt": "Пря́ник сто́ит ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "две копе́йки"
+        ],
+        "choices": [
+         "две копе́йки",
+         "два рубля́",
+         "оди́н рубль"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s058"
+        ]
+       },
+       {
+        "id": "x3-3-2",
+        "prompt": "Кни́га у мужика́ сто́ит ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "два рубля́"
+        ],
+        "choices": [
+         "два рубля́",
+         "две копе́йки",
+         "оди́н рубль"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s075"
+        ]
+       },
+       {
+        "id": "x3-3-3",
+        "prompt": "У Ве́ры Никола́евны уже́ есть ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "свой плато́к"
+        ],
+        "choices": [
+         "свой плато́к",
+         "но́вая подко́ва",
+         "большо́й пря́ник"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s069"
+        ]
+       },
+       {
+        "id": "x3-3-4",
+        "prompt": "Сила́нтий сиди́т на мешке́ и ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "пьёт чай"
+        ],
+        "choices": [
+         "пьёт чай",
+         "ест пря́ник",
+         "чита́ет кни́гу"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s081"
+        ]
+       },
+       {
+        "id": "x3-3-5",
+        "prompt": "Сила́нтий покупа́ет овёс ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "о́чень дёшево"
+        ],
+        "choices": [
+         "о́чень дёшево",
+         "о́чень до́рого",
+         "о́чень ме́дленно"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s083"
+        ]
+       },
+       {
+        "id": "x3-3-6",
+        "prompt": "На́стя ест пря́ник, и ей ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "о́чень нра́вится"
+        ],
+        "choices": [
+         "о́чень нра́вится",
+         "о́чень ску́чно",
+         "о́чень хо́лодно"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l08-s063"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l08-sec4",
+    "title": "Не пода́рок",
+    "segments": [
+     {
+      "id": "ru-mir-01-l08-s090",
+      "text": "Ива́н и На́стя иду́т к теле́ге.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s091",
+      "text": "— Ну, Фёдор? Где де́ньги? Ты не мо́жешь прода́ть овёс? — спра́шивает оте́ц.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s092",
+      "text": "— Де́нег нет. Овёс — здесь, в мешка́х.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s093",
+      "text": "Сила́нтию я его́ не продаю́.",
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s094",
+      "text": "Оте́ц смо́трит на сы́на, на мешки́, на ло́шадь.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s095",
+      "text": "— У меня́ три рубля́, — говори́т он. — Ло́шади нужны́ подко́вы: э́то два рубля́.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s096",
+      "text": "На́сте нужна́ доска́. А Фёдору нужны́ три рубля́.",
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s097",
+      "text": "— Мне двена́дцать лет, а у меня́ нет доски́!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 6,
+        "end": 17,
+        "token": "двена́дцать",
+        "lemma": "двенадцать",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s098",
+      "text": "— А ло́шади нельзя́ без подко́вы, — говори́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "нельзя́",
+        "gloss": "нельзя́ ↔ мо́жно",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-nelzya"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s099",
+      "text": "— А мне нельзя́ без о́труба! Мне на́до жить в го́роде и ждать: там моё де́ло.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s100",
+      "text": "Пётр ду́мает: подко́ва и доска́ — и́ли о́труб.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s101",
+      "text": "Он берёт свои́ де́ньги и даёт их ста́ршему сы́ну.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s102",
+      "text": "— Оте́ц? Ты ведь не за о́труб.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s103",
+      "text": "— Я не за о́труб. Но ты мой сын.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s104",
+      "text": "Сын помога́ет отцу́, а оте́ц — сы́ну.",
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s105",
+      "text": "— А ло́шадь? — ти́хо спра́шивает Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s106",
+      "text": "— Ло́шадь хрома́ет и ждёт.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s107",
+      "text": "— Спаси́бо, оте́ц, — говори́т Фёдор. — Мой овёс — твой.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l08-s108",
+      "text": "— Э́то не пода́рок, Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l08-s109",
+      "text": "Фёдор берёт де́ньги и идёт: его́ де́ло — не на я́рмарке.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s110",
+      "text": "А Ива́н смо́трит на сестру́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s111",
+      "text": "У неё пря́ник, но доски́ нет."
+     },
+     {
+      "id": "ru-mir-01-l08-s112",
+      "text": "Ива́н берёт свой рубль."
+     },
+     {
+      "id": "ru-mir-01-l08-s113",
+      "text": "— До́ску На́сте покупа́ю я!",
+      "paragraph_start": true,
+      "speaker": "char-ivan",
+      "pins": [
+       {
+        "start": 16,
+        "end": 24,
+        "token": "покупа́ю",
+        "lemma": "покупать",
+        "feats": {
+         "aspect": "impf",
+         "mood": "indc",
+         "number": "sing",
+         "person": "1per",
+         "pos": "VERB",
+         "tense": "pres",
+         "verbform": "fin"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s114",
+      "text": "До́ма, в Берёзовке, у Соколо́вых пьют чай.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s115",
+      "text": "Фёдора нет: он ещё в го́роде."
+     },
+     {
+      "id": "ru-mir-01-l08-s116",
+      "text": "На́стя пока́зывает ма́тери но́вую до́ску."
+     },
+     {
+      "id": "ru-mir-01-l08-s117",
+      "text": "Дед смо́трит на пря́ник На́сти."
+     },
+     {
+      "id": "ru-mir-01-l08-s118",
+      "text": "— Дед, тебе́ се́мьдесят лет, а ты хо́чешь пря́ник!",
+      "paragraph_start": true,
+      "speaker": "char-nastya",
+      "pins": [
+       {
+        "start": 13,
+        "end": 23,
+        "token": "се́мьдесят",
+        "lemma": "семьдесят",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s119",
+      "text": "— Мне се́мьдесят лет, а пря́ник мне то́же нра́вится.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej",
+      "pins": [
+       {
+        "start": 6,
+        "end": 16,
+        "token": "се́мьдесят",
+        "lemma": "семьдесят",
+        "feats": {
+         "case": "nomn",
+         "pos": "NUMR"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s120",
+      "text": "На́стя даёт де́ду пря́ник, и дед ест.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s121",
+      "text": "Де́ду и На́сте ве́село: им нра́вится пря́ник.",
+      "pins": [
+       {
+        "start": 24,
+        "end": 26,
+        "token": "им",
+        "lemma": "они",
+        "feats": {
+         "case": "datv",
+         "number": "plur",
+         "person": "3per",
+         "pos": "NPRO"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s122",
+      "text": "Ша́рик то́же хо́чет есть."
+     },
+     {
+      "id": "ru-mir-01-l08-s123",
+      "text": "— Ша́рик, тебе́ пря́ник нельзя́! — смеётся мать.",
+      "paragraph_start": true,
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l08-s124",
+      "text": "— А мне? Мне ну́жен кра́сный плато́к!",
+      "speaker": "char-marya"
+     },
+     {
+      "id": "ru-mir-01-l08-s125",
+      "text": "То́лько Ша́рику ску́чно: ему́ пря́ник нельзя́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s126",
+      "text": "На друго́й день, ве́чером, Ива́н идёт в шко́лу, к Ве́ре Никола́евне.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 3,
+        "end": 10,
+        "token": "друго́й",
+        "lemma": "другой",
+        "feats": {
+         "pos": "ADJF",
+         "case": "accs",
+         "number": "sing",
+         "gender": "masc",
+         "animacy": "inan"
+        }
+       },
+       {
+        "start": 17,
+        "end": 25,
+        "token": "ве́чером",
+        "lemma": "вечером",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s127",
+      "text": "Пода́рка у него́ нет."
+     },
+     {
+      "id": "ru-mir-01-l08-s128",
+      "text": "— Ве́ра Никола́евна, мне нужна́ кни́га, — говори́т он.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s129",
+      "text": "— Кака́я кни́га, Ива́н Петро́вич?",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l08-s130",
+      "text": "— Не зна́ю. На я́рмарке кни́ги, но я чита́ю ме́дленно.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s131",
+      "text": "Кака́я кни́га мне нужна́? Не зна́ю.",
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s132",
+      "text": "Ве́ра Никола́евна даёт ему́ кни́гу.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l08-s133",
+      "text": "— Вот а́збука. Здесь все бу́квы, от «А» до «Я».",
+      "paragraph_start": true,
+      "speaker": "char-vera",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "а́збука",
+        "gloss": "а́збука: кни́га, в ней все бу́квы",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-azbuka"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s134",
+      "text": "Вам на́до чита́ть, Ива́н Петро́вич: и у́тром, и ве́чером.",
+      "speaker": "char-vera",
+      "pins": [
+       {
+        "start": 38,
+        "end": 44,
+        "token": "у́тром",
+        "lemma": "утром",
+        "feats": {
+         "pos": "ADVB"
+        }
+       },
+       {
+        "start": 48,
+        "end": 56,
+        "token": "ве́чером",
+        "lemma": "вечером",
+        "feats": {
+         "pos": "ADVB"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s135",
+      "text": "— Э́то пода́рок?",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s136",
+      "text": "— Нет, э́то не пода́рок. Э́то кни́га шко́лы.",
+      "paragraph_start": true,
+      "speaker": "char-vera"
+     },
+     {
+      "id": "ru-mir-01-l08-s137",
+      "text": "— Спаси́бо, Ве́ра Никола́евна. Вы мне помога́ете.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l08-s138",
+      "text": "Но́чью Ива́н идёт домо́й по дере́вне.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 0,
+        "end": 6,
+        "token": "Но́чью",
+        "lemma": "ночью",
+        "feats": {
+         "pos": "ADVB"
+        }
+       },
+       {
+        "start": 25,
+        "end": 27,
+        "token": "по",
+        "lemma": "по",
+        "feats": {
+         "pos": "PREP"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-s139",
+      "text": "Хо́лодно."
+     },
+     {
+      "id": "ru-mir-01-l08-s140",
+      "text": "Но у Ива́на в руке́ а́збука — его́ кни́га."
+     },
+     {
+      "id": "ru-mir-01-l08-s141",
+      "text": "Он смо́трит в а́збуку и чита́ет ме́дленно: «А»…"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l08-x4-1",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "Same person, new verb: смо́трит на кого́? (accusative) → даёт кому́? (dative).",
+      "grammar_target_ids": [
+       "G08",
+       "G06"
+      ],
+      "obrazec": {
+       "rule": "кого́? сы́на → кому́? сы́ну",
+       "prompt": "Оте́ц смо́трит на сы́на. → Оте́ц даёт де́ньги ___.",
+       "answer": "сы́ну"
+      },
+      "items": [
+       {
+        "id": "x4-1-1",
+        "prompt": "Ива́н смо́трит на сестру́. → Ива́н покупа́ет до́ску ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сестре́"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s110"
+        ],
+        "common_wrong": [
+         {
+          "answer": "сестру́",
+          "hint": "покупа́ет кому́? → сестре́"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-2",
+        "prompt": "Пётр ви́дит Фёдора. → Пётр даёт де́ньги ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдору"
+        ],
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "Фёдора",
+          "hint": "даёт кому́? → Фёдору"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-3",
+        "prompt": "На́стя лю́бит де́да. → На́стя даёт пря́ник ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "де́ду"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s120"
+        ],
+        "common_wrong": [
+         {
+          "answer": "де́да",
+          "hint": "даёт кому́? → де́ду"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-4",
+        "prompt": "Ива́н ви́дит Ве́ру Никола́евну. → Ива́н говори́т ___ Никола́евне: «Мне нужна́ кни́га».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ве́ре"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "Ве́ру",
+          "hint": "говори́т кому́? → Ве́ре"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-5",
+        "prompt": "На́стя ждёт мать. → На́стя пока́зывает до́ску ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́тери"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s116"
+        ],
+        "common_wrong": [
+         {
+          "answer": "мать",
+          "hint": "пока́зывает кому́? мать → ма́тери"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-6",
+        "prompt": "Сын слу́шает отца́. → Сын помога́ет ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "отцу́"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s104"
+        ],
+        "common_wrong": [
+         {
+          "answer": "отца́",
+          "hint": "помога́ет кому́? → отцу́"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x4-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "нельзя́ / на́до / лет: the person is in the dative.",
+      "grammar_target_ids": [
+       "G08"
+      ],
+      "obrazec": {
+       "rule": "кому́? ло́шадь → ло́шади",
+       "prompt": "Кому́ нельзя́ без подко́вы? — ___ нельзя́ без подко́вы. (ло́шадь)",
+       "answer": "Ло́шади"
+      },
+      "items": [
+       {
+        "id": "x4-2-1",
+        "prompt": "Кому́ нельзя́ без о́труба? — ___ нельзя́ без о́труба. (Фёдор)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдору"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s099"
+        ]
+       },
+       {
+        "id": "x4-2-2",
+        "prompt": "Кому́ на́до жить в го́роде и ждать? Фёдору? — Да, ___ на́до жить в го́роде. (он)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ему́"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s099"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Его́",
+          "hint": "кому́? он → ему́"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-3",
+        "prompt": "Кому́ пря́ник нельзя́? — ___ пря́ник нельзя́. (Ша́рик)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Ша́рику"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s123"
+        ]
+       },
+       {
+        "id": "x4-2-4",
+        "prompt": "Кому́ ну́жен кра́сный плато́к? — Кра́сный плато́к ну́жен ___. (мать)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́тери"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s124"
+        ],
+        "common_wrong": [
+         {
+          "answer": "мать",
+          "hint": "кому́? мать → ма́тери"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-5",
+        "prompt": "Кому́ на́до чита́ть у́тром и ве́чером? — ___ на́до чита́ть, Ива́н Петро́вич. (вы)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Вам"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s134"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Вас",
+          "hint": "кому́? вы → вам"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-6",
+        "prompt": "Кому́ се́мьдесят лет? — ___ се́мьдесят лет. (дед)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Де́ду"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s118"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l08-x4-3",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Listen to the story sentence and type the missing word.",
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Ива́н и На́стя иду́т к ___.",
+       "answer": "теле́ге"
+      },
+      "items": [
+       {
+        "id": "x4-3-1",
+        "audio_segment_id": "ru-mir-01-l08-s104",
+        "prompt": "Сын помога́ет отцу́, а оте́ц — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сы́ну"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s104"
+        ]
+       },
+       {
+        "id": "x4-3-2",
+        "audio_segment_id": "ru-mir-01-l08-s098",
+        "prompt": "— А ___ нельзя́ без подко́вы, — говори́т Ива́н.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ло́шади"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s098"
+        ]
+       },
+       {
+        "id": "x4-3-3",
+        "audio_segment_id": "ru-mir-01-l08-s101",
+        "prompt": "Он берёт свои́ де́ньги и даёт их ___ сы́ну.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ста́ршему"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s101"
+        ]
+       },
+       {
+        "id": "x4-3-4",
+        "audio_segment_id": "ru-mir-01-l08-s116",
+        "prompt": "На́стя пока́зывает ___ но́вую до́ску.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ма́тери"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s116"
+        ]
+       },
+       {
+        "id": "x4-3-5",
+        "audio_segment_id": "ru-mir-01-l08-s119",
+        "prompt": "— Мне се́мьдесят лет, а пря́ник мне то́же ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "нра́вится"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s119"
+        ]
+       },
+       {
+        "id": "x4-3-6",
+        "audio_segment_id": "ru-mir-01-l08-s133",
+        "prompt": "— Вот ___. Здесь все бу́квы, от «А» до «Я».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "а́збука"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l08-s133"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "words_with_history": {
+  "title": "Слова́ с исто́рией",
+  "word": "нужда́",
+  "text": [
+   "Нужда́ — де́нег нет, а ну́жно всё: ло́шади — подко́ва, На́сте — доска́, Фёдору — о́труб.",
+   "Пётр говори́т: «Нужда́? На́до ждать». Ло́шадь хрома́ет и ждёт, и он ждёт.",
+   "Фёдор говори́т: «Нужда́? Так жить нельзя́. Мне ну́жен о́труб».",
+   "А Сила́нтий ду́мает: «У мужика́ нужда́ — мужи́к продаёт дёшево»."
+  ],
+  "proverb": "Нужда́ всему́ нау́чит.",
+  "lexeme_ids": [
+   "ru-nuzhda",
+   "ru-nuzhnyj",
+   "ru-nado"
+  ],
+  "note_en": "Нужда́ is need, want and poverty at once, the root of ну́жно. In 1913 a peasant household paid cash for little: salt, iron, kerchiefs, a horseshoe, taxes. Grain was sold at the autumn fair, when prices were lowest and the buyers knew it. The proverb: \"Need will teach you everything.\""
+ },
+ "grammar": {
+  "title": "Кому́? Кому́ что ну́жно?",
+  "rule": "кому́? — Петру́, кузнецу́, На́сте, Ве́ре, ло́шади, ма́тери · мне, тебе́, ему́, ей, вам, им · на́шему де́ду, твое́й ло́шади · На́сте нужна́ доска́, Фёдору нужны́ де́ньги",
+  "tables": [
+   {
+    "id": "komu-sushch",
+    "caption": "кто? → кому́? -у · -е · -и",
+    "header": [
+     "кто?",
+     "кому́?"
+    ],
+    "rows": [
+     [
+      "Пётр",
+      "Петру́"
+     ],
+     [
+      "кузне́ц",
+      "кузнецу́"
+     ],
+     [
+      "Фёдор",
+      "Фёдору"
+     ],
+     [
+      "сын",
+      "сы́ну"
+     ],
+     [
+      "дед",
+      "де́ду"
+     ],
+     [
+      "На́стя",
+      "На́сте"
+     ],
+     [
+      "Ве́ра",
+      "Ве́ре"
+     ],
+     [
+      "сестра́",
+      "сестре́"
+     ],
+     [
+      "ба́ба",
+      "ба́бе"
+     ],
+     [
+      "ло́шадь",
+      "ло́шади"
+     ],
+     [
+      "мать",
+      "ма́тери"
+     ]
+    ]
+   },
+   {
+    "id": "komu-mest",
+    "caption": "я → мне",
+    "header": [
+     "кто?",
+     "кому́?"
+    ],
+    "rows": [
+     [
+      "я",
+      "мне"
+     ],
+     [
+      "ты",
+      "тебе́"
+     ],
+     [
+      "он",
+      "ему́"
+     ],
+     [
+      "она́",
+      "ей"
+     ],
+     [
+      "вы",
+      "вам"
+     ],
+     [
+      "они́",
+      "им"
+     ],
+     [
+      "кто",
+      "кому́"
+     ]
+    ]
+   },
+   {
+    "id": "komu-prilag",
+    "caption": "наш дед → на́шему де́ду",
+    "header": [
+     "кто?",
+     "кому́?"
+    ],
+    "rows": [
+     [
+      "наш дед",
+      "на́шему де́ду"
+     ],
+     [
+      "ста́рший сын",
+      "ста́ршему сы́ну"
+     ],
+     [
+      "на́ша ло́шадь",
+      "на́шей ло́шади"
+     ],
+     [
+      "твоя́ ло́шадь",
+      "твое́й ло́шади"
+     ]
+    ]
+   },
+   {
+    "id": "nuzhen",
+    "caption": "ну́жен · нужна́ · ну́жно · нужны́",
+    "header": [
+     "что?",
+     "кому́ что ну́жно?"
+    ],
+    "rows": [
+     [
+      "учени́к (он)",
+      "Мне ну́жен тако́й учени́к."
+     ],
+     [
+      "подко́ва (она́)",
+      "Ло́шади нужна́ подко́ва."
+     ],
+     [
+      "что?",
+      "Что тебе́ ну́жно?"
+     ],
+     [
+      "де́ньги (они́)",
+      "Фёдору нужны́ де́ньги."
+     ]
+    ]
+   },
+   {
+    "id": "kogo-komu",
+    "caption": "кого́? ↔ кому́?",
+    "header": [
+     "кого́? что?",
+     "кому́?"
+    ],
+    "rows": [
+     [
+      "Кузне́ц смо́трит на Ива́на.",
+      "Ива́н помога́ет кузнецу́."
+     ],
+     [
+      "Оте́ц смо́трит на сы́на.",
+      "Он даёт де́ньги ста́ршему сы́ну."
+     ],
+     [
+      "Ива́н смо́трит на сестру́.",
+      "Ему́ ну́жен пода́рок сестре́."
+     ]
+    ]
+   },
+   {
+    "id": "let-kholodno",
+    "caption": "Ско́лько тебе́ лет? · Тебе́ хо́лодно?",
+    "header": [
+     "ско́лько лет?",
+     "как?"
+    ],
+    "rows": [
+     [
+      "Ему́ девятна́дцать лет.",
+      "Мне хо́лодно."
+     ],
+     [
+      "Ей двена́дцать лет.",
+      "На́сте ве́село."
+     ],
+     [
+      "Де́ду се́мьдесят лет.",
+      "Мне ску́чно."
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "ru-mir-01-l08-s006"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s010"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s032"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s041"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s048"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s049"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s062"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s060"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s098"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s101"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s104"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s116"
+   },
+   {
+    "segment_id": "ru-mir-01-l08-s134"
+   }
+  ],
+  "note_en": "The dative answers кому́? \"to or for whom?\": the person who receives (даёт На́сте), is helped (помога́ет отцу́), is shown or told something, or who feels, needs, may or must (мне хо́лодно, на́до, нельзя́). Endings: -у/-ю for masculines in a consonant, -й or -ь (Петру́); -е for most -а/-я nouns, Фе́дя too (Фе́де); -и for -ь feminines (ло́шади, ма́тери). Ну́жен/нужна́/ну́жно/нужны́ agrees with the thing needed. Age: Ему́ девятна́дцать лет. К + dative is \"towards\", по + dative \"along, around\"."
+ },
+ "pensa": {
+  "A": {
+   "id": "ru-mir-01-l08-pa",
+   "title": "Пе́нсум A — Фо́рмы",
+   "blocks": [
+    {
+     "obrazec": {
+      "prompt": "Ива́н помога́ет ___ (кузне́ц).",
+      "answer": "кузнецу́"
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Кузне́ц пока́зывает ___ но́вую подко́ву (Пётр).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Петру́"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Петра́",
+         "hint": "пока́зывает кому́? → Петру́"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Пётр даёт де́ньги ___ (Фёдор).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Фёдору"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Фёдора",
+         "hint": "даёт кому́? → Фёдору"
+        }
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "___ (На́стя) нра́вится пря́ник.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "На́сте"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "На́стя",
+         "hint": "кому́ нра́вится? → На́сте"
+        }
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "___ (ло́шадь) нужна́ подко́ва.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Ло́шади"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Ло́шадь",
+         "hint": "кому́ нужна́? → ло́шади"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "На́сте ___ доска́. (ну́жен)",
+      "answer": "нужна́"
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Фёдору ___ де́ньги. (ну́жен)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "нужны́"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "нужна́",
+         "hint": "де́ньги — они́: нужны́"
+        },
+        {
+         "answer": "ну́жен",
+         "hint": "де́ньги — они́: нужны́"
+        }
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Ма́тери ___ кра́сный плато́к. (ну́жен)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ну́жен"
+       ],
+       "first_letters": 2,
+       "common_wrong": [
+        {
+         "answer": "нужна́",
+         "hint": "плато́к — он: ну́жен"
+        }
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Что вам ___? (ну́жен)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ну́жно"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "ну́жен",
+         "hint": "что? → ну́жно"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "На́сте ве́село, а ___ ску́чно. (я)",
+      "answer": "мне"
+     },
+     "items": [
+      {
+       "id": "a8",
+       "prompt": "Де́ду се́мьдесят лет, а пря́ник ___ то́же нра́вится. (он)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ему́"
+       ],
+       "first_letters": 1,
+       "common_wrong": [
+        {
+         "answer": "его́",
+         "hint": "кому́? он → ему́"
+        }
+       ]
+      },
+      {
+       "id": "a9",
+       "prompt": "Кузне́ц смо́трит на ___ (Ива́н).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Ива́на"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Ива́ну",
+         "hint": "смо́трит на кого́? → Ива́на"
+        }
+       ],
+       "recall_of": "G06"
+      },
+      {
+       "id": "a10",
+       "prompt": "У Ива́на нет ___ (пода́рок) для Ве́ры Никола́евны.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "пода́рка"
+       ],
+       "first_letters": 4,
+       "common_wrong": [
+        {
+         "answer": "пода́рок",
+         "hint": "нет чего́? → пода́рка"
+        }
+       ],
+       "recall_of": "G03"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "ru-mir-01-l08-pb",
+   "title": "Пе́нсум B — Слова́",
+   "word_bank": [
+    "я́рмарка",
+    "теле́га",
+    "подко́ва",
+    "кузне́ц",
+    "пода́рок",
+    "пря́ник",
+    "плато́к",
+    "цена́",
+    "а́збука",
+    "до́рого",
+    "дёшево",
+    "ску́чно",
+    "ве́село"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "У це́ркви теле́ги, ло́шади и ла́вки: сего́дня в го́роде ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "я́рмарка"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b2",
+     "prompt": "Ло́шадь тя́нет ___, а на ней сидя́т мужики́.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "теле́гу"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b3",
+     "prompt": "Ло́шадь хрома́ет: ей нужна́ но́вая ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "подко́ва"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b4",
+     "prompt": "Подко́вы де́лает ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "кузне́ц"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b5",
+     "prompt": "Пря́ник — э́то ___ На́сте: Ива́н даёт, а она́ говори́т: «Спаси́бо!»",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "пода́рок"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b6",
+     "prompt": "На́стя ест ___, и ей о́чень нра́вится.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "пря́ник"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b7",
+     "prompt": "В це́ркви ___ на ма́ме, на Да́рье, на На́сте.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "плато́к",
+      "платки́"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b8",
+     "prompt": "У Ива́на то́лько рубль. Два рубля́ за кни́гу — э́то ___!",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "до́рого"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b9",
+     "prompt": "Рубль за мешо́к овса́ — э́то ___, говори́т Фёдор.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "дёшево"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b10",
+     "prompt": "В ___ все бу́квы, от «А» до «Я».",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "а́збуке"
+     ],
+     "first_letters": 3,
+     "common_wrong": [
+      {
+       "answer": "а́збука",
+       "hint": "где? → в а́збуке"
+      }
+     ]
+    }
+   ]
+  },
+  "C": {
+   "id": "ru-mir-01-l08-pc",
+   "title": "Пе́нсум C — Вопро́сы",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Кому́ что ну́жно? Что ну́жно ло́шади, На́сте и Фёдору?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ло́шади нужна́ подко́ва, На́сте нужна́ доска́, а Фёдору нужны́ де́ньги.",
+      "Ло́шади — подко́ва, На́сте — доска́, Фёдору — три рубля́."
+     ],
+     "rubric": "Three datives (ло́шади, На́сте, Фёдору) and нужна́ / нужны́ agreeing with the thing (подко́ва, доска́ — нужна́; де́ньги — нужны́).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-nuzhnyj",
+      "ru-podkova"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s006",
+      "ru-mir-01-l08-s011"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Что кузне́ц пока́зывает Петру́? Ско́лько сто́ят четы́ре подко́вы и рабо́та?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Он пока́зывает Петру́ но́вую подко́ву. Четы́ре подко́вы и рабо́та — два рубля́.",
+      "Кузне́ц пока́зывает ему́ но́вую подко́ву. Четы́ре подко́вы и рабо́та сто́ят два рубля́."
+     ],
+     "rubric": "пока́зывает Петру́ (dative) a new horseshoe; four shoes with the work cost два рубля́ (2 + genitive singular).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-pokazyvat",
+      "ru-kuznets"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s032",
+      "ru-mir-01-l08-s035"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Ско́лько лет Ива́ну? Что говори́т кузне́ц?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́ну девятна́дцать лет. Кузне́ц говори́т: «Мне ну́жен тако́й учени́к».",
+      "Ему́ девятна́дцать лет, и кузнецу́ ну́жен тако́й учени́к."
+     ],
+     "rubric": "Age with the dative (Ива́ну / ему́ девятна́дцать лет); the smith wants a pupil like him (мне ну́жен тако́й учени́к).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-devyatnadtsat",
+      "ru-god"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s043",
+      "ru-mir-01-l08-s046"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Что Ива́н покупа́ет На́сте? А что ну́жно Ве́ре Никола́евне?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Он покупа́ет На́сте пря́ник. Ве́ре Никола́евне нужны́ кни́ги, но кни́га — два рубля́.",
+      "На́сте — пря́ник. А Ве́ре Никола́евне нужны́ кни́ги, но э́то до́рого.",
+      "Ива́н покупа́ет На́сте пря́ник и до́ску. Ве́ре Никола́евне нужны́ кни́ги, но э́то до́рого."
+     ],
+     "rubric": "покупа́ет На́сте пря́ник, до́ску or both (dative На́сте); Vera needs books (ей нужны́ кни́ги), but a book is too dear (два рубля́, до́рого).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-pokupat",
+      "ru-pryanik",
+      "ru-nuzhnyj"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s060",
+      "ru-mir-01-l08-s074",
+      "ru-mir-01-l08-s113"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Почему́ Фёдор не продаёт овёс Сила́нтию?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Потому́ что Сила́нтий покупа́ет дёшево: рубль за мешо́к.",
+      "Потому́ что э́то не цена́. И Сила́нтий хо́чет и его́ зе́млю, как говоря́т."
+     ],
+     "rubric": "потому́ что + reason: Silanty buys cheap (рубль за мешо́к, дёшево); a fuller answer recalls the rumour that he wants Fyodor's land.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-ph-potomu-chto",
+      "ru-dyoshevo",
+      "ru-prodavat"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s083",
+      "ru-mir-01-l08-s087"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Кому́ Пётр даёт свои́ де́ньги? Что говори́т Фёдор?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Он даёт свои́ де́ньги Фёдору, ста́ршему сы́ну. Фёдор говори́т: «Спаси́бо, оте́ц. Мой овёс — твой».",
+      "Пётр даёт де́ньги Фёдору. Фёдор говори́т: «Спаси́бо, оте́ц. Мой овёс — твой»"
+     ],
+     "rubric": "даёт Фёдору / ста́ршему сы́ну (dative of noun and adjective); Fyodor thanks him and gives him his oats.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-davat",
+      "ru-otrub"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s101",
+      "ru-mir-01-l08-s107"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Что Ве́ра Никола́евна даёт Ива́ну? Э́то пода́рок?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Она́ даёт ему́ а́збуку. Э́то не пода́рок, э́то кни́га шко́лы.",
+      "Ве́ра Никола́евна даёт Ива́ну а́збуку, но э́то не пода́рок."
+     ],
+     "rubric": "даёт ему́ / Ива́ну а́збуку (dative + accusative); not a present but the school's book.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-azbuka",
+      "ru-podarok"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l08-s133",
+      "ru-mir-01-l08-s136"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "А ты? Что тебе́ ну́жно? Что тебе́ нра́вится?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Мне нужна́ но́вая кни́га. Мне нра́вится чай.",
+      "Мне нужны́ де́ньги, а нра́вятся мне кни́ги и пря́ники."
+     ],
+     "rubric": "Your own needs and likes: мне ну́жен / нужна́ / ну́жно / нужны́ (agreeing with the thing), мне нра́вится / нра́вятся.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-nuzhnyj",
+      "ru-nravitsya"
+     ]
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "ru-yarmarka",
+   "citation_form": "я́рмарка",
+   "part_of_speech": "noun",
+   "current_sense": "fair (market)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nuzhda",
+   "citation_form": "нужда́",
+   "part_of_speech": "noun",
+   "current_sense": "need, want, poverty",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nuzhnyj",
+   "citation_form": "ну́жный",
+   "part_of_speech": "adj",
+   "current_sense": "needed (ну́жен, нужна́, ну́жно, нужны́ + dative)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nado",
+   "citation_form": "на́до",
+   "part_of_speech": "adv",
+   "current_sense": "(it is) necessary; one must (+ dative)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nuzhno",
+   "citation_form": "ну́жно",
+   "part_of_speech": "adv",
+   "current_sense": "(it is) necessary; what is needed",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nelzya",
+   "citation_form": "нельзя́",
+   "part_of_speech": "adv",
+   "current_sense": "(it is) not allowed; one cannot",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nravitsya",
+   "citation_form": "нра́виться",
+   "part_of_speech": "verb",
+   "current_sense": "to please (мне нра́вится = I like)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-pokazyvat",
+   "citation_form": "пока́зывать",
+   "part_of_speech": "verb",
+   "current_sense": "to show",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-pomogat",
+   "citation_form": "помога́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to help (+ dative)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-prodavat",
+   "citation_form": "продава́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to sell",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-pokupat",
+   "citation_form": "покупа́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to buy",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-kupit",
+   "citation_form": "купи́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to buy (pf.; here only the infinitive: на́до купи́ть)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "pf"
+  },
+  {
+   "lexeme_id": "ru-prodat",
+   "citation_form": "прода́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to sell (pf.; here only the infinitive: хо́чет прода́ть)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "pf"
+  },
+  {
+   "lexeme_id": "ru-podkova",
+   "citation_form": "подко́ва",
+   "part_of_speech": "noun",
+   "current_sense": "horseshoe",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-kuznets",
+   "citation_form": "кузне́ц",
+   "part_of_speech": "noun",
+   "current_sense": "blacksmith",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-podarok",
+   "citation_form": "пода́рок",
+   "part_of_speech": "noun",
+   "current_sense": "present, gift",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pryanik",
+   "citation_form": "пря́ник",
+   "part_of_speech": "noun",
+   "current_sense": "gingerbread (a honey cake)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-platok",
+   "citation_form": "плато́к",
+   "part_of_speech": "noun",
+   "current_sense": "shawl, kerchief",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-tsena",
+   "citation_form": "цена́",
+   "part_of_speech": "noun",
+   "current_sense": "price",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-dorogo",
+   "citation_form": "до́рого",
+   "part_of_speech": "adv",
+   "current_sense": "expensive(ly), dear",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-dyoshevo",
+   "citation_form": "дёшево",
+   "part_of_speech": "adv",
+   "current_sense": "cheap(ly)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-k",
+   "citation_form": "к",
+   "part_of_speech": "prep",
+   "current_sense": "to, towards (a person or place; + dative)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-po",
+   "citation_form": "по",
+   "part_of_speech": "prep",
+   "current_sense": "along, around (+ dative)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-god",
+   "citation_form": "год",
+   "part_of_speech": "noun",
+   "current_sense": "year (лет = years, after numbers)",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-dvenadtsat",
+   "citation_form": "двена́дцать",
+   "part_of_speech": "num",
+   "current_sense": "twelve",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-devyatnadtsat",
+   "citation_form": "девятна́дцать",
+   "part_of_speech": "num",
+   "current_sense": "nineteen",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-semdesyat",
+   "citation_form": "се́мьдесят",
+   "part_of_speech": "num",
+   "current_sense": "seventy",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-veselo",
+   "citation_form": "ве́село",
+   "part_of_speech": "adv",
+   "current_sense": "(it is) fun, merry: мне ве́село",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-skuchno",
+   "citation_form": "ску́чно",
+   "part_of_speech": "adv",
+   "current_sense": "(it is) boring: мне ску́чно",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-kholodno",
+   "citation_form": "хо́лодно",
+   "part_of_speech": "adv",
+   "current_sense": "(it is) cold: мне хо́лодно",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-telega",
+   "citation_form": "теле́га",
+   "part_of_speech": "noun",
+   "current_sense": "cart",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pit",
+   "citation_form": "пить",
+   "part_of_speech": "verb",
+   "current_sense": "to drink",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-est-eat",
+   "citation_form": "есть",
+   "part_of_speech": "verb",
+   "current_sense": "to eat",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-azbuka",
+   "citation_form": "а́збука",
+   "part_of_speech": "noun",
+   "current_sense": "primer, ABC book",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-chaj-tea",
+   "citation_form": "чай",
+   "part_of_speech": "noun",
+   "current_sense": "tea",
+   "first_introduced_lesson": "ru-mir-01-l08",
+   "new": true
+  }
+ ],
+ "media": {
+  "status": "draft",
+  "cover": "ru-mir-01-l08-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 3,
+   "margin_diagram": 1,
+   "margin_gloss": 33
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-08/silero/manifest.json",
+    "default": true
+   }
+  ]
+ },
+ "completion": {
+  "button_label": "Гото́во"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "ru-mir-01",
+   "glava-08",
+   "chast-1"
+  ]
+ },
+ "metrics": {
+  "running_words": 869,
+  "sentences": 141,
+  "word_target": 800,
+  "word_window": [
+   720,
+   880
+  ]
+ }
+}
