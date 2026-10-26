@@ -405,12 +405,68 @@
     checkSlot: grcCheckSlot, checkResponse: grcCheckResponse, checkItem: grcCheckResponse
   };
 
+  // Generic (design §9): NFC, locale case-fold, apostrophes unified, punctuation stripped at
+  // word edges, whitespace collapsed. Nothing is folded for correctness; a course-level
+  // `answer_folds` map ({"ö": "o"}) plus combining-mark stripping only turn a near miss into
+  // the "accent" status (the reader shows accent_hint) instead of a plain wrong answer.
+  function genericNormalise(value, options = {}) {
+    const locale = options.locale || "und";
+    let text = String(value ?? "").normalize("NFC");
+    try { text = text.toLocaleLowerCase(locale); } catch { text = text.toLowerCase(); }
+    return text.replace(APOSTROPHES, "'")
+      .replace(/(^|\s)[\p{P}\p{S}]+(?=[\p{L}\p{M}\p{N}])/gu, "$1")
+      .replace(/(?<=[\p{L}\p{M}\p{N}])[\p{P}\p{S}]+(?=\s|$)/gu, "")
+      .replace(/(^|\s)[\p{P}\p{S}]+(?=\s|$)/gu, "$1")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function genericFold(value, folds) {
+    const entries = Object.entries(folds || {}).filter(([from]) => from).sort((a, b) => b[0].length - a[0].length);
+    let text = String(value ?? "");
+    for (const [from, to] of entries) text = text.split(from).join(String(to ?? ""));
+    return foldAccents(text);
+  }
+
+  function genericChecker(course) {
+    const locale = course?.language?.locale || course?.lang || course?.language?.code || "und";
+    const folds = course?.answer_folds || {};
+    const normaliseValue = (value) => genericNormalise(value, { locale });
+    const fold = (value) => genericFold(normaliseValue(value), folds);
+    function checkSlot(value, answers, item) {
+      const typed = normaliseValue(value);
+      if (!typed) return { status: "empty" };
+      const originals = asList(answers);
+      const expected = originals.map(normaliseValue);
+      if (expected.includes(typed)) return { status: "correct" };
+      for (const wrong of asList(item?.common_wrong)) {
+        const answer = typeof wrong === "string" ? wrong : wrong?.answer;
+        if (answer && normaliseValue(answer) === typed) return { status: "common_wrong", hint: wrong.hint || "" };
+      }
+      const folded = fold(typed);
+      const index = expected.findIndex((answer) => fold(answer) === folded);
+      if (index >= 0) return { status: "accent", answer: originals[index] };
+      return { status: "wrong" };
+    }
+    function checkResponse(item, values) {
+      const given = asList(values);
+      const slots = slotAnswers(item).map((answers, i) => checkSlot(given[i] ?? "", answers, item));
+      const failure = slots.find((slot) => slot.status !== "correct");
+      const selected = failure || slots[0];
+      const status = slots.every((slot) => slot.status === "empty") ? "empty" : selected.status === "empty" ? "wrong" : selected.status;
+      return { ...selected, status, slots, hint: selected.hint || "" };
+    }
+    return { normalise: normaliseValue, fold, checkSlot, checkResponse, checkItem: checkResponse };
+  }
+  const generic = { normalise: genericNormalise, fold: genericFold, forCourse: genericChecker };
+
   function answerChecker(course) {
-    const lang = course?.answer_checker || course?.capabilities?.answer_checker || course?.lang || course?.language?.code || "cy";
+    const lang = course?.answer_checker || course?.capabilities?.answer_checker || course?.plugin || course?.lang || course?.language?.code || "cy";
     if (lang === "ru") return ru;
     if (lang === "is") return is;
     if (lang === "grc") return grc;
     if (lang === "cy") return { normalise, checkResponse };
+    if (lang === "generic") return genericChecker(course);
     throw new Error(`Unsupported answer checker: ${lang}`);
   }
 
@@ -799,13 +855,54 @@
     return /[\t"\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
   }
 
+  // ---------------------------------------------------------------- reader glosses
+  // docs/reader-glosses.md: word tokens of story text and the forms.json lookup key.
+  // A leading apostrophe starts a clitic token (hi'n → hi, 'n); a trailing one closes an
+  // elided form (δ’). Hyphenated compounds stay one token.
+  const GLOSS_TOKEN = /['’]?[\p{L}\p{M}\p{N}]+(?:-[\p{L}\p{M}\p{N}]+)*(?:['’](?![\p{L}\p{N}]))?/gu;
+  function glossTokens(text) {
+    return [...String(text ?? "").matchAll(GLOSS_TOKEN)].map((m) => ({ text: m[0], start: m.index, end: m.index + m[0].length }));
+  }
+  // The popup for the token of a segment's source text at offset `at`. `segment` is the
+  // lesson layer's entry for this segment; it is ignored when stale (its text differs).
+  // Items are found by forward search, as scripts/check-glosses.mjs does, and cover a
+  // token when the token starts inside them. A one-token item overrides the forms entry;
+  // a longer one is a phrase, shown above the tapped word's own forms entry.
+  // → { word, start, end, phrase: item + {start, end} | null, main, alternatives } | null
+  function glossAt(text, at, forms, segment) {
+    const source = String(text ?? "");
+    const token = glossTokens(source).find((tok) => at >= tok.start && at < tok.end);
+    if (!token) return null;
+    let item = null;
+    if (segment && segment.text === source) {
+      let cursor = 0;
+      for (const entry of segment.items || []) {
+        const start = entry?.text ? source.indexOf(entry.text, cursor) : -1;
+        if (start < 0) continue;
+        const end = start + entry.text.length;
+        cursor = end;
+        if (token.start >= start && token.start < end) { item = { ...entry, start, end }; break; }
+      }
+    }
+    const phrase = item && glossTokens(item.text).length > 1 ? item : null;
+    const key = glossKey(token.text);
+    const analyses = forms && Object.prototype.hasOwnProperty.call(forms, key) && Array.isArray(forms[key]) ? forms[key] : [];
+    const main = item && !phrase ? item : analyses[0] || null;
+    const alternatives = item && !phrase ? [] : analyses.slice(1);
+    if (!phrase && !main) return null;
+    return { word: token.text, start: token.start, end: token.end, phrase, main, alternatives };
+  }
+  function glossKey(surface) {
+    return String(surface ?? "").normalize("NFC").replace(/\u0301/g, "").normalize("NFC").toLowerCase().replace(/[’‘ʼ]/g, "'");
+  }
+
   const api = {
     normalise, foldAccents, unmutateCandidates, sameUnderMutation, mutationDifference,
     accepted, promptParts, countBlanks, answerMode, slotAnswers, checkResponse, revealAnswers,
     containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossAt
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
@@ -814,7 +911,7 @@
       containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossAt
     };
   }
   root.IllustratedCore = api;
