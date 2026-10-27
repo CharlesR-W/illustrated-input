@@ -1,0 +1,4217 @@
+{
+ "schema_version": "0.2.0-proposed",
+ "id": "ru-mir-01-l09",
+ "course_id": "ru-mir-01",
+ "order": 9,
+ "title": "С кем ты?",
+ "part": 1,
+ "status": "draft",
+ "text_status": "draft",
+ "content_version": "0.1.0-loop-draft",
+ "provenance": {
+  "author": "loop writer (Claude, model-written), step write, chapter 9",
+  "model": "claude-opus-5-5",
+  "prompt": "loop/briefs/20261026T201948461-ru-mir-01-write-c09.md; content/ru/plan/chapters.json row 9; docs/russian-mir-design.md; docs/russian-mir-lesson-shape.md",
+  "review_required": "Codex cross-model review and a fluent Russian reader before the chapter leaves draft",
+  "notes": [
+   "Codex review 1026-134744-23840 (high, read-only) and verification 1026-135524-21741 (medium) applied in full: c6 rewritten (no board text, no receptive «Не дава́ть» asked for); long instrumental variants (-ою, мно́ю, не́ю) accepted in exact keys; c3 models match the story; grammar note and hints describe endings by declension pattern (ста́роста → ста́ростой) and narrow за + accusative to «for, on the side of»; s004 says who has a vote and the young men are «молоды́е хозя́ева»; glosses уча́сток, переде́л and го́ловы no longer false or list-only; Silanty «ду́мает свое́й голово́й»; the constable's arms sentence removed; x2-3 untagged from G09. The verification found no blocker or new error.",
+   "Attempt 20261026T201948461-ru-mir-01-write-c09. The previous rejection (c08's first attempt) was for out-of-scope edits to analysis/glava-01..07: the checker regenerates every chapter's sidecar once a new lexicon delta is present. This attempt copied content/ru/analysis/ aside before the first run and restored the other chapters' sidecars byte for byte after every checker run; only analysis/glava-09*.json is left.",
+   "Written from the frozen plan row in four sections: the сход in front of the church (who is there, who has a voice, the elder's chalk and the steward's pencil); Fyodor's request and the right of the household head; who is with whom and the vote by shouting; Ivan's answer and the silent supper. Problem: Fyodor, a married son, asks before the whole village to live «свое́й семьёй, свои́м дворо́м» and for his share as a plot in one place. Turn: «С кем ты, Ва́ня?» — «Я с семьёй». Consequence: «Мир не даёт… В э́том году́ — нет»; Fyodor goes to the uezd with his paper; father and son do not speak at supper.",
+   "Every stance has its best sentence (§4.5): Silanty on initiative («рабо́тает свое́й руко́й и свое́й голово́й… Си́льному мужику́ ну́жен свой уча́сток»), Pyotr on the safety net (the poor woman without a household head; «мир — си́ла»; the proverb), the old man on God's land («Говоря́т, что зако́н — от царя́. А земля́ — от Бо́га»), the steward on the law («Пра́во на о́труб есть у хозя́ина двора́… Зако́н оди́н»). The text never says Fyodor has a right to an отруб: the steward and Pyotr say the right is the household head's (writer note).",
+   "Grammar: present tense throughout; instrumental singular only (no «с молоды́ми / со старика́ми»: the old men and young men are «за Петра́ / за Фёдора», за + accusative from Глава 7, against за + instrumental «за столо́м, за отцо́м»); pronoun instrumentals со мной, с ней, с ни́ми, с на́ми, с ва́ми; рабо́тает прика́зчиком; пе́ред, за, под, над, ме́жду + instrumental. No past, no future, no finite perfective; perfective infinitives only купи́ть / прода́ть after нельзя́ (G08 chunk list). The repartition rule is told with numbers 2–3 + genitive singular («Сход — э́то три ча́сти. На переде́л ну́жно две ча́сти»), since треть and the genitive plural are not available.",
+   "Departures from the row, all for licensing or the prose: (1) the С кем? diagram uses singular instrumentals only (Фёдор — с Сила́нтием; Пётр — с ми́ром; Ива́н — с семьёй), the plural «с молоды́ми, со старика́ми» being G17; (2) the cover has the elder at a small table, not on a bench, because the text says «За столо́м сиди́т ста́роста» (the prose wins); (3) голова́ is used as 'head' (го́ловы, свое́й голово́й, голова́ в рука́х), not as 'household head', which would be a false sense — хозя́ин двора́ says that; (4) пра́во is the household head's right, not Fyodor's (writer note); (5) one extra margin diagram (ru-mir-01-l09-svg-gde: пе́ред це́рковью, за столо́м, под теле́гой, са́бля) so that the prepositions and the sabre resolve without the planned rasters.",
+   "Warnings left, with reasons: stress-lexicon по́лосы (s027) — nominative plural of полоса́ is по́лосы; the lexicon lists only the genitive singular полосы́; new-cluster s023, s087, s103 — every lexeme in those sentences was introduced and glossed earlier in the chapter (the cluster count is per chapter, not per first use); media-count 1 margin_vignette (Часть 1 expects 2–6) — the row plans one vignette (са́бля); the chapter has two drawn SVG diagrams instead, and no further opaque concrete noun needs a picture; stress-unverified — no RUAccent model on this host; stresses set by hand and checked in the language pass and by Codex.",
+   "Workbook: three exercises per section, six items each (12 exercises, 72 items); every item one gap with visible help (bracketed lemma or pronoun, first letters, an ending with its lemma, or two-word phrase choices); drilled forms appear in the story by the end of their section or in the margin paradigm. Pensum A 10 (2 recall: G07 в избе́, G04 бума́гу), B 10 with a 13-word bank, C 8 open questions in story order with one Почему́? (c3) and «А ты?» last.",
+   "Fix 20261027T001647428-ru-mir-01-fix (re-applying 20261027T000932689; review 20261026T225440778-ru-mir-01-review): F001 x1-3-2 distractor пе́ред це́рковью → на столе́ (everything in the scene is before the church); F002 s102 destination named «в уе́зд, в уе́здный го́род» (apposition keeps x4-1-3, x4-2-5 and a10 consistent); F003 ru-pattern-g09 instrumental endings by declension, not gender (ста́роста → ста́ростой).",
+   "Fix 20261027T045408358-ru-mir-01-fix (review 20261027T035157883-ru-mir-01-review): F001 s064 margin gloss «Бо́га ← Бог: о нём говори́т ба́тюшка» (reviewer's 8-word text shortened to the 6-word limit; all words known: ба́тюшка L06, говори́ть L05, о L07, он L02); F002 grammar.note_en and ru-pattern-g09 qualified to first-declension -а/-я nouns, neuter -мя differs (вре́мя → вре́менем). The added gloss lifts gloss-density to 4.1/100 (target 2–4): accepted, as the gloss was promised by learning_contract.incidental[3] and is required for resolvability."
+  ],
+  "review_questions": [
+   {
+    "segment_id": "ru-mir-01-l09-s024",
+    "quote": "— Мир! — говори́т он гро́мко.",
+    "question": "Fyodor addresses the assembly as «Мир!». Natural for 1913 (cf. «Мир честно́й!», «Правосла́вные!»), or should he say «Мужики́!»?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s020",
+    "quote": "— До́брое у́тро, мужики́! — говори́т он. — Весь мир здесь?",
+    "question": "Is «До́брое у́тро» plausible from a village elder in 1913, or too urban («Здоро́во, мужики́» is not available: здоро́во is not in the lexicon)?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s046",
+    "quote": "А двор — э́то де́ло о́бщины.",
+    "question": "History [?]: the steward says a new household (family division) is the commune's business — the сход approves family divisions (history §4). Is this phrasing accurate and natural?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s087",
+    "quote": "Сход — э́то три ча́сти. На переде́л ну́жно две ча́сти, а за Фёдора сего́дня — одна́.",
+    "question": "The two-thirds rule told with «три ча́сти / две ча́сти» (треть is not available). Clear and natural enough as the elder's folk arithmetic?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s013",
+    "quote": "У стола́ стои́т уря́дник Гаври́лов с са́блей.",
+    "question": "History [?]: a rural constable (уря́дник) of 1913 carried a ша́шка (and a revolver); the row has са́бля. Keep са́бля as the general word?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s061",
+    "quote": "— Пра́вда! — крича́т они́. — Хоро́шая земля́ — хоро́шему мужику́!",
+    "question": "Natural as a shouted slogan of the young men?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s073",
+    "quote": "У це́ркви не оди́н мир, а два.",
+    "question": "Narrator's image: the commune split in two. Clear, or does мир here read as 'world'?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s102",
+    "quote": "— Мир реша́ет кри́ком? Хорошо́. Я иду́ с ней в уе́зд, в уе́здный го́род: там есть зако́н.",
+    "question": "Present for an intention (future is G13); «в уе́зд» for the district land-settlement commission [? the 1913 procedure for a son after a refused division]. Natural?"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s046",
+    "quote": "о́бщины",
+    "question": "Stress о́бщина (plan row) vs общи́на: both are attested; which should the course use?"
+   }
+  ]
+ },
+ "learning_contract": {
+  "grammar_target_id": "G09",
+  "primary_new_grammar": {
+   "id": "G09",
+   "label": "Instrumental: с + instr (с кем? с чем?), instrument (пи́шет ме́лом), рабо́тать кем, ме́жду/за/под/над/пе́ред + instr; instrumental of adjectives, possessives, pronouns",
+   "minimum_demonstrations": 8
+  },
+  "recycled_grammar": [
+   "G01",
+   "G02",
+   "G03",
+   "G04",
+   "G05",
+   "G06",
+   "G07",
+   "G08"
+  ],
+  "incidental": [
+   {
+    "form": "Не дава́ть! — imperfective infinitive as a collective command (row incidental_allowed; INFN.ipf licensed since G04)",
+    "gloss_segment_id": "ru-mir-01-l09-s081"
+   },
+   {
+    "form": "С ми́ру по ни́тке — го́лому руба́шка — the row's proverb, quotation segment; ми́ру (partitive genitive after с 'from'), ни́тке, го́лому, руба́шка glossed with one paraphrase of the whole proverb, never tested",
+    "gloss_segment_id": "ru-mir-01-l09-s041"
+   },
+   {
+    "form": "Говори́, Фёдор — imperative chunk (G05 receptive list)",
+    "gloss_segment_id": "ru-mir-01-l09-s022"
+   },
+   {
+    "form": "Бо́га — the name Бог (course.json names_other) in the genitive after от",
+    "gloss_segment_id": "ru-mir-01-l09-s064"
+   }
+  ],
+  "new_lexeme_ids": [
+   "ru-skhod",
+   "ru-mir-commune",
+   "ru-obshchina",
+   "ru-starosta",
+   "ru-uryadnik",
+   "ru-s",
+   "ru-mezhdu",
+   "ru-pod",
+   "ru-nad",
+   "ru-pered",
+   "ru-protiv",
+   "ru-krik",
+   "ru-krichat",
+   "ru-reshat",
+   "ru-golos",
+   "ru-vmeste",
+   "ru-peredel",
+   "ru-karandash",
+   "ru-bumaga",
+   "ru-pravo",
+   "ru-sablya",
+   "ru-silnyj",
+   "ru-golova",
+   "ru-prikazchik",
+   "ru-uchastok",
+   "ru-khoroshij",
+   "ru-chelovek",
+   "ru-sila",
+   "ru-chast",
+   "ru-vopros",
+   "ru-starik",
+   "ru-plokhoj",
+   "ru-dobryj",
+   "ru-obshchij",
+   "ru-vremya"
+  ],
+  "recycle_lexeme_ids": [
+   "ru-otrub",
+   "ru-zakon",
+   "ru-polosa",
+   "ru-zemlya",
+   "ru-otets",
+   "ru-syn",
+   "ru-semya",
+   "ru-muzhik",
+   "ru-bogatyj",
+   "ru-bednyj",
+   "ru-ph-govoryat-chto",
+   "ru-pravda",
+   "ru-kto",
+   "ru-u",
+   "ru-net",
+   "ru-khotet",
+   "ru-moch",
+   "ru-nuzhno",
+   "ru-nado",
+   "ru-nelzya",
+   "ru-mel",
+   "ru-ruka",
+   "ru-za"
+  ],
+  "introductions": [
+   {
+    "lexeme_id": "ru-skhod",
+    "how": "gloss(define)+cover picture+context",
+    "segment_id": "ru-mir-01-l09-s003"
+   },
+   {
+    "lexeme_id": "ru-mir-commune",
+    "how": "gloss(define)+Слова с историей",
+    "segment_id": "ru-mir-01-l09-s020"
+   },
+   {
+    "lexeme_id": "ru-obshchina",
+    "how": "gloss(paraphrase: о́бщина = мир)",
+    "segment_id": "ru-mir-01-l09-s046"
+   },
+   {
+    "lexeme_id": "ru-starosta",
+    "how": "gloss(define)+cover picture",
+    "segment_id": "ru-mir-01-l09-s011"
+   },
+   {
+    "lexeme_id": "ru-uryadnik",
+    "how": "gloss(define)+scene",
+    "segment_id": "ru-mir-01-l09-s013"
+   },
+   {
+    "lexeme_id": "ru-s",
+    "how": "gloss(example)+svg diagram (С кем?)",
+    "segment_id": "ru-mir-01-l09-s006"
+   },
+   {
+    "lexeme_id": "ru-mezhdu",
+    "how": "gloss(example: Фёдор — уря́дник — Пётр)+scene",
+    "segment_id": "ru-mir-01-l09-s074"
+   },
+   {
+    "lexeme_id": "ru-pod",
+    "how": "svg diagram label (под теле́гой); again with над ↔ под",
+    "segment_id": "ru-mir-01-l09-s018"
+   },
+   {
+    "lexeme_id": "ru-nad",
+    "how": "gloss(antonym ↔ под)",
+    "segment_id": "ru-mir-01-l09-s052"
+   },
+   {
+    "lexeme_id": "ru-pered",
+    "how": "svg diagram (пе́ред це́рковью)+gloss(example)",
+    "segment_id": "ru-mir-01-l09-s002"
+   },
+   {
+    "lexeme_id": "ru-protiv",
+    "how": "gloss(antonym ↔ за)",
+    "segment_id": "ru-mir-01-l09-s035"
+   },
+   {
+    "lexeme_id": "ru-krik",
+    "how": "context (крича́ть glossed in the previous sentence)",
+    "segment_id": "ru-mir-01-l09-s052"
+   },
+   {
+    "lexeme_id": "ru-krichat",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s051"
+   },
+   {
+    "lexeme_id": "ru-reshat",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s021"
+   },
+   {
+    "lexeme_id": "ru-golos",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s004"
+   },
+   {
+    "lexeme_id": "ru-vmeste",
+    "how": "gloss(example)",
+    "segment_id": "ru-mir-01-l09-s066"
+   },
+   {
+    "lexeme_id": "ru-peredel",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s067"
+   },
+   {
+    "lexeme_id": "ru-karandash",
+    "how": "gloss(example: contrast with мел)",
+    "segment_id": "ru-mir-01-l09-s016"
+   },
+   {
+    "lexeme_id": "ru-bumaga",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s007"
+   },
+   {
+    "lexeme_id": "ru-pravo",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s045"
+   },
+   {
+    "lexeme_id": "ru-sablya",
+    "how": "svg diagram label+vignette",
+    "segment_id": "ru-mir-01-l09-s002"
+   },
+   {
+    "lexeme_id": "ru-silnyj",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s029"
+   },
+   {
+    "lexeme_id": "ru-golova",
+    "how": "gloss(example: голова́, ру́ки, но́ги)",
+    "segment_id": "ru-mir-01-l09-s009"
+   },
+   {
+    "lexeme_id": "ru-prikazchik",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s015"
+   },
+   {
+    "lexeme_id": "ru-uchastok",
+    "how": "gloss(paraphrase = о́труб)+context",
+    "segment_id": "ru-mir-01-l09-s028"
+   },
+   {
+    "lexeme_id": "ru-khoroshij",
+    "how": "context (хорошо́ is known; contrast хоро́шая ↔ плохи́е in one sentence)",
+    "segment_id": "ru-mir-01-l09-s027"
+   },
+   {
+    "lexeme_id": "ru-chelovek",
+    "how": "gloss(form: лю́ди ← челове́к)+example",
+    "segment_id": "ru-mir-01-l09-s001"
+   },
+   {
+    "lexeme_id": "ru-sila",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s040"
+   },
+   {
+    "lexeme_id": "ru-chast",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s026"
+   },
+   {
+    "lexeme_id": "ru-vopros",
+    "how": "gloss(example)",
+    "segment_id": "ru-mir-01-l09-s012"
+   },
+   {
+    "lexeme_id": "ru-starik",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s062"
+   },
+   {
+    "lexeme_id": "ru-plokhoj",
+    "how": "context (contrast: Земля́ у нас хоро́шая, а по́лосы плохи́е)",
+    "segment_id": "ru-mir-01-l09-s027"
+   },
+   {
+    "lexeme_id": "ru-dobryj",
+    "how": "gloss(paraphrase: До́брое у́тро = Здра́вствуйте)",
+    "segment_id": "ru-mir-01-l09-s020"
+   },
+   {
+    "lexeme_id": "ru-obshchij",
+    "how": "gloss(define)",
+    "segment_id": "ru-mir-01-l09-s036"
+   },
+   {
+    "lexeme_id": "ru-vremya",
+    "how": "gloss(example)",
+    "segment_id": "ru-mir-01-l09-s049"
+   }
+  ],
+  "swaps": []
+ },
+ "story": {
+  "cover": {
+   "ref": "ru-mir-01-l09-cover",
+   "src": "media/images/ru-mir-01-l09-cover.webp",
+   "status": "draft",
+   "presentation": "inline_scene",
+   "alt": "The village assembly in front of the wooden church: bearded household heads stand in a ring; the elder sits at a small table with a board and chalk, the constable with his sabre stands beside him, Fyodor holds up a paper, Ivan stands behind his father.",
+   "art_brief": "Берёзовка, Ryazan province, a Sunday in late November 1913 O.S., late morning just after mass, cold grey light, a thin first snow on the ground, bare birches. Background: the wooden church with one onion dome and its separate small bell tower; its door open, women and children walking away home on the left. Middle: about twenty bearded peasant household heads in sheepskin coats and caps standing in a loose ring in front of the church. In the centre a small plank table: behind it sits Starosta Egor (about 60, lean, long grey beard, bald crown, brown homespun coat, a small round brass elder's badge on a chain on his chest) with a dark slate board on the table and a piece of chalk in his hand. Beside the table stands Uryadnik Gavrilov (about 45, clean-shaven but for a moustache, dark rural-police uniform coat with a shoulder belt, peaked cap, a sabre in a scabbard at his left hip, his hand resting on its hilt). Opposite the table Fyodor (27, broad, short dark-brown beard, blue-grey shirt under a short sheepskin coat) holds up a folded paper. To one side Orlov's steward (about 40, town clothes: dark cloth coat, waistcoat, peaked cap, small beard) holds papers and a pencil. At the back of the ring Pyotr (about 55, grey-brown square beard, sheepskin coat) stands with Ivan (19, straw-fair hair, beardless, cap in hand) half hidden behind him. Silanty (about 50, trimmed black-and-grey beard, dark waistcoat, watch chain) stands near Fyodor. Under a cart at the right edge lies Sharik, the grey-and-white shaggy dog. No text in the image.",
+   "covers_lexeme_ids": [
+    "ru-skhod",
+    "ru-starosta",
+    "ru-uryadnik"
+   ],
+   "width": 1600,
+   "height": 1073
+  },
+  "sections": [
+   {
+    "id": "ru-mir-01-l09-sec1",
+    "title": "Пе́ред це́рковью",
+    "segments": [
+     {
+      "id": "ru-mir-01-l09-s001",
+      "text": "У́тро, хо́лодно, и из це́ркви иду́т лю́ди: мужики́, ба́бы, де́ти.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "лю́ди",
+        "gloss": "лю́ди ← челове́к: мужи́к — челове́к, ба́ба — челове́к",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-chelovek"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s002",
+      "text": "Ба́бы и де́ти иду́т домо́й, а мужики́ стоя́т пе́ред це́рковью.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "пе́ред це́рковью",
+        "gloss": "пе́ред це́рковью: у две́ри це́ркви",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-pered"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l09-svg-gde",
+        "src": "media/diagrams/ru-mir-01-l09-svg-gde.svg",
+        "status": "draft",
+        "alt": "Diagram of the assembly place: the wooden church; in front of it a table with the elder sitting behind it; the constable beside it with a sabre; a cart with the dog lying under it. Labels: пе́ред це́рковью, за столо́м, са́бля, под теле́гой.",
+        "covers_lexeme_ids": [
+         "ru-pered",
+         "ru-pod",
+         "ru-sablya"
+        ],
+        "width": 300,
+        "height": 280
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s003",
+      "text": "Сего́дня здесь сход.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "сход",
+        "gloss": "сход: все хозя́ева дере́вни",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-skhod"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s004",
+      "text": "Но го́лос на схо́де есть то́лько у хозя́ина двора́: оте́ц говори́т, а сын слу́шает.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "го́лос",
+        "gloss": "го́лос: хозя́ин говори́т «да» и́ли «нет»",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-golos"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s005",
+      "text": "Пётр Соколо́в — хозя́ин двора́, и у него́ есть го́лос.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 5,
+        "end": 13,
+        "token": "Соколо́в",
+        "lemma": "соколов",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s006",
+      "text": "Фёдор — не хозя́ин: он сын и живёт с отцо́м.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "с отцо́м",
+        "gloss": "живёт с отцо́м: в одно́й избе́",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-s"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s007",
+      "text": "Но сего́дня у Фёдора в руке́ бума́га.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "бума́га",
+        "gloss": "бума́га: на ней пи́шут",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-bumaga"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s008",
+      "text": "А Ива́н? У Ива́на нет го́лоса.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s009",
+      "text": "Он стои́т за отцо́м и ви́дит то́лько го́ловы.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "го́ловы",
+        "gloss": "го́ловы ← голова́: оди́н челове́к — одна́ голова́",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-golova"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s010",
+      "text": "Пе́ред це́рковью стои́т стол.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s011",
+      "text": "За столо́м сиди́т ста́роста Его́р.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ста́роста",
+        "gloss": "ста́роста: он спра́шивает, а сход отвеча́ет",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-starosta"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s012",
+      "text": "У него́ доска́ и мел, и он пи́шет ме́лом на доске́: «Вопро́с о земле́».",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ме́лом",
+        "gloss": "ме́лом ← мел: мел в руке́",
+        "gloss_kind": "form",
+        "covers_lexeme_ids": [
+         "ru-mel"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Вопро́с",
+        "gloss": "вопро́с: «Кто? Что? Почему́?»",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-vopros"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s013",
+      "text": "У стола́ стои́т уря́дник Гаври́лов с са́блей.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "уря́дник",
+        "gloss": "уря́дник: его́ де́ло — зако́н в дере́вне",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-uryadnik"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "margin_vignette",
+        "ref": "ru-mir-01-l09-img-sablya",
+        "label": "са́бля",
+        "src": "media/vignettes/ru-mir-01-l09-img-sablya.svg",
+        "alt": "A curved sabre in its scabbard, hanging from a belt.",
+        "status": "draft",
+        "art_brief": "One Russian rural-police sabre of 1913 (a шашка-type sabre without a guard) in a dark leather scabbard with brass fittings, hanging diagonally from a narrow shoulder belt; slightly curved blade, wooden grip, a small cord tassel. Ink outline with watercolour wash, transparent background, no text.",
+        "covers_lexeme_ids": [
+         "ru-sablya"
+        ],
+        "width": 240,
+        "height": 240,
+        "anchor_text": "са́блей"
+       }
+      ],
+      "pins": [
+       {
+        "start": 25,
+        "end": 34,
+        "token": "Гаври́лов",
+        "lemma": "гаврилов",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s014",
+      "text": "Он стои́т ти́хо, и рука́ у него́ на са́бле."
+     },
+     {
+      "id": "ru-mir-01-l09-s015",
+      "text": "А вот челове́к Орло́ва, прика́зчик: он рабо́тает прика́зчиком в уса́дьбе.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "прика́зчик",
+        "gloss": "прика́зчик: он рабо́тает у поме́щика",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-prikazchik"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 6,
+        "end": 14,
+        "token": "челове́к",
+        "lemma": "человек",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s016",
+      "text": "У него́ в руке́ бума́ги и каранда́ш.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "каранда́ш",
+        "gloss": "каранда́ш: им пи́шут на бума́ге",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-karandash"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s017",
+      "text": "Ста́роста пи́шет ме́лом, а прика́зчик — карандашо́м."
+     },
+     {
+      "id": "ru-mir-01-l09-s018",
+      "text": "А Ша́рик то́же здесь: он лежи́т под теле́гой.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s019",
+      "text": "Его́р смо́трит на сход.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s020",
+      "text": "— До́брое у́тро, мужики́! — говори́т он. — Весь мир здесь?",
+      "paragraph_start": true,
+      "speaker": "char-egor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "До́брое у́тро",
+        "gloss": "До́брое у́тро! = Здра́вствуйте! (у́тром)",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-dobryj"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "мир",
+        "gloss": "мир: вся дере́вня, все хозя́ева",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-mir-commune"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 48,
+        "end": 51,
+        "token": "мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s021",
+      "text": "Вопро́с у нас оди́н, и мир его́ реша́ет.",
+      "speaker": "char-egor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "реша́ет",
+        "gloss": "реша́ет: говори́т «да» и́ли «нет»",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-reshat"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 23,
+        "end": 26,
+        "token": "мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s022",
+      "text": "Говори́, Фёдор.",
+      "speaker": "char-egor"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l09-x1-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "с кем? с чем? — instrumental: стол-type nouns -ом/-ем/-ём; -а/-я nouns -ой/-ей/-ёй.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "с кем? оте́ц → с отцо́м",
+       "prompt": "Фёдор живёт с ___ (оте́ц).",
+       "answer": "отцо́м"
+      },
+      "items": [
+       {
+        "id": "x1-1-1",
+        "prompt": "Уря́дник стои́т с ___ (са́бля).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "са́блей",
+         "са́блею"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s013"
+        ],
+        "common_wrong": [
+         {
+          "answer": "са́бля",
+          "hint": "с чем? → са́блей"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-2",
+        "prompt": "Пётр живёт с ___ (сын).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "сы́ном"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "сы́на",
+          "hint": "с кем? → сы́ном"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-3",
+        "prompt": "Ива́н живёт с ___ (брат).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "бра́том"
+        ],
+        "first_letters": 3,
+        "common_wrong": [
+         {
+          "answer": "бра́та",
+          "hint": "с кем? → бра́том"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-4",
+        "prompt": "У стола́ стои́т прика́зчик с ___ (каранда́ш).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "карандашо́м"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s016"
+        ]
+       },
+       {
+        "id": "x1-1-5",
+        "prompt": "Ста́роста сиди́т с ___ (доска́) и ме́лом.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "доско́й",
+         "доско́ю"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s012"
+        ],
+        "common_wrong": [
+         {
+          "answer": "доску́",
+          "hint": "с чем? → доско́й"
+         }
+        ]
+       },
+       {
+        "id": "x1-1-6",
+        "prompt": "Фёдор стои́т с ___ (бума́га) в руке́.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "бума́гой",
+         "бума́гою"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s007"
+        ],
+        "common_wrong": [
+         {
+          "answer": "бума́гу",
+          "hint": "с чем? → бума́гой"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x1-2",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "Instrumental endings: стол → столо́м, теле́га → теле́гой, са́бля → са́блей, це́рковь → це́рковью.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "стол → за столо́м",
+       "prompt": "Ста́роста сиди́т за стол___.",
+       "answer": "о́м"
+      },
+      "items": [
+       {
+        "id": "x1-2-1",
+        "prompt": "Мужики́ стоя́т пе́ред це́рков___. (це́рковь)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ью"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s002"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ей",
+          "hint": "це́рковь → це́рковью"
+         }
+        ]
+       },
+       {
+        "id": "x1-2-2",
+        "prompt": "Ша́рик лежи́т под теле́г___. (теле́га)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ой",
+         "ою"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s018"
+        ]
+       },
+       {
+        "id": "x1-2-3",
+        "prompt": "Он рабо́тает прика́зчик___ в уса́дьбе. (прика́зчик)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ом"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s015"
+        ]
+       },
+       {
+        "id": "x1-2-4",
+        "prompt": "Ива́н стои́т за отц___. (оте́ц)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́м"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s009"
+        ]
+       },
+       {
+        "id": "x1-2-5",
+        "prompt": "Ста́роста пи́шет мел___ на доске́. (мел)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ом"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s012"
+        ]
+       },
+       {
+        "id": "x1-2-6",
+        "prompt": "Уря́дник Гаври́лов стои́т с са́бл___. (са́бля)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ей",
+         "ею"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s013"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ой",
+          "hint": "са́бля → са́блей (как семья́ → семьёй)"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x1-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "Где стоя́т мужики́? → пе́ред це́рковью",
+       "prompt": "Мужики́ стоя́т ___.",
+       "answer": "пе́ред це́рковью"
+      },
+      "items": [
+       {
+        "id": "x1-3-1",
+        "prompt": "Ста́роста Его́р сиди́т ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "за столо́м"
+        ],
+        "choices": [
+         "за столо́м",
+         "под теле́гой",
+         "за отцо́м"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s011"
+        ]
+       },
+       {
+        "id": "x1-3-2",
+        "prompt": "Ша́рик лежи́т ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "под теле́гой"
+        ],
+        "choices": [
+         "под теле́гой",
+         "за столо́м",
+         "на столе́"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s018"
+        ]
+       },
+       {
+        "id": "x1-3-3",
+        "prompt": "Ива́н стои́т ___ и ви́дит то́лько го́ловы.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "за отцо́м"
+        ],
+        "choices": [
+         "за отцо́м",
+         "за столо́м",
+         "с са́блей"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s009"
+        ]
+       },
+       {
+        "id": "x1-3-4",
+        "prompt": "У стола́ стои́т уря́дник ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "с са́блей"
+        ],
+        "choices": [
+         "с са́блей",
+         "с бума́гой",
+         "с доско́й"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s013"
+        ]
+       },
+       {
+        "id": "x1-3-5",
+        "prompt": "Ста́роста пи́шет ме́лом, а прика́зчик ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "пи́шет карандашо́м"
+        ],
+        "choices": [
+         "пи́шет карандашо́м",
+         "сиди́т за столо́м",
+         "стои́т с са́блей"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s017"
+        ]
+       },
+       {
+        "id": "x1-3-6",
+        "prompt": "На схо́де у Петра́ ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "есть го́лос"
+        ],
+        "choices": [
+         "есть го́лос",
+         "нет го́лоса",
+         "есть са́бля"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s005"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l09-sec2",
+    "title": "Пра́во хозя́ина",
+    "segments": [
+     {
+      "id": "ru-mir-01-l09-s023",
+      "text": "Фёдор стои́т пе́ред схо́дом с бума́гой в руке́.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s024",
+      "text": "— Мир! — говори́т он гро́мко. — У меня́ семья́: жена́ и два ребёнка.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s025",
+      "text": "Я хочу́ жить свое́й семьёй, свои́м дворо́м.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "свои́м дворо́м",
+        "gloss": "свои́м дворо́м: не с отцо́м",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-s"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 28,
+        "end": 34,
+        "token": "свои́м",
+        "lemma": "свой",
+        "feats": {
+         "case": "ablt",
+         "number": "sing",
+         "pos": "ADJF"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s026",
+      "text": "И мне нужна́ моя́ часть земли́.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "часть",
+        "gloss": "часть земли́: не вся земля́",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-chast"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s027",
+      "text": "Земля́ у нас хоро́шая, а по́лосы плохи́е: одна́ у дере́вни, одна́ у реки́, одна́ у ле́са.",
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l09-s028",
+      "text": "Мне ну́жен уча́сток — вся моя́ земля́ в одно́м ме́сте.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "уча́сток",
+        "gloss": "уча́сток: часть земли́",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-uchastok"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 22,
+        "end": 25,
+        "token": "вся",
+        "lemma": "весь",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "ADJF"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s029",
+      "text": "Я си́льный: я могу́ рабо́тать оди́н.",
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "си́льный",
+        "gloss": "си́льный: тя́нет соху́, как ло́шадь",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-silnyj"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s030",
+      "text": "Мужики́ слу́шают.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s031",
+      "text": "Сила́нтий смо́трит на Фёдора: ему́ э́то нра́вится."
+     },
+     {
+      "id": "ru-mir-01-l09-s032",
+      "text": "Ста́роста пи́шет ме́лом на доске́: «Фёдор Соколо́в — уча́сток».",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 42,
+        "end": 50,
+        "token": "Соколо́в",
+        "lemma": "соколов",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s033",
+      "text": "— Пётр Матве́евич, ты хозя́ин двора́, — говори́т он. — Что ты говори́шь?",
+      "paragraph_start": true,
+      "speaker": "char-egor"
+     },
+     {
+      "id": "ru-mir-01-l09-s034",
+      "text": "Пётр смо́трит на сы́на.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s035",
+      "text": "— Я про́тив, — говори́т он.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "про́тив",
+        "gloss": "про́тив ↔ за",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-protiv"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s036",
+      "text": "— Земля́ у нас о́бщая.",
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "о́бщая",
+        "gloss": "о́бщая: и моя́, и твоя́",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-obshchij"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s037",
+      "text": "Вот бе́дная ба́ба: хозя́ина у неё нет, а де́ти есть.",
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l09-s038",
+      "text": "Кто ей помога́ет? Мир.",
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 18,
+        "end": 21,
+        "token": "Мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s039",
+      "text": "Мир до́брый: он даёт ей зе́млю и помога́ет паха́ть.",
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 0,
+        "end": 3,
+        "token": "Мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s040",
+      "text": "Оди́н челове́к — то́лько оди́н, а мир — си́ла.",
+      "speaker": "char-pyotr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "си́ла",
+        "gloss": "си́ла: мир мо́жет всё",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-sila"
+        ]
+       }
+      ],
+      "pins": [
+       {
+        "start": 34,
+        "end": 37,
+        "token": "мир",
+        "lexeme_id": "ru-mir-commune"
+       },
+       {
+        "start": 6,
+        "end": 14,
+        "token": "челове́к",
+        "lemma": "человек",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s041",
+      "text": "С ми́ру по ни́тке — го́лому руба́шка.",
+      "speaker": "char-pyotr",
+      "quotation": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "С ми́ру по ни́тке — го́лому руба́шка",
+        "gloss": "все даю́т — бе́дному хорошо́",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": []
+       }
+      ],
+      "pins": [
+       {
+        "start": 2,
+        "end": 7,
+        "token": "ми́ру",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s042",
+      "text": "— А зако́н? — говори́т Фёдор. — Зако́н — со мной!",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "со мной",
+        "gloss": "я → со мной, он → с ним",
+        "gloss_kind": "paradigm",
+        "covers_lexeme_ids": [
+         "ru-s"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s043",
+      "text": "Тут говори́т прика́зчик.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s044",
+      "text": "— Зако́н, Фёдор Петро́вич, говори́т о хозя́ине.",
+      "paragraph_start": true,
+      "speaker": "char-prikazchik"
+     },
+     {
+      "id": "ru-mir-01-l09-s045",
+      "text": "Пра́во на о́труб есть у хозя́ина двора́.",
+      "speaker": "char-prikazchik",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Пра́во",
+        "gloss": "пра́во: зако́н говори́т «мо́жно»",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-pravo"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s046",
+      "text": "А двор — э́то де́ло о́бщины.",
+      "speaker": "char-prikazchik",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "о́бщины",
+        "gloss": "о́бщина = мир (так говори́т прика́зчик)",
+        "gloss_kind": "paraphrase",
+        "covers_lexeme_ids": [
+         "ru-obshchina"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s047",
+      "text": "— Пра́во у хозя́ина, — говори́т Пётр. — А хозя́ин — я.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr"
+     },
+     {
+      "id": "ru-mir-01-l09-s048",
+      "text": "Ты не плохо́й сын, Фёдор. Но земля́ не моя́ и не твоя́: она́ ми́ра.",
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 61,
+        "end": 66,
+        "token": "ми́ра",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s049",
+      "text": "— А моё пра́во, оте́ц? Мне на́до ждать? А вре́мя идёт!",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "вре́мя",
+        "gloss": "вре́мя: у́тро, день, ве́чер, ночь…",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-vremya"
+        ]
+       }
+      ]
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l09-x2-1",
+      "type": "okonchaniya",
+      "title": "Оконча́ния",
+      "instruction": "Допиши́ оконча́ние.",
+      "hint_en": "свой in the instrumental: свои́м (m.), свое́й (f.); nouns -ом, -ой, -ёй.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "своя́ семья́ → свое́й семьёй",
+       "prompt": "Фёдор хо́чет жить сво___ семьёй.",
+       "answer": "е́й"
+      },
+      "items": [
+       {
+        "id": "x2-1-1",
+        "prompt": "Фёдор хо́чет жить сво___ дворо́м. (свой)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "и́м"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s025"
+        ],
+        "common_wrong": [
+         {
+          "answer": "е́й",
+          "hint": "свой двор (м.) → свои́м дворо́м"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-2",
+        "prompt": "Фёдор хо́чет жить свое́й семь___. (семья́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ёй",
+         "ёю"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s025"
+        ],
+        "common_wrong": [
+         {
+          "answer": "ей",
+          "hint": "семья́ → семьёй: с ё"
+         }
+        ]
+       },
+       {
+        "id": "x2-1-3",
+        "prompt": "Фёдор стои́т пе́ред сход___. (сход)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ом"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s023"
+        ]
+       },
+       {
+        "id": "x2-1-4",
+        "prompt": "Он стои́т с бума́г___ в руке́. (бума́га)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ой",
+         "ою"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s023"
+        ]
+       },
+       {
+        "id": "x2-1-5",
+        "prompt": "Ива́н живёт с отц___ и с бра́том. (оте́ц)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́м"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s006"
+        ]
+       },
+       {
+        "id": "x2-1-6",
+        "prompt": "Фёдор — с бума́гой, а прика́зчик — с карандаш___. (каранда́ш)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́м"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s016"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x2-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "Answer in the frame: с кем? чем? пе́ред чем? за чем? → instrumental.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "с кем? оте́ц → с отцо́м",
+       "prompt": "С кем живёт Фёдор? — Фёдор живёт с ___ (оте́ц).",
+       "answer": "отцо́м"
+      },
+      "items": [
+       {
+        "id": "x2-2-1",
+        "prompt": "Как Фёдор хо́чет жить? — Он хо́чет жить свое́й ___ (семья́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "семьёй",
+         "семьёю"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s025"
+        ],
+        "common_wrong": [
+         {
+          "answer": "семью́",
+          "hint": "как? → свое́й семьёй"
+         }
+        ]
+       },
+       {
+        "id": "x2-2-2",
+        "prompt": "С чем Фёдор стои́т пе́ред схо́дом? — С ___ (бума́га).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "бума́гой",
+         "бума́гою"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s023"
+        ]
+       },
+       {
+        "id": "x2-2-3",
+        "prompt": "Чем пи́шет ста́роста? — Он пи́шет ___ (мел).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ме́лом"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s012"
+        ],
+        "common_wrong": [
+         {
+          "answer": "мел",
+          "hint": "чем? → ме́лом"
+         }
+        ]
+       },
+       {
+        "id": "x2-2-4",
+        "prompt": "Где стои́т Фёдор? — Он стои́т пе́ред ___ (сход).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "схо́дом"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s023"
+        ],
+        "common_wrong": [
+         {
+          "answer": "схо́де",
+          "hint": "пе́ред чем? → схо́дом"
+         }
+        ]
+       },
+       {
+        "id": "x2-2-5",
+        "prompt": "С кем зако́н? — Фёдор говори́т: «Зако́н — со ___ (я)»!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мной",
+         "мно́ю"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s042"
+        ],
+        "common_wrong": [
+         {
+          "answer": "меня́",
+          "hint": "со мной"
+         }
+        ]
+       },
+       {
+        "id": "x2-2-6",
+        "prompt": "Где сиди́т ста́роста? — Он сиди́т за ___ (стол).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "столо́м"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s011"
+        ],
+        "common_wrong": [
+         {
+          "answer": "стол",
+          "hint": "за чем? → столо́м"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x2-3",
+      "type": "soedini",
+      "title": "Соедини́",
+      "instruction": "Вы́бери отве́т.",
+      "hint_en": "Choose the phrase that fits the story.",
+      "obrazec": {
+       "rule": "Что говори́т Пётр? → «Я про́тив.»",
+       "prompt": "Пётр говори́т: «___»",
+       "answer": "Я про́тив."
+      },
+      "items": [
+       {
+        "id": "x2-3-1",
+        "prompt": "Фёдор хо́чет жить ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "свои́м дворо́м"
+        ],
+        "choices": [
+         "свои́м дворо́м",
+         "с отцо́м",
+         "в уса́дьбе"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s025"
+        ]
+       },
+       {
+        "id": "x2-3-2",
+        "prompt": "Фёдору ну́жен ___ в одно́м ме́сте.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "свой уча́сток"
+        ],
+        "choices": [
+         "свой уча́сток",
+         "но́вый стол",
+         "свой каранда́ш"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s028"
+        ]
+       },
+       {
+        "id": "x2-3-3",
+        "prompt": "Пётр говори́т: мир помога́ет ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "бе́дной ба́бе"
+        ],
+        "choices": [
+         "бе́дной ба́бе",
+         "прика́зчику",
+         "уря́днику"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s039"
+        ]
+       },
+       {
+        "id": "x2-3-4",
+        "prompt": "Прика́зчик говори́т: пра́во на о́труб есть ___ двора́.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "у хозя́ина"
+        ],
+        "choices": [
+         "у хозя́ина",
+         "у сы́на",
+         "у ста́росты"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s045"
+        ]
+       },
+       {
+        "id": "x2-3-5",
+        "prompt": "Пётр говори́т: «Оди́н челове́к — то́лько оди́н, а ___»",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "мир — си́ла"
+        ],
+        "choices": [
+         "мир — си́ла",
+         "мир — крик",
+         "сход — си́ла"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s040"
+        ]
+       },
+       {
+        "id": "x2-3-6",
+        "prompt": "Ста́роста пи́шет ме́лом ___.",
+        "mode": "recognition",
+        "answer_mode": "choice",
+        "accepted_answers": [
+         "на доске́"
+        ],
+        "choices": [
+         "на доске́",
+         "на бума́ге",
+         "в тетра́ди"
+        ],
+        "source_segment_ids": [
+         "ru-mir-01-l09-s012"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l09-sec3",
+    "title": "Кто за? Кто про́тив?",
+    "segments": [
+     {
+      "id": "ru-mir-01-l09-s050",
+      "text": "Тепе́рь все говоря́т гро́мко.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s051",
+      "text": "И вот мужики́ уже́ не говоря́т, а крича́т.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "крича́т",
+        "gloss": "крича́ть: говори́ть о́чень гро́мко",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-krichat"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s052",
+      "text": "Над схо́дом стои́т крик.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Над схо́дом",
+        "gloss": "над ↔ под (теле́гой)",
+        "gloss_kind": "antonym",
+        "covers_lexeme_ids": [
+         "ru-nad"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s053",
+      "text": "А Ша́рик лежи́т под теле́гой и слу́шает крик."
+     },
+     {
+      "id": "ru-mir-01-l09-s054",
+      "text": "Кто с кем?",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "ru-mir-01-l09-svg-s-kem",
+        "src": "media/diagrams/ru-mir-01-l09-svg-s-kem.svg",
+        "status": "draft",
+        "alt": "Three rows of drawn figures: Fyodor beside Silanty, labelled Фёдор — с Сила́нтием; Pyotr in front of three village men, labelled Пётр — с ми́ром; Ivan beside his mother and Nastya, labelled Ива́н — с семьёй.",
+        "covers_lexeme_ids": [
+         "ru-s"
+        ],
+        "width": 300,
+        "height": 330
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s055",
+      "text": "Бога́тый Сила́нтий — с Фёдором."
+     },
+     {
+      "id": "ru-mir-01-l09-s056",
+      "text": "— Фёдор — си́льный мужи́к, — говори́т Сила́нтий. — Си́ла у него́ есть.",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l09-s057",
+      "text": "Он ду́мает свое́й голово́й и мо́жет рабо́тать оди́н.",
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l09-s058",
+      "text": "Мир — плохо́й хозя́ин.",
+      "speaker": "char-silantij",
+      "pins": [
+       {
+        "start": 0,
+        "end": 3,
+        "token": "Мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s059",
+      "text": "Си́льному мужику́ ну́жен свой уча́сток.",
+      "speaker": "char-silantij"
+     },
+     {
+      "id": "ru-mir-01-l09-s060",
+      "text": "Молоды́е хозя́ева — то́же за Фёдора.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s061",
+      "text": "— Пра́вда! — крича́т они́. — Хоро́шая земля́ — хоро́шему мужику́!",
+      "paragraph_start": true,
+      "speaker": "char-molodoj"
+     },
+     {
+      "id": "ru-mir-01-l09-s062",
+      "text": "А старики́ — за Петра́.",
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "старики́",
+        "gloss": "стари́к: ста́рый мужи́к, как дед",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-starik"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s063",
+      "text": "Оди́н стари́к говори́т:"
+     },
+     {
+      "id": "ru-mir-01-l09-s064",
+      "text": "— Говоря́т, что зако́н — от царя́. А земля́ — от Бо́га, Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-starik",
+      "inference_aids": [
+        {
+          "type": "gloss",
+          "presentation": "margin_gloss",
+          "anchor_text": "Бо́га",
+          "gloss": "Бо́га ← Бог: о нём говори́т ба́тюшка",
+          "gloss_kind": "form",
+          "covers_lexeme_ids": []
+        }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s065",
+      "text": "Она́ о́бщая: её нельзя́ купи́ть и прода́ть.",
+      "speaker": "char-starik"
+     },
+     {
+      "id": "ru-mir-01-l09-s066",
+      "text": "Мы на ней живём вме́сте и рабо́таем вме́сте.",
+      "speaker": "char-starik",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "вме́сте",
+        "gloss": "вме́сте: и я, и ты",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-vmeste"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s067",
+      "text": "— А земля́ Орло́ва? — кричи́т молодо́й мужи́к. — Её то́же на переде́л!",
+      "paragraph_start": true,
+      "speaker": "char-molodoj",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "переде́л",
+        "gloss": "переде́л: мир даёт зе́млю: тебе́, ему́…",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "ru-peredel"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s068",
+      "text": "Прика́зчик пи́шет карандашо́м и отвеча́ет ти́хо:",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s069",
+      "text": "— Земля́ Андре́я Серге́евича — не о́бщая, и э́то не де́ло о́бщины. Зако́н оди́н: и для него́, и для вас.",
+      "paragraph_start": true,
+      "speaker": "char-prikazchik",
+      "pins": [
+       {
+        "start": 83,
+        "end": 86,
+        "token": "для",
+        "lemma": "для",
+        "feats": {
+         "pos": "PREP"
+        }
+       },
+       {
+        "start": 96,
+        "end": 99,
+        "token": "для",
+        "lemma": "для",
+        "feats": {
+         "pos": "PREP"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s070",
+      "text": "— А ты с кем? — спра́шивает Фёдор.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l09-s071",
+      "text": "— Я не с о́бщиной и не с ва́ми. Я с зако́ном.",
+      "paragraph_start": true,
+      "speaker": "char-prikazchik"
+     },
+     {
+      "id": "ru-mir-01-l09-s072",
+      "text": "Тепе́рь молоды́е стоя́т с Фёдором, а старики́ — с Петро́м.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s073",
+      "text": "У це́ркви не оди́н мир, а два.",
+      "pins": [
+       {
+        "start": 19,
+        "end": 22,
+        "token": "мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s074",
+      "text": "Уря́дник Гаври́лов стои́т ме́жду Фёдором и Петро́м.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ме́жду",
+        "gloss": "ме́жду: Фёдор — уря́дник — Пётр",
+        "gloss_kind": "example",
+        "covers_lexeme_ids": [
+         "ru-mezhdu"
+        ]
+       },
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l09-img-krik",
+        "src": "media/images/ru-mir-01-l09-img-krik.webp",
+        "status": "draft",
+        "alt": "Two groups of peasants shout at each other in front of the church, young men with Fyodor and Silanty on the left, old men with Pyotr on the right; the constable stands between them with his arms out; the elder writes on his board.",
+        "art_brief": "Same place and day as the cover (Берёзовка, in front of the wooden church, late November 1913 O.S., cold grey midday light, thin snow). The assembly has split into two groups facing each other, mouths open, shouting and gesturing. Left: Fyodor (27, broad, short dark-brown beard, blue-grey shirt under a short sheepskin coat, a folded paper in his fist) with four or five young bearded and beardless men and Silanty (about 50, trimmed black-and-grey beard, dark waistcoat, watch chain) at his shoulder. Right: Pyotr (about 55, grey-brown square beard, sheepskin coat, stern) with four or five old men with long white and grey beards, one leaning on a stick. Exactly between the two groups stands Uryadnik Gavrilov (dark rural-police uniform coat, shoulder belt, peaked cap, sabre at his hip) with both arms stretched out sideways, one palm towards each group, holding them apart. Behind him at the small table Starosta Egor (long grey beard, brass badge) writes with chalk on his board. Far back behind the old men, Ivan (19, straw-fair hair, cap in hand) watches, worried. Orlov's steward (town coat, peaked cap) stands apart at the edge, writing in his papers with a pencil. No text in the image.",
+        "covers_lexeme_ids": [
+         "ru-mezhdu",
+         "ru-krichat",
+         "ru-krik",
+         "ru-uryadnik"
+        ],
+        "width": 1600,
+        "height": 1073
+       }
+      ],
+      "pins": [
+       {
+        "start": 9,
+        "end": 18,
+        "token": "Гаври́лов",
+        "lemma": "гаврилов",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s075",
+      "text": "— Ти́хо, мужики́! — говори́т он. — Крича́ть мо́жно, а си́лой — нельзя́!",
+      "paragraph_start": true,
+      "speaker": "char-gavrilov"
+     },
+     {
+      "id": "ru-mir-01-l09-s076",
+      "text": "Мужики́ смо́трят на са́блю уря́дника — и стоя́т.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s077",
+      "text": "Ста́роста пи́шет ме́лом на доске́: «за» и «про́тив».",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s078",
+      "text": "— Кто за? — спра́шивает он.",
+      "paragraph_start": true,
+      "speaker": "char-egor"
+     },
+     {
+      "id": "ru-mir-01-l09-s079",
+      "text": "— За! — крича́т молоды́е и Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-molodoj"
+     },
+     {
+      "id": "ru-mir-01-l09-s080",
+      "text": "— Кто про́тив?",
+      "paragraph_start": true,
+      "speaker": "char-egor"
+     },
+     {
+      "id": "ru-mir-01-l09-s081",
+      "text": "— Про́тив! Не дава́ть! — крича́т старики́, и Пётр то́же.",
+      "paragraph_start": true,
+      "speaker": "char-starik"
+     },
+     {
+      "id": "ru-mir-01-l09-s082",
+      "text": "Над це́рковью — крик: «Не дава́ть!»",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s083",
+      "text": "Так мир реша́ет: кри́ком.",
+      "pins": [
+       {
+        "start": 4,
+        "end": 7,
+        "token": "мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s084",
+      "text": "— Мир не даёт, — говори́т ста́роста. — В э́том году́ — нет.",
+      "paragraph_start": true,
+      "speaker": "char-egor",
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s085",
+      "text": "— А переде́л? — кричи́т молодо́й мужи́к.",
+      "paragraph_start": true,
+      "speaker": "char-molodoj"
+     },
+     {
+      "id": "ru-mir-01-l09-s086",
+      "text": "— Переде́л — друго́й вопро́с, и сейча́с не вре́мя, — отвеча́ет ста́роста.",
+      "paragraph_start": true,
+      "speaker": "char-egor"
+     },
+     {
+      "id": "ru-mir-01-l09-s087",
+      "text": "— Сход — э́то три ча́сти. На переде́л ну́жно две ча́сти, а за Фёдора сего́дня — одна́.",
+      "speaker": "char-egor"
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l09-x3-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "чем? — the instrument or the means: голово́й, си́лой, кри́ком, карандашо́м.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "чем? голова́ → голово́й",
+       "prompt": "Фёдор ду́мает свое́й ___ (голова́).",
+       "answer": "голово́й"
+      },
+      "items": [
+       {
+        "id": "x3-1-2",
+        "prompt": "Мир реша́ет ___ (крик).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кри́ком"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s083"
+        ],
+        "common_wrong": [
+         {
+          "answer": "крик",
+          "hint": "чем? → кри́ком"
+         }
+        ]
+       },
+       {
+        "id": "x3-1-3",
+        "prompt": "Крича́ть мо́жно, а ___ (си́ла) — нельзя́!",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "си́лой",
+         "си́лою"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s075"
+        ]
+       },
+       {
+        "id": "x3-1-4",
+        "prompt": "Прика́зчик пи́шет ___ (каранда́ш) и отвеча́ет ти́хо.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "карандашо́м"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s068"
+        ]
+       },
+       {
+        "id": "x3-1-5",
+        "prompt": "Ста́роста пи́шет ___ (мел): «за» и «про́тив».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ме́лом"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s077"
+        ]
+       },
+       {
+        "id": "x3-1-6",
+        "prompt": "Он рабо́тает в уса́дьбе ___ (прика́зчик).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "прика́зчиком"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s015"
+        ],
+        "common_wrong": [
+         {
+          "answer": "прика́зчик",
+          "hint": "рабо́тает кем? → прика́зчиком"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x3-2",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "с кем? ме́жду кем? над чем? — always the instrumental.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "с кем? Фёдор → с Фёдором",
+       "prompt": "Сила́нтий — с ___ (Фёдор).",
+       "answer": "Фёдором"
+      },
+      "items": [
+       {
+        "id": "x3-2-1",
+        "prompt": "Старики́ стоя́т с ___ (Пётр).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петро́м"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s072"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Петра́",
+          "hint": "с кем? → с Петро́м"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-2",
+        "prompt": "Прика́зчик говори́т: «Я не с ___ (о́бщина)».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "о́бщиной",
+         "о́бщиною"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s071"
+        ]
+       },
+       {
+        "id": "x3-2-3",
+        "prompt": "Прика́зчик говори́т: «Я с ___ (зако́н)».",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "зако́ном"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s071"
+        ]
+       },
+       {
+        "id": "x3-2-4",
+        "prompt": "Уря́дник стои́т ме́жду ___ (Фёдор) и Петро́м.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдором"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s074"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Фёдора",
+          "hint": "ме́жду кем? → Фёдором"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-5",
+        "prompt": "Над ___ (сход) стои́т крик.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "схо́дом"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s052"
+        ],
+        "common_wrong": [
+         {
+          "answer": "схо́де",
+          "hint": "над чем? → схо́дом"
+         }
+        ]
+       },
+       {
+        "id": "x3-2-6",
+        "prompt": "Пе́ред ___ (це́рковь) не оди́н мир, а два.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "це́рковью"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s073"
+        ],
+        "common_wrong": [
+         {
+          "answer": "це́ркви",
+          "hint": "пе́ред чем? → це́рковью"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x3-3",
+      "type": "preobrazovanie",
+      "title": "Преобразова́ние",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+      "hint_en": "за кого́? (accusative: for) → с кем? (instrumental: with).",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "за кого́? за Фёдора → с кем? с Фёдором",
+       "prompt": "Сила́нтий за Фёдора. → Сила́нтий с ___.",
+       "answer": "Фёдором"
+      },
+      "items": [
+       {
+        "id": "x3-3-1",
+        "prompt": "Старики́ за Петра́. → Старики́ с ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Петро́м"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s062"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Петра́",
+          "hint": "с кем? → Петро́м"
+         }
+        ]
+       },
+       {
+        "id": "x3-3-2",
+        "prompt": "Пётр за мир. → Пётр с ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ми́ром"
+        ],
+        "first_letters": 2,
+        "common_wrong": [
+         {
+          "answer": "мир",
+          "hint": "с чем? → ми́ром"
+         }
+        ]
+       },
+       {
+        "id": "x3-3-3",
+        "prompt": "Прика́зчик за зако́н. → Прика́зчик с ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "зако́ном"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s071"
+        ]
+       },
+       {
+        "id": "x3-3-4",
+        "prompt": "Ива́н ви́дит отца́. → Ива́н стои́т за ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "отцо́м"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s009"
+        ],
+        "common_wrong": [
+         {
+          "answer": "отца́",
+          "hint": "за кем? → отцо́м"
+         }
+        ]
+       },
+       {
+        "id": "x3-3-5",
+        "prompt": "Ста́роста берёт мел. → Ста́роста пи́шет ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ме́лом"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s012"
+        ]
+       },
+       {
+        "id": "x3-3-6",
+        "prompt": "Над схо́дом стои́т крик. → Мир реша́ет ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кри́ком"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s083"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "ru-mir-01-l09-sec4",
+    "title": "С кем ты, Ва́ня?",
+    "segments": [
+     {
+      "id": "ru-mir-01-l09-s088",
+      "text": "Фёдор смо́трит на сход и ви́дит бра́та.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s089",
+      "text": "— Ва́ня! — кричи́т он. — А ты? С кем ты: с ни́ми и́ли со мной?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l09-s090",
+      "text": "Все смо́трят на Ива́на: и молоды́е, и старики́, и оте́ц.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s091",
+      "text": "— У меня́ нет го́лоса, — говори́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l09-s092",
+      "text": "— Го́лоса нет, — говори́т Фёдор. — Но ты мой брат. С кем ты?",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l09-s093",
+      "text": "Ива́н ду́мает: оте́ц — до́брый челове́к, и брат — до́брый.",
+      "paragraph_start": true,
+      "pins": [
+       {
+        "start": 31,
+        "end": 39,
+        "token": "челове́к",
+        "lemma": "человек",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "NOUN"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s094",
+      "text": "Но оте́ц — с ми́ром, а брат — с Сила́нтием.",
+      "pins": [
+       {
+        "start": 13,
+        "end": 19,
+        "token": "ми́ром",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s095",
+      "text": "А он — ме́жду ни́ми."
+     },
+     {
+      "id": "ru-mir-01-l09-s096",
+      "text": "— Я с семьёй, — говори́т Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l09-s097",
+      "text": "— С семьёй? — Фёдор смеётся, но ему́ не ве́село. — Я то́же семья́, Ва́ня!",
+      "paragraph_start": true,
+      "speaker": "char-fyodor"
+     },
+     {
+      "id": "ru-mir-01-l09-s098",
+      "text": "— Семья́ — э́то и мир, сын, — говори́т Пётр.",
+      "paragraph_start": true,
+      "speaker": "char-pyotr",
+      "pins": [
+       {
+        "start": 18,
+        "end": 21,
+        "token": "мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s099",
+      "text": "Отцу́ э́то не нра́вится, и бра́ту не нра́вится.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s100",
+      "text": "Фёдор берёт свою́ бума́гу.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s101",
+      "text": "Пётр смо́трит на неё: э́то его́ три рубля́."
+     },
+     {
+      "id": "ru-mir-01-l09-s102",
+      "text": "— Мир реша́ет кри́ком? Хорошо́. Я иду́ с ней в уе́зд, в уе́здный го́род: там есть зако́н.",
+      "paragraph_start": true,
+      "speaker": "char-fyodor",
+      "pins": [
+       {
+        "start": 2,
+        "end": 5,
+        "token": "Мир",
+        "lexeme_id": "ru-mir-commune"
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s103",
+      "text": "Ве́чером Соколо́вы сидя́т за столо́м.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s104",
+      "text": "Над столо́м — ла́мпа."
+     },
+     {
+      "id": "ru-mir-01-l09-s105",
+      "text": "Пётр сиди́т у окна́, а Фёдор — у две́ри."
+     },
+     {
+      "id": "ru-mir-01-l09-s106",
+      "text": "Ива́н сиди́т ме́жду отцо́м и бра́том.",
+      "inference_aids": [
+       {
+        "type": "image",
+        "presentation": "inline_scene",
+        "ref": "ru-mir-01-l09-img-uzhin",
+        "src": "media/images/ru-mir-01-l09-img-uzhin.webp",
+        "status": "draft",
+        "alt": "Supper in silence in the izba: Pyotr at the window end of the table and Fyodor at the door end, not looking at each other; Ivan sits between them; the women and Nastya at the sides; a lamp hangs over the table; the dog eats bread under it.",
+        "art_brief": "Interior of the Sokolovs' izba, the same evening, lamplight: a kerosene lamp hangs over the long plank table under the icons of the red corner; dark windows. Supper: a bowl of cabbage soup and bread on the table, wooden spoons. Pyotr (about 55, grey-brown square beard, undyed linen shirt with a dark red sash) sits at the end of the table by the window, eyes on his bowl. Fyodor (27, short dark-brown beard, blue-grey shirt, sleeves rolled up) sits at the far end by the door, turned half away, his folded paper beside his bowl. Ivan (19, straw-fair bowl-cut hair, faded red shirt) sits on the bench between them, looking from one to the other. Marya (about 50, dark brown kerchief tied under the chin) stands with a ladle, looking at Pyotr; Darya (25, faded red kerchief) sits beside Fyodor, looking at him. Nastya (12, long light-brown braid with a red ribbon, blue kerchief round her shoulders) leans towards Ivan to whisper. Ded Matvey (70, long white beard, sheepskin waistcoat) sits by the stove. Under the table Sharik (grey-and-white shaggy dog, one ear up) chews a piece of bread. No text in the image.",
+        "covers_lexeme_ids": [
+         "ru-mezhdu",
+         "ru-pod",
+         "ru-nad"
+        ],
+        "width": 1600,
+        "height": 1073
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s107",
+      "text": "Мать даёт хлеб и капу́сту.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s108",
+      "text": "Все ти́хо едя́т, то́лько Пётр не ест: голова́ у него́ в рука́х."
+     },
+     {
+      "id": "ru-mir-01-l09-s109",
+      "text": "Пётр не говори́т с Фёдором, а Фёдор не говори́т с отцо́м."
+     },
+     {
+      "id": "ru-mir-01-l09-s110",
+      "text": "Да́рья смо́трит на Фёдора, а мать — на Петра́."
+     },
+     {
+      "id": "ru-mir-01-l09-s111",
+      "text": "Вся семья́ вме́сте, вре́мя идёт, а в избе́ ти́хо.",
+      "pins": [
+       {
+        "start": 0,
+        "end": 3,
+        "token": "Вся",
+        "lemma": "весь",
+        "feats": {
+         "case": "nomn",
+         "number": "sing",
+         "pos": "ADJF"
+        }
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-s112",
+      "text": "— Ста́рый вопро́с, — ти́хо говори́т дед. — О́чень ста́рый.",
+      "paragraph_start": true,
+      "speaker": "char-ded-matvej"
+     },
+     {
+      "id": "ru-mir-01-l09-s113",
+      "text": "На́стя смо́трит на Ива́на.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s114",
+      "text": "— Ва́ня, а я с кем? — спра́шивает она́.",
+      "paragraph_start": true,
+      "speaker": "char-nastya"
+     },
+     {
+      "id": "ru-mir-01-l09-s115",
+      "text": "— Ты с на́ми, — отвеча́ет Ива́н.",
+      "paragraph_start": true,
+      "speaker": "char-ivan"
+     },
+     {
+      "id": "ru-mir-01-l09-s116",
+      "text": "То́лько Ша́рик под столо́м ест хлеб.",
+      "paragraph_start": true
+     },
+     {
+      "id": "ru-mir-01-l09-s117",
+      "text": "У него́ нет го́лоса, и ему́ хорошо́."
+     }
+    ],
+    "exercises": [
+     {
+      "id": "ru-mir-01-l09-x4-1",
+      "type": "podstanovka",
+      "title": "Подстано́вка",
+      "instruction": "Поста́вь местоиме́ние в ну́жную фо́рму.",
+      "hint_en": "Instrumental pronouns: я → со мной, мы → с на́ми, она́ → с ней, они́ → с ни́ми, вы → с ва́ми, кто → с кем.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "с кем? они́ → с ни́ми",
+       "prompt": "— Ты с ___ и́ли со мной? (они́)",
+       "answer": "ни́ми"
+      },
+      "items": [
+       {
+        "id": "x4-1-1",
+        "prompt": "— Ва́ня, ты с ни́ми и́ли со ___? (я)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "мной",
+         "мно́ю"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s089"
+        ],
+        "common_wrong": [
+         {
+          "answer": "меня́",
+          "hint": "со мной"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-2",
+        "prompt": "— Ты с ___, На́стя, — говори́т Ива́н. (мы)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "на́ми"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s115"
+        ],
+        "common_wrong": [
+         {
+          "answer": "нас",
+          "hint": "с кем? → с на́ми"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-3",
+        "prompt": "Фёдор берёт бума́гу: он идёт с ___ в уе́зд. (она́)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ней",
+         "не́ю"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s102"
+        ],
+        "common_wrong": [
+         {
+          "answer": "её",
+          "hint": "с чем? → с ней"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-4",
+        "prompt": "— Я не с ___, — говори́т прика́зчик. (вы)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ва́ми"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s071"
+        ]
+       },
+       {
+        "id": "x4-1-5",
+        "prompt": "— С ___ ты, Ва́ня? (кто)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кем"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s089"
+        ],
+        "common_wrong": [
+         {
+          "answer": "кого́",
+          "hint": "с кем?"
+         }
+        ]
+       },
+       {
+        "id": "x4-1-6",
+        "prompt": "— А я с ___? — спра́шивает На́стя. (кто)",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кем"
+        ],
+        "first_letters": 1,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s114"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x4-2",
+      "type": "otvet",
+      "title": "Отве́ть",
+      "instruction": "Отве́ть на вопро́с.",
+      "hint_en": "Answer in the frame: за чем? ме́жду кем? с кем? → instrumental; куда́? в + accusative.",
+      "grammar_target_ids": [
+       "G09"
+      ],
+      "obrazec": {
+       "rule": "где? за чем? стол → за столо́м",
+       "prompt": "Где сидя́т Соколо́вы? — Они́ сидя́т за ___ (стол).",
+       "answer": "столо́м"
+      },
+      "items": [
+       {
+        "id": "x4-2-1",
+        "prompt": "Где сиди́т Ива́н? — Он сиди́т ме́жду ___ (оте́ц) и бра́том.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "отцо́м"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s106"
+        ],
+        "common_wrong": [
+         {
+          "answer": "отца́",
+          "hint": "ме́жду кем? → отцо́м"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-2",
+        "prompt": "С кем Ива́н? — Ива́н с ___ (семья́).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "семьёй",
+         "семьёю"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s096"
+        ],
+        "common_wrong": [
+         {
+          "answer": "семье́й",
+          "hint": "семья́ → семьёй: с ё"
+         },
+         {
+          "answer": "семью́",
+          "hint": "с кем? → семьёй"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-3",
+        "prompt": "С кем оте́ц? — Оте́ц с ___ (мир).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "ми́ром"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s094"
+        ]
+       },
+       {
+        "id": "x4-2-4",
+        "prompt": "С кем брат? — Брат с ___ (Сила́нтий).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Сила́нтием"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s094"
+        ],
+        "common_wrong": [
+         {
+          "answer": "Сила́нтиом",
+          "hint": "Сила́нтий → Сила́нтием"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-5",
+        "prompt": "Куда́ Фёдор идёт с бума́гой? — Он идёт в ___ (уе́зд).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "уе́зд"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s102"
+        ],
+        "common_wrong": [
+         {
+          "answer": "уе́зде",
+          "hint": "куда́? → в уе́зд"
+         }
+        ]
+       },
+       {
+        "id": "x4-2-6",
+        "prompt": "С кем не говори́т Пётр? — Он не говори́т с ___ (Фёдор).",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдором"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s109"
+        ]
+       }
+      ]
+     },
+     {
+      "id": "ru-mir-01-l09-x4-3",
+      "type": "diktant",
+      "title": "Дикта́нт",
+      "instruction": "Послу́шай и напиши́ сло́во.",
+      "hint_en": "Listen to the story sentence and type the missing word.",
+      "obrazec": {
+       "rule": "Послу́шай и напиши́ сло́во.",
+       "prompt": "Ива́н сиди́т ме́жду отцо́м и ___.",
+       "answer": "бра́том"
+      },
+      "items": [
+       {
+        "id": "x4-3-1",
+        "prompt": "Он стои́т за ___ и ви́дит то́лько го́ловы.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "отцо́м"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s009"
+        ],
+        "audio_segment_id": "ru-mir-01-l09-s009"
+       },
+       {
+        "id": "x4-3-2",
+        "prompt": "Ста́роста пи́шет ме́лом, а прика́зчик — ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "карандашо́м"
+        ],
+        "first_letters": 4,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s017"
+        ],
+        "audio_segment_id": "ru-mir-01-l09-s017"
+       },
+       {
+        "id": "x4-3-3",
+        "prompt": "Бога́тый Сила́нтий — с ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "Фёдором"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s055"
+        ],
+        "audio_segment_id": "ru-mir-01-l09-s055"
+       },
+       {
+        "id": "x4-3-4",
+        "prompt": "Так мир реша́ет: ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "кри́ком"
+        ],
+        "first_letters": 2,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s083"
+        ],
+        "audio_segment_id": "ru-mir-01-l09-s083"
+       },
+       {
+        "id": "x4-3-5",
+        "prompt": "— Я с ___, — говори́т Ива́н.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "семьёй"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s096"
+        ],
+        "audio_segment_id": "ru-mir-01-l09-s096"
+       },
+       {
+        "id": "x4-3-6",
+        "prompt": "Ве́чером Соколо́вы сидя́т за ___.",
+        "mode": "productive",
+        "answer_mode": "exact",
+        "accepted_answers": [
+         "столо́м"
+        ],
+        "first_letters": 3,
+        "source_segment_ids": [
+         "ru-mir-01-l09-s103"
+        ],
+        "audio_segment_id": "ru-mir-01-l09-s103"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "words_with_history": {
+  "title": "Слова́ с исто́рией",
+  "word": "мир (о́бщина)",
+  "text": [
+   "Пётр говори́т «мир» и ду́мает о бе́дной ба́бе: хозя́ина у неё нет, а мир даёт ей зе́млю.",
+   "Фёдор говори́т «мир» и ви́дит три полосы́: мир реша́ет, а он ждёт.",
+   "А прика́зчик говори́т «о́бщина»: для него́ э́то де́ло дере́вни, а не уса́дьбы.",
+   "Мир — э́то дере́вня, сход и земля́. Но э́то сло́во ещё не всё говори́т…"
+  ],
+  "proverb": "С ми́ру по ни́тке — го́лому руба́шка.",
+  "lexeme_ids": [
+   "ru-mir-commune",
+   "ru-obshchina",
+   "ru-skhod"
+  ],
+  "note_en": "Мир was the peasants' own word for the village commune (сельское общество), which held the land, repartitioned strips and met as the сход of household heads; о́бщина is the official and educated word. Мир also means 'peace' and 'world'. The proverb: 'A thread from each of the commune, and the naked man has a shirt.'"
+ },
+ "grammar": {
+  "title": "С кем? Чем?",
+  "rule": "с кем? — с отцо́м, с Фёдором, со ста́ростой, с семьёй, со мной · чем? — ме́лом, карандашо́м, кри́ком, голово́й · где? — пе́ред це́рковью, за столо́м, под теле́гой, над схо́дом, ме́жду отцо́м и бра́том · рабо́тает прика́зчиком",
+  "tables": [
+   {
+    "id": "s-kem",
+    "caption": "кто? → с кем? -ом · -ем · -ой · -ей · -ью",
+    "header": [
+     "кто? что?",
+     "с кем? с чем?"
+    ],
+    "rows": [
+     [
+      "Фёдор",
+      "с Фёдором"
+     ],
+     [
+      "оте́ц",
+      "с отцо́м"
+     ],
+     [
+      "брат",
+      "с бра́том"
+     ],
+     [
+      "Пётр",
+      "с Петро́м"
+     ],
+     [
+      "Сила́нтий",
+      "с Сила́нтием"
+     ],
+     [
+      "мир",
+      "с ми́ром"
+     ],
+     [
+      "зако́н",
+      "с зако́ном"
+     ],
+     [
+      "бума́га",
+      "с бума́гой"
+     ],
+     [
+      "ста́роста (м.)",
+      "со ста́ростой"
+     ],
+     [
+      "о́бщина",
+      "с о́бщиной"
+     ],
+     [
+      "са́бля",
+      "с са́блей"
+     ],
+     [
+      "семья́",
+      "с семьёй"
+     ],
+     [
+      "це́рковь",
+      "пе́ред це́рковью"
+     ]
+    ]
+   },
+   {
+    "id": "chem",
+    "caption": "что? → чем?",
+    "header": [
+     "что?",
+     "чем?"
+    ],
+    "rows": [
+     [
+      "мел",
+      "пи́шет ме́лом"
+     ],
+     [
+      "каранда́ш",
+      "пи́шет карандашо́м"
+     ],
+     [
+      "крик",
+      "реша́ет кри́ком"
+     ],
+     [
+      "голова́",
+      "ду́мает голово́й"
+     ],
+     [
+      "си́ла",
+      "си́лой нельзя́"
+     ]
+    ]
+   },
+   {
+    "id": "mest",
+    "caption": "я → со мной",
+    "header": [
+     "кто?",
+     "с кем?"
+    ],
+    "rows": [
+     [
+      "я",
+      "со мной"
+     ],
+     [
+      "ты",
+      "с тобо́й"
+     ],
+     [
+      "он",
+      "с ним"
+     ],
+     [
+      "она́",
+      "с ней"
+     ],
+     [
+      "мы",
+      "с на́ми"
+     ],
+     [
+      "вы",
+      "с ва́ми"
+     ],
+     [
+      "они́",
+      "с ни́ми"
+     ],
+     [
+      "кто",
+      "с кем"
+     ]
+    ]
+   },
+   {
+    "id": "svoj",
+    "caption": "свой двор → свои́м дворо́м",
+    "header": [
+     "кто? что?",
+     "кем? чем?"
+    ],
+    "rows": [
+     [
+      "свой двор",
+      "жить свои́м дворо́м"
+     ],
+     [
+      "своя́ семья́",
+      "жить свое́й семьёй"
+     ],
+     [
+      "своя́ голова́",
+      "ду́мать свое́й голово́й"
+     ],
+     [
+      "прика́зчик",
+      "рабо́тать прика́зчиком"
+     ]
+    ]
+   },
+   {
+    "id": "gde",
+    "caption": "пе́ред · за · под · над · ме́жду + чем?",
+    "header": [
+     "где?",
+     "в те́ксте"
+    ],
+    "rows": [
+     [
+      "пе́ред",
+      "Мужики́ стоя́т пе́ред це́рковью."
+     ],
+     [
+      "за",
+      "Ста́роста сиди́т за столо́м."
+     ],
+     [
+      "под",
+      "Ша́рик лежи́т под теле́гой."
+     ],
+     [
+      "над",
+      "Над схо́дом стои́т крик."
+     ],
+     [
+      "ме́жду",
+      "Ива́н сиди́т ме́жду отцо́м и бра́том."
+     ]
+    ]
+   },
+   {
+    "id": "za",
+    "caption": "за кого́? ↔ за кем?",
+    "header": [
+     "за кого́? (за что?)",
+     "за кем? (за чем?)"
+    ],
+    "rows": [
+     [
+      "Молоды́е — за Фёдора.",
+      "Ива́н стои́т за отцо́м."
+     ],
+     [
+      "Старики́ — за Петра́.",
+      "Соколо́вы сидя́т за столо́м."
+     ]
+    ]
+   }
+  ],
+  "examples": [
+   {
+    "segment_id": "ru-mir-01-l09-s006"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s009"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s012"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s013"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s015"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s018"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s025"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s042"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s052"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s055"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s057"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s083"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s074"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s096"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s103"
+   },
+   {
+    "segment_id": "ru-mir-01-l09-s106"
+   }
+  ],
+  "note_en": "The instrumental answers с кем? с чем? (с отцо́м), чем? «by what means?» (пи́шет ме́лом, реша́ет кри́ком) and кем? after рабо́тать (рабо́тает прика́зчиком); пе́ред, за, под, над, ме́жду take it for place. The ending follows the noun's pattern, not its gender: stol-type -ом/-ем/-ём (столо́м, Сила́нтием), first-declension -а/-я nouns -ой/-ей/-ёй, masculine ones too (ста́ростой, са́блей, семьёй), -ь feminines -ью (це́рковью); neuter -мя nouns differ: вре́мя → вре́менем. Here за + accusative means «for, on the side of»."
+ },
+ "pensa": {
+  "A": {
+   "id": "ru-mir-01-l09-pa",
+   "title": "Пе́нсум A — Фо́рмы",
+   "blocks": [
+    {
+     "obrazec": {
+      "prompt": "Фёдор живёт с ___ (оте́ц).",
+      "answer": "отцо́м"
+     },
+     "items": [
+      {
+       "id": "a1",
+       "prompt": "Молоды́е стоя́т с ___ (Фёдор).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Фёдором"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Фёдора",
+         "hint": "с кем? → Фёдором"
+        }
+       ]
+      },
+      {
+       "id": "a2",
+       "prompt": "Старики́ стоя́т с ___ (Пётр).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "Петро́м"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "Петра́",
+         "hint": "с кем? → Петро́м"
+        }
+       ]
+      },
+      {
+       "id": "a3",
+       "prompt": "Ста́роста пи́шет на доске́ ___ (мел).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "ме́лом"
+       ],
+       "first_letters": 2,
+       "common_wrong": [
+        {
+         "answer": "мел",
+         "hint": "чем? → ме́лом"
+        }
+       ]
+      },
+      {
+       "id": "a4",
+       "prompt": "Он рабо́тает в уса́дьбе ___ (прика́зчик).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "прика́зчиком"
+       ],
+       "first_letters": 4,
+       "common_wrong": [
+        {
+         "answer": "прика́зчик",
+         "hint": "рабо́тает кем? → прика́зчиком"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "Ша́рик лежи́т под ___ (теле́га).",
+      "answer": "теле́гой"
+     },
+     "items": [
+      {
+       "id": "a5",
+       "prompt": "Мужики́ стоя́т пе́ред ___ (це́рковь).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "це́рковью"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "це́ркви",
+         "hint": "пе́ред чем? → це́рковью"
+        }
+       ]
+      },
+      {
+       "id": "a6",
+       "prompt": "Уря́дник стои́т у стола́ с ___ (са́бля).",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "са́блей",
+        "са́блею"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "са́бля",
+         "hint": "с чем? → са́блей"
+        }
+       ]
+      },
+      {
+       "id": "a7",
+       "prompt": "Ива́н говори́т: «Я с ___ (семья́)».",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "семьёй",
+        "семьёю"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "семью́",
+         "hint": "с кем? → семьёй"
+        },
+        {
+         "answer": "семья́",
+         "hint": "с кем? → семьёй"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "obrazec": {
+      "prompt": "— Ты с ___, На́стя. (мы)",
+      "answer": "на́ми"
+     },
+     "items": [
+      {
+       "id": "a8",
+       "prompt": "— Ва́ня, ты с ни́ми и́ли со ___? (я)",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "мной",
+        "мно́ю"
+       ],
+       "first_letters": 1,
+       "common_wrong": [
+        {
+         "answer": "меня́",
+         "hint": "со мной"
+        }
+       ]
+      },
+      {
+       "id": "a9",
+       "prompt": "Ве́чером Соколо́вы сидя́т в ___ (изба́) за столо́м.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "избе́"
+       ],
+       "first_letters": 2,
+       "common_wrong": [
+        {
+         "answer": "избу́",
+         "hint": "где? → в избе́"
+        },
+        {
+         "answer": "избо́й",
+         "hint": "где? в чём? → в избе́"
+        }
+       ],
+       "recall_of": "G07"
+      },
+      {
+       "id": "a10",
+       "prompt": "Фёдор берёт свою́ ___ (бума́га) и идёт в уе́зд.",
+       "mode": "productive",
+       "answer_mode": "exact",
+       "accepted_answers": [
+        "бума́гу"
+       ],
+       "first_letters": 3,
+       "common_wrong": [
+        {
+         "answer": "бума́га",
+         "hint": "что берёт? → бума́гу"
+        },
+        {
+         "answer": "бума́гой",
+         "hint": "берёт что? → бума́гу"
+        }
+       ],
+       "recall_of": "G04"
+      }
+     ]
+    }
+   ]
+  },
+  "B": {
+   "id": "ru-mir-01-l09-pb",
+   "title": "Пе́нсум B — Слова́",
+   "word_bank": [
+    "бума́га",
+    "го́лос",
+    "каранда́ш",
+    "крик",
+    "о́бщина",
+    "переде́л",
+    "пра́во",
+    "прика́зчик",
+    "са́бля",
+    "ста́роста",
+    "сход",
+    "уря́дник",
+    "уча́сток"
+   ],
+   "items": [
+    {
+     "id": "b1",
+     "prompt": "Пе́ред це́рковью стоя́т хозя́ева дере́вни: сего́дня здесь ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "сход"
+     ],
+     "first_letters": 2
+    },
+    {
+     "id": "b2",
+     "prompt": "Его́р сиди́т за столо́м и спра́шивает: «Кто за? Кто про́тив?» Его́р — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "ста́роста"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b3",
+     "prompt": "Гаври́лов — ___: его́ де́ло — зако́н в дере́вне.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "уря́дник"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b4",
+     "prompt": "Он рабо́тает у Орло́ва в уса́дьбе: он ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "прика́зчик"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b5",
+     "prompt": "На доске́ пи́шут ме́лом, а на бума́ге — ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "карандашо́м"
+     ],
+     "first_letters": 4,
+     "common_wrong": [
+      {
+       "answer": "каранда́ш",
+       "hint": "чем пи́шут? → карандашо́м"
+      }
+     ]
+    },
+    {
+     "id": "b6",
+     "prompt": "Пётр — хозя́ин двора́: на схо́де его́ ___ — «да» и́ли «нет».",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "го́лос"
+     ],
+     "first_letters": 2
+    },
+    {
+     "id": "b7",
+     "prompt": "Мир даёт зе́млю: э́та часть — тебе́, а та — ему́. Э́то ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "переде́л"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b8",
+     "prompt": "Фёдору нужна́ вся его́ земля́ в одно́м ме́сте: ему́ ну́жен свой ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "уча́сток"
+     ],
+     "first_letters": 3
+    },
+    {
+     "id": "b9",
+     "prompt": "Мужики́ крича́т, и над дере́вней стои́т ___.",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "крик"
+     ],
+     "first_letters": 2
+    },
+    {
+     "id": "b10",
+     "prompt": "Прика́зчик не говори́т «мир»: он говори́т «___».",
+     "mode": "productive",
+     "answer_mode": "exact",
+     "accepted_answers": [
+      "о́бщина"
+     ],
+     "first_letters": 3
+    }
+   ]
+  },
+  "C": {
+   "id": "ru-mir-01-l09-pc",
+   "title": "Пе́нсум C — Вопро́сы",
+   "items": [
+    {
+     "id": "c1",
+     "prompt": "Кто стои́т пе́ред це́рковью? Где стои́т Ива́н?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Пе́ред це́рковью стоя́т мужики́, хозя́ева дере́вни: сего́дня сход. Ива́н стои́т за отцо́м.",
+      "Хозя́ева. Ива́н стои́т за отцо́м: у него́ нет го́лоса."
+     ],
+     "rubric": "Who: the men, the household heads (хозя́ева), at the сход; Ivan stands behind his father (за отцо́м, instrumental) because he has no vote.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-skhod",
+      "ru-golos"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s002",
+      "ru-mir-01-l09-s009"
+     ]
+    },
+    {
+     "id": "c2",
+     "prompt": "Чем пи́шет ста́роста, а чем пи́шет прика́зчик?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ста́роста пи́шет ме́лом на доске́, а прика́зчик пи́шет карандашо́м.",
+      "Ста́роста — ме́лом, а прика́зчик — карандашо́м."
+     ],
+     "rubric": "Two instruments in the instrumental: ме́лом (the elder, on the board) and карандашо́м (the steward).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-karandash",
+      "ru-starosta"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s012",
+      "ru-mir-01-l09-s017"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Что хо́чет Фёдор? Почему́ ему́ ну́жен свой уча́сток?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Фёдор хо́чет жить свое́й семьёй, свои́м дворо́м. Ему́ ну́жен уча́сток, потому́ что одна́ полоса́ у дере́вни, одна́ у реки́, одна́ у ле́са.",
+      "Он хо́чет свой двор и свою́ часть земли́ в одно́м ме́сте, потому́ что по́лосы у него́ плохи́е: одна́ здесь, а друга́я там."
+     ],
+     "rubric": "His own household (свое́й семьёй / свои́м дворо́м) and his share in one place; потому́ что his strips are poor and scattered (one by the village, one by the river, one by the forest).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-uchastok",
+      "ru-chast"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s025",
+      "ru-mir-01-l09-s027",
+      "ru-mir-01-l09-s028"
+     ]
+    },
+    {
+     "id": "c4",
+     "prompt": "Что говори́т прика́зчик о пра́ве? А что говори́т Пётр?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Прика́зчик говори́т: пра́во на о́труб есть у хозя́ина двора́. А Пётр говори́т: «Пра́во у хозя́ина, а хозя́ин — я».",
+      "Пра́во есть у хозя́ина, а хозя́ин — Пётр, не Фёдор."
+     ],
+     "rubric": "The right (пра́во) belongs to the household head (хозя́ин двора́), and that is Pyotr, not Fyodor.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-pravo",
+      "ru-prikazchik"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s045"
+     ]
+    },
+    {
+     "id": "c5",
+     "prompt": "Кто с Фёдором, а кто с Петро́м?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "С Фёдором Сила́нтий и молоды́е, а с Петро́м старики́.",
+      "Сила́нтий и молоды́е — с Фёдором. Старики́ — с Петро́м."
+     ],
+     "rubric": "с + instrumental: с Фёдором (Silanty, the young men), с Петро́м (the old men).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-s",
+      "ru-starik"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s055",
+      "ru-mir-01-l09-s062"
+     ]
+    },
+    {
+     "id": "c6",
+     "prompt": "Как мир реша́ет? Что говори́т ста́роста?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Мир реша́ет кри́ком. Ста́роста говори́т: «Мир не даёт. В э́том году́ — нет».",
+      "Кри́ком. Ста́роста говори́т, что мир не даёт."
+     ],
+     "rubric": "Decides by shouting (кри́ком, instrumental of means); the elder: the mir refuses, not this year (В э́том году́ — нет).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-reshat",
+      "ru-krik"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s083",
+      "ru-mir-01-l09-s084"
+     ]
+    },
+    {
+     "id": "c7",
+     "prompt": "Что отвеча́ет Ива́н бра́ту? Где он сиди́т ве́чером?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Ива́н отвеча́ет: «Я с семьёй». Ве́чером он сиди́т за столо́м, ме́жду отцо́м и бра́том.",
+      "«С семьёй». Он сиди́т ме́жду отцо́м и Фёдором."
+     ],
+     "rubric": "«Я с семьёй» (с + instrumental); at supper he sits между отцо́м и бра́том.",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-s",
+      "ru-mezhdu"
+     ],
+     "source_segment_ids": [
+      "ru-mir-01-l09-s096",
+      "ru-mir-01-l09-s106"
+     ]
+    },
+    {
+     "id": "c8",
+     "prompt": "А ты? С кем ты живёшь? Чем ты пи́шешь?",
+     "mode": "productive",
+     "answer_mode": "self_check",
+     "model_answers": [
+      "Я живу́ с семьёй. Я пишу́ карандашо́м.",
+      "Я живу́ с бра́том и с сестро́й. Пишу́ я карандашо́м, а в шко́ле — ме́лом."
+     ],
+     "rubric": "Your own life: с + instrumental for the people (с семьёй, с бра́том, с ма́терью) and an instrument (карандашо́м, ме́лом, руко́й).",
+     "rubric_lang": "en",
+     "key_terms": [
+      "ru-s",
+      "ru-karandash"
+     ],
+     "source_segment_ids": []
+    }
+   ]
+  }
+ },
+ "vocabulary": [
+  {
+   "lexeme_id": "ru-skhod",
+   "citation_form": "сход",
+   "part_of_speech": "noun",
+   "current_sense": "village assembly",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-mir-commune",
+   "citation_form": "мир",
+   "part_of_speech": "noun",
+   "current_sense": "the village commune (also: peace, world)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-obshchina",
+   "citation_form": "о́бщина",
+   "part_of_speech": "noun",
+   "current_sense": "commune",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-starosta",
+   "citation_form": "ста́роста",
+   "part_of_speech": "noun",
+   "current_sense": "village elder",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-uryadnik",
+   "citation_form": "уря́дник",
+   "part_of_speech": "noun",
+   "current_sense": "rural police constable",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-s",
+   "citation_form": "с",
+   "part_of_speech": "prep",
+   "current_sense": "with (+ instr.); from (+ gen.)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-mezhdu",
+   "citation_form": "ме́жду",
+   "part_of_speech": "prep",
+   "current_sense": "between (+ instr.)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pod",
+   "citation_form": "под",
+   "part_of_speech": "prep",
+   "current_sense": "under (+ instr.)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-nad",
+   "citation_form": "над",
+   "part_of_speech": "prep",
+   "current_sense": "over, above (+ instr.)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pered",
+   "citation_form": "пе́ред",
+   "part_of_speech": "prep",
+   "current_sense": "in front of (+ instr.)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-protiv",
+   "citation_form": "про́тив",
+   "part_of_speech": "prep",
+   "current_sense": "against (+ gen.)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-krik",
+   "citation_form": "крик",
+   "part_of_speech": "noun",
+   "current_sense": "shout",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-krichat",
+   "citation_form": "крича́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to shout",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-reshat",
+   "citation_form": "реша́ть",
+   "part_of_speech": "verb",
+   "current_sense": "to decide",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true,
+   "aspect": "ipf"
+  },
+  {
+   "lexeme_id": "ru-golos",
+   "citation_form": "го́лос",
+   "part_of_speech": "noun",
+   "current_sense": "voice; vote",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-vmeste",
+   "citation_form": "вме́сте",
+   "part_of_speech": "adv",
+   "current_sense": "together",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-peredel",
+   "citation_form": "переде́л",
+   "part_of_speech": "noun",
+   "current_sense": "repartition of commune land",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-karandash",
+   "citation_form": "каранда́ш",
+   "part_of_speech": "noun",
+   "current_sense": "pencil",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-bumaga",
+   "citation_form": "бума́га",
+   "part_of_speech": "noun",
+   "current_sense": "paper; document",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-pravo",
+   "citation_form": "пра́во",
+   "part_of_speech": "noun",
+   "current_sense": "right (legal)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-sablya",
+   "citation_form": "са́бля",
+   "part_of_speech": "noun",
+   "current_sense": "sabre",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-silnyj",
+   "citation_form": "си́льный",
+   "part_of_speech": "adj",
+   "current_sense": "strong",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-golova",
+   "citation_form": "голова́",
+   "part_of_speech": "noun",
+   "current_sense": "head",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-prikazchik",
+   "citation_form": "прика́зчик",
+   "part_of_speech": "noun",
+   "current_sense": "(estate) steward, clerk",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-uchastok",
+   "citation_form": "уча́сток",
+   "part_of_speech": "noun",
+   "current_sense": "plot (of land)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-khoroshij",
+   "citation_form": "хоро́ший",
+   "part_of_speech": "adj",
+   "current_sense": "good",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-chelovek",
+   "citation_form": "челове́к",
+   "part_of_speech": "noun",
+   "current_sense": "person, man (pl. лю́ди)",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-sila",
+   "citation_form": "си́ла",
+   "part_of_speech": "noun",
+   "current_sense": "strength, force",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-chast",
+   "citation_form": "часть",
+   "part_of_speech": "noun",
+   "current_sense": "part, share",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-vopros",
+   "citation_form": "вопро́с",
+   "part_of_speech": "noun",
+   "current_sense": "question, issue",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-starik",
+   "citation_form": "стари́к",
+   "part_of_speech": "noun",
+   "current_sense": "old man",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-plokhoj",
+   "citation_form": "плохо́й",
+   "part_of_speech": "adj",
+   "current_sense": "bad",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-dobryj",
+   "citation_form": "до́брый",
+   "part_of_speech": "adj",
+   "current_sense": "kind, good",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-obshchij",
+   "citation_form": "о́бщий",
+   "part_of_speech": "adj",
+   "current_sense": "common, shared",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  },
+  {
+   "lexeme_id": "ru-vremya",
+   "citation_form": "вре́мя",
+   "part_of_speech": "noun",
+   "current_sense": "time",
+   "first_introduced_lesson": "ru-mir-01-l09",
+   "new": true
+  }
+ ],
+ "media": {
+  "status": "draft",
+  "cover": "ru-mir-01-l09-cover",
+  "counts": {
+   "cover": 1,
+   "inline_scene": 2,
+   "margin_vignette": 1,
+   "margin_diagram": 2,
+   "margin_gloss": 35
+  },
+  "audio_sources": [
+   {
+    "id": "silero",
+    "label": "Silero (синтез речи)",
+    "manifest": "media/audio/glava-09/silero/manifest.json",
+    "default": true
+   }
+  ]
+ },
+ "completion": {
+  "button_label": "Гото́во"
+ },
+ "anki_export": {
+  "enabled": true,
+  "source": "lexicon.card_stages where lesson == this id",
+  "tags": [
+   "ru-mir-01",
+   "glava-09",
+   "chast-1"
+  ]
+ },
+ "metrics": {
+  "running_words": 856,
+  "sentences": 117,
+  "word_target": 850,
+  "word_window": [
+   765,
+   935
+  ]
+ }
+}
