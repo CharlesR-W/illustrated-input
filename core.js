@@ -855,13 +855,76 @@
     return /[\t"\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
   }
 
+  // ---------------------------------------------------------------- reader glosses
+  // docs/reader-glosses.md: word tokens of story text and the forms.json lookup key.
+  // A leading apostrophe starts a clitic token (hi'n → hi, 'n); a trailing one closes an
+  // elided form (δ’). Hyphenated compounds stay one token.
+  const GLOSS_TOKEN = /['’]?[\p{L}\p{M}\p{N}]+(?:-[\p{L}\p{M}\p{N}]+)*(?:['’](?![\p{L}\p{N}]))?/gu;
+  function glossTokens(text) {
+    return [...String(text ?? "").matchAll(GLOSS_TOKEN)].map((m) => ({ text: m[0], start: m.index, end: m.index + m[0].length }));
+  }
+  // The popup for the token of a segment's source text at offset `at`. `segment` is the
+  // lesson layer's entry for this segment; it is ignored when stale (its text differs).
+  // Items are found by forward search, as scripts/check-glosses.mjs does, and cover a
+  // token when the token starts inside them. A one-token item overrides the forms entry;
+  // a longer one is a phrase, shown above the tapped word's own forms entry.
+  // → { word, start, end, phrase: item + {start, end} | null, main, alternatives } | null
+  function glossAt(text, at, forms, segment) {
+    const source = String(text ?? "");
+    const token = glossTokens(source).find((tok) => at >= tok.start && at < tok.end);
+    if (!token) return null;
+    let item = null;
+    if (segment && segment.text === source) {
+      let cursor = 0;
+      for (const entry of segment.items || []) {
+        const start = entry?.text ? source.indexOf(entry.text, cursor) : -1;
+        if (start < 0) continue;
+        const end = start + entry.text.length;
+        cursor = end;
+        if (token.start >= start && token.start < end) { item = { ...entry, start, end }; break; }
+      }
+    }
+    const phrase = item && glossTokens(item.text).length > 1 ? item : null;
+    const key = glossKey(token.text);
+    const analyses = forms && Object.prototype.hasOwnProperty.call(forms, key) && Array.isArray(forms[key]) ? forms[key] : [];
+    const main = item && !phrase ? item : analyses[0] || null;
+    const alternatives = item && !phrase ? [] : analyses.slice(1);
+    if (!phrase && !main) return null;
+    return { word: token.text, start: token.start, end: token.end, phrase, main, alternatives };
+  }
+  function glossKey(surface) {
+    return String(surface ?? "").normalize("NFC").replace(/\u0301/g, "").normalize("NFC").toLowerCase().replace(/[’‘ʼ]/g, "'");
+  }
+
+  // ---------------------------------------------------------------- vocabulary self-check
+
+  // Per-course self-check ratings. Storage is optional; blocked storage still works in
+  // memory. The key is the older practice store's, so ratings saved there survive.
+  function createVocabularyStore(storage, courseId) {
+    const key = `illustrated:${courseId}:practice:v1`;
+    let state = { vocabulary: {} };
+    try {
+      const saved = JSON.parse(storage?.getItem(key) || "null");
+      if (saved && typeof saved.vocabulary === "object" && saved.vocabulary) state = { vocabulary: saved.vocabulary };
+    } catch { /* unavailable or corrupt browser storage */ }
+    function save() { try { storage?.setItem(key, JSON.stringify(state)); } catch { /* memory remains usable */ } }
+    function rating(lessonId, lexemeId) { return state.vocabulary[lessonId]?.[lexemeId]; }
+    function rate(lessonId, lexemeId, value) {
+      if (!["knew", "context", "no"].includes(value)) throw new Error("Unknown vocabulary self-check");
+      (state.vocabulary[lessonId] ||= {})[lexemeId] = value;
+      save();
+    }
+    return { rating, rate,
+      exportVocabulary: () => ({ format: "vocabulary-self-check/1", course_id: courseId, results: JSON.parse(JSON.stringify(state.vocabulary)) }) };
+  }
+
   const api = {
     normalise, foldAccents, unmutateCandidates, sameUnderMutation, mutationDifference,
     accepted, promptParts, countBlanks, answerMode, slotAnswers, checkResponse, revealAnswers,
     containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossAt, createVocabularyStore
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
@@ -870,7 +933,7 @@
       containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossAt, createVocabularyStore
     };
   }
   root.IllustratedCore = api;

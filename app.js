@@ -11,7 +11,7 @@ const UI_DEFAULTS = {
   continue: "Continue", start: "Start reading", how_to_read: "How to read this book",
   part: "Part", lesson: "Lesson", lessons_range: "Lessons {from}–{to}", planned: "coming soon",
   finished: "finished", hide_notes: "Hide notes", show_notes: "Show notes", notes: "Notes",
-  play_sentence: "Play the sentence", listen: "Listen", stop: "Stop", pause: "Pause", resume: "Play", audio: "Audio", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
+  play_sentence: "Play the sentence", play_paragraph: "Play the paragraph", listen: "Listen", stop: "Stop", pause: "Pause", resume: "Play", audio: "Audio", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
   in_story: "in the story", pensa: "Exercises", oral_mode: "Oral mode", check: "Check", reveal: "Show",
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
   correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
@@ -45,10 +45,7 @@ const UI_DEFAULTS = {
   ex_type_podstanovka: "Substitute", ex_type_otvet: "Answer", ex_type_soedini: "Join", ex_type_rasstav: "Word order", ex_type_diktant: "Dictation",
   ex_type_napishi: "Write", timing_summary: "Time per chapter", timing_total: "Total:", minutes: "{n} min",
   anki_include_known: "Include words I already know",
-  custom: "custom", kata: "Kata", kata_due: "Kata due: {n}", kata_more: "Three more?",
-  kata_table: "Reference table", kata_hint: "Show me", kata_finish: "Finish session",
-  kata_complete: "Complete all five items first.", kata_comfortable: "Comfortable", kata_passed: "Passed",
-  kata_failed: "Try again", kata_new: "New session", families: "Word families",
+  custom: "custom", families: "Word families",
   family_non_compositional: "The meaning cannot be predicted from the parts.", reveal_english: "English meaning",
   vocabulary_knew: "Knew it", vocabulary_context: "Got it from context", vocabulary_no: "No",
   vocabulary_export: "Export self-check (JSON)", chapters: "Chapters", back_to_chapter: "Back to the chapter",
@@ -69,7 +66,7 @@ const POS_EN = {
 const state = {
   baseUrl: null, course: null, lessons: new Map(), lexicon: undefined, current: null,
   english: false, notesHidden: false, oral: false, pensa: new Map(), activeField: null, view: null,
-  index: null, indexEntry: null, rereadView: null, book: "chapter", navBook: null, known: undefined, kataSessions: new Map()
+  index: null, indexEntry: null, rereadView: null, book: "chapter", navBook: null, known: undefined
 };
 const $ = (selector, root = document) => root.querySelector(selector);
 
@@ -163,14 +160,14 @@ function courseString(key, vars) {
 // ------------------------------------------------------------------ course features
 
 function capability(name) { return state.course?.capabilities?.[name] === true; }
-let kataStorage = null;
-let kataStorageCourse = null;
-function kataStore() {
-  if (!kataStorage || kataStorageCourse !== state.course.id) {
-    kataStorage = window.Kata.createStore(safeStorage(), state.course.id);
-    kataStorageCourse = state.course.id;
+let vocabularyStorage = null;
+let vocabularyStorageCourse = null;
+function vocabularyStore() {
+  if (!vocabularyStorage || vocabularyStorageCourse !== state.course.id) {
+    vocabularyStorage = Core.createVocabularyStore(safeStorage(), state.course.id);
+    vocabularyStorageCourse = state.course.id;
   }
-  return kataStorage;
+  return vocabularyStorage;
 }
 
 // Keep the typed text intact; show the exact transliteration used by the checker.
@@ -313,21 +310,22 @@ function courseHref(course) {
   return url.href;
 }
 
+// The sidebar is the one place to change course: every visible course, the current marked.
 function renderCourseSwitch() {
   const box = $("#course-switch");
   if (!box) return;
   const list = visibleCourses();
   const current = state.course?.id;
-  if (list.length < 2 && list.every((course) => course.id === current) && !(state.course?.custom && capability("custom_tag"))) { box.hidden = true; box.replaceChildren(); return; }
-  const select = h("select", { id: "course-select" }, list.map((course) =>
-    h("option", { value: course.id, lang: course.language || null, selected: course.id === current }, `${course.title || course.id}${course.custom && (course.id === current ? capability("custom_tag") : course.capabilities?.custom_tag === true) ? ` · ${t("custom")}` : ""}`)));
-  if (!list.some((course) => course.id === current)) select.prepend(h("option", { value: "", selected: true, lang: targetLang() }, state.course?.title || current || ""));
-  select.addEventListener("change", () => {
-    const course = list.find((item) => item.id === select.value);
-    if (course) location.href = courseHref(course);
-  });
-  box.replaceChildren(h("label", { class: "course-switch-label", for: "course-select" }, ui("span", "course_select")), select);
-  if (state.course?.custom && capability("custom_tag")) box.append(ui("span", "custom", { class: "custom-tag" }));
+  const tagged = (course) => (course.id === current ? Boolean(state.course?.custom || course.custom) && capability("custom_tag") : course.custom && course.capabilities?.custom_tag === true);
+  const listed = list.some((course) => course.id === current) ? list : [{ id: current, title: state.course?.title, language: targetLang() }, ...list];
+  if (listed.length < 2 && !tagged(listed[0] || {})) { box.hidden = true; box.replaceChildren(); return; }
+  box.replaceChildren(ui("p", "course_select", { class: "course-switch-label", id: "course-switch-label" }),
+    h("ul", { class: "course-options", id: "course-select" }, listed.map((course) => h("li", null,
+      h("a", { class: "course-option", href: courseHref(course), "aria-current": course.id === current ? "page" : null },
+        h("span", { class: "course-option-title", lang: course.language || null }, course.title || course.id),
+        course.language_name ? h("small", { lang: course.language || null }, course.language_name) : null,
+        // The current course's tag follows its capability; others' tags are plain text.
+        tagged(course) ? (course.id === current ? ui("span", "custom", { class: "custom-tag" }) : h("small", null, t("custom"))) : null)))));
   box.hidden = false;
 }
 
@@ -429,16 +427,16 @@ function knownList(baseline, plan) {
 const STEP_KINDS = ["listen", "read", "exercises", "grammar", "pensa", "write", "workbook", "reread", "anki", "done"];
 
 // The workbook is a separate book (as LLPSI's Exercitia): a chapter is its story, grammar
-// and Pensa, and the section exercises and kata live on #<lesson>/workbook, reached from
-// the course bar. Courses with section exercises or kata get it unless exercise_book: false.
+// and Pensa, and the section exercises live on #<lesson>/workbook, reached from the
+// course bar. Stepper courses get it unless exercise_book: false; others opt in with
+// exercise_book: true. A chapter without section exercises has no workbook.
 function exerciseBook(course) {
-  return Boolean(course) && (course.exercise_book ?? (course.stepper === true || course.capabilities?.kata === true));
+  return Boolean(course) && (course.exercise_book ?? course.stepper === true);
 }
-function lessonKata(lesson, course) { return course?.capabilities?.kata === true && Array.isArray(lesson?.grammar?.kata) ? lesson.grammar.kata : []; }
 function hasWorkbook(lesson, course, core = globalThis.IllustratedCore) {
-  return core.storySections(lesson).some((section, i) => sectionExercises(lesson, section, i).length) || lessonKata(lesson, course).length > 0;
+  return core.storySections(lesson).some((section, i) => sectionExercises(lesson, section, i).length);
 }
-function isWorkbookStep(stepId) { return stepId === "workbook" || stepId === "kata" || /^ex-\d+$/.test(String(stepId || "")); }
+function isWorkbookStep(stepId) { return stepId === "workbook" || /^ex-\d+$/.test(String(stepId || "")); }
 
 function isWorkbookExercise(exercise) { return Boolean(exercise && (exercise.section_id || exercise.type || exercise.obrazec)); }
 function isNapishi(exercise) { return /^(napishi|writing)$/i.test(String(exercise?.type || "")); }
@@ -651,6 +649,7 @@ function whatsNext() { return state.course?.whats_next || (state.course?.whats_n
 
 const VIEWS = ["intro", "overview", "lesson", "whats-next"];
 function showView(name) {
+  closeGloss();
   if (state.view === "lesson" && name !== "lesson") stopStepTimer();
   state.view = name;
   for (const id of VIEWS) if ($(`#${id}`)) $(`#${id}`).hidden = id !== name;
@@ -801,9 +800,7 @@ function showOverview(focus) {
       introText() ? ui("a", "how_to_read", { class: "button secondary", href: "#intro" }) : null,
       whatsNext() ? ui("a", "whats_next", { class: "button secondary", href: "#whats-next" }) : null,
       stepperCourse() ? ui("button", "export_timing", { type: "button", class: "button secondary", onclick: exportTiming }) : null),
-    otherCourses(),
     courseCredits(),
-    capability("kata") ? renderKataQueue() : null,
     stepperCourse() ? timingSummary() : null,
     h("div", { class: "overview-progress" },
       h("div", { class: "progress-copy" }, ui("span", "course_progress", { id: "overview-progress-label" }), h("strong", null, `${count} / ${total}`)),
@@ -875,7 +872,6 @@ async function openLesson(entry, focus = true, stepId = null) {
     state.current = lesson;
     state.book = exerciseBook(state.course) && isWorkbookStep(stepId) ? "workbook" : "chapter";
     state.navBook = null;
-    if (capability("kata")) kataStore().register(lesson);
     store(`${state.course.id}:last-lesson`, lesson.id);
     renderLesson(lesson);
     showView("lesson");
@@ -894,6 +890,7 @@ function setLessonTitle(lesson) {
 }
 
 function renderLesson(lesson) {
+  closeGloss();
   const article = $("#lesson");
   const order = lesson.order ?? lesson._entry?.order;
   const part = partOf(lesson);
@@ -925,6 +922,7 @@ function renderLesson(lesson) {
   ].filter(Boolean));
   markStepRegions(article, lesson);
   bindStoryObservers(article);
+  rebindAudio();
   scheduleAlign();
 }
 
@@ -950,8 +948,8 @@ function renderToolbar(lesson) {
     state.notesHidden = !state.notesHidden;
     store(courseKey("notes-hidden"), state.notesHidden ? "1" : "0");
     $("#lesson").classList.toggle("notes-hidden", state.notesHidden);
-    for (const anchor of document.querySelectorAll("#lesson .anchor, #lesson .note-marker")) anchor.tabIndex = state.notesHidden ? -1 : 0;
-    for (const drawer of document.querySelectorAll("#lesson .inline-notes")) closeDrawer(drawer);
+    for (const marker of document.querySelectorAll("#lesson .note-marker")) marker.tabIndex = state.notesHidden ? -1 : 0;
+    unlightNotes();
     setLabel();
     scheduleAlign();
   });
@@ -1014,34 +1012,38 @@ function renderPronunciationNote(note) {
 function renderStory(lesson) {
   const sections = Core.storySections(lesson);
   const manifest = lesson._audio?.selected?.data;
-  return h("div", { class: "story", id: "story" }, sections.map((section, sectionIndex) => {
+  const story = h("div", { class: "story", id: "story" }, sections.map((section, sectionIndex) => {
     const prose = h("div", { class: "prose-col", lang: targetLang() });
     const margin = h("div", { class: "margin-col", role: "complementary", "aria-label": t("notes") });
-    let paragraph = null;
-    let speaker = null;
-    let pendingScenes = [];
-    let pendingFloats = [];
     const seenGlosses = new Set();
-    const closeParagraph = () => {
-      if (paragraph) prose.append(...pendingFloats, paragraph);
-      for (const scene of pendingScenes) prose.append(scene);
-      paragraph = null; pendingScenes = []; pendingFloats = [];
-    };
+    // A paragraph opens at paragraph_start or at a change of speaker.
+    const paragraphs = [];
     for (const segment of section.segments || []) {
-      const turn = segment.speaker && segment.speaker !== speaker;
-      if (!paragraph || segment.paragraph_start || turn) {
-        closeParagraph();
-        paragraph = h("p", { class: `story-para${segment.speaker ? " turn" : ""}` });
-        speaker = segment.speaker || null;
-      }
-      const { sentence, notes, scenes, floats } = renderSegment(segment, manifest, lesson, seenGlosses);
-      if (paragraph.childNodes.length) paragraph.append(" ");
-      paragraph.append(sentence);
-      margin.append(...notes);
-      pendingFloats.push(...floats);
-      pendingScenes.push(...scenes);
+      const last = paragraphs.at(-1);
+      if (!last || segment.paragraph_start || (segment.speaker && segment.speaker !== last.speaker)) paragraphs.push({ speaker: segment.speaker || null, segments: [segment] });
+      else last.segments.push(segment);
     }
-    closeParagraph();
+    for (const { speaker, segments } of paragraphs) {
+      const paragraph = h("p", { class: `story-para${speaker ? " turn" : ""}` });
+      const voiced = segments.map((segment) => segment.id).filter((id) => manifest?.segments?.[id]);
+      if (voiced.length) paragraph.append(paragraphPlayButton(voiced, lesson), " ");
+      const floats = [];
+      const scenes = [];
+      const strip = [];
+      segments.forEach((segment, i) => {
+        const rendered = renderSegment(segment, manifest, lesson, seenGlosses);
+        if (i) paragraph.append(" ");
+        paragraph.append(rendered.sentence);
+        margin.append(...rendered.notes);
+        strip.push(...rendered.strip);
+        floats.push(...rendered.floats);
+        scenes.push(...rendered.scenes);
+      });
+      prose.append(...floats, paragraph);
+      // Narrow screens hide the margin column; its text notes run under the paragraph instead.
+      if (strip.length) prose.append(h("p", { class: "para-notes" }, strip.flatMap((note, i) => (i ? [" ", note] : [note]))));
+      prose.append(...scenes);
+    }
     const heading = section.title
       ? h("h2", { class: "section-title", id: `${section.id || `section-${sectionIndex}`}-title`, lang: targetLang() },
         h("span", { class: "section-number", "aria-hidden": "true" }, `${ROMAN[sectionIndex] || sectionIndex + 1}.`), ` ${disp(section.title)}`)
@@ -1053,19 +1055,24 @@ function renderStory(lesson) {
       stepEnd(lesson, `read-${sectionIndex + 1}`),
       exerciseBook(state.course) ? null : renderWorkbook(lesson, section, sectionIndex));
   }));
+  wireStoryWords(story, lesson);
+  return story;
 }
 
 const MARGIN = new Set(["margin_gloss", "margin_vignette", "margin_diagram"]);
 
 // Anchor lookup for a segment. Courses with a stress block match on the stress-free text
 // (anchors may be written with or without marks) and map back through the offset map when
-// stress is shown; other courses use the plain lookup unchanged.
+// stress is shown; other courses use the plain lookup unchanged. `map[i]` is the source
+// offset of display character i, so tapped words resolve in the stored (stressed) text.
 function anchorLocator(source) {
-  if (!stressConfig()) return { text: source, find: (anchor) => Core.findAnchor(source, anchor) };
+  const same = Array.from({ length: source.length + 1 }, (_, i) => i);
+  if (!stressConfig()) return { text: source, map: same, find: (anchor) => Core.findAnchor(source, anchor) };
   const stripped = stripStress(source);
   const shown = disp(source, "story") !== source || !source.includes(ACUTE) ? "plain" : "stressed";
   return {
     text: shown === "plain" ? stripped.text : source,
+    map: shown === "plain" ? stripped.map : same,
     find: (anchor) => {
       const found = Core.findAnchor(stripped.text, stripStress(anchor).text);
       if (!found || shown === "plain") return found;
@@ -1076,21 +1083,39 @@ function anchorLocator(source) {
 
 // Several sentences of one subsection may carry the same margin gloss for the same word
 // (e.g. "δεκάτη = τὸ δέκατον μέρος" three times). Only the first is shown in a subsection.
-function glossKey(aid) {
+function marginGlossKey(aid) {
   if (aid.presentation !== "margin_gloss" || !(aid.gloss || aid.text)) return null;
   const target = aid.covers_lexeme_ids?.length ? [...aid.covers_lexeme_ids].sort().join(",") : String(aid.anchor_text || "").normalize("NFC").toLocaleLowerCase();
   return `${String(aid.gloss || aid.text).normalize("NFC").trim()}\u0000${target}`;
 }
 
+// Display text [from, to) as word spans (docs/reader-glosses.md tokens) and the text between
+// them. data-at is the word's source offset, which the dictionary popup looks up.
+function wordNodes(text, from, to, words, map) {
+  const nodes = [];
+  let cursor = from;
+  for (const word of words) {
+    if (word.end <= from || word.start >= to) continue;
+    const start = Math.max(word.start, from);
+    const end = Math.min(word.end, to);
+    if (start > cursor) nodes.push(text.slice(cursor, start));
+    nodes.push(h("span", { class: "w", "data-at": String(map[word.start]) }, text.slice(start, end)));
+    cursor = end;
+  }
+  if (cursor < to) nodes.push(text.slice(cursor, to));
+  return nodes;
+}
+
 function renderSegment(segment, manifest, lesson, seenGlosses = null) {
   const locator = anchorLocator(segment.text || "");
   const text = locator.text;
+  const words = Core.glossTokens(text);
   const aids = Core.presentedAids(segment);
   const ranges = [];
   const loose = [];
   aids.forEach((aid, index) => {
     if (!MARGIN.has(aid.presentation)) return;
-    const key = seenGlosses ? glossKey(aid) : null;
+    const key = seenGlosses ? marginGlossKey(aid) : null;
     if (key && seenGlosses.has(key)) return;
     if (key) seenGlosses.add(key);
     const found = aid.anchor_text ? locator.find(aid.anchor_text) : null;
@@ -1106,6 +1131,14 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
 
   const sentence = h("span", { class: "seg", id: segment.id, "data-segment": segment.id });
   const notes = [];
+  // Text notes again, for the strip under the paragraph on narrow screens (pictures float).
+  const strip = [];
+  const stripNotes = (items, anchorId) => {
+    for (const { aid, index } of items) {
+      if (aid.presentation !== "margin_gloss" && aid.src) continue;
+      strip.push(buildNote(aid, `${segment.id}-n${index}`, anchorId, true, "span"));
+    }
+  };
   if (capability("segment_annotations")) {
     if (segment.receptive) sentence.classList.add("receptive");
     if (segment.preview) notes.push(h("a", { class: "note preview-marker", href: "#grammar", "data-anchor": segment.id,
@@ -1113,25 +1146,28 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
   }
   let cursor = 0;
   ranges.forEach((range, k) => {
-    if (range.start > cursor) sentence.append(text.slice(cursor, range.start));
+    if (range.start > cursor) sentence.append(...wordNodes(text, cursor, range.start, words, locator.map));
     const anchorId = `${segment.id}-a${k}`;
     const noteEls = range.items.map(({ aid, index }) => buildNote(aid, `${segment.id}-n${index}`, anchorId));
     notes.push(...noteEls);
-    const anchor = h("button", {
-      type: "button", class: "anchor", id: anchorId, tabindex: state.notesHidden ? "-1" : "0",
-      "aria-describedby": noteEls.map((note) => note.id).join(" ")
-    }, text.slice(range.start, range.end));
-    wireAnchor(anchor, range.items, sentence, noteEls);
+    stripNotes(range.items, anchorId);
+    // Not a button: its words are the tap targets; tapping one opens the dictionary and
+    // lights its note (wireStoryWords). The words carry the note as their description.
+    const anchor = h("span", { class: "anchor", id: anchorId }, wordNodes(text, range.start, range.end, words, locator.map));
+    for (const word of anchor.querySelectorAll(".w")) word.setAttribute("aria-describedby", noteEls.map((note) => note.id).join(" "));
+    wireAnchor(anchor, noteEls);
     sentence.append(anchor);
     cursor = range.end;
   });
-  if (cursor < text.length) sentence.append(text.slice(cursor));
+  if (cursor < text.length) sentence.append(...wordNodes(text, cursor, text.length, words, locator.map));
   if (loose.length) {
     const markerId = `${segment.id}-m`;
     const noteEls = loose.map(({ aid, index }) => buildNote(aid, `${segment.id}-n${index}`, segment.id));
     notes.push(...noteEls);
+    stripNotes(loose, segment.id);
     const marker = h("button", { type: "button", class: "note-marker", id: markerId, tabindex: state.notesHidden ? "-1" : "0", "aria-label": t("notes"), "aria-describedby": noteEls.map((note) => note.id).join(" ") }, "*");
-    wireAnchor(marker, loose, sentence, noteEls);
+    wireAnchor(marker, noteEls);
+    marker.addEventListener("click", (event) => { event.stopPropagation(); unlightNotes(); lightNotes(segment.id, sentence, marker); });
     sentence.append(marker);
   }
   const scenes = aids.filter((aid) => aid.presentation === "inline_scene").map((aid) => renderScene(aid)).filter(Boolean);
@@ -1146,34 +1182,23 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
       return figure;
     });
 
-  const audioFile = manifest?.segments?.[segment.id];
-  if (audioFile) {
-    sentence.classList.add("has-audio");
-    sentence.tabIndex = 0;
-    const play = (event) => {
-      if (event.target.closest(".anchor, .note-marker, .inline-notes")) return;
-      if (event.type === "keydown" && event.key !== "Enter" && event.key !== " ") return;
-      if (event.type === "keydown" && event.target !== sentence) return;
-      event.preventDefault();
-      playSegments([segment.id], lesson);
-    };
-    sentence.addEventListener("click", play);
-    sentence.addEventListener("keydown", play);
-  }
-  return { sentence, notes, scenes, floats };
+  // Audio is per paragraph (paragraphPlayButton); a tap on a word opens the dictionary.
+  if (manifest?.segments?.[segment.id]) sentence.classList.add("has-audio");
+  return { sentence, notes, strip, scenes, floats };
 }
 
 function glossContent(text) {
   return String(text ?? "").split(/(←|↔|→|=)/).map((part) => (/^(←|↔|→|=)$/.test(part) ? h("span", { class: "gloss-op" }, part) : part));
 }
 
-function buildNote(aid, id, anchorId, inline = false) {
+function buildNote(aid, id, anchorId, inline = false, tag = "div") {
   const lang = targetLang();
   if (aid.presentation === "margin_gloss") {
-    return h("div", { class: `note note-gloss gloss-${aid.gloss_kind || "note"}`, id: inline ? null : id, "data-anchor": anchorId, lang }, glossContent(disp(aid.gloss || aid.text, "glosses")), capability("gloss_reveal") && aid.reveal_en ? revealEnglish(aid.reveal_en) : null);
+    return h(tag, { class: `note note-gloss gloss-${aid.gloss_kind || "note"}`, id: inline ? null : id, "data-anchor": anchorId, lang }, glossContent(disp(aid.gloss || aid.text, "glosses")), capability("gloss_reveal") && aid.reveal_en ? revealEnglish(aid.reveal_en) : null);
   }
   const kind = aid.presentation === "margin_vignette" ? "vignette" : "diagram";
   const label = disp(aid.label || "", "glosses");
+  if (tag === "span") return h("span", { class: "note note-gloss", "data-anchor": anchorId, lang }, label || aid.alt || "");
   const caption = label ? h("figcaption", { lang }, label) : null;
   const figure = h("figure", { class: `note note-${kind}`, id: inline ? null : id, "data-anchor": anchorId });
   if (!aid.src) { figure.classList.add("missing"); figure.append(caption || ""); return figure; }
@@ -1195,51 +1220,206 @@ function isNarrow(el) {
   return !col || getComputedStyle(col).display === "none";
 }
 
-function wireAnchor(anchor, items, sentence, noteEls) {
+// Hovering or focusing an anchor pairs it with its notes (margin or strip), and back.
+function wireAnchor(anchor, noteEls) {
   const pair = (on) => {
     anchor.classList.toggle("paired", on);
     for (const note of noteEls) note.classList.toggle("paired", on);
   };
   anchor.addEventListener("mouseenter", () => pair(true));
-  anchor.addEventListener("mouseleave", () => pair(false));
-  anchor.addEventListener("focus", () => pair(true));
-  anchor.addEventListener("blur", () => pair(false));
+  anchor.addEventListener("mouseleave", () => { if (!anchor.classList.contains("lit")) pair(false); });
   for (const note of noteEls) {
     note.addEventListener("mouseenter", () => pair(true));
     note.addEventListener("mouseleave", () => pair(false));
   }
-  anchor.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (state.notesHidden) return;
-    if (!isNarrow(anchor)) {
-      for (const note of noteEls) { note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
-      return;
-    }
-    // Pictures already float beside the paragraph; the drawer carries only the text notes.
-    const textItems = items.filter(({ aid }) => aid.presentation === "margin_gloss" || !aid.src);
-    if (!textItems.length) {
-      const floats = sectionBodyOf(anchor)?.querySelectorAll(`.note-float[data-anchor="${anchor.id}"], .note-float[data-anchor="${sentence.id}"]`) || [];
-      for (const note of floats) { note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
-      return;
-    }
-    const drawerId = `${anchor.id}-drawer`;
-    const open = document.getElementById(drawerId);
-    if (open) { closeDrawer(open); return; }
-    const drawer = h("span", { class: "inline-notes", id: drawerId, role: "note" },
-      textItems.map(({ aid, index }) => buildNote(aid, `${sentence.id}-n${index}`, anchor.id, true)));
-    drawer.dataset.anchor = anchor.id;
-    let after = sentence;
-    while (after.nextElementSibling?.classList.contains("inline-notes")) after = after.nextElementSibling;
-    after.after(drawer);
-    anchor.setAttribute("aria-expanded", "true");
-    anchor.setAttribute("aria-controls", drawerId);
+}
+
+// Light an anchor's notes where they are visible: the margin column on wide screens, the
+// strip under the paragraph and any floated picture on narrow ones. The anchor stays lit
+// until the dictionary popup closes (unlightNotes).
+function lightNotes(anchorId, sentence, lit = document.getElementById(anchorId)) {
+  if (state.notesHidden) return;
+  const body = sectionBodyOf(sentence);
+  if (!body) return;
+  const where = isNarrow(sentence) ? ".para-notes .note, .note-float" : ".margin-col .note";
+  const notes = [...body.querySelectorAll(where)].filter((note) => note.dataset.anchor === anchorId);
+  lit?.classList.add("paired", "lit");
+  for (const note of notes) { note.classList.add("paired"); note.classList.remove("flash"); void note.offsetWidth; note.classList.add("flash"); }
+}
+function unlightNotes() {
+  for (const el of document.querySelectorAll("#lesson .lit, #lesson .note.paired")) el.classList.remove("paired", "lit");
+}
+
+// ------------------------------------------------------------------ tap-to-gloss (docs/reader-glosses.md)
+// Words of the chapter's story open a small dictionary popup. The glosses load on the first
+// touch of the story (forms.json once per course, the lesson layer once per lesson); a
+// missing file means no popups. Keyboard: one word of the story is in the tab order, the
+// arrow keys move between words, Enter or Space opens the popup and Escape closes it.
+// A word inside a margin-gloss anchor also lights that note.
+
+const glossFiles = new Map();
+function glossFile(path) {
+  const url = resolve(path);
+  if (!glossFiles.has(url)) glossFiles.set(url, loadJSON(url).catch(() => null));
+  return glossFiles.get(url);
+}
+function lessonGlosses(lesson) {
+  if (!lesson._entry) return Promise.resolve(null);
+  const file = entryPath(lesson._entry).split("/").pop();
+  return Promise.all([glossFile("glosses/forms.json"), glossFile(`glosses/${file}`)]).then(([forms, layer]) =>
+    (forms?.forms || layer?.segments ? { forms: forms?.forms || {}, segments: layer?.segments || {} } : null));
+}
+
+function wireStoryWords(story, lesson) {
+  const first = story.querySelector(".w");
+  if (first) first.setAttribute("tabindex", "0");
+  const warm = () => lessonGlosses(lesson).then((data) => story.classList.toggle("has-glosses", Boolean(data)));
+  story.addEventListener("pointerdown", warm, { once: true });
+  story.addEventListener("focusin", warm, { once: true });
+  story.addEventListener("click", (event) => {
+    const word = event.target.closest?.(".w");
+    if (word) openWord(word, lesson);
+  });
+  story.addEventListener("keydown", (event) => {
+    const word = event.target.closest?.(".w");
+    if (!word) return;
+    if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openWord(word, lesson); return; }
+    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+    const all = [...story.querySelectorAll(".w")];
+    const next = all[all.indexOf(word) + (event.key === "ArrowRight" ? 1 : -1)];
+    if (!next) return;
+    event.preventDefault();
+    const open = Boolean(glossPop);
+    rove(next);
+    next.focus();
+    if (open) openWord(next, lesson);
   });
 }
 
-function closeDrawer(drawer) {
-  const anchor = document.getElementById(drawer.dataset.anchor);
-  anchor?.setAttribute("aria-expanded", "false");
-  drawer.remove();
+function rove(word) {
+  const story = word.closest(".story");
+  for (const old of story?.querySelectorAll('.w[tabindex="0"]') || []) if (old !== word) old.setAttribute("tabindex", "-1");
+  word.setAttribute("tabindex", "0");
+}
+
+let glossPop = null;
+let glossSeq = 0;
+async function openWord(word, lesson) {
+  closeGloss();
+  rove(word);
+  const sentence = word.closest(".seg");
+  const anchor = word.closest(".anchor");
+  if (anchor) lightNotes(anchor.id, sentence);
+  const seq = glossSeq;
+  const data = await lessonGlosses(lesson);
+  if (seq !== glossSeq || !data || !word.isConnected) return;
+  word.closest(".story")?.classList.add("has-glosses");
+  const segment = (lesson._segmentIndex ||= Core.segmentIndex(lesson)).get(sentence.dataset.segment);
+  const found = segment ? Core.glossAt(segment.text || "", Number(word.dataset.at), data.forms, data.segments[segment.id]) : null;
+  if (found) showGloss(word, sentence, found);
+}
+
+function glossEntry(analysis, surface, extra = "") {
+  const lang = targetLang();
+  const lemma = analysis.lemma && Core.glossKey(analysis.lemma) !== Core.glossKey(surface) ? analysis.lemma : null;
+  const grammar = [analysis.pos, analysis.form].filter(Boolean).join(" ");
+  return h("div", { class: `gloss-entry${extra}` },
+    h("p", { class: "gloss-head" },
+      h("span", { class: "gloss-word", lang }, disp(surface)),
+      lemma ? [" ", h("span", { class: "gloss-lemma", lang }, disp(lemma, "glosses"))] : null,
+      grammar ? [" ", h("span", { class: "gloss-pos", lang: "en" }, grammar)] : null),
+    analysis.en ? h("p", { class: "gloss-en", lang: "en" }, analysis.en) : null,
+    analysis.note ? h("p", { class: "gloss-note", lang: "en" }, analysis.note) : null);
+}
+
+function showGloss(word, sentence, found) {
+  const lang = targetLang();
+  const from = found.phrase?.start ?? found.start;
+  const to = found.phrase?.end ?? found.end;
+  const active = [...sentence.querySelectorAll(".w")].filter((w) => Number(w.dataset.at) >= from && Number(w.dataset.at) < to);
+  for (const w of active) w.classList.add("w-active");
+  const pop = h("div", { class: "gloss-pop", id: "gloss-pop", role: "dialog", "aria-label": disp(found.phrase?.text || found.word) },
+    found.phrase ? glossEntry(found.phrase, found.phrase.text, " gloss-phrase") : null,
+    found.main ? glossEntry(found.main, found.word) : null,
+    found.alternatives.length ? h("ul", { class: "gloss-alts" }, found.alternatives.map((alt) => h("li", null,
+      h("span", { class: "gloss-lemma", lang }, disp(alt.lemma || "", "glosses")), " ",
+      h("span", { class: "gloss-pos", lang: "en" }, [alt.pos, alt.form].filter(Boolean).join(" ")), " ",
+      h("span", { lang: "en" }, alt.en || "")))) : null);
+  document.body.append(pop);
+  const described = word.getAttribute("aria-describedby");
+  word.setAttribute("aria-describedby", [described, "gloss-pop"].filter(Boolean).join(" "));
+  glossPop = { pop, word, active, described };
+  placeGloss();
+}
+
+// Below the word, or above it when that side has more room; inside the visible area (the
+// visual viewport on iOS, less the sticky header and the audio dock). When neither side
+// fits, the popup is capped and scrolls, overlapping the word only if it must.
+function placeGloss() {
+  if (!glossPop) return;
+  const { pop, word } = glossPop;
+  const rect = word.getClientRects()[0] || word.getBoundingClientRect();
+  const view = window.visualViewport;
+  const viewTop = view ? view.offsetTop : 0;
+  const viewLeft = view ? view.offsetLeft : 0;
+  const viewWidth = view ? view.width : document.documentElement.clientWidth;
+  const viewHeight = view ? view.height : window.innerHeight;
+  const ceiling = Math.max(viewTop, $(".site-header")?.getBoundingClientRect().bottom || 0) + 6;
+  const dock = $("#audio-dock");
+  const floor = viewTop + viewHeight - (dock && !dock.hidden ? dock.offsetHeight + 16 : 8);
+  pop.style.maxHeight = "";
+  const natural = pop.offsetHeight;
+  const below = floor - rect.bottom - 6;
+  const above = rect.top - 6 - ceiling;
+  const up = natural > below && above > below;
+  const room = up ? above : below;
+  const height = natural <= room ? natural : room >= 72 ? room : Math.min(natural, floor - ceiling);
+  if (height < natural) pop.style.maxHeight = `${Math.max(Math.floor(height), 40)}px`;
+  const tall = pop.offsetHeight;
+  const top = Math.min(Math.max(up ? rect.top - 6 - tall : rect.bottom + 6, ceiling), Math.max(ceiling, floor - tall));
+  const left = Math.max(viewLeft + 8, Math.min(rect.left + rect.width / 2 - pop.offsetWidth / 2, viewLeft + viewWidth - pop.offsetWidth - 8));
+  pop.style.left = `${Math.round(left + window.scrollX)}px`;
+  pop.style.top = `${Math.round(top + window.scrollY)}px`;
+  pop.classList.toggle("above", top < rect.top);
+}
+
+function closeGloss() {
+  glossSeq += 1;
+  unlightNotes();
+  if (!glossPop) return;
+  const { pop, word, active, described } = glossPop;
+  glossPop = null;
+  pop.remove();
+  for (const w of active) w.classList.remove("w-active");
+  if (described) word.setAttribute("aria-describedby", described); else word.removeAttribute("aria-describedby");
+}
+
+// ------------------------------------------------------------------ paragraph audio
+
+// One play/pause button per story paragraph with audio. It plays the paragraph's sentences
+// in turn; while anything plays inside its paragraph (also continuous playback) it pauses
+// and resumes instead.
+function paragraphPlayButton(ids, lesson) {
+  const button = h("button", { type: "button", class: "para-play", "aria-label": t("play_paragraph"), title: t("play_paragraph") }, "▶");
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (audioState.on && audioState.active?.closest(".story-para") === button.parentNode) toggleAudioPause();
+    else playSegments(ids, lesson);
+  });
+  return button;
+}
+
+function syncParaButtons() {
+  const para = audioState.on ? audioState.active?.closest?.(".story-para") : null;
+  for (const button of document.querySelectorAll("#lesson .para-play")) {
+    const mine = Boolean(para) && button.parentNode === para;
+    const playing = mine && !audioState.paused;
+    const label = t(playing ? "pause" : mine ? "resume" : "play_paragraph");
+    button.textContent = playing ? "❚❚" : "▶";
+    button.classList.toggle("is-active", mine);
+    button.setAttribute("aria-label", label);
+    button.title = label;
+  }
 }
 
 // Margin alignment: each note sits level with its anchor's line; later notes are pushed
@@ -1328,7 +1508,6 @@ function stepTarget(stepId) {
   if (kind === "read" || kind === "listen") return document.querySelector(`#lesson [data-section="${n}"]`);
   if (kind === "ex") return document.getElementById(`wb-${n}`);
   if (kind === "workbook") return document.getElementById("workbook-book");
-  if (kind === "kata") return document.getElementById("kata");
   if (kind === "grammar") return document.getElementById("words-history") || document.getElementById("grammar");
   if (kind === "pensa") return document.getElementById("pensa");
   if (kind === "write") return document.getElementById("napishi");
@@ -1454,7 +1633,7 @@ function markStepRegions(article, lesson) {
   mark(article.querySelector(".scene.cover"), ["read-1", "reread"]);
   for (const section of article.querySelectorAll(".story-section[data-section]")) mark(section, [`listen-${section.dataset.section}`, `read-${section.dataset.section}`, "reread"]);
   for (const block of article.querySelectorAll(".workbook")) mark(block, [`ex-${block.id.replace("wb-", "")}`]);
-  for (const block of article.querySelectorAll(".workbook, #kata")) mark(block, ["workbook"]);
+  for (const block of article.querySelectorAll(".workbook")) mark(block, ["workbook"]);
   mark(article.querySelector("#words-history"), ["grammar"]);
   mark(article.querySelector("#grammar"), ["grammar"]);
   mark(article.querySelector("#pensa"), ["pensa"]);
@@ -1572,13 +1751,6 @@ async function updateContinueStep(target, order) {
   } catch { /* keep the plain lesson link */ }
 }
 
-function otherCourses() {
-  const others = visibleCourses().filter((course) => course.id !== state.course?.id);
-  if (!others.length) return null;
-  return h("p", { class: "other-courses" }, ui("span", "course_select"), ": ",
-    others.map((course, i) => [i ? " · " : "", h("a", { href: courseHref(course), lang: course.language || null }, course.title || course.id)]));
-}
-
 // ------------------------------------------------------------------ lightbox
 
 function openLightbox(aid) {
@@ -1670,7 +1842,6 @@ function storyLink(segmentId) {
     h("span", { "aria-hidden": "true" }, "↑ "), t("in_story"));
 }
 
-// Tables are rendered locally beside each kata so a hint highlights only its own reference.
 function renderGrammarTable(table, { caption = true } = {}) {
   const header = table.header || [];
   return h("div", { class: "table-wrap", tabindex: "0", role: "region", "aria-label": table.caption || t("grammar") },
@@ -1701,190 +1872,6 @@ function renderFamilies(lesson) {
         diagram?.src ? h("figure", { class: "family-diagram" }, mediaImage(diagram, "diagram")) : null);
     }));
 }
-function renderKata(kata, lesson, onComplete = () => {}) {
-  const sessionKey = `${state.course.id}:${kata.id}`;
-  let session = state.kataSessions.get(sessionKey);
-  if (session?.grade && kata.scheduled && kataStore().due().some((record) => record.id === kata.id)) session = null;
-  if (!session || session.itemIds.some((id) => !kata.pool.some((item) => item.id === id))) {
-    session = { itemIds: window.Kata.draw(kata.pool).map((item) => item.id), stages: {}, completedItems: new Set(), values: {}, feedback: {} };
-    state.kataSessions.set(sessionKey, session);
-  }
-  const items = session.itemIds.map((id) => kata.pool.find((item) => item.id === id));
-  const { stages, completedItems } = session;
-  const table = (lesson.grammar?.tables || []).find((entry) => entry.id === kata.table_ref);
-  // A caption that only repeats the kata's own heading is dropped (it stays the region's label).
-  const sameText = (a, b) => String(a || "").normalize("NFC").toLocaleLowerCase().replace(/\s+/g, " ").trim() ===
-    String(b || "").normalize("NFC").toLocaleLowerCase().replace(/\s+/g, " ").trim();
-  const reference = h("details", { class: "kata-reference", open: true }, ui("summary", "kata_table"),
-    table ? renderGrammarTable(table, { caption: !sameText(table.caption, kata.title) }) : null);
-  const narrow = window.matchMedia("(max-width: 700px)");
-  reference.open = !narrow.matches || Boolean(session.highlight);
-  // Desktop always retains the reference; on a phone the summary opens it above the items.
-  reference.addEventListener("toggle", () => { if (!narrow.matches && !reference.open) reference.open = true; });
-  const box = h("section", { class: "kata", "data-kata": kata.id }, h("h4", { lang: targetLang() }, kata.title));
-  const list = h("ol", { class: "kata-items" });
-  const summary = h("p", { class: "kata-result", role: "status" });
-  const highlight = (item) => {
-    for (const cell of reference.querySelectorAll("td")) {
-      cell.classList.toggle("kata-cell-highlight", cell.closest("table").dataset.table === item.cell.table &&
-        Number(cell.dataset.row) === item.cell.row && Number(cell.dataset.col) === item.cell.col);
-    }
-  };
-  const stageLevel = { clean: 0, hint: 1, reveal: 2 };
-  // The session grades itself once all five items are answered or revealed, so the only
-  // "done" control at the end of the Μάθημα is the step's own.
-  const finishIfComplete = () => {
-    if (session.grade || completedItems.size !== items.length) return;
-    const result = kataStore().record(kata, stages);
-    session.grade = result.last_grade;
-    paintComplete();
-    onComplete(result);
-  };
-  for (const item of items) {
-    stages[item.id] ||= "clean";
-    const row = h("li", { class: `kata-item${completedItems.has(item.id) ? " is-complete" : ""}`, "data-item": item.id, "data-stage": stages[item.id] });
-    const markStage = (stage) => {
-      if (stageLevel[stage] > stageLevel[stages[item.id]]) stages[item.id] = stage;
-      row.dataset.stage = stages[item.id];
-    };
-    const feedback = h("p", { class: "feedback", "aria-live": "polite" });
-    const hint = h("p", { class: "kata-stem", hidden: stages[item.id] === "clean", lang: targetLang() }, item.stem_hint);
-    const answer = h("p", { class: "kata-answer", hidden: stages[item.id] !== "reveal", lang: targetLang() }, item.answer);
-    const field = h("input", { class: "answer-field", type: "text", lang: targetLang(), autocomplete: "off", spellcheck: "false",
-      "aria-label": `${item.lemma} · ${item.label}` });
-    field.value = session.values[item.id] || "";
-    const showFeedback = (status) => {
-      const good = ["correct", "correct_letters", "correct_yo"].includes(status);
-      feedback.className = `feedback status-${status}`;
-      feedback.replaceChildren(ui("span", good ? "correct" : status === "accent" ? "accent_hint" : status === "empty" ? "empty" : "wrong"));
-    };
-    if (session.feedback[item.id]) showFeedback(session.feedback[item.id]);
-    const check = (value) => {
-      session.values[item.id] = value;
-      const result = checkAnswer({ ...item, answer_mode: "exact", accepted_answers: [item.answer, ...(item.accepted || [])] }, [value], {}, lesson);
-      const good = ["correct", "correct_letters", "correct_yo"].includes(result.status);
-      if (good) completedItems.add(item.id); else if (stages[item.id] !== "reveal") completedItems.delete(item.id);
-      row.classList.toggle("is-complete", completedItems.has(item.id));
-      session.feedback[item.id] = result.status;
-      showFeedback(result.status);
-      paintChoices();
-      finishIfComplete();
-    };
-    const choices = kata.shape === "choose" ? h("div", { class: "kata-choices", role: "group", "aria-label": item.prompt },
-      item.options.map((option) => h("button", { type: "button", class: "small-button", lang: targetLang(), "data-option": option, "aria-pressed": String(session.values[item.id] === option), onclick: (event) => {
-        for (const button of choices.children) button.setAttribute("aria-pressed", String(button === event.currentTarget));
-        check(option);
-      } }, option))) : null;
-    // The chosen chip shows whether it was right; colour is backed by a ✓/✗ mark.
-    function paintChoices() {
-      if (!choices) return;
-      const status = session.feedback[item.id];
-      const good = ["correct", "correct_letters", "correct_yo"].includes(status);
-      for (const button of choices.children) {
-        const chosen = status && session.values[item.id] === button.dataset.option;
-        button.classList.toggle("is-right", Boolean(chosen && good));
-        button.classList.toggle("is-wrong", Boolean(chosen && !good));
-      }
-    }
-    paintChoices();
-    field.addEventListener("input", () => {
-      session.values[item.id] = field.value;
-      delete session.feedback[item.id];
-      if (stages[item.id] !== "reveal") completedItems.delete(item.id);
-      row.classList.toggle("is-complete", completedItems.has(item.id)); feedback.className = "feedback"; feedback.replaceChildren();
-    });
-    field.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); check(field.value); } });
-    row.append(h("p", { class: "kata-prompt", lang: targetLang() }, item.prompt),
-      h("p", { class: "kata-lemma", lang: targetLang() }, item.lemma, " · ", item.label),
-      choices || h("div", { class: "answer-line" }, inputWithPreview(field)),
-      h("div", { class: "item-actions" },
-        kata.shape === "type" ? ui("button", "check", { type: "button", class: "small-button check-button", onclick: () => check(field.value) }) : null,
-        ui("button", "kata_hint", { type: "button", class: "small-button kata-hint", onclick: () => {
-          markStage("hint"); hint.hidden = false; reference.open = true;
-          session.highlight = item.id; highlight(item);
-        } }),
-        ui("button", "reveal", { type: "button", class: "small-button kata-reveal", onclick: () => {
-          markStage("reveal"); answer.hidden = false; completedItems.add(item.id); row.classList.add("is-complete");
-          finishIfComplete();
-        } })), hint, answer, feedback);
-    list.append(row);
-  }
-  const paintComplete = () => {
-    summary.replaceChildren(ui("span", `kata_${session.grade}`));
-    box.dataset.grade = session.grade;
-    for (const control of box.querySelectorAll("button, input")) control.disabled = true;
-    const again = ui("button", "kata_new", { type: "button", class: "small-button kata-new", onclick: () => {
-      state.kataSessions.delete(sessionKey);
-      box.replaceWith(renderKata(kata, lesson, onComplete));
-    } });
-    summary.append(" ", again);
-  };
-  const layout = h("div", { class: "kata-layout" }, reference, h("div", { class: "kata-practice" }, list, summary));
-  box.append(layout);
-  watchKataLayout(layout);
-  if (session.highlight) highlight(items.find((item) => item.id === session.highlight));
-  if (session.grade) paintComplete();
-  return box;
-}
-// The table sits beside the items when both fit (CSS flex-wrap decides); once the items
-// wrap below it, the table becomes a sticky band above them so it stays in view.
-function watchKataLayout(layout) {
-  if (typeof ResizeObserver === "undefined") return;
-  const update = () => {
-    const [reference, practice] = layout.children;
-    if (!reference || !practice) return;
-    layout.classList.remove("is-stacked"); // measure the natural (unstacked) flow
-    layout.classList.toggle("is-stacked", practice.offsetTop > reference.offsetTop + 1);
-  };
-  new ResizeObserver(update).observe(layout);
-}
-function renderKataQueue() {
-  kataStore().reconcile(entries().filter(available).map((entry) => entry.id));
-  const queue = h("section", { class: "kata-queue", "aria-labelledby": "kata-due-title" });
-  const heading = ui("h2", "kata_due", { id: "kata-due-title" }, { n: kataStore().due().length });
-  const body = h("div", { class: "kata-due-sessions" });
-  const shown = new Set();
-  const refresh = () => {
-    const due = kataStore().due();
-    const [label, lang] = tl("kata_due", { n: due.length });
-    heading.textContent = label; heading.lang = lang;
-    more.hidden = !due.some((record) => !shown.has(record.id));
-  };
-  const offer = async () => {
-    more.disabled = true;
-    const batch = window.Kata.batch(kataStore().due().filter((record) => !shown.has(record.id)));
-    for (const record of batch) {
-      const entry = entries().find((entry) => entry.id === record.lesson_id && available(entry));
-      if (!entry) continue;
-      try {
-        const lesson = await fetchLesson(entry);
-        kataStore().register(lesson);
-        const kata = lesson.grammar?.kata?.find((kata) => kata.id === record.id && kata.scheduled);
-        if (kata) {
-          shown.add(kata.id);
-          body.append(h("div", { class: "kata-due-session" },
-            h("a", { href: `#${encodeURIComponent(lesson.id)}`, lang: targetLang() }, lesson.title),
-            renderKata(kata, lesson, refresh)));
-        }
-      } catch (error) { body.append(h("p", { class: "error", role: "status" }, t("load_error"))); }
-    }
-    more.disabled = false; refresh();
-  };
-  const more = ui("button", "kata_more", { type: "button", class: "small-button kata-more", onclick: offer });
-  queue.append(heading, body, more);
-  more.hidden = true;
-  heading.textContent = t("loading");
-  // Refresh only units already represented in the queue. Merely visiting the course
-  // overview must never register a unit the reader has not opened.
-  const opened = [...new Set(Object.values(kataStore().read().kata).map((record) => record.lesson_id))];
-  Promise.all(opened.map(async (id) => {
-    const entry = entries().find((entry) => entry.id === id);
-    if (!entry) return;
-    try { kataStore().register(await fetchLesson(entry)); } catch { /* retain due practice until its unit can be fetched */ }
-  })).then(offer);
-  return queue;
-}
-
 function renderGrammar(lesson) {
   let grammar = lesson.grammar || lesson.grammar_observation;
   if (!grammar) return null;
@@ -1904,13 +1891,11 @@ function renderGrammar(lesson) {
       if (!text) return null;
       return h("li", null, h("span", { lang }, text), segment ? [" ", storyLink(example.segment_id)] : null);
     })) : null,
-    nodyn ? h("details", { class: "nodyn", open: capability("kata") }, ui("summary", "grammar_note_en"), richParagraphs(nodyn, lesson, { lang: "en" })) : null,
-    capability("kata") && grammar.parergon ? h("aside", { class: "parergon" },
+    nodyn ? h("details", { class: "nodyn", open: capability("grammar_note_open") }, ui("summary", "grammar_note_en"), richParagraphs(nodyn, lesson, { lang: "en" })) : null,
+    grammar.parergon ? h("aside", { class: "parergon" },
       h("h3", { lang }, grammar.parergon.title || ""),
       richParagraphs(grammar.parergon.body_en || "", lesson, { lang: "en" }),
       grammar.parergon.table ? renderGrammarTable(grammar.parergon.table) : null) : null,
-    capability("kata") && grammar.kata?.length && !exerciseBook(state.course) ? h("section", { class: "kata-section", "aria-label": t("kata") },
-      ui("h3", "kata"), grammar.kata.map((kata) => renderKata(kata, lesson))) : null,
     stepEnd(lesson, "grammar"));
 }
 
@@ -2581,11 +2566,11 @@ function renderVocabulary(lesson) {
 function vocabularySelfCheck(lesson, word) {
   const id = word.lexeme_id || word.id || word.citation_form;
   const group = h("div", { class: "vocabulary-self-check", role: "group", "aria-label": word.citation_form || id });
-  const saved = kataStore().read().vocabulary?.[lesson.id]?.[id];
+  const saved = vocabularyStore().rating(lesson.id, id);
   for (const value of ["knew", "context", "no"]) {
     const button = ui("button", `vocabulary_${value}`, { type: "button", class: "small-button", "data-rating": value,
       "aria-pressed": String(saved === value), onclick: () => {
-        kataStore().vocabulary(lesson.id, id, value);
+        vocabularyStore().rate(lesson.id, id, value);
         for (const item of group.children) item.setAttribute("aria-pressed", String(item === button));
       } });
     group.append(button);
@@ -2593,7 +2578,7 @@ function vocabularySelfCheck(lesson, word) {
   return group;
 }
 function exportVocabulary() {
-  const blob = new Blob([`${JSON.stringify(kataStore().exportVocabulary(), null, 2)}\n`], { type: "application/json" });
+  const blob = new Blob([`${JSON.stringify(vocabularyStore().exportVocabulary(), null, 2)}\n`], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const link = h("a", { href: url, download: `${state.course.id}-vocabulary.json` });
   document.body.append(link); link.click(); link.remove();
@@ -2606,9 +2591,6 @@ function exportVocabulary() {
 
 function renderWorkbookBook(lesson, order, part) {
   const groups = Core.storySections(lesson).map((section, i) => renderWorkbook(lesson, section, i, { book: true })).filter(Boolean);
-  const kata = lessonKata(lesson, state.course);
-  const kataBlock = kata.length ? h("section", { class: "kata-section workbook-kata", id: "kata", "aria-labelledby": "kata-title" },
-    ui("h2", "kata", { id: "kata-title" }), kata.map((item) => renderKata(item, lesson))) : null;
   const statusKey = `status_${lesson.status || "draft"}`;
   return [
     h("header", { class: "lesson-header", id: "workbook-book" },
@@ -2623,8 +2605,7 @@ function renderWorkbookBook(lesson, order, part) {
     stressConfig() ? h("div", { class: "lesson-toolbar" }, renderStressToggle(lesson)) : null,
     renderStepper(lesson),
     ...groups,
-    kataBlock,
-    groups.length || kataBlock ? null : ui("p", "no_exercises", { class: "status-card" }),
+    groups.length ? null : ui("p", "no_exercises", { class: "status-card" }),
     stepEnd(lesson, "workbook"),
     renderPagination(lesson, "/workbook")
   ];
@@ -2776,7 +2757,9 @@ async function loadAudioSources(lesson) {
 const player = typeof Audio === "undefined" ? null : new Audio();
 // on: something is playing or paused (the dock shows); continuous: a whole chapter or part
 // is queued (the toolbar button reads Stop); paused: the learner paused it from the dock.
-const audioState = { queue: [], lesson: null, active: null, button: null, on: false, continuous: false, paused: false };
+// activeId is the sentence being heard: kept by ID so a re-render (stress marks, interface
+// language) can find it again (rebindAudio). offsets: the chapter file's lesson_offsets.
+const audioState = { queue: [], lesson: null, active: null, activeId: null, offsets: null, button: null, on: false, continuous: false, paused: false };
 
 function renderAudioControls(lesson) {
   const audio = lesson._audio;
@@ -2820,6 +2803,7 @@ function playLesson(lesson) {
   if (data?.lesson) {
     stopAudio();
     audioState.continuous = true;
+    audioState.offsets = data.lesson_offsets && Object.keys(data.lesson_offsets).length ? data.lesson_offsets : null;
     playFile(new URL(data.lesson, lesson._audio.selected.base).href, null);
     audioState.button?.(true);
     return;
@@ -2842,13 +2826,31 @@ function advanceQueue() {
   if (!id || !lesson?._audio) { stopAudio(); return; }
   const file = lesson._audio.selected.data.segments?.[id];
   if (!file) { advanceQueue(); return; }
-  playFile(new URL(file, lesson._audio.selected.base).href, document.getElementById(id));
+  playFile(new URL(file, lesson._audio.selected.base).href, id);
 }
 
-function playFile(src, target) {
+function markActive(id) {
   audioState.active?.classList.remove("audio-playing");
-  audioState.active = target;
-  target?.classList.add("audio-playing");
+  audioState.activeId = id || null;
+  audioState.active = id ? document.getElementById(id) : null;
+  audioState.active?.classList.add("audio-playing");
+}
+function rebindAudio() {
+  if (!audioState.on) return;
+  markActive(audioState.activeId);
+  syncParaButtons();
+}
+
+// The segment heard at `time` in a chapter file: the last one started, so the pause between
+// two sentences still belongs to the first.
+function segmentAt(offsets, time) {
+  let found = null;
+  for (const [id, [start]] of Object.entries(offsets || {})) if (start <= time && (!found || start >= found.start)) found = { id, start };
+  return found?.id || null;
+}
+
+function playFile(src, segmentId) {
+  markActive(segmentId);
   audioState.on = true;
   audioState.paused = false;
   updateDock();
@@ -2877,18 +2879,24 @@ function updateDock() {
   stop.textContent = "■";
   stop.setAttribute("aria-label", t("stop"));
   stop.title = stop.getAttribute("aria-label");
+  syncParaButtons();
 }
 
 function stopAudio() {
   audioState.queue = [];
   player.pause();
-  audioState.active?.classList.remove("audio-playing");
-  audioState.active = null;
+  markActive(null);
+  audioState.offsets = null;
   audioState.on = audioState.continuous = audioState.paused = false;
   audioState.button?.(false);
   updateDock();
 }
 player?.addEventListener("ended", () => { audioState.active?.classList.remove("audio-playing"); if (audioState.queue.length) advanceQueue(); else stopAudio(); });
+player?.addEventListener("timeupdate", () => {
+  if (!audioState.offsets || !audioState.on) return;
+  const id = segmentAt(audioState.offsets, player.currentTime);
+  if (id !== audioState.activeId) { markActive(id); syncParaButtons(); }
+});
 player?.addEventListener("error", () => { if (audioState.queue.length) advanceQueue(); else stopAudio(); });
 
 // ------------------------------------------------------------------ navigation drawer
@@ -2988,8 +2996,14 @@ function boot() {
     $("#english-toggle").focus();
   });
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && glossPop) { event.preventDefault(); closeGloss(); return; }
+    if (event.key === "Escape") closeGloss(); // also cancels a lookup still loading
     if (event.key === "Escape" && $("#course-nav").classList.contains("open")) { event.preventDefault(); closeNav(true); }
   });
+  // A tap outside the popup and the story's words closes it (a word opens its own).
+  document.addEventListener("pointerdown", (event) => {
+    if (!event.target.closest?.(".gloss-pop, .story .w, .note-marker")) closeGloss();
+  }, true);
   $("#lightbox").addEventListener("click", (event) => { if (event.target === event.currentTarget) event.currentTarget.close(); });
   window.addEventListener("hashchange", () => {
     const hash = decodeURIComponent(location.hash.slice(1));
@@ -3012,10 +3026,11 @@ function boot() {
   window.addEventListener("resize", () => {
     if (!narrowNav()) closeNav(false);
     syncNavToggle();
-    if (window.innerWidth > 700) for (const reference of document.querySelectorAll(".kata-reference")) reference.open = true;
+    placeGloss();
     scheduleAlign();
   });
   document.fonts?.ready?.then(scheduleAlign);
+  window.visualViewport?.addEventListener("resize", placeGloss);
   // Timing: any input counts as activity; leaving the page saves the time so far.
   for (const type of ["scroll", "keydown", "pointerdown", "pointermove", "touchstart", "input"]) {
     window.addEventListener(type, noteActivity, { passive: true, capture: true });
@@ -3029,7 +3044,7 @@ function boot() {
 
 // Pure helpers for Node tests (tests/static-app.test.cjs loads this file in a vm).
 globalThis.IllustratedReader = {
-  stripStress, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
+  stripStress, segmentAt, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
   knownList, isWorkbookExercise, isNapishi, sectionExercises, napishiOf, buildSteps, nextStep, addTime, timingExport, STEP_KINDS,
   exerciseBook, hasWorkbook, isWorkbookStep,
   UI_DEFAULTS
