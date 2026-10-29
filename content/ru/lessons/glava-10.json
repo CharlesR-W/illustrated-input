@@ -286,7 +286,7 @@
       },
       {
         "lexeme_id": "ru-ranshe",
-        "how": "context (contrast with сейча́с/ста́рик in the same sentence)",
+        "how": "context (contrast with сейча́с/стари́к in the same sentence)",
         "segment_id": "ru-mir-01-l10-s027"
       },
       {
@@ -437,7 +437,16 @@
           },
           {
             "id": "ru-mir-01-l10-s004",
-            "text": "Зимо́й в по́ле рабо́ты не́ было, а в пост в дере́вне бы́ло ти́хо."
+            "text": "Зимо́й в по́ле рабо́ты не́ было, а в пост в дере́вне бы́ло ти́хо.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "рабо́ты не́ было",
+                "gloss": "есть рабо́та → рабо́ты не́ было",
+                "gloss_kind": "form"
+              }
+            ]
           },
           {
             "id": "ru-mir-01-l10-s005",
@@ -775,106 +784,112 @@
             "id": "ru-mir-01-l10-x1-2",
             "type": "okonchaniya",
             "title": "Оконча́ния",
-            "instruction": "Допиши́ оконча́ние.",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
             "hint_en": "-л (он), -ла (она́), -ло (оно́, бы́ло), -ли (они́).",
             "grammar_target_ids": [
               "G10"
             ],
             "obrazec": {
               "rule": "Ша́рик лежа́л · мать сиде́ла · бы́ло ти́хо · Соколо́вы сиде́ли",
-              "prompt": "Ша́рик лежа́___ под столо́м. (лежа́ть)",
-              "answer": "л"
+              "prompt": "Ша́рик ___ под столо́м. (лежа́ть)",
+              "answer": "лежа́л"
             },
             "items": [
               {
                 "id": "x1-2-1",
-                "prompt": "Мать рабо́та___ у ла́мпы. (рабо́тать)",
+                "prompt": "Мать ___ у ла́мпы. (рабо́тать)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ла"
+                  "рабо́тала"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s008"
-                ]
+                ],
+                "first_letters": 6
               },
               {
                 "id": "x1-2-2",
-                "prompt": "На́стя смотре́___ на де́да. (смотре́ть)",
+                "prompt": "На́стя ___ на де́да. (смотре́ть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ла"
+                  "смотре́ла"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s017"
-                ]
+                ],
+                "first_letters": 6
               },
               {
                 "id": "x1-2-3",
-                "prompt": "Ива́н то́же не чита́___: он слу́шал. (чита́ть)",
+                "prompt": "Ива́н то́же не ___: он слу́шал. (чита́ть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "л"
+                  "чита́л"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s023"
-                ]
+                ],
+                "first_letters": 4
               },
               {
                 "id": "x1-2-4",
-                "prompt": "Над столо́м бы___ ла́мпа. (быть)",
+                "prompt": "Над столо́м ___ ла́мпа. (быть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ла"
+                  "была́"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s006"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "л",
+                    "answer": "был",
                     "hint": "ла́мпа — она́ → была́"
                   }
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x1-2-5",
-                "prompt": "В дере́вне бы́___ ти́хо. (быть)",
+                "prompt": "В дере́вне ___ ти́хо. (быть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ло"
+                  "бы́ло"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s004"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "ла",
+                    "answer": "была́",
                     "hint": "ти́хо → бы́ло"
                   }
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x1-2-6",
-                "prompt": "Оте́ц и сын не говори́___. (говори́ть)",
+                "prompt": "Оте́ц и сын не ___: так бы́ло уже́ три неде́ли. (говори́ть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ли"
+                  "говори́ли"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s014"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "л",
+                    "answer": "говори́л",
                     "hint": "они́ → -ли"
                   }
-                ]
+                ],
+                "first_letters": 6
               }
             ]
           },
@@ -1084,6 +1099,15 @@
           {
             "id": "ru-mir-01-l10-s030",
             "text": "Мы то́же бы́ли крепостны́е: мой оте́ц, моя́ мать и я.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "бы́ли",
+                "gloss": "был, была́, бы́ли",
+                "gloss_kind": "paradigm"
+              }
+            ],
             "speaker": "char-ded-matvej"
           },
           {
@@ -1094,6 +1118,15 @@
           {
             "id": "ru-mir-01-l10-s032",
             "text": "Три дня в неде́лю мы рабо́тали на ба́рина, а три дня — на свое́й земле́.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "рабо́тали",
+                "gloss": "рабо́тал, рабо́тала, рабо́тали",
+                "gloss_kind": "paradigm"
+              }
+            ],
             "speaker": "char-ded-matvej",
             "paragraph_start": true
           },
@@ -1117,6 +1150,15 @@
           {
             "id": "ru-mir-01-l10-s034",
             "text": "Жить мы могли́ то́лько здесь. В Москву́ — то́лько с бума́гой ба́рина.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "могли́",
+                "gloss": "мочь → мог, могла́, могли́",
+                "gloss_kind": "paradigm"
+              }
+            ],
             "speaker": "char-ded-matvej"
           },
           {
@@ -1558,7 +1600,8 @@
                 "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "был прика́зчик"
+                  "был прика́зчик",
+                  "прика́зчик был"
                 ],
                 "choices": [
                   "был прика́зчик",
@@ -1575,7 +1618,8 @@
                 "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "плохо́й челове́к"
+                  "плохо́й челове́к",
+                  "челове́к плохо́й"
                 ],
                 "choices": [
                   "плохо́й челове́к",
@@ -1626,7 +1670,8 @@
                 "mode": "recognition",
                 "answer_mode": "choice",
                 "accepted_answers": [
-                  "с бума́гой"
+                  "с бума́гой",
+                  "с бума́гою"
                 ],
                 "choices": [
                   "с бума́гой",
@@ -1933,100 +1978,106 @@
             "id": "ru-mir-01-l10-x3-1",
             "type": "okonchaniya",
             "title": "Оконча́ния",
-            "instruction": "Допиши́ оконча́ние.",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
             "hint_en": "Past agrees with the subject: он -л, она́ -ла, оно́ -ло, они́ -ли.",
             "grammar_target_ids": [
               "G10"
             ],
             "obrazec": {
               "rule": "ба́тюшка чита́л · земля́ была́ · не́ было · лю́ди пла́кали",
-              "prompt": "Ба́тюшка чита́___ манифе́ст. (чита́ть)",
-              "answer": "л"
+              "prompt": "Ба́тюшка ___ манифе́ст. (чита́ть)",
+              "answer": "чита́л"
             },
             "items": [
               {
                 "id": "x3-1-1",
-                "prompt": "Мужики́ стоя́ли пе́ред це́рковью и слу́ша___. (слу́шать)",
+                "prompt": "Мужики́ стоя́ли пе́ред це́рковью и ___. (слу́шать)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ли"
+                  "слу́шали"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s052"
-                ]
+                ],
+                "first_letters": 5
               },
               {
                 "id": "x3-1-2",
-                "prompt": "Хоро́шая земля́ бы___ у ба́рина. (быть)",
+                "prompt": "Хоро́шая земля́ ___ у ба́рина. (быть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ла"
+                  "была́"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s061"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "л",
+                    "answer": "был",
                     "hint": "земля́ — она́ → была́"
                   }
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x3-1-3",
-                "prompt": "Лю́ди пла́ка___ и смея́лись. (пла́кать)",
+                "prompt": "Лю́ди ___ и смея́лись. (пла́кать)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ли"
+                  "пла́кали"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s056"
-                ]
+                ],
+                "first_letters": 5
               },
               {
                 "id": "x3-1-4",
-                "prompt": "Мы ве́ри___. (ве́рить)",
+                "prompt": "Мы ___. (ве́рить)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ли"
+                  "ве́рили"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s066"
-                ]
+                ],
+                "first_letters": 4
               },
               {
                 "id": "x3-1-5",
-                "prompt": "В 1861 году́ я бы___ молодо́й. (быть)",
+                "prompt": "В 1861 году́ я ___ молодо́й. (быть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "л"
+                  "был"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s049"
-                ]
+                ],
+                "first_letters": 2
               },
               {
                 "id": "x3-1-6",
-                "prompt": "Но настоя́щего манифе́ста не́ бы___. (быть)",
+                "prompt": "Но настоя́щего манифе́ста не́ ___. (быть)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "ло"
+                  "было"
                 ],
                 "source_segment_ids": [
                   "ru-mir-01-l10-s070"
                 ],
                 "common_wrong": [
                   {
-                    "answer": "л",
+                    "answer": "был",
                     "hint": "не́ было + кого́? чего́?"
                   }
-                ]
+                ],
+                "first_letters": 2
               }
             ]
           },
@@ -2282,6 +2333,15 @@
           {
             "id": "ru-mir-01-l10-s082",
             "text": "Ра́ньше всё реша́л ба́рин. А сейча́с всё реша́ет мир. Э́то не жизнь!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "реша́л",
+                "gloss": "сейча́с реша́ет → ра́ньше реша́л",
+                "gloss_kind": "form"
+              }
+            ],
             "speaker": "char-fyodor",
             "pins": [
               {
@@ -2743,7 +2803,7 @@
                 ],
                 "first_letters": 3,
                 "source_segment_ids": [
-                  "ru-mir-01-l10-s080"
+                  "ru-mir-01-l10-s079"
                 ]
               },
               {
@@ -2891,7 +2951,7 @@
       "ru-barin",
       "ru-krepostnoj"
     ],
-    "note_en": "Во́ля is both 'will' and 'freedom'. The Emancipation Manifesto of 19 February 1861 (O.S.) freed the serfs, but labour dues went on for at least two years and often longer, and allotment land had to be redeemed; many villages believed the 'real will' was being hidden by the lords. The word also appeared in the name of the revolutionary society «Земля́ и во́ля», founded in 1876 and formally named in 1878."
+    "note_en": "Во́ля is both 'will' and 'freedom'. The Emancipation Manifesto of 19 February 1861 (O.S.) freed the serfs, but labour dues went on for at least two years and often longer, and allotment land had to be redeemed; many villages believed 'genuine freedom' was being hidden by the lords. The word also appeared in the name of the revolutionary society «Земля́ и во́ля», founded in 1876 and formally named in 1878."
   },
   "grammar": {
     "title": "Ра́ньше: был, была́, бы́ло, бы́ли",
@@ -3351,7 +3411,7 @@
           "items": [
             {
               "id": "a9",
-              "prompt": "— Дед, почему́ ты не ___ ба́рина? (люби́ть)",
+              "prompt": "— Дед, почему́ ты сейча́с не ___ ба́рина? (люби́ть)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
@@ -3616,9 +3676,9 @@
           "answer_mode": "self_check",
           "model_answers": [
             "В дере́вне был слух: э́то не настоя́щая во́ля, а настоя́щую во́лю господа́ пря́чут. Мужики́ ве́рили и жда́ли настоя́щий манифе́ст.",
-            "Мужики́ ве́рили, что господа́ пря́тали настоя́щую во́лю."
+            "Мужики́ ве́рили: «Господа́ пря́чут настоя́щую во́лю»."
           ],
-          "rubric": "The rumour: this is not the real will (настоя́щая во́ля); the lords (господа́) hide it; the peasants believed it and waited for a true manifesto.",
+          "rubric": "The rumour: this is not genuine freedom (настоя́щая во́ля); the lords (господа́) hide it; the peasants believed it and waited for a true manifesto.",
           "rubric_lang": "en",
           "key_terms": [
             "ru-nastoyashchij",
@@ -3639,7 +3699,7 @@
           "answer_mode": "self_check",
           "model_answers": [
             "Фёдор говори́л: ра́ньше всё реша́л ба́рин, а сейча́с всё реша́ет мир. Мы и сейча́с крепостны́е, то́лько не ба́рина, а ми́ра.",
-            "Он говори́л, что мир — как ба́рин: он не бьёт, но жить не даёт."
+            "Он говори́л: «Мир — как ба́рин: он не бьёт, но жить не даёт»."
           ],
           "rubric": "Fyodor: the commune now decides everything, as the master did; 'we are still serfs, only the mir's'.",
           "rubric_lang": "en",
@@ -3958,7 +4018,7 @@
       "inline_scene": 2,
       "margin_vignette": 0,
       "margin_diagram": 1,
-      "margin_gloss": 35
+      "margin_gloss": 40
     },
     "audio_sources": [
       {

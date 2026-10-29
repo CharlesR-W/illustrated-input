@@ -317,7 +317,7 @@
           },
           {
             "id": "cy-brenin-01-l14-s007",
-            "text": "\"Wyt ti'n cofio'r dieithryn, Mali?\"",
+            "text": "\"Wyt ti'n cofio'r dieithryn, Mali?\" meddai Arth yn dawel.",
             "paragraph_start": true,
             "speaker": "char-arth"
           },
@@ -420,7 +420,7 @@
           },
           {
             "id": "cy-brenin-01-l14-s017",
-            "text": "\"Mali!\" meddai e yn dawel. \"Dafi?\"",
+            "text": "\"Mali!\" meddai Arth yn dawel. \"Dafi?\"",
             "paragraph_start": true,
             "speaker": "char-arth"
           },
@@ -493,7 +493,7 @@
                 "src": "media/vignettes/cy-brenin-01-l14-img-anifeiliaid.webp",
                 "alt": "",
                 "status": "planned",
-                "art_brief": "A pig, a sheep and a cow standing side by side, simple and friendly. Transparent background, no text.",
+                "art_brief": "A pig, a sheep and a cow as one small friendly group: the big brown-and-white cow standing behind, the pink pig and the white woolly sheep in front of her, each animal whole and clearly separate. Simple and friendly. Isolated on a plain flat white background (cut out to transparency afterwards), no text.",
                 "covers_lexeme_ids": [
                   "cy-mochyn",
                   "cy-dafad",
@@ -511,7 +511,7 @@
           },
           {
             "id": "cy-brenin-01-l14-s026",
-            "text": "Nawr mae Modlen yn glanhau bwrdd bach, ac mae hi ac Elen yn rhoi'r caws a'r wyau ar y bwrdd.",
+            "text": "Nawr mae Modlen yn glanhau bwrdd bach, ac mae hi ac Elen yn rhoi'r wyau a dau gaws ar y bwrdd.",
             "paragraph_start": true
           },
           {
@@ -549,7 +549,7 @@
                 "src": "media/vignettes/cy-brenin-01-l14-img-ceiniog.webp",
                 "alt": "",
                 "status": "planned",
-                "art_brief": "One small round silver penny with a simple cross on it. Transparent background, no text.",
+                "art_brief": "One small round silver penny with a simple cross on it and a plain beaded rim, no letters or inscription. Isolated on a plain flat white background (cut out to transparency afterwards), no text.",
                 "covers_lexeme_ids": [
                   "cy-ceiniog"
                 ]
@@ -753,7 +753,7 @@
                 "src": "media/vignettes/cy-brenin-01-l14-img-gwlan.webp",
                 "alt": "",
                 "status": "planned",
-                "art_brief": "Two soft balls of spun wool, one white and one black, with loose ends. Transparent background, no text.",
+                "art_brief": "Two soft balls of spun wool, one white and one black, with loose ends. Isolated on a plain flat white background (cut out to transparency afterwards), no text.",
                 "covers_lexeme_ids": [
                   "cy-gwlan"
                 ]
@@ -1608,7 +1608,7 @@
                 "Faint yw'r gwlân?"
               ],
               "source_segment_ids": [
-                "cy-brenin-01-l14-s052"
+                "cy-brenin-01-l14-s063"
               ]
             }
           ]
@@ -1715,7 +1715,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae'r tafarnwr yn ___ bwyd a llaeth i'r dynion.",
+          "prompt": "Mae'r dynion yn prynu bwyd a llaeth: mae'r tafarnwr yn ___.",
           "answer_mode": "exact",
           "accepted_answers": [
             "gwerthu"
@@ -1794,7 +1794,8 @@
           "prompt": "Mae Elen yn rhoi tair ceiniog i'r dyn: mae hi'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "talu"
+            "talu",
+            "prynu"
           ]
         }
       ]
@@ -1805,7 +1806,7 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Pwy sy wedi mynd i'r ffair?",
+          "prompt": "Pwy yw'r pump sy wedi mynd i'r ffair?",
           "answer_mode": "self_check",
           "model_answer": "Elen, Modlen, Mali ac Arth (a Dafi, yn y fasged!).",
           "rubric": "Names the four (and Dafi).",
@@ -1813,12 +1814,13 @@
             "cy-ffair"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l14-s002"
+            "cy-brenin-01-l14-s002",
+            "cy-brenin-01-l14-s018"
           ]
         },
         {
           "id": "c2",
-          "prompt": "Faint o wyau sy gyda Modlen?",
+          "prompt": "Faint o wyau sy gyda Modlen ar y ffordd i'r ffair?",
           "answer_mode": "exact",
           "accepted_answers": [
             "Deg",
@@ -1826,7 +1828,16 @@
             "Deg o wyau",
             "Mae deg wy gyda Modlen",
             "Mae deg wy gyda hi",
-            "Mae deg o wyau gyda Modlen"
+            "Mae deg o wyau gyda Modlen",
+            "Mae deg o wyau gyda hi",
+            "Deg wy sy gyda Modlen",
+            "Deg o wyau sy gyda Modlen",
+            "Deg wy sy gyda hi",
+            "Deg o wyau sy gyda hi",
+            "Deg wy sydd gyda Modlen",
+            "Deg o wyau sydd gyda Modlen",
+            "Deg wy sydd gyda hi",
+            "Deg o wyau sydd gyda hi"
           ],
           "model_answer": "Deg wy.",
           "source_segment_ids": [
@@ -1895,7 +1906,7 @@
           "prompt": "A ti? Beth wyt ti eisiau prynu yn y ffair? Faint yw e?",
           "answer_mode": "self_check",
           "model_answer": "Dw i eisiau prynu afal. Un geiniog yw e.",
-          "rubric": "One thing to buy plus a price with a numeral and ceiniog."
+          "rubric": "Names one thing to buy and gives its price. A short amount or a numeral + ceiniog phrase is acceptable."
         }
       ]
     }
@@ -2421,7 +2432,7 @@
     ]
   },
   "metrics": {
-    "running_words": 1206,
+    "running_words": 1211,
     "sentences": 128,
     "word_target": 1100,
     "word_window": [

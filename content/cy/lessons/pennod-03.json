@@ -1057,7 +1057,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "gyflym",
-                "gloss": "yn gyflym (sut?) ↔ yn rhedeg (beth?)",
+                "gloss": "yn gyflym ↔ yn rhedeg",
                 "gloss_kind": "form"
               }
             ]
@@ -1121,8 +1121,8 @@
       {
         "caption": "yn gyflym ↔ yn rhedeg",
         "header": [
-          "Mae … yn … (sut?)",
-          "Mae … yn … (beth?)"
+          "Mae … yn + coch, cyflym …",
+          "Mae … yn + rhedeg, cysgu …"
         ],
         "rows": [
           [
@@ -1164,7 +1164,7 @@
           ],
           [
             "Mae e'n rhedeg ac yn bwyta!",
-            "un 'Mae', dwy ferf"
+            "Mae … yn … ac yn …"
           ]
         ]
       },
@@ -1258,8 +1258,7 @@
               "prompt": "Mali · darllen →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Mali'n darllen.",
-                "Mae Mali yn darllen."
+                "Mae Mali'n darllen."
               ],
               "common_wrong": [
                 {
@@ -1273,8 +1272,7 @@
               "prompt": "Cai · coch →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Cai'n goch.",
-                "Mae Cai yn goch."
+                "Mae Cai'n goch."
               ],
               "common_wrong": [
                 {
@@ -1302,8 +1300,7 @@
               "prompt": "Cai · bwyta →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Cai'n bwyta.",
-                "Mae Cai yn bwyta."
+                "Mae Cai'n bwyta."
               ],
               "common_wrong": [
                 {
@@ -1317,8 +1314,7 @@
               "prompt": "Pero · cyflym →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Pero'n gyflym.",
-                "Mae Pero yn gyflym."
+                "Mae Pero'n gyflym."
               ]
             },
             {
@@ -1338,7 +1334,7 @@
                 "Pero yw enw'r ci.",
                 "Enw'r ci yw Pero."
               ],
-              "explanation": "enw'r ci = un peth → … yw …",
+              "explanation": "Beth yw enw'r ci? → Pero yw enw'r ci.",
               "common_wrong": [
                 {
                   "answer": "Mae Pero'n enw'r ci.",
@@ -1356,10 +1352,10 @@
           "items": [
             {
               "id": "a9",
-              "prompt": "Modlen · dod · y gegin →",
+              "prompt": "Modlen · dod · y gegin → yr ardd",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Modlen yn dod o'r gegin."
+                "Mae Modlen yn dod o'r gegin i'r ardd."
               ]
             },
             {
@@ -1367,8 +1363,7 @@
               "prompt": "Pero · mynd · y llys → y goedwig",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Pero'n mynd o'r llys i'r goedwig.",
-                "Mae Pero yn mynd o'r llys i'r goedwig."
+                "Mae Pero'n mynd o'r llys i'r goedwig."
               ]
             }
           ]
@@ -1433,7 +1428,8 @@
           "prompt": "Mae Cai yn y gegin, ac mae e'n ___ ac yn yfed.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "bwyta"
+            "bwyta",
+            "darllen"
           ]
         },
         {
@@ -1479,7 +1475,7 @@
         },
         {
           "id": "b9",
-          "prompt": "O'r buarth i'r ardd, o'r ardd i'r stabl: mae'r gath yn ___!",
+          "prompt": "O'r buarth i'r ardd, o'r ardd i'r stabl: mae'r gath yn ___ yn gyflym!",
           "answer_mode": "exact",
           "accepted_answers": [
             "rhedeg"
@@ -1500,7 +1496,22 @@
             "Mae Cai yn y buarth",
             "Mae e yn y buarth",
             "Mae Cai'n chwarae yn y buarth",
-            "Mae e'n chwarae yn y buarth"
+            "Mae e'n chwarae yn y buarth",
+            "Mae Cai yn y buarth yn y bore",
+            "Yn y bore, mae Cai yn y buarth",
+            "Yn y buarth yn y bore",
+            "Mae e yn y buarth yn y bore",
+            "Yn y bore, mae e yn y buarth",
+            "Mae Cai yn chwarae yn y buarth yn y bore",
+            "Yn y bore, mae Cai yn chwarae yn y buarth",
+            "Mae e yn chwarae yn y buarth yn y bore",
+            "Yn y bore, mae e yn chwarae yn y buarth",
+            "Yn y buarth, mae Cai",
+            "Yn y buarth, mae e",
+            "Yn y buarth, mae Cai yn chwarae",
+            "Yn y buarth, mae e yn chwarae",
+            "Mae Cai yn y bore yn y buarth",
+            "Mae e yn y bore yn y buarth"
           ],
           "model_answer": "Mae Cai yn y buarth.",
           "source_segment_ids": [
@@ -1518,7 +1529,20 @@
             "Mae Arth yn cario dŵr i'r stabl",
             "Mae e'n cario dŵr i'r stabl",
             "O'r afon i'r stabl",
-            "Mae Arth yn cario dŵr o'r afon i'r stabl"
+            "Mae Arth yn cario dŵr o'r afon i'r stabl",
+            "Mae Arth yn cario dŵr i'r ceffylau",
+            "Mae e yn cario dŵr i'r ceffylau",
+            "Mae Arth yn cario dŵr i'r stabl, i'r ceffylau",
+            "Mae e yn cario dŵr i'r stabl, i'r ceffylau",
+            "Mae e yn cario dŵr o'r afon i'r stabl",
+            "I'r stabl, mae Arth yn cario dŵr",
+            "I'r stabl, mae e yn cario dŵr",
+            "I'r ceffylau, mae Arth yn cario dŵr",
+            "I'r ceffylau, mae e yn cario dŵr",
+            "I'r stabl, i'r ceffylau, mae Arth yn cario dŵr",
+            "I'r stabl, i'r ceffylau, mae e yn cario dŵr",
+            "O'r afon i'r stabl, mae Arth yn cario dŵr",
+            "O'r afon i'r stabl, mae e yn cario dŵr"
           ],
           "model_answer": "I'r stabl, i'r ceffylau.",
           "source_segment_ids": [
@@ -1538,7 +1562,16 @@
             "Mae hi'n darllen wrth ddrws y gegin",
             "Mae hi'n darllen wrth y drws",
             "Mae Mali'n darllen wrth y drws",
-            "Mae hi wrth ddrws y gegin"
+            "Mae hi wrth ddrws y gegin",
+            "Mae hi wrth y drws",
+            "Wrth ddrws y gegin, mae Mali yn darllen",
+            "Wrth ddrws y gegin, mae hi yn darllen",
+            "Wrth ddrws y gegin, mae Mali",
+            "Wrth ddrws y gegin, mae hi",
+            "Wrth y drws, mae Mali yn darllen",
+            "Wrth y drws, mae hi yn darllen",
+            "Wrth y drws, mae Mali",
+            "Wrth y drws, mae hi"
           ],
           "model_answer": "Mae Mali'n darllen wrth ddrws y gegin.",
           "source_segment_ids": [
@@ -1553,7 +1586,9 @@
             "Arth",
             "Arth yw'r bachgen cyflym",
             "Arth yw e",
-            "Arth yw'r bachgen"
+            "Arth yw'r bachgen",
+            "Y bachgen cyflym yw Arth",
+            "Y bachgen yw Arth"
           ],
           "model_answer": "Arth yw'r bachgen cyflym.",
           "source_segment_ids": [
@@ -1582,7 +1617,8 @@
             "Gwellt",
             "Gwellt yw enw'r dyn gwellt",
             "Enw'r dyn gwellt yw Gwellt",
-            "Gwellt yw e"
+            "Gwellt yw e",
+            "Y dyn gwellt yw Gwellt"
           ],
           "model_answer": "Gwellt yw enw'r dyn gwellt!"
         },
@@ -1591,10 +1627,9 @@
           "prompt": "Ble mae Pero'n mynd?",
           "answer_mode": "self_check",
           "model_answer": "Mae Pero'n mynd o'r llys i'r goedwig dywyll.",
-          "rubric": "Says Pero runs to the forest (i'r goedwig).",
+          "rubric": "Names the forest as Pero's destination (i'r goedwig); a destination phrase or full sentence is acceptable. No particular movement verb is required.",
           "key_terms": [
             "cy-coedwig",
-            "cy-rhedeg",
             "cy-mynd"
           ],
           "source_segment_ids": [

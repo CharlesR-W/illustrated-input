@@ -663,7 +663,7 @@
           },
           {
             "id": "cy-brenin-01-l06-s045",
-            "text": "Mae Modlen yn rhoi bara a chaws ar y plât eto.",
+            "text": "Mae Modlen yn rhoi bara, menyn a chaws ar y plât eto.",
             "paragraph_start": true
           },
           {
@@ -1354,7 +1354,7 @@
         "segment_id": "cy-brenin-01-l06-s119"
       }
     ],
-    "nodyn_en": "Use oes / does dim when the subject is indefinite (Oes bara? 'Is there any bread?'). Use ydy / dyw … ddim when the subject is definite: y/yr/'r + noun, a name, a personal pronoun, or a possessed noun like plât Cai (Ydy plât Cai …?). Answer with the same verb: Oes → Oes / Nac oes."
+    "nodyn_en": "For existence: Oes bara? — Oes / Nac oes; Does dim bara. With a definite noun subject or e/hi: Ydy plât Cai …? Ydy e …? Dyw e ddim … . Other pronouns keep their person/number forms, as in Pennod 5: Wyt ti …? Dwyt ti ddim … ."
   },
   "pensa": {
     "A": {
@@ -1477,7 +1477,8 @@
               "prompt": "Pwy yw'r ci drwg? (Pero) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Pero yw'r ci drwg."
+                "Pero yw'r ci drwg.",
+                "Y ci drwg yw Pero."
               ],
               "recall_of": "G02",
               "source_segment_ids": [
@@ -1509,7 +1510,9 @@
               "accepted_answers": [
                 "Nac ydy",
                 "Nac ydy. Dyw Pero ddim yn gi drwg",
-                "Nac ydy. Dyw e ddim yn gi drwg"
+                "Nac ydy. Dyw e ddim yn gi drwg",
+                "Dyw Pero ddim yn gi drwg",
+                "Dyw e ddim yn gi drwg"
               ],
               "recall_of": "G04",
               "source_segment_ids": [
@@ -1563,7 +1566,7 @@
         },
         {
           "id": "b2",
-          "prompt": "Mae Dafi'n bwyta bara, caws a mêl. Nawr dyw e ddim eisiau bwyd: mae e'n ___.",
+          "prompt": "Mae Dafi'n bwyta bara, caws a menyn. Nawr dyw e ddim eisiau bwyd: mae e'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
             "llawn"
@@ -1623,7 +1626,8 @@
           "prompt": "Mae'r plât yn wag, ond mae Modlen yn rhoi bara ar y plât. Nawr mae Dafi'n bwyta'r bara ___!",
           "answer_mode": "exact",
           "accepted_answers": [
-            "eto"
+            "eto",
+            "hefyd"
           ]
         }
       ]
@@ -1642,13 +1646,16 @@
             "Wrth y bwrdd",
             "Mae'r teulu wrth y bwrdd",
             "Yn y gegin, wrth y bwrdd",
-            "Mae'r teulu yn y gegin, wrth y bwrdd"
+            "Mae'r teulu yn y gegin, wrth y bwrdd",
+            "Yn y gegin, mae'r teulu",
+            "Wrth y bwrdd, mae'r teulu",
+            "Yn y gegin, wrth y bwrdd, mae'r teulu"
           ],
           "model_answer": "Mae'r teulu yn y gegin.",
           "source_segment_ids": [
             "cy-brenin-01-l06-s002",
-            "cy-brenin-01-l06-s044",
-            "cy-brenin-01-l06-s096"
+            "cy-brenin-01-l06-s006",
+            "cy-brenin-01-l06-s007"
           ]
         },
         {
@@ -1688,7 +1695,13 @@
             "Nac ydy. Mae e'n bwyta wy",
             "Nac ydy. Mae Arth yn bwyta wy",
             "Nac ydy. Dyw e ddim yn bwyta'r bara",
-            "Nac ydy. Mae Dafi'n bwyta bara Cai"
+            "Nac ydy. Mae Dafi'n bwyta bara Cai",
+            "Dyw e ddim yn bwyta bara Cai",
+            "Mae Dafi'n bwyta'r bara",
+            "Mae e'n bwyta wy",
+            "Mae Arth yn bwyta wy",
+            "Dyw e ddim yn bwyta'r bara",
+            "Mae Dafi'n bwyta bara Cai"
           ],
           "model_answer": "Nac ydy. Mae Dafi'n bwyta'r bara."
         },
@@ -1703,7 +1716,10 @@
             "Nac oes. Does dim tân dan y bwrdd",
             "Nac oes. Does dim tân",
             "Nac oes. Mae mwg dan y bwrdd, ond does dim tân",
-            "Nac oes. Mae Dafi dan y bwrdd"
+            "Nac oes. Mae Dafi dan y bwrdd",
+            "Does dim tân",
+            "Mae mwg, ond does dim tân",
+            "Mae mwg dan y bwrdd, ond does dim tân"
           ],
           "model_answer": "Nac oes. Mae mwg, ond does dim tân.",
           "source_segment_ids": [
@@ -1712,7 +1728,7 @@
         },
         {
           "id": "c6",
-          "prompt": "Ydy Pero'n gi drwg?",
+          "prompt": "Ydy Pero'n gi drwg? Pam?",
           "answer_mode": "self_check",
           "model_answer": "Nac ydy! Mae Dafi'n bwyta'r bara a'r caws.",
           "rubric": "A yes/no answer plus one reason from the story (Dafi eats the food).",
@@ -1727,7 +1743,7 @@
           "prompt": "A ti? Wyt ti'n bwyta bara a mêl yn y bore?",
           "answer_mode": "self_check",
           "model_answer": "Ydw, dw i'n bwyta bara a mêl. / Nac ydw, dw i'n bwyta …",
-          "rubric": "Correct Ydw / Nac ydw, plus one 'Dw i'n …' sentence."
+          "rubric": "Correct Ydw / Nac ydw. A full sentence is optional: Dw i'n bwyta … / Dw i ddim yn bwyta … ."
         }
       ]
     }
@@ -2190,7 +2206,7 @@
     ]
   },
   "metrics": {
-    "running_words": 831,
+    "running_words": 832,
     "sentences": 119,
     "word_target": 750,
     "word_window": [

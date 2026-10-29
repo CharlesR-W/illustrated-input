@@ -1151,7 +1151,7 @@
   },
   "grammar": {
     "title_cy": "Pwy yw …?",
-    "rule_cy": "Cai yw mab Cynyr (pwy yw e: un person) ↔ Mae Cai'n fachgen (sut un yw e). — mab + Cynyr = mab Cynyr; enw + y ci = enw'r ci.",
+    "rule_cy": "Pwy yw Cai? → Cai yw mab Cynyr. ↔ Mae Cai'n fachgen. — mab + Cynyr = mab Cynyr; enw + y ci = enw'r ci.",
     "tables": [
       {
         "caption": "Pwy yw …? ↔ Mae … yn …",
@@ -1299,7 +1299,7 @@
               "common_wrong": [
                 {
                   "answer": "Mae Elen yn wraig Cynyr.",
-                  "hint": "gwraig Cynyr = un person → … yw …"
+                  "hint": "Pwy yw Elen? → … yw …"
                 }
               ]
             },
@@ -1332,8 +1332,7 @@
               "prompt": "Pero · hen gi →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Pero'n hen gi.",
-                "Mae Pero yn hen gi."
+                "Mae Pero'n hen gi."
               ]
             },
             {
@@ -1517,7 +1516,7 @@
           "prompt": "Pwy yw Cynyr?",
           "answer_mode": "self_check",
           "model_answer": "Cynyr yw tad Cai a Mali.",
-          "rubric": "Identifies Cynyr with 'yw' (father of Cai and Mali, or Elen's husband via 'Elen yw gwraig Cynyr').",
+          "rubric": "Identifies Cynyr as Cai and Mali's father or Elen's husband; an identifying noun phrase or a full sentence is acceptable.",
           "key_terms": [
             "cy-tad"
           ],
@@ -1540,10 +1539,21 @@
             "Gwraig Cynyr yw Elen",
             "Mam Cai a Mali yw Elen",
             "Hi yw gwraig Cynyr",
-            "Elen yw gwraig Cynyr a mam Cai a Mali",
             "Elen yw mam Cai a Mali a gwraig Cynyr",
             "Gwraig Cynyr a mam Cai a Mali",
-            "Mam Mali a Cai"
+            "Mam Mali a Cai",
+            "Elen yw mam Mali a Cai",
+            "Mam Mali a Cai yw Elen",
+            "Hi yw mam Cai a Mali",
+            "Hi yw mam Mali a Cai",
+            "Mam Mali a Cai yw hi",
+            "Hi yw gwraig Cynyr a mam Cai a Mali",
+            "Gwraig Cynyr a mam Cai a Mali yw Elen",
+            "Gwraig Cynyr a mam Cai a Mali yw hi",
+            "Mam Cai a Mali a gwraig Cynyr",
+            "Hi yw mam Cai a Mali a gwraig Cynyr",
+            "Mam Cai a Mali a gwraig Cynyr yw Elen",
+            "Mam Cai a Mali a gwraig Cynyr yw hi"
           ],
           "model_answer": "Elen yw gwraig Cynyr, a mam Cai a Mali.",
           "source_segment_ids": [
@@ -1560,7 +1570,11 @@
             "Cogyddes y llys yw hi",
             "Cogyddes y llys yw Modlen",
             "Hi yw cogyddes y llys",
-            "Y gogyddes"
+            "Y gogyddes",
+            "Modlen yw'r gogyddes",
+            "Y gogyddes yw Modlen",
+            "Hi yw'r gogyddes",
+            "Y gogyddes yw hi"
           ],
           "model_answer": "Modlen yw cogyddes y llys.",
           "source_segment_ids": [
@@ -1579,7 +1593,14 @@
             "Wrth Pero",
             "Mae'r ceffylau wrth Pero",
             "Wrth Pero, wrth y wal",
-            "Yn y llys, wrth y wal"
+            "Yn y llys, wrth y wal",
+            "Mae'r ceffylau yn y llys, wrth y wal",
+            "Mae'r ceffylau wrth Pero, wrth y wal",
+            "Wrth y wal, mae'r ceffylau",
+            "Wrth y wal, wrth Pero, mae'r ceffylau",
+            "Wrth Pero, mae'r ceffylau",
+            "Wrth Pero, wrth y wal, mae'r ceffylau",
+            "Yn y llys, wrth y wal, mae'r ceffylau"
           ],
           "model_answer": "Mae'r ceffylau wrth y wal, wrth Pero.",
           "source_segment_ids": [
@@ -1596,7 +1617,8 @@
             "cy-bachgen"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l02-s069"
+            "cy-brenin-01-l02-s067",
+            "cy-brenin-01-l02-s070"
           ]
         },
         {
@@ -1614,7 +1636,7 @@
         },
         {
           "id": "c7",
-          "prompt": "Mae Cai'n fachgen mawr. A Mali?",
+          "prompt": "Mae Cai'n fachgen mawr. A Mali? (Mae … yn …)",
           "answer_mode": "self_check",
           "model_answer": "Mae Mali'n ferch. Mae gwallt Mali'n hir ac yn dywyll.",
           "rubric": "One 'Mae … yn …' sentence about Mali with the soft mutation (merch → yn ferch, or hir/tywyll → yn hir, yn dywyll).",
@@ -2075,7 +2097,7 @@
         "id": "pattern-g02",
         "lesson": "cy-brenin-01-l02",
         "front": "Pwy yw …? — Cai yw mab Cynyr. ↔ Mae Cai'n fachgen.",
-        "back": "Who is …? — Cai is Cynyr's son (identifying: name first, yw). ↔ Cai is a boy (describing: Mae … yn).",
+        "back": "Who is …? — Cai is Cynyr's son (identifying: … yw …). ↔ Cai is a boy (describing: Mae … yn).",
         "example_segment_id": "cy-brenin-01-l02-s011",
         "example_segment_ids": [
           "cy-brenin-01-l02-s011",

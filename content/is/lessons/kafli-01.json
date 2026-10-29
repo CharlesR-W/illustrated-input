@@ -12,7 +12,7 @@
     "author": "MVP writer (Claude, model-written)",
     "model": "claude-opus-5-5",
     "prompt": "prompts/icelandic-mvp-writer-brief.md; docs/icelandic-kvoldvaka-design.md §6 row 1; content/is/plan/chapters.json row 1",
-    "review_required": "Codex cross-model language review (docs/reviews/icelandic-k01-02-codex-review-2026-10-21.md) and fluent native review before text_status: reviewed",
+    "review_required": "Codex cross-model language review (summarised in docs/reviews/icelandic-k01-02-writer-log-2026-10-21.md) and fluent native review before text_status: reviewed",
     "notes": [
       "Bootstrap chapter (design §3.3): people and verbs on the first page; problem (Snati missing) → consequence (found asleep with the sheep) → hook (afi: Þetta er stór dagur. Ísland er gamalt; Siggi does not understand; afi falls asleep).",
       "G01 only: nominative singular, er, hann/hún/það, predicate and attributive adjectives nom. sg.; no article outside the place chunks; no plurals except the supported item átta fætur (SVG).",
@@ -637,7 +637,7 @@
                 "presentation": "margin_gloss",
                 "anchor_text": "spyr",
                 "gloss": "spyr: „Hvað er þetta?“ ↔ segir: „Þetta er …“",
-                "gloss_kind": "antonym",
+                "gloss_kind": "contrast",
                 "covers_lexeme_ids": [
                   "is-spyrja",
                   "is-segja"
@@ -1132,7 +1132,7 @@
             "type": "otvet",
             "title": "Svaraðu",
             "instruction": "Svaraðu spurningunni.",
-            "hint_en": "Answer from the story: a short answer (Í kirkjunni.) or a whole sentence.",
+            "hint_en": "Answer from the story: a short answer (Í kirkjunni.) or a whole sentence. Compare your answer with the models and rubric.",
             "grammar_target_ids": [
               "G01"
             ],
@@ -1146,87 +1146,98 @@
                 "id": "x2-2-1",
                 "prompt": "Hvar er Guðrún?",
                 "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "Í kirkjunni.",
-                  "Guðrún er í kirkjunni.",
-                  "Hún er í kirkjunni."
-                ],
+                "answer_mode": "self_check",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s025"
                 ],
-                "common_wrong": [
-                  {
-                    "answer": "Í kirkja.",
-                    "hint": "í kirkjunni"
-                  }
+                "model_answer": "Guðrún er í kirkjunni.",
+                "model_answers": [
+                  "Guðrún er í kirkjunni.",
+                  "Í kirkjunni."
+                ],
+                "rubric": "Guðrún is in church (í kirkjunni). A short location phrase or a full sentence with her name or hún is fine.",
+                "rubric_lang": "en",
+                "key_terms": [
+                  "is-ph-i-kirkjunni"
                 ]
               },
               {
                 "id": "x2-2-2",
                 "prompt": "Hvar er Siggi?",
                 "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "Á túninu.",
-                  "Siggi er á túninu.",
-                  "Hann er á túninu.",
-                  "Hér, á túninu.",
-                  "Ekki í kirkjunni.",
-                  "Siggi er ekki í kirkjunni.",
-                  "Hann er ekki í kirkjunni."
-                ],
+                "answer_mode": "self_check",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s008"
+                ],
+                "model_answer": "Siggi situr á túninu.",
+                "model_answers": [
+                  "Siggi situr á túninu.",
+                  "Á túninu."
+                ],
+                "rubric": "Siggi is on the home field (á túninu), not in church. A short location phrase or a full sentence with er or situr is fine; the story also supports saying he is not in church.",
+                "rubric_lang": "en",
+                "key_terms": [
+                  "is-ph-a-tuninu"
                 ]
               },
               {
                 "id": "x2-2-3",
                 "prompt": "Hvar er Sleipnir? (afi segir)",
                 "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "Í Ásgarði.",
-                  "Sleipnir er í Ásgarði.",
-                  "Hann er í Ásgarði.",
-                  "Ekki á Íslandi.",
-                  "Sleipnir er ekki á Íslandi.",
-                  "Hann er ekki á Íslandi."
-                ],
+                "answer_mode": "self_check",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s022"
+                ],
+                "model_answer": "Sleipnir er í Ásgarði.",
+                "model_answers": [
+                  "Sleipnir er í Ásgarði.",
+                  "Í Ásgarði."
+                ],
+                "rubric": "In afi’s account Sleipnir is in Ásgarður, not in Iceland. A short location phrase, a full sentence or the story’s negative contrast is fine.",
+                "rubric_lang": "en",
+                "key_terms": [
+                  "is-ph-i-asgardi"
                 ]
               },
               {
                 "id": "x2-2-4",
                 "prompt": "Hvar er Jökuldalur?",
                 "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "Á Íslandi.",
-                  "Jökuldalur er á Íslandi.",
-                  "Hann er á Íslandi."
-                ],
+                "answer_mode": "self_check",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s004"
+                ],
+                "model_answer": "Jökuldalur er á Íslandi.",
+                "model_answers": [
+                  "Jökuldalur er á Íslandi.",
+                  "Á Íslandi."
+                ],
+                "rubric": "Jökuldalur is in Iceland (á Íslandi). A short location phrase or a full sentence in either taught word order is fine.",
+                "rubric_lang": "en",
+                "key_terms": [
+                  "is-ph-a-islandi"
                 ]
               },
               {
                 "id": "x2-2-5",
                 "prompt": "Er Snati í bænum?",
                 "mode": "productive",
-                "answer_mode": "exact",
-                "accepted_answers": [
-                  "Nei.",
-                  "Nei, hann er ekki í bænum.",
-                  "Nei, Snati er ekki í bænum.",
-                  "Hann er ekki í bænum.",
-                  "Snati er ekki í bænum."
-                ],
+                "answer_mode": "self_check",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s032"
                 ],
-                "explanation": "Snati er ekki í bænum. Hann er þar, og þar er kind."
+                "explanation": "Snati er ekki í bænum. Hann er þar, og þar er kind.",
+                "model_answer": "Nei, Snati er ekki í bænum.",
+                "model_answers": [
+                  "Nei, Snati er ekki í bænum.",
+                  "Nei."
+                ],
+                "rubric": "Says no: Snati is not in the farmhouse during the search scene. Nei, a short negative phrase or a full negative sentence is fine.",
+                "rubric_lang": "en",
+                "key_terms": [
+                  "is-ekki",
+                  "is-ph-i-baenum"
+                ]
               }
             ]
           }
@@ -1505,12 +1516,6 @@
                 "wrong": "Hér er bær. Hún heitir Hamrar.",
                 "right": "Hér er bær. Hann heitir Hamrar.",
                 "note": "bær is masculine (kk.): hann",
-                "note_lang": "en"
-              },
-              {
-                "wrong": "Hamrar eru …",
-                "right": "Þetta er bær. Hann heitir Hamrar.",
-                "note": "Hamrar is a plural name; plurals come in Kafli 3",
                 "note_lang": "en"
               },
               {
@@ -1888,31 +1893,38 @@
           "id": "c1",
           "prompt": "Hvar er Jökuldalur?",
           "mode": "productive",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Á Íslandi.",
-            "Jökuldalur er á Íslandi.",
-            "Hann er á Íslandi."
-          ],
+          "answer_mode": "self_check",
           "source_segment_ids": [
             "is-kvold-01-l01-s004"
+          ],
+          "model_answer": "Jökuldalur er á Íslandi.",
+          "model_answers": [
+            "Jökuldalur er á Íslandi.",
+            "Á Íslandi."
+          ],
+          "rubric": "Jökuldalur is in Iceland (á Íslandi). A short location phrase, a pronoun or named subject, and either taught word order are fine.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-ph-a-islandi"
           ]
         },
         {
           "id": "c2",
           "prompt": "Hvað er Sleipnir?",
           "mode": "productive",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Hestur.",
-            "Sleipnir er hestur.",
-            "Hann er hestur.",
-            "Lítill hestur.",
-            "Sleipnir er lítill hestur.",
-            "Hann er lítill hestur."
-          ],
+          "answer_mode": "self_check",
           "source_segment_ids": [
             "is-kvold-01-l01-s019"
+          ],
+          "model_answer": "Sleipnir er lítill hestur.",
+          "model_answers": [
+            "Sleipnir er lítill hestur.",
+            "Hestur."
+          ],
+          "rubric": "Identifies Sleipnir as a horse (hestur); lítill is optional. A short noun phrase or a full sentence with Sleipnir, hann or þetta is fine.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-hestur"
           ]
         },
         {
@@ -1936,7 +1948,7 @@
         },
         {
           "id": "c4",
-          "prompt": "Hvar er Snati? Er hann í bænum?",
+          "prompt": "„Snati! Snati!“ segir Siggi. Hvar er Snati? Er hann í bænum?",
           "mode": "productive",
           "answer_mode": "self_check",
           "model_answer": "Nei. Snati er ekki í bænum. Hann er þar, og þar er kind.",
@@ -1952,7 +1964,9 @@
             "is-kind"
           ],
           "source_segment_ids": [
-            "is-kvold-01-l01-s040"
+            "is-kvold-01-l01-s029",
+            "is-kvold-01-l01-s040",
+            "is-kvold-01-l01-s042"
           ]
         },
         {
@@ -1976,7 +1990,7 @@
         },
         {
           "id": "c6",
-          "prompt": "Siggi heitir Siggi, og hundur heitir Snati. En þú? Hvað heitir þú?",
+          "prompt": "Þetta er Siggi, og þetta er Snati. En þú? Hvað heitir þú?",
           "mode": "productive",
           "answer_mode": "self_check",
           "model_answer": "Ég heiti …",
@@ -2148,7 +2162,7 @@
     },
     {
       "lexeme_id": "is-a-river",
-      "citation_form": "á (kvk.) river",
+      "citation_form": "á (kvk.)",
       "part_of_speech": "noun",
       "current_sense": "river",
       "first_introduced_lesson": "is-kvold-01-l01",

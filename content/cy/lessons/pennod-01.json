@@ -938,7 +938,7 @@
           },
           {
             "id": "cy-brenin-01-l01-s052",
-            "text": "Mae'r ogof yn fach, ond mae'r ogof yn dywyll iawn."
+            "text": "Mae'r ogof yn fawr, ac mae'r ogof yn dywyll iawn."
           },
           {
             "id": "cy-brenin-01-l01-s053",
@@ -1050,7 +1050,7 @@
   },
   "grammar": {
     "title_cy": "Mae … yn …",
-    "rule_cy": "Ble? → yn Ewrop, yn y cwm, yng Nghymru. — Mae … yn + mawr → yn fawr (m → f, b → f, g → –, d → dd, t → d; ll → ll, rh → rh).",
+    "rule_cy": "Ble? → yn Ewrop, yn y cwm, yng Nghymru. — Mae … yn + mawr → yn fawr (m → f, b → f, g → –, d → dd, t → d, c → g, p → b; ll → ll, rh → rh).",
     "tables": [
       {
         "caption": "Ble mae …?",
@@ -1319,7 +1319,7 @@
                 "Mae'r ogof ar y bryn."
               ],
               "source_segment_ids": [
-                "cy-brenin-01-l01-s052"
+                "cy-brenin-01-l01-s083"
               ]
             },
             {
@@ -1372,7 +1372,8 @@
           "prompt": "Mae'r bryn yn uchel, ond mae'r Wyddfa'n uchel ___.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "iawn"
+            "iawn",
+            "hefyd"
           ]
         },
         {
@@ -1444,11 +1445,16 @@
             "Yn Ewrop, yn Ynys Prydain",
             "Mae Cymru yn Ewrop, yn Ynys Prydain",
             "Mae Cymru rhwng Lloegr ac Iwerddon",
-            "Rhwng Lloegr ac Iwerddon"
+            "Rhwng Lloegr ac Iwerddon",
+            "Yn Ynys Prydain, mae Cymru",
+            "Yn Ewrop, mae Cymru",
+            "Rhwng Iwerddon a Lloegr, mae Cymru",
+            "Yn Ewrop, yn Ynys Prydain, mae Cymru",
+            "Rhwng Lloegr ac Iwerddon, mae Cymru"
           ],
           "model_answer": "Mae Cymru yn Ynys Prydain.",
           "source_segment_ids": [
-            "cy-brenin-01-l01-s005"
+            "cy-brenin-01-l01-s006"
           ]
         },
         {
@@ -1487,11 +1493,15 @@
             "Mae'r ogof ar y bryn",
             "Yn uchel ar y bryn",
             "Mae'r ogof yn uchel ar y bryn",
-            "Ar y bryn, wrth y goedwig"
+            "Ar y bryn, wrth y goedwig",
+            "Mae'r ogof ar y bryn, wrth y goedwig",
+            "Ar y bryn, mae'r ogof",
+            "Yn uchel ar y bryn, mae'r ogof",
+            "Ar y bryn, wrth y goedwig, mae'r ogof"
           ],
           "model_answer": "Mae'r ogof ar y bryn.",
           "source_segment_ids": [
-            "cy-brenin-01-l01-s051"
+            "cy-brenin-01-l01-s083"
           ]
         },
         {
@@ -1520,7 +1530,14 @@
             "Mae'r teulu yn y tŷ mawr, yn y llys",
             "Yn y tŷ mawr, yn y llys",
             "Yn y cwm",
-            "Yn y llys, yn y cwm"
+            "Yn y llys, yn y cwm",
+            "Mae'r teulu yn y cwm",
+            "Mae'r teulu yn y llys, yn y cwm",
+            "Yn y llys, mae'r teulu",
+            "Yn y tŷ mawr, mae'r teulu",
+            "Yn y tŷ mawr, yn y llys, mae'r teulu",
+            "Yn y cwm, mae'r teulu",
+            "Yn y llys, yn y cwm, mae'r teulu"
           ],
           "model_answer": "Mae'r teulu yn y tŷ mawr, yn y llys.",
           "source_segment_ids": [
@@ -1529,7 +1546,7 @@
         },
         {
           "id": "c7",
-          "prompt": "Mae Hafren yn hir. A'r Wyddfa?",
+          "prompt": "Mae Hafren yn hir. A'r Wyddfa? (Mae … yn …)",
           "answer_mode": "self_check",
           "model_answer": "Mae'r Wyddfa'n uchel iawn. / Mae'r Wyddfa'n fynydd uchel.",
           "rubric": "One 'Mae … yn …' sentence about Yr Wyddfa with a mutated or unchanged adjective used correctly (yn uchel, yn fawr, yn fynydd).",

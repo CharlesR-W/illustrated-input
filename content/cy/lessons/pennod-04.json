@@ -923,7 +923,7 @@
         "segments": [
           {
             "id": "cy-brenin-01-l04-s071",
-            "text": "Dyma'r tŵr: tŵr hen, tŵr uchel, tŵr llwyd.",
+            "text": "Dyma'r tŵr: hen dŵr, tŵr uchel, tŵr llwyd.",
             "paragraph_start": true
           },
           {
@@ -1343,7 +1343,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Nac ydy",
-                "Nac ydy. Dyw'r goedwig ddim ar dân"
+                "Nac ydy. Dyw'r goedwig ddim ar dân",
+                "Dyw'r goedwig ddim ar dân"
               ],
               "common_wrong": [
                 {
@@ -1372,7 +1373,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ie",
-                "Ie, tŵr carreg yw e"
+                "Ie, tŵr carreg yw e",
+                "Tŵr carreg yw e"
               ],
               "common_wrong": [
                 {
@@ -1387,7 +1389,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ydy",
-                "Ydy, mae'r lamp yn gynnes"
+                "Ydy, mae'r lamp yn gynnes",
+                "Mae'r lamp yn gynnes"
               ],
               "common_wrong": [
                 {
@@ -1473,7 +1476,7 @@
         },
         {
           "id": "b2",
-          "prompt": "Mae Modlen yn ___ drws y gegin, ac mae Pero'n dod i'r gegin.",
+          "prompt": "Mae drws y gegin ar gau. Mae Modlen yn ___ y drws, ac mae Pero'n dod i'r gegin.",
           "answer_mode": "exact",
           "accepted_answers": [
             "agor"
@@ -1492,7 +1495,8 @@
           "prompt": "Dyw Mali ddim yn gweld Pero: mae hi'n ___ yn y stabl ac yn y gegin.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "chwilio"
+            "chwilio",
+            "galw"
           ]
         },
         {
@@ -1553,7 +1557,9 @@
             "Nac ydy. Dyw e ddim yn y stabl",
             "Dyw e ddim yn y stabl",
             "Nac ydy. Dyw e ddim yno",
-            "Nac ydy. Dyw Pero ddim yno"
+            "Nac ydy. Dyw Pero ddim yno",
+            "Dyw e ddim yno",
+            "Dyw Pero ddim yno"
           ],
           "model_answer": "Nac ydy. Dyw Pero ddim yn y stabl.",
           "source_segment_ids": [
@@ -1565,11 +1571,7 @@
           "prompt": "Ydy Elen yn galw \"Pero!\"?",
           "answer_mode": "self_check",
           "model_answer": "Nac ydy. Mae hi'n rhoi lamp i Mali, ac mae hi'n edrych ar y goedwig.",
-          "rubric": "Nac ydy, plus what Elen does instead (gives Mali the lamp, looks at the forest).",
-          "key_terms": [
-            "cy-lamp",
-            "cy-edrych"
-          ],
+          "rubric": "Answers Nac ydy (not Nage). What Elen does instead is optional extra detail.",
           "source_segment_ids": [
             "cy-brenin-01-l04-s031"
           ]
@@ -1585,7 +1587,9 @@
             "Nac ydy. Dyw'r goedwig ddim ar dân",
             "Nac ydy. Dyw'r coed ddim ar dân",
             "Dyw'r coed ddim ar dân",
-            "Nac ydy. Mae mwg, ond dyw'r goedwig ddim ar dân"
+            "Nac ydy. Mae mwg, ond dyw'r goedwig ddim ar dân",
+            "Mae mwg, ond dyw'r coed ddim ar dân",
+            "Mae mwg, ond dyw'r goedwig ddim ar dân"
           ],
           "model_answer": "Nac ydy. Mae mwg, ond dyw'r coed ddim ar dân.",
           "source_segment_ids": [
@@ -1594,7 +1598,7 @@
         },
         {
           "id": "c4",
-          "prompt": "Ble mae'r mwg?",
+          "prompt": "O ble mae'r mwg yn dod?",
           "answer_mode": "self_check",
           "model_answer": "Mae'r mwg yn dod o'r tŵr, yn y goedwig.",
           "rubric": "Says the smoke comes from the tower.",
@@ -1607,7 +1611,7 @@
         },
         {
           "id": "c5",
-          "prompt": "Mae'r ffenest yn goch. Tân yw e?",
+          "prompt": "Mae'r ffenest yn goch. Tân yw e? Ble mae'r tân?",
           "answer_mode": "self_check",
           "model_answer": "Ie: tân yn y tŵr.",
           "rubric": "Ie (not Ydy), and where the fire is.",
@@ -1633,7 +1637,24 @@
             "Wrth y drws gwyrdd, wrth y tŵr",
             "Mae e wrth y drws gwyrdd",
             "Yn y goedwig, wrth y tŵr",
-            "Ar y llwybr"
+            "Ar y llwybr",
+            "Mae Pero yn y goedwig, wrth y tŵr",
+            "Mae e wrth y drws gwyrdd, wrth y tŵr",
+            "Mae e yn y goedwig, wrth y tŵr",
+            "Mae Pero ar y llwybr",
+            "Mae e ar y llwybr",
+            "Wrth y drws, mae Pero",
+            "Wrth y drws, mae e",
+            "Wrth y tŵr, mae Pero",
+            "Wrth y tŵr, mae e",
+            "Wrth y drws gwyrdd, mae Pero",
+            "Wrth y drws gwyrdd, mae e",
+            "Wrth y drws gwyrdd, wrth y tŵr, mae Pero",
+            "Wrth y drws gwyrdd, wrth y tŵr, mae e",
+            "Yn y goedwig, wrth y tŵr, mae Pero",
+            "Yn y goedwig, wrth y tŵr, mae e",
+            "Ar y llwybr, mae Pero",
+            "Ar y llwybr, mae e"
           ],
           "model_answer": "Mae Pero wrth y drws gwyrdd, wrth y tŵr.",
           "source_segment_ids": [
@@ -1645,11 +1666,9 @@
           "prompt": "Cath yw e, wrth y drws gwyrdd?",
           "answer_mode": "self_check",
           "model_answer": "Nage! Mae e'n fach iawn, ac mae e'n goch.",
-          "rubric": "Answers Nage (not Nac ydy), then one sentence describing it (bach, coch).",
+          "rubric": "Answers Nage (not Nac ydy). A description such as bach/coch is optional extra detail.",
           "key_terms": [
-            "cy-nage",
-            "cy-coch",
-            "cy-bach"
+            "cy-nage"
           ]
         }
       ]

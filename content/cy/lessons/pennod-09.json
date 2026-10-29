@@ -1475,7 +1475,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ydyn",
-                "Ydyn, dyn ni'n wlyb"
+                "Ydyn, dyn ni'n wlyb",
+                "Dyn ni'n wlyb"
               ],
               "source_segment_ids": []
             },
@@ -1485,7 +1486,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Nac ydw",
-                "Nac ydw, dw i ddim yn wlyb"
+                "Nac ydw, dw i ddim yn wlyb",
+                "Dw i ddim yn wlyb"
               ],
               "explanation": "Myrddin = un: Ydw / Nac ydw",
               "source_segment_ids": []
@@ -1531,7 +1533,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Nac oes. Does dim pysgod yn y llyn.",
-                "Nac oes"
+                "Nac oes",
+                "Does dim pysgod yn y llyn."
               ],
               "recall_of": "G06",
               "source_segment_ids": []
@@ -1599,7 +1602,8 @@
           "prompt": "Yn y nos mae'r awyr yn ddu, ond yn y bore mae hi'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "las"
+            "las",
+            "felyn"
           ],
           "explanation": "yn + glas → las"
         },
@@ -1654,7 +1658,29 @@
             "Mae'r wers ar lan yr afon",
             "Wrth y bont",
             "Wrth Afon Helyg",
-            "Mae'r wers wrth Afon Helyg"
+            "Mae'r wers wrth Afon Helyg",
+            "Mae'r wers ar y lan",
+            "Mae'r wers wrth y bont",
+            "Mae'r wers wrth yr afon heddiw",
+            "Heddiw, mae'r wers wrth yr afon",
+            "Wrth yr afon heddiw",
+            "Mae'r wers ar lan yr afon heddiw",
+            "Heddiw, mae'r wers ar lan yr afon",
+            "Ar lan yr afon heddiw",
+            "Mae'r wers ar y lan heddiw",
+            "Heddiw, mae'r wers ar y lan",
+            "Ar y lan heddiw",
+            "Mae'r wers wrth y bont heddiw",
+            "Heddiw, mae'r wers wrth y bont",
+            "Wrth y bont heddiw",
+            "Mae'r wers wrth Afon Helyg heddiw",
+            "Heddiw, mae'r wers wrth Afon Helyg",
+            "Wrth Afon Helyg heddiw",
+            "Wrth yr afon, mae'r wers",
+            "Ar lan yr afon, mae'r wers",
+            "Ar y lan, mae'r wers",
+            "Wrth y bont, mae'r wers",
+            "Wrth Afon Helyg, mae'r wers"
           ],
           "model_answer": "Mae'r wers wrth yr afon.",
           "source_segment_ids": [
@@ -1663,16 +1689,18 @@
         },
         {
           "id": "c2",
-          "prompt": "Ydy Myrddin yn byw yn y tŵr?",
+          "prompt": "Ydy Myrddin yn byw yn y tŵr? Ble mae e'n byw hefyd?",
           "answer_mode": "self_check",
           "model_answer": "Ydy, ond mae e'n byw yn y llys, yn y goedwig ac yn y byd hefyd!",
-          "rubric": "Ydy, plus Myrddin's sideways answer (he lives in many places).",
+          "rubric": "Ydy, plus at least one other story-supported place where Myrddin lives (the court, forest, valley or world). A place phrase or full sentence is acceptable; additional places are optional.",
           "key_terms": [
             "cy-byw",
             "cy-byd"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l09-s039"
+            "cy-brenin-01-l09-s039",
+            "cy-brenin-01-l09-s040",
+            "cy-brenin-01-l09-s041"
           ]
         },
         {
@@ -1682,12 +1710,15 @@
           "accepted_answers": [
             "Ydy",
             "Ydy, ond dyw e ddim yn hedfan yn bell",
-            "Ydy. Ond dyw e ddim yn hedfan yn bell",
             "Ydy, mae Dafi'n gallu hedfan",
             "Ydy, mae e'n gallu hedfan",
             "Ydy, mae Dafi'n gallu hedfan, ond dyw e ddim yn hedfan yn bell",
             "Ydy, mae e'n gallu hedfan, ond dyw e ddim yn hedfan yn bell",
-            "Ydy, ond mae e'n fach ac yn wan"
+            "Ydy, ond mae e'n fach ac yn wan",
+            "Mae Dafi'n gallu hedfan",
+            "Mae e'n gallu hedfan",
+            "Mae Dafi'n gallu hedfan, ond dyw e ddim yn hedfan yn bell",
+            "Mae e'n gallu hedfan, ond dyw e ddim yn hedfan yn bell"
           ],
           "model_answer": "Ydy, ond dyw e ddim yn hedfan yn bell."
         },
@@ -1696,7 +1727,7 @@
           "prompt": "Pam mae'r pysgod yn nofio o'r llyn?",
           "answer_mode": "self_check",
           "model_answer": "Mae Dafi'n gwneud mwg ar y dŵr, ac mae'r dŵr yn gynnes.",
-          "rubric": "Gives the reason: Dafi's smoke makes the water warm.",
+          "rubric": "Gives the reason: the water is warm, because of Dafi's smoke. The warmth alone is sufficient; a short reason or full explanation is acceptable.",
           "key_terms": [
             "cy-mwg",
             "cy-cynnes"
@@ -1710,10 +1741,14 @@
             "Nac ydy",
             "Nac ydy. Mae e'n sych",
             "Nac ydy, dyw e ddim yn wlyb",
-            "Nac ydy. Dyw e ddim yn wlyb",
             "Nac ydy. Mae Myrddin yn sych",
             "Nac ydy. Dyw Myrddin ddim yn wlyb",
-            "Nac ydy. Mae e'n sych, ac mae'r farf yn sych hefyd"
+            "Nac ydy. Mae e'n sych, ac mae'r farf yn sych hefyd",
+            "Mae Myrddin yn sych",
+            "Mae e'n sych",
+            "Dyw Myrddin ddim yn wlyb",
+            "Dyw e ddim yn wlyb",
+            "Mae e'n sych, ac mae'r farf yn sych hefyd"
           ],
           "model_answer": "Nac ydy. Mae e'n sych."
         },
@@ -1729,7 +1764,20 @@
             "Mae'r pysgodyn mawr iawn dan y bont",
             "Mae e yn y llyn",
             "Mae e yn y llyn, dan y bont",
-            "Mae'r pysgodyn mawr yn y llyn"
+            "Mae'r pysgodyn mawr yn y llyn",
+            "Mae e dan y bont",
+            "Mae'r pysgodyn mawr iawn yn y llyn, dan y bont",
+            "Mae'r pysgodyn mawr dan y bont",
+            "Mae'r pysgodyn mawr yn y llyn, dan y bont",
+            "Yn y llyn, mae'r pysgodyn mawr iawn",
+            "Yn y llyn, mae'r pysgodyn mawr",
+            "Yn y llyn, mae e",
+            "Dan y bont, mae'r pysgodyn mawr iawn",
+            "Dan y bont, mae'r pysgodyn mawr",
+            "Dan y bont, mae e",
+            "Yn y llyn, dan y bont, mae'r pysgodyn mawr iawn",
+            "Yn y llyn, dan y bont, mae'r pysgodyn mawr",
+            "Yn y llyn, dan y bont, mae e"
           ],
           "model_answer": "Yn y llyn, dan y bont."
         },
@@ -1738,7 +1786,7 @@
           "prompt": "A ti? Wyt ti'n gallu nofio?",
           "answer_mode": "self_check",
           "model_answer": "Ydw, dw i'n gallu nofio. / Nac ydw, dw i ddim yn gallu nofio.",
-          "rubric": "Ydw / Nac ydw, plus a full 'Dw i'n gallu …' sentence."
+          "rubric": "Ydw / Nac ydw. A full sentence is optional: Dw i'n gallu nofio / Dw i ddim yn gallu nofio."
         }
       ]
     }

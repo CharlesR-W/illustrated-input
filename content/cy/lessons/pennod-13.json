@@ -1551,7 +1551,7 @@
                 }
               ],
               "source_segment_ids": [
-                "cy-brenin-01-l13-s053"
+                "cy-brenin-01-l13-s058"
               ]
             },
             {
@@ -1605,7 +1605,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ydw",
-                "Ydw, dw i'n flinedig"
+                "Ydw, dw i'n flinedig",
+                "Dw i'n flinedig"
               ],
               "common_wrong": [
                 {
@@ -1624,7 +1625,11 @@
               "accepted_answers": [
                 "Do",
                 "Do. Gwelais i'r dieithryn",
-                "Do. Wnes i weld y dieithryn"
+                "Do. Wnes i weld y dieithryn",
+                "Do. Gwnes i weld y dieithryn",
+                "Gwelais i'r dieithryn",
+                "Wnes i weld y dieithryn",
+                "Gwnes i weld y dieithryn"
               ],
               "source_segment_ids": [
                 "cy-brenin-01-l13-s108"
@@ -1705,7 +1710,7 @@
         },
         {
           "id": "b2",
-          "prompt": "Mae Cynyr yn ___ y ceffyl wrth y wal.",
+          "prompt": "Mae Cynyr yn ___ y ceffyl wrth y wal gyda lledr: dyw'r ceffyl ddim yn rhydd.",
           "answer_mode": "exact",
           "accepted_answers": [
             "clymu"
@@ -1721,7 +1726,7 @@
         },
         {
           "id": "b4",
-          "prompt": "Mae'r gath ddu'n rhedeg ar ôl ___ fach yn y gegin.",
+          "prompt": "Mae'r gath ddu'n gweld ___ fach yn bwyta'r caws yn y gegin.",
           "answer_mode": "exact",
           "accepted_answers": [
             "llygoden"
@@ -1758,7 +1763,8 @@
           "prompt": "Does dim lledr ar goesau'r aderyn bach: mae e'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "rhydd"
+            "rhydd",
+            "wahanol"
           ]
         },
         {
@@ -1806,7 +1812,11 @@
             "Do. Gwelodd e Dafi ar y to",
             "Do. Gwelodd Arth Dafi ar y to",
             "Do. Gwelodd e Dafi",
-            "Do. Gwelodd Arth Dafi"
+            "Do. Gwelodd Arth Dafi",
+            "Gwelodd e Dafi ar y to",
+            "Gwelodd Arth Dafi ar y to",
+            "Gwelodd e Dafi",
+            "Gwelodd Arth Dafi"
           ],
           "model_answer": "Do. Gwelodd e Dafi ar y to.",
           "source_segment_ids": [
@@ -1818,7 +1828,7 @@
           "prompt": "Beth welodd Arth ar y ffordd?",
           "answer_mode": "self_check",
           "model_answer": "Gwelodd e filwyr, baner gyda draig goch, a'r dieithryn ar geffyl du.",
-          "rubric": "Names at least two: soldiers, the banner, the stranger.",
+          "rubric": "Names at least one story-supported sight from the road: soldiers, the banner, or the stranger. More details are optional.",
           "key_terms": [
             "cy-milwr",
             "cy-baner",
@@ -1846,10 +1856,10 @@
         },
         {
           "id": "c5",
-          "prompt": "Ydy hebog Cynyr yn rhydd?",
+          "prompt": "Ydy hebog Cynyr yn rhydd? Pam?",
           "answer_mode": "self_check",
           "model_answer": "Nac ydy. Mae lledr ar ei goesau e, ac mae Cynyr yn clymu'r lledr wrth y pren.",
-          "rubric": "Nac ydy, plus the leather on its legs.",
+          "rubric": "Nac ydy, plus a story-supported reason: the hawk's legs are bound / Cynyr ties it to the wood / leather is on its legs. A short reason or full sentence is acceptable; the word lledr is not required.",
           "key_terms": [
             "cy-lledr",
             "cy-clymu"
@@ -1867,7 +1877,10 @@
             "Do",
             "Do. Gwelais i'r ogof",
             "Do. Wnes i weld yr ogof",
-            "Do. Gwnes i weld yr ogof"
+            "Do. Gwnes i weld yr ogof",
+            "Gwelais i'r ogof",
+            "Wnes i weld yr ogof",
+            "Gwnes i weld yr ogof"
           ],
           "model_answer": "Do.",
           "source_segment_ids": [
@@ -1879,7 +1892,7 @@
           "prompt": "A ti? Wyt ti eisiau hedfan? Ble?",
           "answer_mode": "self_check",
           "model_answer": "Ydw! Dw i eisiau hedfan uwchben y môr.",
-          "rubric": "Ydw / Nac ydw plus one sentence with a place."
+          "rubric": "Ydw / Nac ydw; if yes, gives a place. A full sentence is optional; a negative answer need not invent a destination."
         }
       ]
     }

@@ -3,6 +3,22 @@
 // Pure helpers shared by the browser reader (window.IllustratedCore) and Node tests
 // (require("./core.js") or `import { … } from "./core.js"`). No DOM access here.
 (function expose(root) {
+  // Deliberately bounded language tags: ISO 639 code, optional script and region.
+  // Bridge text is plain text in dedicated note fields, never arbitrary HTML.
+  // The final lookahead requires the true end; `$` also accepts a trailing newline.
+  const BRIDGE_LANGUAGE_TAG = /^[a-z]{2,3}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?(?![\s\S])/;
+  function isBridgeLanguage(course, lang) {
+    if (typeof lang !== "string" || !BRIDGE_LANGUAGE_TAG.test(lang)) return false;
+    const target = String(course?.lang || course?.language?.code || "").toLowerCase().split("-")[0];
+    return Boolean(target && lang.split("-")[0] !== target &&
+      Array.isArray(course?.bridge_languages) && course.bridge_languages.includes(lang));
+  }
+  function isBridgeReference(course, lang, text) {
+    const references = course?.bridge_references;
+    return isBridgeLanguage(course, lang) && typeof text === "string" && /\S/u.test(text) &&
+      references != null && Object.hasOwn(references, lang) &&
+      Array.isArray(references[lang]) && references[lang].includes(text);
+  }
   // ---------------------------------------------------------------- answers
 
   const APOSTROPHES = /[’‘ʼ`´]/g;
@@ -480,13 +496,54 @@
     return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 
-  // Locate anchor_text as a whole word (case-insensitive, apostrophe-tolerant) in text.
-  function findAnchor(text, anchor) {
+  // Locate anchor_text case-insensitively, using generic token boundaries when supplied.
+  function findAnchor(text, anchor, course) {
     if (!text || !anchor) return null;
-    const pattern = escapeRegExp(String(anchor).normalize("NFC")).replace(/['’]/g, "['’]");
-    const re = new RegExp(`(?<![\\p{L}\\p{M}])${pattern}(?![\\p{L}\\p{M}])`, "iu");
-    const match = re.exec(String(text).normalize("NFC"));
-    return match ? { start: match.index, end: match.index + match[0].length } : null;
+    const genericCourse = course?.plugin === "generic";
+    const pattern = escapeRegExp(String(anchor).normalize("NFC")).replace(genericCourse ? /['’‘ʼ`´]/g : /['’]/g, genericCourse ? "['’‘ʼ`´]" : "['’]");
+    const source = String(text);
+    const normalized = source.normalize("NFC");
+    let match;
+    if (genericCourse) {
+      const tokens = glossTokens(normalized, course);
+      const re = new RegExp(pattern, "giu");
+      for (let m; (m = re.exec(normalized));) {
+        const start = m.index, end = start + m[0].length;
+        if (!tokens.some(t => (t.start < start && start < t.end) || (t.start < end && end < t.end))) { match = m; break; }
+        // A rejected substring may overlap the next valid phrase. Advance one source
+        // code point, rather than skipping to the end of the rejected match.
+        re.lastIndex = start + (normalized.codePointAt(start) > 0xffff ? 2 : 1);
+      }
+    } else match = new RegExp(`(?<![\\p{L}\\p{M}])${pattern}(?![\\p{L}\\p{M}])`, "iu").exec(normalized);
+    if (!match) return null;
+    const range = { start: match.index, end: match.index + match[0].length };
+    if (source === normalized) return range;
+    // Canonical decomposition gives both spellings the same boundary lengths, even
+    // when source code points compose or their combining marks reorder under NFC.
+    const start = normalized.slice(0, range.start).normalize("NFD").length;
+    const end = normalized.slice(0, range.end).normalize("NFD").length;
+    let offset = 0, decomposed = 0;
+    for (const char of source) {
+      if (decomposed === start) range.start = offset;
+      offset += char.length;
+      decomposed += char.normalize("NFD").length;
+      if (decomposed === end) { range.end = offset; break; }
+    }
+    return range;
+  }
+
+  // Merge overlapping anchor ranges ({start, end, items}) into disjoint ranges sorted by start,
+  // so no text is rendered twice; a range that bridges two others joins all three. Items keep input order.
+  function mergeAnchorRanges(ranges) {
+    const order = new Map(ranges.flatMap((range) => range.items).map((item, i) => [item, i]));
+    const merged = [];
+    [...ranges].sort((a, b) => a.start - b.start).forEach((range) => {
+      const last = merged[merged.length - 1];
+      if (last && range.start < last.end) { last.end = Math.max(last.end, range.end); last.items.push(...range.items); }
+      else merged.push({ start: range.start, end: range.end, items: [...range.items] });
+    });
+    merged.forEach((range) => range.items.sort((a, b) => order.get(a) - order.get(b)));
+    return merged;
   }
 
   // ------------------------------------------------------------ completion
@@ -794,6 +851,16 @@
     const skipKnown = (entry, kind) => skipKinds.has(kind) && entry &&
       (knownSet.has(entry.id) || (entry.lemma && knownSet.has(key(entry.lemma))));
     const ids = [...asList(lessonIds)].sort((a, b) => (lessonMap.get(a)?.order || 0) - (lessonMap.get(b)?.order || 0));
+    // Preserve existing GUIDs. A recognition stage must not occupy another
+    // stage's production GUID, including across units and inline deltas.
+    const stageKeys = new Set([
+      ...all, ...ids.flatMap(id => lexiconStages(lessonMap.get(id)?.lexicon_delta))
+    ].filter(stage => stage.lexeme_id).map(stage => `${stage.lexeme_id}:${stage.id || "base"}`));
+    for (const stageKey of stageKeys) {
+      if (stageKeys.has(`${stageKey}-production`)) {
+        throw new Error(`Anki GUID collision: ${courseId}:${stageKey}-production is both a stage and a production note`);
+      }
+    }
     for (const lessonId of ids) {
       const lesson = lessonMap.get(lessonId);
       const segments = lesson ? segmentIndex(lesson) : new Map();
@@ -856,44 +923,159 @@
   }
 
   // ---------------------------------------------------------------- reader glosses
+  // Shared generic-language token boundaries. These lists split spellings, never license
+  // vocabulary or expand a clitic into a lemma. Course language (not casing locale) selects
+  // the policy; unknown apostrophe compounds stay whole, e.g. French aujourd'hui.
+  const ELISION = {
+    fr: {
+      prefixes: new Set("l d j m t s n c qu jusqu lorsqu puisqu".split(" ")),
+      bareQuoteForms: new Set("l d j m t s n c".split(" "))
+    },
+    it: {
+      prefixes: new Set("l un dell all dall nell sull coll quell bell sant c d m t s v ci quest tutt senz anch com dov ch de ne a co e i gl perch".split(" ")),
+      // Standalone modern apocope and poetic forms used in editions of Dante.
+      apocope: new Set("po mo be va fa da sta di vo fe ver me te se".split(" ")),
+      leading: new Set(["l", "n"]),
+      // Orthographic quote priorities only; these spellings grant no vocabulary license.
+      bareQuoteForms: new Set("un ci de ne a co e i di da va fa sta vo fe ver me te se l n c d m t s v".split(" "))
+    }
+  };
+  const GENERIC_TOKEN = /(?:(?!ʼ)[\p{L}\p{M}])+(?:['’‘ʼ`´-](?:(?!ʼ)[\p{L}\p{M}])+)*/gu;
+  const IS_APOSTROPHE = /^['’‘ʼ`´]$/u;
+  function genericTokens(text, language = "und") {
+    const source = String(text ?? "");
+    const code = String(language).toLowerCase().split(/[-_]/u)[0];
+    const policy = Object.prototype.hasOwnProperty.call(ELISION, code) ? ELISION[code] : null;
+    // Matched single quotes delimit text rather than spelling an apocope. Internal
+    // apocope may precede a later closer; unpaired poetic 'l / 'n remain clitics.
+    const quotes = new Set();
+    const marks = policy ? [...source.matchAll(/['‘’]/gu)] : [];
+    const quoteOpening = (at, mark) => {
+      if ((mark !== "'" && mark !== "‘") || /[\p{L}\p{M}]/u.test(source[at - 1] ?? "") || !/[\p{L}\p{M}]/u.test(source[at + 1] ?? "")) return null;
+      const close = mark === "‘" ? "’" : "'";
+      const word = source.slice(at + 1).match(/^[\p{L}\p{M}]+/u)?.[0] ?? "";
+      return policy.leading?.has(word.toLowerCase()) && source[at + 1 + word.length] !== close ? null : close;
+    };
+    const quoteClosing = (at, mark, close) => mark === close && !/[\p{L}\p{M}]/u.test(source[at + 1] ?? "") && source[at + 1] !== mark;
+    const quoteRank = at => {
+      const word = source.slice(0, at).match(/[\p{L}\p{M}]+$/u)?.[0].toLowerCase();
+      if (!policy.prefixes.has(word) && !policy.apocope?.has(word)) return 0;
+      return policy.bareQuoteForms.has(word) ? 1 : 2;
+    };
+    const betterCloser = (index, close, rank) => {
+      for (let i = index + 1; i < marks.length; i++) {
+        const at = marks[i].index, mark = marks[i][0];
+        if (quoteOpening(at, mark)) return false;
+        if (quoteClosing(at, mark, close) && quoteRank(at) < rank) return true;
+      }
+      return false;
+    };
+    let opening = null;
+    for (const [index, q] of marks.entries()) {
+      const at = q.index, mark = q[0];
+      if (opening) {
+        if (quoteClosing(at, mark, opening.close)) {
+          // Ordinary words/punctuation outrank ambiguous bare forms, which outrank
+          // apostrophe-dependent spellings. Ties close the earlier quotation.
+          const rank = quoteRank(at);
+          if (rank && betterCloser(index, opening.close, rank)) continue;
+          quotes.add(opening.at); quotes.add(at); opening = null;
+        }
+      } else {
+        const close = quoteOpening(at, mark);
+        if (close) opening = { at, close };
+      }
+    }
+    const out = [];
+    const push = (start, end) => out.push({ text: source.slice(start, end), start, end });
+    for (const m of source.matchAll(GENERIC_TOKEN)) {
+      let start = m.index, end = start + m[0].length;
+      if (policy) {
+        // A leading poetic clitic is distinct from a single-quoted ordinary word.
+        if (policy.leading?.has(m[0].toLowerCase()) && !quotes.has(start - 1) && IS_APOSTROPHE.test(source[start - 1] ?? "")) start--;
+        let part = start;
+        for (let at = m.index; at < end; at++) {
+          if (IS_APOSTROPHE.test(source[at]) && policy.prefixes.has(source.slice(part, at).toLowerCase())) {
+            push(part, at + 1);
+            part = at + 1;
+          }
+        }
+        const last = source.slice(part, end).toLowerCase();
+        if (!quotes.has(end) && IS_APOSTROPHE.test(source[end] ?? "") && (policy.prefixes.has(last) || policy.apocope?.has(last))) end++;
+        push(part, end);
+      } else push(start, end);
+    }
+    return out;
+  }
+
   // docs/reader-glosses.md: word tokens of story text and the forms.json lookup key.
   // A leading apostrophe starts a clitic token (hi'n → hi, 'n); a trailing one closes an
   // elided form (δ’). Hyphenated compounds stay one token.
-  const GLOSS_TOKEN = /['’]?[\p{L}\p{M}\p{N}]+(?:-[\p{L}\p{M}\p{N}]+)*(?:['’](?![\p{L}\p{N}]))?/gu;
-  function glossTokens(text) {
+  // U+02BC is a modifier letter, so exclude it from the word body as well as
+  // accepting it in the apostrophe positions.
+  const GLOSS_TOKEN = /['’ʼ]?(?:(?!ʼ)[\p{L}\p{M}\p{N}])+(?:-(?:(?!ʼ)[\p{L}\p{M}\p{N}])+)*(?:['’ʼ](?![\p{L}\p{N}]))?/gu;
+  function glossTokens(text, course) {
+    if (course?.plugin === "generic") return genericTokens(text, course.lang ?? course.language?.code ?? "und");
     return [...String(text ?? "").matchAll(GLOSS_TOKEN)].map((m) => ({ text: m[0], start: m.index, end: m.index + m[0].length }));
+  }
+  // Shared with the gloss checker: skip substring collisions until an exact item
+  // match covers complete source tokens (e.g. "o" after "roedd" in "roedd o").
+  function glossItemRange(source, text, cursor = 0, tokens = glossTokens(source)) {
+    if (typeof text !== "string" || !text) return null;
+    for (let start = source.indexOf(text, cursor); start >= 0; start = source.indexOf(text, start + 1)) {
+      const end = start + text.length;
+      if (!tokens.some((tok) => (tok.start < start && start < tok.end) || (tok.start < end && end < tok.end)))
+        return { start, end };
+    }
+    return null;
   }
   // The popup for the token of a segment's source text at offset `at`. `segment` is the
   // lesson layer's entry for this segment; it is ignored when stale (its text differs).
   // Items are found by forward search, as scripts/check-glosses.mjs does, and cover a
   // token when the token starts inside them. A one-token item overrides the forms entry;
-  // a longer one is a phrase, shown above the tapped word's own forms entry.
+  // a longer one is a phrase, shown above the tapped word's own forms entry, unless
+  // its optional components provide a contextual analysis of that individual token.
   // → { word, start, end, phrase: item + {start, end} | null, main, alternatives } | null
-  function glossAt(text, at, forms, segment) {
+  function glossAt(text, at, forms, segment, course) {
     const source = String(text ?? "");
-    const token = glossTokens(source).find((tok) => at >= tok.start && at < tok.end);
+    const tokens = glossTokens(source, course);
+    const token = tokens.find((tok) => at >= tok.start && at < tok.end);
     if (!token) return null;
     let item = null;
     if (segment && segment.text === source) {
       let cursor = 0;
       for (const entry of segment.items || []) {
-        const start = entry?.text ? source.indexOf(entry.text, cursor) : -1;
-        if (start < 0) continue;
-        const end = start + entry.text.length;
+        const range = glossItemRange(source, entry?.text, cursor, tokens);
+        if (!range) continue;
+        const { start, end } = range;
         cursor = end;
         if (token.start >= start && token.start < end) { item = { ...entry, start, end }; break; }
       }
     }
-    const phrase = item && glossTokens(item.text).length > 1 ? item : null;
-    const key = glossKey(token.text);
+    const phrase = item && glossTokens(item.text, course).length > 1 ? item : null;
+    let component = null;
+    if (phrase && Array.isArray(phrase.components)) {
+      let cursor = phrase.start;
+      for (const entry of phrase.components) {
+        if (typeof entry?.text !== "string" || !entry.text) continue;
+        const parts = glossTokens(entry.text, course);
+        if (parts.length !== 1 || parts[0].start !== 0 || parts[0].end !== entry.text.length) continue;
+        const match = tokens.find((tok) => tok.start >= cursor && tok.end <= phrase.end && tok.text === entry.text);
+        if (!match) continue;
+        cursor = match.end;
+        if (token.start === match.start && token.end === match.end) { component = entry; break; }
+      }
+    }
+    const key = glossKey(token.text, course);
     const analyses = forms && Object.prototype.hasOwnProperty.call(forms, key) && Array.isArray(forms[key]) ? forms[key] : [];
-    const main = item && !phrase ? item : analyses[0] || null;
-    const alternatives = item && !phrase ? [] : analyses.slice(1);
+    const override = component || (item && !phrase ? item : null);
+    const main = override || analyses[0] || null;
+    const alternatives = override ? [] : analyses.slice(1);
     if (!phrase && !main) return null;
     return { word: token.text, start: token.start, end: token.end, phrase, main, alternatives };
   }
-  function glossKey(surface) {
-    return String(surface ?? "").normalize("NFC").replace(/\u0301/g, "").normalize("NFC").toLowerCase().replace(/[’‘ʼ]/g, "'");
+  function glossKey(surface, course) {
+    return String(surface ?? "").normalize("NFC").replace(/\u0301/g, "").normalize("NFC").toLowerCase().replace(course?.plugin === "generic" ? APOSTROPHES : /[’‘ʼ]/g, "'");
   }
 
   // ---------------------------------------------------------------- vocabulary self-check
@@ -919,21 +1101,23 @@
   }
 
   const api = {
+    isBridgeLanguage, isBridgeReference,
     normalise, foldAccents, unmutateCandidates, sameUnderMutation, mutationDifference,
     accepted, promptParts, countBlanks, answerMode, slotAnswers, checkResponse, revealAnswers,
-    containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
+    containsLemma, findAnchor, mergeAnchorRanges, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossAt, createVocabularyStore
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, createVocabularyStore
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
+      isBridgeLanguage, isBridgeReference,
       normalise, foldAccents, unmutateCandidates, sameUnderMutation, mutationDifference,
       accepted, promptParts, countBlanks, answerMode, slotAnswers, checkResponse, revealAnswers,
-      containsLemma, findAnchor, readCompleted, setCompleted, toggleCompleted,
+      containsLemma, findAnchor, mergeAnchorRanges, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossAt, createVocabularyStore
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, createVocabularyStore
     };
   }
   root.IllustratedCore = api;

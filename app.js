@@ -50,7 +50,8 @@ const UI_DEFAULTS = {
   vocabulary_knew: "Knew it", vocabulary_context: "Got it from context", vocabulary_no: "No",
   vocabulary_export: "Export self-check (JSON)", chapters: "Chapters", back_to_chapter: "Back to the chapter",
   back_to_exercise: "Back to the exercise", no_exercises: "This chapter has no workbook exercises.",
-  open_workbook: "Workbook for this chapter"
+  open_workbook: "Workbook for this chapter",
+  gloss_keys: "Use Left and Right arrow keys to move between words; Enter or Space opens a gloss; Escape closes it."
 };
 const PENSA_HINTS_EN = {
   A: "Change each sentence as in the example.",
@@ -89,12 +90,18 @@ function h(tag, props, ...children) {
   return el;
 }
 
-function store(key, value) {
+const pendingStorage = new Map();
+function store(key, value, cacheFailure = true) {
   const full = `illustrated-input:${key}`;
+  if (value === undefined && pendingStorage.has(full)) return pendingStorage.get(full);
   try {
     if (value === undefined) return localStorage.getItem(full);
     if (value === null) localStorage.removeItem(full); else localStorage.setItem(full, value);
-  } catch { /* storage unavailable: preferences simply do not persist */ }
+    pendingStorage.delete(full);
+  } catch {
+    // Cache scalar preferences only; record snapshots must not hide newer storage.
+    if (cacheFailure && value !== undefined) pendingStorage.set(full, value === null ? null : String(value));
+  }
   return null;
 }
 
@@ -105,10 +112,38 @@ function setting(name, legacy) {
   const own = store(courseKey(name));
   return own !== null ? own : (legacy ? store(legacy) : null);
 }
+const pendingProgress = new Map();
 function readJSONStore(name, fallback = {}) {
-  try { return JSON.parse(store(courseKey(name)) || "null") ?? fallback; } catch { return fallback; }
+  let data;
+  try { data = JSON.parse(store(courseKey(name)) || "null") ?? fallback; } catch { data = fallback; }
+  for (const { path, value } of pendingProgress.get(courseKey(name))?.values() || []) {
+    if (name === "workbook") {
+      const record = data[path[0]] ||= { skipped: {}, items: {} };
+      record.skipped ||= {}; record.items ||= {};
+      // Defaults are not pending edits: preserve another tab's actual attempt count.
+      if (path[1] === "items" && value !== undefined) record.items[path[2]] ||= { tries: 0 };
+    }
+    let node = data;
+    for (const key of path.slice(0, -1)) node = node[key] ||= {};
+    if (value === undefined) delete node[path.at(-1)]; else node[path.at(-1)] = value;
+  }
+  return data;
 }
-function writeJSONStore(name, value) { store(courseKey(name), JSON.stringify(value)); }
+function writeJSONStore(name, value) { store(courseKey(name), JSON.stringify(value), false); }
+
+// Progress and draft writes retain only local edits, including deletion tombstones.
+// Overlay them on fresh storage so other tabs' unrelated additions/removals survive.
+function writeProgress(name, changes) {
+  const key = courseKey(name);
+  if (!pendingProgress.has(key)) pendingProgress.set(key, new Map());
+  const pending = pendingProgress.get(key);
+  for (const [path, value] of changes) pending.set(JSON.stringify(path), { path, value });
+  const all = readJSONStore(name);
+  try {
+    localStorage.setItem(`illustrated-input:${key}`, JSON.stringify(all));
+    pendingProgress.delete(key);
+  } catch { /* field changes remain pending for this page session */ }
+}
 
 function targetLang() { return state.course?.language?.code || state.course?.language_code || "cy"; }
 function uiLangOfCourse() { return state.course?.ui_lang || targetLang(); }
@@ -234,11 +269,13 @@ function stressHiddenEverywhere() {
   return Boolean(config?.strip_everywhere) && !stressOn(state.current || null);
 }
 function stripStressNodes(root) {
+  // A target-language display preference must not alter a known-language reference.
+  if ((root.nodeType === Node.TEXT_NODE ? root.parentElement : root)?.closest?.(".bridge-language")) return;
   if (root.nodeType === Node.TEXT_NODE) { if (root.nodeValue.includes(ACUTE)) root.nodeValue = root.nodeValue.replace(ACUTE_RE, ""); return; }
   if (root.nodeType !== Node.ELEMENT_NODE) return;
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   let node;
-  while ((node = walker.nextNode())) if (node.nodeValue.includes(ACUTE)) node.nodeValue = node.nodeValue.replace(ACUTE_RE, "");
+  while ((node = walker.nextNode())) if (!node.parentElement?.closest(".bridge-language") && node.nodeValue.includes(ACUTE)) node.nodeValue = node.nodeValue.replace(ACUTE_RE, "");
 }
 function installStressStripper() {
   if (typeof MutationObserver === "undefined") return;
@@ -522,7 +559,27 @@ function entryOrder(entry, index) { return entry.order ?? index + 1; }
 function available(entry) { return Boolean(entry.path || entry.file) && entry.status !== "planned"; }
 function entryPath(entry) { return entry.path || entry.file || `lessons/${entry.id}.json`; }
 function completedKey() { return `illustrated-input:${state.course?.id || "course"}:completed`; }
-function completed() { return Core.readCompleted(safeStorage(), completedKey()); }
+const sessionCompleted = new Map();
+function completed() {
+  const key = completedKey();
+  const done = Core.readCompleted(safeStorage(), key);
+  for (const [lessonId, on] of sessionCompleted.get(key) || []) {
+    if (on) done.add(lessonId); else done.delete(lessonId);
+  }
+  return done;
+}
+function setCompletion(lessonId, on) {
+  const key = completedKey();
+  if (!sessionCompleted.has(key)) sessionCompleted.set(key, new Map());
+  sessionCompleted.get(key).set(lessonId, on);
+  const done = completed();
+  // Overlay only unsaved lesson changes on fresh storage, preserving other tabs'
+  // additions and removals while writes fail and when persistence recovers.
+  try {
+    window.localStorage.setItem(key, JSON.stringify([...done]));
+    sessionCompleted.delete(key);
+  } catch { /* pending changes remain usable for this session */ }
+}
 function safeStorage() {
   try { return window.localStorage; } catch { return { getItem: () => null, setItem: () => {} }; }
 }
@@ -615,11 +672,13 @@ function renderNav() {
   const books = exerciseBook(state.course);
   const navBook = books ? state.navBook || (state.view === "lesson" ? state.book : "chapter") : "chapter";
   const switcher = $("#book-switch");
+  const focusedBook = switcher.contains(document.activeElement) ? document.activeElement.dataset.book : null;
   switcher.hidden = !books;
   if (books) {
     switcher.replaceChildren(...[["chapter", "chapters"], ["workbook", "workbook"]].map(([book, key]) =>
-      ui("button", key, { type: "button", class: "book-tab", "aria-pressed": String(navBook === book),
+      ui("button", key, { type: "button", class: "book-tab", "data-book": book, "aria-pressed": String(navBook === book),
         onclick: () => { state.navBook = book; renderNav(); } })));
+    if (focusedBook) switcher.querySelector(`[data-book="${focusedBook}"]`)?.focus({ preventScroll: true });
   }
   const suffix = navBook === "workbook" ? "/workbook" : "";
   nav.replaceChildren(...parts().map((part) => h("section", { class: "nav-part" },
@@ -658,7 +717,9 @@ function showView(name) {
 }
 
 let firstRoute = true;
+let routeSeq = 0;
 async function route() {
+  const seq = ++routeSeq;
   const hash = decodeURIComponent(location.hash.slice(1));
   const focus = !firstRoute;
   firstRoute = false;
@@ -667,7 +728,7 @@ async function route() {
   if (!hash && introText() && !store(introSeenKey())) return showIntro(false);
   const [lessonHash, stepHash] = hash.split("/");
   const entry = entries().find((item) => item.id === lessonHash);
-  if (entry && available(entry)) return openLesson(entry, focus, stepHash);
+  if (entry && available(entry)) return openLesson(entry, focus, stepHash, seq);
   return showOverview(focus && hash !== "");
 }
 
@@ -864,12 +925,15 @@ async function loadAnswerForms(lesson, entry) {
   lesson._lexemeForms = lexemeFormsIndex(lesson, lexicon, courseChecker());
 }
 
-async function openLesson(entry, focus = true, stepId = null) {
+async function openLesson(entry, focus = true, stepId = null, seq = routeSeq) {
+  const hash = location.hash;
   if (state.view !== "lesson") { $("#loading").hidden = false; }
   try {
     const lesson = await fetchLesson(entry);
+    if (seq !== routeSeq || hash !== location.hash) return;
     stopAudio();
     state.current = lesson;
+    state.rereadView = null;
     state.book = exerciseBook(state.course) && isWorkbookStep(stepId) ? "workbook" : "chapter";
     state.navBook = null;
     store(`${state.course.id}:last-lesson`, lesson.id);
@@ -878,10 +942,9 @@ async function openLesson(entry, focus = true, stepId = null) {
     renderNav();
     window.scrollTo(0, 0);
     setLessonTitle(lesson);
-    state.rereadView = null;
     if (stepId && enterStep(lesson, stepId)) { /* scrolled */ } else if (focus) focusHeading("#lesson-title");
     startStepTimer(lesson);
-  } catch (error) { showError(error); }
+  } catch (error) { if (seq === routeSeq && hash === location.hash) showError(error); }
 }
 
 function setLessonTitle(lesson) {
@@ -1067,14 +1130,14 @@ const MARGIN = new Set(["margin_gloss", "margin_vignette", "margin_diagram"]);
 // offset of display character i, so tapped words resolve in the stored (stressed) text.
 function anchorLocator(source) {
   const same = Array.from({ length: source.length + 1 }, (_, i) => i);
-  if (!stressConfig()) return { text: source, map: same, find: (anchor) => Core.findAnchor(source, anchor) };
+  if (!stressConfig()) return { text: source, map: same, find: (anchor) => Core.findAnchor(source, anchor, state.course) };
   const stripped = stripStress(source);
   const shown = disp(source, "story") !== source || !source.includes(ACUTE) ? "plain" : "stressed";
   return {
     text: shown === "plain" ? stripped.text : source,
     map: shown === "plain" ? stripped.map : same,
     find: (anchor) => {
-      const found = Core.findAnchor(stripped.text, stripStress(anchor).text);
+      const found = Core.findAnchor(stripped.text, stripStress(anchor).text, state.course);
       if (!found || shown === "plain") return found;
       return { start: stripped.map[found.start], end: stripped.map[found.end] };
     }
@@ -1086,7 +1149,7 @@ function anchorLocator(source) {
 function marginGlossKey(aid) {
   if (aid.presentation !== "margin_gloss" || !(aid.gloss || aid.text)) return null;
   const target = aid.covers_lexeme_ids?.length ? [...aid.covers_lexeme_ids].sort().join(",") : String(aid.anchor_text || "").normalize("NFC").toLocaleLowerCase();
-  return `${String(aid.gloss || aid.text).normalize("NFC").trim()}\u0000${target}`;
+  return `${String(aid.gloss || aid.text).normalize("NFC").trim()}\u0000${target}\u0000${aid.lang || ""}`;
 }
 
 // Display text [from, to) as word spans (docs/reader-glosses.md tokens) and the text between
@@ -1099,7 +1162,8 @@ function wordNodes(text, from, to, words, map) {
     const start = Math.max(word.start, from);
     const end = Math.min(word.end, to);
     if (start > cursor) nodes.push(text.slice(cursor, start));
-    nodes.push(h("span", { class: "w", "data-at": String(map[word.start]) }, text.slice(start, end)));
+    nodes.push(h("span", { class: "w", role: "button", tabindex: "-1", "aria-haspopup": "dialog",
+      "aria-describedby": "gloss-keys", "data-at": String(map[word.start]) }, text.slice(start, end)));
     cursor = end;
   }
   if (cursor < to) nodes.push(text.slice(cursor, to));
@@ -1109,9 +1173,9 @@ function wordNodes(text, from, to, words, map) {
 function renderSegment(segment, manifest, lesson, seenGlosses = null) {
   const locator = anchorLocator(segment.text || "");
   const text = locator.text;
-  const words = Core.glossTokens(text);
+  const words = Core.glossTokens(text, state.course);
   const aids = Core.presentedAids(segment);
-  const ranges = [];
+  const spans = [];
   const loose = [];
   aids.forEach((aid, index) => {
     if (!MARGIN.has(aid.presentation)) return;
@@ -1121,13 +1185,9 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
     const found = aid.anchor_text ? locator.find(aid.anchor_text) : null;
     const item = { aid, index };
     if (!found) { loose.push(item); return; }
-    const existing = ranges.find((range) => found.start < range.end && found.end > range.start);
-    if (existing) {
-      existing.start = Math.min(existing.start, found.start); existing.end = Math.max(existing.end, found.end);
-      existing.items.push(item);
-    } else ranges.push({ ...found, items: [item] });
+    spans.push({ ...found, items: [item] });
   });
-  ranges.sort((a, b) => a.start - b.start);
+  const ranges = Core.mergeAnchorRanges(spans);
 
   const sentence = h("span", { class: "seg", id: segment.id, "data-segment": segment.id });
   const notes = [];
@@ -1154,7 +1214,7 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
     // Not a button: its words are the tap targets; tapping one opens the dictionary and
     // lights its note (wireStoryWords). The words carry the note as their description.
     const anchor = h("span", { class: "anchor", id: anchorId }, wordNodes(text, range.start, range.end, words, locator.map));
-    for (const word of anchor.querySelectorAll(".w")) word.setAttribute("aria-describedby", noteEls.map((note) => note.id).join(" "));
+    for (const word of anchor.querySelectorAll(".w")) word.setAttribute("aria-describedby", ["gloss-keys", ...noteEls.map((note) => note.id)].join(" "));
     wireAnchor(anchor, noteEls);
     sentence.append(anchor);
     cursor = range.end;
@@ -1194,7 +1254,8 @@ function glossContent(text) {
 function buildNote(aid, id, anchorId, inline = false, tag = "div") {
   const lang = targetLang();
   if (aid.presentation === "margin_gloss") {
-    return h(tag, { class: `note note-gloss gloss-${aid.gloss_kind || "note"}`, id: inline ? null : id, "data-anchor": anchorId, lang }, glossContent(disp(aid.gloss || aid.text, "glosses")), capability("gloss_reveal") && aid.reveal_en ? revealEnglish(aid.reveal_en) : null);
+    const bridge = Core.isBridgeReference(state.course, aid.lang, aid.gloss);
+    return h(tag, { class: `note note-gloss gloss-${aid.gloss_kind || "note"}${bridge ? " bridge-language" : ""}`, id: inline ? null : id, "data-anchor": anchorId, lang: bridge ? aid.lang : lang }, glossContent(bridge ? aid.gloss : disp(aid.gloss || aid.text, "glosses")), capability("gloss_reveal") && aid.reveal_en ? revealEnglish(aid.reveal_en) : null);
   }
   const kind = aid.presentation === "margin_vignette" ? "vignette" : "diagram";
   const label = disp(aid.label || "", "glosses");
@@ -1207,7 +1268,7 @@ function buildNote(aid, id, anchorId, inline = false, tag = "div") {
   img.addEventListener("error", () => {
     figure.classList.add("missing");
     button.remove();
-    if (!caption) figure.hidden = true;
+    if (!figure.querySelector("figcaption")) figure.hidden = true;
     scheduleAlign();
   });
   figure.append(button, caption || "");
@@ -1271,6 +1332,7 @@ function lessonGlosses(lesson) {
 }
 
 function wireStoryWords(story, lesson) {
+  story.prepend(ui("p", "gloss_keys", { id: "gloss-keys", class: "visually-hidden" }));
   const first = story.querySelector(".w");
   if (first) first.setAttribute("tabindex", "0");
   const warm = () => lessonGlosses(lesson).then((data) => story.classList.toggle("has-glosses", Boolean(data)));
@@ -1315,13 +1377,13 @@ async function openWord(word, lesson) {
   if (seq !== glossSeq || !data || !word.isConnected) return;
   word.closest(".story")?.classList.add("has-glosses");
   const segment = (lesson._segmentIndex ||= Core.segmentIndex(lesson)).get(sentence.dataset.segment);
-  const found = segment ? Core.glossAt(segment.text || "", Number(word.dataset.at), data.forms, data.segments[segment.id]) : null;
+  const found = segment ? Core.glossAt(segment.text || "", Number(word.dataset.at), data.forms, data.segments[segment.id], state.course) : null;
   if (found) showGloss(word, sentence, found);
 }
 
 function glossEntry(analysis, surface, extra = "") {
   const lang = targetLang();
-  const lemma = analysis.lemma && Core.glossKey(analysis.lemma) !== Core.glossKey(surface) ? analysis.lemma : null;
+  const lemma = analysis.lemma && Core.glossKey(analysis.lemma, state.course) !== Core.glossKey(surface, state.course) ? analysis.lemma : null;
   const grammar = [analysis.pos, analysis.form].filter(Boolean).join(" ");
   return h("div", { class: `gloss-entry${extra}` },
     h("p", { class: "gloss-head" },
@@ -1364,6 +1426,8 @@ function placeGloss() {
   const viewLeft = view ? view.offsetLeft : 0;
   const viewWidth = view ? view.width : document.documentElement.clientWidth;
   const viewHeight = view ? view.height : window.innerHeight;
+  // Pinch zoom shrinks the visual viewport without changing CSS vw units.
+  pop.style.maxWidth = `min(19rem, ${Math.max(0, viewWidth - 16)}px)`;
   const ceiling = Math.max(viewTop, $(".site-header")?.getBoundingClientRect().bottom || 0) + 6;
   const dock = $("#audio-dock");
   const floor = viewTop + viewHeight - (dock && !dock.hidden ? dock.offsetHeight + 16 : 8);
@@ -1492,14 +1556,11 @@ function nextStepAfter(lesson, stepId) {
 
 function setTick(lesson, stepId, on) {
   if (stepId === "done") {
-    Core.setCompleted(safeStorage(), completedKey(), lesson.id, on);
+    setCompletion(lesson.id, on);
     state.refreshFinish?.(on);
     renderNav();
   }
-  const all = readJSONStore("steps");
-  const ticks = all[lesson.id] ||= {};
-  if (on) ticks[stepId] = new Date().toISOString(); else delete ticks[stepId];
-  writeJSONStore("steps", all);
+  writeProgress("steps", [[[lesson.id, stepId], on ? new Date().toISOString() : undefined]]);
   refreshStepper(lesson);
 }
 
@@ -1573,6 +1634,7 @@ function renderStepper(lesson) {
 }
 
 function paintStepper(nav, lesson) {
+  const focusedTick = nav.contains(document.activeElement) ? document.activeElement.dataset.step : null;
   const ticks = stepTicks(lesson.id);
   const next = lessonNextStep(lesson);
   const [title, titleLang] = tl("stepper");
@@ -1583,7 +1645,7 @@ function paintStepper(nav, lesson) {
       const done = stepDone(lesson, step, ticks);
       const [label, lang] = stepLabel(step);
       const isNext = next?.id === step.id;
-      const tick = h("button", { type: "button", class: "step-tick", "aria-pressed": String(done), "aria-label": `${label}: ${doneText}`, lang },
+      const tick = h("button", { type: "button", class: "step-tick", "data-step": step.id, "aria-pressed": String(done), "aria-label": `${label}: ${doneText}`, lang },
         h("span", { "aria-hidden": "true" }, done ? "✓" : ""));
       tick.addEventListener("click", () => setTick(lesson, step.id, !stepDone(lesson, step)));
       const link = h("a", { class: "step-link", href: `#${encodeURIComponent(lesson.id)}/${step.id}`, lang, "aria-current": isNext ? "step" : null,
@@ -1592,6 +1654,7 @@ function paintStepper(nav, lesson) {
         done ? h("span", { class: "visually-hidden", lang: doneLang }, ` (${doneText})`) : null);
       return h("li", { class: `step${done ? " is-done" : ""}${isNext ? " is-next" : ""}` }, tick, link);
     })));
+  if (focusedTick) [...nav.querySelectorAll(".step-tick")].find(tick => tick.dataset.step === focusedTick)?.focus({ preventScroll: true });
 }
 
 // "Step done" at the end of a step's block: ticks it and moves on to the next unticked step.
@@ -1763,6 +1826,13 @@ function openLightbox(aid) {
   caption.textContent = aid.label || "";
   caption.lang = targetLang();
   caption.hidden = !aid.label;
+  if (aid.label?.trim()) {
+    dialog.setAttribute("aria-labelledby", "lightbox-caption");
+    dialog.removeAttribute("aria-label");
+  } else {
+    dialog.removeAttribute("aria-labelledby");
+    dialog.setAttribute("aria-label", t("enlarge"));
+  }
   if (typeof dialog.showModal === "function") dialog.showModal(); else dialog.setAttribute("open", "");
   $("#lightbox-close").focus();
 }
@@ -1884,6 +1954,10 @@ function renderGrammar(lesson) {
   return h("section", { class: "grammar", id: "grammar", "aria-labelledby": "grammar-title" },
     h("h2", { id: "grammar-title" }, ui("span", "grammar"), title ? h("span", { lang }, ` · ${title}`) : null),
     rule ? h("p", { class: "grammar-rule", lang }, rule) : null,
+    (grammar.bridge_notes || []).filter(note => Core.isBridgeReference(state.course, note.lang, note.text))
+      .map(note => h("p", { class: "grammar-bridge-note" },
+        h("span", { class: "bridge-language", lang: note.lang }, note.text),
+        note.target_text ? [" → ", h("span", { class: "grammar-bridge-target", lang }, note.target_text)] : null)),
     (grammar.tables || []).map(renderGrammarTable),
     grammar.examples?.length ? h("ul", { class: "grammar-examples" }, grammar.examples.map((example) => {
       const segment = segments.get(example.segment_id);
@@ -1917,8 +1991,15 @@ function pensumItemCount(group) {
 }
 
 function pensaStore(lesson) {
-  if (!state.pensa.has(lesson.id)) state.pensa.set(lesson.id, new Map());
+  if (!state.pensa.has(lesson.id)) {
+    const drafts = readJSONStore("drafts")[lesson.id] || {};
+    state.pensa.set(lesson.id, new Map(Object.entries(drafts).map(([key, values]) => [key, { values }])));
+  }
   return state.pensa.get(lesson.id);
+}
+
+function saveDraft(lesson, key, values) {
+  writeProgress("drafts", [[[lesson.id, key], [...values]]]);
 }
 
 function lessonPensa(lesson) {
@@ -1954,9 +2035,11 @@ function renderObrazec(example, area) {
   if (!example) return null;
   const prompt = typeof example === "string" ? example : example.prompt;
   const answer = typeof example === "string" ? "" : example.answer;
+  const rule = typeof example === "string" ? "" : example.rule;
   return h("div", { class: "enghraifft" },
     ui("span", inflectingCourse() ? "obrazec" : "example", { class: "enghraifft-label" }),
-    h("span", { lang: targetLang() }, disp(prompt, area), answer ? [" ", h("strong", null, disp(answer, area))] : null));
+    h("span", { lang: targetLang() }, rule ? [disp(rule, area), h("br")] : null,
+      disp(prompt, area), answer ? [" ", h("strong", null, disp(answer, area))] : null));
 }
 
 function renderPensa(lesson) {
@@ -1993,7 +2076,7 @@ function renderPensa(lesson) {
         const list = h("ol", { class: "items", start: String(start) });
         for (const item of block.items || []) {
           counter += 1;
-          list.append(renderItem(item, group, counter, memory, aids, lesson, { area: "pensa" }));
+          list.append(renderItem(item, { ...group, mutation_hint: block.mutation_hint ?? group.mutation_hint }, counter, memory, aids, lesson, { area: "pensa" }));
         }
         groupEl.append(list);
       }
@@ -2084,10 +2167,13 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
       style: inline ? `width:${Math.min(longest + 3, 22)}ch` : null
     });
     input.value = saved.values[slotIndex] || "";
-    input.addEventListener("input", () => { saved.values[slotIndex] = input.value; clearState(); warnLatin(); });
+    input.addEventListener("input", () => {
+      saved.values[slotIndex] = input.value; clearState(); warnLatin();
+      saveDraft(lesson, key, saved.values);
+    });
     input.addEventListener("focus", () => { state.activeField = input; });
     input.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") { event.preventDefault(); check(true); }
+      if (event.key === "Enter" && !event.isComposing && event.keyCode !== 229) { event.preventDefault(); check(true); }
     });
     fields.push(input);
     if (capability("scaffolded_answers")) {
@@ -2122,7 +2208,12 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
   if (mode === "self_check") {
     textarea = h("textarea", { class: "answer-field self", lang, rows: "2", "aria-label": itemLabel, "aria-describedby": `${promptTextId} ${feedback.id}`, spellcheck: "false" });
     textarea.value = saved.values[0] || "";
-    textarea.addEventListener("input", () => { saved.values[0] = textarea.value; warnLatin(); });
+    textarea.addEventListener("input", () => {
+      saved.values[0] = textarea.value;
+      saveDraft(lesson, key, saved.values);
+      li.querySelector(".key-terms")?._redraw?.();
+      warnLatin();
+    });
     textarea.addEventListener("focus", () => { state.activeField = textarea; });
     li.append(h("div", { class: "answer-line" }, inputWithPreview(textarea)));
   } else if (parts.length === 1) {
@@ -2169,7 +2260,7 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
     if (item.explanation) reveal.hidden = false;
   }
 
-  function check(advance) {
+  function check(advance, record = true) {
     const values = fields.map((field) => field.value);
     const result = checkAnswer(item, values, group, lesson);
     saved.checked = true;
@@ -2205,11 +2296,11 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
     }
     if (retry) retry.hidden = good(result.status) || result.status === "empty";
     if (result.status !== "empty") showExplanation();
-    opts.onOutcome?.(item, result.status);
+    if (record) opts.onOutcome?.(item, result.status);
     if (good(result.status) && advance) focusNextItem(li);
   }
 
-  function doReveal() {
+  function doReveal(record = true) {
     saved.revealed = true;
     reveal.hidden = false;
     if (!reveal.querySelector(".answer")) {
@@ -2237,7 +2328,7 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
       }
     }
     showExplanation();
-    opts.onOutcome?.(item, "revealed", true);
+    if (record) opts.onOutcome?.(item, "revealed", true);
   }
   li._reveal = doReveal;
 
@@ -2246,8 +2337,8 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
   actions.append(ui("button", "reveal", { type: "button", class: "small-button", onclick: doReveal }));
   if (sourceIds.length) actions.append(storyLink(sourceIds[0]));
   li.append(actions, feedback, reveal);
-  if (saved.revealed) doReveal();
-  if (saved.checked && fields.some((field) => field.value.trim())) check(false);
+  if (saved.revealed) doReveal(false);
+  if (saved.checked && fields.some((field) => field.value.trim())) check(false, false);
   warnLatin();
   return li;
 }
@@ -2273,7 +2364,7 @@ function keyTermsLine(ids, getText, lesson) {
 }
 
 function focusNextItem(li) {
-  const all = [...document.querySelectorAll("#lesson .pensa .item")];
+  const all = [...(li.closest(".pensa, .workbook")?.querySelectorAll(".item") || [])];
   const next = all[all.indexOf(li) + 1];
   const field = next?.querySelector(".answer-field");
   if (field && field.offsetParent) field.focus();
@@ -2296,7 +2387,7 @@ function lemmaFor(id) {
 }
 
 // Accent bar: one shared element, moved under the focused answer field. Its buttons are
-// pointer targets (tabindex -1) that insert at the caret without stealing focus.
+// keyboard and pointer targets that insert at the caret of the last focused field.
 let accentBar = null;
 function accentCharacters() { return state.course?.special_characters || []; }
 function showAccentBar(field) {
@@ -2308,7 +2399,7 @@ function showAccentBar(field) {
     accentBar.addEventListener("mousedown", (event) => event.preventDefault());
   }
   accentBar.replaceChildren(...chars.map((char) => h("button", {
-    type: "button", tabindex: "-1", lang: targetLang(), onclick: (event) => insertChar(event.shiftKey ? char.toUpperCase() : char)
+    type: "button", lang: targetLang(), onclick: (event) => insertChar(event.shiftKey ? char.toUpperCase() : char)
   }, char)));
   accentBar.setAttribute("aria-label", chars.join(" "));
   field.closest(".item, .napishi-field")?.querySelector(".accent-slot")?.append(accentBar);
@@ -2330,18 +2421,19 @@ function workbookRecord(lesson) {
   const all = readJSONStore("workbook");
   const record = all[lesson.id] ||= { skipped: {}, items: {} };
   record.skipped ||= {}; record.items ||= {};
-  return { all, record, save: () => writeJSONStore("workbook", all) };
+  return { all, record };
 }
 
 function recordOutcome(lesson, exerciseId, item, status) {
-  const { record, save } = workbookRecord(lesson);
+  const { record } = workbookRecord(lesson);
   const key = `${exerciseId}:${item.id}`;
-  const entry = record.items[key] ||= { tries: 0 };
-  if (status === "revealed") entry.revealed = new Date().toISOString();
-  else if (status.startsWith("self_")) entry.self = status.slice(5);
-  else if (status !== "empty") { entry.tries += 1; entry.status = status; }
-  entry.at = new Date().toISOString();
-  save();
+  const entry = record.items[key];
+  const fields = {};
+  if (status === "revealed") fields.revealed = new Date().toISOString();
+  else if (status.startsWith("self_")) fields.self = status.slice(5);
+  else if (status !== "empty") { fields.tries = (entry?.tries || 0) + 1; fields.status = status; }
+  fields.at = new Date().toISOString();
+  writeProgress("workbook", Object.entries(fields).map(([field, value]) => [[lesson.id, "items", key, field], value]));
 }
 
 function exerciseTitle(exercise) {
@@ -2390,9 +2482,8 @@ function renderExercise(exercise, number, lesson, memory, aids, sectionIndex) {
     skip.setAttribute("aria-expanded", String(!skipped));
   };
   skip.addEventListener("click", () => {
-    const { record, save } = workbookRecord(lesson);
-    if (record.skipped[exId]) delete record.skipped[exId]; else record.skipped[exId] = new Date().toISOString();
-    save();
+    const { record } = workbookRecord(lesson);
+    writeProgress("workbook", [[[lesson.id, "skipped", exId], record.skipped[exId] ? undefined : new Date().toISOString()]]);
     paint();
   });
   const revealAll = ui("button", "reveal_all", { type: "button", class: "small-button oral-only", onclick: () => {
@@ -2403,6 +2494,7 @@ function renderExercise(exercise, number, lesson, memory, aids, sectionIndex) {
     h("h4", { id: `${domId}-title` }, h("span", { class: "exercise-number", "aria-hidden": "true" }, `${number}. `), h("span", { lang: titleLang }, title)),
     h("div", { class: "exercise-actions" }, skippedNote, revealAll, skip),
     state.english && hint ? h("p", { class: "en-hint", lang: "en" }, hint) : null));
+  if (exercise.instruction) body.append(h("p", { class: "exercise-instruction", lang: targetLang() }, disp(exercise.instruction, "exercises")));
   const example = renderObrazec(exercise.obrazec || exercise.example || exercise.enghraifft, "exercises");
   if (example) body.append(example);
   if (exercise.word_bank?.length) {
@@ -2651,7 +2743,7 @@ function renderFinish(lesson, order) {
   state.refreshFinish = update;
   button.addEventListener("click", () => {
     const done = !completed().has(lesson.id);
-    Core.setCompleted(safeStorage(), completedKey(), lesson.id, done);
+    setCompletion(lesson.id, done);
     update(done);
     renderNav();
     if (stepperFor(lesson)) refreshStepper(lesson);
@@ -2694,7 +2786,8 @@ async function loadLexicon() {
   return state.lexicon;
 }
 
-function inflectingAnki() { return Core.isInflectingCourse(state.course) && (state.course?.anki?.mode !== "scaffolded" || Boolean(state.course.baseline_path)); }
+// Scaffolded exports support known-word baselines independently of morphology.
+function inflectingAnki() { return state.course?.anki?.mode === "scaffolded" || Core.isInflectingCourse(state.course); }
 
 // Known lexemes for exports: baseline_path (default plan/baseline.json) plus, when
 // the plan is reachable (serving the source repository), its rows marked known. The public
@@ -2756,10 +2849,11 @@ async function loadAudioSources(lesson) {
 
 const player = typeof Audio === "undefined" ? null : new Audio();
 // on: something is playing or paused (the dock shows); continuous: a whole chapter or part
-// is queued (the toolbar button reads Stop); paused: the learner paused it from the dock.
+// is queued (the toolbar button reads Stop); paused: playback is paused or needs permission.
 // activeId is the sentence being heard: kept by ID so a re-render (stress marks, interface
 // language) can find it again (rebindAudio). offsets: the chapter file's lesson_offsets.
 const audioState = { queue: [], lesson: null, active: null, activeId: null, offsets: null, button: null, on: false, continuous: false, paused: false };
+let playbackSeq = 0;
 
 function renderAudioControls(lesson) {
   const audio = lesson._audio;
@@ -2855,13 +2949,25 @@ function playFile(src, segmentId) {
   audioState.paused = false;
   updateDock();
   player.src = src;
-  player.play().catch(() => advanceQueue());
+  tryPlay();
+}
+
+function tryPlay() {
+  const seq = ++playbackSeq;
+  player.play().catch((error) => {
+    if (seq !== playbackSeq) return;
+    if (error.name === "NotAllowedError") {
+      audioState.paused = true;
+      updateDock();
+    } else advanceQueue();
+  });
 }
 
 function toggleAudioPause() {
   if (!audioState.on) return;
   audioState.paused = !audioState.paused;
-  if (audioState.paused) player.pause(); else player.play().catch(() => advanceQueue());
+  playbackSeq += 1;
+  if (audioState.paused) player.pause(); else tryPlay();
   updateDock();
 }
 
@@ -2883,6 +2989,7 @@ function updateDock() {
 }
 
 function stopAudio() {
+  playbackSeq += 1;
   audioState.queue = [];
   player.pause();
   markActive(null);
@@ -2892,6 +2999,15 @@ function stopAudio() {
   updateDock();
 }
 player?.addEventListener("ended", () => { audioState.active?.classList.remove("audio-playing"); if (audioState.queue.length) advanceQueue(); else stopAudio(); });
+function syncMediaPause() {
+  if (!audioState.on) return;
+  // Read the current media state: queued events can belong to a replaced clip.
+  if (player.paused && !audioState.paused) playbackSeq += 1;
+  audioState.paused = player.paused;
+  updateDock();
+}
+player?.addEventListener("pause", syncMediaPause);
+player?.addEventListener("play", syncMediaPause);
 player?.addEventListener("timeupdate", () => {
   if (!audioState.offsets || !audioState.on) return;
   const id = segmentAt(audioState.offsets, player.currentTime);
@@ -2968,6 +3084,12 @@ function applyTheme() {
 }
 
 function boot() {
+  $(".skip-link").addEventListener("click", (event) => {
+    event.preventDefault();
+    closeNav(false);
+    $("#main").focus({ preventScroll: true });
+    $("#main").scrollIntoView();
+  });
   applyTheme();
   $("#theme-toggle").addEventListener("click", () => {
     const light = document.documentElement.dataset.theme !== "light";

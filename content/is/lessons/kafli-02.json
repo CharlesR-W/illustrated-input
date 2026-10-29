@@ -167,7 +167,7 @@
       },
       {
         "lexeme_id": "is-kvold",
-        "how": "antonym gloss dagur ↔ kvöld; Gott kvöld",
+        "how": "contrast gloss dagur ↔ kvöld; Gott kvöld",
         "segment_id": "is-kvold-01-l02-s001"
       },
       {
@@ -337,7 +337,7 @@
                 "presentation": "margin_gloss",
                 "anchor_text": "kvöld",
                 "gloss": "dagur ↔ kvöld",
-                "gloss_kind": "antonym",
+                "gloss_kind": "contrast",
                 "covers_lexeme_ids": [
                   "is-kvold"
                 ]
@@ -595,7 +595,7 @@
               },
               {
                 "id": "x1-1-4",
-                "prompt": "Helga er kona. ___ er ung. (kona)",
+                "prompt": "Nú kemur kona. ___ er ung. (kona)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -630,7 +630,7 @@
             "items": [
               {
                 "id": "x1-2-1",
-                "prompt": "Nú kemur ___, og nú kemur maður.",
+                "prompt": "Nú kemur ___, og nú kemur maður. (hestur / hesturinn / konan)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -644,7 +644,7 @@
               },
               {
                 "id": "x1-2-2",
-                "prompt": "Nú kemur maður. ___ er Bjarni.",
+                "prompt": "Nú kemur maður. ___ er Bjarni. (Maður / Maðurinn / Konan)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -658,7 +658,7 @@
               },
               {
                 "id": "x1-2-3",
-                "prompt": "Og hér er ___. Barnið heitir Ásta.",
+                "prompt": "Og hér er ___. Barnið heitir Ásta. (barn / barnið / konan)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -672,7 +672,7 @@
               },
               {
                 "id": "x1-2-4",
-                "prompt": "Nú kemur kona. ___ er Guðrún.",
+                "prompt": "Nú kemur kona. ___ er Guðrún. (Kona / Konan / Maðurinn)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -686,7 +686,7 @@
               },
               {
                 "id": "x1-2-5",
-                "prompt": "Helga er ekki barn. Hún er ung ___.",
+                "prompt": "Helga er ekki barn. Hún er ung ___. (kona / konan / barnið)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -789,7 +789,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "Hver",
-                "gloss": "hver: Óðinn, Ásta · hvað: hestur",
+                "gloss": "hver: Bjarni, Ásta · hvað: hestur",
                 "gloss_kind": "example"
               }
             ]
@@ -1547,8 +1547,23 @@
           ],
           [
             "prestur → presturinn",
-            "",
-            ""
+            "kind → kindin",
+            "fjall → fjallið"
+          ]
+        ]
+      },
+      {
+        "caption": "þessi · þetta",
+        "header": [
+          "kk.",
+          "kvk.",
+          "hk."
+        ],
+        "rows": [
+          [
+            "Þessi hestur er stór.",
+            "Þessi skotthúfa er ný.",
+            "Þetta barn er lítið."
           ]
         ]
       },
@@ -1589,7 +1604,7 @@
             "Hvað er þetta? — Þetta er skotthúfa."
           ],
           [
-            "Hver er Óðinn? — Það er saga.",
+            "Hver er Óðinn? — Konungurinn í Ásgarði.",
             ""
           ]
         ]
@@ -1877,21 +1892,18 @@
           "id": "c2",
           "prompt": "Hvar er Kristján?",
           "mode": "productive",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Í Reykjavík.",
-            "Kristján er í Reykjavík.",
-            "Konungurinn er í Reykjavík.",
-            "Hann er í Reykjavík.",
-            "Á Íslandi, í Reykjavík.",
-            "Á Íslandi.",
-            "Kristján er á Íslandi.",
-            "Hann er á Íslandi.",
-            "Konungurinn er á Íslandi."
-          ],
+          "answer_mode": "self_check",
           "source_segment_ids": [
             "is-kvold-01-l02-s045"
-          ]
+          ],
+          "model_answer": "Kristján er í Reykjavík.",
+          "model_answers": [
+            "Kristján er í Reykjavík.",
+            "Í Reykjavík."
+          ],
+          "rubric": "Kristján, the king, is in Reykjavík, in Iceland. Either supported location is fine, as a short phrase or a full sentence with a name, title or pronoun and either taught word order.",
+          "rubric_lang": "en",
+          "key_terms": []
         },
         {
           "id": "c3",
@@ -1937,22 +1949,18 @@
           "id": "c5",
           "prompt": "Hver er konungurinn í Ásgarði?",
           "mode": "productive",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Óðinn.",
-            "Hann heitir Óðinn.",
-            "Konungurinn í Ásgarði er Óðinn.",
-            "Konungurinn í Ásgarði heitir Óðinn.",
-            "Óðinn er konungurinn í Ásgarði.",
-            "Konungurinn heitir Óðinn.",
-            "Hann er Óðinn.",
-            "Konungurinn er Óðinn.",
-            "Óðinn er konungurinn.",
-            "Óðinn er konungur í Ásgarði."
-          ],
+          "answer_mode": "self_check",
           "source_segment_ids": [
             "is-kvold-01-l02-s054"
-          ]
+          ],
+          "model_answer": "Konungurinn í Ásgarði heitir Óðinn.",
+          "model_answers": [
+            "Konungurinn í Ásgarði heitir Óðinn.",
+            "Óðinn."
+          ],
+          "rubric": "Identifies the king in Ásgarður as Óðinn. The name alone or any grammatical identity sentence using er or heitir is fine.",
+          "rubric_lang": "en",
+          "key_terms": []
         },
         {
           "id": "c6",
@@ -1978,7 +1986,7 @@
       "lexeme_id": "is-standa",
       "citation_form": "stendur (standa)",
       "part_of_speech": "verb",
-      "current_sense": "stands, stands up (standa: to stand)",
+      "current_sense": "stands (standa: to stand)",
       "first_introduced_lesson": "is-kvold-01-l02",
       "new": true
     },
@@ -1994,7 +2002,7 @@
       "lexeme_id": "is-liggja",
       "citation_form": "liggur (liggja)",
       "part_of_speech": "verb",
-      "current_sense": "lies (down) (liggja: to lie)",
+      "current_sense": "lies, is lying (liggja: to lie)",
       "first_introduced_lesson": "is-kvold-01-l02",
       "new": true
     },

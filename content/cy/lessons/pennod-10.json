@@ -1860,10 +1860,11 @@
         },
         {
           "id": "b7",
-          "prompt": "Mae Cai'n pysgota, ac mae e'n dal ___ mawr, gwyrdd!",
+          "prompt": "Mae'r ___ yn fawr ac yn wyrdd, ac mae ei ddannedd e'n finiog!",
           "answer_mode": "exact",
           "accepted_answers": [
-            "penhwyad"
+            "penhwyad",
+            "brenin"
           ]
         },
         {
@@ -1878,7 +1879,7 @@
         },
         {
           "id": "b9",
-          "prompt": "Mae Pero yn yr afon, ac mae e'n ___ Dafi o'r dŵr dwfn.",
+          "prompt": "Mae llaw Myrddin yn ___ Arth a Mali o'r dŵr.",
           "answer_mode": "exact",
           "accepted_answers": [
             "achub"
@@ -1899,7 +1900,9 @@
             "Maen nhw'n bysgod",
             "Pysgod ydyn nhw",
             "Pysgod yw Arth a Mali",
-            "Maen nhw'n bysgod bach"
+            "Maen nhw'n bysgod bach",
+            "Mae Arth a Mali'n bysgod",
+            "Pysgod bach ydyn nhw"
           ],
           "model_answer": "Maen nhw'n bysgod.",
           "source_segment_ids": [
@@ -1914,9 +1917,16 @@
             "Nac oes",
             "Nac oes. Mae esgyll gyda fe",
             "Nac oes. Does dim dwylo gyda fe",
-            "Nac oes, does dim dwylo gyda fe",
             "Nac oes. Does dim dwylo gydag Arth",
-            "Nac oes. Mae esgyll a chynffon gyda fe"
+            "Nac oes. Mae esgyll a chynffon gyda fe",
+            "Does dim dwylo gydag Arth",
+            "Does dim dwylo gyda fe",
+            "Does dim dwylo gydag e",
+            "Nac oes. Does dim dwylo gydag e",
+            "Nac oes. Mae esgyll gydag e",
+            "Mae esgyll gyda fe",
+            "Mae esgyll a chynffon gyda fe",
+            "Mae esgyll gydag e"
           ],
           "model_answer": "Nac oes. Mae esgyll gyda fe.",
           "source_segment_ids": [
@@ -1932,7 +1942,9 @@
             "Y penhwyad yw e",
             "Y penhwyad yw brenin yr afon",
             "Penhwyad",
-            "Y penhwyad yw'r brenin"
+            "Y penhwyad yw'r brenin",
+            "Brenin yr afon yw'r penhwyad",
+            "Y brenin yw'r penhwyad"
           ],
           "model_answer": "Y penhwyad yw brenin yr afon.",
           "source_segment_ids": [
@@ -1956,7 +1968,7 @@
           "prompt": "Sut mae Arth a Mali'n dod o'r dŵr?",
           "answer_mode": "self_check",
           "model_answer": "Mae llaw Myrddin yn achub y plant.",
-          "rubric": "Mentions Myrddin's hand.",
+          "rubric": "Gives the story-supported way out: Myrddin takes or rescues them (with his hand). A short method phrase or full sentence is acceptable; mentioning the hand is optional.",
           "key_terms": [
             "cy-llaw",
             "cy-achub"
@@ -1981,7 +1993,7 @@
           "prompt": "A ti? Ble mae dy drwyn di?",
           "answer_mode": "self_check",
           "model_answer": "Dyma fy nhrwyn i!",
-          "rubric": "Uses fy + nasal mutation with the echo pronoun: fy nhrwyn i."
+          "rubric": "Gives the location of, or points to, the nose. The possessive phrase fy nhrwyn i is one possible answer, not a required extra sentence."
         }
       ]
     }
@@ -2428,7 +2440,7 @@
     ]
   },
   "metrics": {
-    "running_words": 1042,
+    "running_words": 1040,
     "sentences": 151,
     "word_target": 950,
     "word_window": [

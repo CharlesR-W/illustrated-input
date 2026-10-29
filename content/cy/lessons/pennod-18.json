@@ -619,7 +619,7 @@
                 "src": "media/vignettes/cy-brenin-01-l18-img-tabled.webp",
                 "alt": "",
                 "status": "planned",
-                "art_brief": "A small wooden writing tablet filled with dark yellow wax, with a few letters scratched in it, and a bone stylus. Ink line and watercolour, transparent background, no text other than scratched marks that are not readable letters.",
+                "art_brief": "A small wooden writing tablet filled with dark yellow wax, with a few illegible scratched squiggles in it (not readable letters), and a bone stylus. Ink line and watercolour, isolated on a plain flat white background (cut out to transparency afterwards), no text.",
                 "covers_lexeme_ids": [
                   "cy-tabled",
                   "cy-cwyr"
@@ -1108,7 +1108,7 @@
                 "src": "media/vignettes/cy-brenin-01-l18-img-eglwys.webp",
                 "alt": "",
                 "status": "planned",
-                "art_brief": "A small old stone church in a little churchyard: grey stone walls, a little bell-turret with one bell, a round-arched wooden door, one small round-topped window, a wooden cross on the gable (the town church, as in the Pennod 1 tref vignette). Ink line and watercolour, transparent background, no text.",
+                "art_brief": "A small old stone church in a little churchyard: grey stone walls, a little bell-turret with one bell, a round-arched wooden door, one small round-topped window, a wooden cross on the gable (the town church, as in the Pennod 1 tref vignette). Ink line and watercolour, isolated on a plain flat white background (cut out to transparency afterwards), no text.",
                 "covers_lexeme_ids": [
                   "cy-eglwys"
                 ]
@@ -1173,14 +1173,12 @@
                 "presentation": "inline_scene",
                 "ref": "cy-brenin-01-l18-img-brenin",
                 "src": "media/images/cy-brenin-01-l18-img-brenin.webp",
-                "alt": "In the stable at night: Arth reads his first word from the wax tablet, finger on the letters, while Mali watches his face; at the stable door Myrddin stands smiling, with Dafi on his hat holding up the pocket watch.",
+                "alt": "In the stable at night by candlelight: Arth reads his first word from the wax tablet, finger under the letters, while Mali watches his face.",
                 "status": "planned",
-                "art_brief": "Inside the llys stable at night by the light of a new candle (llys palette: warm wood, straw, thatch). Arth (11, untidy brown hair with cowlick, freckles, moss-green tunic) sits on the straw with a small wooden wax tablet on his knees, one finger under a scratched word, mouth open mid-word, eyes shining. Mali (12, long dark braid, dark-blue dress, ink-stained fingers) kneels beside him, watching his face thoughtfully rather than the tablet. In the open stable doorway behind them stands Myrddin (very old, thin, long white beard, round wire spectacles, patched deep-blue robe, tall black brimmed hat), smiling; on the brim of his hat sits Dafi (cup-sized red dragon) holding up an open round silver pocket watch. Snow outside the door. The letters on the tablet are scratches only, not readable text. No text.",
+                "art_brief": "Inside the llys stable at night by the light of a new candle (llys palette: warm wood, straw, thatch). Arth (11, untidy brown hair with cowlick, freckles, moss-green tunic) sits on the straw with a small wooden wax tablet on his knees, one finger under a scratched word, mouth open mid-word, eyes shining. Mali (12, long dark braid, dark-blue dress, ink-stained fingers) kneels beside him, watching his face thoughtfully rather than the tablet. Behind them two horses (an old white-grey and a young chestnut) look over a stall door; the stable door is shut. The letters on the tablet are illegible scratches only, not readable text. No text.",
                 "characters": [
                   "char-arth",
-                  "char-mali",
-                  "char-myrddin",
-                  "char-dafi"
+                  "char-mali"
                 ],
                 "covers_lexeme_ids": [
                   "cy-tabled",
@@ -1439,7 +1437,7 @@
         "rows": [
           [
             "bob dydd · bob bore · bob nos",
-            "= every day, every morning, every night"
+            "bob dydd Llun · bob bore · bob nos"
           ],
           [
             "byth ↔ weithiau ↔ bob dydd",
@@ -1582,7 +1580,10 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Am wyth o'r gloch.",
-                "Mae Cai'n codi am wyth o'r gloch."
+                "Mae Cai'n codi am wyth o'r gloch.",
+                "Am wyth o'r gloch, mae Cai yn codi",
+                "Mae e yn codi am wyth o'r gloch",
+                "Am wyth o'r gloch, mae e yn codi"
               ],
               "source_segment_ids": [
                 "cy-brenin-01-l18-s009"
@@ -1595,7 +1596,13 @@
               "accepted_answers": [
                 "Am ddeuddeg o'r gloch.",
                 "Mae'r teulu'n bwyta am ddeuddeg o'r gloch.",
-                "Mae'r teulu'n bwyta yn y neuadd am ddeuddeg o'r gloch."
+                "Mae'r teulu'n bwyta yn y neuadd am ddeuddeg o'r gloch.",
+                "Am ddeuddeg o'r gloch, mae'r teulu yn bwyta",
+                "Am ddeuddeg o'r gloch, mae'r teulu yn bwyta yn y neuadd",
+                "Maen nhw yn bwyta am ddeuddeg o'r gloch",
+                "Am ddeuddeg o'r gloch, maen nhw yn bwyta",
+                "Maen nhw yn bwyta yn y neuadd am ddeuddeg o'r gloch",
+                "Am ddeuddeg o'r gloch, maen nhw yn bwyta yn y neuadd"
               ],
               "mutation_hint": true,
               "common_wrong": [
@@ -1614,7 +1621,10 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Am ddeg o'r gloch.",
-                "Mae'r teulu yn yr eglwys am ddeg o'r gloch."
+                "Mae'r teulu yn yr eglwys am ddeg o'r gloch.",
+                "Am ddeg o'r gloch, mae'r teulu yn yr eglwys",
+                "Maen nhw yn yr eglwys am ddeg o'r gloch",
+                "Am ddeg o'r gloch, maen nhw yn yr eglwys"
               ],
               "mutation_hint": true,
               "source_segment_ids": [
@@ -1627,7 +1637,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Mae hi'n naw o'r gloch.",
-                "Naw o'r gloch."
+                "Naw o'r gloch.",
+                "Naw o'r gloch yw hi"
               ],
               "common_wrong": [
                 {
@@ -1651,7 +1662,9 @@
               "accepted_answers": [
                 "Bob dydd Mercher.",
                 "Mae Elen yn cyfrif yr arian bob dydd Mercher.",
-                "Bob dydd Mercher, mae Elen yn cyfrif yr arian."
+                "Bob dydd Mercher, mae Elen yn cyfrif yr arian.",
+                "Mae hi yn cyfrif yr arian bob dydd Mercher",
+                "Bob dydd Mercher, mae hi yn cyfrif yr arian"
               ],
               "common_wrong": [
                 {
@@ -1667,7 +1680,9 @@
               "accepted_answers": [
                 "Bob dydd Sul.",
                 "Mae'r teulu'n mynd i'r eglwys bob dydd Sul.",
-                "Bob dydd Sul, mae'r teulu'n mynd i'r eglwys."
+                "Bob dydd Sul, mae'r teulu'n mynd i'r eglwys.",
+                "Maen nhw yn mynd i'r eglwys bob dydd Sul",
+                "Bob dydd Sul, maen nhw yn mynd i'r eglwys"
               ],
               "source_segment_ids": [
                 "cy-brenin-01-l18-s019"
@@ -1816,7 +1831,7 @@
         },
         {
           "id": "b7",
-          "prompt": "Mae Pero'n hen iawn: dyw e ___ yn rhedeg nawr!",
+          "prompt": "Mae Pero'n hen iawn: dyw e ___ yn hela nawr!",
           "answer_mode": "exact",
           "accepted_answers": [
             "byth"
@@ -1860,7 +1875,20 @@
             "Am chwech o'r gloch",
             "Bob bore",
             "Bob bore, am chwech o'r gloch",
-            "Mae Dafi'n cynnau'r ffwrn am chwech o'r gloch"
+            "Mae Dafi'n cynnau'r ffwrn am chwech o'r gloch",
+            "Mae Dafi yn cynnau'r ffwrn bob bore",
+            "Bob bore, mae Dafi yn cynnau'r ffwrn",
+            "Mae e yn cynnau'r ffwrn bob bore",
+            "Bob bore, mae e yn cynnau'r ffwrn",
+            "Am chwech o'r gloch, mae Dafi yn cynnau'r ffwrn",
+            "Mae e yn cynnau'r ffwrn am chwech o'r gloch",
+            "Am chwech o'r gloch, mae e yn cynnau'r ffwrn",
+            "Mae Dafi yn cynnau'r ffwrn bob bore, am chwech o'r gloch",
+            "Bob bore, am chwech o'r gloch, mae Dafi yn cynnau'r ffwrn",
+            "Mae e yn cynnau'r ffwrn bob bore, am chwech o'r gloch",
+            "Bob bore, am chwech o'r gloch, mae e yn cynnau'r ffwrn",
+            "Am chwech o'r gloch, mae Dafi yn cynnau'r ffwrn bob bore",
+            "Am chwech o'r gloch, mae e yn cynnau'r ffwrn bob bore"
           ],
           "model_answer": "Bob bore, am chwech o'r gloch.",
           "source_segment_ids": [
@@ -1888,7 +1916,25 @@
             "I'r stabl",
             "Maen nhw'n mynd i'r stabl",
             "Mae Arth a Mali'n mynd i'r stabl",
-            "Maen nhw'n mynd i'r stabl am wyth o'r gloch"
+            "Maen nhw'n mynd i'r stabl am wyth o'r gloch",
+            "Mae Arth a Mali yn mynd i'r stabl bob nos",
+            "Bob nos, mae Arth a Mali yn mynd i'r stabl",
+            "I'r stabl bob nos",
+            "Mae Arth a Mali yn mynd i'r stabl am wyth o'r gloch",
+            "Am wyth o'r gloch, mae Arth a Mali yn mynd i'r stabl",
+            "I'r stabl am wyth o'r gloch",
+            "Mae Arth a Mali yn mynd i'r stabl bob nos am wyth o'r gloch",
+            "Bob nos am wyth o'r gloch, mae Arth a Mali yn mynd i'r stabl",
+            "I'r stabl bob nos am wyth o'r gloch",
+            "Maen nhw yn mynd i'r stabl bob nos",
+            "Bob nos, maen nhw yn mynd i'r stabl",
+            "Am wyth o'r gloch, maen nhw yn mynd i'r stabl",
+            "Maen nhw yn mynd i'r stabl bob nos am wyth o'r gloch",
+            "Bob nos am wyth o'r gloch, maen nhw yn mynd i'r stabl",
+            "I'r stabl, mae Arth a Mali yn mynd",
+            "I'r stabl, maen nhw yn mynd",
+            "Am wyth o'r gloch, mae Arth a Mali yn mynd i'r stabl bob nos",
+            "Am wyth o'r gloch, maen nhw yn mynd i'r stabl bob nos"
           ],
           "model_answer": "Maen nhw'n mynd i'r stabl."
         },
@@ -1910,7 +1956,13 @@
           "accepted_answers": [
             "Dafi",
             "Dafi sy wedi bwyta'r cwyr",
-            "Dafi yw e"
+            "Dafi yw e",
+            "Dafi sydd wedi bwyta'r cwyr",
+            "Mae Dafi wedi bwyta'r cwyr",
+            "Y ddraig",
+            "Y ddraig sy wedi bwyta'r cwyr",
+            "Y ddraig sydd wedi bwyta'r cwyr",
+            "Mae'r ddraig wedi bwyta'r cwyr"
           ],
           "model_answer": "Dafi.",
           "source_segment_ids": [
@@ -1922,7 +1974,7 @@
           "prompt": "Ble mae Arth yn gweld llythrennau ar ddydd Sul?",
           "answer_mode": "self_check",
           "model_answer": "Ar garreg wrth ddrws yr eglwys.",
-          "rubric": "Names the stone (carreg) at the church (eglwys).",
+          "rubric": "Names the stone or its location by the church door. A short location answer is sufficient.",
           "key_terms": [
             "cy-carreg",
             "cy-eglwys"
@@ -1938,7 +1990,8 @@
           "accepted_answers": [
             "Brenin",
             "Brenin yw e",
-            "Mae hi'n ysgrifennu Brenin"
+            "Mae hi'n ysgrifennu Brenin",
+            "Mae Mali yn ysgrifennu Brenin"
           ],
           "model_answer": "Brenin.",
           "source_segment_ids": [
@@ -1950,7 +2003,7 @@
           "prompt": "A ti? Pryd wyt ti'n codi bob bore?",
           "answer_mode": "self_check",
           "model_answer": "Dw i'n codi am saith o'r gloch.",
-          "rubric": "Dw i'n codi am + an hour + o'r gloch (with the right mutation: am ddeg, am ddau …)."
+          "rubric": "Gives when you get up. A short time expression or a full Dw i'n codi am … o'r gloch sentence is acceptable; mutate after am where required."
         }
       ]
     }

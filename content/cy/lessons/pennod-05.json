@@ -1349,7 +1349,7 @@
   },
   "grammar": {
     "title_cy": "Pwy wyt ti? Arth dw i.",
-    "rule_cy": "fi → dw i · ti → rwyt ti / wyt ti? · e, hi → mae / ydy? — Dw i eisiau … (✗ yn).",
+    "rule_cy": "dw i · rwyt ti / wyt ti? · mae e, mae hi / ydy e? — Dw i eisiau … (✗ yn).",
     "tables": [
       {
         "caption": "dw i · rwyt ti · mae e",
@@ -1357,11 +1357,11 @@
           "",
           "",
           "?",
-          "Na …"
+          "✗"
         ],
         "rows": [
           [
-            "fi",
+            "i",
             "Dw i'n ddewr!",
             "—",
             "Dw i ddim yn darllen."
@@ -1392,6 +1392,11 @@
             "Wyt ti'n darllen?",
             "Ydw.",
             "Nac ydw."
+          ],
+          [
+            "Ydw i'n ddewr?",
+            "Wyt.",
+            "Nac wyt."
           ],
           [
             "Ydy e'n ddraig?",
@@ -1546,12 +1551,29 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Nac ydw",
-                "Nac ydw, dw i ddim yn oer"
+                "Nac ydw, dw i ddim yn oer",
+                "Dw i ddim yn oer"
               ],
               "common_wrong": [
                 {
                   "answer": "Nac ydy",
                   "hint": "Wyt ti …? → Ydw / Nac ydw"
+                }
+              ]
+            },
+            {
+              "id": "a11",
+              "prompt": "\"Ydw i'n ddewr?\" (✓) →",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Wyt",
+                "Wyt, rwyt ti'n ddewr",
+                "Rwyt ti'n ddewr"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Ydw",
+                  "hint": "Ydw i …? → Wyt / Nac wyt"
                 }
               ]
             },
@@ -1562,7 +1584,9 @@
               "accepted_answers": [
                 "Nac ydy",
                 "Nac ydy, dyw Dafi ddim yn drist",
-                "Nac ydy, dyw e ddim yn drist"
+                "Nac ydy, dyw e ddim yn drist",
+                "Dyw Dafi ddim yn drist",
+                "Dyw e ddim yn drist"
               ],
               "common_wrong": [
                 {
@@ -1577,7 +1601,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ie",
-                "Ie, Myrddin yw e"
+                "Ie, Myrddin yw e",
+                "Myrddin yw e"
               ],
               "common_wrong": [
                 {
@@ -1615,8 +1640,7 @@
               "prompt": "Mali · darllen →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Mali'n darllen.",
-                "Mae Mali yn darllen."
+                "Mae Mali'n darllen."
               ],
               "recall_of": "G03"
             },
@@ -1632,7 +1656,7 @@
               "common_wrong": [
                 {
                   "answer": "Mae Myrddin yn athro Arth.",
-                  "hint": "athro Arth = un person → … yw …"
+                  "hint": "Pwy yw Myrddin? → … yw …"
                 }
               ]
             }
@@ -1688,18 +1712,20 @@
         },
         {
           "id": "b4",
-          "prompt": "Dyw Mali ddim yn drist: mae hi'n ___.",
+          "prompt": "Dyw Arth ddim yn drist: mae e'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "hapus"
+            "hapus",
+            "ddewr"
           ]
         },
         {
           "id": "b5",
-          "prompt": "Dyw Arth ddim yn hapus: mae e'n ___.",
+          "prompt": "Dyw Mali ddim yn hapus yn y tŵr: mae hi'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "drist"
+            "drist",
+            "ddewr"
           ],
           "explanation": "yn + trist → drist"
         },
@@ -1752,16 +1778,22 @@
             "Myrddin yw'r hen ddyn. Dewin yw e",
             "Myrddin yw e. Dewin yw e",
             "Myrddin y dewin",
-            "Myrddin yw e, athro Arth"
+            "Myrddin yw e, athro Arth",
+            "Yr hen ddyn yw Myrddin",
+            "Y dewin",
+            "Myrddin yw'r dewin",
+            "Y dewin yw Myrddin",
+            "Y dewin yw e"
           ],
           "model_answer": "Myrddin yw'r hen ddyn. Dewin yw e.",
           "source_segment_ids": [
-            "cy-brenin-01-l05-s014"
+            "cy-brenin-01-l05-s016",
+            "cy-brenin-01-l05-s019"
           ]
         },
         {
           "id": "c2",
-          "prompt": "Ydy Myrddin yn gwybod enw Arth?",
+          "prompt": "Ydy Myrddin yn gwybod enw Arth? Sut rwyt ti'n gwybod?",
           "answer_mode": "self_check",
           "model_answer": "Ydy! \"Arth wyt ti,\" meddai Myrddin.",
           "rubric": "Ydy (not Ie), plus evidence from the story.",
@@ -1769,7 +1801,8 @@
             "cy-gwybod"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l05-s005"
+            "cy-brenin-01-l05-s005",
+            "cy-brenin-01-l05-s006"
           ]
         },
         {
@@ -1777,26 +1810,28 @@
           "prompt": "Pwy yw Dafi?",
           "answer_mode": "self_check",
           "model_answer": "Dafi yw'r ddraig fach goch.",
-          "rubric": "Identifies Dafi as the small (red) dragon, with yw.",
+          "rubric": "Identifies Dafi as the small (red) dragon; an identifying noun phrase or a full sentence is acceptable.",
           "key_terms": [
             "cy-draig"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l05-s040"
+            "cy-brenin-01-l05-s035",
+            "cy-brenin-01-l05-s041"
           ]
         },
         {
           "id": "c4",
-          "prompt": "Ydy Mali'n hapus yn y tŵr?",
+          "prompt": "Ydy Mali'n hapus yn y tŵr? Ble mae hi eisiau mynd?",
           "answer_mode": "self_check",
           "model_answer": "Nac ydy. Dyw hi ddim yn hapus: mae hi eisiau mynd i'r llys.",
-          "rubric": "Nac ydy, plus what Mali wants (eisiau, without yn).",
+          "rubric": "Nac ydy, plus the destination Mali wants (i'r llys). A short place phrase or full sentence is acceptable; if eisiau is used, it has no yn before it.",
           "key_terms": [
             "cy-hapus",
             "cy-eisiau"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l05-s056"
+            "cy-brenin-01-l05-s056",
+            "cy-brenin-01-l05-s057"
           ]
         },
         {
@@ -1819,7 +1854,26 @@
             "Mae Dafi yn yr het",
             "Yn het Myrddin",
             "Mae Dafi yn het Myrddin",
-            "Mae e yn yr het"
+            "Mae e yn yr het",
+            "Mae e yn het Myrddin",
+            "Mae Dafi yn yr het ar y llwybr i'r llys",
+            "Ar y llwybr i'r llys, mae Dafi yn yr het",
+            "Yn yr het ar y llwybr i'r llys",
+            "Mae e yn yr het ar y llwybr i'r llys",
+            "Ar y llwybr i'r llys, mae e yn yr het",
+            "Mae Dafi yn het Myrddin ar y llwybr i'r llys",
+            "Ar y llwybr i'r llys, mae Dafi yn het Myrddin",
+            "Yn het Myrddin ar y llwybr i'r llys",
+            "Mae e yn het Myrddin ar y llwybr i'r llys",
+            "Ar y llwybr i'r llys, mae e yn het Myrddin",
+            "Yn yr het, mae Dafi",
+            "Yn yr het, mae e",
+            "Yn het Myrddin, mae Dafi",
+            "Yn het Myrddin, mae e",
+            "Mae Dafi ar y llwybr i'r llys yn yr het",
+            "Mae e ar y llwybr i'r llys yn yr het",
+            "Mae Dafi ar y llwybr i'r llys yn het Myrddin",
+            "Mae e ar y llwybr i'r llys yn het Myrddin"
           ],
           "model_answer": "Mae Dafi yn yr het.",
           "source_segment_ids": [
@@ -1831,7 +1885,7 @@
           "prompt": "A ti? Pwy wyt ti? Wyt ti'n darllen?",
           "answer_mode": "self_check",
           "model_answer": "… dw i. Ydw, dw i'n darllen. / Nac ydw, dw i ddim yn darllen.",
-          "rubric": "Your name + dw i; then Ydw or Nac ydw (not Ydy) and one dw i sentence."
+          "rubric": "Your name, then Ydw / Nac ydw (not Ydy). Full sentences with dw i are optional."
         }
       ]
     }

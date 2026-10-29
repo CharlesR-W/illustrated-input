@@ -495,7 +495,7 @@
                 "src": "media/vignettes/cy-brenin-01-l11-img-crochan.webp",
                 "alt": "",
                 "status": "planned",
-                "art_brief": "A round black iron cauldron full of burnt black cawl with a wisp of smoke, the wooden handle of a big kitchen knife sticking up out of it. Transparent background, no text.",
+                "art_brief": "A round black iron cauldron full of burnt black cawl with a wisp of smoke, the wooden handle and the top of the broad steel blade of a big kitchen knife sticking up out of it at an angle. Isolated on a plain flat white background (cut out to transparency afterwards), no text.",
                 "covers_lexeme_ids": [
                   "cy-crochan",
                   "cy-cyllell",
@@ -685,7 +685,7 @@
                 "src": "media/images/cy-brenin-01-l11-img-pero-blawd.webp",
                 "alt": "The wrecked kitchen at night: Modlen raises her wooden spoon over Pero, who hides under the table with flour on his nose; Cai points at the dog; Arth holds up the knife from the cauldron beside Mali, both dripping wet, and Myrddin watches from the doorway.",
                 "status": "planned",
-                "art_brief": "Llys kitchen at night by firelight (match place-cegin.png), wrecked: an open stone-ringed hearth with the cauldron of blackened cawl on its chain, flour over the table, bench and floor rushes, a broken earthenware milk jug in a white puddle of milk, an empty pie plate, the clay oven dark and cold. Modlen (short, round, rosy, white headscarf, floury apron, brown dress with rolled sleeves) raises her big wooden spoon, scowling at Pero (big shaggy black-and-white hound, grey muzzle), who slinks sadly under the table, his nose white with flour and a drop of milk on his chin; exactly one dog. Cai (15, tall, ginger-blond, rust-red tunic) points at Pero from the inner doorway. Arth (11, untidy brown hair, oversized moss-green tunic) holds up the big dripping knife he has pulled out of the cauldron; Mali (12, long dark braid, dark-blue dress) beside him, both wet from the river. Myrddin (very old, white beard, round spectacles, patched deep-blue robe, bareheaded) watches from the yard doorway; his tall black brimmed hat sits on a stool by the hearth. No dragon visible. Llys palette, firelight. No text.",
+                "art_brief": "Llys kitchen at night by firelight (match place-cegin.png), wrecked: an open stone-ringed hearth with the cauldron of blackened cawl on its chain, flour over the table, bench and floor rushes, a broken earthenware milk jug in a white puddle of milk, an empty pie plate, the clay oven dark and cold. Modlen (short, round, rosy, white headscarf, floury apron, brown dress with rolled sleeves) raises her big wooden spoon, scowling at Pero (big shaggy black-and-white hound, grey muzzle, coat still damp from the river), who slinks sadly under the table, his nose white with flour and a drop of milk on his chin; exactly one dog. Cai (15, tall, ginger-blond, rust-red tunic) points at Pero from the inner doorway. Arth (11, untidy brown hair, oversized moss-green tunic) holds up the big dripping knife he has pulled out of the cauldron; Mali (12, long dark braid, dark-blue dress) beside him, both wet from the river. Myrddin (very old, white beard, round spectacles, patched deep-blue robe, bareheaded), small in the background, watches from the yard doorway; his tall black brimmed hat sits on a stool by the hearth. No dragon visible. Llys palette, firelight. No text.",
                 "characters": [
                   "char-modlen",
                   "char-pero",
@@ -1209,7 +1209,7 @@
           },
           {
             "id": "cy-brenin-01-l11-s114",
-            "text": "Mae Modlen yn rhoi cig a dŵr yn y crochan, ac mae hi'n gwneud cawl newydd.",
+            "text": "Mae Modlen yn ffeindio cig, ac mae hi'n rhoi'r cig a dŵr yn y crochan: mae hi'n gwneud cawl newydd.",
             "paragraph_start": true
           },
           {
@@ -1327,7 +1327,7 @@
   },
   "grammar": {
     "title_cy": "Mae Dafi wedi bwyta",
-    "rule_cy": "Mae e'n bwyta → Mae e wedi bwyta. yn → wedi; dim treiglad ar ôl wedi.",
+    "rule_cy": "Mae e'n bwyta → Mae e wedi bwyta. yn → wedi; wedi + berfenw: dim treiglad.",
     "tables": [
       {
         "caption": "yn ↔ wedi",
@@ -1584,8 +1584,7 @@
               "prompt": "Wyt ti wedi bwyta, Cai? — Nac ydw! (fi · bwyta · nawr) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Dw i'n bwyta nawr.",
-                "Dw i yn bwyta nawr."
+                "Dw i'n bwyta nawr."
               ],
               "common_wrong": [
                 {
@@ -1690,7 +1689,8 @@
           "prompt": "Mae llaeth yn y ___ ar y bwrdd.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "jwg"
+            "jwg",
+            "crochan"
           ]
         },
         {
@@ -1729,7 +1729,7 @@
         },
         {
           "id": "b8",
-          "prompt": "Mae Cai'n wyn gyda blawd. \"Ha! Ha!\" meddai Mali: mae hi'n ___.",
+          "prompt": "Mae blawd ar Cai. \"Ha! Ha!\" meddai Mali: mae hi'n ___.",
           "answer_mode": "exact",
           "accepted_answers": [
             "chwerthin"
@@ -1768,7 +1768,11 @@
             "Mae Arth a Mali wedi bod yn yr afon",
             "Yn yr afon gyda Pero",
             "Maen nhw wedi bod yn yr afon gyda Pero",
-            "Mae Arth a Mali wedi bod yn yr afon gyda Pero"
+            "Mae Arth a Mali wedi bod yn yr afon gyda Pero",
+            "Yn yr afon, mae Arth a Mali wedi bod",
+            "Yn yr afon, maen nhw wedi bod",
+            "Yn yr afon gyda Pero, mae Arth a Mali wedi bod",
+            "Yn yr afon gyda Pero, maen nhw wedi bod"
           ],
           "model_answer": "Maen nhw wedi bod yn yr afon.",
           "source_segment_ids": [
@@ -1777,10 +1781,10 @@
         },
         {
           "id": "c2",
-          "prompt": "Beth sy wedi digwydd yn y gegin?",
+          "prompt": "Beth sy wedi digwydd yn y gegin? (Mae … wedi …)",
           "answer_mode": "self_check",
           "model_answer": "Mae'r pasteiod wedi mynd, mae'r jwg wedi torri, ac mae'r cawl wedi llosgi.",
-          "rubric": "Names two things that have happened, each with wedi.",
+          "rubric": "Names at least one thing that has happened, with wedi; additional events are optional.",
           "key_terms": [
             "cy-wedi",
             "cy-torri",
@@ -1830,7 +1834,10 @@
             "Dafi yw e",
             "Dafi sy wedi bwyta'r pasteiod",
             "Y ddraig",
-            "Mae'r ddraig wedi bwyta'r pasteiod"
+            "Mae'r ddraig wedi bwyta'r pasteiod",
+            "Dafi sydd wedi bwyta'r pasteiod",
+            "Y ddraig sy wedi bwyta'r pasteiod",
+            "Y ddraig sydd wedi bwyta'r pasteiod"
           ],
           "model_answer": "Mae Dafi wedi bwyta'r pasteiod.",
           "source_segment_ids": [
@@ -1847,7 +1854,19 @@
             "Cynnau'r ffwrn yw gwaith Dafi",
             "Cynnau'r tân yw gwaith Dafi",
             "Mae e'n cynnau'r ffwrn",
-            "Mae Dafi'n cynnau'r ffwrn"
+            "Mae Dafi'n cynnau'r ffwrn",
+            "Gwaith Dafi yw cynnau'r ffwrn",
+            "Gwaith Dafi yw cynnau'r tân",
+            "Cynnau'r ffwrn yw ei waith",
+            "Ei waith yw cynnau'r ffwrn",
+            "Cynnau'r ffwrn yw ei waith e",
+            "Ei waith e yw cynnau'r ffwrn",
+            "Mae Dafi yn cynnau'r tân",
+            "Mae e yn cynnau'r tân",
+            "Cynnau'r tân yw ei waith",
+            "Ei waith yw cynnau'r tân",
+            "Cynnau'r tân yw ei waith e",
+            "Ei waith e yw cynnau'r tân"
           ],
           "model_answer": "Cynnau'r ffwrn.",
           "source_segment_ids": [
@@ -1859,7 +1878,7 @@
           "prompt": "A ti? Wyt ti wedi bwyta heddiw? Beth?",
           "answer_mode": "self_check",
           "model_answer": "Ydw, dw i wedi bwyta bara a chaws. / Nac ydw, dw i ddim wedi bwyta.",
-          "rubric": "Ydw / Nac ydw, plus one 'Dw i wedi …' or 'Dw i ddim wedi …' sentence."
+          "rubric": "Ydw / Nac ydw; if yes, names what was eaten. Full Dw i wedi … / Dw i ddim wedi … sentences are optional."
         }
       ]
     }
@@ -2339,7 +2358,7 @@
     ]
   },
   "metrics": {
-    "running_words": 1097,
+    "running_words": 1101,
     "sentences": 132,
     "word_target": 1000,
     "word_window": [

@@ -213,7 +213,7 @@ main:focus { outline: none; }
 }
 
 /* ---------- dictionary popup (tap-to-gloss) */
-.gloss-pop { position: absolute; z-index: 25; overflow-y: auto; overscroll-behavior: contain; width: max-content; max-width: min(19rem, calc(100vw - 1rem)); padding: .5rem .75rem .55rem; color: var(--ink); background: var(--card); border: 1px solid var(--control-line); border-radius: .6rem; box-shadow: 0 10px 30px var(--shadow-tint), 0 2px 6px rgba(0,0,0,.12); font: .95rem/1.35 var(--sans); }
+.gloss-pop { position: absolute; z-index: 25; overflow-y: auto; overflow-wrap: anywhere; overscroll-behavior: contain; width: max-content; max-width: min(19rem, calc(100vw - 1rem)); padding: .5rem .75rem .55rem; color: var(--ink); background: var(--card); border: 1px solid var(--control-line); border-radius: .6rem; box-shadow: 0 10px 30px var(--shadow-tint), 0 2px 6px rgba(0,0,0,.12); font: .95rem/1.35 var(--sans); }
 .gloss-entry + .gloss-entry { margin-top: .4rem; padding-top: .4rem; border-top: 1px solid var(--line); }
 .gloss-head, .gloss-en, .gloss-note { margin: 0; }
 .gloss-word { font: 700 1.08rem var(--serif); }
@@ -237,6 +237,8 @@ main:focus { outline: none; }
 .grammar { margin: 3rem 0; padding: clamp(1rem, 3vw, 1.75rem); background: var(--card); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
 .grammar h2, .pensa-head h2 { margin: 0 0 .6rem; font: 700 1.6rem var(--serif); }
 .grammar-rule { margin: 0 0 1rem; font: 1.1rem/1.6 var(--serif); padding: .6rem .8rem; background: var(--amber-soft); border-radius: .5rem; }
+.bridge-language { font-style: italic; }
+.grammar-bridge-note { margin: 0 0 1rem; padding-left: .65rem; border-left: 2px solid var(--amber-line); font-family: var(--serif); white-space: pre-line; }
 .table-wrap { overflow-x: auto; margin: 0 0 1.1rem; }
 .grammar table { border-collapse: collapse; min-width: 100%; font: 1rem/1.4 var(--serif); }
 .grammar caption { caption-side: top; text-align: left; padding: 0 0 .35rem; font-weight: 700; color: var(--forest); }
@@ -416,6 +418,7 @@ main:focus { outline: none; }
 .skipped-note { font-size: .8rem; font-weight: 800; color: var(--muted); }
 .skipped-note::before { content: "⤼ "; }
 .exercise .items { padding: 0 .9rem 0 2.4rem; }
+.exercise-instruction { margin: .7rem .9rem; }
 .exercise .word-bank, .exercise .enghraifft { padding-left: .9rem; padding-right: .9rem; }
 .latin-warning { margin: 0 0 .4rem; font-size: .85rem; font-weight: 700; color: var(--warn); }
 .lookalike-note { color: var(--warn); font-weight: 600; }

@@ -82,7 +82,7 @@
     "incidental": [
       {
         "form": "Pen-blwydd hapus (formula)",
-        "gloss_segment_id": "cy-brenin-01-l08-s005"
+        "gloss_segment_id": "cy-brenin-01-l08-s004"
       },
       {
         "form": "Mae'n ddrwg gyda fi (formula)",
@@ -915,7 +915,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "gallu marchogaeth",
-                "gloss": "gallu + berfenw: dim treiglad",
+                "gloss": "gallu + marchogaeth → gallu marchogaeth",
                 "gloss_kind": "form"
               }
             ]
@@ -1114,7 +1114,16 @@
             "id": "cy-brenin-01-l08-s095",
             "text": "\"Mae'n ddrwg gyda fi, Cai!\"",
             "paragraph_start": true,
-            "speaker": "char-arth"
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Mae'n ddrwg gyda fi",
+                "gloss": "= Dw i'n drist, Cai!",
+                "gloss_kind": "synonym"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l08-s096",
@@ -1556,7 +1565,8 @@
               "prompt": "(ti: ceffyl ?) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Oes ceffyl gyda ti?"
+                "Oes ceffyl gyda ti?",
+                "Oes ceffyl gyda thi?"
               ],
               "source_segment_ids": []
             },
@@ -1565,7 +1575,8 @@
               "prompt": "(Cai → fe: tarian ✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae tarian gyda fe."
+                "Mae tarian gyda fe.",
+                "Mae tarian gydag e."
               ],
               "common_wrong": [
                 {
@@ -1657,7 +1668,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ydw, dw i'n gryf.",
-                "Ydw"
+                "Ydw",
+                "Dw i'n gryf."
               ],
               "recall_of": "G05",
               "source_segment_ids": []
@@ -1687,7 +1699,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae Elen yn rhoi llyfr i Mali: ___ yw e.",
+          "prompt": "Mae Mali'n rhoi llyfr i Cai: ___ yw e.",
           "answer_mode": "exact",
           "accepted_answers": [
             "anrheg"
@@ -1756,7 +1768,8 @@
           "prompt": "Mae Arth eisiau rhoi anrheg i Cai, ond does dim ___ gyda fe.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "arian"
+            "arian",
+            "anrheg"
           ]
         }
       ]
@@ -1774,7 +1787,9 @@
             "Cai yw'r marchog newydd",
             "Cai yw e",
             "Cai yw'r marchog",
-            "Cai, mab Cynyr"
+            "Cai, mab Cynyr",
+            "Y marchog newydd yw Cai",
+            "Y marchog yw Cai"
           ],
           "model_answer": "Cai yw'r marchog newydd.",
           "source_segment_ids": [
@@ -1788,9 +1803,11 @@
           "accepted_answers": [
             "Oes",
             "Oes. Mae tarian gyda fe",
-            "Oes, mae tarian gyda fe",
             "Oes, mae tarian gyda Cai",
-            "Oes. Mae tarian gyda Cai"
+            "Mae tarian gyda Cai",
+            "Mae tarian gyda fe",
+            "Mae tarian gydag e",
+            "Oes, mae tarian gydag e"
           ],
           "model_answer": "Oes, mae tarian gyda fe.",
           "source_segment_ids": [
@@ -1808,7 +1825,9 @@
             "cy-newydd"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l08-s060"
+            "cy-brenin-01-l08-s058",
+            "cy-brenin-01-l08-s060",
+            "cy-brenin-01-l08-s062"
           ]
         },
         {
@@ -1826,7 +1845,7 @@
           "prompt": "Pam mae Arth yn drist yn y nos?",
           "answer_mode": "self_check",
           "model_answer": "Mae cleddyf a tharian gyda Cai, ond does dim byd gydag Arth.",
-          "rubric": "Contrasts what Cai has with what Arth has (Does dim … gyda …).",
+          "rubric": "Gives a story-supported reason for Arth's sadness, such as having no sword or money / nothing, or contrasts what Cai has with what Arth has. A short reason is acceptable; no fixed Does dim … gyda … frame is required.",
           "key_terms": [
             "cy-gyda",
             "cy-does-dim"
@@ -1843,7 +1862,49 @@
             "Yn y gwallt",
             "Wrth y glust",
             "Mae Dafi ar Arth",
-            "Mae Dafi yn y gwallt mawr"
+            "Mae Dafi yn y gwallt mawr",
+            "Mae e ar Arth",
+            "Mae e yn y gwallt mawr",
+            "Mae Dafi wrth y glust",
+            "Mae Dafi yn y gwallt mawr nawr",
+            "Nawr, mae Dafi yn y gwallt mawr",
+            "Yn y gwallt mawr nawr",
+            "Mae e yn y gwallt mawr nawr",
+            "Nawr, mae e yn y gwallt mawr",
+            "Mae Dafi ar Arth nawr",
+            "Nawr, mae Dafi ar Arth",
+            "Ar Arth nawr",
+            "Mae e ar Arth nawr",
+            "Nawr, mae e ar Arth",
+            "Mae Dafi yn y gwallt",
+            "Mae Dafi yn y gwallt nawr",
+            "Nawr, mae Dafi yn y gwallt",
+            "Yn y gwallt nawr",
+            "Mae e yn y gwallt",
+            "Mae e yn y gwallt nawr",
+            "Nawr, mae e yn y gwallt",
+            "Mae Dafi wrth y glust nawr",
+            "Nawr, mae Dafi wrth y glust",
+            "Wrth y glust nawr",
+            "Mae e wrth y glust",
+            "Mae e wrth y glust nawr",
+            "Nawr, mae e wrth y glust",
+            "Yn y gwallt mawr, mae Dafi",
+            "Yn y gwallt mawr, mae e",
+            "Ar Arth, mae Dafi",
+            "Ar Arth, mae e",
+            "Yn y gwallt, mae Dafi",
+            "Yn y gwallt, mae e",
+            "Wrth y glust, mae Dafi",
+            "Wrth y glust, mae e",
+            "Mae Dafi nawr yn y gwallt mawr",
+            "Mae e nawr yn y gwallt mawr",
+            "Mae Dafi nawr ar Arth",
+            "Mae e nawr ar Arth",
+            "Mae Dafi nawr yn y gwallt",
+            "Mae e nawr yn y gwallt",
+            "Mae Dafi nawr wrth y glust",
+            "Mae e nawr wrth y glust"
           ],
           "model_answer": "Mae Dafi ar Arth, yn y gwallt mawr."
         },
@@ -1852,7 +1913,7 @@
           "prompt": "A ti? Oes ffrind gyda ti?",
           "answer_mode": "self_check",
           "model_answer": "Oes, mae ffrind gyda fi. / Nac oes.",
-          "rubric": "Oes / Nac oes, plus one sentence 'Mae … gyda fi.'"
+          "rubric": "Oes / Nac oes. An extra sentence is optional: Mae ffrind gyda fi / Does dim ffrind gyda fi."
         }
       ]
     }
@@ -2285,7 +2346,7 @@
       "inline_scene": 3,
       "margin_vignette": 4,
       "margin_diagram": 0,
-      "margin_gloss": 30
+      "margin_gloss": 31
     },
     "audio_sources": [
       {

@@ -186,7 +186,7 @@
    },
    {
     "lexeme_id": "ru-pochemu",
-    "how": "gloss(example)+answer(потому́ что)",
+    "how": "answer (потому́ что, s018)",
     "segment_id": "ru-mir-01-l03-s017"
    },
    {
@@ -216,7 +216,7 @@
    },
    {
     "lexeme_id": "ru-iskat",
-    "how": "gloss(example)+context",
+    "how": "context; и́щет glossed in Глава 2 (s058)",
     "segment_id": "ru-mir-01-l03-s028"
    },
    {
@@ -256,7 +256,7 @@
    },
    {
     "lexeme_id": "ru-chuzhoj",
-    "how": "paraphrase in text (не наш)+gloss",
+    "how": "paraphrase in text (не наш) + gloss at s052 (свой ↔ чужо́й)",
     "segment_id": "ru-mir-01-l03-s047"
    },
    {
@@ -341,7 +341,7 @@
      },
      {
       "id": "ru-mir-01-l03-s002",
-      "text": "У неё ведро́.",
+      "text": "Вот её ведро́.",
       "inference_aids": [
        {
         "type": "image",
@@ -350,21 +350,24 @@
         "anchor_text": "ведро́",
         "label": "ведро́",
         "src": "media/vignettes/ru-mir-01-l03-img-vedro.svg",
-        "alt": "",
+        "alt": "An empty wooden pail with iron hoops and a rope handle.",
         "status": "draft",
         "art_brief": "A wooden peasant milk pail with an iron band and a rope handle, empty. Transparent background, no text.",
         "width": 240,
         "height": 240
-       },
+       }
+      ],
+      "pins": [
        {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "У неё",
-        "gloss": "у неё ведро́ = её ведро́",
-        "gloss_kind": "paraphrase",
-        "covers_lexeme_ids": [
-         "ru-u"
-        ]
+        "start": 4,
+        "end": 6,
+        "token": "её",
+        "lemma": "её",
+        "feats": {
+         "pos": "ADJF",
+         "case": "nomn"
+        },
+        "note": "possessive её with neuter ведро́ (audit fix RU3-03)"
        }
       ]
      },
@@ -402,7 +405,7 @@
         "anchor_text": "Воро́та",
         "label": "воро́та",
         "src": "media/vignettes/ru-mir-01-l03-img-vorota.svg",
-        "alt": "",
+        "alt": "The wooden double gate of a peasant yard; one leaf is shut, the other stands half open.",
         "status": "draft",
         "art_brief": "Wooden double gate of a Russian peasant yard, one leaf half open, a simple wooden latch. Transparent background, no text.",
         "covers_lexeme_ids": [
@@ -1679,7 +1682,16 @@
       "id": "ru-mir-01-l03-s034",
       "text": "— Чья вина́? Твоя́, Ва́нька! — говори́т Фёдор.",
       "speaker": "char-fyodor",
-      "paragraph_start": true
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Ва́нька",
+        "gloss": "Ва́нька = Ива́н",
+        "gloss_kind": "paraphrase"
+       }
+      ]
      },
      {
       "id": "ru-mir-01-l03-s035",
@@ -1724,7 +1736,7 @@
         "anchor_text": "ла́вка",
         "label": "ла́вка",
         "src": "media/vignettes/ru-mir-01-l03-img-lavka.svg",
-        "alt": "",
+        "alt": "A small log-built village shop with a signboard over the door, a barrel and two sacks beside it.",
         "status": "draft",
         "art_brief": "A small village shop of 1913: a log building with a wide door, a sign board, sacks and a barrel by the door. Transparent background, no text.",
         "covers_lexeme_ids": [
@@ -1971,7 +1983,7 @@
         "anchor_text": "капу́ста",
         "label": "капу́ста",
         "src": "media/vignettes/ru-mir-01-l03-img-kapusta.svg",
-        "alt": "",
+        "alt": "A big round head of cabbage growing in dark garden earth.",
         "status": "draft",
         "art_brief": "A single head of young green cabbage with outer leaves spread, seen from the side. Transparent background, no text.",
         "covers_lexeme_ids": [
@@ -2171,7 +2183,8 @@
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Не бе́лая"
+         "Не бе́лая",
+         "Нет"
         ],
         "choices": [
          "Не бе́лая",
@@ -2187,7 +2200,8 @@
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "нет коро́вы"
+         "нет коро́вы",
+         "коро́вы нет"
         ],
         "choices": [
          "нет коро́вы",
@@ -2203,7 +2217,8 @@
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Ла́вка Сила́нтия"
+         "Ла́вка Сила́нтия",
+         "Сила́нтия"
         ],
         "choices": [
          "Ла́вка Сила́нтия",
@@ -2220,7 +2235,8 @@
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Сила́нтий Кузьми́ч"
+         "Сила́нтий Кузьми́ч",
+         "Сила́нтий"
         ],
         "choices": [
          "Сила́нтий Кузьми́ч",
@@ -2238,7 +2254,9 @@
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Коро́ва Соколо́вых"
+         "Коро́ва Соколо́вых",
+         "Соколо́вых",
+         "На́ша"
         ],
         "choices": [
          "Коро́ва Соколо́вых",
@@ -2254,7 +2272,8 @@
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Огоро́д Сила́нтия"
+         "Огоро́д Сила́нтия",
+         "Сила́нтия"
         ],
         "choices": [
          "Огоро́д Сила́нтия",
@@ -2925,7 +2944,7 @@
         "anchor_text": "рубль",
         "label": "рубль и копе́йка",
         "src": "media/vignettes/ru-mir-01-l03-img-rubl.svg",
-        "alt": "",
+        "alt": "A large silver rouble beside four small copper kopecks.",
         "status": "draft",
         "art_brief": "A large silver rouble coin of 1913 beside a small copper kopeck coin, the size difference clear. Transparent background, no text.",
         "covers_lexeme_ids": [
@@ -3723,7 +3742,7 @@
       "id": "ru-mir-01-l03-x3-2",
       "type": "podstanovka",
       "title": "Подстано́вка",
-      "instruction": "Вы́бери отве́т: два и́ли две?",
+      "instruction": "Вы́бери отве́т.",
       "hint_en": "два + м./ср., две + ж.; after 2–4 the noun is genitive singular.",
       "grammar_target_ids": [
        "G03"
@@ -4438,7 +4457,7 @@
     "segment_id": "ru-mir-01-l03-s059"
    }
   ],
-  "note_en": "The genitive answers 'whose?' and 'of what?': изба́ отца́, хозя́ин ла́вки. It follows у ('at, by'; у меня́ есть = I have) and нет ('there is no': коро́вы нет). Endings: м./ср. -а/-я, ж. -ы/-и. After 2, 3, 4 a noun stands in the genitive singular (два рубля́, две копе́йки). Third-person pronouns add н- after у: у него́, у неё, у них."
+  "note_en": "Genitive: 'whose/of what?' (изба́ отца́, хозя́ин ла́вки); у ('at/by'; у меня́ есть = I have); нет ('there is no': коро́вы нет). Regular singular endings follow noun patterns: consonant/-й/-ь masculines, -о/-е neuters -а/-я; -а/-я nouns -ы/-и regardless of gender (ба́тюшка → ба́тюшки; -ия → -ии); -ь feminines -и; neuter -мя differs (и́мя → и́мени). After 2–4: genitive singular (два рубля́, две копе́йки). Third-person pronouns add н- after у: у него́, у неё, у них."
  },
  "pensa": {
   "A": {
@@ -4855,7 +4874,7 @@
     },
     {
      "id": "c7",
-     "prompt": "Что есть у отца́?",
+     "prompt": "Каки́е де́ньги есть у отца́?",
      "mode": "productive",
      "answer_mode": "self_check",
      "model_answers": [
@@ -4881,13 +4900,14 @@
      "answer_mode": "self_check",
      "model_answers": [
       "Фёдор рабо́тает у Сила́нтия в огоро́де два дня.",
-      "Фёдор. Он два дня в огоро́де Сила́нтия."
+      "Фёдор. Он два дня в огоро́де Сила́нтия.",
+      "Фёдор рабо́тает у Сила́нтия в огоро́де."
      ],
-     "rubric": "Фёдор, у Сила́нтия (genitive), and два дня (genitive singular after два).",
+     "rubric": "Фёдор is the required identification. у Сила́нтия is genitive when included. The duration два дня is optional (genitive singular after два).",
      "key_terms": [
       "ru-u",
       "ru-ogorod",
-      "ru-dva"
+      "ru-rabotat"
      ],
      "source_segment_ids": [
       "ru-mir-01-l03-s064",

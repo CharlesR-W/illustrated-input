@@ -325,7 +325,19 @@
           },
           {
             "id": "cy-brenin-01-l07-s003",
-            "text": "Mae Cai'n chwarae â'r cleddyf pren wrth y dyn gwellt."
+            "text": "Mae Cai'n chwarae â'r cleddyf pren wrth y dyn gwellt.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "â'r",
+                "gloss": "â'r = â + y; Cai + cleddyf → chwarae",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "cy-a-with"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l07-s004",
@@ -1421,7 +1433,7 @@
           },
           {
             "id": "cy-brenin-01-l07-s133",
-            "text": "\"Does dim pasteiod wrth y ffenest.",
+            "text": "\"Mae'r pasteiod wrth y ffenest yn ddu!",
             "paragraph_start": true,
             "speaker": "char-modlen"
           },
@@ -1740,7 +1752,8 @@
               "answer_mode": "exact",
               "accepted_answers": [
                 "Nac ydw, dw i ddim yn siarad.",
-                "Nac ydw"
+                "Nac ydw",
+                "Dw i ddim yn siarad."
               ],
               "recall_of": "G05",
               "source_segment_ids": []
@@ -1752,7 +1765,9 @@
               "accepted_answers": [
                 "Nac ydy, dyw Pero ddim yn cysgu.",
                 "Nac ydy, dyw e ddim yn cysgu.",
-                "Nac ydy"
+                "Nac ydy",
+                "Dyw Pero ddim yn cysgu.",
+                "Dyw e ddim yn cysgu."
               ],
               "recall_of": "G04",
               "source_segment_ids": []
@@ -1793,7 +1808,7 @@
         },
         {
           "id": "b2",
-          "prompt": "Dyw'r goeden ddim yn wyrdd yn y nos oer: does dim ___ ar y goeden.",
+          "prompt": "Mae'r gwynt yn y coed: mae ___ yn dod o'r goeden.",
           "answer_mode": "exact",
           "accepted_answers": [
             "dail",
@@ -1874,7 +1889,15 @@
             "Ar un goes",
             "Mae Arth yn sefyll ar un goes",
             "Mae e'n sefyll ar un goes",
-            "Ar un goes, ac mae llygaid Arth ar gau"
+            "Ar un goes, ac mae llygaid Arth ar gau",
+            "Mae Arth ar un goes",
+            "Mae e ar un goes",
+            "Ar un goes, mae Arth yn sefyll",
+            "Ar un goes, mae e yn sefyll",
+            "Ar un goes, mae Arth",
+            "Ar un goes, mae e",
+            "Mae Arth yn sefyll ar un goes, ac mae llygaid Arth ar gau",
+            "Mae e yn sefyll ar un goes, ac mae llygaid Arth ar gau"
           ],
           "model_answer": "Mae Arth yn sefyll ar un goes.",
           "source_segment_ids": [
@@ -1887,12 +1910,7 @@
           "prompt": "Ydy Arth yn clywed yr afon?",
           "answer_mode": "self_check",
           "model_answer": "Ydy. Mae e'n clywed y gwynt, adar, Pero a'r afon.",
-          "rubric": "Ydy, plus one other sound Arth hears.",
-          "key_terms": [
-            "cy-gwynt",
-            "cy-aderyn",
-            "cy-afon"
-          ],
+          "rubric": "Answers Ydy (not Ie). Other sounds Arth hears are optional extra detail.",
           "source_segment_ids": [
             "cy-brenin-01-l07-s045"
           ]
@@ -1916,16 +1934,18 @@
             "Nac oes",
             "Nac oes. Does dim dŵr yn y bwced",
             "Does dim dŵr yn y bwced",
-            "Nac oes. Mae'r bwced yn wag"
+            "Nac oes. Mae'r bwced yn wag",
+            "Mae'r bwced yn wag"
           ],
           "model_answer": "Nac oes. Does dim dŵr yn y bwced.",
           "source_segment_ids": [
-            "cy-brenin-01-l07-s074"
+            "cy-brenin-01-l07-s075",
+            "cy-brenin-01-l07-s076"
           ]
         },
         {
           "id": "c5",
-          "prompt": "Ydy Pero'n bwyta'r bastai?",
+          "prompt": "Ydy Pero'n bwyta'r bastai? Pam?",
           "answer_mode": "self_check",
           "model_answer": "Nac ydy! Mae Dafi'n bwyta'r bastai.",
           "rubric": "Nac ydy, and names Dafi.",
@@ -1943,7 +1963,26 @@
             "Mae Dafi yn yr het",
             "Mae e yn yr het",
             "Yn het Myrddin",
-            "Mae Dafi yn het Myrddin"
+            "Mae Dafi yn het Myrddin",
+            "Mae e yn het Myrddin",
+            "Mae Dafi yn yr het nawr",
+            "Nawr, mae Dafi yn yr het",
+            "Yn yr het nawr",
+            "Mae e yn yr het nawr",
+            "Nawr, mae e yn yr het",
+            "Mae Dafi yn het Myrddin nawr",
+            "Nawr, mae Dafi yn het Myrddin",
+            "Yn het Myrddin nawr",
+            "Mae e yn het Myrddin nawr",
+            "Nawr, mae e yn het Myrddin",
+            "Yn yr het, mae Dafi",
+            "Yn yr het, mae e",
+            "Yn het Myrddin, mae Dafi",
+            "Yn het Myrddin, mae e",
+            "Mae Dafi nawr yn yr het",
+            "Mae e nawr yn yr het",
+            "Mae Dafi nawr yn het Myrddin",
+            "Mae e nawr yn het Myrddin"
           ],
           "model_answer": "Mae Dafi yn yr het."
         },
@@ -1952,7 +1991,7 @@
           "prompt": "A ti? Saf ar un goes, a gwranda. Wyt ti'n clywed rhywbeth?",
           "answer_mode": "self_check",
           "model_answer": "Ydw, dw i'n clywed y gwynt. / Nac ydw, dw i ddim yn clywed dim byd.",
-          "rubric": "Ydw / Nac ydw, plus one 'Dw i'n clywed …' sentence."
+          "rubric": "Ydw / Nac ydw. A full sentence is optional: Dw i'n clywed … / Dw i ddim yn clywed dim byd."
         }
       ]
     }
@@ -2401,7 +2440,7 @@
       "inline_scene": 2,
       "margin_vignette": 6,
       "margin_diagram": 0,
-      "margin_gloss": 34
+      "margin_gloss": 35
     },
     "audio_sources": [
       {
@@ -2430,7 +2469,7 @@
     ]
   },
   "metrics": {
-    "running_words": 867,
+    "running_words": 868,
     "sentences": 145,
     "word_target": 800,
     "word_window": [
