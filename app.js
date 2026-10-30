@@ -1951,6 +1951,10 @@ function renderGrammar(lesson) {
   const title = grammar.title_cy || grammar.title;
   const segments = Core.segmentIndex(lesson);
   const lang = targetLang();
+  const explanationFirst = lang === "ru" && capability("grammar_note_open");
+  const englishNote = nodyn ? h("details", { class: "nodyn", open: capability("grammar_note_open") },
+    explanationFirst ? h("summary", { lang: "en" }, "Grammar explained in English") : ui("summary", "grammar_note_en"),
+    richParagraphs(nodyn, lesson, { lang: "en" })) : null;
   return h("section", { class: "grammar", id: "grammar", "aria-labelledby": "grammar-title" },
     h("h2", { id: "grammar-title" }, ui("span", "grammar"), title ? h("span", { lang }, ` · ${title}`) : null),
     rule ? h("p", { class: "grammar-rule", lang }, rule) : null,
@@ -1958,6 +1962,7 @@ function renderGrammar(lesson) {
       .map(note => h("p", { class: "grammar-bridge-note" },
         h("span", { class: "bridge-language", lang: note.lang }, note.text),
         note.target_text ? [" → ", h("span", { class: "grammar-bridge-target", lang }, note.target_text)] : null)),
+    explanationFirst ? englishNote : null,
     (grammar.tables || []).map(renderGrammarTable),
     grammar.examples?.length ? h("ul", { class: "grammar-examples" }, grammar.examples.map((example) => {
       const segment = segments.get(example.segment_id);
@@ -1965,7 +1970,7 @@ function renderGrammar(lesson) {
       if (!text) return null;
       return h("li", null, h("span", { lang }, text), segment ? [" ", storyLink(example.segment_id)] : null);
     })) : null,
-    nodyn ? h("details", { class: "nodyn", open: capability("grammar_note_open") }, ui("summary", "grammar_note_en"), richParagraphs(nodyn, lesson, { lang: "en" })) : null,
+    explanationFirst ? null : englishNote,
     grammar.parergon ? h("aside", { class: "parergon" },
       h("h3", { lang }, grammar.parergon.title || ""),
       richParagraphs(grammar.parergon.body_en || "", lesson, { lang: "en" }),
