@@ -22,7 +22,9 @@
       "Kept 'mae gwallt Arth yn fawr iawn' (model review flagged a possible 'big hair' calque): it deliberately describes voluminous, sticking-up hair, matching the picture; hir would describe length, which is wrong for Arth.",
       "Cai boasts in the third person ('Cai yw e! Dyma'r dyn mawr!') because first-person forms arrive in Pennod 5; it reads as a comic self-announcement.",
       "No 'A ti?' item: first/second person forms arrive in Pennod 5. Pensum C ends with a small production item (c7).",
-      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): s012's gloss 'ifanc ↔ hen' used hen before its first use (s029); s012 now has 'ifanc: bachgen ↔ dyn' (the boy/man contrast that the 'dyn mawr' joke later plays on) and the antonym gloss 'ifanc ↔ hen' moves to s040, after Pero the old dog. s046's cloned frame ('Mae ceffyl Cynyr wrth Arth, ac mae Arth wrth y ceffyl') is now 'Mae Arth wrth yr hen geffyl mawr: ceffyl Cynyr' (recycles hen + SM from s045 and the G02 genitive, sets up Arth's line s048). Meta-language: 'dim newid' (untaught) removed from the Treigladau row and from A a8/a10 hints (now 'ceffyl (g.) → y ceffyl'); A a2's hint 'menyw (dim y)' is now 'menyw (✗ y)' (standalone dim is Pennod 6). Pensa: b9 was ambiguous (cath and ci both fitted), now 'Mali yw ___ Arth' → chwaer; A a1/a3/a5 and C c2–c4 accept fronted identifications (Gwraig Cynyr yw Elen), pronoun answers and fuller answers. Running words 495 → 493 (advisory window 495–605; not padded back). The repeated 'y ferch ← merch (b.)' gloss on s014 (same word glossed in s013, the sentence before) is dropped, so the gloss count stays at 25."
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): s012's gloss 'ifanc ↔ hen' used hen before its first use (s029); s012 now has 'ifanc: bachgen ↔ dyn' (the boy/man contrast that the 'dyn mawr' joke later plays on) and the antonym gloss 'ifanc ↔ hen' moves to s040, after Pero the old dog. s046's cloned frame ('Mae ceffyl Cynyr wrth Arth, ac mae Arth wrth y ceffyl') is now 'Mae Arth wrth yr hen geffyl mawr: ceffyl Cynyr' (recycles hen + SM from s045 and the G02 genitive, sets up Arth's line s048). Meta-language: 'dim newid' (untaught) removed from the Treigladau row and from A a8/a10 hints (now 'ceffyl (g.) → y ceffyl'); A a2's hint 'menyw (dim y)' is now 'menyw (✗ y)' (standalone dim is Pennod 6). Pensa: b9 was ambiguous (cath and ci both fitted), now 'Mali yw ___ Arth' → chwaer; A a1/a3/a5 and C c2–c4 accept fronted identifications (Gwraig Cynyr yw Elen), pronoun answers and fuller answers. Running words 495 → 493 (advisory window 495–605; not padded back). The repeated 'y ferch ← merch (b.)' gloss on s014 (same word glossed in s013, the sentence before) is dropped, so the gloss count stays at 25.",
+      "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c2, c3, c4 were exact with long accepted_answers lists, now self_check with model_answer, one-feature rubric and key_terms; c4 now precedes c3 for story order, IDs kept; c1 also cites s008 so it is in story order; c5 prompt now quotes Cai's line, since 'Pwy yw'r \"dyn mawr\"?' could also be answered 'Cynyr' from s005, and its model answer and rubric no longer ask for more than the question; c6 model answer replaced by two natural answers and the rubric made one feature; c7 rubric wrongly called yn hir / yn dywyll soft mutations (h- does not mutate) and now states the content point, with source segments s014/s015); nodyn_en expanded to a full English explanation (697 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: c7 moved to story order after c2; c6 'Pwy yw tad Arth?' (deliberately unanswered in the story) replaced by 'Pwy yw brawd Cai?' (s081); c7 rubric accepts one property; feminine examples translated."
     ],
     "review_questions": [
       {
@@ -52,6 +54,10 @@
       {
         "segment_id": "cy-brenin-01-l02-s047",
         "question": "[?] 'Ceffyl Cai yw'r ceffyl da!' identification with two definite NPs: natural?"
+      },
+      {
+        "segment_id": "cy-brenin-01-l02-s014",
+        "question": "[?] Pensum C has no Pam? and no A ti? item (pam and dw i/wyt ti arrive in Pennod 5). The existing 'A …?' contrast item c7 now sits in story order (Codex review, 2026-11-04), not last."
       }
     ]
   },
@@ -1275,7 +1281,7 @@
         "segment_id": "cy-brenin-01-l02-s040"
       }
     ],
-    "nodyn_en": "Identifying (saying which one): Cai yw mab Cynyr; Gwraig Cynyr yw hi. Describing (what kind): Mae Cai'n fachgen. 'Of' is word order: mab Cynyr, enw'r ci. A feminine singular noun softens after y (not ll-, rh-) and softens the next adjective: y gath, barf fawr. Hen usually precedes and softens: hen gi."
+    "nodyn_en": "Pwy yw …? means 'Who is …?'. To identify someone, that is, to say which person they are, Welsh uses X yw Y: Cai yw mab Cynyr ac Elen ('Cai is the son of Cynyr and Elen'). The two halves name the same person, and either can come first: Elen yw gwraig Cynyr ('Elen is Cynyr's wife'); Gwraig Cynyr yw hi, a mam Cai a Mali ('She is Cynyr's wife, and the mother of Cai and Mali'). Hi is 'she' and e is 'he': Pwy yw e? ('Who is he?'). For time, hi means 'it': Mae hi'n fore yng Nghwm Helyg ('It is morning in Cwm Helyg').\n\nTo describe someone, that is, to say what kind of person or thing they are, use the Pennod 1 pattern Mae X yn …, with soft mutation after yn: Mae Cai'n fachgen mawr, ond mae e'n ifanc ('Cai is a big boy, but he is young'). The first table sets the two patterns side by side. Look at the second half. If it is definite (one particular person or thing: a name, a noun with y/'r, or a phrase like mab Cynyr), use yw. If it is an adjective or an indefinite noun ('a …'), use Mae … yn; in this book so far an indefinite noun never comes before yw. So Modlen yw cogyddes y llys ('Modlen is the cook of the court'), but Mae'r gogyddes yn fenyw fach ('The cook is a small woman'). Mali's correction of Cai turns on this: Mam, mae Cai'n fachgen ('Mum, Cai is a boy').\n\nThere is no word here for 'of' or for English -'s: the owner simply follows the thing owned. Mab Cynyr is 'Cynyr's son' (literally 'son Cynyr'), ceffyl Cai is 'Cai's horse'. A 'the' belongs to the owner: enw'r ci ('the dog's name'), cogyddes y llys ('the cook of the court'). The first noun never takes y/'r of its own. The phrase is already definite, so it goes with yw: Pero yw enw'r ci ('Pero is the dog's name').\n\nEvery Welsh noun is either masculine or feminine. This is grammatical gender, marked g. and b. in the glosses, and it is learned with each word. For most words for people it follows sex (merch 'girl' and gwraig 'wife' are feminine, bachgen 'boy' is masculine), but cath 'cat' is feminine for any cat. After y/'r ('the'), a feminine singular noun takes soft mutation: y ferch ('the girl, the daughter'), y gath ('the cat'), y wraig ('the wife'), y fenyw ('the woman'), y gogyddes ('the cook') (from merch, cath, gwraig, menyw, cogyddes). Pwy yw'r ferch? ('Who is the girl?'). Masculine nouns and plurals do not change: y ci ('the dog'), y ceffyl ('the horse'), Mae'r plant wrth y wal ('The children are by the wall'). Ll- and rh- do not change after y either.\n\nA feminine singular noun also softens the adjective after it: Barf fawr, barf hir, barf dda! ('A big beard, a long beard, a good beard!'; from mawr and da, while hir begins with h- and never changes). After a masculine noun the adjective stays as it is. Cai's boast has both: Cai yw'r brawd mawr, a dyma'r chwaer fach! ('Cai is the big brother, and here is the little sister!'). This explains the Pennod 1 words gwlad fach ('a small country') and y goedwig ('the forest').\n\nMost adjectives come after the noun, but hen 'old' comes before it and softens it: hen gi ('an old dog'), and Mae ceffyl Cynyr yn hen geffyl mawr ('Cynyr's horse is a big old horse'). When hen is the predicate it follows yn like any adjective and stays hen: Mae Pero'n hen! ('Pero is old!').\n\nThe last two rows of the Treigladau table repeat Pennod 1: soft mutation after predicative yn (yn fachgen) and after dyma: Dyma'r teulu: dyma deulu Cynyr ('Here is the family: here is Cynyr's family'). Names of people never mutate in this book, so it is Dyma Cynyr ('Here is Cynyr'), though place names do (Dyma Gymru). Two softened words in the dialogue have a cause this book has not explained yet, so read them as set phrases for now: Bore da, blant! ('Good morning, children!', from plant) and Dad ('Dad', from tad), when Mali speaks to her father."
   },
   "pensa": {
     "A": {
@@ -1516,133 +1522,104 @@
           "prompt": "Pwy yw Cynyr?",
           "answer_mode": "self_check",
           "model_answer": "Cynyr yw tad Cai a Mali.",
-          "rubric": "Identifies Cynyr as Cai and Mali's father or Elen's husband; an identifying noun phrase or a full sentence is acceptable.",
+          "rubric": "Identifies Cynyr by family: Cai and Mali's father (or Elen's husband).",
           "key_terms": [
             "cy-tad"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l02-s011"
+            "cy-brenin-01-l02-s008",
+            "cy-brenin-01-l02-s011",
+            "cy-brenin-01-l02-s014"
           ]
         },
         {
           "id": "c2",
           "prompt": "Pwy yw Elen?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Elen yw gwraig Cynyr",
-            "Gwraig Cynyr",
-            "Elen yw mam Cai a Mali",
-            "Mam Cai a Mali",
-            "Elen yw gwraig Cynyr, a mam Cai a Mali",
-            "Gwraig Cynyr yw hi",
-            "Mam Cai a Mali yw hi",
-            "Gwraig Cynyr yw Elen",
-            "Mam Cai a Mali yw Elen",
-            "Hi yw gwraig Cynyr",
-            "Elen yw mam Cai a Mali a gwraig Cynyr",
-            "Gwraig Cynyr a mam Cai a Mali",
-            "Mam Mali a Cai",
-            "Elen yw mam Mali a Cai",
-            "Mam Mali a Cai yw Elen",
-            "Hi yw mam Cai a Mali",
-            "Hi yw mam Mali a Cai",
-            "Mam Mali a Cai yw hi",
-            "Hi yw gwraig Cynyr a mam Cai a Mali",
-            "Gwraig Cynyr a mam Cai a Mali yw Elen",
-            "Gwraig Cynyr a mam Cai a Mali yw hi",
-            "Mam Cai a Mali a gwraig Cynyr",
-            "Hi yw mam Cai a Mali a gwraig Cynyr",
-            "Mam Cai a Mali a gwraig Cynyr yw Elen",
-            "Mam Cai a Mali a gwraig Cynyr yw hi"
-          ],
+          "answer_mode": "self_check",
           "model_answer": "Elen yw gwraig Cynyr, a mam Cai a Mali.",
-          "source_segment_ids": [
-            "cy-brenin-01-l02-s008"
-          ]
-        },
-        {
-          "id": "c3",
-          "prompt": "Pwy yw Modlen?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Modlen yw cogyddes y llys",
-            "Cogyddes y llys",
-            "Cogyddes y llys yw hi",
-            "Cogyddes y llys yw Modlen",
-            "Hi yw cogyddes y llys",
-            "Y gogyddes",
-            "Modlen yw'r gogyddes",
-            "Y gogyddes yw Modlen",
-            "Hi yw'r gogyddes",
-            "Y gogyddes yw hi"
-          ],
-          "model_answer": "Modlen yw cogyddes y llys.",
-          "source_segment_ids": [
-            "cy-brenin-01-l02-s050"
-          ]
-        },
-        {
-          "id": "c4",
-          "prompt": "Ble mae'r ceffylau?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Wrth y wal",
-            "Mae'r ceffylau wrth y wal",
-            "Wrth y wal, wrth Pero",
-            "Mae'r ceffylau wrth y wal, wrth Pero",
-            "Wrth Pero",
-            "Mae'r ceffylau wrth Pero",
-            "Wrth Pero, wrth y wal",
-            "Yn y llys, wrth y wal",
-            "Mae'r ceffylau yn y llys, wrth y wal",
-            "Mae'r ceffylau wrth Pero, wrth y wal",
-            "Wrth y wal, mae'r ceffylau",
-            "Wrth y wal, wrth Pero, mae'r ceffylau",
-            "Wrth Pero, mae'r ceffylau",
-            "Wrth Pero, wrth y wal, mae'r ceffylau",
-            "Yn y llys, wrth y wal, mae'r ceffylau"
-          ],
-          "model_answer": "Mae'r ceffylau wrth y wal, wrth Pero.",
-          "source_segment_ids": [
-            "cy-brenin-01-l02-s044"
-          ]
-        },
-        {
-          "id": "c5",
-          "prompt": "Pwy yw'r \"dyn mawr\"?",
-          "answer_mode": "self_check",
-          "model_answer": "Cai! Ond mae Cai'n fachgen, meddai Mali.",
-          "rubric": "Names Cai, ideally noticing that Mali says he is a boy (fachgen), not a man.",
+          "rubric": "Identifies Elen as Cynyr's wife or Cai and Mali's mother.",
           "key_terms": [
-            "cy-bachgen"
+            "cy-gwraig",
+            "cy-mam"
           ],
           "source_segment_ids": [
-            "cy-brenin-01-l02-s067",
-            "cy-brenin-01-l02-s070"
-          ]
-        },
-        {
-          "id": "c6",
-          "prompt": "Pwy yw tad Arth?",
-          "answer_mode": "self_check",
-          "model_answer": "…? Mae Arth yn y teulu, ond pwy yw tad Arth? \"Arth yw brawd Cai,\" meddai Elen.",
-          "rubric": "Notices the story never answers: Cynyr says nothing, and Elen only says Arth is Cai's brother.",
-          "key_terms": [
-            "cy-brawd"
-          ],
-          "source_segment_ids": [
-            "cy-brenin-01-l02-s080"
+            "cy-brenin-01-l02-s008",
+            "cy-brenin-01-l02-s009"
           ]
         },
         {
           "id": "c7",
           "prompt": "Mae Cai'n fachgen mawr. A Mali? (Mae … yn …)",
           "answer_mode": "self_check",
-          "model_answer": "Mae Mali'n ferch. Mae gwallt Mali'n hir ac yn dywyll.",
-          "rubric": "One 'Mae … yn …' sentence about Mali with the soft mutation (merch → yn ferch, or hir/tywyll → yn hir, yn dywyll).",
+          "model_answer": "Mae Mali'n ferch. / Mae gwallt Mali'n hir ac yn dywyll.",
+          "rubric": "Gives an accurate Mae … yn … description of Mali or her hair; one stated property is enough.",
           "key_terms": [
             "cy-merch",
             "cy-gwallt"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l02-s014",
+            "cy-brenin-01-l02-s015"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Ble mae'r ceffylau?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae'r ceffylau wrth y wal, wrth Pero.",
+          "rubric": "Says the horses are by the wall (or by Pero).",
+          "key_terms": [
+            "cy-ceffyl",
+            "cy-wrth",
+            "cy-wal"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l02-s043",
+            "cy-brenin-01-l02-s044"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Pwy yw Modlen?",
+          "answer_mode": "self_check",
+          "model_answer": "Modlen yw cogyddes y llys.",
+          "rubric": "Identifies Modlen as the cook of the llys.",
+          "key_terms": [
+            "cy-cogyddes",
+            "cy-llys"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l02-s049",
+            "cy-brenin-01-l02-s050"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "\"Dyma'r dyn mawr!\" meddai Cai. Pwy yw'r dyn mawr?",
+          "answer_mode": "self_check",
+          "model_answer": "Cai yw e, ond mae Cai'n fachgen.",
+          "rubric": "Names Cai: he means himself.",
+          "key_terms": [
+            "cy-dyn",
+            "cy-bachgen"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l02-s067",
+            "cy-brenin-01-l02-s068",
+            "cy-brenin-01-l02-s070"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Pwy yw brawd Cai?",
+          "answer_mode": "self_check",
+          "model_answer": "Arth yw brawd Cai.",
+          "rubric": "Names Arth.",
+          "key_terms": [
+            "cy-brawd"
+          ],
+          "source_segment_ids": [
+            "cy-brenin-01-l02-s081"
           ]
         }
       ]

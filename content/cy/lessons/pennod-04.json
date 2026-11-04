@@ -19,7 +19,9 @@
       "The sneeze is rendered as 'A… a… Atishŵ!' with a define gloss (sŵn + mwg) because tisian is Pennod 5. Segment speaker is char-dafi for audio only; the reader does not yet know who it is.",
       "Lint: 'Mae mwg' with an indefinite subject is affirmative mae, which is correct; the negative of indefinite subjects (Does dim) is Pennod 6, and this chapter avoids indefinite negatives entirely.",
       "No 'A ti?' item: second-person forms arrive in Pennod 5.",
-      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): glosses no longer use a word before the reader meets it. s001's 'oer ↔ cynnes' (cynnes first at s003) moves to s003 as 'cynnes ↔ oer', beside the fire vignette; s036's 'pell ↔ agos' (agos first at s037) is now 'pell: Cwm Helyg … Llundain' (the Pennod 1 map), and s037 gets 'agos ↔ pell'; the yma/yno gloss at s049 came after both first uses, so s013 now has 'yma = yn y stabl' and s024 'yno ↔ yma'. Meta-language: Gramadeg header 'Ateb' (a Pennod 12 word) is now '✓ / ✗'; 'dim newid' is now 'll → ll'. Pensa: A a10 'yn ___ (llwyd) → llwyd' gave the answer in the cue; it is now a two-gap item that sets unchanged llwyd beside dawel (Enghraifft likewise: hen … dywyll); b1 also fitted agor, now cued by the cold; A a6/a8/a9/a11 and C c1/c3/c6 accept full answers, pronouns, the fronted identification and 'ar y llwybr' (where Pero runs at s086)."
+      "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): glosses no longer use a word before the reader meets it. s001's 'oer ↔ cynnes' (cynnes first at s003) moves to s003 as 'cynnes ↔ oer', beside the fire vignette; s036's 'pell ↔ agos' (agos first at s037) is now 'pell: Cwm Helyg … Llundain' (the Pennod 1 map), and s037 gets 'agos ↔ pell'; the yma/yno gloss at s049 came after both first uses, so s013 now has 'yma = yn y stabl' and s024 'yno ↔ yma'. Meta-language: Gramadeg header 'Ateb' (a Pennod 12 word) is now '✓ / ✗'; 'dim newid' is now 'll → ll'. Pensa: A a10 'yn ___ (llwyd) → llwyd' gave the answer in the cue; it is now a two-gap item that sets unchanged llwyd beside dawel (Enghraifft likewise: hen … dywyll); b1 also fitted agor, now cued by the cold; A a6/a8/a9/a11 and C c1/c3/c6 accept full answers, pronouns, the fronted identification and 'ar y llwybr' (where Pero runs at s086).",
+      "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c1, c3 and c6 were exact; accepted_answers removed; every item has key_terms, a one-feature English rubric about content and source segments). The bare yes/no items c1, c2, c3 and c7 now carry a wh-follow-up with known words (Ble mae'r ceffylau? / Ble mae hi'n edrych? / Ble mae'r mwg? / Ble mae e?), because Pam? is first known in Pennod 5. c7's prompt no longer names the door, since its follow-up now asks where the creature is. The c5 model is a full sentence. Rubrics no longer test the Ydy/Ie form, only content. There is still no A ti? item (second person comes in Pennod 5) and no 'A …?' contrast item. nodyn_en is expanded to a full English explanation (582 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: 'feminine singular' restored in the adjective rule; c1–c6 rubrics reduced to one feature (c4 accepts the trees, c6 the path s086); c7 reworded to fix its referent (s098–s099)."
     ],
     "review_questions": [
       {
@@ -45,6 +47,14 @@
       {
         "segment_id": "cy-brenin-01-l04-s034",
         "question": "[?] 'lamp' (f.) for a candle lantern: acceptable, or should it be 'llusern'? (plan lists lamp as a transparent loan)"
+      },
+      {
+        "segment_id": "cy-brenin-01-l04-s032",
+        "question": "[?] Pensum C c2 follow-up 'Ble mae hi'n edrych?' (answer: 'ar y goedwig'): natural southern question for 'Where is she looking?', or would 'Ar beth mae hi'n edrych?' be needed (not yet known)?"
+      },
+      {
+        "segment_id": "cy-brenin-01-l04-s099",
+        "question": "[?] Pensum C (2026-11-04): no Pam? (Pennod 5) and no A ti? (second person, Pennod 5). There was no existing 'A …?' contrast item to keep, so none was added; the yes/no items carry Ble …? follow-ups instead. Acceptable?"
       }
     ]
   },
@@ -1270,7 +1280,7 @@
         "segment_id": "cy-brenin-01-l04-s065"
       }
     ],
-    "nodyn_en": "With a definite subject (a name, y/yr/'r + noun), Mae becomes Ydy in questions: Ydy Pero yma? Answer Ydy or Nac ydy. The southern negative is Dyw … ddim: Dyw Pero ddim yma. A yes/no identification question (Pero yw e? Tân yw e?) is answered Ie or Nage instead."
+    "nodyn_en": "This chapter teaches yes/no questions, their answers, and 'not'. Keep two kinds of sentence apart: ordinary Mae sentences, and identification sentences with yw (Pennod 2). Each has its own answer words.\n\nYdy …? In a Mae sentence with a definite subject, the question simply starts with Ydy instead of Mae; nothing else changes. A definite subject is a particular, known person or thing: a name (Pero), a pronoun such as e ('he, it'), or a noun with y, yr or 'r ('the'). Mae Pero yn y stabl ('Pero is in the stable') becomes Ydy Pero yn y stabl? ('Is Pero in the stable?'). So too Ydy'r goedwig yn bell? ('Is the forest far?') and, with a verb-noun, Ydy Pero'n cysgu yn y goedwig? ('Is Pero sleeping in the forest?').\n\nThere is no single word for 'yes' or 'no' here: you answer with the verb, Ydy ('yes, he/she/it is') or Nac ydy ('no, he/she/it isn't'). Ydy'r lamp yn gynnes? Ydy, mae'r lamp yn gynnes ('Is the lamp warm? Yes, the lamp is warm').\n\nDyw … ddim. For 'not', replace Mae with Dyw and put ddim after the subject: Dyw Pero ddim yn y stabl ('Pero isn't in the stable'); dyw Pero ddim yn dod ('Pero doesn't come'); Dyw'r sŵn ddim yn sŵn ci ('The noise isn't a dog's noise'). Positive and negative often stand together: Mae'r ceffylau yma, ond dyw Pero ddim yma ('The horses are here, but Pero isn't here'). Dyw … ddim is the southern form the book uses; treat it as a fixed frame for now. In this book so far every Ydy question and every Dyw sentence has a definite subject. Mae mwg ('There is smoke') has an indefinite one (some smoke, not 'the smoke'); questions and negatives about indefinite things work differently and are not used yet.\n\nIe and Nage. An identification sentence puts the important word first, then yw: Pero yw e ('It's Pero', literally 'Pero is it'). As a question it keeps the same words: Pero yw e? ('Is it Pero?'), Tân yw e? ('Is it fire?'). It does not start with a verb, so Ydy cannot answer it. Say Ie ('yes') or Nage ('no'): Cath yw e? Nage. ('Is it a cat? No.'); Ie, Pero yw e! ('Yes, it's Pero!'). A quick test: a question starting with Ydy takes Ydy or Nac ydy; one starting with a noun before yw takes Ie or Nage.\n\nThe Treigladau ('mutations') table adds new words to known rules. Predicative yn, which links a subject to a description, causes soft mutation, a regular change to the first consonant: tawel → yn dawel ('quiet'), cynnes → yn gynnes ('warm'), pell → yn bell ('far'), gwyrdd → yn wyrdd ('green'); so t → d, c → g, p → b, and g drops. But ll and rh do not change after this yn: Mae'r mwg yn llwyd ('The smoke is grey'). y ('the') softens a feminine singular noun: y goeden ('the tree'), y garreg ('the stone'); plurals do not change: y coed ('the trees'). An adjective after a feminine singular noun softens too: in mae Elen yn fenyw dawel ('Elen is a quiet woman') yn softens menyw and the feminine noun softens tawel. After masculine drws nothing changes: drws gwyrdd ('a green door'). Last, ar dân ('on fire'), ar gau ('closed') and ar agor ('open') are fixed phrases for now: ar ('on') softens tân and cau, and agor, starting with a vowel, cannot change. The table points to Pennod 16 for this rule."
   },
   "pensa": {
     "A": {
@@ -1539,51 +1549,49 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Ydy Pero yn y stabl?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Nac ydy",
-            "Nac ydy. Dyw Pero ddim yn y stabl",
-            "Dyw Pero ddim yn y stabl",
-            "Nac ydy. Dyw e ddim yn y stabl",
-            "Dyw e ddim yn y stabl",
-            "Nac ydy. Dyw e ddim yno",
-            "Nac ydy. Dyw Pero ddim yno",
-            "Dyw e ddim yno",
-            "Dyw Pero ddim yno"
+          "prompt": "Ydy Pero yn y stabl? Ble mae'r ceffylau?",
+          "answer_mode": "self_check",
+          "model_answer": "Nac ydy. Dyw Pero ddim yn y stabl, ond mae'r ceffylau yno.",
+          "key_terms": [
+            "cy-stabl",
+            "cy-ceffyl",
+            "cy-yno"
           ],
-          "model_answer": "Nac ydy. Dyw Pero ddim yn y stabl.",
+          "rubric": "Places the horses in the stable.",
           "source_segment_ids": [
-            "cy-brenin-01-l04-s014"
+            "cy-brenin-01-l04-s013",
+            "cy-brenin-01-l04-s015"
           ]
         },
         {
           "id": "c2",
-          "prompt": "Ydy Elen yn galw \"Pero!\"?",
+          "prompt": "Ydy Elen yn galw \"Pero!\"? Ble mae hi'n edrych?",
           "answer_mode": "self_check",
-          "model_answer": "Nac ydy. Mae hi'n rhoi lamp i Mali, ac mae hi'n edrych ar y goedwig.",
-          "rubric": "Answers Nac ydy (not Nage). What Elen does instead is optional extra detail.",
+          "model_answer": "Nac ydy. Dyw Elen ddim yn galw: mae hi'n edrych ar y goedwig.",
+          "key_terms": [
+            "cy-galw",
+            "cy-edrych",
+            "cy-coedwig"
+          ],
+          "rubric": "Says Elen looks at or towards the forest.",
           "source_segment_ids": [
-            "cy-brenin-01-l04-s031"
+            "cy-brenin-01-l04-s031",
+            "cy-brenin-01-l04-s032"
           ]
         },
         {
           "id": "c3",
-          "prompt": "Ydy'r goedwig ar dân?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Nac ydy",
-            "Nac ydy. Mae mwg, ond dyw'r coed ddim ar dân",
-            "Dyw'r goedwig ddim ar dân",
-            "Nac ydy. Dyw'r goedwig ddim ar dân",
-            "Nac ydy. Dyw'r coed ddim ar dân",
-            "Dyw'r coed ddim ar dân",
-            "Nac ydy. Mae mwg, ond dyw'r goedwig ddim ar dân",
-            "Mae mwg, ond dyw'r coed ddim ar dân",
-            "Mae mwg, ond dyw'r goedwig ddim ar dân"
+          "prompt": "Ydy'r goedwig ar dân? Ble mae'r mwg?",
+          "answer_mode": "self_check",
+          "model_answer": "Nac ydy. Mae'r mwg yn y coed, ond dyw'r coed ddim ar dân.",
+          "key_terms": [
+            "cy-mwg",
+            "cy-tan",
+            "cy-coeden"
           ],
-          "model_answer": "Nac ydy. Mae mwg, ond dyw'r coed ddim ar dân.",
+          "rubric": "Gives a story-supported place for the smoke, such as among the trees or in the forest.",
           "source_segment_ids": [
+            "cy-brenin-01-l04-s063",
             "cy-brenin-01-l04-s067"
           ]
         },
@@ -1592,11 +1600,13 @@
           "prompt": "O ble mae'r mwg yn dod?",
           "answer_mode": "self_check",
           "model_answer": "Mae'r mwg yn dod o'r tŵr, yn y goedwig.",
-          "rubric": "Says the smoke comes from the tower.",
           "key_terms": [
+            "cy-mwg",
             "cy-twr"
           ],
+          "rubric": "Says the smoke comes from the tower or from the trees.",
           "source_segment_ids": [
+            "cy-brenin-01-l04-s068",
             "cy-brenin-01-l04-s072"
           ]
         },
@@ -1604,62 +1614,49 @@
           "id": "c5",
           "prompt": "Mae'r ffenest yn goch. Tân yw e? Ble mae'r tân?",
           "answer_mode": "self_check",
-          "model_answer": "Ie: tân yn y tŵr.",
-          "rubric": "Ie (not Ydy), and where the fire is.",
+          "model_answer": "Ie, tân yw e: mae'r tân yn y tŵr.",
           "key_terms": [
+            "cy-ie",
             "cy-tan",
             "cy-twr"
+          ],
+          "rubric": "Places the fire in the tower.",
+          "source_segment_ids": [
+            "cy-brenin-01-l04-s075",
+            "cy-brenin-01-l04-s076",
+            "cy-brenin-01-l04-s077"
           ]
         },
         {
           "id": "c6",
           "prompt": "Ble mae Pero?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Wrth y drws",
-            "Wrth y tŵr",
-            "Mae Pero wrth y drws",
-            "Wrth y drws gwyrdd",
-            "Mae Pero wrth y tŵr",
-            "Mae Pero wrth y drws gwyrdd, wrth y tŵr",
-            "Mae Pero wrth y drws gwyrdd",
-            "Mae e wrth y drws",
-            "Mae e wrth y tŵr",
-            "Wrth y drws gwyrdd, wrth y tŵr",
-            "Mae e wrth y drws gwyrdd",
-            "Yn y goedwig, wrth y tŵr",
-            "Ar y llwybr",
-            "Mae Pero yn y goedwig, wrth y tŵr",
-            "Mae e wrth y drws gwyrdd, wrth y tŵr",
-            "Mae e yn y goedwig, wrth y tŵr",
-            "Mae Pero ar y llwybr",
-            "Mae e ar y llwybr",
-            "Wrth y drws, mae Pero",
-            "Wrth y drws, mae e",
-            "Wrth y tŵr, mae Pero",
-            "Wrth y tŵr, mae e",
-            "Wrth y drws gwyrdd, mae Pero",
-            "Wrth y drws gwyrdd, mae e",
-            "Wrth y drws gwyrdd, wrth y tŵr, mae Pero",
-            "Wrth y drws gwyrdd, wrth y tŵr, mae e",
-            "Yn y goedwig, wrth y tŵr, mae Pero",
-            "Yn y goedwig, wrth y tŵr, mae e",
-            "Ar y llwybr, mae Pero",
-            "Ar y llwybr, mae e"
-          ],
+          "answer_mode": "self_check",
           "model_answer": "Mae Pero wrth y drws gwyrdd, wrth y tŵr.",
+          "key_terms": [
+            "cy-drws",
+            "cy-gwyrdd",
+            "cy-twr"
+          ],
+          "rubric": "Places Pero by the door or the tower, or on the path (s086).",
           "source_segment_ids": [
-            "cy-brenin-01-l04-s082"
+            "cy-brenin-01-l04-s082",
+            "cy-brenin-01-l04-s084",
+            "cy-brenin-01-l04-s086"
           ]
         },
         {
           "id": "c7",
-          "prompt": "Cath yw e, wrth y drws gwyrdd?",
+          "prompt": "Mae e'n fach iawn, ac mae e'n goch. Ble mae e?",
           "answer_mode": "self_check",
-          "model_answer": "Nage! Mae e'n fach iawn, ac mae e'n goch.",
-          "rubric": "Answers Nage (not Nac ydy). A description such as bach/coch is optional extra detail.",
+          "model_answer": "Mae e wrth y drws gwyrdd, yn y mwg.",
           "key_terms": [
-            "cy-nage"
+            "cy-drws",
+            "cy-mwg"
+          ],
+          "rubric": "Places the small red creature by the door or in the smoke.",
+          "source_segment_ids": [
+            "cy-brenin-01-l04-s098",
+            "cy-brenin-01-l04-s099"
           ]
         }
       ]
