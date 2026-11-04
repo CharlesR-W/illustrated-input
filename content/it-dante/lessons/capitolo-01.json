@@ -1,0 +1,842 @@
+{
+  "schema_version": "0.3.0",
+  "id": "it-dante-01-l01",
+  "course_id": "it-dante-01",
+  "order": 1,
+  "title": "Il libro",
+  "part": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "learning_contract": {
+    "grammar_target_id": "G01",
+    "primary_new_grammar": {
+      "id": "G01",
+      "label": "il/la; è/non è",
+      "minimum_demonstrations": 6
+    },
+    "new_lexeme_ids": [
+      "it-libro",
+      "it-cercare",
+      "it-tavola",
+      "it-carta",
+      "it-guardare",
+      "it-porta",
+      "it-cassa",
+      "it-aprire",
+      "it-trovare",
+      "it-portare",
+      "it-leggere",
+      "it-essere",
+      "it-sciolto",
+      "it-chiudere",
+      "it-copiare"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "it-cercare",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s001"
+      },
+      {
+        "lexeme_id": "it-libro",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s001"
+      },
+      {
+        "lexeme_id": "it-essere",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s002"
+      },
+      {
+        "lexeme_id": "it-tavola",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s002"
+      },
+      {
+        "lexeme_id": "it-guardare",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s003"
+      },
+      {
+        "lexeme_id": "it-leggere",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s004"
+      },
+      {
+        "lexeme_id": "it-copiare",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s005"
+      },
+      {
+        "lexeme_id": "it-porta",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s006"
+      },
+      {
+        "lexeme_id": "it-cassa",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s007"
+      },
+      {
+        "lexeme_id": "it-aprire",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s009"
+      },
+      {
+        "lexeme_id": "it-trovare",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s010"
+      },
+      {
+        "lexeme_id": "it-portare",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s011"
+      },
+      {
+        "lexeme_id": "it-chiudere",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s012"
+      },
+      {
+        "lexeme_id": "it-carta",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s013"
+      },
+      {
+        "lexeme_id": "it-sciolto",
+        "how": "first-use exact Latin margin aid",
+        "segment_id": "it-dante-01-l01-s019"
+      }
+    ]
+  },
+  "provenance": {
+    "author": "Implementation agent",
+    "review_required": "Independent Codex whole-chapter review; owner review remains pending",
+    "notes": [
+      "Short connected first chapter rather than padding to advisory window.",
+      "Long English grammar note intentionally exceeds 80 words to explain gender, article function, accent, negation, bounded action forms and spatial chunks.",
+      "No source quotation; no paid media or audio.",
+      "Trovare occurs twice rather than three times; the two search outcomes suffice, and another find would pad the plot. Advisory length intentionally short. English sense cues and C questions are on the instruction surface because generic prompt licensing requires Italian.",
+      "Independent review findings and responses recorded in REVIEW.md. All four blockers corrected; parent integration review remains.",
+      "Single inserted leaf first appears s013; no second table sheet. Marta returns the book s011. Copiare added as fifteenth budgeted lemma to make copying delay visible.",
+      "Cercare and trovare each occur twice after narrative-economy repairs, rather than three times; the searches and positive/negative finding suffice. The 196-word opening is intentionally below the advisory window; no filler added."
+    ],
+    "review_questions": [
+      {
+        "question": "[?] Please check G01 exact spatial chunks as a gentle idiomatic exception; no productive contractions are tested.",
+        "resolved": true,
+        "resolution": "Parent planner approved three exact receptive chunks; independent reviewer accepted idiom. C now requires only productive è + noun; location wording optional."
+      }
+    ],
+    "reviewers": [
+      "Independent Codex gpt-6.1-sol/high, cx 1104-151722-16713, 2026-11-04; blockers reported and author-corrected; no second independent verification claimed."
+    ]
+  },
+  "story": {
+    "sections": [
+      {
+        "id": "it-dante-01-l01-sec01",
+        "title": "Il libro",
+        "segments": [
+          {
+            "id": "it-dante-01-l01-s001",
+            "text": "Luca cerca il libro.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "cerca",
+                "gloss": "quaerit",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-cercare"
+                ]
+              },
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "libro",
+                "gloss": "liber",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-libro"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s002",
+            "text": "Il libro non è sulla tavola.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "non è sulla tavola",
+                "gloss": "non est super mensam",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-essere",
+                  "it-tavola"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s003",
+            "text": "Luca guarda la tavola.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "guarda",
+                "gloss": "spectat",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-guardare"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s004",
+            "text": "Luca cerca il libro, ma non legge.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "ma",
+                "gloss": "sed",
+                "lang": "la",
+                "gloss_kind": "define"
+              },
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "legge",
+                "gloss": "legit",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-leggere"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s005",
+            "text": "Marta guarda Luca, ma non copia.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "copia",
+                "gloss": "exscribit",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-copiare"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s006",
+            "text": "Luca guarda la porta. Marta guarda la porta con Luca.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "porta",
+                "gloss": "porta",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-porta"
+                ]
+              },
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "con",
+                "gloss": "cum",
+                "lang": "la",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s007",
+            "text": "Marta guarda la cassa. La cassa è sulla tavola.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "cassa",
+                "gloss": "arca",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-cassa"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s008",
+            "text": "Luca guarda la cassa con Marta. Il libro è nella cassa?",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "nella cassa",
+                "gloss": "in arca",
+                "lang": "la",
+                "gloss_kind": "define"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "it-dante-01-l01-sec02",
+        "title": "La cassa",
+        "segments": [
+          {
+            "id": "it-dante-01-l01-s009",
+            "text": "Marta apre la cassa.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "apre",
+                "gloss": "aperit",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-aprire"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s010",
+            "text": "Luca trova il libro nella cassa.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "trova",
+                "gloss": "invenit",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-trovare"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s011",
+            "text": "Luca guarda il libro. Marta porta il libro sulla tavola.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "porta",
+                "gloss": "portat",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-portare"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s012",
+            "text": "Luca chiude la cassa. Marta apre il libro e copia.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "chiude",
+                "gloss": "claudit",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-chiudere"
+                ]
+              },
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "e copia",
+                "gloss": "et exscribit",
+                "lang": "la",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s013",
+            "text": "La carta è nel libro.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "carta",
+                "gloss": "charta",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-carta"
+                ]
+              },
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "nel libro",
+                "gloss": "in libro",
+                "lang": "la",
+                "gloss_kind": "define"
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s014",
+            "text": "Luca guarda la carta nel libro.",
+            "paragraph_start": false
+          },
+          {
+            "id": "it-dante-01-l01-s015",
+            "text": "Marta non copia il libro: guarda la carta.",
+            "paragraph_start": false
+          },
+          {
+            "id": "it-dante-01-l01-s016",
+            "text": "Luca apre la cassa, ma non trova il libro. Il libro è sulla tavola, non nella cassa.",
+            "paragraph_start": true
+          },
+          {
+            "id": "it-dante-01-l01-s017",
+            "text": "Luca chiude la cassa e guarda Marta.",
+            "paragraph_start": false
+          }
+        ]
+      },
+      {
+        "id": "it-dante-01-l01-sec03",
+        "title": "La carta",
+        "segments": [
+          {
+            "id": "it-dante-01-l01-s018",
+            "text": "Marta porta la carta sulla tavola.",
+            "paragraph_start": true
+          },
+          {
+            "id": "it-dante-01-l01-s019",
+            "text": "La carta è sciolta.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "presentation": "margin_gloss",
+                "anchor_text": "sciolta",
+                "gloss": "soluta",
+                "lang": "la",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "it-sciolto"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "it-dante-01-l01-s020",
+            "text": "Marta guarda la carta sciolta. Luca guarda il libro.",
+            "paragraph_start": false
+          },
+          {
+            "id": "it-dante-01-l01-s021",
+            "text": "Marta guarda il libro, ma non legge.",
+            "paragraph_start": true
+          },
+          {
+            "id": "it-dante-01-l01-s022",
+            "text": "Luca legge la carta sciolta. Marta legge con Luca.",
+            "paragraph_start": false
+          },
+          {
+            "id": "it-dante-01-l01-s023",
+            "text": "Luca non chiude il libro. Marta guarda la carta e il libro.",
+            "paragraph_start": true
+          },
+          {
+            "id": "it-dante-01-l01-s024",
+            "text": "Marta chiude il libro, ma non porta il libro nella cassa.",
+            "paragraph_start": false
+          },
+          {
+            "id": "it-dante-01-l01-s025",
+            "text": "Luca legge la carta. La carta è sciolta.",
+            "paragraph_start": true
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title": "Il libro · la carta",
+    "rule": "Il libro è sulla tavola. Il libro non è nella cassa.",
+    "tables": [
+      {
+        "caption": "il · la",
+        "header": [
+          "il",
+          "la"
+        ],
+        "rows": [
+          [
+            "il libro",
+            "la carta"
+          ],
+          [
+            "",
+            "la tavola"
+          ],
+          [
+            "",
+            "la porta"
+          ],
+          [
+            "",
+            "la cassa"
+          ]
+        ]
+      },
+      {
+        "caption": "è · non è",
+        "rows": [
+          [
+            "Il libro è sulla tavola.",
+            "Il libro non è sulla tavola."
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "it-dante-01-l01-s002"
+      },
+      {
+        "segment_id": "it-dante-01-l01-s007"
+      },
+      {
+        "segment_id": "it-dante-01-l01-s013"
+      },
+      {
+        "segment_id": "it-dante-01-l01-s016"
+      },
+      {
+        "segment_id": "it-dante-01-l01-s025"
+      }
+    ],
+    "note_en": "An article is a small word placed before a noun, a naming word. Italian il libro means “the book”; la carta means “the leaf” or “the sheet”. Il marks masculine singular here and la feminine singular. Grammatical gender belongs to the Italian noun: it is not a statement that a book is male or a leaf female. Learn il libro, la carta, la tavola (the table), la porta (the door), and la cassa (the chest) together. This is a deliberately small article subset, not a rule for every Italian noun. Latin has no directly equivalent article. The singular forms developed historically from demonstrative forms including illum and illam; those Latin references explain the history, not a claim that Italian il always means “that”.\n\nÈ means “is”, with a written grave accent. E without an accent means “and”: do not confuse the two. Il libro non è sulla tavola means “The book is not on the table”. Non comes before the verb: non è means “is not”. In the story, Il libro è sulla tavola means “The book is on the table”. In this chapter learn sulla tavola (“on the table”), nella cassa (“in the chest”), and nel libro (“in the book”) as three supported location phrases. Their internal preposition/article combinations are not a productive target yet.\n\nThe actions are shown only in the forms used by one named person: cerca “searches for”, guarda “looks at”, apre “opens”, trova “finds”, porta “carries”, legge “reads”, chiude “closes”. A third-person form describes someone spoken about, such as Luca or Marta. Luca cerca il libro means “Luca searches for the book”. Porta also occurs as the noun “door”: la porta is “the door”, while Luca porta il libro is “Luca carries the book”. Context distinguishes them. Do not infer a full conjugation from these forms. Marta porta la carta sulla tavola means “Marta carries the leaf onto the table”. La carta è sciolta means “The leaf is loose”: it is unattached, rather than one of the bound leaves. Finding it inside a book does not establish its owner or whether it belongs to the volume. Those questions remain open.\n\nThe dictionary forms (infinitives), such as cercare “to search for”, are reference labels, not an extra conjugation target. Copia means “copies”: Marta cannot start copying while the book is missing. She begins after it returns, then pauses to examine the unexpected leaf. Only this one form of copiare is used here.",
+    "bridge_notes": [
+      {
+        "lang": "la",
+        "text": "illum",
+        "target_text": "il"
+      },
+      {
+        "lang": "la",
+        "text": "illam",
+        "target_text": "la"
+      }
+    ]
+  },
+  "pensa": {
+    "A": {
+      "id": "it-dante-01-l01-A",
+      "title": "A",
+      "instruction": "Complete with il or la. Example: Marta legge ___ carta → la.",
+      "enghraifft": {
+        "prompt": "Marta legge ___ carta.",
+        "answer": "la"
+      },
+      "items": [
+        {
+          "id": "it-dante-01-l01-a01",
+          "prompt": "Luca legge ___ libro.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "il"
+          ]
+        },
+        {
+          "id": "it-dante-01-l01-a02",
+          "prompt": "Marta cerca ___ carta.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "la"
+          ]
+        },
+        {
+          "id": "it-dante-01-l01-a03",
+          "prompt": "Marta porta ___ cassa.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "la"
+          ]
+        },
+        {
+          "id": "it-dante-01-l01-a04",
+          "prompt": "Luca guarda ___ libro con Marta.",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "il"
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "it-dante-01-l01-B",
+      "title": "B",
+      "instruction": "Complete from each bank without inflection. English sense cues, in item order: sheet; chest; door; table. Each bank has three extra nouns.",
+      "blocks": [
+        {
+          "word_bank": [
+            "carta",
+            "cassa",
+            "porta",
+            "tavola"
+          ],
+          "items": [
+            {
+              "id": "it-dante-01-l01-b01",
+              "prompt": "Luca legge la ___.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "carta"
+              ]
+            }
+          ]
+        },
+        {
+          "word_bank": [
+            "carta",
+            "porta",
+            "tavola",
+            "cassa"
+          ],
+          "items": [
+            {
+              "id": "it-dante-01-l01-b02",
+              "prompt": "Marta porta la ___.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "cassa"
+              ]
+            }
+          ]
+        },
+        {
+          "word_bank": [
+            "cassa",
+            "tavola",
+            "porta",
+            "carta"
+          ],
+          "items": [
+            {
+              "id": "it-dante-01-l01-b03",
+              "prompt": "Marta apre la ___.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "porta"
+              ]
+            }
+          ]
+        },
+        {
+          "word_bank": [
+            "porta",
+            "tavola",
+            "carta",
+            "cassa"
+          ],
+          "items": [
+            {
+              "id": "it-dante-01-l01-b04",
+              "prompt": "Marta guarda la ___.",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "tavola"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "it-dante-01-l01-C",
+      "title": "C",
+      "instruction": "In story order: What does Luca find in the chest? What does Luca close before Marta opens the book? What does Luca read at the end? Answer in your own Italian sentence. The models illustrate è + noun identification; location phrases are optional and help stays available.",
+      "items": [
+        {
+          "id": "it-dante-01-l01-c01",
+          "prompt": "Luca trova …",
+          "answer_mode": "self_check",
+          "model_answer": "È il libro.",
+          "model_answers": [
+            "È il libro."
+          ],
+          "rubric": "Identify the book; any sentence with that meaning is acceptable. No location phrase or receptive action form is required.",
+          "rubric_lang": "en"
+        },
+        {
+          "id": "it-dante-01-l01-c02",
+          "prompt": "Luca chiude …",
+          "answer_mode": "self_check",
+          "model_answer": "È la cassa.",
+          "model_answers": [
+            "È la cassa."
+          ],
+          "rubric": "Identify the chest that Luca closes; any sentence with that meaning is acceptable. No location phrase or receptive action form is required.",
+          "rubric_lang": "en"
+        },
+        {
+          "id": "it-dante-01-l01-c03",
+          "prompt": "Luca legge …",
+          "answer_mode": "self_check",
+          "model_answer": "È la carta.",
+          "model_answers": [
+            "È la carta."
+          ],
+          "rubric": "Identify the loose leaf; any sentence with that meaning is acceptable. No location phrase or receptive action form is required.",
+          "rubric_lang": "en"
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "it-libro",
+      "citation_form": "libro",
+      "part_of_speech": "noun",
+      "current_sense": "book",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-cercare",
+      "citation_form": "cercare",
+      "part_of_speech": "verb",
+      "current_sense": "to search for; story form cerca — searches for",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-tavola",
+      "citation_form": "tavola",
+      "part_of_speech": "noun",
+      "current_sense": "table",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-carta",
+      "citation_form": "carta",
+      "part_of_speech": "noun",
+      "current_sense": "leaf; sheet",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-guardare",
+      "citation_form": "guardare",
+      "part_of_speech": "verb",
+      "current_sense": "to look at; story form guarda — looks at",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-porta",
+      "citation_form": "porta",
+      "part_of_speech": "noun",
+      "current_sense": "door",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-cassa",
+      "citation_form": "cassa",
+      "part_of_speech": "noun",
+      "current_sense": "chest",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-aprire",
+      "citation_form": "aprire",
+      "part_of_speech": "verb",
+      "current_sense": "to open; story form apre — opens",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-trovare",
+      "citation_form": "trovare",
+      "part_of_speech": "verb",
+      "current_sense": "to find; story form trova — finds",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-portare",
+      "citation_form": "portare",
+      "part_of_speech": "verb",
+      "current_sense": "to carry; story form porta — carries",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-leggere",
+      "citation_form": "leggere",
+      "part_of_speech": "verb",
+      "current_sense": "to read; story form legge — reads",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-essere",
+      "citation_form": "essere",
+      "part_of_speech": "verb",
+      "current_sense": "to be; story form è — is",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-sciolto",
+      "citation_form": "sciolto",
+      "part_of_speech": "adj",
+      "current_sense": "loose; unattached",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-chiudere",
+      "citation_form": "chiudere",
+      "part_of_speech": "verb",
+      "current_sense": "to close; story form chiude — closes",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    },
+    {
+      "lexeme_id": "it-copiare",
+      "citation_form": "copiare",
+      "part_of_speech": "verb",
+      "current_sense": "to copy; story form copia — copies",
+      "first_introduced_lesson": "it-dante-01-l01",
+      "new": true
+    }
+  ]
+}

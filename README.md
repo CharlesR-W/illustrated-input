@@ -13,6 +13,7 @@ those files reference:
 - Ἐν Σκιλλοῦντι (`grc-skil-01`, draft): `content/grc/`
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Kvöldvakan (`is-kvold-01`, draft): `content/is/`
+- Il libro e la via (`it-dante-01`, draft): `content/it-dante/`
 
 Standalone pages (not courses):
 
