@@ -27,8 +27,9 @@
       "Proverb «Беда́ одна́ не хо́дит» (s080) is a quotation segment: беда́ and хо́дит are glossed one-offs, never tested. The manifesto (s110–s116) is abridged to six sentences in G11 grammar; the title formula is the whitelisted glossed chunk (quotation segment). Source: Высочайший манифест 20 июля 1914 г., ru.wikisource.org/wiki/Высочайший_манифест_20.07.1914 (official act, not subject to copyright). The elder's notice (s024, s036–s038) is invented wording.",
       "Departures from the row: the notice is read at the church door, not nailed up; Sunday is not named (воскресе́нье is in neither the lexicon nor plan/frequency.json), the date «20 ию́ля» carries it; Дед's 1877 Bulgaria memory is not used (the row marks it [?]); «Фёдор ещё не написа́л» is not used (a letter two days after he left is implausible); Nastya's «Кто таки́е не́мцы?» becomes «А не́мцы то́же убира́ют рожь?»; the litany is said by the priest (no deacon in the cast); «Росси́я вста́ла как оди́н челове́к» becomes «Вся Росси́я тепе́рь — как оди́н челове́к» (встать is not in the lexicon); Marya, not Дед, blesses Ivan on Monday; Fyodor stands (not kneels) for the blessing, and the art brief follows the text.",
       "Media: cover, three inline scenes (square, blessing, Ivan in the rye) and three vignettes (серп, ко́локол, ико́на) are planned with art briefs; мешо́к is skipped (long-known, with a Глава 4 vignette). One margin SVG authored (ru-mir-01-l11-svg-vid.svg: three timelines чита́л → прочита́л, убира́ли → убра́л, звони́л → позвони́л, with Ivan, a sheaf and a bell), status draft.",
-      "Warning sense-ambiguous «ми́ра» (s119, «О ми́ре всего́ ми́ра»): the second token means 'world'. The course has no world-sense lexeme (only ru-mir-commune and ru-mir-peace), so it is deliberately left unpinned rather than mis-pinned to peace (Codex review blocker 3); the margin gloss «весь мир: вся земля́» carries the meaning and it is never tested. A ru-mir-world lexeme is proposed in OPEN.md.",
-      "Manifesto (s110–s116) now carries a learner-visible adaptation label, s109a «По манифе́сту царя́ от 20 ию́ля 1914 го́да:», and quotation: true on every segment, per COURSE.md's «по …» rule for adapted authentic texts (Codex review blocker 4)."
+      "«ми́ра» in s119 («О ми́ре всего́ ми́ра») means 'world'. It was left unpinned at release because the course had no world-sense lexeme; on 2026-11-04 a ru-mir-world lexeme (planned in COURSE.md and chapters.json) was added in this chapter's delta and the token is pinned to it. The margin gloss «весь мир: вся земля́» carries the meaning; x4-2-2 checks it only by recognition. Глава 22 takes it up productively.",
+      "Manifesto (s110–s116) now carries a learner-visible adaptation label, s109a «По манифе́сту царя́ от 20 ию́ля 1914 го́да:», and quotation: true on every segment, per COURSE.md's «по …» rule for adapted authentic texts (Codex review blocker 4).",
+      "OPEN.md follow-up (2026-11-04): s136–s137 reordered (IDs kept) so Marya's blessing («На друго́й день Ма́рья благослови́ла Ива́на…», s137) comes before Ivan sets off («Пото́м он пошёл в по́ле оди́н.», s136); the old order stepped back in time inside a perfective chain. grammar.note_en expanded to the Главы 1–6 length (the checker's 80-word cap is advisory; COURSE.md asks for several hundred words). The aspect SVG labels and alt text now carry stress. Pensum B shows «Поста́вь сло́во в ну́жную фо́рму.» (the schema now allows a pensum instruction); b3 («Ста́роста чита́л ___: «Фёдор Соколо́в…»») now asks for the demonstrated «спи́сок» instead of the undemonstrated «спи́ске» (Codex review blocker). ru-mir-world added and pinned in s119; it occurs once in the story (recurrence warning), which is all the scene gives naturally, and it is only glossed and recognised here."
     ],
     "review_questions": [
       {
@@ -133,6 +134,7 @@
     "new_lexeme_ids": [
       "ru-vojna",
       "ru-mir-peace",
+      "ru-mir-world",
       "ru-mobilizatsiya",
       "ru-obyavit",
       "ru-zapasnoj",
@@ -215,6 +217,11 @@
       {
         "lexeme_id": "ru-mir-peace",
         "how": "gloss(antonym)",
+        "segment_id": "ru-mir-01-l11-s119"
+      },
+      {
+        "lexeme_id": "ru-mir-world",
+        "how": "gloss(paraphrase)",
         "segment_id": "ru-mir-01-l11-s119"
       },
       {
@@ -775,7 +782,7 @@
                 "ref": "ru-mir-01-l11-svg-vid",
                 "src": "media/diagrams/ru-mir-01-l11-svg-vid.svg",
                 "status": "draft",
-                "alt": "Three timelines. A long wavy line labelled читал ends in a large dot labelled прочитал, beside Ivan reading a sheet of paper. A wavy line labelled убирали ends in a dot labelled убрал, beside a sheaf of rye with a sickle. A wavy line labelled звонил ends in a dot labelled позвонил, beside a church bell.",
+                "alt": "Three timelines. A long wavy line labelled чита́л ends in a large dot labelled прочита́л, beside Ivan reading a sheet of paper. A wavy line labelled убира́ли ends in a dot labelled убра́л, beside a sheaf of rye with a sickle. A wavy line labelled звони́л ends in a dot labelled позвони́л, beside a church bell.",
                 "covers_lexeme_ids": [
                   "ru-prochitat"
                 ],
@@ -2728,7 +2735,9 @@
                 "anchor_text": "всего́ ми́ра",
                 "gloss": "весь мир: вся земля́",
                 "gloss_kind": "paraphrase",
-                "covers_lexeme_ids": []
+                "covers_lexeme_ids": [
+                  "ru-mir-world"
+                ]
               }
             ],
             "pins": [
@@ -2737,6 +2746,12 @@
                 "end": 44,
                 "token": "ми́ре",
                 "lexeme_id": "ru-mir-peace"
+              },
+              {
+                "start": 52,
+                "end": 57,
+                "token": "ми́ра",
+                "lexeme_id": "ru-mir-world"
               }
             ]
           },
@@ -2886,13 +2901,13 @@
             "paragraph_start": true
           },
           {
-            "id": "ru-mir-01-l11-s136",
-            "text": "На друго́й день Ива́н пошёл в по́ле оди́н.",
+            "id": "ru-mir-01-l11-s137",
+            "text": "На друго́й день Ма́рья благослови́ла Ива́на во дворе́ и поцелова́ла.",
             "paragraph_start": true
           },
           {
-            "id": "ru-mir-01-l11-s137",
-            "text": "Ма́рья благослови́ла его́ во дворе́ и поцелова́ла."
+            "id": "ru-mir-01-l11-s136",
+            "text": "Пото́м он пошёл в по́ле оди́н."
           },
           {
             "id": "ru-mir-01-l11-s138",
@@ -3028,6 +3043,7 @@
                 ],
                 "first_letters": 3,
                 "source_segment_ids": [
+                  "ru-mir-01-l11-s137",
                   "ru-mir-01-l11-s136"
                 ],
                 "common_wrong": [
@@ -3306,6 +3322,7 @@
     "proverb": "Беда́ одна́ не хо́дит.",
     "lexeme_ids": [
       "ru-mir-peace",
+      "ru-mir-world",
       "ru-mir-commune",
       "ru-vojna"
     ],
@@ -3516,7 +3533,7 @@
         "segment_id": "ru-mir-01-l11-s143"
       }
     ],
-    "note_en": "Imperfective past presents process, background or repetition: Его́р чита́л. Perfective past presents an event as a bounded whole: прочита́л gives a result; запла́кала and пошёл mark onset (began crying; set off, without asserting arrival). One occurrence can still be imperfective. Perfectives can move a narrative forward; imperfectives describe its background. Learn each pair with its meanings; the table shows changes within these particular pairs. Perfective future comes in Глава 13."
+    "note_en": "Most Russian verbs come in pairs. The two partners name the same action, but they show it in two different ways. This is called aspect. The imperfective (ipf.) answers что де́лал? (“what was he doing?”); the perfective (pf.) answers что сде́лал? (“what did he do?”, asking for one whole event). Both have a past tense, built the same way: -л, -ла, -ло, -ли. Aspect is not a second kind of tense. In their past-tense forms both partners refer to the past; they differ in how the speaker presents the action.\n\nThe imperfective presents the action from inside, as a process that goes on. It is used for an action in progress, for background, for something that lasts, and for repetition. Его́р чита́л ме́дленно и пло́хо means “Yegor was reading slowly and badly”: we watch him at it. В по́ле убира́ли рожь means “In the fields they were harvesting the rye”. Here убира́ли has no subject: it leaves the workers unnamed (“they were harvesting”). Ко́локол звони́л и звони́л means “The bell rang and rang”. In Весь день Ива́н убира́л рожь (“All day Ivan was harvesting rye”) the imperfective presents the ongoing work. A duration phrase such as весь день (“all day”) does not by itself decide the aspect. The imperfective can also simply report that an action took place, without any focus on finishing it, so do not read every imperfective as “unfinished”.\n\nThe perfective presents the action from outside, as one bounded whole. “Bounded” means that it has an edge: a point where the action is reached and something changes. In the diagram the imperfective is the wavy line and the perfective is the dot. Length does not matter here. A long action can be perfective if the speaker reports it as one finished unit, and a short one can be imperfective. Often the edge is the end, and the perfective gives a result. Он чита́л слог за сло́гом — и наконе́ц прочита́л всё сло́во means “He read syllable by syllable, and at last read the whole word.” The first verb is the effort and the second is its success. Его́р не мог прочита́ть сло́во means “Yegor could not read the word”: he never got it done. Он писа́л ме́дленно и наконе́ц написа́л одно́ сло́во means “He wrote slowly and at last wrote one word.” Наконе́ц (“at last”) often marks the edge. The result can still be visible later: Рожь Фёдора я убра́л, а у отца́ она́ ещё стои́т (“Fyodor's rye I have harvested, but Father's is still standing”). English often uses “was …ing” for the imperfective and the simple past for the perfective, but not reliably. Notice what the Russian verb says, not what the English translation happens to use.\n\nFor some verbs the edge is the beginning. Вдруг на пло́щади запла́кала Ма́рья means “Suddenly, on the square, Marya began to cry.” Запла́кала tells us that the crying began; it does not say how long it went on. Запла́кала = ста́ла пла́кать (“began to cry”). Пошёл works the same way. Ива́н пошёл в по́ле means “Ivan set off for the field”: he went off, but the verb does not say that he arrived. So completion (прочита́л, “read to the end”) and onset (запла́кала, “burst into tears”) are both perfective. Each marks one edge of the action, at its end or at its start. The verb's own meaning tells you which edge it is.\n\nA single action is not automatically perfective. One action can be imperfective when it is shown in progress: Он закрыва́л ла́вку (“He was closing the shop”) is one closing, seen while it happens. The next sentence reports it as done: Наконе́ц он закры́л её (“At last he closed it”). Compare Ма́рья целова́ла сы́на (“Marya was kissing her son”) with Фёдор поцелова́л ико́ну (“Fyodor kissed the icon”, once and done).\n\nIn a story the perfective moves the action forward. In an ordinary narrative chain, perfectives present successive events, each after the one before (context can signal otherwise): Пётр взял ико́ну и благослови́л сы́на (“Pyotr took the icon and blessed his son”). Наконе́ц он позвони́л ещё раз — и ста́ло ти́хо means “At last he rang once more, and it went quiet.” In Мужики́ стоя́ли и смотре́ли, а он закрыва́л ла́вку (“The men stood and watched while he was closing the shop”) the imperfectives describe overlapping background activities. Imperfectives can also describe successive activities: У́тром он рабо́тал на полоса́х отца́, а днём — на о́трубе Фёдора (“In the morning he worked on his father's strips, and in the afternoon on Fyodor's отруб”). Because a perfective chain is normally read in order, the order of the sentences matters.\n\nThe table of pairs shows how these particular partners differ. Some add a prefix to the imperfective: писа́ть → написа́ть, чита́ть → прочита́ть, звони́ть → позвони́ть, де́лать → сде́лать, ви́деть → уви́деть. Some imperfectives have a longer stem, often with -ва- or -ыва-: закрыва́ть ↔ закры́ть, расска́зывать ↔ рассказа́ть, дава́ть ↔ дать. A few pairs are different words: говори́ть ↔ сказа́ть, брать ↔ взять, идти́ ↔ пойти́. These are observations about these verbs, not a recipe. No single prefix makes every perfective: по- works for звони́ть but на- for писа́ть. Many prefixes also change the meaning, which comes later. Learn each verb together with its partner, as the margin aids show (сказа́ть pf. ← говори́ть). The perfective has no present tense, and its future comes in Глава́ 13."
   },
   "pensa": {
     "A": {
@@ -3714,6 +3731,7 @@
     "B": {
       "id": "ru-mir-01-l11-pb",
       "title": "Пе́нсум B — Слова́",
+      "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
       "word_bank": [
         "а́рмия",
         "война́",
@@ -3752,11 +3770,11 @@
         },
         {
           "id": "b3",
-          "prompt": "В ___ бы́ло и́мя Фёдора, а и́мени Ива́на не́ было.",
+          "prompt": "Ста́роста чита́л ___: «Фёдор Соколо́в…»",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
-            "спи́ске"
+            "спи́сок"
           ],
           "first_letters": 2
         },
@@ -4015,6 +4033,14 @@
       "citation_form": "мир",
       "part_of_speech": "noun",
       "current_sense": "peace (new sense; the commune sense is Часть 1)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-mir-world",
+      "citation_form": "мир",
+      "part_of_speech": "noun",
+      "current_sense": "the world",
       "first_introduced_lesson": "ru-mir-01-l11",
       "new": true
     },
