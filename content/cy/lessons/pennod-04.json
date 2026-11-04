@@ -1403,34 +1403,25 @@
         },
         {
           "enghraifft": {
-            "prompt": "Mae'r tŵr yn ___ ac yn ___. (hen · tywyll)",
-            "answer": "hen … dywyll"
+            "prompt": "Mae'r tŵr yn hen ac yn ___. (tywyll)",
+            "answer": "dywyll"
           },
           "mutation_hint": true,
           "items": [
             {
               "id": "a10",
-              "prompt": "Mae'r cerrig yn ___, ac mae'r goedwig yn ___. (llwyd · tawel)",
+              "prompt": "Mae'r cerrig yn llwyd, ac mae'r goedwig yn ___. (tawel)",
               "answer_mode": "exact",
               "recall_of": "G01",
               "explanation": "yn + llwyd → yn llwyd (ll → ll) · yn + tawel → yn dawel",
               "common_wrong": [
                 {
-                  "answer": "lwyd",
-                  "hint": "yn + ll → yn llwyd"
-                },
-                {
                   "answer": "tawel",
                   "hint": "yn + t → d"
                 }
               ],
-              "blanks": [
-                [
-                  "llwyd"
-                ],
-                [
-                  "dawel"
-                ]
+              "accepted_answers": [
+                "dawel"
               ]
             },
             {
