@@ -24,7 +24,9 @@
    "Checker warnings justified: pensa-receptive on Pensum A a1–a6 is by design (Dweud yn y De, §7.2): the literary form appears only in the prompt and every accepted answer is colloquial and productive. budget-open-slots: iaith is proposed as an open slot (see report).",
    "Myrddin states the chapter's point once ('Mae angen ffeithiau ar ddarllenydd. Ac mae angen dychymyg ar gynulleidfa.'), as a character, not the narrator.",
    "Recall pass 2026-10-18: recurrences for Penodau 33–37 vocabulary in the chronicle and Cai's tavern tellings (llethr, bwthyn, bugail, mawn, bygwth, baglu, doeth, cynhesu, lluwch, rhewi, ci defaid, tad-cu, acen, anferth, eillio, bygythiad, gludo, buddugoliaeth, taflu, ffôl, gwasgu, clogwyn, esgus, nodwydd, edau, tafodiaith, rhybudd). Gloss symbol: tudalen ▯▯ → 'llyfr = tudalen + tudalen + …'. New segments s301–s311.",
-   "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s065, s307, s109, s116). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed."
+   "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s065, s307, s109, s116). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2, c3 and c4 converted (the 'ble' item dropped for the seren question, s015); one Pam? (c1, s007 states it); 'Pam dwedodd Mali Celwydd?' (second Pam?), the two-fact c6 and the unstated 'tasai Mali'n ysgrifennu stori Cai' item replaced; c4 and c7 practise bydd … yn cael ei …; A ti? no longer a bare yes/no. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Table: the unshown 'y basai fe' cell now says byddai = basai (reading only); the cafodd/mae/bydd row uses attested s050, s085, s070. Pensum B one answer each: b3 cofnodi, b8 tair ffaith, b10 dwy iaith.",
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note no longer states a general ni + soft mutation rule (p/t/c take the aspirate) and no longer says only the front verb changes (yn cael is added); -wch commands stated as the forms shown; B bank darllen → cysgu so b3 has one answer; b4 now the attested singular (ar bob tudalen; tudalennau never shown); A keys accept echo pronouns (ei gweld hi …), a9 ei fod e'n dal and optional fe; C c1 model in narrative past, c6 quoted."
   ],
   "review_questions": []
  },
@@ -1550,7 +1552,7 @@
      ],
      [
       "Dywedodd y brenin y byddai ef yn ymladd …",
-      "Dwedodd y brenin y basai fe'n ymladd …"
+      "(darllen yn unig: byddai = basai)"
      ]
     ]
    },
@@ -1588,9 +1590,9 @@
     ],
     "rows": [
      [
-      "Cafodd y stori ei dweud.",
-      "Mae'r stori'n cael ei dweud.",
-      "Bydd y stori'n cael ei dweud."
+      "Cafodd e ei orchfygu.",
+      "Mae'r stori'n cael ei dweud yn well bob tro.",
+      "Bydd y stori hon yn cael ei chanu."
      ]
     ]
    }
@@ -1642,7 +1644,7 @@
     "segment_id": "cy-brenin-01-l38-s132"
    }
   ],
-  "nodyn_en": "Chronicle Welsh, to recognise only: -wyd is an impersonal past (gwelwyd y cawr = the giant was seen), dywedir = it is said, ef = e, hwy = nhw, byddai = would. Everyday Welsh uses cael: Cafodd y cawr ei weld. Now also produce mae/bydd … yn cael ei …: Bydd y stori'n cael ei chanu."
+  "nodyn_en": "This chapter sets two kinds of Welsh side by side: the old, official language of a written chronicle, and the everyday spoken Welsh of the tavern. The chronicle forms are for recognition only. The everyday forms for 'is done' and 'will be done' are new forms for you to use.\n\nChronicle Welsh has its own past passive, made by adding -wyd to the stem of the verb. It means 'was …' and needs no cael, no possessive and no doer:\n- gwelwyd ('was seen'): Yn y flwyddyn honno, gwelwyd seren fawr yn yr awyr uwchben Caerllion ('In that year, a great star was seen in the sky above Caerllion').\n- claddwyd ('was buried'): claddwyd y brenin Uthr ('King Uthr was buried').\n- dallwyd ('was blinded') and brathwyd ('was bitten'): Dallwyd y cawr gan fwg y ddraig, a brathwyd ei ffêr gan y ci ('The giant was blinded by the dragon's smoke, and his ankle was bitten by the dog'). When the doer is named, it follows gan, as in Pennod 32.\n- gorchfygwyd ('was defeated'): Ac yna y gorchfygwyd Rhita Gawr ar ben yr Wyddfa, a chladdwyd ef dan garnedd ('And then Rhita Gawr was defeated on top of Snowdon, and he was buried under a cairn'). After a ('and'), claddwyd takes the aspirate mutation: a chladdwyd.\n- Here gwelwyd softens after the chronicle's negative ni: ni welwyd etifedd ('no heir was seen').\nMali puts these into everyday Welsh with the cael passive you know: Gorchfygwyd? asks Arthur, and Mali answers Cafodd e ei orchfygu ('He was defeated'). Her own first reaction to gwelwyd shows what this form leaves out: Cafodd y seren ei gweld, ond gan bwy? ('The star was seen, but by whom?').\n\nThree more chronicle forms. Dywedir means 'it is said' or 'people say': Dywedir bod Myrddin wedi ei gweld hi'n gyntaf ('It is said that Myrddin saw it first'). Ef is the chronicle's word for e or fe ('he, him'), and hwy is its word for nhw ('they, them'): aeth ei ffrindiau gydag ef ('his friends went with him'); Aeth ci a draig gyda hwy hefyd ('A dog and a dragon went with them too'). The chronicle also spells dwedodd in full as dywedodd, and reports a future with y byddai ('that … would'), which you met in Pennod 33: Dywedodd y brenin y byddai ef yn ymladd gyda'i ffrindiau, nid ar ei ben ei hun ('The king said that he would fight with his friends, not on his own'). Nid gwir hynny is chronicle Welsh for 'That is not true', and Cai fab Cynyr means 'Cai son of Cynyr'.\n\nNow the everyday forms. In Pennod 32 you learnt the past passive with cafodd. For the present and the future, use mae or bydd with yn cael (or 'n cael), then the possessive and the verb-noun. The possessive agrees with the thing affected, with the same mutations as before: ei + soft mutation for a masculine noun or 'he', ei + aspirate mutation for a feminine noun or 'she', eu with no mutation for a plural.\n- Mae'r stori'n cael ei dweud yn well bob tro ('The story gets told better every time'), says the innkeeper. Stori is feminine; dweud has no aspirate form, so it stays dweud.\n- Bydd y stori hon yn cael ei chanu yn llys y brenin! ('This story will be sung at the king's court!'), says the bard. Feminine: canu → chanu.\n- Bydd stori Mali'n cael ei chadw yn y cronicl, a bydd stori Cai'n cael ei chanu gan y bardd ('Mali's story will be kept in the chronicle, and Cai's story will be sung by the bard'), says Arthur. Feminine: cadw → chadw.\n- Bydd y cronicl yn cael ei ddarllen gan rai darllenwyr ('The chronicle will be read by a few readers'), says Myrddin. Cronicl is masculine: darllen → ddarllen.\n- Bydd e'n cael ei gadw yno am ganrifoedd ('It will be kept there for centuries'). Here e is the truth, y gwirionedd, a masculine noun: cadw → gadw.\n- Myrddin also says bydd chwedl Cai'n cael ei chanu gan bawb ('Cai's legend will be sung by everyone'). Chwedl is feminine.\nSo ddoe, heddiw and yfory line up: Cafodd e ei orchfygu ('He was defeated'); Mae'r stori'n cael ei dweud ('The story is told'); Bydd y stori hon yn cael ei chanu ('This story will be sung'). The past uses cafodd … ei …; the present and the future use mae or bydd … yn cael ei …, with the same possessive and the same mutations.\n\nThe tavern scene also uses chi commands. The plural commands here end in -wch: gwranda → gwrandewch ('Listen!'), says Cai; eistedd → eisteddwch ('Sit down, sit down'), says Arthur to the whole tavern.\n\nPensum A asks you to rewrite chronicle sentences in the Welsh of the south: Gwelwyd y cawr → Cafodd y cawr ei weld; Dywedir bod … → Mae pobl yn dweud bod …; gyda hwy → gyda nhw."
  },
  "pensa": {
   "A": {
@@ -1661,7 +1663,10 @@
        "prompt": "Claddwyd y cawr. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd y cawr ei gladdu."
+        "Cafodd y cawr ei gladdu.",
+        "Cafodd y cawr ei gladdu e.",
+        "Fe gafodd y cawr ei gladdu.",
+        "Fe gafodd y cawr ei gladdu e."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1673,7 +1678,10 @@
        "prompt": "Dallwyd y cawr gan y mwg. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd y cawr ei ddallu gan y mwg."
+        "Cafodd y cawr ei ddallu gan y mwg.",
+        "Cafodd y cawr ei ddallu e gan y mwg.",
+        "Fe gafodd y cawr ei ddallu gan y mwg.",
+        "Fe gafodd y cawr ei ddallu e gan y mwg."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1685,7 +1693,10 @@
        "prompt": "Gwelwyd y garnedd. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd y garnedd ei gweld."
+        "Cafodd y garnedd ei gweld.",
+        "Cafodd y garnedd ei gweld hi.",
+        "Fe gafodd y garnedd ei gweld.",
+        "Fe gafodd y garnedd ei gweld hi."
        ],
        "common_wrong": [
         {
@@ -1700,7 +1711,13 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Cafodd Rhita Gawr ei orchfygu.",
-        "Cafodd Rhita ei orchfygu."
+        "Cafodd Rhita ei orchfygu.",
+        "Cafodd Rhita Gawr ei orchfygu e.",
+        "Cafodd Rhita ei orchfygu e.",
+        "Fe gafodd Rhita Gawr ei orchfygu.",
+        "Fe gafodd Rhita ei orchfygu.",
+        "Fe gafodd Rhita Gawr ei orchfygu e.",
+        "Fe gafodd Rhita ei orchfygu e."
        ],
        "mutation_hint": true
       }
@@ -1725,7 +1742,8 @@
        "prompt": "Aeth ci a draig gyda hwy. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Aeth ci a draig gyda nhw."
+        "Aeth ci a draig gyda nhw.",
+        "Fe aeth ci a draig gyda nhw."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l38-s030"
@@ -1746,7 +1764,13 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Bydd y stori'n cael ei chanu.",
-        "Bydd y stori'n cael ei chanu gan y beirdd."
+        "Bydd y stori'n cael ei chanu gan y beirdd.",
+        "Bydd y stori'n cael ei chanu hi.",
+        "Bydd y stori'n cael ei chanu hi gan y beirdd.",
+        "Fe fydd y stori'n cael ei chanu.",
+        "Fe fydd y stori'n cael ei chanu gan y beirdd.",
+        "Fe fydd y stori'n cael ei chanu hi.",
+        "Fe fydd y stori'n cael ei chanu hi gan y beirdd."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -1765,7 +1789,9 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Mae'r chwedl yn cael ei dweud.",
-        "Mae'r chwedl yn cael ei dweud gan Cai."
+        "Mae'r chwedl yn cael ei dweud gan Cai.",
+        "Mae'r chwedl yn cael ei dweud hi.",
+        "Mae'r chwedl yn cael ei dweud hi gan Cai."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l38-s085"
@@ -1778,7 +1804,10 @@
        "recall_of": "G33",
        "accepted_answers": [
         "Dwedodd Cai fod y cawr yn dal.",
-        "fod y cawr yn dal"
+        "fod y cawr yn dal",
+        "Dwedodd Cai ei fod e'n dal.",
+        "Fe ddwedodd Cai fod y cawr yn dal.",
+        "Fe ddwedodd Cai ei fod e'n dal."
        ],
        "mutation_hint": true
       },
@@ -1791,7 +1820,15 @@
         "Cafodd y farf ei gwnïo gan Modlen.",
         "Cafodd y farf ei gwnïo.",
         "ei gwnïo",
-        "ei gwnïo gan Modlen"
+        "ei gwnïo gan Modlen",
+        "Cafodd y farf ei gwnïo hi gan Modlen.",
+        "Cafodd y farf ei gwnïo hi.",
+        "ei gwnïo hi",
+        "ei gwnïo hi gan Modlen",
+        "Fe gafodd y farf ei gwnïo gan Modlen.",
+        "Fe gafodd y farf ei gwnïo.",
+        "Fe gafodd y farf ei gwnïo hi gan Modlen.",
+        "Fe gafodd y farf ei gwnïo hi."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l38-s109"
@@ -1822,7 +1859,7 @@
     "dychymyg",
     "iaith",
     "cyfieithu",
-    "darllen"
+    "cysgu"
    ],
    "items": [
     {
@@ -1848,18 +1885,16 @@
      "prompt": "Mae Mali'n ysgrifennu'r ffeithiau yn y llawysgrif: mae hi'n eu ___ nhw.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "cofnodi",
-      "darllen"
+      "cofnodi"
      ]
     },
     {
      "id": "b4",
-     "prompt": "Mae'r llyfr yn drwm iawn: mae llawer o ___ yn y llyfr.",
+     "prompt": "Mae llawer o eiriau ar bob ___ yn y llyfr.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "dudalennau"
-     ],
-     "explanation": "llawer o + meddal: tudalennau → dudalennau"
+      "tudalen"
+     ]
     },
     {
      "id": "b5",
@@ -1888,12 +1923,10 @@
     },
     {
      "id": "b8",
-     "prompt": "Mae Mali'n hoffi'r ___ yn y cronicl: beth ddigwyddodd, ble a phryd.",
+     "prompt": "Mae tair ___ ar y dudalen: un cawr, dim tri; mwg y ddraig; dannedd y ci.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "ffeithiau",
-      "hanes",
-      "gwirionedd"
+      "ffaith"
      ]
     },
     {
@@ -1906,12 +1939,10 @@
     },
     {
      "id": "b10",
-     "prompt": "Dyw Mali ddim yn dweud celwydd: mae hi'n dweud y ___.",
+     "prompt": "Mae Cai'n siarad Cymraeg, ac mae'r esgob yn siarad Cymraeg a Lladin: mae dwy ___ gyda'r esgob.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "gwirionedd",
-      "ffeithiau",
-      "hanes"
+      "iaith"
      ]
     }
    ]
@@ -1922,188 +1953,123 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Pam mae Mali'n ysgrifennu yn y cronicl?",
+     "prompt": "Pam gofynnodd yr esgob i Mali ysgrifennu yn y cronicl?",
      "answer_mode": "self_check",
-     "model_answer": "Mae ysgrifennydd yr esgob yn hen ac yn sâl, ac mae Mali'n gallu ysgrifennu'n dda.",
-     "rubric": "Un rheswm: mae'r ysgrifennydd yn sâl / mae Mali'n ysgrifennu'n dda.",
+     "model_answer": "Roedd ei ysgrifennydd e'n hen ac yn sâl, ac roedd Mali'n gallu ysgrifennu'n dda.",
      "key_terms": [
-      "cy-ysgrifennydd"
+      "cy-ysgrifennydd",
+      "cy-cronicl"
      ],
+     "rubric": "Un peth: mae'r ysgrifennydd yn sâl · mae Mali'n ysgrifennu'n dda.",
      "source_segment_ids": [
+      "cy-brenin-01-l38-s006",
       "cy-brenin-01-l38-s007"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Ble roedd Cai'n dweud ei stori?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Yn y dafarn",
-      "Mewn tafarn",
-      "Ar fwrdd yn y dafarn",
-      "Yn y dafarn yng Nghaerllion",
-      "Yn nhafarn y ddinas",
-      "Roedd e'n dweud ei stori yn y dafarn",
-      "Roedd Cai'n dweud ei stori yn y dafarn",
-      "Roedd Cai ar fwrdd yn y dafarn",
-      "Roedd Cai'n sefyll ar fwrdd yn y dafarn",
-      "Roedd Cai yn sefyll yn y dafarn",
-      "Roedd e yn sefyll yn y dafarn",
-      "Roedd Cai yn y dafarn",
-      "Roedd e yn y dafarn",
-      "Roedd Cai yn dweud ei stori mewn tafarn",
-      "Roedd e yn dweud ei stori mewn tafarn",
-      "Roedd Cai yn sefyll mewn tafarn",
-      "Roedd e yn sefyll mewn tafarn",
-      "Roedd Cai mewn tafarn",
-      "Roedd e mewn tafarn",
-      "Roedd Cai yn dweud ei stori ar fwrdd yn y dafarn",
-      "Roedd e yn dweud ei stori ar fwrdd yn y dafarn",
-      "Roedd e yn sefyll ar fwrdd yn y dafarn",
-      "Roedd e ar fwrdd yn y dafarn",
-      "Roedd Cai yn dweud ei stori yn y dafarn yng Nghaerllion",
-      "Roedd e yn dweud ei stori yn y dafarn yng Nghaerllion",
-      "Roedd Cai yn sefyll yn y dafarn yng Nghaerllion",
-      "Roedd e yn sefyll yn y dafarn yng Nghaerllion",
-      "Roedd Cai yn y dafarn yng Nghaerllion",
-      "Roedd e yn y dafarn yng Nghaerllion",
-      "Roedd Cai yn dweud ei stori yn nhafarn y ddinas",
-      "Roedd e yn dweud ei stori yn nhafarn y ddinas",
-      "Roedd Cai yn sefyll yn nhafarn y ddinas",
-      "Roedd e yn sefyll yn nhafarn y ddinas",
-      "Roedd Cai yn nhafarn y ddinas",
-      "Roedd e yn nhafarn y ddinas",
-      "Yn y dafarn, roedd Cai yn dweud ei stori",
-      "Yn y dafarn, roedd e yn dweud ei stori",
-      "Yn y dafarn, roedd Cai yn sefyll",
-      "Yn y dafarn, roedd e yn sefyll",
-      "Yn y dafarn, roedd Cai",
-      "Yn y dafarn, roedd e",
-      "Mewn tafarn, roedd Cai yn dweud ei stori",
-      "Mewn tafarn, roedd e yn dweud ei stori",
-      "Mewn tafarn, roedd Cai yn sefyll",
-      "Mewn tafarn, roedd e yn sefyll",
-      "Mewn tafarn, roedd Cai",
-      "Mewn tafarn, roedd e",
-      "Ar fwrdd yn y dafarn, roedd Cai yn dweud ei stori",
-      "Ar fwrdd yn y dafarn, roedd e yn dweud ei stori",
-      "Ar fwrdd yn y dafarn, roedd Cai yn sefyll",
-      "Ar fwrdd yn y dafarn, roedd e yn sefyll",
-      "Ar fwrdd yn y dafarn, roedd Cai",
-      "Ar fwrdd yn y dafarn, roedd e",
-      "Yn y dafarn yng Nghaerllion, roedd Cai yn dweud ei stori",
-      "Yn y dafarn yng Nghaerllion, roedd e yn dweud ei stori",
-      "Yn y dafarn yng Nghaerllion, roedd Cai yn sefyll",
-      "Yn y dafarn yng Nghaerllion, roedd e yn sefyll",
-      "Yn y dafarn yng Nghaerllion, roedd Cai",
-      "Yn y dafarn yng Nghaerllion, roedd e",
-      "Yn nhafarn y ddinas, roedd Cai yn dweud ei stori",
-      "Yn nhafarn y ddinas, roedd e yn dweud ei stori",
-      "Yn nhafarn y ddinas, roedd Cai yn sefyll",
-      "Yn nhafarn y ddinas, roedd e yn sefyll",
-      "Yn nhafarn y ddinas, roedd Cai",
-      "Yn nhafarn y ddinas, roedd e",
-      "Ar fwrdd mawr yn y dafarn",
-      "Roedd Cai ar fwrdd mawr yn y dafarn",
-      "Roedd Cai'n sefyll ar fwrdd mawr yn y dafarn",
-      "Roedd Cai yn dweud ei stori ar fwrdd mawr yn y dafarn",
-      "Roedd e yn dweud ei stori ar fwrdd mawr yn y dafarn",
-      "Roedd e yn sefyll ar fwrdd mawr yn y dafarn",
-      "Roedd e ar fwrdd mawr yn y dafarn",
-      "Ar fwrdd mawr yn y dafarn, roedd Cai yn dweud ei stori",
-      "Ar fwrdd mawr yn y dafarn, roedd e yn dweud ei stori",
-      "Ar fwrdd mawr yn y dafarn, roedd Cai yn sefyll",
-      "Ar fwrdd mawr yn y dafarn, roedd e yn sefyll",
-      "Ar fwrdd mawr yn y dafarn, roedd Cai",
-      "Ar fwrdd mawr yn y dafarn, roedd e"
+     "prompt": "Darllenodd Mali hen dudalen o'r cronicl am seren fawr yn yr awyr. Beth oedd ei chwestiwn hi?",
+     "answer_mode": "self_check",
+     "model_answer": "\"Cafodd y seren ei gweld, ond gan bwy?\"",
+     "key_terms": [
+      "cy-gweld",
+      "cy-gan"
      ],
-     "model_answer": "Yn y dafarn.",
+     "rubric": "Gan bwy?",
      "source_segment_ids": [
-      "cy-brenin-01-l38-s057"
+      "cy-brenin-01-l38-s013",
+      "cy-brenin-01-l38-s015",
+      "cy-brenin-01-l38-s016"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Yn stori gyntaf Cai, roedd y cawr mor dal â beth?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Mor dal â thŵr",
-      "Â thŵr",
-      "Tŵr",
-      "Thŵr",
-      "Roedd e mor dal â thŵr",
-      "Roedd y cawr mor dal â thŵr",
-      "Roedd Rhita mor dal â thŵr",
-      "Roedd Rhita Gawr mor dal â thŵr"
+     "prompt": "Yn stori gyntaf Cai yn y dafarn, roedd y cawr mor dal â beth?",
+     "answer_mode": "self_check",
+     "model_answer": "Roedd e mor dal â thŵr!",
+     "key_terms": [
+      "cy-tal",
+      "cy-twr"
      ],
-     "model_answer": "Mor dal â thŵr.",
+     "rubric": "Mor dal â thŵr.",
      "source_segment_ids": [
+      "cy-brenin-01-l38-s062",
       "cy-brenin-01-l38-s063"
      ]
     },
     {
      "id": "c4",
-     "prompt": "Y trydydd tro, faint o gewri oedd yn stori Cai?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Tri",
-      "Tri chawr",
-      "Roedd tri chawr",
-      "Tri chawr oedd yn y stori",
-      "Roedd tri chawr yn stori Cai",
-      "Roedd tri chawr yn y stori",
-      "Tri chawr oedd yn stori Cai"
+     "prompt": "Roedd y bardd yn hoffi stori Cai. Beth ddwedodd e? Dechrau: Bydd y stori hon yn cael ei …",
+     "answer_mode": "self_check",
+     "model_answer": "Bydd y stori hon yn cael ei chanu yn llys y brenin!",
+     "key_terms": [
+      "cy-canu",
+      "cy-cael"
      ],
-     "model_answer": "Tri chawr.",
+     "rubric": "… yn cael ei chanu.",
      "source_segment_ids": [
-      "cy-brenin-01-l38-s084"
+      "cy-brenin-01-l38-s069",
+      "cy-brenin-01-l38-s070"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Pam dwedodd Mali \"Celwydd!\"?",
+     "prompt": "Daeth tri marchog o'r gogledd, a dwedodd Cai'r stori am y trydydd tro. Faint o gewri oedd yn y stori nawr?",
      "answer_mode": "self_check",
-     "model_answer": "Roedd Cai'n gorliwio: dim ond un cawr oedd, a wnaeth Cai ddim ymladd ar ei ben ei hun.",
-     "rubric": "Rheswm: roedd Cai'n gorliwio; gellir rhoi un ffaith o'r cronicl (un cawr / gyda'n gilydd).",
+     "model_answer": "Tri chawr: ac roedd y cawr mwyaf yn dalach na'r Wyddfa!",
      "key_terms": [
-      "cy-gorliwio",
       "cy-cawr"
      ],
+     "rubric": "Tri chawr.",
      "source_segment_ids": [
-      "cy-brenin-01-l38-s096",
-      "cy-brenin-01-l38-s105"
+      "cy-brenin-01-l38-s082",
+      "cy-brenin-01-l38-s084"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Beth sy'n bwysig i ddarllenydd, a beth sy'n bwysig i gynulleidfa, meddai Myrddin?",
+     "prompt": "Yn y dafarn, beth oedd angen ar gynulleidfa, meddai Myrddin?",
      "answer_mode": "self_check",
-     "model_answer": "Mae angen ffeithiau ar ddarllenydd, ac mae angen dychymyg ar gynulleidfa.",
-     "rubric": "ffeithiau → darllenydd; dychymyg → cynulleidfa.",
+     "model_answer": "\"Mae angen dychymyg ar gynulleidfa.\"",
      "key_terms": [
-      "cy-ffaith",
+      "cy-cynulleidfa",
       "cy-dychymyg"
      ],
+     "rubric": "Dychymyg.",
      "source_segment_ids": [
+      "cy-brenin-01-l38-s115",
       "cy-brenin-01-l38-s120"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Beth fasai'n digwydd tasai Mali'n ysgrifennu stori Cai yn y cronicl? Dechrau: Basai … / Basen nhw …",
+     "prompt": "Daeth Arthur i'r dafarn. Beth ddwedodd e am stori Mali? Dechrau: Bydd stori Mali'n cael ei …",
      "answer_mode": "self_check",
-     "model_answer": "Basai'r darllenwyr yn credu bod tri chawr ar yr Wyddfa, a basai'r cronicl yn dweud celwydd.",
-     "rubric": "Brawddeg gyda basai / basen nhw.",
+     "model_answer": "Bydd stori Mali'n cael ei chadw yn y cronicl.",
      "key_terms": [
-      "cy-darllenydd"
+      "cy-cadw",
+      "cy-cronicl"
+     ],
+     "rubric": "… yn cael ei chadw yn y cronicl.",
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s125",
+      "cy-brenin-01-l38-s126"
      ]
     },
     {
      "id": "c8",
-     "prompt": "A ti? Wyt ti'n gorliwio weithiau?",
+     "prompt": "A ti? Beth fydd yn cael ei goginio yn dy gegin di yfory? Dechrau: Bydd … yn cael ei …",
      "answer_mode": "self_check",
-     "model_answer": "Ydw, weithiau dw i'n gorliwio. / Nac ydw, dw i'n dweud y gwir.",
-     "rubric": "Ydw / Nac ydw (gyda brawddeg os wyt ti eisiau: Dw i'n gorliwio / Dw i ddim yn gorliwio)."
+     "model_answer": "Bydd cawl yn cael ei goginio.",
+     "key_terms": [
+      "cy-coginio",
+      "cy-cael"
+     ],
+     "rubric": "Bydd … yn cael ei goginio (ei choginio · eu coginio).",
+     "source_segment_ids": [
+      "cy-brenin-01-l38-s070",
+      "cy-brenin-01-l38-s117"
+     ]
     }
    ]
   }

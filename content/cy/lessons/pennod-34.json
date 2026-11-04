@@ -24,7 +24,9 @@
    "SVG cy-brenin-01-l34-img-os-taswn.svg authored (Welsh labels; viewBox 300 wide, 17px text).",
    "Continuity: sets up 36–37 as written by the 37 writer: Arthur decides they go to Eryri together, without an army and without sending a beard (Cai, Mali, Dafi, Pero, and Myrddin 'os ydy e eisiau'); Cynyr stays in Caerllion (Arthur's joke about the most bearded lord); Modlen stays ('Faswn i ddim yn mynd i ben mynydd …') but will pack food. The wool beard goes too, and Cai claims it: 'Os bydd angen brenin barfog, fi fydd y brenin barfog!' (he wears it on the summit in 37). Myrddin: 'Dim hud heddiw … Mae ffrindiau gyda ti. Mae hynny'n well na hud' (37: 'Heddiw, does dim hud'). Modlen's question in 33 (does the giant see well?) is explained: a wool beard might pass at a distance. Mali packs needle, thread and scissors. Dafi's smoke beard and accidental flame foreshadow the blinding smoke of 37.",
    "Recall pass 2026-10-18: recurrences for Penodau 29–33 vocabulary in the council (bygythiad, erbyn, gorchfygu, heddwch, neu, gwrthod, anrhydedd, llythyr, gorffen, urddas, profi, nerfus, esgob, swyddogol, gwisg, tyst, brifo, ysbryd, rhybuddio, gelyn, dadl, anghydfod, ffermwr, barnu, dibynnu, ymddiried, arweinydd, gobaith, trefnu). Voice fix: s018 'Gwenodd Cynyr, ond' → 'ac'. New segments s301–s309, s311–s312 (s310 drafted and withdrawn in the same pass; not to be reused).",
-   "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s305, s062, s066, s309, s311, s312). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed."
+   "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s305, s062, s066, s309, s311, s312). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2 and c7 converted; one Pam? (c2, s017/s302: Arthur gives his reason); prompts on past events use the past; c1, c4 and c8 practise taswn/tasai … baswn/basai; the old c5 'Pam gofynnodd Modlen …' now asks for her idea, which s114 states. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Unshown forms removed: Fasai fe …? (rule_cy, note), the baset ti / basen ni … row, A a6 Fasai fe ddim → attested Faswn i ddim yn mynd i ben mynydd (s120); table row s114 attested. Pensum B b6 doniol and b7 awgrymu now the only fits.",
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 33–36 half) applied: C c7 model 'heb fyddin' (the wool beard does go, s113); c2 model quoted; B b6/b7 carry English sense cues (funny, suggesting) per RULES §7; s024 separate meaning glosses for nodwydd and edau (the vignette is only planned); note's opening definition of the conditional widened. Optional fe variants added to finite A keys."
   ],
   "review_questions": [
    {
@@ -466,8 +468,21 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "nodwydd",
-        "gloss": "nodwydd ac edau: i wnïo",
-        "gloss_kind": "define"
+        "gloss": "nodwydd: dur bach, i wnïo",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-nodwydd"
+        ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "edau",
+        "gloss": "edau: drwy'r nodwydd, i wnïo",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-edau"
+        ]
        },
        {
         "type": "gloss",
@@ -1304,7 +1319,7 @@
  },
  "grammar": {
   "title_cy": "Taswn i'n gawr, baswn i'n chwerthin",
-  "rule_cy": "efallai: Os bydd … / Os ydy …, bydd … · syniad yn y pen: Taswn i'n …, baswn i'n … / Tasai fe'n …, basai fe'n … · ✗: Faswn i ddim … · ?: Fasai fe …?",
+  "rule_cy": "efallai: Os bydd … / Os ydy …, bydd … · syniad yn y pen: Taswn i'n …, baswn i'n … / Tasai fe'n …, basai fe'n … · ✗: Faswn i ddim …",
   "tables": [
    {
     "caption": "taswn · baswn",
@@ -1336,7 +1351,7 @@
     ]
    },
    {
-    "caption": "✗ ac ?",
+    "caption": "✗",
     "header": [
      "",
      ""
@@ -1369,7 +1384,7 @@
      ],
      [
       "Tasai'r cawr ddim yn gweld yn dda,",
-      "basai'r farf yn ddefnyddiol."
+      "basai hi'n ddefnyddiol iawn."
      ]
     ]
    },
@@ -1383,10 +1398,6 @@
      [
       "pe bai = tasai (llyfr)",
       "Pe bai'r cawr yn falch iawn, basai fe'n hoffi clywed …"
-     ],
-     [
-      "baset ti · basen ni · basech chi · basen nhw",
-      "(Pennod 37)"
      ]
     ]
    },
@@ -1444,7 +1455,7 @@
     "segment_id": "cy-brenin-01-l34-s114"
    }
   ],
-  "nodyn_en": "Hypothetical conditions: taswn i (if I were / did) … baswn i (I would) …; tasai … basai … for he, she or a noun. Negatives and questions soft-mutate: Faswn i ddim, Fasai fe …? Open conditions keep os + present or future (Pennod 21). Pe bai is the book form of tasai; other persons come in Pennod 37."
+  "nodyn_en": "This chapter introduces the conditional: an imagined situation and what would follow from it, without saying that the situation is true. The friends try out plans for Rhita Gawr this way. Each sentence has two halves: an 'if' half with taswn i or tasai, and a 'would' half with baswn i or basai.\n\nFor yourself, use taswn i ('if I were', 'if I did') and baswn i ('I would'). For one other person or a noun, use tasai and basai. Both are followed by yn ('n after a vowel) and a verb-noun, or by yn and an adjective or noun, just like mae and roedd:\n- Taswn i'n frenin, baswn i'n ymladd ('If I were king, I would fight'). Brenin takes the soft mutation after yn, as always.\n- Taswn i'n gawr, baswn i'n chwerthin ('If I were a giant, I would laugh').\n- Tasai'r cawr yn gweld y farf hon yn agos, basai fe'n gwybod ('If the giant saw this beard up close, he would know'). Tasai and y join as tasai'r.\n- Tasai Dafi'n tisian ar wyneb Arthur, basai barf o fwg gyda fe ('If Dafi sneezed on Arthur's face, he would have a beard of smoke'). Possession works as usual with gyda.\n- Taswn i'n anfon byddin, basai rhyfel ('If I sent an army, there would be war'). Like mae rhyfel ('there is war') and bydd rhyfel ('there will be war'), basai rhyfel needs no 'there'.\nAfter basai, the pronoun for 'he' in this book is fe: basai fe'n gwybod ('he would know'), basai fe'n darllen ('he would read').\n\nThe 'if' half does not have to be about the past, even though English often uses a past form ('if I sent'). When Arthur says taswn i'n anfon byddin, he is talking about a plan for the coming weeks; what matters is that he is imagining it. The two halves can also have different subjects: Taswn i'n eillio fy marf i, a'i hanfon hi at Rhita, basai'r cawr yn hapus ('If I shaved my beard and sent it to Rhita, the giant would be happy'), says Cynyr. Arthur answers: taswn i'n cymryd dy farf di, faswn i ddim yn frenin da ('if I took your beard, I wouldn't be a good king').\n\nAfter a ('and'), tasai takes the aspirate mutation, t → th: A thasai Cai'n mynd i Eryri at elyn mor gryf, basai'r cawr yn ei fwyta e i frecwast ('And if Cai went to Eryri to such a strong enemy, the giant would eat him for breakfast'). Myrddin does the same: A thasai brenin yn gofyn i ddewin am bopeth, basai fe'n frenin twp ('And if a king asked a wizard about everything, he would be a foolish king').\n\nTo say 'I wouldn't', baswn takes the soft mutation, b → f, and ddim follows the pronoun: Faswn i ddim yn cwympo ('I wouldn't fall'), says Cai; Faswn i ddim yn mynd i ben mynydd am bob pastai yng Nghymru ('I wouldn't go up a mountain for every pie in Wales'), says Modlen. In the 'if' half, a negative simply adds ddim after the subject, and tasai does not change: Tasai'r cawr ddim yn gweld yn dda, basai hi'n ddefnyddiol iawn ('If the giant didn't see well, it [the beard] would be very useful').\n\nCompare os ('if') from Pennod 21. Os is for a real possibility, something that may well happen, and it takes ordinary forms such as bydd or ydy: Os bydd angen brenin barfog, fi fydd y brenin barfog! ('If a bearded king is needed, I'll be the bearded king!'); Os ydy e'n falch, dyw e ddim yn gwrando ar neb ('If he is proud, he doesn't listen to anyone'). Taswn and tasai are for something imagined: Cai is not king and Mali is not a giant. So Mali says os ydy e'n falch about Rhita, who may really be proud, but taswn i'n gawr about herself.\n\nFor recognition only: Mali says Pe bai'r cawr yn falch iawn, basai fe'n hoffi clywed ei fod e'n gryf ac yn fawr ('If the giant were very proud, he would like to hear that he was strong and big'). Pe bai means the same as tasai, but it is the form you find in books, and Cai teases her for sounding like one. The forms for 'you', 'we' and 'they' come later; this chapter uses only taswn i, baswn i, tasai and basai.\n\nThe chapter also uses some irregular comparisons. Gwaeth means 'worse' and is the comparative of drwg ('bad'); gwaethaf is 'worst'. After yn it takes the soft mutation: Penderfynodd Arthur fod mêl ar ei wyneb yn waeth na chawr ('Arthur decided that honey on his face was worse than a giant'); Basai hynny'n waeth na'r cawr! ('That would be worse than the giant!'); Dyna'r cynllun gwaethaf! ('That's the worst plan!'). Gwell is 'better', the comparative of da: Mae hynny'n well na hud ('That is better than magic'). Llai means 'less' and goes before an adjective: Basai hi'n llai trwm na barf Modlen ('It would be less heavy than Modlen's beard'). Na ('than') takes the aspirate mutation, so cawr becomes chawr in na chawr."
  },
  "pensa": {
   "A": {
@@ -1463,7 +1474,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Taswn i'n gawr, baswn i'n chwerthin.",
-        "Baswn i'n chwerthin taswn i'n gawr."
+        "Baswn i'n chwerthin taswn i'n gawr.",
+        "Fe faswn i'n chwerthin taswn i'n gawr."
        ],
        "mutation_hint": true
       },
@@ -1475,7 +1487,8 @@
         "Tasai'r cawr yn gweld y farf, basai fe'n gwybod.",
         "Tasai'r cawr yn gweld y farf, basai e'n gwybod.",
         "Basai fe'n gwybod tasai'r cawr yn gweld y farf.",
-        "Basai e'n gwybod tasai'r cawr yn gweld y farf."
+        "Basai e'n gwybod tasai'r cawr yn gweld y farf.",
+        "Fe fasai e'n gwybod tasai'r cawr yn gweld y farf."
        ]
       },
       {
@@ -1486,7 +1499,9 @@
         "Tasai Dafi'n tisian, basai barf o fwg gydag Arthur.",
         "Tasai Dafi'n tisian, basai barf o fwg gyda Arthur.",
         "Basai barf o fwg gydag Arthur tasai Dafi'n tisian.",
-        "Basai barf o fwg gyda Arthur tasai Dafi'n tisian."
+        "Basai barf o fwg gyda Arthur tasai Dafi'n tisian.",
+        "Fe fasai barf o fwg gydag Arthur tasai Dafi'n tisian.",
+        "Fe fasai barf o fwg gyda Arthur tasai Dafi'n tisian."
        ]
       },
       {
@@ -1495,7 +1510,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Taswn i'n anfon byddin, basai rhyfel.",
-        "Basai rhyfel taswn i'n anfon byddin."
+        "Basai rhyfel taswn i'n anfon byddin.",
+        "Fe fasai rhyfel taswn i'n anfon byddin."
        ],
        "common_wrong": [
         {
@@ -1529,11 +1545,10 @@
       },
       {
        "id": "a6",
-       "prompt": "Basai fe'n hapus. (✗) →",
+       "prompt": "Baswn i'n mynd i ben mynydd. (✗) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Fasai fe ddim yn hapus.",
-        "Fasai e ddim yn hapus."
+        "Faswn i ddim yn mynd i ben mynydd."
        ],
        "mutation_hint": true
       }
@@ -1582,7 +1597,10 @@
        "prompt": "Gwnïodd Modlen y farf. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd y farf ei gwnïo gan Modlen."
+        "Cafodd y farf ei gwnïo gan Modlen.",
+        "Cafodd y farf ei gwnïo hi gan Modlen.",
+        "Fe gafodd y farf ei gwnïo gan Modlen.",
+        "Fe gafodd y farf ei gwnïo hi gan Modlen."
        ],
        "recall_of": "G32"
       }
@@ -1673,22 +1691,19 @@
     },
     {
      "id": "b6",
-     "prompt": "Mae pawb yn chwerthin am y farf wlân: mae hi'n ___ iawn.",
+     "prompt": "Dyw'r stori ddim yn drist: mae hi'n ___ iawn, ac mae pawb yn chwerthin: \"Ha! Ha!\" (funny)",
      "answer_mode": "exact",
      "accepted_answers": [
-      "ddoniol",
-      "dwp",
-      "ffug"
+      "ddoniol"
      ],
      "explanation": "yn + doniol → yn ddoniol"
     },
     {
      "id": "b7",
-     "prompt": "Mae Dafi'n dweud: beth am farf o fwg? Mae e'n ___ barf o fwg.",
+     "prompt": "\"Beth am farf o fwg?\" meddai Dafi: mae e'n ___ barf o fwg. (suggesting)",
      "answer_mode": "exact",
      "accepted_answers": [
-      "awgrymu",
-      "trafod"
+      "awgrymu"
      ]
     },
     {
@@ -1723,119 +1738,130 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Beth fasai'n digwydd tasai Cai'n mynd i Eryri gyda'i gleddyf? Dechrau: Basai …",
+     "prompt": "Roedd Cai eisiau mynd i Eryri gyda'i gleddyf. Beth ddwedodd Mali? Dechrau: Tasai Cai'n mynd i Eryri, basai …",
      "answer_mode": "self_check",
-     "model_answer": "Basai'r cawr yn ei fwyta e i frecwast.",
-     "rubric": "Mae'r ateb yn dechrau Basai … (meddai Mali).",
+     "model_answer": "Tasai Cai'n mynd i Eryri, basai'r cawr yn ei fwyta e i frecwast.",
      "key_terms": [
+      "cy-pattern-g34",
       "cy-cawr"
      ],
+     "rubric": "… basai'r cawr yn ei fwyta e.",
      "source_segment_ids": [
+      "cy-brenin-01-l34-s009",
+      "cy-brenin-01-l34-s010",
       "cy-brenin-01-l34-s011"
      ]
     },
     {
      "id": "c2",
-     "prompt": "O beth mae barf Modlen?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "O wlân",
-      "Gwlân",
-      "O wlân du a gwyn",
-      "O wlân du a gwlân gwyn",
-      "O'r gwlân du a'r gwlân gwyn",
-      "O'r gwlân o'r ffair",
-      "Gwlân du a gwyn",
-      "Gwlân du a gwlân gwyn",
-      "Mae barf Modlen o wlân",
-      "Mae hi o wlân",
-      "Mae barf Modlen o wlân du a gwyn",
-      "Mae hi o wlân du a gwyn",
-      "Mae barf Modlen o wlân du a gwlân gwyn",
-      "Mae hi o wlân du a gwlân gwyn"
+     "prompt": "Roedd Cynyr eisiau eillio ei farf a'i hanfon hi at Rhita. Pam gwrthododd Arthur?",
+     "answer_mode": "self_check",
+     "model_answer": "\"Taswn i'n cymryd dy farf di, faswn i ddim yn frenin da. Dy anrhydedd di yw hi.\"",
+     "key_terms": [
+      "cy-anrhydedd",
+      "cy-barf"
      ],
-     "model_answer": "O wlân",
+     "rubric": "Un peth: «faswn i ddim yn frenin da» · anrhydedd Cynyr yw'r farf.",
      "source_segment_ids": [
-      "cy-brenin-01-l34-s023"
+      "cy-brenin-01-l34-s015",
+      "cy-brenin-01-l34-s017",
+      "cy-brenin-01-l34-s302"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Pam mae Pero'n rhoi ei drwyn ar wyneb Arthur?",
+     "prompt": "Daeth Modlen i'r ystafell gyda basged fawr. Beth oedd yn y fasged?",
      "answer_mode": "self_check",
-     "model_answer": "Mae'r farf yn arogli o ddefaid ac o fêl.",
-     "rubric": "Mae'r ateb yn sôn am y mêl neu'r defaid.",
+     "model_answer": "Barf ffug, fawr, o'r gwlân du a'r gwlân gwyn o'r ffair.",
      "key_terms": [
-      "cy-mel",
-      "cy-dafad"
+      "cy-ffug",
+      "cy-gwlan"
      ],
+     "rubric": "Barf ffug (o wlân).",
      "source_segment_ids": [
-      "cy-brenin-01-l34-s038"
+      "cy-brenin-01-l34-s020",
+      "cy-brenin-01-l34-s022",
+      "cy-brenin-01-l34-s023"
      ]
     },
     {
      "id": "c4",
-     "prompt": "Beth ddigwyddodd i'r farf o fwg?",
+     "prompt": "Gofynnodd Modlen ddoe a oedd y cawr yn gweld yn dda. Beth oedd ei syniad hi? Dechrau: Tasai'r cawr ddim yn gweld yn dda, basai …",
      "answer_mode": "self_check",
-     "model_answer": "Agorodd Mali'r ffenest, ac aeth y farf o fwg i'r awyr.",
-     "rubric": "Mae'r ateb yn sôn am y farf yn mynd i'r awyr / drwy'r ffenest / gyda'r gwynt.",
+     "model_answer": "Tasai'r cawr ddim yn gweld yn dda, basai'r farf ffug yn ddefnyddiol iawn: o bell, mae hi'n farf dda.",
      "key_terms": [
-      "cy-mwg"
+      "cy-pattern-g34",
+      "cy-ffug"
      ],
+     "rubric": "… basai'r farf yn ddefnyddiol (o bell).",
      "source_segment_ids": [
-      "cy-brenin-01-l34-s069"
+      "cy-brenin-01-l34-s044",
+      "cy-brenin-01-l34-s045",
+      "cy-brenin-01-l34-s062",
+      "cy-brenin-01-l34-s114"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Pam gofynnodd Modlen a oedd y cawr yn gweld yn dda?",
+     "prompt": "Yn y neuadd, gwelodd Myrddin y dyn barfog. Beth ddwedodd e am draed Arthur?",
      "answer_mode": "self_check",
-     "model_answer": "Tasai'r cawr ddim yn gweld yn dda, basai'r farf ffug yn ddefnyddiol.",
-     "rubric": "Mae'r ateb yn cysylltu'r farf ffug â llygaid y cawr.",
+     "model_answer": "\"Mae dy draed di'n rhy fach i hen ddewin.\"",
      "key_terms": [
-      "cy-ffug",
-      "cy-barf"
+      "cy-troed"
      ],
+     "rubric": "Roedd ei draed e'n rhy fach.",
      "source_segment_ids": [
-      "cy-brenin-01-l34-s045"
+      "cy-brenin-01-l34-s056",
+      "cy-brenin-01-l34-s057",
+      "cy-brenin-01-l34-s059"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Beth benderfynodd Arthur?",
+     "prompt": "Tisiodd Dafi, ac roedd barf o fwg ar wyneb Arthur. Beth ddigwyddodd i'r farf o fwg?",
      "answer_mode": "self_check",
-     "model_answer": "Penderfynodd e fynd i Eryri gyda'i ffrindiau, heb fyddin.",
-     "rubric": "Un peth: mynd i Eryri / mynd gyda'i ffrindiau / mynd heb fyddin.",
+     "model_answer": "Agorodd Mali'r ffenest, ac aeth y farf o fwg drwy'r ffenest, i'r awyr.",
      "key_terms": [
-      "cy-penderfynu"
+      "cy-mwg",
+      "cy-ffenest"
      ],
+     "rubric": "Aeth hi drwy'r ffenest (i'r awyr).",
      "source_segment_ids": [
-      "cy-brenin-01-l34-s104"
+      "cy-brenin-01-l34-s067",
+      "cy-brenin-01-l34-s068",
+      "cy-brenin-01-l34-s069"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Pwy fydd y brenin barfog?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Cai",
-      "Cai fydd y brenin barfog",
-      "Cai, os bydd angen",
-      "Cai fydd e",
-      "Bydd Cai'n frenin barfog",
-      "Bydd Cai'n frenin barfog os bydd angen"
+     "prompt": "Ar ôl trafod am awr, beth benderfynodd Arthur?",
+     "answer_mode": "self_check",
+     "model_answer": "Penderfynodd e fynd i Eryri gyda'i ffrindiau, heb fyddin.",
+     "key_terms": [
+      "cy-penderfynu",
+      "cy-ffrind"
      ],
-     "model_answer": "Cai",
+     "rubric": "Mynd i Eryri gyda'i ffrindiau.",
      "source_segment_ids": [
-      "cy-brenin-01-l34-s116"
+      "cy-brenin-01-l34-s096",
+      "cy-brenin-01-l34-s100",
+      "cy-brenin-01-l34-s104"
      ]
     },
     {
      "id": "c8",
-     "prompt": "A ti? Taswn i'n frenin, baswn i'n … ?",
+     "prompt": "A ti? Gorffen: Taswn i'n frenin, baswn i'n …",
      "answer_mode": "self_check",
      "model_answer": "Taswn i'n frenin, baswn i'n rhoi pasteiod i bawb.",
-     "rubric": "Ateb byr neu Taswn i'n …, baswn i'n …"
+     "key_terms": [
+      "cy-pattern-g34",
+      "cy-brenin"
+     ],
+     "rubric": "Taswn i'n …, baswn i'n ….",
+     "source_segment_ids": [
+      "cy-brenin-01-l34-s008",
+      "cy-brenin-01-l34-s085"
+     ]
     }
    ]
   }
@@ -2108,7 +2134,7 @@
    "inline_scene": 2,
    "margin_vignette": 1,
    "margin_diagram": 1,
-   "margin_gloss": 30
+   "margin_gloss": 31
   }
  },
  "completion": {

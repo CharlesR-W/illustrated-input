@@ -22,7 +22,9 @@
    "Continuity audit 2026-10-18 applied: Myrddin's watch is heard in the coda ('tic, toc, tic, toc, fel hen oriawr') before the sneeze, paying off 15/18; one line pays off Elen's promise from 30 s046 (she tells Arthur the young queen's story, his mother's). New segments use ids from s201.",
    "Glossed incidentals (one segment each): hyd yn oed, y lleill, o'i gwmpas e, erioed, olaf, daeth … i ben, o hyd, yn dal yno, stopio, bysedd, tywyllwch.",
    "Recall pass 2026-10-18: recurrences for Penodau 35–38 vocabulary (cyfiawn, newid, craig, claddu, lluwch, hanes, gwirionedd). Gloss symbols: ⛔ → 'stopio = aros (dim mynd)', ✋ → 'bys, bysedd: pump ar bob llaw', 📶 → 'dim signal: ffôn ✗'. New segment s301.",
-   "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s005, s049, s114). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed."
+   "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s005, s049, s114). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2, c3 and c4 converted; one Pam? (c1, s011 states it); the two-fact gifts item, the 'Pam does dim signal?' present-tense reason and the unstated 'tasai Mali'n mynd i mewn i'r ogof' item replaced; c2 practises pan oedd, c4 pan fydd, c5 the short answer Gwnaf; Heddiw items keep the section's present tense; A ti? now asks for pan fydd … bydda i'n …. nodyn_en expanded to a full English explanation of pan, the two reading formulas and the Rhan 4 summary; the checker's 60-word cap is advisory (RULES §6). Rhan 4 summary rows 32–36 now quote attested sentences (32 table, 33 s070, 34 s042 / 37 s108, 35 s084, 36 s048/s077) instead of constructed ones.",
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: gwarchod meaning gloss moved to its first use (s040, from s063); s095 gloss for new ysgol; C c5 asks what Dafi promised (Gwnaf i warchod …) instead of the bare Gwnaf; c7 rubric accepts the tail or the eyes; c1 key_terms cy-aros; Rhan 4 row label basen nhw matches its example. Optional fe variants added to finite A keys."
   ],
   "review_questions": []
  },
@@ -535,7 +537,19 @@
       "id": "cy-brenin-01-l40-s040",
       "text": "\"Does dim angen,\" meddai Myrddin. \"Bydd draig fach yn gwarchod y drws.\"",
       "paragraph_start": true,
-      "speaker": "char-myrddin"
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwarchod",
+        "gloss": "gwarchod: aros + gofalu am",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-gwarchod"
+        ]
+       }
+      ]
      }
     ]
    },
@@ -774,18 +788,7 @@
      {
       "id": "cy-brenin-01-l40-s063",
       "text": "\"Wnei di aros yma a gwarchod yr ogof i fi?\"",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "gwarchod",
-        "gloss": "gwarchod: aros + gofalu am",
-        "gloss_kind": "define",
-        "covers_lexeme_ids": [
-         "cy-gwarchod"
-        ]
-       }
-      ]
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l40-s064",
@@ -1035,6 +1038,16 @@
       "text": "Am bedwar o'r gloch, mae bws yr ysgol yn stopio wrth y bont, ac mae car yn aros wrth y bws.",
       "paragraph_start": true,
       "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ysgol",
+        "gloss": "ysgol: lle mae plant yn dysgu",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-ysgol"
+        ]
+       },
        {
         "type": "gloss",
         "presentation": "margin_gloss",
@@ -1381,27 +1394,27 @@
      [
       "32",
       "cafodd … ei …",
-      "Cafodd y cawr ei gladdu."
+      "Cafodd Arthur ei goroni gan yr esgob."
      ],
      [
       "33",
       "dwedodd … fod …",
-      "Dwedodd Mali fod yr ogof yn sych."
+      "Dwedodd e fod Rhita'n gawr mawr iawn."
      ],
      [
       "34, 37",
-      "taswn i … baswn i · basen ni",
-      "Basai hi'n gweld y ddraig."
+      "taswn i … baswn i · basen nhw",
+      "Taswn i'n gawr, baswn i'n chwerthin. · Basen nhw'n chwerthin."
      ],
      [
       "35",
       "dylwn i · dylai",
-      "Dylai Mali fynd i'r tŷ."
+      "Dylai brenin arwain fel gŵydd."
      ],
      [
       "36",
       "gogledd (darllen)",
-      "Mae gen i gi = Mae ci gyda fi."
+      "Mae gen i lefrith = Mae llaeth gyda fi."
      ],
      [
       "37",
@@ -1478,7 +1491,7 @@
     "segment_id": "cy-brenin-01-l40-s127"
    }
   ],
-  "nodyn_en": "No new grammar. pan softens: pan fydd, pan ddaw (pan oedd: no change). Two old formulas are for reading only: pan ddaw'r amser 'when the time comes' (daw = will come) and y brenin a fu ac a fydd 'the king who was and will be' (relative a + bu / bydd). The tables sum up Rhan 4."
+  "nodyn_en": "The last chapter adds no new grammar. It brings back the forms of Rhan 4 and closes the story, and it uses one small word a great deal: pan ('when').\n\nPan gives the soft mutation to the verb after it, if the verb can mutate. With oedd, which starts with a vowel, nothing changes:\n- About the past: Edrychodd Arthur ar ddrws y gegin, lle roedd e'n arfer cario dŵr pan oedd e'n fachgen bach ('Arthur looked at the kitchen door, where he used to carry water when he was a small boy'); Roedd gwynt oer yn dod ohoni hi, fel pan oedd Arthur yn hebog bach ('A cold wind was coming out of it, as when Arthur was a little hawk'); Gwelais i hi o'r awyr, pan o'n i'n hebog ('I saw it from the sky, when I was a hawk'). Pan gyrhaeddon nhw'r llys ('When they reached the court') shows the mutation: cyrhaeddon → gyrhaeddon.\n- About the future: bydd becomes fydd after pan. Myrddin prophesies: pan fydd angen brenin ar Gymru, byddi di'n deffro ('when Wales needs a king, you will wake up'). Dafi promises: A gwnaf i warchod Arthur hefyd, pan fydd e'n cysgu ('And I'll guard Arthur too, when he is sleeping'). Notice that English uses the present after 'when' ('when Wales needs', 'when he is sleeping'), but Welsh uses the future, bydd, because the event is in the future.\n\nDo not confuse pan with two words that look or sound related. Pryd? asks 'when?' as a question: Ond Myrddin: pryd fydd yr amser yn dod? ('But Myrddin: when will the time come?'). And os means 'if', not 'when': A bydd Modlen yn gwneud brecwast i ti, os bydd hi'n deffro'n gynnar ('And Modlen will make you breakfast, if she wakes up early'). Myrddin is sure that the time will come, so he says pan; he is not sure that Modlen will wake early, so he says os.\n\nTwo old formulas appear for reading only. Pan ddaw'r amser means 'when the time comes'. Daw is the short future of dod for 'he' or 'it', which this book has not taught you to use; pan ddaw'r amser means the same as pan fydd yr amser yn dod. The title, Y brenin a fu ac a fydd, means 'the king who was and who will be'. It uses the relative a from Pennod 28 (y cleddyf a dynnodd Arth, 'the sword that Arth pulled'), followed by fu, an old past form of bod, and by fydd. In everyday words it is y brenin oedd, a'r brenin fydd.\n\nShort forms from Pennod 37 return. Mali today says Af i i'r bryn gyda'r ci, Mam-gu. Dof i'n ôl cyn chwech! ('I'll go to the hill with the dog, Grandma. I'll come back before six!'); dof i is the 'I' form of dod. Dafi answers Myrddin's question Wnei di aros yma a gwarchod yr ogof i fi? ('Will you stay here and guard the cave for me?') with Gwnaf ('I will'), then Gwnaf i warchod yr ogof ('I'll guard the cave'), with the soft mutation after gwnaf i.\n\nA few new words describe time and feeling. Henaint is 'old age': Mae henaint yn dod i bawb, hyd yn oed i ddewin ('Old age comes to everyone, even to a wizard'). Hiraeth is a longing for a place, a person or a time that is gone. You feel it: Teimlodd e hiraeth mawr am y dyddiau hynny ('He felt a great longing for those days'). Like ofn, it is 'on' a person: Bydd hiraeth arna i ('I will miss you', literally 'longing will be on me'). Erioed means 'ever, always (in the past)': Mae e wedi bod yma erioed ('It has always been here'). O hyd and yn dal both mean 'still': maen nhw'n cysgu yno o hyd ('they are still sleeping there'); Mae'r afon yn dal yno ('The river is still there'). Daeth … i ben means 'came to an end': Daeth amser Arthur a'i gwmni i ben ('The time of Arthur and his company came to an end').\n\nThe tables sum up Rhan 4, with one line from the story for each chapter:\n- 32: the past passive, Cafodd Arthur ei goroni gan yr esgob ('Arthur was crowned by the bishop').\n- 33: reported speech, Dwedodd e fod Rhita'n gawr mawr iawn ('He said that Rhita was a very big giant').\n- 34 and 37: the conditional, Taswn i'n gawr, baswn i'n chwerthin ('If I were a giant, I would laugh'); Basen nhw'n chwerthin ('They would laugh').\n- 35: should, Dylai brenin arwain fel gŵydd ('A king should lead like a goose').\n- 36: northern Welsh for reading, Mae gen i lefrith = Mae llaeth gyda fi ('I have milk').\n- 37: short futures, Gwnaf i warchod yr ogof ('I'll guard the cave').\n- 38: the present and future passive, Bydd hi'n cael ei chadw yn y cronicl ('It will be kept in the chronicle'), and the chronicle's gwelwyd ('was seen') for reading.\n- 39: y bydd, lle and ai, Dw i'n gwybod y bydd e'n dod ('I know that it will come').\nThe mutation table gathers the triggers that Rhan 4 used most: gan, a short future such as gwnaf i, mor and â, and pan."
  },
  "pensa": {
   "A": {
@@ -1498,7 +1511,9 @@
        "accepted_answers": [
         "Bydd Arthur yn cysgu.",
         "Bydd Arthur yn cysgu yfory.",
-        "Yfory, bydd Arthur yn cysgu."
+        "Yfory, bydd Arthur yn cysgu.",
+        "Fe fydd Arthur yn cysgu.",
+        "Fe fydd Arthur yn cysgu yfory."
        ]
       },
       {
@@ -1511,7 +1526,9 @@
         "Roedd Arthur yn cysgu ddoe.",
         "Cysgodd Arthur ddoe.",
         "Ddoe, roedd Arthur yn cysgu.",
-        "Ddoe, cysgodd Arthur."
+        "Ddoe, cysgodd Arthur.",
+        "Fe gysgodd Arthur.",
+        "Fe gysgodd Arthur ddoe."
        ]
       },
       {
@@ -1538,7 +1555,9 @@
        "recall_of": "G37",
        "accepted_answers": [
         "Gwnaf i warchod yr ogof.",
-        "Gwna i warchod yr ogof."
+        "Gwna i warchod yr ogof.",
+        "Fe wnaf i warchod yr ogof.",
+        "Fe wna i warchod yr ogof."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1551,7 +1570,8 @@
        "answer_mode": "exact",
        "recall_of": "G34",
        "accepted_answers": [
-        "Baswn i'n deffro'n gynnar."
+        "Baswn i'n deffro'n gynnar.",
+        "Fe faswn i'n deffro'n gynnar."
        ]
       },
       {
@@ -1563,7 +1583,15 @@
         "Bydd y broffwydoliaeth yn cael ei chofnodi.",
         "Bydd y broffwydoliaeth yn cael ei chofnodi gan Mali.",
         "yn cael ei chofnodi",
-        "yn cael ei chofnodi gan Mali"
+        "yn cael ei chofnodi gan Mali",
+        "Bydd y broffwydoliaeth yn cael ei chofnodi hi.",
+        "Bydd y broffwydoliaeth yn cael ei chofnodi hi gan Mali.",
+        "yn cael ei chofnodi hi",
+        "yn cael ei chofnodi hi gan Mali",
+        "Fe fydd y broffwydoliaeth yn cael ei chofnodi.",
+        "Fe fydd y broffwydoliaeth yn cael ei chofnodi gan Mali.",
+        "Fe fydd y broffwydoliaeth yn cael ei chofnodi hi.",
+        "Fe fydd y broffwydoliaeth yn cael ei chofnodi hi gan Mali."
        ],
        "common_wrong": [
         {
@@ -1612,7 +1640,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Dwedodd Mali fod yr ogof yn sych.",
-        "fod yr ogof yn sych"
+        "fod yr ogof yn sych",
+        "Fe ddwedodd Mali fod yr ogof yn sych."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1625,7 +1654,8 @@
        "answer_mode": "exact",
        "recall_of": "G35",
        "accepted_answers": [
-        "Dylai Mali fynd i'r tŷ."
+        "Dylai Mali fynd i'r tŷ.",
+        "Fe ddylai Mali fynd i'r tŷ."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -1750,141 +1780,124 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Pam mae Myrddin eisiau dychwelyd i Gwm Helyg?",
+     "prompt": "Dwedodd Myrddin: \"Rhaid i ti ddod gyda fi i Gwm Helyg.\" Pam, meddai Myrddin?",
      "answer_mode": "self_check",
-     "model_answer": "Mae e'n hen, ac mae rhywbeth yno sy'n aros am Arthur: yr ogof.",
-     "rubric": "Henaint Myrddin, neu'r ogof sy'n aros am Arthur.",
+     "model_answer": "Mae rhywbeth yno sy'n aros am Arthur.",
      "key_terms": [
-      "cy-henaint",
-      "cy-ogof"
+      "cy-aros"
      ],
+     "rubric": "Mae rhywbeth yno sy'n aros am Arthur.",
      "source_segment_ids": [
-      "cy-brenin-01-l40-s007",
+      "cy-brenin-01-l40-s009",
+      "cy-brenin-01-l40-s010",
       "cy-brenin-01-l40-s011"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Beth oedd yng nghanol yr ogof?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Bwrdd crwn o garreg",
-      "Bwrdd crwn",
-      "Bwrdd carreg",
-      "Roedd bwrdd crwn o garreg yno",
-      "Bwrdd crwn o garreg a seddau carreg",
-      "Roedd bwrdd crwn o garreg yng nghanol yr ogof",
-      "Roedd bwrdd crwn yng nghanol yr ogof",
-      "Roedd bwrdd carreg yng nghanol yr ogof",
-      "Roedd bwrdd crwn yno",
-      "Roedd bwrdd carreg yno",
-      "Roedd bwrdd crwn o garreg a seddau carreg yno",
-      "Yng nghanol yr ogof roedd bwrdd crwn o garreg",
-      "Yng nghanol yr ogof roedd bwrdd crwn",
-      "Yng nghanol yr ogof roedd bwrdd carreg"
+     "prompt": "Yng Nghwm Helyg, edrychodd Arthur ar ddrws y gegin. Beth oedd e'n arfer ei wneud yno pan oedd e'n fachgen bach?",
+     "answer_mode": "self_check",
+     "model_answer": "Roedd e'n arfer cario dŵr.",
+     "key_terms": [
+      "cy-pan",
+      "cy-arfer"
      ],
-     "model_answer": "Bwrdd crwn o garreg.",
+     "rubric": "Cario dŵr.",
      "source_segment_ids": [
-      "cy-brenin-01-l40-s034"
+      "cy-brenin-01-l40-s021",
+      "cy-brenin-01-l40-s022"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Beth fydd Arthur yn ei wneud pan fydd angen brenin ar Gymru?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Bydd e'n deffro",
-      "Deffro",
-      "Bydd Arthur yn deffro",
-      "Bydd y brenin yn deffro",
-      "Bydd Arthur yn deffro pan fydd angen brenin ar Gymru",
-      "Bydd e'n deffro pan fydd angen brenin ar Gymru",
-      "Bydd y brenin yn deffro pan fydd angen brenin ar Gymru",
-      "Pan fydd angen brenin ar Gymru, bydd Arthur yn deffro",
-      "Pan fydd angen brenin ar Gymru, bydd e'n deffro",
-      "Pan fydd angen brenin ar Gymru, bydd y brenin yn deffro"
+     "prompt": "Ar ben y bryn, aethon nhw i'r ogof. Beth oedd yng nghanol yr ogof?",
+     "answer_mode": "self_check",
+     "model_answer": "Bwrdd crwn o garreg, a llawer o seddau carreg.",
+     "key_terms": [
+      "cy-ogof",
+      "cy-crwn"
      ],
-     "model_answer": "Bydd e'n deffro.",
+     "rubric": "Bwrdd crwn o garreg.",
      "source_segment_ids": [
-      "cy-brenin-01-l40-s052"
+      "cy-brenin-01-l40-s030",
+      "cy-brenin-01-l40-s033",
+      "cy-brenin-01-l40-s034"
      ]
     },
     {
      "id": "c4",
-     "prompt": "Pwy sy'n gwarchod yr ogof?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Dafi",
-      "Dafi sy'n gwarchod yr ogof",
-      "Dafi'r ddraig",
-      "Draig fach goch",
-      "Dafi sy",
-      "Y ddraig fach goch",
-      "Y ddraig",
-      "Dafi sydd yn gwarchod yr ogof",
-      "Y ddraig fach",
-      "Y ddraig fach goch sy'n gwarchod yr ogof",
-      "Mae Dafi'n gwarchod yr ogof",
-      "Mae'r ddraig yn gwarchod yr ogof",
-      "Mae'r ddraig fach yn gwarchod yr ogof",
-      "Mae'r ddraig fach goch yn gwarchod yr ogof",
-      "Y ddraig sy'n gwarchod yr ogof",
-      "Y ddraig sydd yn gwarchod yr ogof",
-      "Y ddraig fach sy'n gwarchod yr ogof",
-      "Y ddraig fach sydd yn gwarchod yr ogof",
-      "Y ddraig fach goch sydd yn gwarchod yr ogof",
-      "Dafi sydd"
+     "prompt": "Yn ei broffwydoliaeth olaf, beth ddwedodd Myrddin? Dechrau: Pan fydd angen brenin ar Gymru, …",
+     "answer_mode": "self_check",
+     "model_answer": "Pan fydd angen brenin ar Gymru, byddi di'n deffro.",
+     "key_terms": [
+      "cy-proffwydoliaeth",
+      "cy-deffro"
      ],
-     "model_answer": "Dafi.",
+     "rubric": "… bydd Arthur yn deffro (byddi di'n deffro).",
      "source_segment_ids": [
-      "cy-brenin-01-l40-s065"
+      "cy-brenin-01-l40-s043",
+      "cy-brenin-01-l40-s046",
+      "cy-brenin-01-l40-s052"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Beth roddodd Myrddin i Mali, ac i Cai?",
+     "prompt": "Gofynnodd Myrddin: \"Wnei di aros yma a gwarchod yr ogof i fi?\" Beth ddwedodd Dafi? Dechrau: Gwnaf i …",
      "answer_mode": "self_check",
-     "model_answer": "Rhoddodd e ei sbectol i Mali, a'i ymbarél du i Cai.",
-     "rubric": "Y sbectol i Mali a'r ymbarél i Cai.",
+     "model_answer": "\"Gwnaf i warchod yr ogof. A gwnaf i warchod Arthur hefyd, pan fydd e'n cysgu.\"",
      "key_terms": [
-      "cy-sbectol",
-      "cy-ymbarel"
+      "cy-gwarchod"
      ],
+     "rubric": "Un peth: gwarchod yr ogof · gwarchod Arthur.",
      "source_segment_ids": [
-      "cy-brenin-01-l40-s069",
-      "cy-brenin-01-l40-s071"
+      "cy-brenin-01-l40-s063",
+      "cy-brenin-01-l40-s065"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Pam does dim signal gyda Mali heddiw?",
+     "prompt": "Heddiw, ar y bryn, mae Mali'n edrych ar ei ffôn. Beth mae hi'n ddweud wrth y ci?",
      "answer_mode": "self_check",
-     "model_answer": "Mae hi ar y bryn uchel, a does byth signal ar y bryn yma.",
-     "rubric": "Mae hi ar y bryn / ar y mynydd.",
+     "model_answer": "\"Dim signal eto! Does byth signal ar y bryn yma.\"",
      "key_terms": [
       "cy-signal",
       "cy-bryn"
      ],
+     "rubric": "Does dim signal.",
      "source_segment_ids": [
+      "cy-brenin-01-l40-s109",
+      "cy-brenin-01-l40-s110",
       "cy-brenin-01-l40-s111"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Beth fasai'n digwydd tasai Mali'n mynd i mewn i'r ogof? Dechrau: Basai hi'n …",
+     "prompt": "Yn yr ogof, mae sŵn bach, ac mae mwg bach llwyd yn dod o'r ogof. Beth mae Mali'n ei weld am funud?",
      "answer_mode": "self_check",
-     "model_answer": "Basai hi'n gweld y ddraig, ac efallai basai hi'n gweld y brenin yn cysgu wrth y bwrdd carreg.",
-     "rubric": "Brawddeg gyda basai hi'n …",
+     "model_answer": "Rhywbeth bach a choch: cynffon fach goch, a dau lygad mawr, melyn.",
      "key_terms": [
-      "cy-bod"
+      "cy-ogof"
+     ],
+     "rubric": "Un peth: cynffon fach goch · dau lygad melyn.",
+     "source_segment_ids": [
+      "cy-brenin-01-l40-s119",
+      "cy-brenin-01-l40-s120",
+      "cy-brenin-01-l40-s121"
      ]
     },
     {
      "id": "c8",
-     "prompt": "A ti? Am beth wyt ti'n breuddwydio?",
+     "prompt": "A ti? Beth fyddi di'n ei wneud pan fydd hi'n bwrw glaw yfory? Dechrau: Pan fydd hi'n bwrw glaw, bydda i'n …",
      "answer_mode": "self_check",
-     "model_answer": "Dw i'n breuddwydio am ddreigiau. / Dw i'n breuddwydio am fynd i Gymru.",
-     "rubric": "Am + enw / berfenw gyda threiglad meddal (ateb byr / Dw i'n breuddwydio am …)."
+     "model_answer": "Pan fydd hi'n bwrw glaw, bydda i'n darllen llyfr.",
+     "key_terms": [
+      "cy-pan"
+     ],
+     "rubric": "Pan fydd …, bydda i'n ….",
+     "source_segment_ids": [
+      "cy-brenin-01-l40-s052",
+      "cy-brenin-01-l40-s065"
+     ]
     }
    ]
   }
@@ -2118,7 +2131,7 @@
    "inline_scene": 2,
    "margin_vignette": 2,
    "margin_diagram": 0,
-   "margin_gloss": 40
+   "margin_gloss": 41
   }
  },
  "completion": {
