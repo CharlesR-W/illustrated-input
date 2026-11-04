@@ -6,7 +6,7 @@
       "islenska-data": "5.0.0",
       "tokenizer": "3.7.0"
     },
-    "input_sha256": "b63eeb39257924ce26e1b2d4e4e2c89a9568b018986e949e1b229c74bfab8cac",
+    "input_sha256": "a3947695c581af3dc2a14ba57cb00f1365d83b94a83d8e0f5da8b6d14b414a2b",
     "license": "CC BY-SA 4.0",
     "credit": "Beygingarlýsing íslensks nútímamáls. Stofnun Árna Magnússonar í íslenskum fræðum. Höfundur og ritstjóri Kristín Bjarnadóttir.",
     "source": "https://bin.arnastofnun.is",
@@ -2544,64 +2544,79 @@
       ]
     }
   },
-  "þá": {
-    "lexeme_id": "is-hann",
-    "lemma": "hann",
-    "bin_id": 403784,
-    "forms": [
-      "hann",
-      "hans",
-      "honum",
-      "þeim",
-      "þeir",
-      "þeirra",
-      "þá"
-    ],
-    "features_by_form": {
-      "hann": [
-        {
+  "þá": [
+    {
+      "lexeme_id": "is-hann",
+      "lemma": "hann",
+      "bin_id": 403784,
+      "forms": [
+        "hann",
+        "hans",
+        "honum",
+        "þeim",
+        "þeir",
+        "þeirra",
+        "þá"
+      ],
+      "features_by_form": {
+        "hann": [
+          {
+            "pos": "pron",
+            "case": "nom",
+            "number": "sing"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "sing"
+          }
+        ],
+        "hans": {
           "pos": "pron",
-          "case": "nom",
+          "case": "gen",
           "number": "sing"
         },
-        {
+        "honum": {
+          "pos": "pron",
+          "case": "dat",
+          "number": "sing"
+        },
+        "þeim": {
+          "pos": "pron",
+          "case": "dat",
+          "number": "plur"
+        },
+        "þeir": {
+          "pos": "pron",
+          "case": "nom",
+          "number": "plur"
+        },
+        "þeirra": {
+          "pos": "pron",
+          "case": "gen",
+          "number": "plur"
+        },
+        "þá": {
           "pos": "pron",
           "case": "acc",
-          "number": "sing"
+          "number": "plur"
         }
+      }
+    },
+    {
+      "lexeme_id": "is-tha",
+      "lemma": "þá",
+      "bin_id": 495859,
+      "forms": [
+        "þá"
       ],
-      "hans": {
-        "pos": "pron",
-        "case": "gen",
-        "number": "sing"
-      },
-      "honum": {
-        "pos": "pron",
-        "case": "dat",
-        "number": "sing"
-      },
-      "þeim": {
-        "pos": "pron",
-        "case": "dat",
-        "number": "plur"
-      },
-      "þeir": {
-        "pos": "pron",
-        "case": "nom",
-        "number": "plur"
-      },
-      "þeirra": {
-        "pos": "pron",
-        "case": "gen",
-        "number": "plur"
-      },
-      "þá": {
-        "pos": "pron",
-        "case": "acc",
-        "number": "plur"
+      "features_by_form": {
+        "þá": {
+          "pos": "adv"
+        }
       }
     }
-  },
+  ],
   "kalla": {
     "lexeme_id": "is-kalla",
     "lemma": "kalla",
