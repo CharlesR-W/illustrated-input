@@ -25,7 +25,8 @@
    "Review-question verdicts (Codex): Accepted: fyrrach (byr → byrrach → byrraf). · Accepted: Arth yw'r yswain cyflymaf ar y cae. · Accepted: yr yswain mwyaf blinedig. · Accepted as conversational ellipsis: mae ail yn well na thrydydd. · Revised as advised: mae e'n mynd i gysgu'n gyflymach na fi. · Accepted: urddodd e ei fab.",
    "Integrator: the cy-mor-equative base card front in lexicon.json is 'mor … â (+ SM)'; Codex asks for 'mor (+ SM) … â (+ AM)'. Not changed in the delta because the merged lexicon entry would then conflict; please apply in lexicon.json and the delta together.",
    "Recall pass 2026-10-18: recurrences added by local rewording: dyffryn (s001), cymryd rhan (s007, Cai on being knighted), pwysig (s009, 'y gystadleuaeth fawr, bwysig'), paratoi (s015, Arth's squire work), mwdlyd (s059, the churned field). Gloss s011 shortened to 'gwaywffon: pren hir, pen dur' (was 7 words). Card copies in lexicon_delta/anki_export synced to lexicon.json where the new lexicon-copy check flagged them. No gloss symbols to replace.",
-   "Audit-fix pass 2026-10-19: s017 'esgidiau gorau' → 'esgidiau mawr' (gorau was used 30 lines before any gloss could resolve it); taro glossed at its first use (s011, = curo'n gryf); late duplicate glosses removed (llai s073, already in the s033 paradigm; well s093 and orau s107, already glossed at s087/s048); the two fyrrach glosses merged; gwaeth gloss tidied; 'mor gryf â'i dad: Cai = Cynyr' (a false equation) → 'mor … â: cryf = cryf'. Pensa C c1 (perfect, as in s071 'Pwy sy wedi llosgi …?'), c6 and c7 now ask about the narrated past."
+   "Audit-fix pass 2026-10-19: s017 'esgidiau gorau' → 'esgidiau mawr' (gorau was used 30 lines before any gloss could resolve it); taro glossed at its first use (s011, = curo'n gryf); late duplicate glosses removed (llai s073, already in the s033 paradigm; well s093 and orau s107, already glossed at s087/s048); the two fyrrach glosses merged; gwaeth gloss tidied; 'mor gryf â'i dad: Cai = Cynyr' (a false equation) → 'mor … â: cryf = cryf'. Pensa C c1 (perfect, as in s071 'Pwy sy wedi llosgi …?'), c6 and c7 now ask about the narrated past.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c1, c3 and c7 converted and accepted_answers removed; one Pam? (c5, the banner, asked in the past); the yes/no c2 now asks for Mali's answer; prompts on past events use the past; c6 the negesydd's verdict replaces the two-fact 'gorau a'r ail'; the old c6 (why Cai did not look for the sword) dropped. Rubrics avoid neu (first taught at 33). nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Table 'na + treiglad llaes' rebuilt from attested sentences (the unshown 'nag Arth' and the non-mutating 'na fi' row removed). A a1 prompt no longer says 'the strong knight is strong'. Codex review fixes: B b3 no fronted focus (Mae Gwalchmai'n ennill); B b10 reworded so only hawdd fits ('…ac mae pawb yn gwybod yr ateb'), key hawdd only; s048 gloss now carries meaning (orau ← gorau: da → gwell → gorau); c5 rubric one cause; c8 accepts 'nobody is taller'; note: na ti explained as the spoken form, bare comparatives translated."
   ],
   "review_questions": [
    {
@@ -748,8 +749,8 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "orau",
-        "gloss": "y ddraig orau ← gorau",
-        "gloss_kind": "radical"
+        "gloss": "orau ← gorau: da → gwell → gorau",
+        "gloss_kind": "paradigm"
        }
       ]
      },
@@ -1376,11 +1377,15 @@
     "rows": [
      [
       "ceffyl → na cheffyl",
-      "pob → na phob un"
+      "Mae fy ngheffyl i'n gyflymach na cheffyl Gwalchmai!"
+     ],
+     [
+      "pob → na phob un",
+      "roedd Arth yn gyflymach na phob un"
      ],
      [
       "trydydd → na thrydydd",
-      "fi → na fi · Arth → nag Arth"
+      "Ac mae ail yn well na thrydydd."
      ]
     ]
    },
@@ -1448,7 +1453,7 @@
     "segment_id": "cy-brenin-01-l25-s096"
    }
   ],
-  "nodyn_en": "Comparison: add -ach (than = na, with aspirate mutation: na cheffyl) and -af: cyflym, cyflymach, cyflymaf. Many longer adjectives, especially of three or more syllables, use mwy / mwyaf: mwyaf blinedig. Irregular: da, gwell, gorau; mawr, mwy, mwyaf. To recognise for now: bach, llai, lleiaf; drwg, gwaeth, gwaethaf; mor … â (as … as)."
+  "nodyn_en": "This chapter is about comparing: 'faster', 'fastest', 'better', 'best'. The English form in -er is called the comparative, and the form in -est the superlative.\n\nRegular adjectives add -ach for the comparative and -af for the superlative: cyflym ('fast'), cyflymach ('faster'), cyflymaf ('fastest'); cryf ('strong'), cryfach ('stronger'), cryfaf ('strongest'); tal ('tall'), talach ('taller'); anodd ('difficult'), anoddach ('more difficult'). In byr ('short') the r is doubled: byrrach ('shorter').\n\n'Than' is na. After predicative yn (the yn that links a description to its subject) a comparative softens like any adjective: Mae e'n dalach na fi! ('He's taller than me!', tal → dalach); Mae ei geffyl e'n fwy na dy geffyl di ('His horse is bigger than your horse'); efallai ei fod e'n gryfach na'i geffyl ('perhaps he's stronger than his horse'); Mae e'n anoddach na gwaith marchog! ('It's harder than a knight's work!'). A comparative can also stand without na: Mae e'n fyrrach ('He's shorter'). In Dw i'n fwy na ti, ond rwyt ti'n gyflymach na fi! ('I'm bigger than you, but you're faster than me!') the big squire uses both kinds.\n\nNa itself causes the aspirate mutation: c becomes ch, p becomes ph, t becomes th. Mae fy ngheffyl i'n gyflymach na cheffyl Gwalchmai! ('My horse is faster than Gwalchmai's horse!'); roedd Arth yn gyflymach na phob un ('Arth was faster than every one'); Ac mae ail yn well na thrydydd ('And second is better than third'). Other sounds do not change: na fi ('than me'), na gwaith marchog, na'r gwynt ('than the wind'). Mali's na ti ('than you') keeps its t, as the spoken A ti? does; written Welsh has na thi. Personal names never mutate, so Elen says dyw e ddim yn waeth na Cai yn y mwd ('it isn't worse than Cai in the mud').\n\nA superlative follows its noun, like other adjectives: Fe yw'r marchog cryfaf yng Nghaerllion! ('He's the strongest knight in Caerllion!'); Arth yw'r yswain cyflymaf ar y cae! ('Arth is the fastest squire on the field!'). After a feminine singular noun it softens, again like any adjective: Pwy yw'r ddraig orau yn y twrnamaint? ('Who is the best dragon in the tournament?', gorau → orau); Ti yw'r ddraig leiaf yn y byd ('You're the smallest dragon in the world', lleiaf → leiaf). It can also stand alone after y ('the'), as a noun: Heddiw, Gwalchmai yw'r gorau, a Cai yw'r ail ('Today Gwalchmai is the best, and Cai is second'). Mali corrects Cai with Yr ail orau ('The second best'): ail ('second') softens the word after it.\n\nLonger adjectives such as blinedig ('tired') and peryglus ('dangerous') do not add -af in this chapter; instead mwyaf ('most') comes before them: fi yw'r yswain mwyaf blinedig ('I'm the most tired squire'); Y lleiaf, ond y mwyaf peryglus! ('The smallest, but the most dangerous!'). Mwy ('more') also comes before o and a noun: Roedd mwy o bobl yn y dafarn heddiw ('There were more people in the inn today').\n\nTwo common adjectives change completely. Da ('good') becomes gwell ('better') and gorau ('best'): Yfory, bydda i'n well na Gwalchmai! ('Tomorrow I'll be better than Gwalchmai!', gwell softened to well after yn); mae dy geffyl di'n well na fy ngheffyl i ('your horse is better than my horse'). Mawr ('big') becomes mwy ('bigger') and mwyaf ('biggest'): ceffyl mwyaf y twrnamaint ('the biggest horse of the tournament').\n\nTwo more pairs are for recognising only; you will use them yourself later in the book. Bach ('small') becomes llai ('smaller') and lleiaf ('smallest'): Mae'r faner yn llai nawr ('The banner is smaller now'); Rwyt ti'n llai na fi ('You're smaller than me'); y marchog lleiaf ar y cae ('the smallest knight on the field'). Llai keeps its ll after yn, because ll and rh resist this softening. Drwg ('bad') becomes gwaeth ('worse') and gwaethaf ('worst'): Mae hyn yn waeth na'r glo yn y dafarn! ('This is worse than the coal in the inn!'); Dyma'r diwrnod gwaethaf! ('This is the worst day!').\n\nAlso for recognising only is mor … â ('as … as'). Mor softens the adjective after it, and no yn comes before it: Mae fy mab i mor gryf â'i dad! ('My son is as strong as his father!', cryf → gryf); Rwyt ti mor gyflym â'r gwynt ('You're as fast as the wind'); Elen adds that Cai is mor uchel â'i dad ('as loud as his father').\n\nTwo new verbs describe the contest. Cystadlu â means 'compete against': cystadlodd Cai â Gwalchmai ('Cai competed against Gwalchmai'). Taro ('strike') has the past stem traw-: a thrawodd ei waywffon e darian marchog ifanc ('and his lance struck a young knight's shield'), with the aspirate mutation after a ('and') and the softened object (tarian → darian) after an inflected verb."
  },
  "pensa": {
   "A": {
@@ -1463,7 +1468,7 @@
      "items": [
       {
        "id": "a1",
-       "prompt": "Mae'r marchog cryf yn gryf, ond mae Cai'n ___ (cryf + -ach)",
+       "prompt": "Mae'r marchog ifanc yn gryf, ond mae Cai'n ___ (cryf + -ach)",
        "answer_mode": "exact",
        "accepted_answers": [
         "gryfach"
@@ -1673,7 +1678,7 @@
     },
     {
      "id": "b3",
-     "prompt": "Gwalchmai sy'n ennill heddiw: fe yw'r ___.",
+     "prompt": "Mae Gwalchmai'n ennill heddiw: fe yw'r ___.",
      "answer_mode": "exact",
      "accepted_answers": [
       "enillydd"
@@ -1730,11 +1735,10 @@
     },
     {
      "id": "b10",
-     "prompt": "Dyw'r gwaith ddim yn anodd heddiw: mae e'n ___.",
+     "prompt": "Dyw'r cwestiwn ddim yn anodd: mae e'n ___, ac mae pawb yn gwybod yr ateb.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "hawdd",
-      "fyr"
+      "hawdd"
      ]
     }
    ]
@@ -1745,193 +1749,119 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Pwy sy wedi urddo Cai?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Cynyr",
-      "Ei dad",
-      "Ei dad e",
-      "Cynyr, ei dad",
-      "Cynyr sy wedi urddo Cai",
-      "Cynyr sydd wedi urddo Cai",
-      "Ei dad sy wedi urddo Cai",
-      "Mae Cynyr wedi urddo Cai",
-      "Ei dad sydd wedi urddo Cai",
-      "Ei dad e sy wedi urddo Cai",
-      "Ei dad e sydd wedi urddo Cai",
-      "Mae ei dad wedi urddo Cai",
-      "Mae ei dad e wedi urddo Cai"
+     "prompt": "Yn y bore, wrth y pebyll, roedd gwaith gyda Cynyr. Beth oedd y gwaith?",
+     "answer_mode": "self_check",
+     "model_answer": "Urddodd e Cai, ei fab: roedd Cai'n farchog wedyn.",
+     "key_terms": [
+      "cy-urddo",
+      "cy-marchog"
      ],
-     "model_answer": "Cynyr.",
+     "rubric": "Urddodd e Cai.",
      "source_segment_ids": [
-      "cy-brenin-01-l25-s004"
+      "cy-brenin-01-l25-s004",
+      "cy-brenin-01-l25-s005",
+      "cy-brenin-01-l25-s006"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Ydy Gwalchmai'n dalach na Cai, meddai Mali? Beth ddwedodd hi?",
+     "prompt": "Roedd Arth yn yswain i Cai. Beth oedd ei waith e?",
      "answer_mode": "self_check",
-     "model_answer": "Nac ydy. Mae e'n fyrrach, ond mae ei geffyl e'n fwy.",
-     "rubric": "Nac ydy + byrrach (fyrrach).",
+     "model_answer": "Roedd e'n paratoi'r ceffyl, ac roedd e'n cario'r waywffon, y darian a'r cleddyf.",
      "key_terms": [
-      "cy-byr",
-      "cy-tal"
+      "cy-yswain",
+      "cy-paratoi",
+      "cy-cario"
      ],
+     "rubric": "Un peth: paratoi'r ceffyl · cario'r waywffon, y darian, y cleddyf · sgleinio'r darian.",
      "source_segment_ids": [
+      "cy-brenin-01-l25-s015",
+      "cy-brenin-01-l25-s017",
+      "cy-brenin-01-l25-s018"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Dwedodd Cai: \"Mae Gwalchmai'n dalach na fi!\" Beth oedd ateb Mali?",
+     "answer_mode": "self_check",
+     "model_answer": "Dyw e ddim yn dalach na ti, Cai: mae e'n fyrrach.",
+     "key_terms": [
+      "cy-tal",
+      "cy-byr",
+      "cy-na-than"
+     ],
+     "rubric": "Mae Gwalchmai'n fyrrach (dyw e ddim yn dalach).",
+     "source_segment_ids": [
+      "cy-brenin-01-l25-s021",
+      "cy-brenin-01-l25-s022",
       "cy-brenin-01-l25-s023",
       "cy-brenin-01-l25-s024"
      ]
     },
     {
-     "id": "c3",
-     "prompt": "Pwy yw'r yswain cyflymaf ar y cae?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Arth",
-      "Arth yw'r yswain cyflymaf",
-      "Arth yw e",
-      "Arth yw'r yswain cyflymaf ar y cae",
-      "Yr yswain cyflymaf yw Arth",
-      "Yr yswain cyflymaf ar y cae yw Arth"
-     ],
-     "model_answer": "Arth.",
-     "source_segment_ids": [
-      "cy-brenin-01-l25-s056"
-     ]
-    },
-    {
      "id": "c4",
-     "prompt": "Pam mae baner yr arglwydd coch yn ddu?",
+     "prompt": "Beth ddigwyddodd i'r marchog bach, y marchog sy'n gweiddi?",
      "answer_mode": "self_check",
-     "model_answer": "Tisiodd Dafi dan glogyn Mali, a llosgodd y tân y faner.",
-     "rubric": "Dafi + tisian / tân.",
+     "model_answer": "Gwaeddodd e'n uchel, ond cwympodd e o'i geffyl yn gyflym iawn.",
      "key_terms": [
-      "cy-tisian",
-      "cy-llosgi"
+      "cy-cwympo",
+      "cy-ceffyl"
      ],
+     "rubric": "Cwympodd e o'i geffyl.",
      "source_segment_ids": [
-      "cy-brenin-01-l25-s068"
+      "cy-brenin-01-l25-s033",
+      "cy-brenin-01-l25-s034",
+      "cy-brenin-01-l25-s035"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Pwy yw'r gorau heddiw, a phwy yw'r ail?",
+     "prompt": "Pam roedd baner yr arglwydd coch yn ddu ac yn fach?",
      "answer_mode": "self_check",
-     "model_answer": "Gwalchmai yw'r gorau, a Cai yw'r ail.",
-     "rubric": "Gwalchmai yw'r gorau; Cai yw'r ail. Atebion byr yn ddigon: Gwalchmai; Cai.",
+     "model_answer": "Tisiodd Dafi dan glogyn Mali, a llosgodd y tân y faner.",
      "key_terms": [
-      "cy-gorau"
+      "cy-tisian",
+      "cy-llosgi",
+      "cy-baner"
      ],
+     "rubric": "Llosgodd tân Dafi'r faner.",
      "source_segment_ids": [
-      "cy-brenin-01-l25-s083"
+      "cy-brenin-01-l25-s067",
+      "cy-brenin-01-l25-s068",
+      "cy-brenin-01-l25-s069",
+      "cy-brenin-01-l25-s070"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Pam doedd Cai ddim yn chwilio am y cleddyf pan oedd y wain yn wag?",
+     "prompt": "Cystadlodd Cai â Gwalchmai, a doedd y ddau ddim yn cwympo. Beth ddwedodd y negesydd am Cai?",
      "answer_mode": "self_check",
-     "model_answer": "Roedd e'n meddwl bod Arth wedi sgleinio'r cleddyf.",
-     "rubric": "… meddwl bod Arth … sgleinio.",
+     "model_answer": "Heddiw, Gwalchmai yw'r gorau, a Cai yw'r ail.",
      "key_terms": [
-      "cy-sgleinio",
-      "cy-bod-that"
+      "cy-ail",
+      "cy-gorau"
      ],
+     "rubric": "Cai yw'r ail.",
      "source_segment_ids": [
-      "cy-brenin-01-l25-s117"
+      "cy-brenin-01-l25-s077",
+      "cy-brenin-01-l25-s079",
+      "cy-brenin-01-l25-s080",
+      "cy-brenin-01-l25-s083"
      ]
     },
     {
      "id": "c7",
      "prompt": "Ble roedd cleddyf Cai yn y nos?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Dan y fainc",
-      "Roedd e dan y fainc",
-      "Dan y fainc yn y dafarn",
-      "Roedd e dan y fainc yn y dafarn",
-      "O dan y fainc",
-      "Roedd e o dan y fainc",
-      "O dan y fainc yn y dafarn",
-      "Roedd cleddyf Cai dan y fainc",
-      "Roedd cleddyf Cai dan y fainc yn y dafarn",
-      "Yn y dafarn, dan y fainc",
-      "Yn y cysgod, dan y fainc",
-      "Roedd e o dan y fainc yn y dafarn",
-      "Roedd cleddyf Cai o dan y fainc",
-      "Roedd cleddyf Cai o dan y fainc yn y dafarn",
-      "Yn y dafarn",
-      "Roedd cleddyf Cai dan y fainc yn y nos",
-      "Yn y nos, roedd cleddyf Cai dan y fainc",
-      "Dan y fainc yn y nos",
-      "Roedd e dan y fainc yn y nos",
-      "Yn y nos, roedd e dan y fainc",
-      "Roedd cleddyf Cai dan y fainc yn y dafarn yn y nos",
-      "Yn y nos, roedd cleddyf Cai dan y fainc yn y dafarn",
-      "Dan y fainc yn y dafarn yn y nos",
-      "Roedd e dan y fainc yn y dafarn yn y nos",
-      "Yn y nos, roedd e dan y fainc yn y dafarn",
-      "Roedd cleddyf Cai o dan y fainc yn y nos",
-      "Yn y nos, roedd cleddyf Cai o dan y fainc",
-      "O dan y fainc yn y nos",
-      "Roedd e o dan y fainc yn y nos",
-      "Yn y nos, roedd e o dan y fainc",
-      "Roedd cleddyf Cai o dan y fainc yn y dafarn yn y nos",
-      "Yn y nos, roedd cleddyf Cai o dan y fainc yn y dafarn",
-      "O dan y fainc yn y dafarn yn y nos",
-      "Roedd e o dan y fainc yn y dafarn yn y nos",
-      "Yn y nos, roedd e o dan y fainc yn y dafarn",
-      "Roedd cleddyf Cai yn y dafarn, dan y fainc",
-      "Roedd cleddyf Cai yn y dafarn, dan y fainc yn y nos",
-      "Yn y nos, roedd cleddyf Cai yn y dafarn, dan y fainc",
-      "Yn y dafarn, dan y fainc yn y nos",
-      "Roedd e yn y dafarn, dan y fainc",
-      "Roedd e yn y dafarn, dan y fainc yn y nos",
-      "Yn y nos, roedd e yn y dafarn, dan y fainc",
-      "Roedd cleddyf Cai yn y cysgod, dan y fainc",
-      "Roedd cleddyf Cai yn y cysgod, dan y fainc yn y nos",
-      "Yn y nos, roedd cleddyf Cai yn y cysgod, dan y fainc",
-      "Yn y cysgod, dan y fainc yn y nos",
-      "Roedd e yn y cysgod, dan y fainc",
-      "Roedd e yn y cysgod, dan y fainc yn y nos",
-      "Yn y nos, roedd e yn y cysgod, dan y fainc",
-      "Roedd cleddyf Cai yn y dafarn",
-      "Roedd cleddyf Cai yn y dafarn yn y nos",
-      "Yn y nos, roedd cleddyf Cai yn y dafarn",
-      "Yn y dafarn yn y nos",
-      "Roedd e yn y dafarn",
-      "Roedd e yn y dafarn yn y nos",
-      "Yn y nos, roedd e yn y dafarn",
-      "Dan y fainc, roedd cleddyf Cai",
-      "Dan y fainc, roedd e",
-      "Dan y fainc yn y dafarn, roedd cleddyf Cai",
-      "Dan y fainc yn y dafarn, roedd e",
-      "O dan y fainc, roedd cleddyf Cai",
-      "O dan y fainc, roedd e",
-      "O dan y fainc yn y dafarn, roedd cleddyf Cai",
-      "O dan y fainc yn y dafarn, roedd e",
-      "Yn y dafarn, dan y fainc, roedd cleddyf Cai",
-      "Yn y dafarn, dan y fainc, roedd e",
-      "Yn y cysgod, dan y fainc, roedd cleddyf Cai",
-      "Yn y cysgod, dan y fainc, roedd e",
-      "Yn y dafarn, roedd cleddyf Cai",
-      "Yn y dafarn, roedd e",
-      "Roedd cleddyf Cai yn y nos dan y fainc",
-      "Roedd e yn y nos dan y fainc",
-      "Roedd cleddyf Cai yn y nos dan y fainc yn y dafarn",
-      "Roedd e yn y nos dan y fainc yn y dafarn",
-      "Roedd cleddyf Cai yn y nos o dan y fainc",
-      "Roedd e yn y nos o dan y fainc",
-      "Roedd cleddyf Cai yn y nos o dan y fainc yn y dafarn",
-      "Roedd e yn y nos o dan y fainc yn y dafarn",
-      "Roedd cleddyf Cai yn y nos yn y dafarn, dan y fainc",
-      "Roedd e yn y nos yn y dafarn, dan y fainc",
-      "Roedd cleddyf Cai yn y nos yn y cysgod, dan y fainc",
-      "Roedd e yn y nos yn y cysgod, dan y fainc",
-      "Roedd cleddyf Cai yn y nos yn y dafarn",
-      "Roedd e yn y nos yn y dafarn"
+     "answer_mode": "self_check",
+     "model_answer": "Roedd e dan y fainc yn y dafarn, yn y cysgod.",
+     "key_terms": [
+      "cy-cleddyf",
+      "cy-mainc"
      ],
-     "model_answer": "Dan y fainc, yn y dafarn.",
+     "rubric": "Dan y fainc.",
      "source_segment_ids": [
+      "cy-brenin-01-l25-s109",
+      "cy-brenin-01-l25-s114",
       "cy-brenin-01-l25-s121"
      ]
     },
@@ -1940,7 +1870,15 @@
      "prompt": "A ti? Pwy sy'n dalach na ti yn dy deulu di?",
      "answer_mode": "self_check",
      "model_answer": "Mae fy mrawd i'n dalach na fi.",
-     "rubric": "Enw / … yn dalach na … (na + llaes os oes c, p, t)."
+     "key_terms": [
+      "cy-tal",
+      "cy-na-than"
+     ],
+     "rubric": "Un o dy deulu di: … yn dalach na fi · Does dim un yn dalach na fi.",
+     "source_segment_ids": [
+      "cy-brenin-01-l25-s022",
+      "cy-brenin-01-l25-s078"
+     ]
     }
    ]
   }

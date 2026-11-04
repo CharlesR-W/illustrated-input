@@ -25,7 +25,8 @@
    "For the integrator: the published card cy-pattern-g30 could not be changed from the delta (lexicon-merge identity check). Proposed back text, to apply in lexicon.json and this delta together: \"When I went through the gate, the king had died. · Before dying, Uthr called me. · After hearing … · While walking through the storm … · for eleven years (with the present: and still)\"",
    "For the integrator: published sense cy-ers-s1 / card base kept as is (merge identity check). Proposed English sense per the review: \"since; for (from an earlier point up to the time referred to; with the present tense = up to now)\"",
    "Recall pass 2026-10-18: recurrences added. Privacy for the secret: ar gau + clo + cloi (s149, also a pluperfect model 'roedd Myrddin wedi ei gloi e'), and Myrddin opens the lock for Modlen (s139 split, s153). Arthur's 'Ai fi oedd y babi yn y flanced?' and Elen's 'Ti oedd y babi' (s150–s151: ai, babi, blanced, subject focus) answer Mali's Pennod 17 question in the family's own words. Cynyr to Mali: twyllo (s154, 'Wnes i ddim dy dwyllo di, ond wnes i ddim dweud y gwir chwaith'). Correction: s030 'gyda Uthr' → 'gydag Uthr'. Cai: sgleinio (s128), llai + na + gwell (s152, teasing). No gloss symbols to replace.",
-   "Recall pass revision 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): critique row s149 reworked as suggested."
+   "Recall pass revision 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): critique row s149 reworked as suggested.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, no neu or rheswm; key_terms, sources); the exact c5 dropped; one Pam? (c1, the castle's danger, s032–033); the present-tense 'Pam mae Mali'n ddig?' and 'Sut mae Arthur yn teimlo…? Pam?' replaced by past-tense questions on what Mali said and what Arthur wanted; c1's unattested model 'Cadw fy mab i'n ddiogel' replaced by s036; c3 no longer gives a 'Roedd … wedi' frame. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). rule_cy no longer keys ers to 'hyd heddiw' (s105 has ers with roedd) or claims a time rule. Tables limited to attested sentences: mae/roedd … wedi now pairs s069 with s050 and s114; a new roedd … wedi table (s035, s062, s112, s054); the unshown 'Pan ddaeth Myrddin, roedd pawb wedi mynd i gysgu' removed. Pensum A: a4's unshown gyrhaeddodd replaced by a roedd … wedi item; the enghraifft no longer uses unknown 'o flaen'. Codex review fixes: A a4's stale gyrhaeddodd explanation replaced; A a9 also accepts ddaeth; first-use aids: s034 cyn (yn gyntaf galw, wedyn marw) instead of the circular cyn ↔ ar ôl, s036 unig fab: dim ond un mab, s060 atgof gloss without untaught cof, s074 gwaed: coch, yn y corff; c6 rubric one fact; B b4 (… yn uchel) and b7 (Dyw e ddim yn drist, ond …) reworded so one bank word fits."
   ],
   "review_questions": [
    {
@@ -504,8 +505,8 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "Cyn",
-        "gloss": "cyn ↔ ar ôl",
-        "gloss_kind": "antonym"
+        "gloss": "yn gyntaf galw, wedyn marw",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -515,7 +516,16 @@
      },
      {
       "id": "cy-brenin-01-l30-s036",
-      "text": "\"Rhaid i ti amddiffyn fy mab, Myrddin, meddai e. Ei unig fab e oedd y babi.\""
+      "text": "\"Rhaid i ti amddiffyn fy mab, Myrddin, meddai e. Ei unig fab e oedd y babi.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "unig",
+        "gloss": "unig fab: dim ond un mab",
+        "gloss_kind": "define"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l30-s037",
@@ -706,7 +716,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "atgof",
-        "gloss": "atgof: rhywbeth yn y cof",
+        "gloss": "atgof: rhywbeth rwyt ti'n ei gofio",
         "gloss_kind": "define"
        },
        {
@@ -828,6 +838,16 @@
       "id": "cy-brenin-01-l30-s074",
       "text": "\"Gwaed Uthr yw dy waed di.\"",
       "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Gwaed",
+        "gloss": "gwaed: coch, yn y corff",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-gwaed"
+        ]
+       },
        {
         "type": "gloss",
         "presentation": "margin_gloss",
@@ -1370,7 +1390,7 @@
  },
  "grammar": {
   "title_cy": "Roedd y brenin wedi marw",
-  "rule_cy": "roedd / ro'n i … wedi + berfenw = cyn amser arall yn y gorffennol. Pan es i …, roedd e wedi marw. · cyn, ar ôl, wrth + berfenw. · ers + amser = o amser yn y gorffennol (gyda mae / dw i: hyd heddiw).",
+  "rule_cy": "roedd / ro'n i … wedi + berfenw: Pan es i drwy'r porth, roedd y brenin wedi marw. · Rwyt ti wedi cadw dy addewid ↔ Ro'n i wedi addo. · cyn, ar ôl, wrth + berfenw: cyn marw, ar ôl clywed, wrth gerdded · ers + amser: ers un ar ddeg o flynyddoedd, ers y noson honno",
   "tables": [
    {
     "caption": "mae … wedi ↔ roedd … wedi",
@@ -1380,20 +1400,37 @@
     ],
     "rows": [
      [
-      "Mae'r brenin wedi marw.",
-      "Roedd y brenin wedi marw."
+      "Rwyt ti wedi bod yn ffyddlon, Cynyr.",
+      "Roedd e wedi bod yn was ffyddlon i'r brenin."
      ],
      [
-      "Dw i wedi addo.",
+      "Rwyt ti wedi cadw dy addewid.",
       "Ro'n i wedi addo."
+     ]
+    ]
+   },
+   {
+    "caption": "roedd … wedi",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "roedd e wedi",
+      "Roedd e wedi rhoi'r enw Arthur i'r babi."
      ],
      [
-      "Mae Mali wedi gofyn.",
-      "Roedd Mali wedi gofyn."
+      "roedd hi wedi",
+      "Roedd hi wedi gofyn y cwestiwn hwn yn y neuadd."
      ],
      [
-      "Mae pawb wedi mynd i gysgu.",
-      "Roedd pawb wedi mynd i gysgu."
+      "ro'n i wedi",
+      "Ro'n i wedi gweld y cleddyf yn y drych hefyd."
+     ],
+     [
+      "roedd pawb … wedi",
+      "Roedd pawb yn y llys wedi mynd i gysgu."
      ]
     ]
    },
@@ -1407,10 +1444,6 @@
      [
       "Pan es i drwy'r porth,",
       "roedd y brenin wedi marw."
-     ],
-     [
-      "Pan ddaeth Myrddin,",
-      "roedd pawb wedi mynd i gysgu."
      ]
     ]
    },
@@ -1469,7 +1502,7 @@
     "segment_id": "cy-brenin-01-l30-s014"
    }
   ],
-  "nodyn_en": "Roedd … wedi = 'had done': one past event before another (Pan es i drwy'r porth, roedd y brenin wedi marw). Cyn, ar ôl and wrth take a verb-noun: cyn marw 'before dying', ar ôl clywed 'after hearing', wrth gerdded 'while walking'. Ers + time with the present = 'for … (and still)'."
+  "nodyn_en": "This chapter adds the pluperfect, the 'had done' tense, for an event that was already complete before another moment in the past. You know mae … wedi from Pennod 11 for 'has done': Rwyt ti wedi cadw dy addewid ('You have kept your promise'). Put roedd (or ro'n i and the other past forms of bod from Pennod 17) in place of mae, and the same pattern means 'had done': roedd … wedi + verb-noun, the dictionary form of a verb. The verb-noun after wedi does not mutate.\n\nPan es i drwy'r porth, roedd y brenin wedi marw ('When I went through the gate, the king had died'): the king's death came before Myrddin passed the gate. Myrddin's story is full of such earlier events. Roedd e wedi rhoi'r enw Arthur i'r babi ('He had given the name Arthur to the baby'); Roedd y brenin wedi bod yn sâl am amser hir ('The king had been ill for a long time'); Roedd Cynyr wedi gadael Caerllion gydag Elen ('Cynyr had left Caerllion with Elen'); Roedd pawb yn y llys wedi mynd i gysgu ('Everyone in the court had gone to sleep'). He also recalls the winter evening in Llys Cynyr: roedd Cynyr wedi dweud hanner y stori ('Cynyr had told half the story'), Roedd Arth wedi mynd i gysgu, ac roedd Mali wedi gofyn: Pwy oedd y babi? ('Arth had gone to sleep, and Mali had asked: Who was the baby?'). Mali uses the 'I' form: Ro'n i wedi gweld y cleddyf yn y drych hefyd, cyn y daith ('I had seen the sword in the mirror too, before the journey'). Compare the two tenses side by side: Rwyt ti wedi bod yn ffyddlon, Cynyr ('You have been faithful, Cynyr') and Roedd e wedi bod yn was ffyddlon i'r brenin am flynyddoedd ('He had been a faithful servant to the king for years').\n\nCyn ('before'), ar ôl ('after') and wrth ('while, on') can be followed directly by a verb-noun, where English uses '-ing' or a whole clause. Cyn marw, galwodd Uthr fi at ei wely ('Before he died, Uthr called me to his bed', literally 'before dying'). Ar ôl clywed geiriau'r brenin, es i o'r castell yn y nos ('After hearing the king's words, I left the castle in the night'). Ar ôl clywed y stori, roedd Arthur yn dawel iawn ('After hearing the story, Arthur was very quiet'). Wrth gerdded drwy'r storm, ro'n i'n siarad gyda'r babi ('While walking through the storm, I was talking to the baby'). Wrth agor y drws, gwelais i Myrddin ('On opening the door, I saw Myrddin'). Wrth softens the verb-noun after it (cerdded → gerdded), but in this chapter cyn and ar ôl leave it unchanged (cyn marw, ar ôl clywed). Cyn and ar ôl also come before a noun: cyn y daith ('before the journey'), Cyn y bore ('Before morning'), Ar ôl y noson honno ('After that night').\n\nErs means 'since' or 'for', with a starting point or a length of time. With the present tense it describes something that began in the past and is still going on; English uses 'have been' here, but Welsh keeps the present: Ers un ar ddeg o flynyddoedd, dw i'n cadw cyfrinach ('For eleven years I have been keeping a secret'); Ers y noson honno, dw i'n cadw'r gyfrinach bob dydd ('Since that night I have kept the secret every day'); fy mab i wyt ti hefyd, ers y noson honno ('you are my son too, since that night'). With roedd, ers looks back from a past moment: Ers un ar ddeg o flynyddoedd, roedd pawb yn gwybod ('For eleven years everyone had known'); ro'n i'n amau bod cyfrinach ers stori Dad am y storm ('I had suspected there was a secret since Dad's story about the storm').\n\nOther forms in the chapter. Maeth means 'foster': tad maeth ('foster father'), mam faeth ('foster mother'), where maeth softens after the feminine noun mam. Cael ei eni means 'be born': cafodd mab ei eni i'r brenin a'r frenhines ('a son was born to the king and queen'); Ble ces i fy ngeni? ('Where was I born?'); Cest ti dy eni yma ('You were born here'). Learn these as set phrases for now; Pennod 32 explains the pattern. Roedd e'n arfer cario bwced dŵr i Modlen ('He used to carry a bucket of water for Modlen') uses arfer for 'used to'. In yn hytrach nag i'r cyngor ('rather than for the council'), na becomes nag before a vowel."
  },
  "pensa": {
   "A": {
@@ -1514,19 +1547,18 @@
       },
       {
        "id": "a4",
-       "prompt": "Pan ___ (cyrraedd) Myrddin, roedd pawb wedi mynd i gysgu.",
+       "prompt": "Mae'r plant wedi mynd i gysgu. (roedd) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "gyrhaeddodd"
+        "Roedd y plant wedi mynd i gysgu."
        ],
-       "mutation_hint": true,
-       "explanation": "pan + treiglad: cyrhaeddodd → gyrhaeddodd"
+       "explanation": "mae … wedi → roedd … wedi"
       }
      ]
     },
     {
      "enghraifft": {
-      "prompt": "___ (o flaen) marw, galwodd Uthr Myrddin. (cyn / ar ôl)",
+      "prompt": "___ marw, galwodd Uthr Myrddin at ei wely. (cyn / ar ôl)",
       "answer": "Cyn"
      },
      "items": [
@@ -1577,7 +1609,8 @@
        "prompt": "Daeth Myrddin drwy'r storm. → y dewin ___ drwy'r storm",
        "answer_mode": "exact",
        "accepted_answers": [
-        "a ddaeth"
+        "a ddaeth",
+        "ddaeth"
        ],
        "mutation_hint": true,
        "recall_of": "G28"
@@ -1657,11 +1690,10 @@
     },
     {
      "id": "b4",
-     "prompt": "Mae'r babi'n drist ac mae dagrau yn ei lygaid e: mae e'n ___.",
+     "prompt": "Mae'r babi'n drist ac mae dagrau yn ei lygaid e: mae e'n ___ yn uchel.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "crio",
-      "brifo"
+      "crio"
      ]
     },
     {
@@ -1682,11 +1714,10 @@
     },
     {
      "id": "b7",
-     "prompt": "Does dim ffrind gyda'r hen ddyn, a does neb yn ei dŷ e: mae e'n ___.",
+     "prompt": "Does dim ffrind gyda'r hen ddyn, a does neb yn ei dŷ e. Dyw e ddim yn drist, ond mae e'n ___.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "unig",
-      "drist"
+      "unig"
      ]
     },
     {
@@ -1722,113 +1753,131 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Beth oedd Uthr wedi ei ofyn i Myrddin cyn marw?",
+     "prompt": "Pam roedd y castell yn beryglus i'r babi?",
      "answer_mode": "self_check",
-     "model_answer": "Roedd e wedi gofyn: Cadw fy mab i'n ddiogel.",
-     "rubric": "Ateb: cadw'r babi / y mab yn ddiogel.",
+     "model_answer": "Roedd y brenin wedi bod yn sâl am amser hir, ac roedd yr arglwyddi'n ymladd am yr orsedd.",
      "key_terms": [
-      "cy-cadw"
+      "cy-gorsedd",
+      "cy-peryglus"
      ],
+     "rubric": "Un peth: brenin sâl · yr arglwyddi'n ymladd am yr orsedd.",
      "source_segment_ids": [
-      "cy-brenin-01-l30-s036"
+      "cy-brenin-01-l30-s032",
+      "cy-brenin-01-l30-s033"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Pam doedd y castell ddim yn ddiogel i'r babi?",
+     "prompt": "Cyn marw, galwodd Uthr Myrddin at ei wely. Beth ddwedodd e wrth Myrddin?",
      "answer_mode": "self_check",
-     "model_answer": "Roedd y brenin yn sâl, ac roedd yr arglwyddi'n ymladd am yr orsedd.",
-     "rubric": "Ateb: brenin sâl / arglwyddi'n ymladd am yr orsedd.",
+     "model_answer": "\"Rhaid i ti amddiffyn fy mab, Myrddin.\"",
      "key_terms": [
-      "cy-gorsedd"
+      "cy-amddiffyn",
+      "cy-mab"
      ],
+     "rubric": "Amddiffyn ei fab.",
      "source_segment_ids": [
-      "cy-brenin-01-l30-s032"
+      "cy-brenin-01-l30-s034",
+      "cy-brenin-01-l30-s035",
+      "cy-brenin-01-l30-s036"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Pan aeth Myrddin drwy'r porth, beth oedd wedi digwydd? (Roedd … wedi …)",
+     "prompt": "Pan aeth Myrddin drwy'r porth gyda'r babi, beth oedd wedi digwydd yn y castell?",
      "answer_mode": "self_check",
      "model_answer": "Roedd y brenin wedi marw.",
-     "rubric": "Roedd … wedi + berfenw.",
      "key_terms": [
-      "cy-marw"
+      "cy-marw",
+      "cy-wedi"
      ],
+     "rubric": "Y brenin wedi marw.",
      "source_segment_ids": [
+      "cy-brenin-01-l30-s038",
       "cy-brenin-01-l30-s039"
      ]
     },
     {
      "id": "c4",
-     "prompt": "Beth oedd addewid Cynyr?",
+     "prompt": "Rhoddodd Myrddin y babi i Cynyr. Beth oedd addewid Cynyr?",
      "answer_mode": "self_check",
-     "model_answer": "Bydd e'n magu'r babi yn fab iddo fe, a bydd e'n cadw'r gyfrinach.",
-     "rubric": "Ateb: magu'r babi / cadw'r gyfrinach.",
+     "model_answer": "Bydda i'n magu'r babi yn fab i fi, a bydda i'n cadw'r gyfrinach.",
      "key_terms": [
-      "cy-magu",
-      "cy-cadw"
+      "cy-addewid",
+      "cy-magu"
      ],
+     "rubric": "Un peth: magu'r babi · cadw'r gyfrinach.",
      "source_segment_ids": [
+      "cy-brenin-01-l30-s064",
+      "cy-brenin-01-l30-s065",
+      "cy-brenin-01-l30-s066",
       "cy-brenin-01-l30-s067"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Beth yw enw go iawn Arth?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Arthur",
-      "Arthur yw ei enw e",
-      "Arthur, mab Uthr",
-      "Arthur yw ei enw",
-      "Ei enw yw Arthur",
-      "Ei enw e yw Arthur",
-      "Arthur yw enw go iawn Arth",
-      "Arthur yw ei enw go iawn",
-      "Ei enw go iawn yw Arthur",
-      "Enw go iawn Arth yw Arthur",
-      "Ei enw go iawn e yw Arthur",
-      "Arthur yw ei enw go iawn e"
+     "prompt": "Gofynnodd Arthur: \"Ai fi oedd y babi yn y flanced?\" Beth oedd ateb Elen?",
+     "answer_mode": "self_check",
+     "model_answer": "\"Ie. Ti oedd y babi.\"",
+     "key_terms": [
+      "cy-babi"
      ],
-     "model_answer": "Arthur, mab Uthr.",
+     "rubric": "Ie (fe oedd y babi).",
      "source_segment_ids": [
-      "cy-brenin-01-l30-s072"
+      "cy-brenin-01-l30-s150",
+      "cy-brenin-01-l30-s151"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Pam mae Mali'n ddig?",
+     "prompt": "Wrth y ffenest, roedd Mali'n goch. Beth ddwedodd hi wrth ei mam a'i thad?",
      "answer_mode": "self_check",
-     "model_answer": "Roedd pawb yn gwybod y gyfrinach ers un ar ddeg o flynyddoedd, a wnaeth neb ddweud dim byd.",
-     "rubric": "Ateb: cyfrinach / doedd neb wedi dweud.",
+     "model_answer": "\"Ro't ti'n gwybod! Roedd pawb yn gwybod ers un ar ddeg o flynyddoedd, a wnaeth neb ddweud dim byd!\"",
      "key_terms": [
-      "cy-cyfrinach"
+      "cy-gwybod",
+      "cy-ers"
      ],
+     "rubric": "Roedd pawb yn gwybod.",
      "source_segment_ids": [
+      "cy-brenin-01-l30-s101",
+      "cy-brenin-01-l30-s102",
+      "cy-brenin-01-l30-s103",
+      "cy-brenin-01-l30-s104",
       "cy-brenin-01-l30-s105"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Sut mae Arthur yn teimlo wrth y tân? Pam?",
+     "prompt": "Ar ôl clywed y stori, beth oedd Arthur eisiau?",
      "answer_mode": "self_check",
-     "model_answer": "Mae e'n teimlo'n unig: dyw e ddim eisiau'r goron, mae e eisiau mynd yn ôl i Gwm Helyg.",
-     "rubric": "Ateb: unig / dim eisiau coron, gyda rheswm.",
+     "model_answer": "Doedd e ddim eisiau coron: roedd e eisiau mynd yn ôl i Gwm Helyg.",
      "key_terms": [
-      "cy-unig",
       "cy-coron"
      ],
+     "rubric": "Mynd yn ôl i Gwm Helyg (dim coron).",
      "source_segment_ids": [
-      "cy-brenin-01-l30-s134"
+      "cy-brenin-01-l30-s131",
+      "cy-brenin-01-l30-s134",
+      "cy-brenin-01-l30-s135",
+      "cy-brenin-01-l30-s136"
      ]
     },
     {
      "id": "c8",
      "prompt": "A ti? Beth wyt ti'n ei gofio o dy blentyndod?",
      "answer_mode": "self_check",
-     "model_answer": "Dw i'n cofio fy nhad a fy mam.",
-     "rubric": "Ateb am atgof o dy blentyndod."
+     "model_answer": "Dw i'n cofio fy nhad a fy mam wrth y tân.",
+     "key_terms": [
+      "cy-plentyndod",
+      "cy-atgof"
+     ],
+     "rubric": "Un atgof: Dw i'n cofio …",
+     "source_segment_ids": [
+      "cy-brenin-01-l30-s095",
+      "cy-brenin-01-l30-s097",
+      "cy-brenin-01-l30-s132",
+      "cy-brenin-01-l30-s133"
+     ]
     }
    ]
   }
@@ -2183,7 +2232,7 @@
    "inline_scene": 2,
    "margin_vignette": 1,
    "margin_diagram": 1,
-   "margin_gloss": 32
+   "margin_gloss": 34
   }
  },
  "completion": {

@@ -24,7 +24,8 @@
    "Known checker limitation: the cael-passive frame is not a lexeme, so its uses are not counted by the checker; the count above is by hand.",
    "Recall pass 2026-10-18: recurrences for Penodau 27–31 vocabulary woven into the preparations, pasty gag, coronation and feast (dadlau, protestio, barn, gwthio, mam faeth, cyfrifol, annheg, euog, tystiolaeth, dieuog, ymddiheuro, cosb, anghywir, dro ar ôl tro, geni, gwaed, ffyddlon, tyngu, llw, addewid, gwawdio, dewrder, atgof, cywir, tad maeth, magu, pendant, derbyn, cenfigen, ffagl). Oath at the altar added as the callback to Pennod 27 'Rhaid i bob brenin dyngu llw'. New segments s301–s310.",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s031, s040, s309, s052, s078, s082); editor's own further pruning of narrator labels (s059, s307). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
-   "Audit-fix pass 2026-10-19: s014 gloss no longer uses gorffen (a Pennod 33 word); late 'Atishŵ' gloss removed (s102; Atishŵ, glossed since Pennod 5, now a declared incidental). Pensa: B.b4 rewritten so only dawnsio fits (dathlu also fitted); A.a10 accepts the relative clause without a; C.c3/c6 accept relative-a answers; C.c2/c5/c7 asked in the past to match the narration. No prose changed."
+   "Audit-fix pass 2026-10-19: s014 gloss no longer uses gorffen (a Pennod 33 word); late 'Atishŵ' gloss removed (s102; Atishŵ, glossed since Pennod 5, now a declared incidental). Pensa: B.b4 rewritten so only dawnsio fits (dathlu also fitted); A.a10 accepts the relative clause without a; C.c3/c6 accept relative-a answers; C.c2/c5/c7 asked in the past to match the narration. No prose changed.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, no neu or 'Mae'r ateb yn …' frames; key_terms, sources); the exact c1, c3 and c6 converted (c4 now 'Gan bwy?', a passive with gan); one Pam? (c1, s003–004: Barf Goch states the reason); 'Pam cofiodd Mali'r pwll?' reworded as what the memory was; 'Pam roedd pob barf yn crynu?' (a reason the story leaves to inference) replaced by what was in the cloak; new c2 (Modlen: 'Dim eto') and c3 (Cafodd pob ffwrn ei chynnau gan Dafi). nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). The active ↔ passive table now pairs attested sentences (s039/s038, s079/s072, s056/s057, s092/s056) instead of four unshown -odd sentences; rule_cy cites the attested y llawr, not 'y bwrdd'. Pensum A a4's unshown 'ei thorri' replaced by Cafodd y bastai ei bwyta (s043–044). Codex review fixes: the -odd and cafodd examples are now two separate lists of story events, not pairs; Pensum A a5 (ei rhoi, s056), a6 (ei wahodd, s038/s079) and recall a10 (a gyhuddodd, s003) replace the unshown ei chodi, eu croesawu and a goginiodd; a4's stale thorri feedback now targets Dafi's ei fwyta error; gloss anchors at s030 (y wisg) and s083 (am win) fixed; s036 gwin gloss says it is drunk (gwin coch: mae arglwyddi'n ei yfed), with llaeth as the contrast at s037; c7 asks O beth cafodd y clogyn ei wnïo?; c8 rubric shows ei choginio."
   ],
   "review_questions": [
    {
@@ -673,7 +674,7 @@
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "wisg",
+        "anchor_text": "y wisg",
         "gloss": "y wisg ← gwisg (b.)",
         "gloss_kind": "radical"
        },
@@ -732,7 +733,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "gwin",
-        "gloss": "gwin coch: i'r arglwyddi",
+        "gloss": "gwin coch: mae arglwyddi'n ei yfed",
         "gloss_kind": "define"
        }
       ]
@@ -1189,7 +1190,7 @@
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "win",
+        "anchor_text": "am win",
         "gloss": "am win ← gwin",
         "gloss_kind": "radical"
        }
@@ -1418,30 +1419,39 @@
  },
  "grammar": {
   "title_cy": "Cafodd y neuadd ei glanhau",
-  "rule_cy": "Yma, gydag enw: cafodd + enw + ei / eu + berfenw (+ gan …): y bwrdd (g.) → ei + SM · y neuadd (b.) → ei + AM · y llestri → eu. Cwestiwn: Gafodd …? — Do. / Naddo.",
+  "rule_cy": "Yma, gydag enw: cafodd + enw + ei / eu + berfenw (+ gan …): y llawr (g.) → ei + SM: ei olchi · y wledd (b.) → ei + AM: ei choginio · y llestri → eu: eu golchi. Cwestiwn: Gafodd …? — Do. / Naddo.",
   "tables": [
    {
-    "caption": "Pwy wnaeth? ↔ Beth ddigwyddodd?",
+    "caption": "Pwy wnaeth? (-odd)",
     "header": [
-     "",
      ""
     ],
     "rows": [
      [
-      "Glanhaodd y morynion y neuadd.",
-      "Cafodd y neuadd ei glanhau gan y morynion."
+      "cyfrifodd hi'r pasteiod"
      ],
      [
-      "Coginiodd Modlen y wledd.",
-      "Cafodd y wledd ei choginio gan Modlen."
+      "Croesawodd Arthur bob arglwydd wrth y drws."
      ],
      [
-      "Coronodd yr esgob Arthur.",
+      "Rhoddodd hi'r bastai i Dafi."
+     ]
+    ]
+   },
+   {
+    "caption": "Beth ddigwyddodd? (cafodd … gan …)",
+    "header": [
+     ""
+    ],
+    "rows": [
+     [
+      "Gafodd y pasteiod eu cyfrif?"
+     ],
+     [
+      "cafodd y brenin newydd ei groesawu gan bawb"
+     ],
+     [
       "Cafodd Arthur ei goroni gan yr esgob."
-     ],
-     [
-      "Golchodd y morynion y llestri.",
-      "Cafodd y llestri eu golchi."
      ]
     ]
    },
@@ -1573,7 +1583,7 @@
     "segment_id": "cy-brenin-01-l32-s099"
    }
   ],
-  "nodyn_en": "With noun subjects, use cafodd + subject + ei/eu + verb-noun. Pronouns need corresponding cael and possessive forms (Ces i fy ngeni, Pennod 30). Possessives agree with subjects: ei + soft mutation (masculine), ei + aspirate (feminine), eu (plural). The doer follows gan + soft mutation. Questions: Gafodd …? — Do / Naddo."
+  "nodyn_en": "This chapter introduces the passive: saying what was done to something, often without saying who did it. English uses 'was' and a past participle ('The hall was cleaned'). Welsh uses the past of cael ('get'), cafodd, then the thing affected, then a possessive that agrees with that thing, then a verb-noun, the dictionary form of a verb: Cafodd y neuadd ei glanhau ('The hall was cleaned', literally 'the hall got its cleaning'). For now the book uses only this past passive; the present and future forms come later.\n\nThe possessive is the one you know from Pennod 10 and Pennod 26, and it brings its usual mutation. For a masculine singular noun or a man, ei ('his, its') gives the soft mutation: Cafodd y llawr ei olchi ('The floor was washed', golchi → olchi); Cafodd bara ei bobi ('Bread was baked', pobi → bobi); Cafodd llawer o gig ei goginio ('A lot of meat was cooked'); Cafodd Arthur ei goroni ('Arthur was crowned', coroni → goroni). For a feminine singular noun or a woman, ei ('her, its') gives the aspirate mutation: Cafodd y wledd ei pharatoi gan Modlen, a chafodd hi ei choginio gan Modlen hefyd ('The feast was prepared by Modlen, and it was cooked by Modlen too'; paratoi → pharatoi, coginio → choginio); Cafodd pob ffwrn yn y castell ei chynnau ('Every oven in the castle was lit'). Sounds with no aspirate form do not change: Cafodd y goron ei rhoi ar ben Arthur ('The crown was put on Arthur's head'); Cafodd gwisg newydd ei gwnïo ('A new robe was sewn'). For a plural, eu ('their') gives no mutation: Cafodd y llestri eu golchi ('The dishes were washed'); Cafodd y byrddau hir eu cario i'r neuadd ('The long tables were carried to the hall'); Cafodd y clychau eu canu ('The bells were rung').\n\nDafi makes this chapter's deliberate mistake: Cafodd y bastai ei fwyta, as if pastai were masculine. Mali corrects him: Pastai yw hi: ei bwyta hi ('It's a pie: ei bwyta, for her'). Pastai is feminine, so ei means 'her' and bwyta keeps its b, because b has no aspirate form. Dafi tries again: Cafodd hi ei bwyta gan ddraig fach ('It was eaten by a little dragon').\n\nThe doer, if named, follows gan ('by'), which gives the soft mutation: Cafodd y neuadd ei glanhau gan y morynion ('The hall was cleaned by the maids'); Cafodd Arthur ei goroni gan yr esgob ('Arthur was crowned by the bishop'); cafodd y brenin newydd ei groesawu gan bawb. Wel, gan lawer ('the new king was welcomed by everyone. Well, by many'; pawb → bawb, llawer → lawer); Ond gan bwy? ('But by whom?'); gan ddraig fach. Personal names never mutate: gan Modlen, gan Cai, gan Dafi. With a gift, gan means 'from': Anrheg gan Modlen ('A present from Modlen').\n\nFor a question, cafodd softens to gafodd, as other inflected verbs do in questions: Gafodd y neuadd ei glanhau? ('Was the hall cleaned?'); Gafodd pob arglwydd ei wahodd? ('Was every lord invited?'); Gafodd y pasteiod eu cyfrif? ('Were the pies counted?'). The answer is Do ('Yes') or Naddo ('No'). Cafodd also softens after pan and after relative a: ar y bore pan gafodd e ei goroni ('on the morning when he was crowned'); pob arglwydd a gafodd ei wahodd ('every lord who was invited').\n\nWith a pronoun subject, cael and the possessive both match the person. You met these as set phrases in Pennod 30: Ble ces i fy ngeni? ('Where was I born?'); cest ti dy eni'n dywysog ('you were born a prince'); Cafodd e ei eni yng Nghaerllion ('He was born in Caerllion'). Cael keeps its ordinary meaning 'get' too: Ond ches i ddim gwin ('But I didn't get any wine'), where the negative past has the mixed mutation (ces → ches).\n\nOther forms in the chapter. Rhy means 'too' and softens the adjective: roedd hi'n rhy hir ('it was too long'); Mae'r brenin yn rhy fach i'r wisg ('The king is too small for the robe'); rhy fawr ('too big'). Rhaid gwahodd pawb ('Everyone must be invited') uses rhaid with no person after it. Dywysog Arthur ('Prince Arthur') is softened because it addresses him (tywysog → dywysog). Dwyt ti byth yn barod means 'You're never ready'."
  },
  "pensa": {
   "A": {
@@ -1628,41 +1638,43 @@
       },
       {
        "id": "a4",
-       "prompt": "Torrodd Dafi'r bastai. →",
+       "prompt": "Bwytodd Dafi'r bastai. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd y bastai ei thorri gan Dafi."
+        "Cafodd y bastai ei bwyta gan Dafi."
        ],
        "mutation_hint": true,
        "common_wrong": [
         {
-         "answer": "Cafodd y bastai ei dorri gan Dafi.",
-         "hint": "pastai (b.): ei + AM → ei thorri"
+         "answer": "Cafodd y bastai ei fwyta gan Dafi.",
+         "hint": "pastai (b.): ei bwyta, dim ei fwyta"
         }
        ]
       },
       {
        "id": "a5",
-       "prompt": "Cododd yr esgob y goron. →",
+       "prompt": "Rhoddodd yr esgob y goron ar ben Arthur. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd y goron ei chodi gan yr esgob."
+        "Cafodd y goron ei rhoi ar ben Arthur gan yr esgob.",
+        "Cafodd y goron ei rhoi gan yr esgob ar ben Arthur."
        ],
        "mutation_hint": true,
        "common_wrong": [
         {
-         "answer": "Cafodd y goron ei godi gan yr esgob.",
-         "hint": "coron (b.): ei + AM → ei chodi"
+         "answer": "Cafodd y goron ei roi ar ben Arthur gan yr esgob.",
+         "hint": "coron (b.): ei rhoi, dim ei roi"
         }
        ]
       },
       {
        "id": "a6",
-       "prompt": "Croesawodd Arthur yr arglwyddi. →",
+       "prompt": "Gwahoddodd Mali bob arglwydd. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cafodd yr arglwyddi eu croesawu gan Arthur."
-       ]
+        "Cafodd pob arglwydd ei wahodd gan Mali."
+       ],
+       "mutation_hint": true
       }
      ]
     },
@@ -1726,11 +1738,11 @@
      "items": [
       {
        "id": "a10",
-       "prompt": "Dyma'r fenyw. Coginiodd y fenyw y wledd. →",
+       "prompt": "Dyma'r arglwydd. Cyhuddodd yr arglwydd Cynyr yn y cyngor. →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dyma'r fenyw a goginiodd y wledd.",
-        "Dyma'r fenyw goginiodd y wledd."
+        "Dyma'r arglwydd a gyhuddodd Cynyr yn y cyngor.",
+        "Dyma'r arglwydd gyhuddodd Cynyr yn y cyngor."
        ],
        "mutation_hint": true,
        "recall_of": "G28"
@@ -1854,160 +1866,128 @@
    "items": [
     {
      "id": "c1",
-     "prompt": "Pwy sy'n trefnu'r wledd?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Modlen",
-      "Modlen sy'n trefnu'r wledd",
-      "Modlen sydd yn trefnu'r wledd",
-      "Modlen, y gogyddes",
-      "Mae Modlen yn trefnu'r wledd",
-      "Y gogyddes sy'n trefnu'r wledd",
-      "Y gogyddes sydd yn trefnu'r wledd",
-      "Mae'r gogyddes yn trefnu'r wledd",
-      "Y gogyddes"
-     ],
-     "model_answer": "Modlen",
-     "source_segment_ids": [
-      "cy-brenin-01-l32-s012"
-     ]
-    },
-    {
-     "id": "c2",
-     "prompt": "Pam roedd yr arglwyddi eisiau coroni Arthur yn gyflym?",
+     "prompt": "Pam roedd Barf Goch eisiau coroni Arthur yn gyflym?",
      "answer_mode": "self_check",
-     "model_answer": "Heb goron, dyw e ddim yn frenin swyddogol.",
-     "rubric": "Mae'r ateb yn dweud: heb goron, dyw Arthur ddim yn frenin swyddogol.",
+     "model_answer": "Heb goron, doedd e ddim yn frenin swyddogol: dim ond bachgen oedd e.",
      "key_terms": [
-      "cy-coron",
+      "cy-coroni",
       "cy-swyddogol"
      ],
+     "rubric": "Heb goron, dyw e ddim yn frenin swyddogol.",
      "source_segment_ids": [
+      "cy-brenin-01-l32-s003",
       "cy-brenin-01-l32-s004"
      ]
     },
     {
-     "id": "c3",
-     "prompt": "Pwy wnïodd y wisg las?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Elen",
-      "Elen wnïodd y wisg",
-      "Elen wnïodd hi",
-      "Mam",
-      "Elen wnïodd y wisg las",
-      "Elen a wnïodd y wisg las",
-      "Elen a wnïodd y wisg",
-      "Elen a wnïodd hi",
-      "Gwnïodd Elen y wisg",
-      "Gwnïodd Elen y wisg las",
-      "Gwnïodd Elen hi",
-      "Gwnïodd Mam y wisg",
-      "Mam wnïodd y wisg",
-      "Mam a wnïodd y wisg",
-      "Gwnïodd Mam y wisg las",
-      "Mam wnïodd y wisg las",
-      "Mam a wnïodd y wisg las",
-      "Gwnïodd Mam hi",
-      "Mam wnïodd hi",
-      "Mam a wnïodd hi"
+     "id": "c2",
+     "prompt": "Dwedodd Arthur wrth Modlen: \"Ond fi yw'r brenin!\" Beth oedd ateb Modlen?",
+     "answer_mode": "self_check",
+     "model_answer": "\"Brenin? Dim eto: does dim coron ar dy ben di. Cer i olchi dy wyneb!\"",
+     "key_terms": [
+      "cy-coron"
      ],
-     "model_answer": "Elen",
+     "rubric": "Un peth: dim eto (does dim coron ar ei ben e) · cer i olchi dy wyneb.",
      "source_segment_ids": [
-      "cy-brenin-01-l32-s029"
+      "cy-brenin-01-l32-s017",
+      "cy-brenin-01-l32-s018"
+     ]
+    },
+    {
+     "id": "c3",
+     "prompt": "Drwy'r dydd, roedd y castell yn brysur. Beth gafodd ei wneud gan Dafi?",
+     "answer_mode": "self_check",
+     "model_answer": "Cafodd pob ffwrn yn y castell ei chynnau gan Dafi.",
+     "key_terms": [
+      "cy-ffwrn",
+      "cy-cynnau"
+     ],
+     "rubric": "Pob ffwrn: cafodd hi ei chynnau.",
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s020",
+      "cy-brenin-01-l32-s023"
      ]
     },
     {
      "id": "c4",
-     "prompt": "Beth ddigwyddodd i'r goron yn yr eglwys?",
+     "prompt": "Yn y gegin, cafodd un bastai ei bwyta. Gan bwy?",
      "answer_mode": "self_check",
-     "model_answer": "Roedd hi'n rhy fawr: cwympodd hi dros glustiau Arthur.",
-     "rubric": "Mae'r ateb yn sôn am y goron yn cwympo / y goron yn rhy fawr.",
+     "model_answer": "Cafodd hi ei bwyta gan Dafi: roedd blawd ar ei drwyn e.",
      "key_terms": [
-      "cy-rhy",
-      "cy-coron"
+      "cy-gan",
+      "cy-pastai"
      ],
+     "rubric": "Gan Dafi.",
      "source_segment_ids": [
-      "cy-brenin-01-l32-s058"
+      "cy-brenin-01-l32-s039",
+      "cy-brenin-01-l32-s040",
+      "cy-brenin-01-l32-s041",
+      "cy-brenin-01-l32-s042",
+      "cy-brenin-01-l32-s044",
+      "cy-brenin-01-l32-s302"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Pam cofiodd Mali'r pwll yng Nghwm Helyg?",
+     "prompt": "Cafodd y goron ei rhoi ar ben Arthur. Beth ddigwyddodd wedyn?",
      "answer_mode": "self_check",
-     "model_answer": "Gwelodd hi'r goron ar ben Arthur yn y dŵr, ar ddiwrnod y carw gwyn.",
-     "rubric": "Mae'r ateb yn cysylltu'r goron â'r pwll: gwelodd Mali goron ar ben Arthur yn y dŵr.",
+     "model_answer": "Roedd y goron yn rhy fawr: cwympodd hi dros ei glustiau e, at ei drwyn e.",
      "key_terms": [
-      "cy-pwll",
-      "cy-coron"
+      "cy-coron",
+      "cy-rhy"
      ],
+     "rubric": "Roedd hi'n rhy fawr (cwympodd hi).",
      "source_segment_ids": [
-      "cy-brenin-01-l32-s065"
+      "cy-brenin-01-l32-s056",
+      "cy-brenin-01-l32-s057",
+      "cy-brenin-01-l32-s058"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Pwy fwytodd un bastai?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Dafi",
-      "Dafi fwytodd y bastai",
-      "Dafi fwytodd hi",
-      "Y ddraig",
-      "Dafi, y ddraig fach",
-      "Draig fach",
-      "Y ddraig fach",
-      "Dafi fwytodd un bastai",
-      "Dafi a fwytodd y bastai",
-      "Dafi a fwytodd un bastai",
-      "Dafi a fwytodd hi",
-      "Bwytodd Dafi'r bastai",
-      "Bwytodd Dafi un bastai",
-      "Bwytodd Dafi hi",
-      "Bwytodd y ddraig y bastai",
-      "Y ddraig fwytodd y bastai",
-      "Y ddraig a fwytodd y bastai",
-      "Bwytodd y ddraig un bastai",
-      "Y ddraig fwytodd un bastai",
-      "Y ddraig a fwytodd un bastai",
-      "Bwytodd y ddraig hi",
-      "Y ddraig fwytodd hi",
-      "Y ddraig a fwytodd hi",
-      "Bwytodd y ddraig fach y bastai",
-      "Y ddraig fach fwytodd y bastai",
-      "Y ddraig fach a fwytodd y bastai",
-      "Bwytodd y ddraig fach un bastai",
-      "Y ddraig fach fwytodd un bastai",
-      "Y ddraig fach a fwytodd un bastai",
-      "Bwytodd y ddraig fach hi",
-      "Y ddraig fach fwytodd hi",
-      "Y ddraig fach a fwytodd hi"
+     "prompt": "Yn yr eglwys, daeth atgof i Mali. Beth oedd yr atgof?",
+     "answer_mode": "self_check",
+     "model_answer": "Y pwll yng Nghwm Helyg: gwelodd hi'r goron ar ben Arthur yn y dŵr, ar ddiwrnod y carw gwyn.",
+     "key_terms": [
+      "cy-atgof",
+      "cy-pwll"
      ],
-     "model_answer": "Dafi",
+     "rubric": "Y pwll (y goron ar ben Arthur yn y dŵr).",
      "source_segment_ids": [
-      "cy-brenin-01-l32-s044"
+      "cy-brenin-01-l32-s064",
+      "cy-brenin-01-l32-s065"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Pam roedd pob barf yn y neuadd yn crynu?",
+     "prompt": "Yn y wledd, agorodd y dyn enfawr glogyn hir ar y llawr. O beth cafodd y clogyn ei wnïo?",
      "answer_mode": "self_check",
-     "model_answer": "Daeth negesydd Rhita Gawr i'r neuadd gyda chlogyn o farfau.",
-     "rubric": "Mae'r ateb yn sôn am y clogyn o farfau neu am Rhita Gawr.",
+     "model_answer": "Barfau: cafodd y clogyn ei wnïo o farfau coch, du, llwyd a gwyn.",
      "key_terms": [
       "cy-barf",
-      "cy-clogyn"
+      "cy-gwnio"
      ],
+     "rubric": "Barfau.",
      "source_segment_ids": [
-      "cy-brenin-01-l32-s099"
+      "cy-brenin-01-l32-s098",
+      "cy-brenin-01-l32-s099",
+      "cy-brenin-01-l32-s100"
      ]
     },
     {
      "id": "c8",
      "prompt": "A ti? Beth gafodd ei goginio yn dy gegin di ddoe?",
      "answer_mode": "self_check",
-     "model_answer": "Cafodd cawl ei goginio. / Cafodd bara ei bobi.",
-     "rubric": "Beth gafodd ei goginio ddoe; ateb byr / Cafodd … ei / eu + berfenw / dim byd."
+     "model_answer": "Cafodd cawl ei goginio, a chafodd bara ei bobi.",
+     "key_terms": [
+      "cy-coginio",
+      "cy-cael"
+     ],
+     "rubric": "Cafodd … ei goginio (ei choginio · ei bobi · eu coginio).",
+     "source_segment_ids": [
+      "cy-brenin-01-l32-s025",
+      "cy-brenin-01-l32-s076"
+     ]
     }
    ]
   }

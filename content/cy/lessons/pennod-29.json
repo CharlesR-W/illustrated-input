@@ -27,7 +27,8 @@
    "Full Codex Welsh review (docs/reviews/welsh-review-26-31-full-2026-10-18.md) applied; its verdicts on the writer's [?] questions are recorded as resolutions (all accepted, none deferred to a human beyond the general fluent sign-off). Applied: 'Barf Goch yn' (s041, s094, B5), the focus rule now states the third-person verb form (Fi welodd e, Ni wnaeth e) in rule, table, nodyn and pattern card, A4/C4 accept retained relative a and the quoted 'Fi oedd ar fai'.",
    "For the integrator: the published card cy-pattern-g29 could not be changed from the delta (lexicon-merge identity check). Proposed back text, to apply in lexicon.json and this delta together: \"It was Arth who drew the sword, not me. · It was I who was at fault. · Myrddin did it! — It wasn't magic. · It wasn't Pero who ate the pies! (verb always in the he/she form: Fi welodd e, Ni wnaeth e)\"",
    "Recall pass 2026-10-18: recurrences added. The tafarnwr: byr (s033), clo (s037). Cai: allor (s064). The old lord: the full form sydd (s107). Modlen: gwaeth in her triple-negative fingerprint (s108), taro (s110: she strikes the bench instead of only raising the spoon). Pero: llithro (s145). Dafi's whispered callback to his 25 line, 'Y ddraig leiaf, ond y mwyaf peryglus…' (lleiaf, mwyaf; s146), now motivates Mali's hand on her cloak in s119. No gloss symbols to replace.",
-   "Audit-fix pass 2026-10-19: bai glossed at its first use (s009, 'pwy wnaeth y drwg?'; was first glossed at s058); tystiolaeth no longer glossed with tystion before tystion appears; euog defined in known words instead of the not-yet-seen dieuog (the pair now sits on ddieuog, s052); amddiffyn no longer glossed with the untaught rhywun; s052 (three glosses) split at its sentence break into new s147 'Dw i'n amddiffyn Cynyr.' + s052; taw gloss drops the untracked 'o flaen'; late radical gloss ddadlau (s094) removed. Pensa: A a9 accepts 'Mae rhaid …' as Pennod 27 does; C c6 object question mutated and past (Beth farnodd …?), c3/c7 asked in the past."
+   "Audit-fix pass 2026-10-19: bai glossed at its first use (s009, 'pwy wnaeth y drwg?'; was first glossed at s058); tystiolaeth no longer glossed with tystion before tystion appears; euog defined in known words instead of the not-yet-seen dieuog (the pair now sits on ddieuog, s052); amddiffyn no longer glossed with the untaught rhywun; s052 (three glosses) split at its sentence break into new s147 'Dw i'n amddiffyn Cynyr.' + s052; taw gloss drops the untracked 'o flaen'; late radical gloss ddadlau (s094) removed. Pensa: A a9 accepts 'Mae rhaid …' as Pennod 27 does; C c6 object question mutated and past (Beth farnodd …?), c3/c7 asked in the past.",
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, no neu, rheswm or 'ateb sy'n …'; key_terms, sources); the exact c1 and c4 converted (subject focus kept as the model), c6 (the verdict) dropped; one Pam? (c6, the council's laughter, shown at s116–118); the present-tense 'Pam dyw Barf Goch ddim yn cyhuddo Cynyr nawr?' replaced by what he said (s085); new c3 (Cleddyf pwy oedd e?) and c7 (Arthur). nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). rule_cy no longer uses untaught 'person'. Tables limited to attested sentences: the focus table pairs s008/s065, s028/s027, s013/s011; the constructed 'Gwelais i e', 'Gwnaeth Myrddin hud', 'Bwytodd y ddraig…', 'Roedd Cai ar fai', 'Roedd e'n hud' and the ambiguous 'Gwnaethon ni e → Ni wnaeth e' removed; a new X + oedd table (s058/s122, s012/s017); chwaith/hefyd rows from s031 and s021 replace two invented sentences; 'o flaen' (unknown) removed from the taw cell. Codex review fixes: taw no longer described as promoted at 39 (ai is; taw stays receptive), table renamed 'Darllen yn unig' with the attested answer Nage. (s137); the focus table keeps only the same-event pair s008/s065, other focused sentences listed separately; note defines subject and inflected verb; B b5 (… o dwyll), b7 (doedd neb yn dadlau) and b10 (dyw e byth yn mynd i'r afon) reworded so one bank word fits; s094 radical gloss ddadlau ← dadlau."
   ],
   "review_questions": [
    {
@@ -995,7 +996,19 @@
      },
      {
       "id": "cy-brenin-01-l29-s094",
-      "text": "Wnaeth neb ddadlau, a doedd neb yn cyhuddo Cynyr, ond roedd Barf Goch yn dawel, ac roedd cenfigen ar ei wyneb e."
+      "text": "Wnaeth neb ddadlau, a doedd neb yn cyhuddo Cynyr, ond roedd Barf Goch yn dawel, ac roedd cenfigen ar ei wyneb e.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddadlau",
+        "gloss": "ddadlau ← dadlau",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-dadlau"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l29-s095",
@@ -1323,7 +1336,7 @@
  },
  "grammar": {
   "title_cy": "Arth wnaeth e!",
-  "rule_cy": "Pwy …? → X + berf (treiglad meddal), a'r ferf yn y trydydd person (fe/hi): Arth dynnodd y cleddyf. · Gwelais i e → Fi welodd e. · Fi oedd ar fai. · Nid X: Nid Pero fwytodd y pasteiod. · … ddim … chwaith.",
+  "rule_cy": "Pwy …? → X + berf (treiglad meddal): Arth dynnodd y cleddyf. · Fi welodd e · Fi gloiodd y drws (yr un ferf i bawb: welodd, gloiodd) · Fi oedd ar fai. · Nid X: Nid Pero fwytodd y pasteiod. · … ddim … chwaith.",
   "tables": [
    {
     "caption": "trefn arferol ↔ ffocws",
@@ -1333,32 +1346,45 @@
     ],
     "rows": [
      [
-      "Tynnodd Arth y cleddyf.",
+      "tynnodd y bachgen hwn y cleddyf",
       "Arth dynnodd y cleddyf."
-     ],
+     ]
+    ]
+   },
+   {
+    "caption": "ffocws: X + berf",
+    "header": [
+     ""
+    ],
+    "rows": [
      [
-      "Gwelais i e.",
       "Fi welodd e."
      ],
      [
-      "Gwnaeth Myrddin hud.",
+      "fi gloiodd y drws, a fi aeth i'r twrnamaint"
+     ],
+     [
       "Myrddin wnaeth e!"
      ],
      [
-      "Bwytodd y ddraig y pasteiod.",
       "Y ddraig fwytodd nhw!"
+     ]
+    ]
+   },
+   {
+    "caption": "X + oedd",
+    "header": [
+     "",
+     ""
+    ],
+    "rows": [
+     [
+      "Fi oedd ar fai.",
+      "Nid Pero oedd ar fai, Dad."
      ],
      [
-      "Roedd Cai ar fai.",
-      "Cai oedd ar fai."
-     ],
-     [
-      "Roedd e'n hud.",
-      "Hud oedd e."
-     ],
-     [
-      "Gwnaethon ni e.",
-      "Ni wnaeth e. (dim 'wnaethon')"
+      "Hud oedd e!",
+      "Nid hud oedd e."
      ]
     ]
    },
@@ -1391,17 +1417,17 @@
     ],
     "rows": [
      [
-      "Roedd Elen yno, a Pero hefyd.",
+      "Fi welodd e hefyd!",
       "+ hefyd"
      ],
      [
-      "Doedd Myrddin ddim yno, a doedd ei het ddim yno chwaith.",
+      "doedd e ddim yn y gwersyll chwaith",
       "− chwaith"
      ]
     ]
    },
    {
-    "caption": "Darllen yn unig (Pennod 39)",
+    "caption": "Darllen yn unig",
     "header": [
      "",
      ""
@@ -1409,11 +1435,11 @@
     "rows": [
      [
       "Ai ti wnaeth yr hud?",
-      "= Ti wnaeth yr hud? — Ie. / Nage."
+      "Nage."
      ],
      [
       "Dw i'n credu taw Arth wnaeth e.",
-      "taw = bod, o flaen ffocws"
+      "taw = bod, gyda ffocws"
      ]
     ]
    },
@@ -1459,7 +1485,7 @@
     "segment_id": "cy-brenin-01-l29-s143"
    }
   ],
-  "nodyn_en": "To stress who did something, put that person first, soft-mutate the verb and use the he/she form of the verb for every person: Arth dynnodd y cleddyf; Gwelais i e → Fi (a) welodd e. With bod: Fi oedd ar fai. Nid negates the fronted part. Chwaith = 'either' after a negative. Ai …? and taw: reading only."
+  "nodyn_en": "A Welsh sentence normally starts with its verb: tynnodd y bachgen hwn y cleddyf ('this boy pulled the sword'). To stress who did something, to answer 'Who …?' or to contradict someone, Welsh puts that person or thing first instead. This is called fronting, or focus. English does the same job with 'It was X who …', or just with stress in the voice ('ARTH pulled it').\n\nWhen the subject (the one doing the action) is fronted, the inflected verb (a verb with an ending for tense and person, such as tynnodd) follows it with the soft mutation, and the verb is always the he/she form, whoever the subject is. Pwy dynnodd y cleddyf yn gyntaf? ('Who pulled the sword first?') is answered Arth dynnodd y cleddyf ('It was Arth who pulled the sword', tynnodd → dynnodd). The witnesses say Fi welodd e ('I saw it', literally 'me saw it'): the verb is welodd, the he/she form, softened from gwelodd, and not the 'I' form. The innkeeper says fi gloiodd y drws, a fi aeth i'r twrnamaint ('I locked the door, and I went to the tournament'; cloiodd → gloiodd, while aeth starts with a vowel and does not change). Barf Goch says Cynyr ddaeth â'r bachgen yma. Cynyr roddodd y bachgen i Myrddin ('It was Cynyr who brought the boy here. Cynyr gave the boy to Myrddin'; daeth → ddaeth, rhoddodd → roddodd). Modlen says Y ddraig fwytodd nhw ('The dragon ate them', bwytodd → fwytodd). With gwneud ('do'): Myrddin wnaeth e! ('Myrddin did it!').\n\nWith bod ('be') in the past, the fronted word is followed by oedd: Fi oedd ar fai ('It was me who was at fault', that is, 'I was to blame'); Hud oedd e! ('It was magic!'); Celwydd oedd e ('It was a lie'). In the present the word is yw: Cleddyf y bachgen mawr yw e ('It's the big boy's sword'). When the fronted word is not the subject but describes it, bod keeps its own person: Cai dw i, mab Cynyr ('I'm Cai, Cynyr's son').\n\nTo deny the fronted part, put nid ('not') before it: Nid hud oedd e ('It wasn't magic'); Nid Pero fwytodd y pasteiod! ('It wasn't Pero who ate the pies!'); Nid fi dynnodd e ('It wasn't me who pulled it'); Ac nid ffrind i Cynyr dw i! ('And I'm no friend of Cynyr's!'); Ond nid Arth yw ei enw e ('But his name isn't Arth'). Nid can also come after the true answer: Arth dynnodd y cleddyf, nid fi ('Arth pulled the sword, not me').\n\nChwaith means 'either' after a negative, where a positive sentence has hefyd ('too'): doedd e ddim yn y gwersyll chwaith ('he wasn't in the camp either'); dw i ddim yn penlinio i fachgen chwaith ('I'm not kneeling to a boy either'); nid Cai dynnodd e chwaith ('and it wasn't Cai who pulled it either'). Compare Fi welodd e hefyd! ('I saw it too!').\n\nTwo forms are for reading only: ai, which you will use yourself from Pennod 39, and the southern taw, which stays a reading form. Ai asks a yes/no question about a fronted word: Ai ti wnaeth yr hud, ddewin? ('Was it you who did the magic, wizard?'); Ai tyst yw offeiriad? ('Is a priest a witness?'). The answer is Ie ('Yes') or Nage ('No'), and Myrddin answers Nage. Taw is the southern word for 'that' before a fronted clause, after verbs such as credu ('believe') and gwybod ('know'): dw i'n credu taw Arth wnaeth e ('I believe that it was Arth who did it'); Mae Cai'n gwybod taw Arth wnaeth e ('Cai knows that it was Arth who did it'). Without fronting, bod is used, as in Pennod 22: Dw i'n profi bod Arth yn dweud y gwir ('I'm proving that Arth is telling the truth').\n\nWords of the trial. Bai ('fault, blame'): Fi oedd ar fai ('I was to blame'), Does dim bai ar Arth ('Arth isn't to blame'), fy mai i oedd e ('it was my fault'). Euog ('guilty') and dieuog ('innocent'): euog o dwyll ('guilty of deceit'). Cyhuddo … o means 'accuse … of': Dw i'n cyhuddo Cynyr o dwyll! ('I accuse Cynyr of deceit!'). Yn fy marn i means 'in my opinion' (barn, 'opinion', with the nasal mutation after fy: barn → marn). Mewn gwirionedd means 'in truth, actually', and yn hytrach 'instead, rather'."
  },
  "pensa": {
   "A": {
@@ -1678,11 +1704,10 @@
     },
     {
      "id": "b5",
-     "prompt": "Mae Barf Goch yn dweud: \"Cynyr wnaeth y twyll!\" Mae e'n ___ Cynyr.",
+     "prompt": "Mae Barf Goch yn dweud: \"Cynyr wnaeth y twyll!\" Mae e'n ___ Cynyr o dwyll.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "cyhuddo",
-      "barnu"
+      "cyhuddo"
      ]
     },
     {
@@ -1695,11 +1720,10 @@
     },
     {
      "id": "b7",
-     "prompt": "Mae cleddyf Cai, gydag aur ar y carn, yn dangos y gwir i bawb: ___ dda yw hi.",
+     "prompt": "Dangosodd y tafarnwr gleddyf Cai i'r cyngor, a doedd neb yn dadlau wedyn: ___ dda oedd hi.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "tystiolaeth",
-      "dadl"
+      "tystiolaeth"
      ]
     },
     {
@@ -1721,11 +1745,10 @@
     },
     {
      "id": "b10",
-     "prompt": "Dyw Dafi ddim yn hoffi dŵr, a dyw Pero ddim yn hoffi dŵr ___.",
+     "prompt": "Dyw Dafi ddim yn hoffi dŵr, a dyw Pero, yr hen gi, ddim yn hoffi dŵr ___: dyw e byth yn mynd i'r afon.",
      "answer_mode": "exact",
      "accepted_answers": [
-      "chwaith",
-      "eto"
+      "chwaith"
      ]
     }
    ]
@@ -1737,128 +1760,131 @@
     {
      "id": "c1",
      "prompt": "Pwy wnaeth yr hud, meddai Barf Goch?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Myrddin",
-      "Myrddin wnaeth e",
-      "Myrddin wnaeth yr hud",
-      "Myrddin a wnaeth e",
-      "Myrddin a wnaeth yr hud",
-      "Wnaeth Myrddin yr hud",
-      "Gwnaeth Myrddin yr hud",
-      "Gwnaeth Myrddin e",
-      "Wnaeth Myrddin e"
+     "answer_mode": "self_check",
+     "model_answer": "Myrddin wnaeth e, meddai Barf Goch.",
+     "key_terms": [
+      "cy-hud",
+      "cy-gwneud"
      ],
-     "model_answer": "Myrddin wnaeth e.",
+     "rubric": "Myrddin.",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s011"
+      "cy-brenin-01-l29-s010",
+      "cy-brenin-01-l29-s011",
+      "cy-brenin-01-l29-s012",
+      "cy-brenin-01-l29-s013"
      ]
     },
     {
      "id": "c2",
-     "prompt": "Pwy welodd Arth yn tynnu'r cleddyf?",
+     "prompt": "Dwedodd yr hen arglwydd: \"Rhaid i ni gael tystion.\" Pwy welodd Arth yn tynnu'r cleddyf?",
      "answer_mode": "self_check",
-     "model_answer": "Yr offeiriad welodd e, a'r marchog cryf, a'r cyngor.",
-     "rubric": "Ateb yn enwi tyst: yr offeiriad / y marchog cryf / y cyngor.",
+     "model_answer": "Yr offeiriad welodd e, a'r marchog cryf hefyd.",
      "key_terms": [
-      "cy-offeiriad"
+      "cy-tyst"
      ],
+     "rubric": "Un tyst: yr offeiriad · y marchog cryf · y cyngor.",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s027"
+      "cy-brenin-01-l29-s026",
+      "cy-brenin-01-l29-s027",
+      "cy-brenin-01-l29-s028",
+      "cy-brenin-01-l29-s031"
      ]
     },
     {
      "id": "c3",
-     "prompt": "Beth oedd gyda'r tafarnwr yn ei ddwylo?",
+     "prompt": "Daeth y tafarnwr at y tân gyda chleddyf. Cleddyf pwy oedd e?",
      "answer_mode": "self_check",
-     "model_answer": "Cleddyf Cai, gydag aur ar y carn.",
-     "rubric": "Ateb: cleddyf Cai.",
+     "model_answer": "Cleddyf Cai oedd e: roedd aur ar y carn.",
      "key_terms": [
+      "cy-tafarnwr",
       "cy-cleddyf"
      ],
+     "rubric": "Cleddyf Cai.",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s037"
+      "cy-brenin-01-l29-s033",
+      "cy-brenin-01-l29-s037",
+      "cy-brenin-01-l29-s038",
+      "cy-brenin-01-l29-s039"
      ]
     },
     {
      "id": "c4",
      "prompt": "Pwy oedd ar fai, meddai Cai?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Fe",
-      "Cai",
-      "Cai oedd ar fai",
-      "Fe oedd ar fai",
-      "Cai a oedd ar fai",
-      "Fi oedd ar fai",
-      "Roedd Cai ar fai",
-      "Roedd e ar fai",
-      "Ro'n i ar fai",
-      "Fi a oedd ar fai",
-      "Fe a oedd ar fai"
+     "answer_mode": "self_check",
+     "model_answer": "Fe oedd ar fai: \"Fi oedd ar fai,\" meddai Cai.",
+     "key_terms": [
+      "cy-bai"
      ],
-     "model_answer": "Cai oedd ar fai.",
+     "rubric": "Cai (nid Arth, nid Cynyr).",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s058"
+      "cy-brenin-01-l29-s058",
+      "cy-brenin-01-l29-s065",
+      "cy-brenin-01-l29-s067",
+      "cy-brenin-01-l29-s073"
      ]
     },
     {
      "id": "c5",
-     "prompt": "Pam dyw Barf Goch ddim yn cyhuddo Cynyr nawr?",
+     "prompt": "Dwedodd Cai y gwir yn y cyngor. Beth ddwedodd Barf Goch wedyn am Cynyr?",
      "answer_mode": "self_check",
-     "model_answer": "Mae Cai'n dweud y gwir yn y cyngor, ac mae hynny'n ddrwg i Cai: dyw lleidr ddim yn gwneud hynny.",
-     "rubric": "Ateb: mae Cai'n cyfaddef / dweud y gwir yn y cyngor.",
+     "model_answer": "\"Dw i ddim yn cyhuddo Cynyr nawr.\"",
      "key_terms": [
-      "cy-gwir"
+      "cy-cyhuddo"
      ],
+     "rubric": "Dyw e ddim yn cyhuddo Cynyr nawr.",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s084"
+      "cy-brenin-01-l29-s084",
+      "cy-brenin-01-l29-s085"
      ]
     },
     {
      "id": "c6",
-     "prompt": "Beth farnodd y cyngor am Cynyr?",
-     "answer_mode": "exact",
-     "accepted_answers": [
-      "Dieuog",
-      "Roedd e'n ddieuog",
-      "Roedd Cynyr yn ddieuog",
-      "Mae e'n ddieuog",
-      "Mae Cynyr yn ddieuog",
-      "Bod Cynyr yn ddieuog",
-      "Bod e'n ddieuog",
-      "Ei fod e'n ddieuog",
-      "Fod Cynyr yn ddieuog",
-      "Fod e'n ddieuog",
-      "Barnodd y cyngor fod Cynyr yn ddieuog",
-      "Barnodd y cyngor fod e'n ddieuog",
-      "Barnodd y cyngor ei fod e'n ddieuog"
+     "prompt": "Pam roedd y cyngor yn chwerthin?",
+     "answer_mode": "self_check",
+     "model_answer": "Dwedodd Modlen: \"Nid Pero fwytodd y pasteiod: y ddraig fwytodd nhw!\" Draig yn y gegin? Roedd hynny'n wallgof i'r arglwyddi.",
+     "key_terms": [
+      "cy-draig",
+      "cy-chwerthin"
      ],
-     "model_answer": "Roedd Cynyr yn ddieuog.",
+     "rubric": "Modlen: y ddraig fwytodd y pasteiod.",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s093"
+      "cy-brenin-01-l29-s111",
+      "cy-brenin-01-l29-s112",
+      "cy-brenin-01-l29-s113",
+      "cy-brenin-01-l29-s116",
+      "cy-brenin-01-l29-s117",
+      "cy-brenin-01-l29-s118"
      ]
     },
     {
      "id": "c7",
-     "prompt": "Pam roedd y cyngor yn chwerthin?",
+     "prompt": "Beth ddwedodd Myrddin am enw Arth?",
      "answer_mode": "self_check",
-     "model_answer": "Dwedodd Modlen: Nid Pero fwytodd y pasteiod: y ddraig fwytodd nhw! Doedd yr arglwyddi ddim yn credu bod draig yn y gegin.",
-     "rubric": "Ateb: Modlen a'r ddraig / nid Pero fwytodd y pasteiod.",
+     "model_answer": "Nid Arth yw ei enw e: Arthur dynnodd y cleddyf.",
      "key_terms": [
-      "cy-pastai",
-      "cy-draig"
+      "cy-enw"
      ],
+     "rubric": "Arthur.",
      "source_segment_ids": [
-      "cy-brenin-01-l29-s113"
+      "cy-brenin-01-l29-s141",
+      "cy-brenin-01-l29-s142",
+      "cy-brenin-01-l29-s143"
      ]
     },
     {
      "id": "c8",
      "prompt": "A ti? Pwy wnaeth dy frecwast di heddiw?",
      "answer_mode": "self_check",
-     "model_answer": "Fi wnaeth e. / Mam wnaeth e.",
-     "rubric": "Ateb sy'n dweud pwy wnaeth dy frecwast di heddiw."
+     "model_answer": "Fi wnaeth e. Wnes i fara a chaws.",
+     "key_terms": [
+      "cy-brecwast",
+      "cy-gwneud"
+     ],
+     "rubric": "… wnaeth e (Fi wnaeth e · Mam wnaeth e).",
+     "source_segment_ids": [
+      "cy-brenin-01-l29-s011",
+      "cy-brenin-01-l29-s012"
+     ]
     }
    ]
   }
@@ -2213,7 +2239,7 @@
    "inline_scene": 2,
    "margin_vignette": 0,
    "margin_diagram": 0,
-   "margin_gloss": 34
+   "margin_gloss": 35
   }
  },
  "completion": {
