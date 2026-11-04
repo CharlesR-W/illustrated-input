@@ -22,7 +22,9 @@
       "Objects whose form equals the nominative (supported, logged): sér skýið (s025), á bók (s057, s058). No other objects.",
       "12 margin glosses, none of the define kind: the define gloss for fljótur was dropped at the Codex review (coming and going is not quickness); fljótur rests on the race context. Kindurnar … hvítar (s016) adds a third use of hvítur and a feminine plural. Bjarni's line Blautt gras er ekki hey was cut as untrue (hay can be wet); s034 Hlaðan er stór was folded into s037 so that þar is anchored; s034 and s041 are retired ids.",
       "Media: margin_vignette 0 (Hluti 1 expects 4–10, a checker warning): the two SVGs carry the concrete nouns (hey, hrífa, sáta, hlaða, gras, heiði, sól, ský, rigning), so raster vignettes would duplicate them. The planned cover and two scenes support but never carry meaning.",
-      "Orð með sögu uses heyannir only as the headword, explained in its own lines; it is not a story token."
+      "Orð með sögu uses heyannir only as the headword, explained in its own lines; it is not a story token.",
+      "2026-11-04: grammar.note_en expanded to a full English explanation (owner, all courses; RULES §6), 705 words: length follows content, as the design's 80-word cap is superseded. Every example is a sentence or form from this chapter's story (or its grammar tables), translated; terms are defined at first use and later material is named, not taught. Revised after the 2026-11-04 Codex review (scoped rules, no outside-chapter examples).",
+      "2026-11-04 fixes from the review's non-blocking suggestions: SVG margin diagram is-kvold-01-l03-svg-fljotur at s029 (Óli er fljótur; kemur og fer; haycocks four → three → two), consistent with b3; x1-1-1, -3, -4, -5 recombined (-1 and -3 without þeir/þau, which the story has not yet shown) so they no longer copy story sentences; s017 „sumarið er gamalt“ kept as afi's image."
     ],
     "review_questions": [
       {
@@ -344,10 +346,10 @@
       "cover": 1,
       "inline_scene": 2,
       "margin_vignette": 0,
-      "margin_diagram": 3,
+      "margin_diagram": 4,
       "margin_gloss": 12
     },
-    "notes": "Three deterministic SVG margin aids (Túnið: the hay words and the weather, two panels; barn → börn: the u-umlaut; Bjarni á börn · Afi á bók: eiga at s057, added 2026-11-04 after review) authored with the chapter; cover and two inline scenes (the hay race, Siggi in the hay) are planned rasters. No sentence depends on a planned raster: the SVGs, glosses and adjacent text carry every new word. Audio is suspended."
+    "notes": "Four deterministic SVG margin aids (Túnið: the hay words and the weather, two panels; barn → börn: the u-umlaut; Bjarni á börn · Afi á bók: eiga at s057, added 2026-11-04 after review; Óli er fljótur: kemur og fer and the haycocks falling four → three → two, at s029, added 2026-11-04 after review) authored with the chapter; cover and two inline scenes (the hay race, Siggi in the hay) are planned rasters. No sentence depends on a planned raster: the SVGs, glosses and adjacent text carry every new word. Audio is suspended."
   },
   "metrics": {
     "running_words": 515,
@@ -415,7 +417,7 @@
             "items": [
               {
                 "id": "x1-1-1",
-                "prompt": "Bjarni og Óli eru ___. (maður)",
+                "prompt": "Á túninu eru ___: Óli og Bjarni. (maður)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -453,7 +455,7 @@
               },
               {
                 "id": "x1-1-3",
-                "prompt": "Siggi og Ásta eru ___. (barn)",
+                "prompt": "Á túninu eru ___: Siggi og Ásta. (barn)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -472,7 +474,7 @@
               },
               {
                 "id": "x1-1-4",
-                "prompt": "Sáturnar eru margar líka, og þær eru ___. (stór)",
+                "prompt": "Hlaðan er stór, og sáturnar eru ___. (stór)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -487,7 +489,7 @@
               },
               {
                 "id": "x1-1-5",
-                "prompt": "Tveir eru stórir, og tveir eru ___. (lítill)",
+                "prompt": "Sleipnir er lítill, og tveir hestar eru ___ líka. (lítill)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1112,7 +1114,24 @@
           },
           {
             "id": "is-kvold-01-l03-s029",
-            "text": "Óli er fljótur."
+            "text": "Óli er fljótur.",
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l03-svg-fljotur",
+                "anchor_text": "fljótur",
+                "src": "media/diagrams/is-kvold-01-l03-svg-fljotur.svg",
+                "label": "Óli er fljótur.",
+                "alt": "Top: a haycock on the left and the turf hay barn on the right; between them Óli runs, leaning forward with an armful of hay and speed lines behind him, under a two-way arrow labelled kemur og fer. Bottom: four haycocks, then three, then two. Caption: Óli er fljótur.",
+                "status": "draft",
+                "width": 360,
+                "height": 270,
+                "covers_lexeme_ids": [
+                  "is-fljotur"
+                ]
+              }
+            ]
           },
           {
             "id": "is-kvold-01-l03-s030",
@@ -1755,7 +1774,7 @@
         "segment_id": "is-kvold-01-l03-s063"
       }
     ],
-    "note_en": "Patterns in this chapter: hestur → hestar → hestarnir; kona → konur; hrífa → hrífurnar; ský → ský → skýin; barn → börn → börnin. Maður → menn → mennirnir is irregular: learn it whole. The plural takes eru: Óli er fljótur \"Óli is quick\", Mennirnir eru fljótir \"The men are quick\", Siggi og Ásta eru börn \"Siggi and Ásta are children\"; fólk is singular (fólkið er). Adjectives agree: fljótir (kk. ft.), fljótar (kvk. ft.), fljót (hk. ft.). In some forms a alternates with ö: barn → börn, saga → sögur, svart → svört. This does not happen before every written u (svartur, strákur). Abbreviations: et. singular, ft. plural; kk. masculine, kvk. feminine, hk. neuter."
+    "note_en": "The singular (et., eintala) is the form for one; the plural (ft., fleirtala) is the form for more than one. Icelandic makes plurals with endings, and the ending depends on the noun. The nominative plurals in this chapter:\n- masculine -ar, replacing the -ur of the singular: hestur → hestar \"horses\";\n- feminine -ur, replacing a final -a or added to the word: kona → konur \"women\", hrífa → hrífur \"rakes\", sáta → sátur \"haycocks\", saga → sögur \"stories\", kind → kindur \"sheep (ewes)\";\n- neuter, no ending: ský → ský \"clouds\", barn → börn \"children\";\n- maður → menn \"men\" is irregular; learn it whole.\n\nThe plural with the article adds a second ending, \"the\", to the plural form: masculine -nir in hestar → hestarnir \"the horses\" (the irregular menn → mennirnir \"the men\" must be learned separately), feminine -nar (hrífur → hrífurnar \"the rakes\", sátur → sáturnar \"the haycocks\", kindur → kindurnar \"the sheep\", sögur → sögurnar \"the stories\"), neuter -in (ský → skýin \"the clouds\", börn → börnin \"the children\"). So hestarnir is hest-ar-nir: the noun, then the plural ending, then \"the\". Ský is the same in the singular and the plural, so only the article tells them apart: skýið \"the cloud\", skýin \"the clouds\".\n\nThe plural of er \"is\" is eru \"are\": Óli er fljótur (\"Óli is quick\") but Mennirnir eru fljótir (\"The men are quick\"). Two or more subjects joined by og also take eru: Siggi og Ásta eru börn (\"Siggi and Ásta are children\"); Guðrún, Helga og Þórunn eru konur (\"Guðrún, Helga and Þórunn are women\"). Fólk \"people\" is a singular word for a group, so it takes er: Fólkið er á túninu (\"The people are on the home field\"); Hundur er ekki fólk! (\"A dog isn't people!\"). The word for \"they\" that refers back to a feminine plural noun is þær: Sáturnar eru margar líka, og þær eru stórar (\"The haycocks are many too, and they are big\").\n\nAdjectives agree in number as well as gender. Their nominative plural endings are masculine -ir, feminine -ar and neuter no ending. Masculine: Mennirnir eru fljótir; Tveir eru stórir, og tveir eru litlir (\"Two are big, and two are small\", of the horses). Feminine: Helga og Þórunn eru fljótar (\"Helga and Þórunn are quick\"); Kindurnar eru þar, og þær eru hvítar (\"The sheep are there, and they are white\"). Neuter: Skýin eru lítil og hvít (\"The clouds are small and white\"); Nú eru skýin mörg og svört (\"Now the clouds are many and black\"). The masculine plural has i in litlir \"small\"; the neuter plural keeps í in lítil, as in Skýin eru lítil og hvít. The singular forms continue to agree in gender, using the different forms already met: Óli er blautur (\"Óli is wet\"), bókin er blaut (\"the book is wet\"), Grasið er blautt (\"The grass is wet\"); hlaðan er þurr (\"the barn is dry\"), Það er þurrt (\"It [the hay] is dry\"); Rigningin er mikil (\"The rain is heavy\").\n\nThe numbers shown here also change with gender. They are shown here, not yet practised: Tveir menn, þrjár konur og tvö börn! (\"Two men, three women and two children!\"): tveir is masculine, tvær feminine and tvö neuter. Likewise Fjórir hestar eru á túninu (\"Four horses are on the home field\") but Sáturnar eru fjórar! (\"There are four haycocks!\", literally \"The haycocks are four\").\n\na and ö. In some forms an a in the word becomes ö: barn → börn, saga → sögur and sögurnar, svart → svört. In this chapter this happens when the ending begins with u (sög-ur). It also happens in forms with no ending: the neuter plural of nouns and adjectives (börn, mörg, svört) and the feminine singular of adjectives. Compare Skýið er svart (\"The cloud is black\") but Nú eru skýin … svört (\"Now the clouds are … black\"), and heiðin er svört líka (\"the heath is black too\"). Mörg is the neuter plural of margur \"many\". It does not happen before the -ur of a masculine dictionary form: dagur \"day\", svartur \"black\", margur keep their a. Only a changes this way; á is a different letter and does not change (strákur \"boy\"). In barn → börn, singular and plural differ only in this vowel."
   },
   "pensa": {
     "A": {
