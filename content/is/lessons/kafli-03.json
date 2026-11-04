@@ -1,0 +1,2392 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "is-kvold-01-l03",
+  "course_id": "is-kvold-01",
+  "order": 3,
+  "title": "Túnið",
+  "part": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "0.1.0",
+  "provenance": {
+    "author": "loop writer (Claude, model-written)",
+    "model": "claude-opus-5-5",
+    "prompt": "textbook loop step write, attempt 20261026T030854241-is-kvold-01-write-c03; docs/icelandic-kvoldvaka-design.md §6 row 3; content/is/plan/chapters.json row 3 with proposed_for_frozen_rows.3 (adopted P001)",
+    "review_required": "Codex cross-model language review and fluent native review before text_status: reviewed",
+    "notes": [
+      "Lexemes: the 25 of chapters.json proposed_for_frozen_rows.3 (adopted at plan-revise P001) plus the place chunk í heyinu, 26 in new_lexeme_ids (ceiling 27). Incidental verbs first used here: sér, les, á (3sg only, not counted in the budget). hefur (hafa) was moved to Kafli 4 s012 („Hann hefur ekki átta fætur!“, of a horse that is not Sleipnir) at fix 20261027T031328857-is-kvold-01-fix (F002), because no aid from known words could carry it at s048. The checker's advisory grammar-unlicensed warning for heyinu now also fires at s048, as at s047, s049 and s056: í heyinu is the row's place chunk, not yet in course.json.place_chunks (the runner's).",
+      "G03 in the first third: menn, konur, börn (s004–s006), Ásta counts the people (s008). Every plural is a nominative subject or predicate; no third-person plural verb except eru (G04).",
+      "Beat 3's „under a haycock“ is told as „í heyinu“ (the supplement's place chunk): undir is Kafli 11. The haycock is a small one at the edge of the field that nobody counted (s045).",
+      "„Everyone carries hay“ without bera (not licensed): Óli kemur og fer, kemur og fer, og heyið fer líka (s028); Óli, the women, the men and the horses are fljót (s029–s033); Ásta counts the haycocks down (s035); Þar er hlaðan, og nú er heyið þar (s037). Codex review: hefur hey for carrying was dropped as an English workaround.",
+      "Hook: afi owns the book (s057–s058; first-use support for á: the margin diagram is-kvold-01-l03-svg-eiga at s057, closing IS03-02). Bjarni keeps it: he leaves with it at s053 and again after his s060 refusal, explicitly staged at s061. Afi and Siggi then sit together without the book (s063). Only the supported á bók is used; no new accusative or genitive paradigm.",
+      "Objects whose form equals the nominative (supported, logged): sér skýið (s025), á bók (s057, s058). No other objects.",
+      "12 margin glosses, none of the define kind: the define gloss for fljótur was dropped at the Codex review (coming and going is not quickness); fljótur rests on the race context. Kindurnar … hvítar (s016) adds a third use of hvítur and a feminine plural. Bjarni's line Blautt gras er ekki hey was cut as untrue (hay can be wet); s034 Hlaðan er stór was folded into s037 so that þar is anchored; s034 and s041 are retired ids.",
+      "Media: margin_vignette 0 (Hluti 1 expects 4–10, a checker warning): the two SVGs carry the concrete nouns (hey, hrífa, sáta, hlaða, gras, heiði, sól, ský, rigning), so raster vignettes would duplicate them. The planned cover and two scenes support but never carry meaning.",
+      "Orð með sögu uses heyannir only as the headword, explained in its own lines; it is not a story token."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "is-kvold-01-l03-s001",
+        "quote": "Það er sól á Jökuldal.",
+        "question": "Natural for 'it is sunny' in plain narration (vs Sólin skín, not yet licensed)?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s003",
+        "quote": "Hér er gras, og þar er hey, mikið hey.",
+        "question": "Natural for the edge of the field against the mown rows (as the SVG shows)?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s007",
+        "quote": "Siggi er strákur, og Ásta er stelpa.",
+        "question": "strákur/stelpa are the plan's A1 words; are they acceptable in an 1874 farm household's narration, or would a fluent reader expect drengur/stúlka? (Register only; the plan chose them.)"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s010",
+        "quote": "„Afi er afi,“ segir Ásta. „Og Snati er hundur. Hundur er ekki fólk!“",
+        "question": "Does Hundur er ekki fólk read naturally as a six-year-old's logic ('a dog isn't people')?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s014",
+        "quote": "Fjórir hestar eru á túninu. Tveir eru stórir, og tveir eru litlir.",
+        "question": "Natural without tveir þeirra (not licensed)?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s017",
+        "quote": "„En sumarið er gamalt.“",
+        "question": "Does 'the summer is old' read as late summer, in afi's voice (echo of Ísland er gamalt, Kafli 1)? Would a native say sumarið er á enda / liðið (not licensed)?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s026",
+        "quote": "„Það kemur rigning!“ segir hann.",
+        "question": "Natural as Bjarni's warning?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s028",
+        "quote": "Óli kemur og fer, kemur og fer, og heyið fer líka.",
+        "question": "Does heyið fer líka read as Óli carrying the hay away (no verb of carrying is licensed)?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s037",
+        "quote": "Þar er hlaðan, og nú er heyið þar. Og nú kemur rigningin.",
+        "question": "Natural?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s053",
+        "quote": "Bjarni fer, og bókin fer líka.",
+        "question": "Does this read as 'Bjarni goes off, taking the book' (the hook) without með?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s057",
+        "quote": "„Á afi bók?“ spyr Ásta.",
+        "question": "Natural for 'Does afi have a book?' (eiga + bók, acc. = nom.)? Review 2026-11-04 accepted the Icelandic; first-use support for á is now the margin diagram is-kvold-01-l03-svg-eiga (Bjarni á börn · Afi á bók). Checker advisories left on purpose: 'planned gloss for á' (the support is a diagram, not a margin_gloss) and '3 margin_diagram (expects 0–2)'; no vignette was added just to meet the vignette count, as the review advised."
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s060",
+        "quote": "„Bókin er hér,“ segir Bjarni. „Hey í dag, Siggi. Bók … ekki í dag.“",
+        "question": "Natural and in character (practical, few words)?"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s063",
+        "quote": "„Bókin er ekki hér, Siggi,“ segir afi. „En sögurnar eru hér.“",
+        "question": "Does sögurnar eru hér read as 'the stories are here (in me)', answering Kafli 2's Sagan er hér?"
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G03",
+    "primary_new_grammar": {
+      "id": "G03",
+      "label": "Nominative plural (-ar, -ur, neuter zero; maður → menn) with the article (-nir, -nar, -in); adjectives nom. pl.; eru; u-umlaut a → ö (barn → börn, saga → sögur, svart → svört); tveir/þrír/fjórir nom.",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G01",
+      "G02"
+    ],
+    "incidental": [
+      {
+        "form": "sér",
+        "gloss_segment_id": "is-kvold-01-l03-s025"
+      },
+      {
+        "form": "les",
+        "gloss_segment_id": "is-kvold-01-l03-s048"
+      },
+      {
+        "form": "á",
+        "gloss_segment_id": "is-kvold-01-l03-s057"
+      }
+    ],
+    "new_lexeme_ids": [
+      "is-hey",
+      "is-hrifa",
+      "is-sata",
+      "is-sky",
+      "is-svartur",
+      "is-hvitur",
+      "is-rigning",
+      "is-heidi",
+      "is-bok",
+      "is-folk",
+      "is-margur",
+      "is-tveir",
+      "is-thrir",
+      "is-fjorir",
+      "is-hlada",
+      "is-sumar",
+      "is-blautur",
+      "is-thurr",
+      "is-fljotur",
+      "is-strakur",
+      "is-stelpa",
+      "is-gras",
+      "is-tun",
+      "is-sol",
+      "is-mikill",
+      "is-ph-i-heyinu"
+    ],
+    "recycle_lexeme_ids": [
+      "is-madur",
+      "is-kona",
+      "is-barn",
+      "is-hver",
+      "is-thessi",
+      "is-dagur",
+      "is-kvold",
+      "is-hestur",
+      "is-afi",
+      "is-saga",
+      "is-vera",
+      "is-hvad",
+      "is-hvar",
+      "is-her",
+      "is-thar",
+      "is-og",
+      "is-en",
+      "is-ekki",
+      "is-lika",
+      "is-nu",
+      "is-hann",
+      "is-hun",
+      "is-thad",
+      "is-stor",
+      "is-litill",
+      "is-gamall",
+      "is-kind",
+      "is-hundur",
+      "is-baer",
+      "is-pabbi",
+      "is-ph-a-tuninu",
+      "is-ph-i-baenum",
+      "is-ph-i-dag",
+      "is-ph-ja",
+      "is-ph-nei",
+      "is-pattern-g02"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "is-hey",
+        "how": "margin SVG Túnið (label hey) + contrast with gras",
+        "segment_id": "is-kvold-01-l03-s003"
+      },
+      {
+        "lexeme_id": "is-hrifa",
+        "how": "margin SVG Túnið (label hrífa)",
+        "segment_id": "is-kvold-01-l03-s011"
+      },
+      {
+        "lexeme_id": "is-sata",
+        "how": "margin SVG Túnið (label sáta)",
+        "segment_id": "is-kvold-01-l03-s013"
+      },
+      {
+        "lexeme_id": "is-sky",
+        "how": "margin SVG Túnið (label ský; white clouds above, black cloud below)",
+        "segment_id": "is-kvold-01-l03-s002"
+      },
+      {
+        "lexeme_id": "is-svartur",
+        "how": "antonym gloss hvítt ↔ svart + SVG black cloud",
+        "segment_id": "is-kvold-01-l03-s023"
+      },
+      {
+        "lexeme_id": "is-hvitur",
+        "how": "margin SVG Túnið (white clouds) + Kindurnar eru … hvítar",
+        "segment_id": "is-kvold-01-l03-s002"
+      },
+      {
+        "lexeme_id": "is-rigning",
+        "how": "margin SVG Túnið (label rigning, bottom panel) + context (black cloud)",
+        "segment_id": "is-kvold-01-l03-s026"
+      },
+      {
+        "lexeme_id": "is-heidi",
+        "how": "margin SVG Túnið (label heiði)",
+        "segment_id": "is-kvold-01-l03-s015"
+      },
+      {
+        "lexeme_id": "is-bok",
+        "how": "context at s048: Í heyinu er bók, og sagan er þar (the book is where the story is, answering s018–s019 Hvar er sagan? — Hún er hér; echoed in s050 and s058) + Bók í heyinu? (s049); the planned scene img-siggi-i-heyinu will add the picture",
+        "segment_id": "is-kvold-01-l03-s048"
+      },
+      {
+        "lexeme_id": "is-folk",
+        "how": "example gloss fólk: Bjarni, Guðrún, Helga, Óli, Þórunn …",
+        "segment_id": "is-kvold-01-l03-s002"
+      },
+      {
+        "lexeme_id": "is-margur",
+        "how": "counting contrast: Tvær, þrjár, fjórar … Hrífurnar eru margar",
+        "segment_id": "is-kvold-01-l03-s012"
+      },
+      {
+        "lexeme_id": "is-tveir",
+        "how": "example gloss tveir: Bjarni, Óli (Ásta counts the people just named)",
+        "segment_id": "is-kvold-01-l03-s008"
+      },
+      {
+        "lexeme_id": "is-thrir",
+        "how": "example gloss þrjár: Guðrún, Helga, Þórunn",
+        "segment_id": "is-kvold-01-l03-s008"
+      },
+      {
+        "lexeme_id": "is-fjorir",
+        "how": "counting sequence Tvær, þrjár, fjórar … + Fjórir hestar … Tveir … og tveir",
+        "segment_id": "is-kvold-01-l03-s012"
+      },
+      {
+        "lexeme_id": "is-hlada",
+        "how": "margin SVG Túnið (label hlaða)",
+        "segment_id": "is-kvold-01-l03-s015"
+      },
+      {
+        "lexeme_id": "is-sumar",
+        "how": "cognate (summer) with sól in the same sentence and the SVG; defined by afi in s017 (Sól, hey og fólk á túninu: þetta er sumar)",
+        "segment_id": "is-kvold-01-l03-s001"
+      },
+      {
+        "lexeme_id": "is-blautur",
+        "how": "context: Rigningin er mikil. Óli er blautur, og Snati er blautur.",
+        "segment_id": "is-kvold-01-l03-s039"
+      },
+      {
+        "lexeme_id": "is-thurr",
+        "how": "antonym gloss blautt ↔ þurrt",
+        "segment_id": "is-kvold-01-l03-s040"
+      },
+      {
+        "lexeme_id": "is-fljotur",
+        "how": "context: the race against the rain (Óli kemur og fer, kemur og fer … Óli er fljótur); no gloss: no licensed synonym or antonym",
+        "segment_id": "is-kvold-01-l03-s029"
+      },
+      {
+        "lexeme_id": "is-strakur",
+        "how": "context: Siggi er strákur, og Ásta er stelpa (known people)",
+        "segment_id": "is-kvold-01-l03-s007"
+      },
+      {
+        "lexeme_id": "is-stelpa",
+        "how": "context: Siggi er strákur, og Ásta er stelpa (known people)",
+        "segment_id": "is-kvold-01-l03-s007"
+      },
+      {
+        "lexeme_id": "is-gras",
+        "how": "margin SVG Túnið (label gras) + contrast Hér er gras, og þar er hey (matching the picture)",
+        "segment_id": "is-kvold-01-l03-s003"
+      },
+      {
+        "lexeme_id": "is-tun",
+        "how": "known place chunk á túninu followed immediately by free-noun use Túnið er stórt; Kafli 1 map label tún supplies the scene",
+        "segment_id": "is-kvold-01-l03-s002"
+      },
+      {
+        "lexeme_id": "is-sol",
+        "how": "margin SVG Túnið (label sól)",
+        "segment_id": "is-kvold-01-l03-s001"
+      },
+      {
+        "lexeme_id": "is-mikill",
+        "how": "antonym gloss lítið ↔ mikið",
+        "segment_id": "is-kvold-01-l03-s003"
+      },
+      {
+        "lexeme_id": "is-ph-i-heyinu",
+        "how": "hey known + the place-chunk pattern of á túninu / í bænum",
+        "segment_id": "is-kvold-01-l03-s047"
+      },
+      {
+        "lexeme_id": "is-sja",
+        "how": "incidental verb (design §3.2), context: Bjarni sér skýið after „Pabbi! Svart ský!“",
+        "segment_id": "is-kvold-01-l03-s025"
+      },
+      {
+        "lexeme_id": "is-lesa",
+        "how": "incidental verb (design §3.2), define gloss at s048 (les: sér „Óðinn“ og segir „Óðinn“) + context: Siggi says the names aloud (s047); the book is named first (Í heyinu er bók, og sagan er þar), then Siggi les. (s048)",
+        "segment_id": "is-kvold-01-l03-s048"
+      },
+      {
+        "lexeme_id": "is-eiga",
+        "how": "incidental verb (design §3.2), context: Á afi bók? — Afi á bók (bók known)",
+        "segment_id": "is-kvold-01-l03-s057"
+      },
+      {
+        "lexeme_id": "is-pattern-g03",
+        "how": "margin SVG barn → börn (u-umlaut) + form glosses maður → menn, kona → konur, hestur → hestar",
+        "segment_id": "is-kvold-01-l03-s006"
+      }
+    ],
+    "swaps": []
+  },
+  "media": {
+    "status": "draft",
+    "cover": "is-kvold-01-l03-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 2,
+      "margin_vignette": 0,
+      "margin_diagram": 3,
+      "margin_gloss": 12
+    },
+    "notes": "Three deterministic SVG margin aids (Túnið: the hay words and the weather, two panels; barn → börn: the u-umlaut; Bjarni á börn · Afi á bók: eiga at s057, added 2026-11-04 after review) authored with the chapter; cover and two inline scenes (the hay race, Siggi in the hay) are planned rasters. No sentence depends on a planned raster: the SVGs, glosses and adjacent text carry every new word. Audio is suspended."
+  },
+  "metrics": {
+    "running_words": 515,
+    "sentences": 116,
+    "word_target": 475,
+    "word_window": [
+      428,
+      522
+    ]
+  },
+  "story": {
+    "cover": {
+      "type": "image",
+      "presentation": "inline_scene",
+      "ref": "is-kvold-01-l03-cover",
+      "src": "media/images/is-kvold-01-l03-cover.webp",
+      "alt": "Haymaking on the sunny home field of Hamrar: five adults rake and gather hay; Siggi holds a rake, Ásta counts on her fingers beside seated afi, and Snati lies at afi's feet. Four Icelandic horses stand side by side by the turf hay barn, two large ones with pack frames and two small ones; white clouds hang over the heath.",
+      "status": "draft",
+      "art_brief": "A sunny afternoon in late August 1874, warm light and small white clouds over the home field of Hamrar in Jökuldalur. Keep the established Kafli 1–2 ink-and-watercolour farm setting: three dark tarred timber gables with white trim, turf walls and grass roofs; the long low turf hay barn beside the farmhouse; brown-green heath and the two-banded basalt crag behind. Pale drying hay lies in rows with several round haycocks, and a strip of standing green grass remains at the field edge. Five adult workers form one clear group: Bjarni and Óli rake with long wooden hay rakes, while Guðrún, Helga and Þórunn rake and gather hay. Four Icelandic horses stand beside the barn, fully in frame and separated by visible gaps, all on the same level and at the same distance from the viewer: exactly two large horses and two smaller horses, with pack frames. Each horse has one separate head, body and four legs; their size contrast is clear without perspective tricks. Foreground right: Ásta counts on her fingers beside afi, seated on his flat stone with his stick; Snati lies at his feet. Foreground left: Siggi stands holding his rake and looks toward the farmhouse. Keep all eight people distinct and countable: Bjarni 44, broad and dark-bearded; Óli 24, the tallest, red-cheeked and red-bearded, cap and plain cream work jumper; Guðrún 38, dark peysuföt and small black skotthúfa; Helga 18, tall, honey-brown plaits and dark working dress; Þórunn 36, thin, brown shawl and grey apron; Siggi 11, thin, tousled sandy hair, plain brown knitted work jumper, grey breeches and sewn sheepskin shoes on both feet; Ásta 6, white-blond plaits, dark-red mid-calf dress and white apron; afi 73, white hair and chin-beard, dark-blue jacket, dark knitted cap and stick. Snati is the cream-and-tan Icelandic sheepdog with pointed ears and curled tail. Plain period work clothes, simple knitting. No text, letters or numerals anywhere.",
+      "characters": [
+        "char-bjarni",
+        "char-oli",
+        "char-gudrun",
+        "char-helga",
+        "char-thorunn",
+        "char-asta",
+        "char-afi",
+        "char-snati",
+        "char-siggi"
+      ],
+      "covers_lexeme_ids": [
+        "is-hey",
+        "is-hrifa",
+        "is-sata",
+        "is-hlada",
+        "is-folk",
+        "is-heidi",
+        "is-tun",
+        "is-sumar",
+        "is-strakur",
+        "is-stelpa"
+      ],
+      "width": 1264,
+      "height": 848
+    },
+    "sections": [
+      {
+        "id": "is-kvold-01-l03-sec1",
+        "title": "Heyið",
+        "exercises": [
+          {
+            "id": "is-kvold-01-l03-x1-1",
+            "type": "podstanovka",
+            "title": "Rétt form",
+            "instruction": "Settu orðið í rétt form.",
+            "hint_en": "Patterns: hestur → hestar, kona → konur, barn → börn (a → ö); maður → menn is irregular. Adjectives agree: stórar (kvk.), litlir (kk.).",
+            "grammar_target_ids": [
+              "G03"
+            ],
+            "obrazec": {
+              "rule": "hestur → hestar · kona → konur · barn → börn",
+              "prompt": "Fjórir ___ eru á túninu. (hestur)",
+              "answer": "hestar"
+            },
+            "items": [
+              {
+                "id": "x1-1-1",
+                "prompt": "Bjarni og Óli eru ___. (maður)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "menn"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "maðurar",
+                    "hint": "maður → menn"
+                  },
+                  {
+                    "answer": "maður",
+                    "hint": "fleirtala: menn"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-2",
+                "prompt": "Guðrún, Helga og Þórunn eru ___. (kona)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "konur"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "konar",
+                    "hint": "kvk. ft.: -ur → konur"
+                  },
+                  {
+                    "answer": "kona",
+                    "hint": "fleirtala: konur"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-3",
+                "prompt": "Siggi og Ásta eru ___. (barn)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "börn"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "barn",
+                    "hint": "fleirtala: a → ö, börn"
+                  },
+                  {
+                    "answer": "barnar",
+                    "hint": "hk. ft.: no ending, a → ö: börn"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-4",
+                "prompt": "Sáturnar eru margar líka, og þær eru ___. (stór)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "stórar"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "stórir",
+                    "hint": "sáturnar (kvk.) → stórar"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-5",
+                "prompt": "Tveir eru stórir, og tveir eru ___. (lítill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "litlir"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "lítill",
+                    "hint": "fleirtala: litlir"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-x1-2",
+            "type": "podstanovka",
+            "title": "Er eða eru?",
+            "instruction": "Veldu rétt orð.",
+            "hint_en": "A singular subject takes er; a plural subject takes eru.",
+            "grammar_target_ids": [
+              "G03"
+            ],
+            "obrazec": {
+              "rule": "Siggi er … · Siggi og Ásta eru …",
+              "prompt": "Siggi og Ásta ___ börn.",
+              "answer": "eru"
+            },
+            "items": [
+              {
+                "id": "x1-2-1",
+                "prompt": "Siggi ___ strákur.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "er"
+                ],
+                "choices": [
+                  "er",
+                  "eru",
+                  "ekki"
+                ]
+              },
+              {
+                "id": "x1-2-2",
+                "prompt": "Hrífurnar ___ margar.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "eru"
+                ],
+                "choices": [
+                  "er",
+                  "eru",
+                  "ekki"
+                ]
+              },
+              {
+                "id": "x1-2-3",
+                "prompt": "„Afi ___ afi,“ segir Ásta.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "er"
+                ],
+                "choices": [
+                  "er",
+                  "eru",
+                  "ekki"
+                ]
+              },
+              {
+                "id": "x1-2-4",
+                "prompt": "Tveir hestar ___ litlir.",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "eru"
+                ],
+                "choices": [
+                  "er",
+                  "eru",
+                  "ekki"
+                ]
+              },
+              {
+                "id": "x1-2-5",
+                "prompt": "„Hundur ___ ekki fólk!“",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "er"
+                ],
+                "choices": [
+                  "er",
+                  "eru",
+                  "ekki"
+                ]
+              }
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "id": "is-kvold-01-l03-s001",
+            "text": "Það er sumar á Jökuldal, og það er sól.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l03-svg-tunid",
+                "anchor_text": "sól",
+                "src": "media/diagrams/is-kvold-01-l03-svg-tunid.svg",
+                "label": "sól · heiði · gras · hey · hrífa · sáta · ský · rigning · hlaða",
+                "alt": "Two panels of the same home field at Hamrar. Top, fair weather: sun (sól), small white clouds, the brown-green moor behind (heiði), a strip of standing grass (gras), rows of drying hay (hey), a haycock (sáta) and Óli raking with a wooden hay rake (hrífa). Bottom, the storm: a big black cloud (ský) over the moor with rain falling (rigning); the field is bare and the hay is heaped in the open door of the turf hay barn (hlaða).",
+                "status": "draft",
+                "width": 360,
+                "height": 440,
+                "covers_lexeme_ids": [
+                  "is-sol",
+                  "is-heidi",
+                  "is-gras",
+                  "is-hey",
+                  "is-hrifa",
+                  "is-sata",
+                  "is-sky",
+                  "is-rigning",
+                  "is-hlada"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s002",
+            "text": "Skýin eru lítil og hvít, og fólkið er á túninu. Túnið er stórt.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fólkið",
+                "gloss": "fólk: Bjarni, Guðrún, Helga, Óli, Þórunn …",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "is-folk"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s003",
+            "text": "Hér er gras, og þar er hey, mikið hey.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "mikið",
+                "gloss": "lítið ↔ mikið",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-mikill"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s004",
+            "text": "Bjarni og Óli eru menn.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "menn",
+                "gloss": "maður → menn",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g03"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s005",
+            "text": "Guðrún, Helga og Þórunn eru konur.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "konur",
+                "gloss": "kona → konur",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g03"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s006",
+            "text": "Siggi og Ásta eru börn.",
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l03-svg-barn-born",
+                "anchor_text": "börn",
+                "src": "media/diagrams/is-kvold-01-l03-svg-barn-born.svg",
+                "label": "barn → börn · saga → sögur · svart → svört",
+                "alt": "Ásta alone, labelled barn; an arrow; Siggi and Ásta side by side, labelled börn. Below, three rows with the changing vowel marked in colour and bold: barn → börn, saga → sögur, svart → svört.",
+                "status": "draft",
+                "width": 360,
+                "height": 300,
+                "covers_lexeme_ids": [
+                  "is-barn",
+                  "is-pattern-g03",
+                  "is-strakur",
+                  "is-stelpa"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s007",
+            "text": "Siggi er strákur, og Ásta er stelpa."
+          },
+          {
+            "id": "is-kvold-01-l03-s008",
+            "text": "„Tveir menn, þrjár konur og tvö börn!“ segir Ásta.",
+            "paragraph_start": true,
+            "speaker": "char-asta",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Tveir",
+                "gloss": "tveir: Bjarni, Óli · þrjár: Guðrún, Helga, Þórunn",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "is-tveir",
+                  "is-thrir"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s009",
+            "text": "„Og afi?“ spyr afi. „Og Snati?“",
+            "paragraph_start": true,
+            "speaker": "char-afi"
+          },
+          {
+            "id": "is-kvold-01-l03-s010",
+            "text": "„Afi er afi,“ segir Ásta. „Og Snati er hundur. Hundur er ekki fólk!“",
+            "speaker": "char-asta",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s011",
+            "text": "„Og hrífurnar, Ásta?“",
+            "paragraph_start": true,
+            "speaker": "char-afi"
+          },
+          {
+            "id": "is-kvold-01-l03-s012",
+            "text": "„Tvær, þrjár, fjórar … Hrífurnar eru margar, afi!“",
+            "speaker": "char-asta",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s013",
+            "text": "Sáturnar eru margar líka, og þær eru stórar.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s014",
+            "text": "Fjórir hestar eru á túninu. Tveir eru stórir, og tveir eru litlir.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "hestar",
+                "gloss": "hestur → hestar",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g03"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s015",
+            "text": "Þar er hlaðan. Og þar er heiðin, og þar er gras.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s016",
+            "text": "Kindurnar eru þar, og þær eru hvítar.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Kindurnar",
+                "gloss": "kind → kindur",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g03"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s017",
+            "text": "„Sól, hey og fólk á túninu: þetta er sumar, Siggi,“ segir afi. „En sumarið er gamalt.“",
+            "paragraph_start": true,
+            "speaker": "char-afi"
+          },
+          {
+            "id": "is-kvold-01-l03-s018",
+            "text": "„Afi, hvar er sagan?“ spyr Siggi. „Óðinn, Sleipnir og Ásgarður?“",
+            "paragraph_start": true,
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l03-s019",
+            "text": "„Hún er hér,“ segir afi.",
+            "speaker": "char-afi",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s020",
+            "text": "„Hér? Í bænum?“",
+            "speaker": "char-siggi",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s021",
+            "text": "Afi segir ekki „já“, og hann segir ekki „nei“.",
+            "paragraph_start": true
+          }
+        ]
+      },
+      {
+        "id": "is-kvold-01-l03-sec2",
+        "title": "Svart ský",
+        "exercises": [
+          {
+            "id": "is-kvold-01-l03-x2-1",
+            "type": "okonchaniya",
+            "title": "Endingar",
+            "instruction": "Skrifaðu endinguna.",
+            "hint_en": "Whole forms: menn → mennirnir, hrífur → hrífurnar, ský → skýin. Adjectives: fljótur (kk. et.), fljótir (kk. ft.), fljótar (kvk. ft.).",
+            "grammar_target_ids": [
+              "G03"
+            ],
+            "obrazec": {
+              "rule": "mennirnir · hrífurnar · skýin",
+              "prompt": "Sátur___ eru fjórar.",
+              "answer": "nar"
+            },
+            "items": [
+              {
+                "id": "x2-1-1",
+                "prompt": "Ský___ eru mörg og svört.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "in"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "ið",
+                    "hint": "fleirtala: skýin"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-2",
+                "prompt": "Hrífur___ eru margar.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "nar"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "in",
+                    "hint": "kvk. ft.: -nar"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-3",
+                "prompt": "Menn___ eru fljótir.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "irnir"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "inn",
+                    "hint": "fleirtala: mennirnir"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-4",
+                "prompt": "Helga og Þórunn eru fljót___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ar"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "ir",
+                    "hint": "kvk. ft.: fljótar"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-5",
+                "prompt": "Óli er fljót___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ur"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "ir",
+                    "hint": "et.: fljótur"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-x2-2",
+            "type": "podstanovka",
+            "title": "Rétt form",
+            "instruction": "Settu orðið í rétt form.",
+            "hint_en": "Adjectives agree with the plural noun: stórir (kk.), stórar (kvk.), stór (hk.). In some forms a → ö: svört. lítill → litlir, lítil.",
+            "grammar_target_ids": [
+              "G03"
+            ],
+            "obrazec": {
+              "rule": "hestarnir eru stórir · sáturnar eru stórar · skýin eru stór",
+              "prompt": "Kindurnar eru ___. (hvítur)",
+              "answer": "hvítar"
+            },
+            "items": [
+              {
+                "id": "x2-2-1",
+                "prompt": "Sáturnar eru ___. (stór)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "stórar"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "stór",
+                    "hint": "sáturnar (kvk. ft.) → stórar"
+                  }
+                ]
+              },
+              {
+                "id": "x2-2-2",
+                "prompt": "Nú eru skýin ___. (svartur)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "svört"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "svart",
+                    "hint": "skýin (hk. ft.): a → ö, svört"
+                  }
+                ]
+              },
+              {
+                "id": "x2-2-3",
+                "prompt": "Hestarnir eru ___. (lítill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "litlir"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "lítill",
+                    "hint": "hestarnir (kk. ft.) → litlir"
+                  }
+                ]
+              },
+              {
+                "id": "x2-2-4",
+                "prompt": "Börnin eru ___. (lítill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "lítil"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "litlir",
+                    "hint": "börnin (hk. ft.) → lítil"
+                  }
+                ]
+              },
+              {
+                "id": "x2-2-5",
+                "prompt": "Mennirnir eru ___. (fljótur)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "fljótir"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "fljótar",
+                    "hint": "mennirnir (kk. ft.) → fljótir"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "id": "is-kvold-01-l03-s022",
+            "text": "Þar er heiðin, og þar kemur ský.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s023",
+            "text": "Skýið er ekki lítið og hvítt. Það er stórt og svart.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "svart",
+                "gloss": "hvítt ↔ svart",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-svartur"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s024",
+            "text": "„Pabbi! Svart ský!“ segir Helga.",
+            "paragraph_start": true,
+            "speaker": "char-helga"
+          },
+          {
+            "id": "is-kvold-01-l03-s025",
+            "text": "Bjarni sér skýið."
+          },
+          {
+            "id": "is-kvold-01-l03-s026",
+            "text": "„Það kemur rigning!“ segir hann. „Og heyið er á túninu!“",
+            "speaker": "char-bjarni"
+          },
+          {
+            "id": "is-kvold-01-l03-s027",
+            "text": "Nú er ekki sól. Nú eru skýin mörg og svört, og heiðin er svört líka.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "svört",
+                "gloss": "svart ský → svört ský",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g03"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s028",
+            "text": "Óli kemur og fer, kemur og fer, og heyið fer líka.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l03-img-kapp",
+                "src": "media/images/is-kvold-01-l03-img-kapp.webp",
+                "alt": "Under dark clouds at Hamrar, Óli hurries with an armful of hay toward the open turf hay barn. Bjarni leads a horse carrying hay; Guðrún, Helga and Þórunn gather the hay, and Ásta hurries with a small bundle beside Snati. Haycocks remain on the sunlit field; rain has not yet reached it.",
+                "status": "draft",
+                "art_brief": "Late afternoon in late August 1874 on the home field of Hamrar. Heavy black clouds fill the sky and darken the heath: dim overcast light over the whole field, with no sunlight and no rain yet falling on the workers or hay. Óli, the tall red-bearded farmhand in a cap and plain cream work jumper, hurries toward the open door of the long low turf hay barn with a huge armful of hay. Bjarni, broad and dark-bearded in plain work clothes, leads an Icelandic horse carrying two balanced bundles of hay toward the same door. Helga, tall with honey-brown plaits and a dark working dress, and thin Þórunn in a brown shawl and grey apron, rake hay into heaps with long wooden hay rakes; Guðrún, in dark peysuföt and a small black skotthúfa, gathers a bundle. Haycocks remain clearly visible beyond them. In the foreground Ásta, six, white-blond plaits, dark-red mid-calf dress and white apron, hurries with a small armful of hay; Snati, the cream-and-tan Icelandic sheepdog with a curled tail, runs beside her. Show only these six people and the dog. Separate their silhouettes and let the forward lean of the running figures make their speed clear. Established Kafli 1–2 farm ink-and-watercolour style; turf-and-stone walls and grass roof, simple wooden tools, plain period work clothes. No text, letters or numerals anywhere.",
+                "characters": [
+                  "char-oli",
+                  "char-bjarni",
+                  "char-helga",
+                  "char-thorunn",
+                  "char-gudrun",
+                  "char-asta",
+                  "char-snati"
+                ],
+                "covers_lexeme_ids": [
+                  "is-hey",
+                  "is-hlada",
+                  "is-sky",
+                  "is-svartur",
+                  "is-heidi",
+                  "is-hrifa",
+                  "is-sata",
+                  "is-fljotur"
+                ],
+                "width": 1264,
+                "height": 848
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s029",
+            "text": "Óli er fljótur."
+          },
+          {
+            "id": "is-kvold-01-l03-s030",
+            "text": "Helga og Þórunn eru fljótar, og mennirnir eru fljótir."
+          },
+          {
+            "id": "is-kvold-01-l03-s031",
+            "text": "Ásta er lítil stelpa, en hún er líka fljót."
+          },
+          {
+            "id": "is-kvold-01-l03-s032",
+            "text": "„Þessi stelpa er fljót!“ segir Óli.",
+            "speaker": "char-oli"
+          },
+          {
+            "id": "is-kvold-01-l03-s033",
+            "text": "Hestarnir eru fljótir líka.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s035",
+            "text": "„Sáturnar eru fjórar!“ segir Ásta. „Nú eru þær þrjár! Nú eru þær tvær!“",
+            "paragraph_start": true,
+            "speaker": "char-asta"
+          },
+          {
+            "id": "is-kvold-01-l03-s036",
+            "text": "Skýið er svart, og nú er það hér.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s037",
+            "text": "Þar er hlaðan, og nú er heyið þar. Og nú kemur rigningin."
+          }
+        ]
+      },
+      {
+        "id": "is-kvold-01-l03-sec3",
+        "title": "Bókin",
+        "exercises": [
+          {
+            "id": "is-kvold-01-l03-x3-1",
+            "type": "podstanovka",
+            "title": "Rétt form",
+            "instruction": "Settu orðið í rétt form.",
+            "hint_en": "The adjective agrees with its noun: kk. blautur, kvk. blaut, hk. blautt; þurr, þurr, þurrt; mikill, mikil, mikið.",
+            "grammar_target_ids": [
+              "G03"
+            ],
+            "obrazec": {
+              "rule": "Siggi er blautur · bókin er blaut · túnið er blautt",
+              "prompt": "Strákurinn er ___. (blautur)",
+              "answer": "blautur"
+            },
+            "items": [
+              {
+                "id": "x3-1-1",
+                "prompt": "Túnið er ___. (blautur)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "blautt"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "blaut",
+                    "hint": "túnið (hk.) → blautt"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-2",
+                "prompt": "Bókin er ___. (blautur)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "blaut"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "blautt",
+                    "hint": "bókin (kvk.) → blaut"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-3",
+                "prompt": "Heyið er ekki blautt. Það er ___. (þurr)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "þurrt"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "þurr",
+                    "hint": "heyið (hk.) → þurrt"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-4",
+                "prompt": "Hlaðan er ___. (þurr)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "þurr"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "þurrt",
+                    "hint": "hlaðan (kvk.) → þurr"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-5",
+                "prompt": "Rigningin er ___. (mikill)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "mikil"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "mikið",
+                    "hint": "rigningin (kvk.) → mikil"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-x3-2",
+            "type": "podstanovka",
+            "title": "Rétt form",
+            "instruction": "Veldu rétt orð.",
+            "hint_en": "A singular subject takes er (fólkið er), a plural subject eru; the adjective's ending shows which noun fits.",
+            "grammar_target_ids": [
+              "G03"
+            ],
+            "obrazec": {
+              "rule": "bókin er · sögurnar eru",
+              "prompt": "Nú er heyið þar, og nú kemur ___. (rigningin / skýin / hrífurnar)",
+              "answer": "rigningin"
+            },
+            "items": [
+              {
+                "id": "x3-2-1",
+                "prompt": "Bókin er ekki hér, en ___ eru hér. (sögurnar / sagan / bókin)",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "sögurnar"
+                ],
+                "choices": [
+                  "sögurnar",
+                  "sagan",
+                  "bókin"
+                ]
+              },
+              {
+                "id": "x3-2-2",
+                "prompt": "Á túninu liggur ___, og þar er sáta. (hrífa / hrífurnar / sáturnar)",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "hrífa"
+                ],
+                "choices": [
+                  "hrífa",
+                  "hrífurnar",
+                  "sáturnar"
+                ]
+              },
+              {
+                "id": "x3-2-3",
+                "prompt": "___ er blautur, og bókin er blaut. (Strákurinn / Börnin / Stelpan)",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "Strákurinn"
+                ],
+                "choices": [
+                  "Strákurinn",
+                  "Börnin",
+                  "Stelpan"
+                ]
+              },
+              {
+                "id": "x3-2-4",
+                "prompt": "Heyið er þurrt, og ___ er þurrt. (fólkið / hlaðan / mennirnir)",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "fólkið"
+                ],
+                "choices": [
+                  "fólkið",
+                  "hlaðan",
+                  "mennirnir"
+                ]
+              },
+              {
+                "id": "x3-2-5",
+                "prompt": "Bjarni fer, og ___ fer líka. (bókin / sögurnar / börnin)",
+                "mode": "productive",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "bókin"
+                ],
+                "choices": [
+                  "bókin",
+                  "sögurnar",
+                  "börnin"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-napishi",
+            "type": "napishi",
+            "title": "Skrifaðu",
+            "mode": "productive",
+            "prompt": "Túnið: hvað er þar? Skrifaðu.",
+            "length_hint": "3–5 setningar",
+            "hint_en": "Write 3–5 sentences about the home field at haymaking: who and what is there. Use plurals with eru (menn, konur, börn, hestar, hrífurnar, sáturnar) and make the adjectives agree.",
+            "model_answers": [
+              "Á túninu eru tveir menn og þrjár konur. Hrífurnar eru margar, og sáturnar eru stórar. Börnin eru lítil.",
+              "Það er sól, og skýin eru hvít. Heyið er þurrt. Fjórir hestar eru á túninu, og þeir eru fljótir."
+            ],
+            "rubric": [
+              "plural nouns: menn, konur, börn (a → ö), hestar; with the article -nir, -nar, -in",
+              "eru with a plural subject",
+              "adjectives agree in the plural: stórir / stórar / stór, fljótir / fljótar / fljót"
+            ],
+            "rubric_lang": "en",
+            "key_terms": [
+              "is-hey",
+              "is-hrifa",
+              "is-sata",
+              "is-margur",
+              "is-pattern-g03"
+            ],
+            "typical_errors": [
+              {
+                "wrong": "Börnin er lítil.",
+                "right": "Börnin eru lítil.",
+                "note": "plural subject → eru",
+                "note_lang": "en"
+              },
+              {
+                "wrong": "Á túninu eru barn.",
+                "right": "Á túninu eru börn.",
+                "note": "barn → börn in the plural (a → ö)",
+                "note_lang": "en"
+              },
+              {
+                "wrong": "Konurnar eru fljótir.",
+                "right": "Konurnar eru fljótar.",
+                "note": "kvk. ft. → fljótar",
+                "note_lang": "en"
+              }
+            ],
+            "elicits": [
+              "G03"
+            ]
+          }
+        ],
+        "segments": [
+          {
+            "id": "is-kvold-01-l03-s038",
+            "text": "Rigningin er mikil.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s039",
+            "text": "Óli er blautur, og Snati er blautur. Grasið er blautt."
+          },
+          {
+            "id": "is-kvold-01-l03-s040",
+            "text": "„En heyið er ekki blautt,“ segir Bjarni. „Það er þurrt, og hlaðan er þurr.“",
+            "paragraph_start": true,
+            "speaker": "char-bjarni",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "þurrt",
+                "gloss": "blautt ↔ þurrt",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "is-thurr"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s042",
+            "text": "„Og börnin? Ásta er hér, en hvar er strákurinn?“ spyr Guðrún.",
+            "paragraph_start": true,
+            "speaker": "char-gudrun"
+          },
+          {
+            "id": "is-kvold-01-l03-s043",
+            "text": "„Siggi! Siggi!“ segir hún. En Siggi kemur ekki.",
+            "speaker": "char-gudrun"
+          },
+          {
+            "id": "is-kvold-01-l03-s044",
+            "text": "„Voff!“ segir Snati, og hann fer. Bjarni fer líka.",
+            "paragraph_start": true,
+            "speaker": "char-snati"
+          },
+          {
+            "id": "is-kvold-01-l03-s045",
+            "text": "Á túninu liggur hrífa, og þar er sáta, lítil sáta."
+          },
+          {
+            "id": "is-kvold-01-l03-s046",
+            "text": "„Hver er hér?“ spyr Bjarni.",
+            "speaker": "char-bjarni"
+          },
+          {
+            "id": "is-kvold-01-l03-s047",
+            "text": "Og þar, í heyinu, liggur Siggi. „Óðinn … Sleipnir … Ásgarður …“ segir hann.",
+            "paragraph_start": true,
+            "speaker": "char-siggi",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l03-img-siggi-i-heyinu",
+                "src": "media/images/is-kvold-01-l03-img-siggi-i-heyinu.webp",
+                "alt": "In the rain at the edge of the home field, Snati barks at a small haycock; inside the hay Siggi lies on his stomach reading an old handwritten book; Bjarni, dripping wet, has just pulled the hay aside and stares down at him.",
+                "status": "draft",
+                "art_brief": "Minutes later on the same day at Hamrar, heavy rain falls in grey slanting lines and the daylight is dim blue-grey. At the edge of the mown home field, beside the turf wall, stands one small haycock; a wooden hay rake lies on the ground beside it. Wet Snati, the cream-and-tan Icelandic sheepdog with pointed ears and curled tail, stands barking at the haycock. Bjarni, 44, broad and dark-bearded, in soaked plain work clothes and a dripping hat, has pulled the hay aside with one hand and looks down in astonishment. Inside the hollow in the hay, Siggi, 11, thin, tousled sandy hair, plain brown knitted work jumper, grey breeches and sewn sheepskin shoes on both healed feet, lies on his stomach reading an open thick calfskin-backed paper manuscript. His gaze and one finger follow a row of loose wavy ink strokes, his lips parted as he reads aloud; the page marks contain no letters or recognisable symbols. The book is large enough to recognise and rain-spotted pages are clear. Keep Bjarni, Siggi, Snati, the wet hay and the dropped rake as the focus, with the established dark tarred farmhouse gables and low turf hay barn small and dim behind. Established Kafli 1–2 farm ink-and-watercolour style. No text, letters or numerals anywhere.",
+                "characters": [
+                  "char-siggi",
+                  "char-bjarni",
+                  "char-snati"
+                ],
+                "covers_lexeme_ids": [
+                  "is-bok",
+                  "is-sata",
+                  "is-rigning",
+                  "is-blautur",
+                  "is-ph-i-heyinu",
+                  "is-hrifa"
+                ],
+                "width": 1264,
+                "height": 848
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s048",
+            "text": "Í heyinu er bók, og sagan er þar. Siggi les.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "les",
+                "gloss": "les: sér „Óðinn“ og segir „Óðinn“",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "is-lesa"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s049",
+            "text": "„Siggi!“ segir Bjarni. „Hvað er þetta? Bók í heyinu?“",
+            "paragraph_start": true,
+            "speaker": "char-bjarni"
+          },
+          {
+            "id": "is-kvold-01-l03-s050",
+            "text": "„Pabbi! Sagan er hér! Óðinn er hér, og Sleipnir …“",
+            "speaker": "char-siggi",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s051",
+            "text": "„Bók?“ segir Bjarni. „Hey, ekki bók!“",
+            "speaker": "char-bjarni",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s052",
+            "text": "Strákurinn er blautur, og bókin er blaut.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s053",
+            "text": "Bjarni fer, og bókin fer líka."
+          },
+          {
+            "id": "is-kvold-01-l03-s054",
+            "text": "Nú er kvöld, og rigningin er mikil.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s055",
+            "text": "Fólkið er í bænum. Heyið er þurrt, og fólkið er þurrt. En Siggi er blautur."
+          },
+          {
+            "id": "is-kvold-01-l03-s056",
+            "text": "„Bók í heyinu!“ segir Óli.",
+            "paragraph_start": true,
+            "speaker": "char-oli"
+          },
+          {
+            "id": "is-kvold-01-l03-s057",
+            "text": "„Á afi bók?“ spyr Ásta.",
+            "paragraph_start": true,
+            "speaker": "char-asta",
+            "inference_aids": [
+              {
+                "type": "diagram",
+                "presentation": "margin_diagram",
+                "ref": "is-kvold-01-l03-svg-eiga",
+                "anchor_text": "Á",
+                "src": "media/diagrams/is-kvold-01-l03-svg-eiga.svg",
+                "label": "Bjarni á börn · Afi á bók",
+                "alt": "Two rows. Top: Bjarni's portrait, an arrow, then his children Siggi and Ásta; labelled Bjarni á börn. Bottom: afi's portrait, an arrow, then an old leather-bound book; labelled Afi á bók.",
+                "status": "draft",
+                "width": 360,
+                "height": 270,
+                "covers_lexeme_ids": [
+                  "is-eiga"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is-kvold-01-l03-s058",
+            "text": "„Já,“ segir Siggi. „Afi á bók, og sagan er þar.“",
+            "speaker": "char-siggi",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s059",
+            "text": "„Og hvar er bókin nú?“",
+            "speaker": "char-asta",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s060",
+            "text": "„Bókin er hér,“ segir Bjarni. „Hey í dag, Siggi. Bók … ekki í dag.“",
+            "paragraph_start": true,
+            "speaker": "char-bjarni"
+          },
+          {
+            "id": "is-kvold-01-l03-s061",
+            "text": "Bjarni fer, og bókin fer líka. Afi situr, og Siggi situr þar líka.",
+            "paragraph_start": true
+          },
+          {
+            "id": "is-kvold-01-l03-s062",
+            "text": "„Afi, bókin …“ segir Siggi.",
+            "speaker": "char-siggi"
+          },
+          {
+            "id": "is-kvold-01-l03-s063",
+            "text": "„Bókin er ekki hér, Siggi,“ segir afi. „En sögurnar eru hér.“",
+            "speaker": "char-afi",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "sögurnar",
+                "gloss": "saga → sögur",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "is-pattern-g03"
+                ]
+              }
+            ],
+            "paragraph_start": true
+          }
+        ]
+      }
+    ]
+  },
+  "words_with_history": {
+    "title": "Orð með sögu",
+    "word": "hey · heyannir",
+    "text": [
+      "Hey er þurrt gras.",
+      "Heyannir: sumar, sól, mikið hey og mikið fólk á túninu.",
+      "Afi segir „heyannir“. Siggi segir „sumar“."
+    ],
+    "lexeme_ids": [
+      "is-hey",
+      "is-sumar"
+    ],
+    "note_en": "Heyannir ('hay-toils') was a month of the old Icelandic calendar, from late July to late August, named for the haymaking that filled it; the next month began in the last week of August. Hey is the same word as English hay. Hay brought in wet could rot, so a black cloud sent everyone running."
+  },
+  "grammar": {
+    "title": "barn → börn",
+    "rule": "hestur → hestar → hestarnir · maður → menn → mennirnir · hrífa → hrífur → hrífurnar · ský → ský → skýin · barn → börn → börnin",
+    "tables": [
+      {
+        "caption": "et. · ft. · ft. -nir, -nar, -in",
+        "header": [
+          "et.",
+          "ft.",
+          "ft. …"
+        ],
+        "rows": [
+          [
+            "hestur",
+            "hestar",
+            "hestarnir"
+          ],
+          [
+            "maður",
+            "menn",
+            "mennirnir"
+          ],
+          [
+            "kona",
+            "konur",
+            ""
+          ],
+          [
+            "hrífa",
+            "",
+            "hrífurnar"
+          ],
+          [
+            "sáta",
+            "",
+            "sáturnar"
+          ],
+          [
+            "kind",
+            "",
+            "kindurnar"
+          ],
+          [
+            "saga",
+            "",
+            "sögurnar"
+          ],
+          [
+            "barn",
+            "börn",
+            "börnin"
+          ],
+          [
+            "ský",
+            "",
+            "skýin"
+          ]
+        ]
+      },
+      {
+        "caption": "er · eru",
+        "header": [
+          "er",
+          "eru"
+        ],
+        "rows": [
+          [
+            "Óli er fljótur.",
+            "Mennirnir eru fljótir."
+          ],
+          [
+            "Hlaðan er þurr.",
+            "Sáturnar eru … stórar."
+          ],
+          [
+            "Skýið er svart.",
+            "Nú eru skýin mörg og svört."
+          ],
+          [
+            "Siggi er strákur.",
+            "Siggi og Ásta eru börn."
+          ]
+        ]
+      },
+      {
+        "caption": "a → ö",
+        "header": [
+          "a",
+          "ö"
+        ],
+        "rows": [
+          [
+            "barn",
+            "börn"
+          ],
+          [
+            "saga",
+            "sögur(nar)"
+          ],
+          [
+            "svart ský",
+            "svört ský"
+          ],
+          [
+            "margur",
+            "mörg ský"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "is-kvold-01-l03-s004"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s006"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s012"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s014"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s016"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s027"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s030"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s035"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s042"
+      },
+      {
+        "segment_id": "is-kvold-01-l03-s063"
+      }
+    ],
+    "note_en": "Patterns in this chapter: hestur → hestar → hestarnir; kona → konur; hrífa → hrífurnar; ský → ský → skýin; barn → börn → börnin. Maður → menn → mennirnir is irregular: learn it whole. The plural takes eru: Óli er fljótur \"Óli is quick\", Mennirnir eru fljótir \"The men are quick\", Siggi og Ásta eru börn \"Siggi and Ásta are children\"; fólk is singular (fólkið er). Adjectives agree: fljótir (kk. ft.), fljótar (kvk. ft.), fljót (hk. ft.). In some forms a alternates with ö: barn → börn, saga → sögur, svart → svört. This does not happen before every written u (svartur, strákur). Abbreviations: et. singular, ft. plural; kk. masculine, kvk. feminine, hk. neuter."
+  },
+  "pensa": {
+    "A": {
+      "id": "is-kvold-01-l03-pa",
+      "title": "Verkefni A — Form",
+      "blocks": [
+        {
+          "obrazec": {
+            "prompt": "Bjarni og Óli eru ___. (maður)",
+            "answer": "menn"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Nú eru ___ mörg og svört. (ský)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "skýin"
+              ],
+              "choices": [
+                "skýin",
+                "skýið",
+                "sólin"
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "„___ eru fjórar!“ segir Ásta. (sáta)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "Sáturnar"
+              ],
+              "choices": [
+                "Sáturnar",
+                "Sátan",
+                "Hlaðan"
+              ]
+            },
+            {
+              "id": "a3",
+              "prompt": "Siggi og Ásta eru ___. (barn)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "börn"
+              ],
+              "choices": [
+                "börn",
+                "barn",
+                "barnið"
+              ]
+            },
+            {
+              "id": "a4",
+              "prompt": "Guðrún, Helga og Þórunn eru ___. (kona)",
+              "mode": "productive",
+              "answer_mode": "choice",
+              "accepted_answers": [
+                "konur"
+              ],
+              "choices": [
+                "konur",
+                "kona",
+                "konan"
+              ]
+            }
+          ]
+        },
+        {
+          "obrazec": {
+            "prompt": "Sáturnar eru ___. (stór)",
+            "answer": "stórar"
+          },
+          "items": [
+            {
+              "id": "a5",
+              "prompt": "Hrífurnar eru ___. (margur)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "margar"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "margir",
+                  "hint": "hrífurnar (kvk.) → margar"
+                }
+              ]
+            },
+            {
+              "id": "a6",
+              "prompt": "Nú eru skýin ___ og svört. (margur)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "mörg"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "margar",
+                  "hint": "skýin (hk.) → mörg: a → ö"
+                }
+              ]
+            },
+            {
+              "id": "a7",
+              "prompt": "Hér er hlaða. ___ er stór. (hlaða)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Hlaðan"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Hlaða",
+                  "hint": "second mention → -n: hlaðan"
+                }
+              ],
+              "recall_of": "G02"
+            },
+            {
+              "id": "a8",
+              "prompt": "Hér er bók. ___ er blaut. (hann / hún / það)",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "Hún"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "Það",
+                  "hint": "bók (kvk.) → hún"
+                }
+              ],
+              "recall_of": "G01"
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "is-kvold-01-l03-pb",
+      "title": "Verkefni B — Orð",
+      "word_bank": [
+        "bók",
+        "fljótur",
+        "fólk",
+        "heiði",
+        "hlaða",
+        "hrífa",
+        "rigning",
+        "ský",
+        "sól",
+        "stelpa",
+        "svartur",
+        "þurr"
+      ],
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Snati er hundur, en Ásta er lítil ___. (st…)",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "stelpa"
+          ]
+        },
+        {
+          "id": "b2",
+          "prompt": "Í dag er ekki sól. Skýin eru svört, og ___ kemur. (ri…)",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "rigning",
+            "rigningin"
+          ]
+        },
+        {
+          "id": "b3",
+          "prompt": "Óli kemur og fer, kemur og fer. Hann er ___. (fl…)",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "fljótur"
+          ]
+        },
+        {
+          "id": "b4",
+          "prompt": "Óli er blautur, en hlaðan er ekki blaut. Hún er ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "þurr"
+          ]
+        },
+        {
+          "id": "b5",
+          "prompt": "Siggi les. Hér er blaut ___. (b…)",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "bók"
+          ]
+        },
+        {
+          "id": "b6",
+          "prompt": "Nú er ekki rigning. Nú er ___, og heyið er þurrt. (só…)",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "sól"
+          ]
+        },
+        {
+          "id": "b7",
+          "prompt": "Afi, Bjarni, Guðrún, Helga, Siggi og Ásta: hér er mikið ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "fólk"
+          ]
+        },
+        {
+          "id": "b8",
+          "prompt": "Þetta er ekki bær. Þetta er ___, og heyið er þar. (hl…)",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "hlaða",
+            "hlaðan"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "id": "is-kvold-01-l03-pc",
+      "title": "Verkefni C — Spurningar",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Það er sól. Hvar er fólkið?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Fólkið er á túninu.",
+          "model_answers": [
+            "Fólkið er á túninu.",
+            "Það er á túninu, á Jökuldal."
+          ],
+          "rubric": "On the home field (á túninu), raking hay. Any sentence that puts the people on the tún is right.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-folk",
+            "is-tun"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l03-s002"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Bjarni og Óli eru menn, og Guðrún, Helga og Þórunn eru konur. En Siggi og Ásta?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Siggi og Ásta eru börn.",
+          "model_answers": [
+            "Siggi og Ásta eru börn.",
+            "Þau eru tvö börn. Siggi er strákur, og Ásta er stelpa."
+          ],
+          "rubric": "They are children (börn: barn → börn); Siggi is a boy (strákur), Ásta a girl (stelpa). Either order of the names, a pronoun or the names are all fine.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-barn",
+            "is-strakur",
+            "is-stelpa"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l03-s006",
+            "is-kvold-01-l03-s007"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Hvað sér Helga, og hvað segir Bjarni?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Helga sér svart ský. Bjarni segir: „Það kemur rigning!“",
+          "model_answers": [
+            "Helga sér svart ský. Bjarni segir: „Það kemur rigning!“",
+            "Hún sér ský, stórt og svart. Bjarni segir: „Það kemur rigning, og heyið er á túninu!“"
+          ],
+          "rubric": "Helga sees a big black cloud over the heath; Bjarni says rain is coming and the hay is still on the home field.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-sky",
+            "is-svartur",
+            "is-rigning"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l03-s022",
+            "is-kvold-01-l03-s024",
+            "is-kvold-01-l03-s026"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Af hverju er fólkið fljótt?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Það kemur rigning, og heyið er á túninu.",
+          "model_answers": [
+            "Það kemur rigning, og heyið er á túninu.",
+            "Skýið er stórt og svart, og það kemur rigning. Heyið er þurrt, og það er á túninu."
+          ],
+          "rubric": "Rain is coming and the dry hay is still out on the field; the hay must be in the barn before it gets wet, so everyone hurries.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-rigning",
+            "is-hey",
+            "is-fljotur"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l03-s026",
+            "is-kvold-01-l03-s028",
+            "is-kvold-01-l03-s037"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Hvar liggur Siggi, og hvað les hann?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Siggi liggur í heyinu, og hann les bók.",
+          "model_answers": [
+            "Siggi liggur í heyinu, og hann les bók.",
+            "Hann er á túninu. Hann liggur í heyinu og les."
+          ],
+          "rubric": "In a small haycock at the edge of the home field (í heyinu, á túninu), reading afi's book instead of working.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-ph-i-heyinu",
+            "is-bok"
+          ],
+          "source_segment_ids": [
+            "is-kvold-01-l03-s045",
+            "is-kvold-01-l03-s047",
+            "is-kvold-01-l03-s048"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "En þú? Hvað er hér í dag: sól, rigning, ský?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answer": "Í dag er sól, og skýin eru hvít.",
+          "model_answers": [
+            "Í dag er sól, og skýin eru hvít.",
+            "Í dag er ekki sól. Rigningin er mikil, og skýin eru mörg og svört."
+          ],
+          "rubric": "Answer in a full sentence, not just já or nei: any true answer about today's weather in the frame Í dag er …; if you mention the clouds, make the adjective plural (hvít, svört, mörg).",
+          "rubric_lang": "en",
+          "key_terms": [
+            "is-sol",
+            "is-sky",
+            "is-rigning"
+          ],
+          "source_segment_ids": []
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "is-sja",
+      "citation_form": "sér (sjá)",
+      "part_of_speech": "verb",
+      "current_sense": "sees (sjá: to see)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-lesa",
+      "citation_form": "les (lesa)",
+      "part_of_speech": "verb",
+      "current_sense": "reads (lesa: to read)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-eiga",
+      "citation_form": "á (eiga)",
+      "part_of_speech": "verb",
+      "current_sense": "owns, has (eiga: to own)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-ph-i-heyinu",
+      "citation_form": "í heyinu",
+      "part_of_speech": "phrase",
+      "current_sense": "in the hay (place chunk)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-hey",
+      "citation_form": "hey (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "hay",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-hrifa",
+      "citation_form": "hrífa (kvk.), ft. hrífur",
+      "part_of_speech": "noun",
+      "current_sense": "(hay) rake",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-sata",
+      "citation_form": "sáta (kvk.), ft. sátur",
+      "part_of_speech": "noun",
+      "current_sense": "haycock (a small heap of dried hay)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-sky",
+      "citation_form": "ský (hk.), ft. ský",
+      "part_of_speech": "noun",
+      "current_sense": "cloud",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-svartur",
+      "citation_form": "svartur (hk. et. svart, hk. ft. svört)",
+      "part_of_speech": "adj",
+      "current_sense": "black",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-hvitur",
+      "citation_form": "hvítur (hk. hvítt)",
+      "part_of_speech": "adj",
+      "current_sense": "white",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-rigning",
+      "citation_form": "rigning (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "rain",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-heidi",
+      "citation_form": "heiði (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "heath, moorland (the high moor above the farm)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-bok",
+      "citation_form": "bók (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "book",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-folk",
+      "citation_form": "fólk (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "people",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-margur",
+      "citation_form": "margir, margar, mörg",
+      "part_of_speech": "adj",
+      "current_sense": "many (in the plural: margir, margar, mörg)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-tveir",
+      "citation_form": "tveir, tvær, tvö",
+      "part_of_speech": "num",
+      "current_sense": "two",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-thrir",
+      "citation_form": "þrír, þrjár (kvk.)",
+      "part_of_speech": "num",
+      "current_sense": "three",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-fjorir",
+      "citation_form": "fjórir, fjórar (kvk.)",
+      "part_of_speech": "num",
+      "current_sense": "four",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-hlada",
+      "citation_form": "hlaða (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "hay barn",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-sumar",
+      "citation_form": "sumar (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "summer",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-blautur",
+      "citation_form": "blautur (kvk. blaut, hk. blautt)",
+      "part_of_speech": "adj",
+      "current_sense": "wet",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-thurr",
+      "citation_form": "þurr (hk. þurrt)",
+      "part_of_speech": "adj",
+      "current_sense": "dry",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-fljotur",
+      "citation_form": "fljótur (kvk. fljót)",
+      "part_of_speech": "adj",
+      "current_sense": "quick, fast",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    },
+    {
+      "lexeme_id": "is-strakur",
+      "citation_form": "strákur (kk.)",
+      "part_of_speech": "noun",
+      "current_sense": "boy",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kk."
+    },
+    {
+      "lexeme_id": "is-stelpa",
+      "citation_form": "stelpa (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "girl",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-gras",
+      "citation_form": "gras (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "grass",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-tun",
+      "citation_form": "tún (hk.)",
+      "part_of_speech": "noun",
+      "current_sense": "home field (the mown, manured field round the farmhouse)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "hk."
+    },
+    {
+      "lexeme_id": "is-sol",
+      "citation_form": "sól (kvk.)",
+      "part_of_speech": "noun",
+      "current_sense": "sun; sunshine",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true,
+      "gender": "kvk."
+    },
+    {
+      "lexeme_id": "is-mikill",
+      "citation_form": "mikill (kvk. mikil, hk. mikið)",
+      "part_of_speech": "adj",
+      "current_sense": "much, a lot of; big, great (rain: heavy)",
+      "first_introduced_lesson": "is-kvold-01-l03",
+      "new": true
+    }
+  ],
+  "completion": {
+    "button_label": "Búið"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "is-kvold-01",
+      "kafli-03",
+      "hluti-1"
+    ]
+  }
+}
