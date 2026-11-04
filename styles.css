@@ -127,9 +127,6 @@ main:focus { outline: none; }
 .lesson-header h1 { margin: .1rem 0 0; font: 700 clamp(2.1rem, 6vw, 3.6rem)/1.02 var(--serif); letter-spacing: -.02em; outline: none; }
 .status-badge { position: absolute; top: 0; right: 0; padding: .2rem .55rem; background: var(--badge); border-radius: 99px; font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
 .lesson-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin: 0 0 1.6rem; }
-.audio-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
-.voice-picker { display: flex; align-items: center; gap: .4rem; font-size: .85rem; font-weight: 700; }
-.voice-picker select { padding: .35rem .5rem; border: 1px solid var(--line); border-radius: .4rem; background: var(--card); }
 
 /* ---------- pictures */
 .scene { margin: 1.4rem 0 1.6rem; }
@@ -147,7 +144,6 @@ main:focus { outline: none; }
 .story-para { margin: 0 0 .8em; }
 .seg { border-radius: .2rem; scroll-margin-top: calc(var(--header) + 2rem); }
 .story { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
-.seg.audio-playing { background: var(--mint); box-shadow: 0 0 0 .15rem var(--mint); }
 .seg.flash, .note.flash { animation: flash 1.6s ease-out; }
 @keyframes flash { 0%, 30% { background: var(--flash); box-shadow: 0 0 0 .2rem var(--flash); } 100% { background: transparent; box-shadow: none; } }
 /* Story words (tap-to-gloss): no mark until tapped, then a soft highlight. */
@@ -159,10 +155,6 @@ main:focus { outline: none; }
 .w:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
 .anchor { border-radius: .15rem; text-decoration: underline var(--amber); text-decoration-thickness: 1.5px; text-underline-offset: .22em; }
 .anchor.paired { background: var(--amber-soft); text-decoration-color: var(--amber); }
-.para-play { position: relative; display: inline-grid; place-items: center; width: 1.45rem; height: 1.45rem; margin: 0 .35rem 0 0; padding: 0 0 0 .08rem; vertical-align: .12rem; border: 1px solid var(--control-line); border-radius: 50%; background: var(--card); color: var(--forest); font: .58rem/1 var(--sans); cursor: pointer; opacity: .7; }
-.para-play::before { content: ""; position: absolute; inset: -.5rem; } /* a finger-sized target */
-.para-play:hover, .para-play:focus-visible, .para-play.is-active { opacity: 1; border-color: var(--forest); background: var(--mint); }
-.para-play.is-active { padding-left: 0; letter-spacing: -.1em; }
 .note-marker { display: inline-block; margin-left: .15rem; padding: 0 .3rem; border: 1px solid var(--amber-line); border-radius: 99px; background: var(--amber-soft); color: var(--amber-ink); font: 700 .75rem/1.4 var(--sans); vertical-align: super; }
 /* Narrow screens: the paragraph's text notes run as one quiet line beneath it. */
 .para-notes { margin: -.45em 0 1em; padding: .05rem 0 .05rem .6rem; border-left: 2px solid var(--amber-line); font: .95rem/1.5 var(--serif); color: var(--note-ink); }
@@ -290,7 +282,7 @@ main:focus { outline: none; }
 .feedback { min-height: 0; margin-top: .35rem; font-size: .9rem; font-weight: 700; }
 .feedback:empty { margin: 0; }
 .feedback.status-correct { color: var(--ok); }
-.feedback.status-accent, .feedback.status-mutation, .feedback.status-common_wrong { color: var(--warn); }
+.feedback.status-accent, .feedback.status-capitalisation, .feedback.status-mutation, .feedback.status-common_wrong { color: var(--warn); }
 .feedback.status-wrong, .feedback.status-empty { color: var(--bad); }
 .feedback .typed { font: 1rem var(--serif); }
 .feedback mark { background: var(--mark); padding: 0 .05em; border-radius: .15rem; }
@@ -326,15 +318,7 @@ main:focus { outline: none; }
 .page-title { font-family: var(--serif); font-weight: 400; }
 .toast { position: fixed; right: 1rem; bottom: 1rem; z-index: 40; max-width: calc(100vw - 2rem); padding: .7rem 1rem; color: var(--on-forest); background: var(--forest-2); border-radius: .5rem; box-shadow: var(--shadow); opacity: 0; transform: translateY(10px); pointer-events: none; transition: .2s; }
 .toast.show { opacity: 1; transform: none; }
-.audio-docked .toast { bottom: 5rem; }
 
-/* ---------- audio dock: follows the screen while anything is playing or paused */
-.audio-dock { position: fixed; right: 1rem; bottom: max(1rem, env(safe-area-inset-bottom)); z-index: 30; display: flex; gap: .35rem; padding: .3rem; background: var(--card); border: 1px solid var(--line); border-radius: 99px; box-shadow: var(--shadow); }
-.audio-dock[hidden] { display: none; }
-.audio-dock button { width: 2.75rem; height: 2.75rem; display: grid; place-items: center; border: 0; border-radius: 50%; font-size: 1rem; line-height: 1; cursor: pointer; }
-.audio-dock-main { background: var(--forest); color: var(--on-forest); }
-.audio-dock-stop { background: var(--surface); color: var(--forest); }
-.audio-dock button:hover { filter: brightness(1.08); }
 
 /* ---------- wide screens: the Lessons button folds the sidebar away */
 @media (min-width: 861px) {
@@ -365,14 +349,13 @@ main:focus { outline: none; }
   .site-header { padding: 0 1rem; }
   .pill { padding: .35rem .65rem; font-size: .8rem; }
   .brand-mark { width: 32px; height: 32px; font-size: 1rem; }
-  body:has(.return-to-workbook) .audio-dock { bottom: 4.5rem; }
   .brand strong { font-size: .92rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
 @media print {
-  .site-header, .course-panel, .lesson-toolbar, .pensa, .lesson-finish, .lesson-pagination, .toast, .audio-dock { display: none !important; }
+  .site-header, .course-panel, .lesson-toolbar, .pensa, .lesson-finish, .lesson-pagination, .toast { display: none !important; }
   .app-shell { display: block; }
 }
 

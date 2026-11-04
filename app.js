@@ -11,12 +11,12 @@ const UI_DEFAULTS = {
   continue: "Continue", start: "Start reading", how_to_read: "How to read this book",
   part: "Part", lesson: "Lesson", lessons_range: "Lessons {from}–{to}", planned: "coming soon",
   finished: "finished", hide_notes: "Hide notes", show_notes: "Show notes", notes: "Notes",
-  play_sentence: "Play the sentence", play_paragraph: "Play the paragraph", listen: "Listen", stop: "Stop", pause: "Pause", resume: "Play", audio: "Audio", voice: "Voice", grammar: "Grammar", grammar_note_en: "Note (English)",
+  grammar: "Grammar", grammar_note_en: "Note (English)",
   in_story: "in the story", pensa: "Exercises", oral_mode: "Oral mode", check: "Check", reveal: "Show",
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
   correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
   case_hint: "Almost! Case?", number_hint: "Almost! Number?", tense_hint: "Almost! Tense?", mood_hint: "Almost! Mood?",
-  accent_hint: "Almost: check the accents.", mutation_hint: "Almost: mutation?",
+  accent_hint: "Almost: check the accents.", capitalisation_hint: "Almost: check the capitalisation.", mutation_hint: "Almost: mutation?",
   wrong: "Not yet.", empty: "Type an answer first.", answer: "Answer", model_answer: "Answer",
   rubric: "Check", self_yes: "I had it", self_no: "Not yet", key_terms: "Key words", word_bank: "Word bank",
   item: "Question {n}", blank: "blank {n}", vocabulary: "Vocabulary", words_count: "{n} words",
@@ -31,7 +31,7 @@ const UI_DEFAULTS = {
   skip_exercise: "Skip", skipped: "Skipped", unskip: "Undo", correct_yo: "Correct! (ё)", ending_hint: "Almost! The ending?",
   aspect_hint: "Almost! Aspect?", lookalike_warning: "Latin letters ({chars}) were replaced by Cyrillic ones.",
   latin_warning: "Latin letters: {chars}. Switch the keyboard layout?", pronunciation: "Pronunciation",
-  stepper: "Steps", step_listen: "Listen {n}", step_read: "Read {n}", step_exercises: "Workbook {n}", step_grammar: "Grammar",
+  stepper: "Steps", step_read: "Read {n}", step_exercises: "Workbook {n}", step_grammar: "Grammar",
   step_pensa: "Exercises", step_write: "Write", step_reread: "Re-read", step_anki: "Anki", step_done: "Done",
   step_mark: "Step done", step_marked: "Done", step_next: "Next: {step}", continue_step: "{lesson} · {step}",
   export_timing: "Export timing (JSON)", words_with_history: "Words with a history", note_en: "Note (English)",
@@ -42,7 +42,7 @@ const UI_DEFAULTS = {
   feedback_task: "Task", feedback_text: "Learner's text", feedback_rewrite: "Learner's corrected version",
   feedback_prompt: "You are an experienced language teacher. Correct the learner's text below: rewrite it correctly with as few changes as possible, list each error as wrong → right with a short explanation of the rule, say what is good, and give one short exercise on the most important error.",
   words_typed: "{n} words", ex_type_okonchaniya: "Endings", ex_type_preobrazovanie: "Transform",
-  ex_type_podstanovka: "Substitute", ex_type_otvet: "Answer", ex_type_soedini: "Join", ex_type_rasstav: "Word order", ex_type_diktant: "Dictation",
+  ex_type_podstanovka: "Substitute", ex_type_otvet: "Answer", ex_type_soedini: "Join", ex_type_rasstav: "Word order",
   ex_type_napishi: "Write", timing_summary: "Time per chapter", timing_total: "Total:", minutes: "{n} min",
   anki_include_known: "Include words I already know",
   custom: "custom", families: "Word families",
@@ -153,7 +153,7 @@ function uiLangOfCourse() { return state.course?.ui_lang || targetLang(); }
 const UI_ALIASES = {
   contents: ["course_contents"], lesson: ["chapter"], pensa: ["exercises"], grammar_note_en: ["nodyn"],
   retry: ["try_again"], accent_hint: ["almost_circumflex"], self_yes: ["self_check_yes"], self_no: ["self_check_no"],
-  finished_state: ["finished"], listen: ["audio_play"], voice: ["audio_source"], anki_lesson: ["anki"],
+  finished_state: ["finished"], anki_lesson: ["anki"],
   english_toggle: [], nav_lessons: ["course_contents"]
 };
 function courseStrings(lang) {
@@ -261,7 +261,7 @@ function stressOn(lesson = state.current) {
 }
 // `stress.strip_everywhere`: with the toggle off, no rendered text anywhere (titles, grammar
 // tables, glosses, vocabulary, feedback) shows an acute. A MutationObserver strips U+0301 from
-// text as it is added; the stored data and the audio keep their stress. Turning the toggle on
+// text as it is added; the stored data keeps its stress. Turning the toggle on
 // re-renders, and the observer then leaves the new text alone.
 const ACUTE_RE = /\u0301/g;
 function stressHiddenEverywhere() {
@@ -461,7 +461,7 @@ function knownList(baseline, plan) {
 
 // ------------------------------------------------------------------ chapter steps (design §9)
 
-const STEP_KINDS = ["listen", "read", "exercises", "grammar", "pensa", "write", "workbook", "reread", "anki", "done"];
+const STEP_KINDS = ["read", "exercises", "grammar", "pensa", "write", "workbook", "reread", "anki", "done"];
 
 // The workbook is a separate book (as LLPSI's Exercitia): a chapter is its story, grammar
 // and Pensa, and the section exercises live on #<lesson>/workbook, reached from the
@@ -476,6 +476,20 @@ function hasWorkbook(lesson, course, core = globalThis.IllustratedCore) {
 function isWorkbookStep(stepId) { return stepId === "workbook" || /^ex-\d+$/.test(String(stepId || "")); }
 
 function isWorkbookExercise(exercise) { return Boolean(exercise && (exercise.section_id || exercise.type || exercise.obrazec)); }
+// Audio-dependent activities stay hidden while course audio is suspended.
+function needsAudio(exercise) {
+  return Boolean(exercise?.requires_audio || exercise?.audio_required) ||
+    /^(?:dictation|diktant|listening|listen)$/i.test(String(exercise?.type || exercise?.key || ""));
+}
+function visibleItems(items) { return (items || []).filter((item) => !needsAudio(item)); }
+function visibleExercise(exercise) {
+  if (needsAudio(exercise)) return null;
+  if (Array.isArray(exercise)) return visibleItems(exercise);
+  const result = { ...exercise };
+  for (const key of ["items", "questions"]) if (Array.isArray(result[key])) result[key] = visibleItems(result[key]);
+  if (Array.isArray(result.blocks)) result.blocks = result.blocks.map(visibleExercise).filter((block) => block && pensumItemCount(block));
+  return result;
+}
 function isNapishi(exercise) { return /^(napishi|writing)$/i.test(String(exercise?.type || "")); }
 
 // Workbook exercises for a section (section.exercises, or lesson.exercises[] with section_id).
@@ -484,7 +498,7 @@ function sectionExercises(lesson, section, index) {
   const shared = Array.isArray(lesson?.exercises) && lesson.exercises.some(isWorkbookExercise)
     ? lesson.exercises.filter((exercise) => exercise.section_id && (exercise.section_id === section?.id || exercise.section_id === index + 1))
     : [];
-  return [...own, ...shared].filter((exercise) => !isNapishi(exercise));
+  return [...own, ...shared].filter((exercise) => !isNapishi(exercise)).map(visibleExercise).filter((exercise) => exercise && pensumItemCount(exercise));
 }
 
 function napishiOf(lesson, sections) {
@@ -500,16 +514,12 @@ function buildSteps(lesson, { core = globalThis.IllustratedCore, course = null, 
   const steps = [];
   sections.forEach((section, i) => {
     const n = roman[i] || String(i + 1);
-    // Audio-first parts get a Listen step, unless the lesson is known to have no audio (_audio null).
-    if (course?.capabilities?.audio_first_through_part >= Number(lesson.part ?? lesson._entry?.part ?? 1) && lesson._audio !== null) {
-      steps.push({ id: `listen-${i + 1}`, kind: "listen", n });
-    }
     steps.push({ id: `read-${i + 1}`, kind: "read", n });
     if (!book && sectionExercises(lesson, section, i).length) steps.push({ id: `ex-${i + 1}`, kind: "exercises", n });
   });
-  const pensa = lesson?.pensa || (Array.isArray(lesson?.exercises) && !lesson.exercises.some(isWorkbookExercise) ? lesson.exercises : null);
+  const pensa = pensaGroups(lessonPensa(lesson));
   if (lesson?.grammar || lesson?.grammar_observation || lesson?.words_with_history) steps.push({ id: "grammar", kind: "grammar" });
-  const hasPensaItems = pensa && Object.values(pensa).some((group) => Array.isArray(group) ? group.length : pensumItemCount(group));
+  const hasPensaItems = pensa.some((group) => pensumItemCount(group));
   if (pensa && Object.keys(pensa).length && hasPensaItems) steps.push({ id: "pensa", kind: "pensa" });
   if (napishiOf(lesson, sections)) steps.push({ id: "write", kind: "write" });
   if (book && hasWorkbook(lesson, course, core)) steps.push({ id: "workbook", kind: "workbook" });
@@ -556,7 +566,10 @@ function timingExport({ course, entries = [], timing = {}, steps = {}, workbook 
 
 function entries() { return state.course?.lessons || state.course?.lesson_index || []; }
 function entryOrder(entry, index) { return entry.order ?? index + 1; }
-function available(entry) { return Boolean(entry.path || entry.file) && entry.status !== "planned"; }
+function available(entry) {
+  const explicitPublication = state.course?.lessons?.some((lesson) => Object.hasOwn(lesson, "published"));
+  return Boolean(entry.path || entry.file) && (explicitPublication ? entry.published === true : entry.status !== "planned");
+}
 function entryPath(entry) { return entry.path || entry.file || `lessons/${entry.id}.json`; }
 function completedKey() { return `illustrated-input:${state.course?.id || "course"}:completed`; }
 const sessionCompleted = new Map();
@@ -900,7 +913,6 @@ async function fetchLesson(entry) {
   if (state.lessons.has(entry.id)) return state.lessons.get(entry.id);
   const lesson = await loadJSON(resolve(entryPath(entry)));
   lesson._entry = entry;
-  lesson._audio = await loadAudioSources(lesson);
   if (inflectingCourse()) await loadAnswerForms(lesson, entry);
   state.lessons.set(entry.id, lesson);
   return lesson;
@@ -931,7 +943,6 @@ async function openLesson(entry, focus = true, stepId = null, seq = routeSeq) {
   try {
     const lesson = await fetchLesson(entry);
     if (seq !== routeSeq || hash !== location.hash) return;
-    stopAudio();
     state.current = lesson;
     state.rereadView = null;
     state.book = exerciseBook(state.course) && isWorkbookStep(stepId) ? "workbook" : "chapter";
@@ -985,7 +996,6 @@ function renderLesson(lesson) {
   ].filter(Boolean));
   markStepRegions(article, lesson);
   bindStoryObservers(article);
-  rebindAudio();
   scheduleAlign();
 }
 
@@ -1016,7 +1026,7 @@ function renderToolbar(lesson) {
     setLabel();
     scheduleAlign();
   });
-  return h("div", { class: "lesson-toolbar" }, notesButton, renderStressToggle(lesson), renderAudioControls(lesson));
+  return h("div", { class: "lesson-toolbar" }, notesButton, renderStressToggle(lesson));
 }
 
 function renderStressToggle(lesson) {
@@ -1074,7 +1084,6 @@ function renderPronunciationNote(note) {
 
 function renderStory(lesson) {
   const sections = Core.storySections(lesson);
-  const manifest = lesson._audio?.selected?.data;
   const story = h("div", { class: "story", id: "story" }, sections.map((section, sectionIndex) => {
     const prose = h("div", { class: "prose-col", lang: targetLang() });
     const margin = h("div", { class: "margin-col", role: "complementary", "aria-label": t("notes") });
@@ -1088,13 +1097,11 @@ function renderStory(lesson) {
     }
     for (const { speaker, segments } of paragraphs) {
       const paragraph = h("p", { class: `story-para${speaker ? " turn" : ""}` });
-      const voiced = segments.map((segment) => segment.id).filter((id) => manifest?.segments?.[id]);
-      if (voiced.length) paragraph.append(paragraphPlayButton(voiced, lesson), " ");
       const floats = [];
       const scenes = [];
       const strip = [];
       segments.forEach((segment, i) => {
-        const rendered = renderSegment(segment, manifest, lesson, seenGlosses);
+        const rendered = renderSegment(segment, lesson, seenGlosses);
         if (i) paragraph.append(" ");
         paragraph.append(rendered.sentence);
         margin.append(...rendered.notes);
@@ -1112,7 +1119,7 @@ function renderStory(lesson) {
         h("span", { class: "section-number", "aria-hidden": "true" }, `${ROMAN[sectionIndex] || sectionIndex + 1}.`), ` ${disp(section.title)}`)
       : null;
     return h("section", { class: "story-section", id: section.id || `section-${sectionIndex + 1}`, "aria-labelledby": heading ? heading.id : null, "data-section": String(sectionIndex + 1) },
-      heading, stepEnd(lesson, `listen-${sectionIndex + 1}`),
+      heading,
       sectionIndex === 0 && lesson.pronunciation_note ? renderPronunciationNote(lesson.pronunciation_note) : null,
       h("div", { class: "section-body" }, prose, margin),
       stepEnd(lesson, `read-${sectionIndex + 1}`),
@@ -1170,7 +1177,7 @@ function wordNodes(text, from, to, words, map) {
   return nodes;
 }
 
-function renderSegment(segment, manifest, lesson, seenGlosses = null) {
+function renderSegment(segment, lesson, seenGlosses = null) {
   const locator = anchorLocator(segment.text || "");
   const text = locator.text;
   const words = Core.glossTokens(text, state.course);
@@ -1242,8 +1249,6 @@ function renderSegment(segment, manifest, lesson, seenGlosses = null) {
       return figure;
     });
 
-  // Audio is per paragraph (paragraphPlayButton); a tap on a word opens the dictionary.
-  if (manifest?.segments?.[segment.id]) sentence.classList.add("has-audio");
   return { sentence, notes, strip, scenes, floats };
 }
 
@@ -1321,7 +1326,15 @@ function unlightNotes() {
 const glossFiles = new Map();
 function glossFile(path) {
   const url = resolve(path);
-  if (!glossFiles.has(url)) glossFiles.set(url, loadJSON(url).catch(() => null));
+  if (!glossFiles.has(url)) {
+    // A failed load is forgotten so the next tap retries it; concurrent callers
+    // still share one pending request, and successful files stay cached.
+    const request = loadJSON(url).catch(() => {
+      if (glossFiles.get(url) === request) glossFiles.delete(url);
+      return null;
+    });
+    glossFiles.set(url, request);
+  }
   return glossFiles.get(url);
 }
 function lessonGlosses(lesson) {
@@ -1415,7 +1428,7 @@ function showGloss(word, sentence, found) {
 }
 
 // Below the word, or above it when that side has more room; inside the visible area (the
-// visual viewport on iOS, less the sticky header and the audio dock). When neither side
+// visual viewport on iOS, less the sticky header). When neither side
 // fits, the popup is capped and scrolls, overlapping the word only if it must.
 function placeGloss() {
   if (!glossPop) return;
@@ -1429,8 +1442,7 @@ function placeGloss() {
   // Pinch zoom shrinks the visual viewport without changing CSS vw units.
   pop.style.maxWidth = `min(19rem, ${Math.max(0, viewWidth - 16)}px)`;
   const ceiling = Math.max(viewTop, $(".site-header")?.getBoundingClientRect().bottom || 0) + 6;
-  const dock = $("#audio-dock");
-  const floor = viewTop + viewHeight - (dock && !dock.hidden ? dock.offsetHeight + 16 : 8);
+  const floor = viewTop + viewHeight - 8;
   pop.style.maxHeight = "";
   const natural = pop.offsetHeight;
   const below = floor - rect.bottom - 6;
@@ -1456,34 +1468,6 @@ function closeGloss() {
   pop.remove();
   for (const w of active) w.classList.remove("w-active");
   if (described) word.setAttribute("aria-describedby", described); else word.removeAttribute("aria-describedby");
-}
-
-// ------------------------------------------------------------------ paragraph audio
-
-// One play/pause button per story paragraph with audio. It plays the paragraph's sentences
-// in turn; while anything plays inside its paragraph (also continuous playback) it pauses
-// and resumes instead.
-function paragraphPlayButton(ids, lesson) {
-  const button = h("button", { type: "button", class: "para-play", "aria-label": t("play_paragraph"), title: t("play_paragraph") }, "▶");
-  button.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (audioState.on && audioState.active?.closest(".story-para") === button.parentNode) toggleAudioPause();
-    else playSegments(ids, lesson);
-  });
-  return button;
-}
-
-function syncParaButtons() {
-  const para = audioState.on ? audioState.active?.closest?.(".story-para") : null;
-  for (const button of document.querySelectorAll("#lesson .para-play")) {
-    const mine = Boolean(para) && button.parentNode === para;
-    const playing = mine && !audioState.paused;
-    const label = t(playing ? "pause" : mine ? "resume" : "play_paragraph");
-    button.textContent = playing ? "❚❚" : "▶";
-    button.classList.toggle("is-active", mine);
-    button.setAttribute("aria-label", label);
-    button.title = label;
-  }
 }
 
 // Margin alignment: each note sits level with its anchor's line; later notes are pushed
@@ -1539,7 +1523,7 @@ function stepperFor(lesson) {
 function lessonSteps(lesson) { return lesson._steps ||= buildSteps(lesson, { core: Core, course: state.course, roman: ROMAN }); }
 function stepTicks(lessonId) { return readJSONStore("steps")[lessonId] || {}; }
 function stepLabel(step) {
-  const key = { listen: "step_listen", read: "step_read", exercises: "step_exercises", grammar: "step_grammar", pensa: "step_pensa", write: "step_write", workbook: "workbook", reread: "step_reread", anki: "step_anki", done: "step_done" }[step.kind];
+  const key = { read: "step_read", exercises: "step_exercises", grammar: "step_grammar", pensa: "step_pensa", write: "step_write", workbook: "workbook", reread: "step_reread", anki: "step_anki", done: "step_done" }[step.kind];
   return tl(key, { n: step.n ?? "" }).map((value, i) => (i === 0 ? String(value).trim() : value));
 }
 function stepDone(lesson, step, ticks = stepTicks(lesson.id)) {
@@ -1566,7 +1550,7 @@ function setTick(lesson, stepId, on) {
 
 function stepTarget(stepId) {
   const [kind, n] = stepId.split("-");
-  if (kind === "read" || kind === "listen") return document.querySelector(`#lesson [data-section="${n}"]`);
+  if (kind === "read") return document.querySelector(`#lesson [data-section="${n}"]`);
   if (kind === "ex") return document.getElementById(`wb-${n}`);
   if (kind === "workbook") return document.getElementById("workbook-book");
   if (kind === "grammar") return document.getElementById("words-history") || document.getElementById("grammar");
@@ -1577,9 +1561,7 @@ function stepTarget(stepId) {
   return null;
 }
 
-// Opening a step from the stepper. Перечитать (design §9: whole chapter, continuous audio,
-// stress off) shows the chapter without stress for this view only (the saved toggle is
-// unchanged) and starts continuous audio when the chapter has a manifest.
+// Re-reading shows the chapter without stress for this view only; the saved toggle stays unchanged.
 function enterStep(lesson, stepId, { restoreY = null } = {}) {
   const reread = stepId === "reread";
   const wanted = reread && stressConfig() ? lesson.id : null;
@@ -1595,11 +1577,6 @@ function enterStep(lesson, stepId, { restoreY = null } = {}) {
   }
   if (typeof restoreY === "number") { window.scrollTo(0, restoreY); return true; }
   const scrolled = scrollToStep(stepId);
-  if (stepId.startsWith("listen-") && lesson._audio) {
-    const section = Core.storySections(lesson)[Number(stepId.split("-")[1]) - 1];
-    if (section) playSegments((section.segments || []).map((segment) => segment.id).filter((id) => lesson._audio.selected?.data?.segments?.[id]), lesson, true);
-  }
-  if (reread && lesson._audio && (lesson._audio.selected?.data?.lesson || Object.keys(lesson._audio.selected?.data?.segments || {}).length)) playLesson(lesson);
   return scrolled;
 }
 
@@ -1694,7 +1671,7 @@ function markStepRegions(article, lesson) {
   const steps = new Set(lessonSteps(lesson).map((step) => step.id));
   const mark = (el, ids) => { const list = ids.filter((id) => steps.has(id)); if (el && list.length) el.dataset.steps = list.join(" "); };
   mark(article.querySelector(".scene.cover"), ["read-1", "reread"]);
-  for (const section of article.querySelectorAll(".story-section[data-section]")) mark(section, [`listen-${section.dataset.section}`, `read-${section.dataset.section}`, "reread"]);
+  for (const section of article.querySelectorAll(".story-section[data-section]")) mark(section, [`read-${section.dataset.section}`, "reread"]);
   for (const block of article.querySelectorAll(".workbook")) mark(block, [`ex-${block.id.replace("wb-", "")}`]);
   for (const block of article.querySelectorAll(".workbook")) mark(block, ["workbook"]);
   mark(article.querySelector("#words-history"), ["grammar"]);
@@ -1706,7 +1683,7 @@ function markStepRegions(article, lesson) {
 
 // Timing (pilot workload, design §9): time is credited to the step whose region is at the
 // reading line, only while the page is visible and the learner has acted in the last ten
-// minutes (or audio plays). A region shared by two steps (reading and re-reading) goes to
+// minutes. A region shared by two steps (reading and re-reading) goes to
 // the first of them not yet ticked.
 const IDLE_MS = 10 * 60 * 1000;
 const TIMER_MS = 5000;
@@ -1731,8 +1708,7 @@ function timerTick() {
   timer.last = now;
   const lesson = timer.lesson;
   if (!lesson || state.view !== "lesson" || state.current !== lesson || document.visibilityState !== "visible") return;
-  const listening = typeof player !== "undefined" && player && !player.paused;
-  if (now - timer.activity > IDLE_MS && !listening) return;
+  if (now - timer.activity > IDLE_MS) return;
   const step = activeStep(lesson);
   timer.pending[step] = (timer.pending[step] || 0) + elapsed;
 }
@@ -1982,11 +1958,11 @@ function renderGrammar(lesson) {
 
 function pensaGroups(pensa) {
   if (!pensa) return [];
-  if (Array.isArray(pensa)) return pensa.map((group, i) => ({ key: group.label || "ABC"[i], ...group }));
+  if (Array.isArray(pensa)) return pensa.map((group, i) => visibleExercise({ key: group.label || "ABC"[i], ...group })).filter(Boolean);
   return ["A", "B", "C"].map((key) => {
     const value = pensa[key] || pensa[key.toLowerCase()];
     if (!value) return null;
-    return { key, ...(Array.isArray(value) ? { items: value } : value) };
+    return visibleExercise({ key, ...(Array.isArray(value) ? { items: value } : value) });
   }).filter(Boolean);
 }
 
@@ -2202,11 +2178,6 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
   } else {
     prompt.append(h("span", { id: promptTextId }, parts.join("___")));
   }
-  if (item.audio_segment_id && lesson._audio?.selected?.data?.segments?.[item.audio_segment_id]) {
-    const play = h("button", { type: "button", class: "small-button item-audio", "aria-label": t("play_sentence") }, "▶");
-    play.addEventListener("click", () => playSegments([item.audio_segment_id], lesson));
-    li.append(play);
-  }
   li.append(prompt);
 
   let textarea = null;
@@ -2276,7 +2247,7 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
       field.classList.toggle("is-wrong", Boolean(status) && !good(status) && status !== "empty");
     });
     feedback.className = `feedback status-${result.status}`;
-    const messages = { correct_letters: "correct_letters", ambiguous_letters: "ambiguous_letters", correct: "correct", correct_yo: "correct_yo", accent: "accent_hint", mutation: "mutation_hint", ending: "ending_hint", aspect: "aspect_hint", wrong: "wrong", empty: "empty" };
+    const messages = { correct_letters: "correct_letters", ambiguous_letters: "ambiguous_letters", correct: "correct", correct_yo: "correct_yo", accent: "accent_hint", capitalisation: "capitalisation_hint", mutation: "mutation_hint", ending: "ending_hint", aspect: "aspect_hint", wrong: "wrong", empty: "empty" };
     if (result.status === "common_wrong") {
       feedback.replaceChildren(h("span", { lang }, disp(result.hint, area) || t("wrong")));
     } else {
@@ -2834,192 +2805,6 @@ async function downloadAnki(lesson, cumulative) {
   if (stepperFor(lesson) && !stepTicks(lesson.id).anki) setTick(lesson, "anki", true);
 }
 
-// ------------------------------------------------------------------ audio
-
-async function loadAudioSources(lesson) {
-  const media = lesson.media || {};
-  const declared = media.audio_sources || (media.audio_manifest ? [{ id: "default", label: "Default", manifest: media.audio_manifest, default: true }]
-    : state.course?.audio?.lesson_sources?.[lesson.id] || []);
-  const sources = (await Promise.all(declared.map(async (source) => {
-    try {
-      const url = resolve(source.manifest);
-      return { ...source, data: await loadJSON(url), base: new URL("./", url).href };
-    } catch { return null; }
-  }))).filter(Boolean);
-  if (!sources.length) return null;
-  const saved = store(`${state.course.id}:audio-source`);
-  const selected = sources.find((source) => source.id === saved) || sources.find((source) => source.default) || sources[0];
-  return { sources, selected };
-}
-
-const player = typeof Audio === "undefined" ? null : new Audio();
-// on: something is playing or paused (the dock shows); continuous: a whole chapter or part
-// is queued (the toolbar button reads Stop); paused: playback is paused or needs permission.
-// activeId is the sentence being heard: kept by ID so a re-render (stress marks, interface
-// language) can find it again (rebindAudio). offsets: the chapter file's lesson_offsets.
-const audioState = { queue: [], lesson: null, active: null, activeId: null, offsets: null, button: null, on: false, continuous: false, paused: false };
-let playbackSeq = 0;
-
-function renderAudioControls(lesson) {
-  const audio = lesson._audio;
-  if (!audio) return null;
-  const hasSegments = Object.keys(audio.selected.data?.segments || {}).length > 0;
-  if (!hasSegments && !audio.selected.data?.lesson) return null;
-  const listen = h("button", { type: "button", class: "pill listen", "aria-pressed": "false" });
-  const setListen = (playing) => {
-    listen.replaceChildren(h("span", { "aria-hidden": "true" }, playing ? "■ " : "▶ "), ui("span", playing ? "stop" : "listen"));
-    listen.setAttribute("aria-pressed", String(playing));
-  };
-  setListen(audioState.continuous);
-  audioState.button = setListen;
-  listen.addEventListener("click", () => {
-    if (audioState.continuous) { stopAudio(); return; }
-    playLesson(lesson);
-  });
-  const controls = [listen];
-  if (audio.sources.length > 1) {
-    const select = h("select", { id: "audio-source" }, audio.sources.map((source) => new Option(source.label || source.id, source.id, false, source.id === audio.selected.id)));
-    select.addEventListener("change", () => {
-      stopAudio();
-      audio.selected = audio.sources.find((source) => source.id === select.value) || audio.selected;
-      store(`${state.course.id}:audio-source`, audio.selected.id);
-      const scroll = window.scrollY;
-      renderLesson(lesson);
-      window.scrollTo(0, scroll);
-      $("#audio-source")?.focus();
-    });
-    controls.push(h("label", { class: "voice-picker" }, ui("span", "voice"), " ", select));
-  }
-  return h("div", { class: "audio-controls" }, controls);
-}
-
-function segmentOrder(lesson) {
-  return Core.storySections(lesson).flatMap((section) => (section.segments || []).map((segment) => segment.id));
-}
-
-function playLesson(lesson) {
-  const data = lesson._audio?.selected?.data;
-  if (data?.lesson) {
-    stopAudio();
-    audioState.continuous = true;
-    audioState.offsets = data.lesson_offsets && Object.keys(data.lesson_offsets).length ? data.lesson_offsets : null;
-    playFile(new URL(data.lesson, lesson._audio.selected.base).href, null);
-    audioState.button?.(true);
-    return;
-  }
-  playSegments(segmentOrder(lesson).filter((id) => data?.segments?.[id]), lesson, true);
-}
-
-function playSegments(ids, lesson, continuous = false) {
-  stopAudio();
-  audioState.queue = [...ids];
-  audioState.lesson = lesson;
-  audioState.continuous = continuous;
-  if (continuous) audioState.button?.(true);
-  advanceQueue();
-}
-
-function advanceQueue() {
-  const lesson = audioState.lesson;
-  const id = audioState.queue.shift();
-  if (!id || !lesson?._audio) { stopAudio(); return; }
-  const file = lesson._audio.selected.data.segments?.[id];
-  if (!file) { advanceQueue(); return; }
-  playFile(new URL(file, lesson._audio.selected.base).href, id);
-}
-
-function markActive(id) {
-  audioState.active?.classList.remove("audio-playing");
-  audioState.activeId = id || null;
-  audioState.active = id ? document.getElementById(id) : null;
-  audioState.active?.classList.add("audio-playing");
-}
-function rebindAudio() {
-  if (!audioState.on) return;
-  markActive(audioState.activeId);
-  syncParaButtons();
-}
-
-// The segment heard at `time` in a chapter file: the last one started, so the pause between
-// two sentences still belongs to the first.
-function segmentAt(offsets, time) {
-  let found = null;
-  for (const [id, [start]] of Object.entries(offsets || {})) if (start <= time && (!found || start >= found.start)) found = { id, start };
-  return found?.id || null;
-}
-
-function playFile(src, segmentId) {
-  markActive(segmentId);
-  audioState.on = true;
-  audioState.paused = false;
-  updateDock();
-  player.src = src;
-  tryPlay();
-}
-
-function tryPlay() {
-  const seq = ++playbackSeq;
-  player.play().catch((error) => {
-    if (seq !== playbackSeq) return;
-    if (error.name === "NotAllowedError") {
-      audioState.paused = true;
-      updateDock();
-    } else advanceQueue();
-  });
-}
-
-function toggleAudioPause() {
-  if (!audioState.on) return;
-  audioState.paused = !audioState.paused;
-  playbackSeq += 1;
-  if (audioState.paused) player.pause(); else tryPlay();
-  updateDock();
-}
-
-function updateDock() {
-  const dock = $("#audio-dock");
-  if (!dock) return;
-  dock.hidden = !audioState.on;
-  document.body.classList.toggle("audio-docked", audioState.on);
-  dock.setAttribute("aria-label", t("audio"));
-  const main = $("#audio-pause");
-  main.textContent = audioState.paused ? "▶" : "❚❚";
-  main.setAttribute("aria-label", t(audioState.paused ? "resume" : "pause"));
-  main.title = main.getAttribute("aria-label");
-  const stop = $("#audio-stop");
-  stop.textContent = "■";
-  stop.setAttribute("aria-label", t("stop"));
-  stop.title = stop.getAttribute("aria-label");
-  syncParaButtons();
-}
-
-function stopAudio() {
-  playbackSeq += 1;
-  audioState.queue = [];
-  player.pause();
-  markActive(null);
-  audioState.offsets = null;
-  audioState.on = audioState.continuous = audioState.paused = false;
-  audioState.button?.(false);
-  updateDock();
-}
-player?.addEventListener("ended", () => { audioState.active?.classList.remove("audio-playing"); if (audioState.queue.length) advanceQueue(); else stopAudio(); });
-function syncMediaPause() {
-  if (!audioState.on) return;
-  // Read the current media state: queued events can belong to a replaced clip.
-  if (player.paused && !audioState.paused) playbackSeq += 1;
-  audioState.paused = player.paused;
-  updateDock();
-}
-player?.addEventListener("pause", syncMediaPause);
-player?.addEventListener("play", syncMediaPause);
-player?.addEventListener("timeupdate", () => {
-  if (!audioState.offsets || !audioState.on) return;
-  const id = segmentAt(audioState.offsets, player.currentTime);
-  if (id !== audioState.activeId) { markActive(id); syncParaButtons(); }
-});
-player?.addEventListener("error", () => { if (audioState.queue.length) advanceQueue(); else stopAudio(); });
-
 // ------------------------------------------------------------------ navigation drawer
 
 // Narrow screens open the course panel as a drawer; wide screens fold the sidebar away.
@@ -3107,8 +2892,6 @@ function boot() {
     if (!narrowNav()) toggleSidebar();
     else if ($("#course-nav").classList.contains("open")) closeNav(true); else openNav();
   });
-  $("#audio-pause").addEventListener("click", toggleAudioPause);
-  $("#audio-stop").addEventListener("click", stopAudio);
   $("#english-toggle").addEventListener("click", () => {
     state.english = !state.english;
     store(courseKey("english"), state.english ? "1" : "0");
@@ -3169,9 +2952,9 @@ function boot() {
   init();
 }
 
-// Pure helpers for Node tests (tests/static-app.test.cjs loads this file in a vm).
+// Pure helpers for Node tests (tests/fast/static-app.test.cjs loads this file in a vm).
 globalThis.IllustratedReader = {
-  stripStress, segmentAt, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
+  stripStress, latinLetters, formsTable, lexemeFormsIndex, containsLexeme, commonPrefix,
   knownList, isWorkbookExercise, isNapishi, sectionExercises, napishiOf, buildSteps, nextStep, addTime, timingExport, STEP_KINDS,
   exerciseBook, hasWorkbook, isWorkbookStep,
   UI_DEFAULTS

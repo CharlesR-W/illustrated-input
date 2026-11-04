@@ -421,14 +421,16 @@
     checkSlot: grcCheckSlot, checkResponse: grcCheckResponse, checkItem: grcCheckResponse
   };
 
-  // Generic (design §9): NFC, locale case-fold, apostrophes unified, punctuation stripped at
+  // Generic (design §9): NFC, configured case policy, apostrophes unified, punctuation stripped at
   // word edges, whitespace collapsed. Nothing is folded for correctness; a course-level
   // `answer_folds` map ({"ö": "o"}) plus combining-mark stripping only turn a near miss into
   // the "accent" status (the reader shows accent_hint) instead of a plain wrong answer.
   function genericNormalise(value, options = {}) {
     const locale = options.locale || "und";
     let text = String(value ?? "").normalize("NFC");
-    try { text = text.toLocaleLowerCase(locale); } catch { text = text.toLowerCase(); }
+    if (!options.caseSensitive) {
+      try { text = text.toLocaleLowerCase(locale); } catch { text = text.toLowerCase(); }
+    }
     return text.replace(APOSTROPHES, "'")
       .replace(/(^|\s)[\p{P}\p{S}]+(?=[\p{L}\p{M}\p{N}])/gu, "$1")
       .replace(/(?<=[\p{L}\p{M}\p{N}])[\p{P}\p{S}]+(?=\s|$)/gu, "")
@@ -437,24 +439,57 @@
       .trim();
   }
 
-  function genericFold(value, folds) {
+  function genericFold(value, folds, options = {}) {
     const entries = Object.entries(folds || {}).filter(([from]) => from).sort((a, b) => b[0].length - a[0].length);
     let text = String(value ?? "");
-    for (const [from, to] of entries) text = text.split(from).join(String(to ?? ""));
+    const caseText = (value, upper) => {
+      try { return upper ? value.toLocaleUpperCase(options.locale || "und") : value.toLocaleLowerCase(options.locale || "und"); }
+      catch { return upper ? value.toUpperCase() : value.toLowerCase(); }
+    };
+    const title = value => { const [first = "", ...rest] = [...value]; return caseText(first, true) + rest.join(""); };
+    for (const [from, replacement] of entries) {
+      const to = String(replacement ?? "");
+      if (!options.caseSensitive) { text = text.split(from).join(to); continue; }
+      text = text.replace(new RegExp(escapeRegExp(from), "giu"), (match, offset, source) => {
+        if (match === from) return to;
+        // Explicit case-specific entries take precedence over inferred variants.
+        if (Object.hasOwn(folds, match) || from !== caseText(from, false) || caseText(match, false) !== from) return match;
+        if (match !== caseText(match, true) && match !== title(match)) return match;
+        // A lowercase declaration such as ä -> ae also supplies Ä -> Ae in
+        // title-case words, or Ä -> AE in words written entirely in capitals.
+        const before = source.slice(0, offset).match(/[\p{L}\p{M}]*$/u)[0];
+        const after = source.slice(offset + match.length).match(/^[\p{L}\p{M}]*/u)[0];
+        return /\p{Ll}/u.test(before + match + after) ? title(to) : caseText(to, true);
+      });
+    }
     return foldAccents(text);
+  }
+
+  // One language-keyed declaration shared by the reader and generic prose checker.
+  // Course settings can opt another language in or override a declared default.
+  const GENERIC_LANGUAGE_CHECKS = { de: { case_sensitive_answers: true, capitalise_nouns: true } };
+  function genericLanguageConfig(course) {
+    const language = String(course?.lang || course?.language?.code || course?.language?.locale || "und").toLowerCase().split(/[-_]/)[0];
+    return { case_sensitive_answers: false, capitalise_nouns: false, ...GENERIC_LANGUAGE_CHECKS[language], ...course?.language_checks };
   }
 
   function genericChecker(course) {
     const locale = course?.language?.locale || course?.lang || course?.language?.code || "und";
     const folds = course?.answer_folds || {};
-    const normaliseValue = (value) => genericNormalise(value, { locale });
-    const fold = (value) => genericFold(normaliseValue(value), folds);
+    const caseSensitive = genericLanguageConfig(course).case_sensitive_answers === true;
+    const normaliseValue = (value) => genericNormalise(value, { locale, caseSensitive });
+    const ignoreCase = (value) => genericNormalise(value, { locale });
+    const fold = (value) => genericFold(normaliseValue(value), folds, { locale, caseSensitive });
     function checkSlot(value, answers, item) {
       const typed = normaliseValue(value);
       if (!typed) return { status: "empty" };
       const originals = asList(answers);
       const expected = originals.map(normaliseValue);
       if (expected.includes(typed)) return { status: "correct" };
+      if (caseSensitive) {
+        const index = originals.findIndex(answer => ignoreCase(answer) === ignoreCase(value));
+        if (index >= 0) return { status: "capitalisation", answer: originals[index] };
+      }
       for (const wrong of asList(item?.common_wrong)) {
         const answer = typeof wrong === "string" ? wrong : wrong?.answer;
         if (answer && normaliseValue(answer) === typed) return { status: "common_wrong", hint: wrong.hint || "" };
@@ -462,6 +497,11 @@
       const folded = fold(typed);
       const index = expected.findIndex((answer) => fold(answer) === folded);
       if (index >= 0) return { status: "accent", answer: originals[index] };
+      // If both case and accents differ, guide the learner to fix case first.
+      if (caseSensitive) {
+        const index = originals.findIndex(answer => genericFold(ignoreCase(answer), folds) === genericFold(ignoreCase(value), folds));
+        if (index >= 0) return { status: "capitalisation", answer: originals[index] };
+      }
       return { status: "wrong" };
     }
     function checkResponse(item, values) {
@@ -474,7 +514,7 @@
     }
     return { normalise: normaliseValue, fold, checkSlot, checkResponse, checkItem: checkResponse };
   }
-  const generic = { normalise: genericNormalise, fold: genericFold, forCourse: genericChecker };
+  const generic = { normalise: genericNormalise, fold: genericFold, forCourse: genericChecker, languageConfig: genericLanguageConfig };
 
   function answerChecker(course) {
     const lang = course?.answer_checker || course?.capabilities?.answer_checker || course?.plugin || course?.lang || course?.language?.code || "cy";
@@ -653,13 +693,93 @@
     return map;
   }
 
+  // Selected lesson IDs in chapter order: embedded order, the reader's index entry, then
+  // an "-lNN" ID suffix. Lessons with no known order keep their given order, last.
+  function inLessonOrder(lessonIds, lessonMap) {
+    const orderOf = id => {
+      const lesson = lessonMap.get(id);
+      const order = Number(lesson?.order ?? lesson?._entry?.order ?? (/-l(\d+)$/.exec(id) || [])[1]);
+      return Number.isFinite(order) ? order : Infinity;
+    };
+    return asList(lessonIds).map((id, index) => ({id, index, order: orderOf(id)}))
+      .sort((a, b) => (a.order === b.order ? 0 : a.order - b.order) || a.index - b.index)
+      .map(row => row.id);
+  }
+
+  // Follow the reading, not lexicon insertion order. Explicit gloss anchors and
+  // authored surface forms also locate inflected words whose citation differs.
+  // Stages without a locatable word fall back to their example, then stay stable.
+  const LETTER_END = /[\p{L}\p{M}]$/u, LETTER_START = /^[\p{L}\p{M}]/u;
+  function readingOrderStages(stages, lesson, course, entryOf = stage => stage._entry) {
+    // Lower-case, strip marks, then fold case variants such as ς/σ, ϐ/β, µ/μ, ſ/s as
+    // findAnchor's /iu matching does. Offsets are compared only within one keyed text.
+    const key = value => foldAccents(String(value || "").toLowerCase())
+      .replace(/[^\x00-\x7f]/g, ch => ch.toUpperCase().toLowerCase());
+    // Containment prefilter before findAnchor's regex: apostrophe variants are equal.
+    const loose = value => value.replace(/['’‘ʼ`´]/g, "'");
+    const welsh = course?.lang === "cy";
+    const segments = [...segmentIndex(lesson).values()].map(segment => {
+      const text = key(segment.text);
+      // Welsh: radical candidate -> first word offset, so mutated forms match once.
+      const radicals = new Map();
+      if (welsh) for (const match of text.matchAll(/[\p{L}\p{M}]+/gu)) {
+        for (const candidate of unmutateCandidates(match[0], course.unmutation)) if (!radicals.has(candidate)) radicals.set(candidate, match.index);
+      }
+      return {segment, text, loose: loose(text), radicals};
+    });
+    // Both sides are lower-cased and folded, so a boundary-checked search finds what
+    // findAnchor would without compiling a Unicode regex per form (slow on long courses).
+    // Generic courses keep findAnchor for their token boundaries.
+    const generic = course?.plugin === "generic";
+    const anchored = (row, form, folded = loose(form)) => {
+      if (!folded || !row.loose.includes(folded)) return null;
+      if (generic) return findAnchor(row.text, form, course);
+      for (let at = row.loose.indexOf(folded); at >= 0; at = row.loose.indexOf(folded, at + 1)) {
+        const end = at + folded.length;
+        if (!LETTER_END.test(row.loose.slice(Math.max(0, at - 2), at)) && !LETTER_START.test(row.loose.slice(end, end + 2))) return {start: at, end};
+      }
+      return null;
+    };
+    const position = stage => {
+      const entry = entryOf(stage);
+      const forms = [stage.cloze?.answer, headWord(stage.front), entry?.lemma,
+        ...asList(entry?.forms_seen).map(form => typeof form === "string" ? form : form.form)]
+        .filter(Boolean).map(key).map(form => ({form, folded: loose(form)}));
+      const radicals = welsh ? forms.filter(({form}) => !form.includes(" ")).flatMap(({form}) => [...unmutateCandidates(form, course.unmutation)]) : [];
+      const references = asList(stage.example_segment_ids?.length ? stage.example_segment_ids : stage.example_segment_id);
+      let fallback;
+      for (let i = 0; i < segments.length; i++) {
+        const row = segments[i], segment = row.segment;
+        const offsets = [];
+        for (const aid of segment.inference_aids || []) {
+          if (aid.covers_lexeme_ids?.includes(stage.lexeme_id) && aid.anchor_text) {
+            const range = anchored(row, key(aid.anchor_text));
+            if (range) offsets.push(range.start);
+          }
+        }
+        for (const {form, folded} of forms) {
+          const range = anchored(row, form, folded);
+          if (range) offsets.push(range.start);
+        }
+        // sameUnderMutation(word, form): the two share an unmutated candidate.
+        for (const candidate of radicals) if (row.radicals.has(candidate)) offsets.push(row.radicals.get(candidate));
+        if (offsets.length) return [i, Math.min(...offsets)];
+        if (!fallback && (references.includes(segment.id) || stage.cloze?.segment_id === segment.id)) fallback = [i, Infinity];
+      }
+      return fallback || [Infinity, Infinity];
+    };
+    return [...stages].map(stage => ({stage, at: position(stage)}))
+      .sort((a, b) => (a.at[0] - b.at[0]) || (a.at[1] - b.at[1]))
+      .map(row => row.stage);
+  }
+
   // Cards for the given lesson IDs, built from lexicon card_stages (design §8.3–8.4).
   // A lesson whose stages are not yet merged into the lexicon falls back to its own
   // lexicon_delta.card_stages. Lesson vocabulary lists are never exported.
   function buildAnkiCards({ course, lexicon, lessons, lessonIds, lessonLabels = {}, unmutation } = {}) {
     const courseId = course?.id || lexicon?.course_id || "course";
     const lessonMap = asLessonMap(lessons);
-    const ids = asList(lessonIds);
+    const ids = inLessonOrder(lessonIds, lessonMap);
     const all = lexiconStages(lexicon);
     const entries = new Map((lexicon?.entries || []).map((entry) => [entry.id, entry]));
     const cards = [];
@@ -672,7 +792,7 @@
       }
       const segments = lesson ? segmentIndex(lesson) : new Map();
       const vocab = new Map((lesson?.vocabulary || []).map((word) => [word.lexeme_id, word]));
-      for (const stage of stages) {
+      for (const stage of readingOrderStages(stages, lesson, course, stage => stage._entry || entries.get(stage.lexeme_id))) {
         const lexemeId = stage.lexeme_id;
         const stageId = stage.id || stage.card_stage || "base";
         const guid = `${courseId}:${lexemeId}:${stageId}`;
@@ -779,6 +899,7 @@
     const knownSet = new Set(includeKnown ? [] : asList(known).map((k) => (/^[a-z]{2,3}-/.test(k) ? k : key(k))));
     const isKnown = (entry) => entry && (knownSet.has(entry.id) || (entry.lemma && knownSet.has(key(entry.lemma))));
     const all = lexiconStages(lexicon);
+    const entries = new Map((lexicon?.entries || []).map((entry) => [entry.id, entry]));
     const base = course?.anki?.tags_base?.length ? course.anki.tags_base : [courseId];
     // anki.card_kinds limits which kinds are emitted; anki.skip_patterns drops grammar-pattern
     // stages; anki.strip_stress removes acute stress marks from both sides.
@@ -788,14 +909,14 @@
     const cards = [];
     const seen = new Set();
     const push = (card) => cards.push({ ...card, front: unstress(card.front), back: unstress(card.back) });
-    for (const lessonId of asList(lessonIds)) {
+    for (const lessonId of inLessonOrder(lessonIds, lessonMap)) {
       const lesson = lessonMap.get(lessonId);
       const segments = lesson ? segmentIndex(lesson) : new Map();
       const order = lesson?.order ?? Number((/-l(\d+)$/.exec(lessonId) || [])[1]);
       const part = lesson?.part ?? lesson?.rhan;
       const label = lessonLabels[lessonId] || "";
       const lessonTags = [`${chapterTag}-${String(order).padStart(2, "0")}`, ...(part ? [`${partTag}-${part}`] : []), ...asList(lesson?.anki_export?.tags)];
-      for (const stage of all.filter((st) => st.lesson === lessonId)) {
+      for (const stage of readingOrderStages(all.filter((st) => st.lesson === lessonId), lesson, course, stage => stage._entry || entries.get(stage.lexeme_id))) {
         const entry = stage._entry;
         const stageId = stage.id || "base";
         const isPattern = String(stageId).startsWith("pattern");
@@ -850,7 +971,7 @@
     const skipKinds = new Set(course?.anki?.skip_known_kinds ?? ["recognition", "production"]);
     const skipKnown = (entry, kind) => skipKinds.has(kind) && entry &&
       (knownSet.has(entry.id) || (entry.lemma && knownSet.has(key(entry.lemma))));
-    const ids = [...asList(lessonIds)].sort((a, b) => (lessonMap.get(a)?.order || 0) - (lessonMap.get(b)?.order || 0));
+    const ids = inLessonOrder(lessonIds, lessonMap);
     // Preserve existing GUIDs. A recognition stage must not occupy another
     // stage's production GUID, including across units and inline deltas.
     const stageKeys = new Set([
@@ -870,7 +991,7 @@
       for (const stage of [...lexiconStages(delta), ...all].filter(stage => stage.lesson === lessonId || !stage.lesson)) {
         stages.set(`${stage.lexeme_id}:${stage.id || "base"}`, stage);
       }
-      for (const stage of stages.values()) {
+      for (const stage of readingOrderStages(stages.values(), lesson, course, stage => stage._entry || entries.get(stage.lexeme_id) || deltaEntries.get(stage.lexeme_id))) {
         const entry = stage._entry || entries.get(stage.lexeme_id) || deltaEntries.get(stage.lexeme_id);
         if (!stage.lexeme_id) continue;
         const guid = `${courseId}:${stage.lexeme_id}:${stage.id || "base"}`;
@@ -935,7 +1056,9 @@
       prefixes: new Set("l un dell all dall nell sull coll quell bell sant c d m t s v ci quest tutt senz anch com dov ch de ne a co e i gl perch".split(" ")),
       // Standalone modern apocope and poetic forms used in editions of Dante.
       apocope: new Set("po mo be va fa da sta di vo fe ver me te se".split(" ")),
-      leading: new Set(["l", "n"]),
+      // Bounded apheresis, not a rule for every word beginning with n. The surface
+      // 'nferno still needs an explicit vocabulary/dictionary entry (lemma inferno).
+      leading: new Set(["l", "n", "nferno"]),
       // Orthographic quote priorities only; these spellings grant no vocabulary license.
       bareQuoteForms: new Set("un ci de ne a co e i di da va fa sta vo fe ver me te se l n c d m t s v".split(" "))
     }

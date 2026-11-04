@@ -15,7 +15,7 @@
   const keys = Object.keys(LATIN).sort((a, b) => b.length - a.length);
 
   function transliterate(value) {
-    const input = String(value ?? "");
+    const input = String(value ?? "").replace(/[\u2019\u02bc]/gu, "'");
     let out = "";
     for (let i = 0; i < input.length;) {
       const key = keys.find((k) => input.slice(i, i + k.length).toLowerCase() === k);

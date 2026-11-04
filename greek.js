@@ -76,6 +76,10 @@
   // the modifier-letter apostrophes used for elision.
   const PUNCT_RE = /[\p{P}\p{S}ʼʽ]/gu;
 
+  // Greek full case folding needs expansion: ᾔ uppercases to ἬΙ, whereas lowercasing
+  // alone leaves the subscript attached. NFD keeps the other diacritics intact.
+  const caseFold = (value) => String(value ?? "").normalize("NFD").toUpperCase().toLowerCase();
+
   // NFD, strip combining marks, lower-case, final sigma → σ, strip punctuation,
   // collapse whitespace. Applied to both sides of every comparison.
   function normalise(value) {
@@ -89,15 +93,13 @@
       .trim();
   }
 
-  // Like normalise() but keeps breathings, accents, diaeresis and iota subscript (grave is
-  // folded into acute), so a fully accented response can be told apart from its homographs.
+  // Like normalise() but keeps breathings, accents, diaeresis and iota (subscript and
+  // adscript compare equally; grave folds into acute), distinguishing accented homographs.
   function accentKey(value) {
-    return String(value ?? "")
-      .normalize("NFD")
+    return caseFold(value)
       .replace(/̀/g, "́")
       .replace(/̀/g, "́")
       .replace(/̓/g, "̓")
-      .toLowerCase()
       .replace(VARIANT_RE, (ch) => VARIANT_LETTERS[ch])
       .replace(PUNCT_RE, " ")
       .replace(/\s+/g, " ")
@@ -124,8 +126,14 @@
     const accepted = item?.accepted ?? [];
     const key = accentKey(greek);
     if (accepted.some((form) => accentKey(form) === key)) return { ...base, status: "correct", matched: "accented" };
-    if ((item?.collapsed ?? []).includes(normalised)) return { ...base, status: "not_assessable" };
-    if (accepted.some((form) => normalise(form) === normalised)) return { ...base, status: "correct", matched: "unaccented" };
+    // Retain the legacy normalised keys stored by item banks (subscript stripped),
+    // with a second comparison for case-expanded iota. Expansion must not bypass a
+    // collapsed homograph's requirement for correct accents and breathings.
+    const folded = normalise(caseFold(greek));
+    const expandedMatches = accepted.filter((form) => normalise(caseFold(form)) === folded);
+    const collapsed = item?.collapsed ?? [];
+    if (collapsed.includes(normalised) || expandedMatches.some((form) => collapsed.includes(normalise(form)))) return { ...base, status: "not_assessable" };
+    if (expandedMatches.length || accepted.some((form) => normalise(form) === normalised)) return { ...base, status: "correct", matched: "unaccented" };
     for (const pattern of item?.error_patterns ?? []) {
       if ((pattern.match ?? []).includes(normalised)) return { ...base, status: "wrong", label: pattern.label ?? null };
     }

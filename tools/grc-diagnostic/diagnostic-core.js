@@ -5,9 +5,10 @@
 // (window.GrcDiagnosticCore) and Node tests (require). No DOM access here.
 // Contract: content/grc/diagnostic/FORMAT.md; design: docs/greek-diagnostic-spec.md.
 (function expose(root) {
-  const Greek = (typeof module !== "undefined" && module.exports) ? require("../../greek.js") : root.GreekInput;
-
-  const Russian = (typeof module !== "undefined" && module.exports) ? require("../../russian.js") : root.RussianInput;
+  const node = typeof module !== "undefined" && module.exports;
+  const books = node ? require("node:path").resolve(process.env.BOOKS_DIR || require("node:path").join(__dirname, "../../../LanguageBooks")) : null;
+  const Greek = node ? require(require("node:path").join(books, "greek.js")) : root.GreekInput;
+  const Russian = node ? require(require("node:path").join(books, "russian.js")) : root.RussianInput;
 
   const RESULTS_FORMAT = "grc-diagnostic-results/1";
 

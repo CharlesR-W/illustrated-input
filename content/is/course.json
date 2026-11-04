@@ -13,8 +13,7 @@
   "content_version": "0.1.0-mvp",
   "lesson_count": 40,
   "capabilities": {
-    "inflecting": true,
-    "audio_first_through_part": 1
+    "inflecting": true
   },
   "answer_checker": "is",
   "lexicon_path": "lexicon.json",
@@ -167,8 +166,6 @@
       "finished": "✓ Lokið",
       "anki": "Sækja Anki-spjöld",
       "anki_include_known": "Taka með þekkt orð",
-      "audio_play": "Hlusta",
-      "audio_source": "Rödd",
       "proverb": "Málsháttur",
       "hint_toggle": "Vísbending (English)",
       "pensum_a": "Verkefni A — Beygingar",
@@ -303,8 +300,6 @@
       "anki": "Download Anki cards",
       "anki_cumulative": "Anki cards: chapters 1–N",
       "anki_include_known": "Include words I already know",
-      "audio_play": "Listen",
-      "audio_source": "Voice",
       "start": "Start reading",
       "planned": "coming soon",
       "notes": "Notes",
@@ -771,12 +766,6 @@
       "url": "https://bin.arnastofnun.is",
       "lang": "is",
       "license": "CC-BY-SA-4.0"
-    },
-    {
-      "text": "Talrómur speech corpus, Reykjavík University; Piper is_IS voices (salka, ugla, steinn, bui).",
-      "url": "https://huggingface.co/rhasspy/piper-voices",
-      "lang": "en",
-      "license": "CC-BY-4.0"
     }
   ],
   "parts": [
@@ -821,7 +810,8 @@
       "part": 1,
       "status": "draft",
       "grammar_target_id": "G01",
-      "path": "lessons/kafli-01.json"
+      "path": "lessons/kafli-01.json",
+      "published": true
     },
     {
       "id": "is-kvold-01-l02",
@@ -830,7 +820,8 @@
       "part": 1,
       "status": "draft",
       "grammar_target_id": "G02",
-      "path": "lessons/kafli-02.json"
+      "path": "lessons/kafli-02.json",
+      "published": true
     },
     {
       "id": "is-kvold-01-l03",
@@ -839,7 +830,8 @@
       "part": 1,
       "status": "planned",
       "grammar_target_id": "G03",
-      "planned_path": "lessons/kafli-03.json"
+      "planned_path": "lessons/kafli-03.json",
+      "published": false
     },
     {
       "id": "is-kvold-01-l04",
@@ -848,7 +840,8 @@
       "part": 1,
       "status": "planned",
       "grammar_target_id": "G04",
-      "planned_path": "lessons/kafli-04.json"
+      "planned_path": "lessons/kafli-04.json",
+      "published": false
     }
   ],
   "anki": {
@@ -885,80 +878,6 @@
     "mode": "inflecting",
     "chapter_tag": "kafli",
     "part_tag": "hluti"
-  },
-  "audio": {
-    "engine": "piper",
-    "narrator_voice": "salka",
-    "speaker_voices": {
-      "char-afi": {
-        "voice": "bui",
-        "pitch": 0.94
-      },
-      "char-bjarni": "steinn",
-      "char-oli": "bui",
-      "char-siggi": {
-        "voice": "steinn",
-        "pitch": 1.2
-      },
-      "char-gudrun": "ugla",
-      "char-thorunn": {
-        "voice": "ugla",
-        "pitch": 0.94
-      },
-      "char-helga": {
-        "voice": "ugla",
-        "pitch": 1.07
-      },
-      "char-asta": {
-        "voice": "ugla",
-        "pitch": 1.22
-      }
-    },
-    "length_scale": 1,
-    "part_length_scales": {
-      "1": 1.12
-    },
-    "license": "CC-BY-4.0",
-    "attribution": "Talrómur speech corpus, Reykjavík University; Piper is_IS voices (salka, ugla, steinn, bui).",
-    "source": "https://huggingface.co/rhasspy/piper-voices",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "pronunciation_overrides": {},
-    "voice_notes": "Draft casting, pick by ear: narrator salka; afi bui (lowered), Bjarni steinn, Óli bui, Siggi steinn raised; Guðrún ugla, Þórunn ugla (lowered), Helga ugla (raised a little), Ásta ugla raised. Snati (Voff!) uses the narrator.",
-    "source_label": "Piper (Talrómur)",
-    "lesson_sources": {
-      "is-kvold-01-l01": [
-        {
-          "id": "piper",
-          "label": "Piper (Talrómur)",
-          "manifest": "media/audio/kafli-01/piper/manifest.json",
-          "default": true
-        }
-      ],
-      "is-kvold-01-l02": [
-        {
-          "id": "piper",
-          "label": "Piper (Talrómur)",
-          "manifest": "media/audio/kafli-02/piper/manifest.json",
-          "default": true
-        }
-      ],
-      "is-kvold-01-l03": [
-        {
-          "id": "piper",
-          "label": "Piper (Talrómur)",
-          "manifest": "media/audio/kafli-03/piper/manifest.json",
-          "default": true
-        }
-      ],
-      "is-kvold-01-l04": [
-        {
-          "id": "piper",
-          "label": "Piper (Talrómur)",
-          "manifest": "media/audio/kafli-04/piper/manifest.json",
-          "default": true
-        }
-      ]
-    }
   },
   "grading": {
     "recurrence": {

@@ -1,0 +1,4406 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "ru-mir-01-l11",
+  "course_id": "ru-mir-01",
+  "order": 11,
+  "title": "Ко́локол",
+  "part": 2,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "0.1.0-loop-draft",
+  "provenance": {
+    "author": "loop writer (Claude, model-written), step write, chapter 11",
+    "model": "claude-opus-5-5",
+    "prompt": "loop/briefs/20261027T054703901-ru-mir-01-write-c11.md; content/ru/plan/chapters.json row 11; docs/russian-mir-design.md; docs/russian-mir-lesson-shape.md",
+    "review_required": "Codex cross-model review and a fluent Russian reader before the chapter leaves draft",
+    "notes": [
+      "Attempt 20261027T054703901-ru-mir-01-write-c11. Previous rejection (c08: out-of-scope analysis/glava-01..07 edits) handled: content/ru/analysis/ was copied aside before the first checker run and every other chapter's sidecar was restored byte for byte after each run; only analysis/glava-11*.json is new.",
+      "Written from the frozen plan row in four sections: the bell, the courier and the notice on the church square, the elder stumbling over one word and Ivan's first word read in public (sec1); the list, Fyodor called and Ivan not, relief and shame, the women's tears, Nastya's unanswered «Зна́чит, война́?», the vodka shop closed and Silanty's rumour (sec2); the uncut rye, «Беда́ одна́ не хо́дит», Pyotr on the мир, Ivan takes Fyodor's sickle, the blessing and the cart at dawn on the 19th (sec3); the manifesto on 20 July, the litany «О ми́ре всего́ ми́ра», Nastya's two мир, Дед's «Был мир. Тепе́рь война́», ВОЙНА́ / МИР on the slate, Ivan alone in the rye on the 21st (sec4).",
+      "G11 demonstrated well above 8 times with contrasts by the first third: чита́л ↔ прочита́л (s023–s029), звони́л ↔ позвони́л (s013/s018), later убира́ли ↔ убра́л, закрыва́л ↔ закры́л, целова́ла ↔ поцелова́л, пла́кал ↔ запла́кала, писа́л ↔ написа́л, and pf. chains (взял… благослови́л… поцелова́л… пошёл).",
+      "Speech tags: спроси́ть is planned for Глава 12 and отве́тить for Глава 13 (plan/chapters.json), and посмотре́ть for 12, so questions take «сказа́л(а)» or an action beat and silence is «не отвеча́л(а)»; no later lexeme is used early.",
+      "Warning gloss-density (3.2 per 100 words; Часть 2 target 1.5–3): fix job 2026-11-04 harvested the archive's sink/ru-aids-11 cut (58 → 31 margin notes; learning-contract methods changed to context/contrast where a gloss was dropped) and dropped the form notes at s133/s143, where the adjacent sentence already shows писа́л … написа́л and убира́л … убра́л. The Codex review (GPT-6.1-Sol, 2026-11-04) then required four aids back as first-use support, which outranks the density target: the date chunk (s001; the row licenses it as a glossed chunk), вдруг (s007), пло́щадь (s016) and зна́чит (s034). Result 33 glosses / about 1,040 words, down from 58 / 1,036. Dropped glosses rely on known roots (прочита́ть, позвони́ть, рассказа́ть, сде́лать, помо́чь, поцелова́ть ← known or just-glossed ipf.), adjacent contrast (призыва́ют → призва́ли; оста́лась after «Теле́га ушла́»), or baseline knowledge (по́сле, пото́м, наконе́ц, узна́ть, случи́ться). Planned vignettes are not counted as support: the archive's 'picture(svg)' methods for прочита́ть and убра́ть were reduced to their contrasts.",
+      "Warning prior-coverage (87.5% against 88%): the archive's sink/ru-coverage text changes were already in this draft; this fix restores five of them to «взять» sentences (s040 ста́роста взял у ба́тюшки спи́сок, s068 взя́ли всю во́дку, s093 Пётр взял ико́ну, s102 взял мешо́к, s132 взял ста́рую до́ску) because the workbook, Pensum A, the grammar tables (cep) and the tap glosses still cite those sentences, the брать/взять pair is part of the G11 target, and the replacements («у Петра́ была́ ико́на…», «пе́ред Ива́ном была́ ста́рая доска́», «у ста́росты был спи́сок») read awkwardly. The remaining gap is the row's 46 new lexemes; not padded with known words.",
+      "Warning dialogue (28–29% against 30%): the checker does not count continuation segments that carry a speaker (the rest of the notice, Silanty's second sentence, the manifesto); with them the share is above 30%. Not padded.",
+      "Warnings budget-open-slots and lexicon-plan: ru-stydno is this chapter's one open slot (frequency rank 1852; declared in learning_contract.open_slot_ids; the beat «relief and then shame» needs it). ru-uznat was planned for Глава 10 and dropped there (Глава 10 writer log); it is re-introduced here as an ordinary perfective with its own gloss. Total new lexemes 46, under the ceiling of 50.",
+      "Warning stress-lexicon «печи́» (s074): locative-2 на печи́ is correct; the lexicon lists only the genitive пе́чи (same finding as Глава 10).",
+      "Warning pensa-recall a10 (G01): plan/recall.json schedules G01 as this chapter's delayed recall (from Глава 1's Напиши); the checker reads only the short-window targets.",
+      "Proverb «Беда́ одна́ не хо́дит» (s080) is a quotation segment: беда́ and хо́дит are glossed one-offs, never tested. The manifesto (s110–s116) is abridged to six sentences in G11 grammar; the title formula is the whitelisted glossed chunk (quotation segment). Source: Высочайший манифест 20 июля 1914 г., ru.wikisource.org/wiki/Высочайший_манифест_20.07.1914 (official act, not subject to copyright). The elder's notice (s024, s036–s038) is invented wording.",
+      "Departures from the row: the notice is read at the church door, not nailed up; Sunday is not named (воскресе́нье is in neither the lexicon nor plan/frequency.json), the date «20 ию́ля» carries it; Дед's 1877 Bulgaria memory is not used (the row marks it [?]); «Фёдор ещё не написа́л» is not used (a letter two days after he left is implausible); Nastya's «Кто таки́е не́мцы?» becomes «А не́мцы то́же убира́ют рожь?»; the litany is said by the priest (no deacon in the cast); «Росси́я вста́ла как оди́н челове́к» becomes «Вся Росси́я тепе́рь — как оди́н челове́к» (встать is not in the lexicon); Marya, not Дед, blesses Ivan on Monday; Fyodor stands (not kneels) for the blessing, and the art brief follows the text.",
+      "Media: cover, three inline scenes (square, blessing, Ivan in the rye) and three vignettes (серп, ко́локол, ико́на) are planned with art briefs; мешо́к is skipped (long-known, with a Глава 4 vignette). One margin SVG authored (ru-mir-01-l11-svg-vid.svg: three timelines чита́л → прочита́л, убира́ли → убра́л, звони́л → позвони́л, with Ivan, a sheaf and a bell), status draft.",
+      "Warning sense-ambiguous «ми́ра» (s119, «О ми́ре всего́ ми́ра»): the second token means 'world'. The course has no world-sense lexeme (only ru-mir-commune and ru-mir-peace), so it is deliberately left unpinned rather than mis-pinned to peace (Codex review blocker 3); the margin gloss «весь мир: вся земля́» carries the meaning and it is never tested. A ru-mir-world lexeme is proposed in OPEN.md.",
+      "Manifesto (s110–s116) now carries a learner-visible adaptation label, s109a «По манифе́сту царя́ от 20 ию́ля 1914 го́да:», and quotation: true on every segment, per COURSE.md's «по …» rule for adapted authentic texts (Codex review blocker 4)."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "ru-mir-01-l11-s001",
+        "quote": "Бы́ло 18 ию́ля 1914 го́да.",
+        "question": "Opening «Бы́ло 18 ию́ля 1914 го́да.» natural as a narrative opening? (Alternative: «18 ию́ля 1914 го́да …» inside the first sentence.)"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s017",
+        "quote": "Оте́ц Алексе́й был там, у ко́локола.",
+        "question": "History: the priest ringing the bell to call the village from the harvest is a writer's choice (history §2: bells unverified). Acceptable as presented?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s062",
+        "quote": "Наконе́ц он закры́л её и стал у две́ри с са́блей.",
+        "question": "«стал у две́ри» for \"took up his post at the door\": natural, or should it be «встал» (встать not in the lexicon)?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s060",
+        "quote": "Пото́м уря́дник Гаври́лов пошёл к ла́вке у доро́ги: там продава́ли во́дку.",
+        "question": "History: the state vodka shop by the road closed by the constable on 18 July 1914 (the sale ban came with the mobilisation): plausible in a Ryazan village? [?]"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s095",
+        "quote": "Ма́рья целова́ла сы́на, и слёзы шли и шли.",
+        "question": "«слёзы шли и шли» (instead of «текли», not in the lexicon): acceptable colloquial Russian?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s106",
+        "quote": "Теле́га ушла́ по доро́ге, а оте́ц Алексе́й пошёл к це́ркви и позвони́л ещё раз.",
+        "question": "«Теле́га ушла́ по доро́ге» (уе́хала is G16): natural enough for a cart?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s098",
+        "quote": "Ли́зу он взял на ру́ки и целова́л, а она́ смея́лась: она́ ещё не понима́ла.",
+        "question": "Stress «на ру́ки» vs «на́ руки» after взять: both are normative; which is better here?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s119",
+        "quote": "По́сле манифе́ста ба́тюшка сказа́л: «О ми́ре всего́ ми́ра…»",
+        "question": "Liturgy: the priest (not a deacon) saying «О ми́ре всего́ ми́ра…» in a small parish; and the wording «сказа́л» for an intoned petition: acceptable?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s118",
+        "quote": "А Фёдор, наве́рное, узна́л э́то ещё ра́ньше, в го́роде.",
+        "question": "History: reservists at the uezd assembly point on 19–20 July 1914 learning of the war before the village did: plausible? [?]"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s085",
+        "quote": "Мир — э́то не то́лько сход и зако́н.",
+        "question": "Is Pyotr's «Мир — э́то не то́лько сход и зако́н. Мир — э́то сосе́ди, когда́ тебе́ тяжело́» natural peasant speech?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s128",
+        "quote": "— Убира́ют. Не́мцы то́же мужики́.",
+        "question": "«Не́мцы то́же мужики́» (Pyotr): in character for 1914, and not an anachronistic editorial?"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s135",
+        "quote": "Фёдор и други́е ушли́, и в дере́вне оста́лись старики́, ба́бы, де́ти и молоды́е, как Ива́н.",
+        "question": "«старики́, ба́бы, де́ти и молоды́е, как Ива́н» — natural?"
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G11",
+    "primary_new_grammar": {
+      "id": "G11",
+      "label": "Aspect I: писа́л ↔ написа́л in narration; aspect pairs as principal parts (писа́ть/написа́ть, говори́ть/сказа́ть, идти́/пойти́, брать/взять, дава́ть/дать, ви́деть/уви́деть); sequence of single events vs background",
+      "minimum_demonstrations": 8
+    },
+    "recycled_grammar": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10"
+    ],
+    "incidental": [
+      {
+        "form": "18, 19, 20 ию́ля; 1914 го́да; в 1908—1911 года́х — digit dates and years as glossed chunks (row incidental_allowed, L21)",
+        "gloss_segment_id": "ru-mir-01-l11-s001"
+      },
+      {
+        "form": "Бо́жиею ми́лостию Мы, Никола́й Второ́й… — manifesto title formula, receptive, glossed (formula_whitelist from 11); quotation segment",
+        "gloss_segment_id": "ru-mir-01-l11-s110"
+      },
+      {
+        "form": "Проща́й — the farewell formula (imperative of проща́ть, G14), glossed, never tested",
+        "gloss_segment_id": "ru-mir-01-l11-s104"
+      },
+      {
+        "form": "Беда́ одна́ не хо́дит — the row's proverb as a quotation segment: беда́ and хо́дит (ходи́ть, G12) glossed, never tested",
+        "gloss_segment_id": "ru-mir-01-l11-s080"
+      }
+    ],
+    "new_lexeme_ids": [
+      "ru-vojna",
+      "ru-mir-peace",
+      "ru-mobilizatsiya",
+      "ru-obyavit",
+      "ru-zapasnoj",
+      "ru-prizvat",
+      "ru-prizyvat",
+      "ru-armiya",
+      "ru-soldat",
+      "ru-nemets",
+      "ru-prochitat",
+      "ru-napisat",
+      "ru-pojti",
+      "ru-vzyat",
+      "ru-kolokol",
+      "ru-zvonit",
+      "ru-pozvonit",
+      "ru-ploshchad",
+      "ru-spisok",
+      "ru-zaplakat",
+      "ru-zakryt",
+      "ru-zakryvat",
+      "ru-ubrat",
+      "ru-ubirat",
+      "ru-rozh",
+      "ru-serp",
+      "ru-ostatsya",
+      "ru-zashchitit",
+      "ru-vdrug",
+      "ru-potom",
+      "ru-nakonets",
+      "ru-srazu",
+      "ru-sleza",
+      "ru-potselovat",
+      "ru-tselovat",
+      "ru-sluzhit",
+      "ru-znachit",
+      "ru-pomoch",
+      "ru-posle",
+      "ru-blagoslovit",
+      "ru-sdelat",
+      "ru-sluchitsya",
+      "ru-rasskazat",
+      "ru-vodka",
+      "ru-uznat",
+      "ru-stydno"
+    ],
+    "recycle_lexeme_ids": [
+      "ru-chitat",
+      "ru-pisat",
+      "ru-starosta",
+      "ru-uryadnik",
+      "ru-lavka",
+      "ru-batyushka",
+      "ru-tserkov",
+      "ru-ikona",
+      "ru-tsar",
+      "ru-bumaga",
+      "ru-ded",
+      "ru-zemlya",
+      "ru-pole",
+      "ru-otrub",
+      "ru-mir-commune",
+      "ru-skhod",
+      "ru-telega",
+      "ru-rabotat",
+      "ru-skazat",
+      "ru-prijti",
+      "ru-ujti",
+      "ru-ponyat",
+      "ru-stat",
+      "ru-odin",
+      "ru-dva",
+      "ru-tri"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "ru-vojna",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s053"
+      },
+      {
+        "lexeme_id": "ru-mir-peace",
+        "how": "gloss(antonym)",
+        "segment_id": "ru-mir-01-l11-s119"
+      },
+      {
+        "lexeme_id": "ru-mobilizatsiya",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s030"
+      },
+      {
+        "lexeme_id": "ru-obyavit",
+        "how": "gloss(paraphrase)",
+        "segment_id": "ru-mir-01-l11-s024"
+      },
+      {
+        "lexeme_id": "ru-zapasnoj",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s037"
+      },
+      {
+        "lexeme_id": "ru-prizvat",
+        "how": "context+contrast",
+        "segment_id": "ru-mir-01-l11-s043"
+      },
+      {
+        "lexeme_id": "ru-prizyvat",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s039"
+      },
+      {
+        "lexeme_id": "ru-armiya",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s044"
+      },
+      {
+        "lexeme_id": "ru-soldat",
+        "how": "gloss(contrast)",
+        "segment_id": "ru-mir-01-l11-s034"
+      },
+      {
+        "lexeme_id": "ru-nemets",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s124"
+      },
+      {
+        "lexeme_id": "ru-prochitat",
+        "how": "context+contrast",
+        "segment_id": "ru-mir-01-l11-s025"
+      },
+      {
+        "lexeme_id": "ru-napisat",
+        "how": "gloss(aspect_pair)",
+        "segment_id": "ru-mir-01-l11-s033"
+      },
+      {
+        "lexeme_id": "ru-pojti",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s015"
+      },
+      {
+        "lexeme_id": "ru-vzyat",
+        "how": "gloss(form)",
+        "segment_id": "ru-mir-01-l11-s035"
+      },
+      {
+        "lexeme_id": "ru-kolokol",
+        "how": "gloss(sound)",
+        "segment_id": "ru-mir-01-l11-s009"
+      },
+      {
+        "lexeme_id": "ru-zvonit",
+        "how": "gloss(sound)",
+        "segment_id": "ru-mir-01-l11-s009"
+      },
+      {
+        "lexeme_id": "ru-pozvonit",
+        "how": "contrast",
+        "segment_id": "ru-mir-01-l11-s018"
+      },
+      {
+        "lexeme_id": "ru-ploshchad",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s016"
+      },
+      {
+        "lexeme_id": "ru-spisok",
+        "how": "gloss(example)",
+        "segment_id": "ru-mir-01-l11-s038"
+      },
+      {
+        "lexeme_id": "ru-zaplakat",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s049"
+      },
+      {
+        "lexeme_id": "ru-zakryt",
+        "how": "gloss(aspect_pair)",
+        "segment_id": "ru-mir-01-l11-s061"
+      },
+      {
+        "lexeme_id": "ru-zakryvat",
+        "how": "gloss(aspect_pair)",
+        "segment_id": "ru-mir-01-l11-s061"
+      },
+      {
+        "lexeme_id": "ru-ubrat",
+        "how": "contrast",
+        "segment_id": "ru-mir-01-l11-s076"
+      },
+      {
+        "lexeme_id": "ru-ubirat",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s002"
+      },
+      {
+        "lexeme_id": "ru-rozh",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s002"
+      },
+      {
+        "lexeme_id": "ru-serp",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s005"
+      },
+      {
+        "lexeme_id": "ru-ostatsya",
+        "how": "contrast",
+        "segment_id": "ru-mir-01-l11-s107"
+      },
+      {
+        "lexeme_id": "ru-zashchitit",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s112"
+      },
+      {
+        "lexeme_id": "ru-vdrug",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s007"
+      },
+      {
+        "lexeme_id": "ru-potom",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s013"
+      },
+      {
+        "lexeme_id": "ru-nakonets",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s018"
+      },
+      {
+        "lexeme_id": "ru-srazu",
+        "how": "gloss(paraphrase)",
+        "segment_id": "ru-mir-01-l11-s037"
+      },
+      {
+        "lexeme_id": "ru-sleza",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s052"
+      },
+      {
+        "lexeme_id": "ru-potselovat",
+        "how": "context+contrast",
+        "segment_id": "ru-mir-01-l11-s096"
+      },
+      {
+        "lexeme_id": "ru-tselovat",
+        "how": "gloss(sound)",
+        "segment_id": "ru-mir-01-l11-s095"
+      },
+      {
+        "lexeme_id": "ru-sluzhit",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s044"
+      },
+      {
+        "lexeme_id": "ru-znachit",
+        "how": "gloss(paraphrase)",
+        "segment_id": "ru-mir-01-l11-s034"
+      },
+      {
+        "lexeme_id": "ru-pomoch",
+        "how": "context+contrast",
+        "segment_id": "ru-mir-01-l11-s084"
+      },
+      {
+        "lexeme_id": "ru-posle",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s003"
+      },
+      {
+        "lexeme_id": "ru-blagoslovit",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s094"
+      },
+      {
+        "lexeme_id": "ru-sdelat",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s078"
+      },
+      {
+        "lexeme_id": "ru-sluchitsya",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s011"
+      },
+      {
+        "lexeme_id": "ru-rasskazat",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s066"
+      },
+      {
+        "lexeme_id": "ru-vodka",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s060"
+      },
+      {
+        "lexeme_id": "ru-uznat",
+        "how": "context",
+        "segment_id": "ru-mir-01-l11-s069"
+      },
+      {
+        "lexeme_id": "ru-stydno",
+        "how": "gloss(define)",
+        "segment_id": "ru-mir-01-l11-s048"
+      }
+    ],
+    "swaps": [],
+    "open_slot_ids": [
+      "ru-stydno"
+    ]
+  },
+  "story": {
+    "cover": {
+      "ref": "ru-mir-01-l11-cover",
+      "src": "media/images/ru-mir-01-l11-cover.webp",
+      "status": "planned",
+      "presentation": "inline_scene",
+      "alt": "Harvest field in July 1914: a man, a woman and a young man with sickles straighten up in the rye and look towards the wooden church, whose bell is ringing; on the road below a rider is coming into the village.",
+      "art_brief": "Fyodor's отруб outside Берёзовка, Ryazan province, 18 July 1914 O.S. (31 July N.S.), summer daylight during the rye harvest; the prose does not specify a precise hour or weather. Foreground: a field of tall ripe golden rye, part of it cut, with a few bound sheaves standing. Three reapers have just straightened up and turned their heads to the right, towards the village: Fyodor (28, broad, short dark-brown beard, blue-grey shirt dark with sweat, a sickle in his right hand, shading his eyes with his left); Darya (26, faded red kerchief, sleeves rolled up, an armful of cut rye against her hip); Ivan (20, straw-fair bowl-cut hair, beardless, faded red shirt, a sickle in his hand). Middle distance right: the roofs of the village and the wooden church with one onion dome and a separate small wooden bell tower, a bronze bell hanging in a fixed mounting, with its clapper drawn to one side by a rope to suggest the ringing (no text). On the dusty road between the field and the village a rider on a brown horse at a trot, a man in a cap and a dark coat with a satchel. Ink outline with watercolour wash, illustrated reader of about 1910. No text in the image.",
+      "covers_lexeme_ids": [
+        "ru-rozh",
+        "ru-kolokol"
+      ],
+      "width": 1600,
+      "height": 1067
+    },
+    "sections": [
+      {
+        "id": "ru-mir-01-l11-sec1",
+        "title": "Ко́локол",
+        "segments": [
+          {
+            "id": "ru-mir-01-l11-s001",
+            "text": "Бы́ло 18 ию́ля 1914 го́да.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "18 ию́ля 1914 го́да",
+                "gloss": "18 ию́ля 1914 го́да = 18.07.1914",
+                "gloss_kind": "number",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s002",
+            "text": "В по́ле убира́ли рожь.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "рожь",
+                "gloss": "рожь: из неё де́лают хлеб",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-rozh"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "убира́ли",
+                "gloss": "убира́ть рожь: брать рожь с по́ля",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-ubirat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s003",
+            "text": "Весно́й, по́сле схо́да, у Фёдора был свой о́труб."
+          },
+          {
+            "id": "ru-mir-01-l11-s004",
+            "text": "Там Фёдор, Да́рья и Ива́н рабо́тали вме́сте."
+          },
+          {
+            "id": "ru-mir-01-l11-s005",
+            "text": "Ива́н рабо́тал серпо́м, как оте́ц и дед.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "серпо́м",
+                "gloss": "серп: в руке́; им убира́ют рожь",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-serp"
+                ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "ru-mir-01-l11-img-serp",
+                "label": "серп",
+                "src": "media/vignettes/ru-mir-01-l11-img-serp.webp",
+                "alt": "A peasant sickle with a wooden handle.",
+                "status": "planned",
+                "art_brief": "One Russian peasant sickle (серп) of 1914, Ryazan province: a thin crescent iron blade with a finely serrated inner edge, dull grey with a worn bright edge, set in a short turned wooden handle darkened by hands; a few cut rye stalks with ears lying beside it. Ink outline with watercolour wash, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "ru-serp"
+                ],
+                "width": 240,
+                "height": 240,
+                "anchor_text": "серпо́м"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s006",
+            "text": "Рожь в э́том году́ была́ хоро́шая."
+          },
+          {
+            "id": "ru-mir-01-l11-s007",
+            "text": "Вдруг Да́рья сказа́ла:",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Вдруг",
+                "gloss": "вдруг: все рабо́тали — и тут…",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-vdrug"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s008",
+            "text": "— Слу́шайте!",
+            "paragraph_start": true,
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s009",
+            "text": "В дере́вне звони́л ко́локол.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "ru-mir-01-l11-img-kolokol",
+                "label": "ко́локол",
+                "src": "media/vignettes/ru-mir-01-l11-img-kolokol.webp",
+                "alt": "A bronze church bell hanging from a wooden beam, its rope hanging down.",
+                "status": "planned",
+                "art_brief": "One bronze church bell of a village church, about 1914, hanging from a short dark wooden beam by an iron yoke; greenish-brown bronze with two raised rings round the waist, the clapper visible inside the mouth; a hemp rope tied to the clapper hangs down and to the side. Ink outline with watercolour wash, transparent background, no text or inscription on the bell.",
+                "covers_lexeme_ids": [
+                  "ru-kolokol"
+                ],
+                "width": 240,
+                "height": 240,
+                "anchor_text": "ко́локол"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "звони́л ко́локол",
+                "gloss": "ко́локол звони́т: бом! бом!",
+                "gloss_kind": "sound",
+                "covers_lexeme_ids": [
+                  "ru-kolokol",
+                  "ru-zvonit"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s010",
+            "text": "— Почему́? Сейча́с? — Фёдор смотре́л на це́рковь.",
+            "paragraph_start": true,
+            "speaker": "char-fyodor"
+          },
+          {
+            "id": "ru-mir-01-l11-s011",
+            "text": "— Что случи́лось? — сказа́ла Да́рья.",
+            "paragraph_start": true,
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s012",
+            "text": "На доро́ге Ива́н уви́дел ло́шадь, а на ло́шади — челове́ка.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s013",
+            "text": "Пото́м ло́шадь стоя́ла уже́ у до́ма ста́росты, а ко́локол звони́л и звони́л."
+          },
+          {
+            "id": "ru-mir-01-l11-s014",
+            "text": "— На́до идти́, — сказа́л Фёдор.",
+            "paragraph_start": true,
+            "speaker": "char-fyodor"
+          },
+          {
+            "id": "ru-mir-01-l11-s015",
+            "text": "Все пошли́ в дере́вню, и Фёдор шёл с серпо́м в руке́."
+          },
+          {
+            "id": "ru-mir-01-l11-s016",
+            "text": "На пло́щади у це́ркви уже́ стоя́ла вся дере́вня.",
+            "paragraph_start": true,
+            "pins": [
+              {
+                "start": 35,
+                "end": 38,
+                "token": "вся",
+                "lemma": "весь",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ],
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "пло́щади",
+                "gloss": "пло́щадь: ме́сто пе́ред це́рковью",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-ploshchad"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s017",
+            "text": "Оте́ц Алексе́й был там, у ко́локола."
+          },
+          {
+            "id": "ru-mir-01-l11-s018",
+            "text": "Наконе́ц он позвони́л ещё раз — и ста́ло ти́хо."
+          },
+          {
+            "id": "ru-mir-01-l11-s019",
+            "text": "— Что случи́лось, ба́тюшка? — сказа́ла Ма́рья.",
+            "paragraph_start": true,
+            "speaker": "char-marya"
+          },
+          {
+            "id": "ru-mir-01-l11-s020",
+            "text": "У две́ри це́ркви стоя́л ста́роста Его́р с бума́гой в руке́.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s021",
+            "text": "Э́ту бума́гу ему́ дал челове́к на ло́шади.",
+            "pins": [
+              {
+                "start": 22,
+                "end": 30,
+                "token": "челове́к",
+                "lemma": "человек",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s022",
+            "text": "— Мужики́! — сказа́л ста́роста. — Вот бума́га. Слу́шайте!",
+            "paragraph_start": true,
+            "speaker": "char-egor"
+          },
+          {
+            "id": "ru-mir-01-l11-s023",
+            "text": "Его́р чита́л ме́дленно и пло́хо:",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "ru-mir-01-l11-img-ploshchad",
+                "src": "media/images/ru-mir-01-l11-img-ploshchad.webp",
+                "status": "planned",
+                "alt": "At the wooden church door, the elderly village elder struggles to read a sheet of paper. The priest watches; Ivan stands just behind the elder, looking towards the paper. Fyodor holds his sickle, and Darya listens among the villagers.",
+                "art_brief": "At the door of the wooden church in Берёзовка, Ryazan province, 18 July 1914 O.S. (31 July N.S.), while Egor struggles to read the notice. A close view of five principal figures, with the listening village crowd suggested behind them. Centre: староста Егор (about 60, lean, long grey beard, bald crown, brown homespun coat over a belted linen shirt, a small round brass elder's badge on a chain at his chest) holds the sheet at arm's length, squinting, mouth partly open as he struggles through it. Beside him отец Алексей (about 50, tall, long grey beard, shoulder-length grey hair, black cassock, plain silver pectoral cross, soft black outdoor hat) watches the elder. Just behind Egor stands Ivan (20, tall and lanky, straw-fair bowl-cut hair, beardless, faded red косоворотка with a grey cord belt, dark grey trousers), looking towards the sheet; he is not yet reading aloud. At the front edge of the crowd, Fyodor (28, broad, short dark-brown beard, blue-grey косоворотка with a black belt, dark trousers, boots) holds his harvest sickle; Darya (26, round face, hair completely hidden under a faded red kerchief, white shirt, dark red-checked ponyova, apron) listens beside him. Crop the rest of the villagers to background silhouettes; do not stage the later reading of the names or the family's tears. Weathered log church wall and doorway, with a small part of the church square visible; summer daylight. Ink outline with watercolour wash, illustrated reader of about 1910. No text anywhere: only faint irregular grey marks on the sheet, no letters, numbers, labels or inscription.",
+                "covers_lexeme_ids": [
+                  "ru-ploshchad"
+                ],
+                "width": 1600,
+                "height": 1067
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s024",
+            "text": "— «Царь… объяви́л…»",
+            "paragraph_start": true,
+            "speaker": "char-egor",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "объяви́л",
+                "gloss": "объяви́ть: сказа́ть всей Росси́и",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": [
+                  "ru-obyavit"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s025",
+            "text": "Его́р не мог прочита́ть сло́во, и мужики́ смея́лись.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s026",
+            "text": "— Ну, Его́р! Ты чита́ешь, как ребёнок! — сказа́л Сила́нтий.",
+            "paragraph_start": true,
+            "speaker": "char-silantij"
+          },
+          {
+            "id": "ru-mir-01-l11-s027",
+            "text": "Но пото́м мужики́ уже́ не смея́лись.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s028",
+            "text": "Ива́н стоя́л за ста́ростой и смотре́л в бума́гу."
+          },
+          {
+            "id": "ru-mir-01-l11-s029",
+            "text": "Он чита́л слог за сло́гом — и наконе́ц прочита́л всё сло́во:",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "ru-mir-01-l11-svg-vid",
+                "src": "media/diagrams/ru-mir-01-l11-svg-vid.svg",
+                "status": "draft",
+                "alt": "Three timelines. A long wavy line labelled читал ends in a large dot labelled прочитал, beside Ivan reading a sheet of paper. A wavy line labelled убирали ends in a dot labelled убрал, beside a sheaf of rye with a sickle. A wavy line labelled звонил ends in a dot labelled позвонил, beside a church bell.",
+                "covers_lexeme_ids": [
+                  "ru-prochitat"
+                ],
+                "width": 300,
+                "height": 430
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s030",
+            "text": "— Мобилиза́ция!",
+            "paragraph_start": true,
+            "speaker": "char-ivan",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Мобилиза́ция",
+                "gloss": "мобилиза́ция: царю́ нужны́ мужики́",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-mobilizatsiya"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s031",
+            "text": "Все смотре́ли на Ива́на.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s032",
+            "text": "— Ва́ня уме́ет чита́ть! — сказа́ла На́стя.",
+            "paragraph_start": true,
+            "speaker": "char-nastya"
+          },
+          {
+            "id": "ru-mir-01-l11-s033",
+            "text": "— Что э́то? — Сила́нтий смотре́л на ба́тюшку. — Что написа́л царь?",
+            "paragraph_start": true,
+            "speaker": "char-silantij",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "написа́л",
+                "gloss": "написа́ть pf. ← писа́ть",
+                "gloss_kind": "aspect_pair",
+                "covers_lexeme_ids": [
+                  "ru-napisat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s034",
+            "text": "— Зна́чит, царю́ нужны́ солда́ты, — сказа́л ба́тюшка.",
+            "paragraph_start": true,
+            "speaker": "char-otets-aleksej",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Зна́чит",
+                "gloss": "зна́чит: я понима́ю э́то так",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": [
+                  "ru-znachit"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "солда́ты",
+                "gloss": "мужи́к — в по́ле, солда́т — у царя́",
+                "gloss_kind": "contrast",
+                "covers_lexeme_ids": [
+                  "ru-soldat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s035",
+            "text": "Он взял бума́гу и прочита́л её всю, гро́мко и пра́вильно:",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "взял",
+                "gloss": "брал → взял",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "ru-vzyat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s036",
+            "text": "«17 ию́ля царь объяви́л мобилиза́цию.",
+            "paragraph_start": true,
+            "speaker": "char-otets-aleksej"
+          },
+          {
+            "id": "ru-mir-01-l11-s037",
+            "text": "Запасны́е сра́зу иду́т в уе́здный го́род.",
+            "speaker": "char-otets-aleksej",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Запасны́е",
+                "gloss": "запасно́й: ра́ньше солда́т, тепе́рь до́ма",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-zapasnoj"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "сра́зу",
+                "gloss": "сра́зу = сейча́с же",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": [
+                  "ru-srazu"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s038",
+            "text": "Вот спи́сок».",
+            "speaker": "char-otets-aleksej",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "спи́сок",
+                "gloss": "спи́сок: и́мя, и́мя, и́мя…",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "ru-spisok"
+                ]
+              }
+            ]
+          }
+        ],
+        "exercises": [
+          {
+            "id": "ru-mir-01-l11-x1-1",
+            "type": "podstanovka",
+            "title": "Подстано́вка",
+            "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+            "hint_en": "Perfective past presents a single event as a whole, often with its result or as the next step in a sequence; imperfective past is the background or the process.",
+            "grammar_target_ids": [
+              "G11"
+            ],
+            "obrazec": {
+              "rule": "прочита́ть → он прочита́л",
+              "prompt": "Ива́н ___ всё сло́во. (прочита́ть)",
+              "answer": "прочита́л"
+            },
+            "items": [
+              {
+                "id": "x1-1-1",
+                "prompt": "Наконе́ц ба́тюшка ___ ещё раз. (позвони́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "позвони́л"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s018"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "звони́л",
+                    "hint": "Наконе́ц позвони́л — и ста́ло ти́хо (pf.)"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-2",
+                "prompt": "Все ___ в дере́вню. (пойти́)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "пошли́"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s015"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "пошёл",
+                    "hint": "все — они́ → пошли́"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-3",
+                "prompt": "Ба́тюшка ___ бума́гу. (взять)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "взял"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s035"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "брал",
+                    "hint": "взял бума́гу — и пото́м прочита́л её (pf.)"
+                  }
+                ]
+              },
+              {
+                "id": "x1-1-4",
+                "prompt": "На доро́ге Ива́н ___ ло́шадь. (уви́деть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "уви́дел"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s012"
+                ]
+              },
+              {
+                "id": "x1-1-5",
+                "prompt": "17 ию́ля царь ___ мобилиза́цию. (объяви́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "объяви́л"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s036"
+                ]
+              },
+              {
+                "id": "x1-1-6",
+                "prompt": "— Что ___ царь? (написа́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "написа́л"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s033"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "писа́л",
+                    "hint": "бума́га уже́ есть → pf.: написа́л"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x1-2",
+            "type": "otvet",
+            "title": "Отве́ть",
+            "instruction": "Отве́ть на вопро́с.",
+            "hint_en": "Что де́лал? → imperfective (чита́л, убира́ли). А пото́м? → the next single event, perfective (прочита́л).",
+            "grammar_target_ids": [
+              "G11"
+            ],
+            "obrazec": {
+              "rule": "Что де́лал? — чита́л · А пото́м? — прочита́л",
+              "prompt": "Что де́лал Его́р? — Его́р ___ ме́дленно и пло́хо. (чита́ть)",
+              "answer": "чита́л"
+            },
+            "items": [
+              {
+                "id": "x1-2-1",
+                "prompt": "Что де́лали Фёдор, Да́рья и Ива́н? — Они́ ___ рожь. (убира́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "убира́ли"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s004"
+                ]
+              },
+              {
+                "id": "x1-2-2",
+                "prompt": "Ло́шадь уже́ стоя́ла у до́ма ста́росты. Что де́лал ко́локол? — Ко́локол ___. (звони́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "звони́л"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s013"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "позвони́л",
+                    "hint": "что де́лал? → ipf.: звони́л"
+                  }
+                ]
+              },
+              {
+                "id": "x1-2-3",
+                "prompt": "А что пото́м? — Ба́тюшка взял бума́гу и ___ её всю. (прочита́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "прочита́л"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s035"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "чита́л",
+                    "hint": "и пото́м — всё → pf.: прочита́л"
+                  }
+                ]
+              },
+              {
+                "id": "x1-2-4",
+                "prompt": "Что де́лал Ива́н у ста́росты? — Он ___ в бума́гу. (смотре́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "смотре́л"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s028"
+                ]
+              },
+              {
+                "id": "x1-2-5",
+                "prompt": "Ива́н чита́л слог за сло́гом. А пото́м? — Он наконе́ц ___ всё сло́во. (прочита́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "прочита́л"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s029"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "чита́л",
+                    "hint": "наконе́ц, всё сло́во → pf.: прочита́л"
+                  }
+                ]
+              },
+              {
+                "id": "x1-2-6",
+                "prompt": "Что де́лали мужики́? — Мужики́ ___. (смея́ться)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "смея́лись"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s025"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x1-3",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
+            "obrazec": {
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "В дере́вне звони́л ___.",
+              "answer": "ко́локол"
+            },
+            "items": [
+              {
+                "id": "x1-3-1",
+                "prompt": "В по́ле ___ рожь.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "убира́ли"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s002"
+                ]
+              },
+              {
+                "id": "x1-3-2",
+                "prompt": "На ___ у це́ркви уже́ стоя́ла вся дере́вня.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "пло́щади"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s016"
+                ]
+              },
+              {
+                "id": "x1-3-3",
+                "prompt": "Его́р не мог ___ сло́во, и мужики́ смея́лись.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "прочита́ть"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s025"
+                ]
+              },
+              {
+                "id": "x1-3-4",
+                "prompt": "— Зна́чит, царю́ нужны́ ___, — сказа́л ба́тюшка.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "солда́ты"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s034"
+                ]
+              },
+              {
+                "id": "x1-3-5",
+                "prompt": "Запасны́е ___ иду́т в уе́здный го́род.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "сра́зу"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s037"
+                ]
+              },
+              {
+                "id": "x1-3-6",
+                "prompt": "Вот ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "спи́сок"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s038"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ru-mir-01-l11-sec2",
+        "title": "Спи́сок",
+        "segments": [
+          {
+            "id": "ru-mir-01-l11-s039",
+            "text": "— Кого́ призыва́ют? — сказа́ла Да́рья.",
+            "paragraph_start": true,
+            "speaker": "char-darya",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "призыва́ют",
+                "gloss": "призыва́ть: «Ты тепе́рь солда́т!»",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-prizyvat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s040",
+            "text": "Тогда́ ста́роста взял у ба́тюшки спи́сок и стал чита́ть имена́.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s041",
+            "text": "Имена́ он чита́л хорошо́: э́ти имена́ он знал."
+          },
+          {
+            "id": "ru-mir-01-l11-s042",
+            "text": "— Фёдор Соколо́в, — сказа́л ста́роста.",
+            "paragraph_start": true,
+            "speaker": "char-egor",
+            "pins": [
+              {
+                "start": 8,
+                "end": 16,
+                "token": "Соколо́в",
+                "lemma": "соколов",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s043",
+            "text": "Фёдора призва́ли.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s044",
+            "text": "Три го́да, в 1908—1911 года́х, он служи́л в а́рмии: он запасно́й.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "служи́л в а́рмии",
+                "gloss": "служи́ть в а́рмии: он солда́т",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-sluzhit",
+                  "ru-armiya"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s045",
+            "text": "Ива́н слу́шал и ждал своё и́мя."
+          },
+          {
+            "id": "ru-mir-01-l11-s046",
+            "text": "Но ста́роста прочита́л спи́сок, и Ива́н сра́зу по́нял: его́ и́мени нет."
+          },
+          {
+            "id": "ru-mir-01-l11-s047",
+            "text": "Ива́на не призва́ли."
+          },
+          {
+            "id": "ru-mir-01-l11-s048",
+            "text": "Ему́ ста́ло легко́, а пото́м он уви́дел Да́рью, Ми́шу и Ли́зу — и ему́ ста́ло сты́дно.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "сты́дно",
+                "gloss": "сты́дно: «Я плохо́й», — и тяжело́",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-stydno"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s049",
+            "text": "Вдруг на пло́щади запла́кала Ма́рья.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "запла́кала",
+                "gloss": "не пла́кала — и вот пла́чет",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-zaplakat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s050",
+            "text": "— Почему́ его́ призва́ли? Почему́ Фе́дю? Он уже́ служи́л!",
+            "paragraph_start": true,
+            "speaker": "char-marya"
+          },
+          {
+            "id": "ru-mir-01-l11-s051",
+            "text": "Пото́м запла́кала Да́рья, а за ней и Ли́за.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s052",
+            "text": "Ми́ша не пла́кал: он смотре́л на ма́му и на её слёзы.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "слёзы",
+                "gloss": "слёзы: вода́, когда́ пла́чут",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-sleza"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s053",
+            "text": "— Зна́чит, война́? — ти́хо сказа́ла На́стя.",
+            "paragraph_start": true,
+            "speaker": "char-nastya",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "война́",
+                "gloss": "война́: страна́ бьёт страну́",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-vojna"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s054",
+            "text": "Мать не отвеча́ла.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s055",
+            "text": "Оте́ц не отвеча́л."
+          },
+          {
+            "id": "ru-mir-01-l11-s056",
+            "text": "Ба́тюшка то́же не отвеча́л: в бума́ге бы́ло сло́во «мобилиза́ция», а сло́ва «война́» там не́ было."
+          },
+          {
+            "id": "ru-mir-01-l11-s057",
+            "text": "На́стя смотре́ла на отца́:",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s058",
+            "text": "— А Ва́ню то́же призыва́ют?",
+            "paragraph_start": true,
+            "speaker": "char-nastya"
+          },
+          {
+            "id": "ru-mir-01-l11-s059",
+            "text": "— Нет. Ва́ню не призыва́ют: он не служи́л в а́рмии, — сказа́л Пётр.",
+            "paragraph_start": true,
+            "speaker": "char-pyotr"
+          },
+          {
+            "id": "ru-mir-01-l11-s060",
+            "text": "Пото́м уря́дник Гаври́лов пошёл к ла́вке у доро́ги: там продава́ли во́дку.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "во́дку",
+                "gloss": "во́дка: её пьют мужики́",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-vodka"
+                ]
+              }
+            ],
+            "pins": [
+              {
+                "start": 16,
+                "end": 25,
+                "token": "Гаври́лов",
+                "lemma": "гаврилов",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s061",
+            "text": "Мужики́ стоя́ли и смотре́ли, а он закрыва́л ла́вку.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "закрыва́л",
+                "gloss": "закрыва́л → закры́л: в ла́вку нельзя́",
+                "gloss_kind": "aspect_pair",
+                "covers_lexeme_ids": [
+                  "ru-zakryvat",
+                  "ru-zakryt"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s062",
+            "text": "Наконе́ц он закры́л её и стал у две́ри с са́блей."
+          },
+          {
+            "id": "ru-mir-01-l11-s063",
+            "text": "— Что случи́лось? Почему́ закрыва́ют? — сказа́л Сила́нтий.",
+            "paragraph_start": true,
+            "speaker": "char-silantij"
+          },
+          {
+            "id": "ru-mir-01-l11-s064",
+            "text": "— Мобилиза́ция, — сказа́л Гаври́лов. — Сейча́с таки́е ла́вки закрыва́ют. Во́дку не продаю́т.",
+            "paragraph_start": true,
+            "speaker": "char-gavrilov",
+            "pins": [
+              {
+                "start": 26,
+                "end": 35,
+                "token": "Гаври́лов",
+                "lemma": "гаврилов",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s065",
+            "text": "— Вот и ла́вку закры́ли! — сказа́л мужи́к.",
+            "paragraph_start": true,
+            "speaker": "char-muzhik"
+          },
+          {
+            "id": "ru-mir-01-l11-s066",
+            "text": "А Сила́нтий рассказа́л:",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s067",
+            "text": "— Говоря́т, в го́роде ла́вку то́же закры́ли.",
+            "paragraph_start": true,
+            "speaker": "char-silantij"
+          },
+          {
+            "id": "ru-mir-01-l11-s068",
+            "text": "А запасны́е пришли́ и взя́ли всю во́дку!",
+            "speaker": "char-silantij"
+          },
+          {
+            "id": "ru-mir-01-l11-s069",
+            "text": "— Где ты э́то узна́л? — Гаври́лов смотре́л на Сила́нтия.",
+            "paragraph_start": true,
+            "speaker": "char-gavrilov",
+            "pins": [
+              {
+                "start": 24,
+                "end": 33,
+                "token": "Гаври́лов",
+                "lemma": "гаврилов",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s070",
+            "text": "— Мужики́ рассказа́ли, — сказа́л Сила́нтий.",
+            "paragraph_start": true,
+            "speaker": "char-silantij"
+          },
+          {
+            "id": "ru-mir-01-l11-s071",
+            "text": "Э́то был то́лько слух.",
+            "paragraph_start": true
+          }
+        ],
+        "exercises": [
+          {
+            "id": "ru-mir-01-l11-x2-1",
+            "type": "preobrazovanie",
+            "title": "Преобразова́ние",
+            "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+            "hint_en": "Imperfective present → perfective past: one event viewed as a whole, with its result or its start.",
+            "grammar_target_ids": [
+              "G11"
+            ],
+            "obrazec": {
+              "rule": "чита́ет → прочита́л (pf.)",
+              "prompt": "Ста́роста чита́ет спи́сок. → Ста́роста ___ спи́сок. (прочита́ть)",
+              "answer": "прочита́л"
+            },
+            "items": [
+              {
+                "id": "x2-1-1",
+                "prompt": "Ма́рья пла́чет. → Вдруг Ма́рья ___. (запла́кать)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "запла́кала"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s049"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "пла́кала",
+                    "hint": "запла́кала = ста́ла пла́кать (pf.)"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-2",
+                "prompt": "Фёдора призыва́ют. → Фёдора ___. (призва́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "призва́ли"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s043"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "призыва́ли",
+                    "hint": "pf.: призва́ли"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-3",
+                "prompt": "Ста́роста берёт спи́сок. → Ста́роста ___ спи́сок. (взять)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "взял"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s040"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "брал",
+                    "hint": "pf.: взял"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-4",
+                "prompt": "Гаври́лов закрыва́ет ла́вку. → Наконе́ц Гаври́лов ___ ла́вку. (закры́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "закры́л"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s062"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "закрыва́л",
+                    "hint": "наконе́ц → pf.: закры́л"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-5",
+                "prompt": "Сила́нтий расска́зывает о го́роде. → Сила́нтий ___ о го́роде. (рассказа́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "рассказа́л"
+                ],
+                "first_letters": 5,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s066"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "расска́зывал",
+                    "hint": "pf.: рассказа́л"
+                  }
+                ]
+              },
+              {
+                "id": "x2-1-6",
+                "prompt": "Ива́н понима́ет. → Ива́н сра́зу ___. (поня́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "по́нял"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s046"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "понима́л",
+                    "hint": "сра́зу → pf.: по́нял"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x2-2",
+            "type": "okonchaniya",
+            "title": "Оконча́ния",
+            "instruction": "Поста́вь сло́во в ну́жную фо́рму.",
+            "hint_en": "Past endings, perfective too: -л (он), -ла (она́), -ли (они́).",
+            "grammar_target_ids": [
+              "G11"
+            ],
+            "obrazec": {
+              "rule": "он закры́л · она́ запла́кала · они́ призва́ли",
+              "prompt": "Да́рья ___. (запла́кать)",
+              "answer": "запла́кала"
+            },
+            "items": [
+              {
+                "id": "x2-2-1",
+                "prompt": "Ма́рья ___. (запла́кать)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "запла́кала"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s049"
+                ],
+                "first_letters": 7
+              },
+              {
+                "id": "x2-2-2",
+                "prompt": "Фёдора ___. (призва́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "призва́ли"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s043"
+                ],
+                "first_letters": 6
+              },
+              {
+                "id": "x2-2-3",
+                "prompt": "Гаври́лов ___ ла́вку. (закры́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "закры́л"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s062"
+                ],
+                "first_letters": 5
+              },
+              {
+                "id": "x2-2-4",
+                "prompt": "Ста́роста ___ спи́сок. (прочита́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "прочита́л"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s046"
+                ],
+                "first_letters": 7
+              },
+              {
+                "id": "x2-2-5",
+                "prompt": "Запасны́е пришли́ и ___ всю во́дку. (взять)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "взя́ли"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s035",
+                  "ru-mir-01-l11-s068"
+                ],
+                "first_letters": 3
+              },
+              {
+                "id": "x2-2-6",
+                "prompt": "Мужики́ ___. (рассказа́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "рассказа́ли"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s070"
+                ],
+                "first_letters": 8
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x2-3",
+            "type": "soedini",
+            "title": "Соедини́",
+            "instruction": "Вы́бери отве́т.",
+            "hint_en": "Choose the ending that fits the story.",
+            "obrazec": {
+              "rule": "Ста́роста чита́ет и́мя: Фёдор Соколо́в",
+              "prompt": "Ста́роста прочита́л: «___».",
+              "answer": "Фёдор Соколо́в"
+            },
+            "items": [
+              {
+                "id": "x2-3-1",
+                "prompt": "Фёдора призва́ли: он ___ в а́рмии.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "уже́ служи́л",
+                  "служи́л уже́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s044"
+                ],
+                "choices": [
+                  "уже́ служи́л",
+                  "не служи́л",
+                  "не был"
+                ]
+              },
+              {
+                "id": "x2-3-2",
+                "prompt": "Ива́ну ста́ло сты́дно: бра́та призва́ли, а ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "его́ нет"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s048"
+                ],
+                "choices": [
+                  "его́ нет",
+                  "его́ то́же",
+                  "Фёдора нет"
+                ]
+              },
+              {
+                "id": "x2-3-3",
+                "prompt": "Ба́тюшка не отвеча́л: в бума́ге не́ было ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "сло́ва «война́»"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s056"
+                ],
+                "choices": [
+                  "сло́ва «война́»",
+                  "сло́ва «мобилиза́ция»",
+                  "спи́ска"
+                ]
+              },
+              {
+                "id": "x2-3-4",
+                "prompt": "Ва́ню не призыва́ют: он ___ в а́рмии.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "не служи́л"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s059"
+                ],
+                "choices": [
+                  "не служи́л",
+                  "уже́ служи́л",
+                  "сейча́с слу́жит"
+                ]
+              },
+              {
+                "id": "x2-3-5",
+                "prompt": "Гаври́лов закры́л ла́вку: во́дку сейча́с ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "не продаю́т"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s064"
+                ],
+                "choices": [
+                  "не продаю́т",
+                  "не пьют",
+                  "не де́лают"
+                ]
+              },
+              {
+                "id": "x2-3-6",
+                "prompt": "Сила́нтий рассказа́л о го́роде, но э́то был ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "то́лько слух"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s071"
+                ],
+                "choices": [
+                  "то́лько слух",
+                  "спи́сок ста́росты",
+                  "манифе́ст царя́"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ru-mir-01-l11-sec3",
+        "title": "Рожь Фёдора",
+        "segments": [
+          {
+            "id": "ru-mir-01-l11-s072",
+            "text": "Ве́чером Соколо́вы сиде́ли в избе́ у Петра́.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s073",
+            "text": "Фёдор пришёл с Да́рьей, Ми́шей и Ли́зой."
+          },
+          {
+            "id": "ru-mir-01-l11-s074",
+            "text": "Дед лежа́л на печи́: На́стя уже́ рассказа́ла ему́ всё."
+          },
+          {
+            "id": "ru-mir-01-l11-s075",
+            "text": "Серп Фёдора лежа́л у две́ри."
+          },
+          {
+            "id": "ru-mir-01-l11-s076",
+            "text": "— А рожь? — вдруг сказа́ла Да́рья. — Её ещё не убра́ли!",
+            "paragraph_start": true,
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s077",
+            "text": "Её на́до убра́ть сра́зу, а ты идёшь в го́род у́тром!",
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s078",
+            "text": "Что я могу́ сде́лать одна́? У меня́ Ми́ша и Ли́за.",
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s079",
+            "text": "Фёдор не отвеча́л: он смотре́л в окно́.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s080",
+            "text": "— Беда́ одна́ не хо́дит, — сказа́л Пётр.",
+            "paragraph_start": true,
+            "speaker": "char-pyotr",
+            "quotation": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Беда́ одна́ не хо́дит",
+                "gloss": "пло́хо, и ещё пло́хо",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s081",
+            "text": "Пото́м он сказа́л Фёдору:"
+          },
+          {
+            "id": "ru-mir-01-l11-s082",
+            "text": "— Ты говори́л: мир жить не даёт.",
+            "paragraph_start": true,
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 15,
+                "end": 18,
+                "token": "мир",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s083",
+            "text": "А мир помога́л и ра́ньше.",
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 2,
+                "end": 5,
+                "token": "мир",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s084",
+            "text": "Когда́ у Его́ра умерла́ ло́шадь, мир ему́ помо́г.",
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 33,
+                "end": 36,
+                "token": "мир",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s085",
+            "text": "Мир — э́то не то́лько сход и зако́н.",
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 0,
+                "end": 3,
+                "token": "Мир",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s086",
+            "text": "Мир — э́то сосе́ди, когда́ тебе́ тяжело́.",
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 0,
+                "end": 3,
+                "token": "Мир",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s087",
+            "text": "Фёдор и тепе́рь не отвеча́л.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s088",
+            "text": "Весно́й он ушёл из ми́ра на свою́ зе́млю, на о́труб.",
+            "pins": [
+              {
+                "start": 16,
+                "end": 18,
+                "token": "из",
+                "lemma": "из"
+              },
+              {
+                "start": 19,
+                "end": 24,
+                "token": "ми́ра",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s089",
+            "text": "В избе́ бы́ло ти́хо."
+          },
+          {
+            "id": "ru-mir-01-l11-s090",
+            "text": "Тогда́ Ива́н взял серп Фёдора и стал у две́ри.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s091",
+            "text": "Фёдор уви́дел его́ в руке́ у бра́та — и по́нял."
+          },
+          {
+            "id": "ru-mir-01-l11-s092",
+            "text": "Тут Да́рья запла́кала ещё раз, но уже́ ти́хо."
+          },
+          {
+            "id": "ru-mir-01-l11-s093",
+            "text": "19 ию́ля у́тром Пётр взял ико́ну из кра́сного угла́.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "ru-mir-01-l11-img-ikona",
+                "label": "ико́на",
+                "src": "media/vignettes/ru-mir-01-l11-img-ikona.webp",
+                "alt": "A small household icon of the Mother of God in a plain wooden frame.",
+                "status": "planned",
+                "art_brief": "One small household icon (ико́на) of about 1914 from a peasant red corner: a painted wooden panel about 30 cm high, the Mother of God (Kazan type) holding the Christ child, gold background, dark red and blue robes, in a plain dark wooden frame; an embroidered white linen towel (рушни́к) with red ends draped over its top corners. Ink outline with watercolour wash, transparent background, no text or lettering on the icon.",
+                "covers_lexeme_ids": [],
+                "width": 240,
+                "height": 240,
+                "anchor_text": "ико́ну"
+              }
+            ],
+            "pins": [
+              {
+                "start": 33,
+                "end": 35,
+                "token": "из",
+                "lemma": "из"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s094",
+            "text": "Фёдор стоя́л пе́ред отцо́м, и Пётр благослови́л сы́на ико́ной.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "благослови́л",
+                "gloss": "благослови́ть: ико́на над голово́й сы́на",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-blagoslovit"
+                ]
+              },
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "ru-mir-01-l11-img-blagoslovenie",
+                "src": "media/images/ru-mir-01-l11-img-blagoslovenie.webp",
+                "status": "planned",
+                "alt": "On the morning of 19 July, Pyotr holds the household icon towards Fyodor and blesses him. Fyodor stands before his father with his head bowed; Marya waits beside them.",
+                "art_brief": "Morning, 19 July 1914 O.S., at the Sokolovs' izba in Берёзовка. A close composition on Pyotr blessing his standing son with the household icon, before the farewell kisses and departure. Pyotr (about 56, stocky, weathered, grey-brown square beard, undyed linen shirt belted with a dark red sash, dark trousers, lapti with white foot-wrappings, bareheaded) holds the small dark-framed Mother of God icon from the red corner facing Fyodor. The icon has a dark-gold ground and no legible inscription. Fyodor (28, broad and strong, short dark-brown beard and dark hair, blue-grey косоворотка with a black belt, dark trousers, boots) STANDS before his father with his head bowed; he does not kneel. At the edge of the frame Marya (about 50, lined kind face, hair fully hidden under a dark brown kerchief tied under the chin, white shirt with red embroidered sleeves, dark blue-and-black checked ponyova, grey apron) waits close to her son. Frame tightly on these three people against weathered log walls and the doorway. Keep the cart and the priest's later blessing outside the frame. Ink outline with watercolour wash, illustrated reader of about 1910. No text, letters, numbers, labels or inscription anywhere.",
+                "covers_lexeme_ids": [
+                  "ru-blagoslovit"
+                ],
+                "width": 1600,
+                "height": 1067
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s095",
+            "text": "Ма́рья целова́ла сы́на, и слёзы шли и шли.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "целова́ла",
+                "gloss": "целова́ть: «чмок!» — так мать лю́бит сы́на",
+                "gloss_kind": "sound",
+                "covers_lexeme_ids": [
+                  "ru-tselovat"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s096",
+            "text": "Фёдор поцелова́л ико́ну."
+          },
+          {
+            "id": "ru-mir-01-l11-s097",
+            "text": "Пото́м он поцелова́л Да́рью и Ми́шу."
+          },
+          {
+            "id": "ru-mir-01-l11-s098",
+            "text": "Ли́зу он взял на ру́ки и целова́л, а она́ смея́лась: она́ ещё не понима́ла."
+          },
+          {
+            "id": "ru-mir-01-l11-s099",
+            "text": "На доро́ге у до́ма стоя́ла теле́га, и в теле́ге уже́ сиде́ли мужики́ из Берёзовки.",
+            "paragraph_start": true,
+            "pins": [
+              {
+                "start": 69,
+                "end": 71,
+                "token": "из",
+                "lemma": "из"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s100",
+            "text": "Оте́ц Алексе́й благослови́л их."
+          },
+          {
+            "id": "ru-mir-01-l11-s101",
+            "text": "Тепе́рь Фёдор был уже́ не мужи́к, а солда́т.",
+            "pins": [
+              {
+                "start": 36,
+                "end": 43,
+                "token": "солда́т",
+                "lemma": "солдат",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s102",
+            "text": "Он взял мешо́к и пошёл к теле́ге."
+          },
+          {
+            "id": "ru-mir-01-l11-s103",
+            "text": "Наконе́ц он сказа́л Ива́ну:"
+          },
+          {
+            "id": "ru-mir-01-l11-s104",
+            "text": "— Проща́й, Ва́ня.",
+            "paragraph_start": true,
+            "speaker": "char-fyodor",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Проща́й",
+                "gloss": "проща́й ≈ до свида́ния (не на день)",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s105",
+            "text": "— Проща́й, Фе́дя. Серп у меня́.",
+            "paragraph_start": true,
+            "speaker": "char-ivan"
+          },
+          {
+            "id": "ru-mir-01-l11-s106",
+            "text": "Теле́га ушла́ по доро́ге, а оте́ц Алексе́й пошёл к це́ркви и позвони́л ещё раз.",
+            "paragraph_start": true,
+            "pins": [
+              {
+                "start": 14,
+                "end": 16,
+                "token": "по",
+                "lemma": "по",
+                "feats": {
+                  "pos": "PREP"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s107",
+            "text": "Да́рья оста́лась на доро́ге одна́ с Ми́шей и Ли́зой."
+          }
+        ],
+        "exercises": [
+          {
+            "id": "ru-mir-01-l11-x3-1",
+            "type": "podstanovka",
+            "title": "Подстано́вка",
+            "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+            "hint_en": "A chain of events viewed as wholes → perfective past, one after another (взял, благослови́л, пошёл); пошёл marks setting off.",
+            "grammar_target_ids": [
+              "G11"
+            ],
+            "obrazec": {
+              "rule": "взять → Пётр взял ико́ну",
+              "prompt": "Фёдор ___ мешо́к. (взять)",
+              "answer": "взял"
+            },
+            "items": [
+              {
+                "id": "x3-1-1",
+                "prompt": "Пётр ___ ико́ну из кра́сного угла́. (взять)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "взял"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s093"
+                ]
+              },
+              {
+                "id": "x3-1-2",
+                "prompt": "Пётр ___ сы́на ико́ной. (благослови́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "благослови́л"
+                ],
+                "first_letters": 5,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s094"
+                ]
+              },
+              {
+                "id": "x3-1-3",
+                "prompt": "Фёдор ___ ико́ну. (поцелова́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "поцелова́л"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s096"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "целова́л",
+                    "hint": "поцелова́л ико́ну, пото́м взял мешо́к и пошёл (pf.)"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-4",
+                "prompt": "Фёдор взял мешо́к и ___ к теле́ге. (пойти́)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "пошёл"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s102"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "шёл",
+                    "hint": "пошёл = стал идти́ (pf.)"
+                  }
+                ]
+              },
+              {
+                "id": "x3-1-5",
+                "prompt": "Теле́га ___ по доро́ге. (уйти́)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ушла́"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s106"
+                ]
+              },
+              {
+                "id": "x3-1-6",
+                "prompt": "Да́рья ___ на доро́ге одна́. (оста́ться)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "оста́лась"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s107"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "оста́лся",
+                    "hint": "Да́рья — она́ → оста́лась"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x3-2",
+            "type": "otvet",
+            "title": "Отве́ть",
+            "instruction": "Отве́ть на вопро́с.",
+            "hint_en": "Instrumental after с and alone (с кем? чем?): Да́рья → с Да́рьей, ико́на → ико́ной, серп → серпо́м.",
+            "grammar_target_ids": [
+              "G09"
+            ],
+            "obrazec": {
+              "rule": "с кем? Да́рья → с Да́рьей",
+              "prompt": "С кем пришёл Фёдор? — Фёдор пришёл с ___ (Да́рья).",
+              "answer": "Да́рьей"
+            },
+            "items": [
+              {
+                "id": "x3-2-1",
+                "prompt": "Чем Пётр благослови́л сы́на? — Пётр благослови́л сы́на ___ (ико́на).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "ико́ной",
+                  "ико́ною"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s094"
+                ]
+              },
+              {
+                "id": "x3-2-2",
+                "prompt": "С кем оста́лась Да́рья? — Да́рья оста́лась с ___ (Ми́ша) и Ли́зой.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Ми́шей",
+                  "Ми́шею"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s107"
+                ]
+              },
+              {
+                "id": "x3-2-3",
+                "prompt": "Пе́ред кем стоя́л Фёдор? — Фёдор стоя́л пе́ред ___ (оте́ц).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "отцо́м"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s094"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "отцо́й",
+                    "hint": "оте́ц → отцо́м"
+                  }
+                ]
+              },
+              {
+                "id": "x3-2-4",
+                "prompt": "Чем Ива́н убира́л рожь? — Ива́н убира́л рожь ___ (серп).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "серпо́м"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s005"
+                ]
+              },
+              {
+                "id": "x3-2-5",
+                "prompt": "С чем стоя́л Гаври́лов у две́ри? — Гаври́лов стоя́л с ___ (са́бля).",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "са́блей",
+                  "са́блею"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s062"
+                ]
+              },
+              {
+                "id": "x3-2-6",
+                "prompt": "С чем шёл Фёдор в дере́вню? — Фёдор шёл с ___ (серп) в руке́.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "серпо́м"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s015"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x3-3",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
+            "obrazec": {
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "Фёдор не ___.",
+              "answer": "отвеча́л"
+            },
+            "items": [
+              {
+                "id": "x3-3-1",
+                "prompt": "Её на́до ___ сра́зу, а ты идёшь в го́род у́тром!",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "убра́ть"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s077"
+                ]
+              },
+              {
+                "id": "x3-3-2",
+                "prompt": "Когда́ у Его́ра умерла́ ло́шадь, мир ему́ ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "помо́г"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s084"
+                ]
+              },
+              {
+                "id": "x3-3-3",
+                "prompt": "Мир — э́то ___, когда́ тебе́ тяжело́.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "сосе́ди"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s086"
+                ]
+              },
+              {
+                "id": "x3-3-4",
+                "prompt": "Ма́рья целова́ла сы́на, и ___ шли и шли.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "слёзы"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s095"
+                ]
+              },
+              {
+                "id": "x3-3-5",
+                "prompt": "Тепе́рь Фёдор был уже́ не мужи́к, а ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "солда́т"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s101"
+                ]
+              },
+              {
+                "id": "x3-3-6",
+                "prompt": "— Проща́й, Фе́дя. ___ у меня́.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Серп"
+                ],
+                "first_letters": 2,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s105"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ru-mir-01-l11-sec4",
+        "title": "Мир",
+        "segments": [
+          {
+            "id": "ru-mir-01-l11-s108",
+            "text": "20 ию́ля ба́тюшка позвони́л ещё раз, и вся дере́вня пошла́ в це́рковь.",
+            "paragraph_start": true,
+            "pins": [
+              {
+                "start": 39,
+                "end": 42,
+                "token": "вся",
+                "lemma": "весь",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s109",
+            "text": "Там оте́ц Алексе́й чита́л но́вый манифе́ст царя́."
+          },
+          {
+            "id": "ru-mir-01-l11-s109a",
+            "text": "По манифе́сту царя́ от 20 ию́ля 1914 го́да:",
+            "paragraph_start": true,
+            "pins": [
+              {
+                "start": 0,
+                "end": 2,
+                "token": "По",
+                "lemma": "по",
+                "feats": {
+                  "pos": "PREP"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s110",
+            "text": "«Бо́жиею ми́лостию Мы, Никола́й Второ́й…»",
+            "paragraph_start": true,
+            "speaker": "char-otets-aleksej",
+            "quotation": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Бо́жиею ми́лостию Мы",
+                "gloss": "Бо́жиею ми́лостию: от Бо́га; Мы = царь",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s111",
+            "text": "«А́встрия ста́ла бить Се́рбию.",
+            "paragraph_start": true,
+            "speaker": "char-otets-aleksej",
+            "quotation": true
+          },
+          {
+            "id": "ru-mir-01-l11-s112",
+            "text": "Росси́я хоте́ла помо́чь Се́рбии и защити́ть её.",
+            "speaker": "char-otets-aleksej",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "защити́ть",
+                "gloss": "защити́ть: не дать бить",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-zashchitit"
+                ]
+              }
+            ],
+            "quotation": true
+          },
+          {
+            "id": "ru-mir-01-l11-s113",
+            "text": "Мы объяви́ли мобилиза́цию.",
+            "speaker": "char-otets-aleksej",
+            "quotation": true
+          },
+          {
+            "id": "ru-mir-01-l11-s114",
+            "text": "Тогда́ Герма́ния объяви́ла войну́ Росси́и.",
+            "speaker": "char-otets-aleksej",
+            "quotation": true
+          },
+          {
+            "id": "ru-mir-01-l11-s115",
+            "text": "Тепе́рь на́до защити́ть не то́лько Се́рбию, но и Росси́ю.",
+            "speaker": "char-otets-aleksej",
+            "quotation": true
+          },
+          {
+            "id": "ru-mir-01-l11-s116",
+            "text": "Вся Росси́я тепе́рь — как оди́н челове́к».",
+            "speaker": "char-otets-aleksej",
+            "pins": [
+              {
+                "start": 0,
+                "end": 3,
+                "token": "Вся",
+                "lemma": "весь",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              },
+              {
+                "start": 32,
+                "end": 40,
+                "token": "челове́к",
+                "lemma": "человек",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ],
+            "quotation": true
+          },
+          {
+            "id": "ru-mir-01-l11-s117",
+            "text": "Так Берёзовка узна́ла э́то.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s118",
+            "text": "А Фёдор, наве́рное, узна́л э́то ещё ра́ньше, в го́роде."
+          },
+          {
+            "id": "ru-mir-01-l11-s119",
+            "text": "По́сле манифе́ста ба́тюшка сказа́л: «О ми́ре всего́ ми́ра…»",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ми́ре",
+                "gloss": "мир ↔ война́",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "ru-mir-peace"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "всего́ ми́ра",
+                "gloss": "весь мир: вся земля́",
+                "gloss_kind": "paraphrase",
+                "covers_lexeme_ids": []
+              }
+            ],
+            "pins": [
+              {
+                "start": 39,
+                "end": 44,
+                "token": "ми́ре",
+                "lexeme_id": "ru-mir-peace"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s120",
+            "text": "Ма́рья целова́ла ико́ну и пла́кала, а Ива́ну бы́ло сты́дно смотре́ть на Да́рью."
+          },
+          {
+            "id": "ru-mir-01-l11-s121",
+            "text": "— Мир — э́то мы? На́ша дере́вня? — ти́хо сказа́ла На́стя.",
+            "paragraph_start": true,
+            "speaker": "char-nastya",
+            "pins": [
+              {
+                "start": 2,
+                "end": 5,
+                "token": "Мир",
+                "lexeme_id": "ru-mir-commune"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s122",
+            "text": "— Э́то друго́й мир, На́стя, — сказа́л Пётр. — Мир — когда́ нет войны́.",
+            "paragraph_start": true,
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 15,
+                "end": 18,
+                "token": "мир",
+                "lexeme_id": "ru-mir-peace"
+              },
+              {
+                "start": 46,
+                "end": 49,
+                "token": "Мир",
+                "lexeme_id": "ru-mir-peace"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s123",
+            "text": "По́сле це́ркви все стоя́ли на пло́щади.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s124",
+            "text": "Мужики́ говори́ли о царе́, о Се́рбии, о не́мцах.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "не́мцах",
+                "gloss": "не́мец: челове́к из Герма́нии",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "ru-nemets"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s125",
+            "text": "— Зна́чит, Фёдор хо́чет защити́ть Се́рбию? — сказа́ла На́стя.",
+            "paragraph_start": true,
+            "speaker": "char-nastya"
+          },
+          {
+            "id": "ru-mir-01-l11-s126",
+            "text": "— Се́рбию и Росси́ю, На́стя. Он солда́т, — сказа́л Пётр.",
+            "paragraph_start": true,
+            "speaker": "char-pyotr",
+            "pins": [
+              {
+                "start": 32,
+                "end": 39,
+                "token": "солда́т",
+                "lemma": "солдат",
+                "feats": {
+                  "case": "nomn",
+                  "number": "sing"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s127",
+            "text": "— А не́мцы то́же убира́ют рожь?",
+            "paragraph_start": true,
+            "speaker": "char-nastya"
+          },
+          {
+            "id": "ru-mir-01-l11-s128",
+            "text": "— Убира́ют. Не́мцы то́же мужики́.",
+            "paragraph_start": true,
+            "speaker": "char-pyotr"
+          },
+          {
+            "id": "ru-mir-01-l11-s129",
+            "text": "А дед Матве́й сказа́л то́лько:",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s130",
+            "text": "— Был мир. Тепе́рь война́.",
+            "paragraph_start": true,
+            "speaker": "char-ded-matvej",
+            "pins": [
+              {
+                "start": 6,
+                "end": 9,
+                "token": "мир",
+                "lexeme_id": "ru-mir-peace"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s131",
+            "text": "И Ива́н уви́дел у де́да слёзы.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s132",
+            "text": "Ве́чером Ива́н взял ста́рую до́ску.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s133",
+            "text": "Он писа́л ме́дленно и наконе́ц написа́л одно́ сло́во: ВОЙНА́."
+          },
+          {
+            "id": "ru-mir-01-l11-s134",
+            "text": "А На́стя написа́ла под ним: МИР.",
+            "pins": [
+              {
+                "start": 28,
+                "end": 31,
+                "token": "МИР",
+                "lexeme_id": "ru-mir-peace"
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s135",
+            "text": "Фёдор и други́е ушли́, и в дере́вне оста́лись старики́, ба́бы, де́ти и молоды́е, как Ива́н.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s136",
+            "text": "На друго́й день Ива́н пошёл в по́ле оди́н.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s137",
+            "text": "Ма́рья благослови́ла его́ во дворе́ и поцелова́ла."
+          },
+          {
+            "id": "ru-mir-01-l11-s138",
+            "text": "У́тром он рабо́тал на полоса́х отца́, а днём — на о́трубе Фёдора."
+          },
+          {
+            "id": "ru-mir-01-l11-s139",
+            "text": "У него́ бы́ло два серпа́: свой и бра́та.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "ru-mir-01-l11-img-rozh",
+                "src": "media/images/ru-mir-01-l11-img-rozh.webp",
+                "status": "planned",
+                "alt": "Ivan alone in a field of tall ripe rye, cutting it with a sickle; beside him a row of sheaves with a second sickle lying on top; the village church far behind.",
+                "art_brief": "Monday 21 July 1914 O.S., late afternoon, warm low sunlight, long shadows, a few high clouds. Fyodor's отруб: a field of tall ripe golden rye. Ivan (20, straw-fair bowl-cut hair, beardless, faded red shirt dark with sweat, linen trousers, bast shoes, a cord tied round his brow) alone, bent forward in the rye, grasping a handful of stalks with his left hand and cutting them with a sickle in his right. Behind him a cut strip with five or six sheaves bound with straw standing in a row; on the nearest sheaf lies a second sickle (Fyodor's). A clay water jug in the stubble. Nobody else in the field. Far in the background, beyond the strips, the wooden church with its onion dome and bell tower and the roofs of Берёзовка; to the right a stretch of rye still uncut, standing tall. Ink outline with watercolour wash, illustrated reader of about 1910. No text in the image.",
+                "covers_lexeme_ids": [
+                  "ru-serp"
+                ],
+                "width": 1600,
+                "height": 1067
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-s140",
+            "text": "Весь день Ива́н убира́л рожь."
+          },
+          {
+            "id": "ru-mir-01-l11-s141",
+            "text": "Ве́чером пришла́ Да́рья с Ми́шей.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s142",
+            "text": "— Ва́ня, ты всё сде́лал оди́н? — Да́рья смотре́ла на по́ле.",
+            "paragraph_start": true,
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s143",
+            "text": "— Не всё. Рожь Фёдора я убра́л, а у отца́ она́ ещё стои́т.",
+            "paragraph_start": true,
+            "speaker": "char-ivan"
+          },
+          {
+            "id": "ru-mir-01-l11-s144",
+            "text": "— Спаси́бо, Ва́ня. Ты нам помо́г.",
+            "paragraph_start": true,
+            "speaker": "char-darya"
+          },
+          {
+            "id": "ru-mir-01-l11-s145",
+            "text": "Ра́ньше здесь рабо́тали два бра́та.",
+            "paragraph_start": true
+          },
+          {
+            "id": "ru-mir-01-l11-s146",
+            "text": "Тепе́рь Фёдор был в а́рмии, а Ива́н оста́лся — и сего́дня он сде́лал рабо́ту бра́та."
+          },
+          {
+            "id": "ru-mir-01-l11-s147",
+            "text": "Сты́дно ему́ уже́ не́ было."
+          },
+          {
+            "id": "ru-mir-01-l11-s148",
+            "text": "А за дере́вней, на полоса́х отца́, рожь стоя́ла и ждала́ его́."
+          }
+        ],
+        "exercises": [
+          {
+            "id": "ru-mir-01-l11-x4-1",
+            "type": "preobrazovanie",
+            "title": "Преобразова́ние",
+            "instruction": "Поста́вь глаго́л в ну́жную фо́рму.",
+            "hint_en": "Imperfective present → perfective past, presenting an event as a whole: написа́л gives a completed text; пошёл marks setting off, without asserting arrival in the field.",
+            "grammar_target_ids": [
+              "G11"
+            ],
+            "obrazec": {
+              "rule": "пи́шет → написа́л (pf.)",
+              "prompt": "Ива́н пи́шет сло́во. → Ива́н ___ сло́во «война́». (написа́ть)",
+              "answer": "написа́л"
+            },
+            "items": [
+              {
+                "id": "x4-1-1",
+                "prompt": "Ба́тюшка чита́ет манифе́ст. → Ба́тюшка ___ манифе́ст. (прочита́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "прочита́л"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s035",
+                  "ru-mir-01-l11-s109"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "чита́л",
+                    "hint": "pf.: прочита́л"
+                  }
+                ]
+              },
+              {
+                "id": "x4-1-2",
+                "prompt": "Ива́н ви́дит у де́да слёзы. → Ива́н ___ у де́да слёзы. (уви́деть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "уви́дел"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s131"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "ви́дел",
+                    "hint": "pf.: уви́дел"
+                  }
+                ]
+              },
+              {
+                "id": "x4-1-3",
+                "prompt": "Ива́н идёт в по́ле. → На друго́й день Ива́н ___ в по́ле. (пойти́)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "пошёл"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s136"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "шёл",
+                    "hint": "пошёл = стал идти́ (pf.)"
+                  }
+                ]
+              },
+              {
+                "id": "x4-1-4",
+                "prompt": "Ива́н убира́ет рожь Фёдора. → Ве́чером Ива́н уже́ ___ рожь Фёдора. (убра́ть)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "убра́л"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s143"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "убира́л",
+                    "hint": "уже́ всё → pf.: убра́л"
+                  }
+                ]
+              },
+              {
+                "id": "x4-1-5",
+                "prompt": "Ива́н де́лает рабо́ту бра́та. → Сего́дня Ива́н ___ рабо́ту бра́та. (сде́лать)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "сде́лал"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s146"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "де́лал",
+                    "hint": "pf.: сде́лал"
+                  }
+                ]
+              },
+              {
+                "id": "x4-1-6",
+                "prompt": "Ива́н помога́ет Да́рье. → Ива́н ___ Да́рье. (помо́чь)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "помо́г"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s144"
+                ],
+                "common_wrong": [
+                  {
+                    "answer": "помога́л",
+                    "hint": "pf.: помо́г"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x4-2",
+            "type": "soedini",
+            "title": "Соедини́",
+            "instruction": "Вы́бери отве́т.",
+            "hint_en": "Which мир? The commune (сход, neighbours), peace (no war) or the whole world.",
+            "obrazec": {
+              "rule": "«Мир — э́то сосе́ди» → о на́ших сосе́дях",
+              "prompt": "Пётр сказа́л: «Мир помога́л и ра́ньше». Он ду́мает о ___.",
+              "answer": "на́ших сосе́дях"
+            },
+            "items": [
+              {
+                "id": "x4-2-1",
+                "prompt": "Дед сказа́л: «Был мир». Он ду́мает о жи́зни ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "без войны́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s130"
+                ],
+                "choices": [
+                  "без войны́",
+                  "на схо́де",
+                  "в Се́рбии"
+                ]
+              },
+              {
+                "id": "x4-2-2",
+                "prompt": "Ба́тюшка сказа́л: «О ми́ре всего́ ми́ра». Он ду́мает о лю́дях ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "всей земли́"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s119"
+                ],
+                "choices": [
+                  "всей земли́",
+                  "на́шей дере́вни",
+                  "на́шего схо́да"
+                ]
+              },
+              {
+                "id": "x4-2-3",
+                "prompt": "На́стя сказа́ла: «Мир — э́то мы?» Она́ ду́мает о ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "на́шей дере́вне"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s121"
+                ],
+                "choices": [
+                  "на́шей дере́вне",
+                  "всей земле́",
+                  "э́той войне́"
+                ]
+              },
+              {
+                "id": "x4-2-4",
+                "prompt": "Пётр сказа́л: «Э́то друго́й мир». Мир здесь — когда́ ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "нет войны́",
+                  "войны́ нет"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s122"
+                ],
+                "choices": [
+                  "нет войны́",
+                  "помога́ют сосе́ди",
+                  "звони́т ко́локол"
+                ]
+              },
+              {
+                "id": "x4-2-5",
+                "prompt": "На́стя написа́ла «МИР» под сло́вом «ВОЙНА́». Мир здесь — когда́ ___.",
+                "mode": "recognition",
+                "answer_mode": "choice",
+                "accepted_answers": [
+                  "нет войны́",
+                  "войны́ нет"
+                ],
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s134"
+                ],
+                "choices": [
+                  "нет войны́",
+                  "помога́ют сосе́ди",
+                  "звони́т ко́локол"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ru-mir-01-l11-x4-3",
+            "type": "diktant",
+            "title": "Дикта́нт",
+            "instruction": "Послу́шай и напиши́ сло́во.",
+            "hint_en": "Listen to the story sentence and type the missing word.",
+            "obrazec": {
+              "rule": "Послу́шай и напиши́ сло́во.",
+              "prompt": "Так Берёзовка узна́ла: ___.",
+              "answer": "война́"
+            },
+            "items": [
+              {
+                "id": "x4-3-1",
+                "prompt": "Тогда́ Герма́ния объяви́ла ___ Росси́и.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "войну́"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s114"
+                ]
+              },
+              {
+                "id": "x4-3-2",
+                "prompt": "Росси́я хоте́ла помо́чь Се́рбии и ___ её.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "защити́ть"
+                ],
+                "first_letters": 4,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s112"
+                ]
+              },
+              {
+                "id": "x4-3-3",
+                "prompt": "Мужики́ говори́ли о царе́, о Се́рбии, о ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "не́мцах"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s124"
+                ]
+              },
+              {
+                "id": "x4-3-4",
+                "prompt": "У него́ бы́ло два ___: свой и бра́та.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "серпа́"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s139"
+                ]
+              },
+              {
+                "id": "x4-3-5",
+                "prompt": "Весь день Ива́н ___ рожь.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "убира́л"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s140"
+                ]
+              },
+              {
+                "id": "x4-3-6",
+                "prompt": "Ра́ньше здесь рабо́тали два ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "бра́та"
+                ],
+                "first_letters": 3,
+                "source_segment_ids": [
+                  "ru-mir-01-l11-s145"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "words_with_history": {
+    "title": "Слова́ с исто́рией",
+    "word": "мир",
+    "text": [
+      "Пётр говори́т «мир» и ду́мает о сосе́дях: мир помога́ет, когда́ тяжело́.",
+      "Ба́тюшка говори́т «о ми́ре всего́ ми́ра» и ду́мает о лю́дях на всей земле́.",
+      "Дед говори́т «Был мир» и ду́мает о жи́зни без войны́.",
+      "А Фёдор в теле́ге слы́шит одно́ сло́во: «война́».",
+      "Одно́ сло́во — и три ми́ра в одну́ неде́лю."
+    ],
+    "proverb": "Беда́ одна́ не хо́дит.",
+    "lexeme_ids": [
+      "ru-mir-peace",
+      "ru-mir-commune",
+      "ru-vojna"
+    ],
+    "note_en": "Before the 1918 spelling reform the two words were written differently: миръ \"peace\", міръ \"world; commune\". The litany «О мирѣ всего міра» uses both. Germany declared war on Russia on 19 July (1 August N.S.) 1914; the Tsar's manifesto is dated 20 July."
+  },
+  "grammar": {
+    "title": "Вид: что де́лал? — что сде́лал?",
+    "rule": "ipf. — что де́лал? (чита́л — слог за сло́гом; убира́ли; звони́л) · pf. — что сде́лал? (прочита́л — всё сло́во; Рожь Фёдора я убра́л; позвони́л — и ста́ло ти́хо) · pf., pf., pf.: взял, благослови́л, пошёл — и пото́м… · запла́кала = ста́ла пла́кать; пошёл = стал идти́",
+    "tables": [
+      {
+        "id": "para",
+        "caption": "ipf. ↔ pf.: что де́лал? ↔ что сде́лал?",
+        "header": [
+          "ipf.: что де́лал?",
+          "pf.: что сде́лал?"
+        ],
+        "rows": [
+          [
+            "Его́р чита́л ме́дленно и пло́хо.",
+            "Ива́н прочита́л всё сло́во."
+          ],
+          [
+            "В по́ле убира́ли рожь.",
+            "Рожь Фёдора я убра́л."
+          ],
+          [
+            "Ко́локол звони́л и звони́л.",
+            "Ба́тюшка позвони́л ещё раз."
+          ],
+          [
+            "Он закрыва́л ла́вку.",
+            "Наконе́ц он закры́л её."
+          ],
+          [
+            "Ма́рья целова́ла сы́на.",
+            "Фёдор поцелова́л ико́ну."
+          ],
+          [
+            "Ми́ша не пла́кал.",
+            "Вдруг запла́кала Ма́рья."
+          ],
+          [
+            "Он писа́л ме́дленно…",
+            "…и наконе́ц написа́л одно́ сло́во."
+          ]
+        ]
+      },
+      {
+        "id": "cep",
+        "caption": "pf.: одно́, пото́м друго́е · ipf.: в э́то вре́мя",
+        "header": [
+          "pf.: и пото́м…",
+          "ipf.: в э́то вре́мя"
+        ],
+        "rows": [
+          [
+            "Пётр взял ико́ну",
+            "Фёдор стоя́л пе́ред отцо́м"
+          ],
+          [
+            "и благослови́л сы́на.",
+            "Ма́рья целова́ла сы́на,"
+          ],
+          [
+            "Фёдор поцелова́л ико́ну,",
+            "и слёзы шли и шли."
+          ],
+          [
+            "взял мешо́к и пошёл к теле́ге.",
+            "Ли́за смея́лась: она́ ещё не понима́ла."
+          ]
+        ]
+      },
+      {
+        "id": "pary",
+        "caption": "Па́ры: ipf. / pf.",
+        "header": [
+          "ipf.",
+          "pf.",
+          "как?"
+        ],
+        "rows": [
+          [
+            "писа́ть",
+            "написа́ть",
+            "на-"
+          ],
+          [
+            "чита́ть",
+            "прочита́ть",
+            "про-"
+          ],
+          [
+            "звони́ть",
+            "позвони́ть",
+            "по-"
+          ],
+          [
+            "де́лать",
+            "сде́лать",
+            "с-"
+          ],
+          [
+            "пла́кать",
+            "запла́кать",
+            "за-"
+          ],
+          [
+            "убира́ть",
+            "убра́ть",
+            "-ира- → -ра-"
+          ],
+          [
+            "закрыва́ть",
+            "закры́ть",
+            "-ва-"
+          ],
+          [
+            "призыва́ть",
+            "призва́ть",
+            "-ыва- → -ва-"
+          ],
+          [
+            "расска́зывать",
+            "рассказа́ть",
+            "-ыва- → -а-"
+          ],
+          [
+            "помога́ть",
+            "помо́чь",
+            "-гать → -чь"
+          ],
+          [
+            "идти́",
+            "пойти́",
+            "по-"
+          ],
+          [
+            "ви́деть",
+            "уви́деть",
+            "у-"
+          ],
+          [
+            "говори́ть",
+            "сказа́ть",
+            "—"
+          ],
+          [
+            "брать",
+            "взять",
+            "—"
+          ],
+          [
+            "дава́ть",
+            "дать",
+            "-ва-"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "ru-mir-01-l11-s002"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s013"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s018"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s023"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s025"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s029"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s043"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s049"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s061"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s062"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s090"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s095"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s096"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s133"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s140"
+      },
+      {
+        "segment_id": "ru-mir-01-l11-s143"
+      }
+    ],
+    "note_en": "Imperfective past presents process, background or repetition: Его́р чита́л. Perfective past presents an event as a bounded whole: прочита́л gives a result; запла́кала and пошёл mark onset (began crying; set off, without asserting arrival). One occurrence can still be imperfective. Perfectives can move a narrative forward; imperfectives describe its background. Learn each pair with its meanings; the table shows changes within these particular pairs. Perfective future comes in Глава 13."
+  },
+  "pensa": {
+    "A": {
+      "id": "ru-mir-01-l11-pa",
+      "title": "Пе́нсум A — Фо́рмы",
+      "blocks": [
+        {
+          "obrazec": {
+            "prompt": "Его́р ___ ме́дленно и пло́хо: «Царь… объяви́л…» (чита́ть / прочита́ть)",
+            "answer": "чита́л"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Ива́н чита́л слог за сло́гом — и наконе́ц ___ всё сло́во (чита́ть / прочита́ть).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "прочита́л"
+              ],
+              "first_letters": 4,
+              "common_wrong": [
+                {
+                  "answer": "чита́л",
+                  "hint": "всё сло́во, наконе́ц → pf.: прочита́л"
+                }
+              ]
+            },
+            {
+              "id": "a2",
+              "prompt": "Ло́шадь уже́ стоя́ла у до́ма ста́росты, а ко́локол ещё ___ (звони́ть / позвони́ть).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "звони́л"
+              ],
+              "common_wrong": [
+                {
+                  "answer": "позвони́л",
+                  "hint": "ещё звони́л: э́то бы́ло до́лго → ipf.: звони́л"
+                }
+              ]
+            },
+            {
+              "id": "a3",
+              "prompt": "Наконе́ц ба́тюшка ___ ещё раз — и ста́ло ти́хо (звони́ть / позвони́ть).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "позвони́л"
+              ],
+              "first_letters": 4,
+              "common_wrong": [
+                {
+                  "answer": "звони́л",
+                  "hint": "Наконе́ц позвони́л — и ста́ло ти́хо (pf.)"
+                }
+              ]
+            },
+            {
+              "id": "a4",
+              "prompt": "Вдруг на пло́щади ___ Ма́рья (пла́кать / запла́кать).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "запла́кала"
+              ],
+              "first_letters": 4,
+              "common_wrong": [
+                {
+                  "answer": "пла́кала",
+                  "hint": "запла́кала = ста́ла пла́кать (pf.)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "obrazec": {
+            "prompt": "Пётр ___ ико́ну и благослови́л сы́на (брать / взять).",
+            "answer": "взял"
+          },
+          "items": [
+            {
+              "id": "a5",
+              "prompt": "Весь день Ива́н ___ рожь (убира́ть / убра́ть).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "убира́л"
+              ],
+              "first_letters": 4,
+              "common_wrong": [
+                {
+                  "answer": "убра́л",
+                  "hint": "весь день — рабо́та шла → ipf.: убира́л"
+                }
+              ]
+            },
+            {
+              "id": "a6",
+              "prompt": "— Ты всё сде́лал? — Рожь Фёдора я уже́ ___, а рожь отца́ ещё стои́т (убира́ть / убра́ть).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "убра́л"
+              ],
+              "first_letters": 3,
+              "common_wrong": [
+                {
+                  "answer": "убира́л",
+                  "hint": "рожь Фёдора убра́л, а рожь отца́ ещё стои́т (pf.)"
+                }
+              ]
+            },
+            {
+              "id": "a7",
+              "prompt": "Наконе́ц Гаври́лов ___ ла́вку и стал у две́ри (закрыва́ть / закры́ть).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "закры́л"
+              ],
+              "first_letters": 4,
+              "common_wrong": [
+                {
+                  "answer": "закрыва́л",
+                  "hint": "наконе́ц, и пото́м → pf.: закры́л"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "obrazec": {
+            "prompt": "Все смотре́ли на ___ (Ива́н).",
+            "answer": "Ива́на"
+          },
+          "items": [
+            {
+              "id": "a8",
+              "prompt": "Ива́н рабо́тал ___ (серп), как оте́ц и дед.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "серпо́м"
+              ],
+              "first_letters": 3,
+              "common_wrong": [
+                {
+                  "answer": "серп",
+                  "hint": "чем? → серпо́м"
+                }
+              ],
+              "recall_of": "G09"
+            },
+            {
+              "id": "a9",
+              "prompt": "Фёдор уви́дел ___ (брат) с серпо́м в руке́.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "бра́та"
+              ],
+              "first_letters": 3,
+              "common_wrong": [
+                {
+                  "answer": "брат",
+                  "hint": "кого́? → бра́та"
+                }
+              ],
+              "recall_of": "G06"
+            },
+            {
+              "id": "a10",
+              "prompt": "На полоса́х отца́ стои́т ___ рожь (хоро́ший).",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "хоро́шая"
+              ],
+              "first_letters": 4,
+              "common_wrong": [
+                {
+                  "answer": "хоро́ший",
+                  "hint": "рожь — она́ → хоро́шая"
+                }
+              ],
+              "recall_of": "G01"
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "ru-mir-01-l11-pb",
+      "title": "Пе́нсум B — Слова́",
+      "word_bank": [
+        "а́рмия",
+        "война́",
+        "во́дка",
+        "ко́локол",
+        "ла́вка",
+        "мобилиза́ция",
+        "не́мец",
+        "пло́щадь",
+        "рожь",
+        "серп",
+        "слеза́",
+        "солда́т",
+        "спи́сок"
+      ],
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "На це́ркви ___: ба́тюшка звони́т.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "ко́локол"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b2",
+          "prompt": "Пе́ред це́рковью больша́я ___: там стоя́т мужики́.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "пло́щадь"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b3",
+          "prompt": "В ___ бы́ло и́мя Фёдора, а и́мени Ива́на не́ было.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "спи́ске"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b4",
+          "prompt": "Ива́н убира́ет серпо́м ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "рожь"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b5",
+          "prompt": "Чем убира́ют рожь? — Рожь убира́ют ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "серпо́м"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b6",
+          "prompt": "Страна́ бьёт страну́: э́то ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "война́"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b7",
+          "prompt": "Фёдор три го́да служи́л в ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "а́рмии"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b8",
+          "prompt": "Ли́за пла́чет, и у неё ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "слёзы"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b9",
+          "prompt": "Её пьют мужики́, но сейча́с её не продаю́т: э́то ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "во́дка"
+          ],
+          "first_letters": 2
+        },
+        {
+          "id": "b10",
+          "prompt": "Мужи́к рабо́тает в по́ле, а ___ слу́жит в а́рмии.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "солда́т"
+          ],
+          "first_letters": 3
+        }
+      ]
+    },
+    "C": {
+      "id": "ru-mir-01-l11-pc",
+      "title": "Пе́нсум C — Вопро́сы",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Что де́лали Фёдор, Да́рья и Ива́н 18 ию́ля, когда́ в дере́вне звони́л ко́локол?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Они́ убира́ли рожь на о́трубе Фёдора.",
+            "Они́ бы́ли в по́ле и убира́ли рожь."
+          ],
+          "rubric": "Imperfective background: убира́ли рожь (in the field, on Fyodor's о́труб).",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-ubirat",
+            "ru-rozh"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s004",
+            "ru-mir-01-l11-s009"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Как чита́л ста́роста? А что сде́лал Ива́н?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ста́роста чита́л ме́дленно и пло́хо. А Ива́н прочита́л всё сло́во: «Мобилиза́ция!»",
+            "Его́р чита́л пло́хо, а Ива́н прочита́л сло́во."
+          ],
+          "rubric": "чита́л (process, badly) against прочита́л (the whole word, done).",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-prochitat",
+            "ru-chitat"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s023",
+            "ru-mir-01-l11-s029"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Что прочита́л ба́тюшка на пло́щади?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ба́тюшка прочита́л бума́гу о мобилиза́ции: 17 ию́ля царь объяви́л мобилиза́цию.",
+            "Он прочита́л бума́гу о мобилиза́ции."
+          ],
+          "rubric": "The priest reads the notice: the Tsar declared mobilisation; reservists must go to the uezd town at once. The elder then reads the names on the list.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-obyavit",
+            "ru-mobilizatsiya",
+            "ru-zapasnoj"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s036",
+            "ru-mir-01-l11-s037"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Почему́ Фёдора призва́ли, а Ива́на нет?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Фёдор уже́ служи́л в а́рмии, а Ива́н не служи́л.",
+            "Потому́ что Фёдор был запасно́й, а Ива́н в а́рмии не служи́л."
+          ],
+          "rubric": "In this scene the notice calls up reservists: Fyodor had served (1908–11) and is a reservist; Ivan had not served and was not on this list.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-prizvat",
+            "ru-sluzhit",
+            "ru-zapasnoj"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s044",
+            "ru-mir-01-l11-s059"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Что сде́лал уря́дник Гаври́лов у ла́вки?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Он закры́л ла́вку и стал у две́ри с са́блей.",
+            "Гаври́лов закры́л ла́вку: во́дку тогда́ не продава́ли."
+          ],
+          "rubric": "закры́л ла́вку (pf. event); vodka is not sold during the mobilisation.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-zakryt",
+            "ru-vodka"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s062",
+            "ru-mir-01-l11-s064"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Что сказа́л Пётр о ми́ре? А что сде́лал Ива́н?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Пётр сказа́л: мир помога́ет, мир — э́то сосе́ди, когда́ тяжело́. А Ива́н взял серп Фёдора.",
+            "Мир помога́л и ра́ньше, сказа́л Пётр. Ива́н взял серп бра́та."
+          ],
+          "rubric": "Pyotr: the мир (commune) helps its people; Ivan takes Fyodor's sickle without a word (взял, pf.).",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-mir-commune",
+            "ru-vzyat",
+            "ru-serp"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s086",
+            "ru-mir-01-l11-s090"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "Что сде́лал Ива́н на друго́й день?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Он пошёл в по́ле оди́н и убра́л рожь Фёдора. А рожь отца́ ещё стоя́ла.",
+            "Ива́н пошёл в по́ле и сде́лал рабо́ту бра́та."
+          ],
+          "rubric": "A chain of perfectives: пошёл, убра́л, сде́лал; the father's rye is still standing.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-pojti",
+            "ru-ubrat",
+            "ru-sdelat"
+          ],
+          "source_segment_ids": [
+            "ru-mir-01-l11-s136",
+            "ru-mir-01-l11-s143"
+          ]
+        },
+        {
+          "id": "c8",
+          "prompt": "А ты? Что ты сде́лал (сде́лала) сего́дня у́тром?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Сего́дня у́тром я прочита́л газе́ту и пошёл на рабо́ту.",
+            "Сего́дня у́тром я взяла́ кни́гу и прочита́ла уро́к.",
+            "Сего́дня у́тром я прочита́л газе́ту."
+          ],
+          "rubric": "One or more events from your own morning, presented as wholes in the perfective past (прочита́л, взял, пошёл, сде́лал). Giving a sequence is optional; пошёл marks setting off.",
+          "rubric_lang": "en",
+          "key_terms": [
+            "ru-sdelat",
+            "ru-prochitat"
+          ],
+          "source_segment_ids": []
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "ru-vojna",
+      "citation_form": "война́",
+      "part_of_speech": "noun",
+      "current_sense": "war",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-mir-peace",
+      "citation_form": "мир",
+      "part_of_speech": "noun",
+      "current_sense": "peace (new sense; the commune sense is Часть 1)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-mobilizatsiya",
+      "citation_form": "мобилиза́ция",
+      "part_of_speech": "noun",
+      "current_sense": "mobilisation",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-obyavit",
+      "citation_form": "объяви́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to declare, announce",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-zapasnoj",
+      "citation_form": "запасно́й",
+      "part_of_speech": "adj",
+      "current_sense": "reserve; (as noun) reservist",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-prizvat",
+      "citation_form": "призва́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to call up",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-prizyvat",
+      "citation_form": "призыва́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to call up (process, repeated)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-armiya",
+      "citation_form": "а́рмия",
+      "part_of_speech": "noun",
+      "current_sense": "army",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-soldat",
+      "citation_form": "солда́т",
+      "part_of_speech": "noun",
+      "current_sense": "soldier",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-nemets",
+      "citation_form": "не́мец",
+      "part_of_speech": "noun",
+      "current_sense": "a German",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-prochitat",
+      "citation_form": "прочита́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to read (through), finish reading",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-napisat",
+      "citation_form": "написа́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to write (pf.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-pojti",
+      "citation_form": "пойти́",
+      "part_of_speech": "verb",
+      "current_sense": "to set off, start walking",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-vzyat",
+      "citation_form": "взять",
+      "part_of_speech": "verb",
+      "current_sense": "to take",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-kolokol",
+      "citation_form": "ко́локол",
+      "part_of_speech": "noun",
+      "current_sense": "bell",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-zvonit",
+      "citation_form": "звони́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to ring (a bell)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-pozvonit",
+      "citation_form": "позвони́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to give a ring (here, the final ring)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-ploshchad",
+      "citation_form": "пло́щадь",
+      "part_of_speech": "noun",
+      "current_sense": "square",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-spisok",
+      "citation_form": "спи́сок",
+      "part_of_speech": "noun",
+      "current_sense": "list",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-zaplakat",
+      "citation_form": "запла́кать",
+      "part_of_speech": "verb",
+      "current_sense": "to burst into tears",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-zakryt",
+      "citation_form": "закры́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to close",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-zakryvat",
+      "citation_form": "закрыва́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to close (process, repeated)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-ubrat",
+      "citation_form": "убра́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to bring in (the harvest); to clear away",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-ubirat",
+      "citation_form": "убира́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to bring in, harvest (process)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-rozh",
+      "citation_form": "рожь",
+      "part_of_speech": "noun",
+      "current_sense": "rye",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-serp",
+      "citation_form": "серп",
+      "part_of_speech": "noun",
+      "current_sense": "sickle",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-ostatsya",
+      "citation_form": "оста́ться",
+      "part_of_speech": "verb",
+      "current_sense": "to stay, remain",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-zashchitit",
+      "citation_form": "защити́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to defend",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-vdrug",
+      "citation_form": "вдруг",
+      "part_of_speech": "adv",
+      "current_sense": "suddenly",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-potom",
+      "citation_form": "пото́м",
+      "part_of_speech": "adv",
+      "current_sense": "then, afterwards",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-nakonets",
+      "citation_form": "наконе́ц",
+      "part_of_speech": "adv",
+      "current_sense": "at last, finally",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-srazu",
+      "citation_form": "сра́зу",
+      "part_of_speech": "adv",
+      "current_sense": "at once",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-sleza",
+      "citation_form": "слеза́",
+      "part_of_speech": "noun",
+      "current_sense": "tear (pl. слёзы)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-potselovat",
+      "citation_form": "поцелова́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to kiss",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-tselovat",
+      "citation_form": "целова́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to kiss (process, repeated)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-sluzhit",
+      "citation_form": "служи́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to serve",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-znachit",
+      "citation_form": "зна́чит",
+      "part_of_speech": "part",
+      "current_sense": "so, that means (parenthetical)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-pomoch",
+      "citation_form": "помо́чь",
+      "part_of_speech": "verb",
+      "current_sense": "to help (pf.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-posle",
+      "citation_form": "по́сле",
+      "part_of_speech": "prep",
+      "current_sense": "after (+ gen.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-blagoslovit",
+      "citation_form": "благослови́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to bless",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-sdelat",
+      "citation_form": "сде́лать",
+      "part_of_speech": "verb",
+      "current_sense": "to do, make (pf.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-sluchitsya",
+      "citation_form": "случи́ться",
+      "part_of_speech": "verb",
+      "current_sense": "to happen (pf.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-rasskazat",
+      "citation_form": "рассказа́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to tell (pf.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-vodka",
+      "citation_form": "во́дка",
+      "part_of_speech": "noun",
+      "current_sense": "vodka",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-uznat",
+      "citation_form": "узна́ть",
+      "part_of_speech": "verb",
+      "current_sense": "to find out, come to know (pf.)",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    },
+    {
+      "lexeme_id": "ru-stydno",
+      "citation_form": "сты́дно",
+      "part_of_speech": "adv",
+      "current_sense": "(it is) shameful; мне сты́дно = I am ashamed",
+      "first_introduced_lesson": "ru-mir-01-l11",
+      "new": true
+    }
+  ],
+  "media": {
+    "status": "draft",
+    "cover": "ru-mir-01-l11-cover",
+    "counts": {
+      "cover": 1,
+      "inline_scene": 3,
+      "margin_vignette": 3,
+      "margin_diagram": 1,
+      "margin_gloss": 33
+    }
+  },
+  "completion": {
+    "button_label": "Гото́во"
+  },
+  "anki_export": {
+    "enabled": true,
+    "source": "lexicon.card_stages where lesson == this id",
+    "tags": [
+      "ru-mir-01",
+      "glava-11",
+      "chast-2"
+    ]
+  },
+  "metrics": {
+    "running_words": 1036,
+    "sentences": 148,
+    "word_target": 950,
+    "word_window": [
+      855,
+      1045
+    ]
+  }
+}
