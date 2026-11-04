@@ -9,6 +9,7 @@ each course its `course.json`, the written lesson files, `lexicon.json`, and the
 those files reference:
 
 - Мир (`ru-mir-01`, draft): `content/ru/`
+- Мир: ускоренный курс (`ru-mirc-01`, draft): `content/ru-mirc/`
 - Ἐν Σκιλλοῦντι (`grc-skil-01`, draft): `content/grc/`
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Kvöldvakan (`is-kvold-01`, draft): `content/is/`
