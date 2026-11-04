@@ -25,7 +25,8 @@
       "Fluent review 2026-10-12 applied: B.b7 prompt now serves the food ('yn rhoi … ar y bwrdd') instead of 'gwneud'; C.c1, C.c2 and C.c4 answer keys widened. Review-question verdicts, all accepted unchanged: s016 'Stori am yr amser pan o'n i'n ifanc'; s035 'pan gwympodd' (SM after pan); s059 'Ro'n i'n forwyn i'r frenhines'; s067 'ac ro'n i' (ac before roedd and its contractions); s092 'Pwy oedd y babi?'; s008 noun 'arfer' (custom); s017 'Mae'r gwynt yn curo ar y drws'; s039 keep 'dig' (valid standard informal; grac not needed).",
       "Recall pass 2026-10-18: recurrences woven into Cynyr's tale and the frame — cy-olwyn / cy-botwm (s134, Pero sleeps with Myrddin's little wheel and big button from Pennod 15), cy-clymu (s020), cy-pedwar (s021), cy-prynu (s026, Cai), cy-mochyn (s028), cy-ugain (s029) and cy-cyfrif (new s132, Mali checks the number; s030 now opens with Cynyr's 'Do'), cy-saith (s046), cy-ph-ar-goll (s083–s084), cy-heibio-i (s085), cy-disgyn (s086), cy-gwlan (s087), cy-ysgafn (s088), cy-drych and cy-pwll (new s133, Mali links the mirror and the pool to the baby). s006 split (s006 + s134) to keep sentence length ≤ 22. Also cy-anghofio (s127, Mali never forgets).",
       "Critique pass 2026-10-18: s007, s023, s070, s113 reverted to HEAD (milk source, price, storm duration, snack packaging were unmotivated); s135 retired with the s007 revert.",
-      "Audit-fix pass 2026-10-19: Cai's 'Dw i ddim yn ofni taranau!' (s068) moved after s074 ('roedd e'n ofni'r taranau'), so taranau is first met in the storm description with its gloss (s072) and Cai's boast answers Pero's fear. s134 Pero sleeps with Myrddin's wheel only (in Pennod 15 the button stayed on the table). s126 cyfrinach glossed from the known cyfrinachol. Pensa A.a6–a8 accept full answers (Oedd. Roedd e'n …; Do. Daeth e …)."
+      "Audit-fix pass 2026-10-19: Cai's 'Dw i ddim yn ofni taranau!' (s068) moved after s074 ('roedd e'n ofni'r taranau'), so taranau is first met in the storm description with its gloss (s072) and Cai's boast answers Pero's fear. s134 Pero sleeps with Myrddin's wheel only (in Pennod 15 the button stayed on the table). s126 cyfrinach glossed from the known cyfrinachol. Pensa A.a6–a8 accept full answers (Oedd. Roedd e'n …; Do. Daeth e …).",
+      "Owner fix 2026-11-04: Pensum C converted to open self_check questions (eight items in story order, all self_check with rubric, key_terms and sources; the exact c1, c2, c4 and c6 converted and accepted_answers removed; the bare yes/no 'Oedd y brenin yn ddig…?' now asks what the king did; new c6 asks what Myrddin does when Mali asks who the baby was (he smiles and does not answer, s121); the one Pam? is c7, with the narrator's stated reason; c8 A ti? asks where the learner lived as a baby). nodyn_en expanded to a full English explanation. Grammar tables limited to forms the story shows: the ro'n nhw row dropped, 'dyw e ddim yn ddig' → 'dyw e ddim ar goll' (s084), the 'Ddaeth …? / Gwympodd …? — Do' rows (no third-person inflected question in the prose) replaced by Wnest ti gyfrif y marchogion? — Do (s132, s030). Pensum A a8 recast from Ddaeth Myrddin i'r drws? to Wnest ti weld y bardd? for the same reason. The checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content). Codex review (GPT-6.1-Sol, 2026-11-04) fixes: the note says the imperfect loses r- (not ro-) after pan; the preposition recap is limited to i and ar; Oedd …? is qualified to third-person questions; verb-noun defined at first use; c8 A ti? no longer introduces pan o't ti."
     ],
     "review_questions": []
   },
@@ -1332,12 +1333,8 @@
             "ro'ch chi yng Nghaerllion"
           ],
           [
-            "maen nhw'n chwerthin",
-            "ro'n nhw'n chwerthin"
-          ],
-          [
-            "dyw e ddim yn ddig",
-            "doedd e ddim yn ddig"
+            "dyw e ddim ar goll",
+            "doedd e ddim ar goll"
           ],
           [
             "Ydy e …? — Ydy. / Nac ydy.",
@@ -1367,19 +1364,23 @@
         ]
       },
       {
-        "caption": "Oedd …? ↔ Ddaeth …?",
+        "caption": "Oedd …? ↔ Wnest ti …?",
         "header": [
           "roedd",
-          "daeth, -odd"
+          "wnes i, -odd"
         ],
         "rows": [
           [
-            "Oedd y brenin yn ddig? — Nac oedd.",
-            "Ddaeth Myrddin i'r drws? — Do."
+            "Oedd e ar goll? — Nac oedd.",
+            "Wnest ti gyfrif y marchogion? — Do."
           ],
           [
             "Oedd Pero yno? — Oedd.",
-            "Gwympodd y cleddyf? — Do."
+            ""
+          ],
+          [
+            "Oedd y brenin yn ddig? — Nac oedd.",
+            ""
           ]
         ]
       },
@@ -1458,7 +1459,7 @@
         "segment_id": "cy-brenin-01-l17-s080"
       }
     ],
-    "nodyn_en": "Roedd/oedd is the imperfect of bod: it paints the background (Roedd storm fawr 'There was a big storm'). The -odd/daeth past tells what happened (pan ddaeth Myrddin 'when Myrddin came'). Questions: Oedd …? — Oedd / Nac oedd, not Do / Naddo. Ro'n i'n arfer + verb-noun = 'I used to'. Pan causes soft mutation."
+    "nodyn_en": "Cynyr's winter story is set in the past, so this chapter brings in the past tense of bod ('to be'). It is called the imperfect: it describes how things were, what was going on, or what used to happen, rather than a single finished event. Each present form of bod has a past partner: dw i'n ifanc ('I am young') becomes ro'n i'n ifanc ('I was young'); rwyt ti'n fabi ('you are a baby') becomes Ro't ti'n fabi ('You were a baby'); mae'r brenin yn gryf ('the king is strong') becomes Roedd y brenin yn gryf ('The king was strong'); dyn ni'n ifanc ('we are young') becomes Ro'n ni'n ifanc ('We were young'); dych chi yng Nghaerllion ('you are in Caerllion') becomes Ro'ch chi yng Nghaerllion ('You were in Caerllion'). Ro'n i and ro'n ni are spoken southern forms: the verb form ro'n is the same, and only the pronoun after it tells 'I' from 'we'.\n\nThe negative uses doedd … ddim, just as the present uses dyw … ddim: Doedd e ddim ar goll ('He was not lost'), doedd y bardd ddim yn chwerthin ('the bard was not laughing'). Does dim ('there is no') becomes doedd dim ('there was no'): Doedd dim golau yn y cwm ('There was no light in the valley').\n\nA question about 'he', 'she', 'it' or a named person or thing starts with Oedd: Oedd y brenin yn ddig? ('Was the king angry?'), Oedd Pero yno? ('Was Pero there?'), where yno means 'there'. The answer repeats the verb: Oedd ('Yes, he was') or Nac oedd ('No, he wasn't'). This differs from a question with a past-tense verb that tells an event, which is answered Do ('Yes') or Naddo ('No'): Wnest ti gyfrif y marchogion, Dad? ('Did you count the knights, Dad?') Do.\n\nAfter pan ('when') the imperfect loses its first r- (ro'n becomes o'n, roedd becomes oedd): pan o'n i'n ifanc ('when I was young'), Pan oedd y storm yn y cwm? ('When the storm was in the valley?'), and Mali's question to Myrddin, Oedd storm yng Nghwm Helyg pan o'n i'n fabi? ('Was there a storm in Cwm Helyg when I was a baby?').\n\nWelsh uses two past tenses side by side, and Cynyr's story shows how they work together. Roedd describes the scene or an action that was going on, like a picture in the background. The past tense met in Penodau 12–13 (wnes i, -odd, daeth, es i) tells the event that happened against it. Roedd storm fawr pan ddaeth Myrddin ('There was a big storm when Myrddin came'). Roedd y bardd yn chwarae'r delyn pan gwympodd y cleddyf o fy nwylo i ('The bard was playing the harp when the sword fell from my hands'). Roedd pawb yn y llys yn cysgu ('Everyone in the court was asleep'); then come the events: clywais i sŵn wrth y drws ('I heard a noise at the door'), Es i at y drws ('I went to the door'). With yn and a verb-noun (the dictionary form of a verb), roedd means 'was doing': roedd y bardd yn chwarae ('the bard was playing').\n\nArfer has two uses. As a noun it means 'a custom': Dyma hen arfer yn Llys Cynyr ('This is an old custom at Llys Cynyr'). After roedd … yn it means 'used to', followed by a verb-noun: Ro'n i'n arfer cario cleddyf enwog y brenin ('I used to carry the king's famous sword'), Roedd e'n arfer hela ceirw ('He used to hunt deer'), roedd y bardd yn arfer chwarae'r delyn i'r frenhines ('the bard used to play the harp for the queen').\n\nPan softens the verb after it, the soft mutation met after yn and y: daeth becomes pan ddaeth ('when he came'), cwympodd becomes pan gwympodd ('when it fell'). After yn, a noun softens just as an adjective does: Ro'n i'n was ('I was a servant', from gwas), Roedd Cai'n fachgen bach ('Cai was a little boy', from bachgen), roedd Mali'n fabi ('Mali was a baby', from babi).\n\nOlder rules return too. After the prepositions i ('to') and ar ('on'), a place name or a common noun softens (Pennod 16): yn ôl i Gwm Helyg ('back to Cwm Helyg'), ar do'r neuadd ('on the roof of the hall', from to). Y ('the') softens a feminine singular noun (Pennod 2): y frenhines ('the queen', from brenhines), y delyn ('the harp', from telyn), y flanced ('the blanket', from blanced), y wledd ('the feast', from gwledd)."
   },
   "pensa": {
     "A": {
@@ -1569,20 +1570,25 @@
             },
             {
               "id": "a8",
-              "prompt": "Ddaeth Myrddin i'r drws? (✓) →",
+              "prompt": "Wnest ti weld y bardd? (✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
                 "Do",
-                "Do. Daeth e i'r drws",
-                "Do. Daeth Myrddin i'r drws",
-                "Daeth e i'r drws",
-                "Daeth Myrddin i'r drws"
+                "Do. Wnes i weld y bardd",
+                "Do, wnes i weld y bardd",
+                "Wnes i weld y bardd",
+                "Do. Gwelais i'r bardd",
+                "Gwelais i'r bardd"
               ],
               "common_wrong": [
                 {
                   "answer": "Oedd",
                   "hint": "Ddaeth …? → Do / Naddo"
                 }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l17-s132",
+                "cy-brenin-01-l17-s030"
               ]
             }
           ]
@@ -1730,149 +1736,141 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Ble mae'r teulu yn y nos?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Wrth y tân",
-            "Yn y neuadd",
-            "Wrth y tân yn y neuadd",
-            "Mae'r teulu wrth y tân",
-            "Mae'r teulu wrth y tân, yn y neuadd",
-            "Mae'r teulu yn y neuadd",
-            "Mae'r teulu wrth y tân yn y nos",
-            "Yn y nos, mae'r teulu wrth y tân",
-            "Wrth y tân yn y nos",
-            "Mae'r teulu yn y neuadd yn y nos",
-            "Yn y nos, mae'r teulu yn y neuadd",
-            "Yn y neuadd yn y nos",
-            "Mae'r teulu wrth y tân yn y neuadd yn y nos",
-            "Yn y nos, mae'r teulu wrth y tân yn y neuadd",
-            "Wrth y tân yn y neuadd yn y nos",
-            "Wrth y tân, mae'r teulu",
-            "Yn y neuadd, mae'r teulu",
-            "Wrth y tân yn y neuadd, mae'r teulu"
+          "prompt": "Mae hi'n aeaf, ac mae'r nos yn hir. Ble mae'r teulu?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae'r teulu yn y neuadd, wrth y tân mawr.",
+          "key_terms": [
+            "cy-tan",
+            "cy-neuadd"
           ],
-          "model_answer": "Mae'r teulu wrth y tân, yn y neuadd.",
+          "rubric": "Says they are by the fire (in the hall).",
           "source_segment_ids": [
-            "cy-brenin-01-l17-s004"
+            "cy-brenin-01-l17-s004",
+            "cy-brenin-01-l17-s005",
+            "cy-brenin-01-l17-s006",
+            "cy-brenin-01-l17-s007"
           ]
         },
         {
           "id": "c2",
           "prompt": "Ble oedd Cynyr pan oedd e'n ifanc?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Yng Nghaerllion",
-            "Yn llys y Brenin Uthr",
-            "Roedd e yng Nghaerllion",
-            "Yng Nghaerllion, yn llys y Brenin Uthr",
-            "Roedd e yng Nghaerllion, yn llys y Brenin Uthr",
-            "Roedd e yn llys y Brenin Uthr",
-            "Roedd Cynyr yn llys y Brenin Uthr",
-            "Roedd Cynyr yng Nghaerllion",
-            "Roedd Cynyr yng Nghaerllion, yn llys y Brenin Uthr",
-            "Yng Nghaerllion, roedd Cynyr",
-            "Yng Nghaerllion, roedd e",
-            "Yn llys y Brenin Uthr, roedd Cynyr",
-            "Yn llys y Brenin Uthr, roedd e",
-            "Yng Nghaerllion, yn llys y Brenin Uthr, roedd Cynyr",
-            "Yng Nghaerllion, yn llys y Brenin Uthr, roedd e"
+          "answer_mode": "self_check",
+          "model_answer": "Roedd e'n was yn llys y Brenin Uthr, yng Nghaerllion.",
+          "key_terms": [
+            "cy-gwas",
+            "cy-llys"
           ],
-          "model_answer": "Roedd e yng Nghaerllion, yn llys y Brenin Uthr.",
+          "rubric": "Says he was at King Uthr's court (in Caerllion).",
           "source_segment_ids": [
-            "cy-brenin-01-l17-s018"
+            "cy-brenin-01-l17-s018",
+            "cy-brenin-01-l17-s020"
           ]
         },
         {
           "id": "c3",
-          "prompt": "Beth oedd gwaith Cynyr yn y castell?",
+          "prompt": "Cwympodd y cleddyf o ddwylo Cynyr ar droed y bardd. Beth oedd y brenin yn wneud?",
           "answer_mode": "self_check",
-          "model_answer": "Roedd e'n was. Roedd e'n arfer cario cleddyf y brenin.",
-          "rubric": "Says he was a servant (gwas) or that he used to carry the king's sword.",
+          "model_answer": "Roedd y brenin yn chwerthin.",
           "key_terms": [
-            "cy-gwas",
-            "cy-cleddyf"
+            "cy-chwerthin",
+            "cy-brenin"
           ],
+          "rubric": "Says the king laughed.",
           "source_segment_ids": [
-            "cy-brenin-01-l17-s047"
-          ]
-        },
-        {
-          "id": "c4",
-          "prompt": "Oedd y brenin yn ddig pan gwympodd y cleddyf?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Nac oedd",
-            "Nac oedd. Roedd e'n chwerthin",
-            "Nac oedd, doedd e ddim",
-            "Doedd e ddim yn ddig",
-            "Nac oedd. Doedd e ddim yn ddig",
-            "Nac oedd. Doedd y brenin ddim yn ddig",
-            "Doedd y brenin ddim yn ddig",
-            "Nac oedd. Roedd y brenin yn chwerthin",
-            "Roedd e'n chwerthin",
-            "Doedd e ddim",
-            "Roedd y brenin yn chwerthin"
-          ],
-          "model_answer": "Nac oedd. Roedd e'n chwerthin.",
-          "source_segment_ids": [
+            "cy-brenin-01-l17-s035",
+            "cy-brenin-01-l17-s036",
+            "cy-brenin-01-l17-s038",
             "cy-brenin-01-l17-s039"
           ]
         },
         {
-          "id": "c5",
+          "id": "c4",
           "prompt": "Sut oedd y tywydd ar noson y storm?",
           "answer_mode": "self_check",
-          "model_answer": "Roedd y tywydd yn ofnadwy: roedd eira, gwynt, taranau a mellt.",
-          "rubric": "Gives a story-supported weather description: ofnadwy, or one detail (snow, strong wind, thunder or lightning). A short answer or a past-tense sentence is acceptable.",
+          "model_answer": "Roedd y tywydd yn ofnadwy: roedd eira, gwynt cryf, taranau a mellt.",
           "key_terms": [
-            "cy-eira",
-            "cy-taran",
-            "cy-mellten",
+            "cy-tywydd",
             "cy-ofnadwy"
           ],
+          "rubric": "Gives one story detail of the weather: terrible, snow, strong wind, thunder or lightning.",
           "source_segment_ids": [
-            "cy-brenin-01-l17-s070"
+            "cy-brenin-01-l17-s069",
+            "cy-brenin-01-l17-s070",
+            "cy-brenin-01-l17-s071",
+            "cy-brenin-01-l17-s072"
           ]
         },
         {
-          "id": "c6",
-          "prompt": "Beth oedd yn y flanced?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Babi",
-            "Babi bach",
-            "Roedd babi yn y flanced",
-            "Roedd babi bach yn y flanced",
-            "Babi oedd yn y flanced",
-            "Babi bach oedd yn y flanced"
-          ],
+          "id": "c5",
+          "prompt": "Daeth Myrddin at y drws drwy'r storm. Beth oedd yn y flanced yn ei ddwylo e?",
+          "answer_mode": "self_check",
           "model_answer": "Roedd babi bach yn y flanced.",
+          "key_terms": [
+            "cy-blanced",
+            "cy-babi"
+          ],
+          "rubric": "Says a (small) baby.",
           "source_segment_ids": [
+            "cy-brenin-01-l17-s082",
+            "cy-brenin-01-l17-s085",
+            "cy-brenin-01-l17-s087",
             "cy-brenin-01-l17-s088"
           ]
         },
         {
-          "id": "c7",
-          "prompt": "Pam dyw Mali ddim yn cysgu?",
+          "id": "c6",
+          "prompt": "Mae Mali'n gofyn i Myrddin: \"Pwy oedd y babi?\" Beth mae Myrddin yn wneud?",
           "answer_mode": "self_check",
-          "model_answer": "Mae hi'n cofio'r stori, ac mae hi eisiau gwybod: pwy oedd y babi, a ble mae'r babi nawr?",
-          "rubric": "Gives a reason: she keeps thinking about the story, the baby or the secret.",
+          "model_answer": "Mae e'n gwenu, ond dyw e ddim yn ateb.",
           "key_terms": [
-            "cy-babi",
-            "cy-cyfrinach",
-            "cy-stori"
+            "cy-gwenu",
+            "cy-ateb"
           ],
+          "rubric": "Says Myrddin does not answer (he smiles, or talks about the weather).",
           "source_segment_ids": [
-            "cy-brenin-01-l17-s129"
+            "cy-brenin-01-l17-s119",
+            "cy-brenin-01-l17-s120",
+            "cy-brenin-01-l17-s121",
+            "cy-brenin-01-l17-s122",
+            "cy-brenin-01-l17-s123"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "Mae Arth yn cysgu. Pam dyw Mali ddim yn cysgu?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae hi'n cofio stori Dad, a dyw hi ddim yn deall: pwy oedd y babi yn y flanced?",
+          "key_terms": [
+            "cy-cofio",
+            "cy-deall"
+          ],
+          "rubric": "Gives the story's reason: she keeps thinking about Cynyr's story (the baby in the blanket).",
+          "source_segment_ids": [
+            "cy-brenin-01-l17-s124",
+            "cy-brenin-01-l17-s125",
+            "cy-brenin-01-l17-s126",
+            "cy-brenin-01-l17-s127",
+            "cy-brenin-01-l17-s128",
+            "cy-brenin-01-l17-s129",
+            "cy-brenin-01-l17-s130",
+            "cy-brenin-01-l17-s131"
           ]
         },
         {
           "id": "c8",
           "prompt": "A ti? Ble ro't ti'n byw yn y gorffennol?",
           "answer_mode": "self_check",
-          "model_answer": "Ro'n i'n byw mewn tref fach. / Ro'n i'n byw yng Nghymru.",
-          "rubric": "Gives a past home location. A short place phrase or Ro'n i'n byw yn / yng / mewn + place is acceptable."
+          "model_answer": "Ro'n i'n byw mewn tref fach.",
+          "key_terms": [
+            "cy-byw",
+            "cy-gorffennol"
+          ],
+          "rubric": "Names a place where they used to live.",
+          "source_segment_ids": [
+            "cy-brenin-01-l17-s008",
+            "cy-brenin-01-l17-s018",
+            "cy-brenin-01-l17-s064"
+          ]
         }
       ]
     }

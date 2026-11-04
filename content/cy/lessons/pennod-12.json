@@ -1486,8 +1486,8 @@
       "blocks": [
         {
           "enghraifft": {
-            "prompt": "Dw i'n bwyta'r bara. (ddoe) →",
-            "answer": "Wnes i fwyta'r bara."
+            "prompt": "Dw i'n pysgota. (ddoe) →",
+            "answer": "Wnes i bysgota."
           },
           "items": [
             {
@@ -1560,31 +1560,50 @@
           "items": [
             {
               "id": "a4",
-              "prompt": "Rwyt ti'n bwyta'r cawl. (neithiwr) → ?",
+              "prompt": "Rwyt ti'n gweld Dafi. (ddoe) → ?",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Wnest ti fwyta'r cawl?",
-                "Wnest ti fwyta'r cawl neithiwr?",
-                "Neithiwr, wnest ti fwyta'r cawl?"
+                "Wnest ti weld Dafi?",
+                "Wnest ti weld Dafi ddoe?",
+                "Ddoe, wnest ti weld Dafi?",
+                "Welaist ti Dafi?",
+                "Welaist ti Dafi ddoe?",
+                "Ddoe, welaist ti Dafi?"
               ],
               "common_wrong": [
                 {
-                  "answer": "Wnes i fwyta'r cawl?",
+                  "answer": "Wnes i weld Dafi?",
                   "hint": "ti → Wnest ti"
+                },
+                {
+                  "answer": "Wnest ti gweld Dafi?",
+                  "hint": "wnest ti + g → (g)weld"
                 }
               ],
-              "mutation_hint": true
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l12-s054"
+              ]
             },
             {
               "id": "a5",
-              "prompt": "Rwyt ti'n darllen y llyfr. (ddoe) → ?",
+              "prompt": "Rwyt ti'n cuddio gydag Arth. (ddoe) → ?",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Wnest ti ddarllen y llyfr?",
-                "Wnest ti ddarllen y llyfr ddoe?",
-                "Ddoe, wnest ti ddarllen y llyfr?"
+                "Wnest ti guddio gydag Arth?",
+                "Wnest ti guddio gydag Arth ddoe?",
+                "Ddoe, wnest ti guddio gydag Arth?"
               ],
-              "mutation_hint": true
+              "mutation_hint": true,
+              "common_wrong": [
+                {
+                  "answer": "Wnest ti cuddio gydag Arth?",
+                  "hint": "wnest ti + c → g"
+                }
+              ],
+              "source_segment_ids": [
+                "cy-brenin-01-l12-s048"
+              ]
             }
           ]
         },

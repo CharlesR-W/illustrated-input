@@ -25,7 +25,8 @@
       "Fluent review 2026-10-12 applied: letter recognition now uses 'gallu darllen' (s055, s057, s106) instead of 'gwybod'; 'gwybod hanner yr wyddor' (s100, s117) kept as the reviewer's qualified verdict allows; s067 'wedi llosgi' (mas dropped, matching C.c4); A.a4, C.c1, C.c5 keys widened; A.a5/A.a6 (and their Enghraifft) now cue 'pob + …' so 'Bob dydd …' is explicitly required and pob → bob is what is tested; C.c7 asks 'Beth mae hi'n ysgrifennu?'. Review-question verdicts, all accepted unchanged: s013 'Bob dydd Llun, …' (no ar; comma fine); s011 'Dim ond chwarter awr! Dw i byth yn hwyr!'; s057 no comma after Weithiau; s070 'Aros funud' (adverbial SM of duration); s083 'afalau'r hydref yw'r rhain'; s136 'Dw i wedi darllen am flynyddoedd'; s122–126 verbless ordinal recap; s007 Monday-first week; s131 'Pryd dw i'n gallu darllen llyfr?' as colloquial present modal; 'tabled gŵyr' keeps the circumflex on the mutated form.",
       "s007 now carries an antonym gloss 'cyntaf ↔ olaf': with the phrase-lexeme checker fix, 'olaf' is no longer licensed by Pennod 12's 'yn olaf' outside that phrase. The gloss also supplies the 'context+gloss' introduction of cyntaf declared for s007. s031 also gains the radical gloss 'y wers gyntaf ← cyntaf' that the checker asked for (first mutated use of a new word).",
       "Recall pass 2026-10-18: recurrences added for cy-ffair (s014), cy-olwyn (s018, Pero's running gag from Penodau 15 and 17), cy-cwpwrdd / cy-allwedd (s058, which keeps its silff), cy-pump (s082 'pum pastai'), cy-llygoden / cy-nyth (new s139, Arth's wrong suspect before Dafi is found; sets up the mouse nest in Pennod 19), cy-tafarnwr / cy-gwerthu / cy-rhad (new s140, s102 split), cy-pedair (s110), cy-brenhines (s115), cy-curo (s118, Myrddin knocks as in Penodau 17 and 19). Voice: s087 Modlen now hides the bread (the pasties were already gone in s086, and s088 is about bread). Padding: retired s111 (a looking beat repeated by s115); s024 shortened. Note: s008 'codi'n gynnar' is a real use of cy-cynnar, but the checker resolves 'gynnar' here to the plan form 'yn gynnar / yn hwyr', so it does not count for Pennod 17's recall.",
-      "Audit-fix pass 2026-10-19: glosses no longer use munud before its first use (s070): s011 'chwarter awr = ¼ awr', s059 'awr a hanner = 1½ awr'. s002 had three glosses in one sentence; the two radical glosses (bob dydd ← pob dydd, a phob nos ← pob nos) are merged into one ('bob dydd · a phob nos ← pob'). Pensa A.a1–a3, A.a5–a6 and C.c3 accept full-sentence answers."
+      "Audit-fix pass 2026-10-19: glosses no longer use munud before its first use (s070): s011 'chwarter awr = ¼ awr', s059 'awr a hanner = 1½ awr'. s002 had three glosses in one sentence; the two radical glosses (bob dydd ← pob dydd, a phob nos ← pob nos) are merged into one ('bob dydd · a phob nos ← pob'). Pensa A.a1–a3, A.a5–a6 and C.c3 accept full-sentence answers.",
+      "Owner fix 2026-11-04: Pensum C converted to open self_check questions (eight items in story order, all self_check with rubric, key_terms and sources; the exact c1, c3, c5 and c7 converted and accepted_answers removed; the yes/no 'Oes bara newydd…? Pam?' and the stone-by-the-church item dropped; new c2 (Arth's secret), c4 (he reads 'chi' for 'ci'); c5 asks what happens to the candle; the one Pam? is c6 (no wax: Dafi has eaten it, s096–s098); c8 A ti? rubric no longer asks for a mutation). nodyn_en expanded to a full English explanation. Grammar tables limited to forms the story shows: dydd Mawrth row now 'i'r ffair' (s014); the Mae hi'n chwech/naw/ddeuddeg o'r gloch cells (only am … is shown) replaced by attested am-phrases. Pensum A a4 recast from (9:00) Mae hi'n naw o'r gloch to (10:00) Mae hi'n ddeg o'r gloch (s121). The checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content). Codex review (GPT-6.1-Sol, 2026-11-04) fixes: the byth sentence no longer says the verb stays positive; recall a10 and its example drilled dwy bastai / dau geffyl, unattested in prose, now dwy geiniog / dau gaws (14:s040, s026); the pan ddaeth row (chapter 17 only) dropped from Treigladau; c3 and c5 prompts tightened; untranslated examples translated."
     ],
     "review_questions": []
   },
@@ -1375,7 +1376,7 @@
           ],
           [
             "dydd Mawrth",
-            "Mae Cynyr yn mynd i'r dref."
+            "Mae Cynyr yn mynd i'r ffair."
           ],
           [
             "dydd Mercher",
@@ -1407,24 +1408,20 @@
         ],
         "rows": [
           [
-            "Mae hi'n chwech o'r gloch.",
-            "am chwech o'r gloch"
-          ],
-          [
             "Mae hi'n wyth o'r gloch.",
             "am wyth o'r gloch"
-          ],
-          [
-            "Mae hi'n naw o'r gloch.",
-            "am naw o'r gloch"
           ],
           [
             "Mae hi'n ddeg o'r gloch.",
             "am ddeg o'r gloch"
           ],
           [
-            "Mae hi'n ddeuddeg o'r gloch.",
-            "am ddeuddeg o'r gloch"
+            "",
+            "am chwech · am naw o'r gloch"
+          ],
+          [
+            "",
+            "am ddau · am dri · am ddeuddeg o'r gloch"
           ]
         ]
       },
@@ -1514,11 +1511,6 @@
             "yn + rhif",
             "mae hi'n ddeg o'r gloch",
             "Pennod 1"
-          ],
-          [
-            "pan + berf",
-            "pan ddaeth",
-            "Pennod 17"
           ]
         ]
       }
@@ -1561,7 +1553,7 @@
         "segment_id": "cy-brenin-01-l18-s057"
       }
     ],
-    "nodyn_en": "Days are dydd + name: dydd Llun (Monday) … dydd Sul (Sunday). Time: Faint o'r gloch yw hi? — Mae hi'n wyth o'r gloch. 'At eight' is am wyth o'r gloch; am and yn mutate numbers (am ddeg, mae hi'n ddeg). Pob 'every' becomes bob in time phrases: bob dydd. Ordinals: y dydd cyntaf, yr ail ddydd (+ SM)."
+    "nodyn_en": "This chapter is about time: the days of the week, the hours of the clock, and words for how often something happens.\n\nThe days are named with dydd ('day') and a name: dydd Llun ('Monday'), dydd Mawrth ('Tuesday'), dydd Mercher ('Wednesday'), dydd Iau ('Thursday'), dydd Gwener ('Friday'), dydd Sadwrn ('Saturday'), dydd Sul ('Sunday'). Dydd Llun yw'r dydd cyntaf, a dydd Sul yw'r dydd olaf ('Monday is the first day, and Sunday is the last day'). 'On Saturday' is ar ddydd Sadwrn, with dydd softened after ar (Pennod 16). For the evening, nos ('night') replaces dydd, and Llun softens after it: Mae'r wers gyntaf nos Lun ('The first lesson is on Monday night'). When the story counts days it uses diwrnod: Mae saith diwrnod mewn wythnos ('There are seven days in a week'), Pedwar diwrnod o wersi ('Four days of lessons').\n\nTo ask the time, say Faint o'r gloch yw hi? ('What time is it?', literally 'How much of the clock is it?'). The answer is Mae hi'n … o'r gloch: Mae hi'n wyth o'r gloch ('It is eight o'clock'), mae hi'n ddeg o'r gloch ('it is ten o'clock'), where deg softens after yn. Dafi, reading the watch, says only Wyth o'r gloch! ('Eight o'clock!'). The hi in these sentences means 'it', as in Mae hi'n oer ('It is cold', Pennod 17).\n\nTo say when something happens, ask Pryd? ('When?') and answer with am ('at'). Am causes the soft mutation, the softening of a word's first sound: am ddeg o'r gloch ('at ten o'clock', from deg), am ddeuddeg o'r gloch ('at twelve o'clock', from deuddeg), am ddau o'r gloch ('at two o'clock', from dau), am dri o'r gloch ('at three o'clock', from tri). Chwech, wyth and naw begin with sounds the soft mutation does not touch: am chwech o'r gloch ('at six o'clock'), am wyth o'r gloch ('at eight o'clock'), am naw o'r gloch ('at nine o'clock'). Am can also mean 'for' a length of time: am chwarter awr ('for a quarter of an hour'), am amser hir ('for a long time'), am flynyddoedd ('for years', from blynyddoedd). A lesson can last awr a hanner ('an hour and a half'). In Aros funud ('Wait a minute') munud softens without a preposition in front of it.\n\nPob means 'every'. When it says when something happens, it softens to bob: bob dydd ('every day'), bob bore ('every morning'), bob nos ('every night'), Bob dydd Llun, mae Cai'n ymarfer ('Every Monday, Cai practises'). After a ('and') it takes the aspirate mutation instead, p to ph: bob dydd a phob nos ('every day and every night'), A phob dydd Sul ('And every Sunday').\n\nTwo more words say how often. Byth means 'never'. In a negative sentence it takes the place of ddim, and with 'I' the verb form stays dw i, as in Dw i ddim …: Dw i byth yn hwyr! ('I'm never late!'), Dw i byth yn darllen ('I never read'). Paid byth â … means 'never …!' as an order: Dafi: paid byth â chyffwrdd â'r pasteiod! ('Dafi: never touch the pies!'), with c to ch after â. Weithiau means 'sometimes': Weithiau mae Dafi'n bwyta'r bara ('Sometimes Dafi eats the bread').\n\nOrdinal numbers say which one in a row: first, second, third, fourth. Cyntaf ('first') comes after its noun, and softens after a feminine noun as adjectives do: y dydd cyntaf ('the first day'), y wers gyntaf ('the first lesson'), y llythyren gyntaf ('the first letter'). The others come before the noun. Ail ('second') softens the noun after it, even ll-: yr ail ddydd ('the second day'), yr ail lythyren ('the second letter'). Trydydd ('third') and pedwerydd ('fourth') leave dydd unchanged: y trydydd dydd ('the third day'), y pedwerydd dydd ('the fourth day'). Olaf ('last') follows the noun, like cyntaf: y dydd olaf ('the last day').\n\nMyrddin's answer lists units of time: munud ('minute'), awr ('hour'), wythnos ('week'), mis ('month'), blwyddyn ('year'). Mewn before them means 'in (a)': Mewn munud? Mewn awr? Mewn wythnos? ('In a minute? In an hour? In a week?'). Mae deuddeg mis mewn blwyddyn ('There are twelve months in a year'). The seasons are gwanwyn ('spring'), haf ('summer'), hydref ('autumn') and gaeaf ('winter')."
   },
   "pensa": {
     "A": {
@@ -1633,18 +1625,23 @@
             },
             {
               "id": "a4",
-              "prompt": "Faint o'r gloch yw hi? (9:00)",
+              "prompt": "Faint o'r gloch yw hi? (10:00)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae hi'n naw o'r gloch.",
-                "Naw o'r gloch.",
-                "Naw o'r gloch yw hi"
+                "Mae hi'n ddeg o'r gloch.",
+                "Deg o'r gloch.",
+                "Deg o'r gloch yw hi"
               ],
               "common_wrong": [
                 {
-                  "answer": "Am naw o'r gloch.",
-                  "hint": "Faint o'r gloch yw hi? → Mae hi'n …"
+                  "answer": "Mae hi'n deg o'r gloch.",
+                  "hint": "yn + d → dd"
                 }
+              ],
+              "mutation_hint": true,
+              "source_segment_ids": [
+                "cy-brenin-01-l18-s120",
+                "cy-brenin-01-l18-s121"
               ]
             }
           ]
@@ -1740,20 +1737,31 @@
         },
         {
           "enghraifft": {
-            "prompt": "Mae ___ yn y stabl. (2 + ceffyl)",
-            "answer": "dau geffyl"
+            "prompt": "Mae ___ ar y bwrdd. (2 + caws)",
+            "answer": "dau gaws"
           },
           "items": [
             {
               "id": "a10",
-              "prompt": "Mae ___ ar y bwrdd. (2 + pastai)",
+              "prompt": "Mae Arth yn talu ___ i'r tafarnwr. (2 + ceiniog)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "dwy bastai"
+                "dwy geiniog"
               ],
               "mutation_hint": true,
               "recall_of": "G14",
-              "explanation": "pastai (b.) → dwy + SM"
+              "explanation": "pastai (b.) → dwy + SM",
+              "common_wrong": [
+                {
+                  "answer": "dau geiniog",
+                  "hint": "ceiniog (b.) → dwy"
+                },
+                {
+                  "answer": "dwy ceiniog",
+                  "hint": "dwy + c → g"
+                }
+              ],
+              "source_segment_ids": []
             }
           ]
         }
@@ -1869,133 +1877,118 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Pryd mae Dafi'n cynnau'r ffwrn?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Am chwech o'r gloch",
-            "Bob bore",
-            "Bob bore, am chwech o'r gloch",
-            "Mae Dafi'n cynnau'r ffwrn am chwech o'r gloch",
-            "Mae Dafi yn cynnau'r ffwrn bob bore",
-            "Bob bore, mae Dafi yn cynnau'r ffwrn",
-            "Mae e yn cynnau'r ffwrn bob bore",
-            "Bob bore, mae e yn cynnau'r ffwrn",
-            "Am chwech o'r gloch, mae Dafi yn cynnau'r ffwrn",
-            "Mae e yn cynnau'r ffwrn am chwech o'r gloch",
-            "Am chwech o'r gloch, mae e yn cynnau'r ffwrn",
-            "Mae Dafi yn cynnau'r ffwrn bob bore, am chwech o'r gloch",
-            "Bob bore, am chwech o'r gloch, mae Dafi yn cynnau'r ffwrn",
-            "Mae e yn cynnau'r ffwrn bob bore, am chwech o'r gloch",
-            "Bob bore, am chwech o'r gloch, mae e yn cynnau'r ffwrn",
-            "Am chwech o'r gloch, mae Dafi yn cynnau'r ffwrn bob bore",
-            "Am chwech o'r gloch, mae e yn cynnau'r ffwrn bob bore"
+          "prompt": "Bob bore, am chwech o'r gloch, beth mae Dafi'n wneud?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae e'n codi'n gynnar ac yn cynnau'r ffwrn i Modlen.",
+          "key_terms": [
+            "cy-cynnau",
+            "cy-ffwrn"
           ],
-          "model_answer": "Bob bore, am chwech o'r gloch.",
+          "rubric": "Says Dafi lights the oven (for Modlen).",
           "source_segment_ids": [
             "cy-brenin-01-l18-s008"
           ]
         },
         {
           "id": "c2",
-          "prompt": "Oes bara newydd yn y gegin ar ddydd Gwener? Pam?",
+          "prompt": "Mae cyfrinach gydag Arth yr wythnos yma. Beth yw'r gyfrinach?",
           "answer_mode": "self_check",
-          "model_answer": "Oes: mae Modlen yn pobi bara bob dydd Gwener.",
-          "rubric": "Says yes and gives the reason: Modlen bakes on Fridays.",
+          "model_answer": "Mae e eisiau darllen: mae e eisiau dysgu'r llythrennau gyda Mali.",
           "key_terms": [
-            "cy-pobi"
+            "cy-cyfrinach",
+            "cy-darllen"
           ],
+          "rubric": "Says Arth wants to learn to read (the letters).",
           "source_segment_ids": [
-            "cy-brenin-01-l18-s017"
+            "cy-brenin-01-l18-s022",
+            "cy-brenin-01-l18-s023",
+            "cy-brenin-01-l18-s025"
           ]
         },
         {
           "id": "c3",
-          "prompt": "Ble mae Arth a Mali'n mynd bob nos am wyth o'r gloch?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "I'r stabl",
-            "Maen nhw'n mynd i'r stabl",
-            "Mae Arth a Mali'n mynd i'r stabl",
-            "Maen nhw'n mynd i'r stabl am wyth o'r gloch",
-            "Mae Arth a Mali yn mynd i'r stabl bob nos",
-            "Bob nos, mae Arth a Mali yn mynd i'r stabl",
-            "I'r stabl bob nos",
-            "Mae Arth a Mali yn mynd i'r stabl am wyth o'r gloch",
-            "Am wyth o'r gloch, mae Arth a Mali yn mynd i'r stabl",
-            "I'r stabl am wyth o'r gloch",
-            "Mae Arth a Mali yn mynd i'r stabl bob nos am wyth o'r gloch",
-            "Bob nos am wyth o'r gloch, mae Arth a Mali yn mynd i'r stabl",
-            "I'r stabl bob nos am wyth o'r gloch",
-            "Maen nhw yn mynd i'r stabl bob nos",
-            "Bob nos, maen nhw yn mynd i'r stabl",
-            "Am wyth o'r gloch, maen nhw yn mynd i'r stabl",
-            "Maen nhw yn mynd i'r stabl bob nos am wyth o'r gloch",
-            "Bob nos am wyth o'r gloch, maen nhw yn mynd i'r stabl",
-            "I'r stabl, mae Arth a Mali yn mynd",
-            "I'r stabl, maen nhw yn mynd",
-            "Am wyth o'r gloch, mae Arth a Mali yn mynd i'r stabl bob nos",
-            "Am wyth o'r gloch, maen nhw yn mynd i'r stabl bob nos"
+          "prompt": "Ble mae'r gwersi?",
+          "answer_mode": "self_check",
+          "model_answer": "Yn y stabl: mae Arth a Mali'n mynd i'r stabl.",
+          "key_terms": [
+            "cy-stabl"
           ],
-          "model_answer": "Maen nhw'n mynd i'r stabl."
+          "rubric": "Says the lessons are in the stable.",
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s030",
+            "cy-brenin-01-l18-s033"
+          ]
         },
         {
           "id": "c4",
-          "prompt": "Pam mae'r stabl yn dywyll ar y trydydd dydd?",
+          "prompt": "Ar y dydd cyntaf, mae Mali'n ysgrifennu \"ci\" yn y cwyr. Beth yw ateb Arth?",
           "answer_mode": "self_check",
-          "model_answer": "Mae'r gannwyll wedi llosgi.",
-          "rubric": "Gives the reason: the candle has burnt out.",
+          "model_answer": "\"Chi?\" Mae e'n darllen \"chi\", dim \"ci\".",
           "key_terms": [
-            "cy-cannwyll",
-            "cy-llosgi"
+            "cy-llythyren",
+            "cy-darllen"
+          ],
+          "rubric": "Says Arth reads it as 'chi' (not 'ci').",
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s037",
+            "cy-brenin-01-l18-s038",
+            "cy-brenin-01-l18-s039",
+            "cy-brenin-01-l18-s040",
+            "cy-brenin-01-l18-s041",
+            "cy-brenin-01-l18-s042"
           ]
         },
         {
           "id": "c5",
-          "prompt": "Pwy sy wedi bwyta'r cwyr?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Dafi",
-            "Dafi sy wedi bwyta'r cwyr",
-            "Dafi yw e",
-            "Dafi sydd wedi bwyta'r cwyr",
-            "Mae Dafi wedi bwyta'r cwyr",
-            "Y ddraig",
-            "Y ddraig sy wedi bwyta'r cwyr",
-            "Y ddraig sydd wedi bwyta'r cwyr",
-            "Mae'r ddraig wedi bwyta'r cwyr"
+          "prompt": "Ar y trydydd dydd, mae'r gannwyll yn fach iawn. Beth sy'n digwydd i'r gannwyll?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae'r gannwyll wedi llosgi, ac mae'r stabl yn dywyll: does dim golau.",
+          "key_terms": [
+            "cy-cannwyll",
+            "cy-llosgi"
           ],
-          "model_answer": "Dafi.",
+          "rubric": "Says the candle burns out (the stable goes dark).",
           "source_segment_ids": [
-            "cy-brenin-01-l18-s096"
+            "cy-brenin-01-l18-s060",
+            "cy-brenin-01-l18-s064",
+            "cy-brenin-01-l18-s065",
+            "cy-brenin-01-l18-s066",
+            "cy-brenin-01-l18-s067",
+            "cy-brenin-01-l18-s068"
           ]
         },
         {
           "id": "c6",
-          "prompt": "Ble mae Arth yn gweld llythrennau ar ddydd Sul?",
+          "prompt": "Ar ddydd Gwener, pam does dim cwyr ar y dabled?",
           "answer_mode": "self_check",
-          "model_answer": "Ar garreg wrth ddrws yr eglwys.",
-          "rubric": "Names the stone or its location by the church door. A short location answer is sufficient.",
+          "model_answer": "Mae Dafi wedi bwyta'r cwyr! Mae cwyr ar ei geg e.",
           "key_terms": [
-            "cy-carreg",
-            "cy-eglwys"
+            "cy-cwyr"
           ],
+          "rubric": "Says Dafi has eaten the wax.",
           "source_segment_ids": [
-            "cy-brenin-01-l18-s105"
+            "cy-brenin-01-l18-s095",
+            "cy-brenin-01-l18-s096",
+            "cy-brenin-01-l18-s097",
+            "cy-brenin-01-l18-s098"
           ]
         },
         {
           "id": "c7",
-          "prompt": "Ar ddydd Sul, yn y nos, mae Mali'n ysgrifennu yn y cwyr newydd. Beth mae hi'n ysgrifennu?",
-          "answer_mode": "exact",
-          "accepted_answers": [
-            "Brenin",
-            "Brenin yw e",
-            "Mae hi'n ysgrifennu Brenin",
-            "Mae Mali yn ysgrifennu Brenin"
+          "prompt": "Ar ddydd Sul, yn y nos, mae Mali'n ysgrifennu yn y cwyr newydd. Beth mae Arth yn ddarllen?",
+          "answer_mode": "self_check",
+          "model_answer": "Mae e'n darllen \"brenin\".",
+          "key_terms": [
+            "cy-brenin",
+            "cy-darllen"
           ],
-          "model_answer": "Brenin.",
+          "rubric": "Says he reads 'brenin'.",
           "source_segment_ids": [
-            "cy-brenin-01-l18-s113"
+            "cy-brenin-01-l18-s109",
+            "cy-brenin-01-l18-s110",
+            "cy-brenin-01-l18-s112",
+            "cy-brenin-01-l18-s113",
+            "cy-brenin-01-l18-s117"
           ]
         },
         {
@@ -2003,7 +1996,15 @@
           "prompt": "A ti? Pryd wyt ti'n codi bob bore?",
           "answer_mode": "self_check",
           "model_answer": "Dw i'n codi am saith o'r gloch.",
-          "rubric": "Gives when you get up. A short time expression or a full Dw i'n codi am … o'r gloch sentence is acceptable; mutate after am where required."
+          "key_terms": [
+            "cy-codi",
+            "cy-ph-or-gloch"
+          ],
+          "rubric": "Gives a time when they get up.",
+          "source_segment_ids": [
+            "cy-brenin-01-l18-s008",
+            "cy-brenin-01-l18-s009"
+          ]
         }
       ]
     }
