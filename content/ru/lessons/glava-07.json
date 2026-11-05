@@ -23,7 +23,9 @@
    "Workbook: three exercises of six items per section (12 exercises, 72 items); every item one gap with visible help (bracketed lemma, first letters, (в / на) or phrase choices of at most two words); drilled forms appear in the story by the end of their section. Pensum A 10 (2 recall: G05 говоря́т, G02 ба́бы), B 10 with a 13-word bank, C 8 open questions in story order with one Почему́? and «А ты?» last.",
    "Continuity: Ivan knows the truth from Глава 4 (Фёдор: «вся земля — здесь, своя земля»); Дарья is proud of it; Пётр is silent at the priest's and at supper; Дед has known Moscow (winter factory work) [?]; Misha (6) carries the first version; Силантий's joke plants his later land-buying (Глава 37).",
    "Fix 20261026T013800027-ru-mir-01-fix (review 20261026T012947150): F004 adds a margin gloss on s122 («ты за о́труб = ты хо́чешь о́труб») for the new 'in favour of' sense of за; gloss density is now 4.1 per 100 words, just over the Часть 1 target 2–4, accepted because the sense is not resolvable from за́ руку / за уро́к and the owner is learning from scratch. media.counts.margin_gloss 32 → 33 accordingly.",
-   "OPEN.md follow-up (2026-11-04): grammar.note_en expanded to a full English explanation (owner, 2026-11-04: explicit English grammar for every course; RULES §6), about 1188 words. The checker's 80-word cap is advisory; COURSE.md asks for several hundred words, and the note follows this chapter's own forms (story first; table, rule-line, margin-aid and exercise forms are named as such). Combined Codex review of the Главы 7–10 notes (cx 1104-092452-18104, gpt-6.1-sol, high) applied: the -у́ location form described as location after в/на (not 'only place'; году́ in Главы 9–10), ending rules scoped to the nouns shown (-ия nouns excluded), из + genitive limited to home towns, на миру́ translated 'among one's own people', о/про equivalence limited to topic-marking."
+   "OPEN.md follow-up (2026-11-04): grammar.note_en expanded to a full English explanation (owner, 2026-11-04: explicit English grammar for every course; RULES §6), about 1188 words. The checker's 80-word cap is advisory; COURSE.md asks for several hundred words, and the note follows this chapter's own forms (story first; table, rule-line, margin-aid and exercise forms are named as such). Combined Codex review of the Главы 7–10 notes (cx 1104-092452-18104, gpt-6.1-sol, high) applied: the -у́ location form described as location after в/на (not 'only place'; году́ in Главы 9–10), ending rules scoped to the nouns shown (-ия nouns excluded), из + genitive limited to home towns, на миру́ translated 'among one's own people', о/про equivalence limited to topic-marking.",
+   "2026-11-04 repair under parent audit rulings: substantial English explanation is required; unseen table cells individually labelled reference/preview; they do not license production. Audio remains suspended. Course-level later recurrence and deferred beats are handed to parent for OPEN/plan integration.",
+   "Repair audit: historical dated notes above are retained as adjudication history, not claims about current counts or scaffolding. Current checks and focused review govern readiness. English prompts are authorized by RULES7 owner2026-11-04. Deferred protected beats and course-level recurrence require parent plan/OPEN integration; see repair01-08 handoff manifest."
   ],
   "review_questions": [
    {
@@ -101,12 +103,16 @@
     "gloss_segment_id": "ru-mir-01-l07-s118"
    },
    {
-    "form": "Тебе́ хорошо́; мне — baseline dative pronouns (G08)",
+    "form": "Тебе́ хорошо́ — whole receptive experiencer expression at s044, supported by its contextual English meaning; not a general baseline dative licence and never required productively.",
     "gloss_segment_id": "ru-mir-01-l07-s044"
    },
    {
     "form": "непра́вда — не + пра́вда written as one word in the non-contrastive «Э́то непра́вда!» (s113, and the c7 model); пра́вда and не are known; the contrastive «не пра́вда» stays in s078, x3-3-6 and b10",
     "gloss_segment_id": "ru-mir-01-l07-s113"
+   },
+   {
+    "form": "Наве́рное, мне! — whole receptive elliptical recipient expression after продаёт, supported at first use by “Probably to me!”; not a general baseline dative licence; never required productively.",
+    "gloss_segment_id": "ru-mir-01-l07-s075"
    }
   ],
   "new_lexeme_ids": [
@@ -748,7 +754,7 @@
      },
      {
       "id": "ru-mir-01-l07-s018",
-      "text": "Он студе́нт. Мо́жет быть, она́ его́ зна́ет!",
+      "text": "Он студе́нт. Мо́жет быть, она́ его́ зна́ет! В университе́те у́чится Никола́й. Он у́чится в Москве́, не в Ряза́ни.",
       "speaker": "char-baba",
       "inference_aids": [
        {
@@ -813,7 +819,16 @@
      {
       "id": "ru-mir-01-l07-s024",
       "text": "Мой Фёдор хо́чет о́труб.",
-      "speaker": "char-darya"
+      "speaker": "char-darya",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "о́труб",
+        "gloss": "о́труб: вся земля́ в одно́м ме́сте",
+        "gloss_kind": "define"
+       }
+      ]
      },
      {
       "id": "ru-mir-01-l07-s025",
@@ -923,35 +938,23 @@
       "items": [
        {
         "id": "x1-1-1",
-        "prompt": "У́тром вся дере́вня в ___ (це́рковь).",
+        "prompt": "Ма́рья у коло́дца. А у́тром она́ в ___ (це́рковь).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "це́ркви"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s002"
-        ],
-        "common_wrong": [
-         {
-          "answer": "це́ркве",
-          "hint": "це́рковь → в це́ркви"
-         }
-        ],
-        "first_letters": 5
+        "first_letters": 1
        },
        {
         "id": "x1-1-2",
-        "prompt": "У Да́рьи ведро́, а в ___ (ведро́) вода́.",
+        "prompt": "Да́рья берёт ведро́. В ___ (ведро́) вода́.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "ведре́"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s005"
-        ],
-        "first_letters": 4
+        "first_letters": 1
        },
        {
         "id": "x1-1-3",
@@ -1044,16 +1047,13 @@
        },
        {
         "id": "x1-2-2",
-        "prompt": "Ба́бы говоря́т об ___ (учи́тельница).",
+        "prompt": "На́стя то́же говори́т об ___ (учи́тельница).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "учи́тельнице"
         ],
-        "first_letters": 3,
-        "source_segment_ids": [
-         "ru-mir-01-l07-s008"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x1-2-3",
@@ -1089,16 +1089,13 @@
        },
        {
         "id": "x1-2-5",
-        "prompt": "Фёдор хо́чет так: вся земля́ — в одно́м ___ (ме́сто).",
+        "prompt": "Не здесь и там, а в одно́м ___ (ме́сто) вся земля́.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "ме́сте"
         ],
-        "first_letters": 2,
-        "source_segment_ids": [
-         "ru-mir-01-l07-s027"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x1-2-6",
@@ -1196,7 +1193,7 @@
        },
        {
         "id": "x1-3-5",
-        "prompt": "Фёдор ___.",
+        "prompt": "У Фёдора три полосы́, но он ___ (what does he want?).",
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
@@ -1207,13 +1204,11 @@
          "хо́чет ла́вку",
          "живёт в шко́ле"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s027"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x1-3-6",
-        "prompt": "У Ми́ши копе́йка, и он идёт ___.",
+        "prompt": "Ми́ша хо́чет хлеб. Куда́ он идёт? — ___.",
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
@@ -1224,9 +1219,7 @@
          "в шко́лу",
          "в це́рковь"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s031"
-        ]
+        "first_letters": 1
        }
       ]
      }
@@ -1356,6 +1349,12 @@
       "text": "— О како́м зако́не? — спра́шивает сосе́д.",
       "paragraph_start": true,
       "speaker": "char-sosed"
+     },
+     {
+      "id": "ru-mir-01-l07-s037a",
+      "text": "— В но́вой газе́те пи́шут о но́вом зако́не, о бе́дных мужика́х и о бога́тых поме́щиках, — говори́т Сила́нтий.",
+      "paragraph_start": true,
+      "speaker": "char-silantij"
      },
      {
       "id": "ru-mir-01-l07-s038",
@@ -1583,7 +1582,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "фа́брике",
-        "gloss": "фа́брика: большо́й дом, там рабо́тают",
+        "gloss": "фа́брика: там де́лают ла́мпы",
         "gloss_kind": "define",
         "covers_lexeme_ids": [
          "ru-fabrika"
@@ -1708,42 +1707,33 @@
        },
        {
         "id": "x2-1-4",
-        "prompt": "Где хозя́ин живёт хорошо́? — На ___ (своя́) земле́.",
+        "prompt": "О ___ (но́вый) зако́не чита́ют мужики́.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "свое́й"
+         "но́вом"
         ],
-        "first_letters": 3,
-        "source_segment_ids": [
-         "ru-mir-01-l07-s043"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x2-1-5",
-        "prompt": "Где Фёдор хо́чет жить? Его́р говори́т: «В Москве́, на ___ (фа́брика)!»",
+        "prompt": "В ___ (но́вая) газе́те — но́вости из Москвы́.",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "фа́брике"
+         "но́вой"
         ],
-        "first_letters": 3,
-        "source_segment_ids": [
-         "ru-mir-01-l07-s052"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x2-1-6",
-        "prompt": "— О ___ (како́й) зако́не? — спра́шивает сосе́д.",
+        "prompt": "О ___ (како́й) зако́не пи́шут в газе́те?",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "како́м"
         ],
-        "first_letters": 2,
-        "source_segment_ids": [
-         "ru-mir-01-l07-s037"
-        ]
+        "first_letters": 1
        }
       ]
      },
@@ -1764,14 +1754,11 @@
       "items": [
        {
         "id": "x2-2-1",
-        "prompt": "Мужики́ сидя́т ___ мешка́х. (в / на)",
+        "prompt": "Кни́га ___ столе́, а вода́ в ведре́. (в / на)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "на"
-        ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s034"
         ]
        },
        {
@@ -1847,7 +1834,7 @@
       "items": [
        {
         "id": "x2-3-1",
-        "prompt": "Сила́нтий стои́т у стола́ и ___.",
+        "prompt": "Сила́нтий не говори́т: он ___. (What is he doing?)",
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
@@ -1858,13 +1845,11 @@
          "пи́шет кни́гу",
          "смо́трит в окно́"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s035"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x2-3-2",
-        "prompt": "Зако́н говори́т: мо́жно рабо́тать на ___.",
+        "prompt": "Своя́ земля́: мужи́к рабо́тает на ___.",
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
@@ -1875,9 +1860,7 @@
          "фа́брике",
          "мешка́х"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s038"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x2-3-3",
@@ -2148,29 +2131,23 @@
       "items": [
        {
         "id": "x3-1-1",
-        "prompt": "Пётр ду́мает о ___ и о сы́не. (мн.)",
+        "prompt": "Оте́ц Алексе́й чита́ет и ду́мает о ___ (кни́ги).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "кни́гах"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s068"
-        ],
-        "first_letters": 4
+        "first_letters": 1
        },
        {
         "id": "x3-1-2",
-        "prompt": "Пётр ду́мает о кни́гах и о ___ (сын).",
+        "prompt": "Ба́тюшка спра́шивает Петра́ о ___ (сын).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "сы́не"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s068"
-        ],
-        "first_letters": 3
+        "first_letters": 1
        },
        {
         "id": "x3-1-3",
@@ -2303,13 +2280,13 @@
        },
        {
         "id": "x3-2-5",
-        "prompt": "На́стя в избе́. → На́стя идёт в ___.",
+        "prompt": "Сосе́д идёт в ___ (ла́вка).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
-         "избу́"
+         "ла́вку"
         ],
-        "first_letters": 2
+        "first_letters": 1
        },
        {
         "id": "x3-2-6",
@@ -2354,7 +2331,7 @@
        },
        {
         "id": "x3-3-2",
-        "prompt": "Таки́е кни́ги чита́ют студе́нты ___.",
+        "prompt": "Где у́чатся студе́нты? — ___.",
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
@@ -2365,9 +2342,7 @@
          "в ла́вке",
          "у коло́дца"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s064"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x3-3-3",
@@ -2405,20 +2380,18 @@
        },
        {
         "id": "x3-3-5",
-        "prompt": "Сила́нтий смеётся: «Мо́жет быть, он продаёт зе́млю? ___»",
+        "prompt": "Who hopes to receive the land if Fyodor sells? — ___.",
         "mode": "recognition",
         "answer_mode": "choice",
         "accepted_answers": [
-         "Наве́рное, мне!"
+         "Сила́нтий Кузьми́ч"
         ],
         "choices": [
-         "Наве́рное, мне!",
-         "Кака́я но́вость!",
-         "Я не зна́ю!"
+         "Сила́нтий Кузьми́ч",
+         "Пётр Матве́евич",
+         "Ива́н Петро́вич"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s075"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x3-3-6",
@@ -2802,7 +2775,7 @@
         "ref": "ru-mir-01-l07-svg-slukh",
         "src": "media/diagrams/ru-mir-01-l07-svg-slukh.svg",
         "status": "draft",
-        "alt": "A map of how the rumour travels: the well, the shop, the priest's house and back to the well, with the three versions of the news on the arrows.",
+        "alt": "A compressed route of the rumour from the well through the shop and priest to the house.",
         "covers_lexeme_ids": [
          "ru-slukh",
          "ru-kolodets"
@@ -2976,16 +2949,13 @@
        },
        {
         "id": "x4-1-2",
-        "prompt": "А в ___ зимо́й то́лько ба́бы и де́ти. (мн.)",
+        "prompt": "Мужики́ в Москве́, а де́ти в ___ (изба́; plural).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "и́збах"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s087"
-        ],
-        "first_letters": 3
+        "first_letters": 1
        },
        {
         "id": "x4-1-3",
@@ -3015,29 +2985,23 @@
        },
        {
         "id": "x4-1-5",
-        "prompt": "— Я хочу́ говори́ть об ___ (о́труб) на схо́де.",
+        "prompt": "О земле́ говоря́т мужики́. Фёдор говори́т об ___ (о́труб).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "о́трубе"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s115"
-        ],
-        "first_letters": 5
+        "first_letters": 1
        },
        {
         "id": "x4-1-6",
-        "prompt": "Ведро́ — на ___ (земля́).",
+        "prompt": "Да́рья не берёт ведро́: оно́ на ___ (земля́).",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "земле́"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s106"
-        ],
-        "first_letters": 4
+        "first_letters": 1
        }
       ]
      },
@@ -3180,15 +3144,13 @@
        },
        {
         "id": "x4-3-3",
-        "prompt": "— Он и но́чью ду́мает о земле́, о свое́й ___.",
+        "prompt": "О чём ду́мает Фёдор? О свое́й ___. (земля́)",
         "mode": "productive",
         "answer_mode": "exact",
         "accepted_answers": [
          "земле́"
         ],
-        "source_segment_ids": [
-         "ru-mir-01-l07-s098"
-        ]
+        "first_letters": 1
        },
        {
         "id": "x4-3-4",
@@ -3308,11 +3270,11 @@
       "о кни́гах"
      ],
      [
-      "и́збы",
+      "и́збы [reference/preview]",
       "в и́збах"
      ],
      [
-      "фа́брики",
+      "фа́брики [reference/preview]",
       "на фа́бриках"
      ],
      [
@@ -3338,7 +3300,7 @@
     ],
     "rows": [
      [
-      "одно́ ме́сто",
+      "одно́ ме́сто [reference/preview]",
       "в одно́м ме́сте"
      ],
      [
@@ -3364,6 +3326,22 @@
      [
       "о́труб",
       "об о́трубе"
+     ],
+     [
+      "но́вая газе́та",
+      "в но́вой газе́те"
+     ],
+     [
+      "но́вый зако́н",
+      "о но́вом зако́не"
+     ],
+     [
+      "бе́дные мужики́",
+      "о бе́дных мужика́х"
+     ],
+     [
+      "бога́тые поме́щики",
+      "о бога́тых поме́щиках"
      ]
     ]
    },
@@ -3394,6 +3372,44 @@
      [
       "на фа́брике",
       "на фа́брику"
+     ]
+    ]
+   },
+   {
+    "id": "prepositional-pronoun-reference",
+    "caption": "О ком?",
+    "header": [
+     "person",
+     "prepositional reference"
+    ],
+    "rows": [
+     [
+      "я",
+      "обо мне [reference/preview]"
+     ],
+     [
+      "ты",
+      "о тебе́ [reference/preview]"
+     ],
+     [
+      "он / оно́",
+      "о нём [reference/preview]"
+     ],
+     [
+      "она́",
+      "о ней [reference/preview]"
+     ],
+     [
+      "мы",
+      "о нас [reference/preview]"
+     ],
+     [
+      "вы",
+      "о вас [reference/preview]"
+     ],
+     [
+      "они́",
+      "о них [reference/preview]"
      ]
     ]
    }
@@ -3436,7 +3452,7 @@
     "segment_id": "ru-mir-01-l07-s031"
    }
   ],
-  "note_en": "The prepositional case is the form a noun takes after certain prepositions; it never stands without one, which is where its name comes from. In this chapter it answers three questions: где? (“where?”) after в (“in”) and на (“on, at”), and о ком? (“about whom?”) and о чём? (“about what?”) after о (“about”). Compare Она́ живёт в шко́ле (“She lives in the school”) with Ба́бы говоря́т об учи́тельнице (“The women are talking about the teacher”). You have met в Москве́ and similar forms since Глава́ 1; this chapter fills in the rest of the pattern.\n\nMost singular nouns take -е. A masculine noun ending in a consonant adds it: Фёдор → о Фёдоре, брат → о бра́те, стол → на столе́, зако́н → о зако́не, хлеб → о хле́бе. A masculine noun in -ь replaces it with -е: царь → о царе́ (“about the tsar”). The feminine nouns in -а or -я shown here replace that vowel with -е: шко́ла → в шко́ле, ла́вка → в ла́вке, изба́ → в избе́, дере́вня → в дере́вне, земля́ → на земле́. Neuter nouns in -о do the same: окно́ → в окне́, ведро́ → в ведре́. Learn оте́ц → об отце́: the е drops out, as in отца́. Feminine nouns ending in -ь take -и instead: Ряза́нь → в Ряза́ни, це́рковь → в це́ркви. So У́тром вся дере́вня в це́ркви means “In the morning the whole village is in church”.\n\nA few masculine nouns have a special location form in stressed -у́ after в or на: у́гол → в углу́ (“in the corner”; the о drops out), мир → на миру́ (“among people, among one's own”). Бе́дные, но на миру́ means “Poor, but among our own people”: the neighbour stresses that in the commune nobody is alone. Here these -у́ forms describe a location after в or на; they are not the forms used for a topic after о. After о the same noun takes ordinary -е: Разгово́р у них не о Фёдоре, а о ми́ре и о шко́ле (“Their talk is not about Fyodor but about the commune and the school”). Only some nouns have the -у́ form; learn each one as you meet it.\n\nIn the plural, the nouns here take -ах or -ях, whatever their gender; поля́ and де́ти take -ях: мешки́ → на мешка́х (“on the sacks”), кни́ги → о кни́гах, и́збы → в и́збах, фа́брики → на фа́бриках, мужики́ → о мужика́х, поме́щики → о поме́щиках, поля́ → на поля́х, де́ти → о де́тях. В ла́вке Сила́нтия мешки́, и мужики́ сидя́т на мешка́х means “In Silanty's shop there are sacks, and the men sit on the sacks.”\n\nWords that describe the noun change too. The masculine and neuter forms shown here end in -ом: одно́ ме́сто → в одно́м ме́сте (“in one place”), како́й зако́н → о како́м зако́не (“about which law?”). The feminine prepositional form of свой is свое́й: на свое́й земле́ (“on one's own land”). Зако́н говори́т: мо́жно рабо́тать на свое́й земле́, как поме́щик means “The law says one may work on one's own land, like a landowner.” Both words in the phrase need their endings: Он и но́чью ду́мает о земле́, о свое́й земле́ (“Even at night he thinks about land, about his own land”).\n\nОн, она́, оно́ and они́ have prepositional forms too, and after a preposition they begin with н-: Вот коло́дец: в нём вода́, как в реке́ (“Here is the well: there is water in it, as in a river”); Всё о ней и о ней! (“It's all about her, always her!”); А что в них? (“And what is in them?”, about the teacher's books). You already know у него́ (“he has”) and у них, which add н- in the same way. Without a preposition there is no н-: Мо́жет быть, она́ его́ зна́ет (“Perhaps she knows him”). The question words follow the same case: кто → о ком?, что → о чём?. О чём тут разгово́р? means “What is the talk about here?”\n\nBefore a vowel sound, о becomes об: об учи́тельнице, об отце́, об о́трубе. Я хочу́ говори́ть об о́трубе на схо́де means “I want to talk about the о́труб at the village meeting.” The story also uses про (“about”) in everyday talk. Про takes the accusative of Глава́ 6, not the prepositional: Вся дере́вня говори́т про меня́! (“The whole village is talking about me!”). Compare Говоря́т о Москве́ (“They talk about Moscow”) with Учи́тельница всё зна́ет про Москву́ (“The teacher knows everything about Moscow”). Both introduce the topic; про is more conversational. Do not mix the two patterns: о Москве́, but про Москву́.\n\nВ means “in, inside”; на means “on” a surface. Кни́ги на столе́, на окне́, в углу́ means “Books on the table, on the windowsill, in the corner”. Compare В окне́ шко́лы — ла́мпа (“In the school window there is a lamp”): the lamp is seen in the window, while the books lie on it. Ведро́ — на земле́ means “The bucket is on the ground”. Some nouns take на where English says “in” or “at”: на поля́х (“in the fields”), на фа́брике (“at a factory”), на схо́де (“at the village meeting”). The story uses в with шко́ла, ла́вка, це́рковь, изба́, дере́вня and университе́т, and with towns: в Москве́, в Ряза́ни. Learn the preposition together with each noun; English does not predict it.\n\nThe prepositional answers где?, a location. For movement to a place (куда́? “where to?”), в and на take the accusative instead: У Ми́ши копе́йка, и он идёт в ла́вку (“Misha has a kopeck, and he goes to the shop”); А Фёдор — в Москву́! (“And Fyodor's off to Moscow!”); Фёдор не хо́чет зимо́й на фа́брику (“Fyodor doesn't want to go to a factory in winter”). The verb of going can be left out, as in the last two examples. One letter changes the meaning: в Москве́ is “in Moscow”, в Москву́ is “to Moscow”. A noun keeps its preposition: на фа́брике, на фа́брику. For someone's home town the chapter uses из with the genitive: Она́ из Ряза́ни (“She is from Ryazan”). This chapter does not show “from” with на-nouns. Домо́й (“home”, homewards) needs no preposition: Пётр идёт домо́й (“Pyotr goes home”).\n\nNot every answer to где? is prepositional. У with the genitive means “by, at”: У коло́дца стоя́т ба́бы (“Women are standing at the well”); Сила́нтий стои́т у стола́ (“Silanty stands by the table”); у две́ри (“by the door”), у пе́чи (“by the stove”). With a person it means “at someone's place”: the section title У ба́тюшки means “At the priest's”. The same у + genitive also expresses having, as before: У Да́рьи ведро́ (“Darya has a bucket”).\n\nSome other words are useful here. У́тром (“in the morning”), ве́чером (“in the evening”), но́чью (“at night”) and зимо́й (“in winter”) are time words; their endings belong to a case that Глава́ 9 explains. Слу́хом земля́ по́лнится means “The land fills with rumour”: news travels. It is a proverb to recognise. In Ты за о́труб, а оте́ц — за мир (“You are for the о́труб, and Father is for the commune”), за means “for, on the side of”. Глава́ 9 returns to it."
+  "note_en": "The prepositional case is the form a noun takes after certain prepositions; it never stands without one, which is where its name comes from. In this chapter it answers three questions: где? (“where?”) after в (“in”) and на (“on, at”), and о ком? (“about whom?”) and о чём? (“about what?”) after о (“about”). Compare Она́ живёт в шко́ле (“She lives in the school”) with Ба́бы говоря́т об учи́тельнице (“The women are talking about the teacher”). You have met в Москве́ and similar forms since Глава́ 1; this chapter fills in the rest of the pattern.\n\nMost singular nouns take -е. A masculine noun ending in a consonant adds it: Фёдор → о Фёдоре, брат → о бра́те, стол → на столе́, зако́н → о зако́не, хлеб → о хле́бе. A masculine noun in -ь replaces it with -е: царь → о царе́ (“about the tsar”). The feminine nouns in -а or -я shown here replace that vowel with -е: шко́ла → в шко́ле, ла́вка → в ла́вке, изба́ → в избе́, дере́вня → в дере́вне, земля́ → на земле́. Neuter nouns in -о do the same: окно́ → в окне́, ведро́ → в ведре́. Learn оте́ц → об отце́: the е drops out, as in отца́. Feminine nouns ending in -ь take -и instead: Ряза́нь → в Ряза́ни, це́рковь → в це́ркви. So У́тром вся дере́вня в це́ркви means “In the morning the whole village is in church”.\n\nA few masculine nouns have a special location form in stressed -у́ after в or на: у́гол → в углу́ (“in the corner”; the о drops out), мир → на миру́ (“among people, among one's own”). Бе́дные, но на миру́ means “Poor, but among our own people”: the neighbour stresses that in the commune nobody is alone. Here these -у́ forms describe a location after в or на; they are not the forms used for a topic after о. After о the same noun takes ordinary -е: Разгово́р у них не о Фёдоре, а о ми́ре и о шко́ле (“Their talk is not about Fyodor but about the commune and the school”). Only some nouns have the -у́ form; learn each one as you meet it.\n\nIn the plural, the nouns here take -ах or -ях, whatever their gender; поля́ and де́ти take -ях: мешки́ → на мешка́х (“on the sacks”), кни́ги → о кни́гах, и́збы → в и́збах, фа́брики → на фа́бриках, мужики́ → о мужика́х, поме́щики → о поме́щиках, поля́ → на поля́х, де́ти → о де́тях. В ла́вке Сила́нтия мешки́, и мужики́ сидя́т на мешка́х means “In Silanty's shop there are sacks, and the men sit on the sacks.”\n\nWords that describe the noun change too. The masculine and neuter forms shown here end in -ом: одно́ ме́сто → в одно́м ме́сте (“in one place”), како́й зако́н → о како́м зако́не (“about which law?”). The feminine prepositional form of свой is свое́й: на свое́й земле́ (“on one's own land”). Зако́н говори́т: мо́жно рабо́тать на свое́й земле́, как поме́щик means “The law says one may work on one's own land, like a landowner.” Both words in the phrase need their endings: Он и но́чью ду́мает о земле́, о свое́й земле́ (“Even at night he thinks about land, about his own land”).\n\nОн, она́, оно́ and они́ have prepositional forms too, and after a preposition they begin with н-: Вот коло́дец: в нём вода́, как в реке́ (“Here is the well: there is water in it, as in a river”); Всё о ней и о ней! (“It's all about her, always her!”); А что в них? (“And what is in them?”, about the teacher's books). You already know у него́ (“he has”) and у них, which add н- in the same way. Without a preposition there is no н-: Мо́жет быть, она́ его́ зна́ет (“Perhaps she knows him”). The question words follow the same case: кто → о ком?, что → о чём?. О чём тут разгово́р? means “What is the talk about here?”\n\nBefore a vowel sound, о becomes об: об учи́тельнице, об отце́, об о́трубе. Я хочу́ говори́ть об о́трубе на схо́де means “I want to talk about the о́труб at the village meeting.” The story also uses про (“about”) in everyday talk. Про takes the accusative of Глава́ 6, not the prepositional: Вся дере́вня говори́т про меня́! (“The whole village is talking about me!”). Compare Говоря́т о Москве́ (“They talk about Moscow”) with Учи́тельница всё зна́ет про Москву́ (“The teacher knows everything about Moscow”). Both introduce the topic; про is more conversational. Do not mix the two patterns: о Москве́, but про Москву́.\n\nВ means “in, inside”; на means “on” a surface. Кни́ги на столе́, на окне́, в углу́ means “Books on the table, on the windowsill, in the corner”. Compare В окне́ шко́лы — ла́мпа (“In the school window there is a lamp”): the lamp is seen in the window, while the books lie on it. Ведро́ — на земле́ means “The bucket is on the ground”. Some nouns take на where English says “in” or “at”: на поля́х (“in the fields”), на фа́брике (“at a factory”), на схо́де (“at the village meeting”). The story uses в with шко́ла, ла́вка, це́рковь, изба́, дере́вня and университе́т, and with towns: в Москве́, в Ряза́ни. Learn the preposition together with each noun; English does not predict it.\n\nThe prepositional answers где?, a location. For movement to a place (куда́? “where to?”), в and на take the accusative instead: У Ми́ши копе́йка, и он идёт в ла́вку (“Misha has a kopeck, and he goes to the shop”); А Фёдор — в Москву́! (“And Fyodor's off to Moscow!”); Фёдор не хо́чет зимо́й на фа́брику (“Fyodor doesn't want to go to a factory in winter”). The verb of going can be left out, as in the last two examples. One letter changes the meaning: в Москве́ is “in Moscow”, в Москву́ is “to Moscow”. A noun keeps its preposition: на фа́брике, на фа́брику. For someone's home town the chapter uses из with the genitive: Она́ из Ряза́ни (“She is from Ryazan”). This chapter does not show “from” with на-nouns. Домо́й (“home”, homewards) needs no preposition: Пётр идёт домо́й (“Pyotr goes home”).\n\nNot every answer to где? is prepositional. У with the genitive means “by, at”: У коло́дца стоя́т ба́бы (“Women are standing at the well”); Сила́нтий стои́т у стола́ (“Silanty stands by the table”); у две́ри (“by the door”), у пе́чи (“by the stove”). With a person it means “at someone's place”: the section title У ба́тюшки means “At the priest's”. The same у + genitive also expresses having, as before: У Да́рьи ведро́ (“Darya has a bucket”).\n\nSome other words are useful here. У́тром (“in the morning”), ве́чером (“in the evening”), но́чью (“at night”) and зимо́й (“in winter”) are time words; their endings belong to a case that Глава́ 9 explains. Слу́хом земля́ по́лнится means “The land fills with rumour”: news travels. It is a proverb to recognise. In Ты за о́труб, а оте́ц — за мир (“You are for the о́труб, and Father is for the commune”), за means “for, on the side of”. Глава́ 9 returns to it. A descriptive adjective agrees with its noun in the prepositional: в но́вой газе́те means “in the new newspaper”; о но́вом зако́не, “about the new law”; о бе́дных мужика́х, “about poor peasants”; о бога́тых поме́щиках, “about rich landowners”. Hard masculine/neuter adjectives take -ом, feminine -ой, and plural -ых; after the spelling-rule consonants the plural has -их. Soft adjectives have -ем, -ей, -их respectively (reference/preview, not additional productive cells here)."
  },
  "pensa": {
   "A": {
@@ -3451,64 +3467,42 @@
      "items": [
       {
        "id": "a1",
-       "prompt": "Учи́тельница живёт в ___ (шко́ла).",
+       "prompt": "Ве́ра Никола́евна чита́ет в ___ (шко́ла; где?).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "шко́ле"
        ],
-       "first_letters": 3,
-       "source_segment_ids": [
-        "ru-mir-01-l07-s009"
-       ]
+       "first_letters": 1
       },
       {
        "id": "a2",
-       "prompt": "Мужики́ сидя́т на ___ (мешки́).",
+       "prompt": "Ива́н идёт в ___ (шко́ла; куда́?).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "мешка́х"
+        "шко́лу"
        ],
-       "first_letters": 3,
-       "common_wrong": [
-        {
-         "answer": "мешке́",
-         "hint": "мешки́ — мн.: на мешка́х"
-        }
-       ]
+       "first_letters": 1
       },
       {
        "id": "a3",
-       "prompt": "У́тром вся дере́вня в ___ (це́рковь).",
+       "prompt": "Кни́ги ___ столе́, а вода́ в ведре́. (в / на)",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "це́ркви"
-       ],
-       "first_letters": 3,
-       "common_wrong": [
-        {
-         "answer": "це́ркве",
-         "hint": "це́рковь → в це́ркви"
-        }
+        "на"
        ]
       },
       {
        "id": "a4",
-       "prompt": "Ряза́нь — большо́й го́род. В ___ (Ряза́нь) больши́е шко́лы.",
+       "prompt": "Мужики́ говоря́т в ___ (ла́вка; где?).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Ряза́ни"
+        "ла́вке"
        ],
-       "first_letters": 3,
-       "common_wrong": [
-        {
-         "answer": "Ряза́не",
-         "hint": "Ряза́нь → в Ряза́ни"
-        }
-       ]
+       "first_letters": 1
       }
      ]
     },
@@ -3520,13 +3514,13 @@
      "items": [
       {
        "id": "a5",
-       "prompt": "В ла́вке говоря́т о ___ (Фёдор).",
+       "prompt": "Не в шко́лу, а в ___ (ла́вка; куда́?) идёт На́стя.",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Фёдоре"
+        "ла́вку"
        ],
-       "first_letters": 3
+       "first_letters": 1
       },
       {
        "id": "a6",
@@ -3580,30 +3574,24 @@
      "items": [
       {
        "id": "a9",
-       "prompt": "Мужики́ в ла́вке ___ (говори́ть) о Фёдоре.",
+       "prompt": "Мужики́ чита́ют газе́ту и ___ (говори́ть) о земле́.",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "говоря́т"
        ],
-       "first_letters": 4,
-       "recall_of": "G05",
-       "common_wrong": [
-        {
-         "answer": "говори́т",
-         "hint": "мужики́ — они́: говоря́т"
-        }
-       ]
+       "first_letters": 1,
+       "recall_of": "G05"
       },
       {
        "id": "a10",
-       "prompt": "У коло́дца стоя́т ___ (ба́ба, мн.).",
+       "prompt": "Ба́ба стои́т у коло́дца. А там ___ (ба́ба; plural).",
        "mode": "productive",
        "answer_mode": "exact",
        "accepted_answers": [
         "ба́бы"
        ],
-       "first_letters": 2,
+       "first_letters": 1,
        "recall_of": "G02"
       }
      ]
@@ -3626,111 +3614,116 @@
     "бога́тый",
     "бе́дный",
     "молодо́й",
-    "слух"
+    "слух",
+    "го́род",
+    "река́",
+    "страна́",
+    "ста́рый"
    ],
    "items": [
     {
      "id": "b1",
-     "prompt": "Ба́бы стоя́т у ___ и говоря́т.",
+     "prompt": "Ба́бы стоя́т у ___ и говоря́т. (well)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "коло́дца"
      ],
-     "first_letters": 3
+     "first_letters": 1
     },
     {
      "id": "b2",
-     "prompt": "Да́рья берёт ___, а в нём вода́.",
+     "prompt": "Да́рья берёт ___, а в нём вода́. (bucket)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "ведро́"
      ],
-     "first_letters": 2
+     "first_letters": 1
     },
     {
      "id": "b3",
-     "prompt": "У коло́дца говоря́т ___, а в ла́вке — мужики́.",
+     "prompt": "У коло́дца говоря́т ___, а в ла́вке — мужики́. (women)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "ба́бы"
      ],
-     "first_letters": 2
+     "first_letters": 1
     },
     {
      "id": "b4",
-     "prompt": "В ла́вке Сила́нтия на мешка́х сидя́т ___.",
+     "prompt": "В ла́вке Сила́нтия на мешка́х сидя́т ___. (men)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "мужики́"
      ],
-     "first_letters": 3
+     "first_letters": 1
     },
     {
      "id": "b5",
-     "prompt": "В ___ Сила́нтий чита́ет но́вости из го́рода. (ед.)",
+     "prompt": "В ___ Сила́нтий чита́ет но́вости из го́рода. (ед.) (newspaper)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "газе́те"
      ],
-     "first_letters": 3
+     "first_letters": 1
     },
     {
      "id": "b6",
-     "prompt": "На столе́ у учи́тельницы не газе́ты, а ___: она́ их чита́ет и но́чью.",
+     "prompt": "На столе́ у учи́тельницы не газе́ты, а ___: она́ их чита́ет и но́чью. (books)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "кни́ги"
      ],
-     "first_letters": 3
+     "first_letters": 1
     },
     {
      "id": "b7",
-     "prompt": "Земля́ хозя́ина в одно́м ме́сте — э́то ___.",
+     "prompt": "Земля́ хозя́ина в одно́м ме́сте — э́то ___. (consolidated plot)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "о́труб"
      ],
-     "first_letters": 2
+     "first_letters": 1
     },
     {
      "id": "b8",
-     "prompt": "Зимо́й мужики́ рабо́тают в Москве́, на ___.",
+     "prompt": "Зимо́й мужики́ рабо́тают в Москве́, на ___. (factory or factories)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "фа́брике",
       "фа́бриках"
      ],
-     "first_letters": 3
+     "first_letters": 1
     },
     {
      "id": "b9",
-     "prompt": "У Сила́нтия есть де́ньги, ла́вка и дом: он ___.",
+     "prompt": "У Сила́нтия есть де́ньги, ла́вка и дом: он ___. (rich)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "бога́тый"
      ],
-     "first_letters": 3
+     "first_letters": 1
     },
     {
      "id": "b10",
-     "prompt": "«Фёдор продаёт зе́млю» — э́то не пра́вда, э́то то́лько ___.",
+     "prompt": "«Фёдор продаёт зе́млю» — э́то не пра́вда, э́то то́лько ___. (rumour)",
      "mode": "productive",
      "answer_mode": "exact",
      "accepted_answers": [
       "слух"
      ],
-     "first_letters": 2
+     "first_letters": 1
     }
-   ]
+   ],
+   "instruction": "Use a word from the bank; change its form where needed. English sense cues identify the intended meaning."
   },
   "C": {
    "id": "ru-mir-01-l07-pc",
@@ -3838,10 +3831,10 @@
      "mode": "productive",
      "answer_mode": "self_check",
      "model_answers": [
-      "Говоря́т, что Фёдор продаёт зе́млю, а Сила́нтий её берёт.",
-      "Они́ говоря́т, что Фёдор продаёт зе́млю и хо́чет в Москву́."
+      "Они́ говоря́т: «Фёдор — в Москву́, а зе́млю берёт Сила́нтий».",
+      "Они́ говоря́т, что Фёдор хо́чет жить в Москве́, а его́ зе́млю берёт Сила́нтий."
      ],
-     "rubric": "The third version of the rumour: Fyodor sells his land and Silanty takes it (говоря́т, что …).",
+     "rubric": "The third version of the rumour: Fyodor sells his land and Silanty takes it (говоря́т, что …). The incidental продаёт is optional; licensed paraphrases with берёт are sufficient.",
      "key_terms": [
       "ru-ph-govoryat-chto",
       "ru-slukh"
@@ -4197,10 +4190,10 @@
   "cover": "ru-mir-01-l07-cover",
   "counts": {
    "cover": 1,
-   "inline_scene": 2,
+   "margin_gloss": 39,
    "margin_vignette": 2,
-   "margin_diagram": 1,
-   "margin_gloss": 38
+   "inline_scene": 2,
+   "margin_diagram": 1
   }
  },
  "completion": {
@@ -4216,8 +4209,8 @@
   ]
  },
  "metrics": {
-  "running_words": 815,
-  "sentences": 126,
+  "running_words": 842,
+  "sentences": 127,
   "word_target": 750,
   "word_window": [
    675,
