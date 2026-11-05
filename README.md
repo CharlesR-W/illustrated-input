@@ -16,6 +16,7 @@ those files reference:
 - Il libro e la via (`it-dante-01`, draft): `content/it-dante/`
 - La puerta del patio (`es-NEW-01`, draft): `content/es/`
 - Die offene Tür (`de-NEW-01`, draft): `content/de/`
+- O café da esquina (`pt-NEW-01`, draft): `content/pt/`
 
 Standalone pages (not courses):
 
