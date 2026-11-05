@@ -16,6 +16,7 @@ const UI_DEFAULTS = {
   retry: "Try again", reveal_all: "Show all", example: "Example", correct: "Correct!",
   correct_letters: "Correct, but use: {answer}", ambiguous_letters: "Did you mean {answer}?",
   case_hint: "Almost! Case?", number_hint: "Almost! Number?", tense_hint: "Almost! Tense?", mood_hint: "Almost! Mood?",
+  japanese_spelling_hint: "Almost: check voicing and spelling.",
   accent_hint: "Almost: check the accents.", capitalisation_hint: "Almost: check the capitalisation.", mutation_hint: "Almost: mutation?",
   wrong: "Not yet.", empty: "Type an answer first.", answer: "Answer", model_answer: "Answer",
   rubric: "Check", self_yes: "I had it", self_no: "Not yet", key_terms: "Key words", word_bank: "Word bank",
@@ -768,6 +769,14 @@ function showIntro(focus) {
   const paragraphs = Array.isArray(text) ? text : String(text).split(/\n\s*\n/);
   const body = paragraphs.map((block) => {
     const lines = block.split("\n");
+    if (state.course?.lang === "ja" && lines.length >= 3 && lines.every(line => /^\|.*\|$/.test(line.trim()))) {
+      const cells = line => line.trim().slice(1, -1).split("|").map(cell => cell.trim());
+      const rows = lines.filter(line => !/^\|[\s:|+-]+\|$/.test(line.trim()));
+      return h("div", { class: "kana-reference" }, h("table", null,
+        h("thead", null, h("tr", null, cells(rows[0]).map(cell => h("th", { scope: "col" }, cell)))),
+        h("tbody", null, rows.slice(1).map(row => h("tr", null, cells(row).map(cell => h("td", null, cell)))))));
+    }
+    if (state.course?.lang === "ja" && /^#{1,3} /.test(block)) return h("h2", null, block.replace(/^#{1,3} /, ""));
     if (lines.every((line) => /^\s*[-•]\s+/.test(line))) {
       return h("ul", null, lines.map((line) => h("li", null, line.replace(/^\s*[-•]\s+/, ""))));
     }
@@ -1340,7 +1349,8 @@ function glossFile(path) {
 function lessonGlosses(lesson) {
   if (!lesson._entry) return Promise.resolve(null);
   const file = entryPath(lesson._entry).split("/").pop();
-  return Promise.all([glossFile("glosses/forms.json"), glossFile(`glosses/${file}`), state.course?.lang === "lzh" ? (state.lexicon || glossFile(state.course.lexicon_path || "lexicon.json")) : null]).then(([forms, layer, lexicon]) => {
+  return Promise.all([glossFile("glosses/forms.json"), glossFile(`glosses/${file}`), ["lzh", "ja"].includes(state.course?.lang) ? (state.lexicon || glossFile(state.course.lexicon_path || "lexicon.json")) : null]).then(([forms, layer, lexicon]) => {
+    if (state.course?.lang === "ja") return { forms: Core.japaneseGlossForms(lexicon, forms?.forms, Number(lesson.order)), segments: Object.fromEntries(Object.entries(layer?.segments || {}).map(([id, segment]) => [id, Core.japaneseGlossSegment(segment)])) };
     if (state.course?.lang !== "lzh") return forms?.forms || layer?.segments ? { forms: forms?.forms || {}, segments: layer?.segments || {} } : null;
     const dictionary = Object.create(null);
     for (const entry of lexicon?.entries || []) {
@@ -2256,7 +2266,7 @@ function renderItem(item, group, number, memory, aids, lesson, opts = {}) {
       field.classList.toggle("is-wrong", Boolean(status) && !good(status) && status !== "empty");
     });
     feedback.className = `feedback status-${result.status}`;
-    const messages = { correct_letters: "correct_letters", ambiguous_letters: "ambiguous_letters", correct: "correct", correct_yo: "correct_yo", accent: "accent_hint", capitalisation: "capitalisation_hint", mutation: "mutation_hint", ending: "ending_hint", aspect: "aspect_hint", wrong: "wrong", empty: "empty" };
+    const messages = { correct_letters: "correct_letters", ambiguous_letters: "ambiguous_letters", correct: "correct", correct_yo: "correct_yo", accent: state.course?.lang === "ja" ? "japanese_spelling_hint" : "accent_hint", capitalisation: "capitalisation_hint", mutation: "mutation_hint", ending: "ending_hint", aspect: "aspect_hint", wrong: "wrong", empty: "empty" };
     if (result.status === "common_wrong") {
       feedback.replaceChildren(h("span", { lang }, disp(result.hint, area) || t("wrong")));
     } else {
@@ -2626,7 +2636,7 @@ function renderVocabulary(lesson) {
   if (!words.length) return null;
   const lang = targetLang();
   return h("details", { class: "vocabulary" },
-    h("summary", null, ui("span", "vocabulary", { class: "vocab-title" }), " ", ui("small", state.course?.lang === "lzh" ? "lexical_senses_count" : "words_count", null, { n: words.length })),
+    h("summary", null, ui("span", "vocabulary", { class: "vocab-title" }), " ", ui("small", ["lzh", "ja"].includes(state.course?.lang) ? "lexical_senses_count" : "words_count", null, { n: words.length })),
     h("dl", { class: "vocab-list" }, words.map((word) => {
       const form = word.citation_form || word.display_form || "";
       const gender = word.gender && !/\(.*\)/.test(form) ? ` (${t(`gender_${word.gender}`)})` : "";

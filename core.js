@@ -477,7 +477,10 @@
     const locale = course?.language?.locale || course?.lang || course?.language?.code || "und";
     const folds = course?.answer_folds || {};
     const caseSensitive = genericLanguageConfig(course).case_sensitive_answers === true;
-    const normaliseValue = (value) => genericNormalise(value, { locale, caseSensitive });
+    const normaliseValue = (value) => {
+      const text = genericNormalise(value, { locale, caseSensitive });
+      return course?.lang === "ja" ? text.replace(/\s/gu, "") : text;
+    };
     const ignoreCase = (value) => genericNormalise(value, { locale });
     const fold = (value) => genericFold(normaliseValue(value), folds, { locale, caseSensitive });
     function checkSlot(value, answers, item) {
@@ -1068,6 +1071,11 @@
   function genericTokens(text, language = "und") {
     const source = String(text ?? "");
     const code = String(language).toLowerCase().split(/[-_]/u)[0];
+    if (code === "ja") {
+      // Orthographic atoms, not morphological segmentation. Preserve raw UTF-16 spans.
+      const pattern = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー]\p{M}*|(?:(?![\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ーʼ])[\p{L}\p{M}])+(?:['’‘ʼ`´-](?:(?![\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ーʼ])[\p{L}\p{M}])+)*/gu;
+      return [...source.matchAll(pattern)].map(m => ({ text: m[0], start: m.index, end: m.index + m[0].length }));
+    }
     if (code === "lzh") {
       // Exact UTF-16 source offsets; one Han code point with its following combining marks.
       const pattern = /\p{Script=Han}\p{M}*|(?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+(?:['’‘ʼ`´-](?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+)*/gu;
@@ -1182,7 +1190,7 @@
     }
     // Reuse contextual phrases. Longest dictionary span, then earliest start,
     // resolves overlapping compounds without granting component senses.
-    if (!item && course?.lang === "lzh" && forms) {
+    if (!item && ["lzh", "ja"].includes(course?.lang) && forms) {
       const candidates = [];
       for (const [surface, analyses] of Object.entries(forms)) {
         if (!Array.isArray(analyses) || !analyses.length || glossTokens(surface, course).length < 2) continue;
@@ -1192,7 +1200,7 @@
           const current = tokens[at + j], previous = tokens[at + j - 1];
           if (!current) return false;
           const gap = j ? source.slice(previous.end, current.start) : "";
-          const hanBoundary = j && (/^\p{Script=Han}/u.test(previous.text) || /^\p{Script=Han}/u.test(current.text));
+          const hanBoundary = j && (course?.lang === "ja" ? /^[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー]/u.test(previous.text) || /^[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}ー]/u.test(current.text) : /^\p{Script=Han}/u.test(previous.text) || /^\p{Script=Han}/u.test(current.text));
           return glossKey(current.text, course) === glossKey(part.text, course) && (hanBoundary ? gap === "" : !/\S/u.test(gap));
         });
         for (let i = 0; i < tokens.length; i++) {
@@ -1229,7 +1237,7 @@
       }
     }
     const key = glossKey(token.text, course);
-    const analyses = forms && Object.prototype.hasOwnProperty.call(forms, key) && Array.isArray(forms[key]) ? forms[key] : [];
+    const analyses = !(course?.lang === "ja" && phrase && !component) && forms && Object.prototype.hasOwnProperty.call(forms, key) && Array.isArray(forms[key]) ? forms[key] : [];
     const override = component || (item && !phrase ? item : null);
     const main = override || analyses[0] || null;
     const alternatives = override ? [] : analyses.slice(1);
@@ -1238,8 +1246,43 @@
   }
   function glossKey(surface, course) {
     const source = String(surface ?? "").normalize("NFC");
-    const key = course?.lang === "lzh" ? source : source.replace(/\u0301/g, "").normalize("NFC");
+    const key = ["lzh", "ja"].includes(course?.lang) ? source : source.replace(/\u0301/g, "").normalize("NFC");
     return key.toLowerCase().replace(course?.plugin === "generic" ? APOSTROPHES : /[’‘ʼ]/g, "'");
+  }
+
+  // Japanese entries keep one semantic ID per sense. Project only dated surfaces at
+  // this lesson; a later kanji spelling or citation must not leak into an early popup.
+  function japaneseGlossForms(lexicon, authored, chapter) {
+    const out = Object.create(null), entries = new Map();
+    if (!Number.isSafeInteger(chapter) || chapter < 1) return out;
+    const date = id => Number(/-l(\d+)$/.exec(String(id ?? ""))?.[1] ?? Infinity);
+    for (const entry of lexicon?.entries || []) {
+      if (date(entry.first_lesson) > chapter) continue;
+      entries.set(entry.id, entry);
+      const surfaces = [{ form: entry.lemma, first_lesson: entry.first_lesson }, ...(entry.forms || [])];
+      for (const form of surfaces) {
+        if (!form || typeof form !== "object" || !form.form || date(form.first_lesson || entry.first_lesson) > chapter) continue;
+        const en = (entry.senses || []).filter(s => date(s.first_lesson || entry.first_lesson) <= chapter).map(s => s.gloss_en).filter(Boolean).join("; ") || entry.sense_en || entry.meaning_en || "";
+        (out[glossKey(form.form, { lang: "ja", plugin: "generic" })] ||= []).push({ lemma: form.form, en, pos: entry.part_of_speech, lexeme_id: entry.id });
+      }
+    }
+    // Authored form tables may enrich a licensed surface/sense, never introduce one.
+    for (const [surface, analyses] of Object.entries(authored || {})) {
+      const key = glossKey(surface, { lang: "ja", plugin: "generic" });
+      if (!Array.isArray(analyses) || !out[key]) continue;
+      for (const analysis of analyses) {
+        if (!out[key].some(a => a.lexeme_id === analysis.lexeme_id) || !entries.has(analysis.lexeme_id) || (analysis.first_lesson && date(analysis.first_lesson) > chapter)) continue;
+        const current = out[key].find(a => a.lexeme_id === analysis.lexeme_id);
+        Object.assign(current, analysis, { lemma: surface });
+      }
+    }
+    return out;
+  }
+
+  function japaneseGlossSegment(segment) {
+    if (!segment) return segment;
+    const citation = entry => ({ ...entry, lemma: entry.text, ...(Array.isArray(entry.components) ? { components: entry.components.map(citation) } : {}) });
+    return { ...segment, items: (segment.items || []).map(citation) };
   }
 
   // ---------------------------------------------------------------- vocabulary self-check
@@ -1271,7 +1314,7 @@
     containsLemma, findAnchor, mergeAnchorRanges, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, createVocabularyStore
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, japaneseGlossForms, japaneseGlossSegment, createVocabularyStore
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
@@ -1281,7 +1324,7 @@
       containsLemma, findAnchor, mergeAnchorRanges, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, createVocabularyStore
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, japaneseGlossForms, japaneseGlossSegment, createVocabularyStore
     };
   }
   root.IllustratedCore = api;

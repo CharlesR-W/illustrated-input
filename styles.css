@@ -493,3 +493,9 @@ main:focus { outline: none; }
    therefore stay in their written case (`lang` is inherited from the course content). */
 :lang(grc), :lang(el) { text-transform: none !important; }
 
+
+/* Japanese reference charts are plain authored text, never interpreted HTML. */
+.kana-reference { overflow-x: auto; margin-block: 1rem; }
+.kana-reference table { border-collapse: collapse; width: 100%; }
+.kana-reference th, .kana-reference td { padding: .45rem; border: 1px solid var(--border, #bbb); text-align: start; white-space: nowrap; }
+:lang(ja) .sentence { line-height: 2; }
