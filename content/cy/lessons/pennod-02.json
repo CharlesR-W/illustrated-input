@@ -24,7 +24,8 @@
       "No 'A ti?' item: first/second person forms arrive in Pennod 5. Pensum C ends with a small production item (c7).",
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): s012's gloss 'ifanc ↔ hen' used hen before its first use (s029); s012 now has 'ifanc: bachgen ↔ dyn' (the boy/man contrast that the 'dyn mawr' joke later plays on) and the antonym gloss 'ifanc ↔ hen' moves to s040, after Pero the old dog. s046's cloned frame ('Mae ceffyl Cynyr wrth Arth, ac mae Arth wrth y ceffyl') is now 'Mae Arth wrth yr hen geffyl mawr: ceffyl Cynyr' (recycles hen + SM from s045 and the G02 genitive, sets up Arth's line s048). Meta-language: 'dim newid' (untaught) removed from the Treigladau row and from A a8/a10 hints (now 'ceffyl (g.) → y ceffyl'); A a2's hint 'menyw (dim y)' is now 'menyw (✗ y)' (standalone dim is Pennod 6). Pensa: b9 was ambiguous (cath and ci both fitted), now 'Mali yw ___ Arth' → chwaer; A a1/a3/a5 and C c2–c4 accept fronted identifications (Gwraig Cynyr yw Elen), pronoun answers and fuller answers. Running words 495 → 493 (advisory window 495–605; not padded back). The repeated 'y ferch ← merch (b.)' gloss on s014 (same word glossed in s013, the sentence before) is dropped, so the gloss count stays at 25.",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c2, c3, c4 were exact with long accepted_answers lists, now self_check with model_answer, one-feature rubric and key_terms; c4 now precedes c3 for story order, IDs kept; c1 also cites s008 so it is in story order; c5 prompt now quotes Cai's line, since 'Pwy yw'r \"dyn mawr\"?' could also be answered 'Cynyr' from s005, and its model answer and rubric no longer ask for more than the question; c6 model answer replaced by two natural answers and the rubric made one feature; c7 rubric wrongly called yn hir / yn dywyll soft mutations (h- does not mutate) and now states the content point, with source segments s014/s015); nodyn_en expanded to a full English explanation (697 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
-      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: c7 moved to story order after c2; c6 'Pwy yw tad Arth?' (deliberately unanswered in the story) replaced by 'Pwy yw brawd Cai?' (s081); c7 rubric accepts one property; feminine examples translated."
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: c7 moved to story order after c2; c6 'Pwy yw tad Arth?' (deliberately unanswered in the story) replaced by 'Pwy yw brawd Cai?' (s081); c7 rubric accepts one property; feminine examples translated.",
+      "Quality audit 2026-11-04, review 1104-194053-5525: family tree moved to first relationship use, with explicit gwraig label; B retrieval leak, copied clause and fragment repaired; B8 now radical ci; early Da iawn formula replaced by licensed identification; second radical links. Current density exceeds the course cap; essential aids retained and policy/format/story decisions referred to owner in OPEN.md. Old measurement and C-order notes above describe prior versions, not current delivery."
     ],
     "review_questions": [
       {
@@ -78,7 +79,7 @@
       },
       {
         "form": "Bore da / Nos da (formulae)",
-        "gloss_segment_id": "cy-brenin-01-l02-s032"
+        "gloss_segment_id": "cy-brenin-01-l02-s024"
       },
       {
         "form": "vocatives Dad, Mam",
@@ -420,6 +421,28 @@
                 "covers_lexeme_ids": [
                   "cy-gwraig"
                 ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l02-img-coeden-deulu",
+                "anchor_text": "wraig",
+                "label": "teulu Cynyr",
+                "src": "media/diagrams/cy-brenin-01-l02-img-coeden-deulu.svg",
+                "alt": "Family tree: Cynyr and Elen joined by a double line; below them Cai and Mali; Arth beside them joined only by a dashed line with a question mark. Welsh labels only: Cynyr, Elen, Cai, Mali, Arth, tad, mam, mab, merch, brawd, chwaer, ?. Reused and updated in Pennod 30. Elen is labelled gwraig (Cynyr’s wife).",
+                "status": "draft",
+                "art_brief": "Family tree: Cynyr and Elen joined by a double line; below them Cai and Mali; Arth beside them joined only by a dashed line with a question mark. Welsh labels only: Cynyr, Elen, Cai, Mali, Arth, tad, mam, mab, merch, brawd, chwaer, ?. Reused and updated in Pennod 30.",
+                "covers_lexeme_ids": [
+                  "cy-tad",
+                  "cy-mam",
+                  "cy-mab",
+                  "cy-merch",
+                  "cy-brawd",
+                  "cy-chwaer",
+                  "cy-gwraig"
+                ],
+                "width": 320,
+                "height": 252
               }
             ]
           },
@@ -521,29 +544,7 @@
           {
             "id": "cy-brenin-01-l02-s016",
             "text": "Cai yw brawd Mali, a Mali yw chwaer Cai.",
-            "inference_aids": [
-              {
-                "type": "image",
-                "presentation": "margin_diagram",
-                "ref": "cy-brenin-01-l02-img-coeden-deulu",
-                "anchor_text": "brawd",
-                "label": "teulu Cynyr",
-                "src": "media/diagrams/cy-brenin-01-l02-img-coeden-deulu.svg",
-                "alt": "Family tree: Cynyr and Elen joined by a double line; below them Cai and Mali; Arth beside them joined only by a dashed line with a question mark. Welsh labels only: Cynyr, Elen, Cai, Mali, Arth, tad, mam, mab, merch, brawd, chwaer, ?. Reused and updated in Pennod 30.",
-                "status": "draft",
-                "art_brief": "Family tree: Cynyr and Elen joined by a double line; below them Cai and Mali; Arth beside them joined only by a dashed line with a question mark. Welsh labels only: Cynyr, Elen, Cai, Mali, Arth, tad, mam, mab, merch, brawd, chwaer, ?. Reused and updated in Pennod 30.",
-                "covers_lexeme_ids": [
-                  "cy-tad",
-                  "cy-mam",
-                  "cy-mab",
-                  "cy-merch",
-                  "cy-brawd",
-                  "cy-chwaer"
-                ],
-                "width": 320,
-                "height": 222
-              }
-            ]
+            "inference_aids": []
           },
           {
             "id": "cy-brenin-01-l02-s017",
@@ -767,7 +768,16 @@
           },
           {
             "id": "cy-brenin-01-l02-s042",
-            "text": "Cath yw enw'r gath!"
+            "text": "Cath yw enw'r gath!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gath",
+                "gloss": "gath ← cath",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l02-s043",
@@ -808,7 +818,16 @@
           },
           {
             "id": "cy-brenin-01-l02-s046",
-            "text": "Mae Arth wrth yr hen geffyl mawr: ceffyl Cynyr."
+            "text": "Mae Arth wrth yr hen geffyl mawr: ceffyl Cynyr.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "geffyl",
+                "gloss": "geffyl ← ceffyl",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l02-s047",
@@ -916,7 +935,7 @@
           },
           {
             "id": "cy-brenin-01-l02-s056",
-            "text": "\"Da iawn.",
+            "text": "\"Modlen yw hi.\"",
             "paragraph_start": true,
             "speaker": "char-mali"
           },
@@ -1447,7 +1466,7 @@
         },
         {
           "id": "b2",
-          "prompt": "Mali a Cai: Elen yw ___ Mali, ac Elen yw mam Cai hefyd.",
+          "prompt": "Cai yw mab Elen. Elen yw ___ Cai.",
           "answer_mode": "exact",
           "accepted_answers": [
             "mam"
@@ -1471,7 +1490,7 @@
         },
         {
           "id": "b5",
-          "prompt": "Modlen yw ___ y llys.",
+          "prompt": "___ y llys yw Modlen.",
           "answer_mode": "exact",
           "accepted_answers": [
             "cogyddes"
@@ -1479,7 +1498,7 @@
         },
         {
           "id": "b6",
-          "prompt": "Cynyr: dyn mawr, ___ fawr!",
+          "prompt": "Mae ___ Cynyr yn hir ac yn fawr.",
           "answer_mode": "exact",
           "accepted_answers": [
             "barf"
@@ -1496,12 +1515,11 @@
         },
         {
           "id": "b8",
-          "prompt": "Mae'r gath yn ifanc, ond Pero yw'r hen ___.",
+          "prompt": "Mae'r ___ yn hen: Pero yw e.",
           "answer_mode": "exact",
           "accepted_answers": [
-            "gi"
-          ],
-          "explanation": "hen + ci → hen gi"
+            "ci"
+          ]
         },
         {
           "id": "b9",
@@ -2091,7 +2109,7 @@
       "inline_scene": 1,
       "margin_vignette": 4,
       "margin_diagram": 1,
-      "margin_gloss": 28
+      "margin_gloss": 30
     }
   },
   "completion": {
@@ -2107,7 +2125,7 @@
     ]
   },
   "metrics": {
-    "running_words": 493,
+    "running_words": 494,
     "sentences": 86,
     "word_target": 550,
     "word_window": [

@@ -22,7 +22,8 @@
       "Gentle-opening pass 2026-10-19 (owner, learning from the course, found Pennod 1 a bit too hard): 524 running words (was 390), 86 sentences (was 63), the same 32 new lexemes, so one new item per 16.4 words (was 12.2). Re-paced opening: the locative block s005–s010 now comes before s004, so the reader meets about 60 words of Dyma / ar / yn (in) / ble / hefyd before the first predicative yn and mutation; mawr appears unmutated (s066 môr mawr) before fawr, tywyll (s080) before dywyll, and trefi before the glossed predicative dref (s076). Added material: more on Iwerddon (Ewrop, size, the sea), Cymru between Iwerddon and Lloegr, mountains in the Alban, Ynys Môn, Afon Wysg only in Cymru, Caerfyrddin, Llundain, the dark mountains round the cwm, Hafren against Afon Helyg, bryn against mynyddoedd (gloss bryn = mynydd bach), the cave high on the hill, the long hall, and where the forest lies. Existing text changed only to match the pictures: s048 (the river does not run through the forest; this also removes the two-yn clause queried earlier), s054 (the river, not the llys, lies between the llys and the hill; Gramadeg row and Pensum C c5 follow), s057 (tai bach reads as toilets; now tai, with their smallness in s084). Map: labels Ynys Môn, Caerfyrddin, Llundain; three small peaks round Cwm Helyg so that s041 rhwng y mynyddoedd is true on the map. Stopped at 524 running words rather than the 650–750 aim: two independent reviews (Codex gpt-6-astra; a separate Claude Opus critic) agreed that further sentences with this vocabulary and grammar would restate map facts (design §1.1, §6.2), and that the gain in ease comes from the ramp rather than the total.",
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md; the gentle-opening re-pacing is untouched, no story text changed): Pensum A no longer tests the noun–adjective gender mutation this chapter defers (old a7 'tŷ ___ (mawr)', now 'yn ___ (tref) → dref'); the trivial no-change items a2/a4 (answer = cue) are now two-gap items that set an unchanged adjective beside a mutated one (hir | fach, uchel | fawr); a6 no longer copies s028 (now 'Mae'r bryn yn fynydd bach', the bryn gloss). Pensum B: b8 no longer needs 'gwlad + bach → gwlad fach' (now wrth); b7 accepted two bank words (hir/fawr) and needed the feminine mutation, now a predicative contrast with one answer (fawr); b5's dialogue no longer gives away b8. Pensum C c1/c4/c6 accept more correct answers (both Ewrop and Ynys Prydain; 'yn uchel ar y bryn'; 'yn y cwm'). Meta-language: 'dim newid' (dim is Pennod 6, newid never taught) replaced by arrows (ll → ll, rh → rh; hir → hir). Gloss: 'mynydd, mynyddoedd' gave form only; now 'mynydd ▲, mynyddoedd ▲▲', the map's mountain sign. Filled the unfilled {WORDS} placeholder in the gentle-opening note (524).",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c1, c4, c6 were exact with long accepted_answers lists, now self_check with model_answer, one-feature rubric and key_terms; c3 gains key term cy-wrth; c4 rubric now one feature; c7 rubric no longer grades the mutation, only the content point in the printed frame, and gains source segments s028/s031); nodyn_en expanded to a full English explanation (646 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
-      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: article rule now gives yr before h-; 'there is' reading no longer keyed to indefiniteness; c2 accepts 'in Europe' (s065); c7 moved to story order after c2."
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: article rule now gives yr before h-; 'there is' reading no longer keyed to indefiniteness; c2 accepts 'in Europe' (s065); c7 moved to story order after c2.",
+      "Quality audit 2026-11-04, review 1104-194052-1528: unique B sense cues; accepted short A answers; recombined copied A items; first-use dark contrast diagram; second radical links; gloss redistribution; reference example and translation completion. English cue licensing warnings and the long English note are intentional under RULES §§6–7. Design conflicts and contrast balance remain owner questions in OPEN.md. The final note paragraph already translated ynys fawr, y ddinas and y goedwig before this audit."
     ],
     "review_questions": [
       {
@@ -514,7 +515,16 @@
           },
           {
             "id": "cy-brenin-01-l01-s021",
-            "text": "Mae Llydaw yn wlad fach."
+            "text": "Mae Llydaw yn wlad fach.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fach",
+                "gloss": "fach ← bach",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l01-s022",
@@ -826,7 +836,25 @@
           },
           {
             "id": "cy-brenin-01-l01-s080",
-            "text": "Mae mynyddoedd tywyll wrth y cwm."
+            "text": "Mae mynyddoedd tywyll wrth y cwm.",
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l01-img-tywyll",
+                "anchor_text": "tywyll",
+                "label": "tywyll",
+                "src": "media/diagrams/cy-brenin-01-l01-img-tywyll.svg",
+                "alt": "Two mountains of the same shape, one pale and one dark; the dark one is labelled tywyll.",
+                "status": "draft",
+                "art_brief": "Equal mountain silhouettes contrast light and dark; only the dark one is labelled tywyll.",
+                "covers_lexeme_ids": [
+                  "cy-tywyll"
+                ],
+                "width": 300,
+                "height": 150
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l01-s044",
@@ -869,13 +897,6 @@
                 "covers_lexeme_ids": [
                   "cy-tywyll"
                 ]
-              },
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "yn y cwm",
-                "gloss": "yn y cwm (Ble?) ↔ yn fawr",
-                "gloss_kind": "form"
               }
             ]
           },
@@ -952,12 +973,28 @@
                 "anchor_text": "yn uchel",
                 "gloss": "yn + uchel → yn uchel",
                 "gloss_kind": "form"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "yn",
+                "gloss": "yn y cwm (Ble?) ↔ yn fawr",
+                "gloss_kind": "form"
               }
             ]
           },
           {
             "id": "cy-brenin-01-l01-s052",
-            "text": "Mae'r ogof yn fawr, ac mae'r ogof yn dywyll iawn."
+            "text": "Mae'r ogof yn fawr, ac mae'r ogof yn dywyll iawn.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "dywyll",
+                "gloss": "dywyll ← tywyll",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l01-s053",
@@ -1133,10 +1170,10 @@
           ],
           [
             "hir → hir · uchel → uchel",
-            "Mae Afon Wysg yn hir."
+            "Mae Afon Wysg yn hir. / Mae'r ogof yn uchel ar y bryn."
           ],
           [
-            "Ewrop (lle)",
+            "Ewrop",
             "Mae Ynys Prydain yn Ewrop."
           ]
         ]
@@ -1182,9 +1219,30 @@
       },
       {
         "segment_id": "cy-brenin-01-l01-s023"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s017"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s028"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s047"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s051"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s054"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s069"
+      },
+      {
+        "segment_id": "cy-brenin-01-l01-s083"
       }
     ],
-    "nodyn_en": "The main sentence pattern in this chapter is Mae + subject + yn + …. A Welsh sentence usually begins with its verb. Mae is a form of bod ('to be') meaning 'is' or 'are'; after it comes the subject (the person or thing the sentence is about): Mae Ynys Prydain yn Ewrop ('The island of Britain is in Europe'). Mae can also introduce something, where English says 'there is' or 'there are': Mae afonydd yng Nghymru hefyd ('There are rivers in Wales too'). Here afonydd is indefinite: 'rivers', not 'the rivers'. Welsh has no word for 'a'. 'The' has three forms: 'r after a word ending in a vowel; otherwise yr before a vowel or h-, and y before other consonants: Dyma'r map ('Here is the map').\n\nYn does two different jobs, and the table 'yn Ewrop ↔ yn fawr' sets them side by side. The first yn means 'in'. It is a preposition: a small word before a noun that shows place, like ar 'on', wrth 'by' and rhwng 'between'. These answer Ble? ('Where?'): Mae Caerllion yng Nghymru, wrth Afon Wysg ('Caerllion is in Wales, by the river Wysg'). An answer can be just the place phrase: Ble mae Iwerddon? Yn y môr, wrth Ynys Prydain ('Where is Ireland? In the sea, by the island of Britain'), or even one noun: Ar y bryn? Ogof. ('On the hill? A cave.')\n\nYn 'in' is written in full, even after a vowel: Mae Cymru yn Ynys Prydain ('Wales is in the island of Britain'). With Cymru and Cwm Helyg it changes shape, and so does the next word: yng Nghymru ('in Wales'), Yng Nghwm Helyg ('In Cwm Helyg'). This is called nasal mutation. Take these two as fixed chunks for now; the Treigladau table points to Pennod 16 for it.\n\nThe second yn links the subject to its predicate: the part of the sentence that says what the subject is or what it is like. After this yn comes an adjective (a describing word, such as mawr 'big') or a noun: Mae Ynys Prydain yn fawr ('The island of Britain is big'), Mae Caerllion yn ddinas ('Caerllion is a city'). English just says 'is'. After a vowel this yn is written 'n: Mae Cymru'n wlad ('Wales is a country'). Iawn 'very' follows the adjective: Mae'r ogof yn fawr, ac mae'r ogof yn dywyll iawn ('The cave is big, and the cave is very dark'). To tell the two kinds of yn apart, ask Ble?: yn Ewrop answers it, yn fawr does not.\n\nThis second yn also changes the first letter of the next word. Regular sound changes like this are called mutations (treigladau); this one is soft mutation, the commonest. The rule line gives it: m → f, b → f, g drops, d → dd, t → d, c → g, p → b. So mynydd gives Mae'r Wyddfa'n fynydd uchel iawn ('Yr Wyddfa is a very high mountain'), bach gives Mae Cymru'n fach ('Wales is small'), and likewise gwlad → yn wlad ('a country'), dinas → yn ddinas ('a city'), tywyll → yn dywyll ('dark'), tref → yn dref ('a town'). No word in c- or p- follows this yn in the chapter yet. A word beginning with a vowel or h- never changes: Mae Afon Wysg yn hir ('The river Wysg is long'), Mae'r ogof yn uchel ar y bryn ('The cave is high up on the hill'). After this yn, ll- and rh- stay unchanged too. Yn 'in' never causes soft mutation.\n\nDyma ('here is, here are') also causes soft mutation: Dyma Gymru ('Here is Wales'; c → g). In this book place names mutate like other words.\n\nSome softened words have no yn or dyma before them: ynys fawr ('a big island', from mawr), y ddinas ('the city', from dinas), y goedwig ('the forest', from coedwig). These nouns are feminine (marked b. in the glosses). The Treigladau table, which gives the Pennod that explains each mutation, points to Pennod 2 for these; for now just read them."
+    "nodyn_en": "The main sentence pattern in this chapter is Mae + subject + yn + …. A Welsh sentence usually begins with its verb. Mae is a form of bod ('to be') meaning 'is' or 'are'; after it comes the subject (the person or thing the sentence is about): Mae Ynys Prydain yn Ewrop ('The island of Britain is in Europe'). Mae can also introduce something, where English says 'there is' or 'there are': Mae afonydd yng Nghymru hefyd ('There are rivers in Wales too'). Here afonydd is indefinite: 'rivers', not 'the rivers'. Welsh has no word for 'a'. 'The' has three forms: 'r after a word ending in a vowel; otherwise yr before a vowel or h-, and y before other consonants: Dyma'r map ('Here is the map').\n\nYn does two different jobs, and the table 'yn Ewrop ↔ yn fawr' sets them side by side. The first yn means 'in'. It is a preposition: a small word before a noun that shows place, like ar 'on', wrth 'by' and rhwng 'between'. These answer Ble? ('Where?'): Mae Caerllion yng Nghymru, wrth Afon Wysg ('Caerllion is in Wales, by the river Wysg'). An answer can be just the place phrase: Ble mae Iwerddon? Yn y môr, wrth Ynys Prydain ('Where is Ireland? In the sea, by the island of Britain'), or even one noun: Ar y bryn? Ogof. ('On the hill? A cave.')\n\nYn 'in' is written in full, even after a vowel: Mae Cymru yn Ynys Prydain ('Wales is in the island of Britain'). With Cymru and Cwm Helyg it changes shape, and so does the next word: yng Nghymru ('in Wales'), Yng Nghwm Helyg ('In Cwm Helyg'). This is called nasal mutation. Take these two as fixed chunks for now; the Treigladau table points to Pennod 16 for it.\n\nThe second yn links the subject to its predicate: the part of the sentence that says what the subject is or what it is like. After this yn comes an adjective (a describing word, such as mawr 'big') or a noun: Mae Ynys Prydain yn fawr ('The island of Britain is big'), Mae Caerllion yn ddinas ('Caerllion is a city'). English just says 'is'. After a vowel this yn is written 'n: Mae Cymru'n wlad ('Wales is a country'). Iawn 'very' follows the adjective: Mae'r ogof yn fawr, ac mae'r ogof yn dywyll iawn ('The cave is big, and the cave is very dark'). To tell the two kinds of yn apart, ask Ble?: yn Ewrop answers it, yn fawr does not.\n\nThis second yn also changes the first letter of the next word. Regular sound changes like this are called mutations (treigladau); this one is soft mutation, the commonest. The rule line gives it: m → f, b → f, g drops, d → dd, t → d, c → g, p → b. So mynydd gives Mae'r Wyddfa'n fynydd uchel iawn ('Yr Wyddfa is a very high mountain'), bach gives Mae Cymru'n fach ('Wales is small'), and likewise gwlad → yn wlad ('a country'), dinas → yn ddinas ('a city'), tywyll → yn dywyll ('dark'), tref → yn dref ('a town'). No word in c- or p- follows this yn in the chapter yet. A word beginning with a vowel or h- never changes: Mae Afon Wysg yn hir ('The river Wysg is long'), Mae'r ogof yn uchel ar y bryn ('The cave is high up on the hill'). After this yn, ll- and rh- stay unchanged too. Yn 'in' never causes soft mutation.\n\nDyma ('here is, here are') also causes soft mutation: Dyma Gymru ('Here is Wales'; c → g). In this book place names mutate like other words.\n\nSome softened words have no yn or dyma before them: ynys fawr ('a big island', from mawr), y ddinas ('the city', from dinas), y goedwig ('the forest', from coedwig). These nouns are feminine (marked b. in the glosses). The Treigladau table, which gives the Pennod that explains each mutation, points to Pennod 2 for these; for now just read them.\n\nFurther location-table translations: Ble mae Caerllion? means “Where is Caerllion?”; Ble mae Llys Cynyr? means “Where is Cynyr’s court?”; Yng Nghwm Helyg, wrth yr afon means “In Cwm Helyg, by the river”. Ble mae Cymru? means “Where is Wales?”; Rhwng Iwerddon a Lloegr means “Between Ireland and England”. Mae Cymru’n fach means “Wales is small”."
   },
   "pensa": {
     "A": {
@@ -1229,7 +1287,7 @@
             },
             {
               "id": "a3",
-              "prompt": "Mae Caerllion yn ___. (dinas)",
+              "prompt": "Mae Caerllion yn ___ fawr iawn, ond mae Caerfyrddin yn dref. (dinas)",
               "answer_mode": "exact",
               "accepted_answers": [
                 "ddinas"
@@ -1300,7 +1358,7 @@
             },
             {
               "id": "a8",
-              "prompt": "Mae Llydaw yn ___ fach. (gwlad)",
+              "prompt": "Mae Llydaw yn ___, ac mae’r môr wrth Llydaw. (gwlad)",
               "answer_mode": "exact",
               "accepted_answers": [
                 "wlad"
@@ -1325,7 +1383,8 @@
               "prompt": "Ble mae'r ogof? (ar · y bryn)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae'r ogof ar y bryn."
+                "Mae'r ogof ar y bryn.",
+                "Ar y bryn."
               ],
               "source_segment_ids": [
                 "cy-brenin-01-l01-s083"
@@ -1336,7 +1395,8 @@
               "prompt": "Ble mae'r môr? (rhwng · Cymru · Iwerddon)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae'r môr rhwng Cymru ac Iwerddon."
+                "Mae'r môr rhwng Cymru ac Iwerddon.",
+                "Rhwng Cymru ac Iwerddon."
               ],
               "common_wrong": [
                 {
@@ -1378,16 +1438,15 @@
         },
         {
           "id": "b2",
-          "prompt": "Mae'r bryn yn uchel, ond mae'r Wyddfa'n uchel ___.",
+          "prompt": "Mae'r bryn yn uchel, ond mae'r Wyddfa'n uchel ___. (very)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "iawn",
-            "hefyd"
+            "iawn"
           ]
         },
         {
           "id": "b3",
-          "prompt": "Mae'r môr ___ Cymru ac Iwerddon.",
+          "prompt": "Mae'r môr ___ Cymru ac Iwerddon. (between)",
           "answer_mode": "exact",
           "accepted_answers": [
             "rhwng"
@@ -1419,7 +1478,7 @@
         },
         {
           "id": "b7",
-          "prompt": "Mae Ynys Môn yn fach, ond mae Ynys Prydain yn ___ iawn.",
+          "prompt": "Mae Ynys Môn yn fach, ond mae Ynys Prydain yn ___ iawn. (big)",
           "answer_mode": "exact",
           "accepted_answers": [
             "fawr"
@@ -2091,8 +2150,8 @@
       "cover": 1,
       "inline_scene": 1,
       "margin_vignette": 5,
-      "margin_diagram": 1,
-      "margin_gloss": 23
+      "margin_diagram": 2,
+      "margin_gloss": 25
     }
   },
   "completion": {
