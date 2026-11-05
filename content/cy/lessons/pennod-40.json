@@ -24,7 +24,8 @@
    "Recall pass 2026-10-18: recurrences for Penodau 35–38 vocabulary (cyfiawn, newid, craig, claddu, lluwch, hanes, gwirionedd). Gloss symbols: ⛔ → 'stopio = aros (dim mynd)', ✋ → 'bys, bysedd: pump ar bob llaw', 📶 → 'dim signal: ffôn ✗'. New segment s301.",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s005, s049, s114). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
    "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2, c3 and c4 converted; one Pam? (c1, s011 states it); the two-fact gifts item, the 'Pam does dim signal?' present-tense reason and the unstated 'tasai Mali'n mynd i mewn i'r ogof' item replaced; c2 practises pan oedd, c4 pan fydd, c5 the short answer Gwnaf; Heddiw items keep the section's present tense; A ti? now asks for pan fydd … bydda i'n …. nodyn_en expanded to a full English explanation of pan, the two reading formulas and the Rhan 4 summary; the checker's 60-word cap is advisory (RULES §6). Rhan 4 summary rows 32–36 now quote attested sentences (32 table, 33 s070, 34 s042 / 37 s108, 35 s084, 36 s048/s077) instead of constructed ones.",
-   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: gwarchod meaning gloss moved to its first use (s040, from s063); s095 gloss for new ysgol; C c5 asks what Dafi promised (Gwnaf i warchod …) instead of the bare Gwnaf; c7 rubric accepts the tail or the eyes; c1 key_terms cy-aros; Rhan 4 row label basen nhw matches its example. Optional fe variants added to finite A keys."
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: gwarchod meaning gloss moved to its first use (s040, from s063); s095 gloss for new ysgol; C c5 asks what Dafi promised (Gwnaf i warchod …) instead of the bare Gwnaf; c7 rubric accepts the tail or the eyes; c1 key_terms cy-aros; Rhan 4 row label basen nhw matches its example. Optional fe variants added to finite A keys.",
+   "Quality audit 2026-11-04, review 1104-195058-10460: unique B2 sense cue; sentence C3/C7 models; tense category labels replace misleading yesterday/tomorrow shortcuts; translated remaining mutation examples; meaning-bearing darkness aid; removed redundant olaf aid and supplied second cwmni radical aid; individual bard attribution retains centuries of transmission; recombined copied A4; valid cave-pronoun variants in A9; refreshed introduction pointers. English cue warnings and long note intentional under RULES §§6–7. Legacy A format, summary opening and terminal recycling remain explicit owner decisions in OPEN.md."
   ],
   "review_questions": []
  },
@@ -107,7 +108,7 @@
    },
    {
     "lexeme_id": "cy-ysgol",
-    "how": "context(bws yr ysgol)+picture(scene)",
+    "how": "gloss(define)+context",
     "segment_id": "cy-brenin-01-l40-s095"
    },
    {
@@ -128,7 +129,7 @@
    {
     "lexeme_id": "cy-gwarchod",
     "how": "gloss(define)",
-    "segment_id": "cy-brenin-01-l40-s063"
+    "segment_id": "cy-brenin-01-l40-s040"
    },
    {
     "lexeme_id": "cy-breuddwydio",
@@ -588,13 +589,6 @@
         "anchor_text": "mhroffwydoliaeth",
         "gloss": "proffwydoliaeth: beth fydd yn digwydd",
         "gloss_kind": "define"
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "olaf",
-        "gloss": "cyntaf ↔ olaf",
-        "gloss_kind": "antonym"
        }
       ]
      },
@@ -876,7 +870,16 @@
       "id": "cy-brenin-01-l40-s074",
       "text": "\"Does dim angen anrheg arnat ti, Arthur,\" meddai Myrddin. \"Mae dy gwmni di gyda ti.\"",
       "paragraph_start": true,
-      "speaker": "char-myrddin"
+      "speaker": "char-myrddin",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gwmni",
+        "gloss": "dy gwmni ← cwmni",
+        "gloss_kind": "radical"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l40-s075",
@@ -920,7 +923,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "a fu ac a fydd",
-        "gloss": "a fu: ddoe · a fydd: yfory",
+        "gloss": "fu: oedd; fydd: bydd",
         "gloss_kind": "synonym"
        }
       ]
@@ -989,7 +992,7 @@
      },
      {
       "id": "cy-brenin-01-l40-s089",
-      "text": "\"Roedd y cawr yn dalach na'r Wyddfa!\" meddai'r beirdd yn y tafarndai, ganrif ar ôl canrif.",
+      "text": "\"Roedd y cawr yn dalach na'r Wyddfa!\" meddai bardd yn y dafarn. Roedd y beirdd yn dweud y stori, ganrif ar ôl canrif.",
       "paragraph_start": true,
       "speaker": "char-bardd"
      },
@@ -1237,7 +1240,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "tywyllwch",
-        "gloss": "tywyll → tywyllwch",
+        "gloss": "tywyllwch = dim golau",
         "gloss_kind": "define"
        },
        {
@@ -1339,7 +1342,7 @@
  },
  "grammar": {
   "title_cy": "Pan fydd angen brenin ar Gymru",
-  "rule_cy": "ddoe: pan oedd e'n fachgen bach · yfory: pan fydd angen brenin, byddi di'n deffro. (darllen: pan ddaw'r amser = pan fydd yr amser yn dod; y brenin a fu ac a fydd = y brenin oedd, a'r brenin fydd)",
+  "rule_cy": "gorffennol: pan oedd e'n fachgen bach · dyfodol: pan fydd angen brenin, byddi di'n deffro. (darllen: pan ddaw'r amser = pan fydd yr amser yn dod; y brenin a fu ac a fydd = y brenin oedd, a'r brenin fydd)",
   "tables": [
    {
     "caption": "pan + treiglad",
@@ -1349,11 +1352,11 @@
     ],
     "rows": [
      [
-      "ddoe",
+      "gorffennol",
       "pan oedd e'n fachgen bach · fel pan oedd Arthur yn hebog bach"
      ],
      [
-      "yfory",
+      "dyfodol",
       "pan fydd angen brenin ar Gymru, byddi di'n deffro · pan fydd e'n cysgu"
      ],
      [
@@ -1371,11 +1374,11 @@
     "rows": [
      [
       "y brenin a fu",
-      "y brenin oedd (ddoe)"
+      "y brenin oedd"
      ],
      [
       "y brenin a fydd",
-      "y brenin fydd (yfory)"
+      "y brenin fydd"
      ],
      [
       "(Pennod 28)",
@@ -1491,7 +1494,7 @@
     "segment_id": "cy-brenin-01-l40-s127"
    }
   ],
-  "nodyn_en": "The last chapter adds no new grammar. It brings back the forms of Rhan 4 and closes the story, and it uses one small word a great deal: pan ('when').\n\nPan gives the soft mutation to the verb after it, if the verb can mutate. With oedd, which starts with a vowel, nothing changes:\n- About the past: Edrychodd Arthur ar ddrws y gegin, lle roedd e'n arfer cario dŵr pan oedd e'n fachgen bach ('Arthur looked at the kitchen door, where he used to carry water when he was a small boy'); Roedd gwynt oer yn dod ohoni hi, fel pan oedd Arthur yn hebog bach ('A cold wind was coming out of it, as when Arthur was a little hawk'); Gwelais i hi o'r awyr, pan o'n i'n hebog ('I saw it from the sky, when I was a hawk'). Pan gyrhaeddon nhw'r llys ('When they reached the court') shows the mutation: cyrhaeddon → gyrhaeddon.\n- About the future: bydd becomes fydd after pan. Myrddin prophesies: pan fydd angen brenin ar Gymru, byddi di'n deffro ('when Wales needs a king, you will wake up'). Dafi promises: A gwnaf i warchod Arthur hefyd, pan fydd e'n cysgu ('And I'll guard Arthur too, when he is sleeping'). Notice that English uses the present after 'when' ('when Wales needs', 'when he is sleeping'), but Welsh uses the future, bydd, because the event is in the future.\n\nDo not confuse pan with two words that look or sound related. Pryd? asks 'when?' as a question: Ond Myrddin: pryd fydd yr amser yn dod? ('But Myrddin: when will the time come?'). And os means 'if', not 'when': A bydd Modlen yn gwneud brecwast i ti, os bydd hi'n deffro'n gynnar ('And Modlen will make you breakfast, if she wakes up early'). Myrddin is sure that the time will come, so he says pan; he is not sure that Modlen will wake early, so he says os.\n\nTwo old formulas appear for reading only. Pan ddaw'r amser means 'when the time comes'. Daw is the short future of dod for 'he' or 'it', which this book has not taught you to use; pan ddaw'r amser means the same as pan fydd yr amser yn dod. The title, Y brenin a fu ac a fydd, means 'the king who was and who will be'. It uses the relative a from Pennod 28 (y cleddyf a dynnodd Arth, 'the sword that Arth pulled'), followed by fu, an old past form of bod, and by fydd. In everyday words it is y brenin oedd, a'r brenin fydd.\n\nShort forms from Pennod 37 return. Mali today says Af i i'r bryn gyda'r ci, Mam-gu. Dof i'n ôl cyn chwech! ('I'll go to the hill with the dog, Grandma. I'll come back before six!'); dof i is the 'I' form of dod. Dafi answers Myrddin's question Wnei di aros yma a gwarchod yr ogof i fi? ('Will you stay here and guard the cave for me?') with Gwnaf ('I will'), then Gwnaf i warchod yr ogof ('I'll guard the cave'), with the soft mutation after gwnaf i.\n\nA few new words describe time and feeling. Henaint is 'old age': Mae henaint yn dod i bawb, hyd yn oed i ddewin ('Old age comes to everyone, even to a wizard'). Hiraeth is a longing for a place, a person or a time that is gone. You feel it: Teimlodd e hiraeth mawr am y dyddiau hynny ('He felt a great longing for those days'). Like ofn, it is 'on' a person: Bydd hiraeth arna i ('I will miss you', literally 'longing will be on me'). Erioed means 'ever, always (in the past)': Mae e wedi bod yma erioed ('It has always been here'). O hyd and yn dal both mean 'still': maen nhw'n cysgu yno o hyd ('they are still sleeping there'); Mae'r afon yn dal yno ('The river is still there'). Daeth … i ben means 'came to an end': Daeth amser Arthur a'i gwmni i ben ('The time of Arthur and his company came to an end').\n\nThe tables sum up Rhan 4, with one line from the story for each chapter:\n- 32: the past passive, Cafodd Arthur ei goroni gan yr esgob ('Arthur was crowned by the bishop').\n- 33: reported speech, Dwedodd e fod Rhita'n gawr mawr iawn ('He said that Rhita was a very big giant').\n- 34 and 37: the conditional, Taswn i'n gawr, baswn i'n chwerthin ('If I were a giant, I would laugh'); Basen nhw'n chwerthin ('They would laugh').\n- 35: should, Dylai brenin arwain fel gŵydd ('A king should lead like a goose').\n- 36: northern Welsh for reading, Mae gen i lefrith = Mae llaeth gyda fi ('I have milk').\n- 37: short futures, Gwnaf i warchod yr ogof ('I'll guard the cave').\n- 38: the present and future passive, Bydd hi'n cael ei chadw yn y cronicl ('It will be kept in the chronicle'), and the chronicle's gwelwyd ('was seen') for reading.\n- 39: y bydd, lle and ai, Dw i'n gwybod y bydd e'n dod ('I know that it will come').\nThe mutation table gathers the triggers that Rhan 4 used most: gan, a short future such as gwnaf i, mor and â, and pan."
+  "nodyn_en": "The last chapter adds no new grammar. It brings back the forms of Rhan 4 and closes the story, and it uses one small word a great deal: pan ('when').\n\nPan gives the soft mutation to the verb after it, if the verb can mutate. With oedd, which starts with a vowel, nothing changes:\n- About the past: Edrychodd Arthur ar ddrws y gegin, lle roedd e'n arfer cario dŵr pan oedd e'n fachgen bach ('Arthur looked at the kitchen door, where he used to carry water when he was a small boy'); Roedd gwynt oer yn dod ohoni hi, fel pan oedd Arthur yn hebog bach ('A cold wind was coming out of it, as when Arthur was a little hawk'); Gwelais i hi o'r awyr, pan o'n i'n hebog ('I saw it from the sky, when I was a hawk'). Pan gyrhaeddon nhw'r llys ('When they reached the court') shows the mutation: cyrhaeddon → gyrhaeddon.\n- About the future: bydd becomes fydd after pan. Myrddin prophesies: pan fydd angen brenin ar Gymru, byddi di'n deffro ('when Wales needs a king, you will wake up'). Dafi promises: A gwnaf i warchod Arthur hefyd, pan fydd e'n cysgu ('And I'll guard Arthur too, when he is sleeping'). Notice that English uses the present after 'when' ('when Wales needs', 'when he is sleeping'), but Welsh uses the future, bydd, because the event is in the future.\n\nDo not confuse pan with two words that look or sound related. Pryd? asks 'when?' as a question: Ond Myrddin: pryd fydd yr amser yn dod? ('But Myrddin: when will the time come?'). And os means 'if', not 'when': A bydd Modlen yn gwneud brecwast i ti, os bydd hi'n deffro'n gynnar ('And Modlen will make you breakfast, if she wakes up early'). Myrddin is sure that the time will come, so he says pan; he is not sure that Modlen will wake early, so he says os.\n\nTwo old formulas appear for reading only. Pan ddaw'r amser means 'when the time comes'. Daw is the short future of dod for 'he' or 'it', which this book has not taught you to use; pan ddaw'r amser means the same as pan fydd yr amser yn dod. The title, Y brenin a fu ac a fydd, means 'the king who was and who will be'. It uses the relative a from Pennod 28 (y cleddyf a dynnodd Arth, 'the sword that Arth pulled'), followed by fu, an old past form of bod, and by fydd. In everyday words it is y brenin oedd, a'r brenin fydd.\n\nShort forms from Pennod 37 return. Mali today says Af i i'r bryn gyda'r ci, Mam-gu. Dof i'n ôl cyn chwech! ('I'll go to the hill with the dog, Grandma. I'll come back before six!'); dof i is the 'I' form of dod. Dafi answers Myrddin's question Wnei di aros yma a gwarchod yr ogof i fi? ('Will you stay here and guard the cave for me?') with Gwnaf ('I will'), then Gwnaf i warchod yr ogof ('I'll guard the cave'), with the soft mutation after gwnaf i.\n\nA few new words describe time and feeling. Henaint is 'old age': Mae henaint yn dod i bawb, hyd yn oed i ddewin ('Old age comes to everyone, even to a wizard'). Hiraeth is a longing for a place, a person or a time that is gone. You feel it: Teimlodd e hiraeth mawr am y dyddiau hynny ('He felt a great longing for those days'). Like ofn, it is 'on' a person: Bydd hiraeth arna i ('I will miss you', literally 'longing will be on me'). Erioed means 'ever, always (in the past)': Mae e wedi bod yma erioed ('It has always been here'). O hyd and yn dal both mean 'still': maen nhw'n cysgu yno o hyd ('they are still sleeping there'); Mae'r afon yn dal yno ('The river is still there'). Daeth … i ben means 'came to an end': Daeth amser Arthur a'i gwmni i ben ('The time of Arthur and his company came to an end').\n\nThe tables sum up Rhan 4, with one line from the story for each chapter:\n- 32: the past passive, Cafodd Arthur ei goroni gan yr esgob ('Arthur was crowned by the bishop').\n- 33: reported speech, Dwedodd e fod Rhita'n gawr mawr iawn ('He said that Rhita was a very big giant').\n- 34 and 37: the conditional, Taswn i'n gawr, baswn i'n chwerthin ('If I were a giant, I would laugh'); Basen nhw'n chwerthin ('They would laugh').\n- 35: should, Dylai brenin arwain fel gŵydd ('A king should lead like a goose').\n- 36: northern Welsh for reading, Mae gen i lefrith = Mae llaeth gyda fi ('I have milk').\n- 37: short futures, Gwnaf i warchod yr ogof ('I'll guard the cave').\n- 38: the present and future passive, Bydd hi'n cael ei chadw yn y cronicl ('It will be kept in the chronicle'), and the chronicle's gwelwyd ('was seen') for reading.\n- 39: y bydd, lle and ai, Dw i'n gwybod y bydd e'n dod ('I know that it will come').\nThe mutation table gathers the triggers that Rhan 4 used most: gan, a short future such as gwnaf i, mor and â, and pan.\n\nFurther mutation-table translations: gan ferch Cynyr means “by Cynyr’s daughter”; mor fach â llygoden means “as small as a mouse”; mor fawr â thŷ means “as big as a house”. The past and future labels describe tense, not specifically yesterday and tomorrow: this story ranges over many years."
  },
  "pensa": {
   "A": {
@@ -1550,14 +1553,14 @@
      "items": [
       {
        "id": "a4",
-       "prompt": "Bydda i'n gwarchod yr ogof. →",
+       "prompt": "Bydda i'n gwarchod Arthur. →",
        "answer_mode": "exact",
        "recall_of": "G37",
        "accepted_answers": [
-        "Gwnaf i warchod yr ogof.",
-        "Gwna i warchod yr ogof.",
-        "Fe wnaf i warchod yr ogof.",
-        "Fe wna i warchod yr ogof."
+        "Gwnaf i warchod Arthur.",
+        "Gwna i warchod Arthur.",
+        "Fe wnaf i warchod Arthur.",
+        "Fe wna i warchod Arthur."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1641,7 +1644,10 @@
        "accepted_answers": [
         "Dwedodd Mali fod yr ogof yn sych.",
         "fod yr ogof yn sych",
-        "Fe ddwedodd Mali fod yr ogof yn sych."
+        "Fe ddwedodd Mali fod yr ogof yn sych.",
+        "Dwedodd Mali ei bod hi'n sych.",
+        "ei bod hi'n sych",
+        "Fe ddwedodd Mali ei bod hi'n sych."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1701,7 +1707,7 @@
     },
     {
      "id": "b2",
-     "prompt": "Ar ôl noson hir yn y gwely, mae Cai'n agor ei lygaid ac yn ___.",
+     "prompt": "Ar ôl noson hir yn y gwely, mae Cai'n agor ei lygaid ac yn ___. (wake up)",
      "answer_mode": "exact",
      "accepted_answers": [
       "deffro"
@@ -1812,7 +1818,7 @@
      "id": "c3",
      "prompt": "Ar ben y bryn, aethon nhw i'r ogof. Beth oedd yng nghanol yr ogof?",
      "answer_mode": "self_check",
-     "model_answer": "Bwrdd crwn o garreg, a llawer o seddau carreg.",
+     "model_answer": "Roedd bwrdd crwn o garreg yng nghanol yr ogof.",
      "key_terms": [
       "cy-ogof",
       "cy-crwn"
@@ -1874,7 +1880,7 @@
      "id": "c7",
      "prompt": "Yn yr ogof, mae sŵn bach, ac mae mwg bach llwyd yn dod o'r ogof. Beth mae Mali'n ei weld am funud?",
      "answer_mode": "self_check",
-     "model_answer": "Rhywbeth bach a choch: cynffon fach goch, a dau lygad mawr, melyn.",
+     "model_answer": "Mae Mali'n gweld cynffon fach goch a dau lygad mawr, melyn.",
      "key_terms": [
       "cy-ogof"
      ],
@@ -2147,7 +2153,7 @@
   ]
  },
  "metrics": {
-  "running_words": 1747,
+  "running_words": 1754,
   "sentences": 130,
   "word_target": 1800,
   "word_window": [
