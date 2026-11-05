@@ -26,7 +26,8 @@
    "Integrator: the cy-mor-equative base card front in lexicon.json is 'mor … â (+ SM)'; Codex asks for 'mor (+ SM) … â (+ AM)'. Not changed in the delta because the merged lexicon entry would then conflict; please apply in lexicon.json and the delta together.",
    "Recall pass 2026-10-18: recurrences added by local rewording: dyffryn (s001), cymryd rhan (s007, Cai on being knighted), pwysig (s009, 'y gystadleuaeth fawr, bwysig'), paratoi (s015, Arth's squire work), mwdlyd (s059, the churned field). Gloss s011 shortened to 'gwaywffon: pren hir, pen dur' (was 7 words). Card copies in lexicon_delta/anki_export synced to lexicon.json where the new lexicon-copy check flagged them. No gloss symbols to replace.",
    "Audit-fix pass 2026-10-19: s017 'esgidiau gorau' → 'esgidiau mawr' (gorau was used 30 lines before any gloss could resolve it); taro glossed at its first use (s011, = curo'n gryf); late duplicate glosses removed (llai s073, already in the s033 paradigm; well s093 and orau s107, already glossed at s087/s048); the two fyrrach glosses merged; gwaeth gloss tidied; 'mor gryf â'i dad: Cai = Cynyr' (a false equation) → 'mor … â: cryf = cryf'. Pensa C c1 (perfect, as in s071 'Pwy sy wedi llosgi …?'), c6 and c7 now ask about the narrated past.",
-   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c1, c3 and c7 converted and accepted_answers removed; one Pam? (c5, the banner, asked in the past); the yes/no c2 now asks for Mali's answer; prompts on past events use the past; c6 the negesydd's verdict replaces the two-fact 'gorau a'r ail'; the old c6 (why Cai did not look for the sword) dropped. Rubrics avoid neu (first taught at 33). nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Table 'na + treiglad llaes' rebuilt from attested sentences (the unshown 'nag Arth' and the non-mutating 'na fi' row removed). A a1 prompt no longer says 'the strong knight is strong'. Codex review fixes: B b3 no fronted focus (Mae Gwalchmai'n ennill); B b10 reworded so only hawdd fits ('…ac mae pawb yn gwybod yr ateb'), key hawdd only; s048 gloss now carries meaning (orau ← gorau: da → gwell → gorau); c5 rubric one cause; c8 accepts 'nobody is taller'; note: na ti explained as the spoken form, bare comparatives translated."
+   "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c1, c3 and c7 converted and accepted_answers removed; one Pam? (c5, the banner, asked in the past); the yes/no c2 now asks for Mali's answer; prompts on past events use the past; c6 the negesydd's verdict replaces the two-fact 'gorau a'r ail'; the old c6 (why Cai did not look for the sword) dropped. Rubrics avoid neu (first taught at 33). nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Table 'na + treiglad llaes' rebuilt from attested sentences (the unshown 'nag Arth' and the non-mutating 'na fi' row removed). A a1 prompt no longer says 'the strong knight is strong'. Codex review fixes: B b3 no fronted focus (Mae Gwalchmai'n ennill); B b10 reworded so only hawdd fits ('…ac mae pawb yn gwybod yr ateb'), key hawdd only; s048 gloss now carries meaning (orau ← gorau: da → gwell → gorau); c5 rubric one cause; c8 accepts 'nobody is taller'; note: na ti explained as the spoken form, bare comparatives translated.",
+   "Quality continuation audit, review 1104-204733-3857: valid optional fe and reported-pronoun/expanded-yn keys; immediate sheath meaning using already taught llafn/lledr; circular easy/difficult contrast moved after its contextual support; copied A5/A8 recombined with consistent keys/hints/references. English-note length remains intentional. Legacy A recall format, future recycling and the period convention for the prescribed tournament remain owner decisions; no tournament or story redesign."
   ],
   "review_questions": [
    {
@@ -454,6 +455,13 @@
         "covers_lexeme_ids": [
          "cy-gwain"
         ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "wain",
+        "gloss": "gwain: lledr dros lafn y cleddyf",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -865,13 +873,6 @@
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "hawdd",
-        "gloss": "hawdd ↔ anodd",
-        "gloss_kind": "antonym"
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
         "anchor_text": "gwaywffyn",
         "gloss": "gwaywffon, gwaywffyn",
         "gloss_kind": "number"
@@ -882,7 +883,16 @@
       "id": "cy-brenin-01-l25-s060",
       "text": "\"Mae gwaith yswain yn anodd, ac mae'r gystadleuaeth yn hir,\" meddai Mali, a rhoddodd hi fara i Arth.",
       "paragraph_start": true,
-      "speaker": "char-mali"
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anodd",
+        "gloss": "anodd ↔ hawdd",
+        "gloss_kind": "antonym"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l25-s061",
@@ -1522,7 +1532,7 @@
       },
       {
        "id": "a5",
-       "prompt": "Heddiw, Gwalchmai yw'r ___. (da: y … + -af)",
+       "prompt": "Roedd tarian las gyda'r marchog ___. (da: -af)",
        "answer_mode": "exact",
        "accepted_answers": [
         "gorau"
@@ -1533,9 +1543,7 @@
          "hint": "da → gwell → gorau"
         }
        ],
-       "source_segment_ids": [
-        "cy-brenin-01-l25-s083"
-       ]
+       "source_segment_ids": []
       },
       {
        "id": "a6",
@@ -1584,21 +1592,19 @@
      "items": [
       {
        "id": "a8",
-       "prompt": "Mae fy ngheffyl i'n gyflymach na ___ Gwalchmai! (ceffyl)",
+       "prompt": "Mae'r darian las yn fwy na ___ goch. (tarian)",
        "answer_mode": "exact",
        "accepted_answers": [
-        "cheffyl"
+        "tharian"
        ],
        "mutation_hint": true,
        "common_wrong": [
         {
-         "answer": "ceffyl",
-         "hint": "na + llaes: c → ch"
+         "answer": "tarian",
+         "hint": "na + t → th"
         }
        ],
-       "source_segment_ids": [
-        "cy-brenin-01-l25-s025"
-       ]
+       "source_segment_ids": []
       }
      ]
     },
@@ -1613,7 +1619,8 @@
        "prompt": "Cyrhaeddodd e'r dafarn. (ni) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cyrhaeddon ni'r dafarn."
+        "Cyrhaeddon ni'r dafarn.",
+        "Fe gyrhaeddon ni'r dafarn."
        ],
        "recall_of": "G23"
       }
@@ -1630,7 +1637,11 @@
        "prompt": "Mae Arth yn gyflym. (Mae pawb yn dweud …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Mae pawb yn dweud bod Arth yn gyflym."
+        "Mae pawb yn dweud bod Arth yn gyflym.",
+        "Mae pawb yn dweud ei fod e'n gyflym.",
+        "Mae pawb yn dweud fod e'n gyflym.",
+        "Mae pawb yn dweud ei fod e yn gyflym.",
+        "Mae pawb yn dweud fod e yn gyflym."
        ],
        "recall_of": "G22"
       }
@@ -2317,7 +2328,7 @@
    "inline_scene": 2,
    "margin_vignette": 2,
    "margin_diagram": 1,
-   "margin_gloss": 36
+   "margin_gloss": 37
   }
  },
  "completion": {
