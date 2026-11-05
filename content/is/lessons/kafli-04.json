@@ -313,7 +313,7 @@
     "swaps": []
   },
   "metrics": {
-    "running_words": 583,
+    "running_words": 581,
     "sentences": 113,
     "word_target": 530,
     "word_window": [
@@ -631,32 +631,20 @@
               },
               {
                 "id": "x1-1-2",
-                "prompt": "„Snati! Komdu!“ ___ Bjarni. (kalla)",
+                "prompt": "Bjarni ___: „Óli!“ (kalla)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "kallar"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "kalla",
-                    "hint": "et.: kallar"
-                  }
                 ]
               },
               {
                 "id": "x1-1-3",
-                "prompt": "Bændurnir ríða og ___. (kalla)",
+                "prompt": "Bjarni kallar. Bændurnir ríða og ___. (kallar → þeir)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "kalla"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "kallar",
-                    "hint": "ft.: kalla"
-                  }
                 ]
               },
               {
@@ -1096,17 +1084,11 @@
               },
               {
                 "id": "x2-1-2",
-                "prompt": "Kind jarm___.",
+                "prompt": "Kindin er hrædd og jarm___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "ar"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "a",
-                    "hint": "et.: jarmar"
-                  }
                 ]
               },
               {
@@ -1126,32 +1108,20 @@
               },
               {
                 "id": "x2-1-4",
-                "prompt": "Hún klifr___ upp.",
+                "prompt": "Kindin kemur og klifr___ upp.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "ar"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "a",
-                    "hint": "et.: klifrar"
-                  }
                 ]
               },
               {
                 "id": "x2-1-5",
-                "prompt": "Siggi og Ketill fara, og þeir klifr___ niður.",
+                "prompt": "Strákarnir klifr___ niður, en mennirnir standa uppi.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "a"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "ar",
-                    "hint": "þeir (ft.) → klifra"
-                  }
                 ]
               }
             ]
@@ -1173,7 +1143,7 @@
             "items": [
               {
                 "id": "x2-2-1",
-                "prompt": "Hvað gera mennirnir? — Þeir ___ niður. (kalla)",
+                "prompt": "Hvað gera mennirnir? — Þeir ___ niður. (kallar → þeir)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1203,7 +1173,7 @@
               },
               {
                 "id": "x2-2-3",
-                "prompt": "Hvað gera kindurnar? — Þær ___. (jarma)",
+                "prompt": "Hvað gera kindurnar? — Þær ___. (jarmar → þær)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1233,7 +1203,7 @@
               },
               {
                 "id": "x2-2-5",
-                "prompt": "Hvað ___ strákarnir? — Þeir klifra niður. (gera)",
+                "prompt": "Hvað ___ strákarnir? — Þeir klifra niður. (gerir → strákarnir)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1433,17 +1403,11 @@
               },
               {
                 "id": "x3-1-4",
-                "prompt": "Markið er ___. (skrítinn)",
+                "prompt": "Lambið hefur ___ mark. (skrítinn)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "skrítið"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "skrítinn",
-                    "hint": "markið (hk.) → skrítið"
-                  }
                 ]
               },
               {
@@ -1480,16 +1444,11 @@
             "items": [
               {
                 "id": "x3-2-1",
-                "prompt": "Lambið er hrætt, en nú er það ___. (uppi / upp / niður)",
+                "prompt": "Lambið og kindin eru ___. (uppi / upp / niður)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "uppi"
-                ],
-                "choices": [
-                  "uppi",
-                  "upp",
-                  "niður"
                 ]
               },
               {
@@ -1648,21 +1607,13 @@
       {
         "caption": "Hvað gerir …? · Hvað gera …?",
         "header": [
-          "?",
-          "—"
+          "et.",
+          "ft."
         ],
         "rows": [
           [
-            "Hvað gerir kindin?",
-            "Hún stendur."
-          ],
-          [
             "Hvað gerir lambið?",
-            "Það liggur."
-          ],
-          [
-            "Hvað gera hundarnir?",
-            "Þeir hlaupa."
+            "Hvað gera hundarnir?"
           ]
         ]
       }
@@ -1781,7 +1732,7 @@
           "items": [
             {
               "id": "a5",
-              "prompt": "Bændurnir ___, og Óli kallar líka. (kalla)",
+              "prompt": "Bændurnir ___, og Óli kallar líka. (kallar → bændurnir)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
@@ -1811,24 +1762,13 @@
             },
             {
               "id": "a7",
-              "prompt": "Siggi kemur, og ___ koma líka. (hundur)",
+              "prompt": "Hér er lamb. ___ er hrætt. (hann / hún / það)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
-                "hundarnir",
-                "hundar"
+                "Það"
               ],
-              "common_wrong": [
-                {
-                  "answer": "hundurinn",
-                  "hint": "ft.: hundarnir"
-                },
-                {
-                  "answer": "hundur",
-                  "hint": "ft.: hundar"
-                }
-              ],
-              "recall_of": "G03"
+              "recall_of": "G01"
             },
             {
               "id": "a8",
@@ -2355,20 +2295,21 @@
     "prompt": "textbook loop step write, attempt 20261026T035052642-is-kvold-01-write-c04; docs/icelandic-kvoldvaka-design.md §6 row 4; content/is/plan/chapters.json row 4",
     "review_required": "Codex cross-model language review and a fluent native review before the owner promotes the text",
     "notes": [
-      "Lexemes: the 26 of chapters.json row 4 exactly (24 words + the place chunks á heiðinni, í gilinu); budget 26, ceiling 28. No open slots (Hluti 1). Incidentals used (row incidental_allowed): hleypur, ríður (3sg of the new lexemes hlaupa, ríða), geltir (made transparent in the text by „Voff, voff!“), gerir, Komdu (form gloss komdu ← koma), and the 3pl of koma, fara, sofa, standa, hafa. hefur (hafa) is first met here at s012 („Hann hefur ekki átta fætur!“), moved from Kafli 3 at fix 20261027T031328857-is-kvold-01-fix (F002); like the other incidentals it rests on context, not a margin gloss, so it carries the same planned-gloss warning. heita, spyrja, lesa stay 3sg-only (spyr is used as a speech tag only).",
-      "G04 in the first third: the minimal pair is sentence 2 (Siggi vaknar … Ásta og Helga vakna ekki: þær sofa); kallar s013, kalla s022; Hvað gera …? s029, Hvað gerir …? s043, s045.",
-      "No accusative that differs from the nominative: objects are neuter, feminine plural or indefinite (sér það, hefur mark, hafa mark, á þessar kindur, á margar, segir lítið, segir það, átta fætur). í/á + dative only in the place chunks (á Jökuldal, á túninu, á heiðinni, í gilinu) and in Óðinn situr á Sleipni, which repeats Kafli 2 s055 (licensed at G02; Codex flagged it in both passes against the closed chunk list I gave it, and itself noted the G02 licence).",
-      "Text routes of the row used, adapted: ganga, á heiðinni, þoka (without a third 'Í dag'), hlaupa (afi), ríða (afi's Óðinn line), lamb (Kind og lamb koma: kindin er mamma, og lambið er barn), gil (+ the SVG at the same sentence), í gilinu, mark (in Óli's mouth, not a narrator question, + the earmark SVG), hræddur (the lamb and Snati), klifra.",
-      "seinn is introduced by Ketill's teasing „Hann er seinn!“ (s020, gloss fljótur ↔ seinn): Siggi in fact woke early, so the tease is a small joke and the start of the rivalry. stoltur rests on context (… en þeir eru stoltir: kindin er hér, og lambið er hér; Óli: „í dag eru strákarnir stórir menn!“; Ásta: „Siggi er stoltur, og Ketill er stoltur!“); no closed-list gloss fits it honestly, and English is not allowed in the margin. Codex rated it a blocker twice (proud vs happy/relieved); I judged the gist ('pleased with themselves, feeling grown') resolvable and left it as a review question.",
-      "kaldur carries a sound gloss kalt: «brrr!» plus the fog context; flagged for the reviewer.",
-      "Codex review (cx job 1025-211210-12945) changes: the lamb is no longer carried (a September lamb is about four months old and heavy): Siggi calls it up as Ketill calls the ewe; Þau koma ekki upp states the need for rescue; Snati fer after Siggi's „Nei, Snati!“; Óli announces his retelling („Ásta, hér er sagan“); bóndi contrasted with vinnumaður; the ewe's mark says „Bjarni“ and the lamb's says neither „Bjarni“ nor „Jón“ (pass 2), after an SVG of Bjarni's and Jón's marks; x3-2-4/5 rewritten so that only one choice fits; b1 accepts bændurnir; b8 no longer contradicts the hook.",
-      "Hook without genitive or accusative: Kindin hefur mark, og það segir „Bjarni“. Lambið hefur mark líka, en það segir ekki „Bjarni“, og það segir ekki „Jón“. Jón: „Skrítið mark.“; Ásta: „Er lambið skrítið, pabbi?“ — „Nei. Markið er skrítið.“; Siggi: „Hver á lambið, pabbi?“; last line En markið segir það ekki, answering Óli's „markið segir það“.",
-      "The ewe is Bjarni's (her mark says „Bjarni“); the lamb with her has a mark nobody knows, so it is a stray that followed her (continuity log).",
-      "Media: margin_vignette 3 (þoka, gil, mark; Hluti 1 expects 4–10, a checker warning): the row plans three, and two SVG diagrams carry the exact relations. The planned cover, scene and vignettes support but never carry meaning.",
-      "Checker warnings grammar-unlicensed for heiðinni and gilinu are the row's new place chunks (course-lists.json place_chunks from 4), not yet in course.json.place_chunks (course.json is the runner's); same situation as Kafli 3's í heyinu.",
-      "pronunciation_note: hv = kv with hvar, hvað, hver (all in the chapter), per the row's pronunciation_drip.",
-      "2026-11-04: grammar.note_en expanded to a full English explanation (owner, all courses; RULES §6), 902 words: length follows content, as the design's 80-word cap is superseded. Every example is a sentence or form from this chapter's story (or its grammar tables), translated; terms are defined at first use and later material is named, not taught. Revised after the 2026-11-04 Codex review (scoped rules, no outside-chapter examples).",
-      "2026-11-04 fixes from the review's non-blocking suggestions: Óli's „í dag eru strákarnir stórir menn!“ (s059) now precedes the first stoltir (s058), so pride follows his praise; c4 gains a model answer using it. The earmark vignette was regenerated as two separate animals. Retroactive per-occurrence constructions[] tags for Kaflar 1–4 were declined: the checker cannot read them, the reviewer verified licensing by hand, and COURSE.md's tagging rule stands for new chapters."
+      "Earlier version / review history: Lexemes: the 26 of chapters.json row 4 exactly (24 words + the place chunks á heiðinni, í gilinu); budget 26, ceiling 28. No open slots (Hluti 1). Incidentals used (row incidental_allowed): hleypur, ríður (3sg of the new lexemes hlaupa, ríða), geltir (made transparent in the text by „Voff, voff!“), gerir, Komdu (form gloss komdu ← koma), and the 3pl of koma, fara, sofa, standa, hafa. hefur (hafa) is first met here at s012 („Hann hefur ekki átta fætur!“), moved from Kafli 3 at fix 20261027T031328857-is-kvold-01-fix (F002); like the other incidentals it rests on context, not a margin gloss, so it carries the same planned-gloss warning. heita, spyrja, lesa stay 3sg-only (spyr is used as a speech tag only).",
+      "Earlier version / review history: G04 in the first third: the minimal pair is sentence 2 (Siggi vaknar … Ásta og Helga vakna ekki: þær sofa); kallar s013, kalla s022; Hvað gera …? s029, Hvað gerir …? s043, s045.",
+      "Earlier version / review history: No accusative that differs from the nominative: objects are neuter, feminine plural or indefinite (sér það, hefur mark, hafa mark, á þessar kindur, á margar, segir lítið, segir það, átta fætur). í/á + dative only in the place chunks (á Jökuldal, á túninu, á heiðinni, í gilinu) and in Óðinn situr á Sleipni, which repeats Kafli 2 s055 (licensed at G02; Codex flagged it in both passes against the closed chunk list I gave it, and itself noted the G02 licence).",
+      "Earlier version / review history: Text routes of the row used, adapted: ganga, á heiðinni, þoka (without a third 'Í dag'), hlaupa (afi), ríða (afi's Óðinn line), lamb (Kind og lamb koma: kindin er mamma, og lambið er barn), gil (+ the SVG at the same sentence), í gilinu, mark (in Óli's mouth, not a narrator question, + the earmark SVG), hræddur (the lamb and Snati), klifra.",
+      "Earlier version / review history: seinn is introduced by Ketill's teasing „Hann er seinn!“ (s020, gloss fljótur ↔ seinn): Siggi in fact woke early, so the tease is a small joke and the start of the rivalry. stoltur rests on context (… en þeir eru stoltir: kindin er hér, og lambið er hér; Óli: „í dag eru strákarnir stórir menn!“; Ásta: „Siggi er stoltur, og Ketill er stoltur!“); no closed-list gloss fits it honestly, and English is not allowed in the margin. Codex rated it a blocker twice (proud vs happy/relieved); I judged the gist ('pleased with themselves, feeling grown') resolvable and left it as a review question.",
+      "Earlier version / review history: kaldur carries a sound gloss kalt: «brrr!» plus the fog context; flagged for the reviewer.",
+      "Earlier version / review history: Codex review (cx job 1025-211210-12945) changes: the lamb is no longer carried (a September lamb is about four months old and heavy): Siggi calls it up as Ketill calls the ewe; Þau koma ekki upp states the need for rescue; Snati fer after Siggi's „Nei, Snati!“; Óli announces his retelling („Ásta, hér er sagan“); bóndi contrasted with vinnumaður; the ewe's mark says „Bjarni“ and the lamb's says neither „Bjarni“ nor „Jón“ (pass 2), after an SVG of Bjarni's and Jón's marks; x3-2-4/5 rewritten so that only one choice fits; b1 accepts bændurnir; b8 no longer contradicts the hook.",
+      "Earlier version / review history: Hook without genitive or accusative: Kindin hefur mark, og það segir „Bjarni“. Lambið hefur mark líka, en það segir ekki „Bjarni“, og það segir ekki „Jón“. Jón: „Skrítið mark.“; Ásta: „Er lambið skrítið, pabbi?“ — „Nei. Markið er skrítið.“; Siggi: „Hver á lambið, pabbi?“; last line En markið segir það ekki, answering Óli's „markið segir það“.",
+      "Earlier version / review history: The ewe is Bjarni's (her mark says „Bjarni“); the lamb with her has a mark nobody knows, so it is a stray that followed her (continuity log).",
+      "Earlier version / review history: Media: margin_vignette 3 (þoka, gil, mark; Hluti 1 expects 4–10, a checker warning): the row plans three, and two SVG diagrams carry the exact relations. The planned cover, scene and vignettes support but never carry meaning.",
+      "Earlier version / review history: Checker warnings grammar-unlicensed for heiðinni and gilinu are the row's new place chunks (course-lists.json place_chunks from 4), not yet in course.json.place_chunks (course.json is the runner's); same situation as Kafli 3's í heyinu.",
+      "Earlier version / review history: pronunciation_note: hv = kv with hvar, hvað, hver (all in the chapter), per the row's pronunciation_drip.",
+      "Earlier version / review history: 2026-11-04: grammar.note_en expanded to a full English explanation (owner, all courses; RULES §6), 902 words: length follows content, as the design's 80-word cap is superseded. Every example is a sentence or form from this chapter's story (or its grammar tables), translated; terms are defined at first use and later material is named, not taught. Revised after the 2026-11-04 Codex review (scoped rules, no outside-chapter examples).",
+      "Earlier version / review history: 2026-11-04 fixes from the review's non-blocking suggestions: Óli's „í dag eru strákarnir stórir menn!“ (s059) now precedes the first stoltir (s058), so pride follows his praise; c4 gains a model answer using it. The earmark vignette was regenerated as two separate animals. Retroactive per-occurrence constructions[] tags for Kaflar 1–4 were declined: the checker cannot read them, the reviewer verified licensing by hand, and COURSE.md's tagging rule stands for new chapters.",
+      "Audit repair, 2026-11-04: current version corrects the published-chapter audit blockers in popups, exercise frames, keys, recall and grammar references as applicable. Earlier word/focus counts and omission claims above are historical. Current chapter gate and independent review are archived in docs/reviews/is-audit-repairs-2026-11-04 and OPEN.md. For chapters 5–12, cover/scene records are planned; no image generation or audio. Reference-labelled table cells are for lookup only, never required output. Weak later recurrence is scheduled in plan rows 15–17. Text remains draft."
     ],
     "review_questions": [
       {

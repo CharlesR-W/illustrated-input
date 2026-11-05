@@ -14,14 +14,15 @@
     "prompt": "prompts/icelandic-mvp-writer-brief.md; docs/icelandic-kvoldvaka-design.md §6 row 1; content/is/plan/chapters.json row 1",
     "review_required": "Codex cross-model language review (summarised in docs/reviews/icelandic-k01-02-writer-log-2026-10-21.md) and fluent native review before text_status: reviewed",
     "notes": [
-      "Bootstrap chapter (design §3.3): people and verbs on the first page; problem (Snati missing) → consequence (found asleep with the sheep) → hook (afi: Þetta er stór dagur. Ísland er gamalt; Siggi does not understand; afi falls asleep).",
-      "G01 only: nominative singular, er, hann/hún/það, predicate and attributive adjectives nom. sg.; no article outside the place chunks; no plurals except the supported item átta fætur (SVG).",
-      "Incidental verbs used (6 of the 13): heitir, situr, segir, spyr, sefur, kemur.",
-      "Place chunk changed from í Jökuldal to á Jökuldal (traditional local usage; Codex language check 2026-10-21, citing Eiríkur Rögnvaldsson on prepositions with valley names).",
-      "Hamrar is a plural farm name: never used as a subject with er/eru; introduced as „Þetta er bær. Hann heitir Hamrar.“",
-      "Siggi's cut foot (design §6 row 1) is shown in the scene art only; the text never needs it.",
-      "Language checked token by token against BÍN (islenska 2.1.0) and by one Codex pass; fixes applied.",
-      "2026-11-04: grammar.note_en expanded to a full English explanation (owner, all courses; RULES §6), 909 words: length follows content, as the design's 80-word cap is superseded. Every example is a sentence or form from this chapter's story (or its grammar tables), translated; terms are defined at first use and later material is named, not taught. Revised after the 2026-11-04 Codex review (scoped rules, no outside-chapter examples)."
+      "Earlier version / review history: Bootstrap chapter (design §3.3): people and verbs on the first page; problem (Snati missing) → consequence (found asleep with the sheep) → hook (afi: Þetta er stór dagur. Ísland er gamalt; Siggi does not understand; afi falls asleep).",
+      "Earlier version / review history: G01 only: nominative singular, er, hann/hún/það, predicate and attributive adjectives nom. sg.; no article outside the place chunks; no plurals except the supported item átta fætur (SVG).",
+      "Earlier version / review history: Incidental verbs used (6 of the 13): heitir, situr, segir, spyr, sefur, kemur.",
+      "Earlier version / review history: Place chunk changed from í Jökuldal to á Jökuldal (traditional local usage; Codex language check 2026-10-21, citing Eiríkur Rögnvaldsson on prepositions with valley names).",
+      "Earlier version / review history: Hamrar is a plural farm name: never used as a subject with er/eru; introduced as „Þetta er bær. Hann heitir Hamrar.“",
+      "Earlier version / review history: Siggi's cut foot (design §6 row 1) is shown in the scene art only; the text never needs it.",
+      "Earlier version / review history: Language checked token by token against BÍN (islenska 2.1.0) and by one Codex pass; fixes applied.",
+      "Earlier version / review history: 2026-11-04: grammar.note_en expanded to a full English explanation (owner, all courses; RULES §6), 909 words: length follows content, as the design's 80-word cap is superseded. Every example is a sentence or form from this chapter's story (or its grammar tables), translated; terms are defined at first use and later material is named, not taught. Revised after the 2026-11-04 Codex review (scoped rules, no outside-chapter examples).",
+      "Audit repair, 2026-11-04: current version corrects the published-chapter audit blockers in popups, exercise frames, keys, recall and grammar references as applicable. Earlier word/focus counts and omission claims above are historical. Current chapter gate and independent review are archived in docs/reviews/is-audit-repairs-2026-11-04 and OPEN.md. For chapters 5–12, cover/scene records are planned; no image generation or audio. Reference-labelled table cells are for lookup only, never required output. Weak later recurrence is scheduled in plan rows 15–17. Text remains draft."
     ],
     "review_questions": [
       {
@@ -747,7 +748,7 @@
             "items": [
               {
                 "id": "x1-1-1",
-                "prompt": "Þetta er Ísland. ___ er stórt.",
+                "prompt": "Þetta er Ísland. ___ er stórt. (Hann / Hún / Það)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -767,7 +768,7 @@
               },
               {
                 "id": "x1-1-2",
-                "prompt": "Þetta er hestur. ___ heitir Sleipnir.",
+                "prompt": "Þetta er hestur. ___ heitir Sleipnir. (Hann / Hún / Það)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -781,7 +782,7 @@
               },
               {
                 "id": "x1-1-3",
-                "prompt": "Þar er á. ___ er stór.",
+                "prompt": "Þar er á. ___ er stór. (Hann / Hún / Það)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -801,7 +802,7 @@
               },
               {
                 "id": "x1-1-4",
-                "prompt": "Hér er kind. ___ er lítil.",
+                "prompt": "Hér er kind. ___ er lítil. (Hann / Hún / Það)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -815,7 +816,7 @@
               },
               {
                 "id": "x1-1-5",
-                "prompt": "Þetta er Jökuldalur. ___ er á Íslandi.",
+                "prompt": "Þetta er Jökuldalur. ___ er á Íslandi. (Hann / Hún / Það)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
@@ -834,7 +835,7 @@
             "type": "podstanovka",
             "title": "Rétt form",
             "instruction": "Settu orðið í rétt form.",
-            "hint_en": "The adjective agrees with the noun: stór (kk., kvk.), stórt (hk.); lítill (kk.), lítil (kvk.).",
+            "hint_en": "x1-2-3: Cue: small; l…; x1-2-4: Cue: big; s…; x1-2-5: Cue: big; s…",
             "grammar_target_ids": [
               "G01"
             ],
@@ -846,17 +847,11 @@
             "items": [
               {
                 "id": "x1-2-1",
-                "prompt": "Þar er fjall. Það er ___. (stór)",
+                "prompt": "Bær er lítill, en fjall er ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "stórt"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "stór",
-                    "hint": "fjall (hk.) → -t"
-                  }
                 ],
                 "source_segment_ids": [
                   "is-kvold-01-l01-s014"
@@ -864,7 +859,7 @@
               },
               {
                 "id": "x1-2-2",
-                "prompt": "Þar er kind. Hún er ___. (lítill)",
+                "prompt": "Kind er ekki stór. Hún er ___. (lítill)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -879,7 +874,7 @@
               },
               {
                 "id": "x1-2-3",
-                "prompt": "Sleipnir er ___. (lítill)",
+                "prompt": "Sleipnir er hestur. Hann er ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -888,7 +883,7 @@
               },
               {
                 "id": "x1-2-4",
-                "prompt": "Jökulsá er ___. (stór)",
+                "prompt": "Jökulsá er ekki lítil. Hún er ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -903,7 +898,7 @@
               },
               {
                 "id": "x1-2-5",
-                "prompt": "Afi er ___, en Siggi er lítill. (stór)",
+                "prompt": "Siggi er lítill, en afi er ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1058,72 +1053,59 @@
             "id": "is-kvold-01-l01-x2-1",
             "type": "preobrazovanie",
             "title": "Breyttu",
-            "instruction": "Skrifaðu setninguna með „ekki“.",
-            "hint_en": "Make the sentence negative: ekki comes right after the verb.",
+            "instruction": "Skrifaðu.",
+            "hint_en": "Complete each gap. The English sense cue is not; use the first letters e….",
             "grammar_target_ids": [
               "G01"
             ],
             "obrazec": {
-              "rule": "X er … → X er ekki …",
-              "prompt": "Snati er í bænum. →",
-              "answer": "Snati er ekki í bænum."
+              "prompt": "Siggi er ___ gamall. (e…)",
+              "answer": "ekki"
             },
             "items": [
               {
                 "id": "x2-1-1",
-                "prompt": "Snati er í kirkjunni. →",
+                "prompt": "Snati er hundur. Hann er ___ hestur.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Snati er ekki í kirkjunni."
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "Snati ekki er í kirkjunni.",
-                    "hint": "er ekki"
-                  }
+                  "ekki"
                 ]
               },
               {
                 "id": "x2-1-2",
-                "prompt": "Afi er í kirkjunni. →",
+                "prompt": "Afi er gamall, en Siggi er ___ gamall.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Afi er ekki í kirkjunni."
+                  "ekki"
                 ]
               },
               {
                 "id": "x2-1-3",
-                "prompt": "Sleipnir er á Íslandi. →",
+                "prompt": "Sleipnir er hestur, en hann er ___ stór.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Sleipnir er ekki á Íslandi."
+                  "ekki"
                 ]
               },
               {
                 "id": "x2-1-4",
-                "prompt": "Snati kemur. →",
+                "prompt": "Snati er hér, en hann kemur ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Snati kemur ekki."
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "Snati ekki kemur.",
-                    "hint": "kemur ekki"
-                  }
+                  "ekki"
                 ]
               },
               {
                 "id": "x2-1-5",
-                "prompt": "Siggi er í bænum. →",
+                "prompt": "Siggi er ungur. Hann er ___ gamall.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Siggi er ekki í bænum."
+                  "ekki"
                 ]
               }
             ]
@@ -1132,112 +1114,80 @@
             "id": "is-kvold-01-l01-x2-2",
             "type": "otvet",
             "title": "Svaraðu",
-            "instruction": "Svaraðu spurningunni.",
-            "hint_en": "Answer from the story: a short answer (Í kirkjunni.) or a whole sentence. Compare your answer with the models and rubric.",
+            "instruction": "Skrifaðu.",
+            "hint_en": "Supply the pronoun matching the named person or thing.",
             "grammar_target_ids": [
               "G01"
             ],
             "obrazec": {
-              "rule": "Hvar er …? — Í … / Á …",
-              "prompt": "Hvar er Bjarni?",
-              "answer": "Í kirkjunni."
+              "prompt": "Þetta er bær. ___ er ekki stór. (hann / hún / það)",
+              "answer": "Hann"
             },
             "items": [
               {
                 "id": "x2-2-1",
-                "prompt": "Hvar er Guðrún?",
+                "prompt": "Guðrún er í kirkjunni. ___ er ekki hér. (hann / hún / það)",
                 "mode": "productive",
-                "answer_mode": "self_check",
+                "answer_mode": "exact",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s025"
                 ],
-                "model_answer": "Guðrún er í kirkjunni.",
-                "model_answers": [
-                  "Guðrún er í kirkjunni.",
-                  "Í kirkjunni."
-                ],
-                "rubric": "Guðrún is in church (í kirkjunni). A short location phrase or a full sentence with her name or hún is fine.",
                 "rubric_lang": "en",
-                "key_terms": [
-                  "is-ph-i-kirkjunni"
+                "accepted_answers": [
+                  "Hún"
                 ]
               },
               {
                 "id": "x2-2-2",
-                "prompt": "Hvar er Siggi?",
+                "prompt": "Siggi er á túninu. ___ er ekki í kirkjunni. (hann / hún / það)",
                 "mode": "productive",
-                "answer_mode": "self_check",
+                "answer_mode": "exact",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s008"
                 ],
-                "model_answer": "Siggi situr á túninu.",
-                "model_answers": [
-                  "Siggi situr á túninu.",
-                  "Á túninu."
-                ],
-                "rubric": "Siggi is on the home field (á túninu), not in church. A short location phrase or a full sentence with er or situr is fine; the story also supports saying he is not in church.",
                 "rubric_lang": "en",
-                "key_terms": [
-                  "is-ph-a-tuninu"
+                "accepted_answers": [
+                  "Hann"
                 ]
               },
               {
                 "id": "x2-2-3",
-                "prompt": "Hvar er Sleipnir? (afi segir)",
+                "prompt": "Sleipnir er í Ásgarði. ___ er ekki hér. (hann / hún / það)",
                 "mode": "productive",
-                "answer_mode": "self_check",
+                "answer_mode": "exact",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s022"
                 ],
-                "model_answer": "Sleipnir er í Ásgarði.",
-                "model_answers": [
-                  "Sleipnir er í Ásgarði.",
-                  "Í Ásgarði."
-                ],
-                "rubric": "In afi’s account Sleipnir is in Ásgarður, not in Iceland. A short location phrase, a full sentence or the story’s negative contrast is fine.",
                 "rubric_lang": "en",
-                "key_terms": [
-                  "is-ph-i-asgardi"
+                "accepted_answers": [
+                  "Hann"
                 ]
               },
               {
                 "id": "x2-2-4",
-                "prompt": "Hvar er Jökuldalur?",
+                "prompt": "Jökuldalur er á Íslandi. ___ er ekki í Ásgarði. (hann / hún / það)",
                 "mode": "productive",
-                "answer_mode": "self_check",
+                "answer_mode": "exact",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s004"
                 ],
-                "model_answer": "Jökuldalur er á Íslandi.",
-                "model_answers": [
-                  "Jökuldalur er á Íslandi.",
-                  "Á Íslandi."
-                ],
-                "rubric": "Jökuldalur is in Iceland (á Íslandi). A short location phrase or a full sentence in either taught word order is fine.",
                 "rubric_lang": "en",
-                "key_terms": [
-                  "is-ph-a-islandi"
+                "accepted_answers": [
+                  "Hann"
                 ]
               },
               {
                 "id": "x2-2-5",
-                "prompt": "Er Snati í bænum?",
+                "prompt": "Snati er ekki í bænum. ___ er þar, og þar er kind. (hann / hún / það)",
                 "mode": "productive",
-                "answer_mode": "self_check",
+                "answer_mode": "exact",
                 "source_segment_ids": [
                   "is-kvold-01-l01-s032"
                 ],
                 "explanation": "Snati er ekki í bænum. Hann er þar, og þar er kind.",
-                "model_answer": "Nei, Snati er ekki í bænum.",
-                "model_answers": [
-                  "Nei, Snati er ekki í bænum.",
-                  "Nei."
-                ],
-                "rubric": "Says no: Snati is not in the farmhouse during the search scene. Nei, a short negative phrase or a full negative sentence is fine.",
                 "rubric_lang": "en",
-                "key_terms": [
-                  "is-ekki",
-                  "is-ph-i-baenum"
+                "accepted_answers": [
+                  "Hann"
                 ]
               }
             ]
@@ -1341,7 +1291,7 @@
             "type": "podstanovka",
             "title": "Rétt form",
             "instruction": "Settu orðið í rétt form.",
-            "hint_en": "gamall (kk.), gamalt (hk.); stór, stórt.",
+            "hint_en": "x3-1-1: Cue: old; g…; x3-1-3: Cue: young; u…; x3-1-4: Cue: young; u…",
             "grammar_target_ids": [
               "G01"
             ],
@@ -1353,7 +1303,7 @@
             "items": [
               {
                 "id": "x3-1-1",
-                "prompt": "Afi er ___. (gamall)",
+                "prompt": "Siggi er ungur, en afi er ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1362,7 +1312,7 @@
               },
               {
                 "id": "x3-1-2",
-                "prompt": "Þar er fjall. Það er ___. (gamall)",
+                "prompt": "Ísland er stórt og ___. (gamall)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1380,7 +1330,7 @@
               },
               {
                 "id": "x3-1-3",
-                "prompt": "Siggi er ___. (ungur)",
+                "prompt": "Siggi er lítill og ___.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1389,22 +1339,16 @@
               },
               {
                 "id": "x3-1-4",
-                "prompt": "Dagur er ekki ___. (gamall)",
+                "prompt": "Siggi: „Dagur er ___, en afi er gamall.“",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "gamall"
-                ],
-                "common_wrong": [
-                  {
-                    "answer": "gamalt",
-                    "hint": "dagur (kk.) → gamall"
-                  }
+                  "ungur"
                 ]
               },
               {
                 "id": "x3-1-5",
-                "prompt": "Ísland er ___. (stór)",
+                "prompt": "Fjall er gamalt og ___. (stór)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1417,60 +1361,59 @@
             "id": "is-kvold-01-l01-x3-2",
             "type": "soedini",
             "title": "Tengdu",
-            "instruction": "Tengdu setningarnar með „en“.",
-            "hint_en": "Join the two sentences with en (but), in the order given.",
+            "instruction": "Skrifaðu.",
+            "hint_en": "x3-2-1: Cue: but; e…; x3-2-2: Cue: but; e…; x3-2-3: Cue: but; e…; x3-2-4: Cue: but; e…; x3-2-5: Cue: and; o…",
             "grammar_target_ids": [
               "G01"
             ],
             "obrazec": {
-              "rule": "…, en …",
-              "prompt": "Afi er gamall. Siggi er ungur. (en)",
-              "answer": "Afi er gamall, en Siggi er ungur."
+              "prompt": "Snati er lítill, ___ fjall er stórt.",
+              "answer": "en"
             },
             "items": [
               {
                 "id": "x3-2-1",
-                "prompt": "Afi er stór. Siggi er lítill. (en)",
+                "prompt": "Snati er hundur, ___ Sleipnir er hestur.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Afi er stór, en Siggi er lítill."
+                  "en"
                 ]
               },
               {
                 "id": "x3-2-2",
-                "prompt": "Þar er á. Snati er ekki þar. (en)",
+                "prompt": "Sleipnir er lítill, ___ fjall er stórt.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Þar er á, en Snati er ekki þar."
+                  "en"
                 ]
               },
               {
                 "id": "x3-2-3",
-                "prompt": "Afi sefur. Siggi sefur ekki. (en)",
+                "prompt": "Afi er hér, ___ hann sefur.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Afi sefur, en Siggi sefur ekki."
+                  "en"
                 ]
               },
               {
                 "id": "x3-2-4",
-                "prompt": "Ísland er gamalt. Dagur er ekki gamall. (en)",
+                "prompt": "Ísland er gamalt, ___ Siggi er ungur.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Ísland er gamalt, en dagur er ekki gamall."
+                  "en"
                 ]
               },
               {
                 "id": "x3-2-5",
-                "prompt": "Siggi er hér. Snati er ekki hér. (en)",
+                "prompt": "Snati er hér, ___ Siggi er hér.",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "Siggi er hér, en Snati er ekki hér."
+                  "og"
                 ]
               }
             ]
@@ -1482,15 +1425,15 @@
             "mode": "productive",
             "prompt": "Hamrar: hvað er hér, og hvað er þar? Skrifaðu.",
             "length_hint": "3–5 setningar",
-            "hint_en": "Write 3–5 sentences about Hamrar: what is here and what is there. Use hann, hún or það for the second mention, and make the adjective agree.",
+            "hint_en": "Write 3–5 short subject-first sentences. Describe people or things with hann/hún/það and demonstrated adjectives. Use en for a contrast; place chunks and incidental verbs are not required.",
             "model_answers": [
-              "Hér er bær. Hann heitir Hamrar, og hann er lítill. Þar er fjall. Það er stórt og gamalt. Og þar er á. Hún heitir Jökulsá.",
-              "Þetta er Siggi. Hann situr á túninu. Afi er gamall, en Siggi er ungur. Þar er kind. Hún er lítil, og hún sefur."
+              "Þetta er Siggi. Hann er ungur. Snati er hundur, en Sleipnir er hestur.",
+              "Siggi er lítill, en afi er stór. Hann er gamall. Ísland er stórt og gamalt."
             ],
             "rubric": [
               "hann / hún / það chosen by the noun (bær → hann, á → hún, fjall → það)",
               "adjectives that agree: stór / stórt, lítill / lítil, gamall / gamalt",
-              "a hér … þar … or … en … contrast"
+              "a contrast with en, using subject-first sentences"
             ],
             "rubric_lang": "en",
             "key_terms": [
@@ -1514,12 +1457,6 @@
                 "note_lang": "en"
               },
               {
-                "wrong": "Hér er bær. Hún heitir Hamrar.",
-                "right": "Hér er bær. Hann heitir Hamrar.",
-                "note": "bær is masculine (kk.): hann",
-                "note_lang": "en"
-              },
-              {
                 "wrong": "Siggi ekki er gamall.",
                 "right": "Siggi er ekki gamall.",
                 "note": "ekki goes after the verb",
@@ -1539,7 +1476,7 @@
     "word": "bær",
     "text": [
       "Þetta er bær. Hann heitir Hamrar, og hann er á Jökuldal.",
-      "Afi er í bænum, Siggi er á túninu, og kind er þar. Það er bær."
+      "„Þetta er bær,“ segir Siggi. „Já, lítill bær,“ segir afi."
     ],
     "lexeme_ids": [
       "is-baer"
@@ -1609,27 +1546,6 @@
             ""
           ]
         ]
-      },
-      {
-        "caption": "Hvar? — hér · þar",
-        "header": [
-          "Hvar er …?",
-          "…"
-        ],
-        "rows": [
-          [
-            "Hvar er Ásgarður?",
-            "Ásgarður er ekki á Íslandi."
-          ],
-          [
-            "Er Snati í bænum?",
-            "Nei. Hann er ekki í bænum."
-          ],
-          [
-            "Og þar?",
-            "Þar er kind, og þar er … Snati!"
-          ]
-        ]
       }
     ],
     "examples": [
@@ -1658,7 +1574,7 @@
         "segment_id": "is-kvold-01-l01-s053"
       }
     ],
-    "note_en": "A noun is a naming word (bær \"farm\", Siggi), and a pronoun is a short word used in place of a noun (hann \"he\"). Every Icelandic noun has a grammatical gender: masculine (kk., karlkyn), feminine (kvk., kvenkyn) or neuter (hk., hvorugkyn, literally \"neither kind\"). Gender belongs to the word, not to the thing. In this chapter a farm (bær), a horse (hestur) and a day (dagur) are masculine; a river (á) and a sheep (kind) are feminine; a mountain (fjall) and Iceland (Ísland) are neuter. Names follow the person's or animal's sex: afi, Siggi and Snati are masculine; Guðrún, Helga and Ásta are feminine.\n\nYou can hear the gender in the word for \"it\". Icelandic has three: hann (masculine; also \"he\"), hún (feminine; also \"she\") and það (neuter). The pronoun takes the gender of the noun it refers back to, so a thing is often hann or hún. Hér er bær. Hann er lítill means \"Here is a farm. It is small\", literally \"he is small\". Og þar er á. Hún heitir Jökulsá means \"And there is a river. It is called Jökulsá\", literally \"she is called\". Og þar er fjall. Það er stórt means \"And there is a mountain. It is big.\" English says \"it\" in all three, so translations hide the difference. Learn each noun together with its hann, hún or það. Many masculine nouns here end in -ur (hestur, dagur, hundur \"dog\", Jökuldalur, Ásgarður \"Asgard\"), but bær is masculine without it, so the ending is a hint, not a rule.\n\nAdjectives (describing words such as stór \"big\", lítill \"small\", gamall \"old\", ungur \"young\") agree with their noun: they take the form that matches its gender. Masculine: Afi er stór (\"Grandad is big\"), Afi er gamall (\"Grandad is old\"), Siggi er ungur (\"Siggi is young\"). Feminine: Hún er stór (\"It [the river] is big\"), Hún er lítil (\"It [the sheep] is small\"). Neuter: Ísland er stórt (\"Iceland is big\"), Ísland er gamalt (\"Iceland is old\"). The neuter adds -t: stór → stórt, gamall → gamalt (with one l). Masculine and feminine stór happen to look the same, but masculine lítill and feminine lítil do not. The adjective agrees in the same way when it stands before its noun: Sleipnir er lítill hestur (\"Sleipnir is a small horse\"), Þetta er stór dagur (\"This is a big day\"). There is no word for \"a\": hestur alone means \"a horse\" (more in Kafli 2).\n\nAll these nouns, pronouns and adjectives are in the nominative, the basic form used for the subject of a sentence (the one the sentence is about) and after er \"is\". Icelandic nouns change their endings for other uses in the sentence; these sets of endings are called cases, and they come later. A few place phrases already show other forms; for now learn each as a whole: á túninu \"on the home field\", í bænum \"in the farmhouse\", í kirkjunni \"in church\", á Íslandi \"in Iceland\", á Jökuldal \"in Jökuldalur\", í Ásgarði \"in Asgard\". The noun changes inside the phrase (Ísland → á Íslandi, Jökuldalur → á Jökuldal, bær → í bænum, Ásgarður → í Ásgarði); Kafli 6 explains these endings. Do not confuse the little word á \"on, in\" in these phrases with the noun á \"river\".\n\nÞetta er … means \"This is …\" and introduces something. Þetta stays the same whatever the gender of what follows: Þetta er Ísland (\"This is Iceland\"), Þetta er Siggi (\"This is Siggi\"), Þetta er hestur (\"This is a horse\"). The question is Hvað er þetta? (\"What is this?\").\n\nEr \"is\" is a verb, the word for an action or a state. In a statement the verb comes second: one element first, then the verb. Usually the subject is first: Siggi situr á túninu (\"Siggi is sitting on the home field\"). If something else comes first, such as hér \"here\" or þar \"there\", the subject moves after the verb: Hér er bær (\"Here is a farm\"), Þar er fjall (\"There is a mountain\"), Og hér, á Jökuldal, er bær (\"And here, in Jökuldalur, is a farm\"; og \"and\" does not count as an element). A quotation also counts as the first element, so the verb comes before the speaker: „Hvað er þetta, Siggi?“ spyr afi (\"'What is this, Siggi?' asks Grandad\"). A yes/no question starts with the verb: Er Snati í bænum? (\"Is Snati in the farmhouse?\"). A question with a question word puts that word first and the verb second: Hvar er Ásgarður? (\"Where is Asgard?\"). Answers to hvar? \"where?\" often use hér \"here\" and þar \"there\": Er hann þar? (\"Is he there?\").\n\nIn these statements, where the subject comes before the verb, ekki \"not\" comes straight after the verb: Snati er ekki í kirkjunni (\"Snati is not in church\"), En Snati kemur ekki (\"But Snati does not come\"), Siggi er ungur, og hann sefur ekki (\"Siggi is young, and he is not asleep\"). Icelandic needs no helper like English \"does\": kemur ekki is simply \"comes not\". Og joins (\"and\"); en contrasts (\"but\"): Afi er gamall, en Siggi er ungur (\"Grandad is old, but Siggi is young\").\n\nThe other verbs here, heitir \"is called\", situr \"sits\", sefur \"sleeps\", kemur \"comes\", segir \"says\" and spyr \"asks\", are in the form for one person or thing (he, she, it or a name). One present form covers both English \"sits\" and \"is sitting\", \"sleeps\" and \"is asleep\". Learn them as words for now; Kafli 4 begins to show how verbs change."
+    "note_en": "A noun is a naming word (bær \"farm\", Siggi), and a pronoun is a short word used in place of a noun (hann \"he\"). Every Icelandic noun has a grammatical gender: masculine (kk., karlkyn), feminine (kvk., kvenkyn) or neuter (hk., hvorugkyn, literally \"neither kind\"). Gender belongs to the word, not to the thing. In this chapter a farm (bær), a horse (hestur) and a day (dagur) are masculine; a river (á) and a sheep (kind) are feminine; a mountain (fjall) and Iceland (Ísland) are neuter. Names follow the person's or animal's sex: afi, Siggi and Snati are masculine; Guðrún, Helga and Ásta are feminine.\n\nYou can hear the gender in the word for \"it\". Icelandic has three: hann (masculine; also \"he\"), hún (feminine; also \"she\") and það (neuter). The pronoun takes the gender of the noun it refers back to, so a thing is often hann or hún. Hér er bær. Hann er lítill means \"Here is a farm. It is small\", literally \"he is small\". Og þar er á. Hún heitir Jökulsá means \"And there is a river. It is called Jökulsá\", literally \"she is called\". Og þar er fjall. Það er stórt means \"And there is a mountain. It is big.\" English says \"it\" in all three, so translations hide the difference. Learn each noun together with its hann, hún or það. Many masculine nouns here end in -ur (hestur, dagur, hundur \"dog\", Jökuldalur, Ásgarður \"Asgard\"), but bær is masculine without it, so the ending is a hint, not a rule.\n\nAdjectives (describing words such as stór \"big\", lítill \"small\", gamall \"old\", ungur \"young\") agree with their noun: they take the form that matches its gender. Masculine: Afi er stór (\"Grandad is big\"), Afi er gamall (\"Grandad is old\"), Siggi er ungur (\"Siggi is young\"). Feminine: Hún er stór (\"It [the river] is big\"), Hún er lítil (\"It [the sheep] is small\"). Neuter: Ísland er stórt (\"Iceland is big\"), Ísland er gamalt (\"Iceland is old\"). The two neuter forms used here are stórt and gamalt. Learn them alongside stór and gamall; other adjectives can change differently. Masculine and feminine stór happen to look the same, but masculine lítill and feminine lítil do not. The adjective agrees in the same way when it stands before its noun: Sleipnir er lítill hestur (\"Sleipnir is a small horse\"), Þetta er stór dagur (\"This is a big day\"). There is no word for \"a\": hestur alone means \"a horse\" (more in Kafli 2).\n\nAll these nouns, pronouns and adjectives are in the nominative, the basic form used for the subject of a sentence (the one the sentence is about) and after er \"is\". Icelandic nouns change their endings for other uses in the sentence; these sets of endings are called cases, and they come later. A few place phrases already show other forms; for now learn each as a whole: á túninu \"on the home field\", í bænum \"in the farmhouse\", í kirkjunni \"in church\", á Íslandi \"in Iceland\", á Jökuldal \"in Jökuldalur\", í Ásgarði \"in Asgard\". The noun changes inside the phrase (Ísland → á Íslandi, Jökuldalur → á Jökuldal, bær → í bænum, Ásgarður → í Ásgarði); Kafli 6 explains these endings. Do not confuse the little word á \"on, in\" in these phrases with the noun á \"river\".\n\nÞetta er … means \"This is …\" and introduces something. Þetta stays the same whatever the gender of what follows: Þetta er Ísland (\"This is Iceland\"), Þetta er Siggi (\"This is Siggi\"), Þetta er hestur (\"This is a horse\"). The question is Hvað er þetta? (\"What is this?\").\n\nEr \"is\" is a verb, the word for an action or a state. In a statement the verb comes second: one element first, then the verb. Usually the subject is first: Siggi situr á túninu (\"Siggi is sitting on the home field\"). If something else comes first, such as hér \"here\" or þar \"there\", the subject moves after the verb: Hér er bær (\"Here is a farm\"), Þar er fjall (\"There is a mountain\"), Og hér, á Jökuldal, er bær (\"And here, in Jökuldalur, is a farm\"; og \"and\" does not count as an element). A quotation also counts as the first element, so the verb comes before the speaker: „Hvað er þetta, Siggi?“ spyr afi (\"'What is this, Siggi?' asks Grandad\"). A yes/no question starts with the verb: Er Snati í bænum? (\"Is Snati in the farmhouse?\"). A question with a question word puts that word first and the verb second: Hvar er Ásgarður? (\"Where is Asgard?\"). Answers to hvar? \"where?\" often use hér \"here\" and þar \"there\": Er hann þar? (\"Is he there?\").\n\nIn these statements, where the subject comes before the verb, ekki \"not\" comes straight after the verb: Snati er ekki í kirkjunni (\"Snati is not in church\"), En Snati kemur ekki (\"But Snati does not come\"), Siggi er ungur, og hann sefur ekki (\"Siggi is young, and he is not asleep\"). Icelandic needs no helper like English \"does\": kemur ekki is simply \"comes not\". Og joins (\"and\"); en contrasts (\"but\"): Afi er gamall, en Siggi er ungur (\"Grandad is old, but Siggi is young\").\n\nThe other verbs here, heitir \"is called\", situr \"sits\", sefur \"sleeps\", kemur \"comes\", segir \"says\" and spyr \"asks\", are in the form for one person or thing (he, she, it or a name). One present form covers both English \"sits\" and \"is sitting\", \"sleeps\" and \"is asleep\". Learn them as words for now; Kafli 4 begins to show how verbs change."
   },
   "pensa": {
     "A": {
@@ -1673,7 +1589,7 @@
           "items": [
             {
               "id": "a1",
-              "prompt": "Hér er hestur. ___ er lítill.",
+              "prompt": "Hér er hestur. ___ er lítill. (Hann / Hún / Það)",
               "mode": "productive",
               "answer_mode": "choice",
               "accepted_answers": [
@@ -1687,7 +1603,7 @@
             },
             {
               "id": "a2",
-              "prompt": "Þar er kind. ___ sefur.",
+              "prompt": "Þar er kind. ___ sefur. (Hann / Hún / Það)",
               "mode": "productive",
               "answer_mode": "choice",
               "accepted_answers": [
@@ -1701,7 +1617,7 @@
             },
             {
               "id": "a3",
-              "prompt": "Þetta er Ísland. ___ er gamalt.",
+              "prompt": "Þetta er Ísland. ___ er gamalt. (Hann / Hún / Það)",
               "mode": "productive",
               "answer_mode": "choice",
               "accepted_answers": [
@@ -1715,7 +1631,7 @@
             },
             {
               "id": "a4",
-              "prompt": "„Þetta er stór dagur.“ — „___ er ekki gamall!“",
+              "prompt": "„Þetta er stór dagur.“ — „___ er ekki gamall!“ (Hann / Hún / Það)",
               "mode": "productive",
               "answer_mode": "choice",
               "accepted_answers": [
@@ -1740,7 +1656,7 @@
           "items": [
             {
               "id": "a5",
-              "prompt": "Ísland er ___. (gamall)",
+              "prompt": "Ísland er stórt og ___. (gamall) (gamall / gamalt / stórt)",
               "mode": "productive",
               "answer_mode": "choice",
               "accepted_answers": [
@@ -1754,7 +1670,7 @@
             },
             {
               "id": "a6",
-              "prompt": "Afi er ___. (gamall)",
+              "prompt": "Afi er stór og ___. (ga…)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
@@ -1763,7 +1679,7 @@
             },
             {
               "id": "a7",
-              "prompt": "Jökulsá er ___. (stór)",
+              "prompt": "Jökulsá er ekki lítil. Hún er ___. (st…)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
@@ -1778,7 +1694,7 @@
             },
             {
               "id": "a8",
-              "prompt": "Þar er kind. Hún er ___. (lítill)",
+              "prompt": "Kind er ___, en fjall er stórt. (lítill)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
@@ -1799,22 +1715,22 @@
       "id": "is-kvold-01-l01-pb",
       "title": "Verkefni B — Orð",
       "word_bank": [
+        "Hvar",
+        "Jökuldalur",
         "afi",
         "bær",
         "dagur",
         "fjall",
-        "gamall",
         "hestur",
         "hundur",
-        "hvar",
         "kind",
-        "lítill",
-        "ungur"
+        "Ásgarður",
+        "Ísland"
       ],
       "items": [
         {
           "id": "b1",
-          "prompt": "Snati er ___: „Voff!“",
+          "prompt": "Snati er ekki hestur. Hann er ___. (hu…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1823,7 +1739,7 @@
         },
         {
           "id": "b2",
-          "prompt": "Sleipnir er ___, en hann er lítill.",
+          "prompt": "Sleipnir er ___, en Snati er hundur. (he…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1832,7 +1748,7 @@
         },
         {
           "id": "b3",
-          "prompt": "Siggi er ungur, en ___ er gamall.",
+          "prompt": "Siggi er hér, og ___ er hér. (af…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1841,7 +1757,7 @@
         },
         {
           "id": "b4",
-          "prompt": "„___ er Snati?“ spyr Siggi.",
+          "prompt": "„___ er Sleipnir?“ — „Í Ásgarði.“ (Hv…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1850,7 +1766,7 @@
         },
         {
           "id": "b5",
-          "prompt": "Þetta er ___. Hann heitir Hamrar.",
+          "prompt": "Hér er lítill ___, en þar er stórt fjall. (b…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1859,7 +1775,7 @@
         },
         {
           "id": "b6",
-          "prompt": "Þar er ___. Það er stórt.",
+          "prompt": "Ísland er stórt, og hér er stórt ___. (fj…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1868,7 +1784,7 @@
         },
         {
           "id": "b7",
-          "prompt": "Þar er ___. Hún er lítil.",
+          "prompt": "Hér er lítil ___, og Snati er þar. (ki…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1877,7 +1793,7 @@
         },
         {
           "id": "b8",
-          "prompt": "Afi er gamall, og Ísland er gamalt. En ___ er ekki gamall: hann er ungur!",
+          "prompt": "Siggi: „___ er ungur, en Ísland er gamalt!“ (da…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1892,22 +1808,20 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Hvar er Jökuldalur?",
+          "prompt": "Hvað er stórt?",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
             "is-kvold-01-l01-s004"
           ],
-          "model_answer": "Jökuldalur er á Íslandi.",
+          "model_answer": "Ísland er stórt.",
           "model_answers": [
-            "Jökuldalur er á Íslandi.",
-            "Á Íslandi."
+            "Ísland er stórt.",
+            "Fjall er stórt."
           ],
-          "rubric": "Jökuldalur is in Iceland (á Íslandi). A short location phrase, a pronoun or named subject, and either taught word order are fine.",
+          "rubric": "Name something described as big in the story.",
           "rubric_lang": "en",
-          "key_terms": [
-            "is-ph-a-islandi"
-          ]
+          "key_terms": []
         },
         {
           "id": "c2",
@@ -1930,40 +1844,34 @@
         },
         {
           "id": "c3",
-          "prompt": "Hvar er Bjarni, og hvar er Guðrún?",
+          "prompt": "Hvar er Siggi?",
           "mode": "productive",
           "answer_mode": "self_check",
-          "model_answer": "Bjarni er í kirkjunni, og Guðrún er í kirkjunni.",
+          "model_answer": "Siggi er hér.",
           "model_answers": [
-            "Bjarni er í kirkjunni, og Guðrún er í kirkjunni.",
-            "Í kirkjunni."
+            "Siggi er hér.",
+            "Hann er hér."
           ],
-          "rubric": "Both are in church (Bjarni er í kirkjunni, og Guðrún er í kirkjunni); pronouns or two sentences are fine.",
+          "rubric": "Use a simple productive location answer; no place chunk is required.",
           "rubric_lang": "en",
-          "key_terms": [
-            "is-ph-i-kirkjunni"
-          ],
+          "key_terms": [],
           "source_segment_ids": [
             "is-kvold-01-l01-s025"
           ]
         },
         {
           "id": "c4",
-          "prompt": "„Snati! Snati!“ segir Siggi. Hvar er Snati? Er hann í bænum?",
+          "prompt": "Snati er þar, og þar er kind. Hvað er Snati?",
           "mode": "productive",
           "answer_mode": "self_check",
-          "model_answer": "Nei. Snati er ekki í bænum. Hann er þar, og þar er kind.",
+          "model_answer": "Snati er hundur.",
           "model_answers": [
-            "Nei. Snati er ekki í bænum. Hann er þar, og þar er kind.",
-            "Snati er ekki í bænum. Hann sefur þar, og þar er kind."
+            "Snati er hundur.",
+            "Hann er hundur."
           ],
-          "rubric": "Says no: Snati is not in the farmhouse; he is up there where the sheep are, asleep.",
+          "rubric": "Identify Snati as a dog.",
           "rubric_lang": "en",
-          "key_terms": [
-            "is-ekki",
-            "is-thar",
-            "is-kind"
-          ],
+          "key_terms": [],
           "source_segment_ids": [
             "is-kvold-01-l01-s029",
             "is-kvold-01-l01-s040",
@@ -1972,19 +1880,17 @@
         },
         {
           "id": "c5",
-          "prompt": "Snati er ekki í kirkjunni. Hvað er Snati?",
+          "prompt": "Af hverju er Snati ekki í kirkjunni?",
           "mode": "productive",
           "answer_mode": "self_check",
           "model_answer": "Snati er hundur.",
           "model_answers": [
             "Snati er hundur.",
-            "Hann er hundur. Hann er ekki í kirkjunni."
+            "Hann er hundur."
           ],
-          "rubric": "Snati is a dog, and a dog is not in church (afi: „Snati er hundur. Hann er ekki í kirkjunni!“).",
+          "rubric": "This gives afi’s implied reason in this scene, rather than a general rule about dogs.",
           "rubric_lang": "en",
-          "key_terms": [
-            "is-hundur"
-          ],
+          "key_terms": [],
           "source_segment_ids": [
             "is-kvold-01-l01-s046"
           ]
@@ -1996,7 +1902,8 @@
           "answer_mode": "self_check",
           "model_answer": "Ég heiti …",
           "model_answers": [
-            "Ég heiti …"
+            "Ég heiti … .",
+            "Ég heiti … . Hér er Siggi."
           ],
           "rubric": "Any name: Ég heiti … (a baseline phrase).",
           "rubric_lang": "en",
