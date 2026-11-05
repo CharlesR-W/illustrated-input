@@ -27,7 +27,9 @@
    "Recall pass 2026-10-18: recurrences for Penodau 28–32 vocabulary (swyddogol, gwisg, nerfus, urddas, gwaedd, gwthio, bai, poeni, dathlu, gwin, cerddoriaeth, amddiffyn, grym, cyfrifol, cadw, yn hytrach, dadl, esgob, coginio, dawnsio, seremoni, ai, gwahodd, croesawu, taw, derbyn, mewn gwirionedd, coroni, gwnïo); Modlen's question chain to Mali (Gafodd e ei wahodd? … Naddo, a naddo) echoes Pennod 32. New segments s301–s309.",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s039, s305); editor's own further pruning of narrator labels (s027, s301). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
    "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c1 and c2 converted; one Pam? (c3, the hall's laughter, s011-013); prompts on past events use the past; new c5-c7 practise the target (Dwedodd Arthur fod …, Dwedodd Cai fod …, Gofynnodd Modlen a oedd …); the old c5 two-fact rubric (balch neu beryglus) and c7 present-tense prompt dropped. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Unshown 'fod e / bod hi' no longer claimed in the note (A keys still accept them). Table row 4 now the attested s073 report. Pensum B one answer each: b4 barfog by contrast with Arthur, b8 gelyn and b10 bygwth only (bygythiad out of the bank), b7 and b9 reworded so gorffen and rhybuddio are the only fits.",
-   "Codex review 2026-11-04 (GPT-6.1-Sol, 33–36 half) applied: note no longer says a bod clause after a past verb is 'always fod' without the pronoun forms, and narrows 'everything after fod'; y byddai/taw 'for recognition only here' (no 'yet'); recall A a9 now the attested 29:s045 Cynyr roddodd … (coginiodd never shown); s017 eillio gloss carries meaning. Optional fe variants added to finite A keys."
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 33–36 half) applied: note no longer says a bod clause after a past verb is 'always fod' without the pronoun forms, and narrows 'everything after fod'; y byddai/taw 'for recognition only here' (no 'yet'); recall A a9 now the attested 29:s045 Cynyr roddodd … (coginiodd never shown); s017 eillio gloss carries meaning. Optional fe variants added to finite A keys.",
+   "Fresh review continuation: independently anchored war/peace meanings and sentence-split aid density; restored four second radicals. The same Arthur refusal now begins in reported form, delivering G33 in the first third without adding a speech/event; its gloss explains the shift from Dw i to e. A9 recalls the confirmed Myrddin-to-Cynyr baby handover, not a withdrawn accusation. Pronoun/optional-fe reporting variants, unique bearded/enemy B cues, full-sentence C deadline and English task explanations. Delivered beard part–whole aid supplied separately. Legacy A redesign and later recurrence remain owner decisions.",
+   "Delivered beard part–whole meaning reference at first darn, replacing the unsupported standalone rhan definition."
   ],
   "review_questions": [
    {
@@ -132,12 +134,12 @@
    },
    {
     "lexeme_id": "cy-heddwch",
-    "how": "gloss(antonym)",
-    "segment_id": "cy-brenin-01-l33-s010"
+    "how": "known absence of already established war/fighting",
+    "segment_id": "cy-brenin-01-l33-s021"
    },
    {
     "lexeme_id": "cy-rhyfel",
-    "how": "gloss(antonym)",
+    "how": "known soldiers fighting, before peace contrast",
     "segment_id": "cy-brenin-01-l33-s010"
    },
    {
@@ -380,7 +382,7 @@
      },
      {
       "id": "cy-brenin-01-l33-s010",
-      "text": "\"Bydd e'n dod gyda byddin o gewri, a bydd rhyfel yng Nghymru!\"",
+      "text": "\"Bydd e'n dod gyda byddin o gewri. Bydd rhyfel yng Nghymru!\"",
       "inference_aids": [
        {
         "type": "gloss",
@@ -400,11 +402,10 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "rhyfel",
-        "gloss": "rhyfel ↔ heddwch",
-        "gloss_kind": "antonym",
+        "gloss": "rhyfel: milwyr yn ymladd",
+        "gloss_kind": "define",
         "covers_lexeme_ids": [
-         "cy-rhyfel",
-         "cy-heddwch"
+         "cy-rhyfel"
         ]
        }
       ]
@@ -437,7 +438,16 @@
      {
       "id": "cy-brenin-01-l33-s014",
       "text": "Ond yn sydyn, doedd neb yn chwerthin. Doedd neb eisiau gweld byddin o gewri yng Nghymru.",
-      "paragraph_start": true
+      "paragraph_start": true,
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gewri",
+        "gloss": "gewri ← cewri (cawr)",
+        "gloss_kind": "radical"
+       }
+      ]
      }
     ]
    },
@@ -499,7 +509,7 @@
      },
      {
       "id": "cy-brenin-01-l33-s021",
-      "text": "\"Dw i eisiau heddwch,\" meddai Arthur, \"ond dw i ddim yn ofni dy fygythiad di.",
+      "text": "Dwedodd Arthur ei fod e eisiau heddwch. \"Ond dw i ddim yn ofni dy fygythiad di.",
       "paragraph_start": true,
       "speaker": "char-arth",
       "inference_aids": [
@@ -509,6 +519,20 @@
         "anchor_text": "fygythiad",
         "gloss": "dy fygythiad ← bygythiad: \"Neu …!\"",
         "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "heddwch",
+        "gloss": "heddwch: dim rhyfel, dim ymladd",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ei fod e",
+        "gloss": "ei fod e: «Dw i» → e",
+        "gloss_kind": "form"
        }
       ]
      },
@@ -540,7 +564,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "ddarn",
-        "gloss": "ddarn ← darn: rhan fach",
+        "gloss": "ddarn ← darn",
         "gloss_kind": "radical"
        },
        {
@@ -564,6 +588,21 @@
         ],
         "width": 1600,
         "height": 1067
+       },
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "cy-brenin-01-l33-img-audit-beard-piece",
+        "label": "barf Cynyr · darn o farf Cynyr",
+        "src": "media/diagrams/cy-brenin-01-l33-img-audit-beard-piece.svg",
+        "alt": "Part–whole reference, not a second event: Cynyr’s long golden beard with a long lock highlighted, and the matching cut lock beside it. Labels barf Cynyr and darn o farf Cynyr.",
+        "status": "draft",
+        "art_brief": "Part–whole reference, not a second event: Cynyr’s long golden beard with a long lock highlighted, and the matching cut lock beside it. Labels barf Cynyr and darn o farf Cynyr.",
+        "covers_lexeme_ids": [
+         "cy-darn"
+        ],
+        "width": 300,
+        "height": 260
        }
       ]
      },
@@ -789,7 +828,16 @@
      },
      {
       "id": "cy-brenin-01-l33-s057",
-      "text": "\"Ond mae'r beirdd yn dweud ei fod e'n falch iawn hefyd. Dyma fy rhybudd i: mae cawr balch yn elyn peryglus.\""
+      "text": "\"Ond mae'r beirdd yn dweud ei fod e'n falch iawn hefyd. Dyma fy rhybudd i: mae cawr balch yn elyn peryglus.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "elyn",
+        "gloss": "elyn ← gelyn",
+        "gloss_kind": "radical"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l33-s058",
@@ -943,7 +991,16 @@
      },
      {
       "id": "cy-brenin-01-l33-s074",
-      "text": "Dwedodd e fod Rhita eisiau barf Arthur i orffen y clogyn.\""
+      "text": "Dwedodd e fod Rhita eisiau barf Arthur i orffen y clogyn.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "orffen",
+        "gloss": "orffen ← gorffen",
+        "gloss_kind": "radical"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l33-s075",
@@ -1097,7 +1154,16 @@
      },
      {
       "id": "cy-brenin-01-l33-s096",
-      "text": "\"Ac wedyn torrodd y negesydd ddarn o farf Dad.\""
+      "text": "\"Ac wedyn torrodd y negesydd ddarn o farf Dad.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddarn",
+        "gloss": "ddarn ← darn",
+        "gloss_kind": "radical"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l33-s097",
@@ -1456,7 +1522,11 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Dwedodd y negesydd fod Rhita'n casglu barfau.",
-        "Fe ddwedodd y negesydd fod Rhita'n casglu barfau."
+        "Fe ddwedodd y negesydd fod Rhita'n casglu barfau.",
+        "Dwedodd e fod Rhita'n casglu barfau.",
+        "Dwedodd fe fod Rhita'n casglu barfau.",
+        "Fe ddwedodd e fod Rhita'n casglu barfau.",
+        "Fe ddwedodd fe fod Rhita'n casglu barfau."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -1472,7 +1542,11 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Dwedodd Dafi fod rhyfel yn dod.",
-        "Fe ddwedodd Dafi fod rhyfel yn dod."
+        "Fe ddwedodd Dafi fod rhyfel yn dod.",
+        "Dwedodd e fod rhyfel yn dod.",
+        "Dwedodd fe fod rhyfel yn dod.",
+        "Fe ddwedodd e fod rhyfel yn dod.",
+        "Fe ddwedodd fe fod rhyfel yn dod."
        ],
        "mutation_hint": true
       },
@@ -1516,7 +1590,9 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Dwedodd Mali fod y negesydd wedi torri barf Dad.",
-        "Fe ddwedodd Mali fod y negesydd wedi torri barf Dad."
+        "Fe ddwedodd Mali fod y negesydd wedi torri barf Dad.",
+        "Dwedodd hi fod y negesydd wedi torri barf Dad.",
+        "Fe ddwedodd hi fod y negesydd wedi torri barf Dad."
        ]
       },
       {
@@ -1554,7 +1630,7 @@
         "Fe ofynnodd Arthur a ydy Rhita'n gryf.",
         "Fe ofynnodd Arthur os ydy Rhita'n gryf."
        ],
-       "explanation": "Yr ymarfer: adrodd o ddoe (a oedd …). Mae a ydy … yn iawn hefyd os ydy'r cwestiwn yn wir nawr."
+       "explanation": "Practise reporting a past conversation with a oedd. The key also accepts the present form when the question remains current; a/os variants remain under the established answer policy."
       },
       {
        "id": "a8",
@@ -1568,9 +1644,17 @@
         "Fe ofynnodd Modlen a oedd y cawr yn gweld yn dda.",
         "Fe ofynnodd Modlen os oedd y cawr yn gweld yn dda.",
         "Fe ofynnodd Modlen a ydy'r cawr yn gweld yn dda.",
-        "Fe ofynnodd Modlen os ydy'r cawr yn gweld yn dda."
+        "Fe ofynnodd Modlen os ydy'r cawr yn gweld yn dda.",
+        "Gofynnodd hi a oedd y cawr yn gweld yn dda.",
+        "Gofynnodd hi os oedd y cawr yn gweld yn dda.",
+        "Gofynnodd hi a ydy'r cawr yn gweld yn dda.",
+        "Gofynnodd hi os ydy'r cawr yn gweld yn dda.",
+        "Fe ofynnodd hi a oedd y cawr yn gweld yn dda.",
+        "Fe ofynnodd hi os oedd y cawr yn gweld yn dda.",
+        "Fe ofynnodd hi a ydy'r cawr yn gweld yn dda.",
+        "Fe ofynnodd hi os ydy'r cawr yn gweld yn dda."
        ],
-       "explanation": "Yr ymarfer: adrodd o ddoe (a oedd …). Mae a ydy … yn iawn hefyd os ydy'r cwestiwn yn wir nawr."
+       "explanation": "Practise reporting a past conversation with a oedd. The key also accepts the present form when the question remains current; a/os variants remain under the established answer policy."
       }
      ]
     },
@@ -1582,16 +1666,17 @@
      "items": [
       {
        "id": "a9",
-       "prompt": "Pwy roddodd y bachgen i Myrddin? (Cynyr) →",
+       "prompt": "Pwy roddodd y babi i Cynyr? (Myrddin) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Cynyr roddodd y bachgen i Myrddin.",
-        "Cynyr a roddodd y bachgen i Myrddin.",
-        "Rhoddodd Cynyr y bachgen i Myrddin.",
-        "Fe roddodd Cynyr y bachgen i Myrddin."
+        "Myrddin roddodd y babi i Cynyr.",
+        "Myrddin a roddodd y babi i Cynyr.",
+        "Rhoddodd Myrddin y babi i Cynyr.",
+        "Fe roddodd Myrddin y babi i Cynyr."
        ],
        "mutation_hint": true,
-       "recall_of": "G29"
+       "recall_of": "G29",
+       "source_segment_ids": []
       }
      ]
     },
@@ -1663,7 +1748,7 @@
     },
     {
      "id": "b4",
-     "prompt": "Does dim barf gydag Arthur, ond mae barf hir, aur gyda Cynyr: mae Cynyr yn ddyn ___.",
+     "prompt": "Does dim barf gydag Arthur, ond mae barf hir, aur gyda Cynyr: mae Cynyr yn ddyn ___. (bearded)",
      "answer_mode": "exact",
      "accepted_answers": [
       "barfog"
@@ -1695,7 +1780,7 @@
     },
     {
      "id": "b8",
-     "prompt": "Dyw'r cawr ddim yn ffrind i'r brenin: ___ yw e.",
+     "prompt": "Dyw'r cawr ddim yn ffrind i'r brenin: ___ yw e. (enemy)",
      "answer_mode": "exact",
      "accepted_answers": [
       "gelyn"
@@ -1742,7 +1827,7 @@
      "id": "c2",
      "prompt": "Erbyn pryd roedd rhaid i Arthur anfon ei farf at Rhita?",
      "answer_mode": "self_check",
-     "model_answer": "Erbyn y lleuad newydd.",
+     "model_answer": "Roedd rhaid iddo fe anfon ei farf erbyn y lleuad newydd.",
      "key_terms": [
       "cy-erbyn",
       "cy-lleuad"
@@ -2179,8 +2264,8 @@
    "cover": 1,
    "inline_scene": 2,
    "margin_vignette": 0,
-   "margin_diagram": 0,
-   "margin_gloss": 32
+   "margin_diagram": 1,
+   "margin_gloss": 38
   }
  },
  "completion": {

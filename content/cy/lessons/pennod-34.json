@@ -26,7 +26,9 @@
    "Recall pass 2026-10-18: recurrences for Penodau 29–33 vocabulary in the council (bygythiad, erbyn, gorchfygu, heddwch, neu, gwrthod, anrhydedd, llythyr, gorffen, urddas, profi, nerfus, esgob, swyddogol, gwisg, tyst, brifo, ysbryd, rhybuddio, gelyn, dadl, anghydfod, ffermwr, barnu, dibynnu, ymddiried, arweinydd, gobaith, trefnu). Voice fix: s018 'Gwenodd Cynyr, ond' → 'ac'. New segments s301–s309, s311–s312 (s310 drafted and withdrawn in the same pass; not to be reused).",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s305, s062, s066, s309, s311, s312). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
    "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2 and c7 converted; one Pam? (c2, s017/s302: Arthur gives his reason); prompts on past events use the past; c1, c4 and c8 practise taswn/tasai … baswn/basai; the old c5 'Pam gofynnodd Modlen …' now asks for her idea, which s114 states. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Unshown forms removed: Fasai fe …? (rule_cy, note), the baset ti / basen ni … row, A a6 Fasai fe ddim → attested Faswn i ddim yn mynd i ben mynydd (s120); table row s114 attested. Pensum B b6 doniol and b7 awgrymu now the only fits.",
-   "Codex review 2026-11-04 (GPT-6.1-Sol, 33–36 half) applied: C c7 model 'heb fyddin' (the wool beard does go, s113); c2 model quoted; B b6/b7 carry English sense cues (funny, suggesting) per RULES §7; s024 separate meaning glosses for nodwydd and edau (the vignette is only planned); note's opening definition of the conditional widened. Optional fe variants added to finite A keys."
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 33–36 half) applied: C c7 model 'heb fyddin' (the wool beard does go, s113); c2 model quoted; B b6/b7 carry English sense cues (funny, suggesting) per RULES §7; s024 separate meaning glosses for nodwydd and edau (the vignette is only planned); note's opening definition of the conditional widened. Optional fe variants added to finite A keys.",
+   "Fresh review continuation: first-use discuss/stupid/clever/decide meanings, conditional bootstrap reference supplied separately; removed dictionary tail from narration and undeclared ynoch chi construction, retaining trust in friends. Speaker and second radicals repaired; sewing sentence split, keeping IDs/events. Completed optional-fe/repeated-subject keys, recombined two choice contexts and provided three taught choices; unique sticking cue, C sentence model. English conditional generalisations narrowed and Dafi table/example now quotes his actual first-person sentence. Missing planned cells, legacy A design and recurrence remain owner questions.",
+   "Delivered first-encounter conditional comparison aligning imagined condition and consequence separately with known present predicates; later os/taswn diagram retained for consolidation."
   ],
   "review_questions": [
    {
@@ -91,10 +93,6 @@
    {
     "form": "pe bai",
     "gloss_segment_id": "cy-brenin-01-l34-s080"
-   },
-   {
-    "form": "ynoch chi",
-    "gloss_segment_id": "cy-brenin-01-l34-s102"
    }
   ],
   "new_lexeme_ids": [
@@ -147,8 +145,8 @@
    },
    {
     "lexeme_id": "cy-penderfynu",
-    "how": "gloss",
-    "segment_id": "cy-brenin-01-l34-s096"
+    "how": "meaning gloss at first narrative use",
+    "segment_id": "cy-brenin-01-l34-s033"
    },
    {
     "lexeme_id": "cy-ph-gydan-gilydd",
@@ -172,8 +170,8 @@
    },
    {
     "lexeme_id": "cy-trafod",
-    "how": "gloss+context",
-    "segment_id": "cy-brenin-01-l34-s089"
+    "how": "meaning gloss at first narrative use",
+    "segment_id": "cy-brenin-01-l34-s004"
    },
    {
     "lexeme_id": "cy-doniol",
@@ -269,7 +267,16 @@
      },
      {
       "id": "cy-brenin-01-l34-s004",
-      "text": "\"Dewch: dyn ni'n trafod bygythiad y cawr heddiw.\""
+      "text": "\"Dewch: dyn ni'n trafod bygythiad y cawr heddiw.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "trafod",
+        "gloss": "trafod: siarad am rywbeth",
+        "gloss_kind": "define"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l34-s005",
@@ -304,6 +311,19 @@
         "anchor_text": "Taswn",
         "gloss": "taswn … baswn …: syniad yn y pen",
         "gloss_kind": "paradigm"
+       },
+       {
+        "type": "image",
+        "presentation": "margin_diagram",
+        "ref": "cy-brenin-01-l34-img-audit-conditional-first",
+        "label": "taswn → baswn",
+        "src": "media/diagrams/cy-brenin-01-l34-img-audit-conditional-first.svg",
+        "alt": "Cai’s actual situation is contrasted with his imagined condition and consequence. In the imagined panel Taswn is aligned with being king and baswn with fighting; no actual kingship or fighting event is asserted.",
+        "status": "draft",
+        "art_brief": "Cai’s actual situation is contrasted with his imagined condition and consequence. In the imagined panel Taswn is aligned with being king and baswn with fighting; no actual kingship or fighting event is asserted.",
+        "covers_lexeme_ids": [],
+        "width": 300,
+        "height": 305
        }
       ]
      },
@@ -355,8 +375,8 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "twp",
-        "gloss": "twp ↔ clyfar",
-        "gloss_kind": "antonym"
+        "gloss": "twp: ddim yn deall",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -403,7 +423,8 @@
      {
       "id": "cy-brenin-01-l34-s018",
       "text": "Gwenodd Cynyr, ac roedd e'n falch. \"Rwyt ti'n ddewr, fy mab,\" meddai e.",
-      "paragraph_start": true
+      "paragraph_start": true,
+      "speaker": "char-cynyr"
      },
      {
       "id": "cy-brenin-01-l34-s303",
@@ -462,7 +483,7 @@
      },
      {
       "id": "cy-brenin-01-l34-s024",
-      "text": "Ces i nodwydd ac edau gan Elen, a siswrn gan y morynion, a gweithiais i drwy'r nos.\"",
+      "text": "Ces i nodwydd ac edau gan Elen. Ces i siswrn gan y morynion, a gweithiais i drwy'r nos.\"",
       "inference_aids": [
        {
         "type": "gloss",
@@ -526,7 +547,16 @@
       "id": "cy-brenin-01-l34-s027",
       "text": "\"Syniad clyfar, Modlen,\" meddai Arthur.",
       "paragraph_start": true,
-      "speaker": "char-arth"
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "clyfar",
+        "gloss": "clyfar: deall yn gyflym",
+        "gloss_kind": "define"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l34-s028",
@@ -583,6 +613,13 @@
         "anchor_text": "waeth",
         "gloss": "yn waeth ← gwaeth (drwg)",
         "gloss_kind": "form"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Penderfynodd",
+        "gloss": "penderfynu: dewis",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -635,7 +672,16 @@
       "id": "cy-brenin-01-l34-s041",
       "text": "\"Mae hi'n ddoniol iawn,\" meddai Mali.",
       "paragraph_start": true,
-      "speaker": "char-mali"
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ddoniol",
+        "gloss": "ddoniol ← doniol",
+        "gloss_kind": "radical"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l34-s042",
@@ -1040,17 +1086,9 @@
      },
      {
       "id": "cy-brenin-01-l34-s089",
-      "text": "Trafododd y ffrindiau bob cynllun am awr: dyna beth yw trafod.",
+      "text": "Trafododd y ffrindiau bob cynllun am awr..",
       "paragraph_start": true,
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "Trafododd",
-        "gloss": "trafod: siarad am gynllun",
-        "gloss_kind": "define"
-       }
-      ]
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l34-s090",
@@ -1152,14 +1190,14 @@
      },
      {
       "id": "cy-brenin-01-l34-s102",
-      "text": "Taswn i'n mynd heb fy ffrindiau, baswn i'n dwp. Dw i'n dibynnu arnoch chi, a dw i'n ymddiried ynoch chi.\"",
+      "text": "Taswn i'n mynd heb fy ffrindiau, baswn i'n dwp. Dw i'n dibynnu arnoch chi, a dw i'n ymddiried yn fy ffrindiau.\"",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "ynoch",
-        "gloss": "yn + chi → ynoch chi",
-        "gloss_kind": "form"
+        "anchor_text": "dwp",
+        "gloss": "dwp ← twp",
+        "gloss_kind": "radical"
        }
       ]
      },
@@ -1341,7 +1379,7 @@
       "basai fe'n gwybod."
      ],
      [
-      "Tasai Dafi'n tisian ar wyneb Arthur,",
+      "Taswn i'n tisian ar wyneb Arthur,",
       "basai barf o fwg gyda fe."
      ],
      [
@@ -1455,7 +1493,7 @@
     "segment_id": "cy-brenin-01-l34-s114"
    }
   ],
-  "nodyn_en": "This chapter introduces the conditional: an imagined situation and what would follow from it, without saying that the situation is true. The friends try out plans for Rhita Gawr this way. Each sentence has two halves: an 'if' half with taswn i or tasai, and a 'would' half with baswn i or basai.\n\nFor yourself, use taswn i ('if I were', 'if I did') and baswn i ('I would'). For one other person or a noun, use tasai and basai. Both are followed by yn ('n after a vowel) and a verb-noun, or by yn and an adjective or noun, just like mae and roedd:\n- Taswn i'n frenin, baswn i'n ymladd ('If I were king, I would fight'). Brenin takes the soft mutation after yn, as always.\n- Taswn i'n gawr, baswn i'n chwerthin ('If I were a giant, I would laugh').\n- Tasai'r cawr yn gweld y farf hon yn agos, basai fe'n gwybod ('If the giant saw this beard up close, he would know'). Tasai and y join as tasai'r.\n- Tasai Dafi'n tisian ar wyneb Arthur, basai barf o fwg gyda fe ('If Dafi sneezed on Arthur's face, he would have a beard of smoke'). Possession works as usual with gyda.\n- Taswn i'n anfon byddin, basai rhyfel ('If I sent an army, there would be war'). Like mae rhyfel ('there is war') and bydd rhyfel ('there will be war'), basai rhyfel needs no 'there'.\nAfter basai, the pronoun for 'he' in this book is fe: basai fe'n gwybod ('he would know'), basai fe'n darllen ('he would read').\n\nThe 'if' half does not have to be about the past, even though English often uses a past form ('if I sent'). When Arthur says taswn i'n anfon byddin, he is talking about a plan for the coming weeks; what matters is that he is imagining it. The two halves can also have different subjects: Taswn i'n eillio fy marf i, a'i hanfon hi at Rhita, basai'r cawr yn hapus ('If I shaved my beard and sent it to Rhita, the giant would be happy'), says Cynyr. Arthur answers: taswn i'n cymryd dy farf di, faswn i ddim yn frenin da ('if I took your beard, I wouldn't be a good king').\n\nAfter a ('and'), tasai takes the aspirate mutation, t → th: A thasai Cai'n mynd i Eryri at elyn mor gryf, basai'r cawr yn ei fwyta e i frecwast ('And if Cai went to Eryri to such a strong enemy, the giant would eat him for breakfast'). Myrddin does the same: A thasai brenin yn gofyn i ddewin am bopeth, basai fe'n frenin twp ('And if a king asked a wizard about everything, he would be a foolish king').\n\nTo say 'I wouldn't', baswn takes the soft mutation, b → f, and ddim follows the pronoun: Faswn i ddim yn cwympo ('I wouldn't fall'), says Cai; Faswn i ddim yn mynd i ben mynydd am bob pastai yng Nghymru ('I wouldn't go up a mountain for every pie in Wales'), says Modlen. In the 'if' half, a negative simply adds ddim after the subject, and tasai does not change: Tasai'r cawr ddim yn gweld yn dda, basai hi'n ddefnyddiol iawn ('If the giant didn't see well, it [the beard] would be very useful').\n\nCompare os ('if') from Pennod 21. Os is for a real possibility, something that may well happen, and it takes ordinary forms such as bydd or ydy: Os bydd angen brenin barfog, fi fydd y brenin barfog! ('If a bearded king is needed, I'll be the bearded king!'); Os ydy e'n falch, dyw e ddim yn gwrando ar neb ('If he is proud, he doesn't listen to anyone'). Taswn and tasai are for something imagined: Cai is not king and Mali is not a giant. So Mali says os ydy e'n falch about Rhita, who may really be proud, but taswn i'n gawr about herself.\n\nFor recognition only: Mali says Pe bai'r cawr yn falch iawn, basai fe'n hoffi clywed ei fod e'n gryf ac yn fawr ('If the giant were very proud, he would like to hear that he was strong and big'). Pe bai means the same as tasai, but it is the form you find in books, and Cai teases her for sounding like one. The forms for 'you', 'we' and 'they' come later; this chapter uses only taswn i, baswn i, tasai and basai.\n\nThe chapter also uses some irregular comparisons. Gwaeth means 'worse' and is the comparative of drwg ('bad'); gwaethaf is 'worst'. After yn it takes the soft mutation: Penderfynodd Arthur fod mêl ar ei wyneb yn waeth na chawr ('Arthur decided that honey on his face was worse than a giant'); Basai hynny'n waeth na'r cawr! ('That would be worse than the giant!'); Dyna'r cynllun gwaethaf! ('That's the worst plan!'). Gwell is 'better', the comparative of da: Mae hynny'n well na hud ('That is better than magic'). Llai means 'less' and goes before an adjective: Basai hi'n llai trwm na barf Modlen ('It would be less heavy than Modlen's beard'). Na ('than') takes the aspirate mutation, so cawr becomes chawr in na chawr."
+  "nodyn_en": "This chapter introduces the conditional: an imagined situation and what would follow from it, without saying that the situation is true. The friends try out plans for Rhita Gawr this way. A complete if–would sentence has two parts. A would-clause can also stand alone when its condition is understood. The complete pattern has an 'if' half with taswn i or tasai, and a 'would' half with baswn i or basai.\n\nFor yourself, use taswn i ('if I were', 'if I did') and baswn i ('I would'). For one other person or a noun, use tasai and basai. Both are followed by yn ('n after a vowel) and a verb-noun, or by yn and an adjective or noun, just like mae and roedd. Possession with gyda and existential statements work differently, as the examples below show:\n- Taswn i'n frenin, baswn i'n ymladd ('If I were king, I would fight'). Brenin takes the soft mutation after yn, as always.\n- Taswn i'n gawr, baswn i'n chwerthin ('If I were a giant, I would laugh').\n- Tasai'r cawr yn gweld y farf hon yn agos, basai fe'n gwybod ('If the giant saw this beard up close, he would know'). Tasai and y join as tasai'r.\n- Taswn i'n tisian ar wyneb Arthur, basai barf o fwg gyda fe ('If I sneezed on Arthur’s face, he would have a beard of smoke'), says Dafi. Possession works as usual with gyda.\n- Taswn i'n anfon byddin, basai rhyfel ('If I sent an army, there would be war'). Like mae rhyfel ('there is war') and bydd rhyfel ('there will be war'), basai rhyfel needs no 'there'.\nAfter basai, the pronoun for 'he' in this book is fe: basai fe'n gwybod ('he would know'), basai fe'n darllen ('he would read').\n\nThe 'if' half does not have to be about the past, even though English often uses a past form ('if I sent'). When Arthur says taswn i'n anfon byddin, he is talking about a plan for the coming weeks; what matters is that he is imagining it. The two halves can also have different subjects: Taswn i'n eillio fy marf i, a'i hanfon hi at Rhita, basai'r cawr yn hapus ('If I shaved my beard and sent it to Rhita, the giant would be happy'), says Cynyr. Arthur answers: taswn i'n cymryd dy farf di, faswn i ddim yn frenin da ('if I took your beard, I wouldn't be a good king').\n\nAfter a ('and'), tasai takes the aspirate mutation, t → th: A thasai Cai'n mynd i Eryri at elyn mor gryf, basai'r cawr yn ei fwyta e i frecwast ('And if Cai went to Eryri to such a strong enemy, the giant would eat him for breakfast'). Myrddin does the same: A thasai brenin yn gofyn i ddewin am bopeth, basai fe'n frenin twp ('And if a king asked a wizard about everything, he would be a foolish king').\n\nTo say 'I wouldn't', baswn takes the soft mutation, b → f, and ddim follows the pronoun: Faswn i ddim yn cwympo ('I wouldn't fall'), says Cai; Faswn i ddim yn mynd i ben mynydd am bob pastai yng Nghymru ('I wouldn't go up a mountain for every pie in Wales'), says Modlen. In the 'if' half, a negative simply adds ddim after the subject, and tasai does not change: Tasai'r cawr ddim yn gweld yn dda, basai hi'n ddefnyddiol iawn ('If the giant didn't see well, it [the beard] would be very useful').\n\nCompare os ('if') from Pennod 21. Os is for a real possibility, something that may well happen, and it takes ordinary forms such as bydd or ydy: Os bydd angen brenin barfog, fi fydd y brenin barfog! ('If a bearded king is needed, I'll be the bearded king!'); Os ydy e'n falch, dyw e ddim yn gwrando ar neb ('If he is proud, he doesn't listen to anyone'). Taswn and tasai are for something imagined: Cai is not king and Mali is not a giant. So Mali says os ydy e'n falch about Rhita, who may really be proud, but taswn i'n gawr about herself.\n\nFor recognition only: Mali says Pe bai'r cawr yn falch iawn, basai fe'n hoffi clywed ei fod e'n gryf ac yn fawr ('If the giant were very proud, he would like to hear that he was strong and big'). Pe bai means the same as tasai, but it is the form you find in books, and Cai teases her for sounding like one. The forms for 'you', 'we' and 'they' come later; this chapter uses only taswn i, baswn i, tasai and basai.\n\nThe chapter also uses some irregular comparisons. Gwaeth means 'worse' and is the comparative of drwg ('bad'); gwaethaf is 'worst'. After yn it takes the soft mutation: Penderfynodd Arthur fod mêl ar ei wyneb yn waeth na chawr ('Arthur decided that honey on his face was worse than a giant'); Basai hynny'n waeth na'r cawr! ('That would be worse than the giant!'); Dyna'r cynllun gwaethaf! ('That's the worst plan!'). Gwell is 'better', the comparative of da: Mae hynny'n well na hud ('That is better than magic'). Llai means 'less' and goes before an adjective: Basai hi'n llai trwm na barf Modlen ('It would be less heavy than Modlen's beard'). Na ('than') takes the aspirate mutation, so cawr becomes chawr in na chawr."
  },
  "pensa": {
   "A": {
@@ -1475,7 +1513,8 @@
        "accepted_answers": [
         "Taswn i'n gawr, baswn i'n chwerthin.",
         "Baswn i'n chwerthin taswn i'n gawr.",
-        "Fe faswn i'n chwerthin taswn i'n gawr."
+        "Fe faswn i'n chwerthin taswn i'n gawr.",
+        "Taswn i'n gawr, fe faswn i'n chwerthin."
        ],
        "mutation_hint": true
       },
@@ -1488,7 +1527,14 @@
         "Tasai'r cawr yn gweld y farf, basai e'n gwybod.",
         "Basai fe'n gwybod tasai'r cawr yn gweld y farf.",
         "Basai e'n gwybod tasai'r cawr yn gweld y farf.",
-        "Fe fasai e'n gwybod tasai'r cawr yn gweld y farf."
+        "Fe fasai e'n gwybod tasai'r cawr yn gweld y farf.",
+        "Tasai'r cawr yn gweld y farf, basai'r cawr yn gwybod.",
+        "Basai'r cawr yn gwybod tasai'r cawr yn gweld y farf.",
+        "Tasai'r cawr yn gweld y farf, fe fasai fe'n gwybod.",
+        "Tasai'r cawr yn gweld y farf, fe fasai e'n gwybod.",
+        "Fe fasai fe'n gwybod tasai'r cawr yn gweld y farf.",
+        "Tasai'r cawr yn gweld y farf, fe fasai'r cawr yn gwybod.",
+        "Fe fasai'r cawr yn gwybod tasai'r cawr yn gweld y farf."
        ]
       },
       {
@@ -1501,7 +1547,9 @@
         "Basai barf o fwg gydag Arthur tasai Dafi'n tisian.",
         "Basai barf o fwg gyda Arthur tasai Dafi'n tisian.",
         "Fe fasai barf o fwg gydag Arthur tasai Dafi'n tisian.",
-        "Fe fasai barf o fwg gyda Arthur tasai Dafi'n tisian."
+        "Fe fasai barf o fwg gyda Arthur tasai Dafi'n tisian.",
+        "Tasai Dafi'n tisian, fe fasai barf o fwg gydag Arthur.",
+        "Tasai Dafi'n tisian, fe fasai barf o fwg gyda Arthur."
        ]
       },
       {
@@ -1511,7 +1559,8 @@
        "accepted_answers": [
         "Taswn i'n anfon byddin, basai rhyfel.",
         "Basai rhyfel taswn i'n anfon byddin.",
-        "Fe fasai rhyfel taswn i'n anfon byddin."
+        "Fe fasai rhyfel taswn i'n anfon byddin.",
+        "Taswn i'n anfon byddin, fe fasai rhyfel."
        ],
        "common_wrong": [
         {
@@ -1562,27 +1611,31 @@
      "items": [
       {
        "id": "a7",
-       "prompt": "___ i'n gawr, baswn i'n chwerthin. (Os / Taswn)",
+       "prompt": "___ i'n frenin, baswn i'n helpu'r plant. (Os / Taswn / Baswn)",
        "answer_mode": "choice",
        "choices": [
         "Os",
-        "Taswn"
+        "Taswn",
+        "Baswn"
        ],
        "accepted_answers": [
         "Taswn"
-       ]
+       ],
+       "source_segment_ids": []
       },
       {
        "id": "a8",
-       "prompt": "___ bydd angen brenin barfog, fi fydd y brenin barfog! (Os / Taswn)",
+       "prompt": "___ bydd hi'n oer yfory, bydd y cawr yn gwisgo cot. (Os / Taswn / Tasai)",
        "answer_mode": "choice",
        "choices": [
         "Os",
-        "Taswn"
+        "Taswn",
+        "Tasai"
        ],
        "accepted_answers": [
         "Os"
-       ]
+       ],
+       "source_segment_ids": []
       }
      ]
     },
@@ -1683,7 +1736,7 @@
     },
     {
      "id": "b5",
-     "prompt": "Mae Modlen yn rhoi mêl ar y farf, ac mae hi'n ___ y farf ar wyneb Arthur.",
+     "prompt": "Mae Modlen yn rhoi mêl ar y farf, ac mae hi'n ___ y farf ar wyneb Arthur. (sticking)",
      "answer_mode": "exact",
      "accepted_answers": [
       "gludo"
@@ -1772,7 +1825,7 @@
      "id": "c3",
      "prompt": "Daeth Modlen i'r ystafell gyda basged fawr. Beth oedd yn y fasged?",
      "answer_mode": "self_check",
-     "model_answer": "Barf ffug, fawr, o'r gwlân du a'r gwlân gwyn o'r ffair.",
+     "model_answer": "Roedd barf ffug yn y fasged.",
      "key_terms": [
       "cy-ffug",
       "cy-gwlan"
@@ -2133,8 +2186,8 @@
    "cover": 1,
    "inline_scene": 2,
    "margin_vignette": 1,
-   "margin_diagram": 1,
-   "margin_gloss": 31
+   "margin_diagram": 2,
+   "margin_gloss": 34
   }
  },
  "completion": {
@@ -2150,7 +2203,7 @@
   ]
  },
  "metrics": {
-  "running_words": 1647,
+  "running_words": 1645,
   "sentences": 134,
   "word_target": 1720,
   "word_window": [
