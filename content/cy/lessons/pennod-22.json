@@ -457,15 +457,7 @@
      {
       "id": "cy-brenin-01-l22-s012",
       "text": "\"Mae gormod o gwrw yn y dafarn yma.\"",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "gwrw",
-        "gloss": "o gwrw ← cwrw",
-        "gloss_kind": "radical"
-       }
-      ]
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l22-s013",
@@ -617,7 +609,19 @@
       "id": "cy-brenin-01-l22-s026",
       "text": "\"Ac mae'r arglwyddi'n ymladd am yr orsedd yng Nghaerllion yn barod,\" meddai'r hen deithiwr.",
       "paragraph_start": true,
-      "speaker": "char-hen-deithiwr"
+      "speaker": "char-hen-deithiwr",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "deithiwr",
+        "gloss": "deithiwr ← teithiwr",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-teithiwr"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l22-s027",
@@ -993,20 +997,24 @@
       "id": "cy-brenin-01-l22-s072",
       "text": "\"Mae'n wir,\" meddai'r dyn.",
       "paragraph_start": true,
-      "speaker": "char-dyn-cwch"
-     },
-     {
-      "id": "cy-brenin-01-l22-s073",
-      "text": "\"Dw i'n siŵr eu bod nhw yno nawr, yn yr eira, yn aros am deithwyr.\"",
+      "speaker": "char-dyn-cwch",
       "inference_aids": [
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "deithwyr",
-        "gloss": "am deithwyr ← teithwyr",
-        "gloss_kind": "radical"
+        "anchor_text": "wir",
+        "gloss": "wir ← gwir",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-gwir"
+        ]
        }
       ]
+     },
+     {
+      "id": "cy-brenin-01-l22-s073",
+      "text": "\"Dw i'n siŵr eu bod nhw yno nawr, yn yr eira, yn aros am deithwyr.\"",
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l22-s074",
@@ -1060,15 +1068,7 @@
       "text": "\"Efallai bod lladron yno, Dad!\" meddai Cai.",
       "paragraph_start": true,
       "speaker": "char-cai",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "Efallai bod",
-        "gloss": "efallai + bod (dim mae)",
-        "gloss_kind": "form"
-       }
-      ]
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l22-s083",
@@ -1322,7 +1322,19 @@
      },
      {
       "id": "cy-brenin-01-l22-s119",
-      "text": "\"Dw i'n gwybod bod un peth yn gelwydd: does dim lladron ar y bont. A dw i'n gwybod bod un peth yn wir: mae draig gyda'r dewin!\""
+      "text": "\"Dw i'n gwybod bod un peth yn gelwydd: does dim lladron ar y bont. A dw i'n gwybod bod un peth yn wir: mae draig gyda'r dewin!\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gelwydd",
+        "gloss": "gelwydd ← celwydd",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-celwydd"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l22-s120",
@@ -1517,7 +1529,9 @@
         "Dw i'n gwybod dy fod di'n ddewr.",
         "Dw i'n gwybod dy fod ti'n ddewr.",
         "Dw i'n gwybod bod ti'n ddewr.",
-        "Dw i'n gwybod dy fod yn ddewr."
+        "Dw i'n gwybod dy fod yn ddewr.",
+        "Dw i'n gwybod fod ti'n ddewr.",
+        "Dw i'n gwybod fod di'n ddewr."
        ],
        "mutation_hint": true
       },
@@ -1529,7 +1543,10 @@
         "Mae pawb yn dweud ei fod e'n hen.",
         "Mae pawb yn dweud fod e'n hen.",
         "Mae pawb yn dweud bod e'n hen.",
-        "Mae pawb yn dweud ei fod yn hen."
+        "Mae pawb yn dweud ei fod yn hen.",
+        "Mae pawb yn dweud ei fod fe'n hen.",
+        "Mae pawb yn dweud fod fe'n hen.",
+        "Mae pawb yn dweud bod fe'n hen."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l22-s038"
@@ -1553,12 +1570,12 @@
       },
       {
        "id": "a6",
-       "prompt": "Dyn ni'n mynd yn y cwch. (Mae Cai'n dweud …) →",
+       "prompt": "Dyn ni'n aros yn y dafarn. (Mae Cai'n dweud …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Mae Cai'n dweud ein bod ni'n mynd yn y cwch.",
-        "Mae Cai'n dweud bod ni'n mynd yn y cwch.",
-        "Mae Cai'n dweud ein bod yn mynd yn y cwch."
+        "Mae Cai'n dweud ein bod ni'n aros yn y dafarn.",
+        "Mae Cai'n dweud bod ni'n aros yn y dafarn.",
+        "Mae Cai'n dweud ein bod yn aros yn y dafarn."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l22-s085"
@@ -1566,12 +1583,12 @@
       },
       {
        "id": "a7",
-       "prompt": "Maen nhw'n mynd i Gaerllion. (Dw i'n meddwl …) →",
+       "prompt": "Maen nhw'n yfed cwrw. (Dw i'n meddwl …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dw i'n meddwl eu bod nhw'n mynd i Gaerllion.",
-        "Dw i'n meddwl bod nhw'n mynd i Gaerllion.",
-        "Dw i'n meddwl eu bod yn mynd i Gaerllion."
+        "Dw i'n meddwl eu bod nhw'n yfed cwrw.",
+        "Dw i'n meddwl bod nhw'n yfed cwrw.",
+        "Dw i'n meddwl eu bod yn yfed cwrw."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l22-s017"

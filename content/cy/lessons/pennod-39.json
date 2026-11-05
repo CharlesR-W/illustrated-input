@@ -464,7 +464,19 @@
       "id": "cy-brenin-01-l39-s024",
       "text": "\"Dyw hi ddim yn gyfraith,\" meddai Mali yn dawel wrth Arthur. \"Dw i wedi darllen hanes Caerllion yn y cronicl, bob tudalen o'r llawysgrif.\"",
       "paragraph_start": true,
-      "speaker": "char-mali"
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gyfraith",
+        "gloss": "gyfraith ← cyfraith",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-cyfraith"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l39-s311",
@@ -971,7 +983,19 @@
      },
      {
       "id": "cy-brenin-01-l39-s083",
-      "text": "Roedd pawb yn gyfartal wrth y bwrdd."
+      "text": "Roedd pawb yn gyfartal wrth y bwrdd.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gyfartal",
+        "gloss": "gyfartal ← cyfartal",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-cyfartal"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l39-s302",
@@ -992,7 +1016,19 @@
       "id": "cy-brenin-01-l39-s202",
       "text": "\"Fi yw'r arglwydd hynaf yn y deyrnas,\" meddai'r hen arglwydd. \"Ond dw i ddim eisiau'r gadair wrth y brenin. Dw i eisiau cawl poeth.\"",
       "paragraph_start": true,
-      "speaker": "char-hen-arglwydd"
+      "speaker": "char-hen-arglwydd",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "deyrnas",
+        "gloss": "deyrnas ← teyrnas",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-teyrnas"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l39-s203",
@@ -1392,16 +1428,6 @@
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "parchu",
-        "gloss": "parch → parchu",
-        "gloss_kind": "define",
-        "covers_lexeme_ids": [
-         "cy-parchu"
-        ]
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
         "anchor_text": "gyfiawnder",
         "gloss": "gyfiawnder ← cyfiawnder",
         "gloss_kind": "radical"
@@ -1425,26 +1451,14 @@
      },
      {
       "id": "cy-brenin-01-l39-s120",
-      "text": "\"Dyn ni'n cytuno!\" meddai pawb o gwmpas y bwrdd.",
-      "paragraph_start": true,
-      "speaker": "char-arglwyddi"
+      "text": "Roedd pawb o gwmpas y bwrdd yn cytuno.",
+      "paragraph_start": true
      },
      {
       "id": "cy-brenin-01-l39-s121",
       "text": "Ysgrifennodd Mali'r gyfraith ar ei thabled: Does neb yn fwy na neb. Cyfiawnder i bawb. Rhyddid i bawb. Parch i bawb.",
       "paragraph_start": true,
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "Cyfiawnder",
-        "gloss": "cyfiawn → cyfiawnder",
-        "gloss_kind": "define",
-        "covers_lexeme_ids": [
-         "cy-cyfiawnder"
-        ]
-       }
-      ]
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l39-s122",
@@ -1662,7 +1676,9 @@
        "prompt": "Bydd y cawl yn oer. (Dw i'n siŵr …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dw i'n siŵr y bydd y cawl yn oer."
+        "Dw i'n siŵr y bydd y cawl yn oer.",
+        "Dw i'n siŵr y bydd e'n oer.",
+        "Dw i'n siŵr y bydd fe'n oer."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l39-s057"
@@ -1673,7 +1689,10 @@
        "prompt": "Mae Mali eisiau llaeth. (Dw i'n gwybod …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dw i'n gwybod bod Mali eisiau llaeth."
+        "Dw i'n gwybod bod Mali eisiau llaeth.",
+        "Dw i'n gwybod ei bod hi eisiau llaeth.",
+        "Dw i'n gwybod bod hi eisiau llaeth.",
+        "Dw i'n gwybod ei bod eisiau llaeth."
        ],
        "common_wrong": [
         {
@@ -1688,7 +1707,8 @@
        "prompt": "Bydd yr arglwyddi'n cytuno. (Dw i'n gobeithio …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dw i'n gobeithio y bydd yr arglwyddi'n cytuno."
+        "Dw i'n gobeithio y bydd yr arglwyddi'n cytuno.",
+        "Dw i'n gobeithio y byddan nhw'n cytuno."
        ]
       },
       {
@@ -1696,7 +1716,12 @@
        "prompt": "Mae'r bwrdd yn grwn. (Dw i'n credu …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dw i'n credu bod y bwrdd yn grwn."
+        "Dw i'n credu bod y bwrdd yn grwn.",
+        "Dw i'n credu ei fod e'n grwn.",
+        "Dw i'n credu ei fod fe'n grwn.",
+        "Dw i'n credu ei fod yn grwn.",
+        "Dw i'n credu fod e'n grwn.",
+        "Dw i'n credu fod fe'n grwn."
        ],
        "common_wrong": [
         {
@@ -1720,7 +1745,10 @@
        "accepted_answers": [
         "Yn yr amffitheatr bydd y wledd.",
         "Yn yr amffitheatr fydd y wledd.",
-        "Yn yr amffitheatr y bydd y wledd."
+        "Yn yr amffitheatr y bydd y wledd.",
+        "Yn yr amffitheatr bydd hi.",
+        "Yn yr amffitheatr fydd hi.",
+        "Yn yr amffitheatr y bydd hi."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l39-s036"
@@ -1731,7 +1759,8 @@
        "prompt": "Hwn yw'r bwrdd newydd. (?) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Ai hwn yw'r bwrdd newydd?"
+        "Ai hwn yw'r bwrdd newydd?",
+        "Ai'r bwrdd newydd yw hwn?"
        ],
        "source_segment_ids": []
       },
@@ -1740,7 +1769,9 @@
        "prompt": "Cai fydd y distain. (?) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Ai Cai fydd y distain?"
+        "Ai Cai fydd y distain?",
+        "Ai fe fydd y distain?",
+        "Ai e fydd y distain?"
        ]
       }
      ]
@@ -1763,7 +1794,23 @@
         "mae'r brenin yn eistedd arni hi",
         "mae'r brenin yn eistedd arni",
         "y mae'r brenin yn eistedd arni hi",
-        "y mae'r brenin yn eistedd arni"
+        "y mae'r brenin yn eistedd arni",
+        "y gadair mae e'n eistedd arni hi",
+        "y gadair mae fe'n eistedd arni hi",
+        "y gadair mae e'n eistedd arni",
+        "y gadair mae fe'n eistedd arni",
+        "y gadair y mae e'n eistedd arni hi",
+        "y gadair y mae fe'n eistedd arni hi",
+        "y gadair y mae e'n eistedd arni",
+        "y gadair y mae fe'n eistedd arni",
+        "mae e'n eistedd arni hi",
+        "mae fe'n eistedd arni hi",
+        "mae e'n eistedd arni",
+        "mae fe'n eistedd arni",
+        "y mae e'n eistedd arni hi",
+        "y mae fe'n eistedd arni hi",
+        "y mae e'n eistedd arni",
+        "y mae fe'n eistedd arni"
        ],
        "common_wrong": [
         {
@@ -1791,7 +1838,11 @@
        "recall_of": "G35",
        "accepted_answers": [
         "Dylai marchog fod yn ddewr.",
-        "Fe ddylai marchog fod yn ddewr."
+        "Fe ddylai marchog fod yn ddewr.",
+        "Dylai e fod yn ddewr.",
+        "Dylai fe fod yn ddewr.",
+        "Fe ddylai e fod yn ddewr.",
+        "Fe ddylai fe fod yn ddewr."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -2362,7 +2413,7 @@
    "inline_scene": 2,
    "margin_vignette": 1,
    "margin_diagram": 1,
-   "margin_gloss": 46
+   "margin_gloss": 47
   }
  },
  "completion": {
@@ -2378,7 +2429,7 @@
   ]
  },
  "metrics": {
-  "running_words": 1918,
+  "running_words": 1917,
   "sentences": 142,
   "word_target": 1870,
   "word_window": [

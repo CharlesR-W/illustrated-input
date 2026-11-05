@@ -559,13 +559,6 @@
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "welon",
-        "gloss": "pan welon ← gwelon",
-        "gloss_kind": "radical"
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
         "anchor_text": "i ffwrdd",
         "gloss": "i ffwrdd ↔ yn ôl",
         "gloss_kind": "antonym"
@@ -901,13 +894,6 @@
         "anchor_text": "Rhufeiniaid",
         "gloss": "Rhufeiniaid: pobl o'r gorffennol pell",
         "gloss_kind": "define"
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "gwnaethon nhw",
-        "gloss": "gwnaeth e · gwnaethon nhw",
-        "gloss_kind": "paradigm"
        }
       ]
      },
@@ -987,15 +973,7 @@
       "text": "\"Weloch chi'r castell?\" meddai Cynyr yn dawel.",
       "paragraph_start": true,
       "speaker": "char-cynyr",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "Weloch",
-        "gloss": "Weloch chi? ← gweloch · gwelon ni",
-        "gloss_kind": "radical"
-       }
-      ]
+      "inference_aids": []
      },
      {
       "id": "cy-brenin-01-l23-s077",
@@ -1128,7 +1106,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "seddau",
-        "gloss": "sedd: cadair neu mainc",
+        "gloss": "sedd: cadair · mainc",
         "gloss_kind": "define"
        }
       ]
@@ -1218,7 +1196,19 @@
       "id": "cy-brenin-01-l23-s102",
       "text": "\"Does dim pen i gylch, Arth,\" darllenodd Mali.",
       "paragraph_start": true,
-      "speaker": "char-mali"
+      "speaker": "char-mali",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gylch",
+        "gloss": "gylch ← cylch",
+        "gloss_kind": "radical",
+        "covers_lexeme_ids": [
+         "cy-cylch"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l23-s103",
@@ -1490,7 +1480,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Cysgon ni mewn pabell.",
-        "Fe gysgon ni mewn pabell."
+        "Fe gysgon ni mewn pabell.",
+        "Gysgon ni mewn pabell."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l23-s055"
@@ -1502,7 +1493,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Rhedon nhw i ffwrdd.",
-        "Fe redon nhw i ffwrdd."
+        "Fe redon nhw i ffwrdd.",
+        "Redon nhw i ffwrdd."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l23-s035"
@@ -1514,7 +1506,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Rhwyfaist ti'n gryf.",
-        "Fe rwyfaist ti'n gryf."
+        "Fe rwyfaist ti'n gryf.",
+        "Rwyfaist ti'n gryf."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l23-s049"
@@ -1538,7 +1531,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Tynnon ni'r gert.",
-        "Fe dynnon ni'r gert."
+        "Fe dynnon ni'r gert.",
+        "Dynnon ni'r gert."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l23-s023"
@@ -1558,7 +1552,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Daethon ni i Gaerllion.",
-        "Fe ddaethon ni i Gaerllion."
+        "Fe ddaethon ni i Gaerllion.",
+        "Ddaethon ni i Gaerllion."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l23-s108"
@@ -1570,7 +1565,8 @@
        "answer_mode": "exact",
        "accepted_answers": [
         "Cawson ni gawl.",
-        "Fe gawson ni gawl."
+        "Fe gawson ni gawl.",
+        "Gawson ni gawl."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1610,7 +1606,10 @@
         "Yfory bydd hi'n bwrw eira.",
         "Fe fydd hi'n bwrw eira.",
         "Fe fydd hi'n bwrw eira yfory.",
-        "Yfory fe fydd hi'n bwrw eira."
+        "Yfory fe fydd hi'n bwrw eira.",
+        "Fydd hi'n bwrw eira.",
+        "Fydd hi'n bwrw eira yfory.",
+        "Yfory fydd hi'n bwrw eira."
        ],
        "recall_of": "G20"
       }
@@ -1663,7 +1662,7 @@
    "items": [
     {
      "id": "b1",
-     "prompt": "Mae'r ffordd yn wlyb ac yn ddu ar ôl y glaw… wel, mae ___ ar y ffordd.",
+     "prompt": "Mae'r ffordd yn wlyb ac yn ddu yn y glaw… wel, mae ___ ar y ffordd.",
      "answer_mode": "exact",
      "accepted_answers": [
       "mwd"
@@ -2291,7 +2290,7 @@
    "inline_scene": 2,
    "margin_vignette": 2,
    "margin_diagram": 2,
-   "margin_gloss": 38
+   "margin_gloss": 36
   }
  },
  "completion": {
