@@ -1186,6 +1186,43 @@ function wordNodes(text, from, to, words, map) {
   return nodes;
 }
 
+
+// Ruby ranges are the outer partition; the existing word/anchor renderer is reused
+// inside each base. An anchor crossing a ruby boundary has linked fragments, never
+// duplicate IDs. Every .w retains its exact original source offset and text.
+function japaneseStoryNodes(text, words, map, ranges, readings) {
+  const pieces = new Map();
+  const base = (from, to) => {
+    const nodes = [];
+    let cursor = from;
+    for (const range of ranges) {
+      if (range.end <= from || range.start >= to) continue;
+      const start = Math.max(from, range.start), end = Math.min(to, range.end);
+      if (cursor < start) nodes.push(...wordNodes(text, cursor, start, words, map));
+      const part = pieces.get(range.anchorId) || 0;
+      pieces.set(range.anchorId, part + 1);
+      const anchor = h("span", { class: "anchor", id: part ? `${range.anchorId}-p${part}` : range.anchorId,
+        "data-note-anchor": range.anchorId }, wordNodes(text, start, end, words, map));
+      for (const word of anchor.querySelectorAll(".w")) word.setAttribute("aria-describedby", ["gloss-keys", ...range.noteEls.map(note => note.id)].join(" "));
+      wireAnchor(anchor, range.noteEls);
+      nodes.push(anchor);
+      cursor = end;
+    }
+    if (cursor < to) nodes.push(...wordNodes(text, cursor, to, words, map));
+    return nodes;
+  };
+  const nodes = [];
+  let cursor = 0;
+  for (const span of readings) {
+    nodes.push(...base(cursor, span.start));
+    nodes.push(h("ruby", { class: "authored-ruby" }, h("rb", null, base(span.start, span.end)),
+      h("rp", null, "("), h("rt", null, span.reading), h("rp", null, ")")));
+    cursor = span.end;
+  }
+  nodes.push(...base(cursor, text.length));
+  return nodes;
+}
+
 function renderSegment(segment, lesson, seenGlosses = null) {
   const locator = anchorLocator(segment.text || "");
   const text = locator.text;
@@ -1220,6 +1257,17 @@ function renderSegment(segment, lesson, seenGlosses = null) {
     if (segment.preview) notes.push(h("a", { class: "note preview-marker", href: "#grammar", "data-anchor": segment.id,
       onclick: (event) => { event.preventDefault(); document.getElementById("grammar")?.scrollIntoView({ behavior: "smooth" }); } }, "→ ", ui("span", "grammar")));
   }
+  const readings = state.course?.lang === "ja" ? (Core.japaneseReadings?.(segment)?.spans || []) : [];
+  if (readings.length) {
+    const anchored = ranges.map((range, k) => {
+      const anchorId = `${segment.id}-a${k}`;
+      const noteEls = range.items.map(({ aid, index }) => buildNote(aid, `${segment.id}-n${index}`, anchorId));
+      notes.push(...noteEls);
+      stripNotes(range.items, anchorId);
+      return { ...range, anchorId, noteEls };
+    });
+    sentence.append(...japaneseStoryNodes(text, words, locator.map, anchored, readings));
+  } else {
   let cursor = 0;
   ranges.forEach((range, k) => {
     if (range.start > cursor) sentence.append(...wordNodes(text, cursor, range.start, words, locator.map));
@@ -1236,6 +1284,7 @@ function renderSegment(segment, lesson, seenGlosses = null) {
     cursor = range.end;
   });
   if (cursor < text.length) sentence.append(...wordNodes(text, cursor, text.length, words, locator.map));
+  }
   if (loose.length) {
     const markerId = `${segment.id}-m`;
     const noteEls = loose.map(({ aid, index }) => buildNote(aid, `${segment.id}-n${index}`, segment.id));
@@ -1403,14 +1452,20 @@ async function openWord(word, lesson) {
   rove(word);
   const sentence = word.closest(".seg");
   const anchor = word.closest(".anchor");
-  if (anchor) lightNotes(anchor.id, sentence);
+  if (anchor) {
+    if (state.course?.lang === "ja") lightNotes(anchor.dataset.noteAnchor || anchor.id, sentence, anchor);
+    else lightNotes(anchor.id, sentence);
+  }
   const seq = glossSeq;
   const data = await lessonGlosses(lesson);
   if (seq !== glossSeq || !data || !word.isConnected) return;
   word.closest(".story")?.classList.add("has-glosses");
   const segment = (lesson._segmentIndex ||= Core.segmentIndex(lesson)).get(sentence.dataset.segment);
   const found = segment ? Core.glossAt(segment.text || "", Number(word.dataset.at), data.forms, data.segments[segment.id], state.course) : null;
-  if (found) showGloss(word, sentence, found);
+  if (found) {
+    const readings = state.course?.lang === "ja" ? (Core.japaneseReadings?.(segment)?.spans || []).filter(span => span.start <= Number(word.dataset.at) && span.end > Number(word.dataset.at)).map(span => ({ ...span, text: segment.text.slice(span.start, span.end) })) : [];
+    showGloss(word, sentence, found, readings);
+  }
 }
 
 function glossEntry(analysis, surface, extra = "") {
@@ -1426,7 +1481,7 @@ function glossEntry(analysis, surface, extra = "") {
     analysis.note ? h("p", { class: "gloss-note", lang: "en" }, analysis.note) : null);
 }
 
-function showGloss(word, sentence, found) {
+function showGloss(word, sentence, found, readings = []) {
   const lang = targetLang();
   const from = found.phrase?.start ?? found.start;
   const to = found.phrase?.end ?? found.end;
@@ -1439,6 +1494,7 @@ function showGloss(word, sentence, found) {
       h("span", { class: "gloss-lemma", lang }, disp(alt.lemma || "", "glosses")), " ",
       h("span", { class: "gloss-pos", lang: "en" }, [alt.pos, alt.form].filter(Boolean).join(" ")), " ",
       h("span", { lang: "en" }, alt.en || "")))) : null);
+  if (readings.length) pop.prepend(...readings.map(reading => h("p", { class: "gloss-reading", lang }, h("span", null, reading.text), " — ", h("span", null, reading.reading))));
   document.body.append(pop);
   const described = word.getAttribute("aria-describedby");
   word.setAttribute("aria-describedby", [described, "gloss-pop"].filter(Boolean).join(" "));

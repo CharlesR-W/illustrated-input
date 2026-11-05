@@ -499,3 +499,8 @@ main:focus { outline: none; }
 .kana-reference table { border-collapse: collapse; width: 100%; }
 .kana-reference th, .kana-reference td { padding: .45rem; border: 1px solid var(--border, #bbb); text-align: start; white-space: nowrap; }
 :lang(ja) .sentence { line-height: 2; }
+
+/* Only authored Japanese story readings enter this presentation path. */
+:lang(ja) .authored-ruby { ruby-align: center; ruby-position: over; }
+:lang(ja) .authored-ruby rt { font-size: .55em; font-weight: 400; line-height: 1; }
+:lang(ja) .gloss-reading { margin-block: .25rem; }

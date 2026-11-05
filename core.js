@@ -680,6 +680,71 @@
     return `${escapeHtml(text.slice(0, range.start))}<b>${escapeHtml(text.slice(range.start, range.end))}</b>${escapeHtml(text.slice(range.end))}`;
   }
 
+
+  // Authored Japanese readings are source-bound presentation metadata. They never
+  // enter tokenisation, lexical matching, recurrence counts or answer checking.
+  function japaneseReadings(segment) {
+    const source = String(segment?.text ?? "");
+    const metadata = segment?.readings;
+    const errors = [];
+    const fail = (code, message) => errors.push({ code, message });
+    const atoms = genericTokens(source, "ja");
+    const spans = [];
+    if (metadata !== undefined) {
+      if (!metadata || typeof metadata !== "object" || Array.isArray(metadata) || metadata.source !== source) {
+        fail("reading-source", "readings.source must equal the complete, exact segment text");
+      } else if (!Array.isArray(metadata.spans)) {
+        fail("reading-spans", "readings.spans must be an array");
+      } else {
+        for (const [index, span] of metadata.spans.entries()) {
+          const label = `reading span ${index + 1}`;
+          if (!span || !Number.isInteger(span.start) || !Number.isInteger(span.end) || span.start < 0 || span.end <= span.start || span.end > source.length) {
+            fail("reading-range", `${label} must be a nonempty UTF-16 range within the source`); continue;
+          }
+          const covered = atoms.filter(atom => atom.start >= span.start && atom.end <= span.end);
+          if (!covered.length || covered[0].start !== span.start || covered.at(-1).end !== span.end || covered.some((atom, i) => i && covered[i - 1].end !== atom.start)) {
+            fail("reading-boundary", `${label} must cover contiguous complete source atoms, including attached combining marks`); continue;
+          }
+          if (typeof span.reading !== "string" || !/^(?:[\p{Script=Hiragana}\p{Script=Katakana}ー][\u3099\u309a]?)+$/u.test(span.reading) || !/[\p{Script=Hiragana}\p{Script=Katakana}]/u.test(span.reading)) {
+            fail("reading-kana", `${label} reading must be nonempty kana, with no markup, spaces or Han`); continue;
+          }
+          spans.push({ start: span.start, end: span.end, reading: span.reading });
+        }
+      }
+    }
+    spans.sort((a, b) => a.start - b.start || a.end - b.end);
+    for (let i = 1; i < spans.length; i++) if (spans[i].start < spans[i - 1].end)
+      fail("reading-overlap", "authored reading ranges must not overlap");
+    for (const atom of atoms) if (/^\p{Script=Han}/u.test(atom.text) && !spans.some(span => span.start <= atom.start && span.end >= atom.end))
+      fail("reading-coverage", `Han atom at UTF-16 offset ${atom.start} lacks an authored reading`);
+    // A renderer must not silently attach part of an invalid or stale annotation set.
+    return { spans: errors.length ? [] : spans, errors };
+  }
+
+  // Safe HTML only for the established HTML Anki fields. Source text is always escaped;
+  // reading spans stay whole even when a bold target crosses their boundaries. Clozes
+  // suppress any overlapping reading so the annotation cannot disclose the answer.
+  function japaneseExample(segment, front = "", blank = null) {
+    const text = String(segment?.text ?? "");
+    const { spans } = japaneseReadings(segment);
+    const range = blank || (front ? findAnchor(text, headWord(front), { plugin: "generic", lang: "ja" }) : null);
+    const base = (from, to) => {
+      if (!range || range.end <= from || range.start >= to) return escapeHtml(text.slice(from, to));
+      const start = Math.max(from, range.start), end = Math.min(to, range.end);
+      const middle = blank ? (start === range.start ? escapeHtml(blank.replacement ?? "___") : "") : `<b>${escapeHtml(text.slice(start, end))}</b>`;
+      return escapeHtml(text.slice(from, start)) + middle + escapeHtml(text.slice(end, to));
+    };
+    let html = "", cursor = 0;
+    for (const span of spans) {
+      html += base(cursor, span.start);
+      const content = base(span.start, span.end);
+      html += blank && blank.start < span.end && blank.end > span.start ? content
+        : `<ruby><rb>${content}</rb><rp>(</rp><rt>${escapeHtml(span.reading)}</rt><rp>)</rp></ruby>`;
+      cursor = span.end;
+    }
+    return html + base(cursor, text.length);
+  }
+
   function lexiconStages(lexicon) {
     const stages = [];
     for (const entry of lexicon?.entries || []) {
@@ -803,8 +868,10 @@
         seen.add(guid);
         const exampleIds = asList(stage.example_segment_ids?.length ? stage.example_segment_ids : stage.example_segment_id);
         const isPattern = String(stageId).startsWith("pattern");
-        const examples = exampleIds.map((id) => segments.get(id)?.text).filter(Boolean)
-          .map((text) => (isPattern ? escapeHtml(text) : boldExample(text, stage.front, unmutation)));
+        const examples = course?.lang === "ja"
+          ? exampleIds.map(id => segments.get(id)).filter(segment => segment?.text).map(segment => japaneseExample(segment, isPattern ? "" : stage.front))
+          : exampleIds.map((id) => segments.get(id)?.text).filter(Boolean)
+            .map((text) => (isPattern ? escapeHtml(text) : boldExample(text, stage.front, unmutation)));
         if (!examples.length && stage.example) examples.push(escapeHtml(stage.example));
         const label = lessonLabels[lessonId] || "";
         let back = escapeHtml(stage.back);
@@ -930,8 +997,10 @@
         const tags = (kind) => [...new Set([...base, ...lessonTags, ...asList(stage.tags), pos, kind].map(tagSafe).filter(Boolean))].join(" ");
         const exampleIds = asList(stage.example_segment_ids?.length ? stage.example_segment_ids : stage.example_segment_id);
         const boldTarget = stage.cloze?.answer || headWord(stage.front);
-        const examples = exampleIds.map((id) => segments.get(id)?.text).filter(Boolean)
-          .map((text) => (isPattern ? escapeHtml(text) : ruBold(text, boldTarget, key)));
+        const examples = course?.lang === "ja"
+          ? exampleIds.map(id => segments.get(id)).filter(segment => segment?.text).map(segment => japaneseExample(segment, isPattern ? "" : boldTarget))
+          : exampleIds.map((id) => segments.get(id)?.text).filter(Boolean)
+            .map((text) => (isPattern ? escapeHtml(text) : ruBold(text, boldTarget, key)));
         if (!examples.length && stage.example) examples.push(escapeHtml(stage.example));
         let back = escapeHtml(stage.back);
         if (examples.length) back += `<br><br>${examples.join("<br>")}`;
@@ -943,16 +1012,17 @@
         }
         const cloze = stage.cloze;
         if (!cloze || stage.production === false || !kinds.has("production")) continue;
-        const sentence = String(segments.get(cloze.segment_id || exampleIds[0])?.text ?? "").normalize("NFC");
-        const range = findAnchor(sentence, String(cloze.answer).normalize("NFC")); // whole word, never inside one
+        const sourceSegment = segments.get(cloze.segment_id || exampleIds[0]);
+        const sentence = course?.lang === "ja" ? String(sourceSegment?.text ?? "") : String(sourceSegment?.text ?? "").normalize("NFC");
+        const range = findAnchor(sentence, String(cloze.answer).normalize("NFC"), course?.lang === "ja" ? course : undefined); // whole word, never inside one
         const at = range ? range.start : -1;
         const answer = range ? sentence.slice(range.start, range.end) : "";
         const production = `${courseId}:${lexemeId}:${stageId}${legacyRussian ? ":production" : "-production"}`;
         if (at < 0 || seen.has(production)) continue;
         seen.add(production);
         const hint = cloze.hint || headWord(stage.front);
-        const front = `${escapeHtml(sentence.slice(0, at))}___${escapeHtml(sentence.slice(at + answer.length))}${hint ? ` <i>(${escapeHtml(hint)})</i>` : ""}`;
-        let prodBack = `<b>${escapeHtml(answer)}</b><br><br>${escapeHtml(sentence.slice(0, at))}<b>${escapeHtml(answer)}</b>${escapeHtml(sentence.slice(at + answer.length))}<br>${escapeHtml(stage.back)}`;
+        const front = `${course?.lang === "ja" ? japaneseExample(sourceSegment, "", range) : `${escapeHtml(sentence.slice(0, at))}___${escapeHtml(sentence.slice(at + answer.length))}`}${hint ? ` <i>(${escapeHtml(hint)})</i>` : ""}`;
+        let prodBack = `<b>${escapeHtml(answer)}</b><br><br>${course?.lang === "ja" ? japaneseExample(sourceSegment, answer) : `${escapeHtml(sentence.slice(0, at))}<b>${escapeHtml(answer)}</b>${escapeHtml(sentence.slice(at + answer.length))}`}<br>${escapeHtml(stage.back)}`;
         if (label) prodBack += `<br><small>${escapeHtml(label)}</small>`;
         push({ guid: production, front, back: prodBack, tags: tags("production"), source: lessonId });
       }
@@ -1002,24 +1072,25 @@
         const pos = entry?.part_of_speech || "";
         const exampleIds = asList(stage.example_segment_ids?.length ? stage.example_segment_ids : stage.example_segment_id);
         const segment = segments.get(stage.cloze?.segment_id || exampleIds[0]);
-        const sentence = String(segment?.text || stage.example || "").normalize("NFC");
+        const sentence = course?.lang === "ja" ? String(segment?.text || stage.example || "") : String(segment?.text || stage.example || "").normalize("NFC");
         const target = stage.cloze?.answer || headWord(citation);
         const aids = [...(segment?.inference_aids || []), ...[...segments.values()].flatMap(seg => seg.inference_aids || [])];
         const gloss = aids.find(aid => aid.gloss && (aid.covers_lexeme_ids?.includes(stage.lexeme_id) || (aid.anchor_text && aid.anchor_text === target)))?.gloss || "";
         const label = lessonLabels[lessonId] || `${course?.ui_strings?.[course?.lang]?.lesson || "Unit"} ${lesson?.order || ""}`;
         const tags = kind => [...new Set([...(course?.anki?.tags_base || [courseId]), `${course?.anki?.chapter_tag || "chapter"}-${String(lesson?.order || 0).padStart(2, "0")}`, ...(lesson?.part ? [`${course?.anki?.part_tag || "part"}-${lesson.part}`] : []), ...asList(lesson?.anki_export?.tags), ...asList(stage.tags), pos, kind].map(tagSafe).filter(Boolean))].join(" ");
-        const back = [escapeHtml(stage.back), escapeHtml(gloss), escapeHtml(sentence), `<small>${escapeHtml(label)}</small>`].filter(Boolean).join("<br><br>");
+        const example = course?.lang === "ja" && segment ? japaneseExample(segment) : escapeHtml(sentence);
+        const back = [escapeHtml(stage.back), escapeHtml(gloss), example, `<small>${escapeHtml(label)}</small>`].filter(Boolean).join("<br><br>");
         cards.delete(guid);
         if (!skipKnown(entry, "recognition")) cards.set(guid, {guid, front: `${escapeHtml(citation)}${pos ? `<br><small>${escapeHtml(pos)}</small>` : ""}`, back, tags: tags("recognition"), source: lessonId, deck});
         // Only the lexeme's explicit production flag opts into this deck.
         cards.delete(`${guid}-production`);
         if (skipKnown(entry, "production") || entry?.production !== true || stage.production === false || !stage.cloze) continue;
-        const range = findAnchor(sentence, String(stage.cloze.answer).normalize("NFC"));
+        const range = findAnchor(sentence, String(stage.cloze.answer).normalize("NFC"), course?.lang === "ja" ? course : undefined);
         if (!range) continue;
         const answer = sentence.slice(range.start, range.end);
         const letters = (answer.match(/\p{L}\p{M}*/gu) || []).slice(0, 2).join("");
-        const front = `${escapeHtml(sentence.slice(0, range.start))}${escapeHtml(letters)}___${escapeHtml(sentence.slice(range.end))}<br><i>${escapeHtml(stage.back)}</i>`;
-        cards.set(`${guid}-production`, {guid: `${guid}-production`, front, back: `${escapeHtml(sentence)}<br><br>${escapeHtml(citation)}<br><small>${escapeHtml(label)}</small>`, tags: tags("production"), source: lessonId, deck: `${deck}::${course?.anki?.production_deck_suffix || "Production"}`});
+        const front = `${course?.lang === "ja" && segment ? japaneseExample(segment, "", { ...range, replacement: `${letters}___` }) : `${escapeHtml(sentence.slice(0, range.start))}${escapeHtml(letters)}___${escapeHtml(sentence.slice(range.end))}`}<br><i>${escapeHtml(stage.back)}</i>`;
+        cards.set(`${guid}-production`, {guid: `${guid}-production`, front, back: `${example}<br><br>${escapeHtml(citation)}<br><small>${escapeHtml(label)}</small>`, tags: tags("production"), source: lessonId, deck: `${deck}::${course?.anki?.production_deck_suffix || "Production"}`});
       }
     }
     return [...cards.values()];
@@ -1314,7 +1385,7 @@
     containsLemma, findAnchor, mergeAnchorRanges, readCompleted, setCompleted, toggleCompleted,
     storySections, segmentIndex, presentedAids, lessonAidIndex,
     escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, japaneseGlossForms, japaneseGlossSegment, createVocabularyStore
+    ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, japaneseGlossForms, japaneseGlossSegment, japaneseReadings, japaneseExample, createVocabularyStore
   };
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
@@ -1324,7 +1395,7 @@
       containsLemma, findAnchor, mergeAnchorRanges, readCompleted, setCompleted, toggleCompleted,
       storySections, segmentIndex, presentedAids, lessonAidIndex,
       escapeHtml, ankiField, headWord, boldExample, buildAnkiCards, ankiDeckName, buildAnkiTsv,
-      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, japaneseGlossForms, japaneseGlossSegment, createVocabularyStore
+      ankiExport, tsvField, WELSH_UNMUTATION, BLANK, ru, is, grc, generic, genericTokens, answerChecker, isInflectingCourse, normaliseRu: ruNormalise, normaliseIs: isNormalise, glossTokens, glossKey, glossItemRange, glossAt, japaneseGlossForms, japaneseGlossSegment, japaneseReadings, japaneseExample, createVocabularyStore
     };
   }
   root.IllustratedCore = api;
