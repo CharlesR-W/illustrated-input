@@ -24,7 +24,8 @@
       "Critique pass 2026-10-18: s130 reverted to HEAD and s136 retired (the sequenced shopping read as an exercise). s137 recount kept.",
       "Audit-fix pass 2026-10-19: glosses no longer use words not yet met (s011 cyfrif now '1, 2, 3 …'; s028 Faint now 'un, dau, tri …?' instead of ceiniog, first met at s029). s106 vocative 'Dafarnwr,' (soft mutation of a common noun in address). Redundant Atishŵ gloss removed (declared incidental). B.b7 now excludes dafad (sheep give milk too): 'Does dim gwlân ar y ___'. C.c2 accepts 'Mae deg o wyau gyda Modlen'. Gramadeg: 'dim newid' replaced by c → g / ll → ll / c → c.",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions in story order (seven items, all self_check with rubric, key_terms and sources): c1 'Pwy yw'r pump sy wedi mynd i'r ffair?' (unlicensed sy wedi with 'y pump', two-fact rubric) recast as 'Ble mae Cynyr, Cai a Pero?' (s002–003, sets up Modlen's Pero alibi); c2 eggs converted from exact ('… Faint?', no sy gyda); c3 'Faint yw'r caws?' (exact) dropped; c4 'Pam mae'r dyn bach yn goch?' recast as 'Ond mae Mali'n cyfrif. Faint yw'r gwlân?' (one Pam? only); c5 and c6 kept with one-feature rubrics; new c8 is the single Pam? ('Mae Arth yn teimlo'n oer, oer iawn. Pam?', s106–113); c7 A ti? now one question with one-feature rubric. No exact key in A or B contains A ti?, so no A thi? variant was needed. nodyn_en expanded to a full English explanation (619 words): numbers 1–10 and ugain, singular noun after numbers, gender forms dwy/tair/pedair, SM after un (feminine singular; ll/rh exception after un stated) and dau/dwy, AM after tri/chwe (story shows c → ch only), pum/chwe, softened numbers (dyma dair, Gaf i ddau), Faint yw …?, Gaf i …? / Cei / Na chei. The checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content). Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: table-only 'un llaw' removed from the Treigladau table and the nodyn (the ll/rh caution after un kept); c7 A ti? given sources for the fair purchases (Gaf i …? / dwy geiniog; pattern, not personal facts); the ddeg gloss-radical warning (fixed un ar ddeg, s106) was signed off by the reviewer.",
-      "Quality audit 2026-11-04, review 1104-194424-14875: first-use buying/selling, price and wool meaning aids; animal SVG at first use; permission paradigm moved to first occurrence; distinct minor-character speaker IDs; attested un geiniog A cell; unique B cues; sentence C models and rubrics; narrowed singular/plural claim. English cues may produce advisory pensa-unknown warnings; permitted by RULES §7. Fallen-apple continuity and productive/incidental Gaf i classification are owner questions; published story facts preserved."
+      "Quality audit 2026-11-04, review 1104-194424-14875: first-use buying/selling, price and wool meaning aids; animal SVG at first use; permission paradigm moved to first occurrence; distinct minor-character speaker IDs; attested un geiniog A cell; unique B cues; sentence C models and rubrics; narrowed singular/plural claim. English cues may produce advisory pensa-unknown warnings; permitted by RULES §7. Fallen-apple continuity and productive/incidental Gaf i classification are owner questions; published story facts preserved.",
+      "Re-review repair: A10 recalls wnes i guddio demonstrated at chapter 12 s048; it is not a chapter-14 story quotation."
     ],
     "review_questions": []
   },
@@ -352,6 +353,16 @@
                 "anchor_text": "cyfrif",
                 "gloss": "cyfrif: 1, 2, 3 …",
                 "gloss_kind": "define"
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "fasged",
+                "gloss": "fasged ← basged (b.)",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-basged"
+                ]
               }
             ]
           },
@@ -739,7 +750,19 @@
             "id": "cy-brenin-01-l14-s045",
             "text": "\"Ugain! Mae'r mochyn yn ddrud!\" meddai Arth.",
             "paragraph_start": true,
-            "speaker": "char-arth"
+            "speaker": "char-arth",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddrud",
+                "gloss": "ddrud ← drud",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-drud"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l14-s046",
@@ -1696,7 +1719,8 @@
               "prompt": "Mae Dafi'n bwyta'r afalau. (wedi) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae Dafi wedi bwyta'r afalau."
+                "Mae Dafi wedi bwyta'r afalau.",
+                "Mae e wedi bwyta'r afalau."
               ],
               "recall_of": "G11"
             }
@@ -1710,21 +1734,24 @@
           "items": [
             {
               "id": "a10",
-              "prompt": "Dw i'n prynu'r gwlân. (ddoe) →",
+              "prompt": "Dw i'n cuddio wrth y bwrdd. (ddoe) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Wnes i brynu'r gwlân.",
-                "Gwnes i brynu'r gwlân.",
-                "Wnes i brynu'r gwlân ddoe.",
-                "Ddoe, wnes i brynu'r gwlân.",
-                "Gwnes i brynu'r gwlân ddoe.",
-                "Ddoe, gwnes i brynu'r gwlân."
+                "Wnes i guddio wrth y bwrdd.",
+                "Wnes i ddoe guddio wrth y bwrdd.",
+                "Wnes i guddio wrth y bwrdd ddoe.",
+                "Gwnes i guddio wrth y bwrdd.",
+                "Gwnes i ddoe guddio wrth y bwrdd.",
+                "Gwnes i guddio wrth y bwrdd ddoe.",
+                "Fe wnes i guddio wrth y bwrdd.",
+                "Fe wnes i ddoe guddio wrth y bwrdd.",
+                "Fe wnes i guddio wrth y bwrdd ddoe."
               ],
               "recall_of": "G12",
               "common_wrong": [
                 {
-                  "answer": "Wnes i prynu'r gwlân.",
-                  "hint": "wnes i + prynu → brynu"
+                  "answer": "Wnes i cuddio wrth y bwrdd.",
+                  "hint": "wnes i + cuddio → guddio"
                 }
               ],
               "mutation_hint": true

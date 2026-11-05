@@ -1395,18 +1395,18 @@
         "rows": [
           [
             "(g.)",
-            "Beth yw hwn? · y botwm yma",
-            "Beth yw hwnnw? · y botwm yna"
+            "Beth yw hwn?",
+            "Beth yw hwnnw?"
           ],
           [
             "(b.)",
-            "Beth yw hon? · yr olwyn yma",
-            "Llwy yw honno. · y llwy yna"
+            "Beth yw hon?",
+            "Llwy yw honno."
           ],
           [
             "pethau",
-            "Edrych ar y rhain! · y pethau hyn",
-            "y pethau hynny ar y silff uchel"
+            "Edrych ar y rhain!",
+            "A’r pethau hynny, i fyny ar y silff?"
           ]
         ]
       },
@@ -1544,7 +1544,7 @@
             },
             {
               "id": "a3",
-              "prompt": "Llwy yw ___. (y llwy, yno)",
+              "prompt": "Mae ___ ar y silff wrth y gannwyll. (y llwy, yno)",
               "answer_mode": "exact",
               "accepted_answers": [
                 "honno"
@@ -1554,9 +1554,6 @@
                   "answer": "hwnnw",
                   "hint": "llwy (b.) → honno"
                 }
-              ],
-              "source_segment_ids": [
-                "cy-brenin-01-l15-s045"
               ]
             },
             {
@@ -1589,10 +1586,10 @@
             },
             {
               "id": "a6",
-              "prompt": "Dw i'n dal y bocs yma: mae ___ yn drwm. (this thing, near)",
+              "prompt": "Dw i'n dal y bocs yma: mae ___ yn drwm. (this masculine object, near)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "hyn"
+                "hwn"
               ],
               "source_segment_ids": []
             }
@@ -1606,21 +1603,18 @@
           "items": [
             {
               "id": "a7",
-              "prompt": "(yno) marchog →",
+              "prompt": "Edrych, Mali: dyna ___ wrth y drws! (marchog)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Dyna farchog!"
+                "farchog"
               ],
               "common_wrong": [
                 {
-                  "answer": "Dyna marchog!",
+                  "answer": "marchog",
                   "hint": "dyna + m → f"
                 }
               ],
-              "mutation_hint": true,
-              "source_segment_ids": [
-                "cy-brenin-01-l15-s065"
-              ]
+              "mutation_hint": true
             },
             {
               "id": "a8",
@@ -1644,7 +1638,9 @@
               "prompt": "\"Welaist ti'r allwedd, Dafi?\" (✗) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Naddo"
+                "Naddo",
+                "Wnes i ddim gweld yr allwedd.",
+                "Naddo, wnes i ddim gweld yr allwedd."
               ],
               "recall_of": "G13",
               "common_wrong": [

@@ -436,7 +436,7 @@
                 "anchor_text": "dydd Llun",
                 "label": "Yr wythnos",
                 "src": "media/diagrams/cy-brenin-01-l18-img-wythnos.svg",
-                "alt": "Two parts, Welsh labels only. Left: Myrddin's round pocket watch (now Dafi's) with numerals 1 to 12, the hands at eight o'clock, labelled 'wyth o'r gloch', with a quarter of the dial shaded and labelled 'chwarter awr'. Right: a week strip of seven rows: 'dydd Llun – ymarfer', 'dydd Mawrth – y ffair', 'dydd Mercher – arian', 'dydd Iau – Myrddin', 'dydd Gwener – pobi', 'dydd Sadwrn – cysgu', 'dydd Sul – eglwys'.",
+                "alt": "Two parts, Welsh labels only. Left: Myrddin's round pocket watch (now Dafi's) with numerals 1 to 12, the hands at eight o'clock, labelled 'wyth o'r gloch', with a quarter of the dial shaded and labelled 'chwarter awr'. Right: a week strip of seven rows: 'dydd Llun – ymarfer', 'dydd Mawrth – y ffair', 'dydd Mercher – arian', 'dydd Iau – Myrddin', 'dydd Gwener – pobi', 'dydd Sadwrn – cysgu', 'dydd Sul – eglwys'. A labelled church drawing supplies eglwys.",
                 "status": "draft",
                 "art_brief": "Two parts, Welsh labels only. Left: Myrddin's round pocket watch (now Dafi's) with numerals 1 to 12, the hands at eight o'clock, labelled 'wyth o'r gloch', with a quarter of the dial shaded and labelled 'chwarter awr'. Right: a week strip of seven rows: 'dydd Llun – ymarfer', 'dydd Mawrth – y ffair', 'dydd Mercher – arian', 'dydd Iau – Myrddin', 'dydd Gwener – pobi', 'dydd Sadwrn – cysgu', 'dydd Sul – eglwys'.",
                 "covers_lexeme_ids": [
@@ -447,10 +447,11 @@
                   "cy-awr",
                   "cy-ymarfer",
                   "cy-pobi",
+                  "cy-eglwys",
                   "cy-eglwys"
                 ],
                 "width": 320,
-                "height": 470
+                "height": 650
               }
             ]
           },
@@ -695,7 +696,9 @@
           },
           {
             "id": "cy-brenin-01-l18-s038",
-            "text": "\"Beth yw hwn, Arth?\""
+            "text": "“Beth yw hwn, Arth?” meddai Mali.",
+            "speaker": "char-mali",
+            "paragraph_start": true
           },
           {
             "id": "cy-brenin-01-l18-s039",
@@ -802,7 +805,7 @@
           },
           {
             "id": "cy-brenin-01-l18-s056",
-            "text": "Mae Mali'n dangos y llythrennau i Arth, ac mae hi'n esbonio: \"Dyma lythyren. Beth yw hon?\"",
+            "text": "“Dyma lythyren. Beth yw hon?” meddai Mali, yn dangos y llythrennau i Arth.",
             "inference_aids": [
               {
                 "type": "gloss",
@@ -811,7 +814,9 @@
                 "gloss": "dyma lythyren ← llythyren",
                 "gloss_kind": "radical"
               }
-            ]
+            ],
+            "speaker": "char-mali",
+            "paragraph_start": true
           },
           {
             "id": "cy-brenin-01-l18-s057",
@@ -931,7 +936,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "funud",
-                "gloss": "aros funud ← munud (b.)",
+                "gloss": "funud ← munud = ¹⁄₆₀ awr",
                 "gloss_kind": "radical"
               }
             ]
@@ -1008,7 +1013,19 @@
           },
           {
             "id": "cy-brenin-01-l18-s082",
-            "text": "Am ddeuddeg o'r gloch, mae pum pastai afal ar y bwrdd."
+            "text": "Am ddeuddeg o'r gloch, mae pum pastai afal ar y bwrdd.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ddeuddeg",
+                "gloss": "ddeuddeg ← deuddeg",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-deuddeg"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l18-s083",
@@ -1265,7 +1282,19 @@
           {
             "id": "cy-brenin-01-l18-s114",
             "text": "Mae Mali'n dawel am funud.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "funud",
+                "gloss": "funud ← munud",
+                "gloss_kind": "radical",
+                "covers_lexeme_ids": [
+                  "cy-munud"
+                ]
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l18-s115",
@@ -1370,14 +1399,20 @@
               {
                 "type": "gloss",
                 "presentation": "margin_gloss",
-                "anchor_text": "Mewn munud",
-                "gloss": "munud → awr → wythnos → mis → blwyddyn",
-                "gloss_kind": "paradigm",
+                "anchor_text": "mis",
+                "gloss": "mis ≈ 4 wythnos",
+                "gloss_kind": "define",
                 "covers_lexeme_ids": [
-                  "cy-munud",
-                  "cy-awr",
-                  "cy-wythnos",
-                  "cy-mis",
+                  "cy-mis"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "blwyddyn",
+                "gloss": "blwyddyn = 12 mis",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
                   "cy-blwyddyn"
                 ]
               }
@@ -1707,7 +1742,9 @@
                 "Mae hi'n ddeg o'r gloch.",
                 "Deg o'r gloch.",
                 "Deg o'r gloch yw hi",
-                "Mae hi'n ddeg."
+                "Mae hi'n ddeg.",
+                "Mae’n ddeg o’r gloch.",
+                "Mae’n ddeg."
               ],
               "common_wrong": [
                 {
@@ -1933,7 +1970,7 @@
         },
         {
           "id": "b9",
-          "prompt": "Ar ddydd Sul, mae'r teulu'n mynd i'r ___ yn y dref.",
+          "prompt": "Mae Dafi’n edrych ar yr ___ o het Myrddin. (church)",
           "answer_mode": "exact",
           "accepted_answers": [
             "eglwys"

@@ -16,7 +16,7 @@
   "notes": [
    "Open slot used: gwely (bed), CorCenCC rank 707, because Cai is in bed for most of the chapter and no planned lexeme means 'bed'. It is declared in learning_contract.open_slot_ids and in the gwely entry's notes in lexicon-deltas/pennod-19.json; the integrator should add it to chapters.json open_slot_words for Pennod 19.",
    "All seven conjugated forms of ar are used in story sentences (arna i, arnat ti, arno fe, arni hi, arnon ni, arnoch chi, arnyn nhw); the literal 'Mae tair blanced arno fe' sits beside the idiom 'Mae gwres arno fe' as the chapter's contrast, and gyda (possession) is contrasted in Pensum A. Pen tost takes gyda, not ar (southern Mynediad: a named sore body part with gyda, conditions such as annwyd and peswch with ar), so s015 sets 'Mae pen tost gyda fi' beside 'mae syched arna i' as a second contrast inside the target.",
-   "Deliberate error: Dafi's 'Mae syched gyda fi!' is corrected by Mali in the next line ('Mae syched arnat ti: dim gyda ti, ond arnat ti!'), and Dafi repeats it correctly, contrasting this chapter's target with Pennod 8 gyda.",
+   "Deliberate error: Dafi's 'Mae syched ar fi!' is corrected by Mali in the next line ('Mae syched arnat ti, Dafi!'), and Dafi repeats it correctly, contrasting this chapter's target with Pennod 8 gyda.",
    "The illness follows its own snowy hunt (told in the past in the opening paragraph), so it does not depend on the autumn hunt of Pennod 16.",
    "Running words 1,333 (target 1,267, window 1,140–1,394).",
    "'Beth sy'n bod?' is used as the whitelisted formula (from 19) and glossed at first use.",
@@ -33,7 +33,7 @@
   "review_questions": [
    {
     "segment_id": "cy-brenin-01-l19-s072",
-    "question": "Deliberate error (flagged): 'Mae syched gyda fi!' corrected next line."
+    "question": "Deliberate error (flagged): 'Mae syched ar fi!' corrected next line."
    }
   ]
  },
@@ -368,6 +368,16 @@
         "anchor_text": "chwys",
         "gloss": "chwys = dŵr ar y pen",
         "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anadlu",
+        "gloss": "anadlu: awyr i’r corff, o’r corff",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-anadlu"
+        ]
        }
       ]
      },
@@ -818,7 +828,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "help",
-        "gloss": "help: Arth yn helpu Elen",
+        "gloss": "help: cario pren, rhoi dŵr",
         "gloss_kind": "define"
        }
       ]
@@ -831,7 +841,19 @@
       "id": "cy-brenin-01-l19-s057",
       "text": "\"Dw i'n gallu helpu, Mam!\" meddai Arth.",
       "paragraph_start": true,
-      "speaker": "char-arth"
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "helpu",
+        "gloss": "helpu = rhoi help",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-helpu"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l19-s058",
@@ -921,7 +943,7 @@
      },
      {
       "id": "cy-brenin-01-l19-s072",
-      "text": "\"Mae syched gyda fi!\"",
+      "text": "\"Mae syched ar fi!\"",
       "deliberate_error": true
      },
      {
@@ -932,7 +954,7 @@
      },
      {
       "id": "cy-brenin-01-l19-s074",
-      "text": "\"Mae syched arnat ti: dim gyda ti, ond arnat ti!\""
+      "text": "\"Mae syched arnat ti, Dafi!\""
      },
      {
       "id": "cy-brenin-01-l19-s075",
@@ -1698,7 +1720,7 @@
     "segment_id": "cy-brenin-01-l19-s074"
    }
   ],
-  "nodyn_en": "In English you have a cold or are afraid. Welsh says that the cold or the fear is on you. The pattern is Mae + the condition + ar ('on') + the person: Mae annwyd ar Cai ('Cai has a cold', literally 'A cold is on Cai'). The story uses it for illness: annwyd ('a cold'), gwres ('a temperature, fever'), peswch ('a cough'). It also uses it for feelings and needs: syched ('thirst'), ofn ('fear'), cywilydd ('shame'), angen ('need'). Mae gwres arno fe ('He has a temperature'), Mae syched arnyn nhw ('They are thirsty'), Mae ofn arna i ('I'm afraid'), mae ofn arni hi ('she is afraid'), Mae cywilydd arna i ('I'm ashamed').\n\nThe course normally shows inflected ar with a following pronoun, as in arni hi. The following pronoun can sometimes be omitted; A3 also accepts arni. This is called an inflected preposition: arna i ('on me'), arnat ti ('on you', to one friend), arno fe ('on him'), arni hi ('on her'), arnon ni ('on us'), arnoch chi ('on you', polite or plural, as Mali says to Myrddin), arnyn nhw ('on them'). Before a name or a noun, ar keeps its plain form: ar Cai ('on Cai'), and the noun softens as after any ar (Pennod 16): Mae angen cwtsh ar bawb ('Everyone needs a cuddle', from pawb).\n\nAngen ('need') puts the thing needed straight after it: Mae angen gorffwys arnat ti ('You need rest'), Mae angen help arna i ('I need help'), Mae angen cawl arnat ti ('You need soup'). Does dim angen with a verb-noun, the dictionary form of a verb, means 'there is no need to': Does dim angen ofni ('There's no need to be afraid'), Does dim angen teimlo cywilydd ('There's no need to feel ashamed').\n\nGyda ('with') from Pennod 8 still says what someone has, and the story keeps it for some other things too. Possession: Mae moddion da gyda Cai ('Cai has good medicine'). An ache: Mae pen tost gyda fi ('I have a headache', literally 'a sore head'). An apology: Mae'n ddrwg gyda fi ('I'm sorry'). Dafi mixes the two patterns. He says Mae syched gyda fi! (his mistake, as if thirst were something he owned), and Mali corrects him: Mae syched arnat ti: dim gyda ti, ond arnat ti! ('You are thirsty: not with you, but on you!'). Then he gets it right: Mae syched arna i! ('I'm thirsty!'). A sore part of the body can also be said with yn: Mae fy ngwddf i'n dost ('My throat is sore'), where tost softens after yn.\n\nAr keeps its everyday meaning 'on' as well: Mae tair blanced wlân arno fe ('He has three woollen blankets on him'), and Mae Elen … yn rhoi ei llaw hi ar ben Cai ('Elen … puts her hand on Cai's head'). The sentence makes the meaning clear: a blanket is really on Cai, while a temperature is a condition.\n\nQuestions and negatives work as with gyda, because the verb is the 'there is' form of bod. A question starts with Oes ('Is there'), and the answer is Oes ('Yes') or Nac oes ('No'): Oes peswch arnat ti? Oes ('Have you got a cough? Yes'), Oes annwyd arnoch chi, Myrddin? Nac oes ('Have you got a cold, Myrddin? No'). The negative is Does dim: Does dim gwres arno fe nawr ('He has no temperature now'), Does dim pen tost gyda fi ('I haven't got a headache'). To ask what is wrong, say Beth sy'n bod? ('What's the matter?').\n\nIn Cai's nightmare the imperfect of Pennod 17 paints the scene: Roedd storm uwchben castell mawr ('There was a storm above a big castle'), ro'n i'n bysgodyn bach ('I was a little fish', from pysgodyn), and roedd ofn arna i ('I was afraid'): the ar pattern works in the past too, with roedd in place of mae. Breuddwyd ('dream') is feminine, so its adjective softens: Breuddwyd ddrwg yw hynny ('That is a bad dream', from drwg).\n\nThe possessives of Pennod 10 return. Fy ('my') gives the nasal mutation: fy ngwddf i ('my throat', from gwddf), fy ngheffyl i ('my horse', from ceffyl), fy mrawd i ('my brother', from brawd). Dy ('your') gives the soft mutation: dy wely di ('your bed', from gwely), dy geffyl di ('your horse'), dy frawd ('your brother', from brawd). After o ('of, from') the soft mutation applies too: llwy o foddion ('a spoon of medicine', from moddion), o bell ('from far away', from pell)."
+  "nodyn_en": "In English you have a cold or are afraid. Welsh says that the cold or the fear is on you. The pattern is Mae + the condition + ar ('on') + the person: Mae annwyd ar Cai ('Cai has a cold', literally 'A cold is on Cai'). The story uses it for illness: annwyd ('a cold'), gwres ('a temperature, fever'), peswch ('a cough'). It also uses it for feelings and needs: syched ('thirst'), ofn ('fear'), cywilydd ('shame'), angen ('need'). Mae gwres arno fe ('He has a temperature'), Mae syched arnyn nhw ('They are thirsty'), Mae ofn arna i ('I'm afraid'), mae ofn arni hi ('she is afraid'), Mae cywilydd arna i ('I'm ashamed').\n\nThe course normally shows inflected ar with a following pronoun, as in arni hi. The following pronoun can sometimes be omitted; A3 also accepts arni. This is called an inflected preposition: arna i ('on me'), arnat ti ('on you', to one friend), arno fe ('on him'), arni hi ('on her'), arnon ni ('on us'), arnoch chi ('on you', polite or plural, as Mali says to Myrddin), arnyn nhw ('on them'). Before a name or a noun, ar keeps its plain form: ar Cai ('on Cai'), and the noun softens as after any ar (Pennod 16): Mae angen cwtsh ar bawb ('Everyone needs a cuddle', from pawb).\n\nAngen ('need') puts the thing needed straight after it: Mae angen gorffwys arnat ti ('You need rest'), Mae angen help arna i ('I need help'), Mae angen cawl arnat ti ('You need soup'). Does dim angen with a verb-noun, the dictionary form of a verb, means 'there is no need to': Does dim angen ofni ('There's no need to be afraid'), Does dim angen teimlo cywilydd ('There's no need to feel ashamed').\n\nGyda ('with') from Pennod 8 still says what someone has, and the story keeps it for some other things too. Possession: Mae moddion da gyda Cai ('Cai has good medicine'). An ache: Mae pen tost gyda fi ('I have a headache', literally 'a sore head'). An apology: Mae'n ddrwg gyda fi ('I'm sorry'). Dafi uses plain ar before a pronoun: Mae syched ar fi! For this chapter’s pattern, he needs arna i. Mali addresses him with Mae syched arnat ti, Dafi! (‘You are thirsty, Dafi!’), and he repeats Mae syched arna i! (‘I’m thirsty!’). A sore part of the body can also be said with yn: Mae fy ngwddf i'n dost ('My throat is sore'), where tost softens after yn.\n\nAr keeps its everyday meaning 'on' as well: Mae tair blanced wlân arno fe ('He has three woollen blankets on him'), and Mae Elen … yn rhoi ei llaw hi ar ben Cai ('Elen … puts her hand on Cai's head'). The sentence makes the meaning clear: a blanket is really on Cai, while a temperature is a condition.\n\nQuestions and negatives work as with gyda, because the verb is the 'there is' form of bod. A question starts with Oes ('Is there'), and the answer is Oes ('Yes') or Nac oes ('No'): Oes peswch arnat ti? Oes ('Have you got a cough? Yes'), Oes annwyd arnoch chi, Myrddin? Nac oes ('Have you got a cold, Myrddin? No'). The negative is Does dim: Does dim gwres arno fe nawr ('He has no temperature now'), Does dim pen tost gyda fi ('I haven't got a headache'). To ask what is wrong, say Beth sy'n bod? ('What's the matter?').\n\nIn Cai's nightmare the imperfect of Pennod 17 paints the scene: Roedd storm uwchben castell mawr ('There was a storm above a big castle'), ro'n i'n bysgodyn bach ('I was a little fish', from pysgodyn), and roedd ofn arna i ('I was afraid'): the ar pattern works in the past too, with roedd in place of mae. Breuddwyd ('dream') is feminine, so its adjective softens: Breuddwyd ddrwg yw hynny ('That is a bad dream', from drwg).\n\nThe possessives of Pennod 10 return. Fy ('my') gives the nasal mutation: fy ngwddf i ('my throat', from gwddf), fy ngheffyl i ('my horse', from ceffyl), fy mrawd i ('my brother', from brawd). Dy ('your') gives the soft mutation: dy wely di ('your bed', from gwely), dy geffyl di ('your horse'), dy frawd ('your brother', from brawd). After o ('of, from') the soft mutation applies too: llwy o foddion ('a spoon of medicine', from moddion), o bell ('from far away', from pell).\n\nThe course practises arna i for this bodily-state pattern. Informal gyda usage also occurs; it is a dialect variant, not intrinsically ungrammatical. Dafi’s flagged error here is instead the unconjugated ar fi."
  },
  "pensa": {
   "A": {
@@ -1798,7 +1820,7 @@
        "common_wrong": [
         {
          "answer": "gyda fi",
-         "hint": "syched → ar: arna i"
+         "hint": "Use this chapter’s ar pattern here: arna i. Informal gyda is a dialect variant."
         }
        ],
        "source_segment_ids": [
@@ -1915,7 +1937,7 @@
     },
     {
      "id": "b6",
-     "prompt": "Mae Arth yn rhoi ___ mawr i Cai yn y nos.",
+     "prompt": "Mae Arth yn rhoi ___ mawr i Cai yn y nos. (hug)",
      "answer_mode": "exact",
      "accepted_answers": [
       "cwtsh"
@@ -1990,7 +2012,7 @@
      "id": "c3",
      "prompt": "Beth yw'r peth coch yn jwg Myrddin?",
      "answer_mode": "self_check",
-     "model_answer": "Moddion o bell: moddion o'r dyfodol.",
+     "model_answer": "Mae moddion o’r dyfodol yn y jwg.",
      "key_terms": [
       "cy-moddion"
      ],
