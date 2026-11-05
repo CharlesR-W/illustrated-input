@@ -14,6 +14,7 @@ those files reference:
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Kvöldvakan (`is-kvold-01`, draft): `content/is/`
 - Il libro e la via (`it-dante-01`, draft): `content/it-dante/`
+- 書與遠方 — Classical Chinese (`lzh-NEW-01`, draft): `content/lzh/`
 - La puerta del patio (`es-NEW-01`, draft): `content/es/`
 - Die offene Tür (`de-NEW-01`, draft): `content/de/`
 - O café da esquina (`pt-NEW-01`, draft): `content/pt/`
