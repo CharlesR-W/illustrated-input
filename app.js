@@ -19,7 +19,7 @@ const UI_DEFAULTS = {
   accent_hint: "Almost: check the accents.", capitalisation_hint: "Almost: check the capitalisation.", mutation_hint: "Almost: mutation?",
   wrong: "Not yet.", empty: "Type an answer first.", answer: "Answer", model_answer: "Answer",
   rubric: "Check", self_yes: "I had it", self_no: "Not yet", key_terms: "Key words", word_bank: "Word bank",
-  item: "Question {n}", blank: "blank {n}", vocabulary: "Vocabulary", words_count: "{n} words",
+  item: "Question {n}", blank: "blank {n}", vocabulary: "Vocabulary", words_count: "{n} words", lexical_senses_count: "{n} lexical senses",
   finish: "Finish lesson", finished_state: "Finished", english_toggle: "English", finished_announce: "{title}: finished.",
   unfinished_announce: "{title}: marked unfinished.", anki_lesson: "Anki: this lesson",
   anki_cumulative: "Anki: lessons 1–{n}", anki_done: "Anki: {n} cards", anki_empty: "No Anki cards for this lesson yet.",
@@ -2626,7 +2626,7 @@ function renderVocabulary(lesson) {
   if (!words.length) return null;
   const lang = targetLang();
   return h("details", { class: "vocabulary" },
-    h("summary", null, ui("span", "vocabulary", { class: "vocab-title" }), " ", state.course?.lang === "lzh" ? h("small", {}, `${words.length} lexical senses`) : ui("small", "words_count", null, { n: words.length })),
+    h("summary", null, ui("span", "vocabulary", { class: "vocab-title" }), " ", ui("small", state.course?.lang === "lzh" ? "lexical_senses_count" : "words_count", null, { n: words.length })),
     h("dl", { class: "vocab-list" }, words.map((word) => {
       const form = word.citation_form || word.display_form || "";
       const gender = word.gender && !/\(.*\)/.test(form) ? ` (${t(`gender_${word.gender}`)})` : "";

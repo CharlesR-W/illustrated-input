@@ -1069,8 +1069,8 @@
     const source = String(text ?? "");
     const code = String(language).toLowerCase().split(/[-_]/u)[0];
     if (code === "lzh") {
-      // Exact UTF-16 source offsets; one Han code point with its variation selector.
-      const pattern = /\p{Script=Han}[\uFE00-\uFE0F\u{E0100}-\u{E01EF}]?|(?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+(?:['’‘ʼ`´-](?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+)*/gu;
+      // Exact UTF-16 source offsets; one Han code point with its following combining marks.
+      const pattern = /\p{Script=Han}\p{M}*|(?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+(?:['’‘ʼ`´-](?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+)*/gu;
       return [...source.matchAll(pattern)].map(m => ({ text: m[0], start: m.index, end: m.index + m[0].length }));
     }
     const policy = Object.prototype.hasOwnProperty.call(ELISION, code) ? ELISION[code] : null;
@@ -1186,17 +1186,29 @@
       const candidates = [];
       for (const [surface, analyses] of Object.entries(forms)) {
         if (!Array.isArray(analyses) || !analyses.length || glossTokens(surface, course).length < 2) continue;
-        const parts = glossTokens(surface, course);
-        for (let i = 0; i + parts.length <= tokens.length; i++) {
-          const matched = parts.every((part, j) => {
-            const current = tokens[i + j], previous = tokens[i + j - 1];
-            const gap = j ? source.slice(previous.end, current.start) : "";
-            const hanBoundary = j && (/^\p{Script=Han}/u.test(previous.text) || /^\p{Script=Han}/u.test(current.text));
-            return glossKey(current.text, course) === glossKey(part.text, course) && (hanBoundary ? gap === "" : !/\S/u.test(gap));
-          });
-          if (!matched) continue;
-          const start = tokens[i].start, end = tokens[i + parts.length - 1].end;
-          if (token.start >= start && token.end <= end) candidates.push({ ...analyses[0], text: source.slice(start, end), start, end });
+        const chunks = surface.split(/…|\.\.\./u).map(chunk => glossTokens(chunk, course)).filter(chunk => chunk.length);
+        if (!chunks.length) continue;
+        const fits = (at, chunk) => chunk.every((part, j) => {
+          const current = tokens[at + j], previous = tokens[at + j - 1];
+          if (!current) return false;
+          const gap = j ? source.slice(previous.end, current.start) : "";
+          const hanBoundary = j && (/^\p{Script=Han}/u.test(previous.text) || /^\p{Script=Han}/u.test(current.text));
+          return glossKey(current.text, course) === glossKey(part.text, course) && (hanBoundary ? gap === "" : !/\S/u.test(gap));
+        });
+        for (let i = 0; i < tokens.length; i++) {
+          let at = i, matched = true;
+          const indices = [];
+          // Same greedy forward search as checker phraseCoverage. Only chunk
+          // atoms receive the frame lookup; skipped filler keeps its own senses.
+          for (const [n, chunk] of chunks.entries()) {
+            if (n) while (at < tokens.length && !fits(at, chunk)) at++;
+            if (!fits(at, chunk)) { matched = false; break; }
+            for (let j = 0; j < chunk.length; j++) indices.push(at + j);
+            at += chunk.length;
+          }
+          if (!matched || !indices.some(index => tokens[index] === token)) continue;
+          const start = tokens[i].start, end = tokens[at - 1].end;
+          candidates.push({ ...analyses[0], text: source.slice(start, end), start, end });
         }
       }
       candidates.sort((a, b) => (b.end - b.start) - (a.end - a.start) || a.start - b.start);
@@ -1225,7 +1237,9 @@
     return { word: token.text, start: token.start, end: token.end, phrase, main, alternatives };
   }
   function glossKey(surface, course) {
-    return String(surface ?? "").normalize("NFC").replace(/\u0301/g, "").normalize("NFC").toLowerCase().replace(course?.plugin === "generic" ? APOSTROPHES : /[’‘ʼ]/g, "'");
+    const source = String(surface ?? "").normalize("NFC");
+    const key = course?.lang === "lzh" ? source : source.replace(/\u0301/g, "").normalize("NFC");
+    return key.toLowerCase().replace(course?.plugin === "generic" ? APOSTROPHES : /[’‘ʼ]/g, "'");
   }
 
   // ---------------------------------------------------------------- vocabulary self-check
