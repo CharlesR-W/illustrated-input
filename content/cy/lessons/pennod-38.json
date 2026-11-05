@@ -26,7 +26,8 @@
    "Recall pass 2026-10-18: recurrences for Penodau 33–37 vocabulary in the chronicle and Cai's tavern tellings (llethr, bwthyn, bugail, mawn, bygwth, baglu, doeth, cynhesu, lluwch, rhewi, ci defaid, tad-cu, acen, anferth, eillio, bygythiad, gludo, buddugoliaeth, taflu, ffôl, gwasgu, clogwyn, esgus, nodwydd, edau, tafodiaith, rhybudd). Gloss symbol: tudalen ▯▯ → 'llyfr = tudalen + tudalen + …'. New segments s301–s311.",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s065, s307, s109, s116). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
    "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2, c3 and c4 converted (the 'ble' item dropped for the seren question, s015); one Pam? (c1, s007 states it); 'Pam dwedodd Mali Celwydd?' (second Pam?), the two-fact c6 and the unstated 'tasai Mali'n ysgrifennu stori Cai' item replaced; c4 and c7 practise bydd … yn cael ei …; A ti? no longer a bare yes/no. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Table: the unshown 'y basai fe' cell now says byddai = basai (reading only); the cafodd/mae/bydd row uses attested s050, s085, s070. Pensum B one answer each: b3 cofnodi, b8 tair ffaith, b10 dwy iaith.",
-   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note no longer states a general ni + soft mutation rule (p/t/c take the aspirate) and no longer says only the front verb changes (yn cael is added); -wch commands stated as the forms shown; B bank darllen → cysgu so b3 has one answer; b4 now the attested singular (ar bob tudalen; tudalennau never shown); A keys accept echo pronouns (ei gweld hi …), a9 ei fod e'n dal and optional fe; C c1 model in narrative past, c6 quoted."
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note no longer states a general ni + soft mutation rule (p/t/c take the aspirate) and no longer says only the front verb changes (yn cael is added); -wch commands stated as the forms shown; B bank darllen → cysgu so b3 has one answer; b4 now the attested singular (ar bob tudalen; tudalennau never shown); A keys accept echo pronouns (ei gweld hi …), a9 ei fod e'n dal and optional fe; C c1 model in narrative past, c6 quoted.",
+   "Fresh review continuation: facts meaning moved to the instruction’s first encounter; overlapping negative/impersonal form aids consolidated to retain meaning equivalents within the cap. B recording/audience cues exclude translation/reader alternatives. Reporting fragment and passive pronoun variants added systematically, preserving agents, optional fe and feminine/masculine possessive mutation. Existing owner-authorised register transformation format retained; no new format exception inferred."
   ],
   "review_questions": []
  },
@@ -139,8 +140,8 @@
    },
    {
     "lexeme_id": "cy-ffaith",
-    "how": "gloss(number)+context",
-    "segment_id": "cy-brenin-01-l38-s010"
+    "how": "number and known real-things meaning at first use",
+    "segment_id": "cy-brenin-01-l38-s008"
    },
    {
     "lexeme_id": "cy-dychymyg",
@@ -323,6 +324,16 @@
         "covers_lexeme_ids": [
          "cy-cofnodi"
         ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "ffeithiau",
+        "gloss": "ffaith, ffeithiau: pethau go iawn",
+        "gloss_kind": "number",
+        "covers_lexeme_ids": [
+         "cy-ffaith"
+        ]
        }
       ]
      },
@@ -336,19 +347,7 @@
       "id": "cy-brenin-01-l38-s010",
       "text": "\"Ffeithiau: beth ddigwyddodd, ble a phryd,\" meddai'r esgob.",
       "paragraph_start": true,
-      "speaker": "char-esgob",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "Ffeithiau",
-        "gloss": "ffaith, ffeithiau: pethau go iawn",
-        "gloss_kind": "number",
-        "covers_lexeme_ids": [
-         "cy-ffaith"
-        ]
-       }
-      ]
+      "speaker": "char-esgob"
      },
      {
       "id": "cy-brenin-01-l38-s011",
@@ -458,13 +457,6 @@
         "anchor_text": "claddwyd",
         "gloss": "claddwyd = cafodd ei gladdu",
         "gloss_kind": "synonym"
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "welwyd",
-        "gloss": "ni welwyd ← gwelwyd",
-        "gloss_kind": "radical"
        },
        {
         "type": "gloss",
@@ -626,13 +618,6 @@
         "anchor_text": "gorchfygwyd",
         "gloss": "gorchfygwyd = cafodd ei orchfygu",
         "gloss_kind": "synonym"
-       },
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "chladdwyd",
-        "gloss": "chladdwyd ← claddwyd",
-        "gloss_kind": "radical"
        },
        {
         "type": "gloss",
@@ -818,7 +803,7 @@
      },
      {
       "id": "cy-brenin-01-l38-s061",
-      "text": "\"Dringon ni'r Wyddfa drwy'r eira, drwy'r lluwchfeydd a drwy'r rhew.\""
+      "text": "\"Dringon ni'r Wyddfa drwy'r eira, drwy'r lluwchau a drwy'r rhew.\""
      },
      {
       "id": "cy-brenin-01-l38-s304",
@@ -1666,7 +1651,15 @@
         "Cafodd y cawr ei gladdu.",
         "Cafodd y cawr ei gladdu e.",
         "Fe gafodd y cawr ei gladdu.",
-        "Fe gafodd y cawr ei gladdu e."
+        "Fe gafodd y cawr ei gladdu e.",
+        "Cafodd e ei gladdu.",
+        "Cafodd fe ei gladdu.",
+        "Cafodd e ei gladdu e.",
+        "Cafodd fe ei gladdu e.",
+        "Fe gafodd e ei gladdu.",
+        "Fe gafodd fe ei gladdu.",
+        "Fe gafodd e ei gladdu e.",
+        "Fe gafodd fe ei gladdu e."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1681,7 +1674,15 @@
         "Cafodd y cawr ei ddallu gan y mwg.",
         "Cafodd y cawr ei ddallu e gan y mwg.",
         "Fe gafodd y cawr ei ddallu gan y mwg.",
-        "Fe gafodd y cawr ei ddallu e gan y mwg."
+        "Fe gafodd y cawr ei ddallu e gan y mwg.",
+        "Cafodd e ei ddallu gan y mwg.",
+        "Cafodd fe ei ddallu gan y mwg.",
+        "Cafodd e ei ddallu e gan y mwg.",
+        "Cafodd fe ei ddallu e gan y mwg.",
+        "Fe gafodd e ei ddallu gan y mwg.",
+        "Fe gafodd fe ei ddallu gan y mwg.",
+        "Fe gafodd e ei ddallu e gan y mwg.",
+        "Fe gafodd fe ei ddallu e gan y mwg."
        ],
        "mutation_hint": true,
        "source_segment_ids": [
@@ -1696,7 +1697,11 @@
         "Cafodd y garnedd ei gweld.",
         "Cafodd y garnedd ei gweld hi.",
         "Fe gafodd y garnedd ei gweld.",
-        "Fe gafodd y garnedd ei gweld hi."
+        "Fe gafodd y garnedd ei gweld hi.",
+        "Cafodd hi ei gweld.",
+        "Cafodd hi ei gweld hi.",
+        "Fe gafodd hi ei gweld.",
+        "Fe gafodd hi ei gweld hi."
        ],
        "common_wrong": [
         {
@@ -1717,7 +1722,15 @@
         "Fe gafodd Rhita Gawr ei orchfygu.",
         "Fe gafodd Rhita ei orchfygu.",
         "Fe gafodd Rhita Gawr ei orchfygu e.",
-        "Fe gafodd Rhita ei orchfygu e."
+        "Fe gafodd Rhita ei orchfygu e.",
+        "Cafodd e ei orchfygu.",
+        "Cafodd fe ei orchfygu.",
+        "Cafodd e ei orchfygu e.",
+        "Cafodd fe ei orchfygu e.",
+        "Fe gafodd e ei orchfygu.",
+        "Fe gafodd fe ei orchfygu.",
+        "Fe gafodd e ei orchfygu e.",
+        "Fe gafodd fe ei orchfygu e."
        ],
        "mutation_hint": true
       }
@@ -1770,7 +1783,15 @@
         "Fe fydd y stori'n cael ei chanu.",
         "Fe fydd y stori'n cael ei chanu gan y beirdd.",
         "Fe fydd y stori'n cael ei chanu hi.",
-        "Fe fydd y stori'n cael ei chanu hi gan y beirdd."
+        "Fe fydd y stori'n cael ei chanu hi gan y beirdd.",
+        "Bydd hi'n cael ei chanu.",
+        "Bydd hi'n cael ei chanu gan y beirdd.",
+        "Bydd hi'n cael ei chanu hi.",
+        "Bydd hi'n cael ei chanu hi gan y beirdd.",
+        "Fe fydd hi'n cael ei chanu.",
+        "Fe fydd hi'n cael ei chanu gan y beirdd.",
+        "Fe fydd hi'n cael ei chanu hi.",
+        "Fe fydd hi'n cael ei chanu hi gan y beirdd."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -1791,7 +1812,11 @@
         "Mae'r chwedl yn cael ei dweud.",
         "Mae'r chwedl yn cael ei dweud gan Cai.",
         "Mae'r chwedl yn cael ei dweud hi.",
-        "Mae'r chwedl yn cael ei dweud hi gan Cai."
+        "Mae'r chwedl yn cael ei dweud hi gan Cai.",
+        "Mae hi'n cael ei dweud.",
+        "Mae hi'n cael ei dweud gan Cai.",
+        "Mae hi'n cael ei dweud hi.",
+        "Mae hi'n cael ei dweud hi gan Cai."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l38-s085"
@@ -1807,7 +1832,10 @@
         "fod y cawr yn dal",
         "Dwedodd Cai ei fod e'n dal.",
         "Fe ddwedodd Cai fod y cawr yn dal.",
-        "Fe ddwedodd Cai ei fod e'n dal."
+        "Fe ddwedodd Cai ei fod e'n dal.",
+        "ei fod e'n dal",
+        "ei fod yn dal",
+        "fod e'n dal"
        ],
        "mutation_hint": true
       },
@@ -1882,7 +1910,7 @@
     },
     {
      "id": "b3",
-     "prompt": "Mae Mali'n ysgrifennu'r ffeithiau yn y llawysgrif: mae hi'n eu ___ nhw.",
+     "prompt": "Mae Mali'n ysgrifennu'r ffeithiau yn y llawysgrif: mae hi'n eu ___ nhw. (record)",
      "answer_mode": "exact",
      "accepted_answers": [
       "cofnodi"
@@ -1898,7 +1926,7 @@
     },
     {
      "id": "b5",
-     "prompt": "Roedd pawb yn y dafarn yn dawel: roedd y ___ yn gwrando ar Cai.",
+     "prompt": "Roedd pawb yn y dafarn yn dawel: roedd y ___ yn gwrando ar Cai. (audience)",
      "answer_mode": "exact",
      "accepted_answers": [
       "gynulleidfa"
@@ -2343,7 +2371,7 @@
    "inline_scene": 2,
    "margin_vignette": 1,
    "margin_diagram": 1,
-   "margin_gloss": 46
+   "margin_gloss": 44
   }
  },
  "completion": {

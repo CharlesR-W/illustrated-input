@@ -27,7 +27,8 @@
    "Recall pass 2026-10-18: in-place recurrences only (chapter is near its word ceiling): rhewi, dathlu, cynhesu. Gloss symbols: taflu ✋/🪨 → 'llaw → → → carreg'; ↓ removed from the clogwyn and baglu glosses.",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s150). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
    "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2, c3 and c4 converted; 'Pam cwympodd y cawr?' (a four-reason rubric) and 'Beth fasai'n digwydd tasai'r cawr yn codi?' (unstated in the story) dropped; one Pam? (c1, s014 states it); c4 practises the short answer Af, c7 Gwnawn ni …; A ti? rubric without the unknown 'lle'. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Unshown forms out of the grammar: dof i (title, rule_cy, grid), cawn ni and statement gwnei di (grid; the attested wnei di? stays), daw e (table row and A a7 feedback). Pensum B one answer each: b4 clogwyn, b5 buddugoliaeth.",
-   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note narrows the mutation rule (noun objects and verb-nouns; ei keeps its own mutation) and no longer says the short forms take no verb-noun; 'two forms of dod'; Dafi's correction translated; recall A a10 now Gwnïodd Modlen y wisg → ei gwnïo (feminine ei gwneud never shown); C c4 asks for Mali's plan (… ei faglu e) instead of the bare Af; s091 gloss gives gwasgu's meaning at first use; unused brwydr out of the B bank. Optional fe variants added to finite A keys."
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note narrows the mutation rule (noun objects and verb-nouns; ei keeps its own mutation) and no longer says the short forms take no verb-noun; 'two forms of dod'; Dafi's correction translated; recall A a10 now Gwnïodd Modlen y wisg → ei gwnïo (feminine ei gwneud never shown); C c4 asks for Mali's plan (… ei faglu e) instead of the bare Af; s091 gloss gives gwasgu's meaning at first use; unused brwydr out of the B bank. Optional fe variants added to finite A keys.",
+   "Fresh review continuation: future linking-yn and negative rules narrowed, without teaching unshown cael negatives; enormous aid moved to first use and cairn meaning simultaneous with radical; unsupported ohonon ni replaced with known un ffrind in the same rope safety condition. Valid bare wna(f), optional fe+a and giant pronoun answers; unique roaring/tripping cues; copied negative frame recombined; C2 full-sentence model. Promised dof/cawn/affirmative gwnei reading exposure remains owner-level coverage question."
   ],
   "review_questions": []
  },
@@ -112,8 +113,8 @@
    },
    {
     "lexeme_id": "cy-anferth",
-    "how": "gloss(synonym)+picture(scene)",
-    "segment_id": "cy-brenin-01-l37-s053"
+    "how": "meaning aid at first use",
+    "segment_id": "cy-brenin-01-l37-s042"
    },
    {
     "lexeme_id": "cy-ph-ar-fy-mhen-fy-hun",
@@ -557,7 +558,7 @@
      },
      {
       "id": "cy-brenin-01-l37-s038",
-      "text": "\"Os bydd un ohonon ni'n cwympo, bydd y ddau ffrind yn dal y rhaff,\" meddai Arthur.",
+      "text": "\"Os bydd un ffrind yn cwympo, bydd y ddau ffrind yn dal y rhaff,\" meddai Arthur.",
       "paragraph_start": true,
       "speaker": "char-arth"
      },
@@ -580,7 +581,19 @@
      },
      {
       "id": "cy-brenin-01-l37-s042",
-      "text": "Roedd rhywbeth anferth yn canu yn y niwl, ac roedd y creigiau'n crynu."
+      "text": "Roedd rhywbeth anferth yn canu yn y niwl, ac roedd y creigiau'n crynu.",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "anferth",
+        "gloss": "anferth = mawr iawn, iawn",
+        "gloss_kind": "synonym",
+        "covers_lexeme_ids": [
+         "cy-anferth"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l37-s043",
@@ -639,19 +652,7 @@
      },
      {
       "id": "cy-brenin-01-l37-s053",
-      "text": "Roedd e'n anferth: roedd ei draed e mor fawr â chychod, ac roedd ei ben e yn y cymylau.",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "anferth",
-        "gloss": "anferth = mawr iawn, iawn",
-        "gloss_kind": "synonym",
-        "covers_lexeme_ids": [
-         "cy-anferth"
-        ]
-       }
-      ]
+      "text": "Roedd e'n anferth: roedd ei draed e mor fawr â chychod, ac roedd ei ben e yn y cymylau."
      },
      {
       "id": "cy-brenin-01-l37-s054",
@@ -1371,6 +1372,13 @@
         "covers_lexeme_ids": [
          "cy-carnedd"
         ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "garnedd",
+        "gloss": "carnedd: carreg ar garreg",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -1889,7 +1897,7 @@
     "segment_id": "cy-brenin-01-l37-s108"
    }
   ],
-  "nodyn_en": "This chapter teaches a short way to talk about the future for three very common verbs: mynd ('go'), gwneud ('do, make') and cael ('get'), and for two forms of dod ('come'). Each short form means the same as the bydd forms you know: af i = bydda i'n mynd ('I'll go'), gwnaf i = bydda i'n gwneud ('I'll do, I'll make'), caf i = bydda i'n cael ('I'll get'). The verb itself carries the future, so there is no yn.\n\nThese are the forms the story uses, for 'I', 'you' (ti) and 'we':\n- mynd: af i, ei di, awn ni. Af i'n gyntaf ('I'll go first'), says Cai. Mali answers: Ei di'n gyntaf, Cai, ond ble mae'r llwybr? ('You'll go first, Cai, but where is the path?'). Arthur decides: Awn ni gyda'n gilydd ('We'll go together').\n- gwneud: gwnaf i, wnei di? (a question), gwnawn ni. Gwnaf i rywbeth defnyddiol, felly ('I'll do something useful, then'), says Mali; Gwnawn ni garnedd ('We'll make a cairn'), says Arthur.\n- cael: caf i, cei di. Caf i bastai yno! ('I'll get a pie there!'), says Cai.\n- dod: doi di, down ni. Af i gyda Cai, a doi di gyda ni, Mali ('I'll go with Cai, and you'll come with us, Mali'); Down ni o'r graig gyda'n gilydd ('We'll come out from the rock together').\nFor he, she or a noun, this chapter still uses bydd: Bydd Pero'n dod hefyd ('Pero will come too'); Fydd e ddim yn marw ('He won't die').\n\nA noun object or a verb-noun straight after a short form takes the soft mutation: Gwnaf i fwg ('I'll make smoke'; mwg → fwg); Cei di frathu'r cawr ('You may bite the giant'; brathu → frathu); gwnawn ni wthio ('we'll push'; gwthio → wthio); Caf i bastai (pastai → bastai). Dafi makes this chapter's deliberate mistake: Gwnaf i mwg mawr iawn! Mali corrects him: Gwnaf i fwg, Dafi. Fwg! He repeats it correctly: Gwnaf i fwg mawr iawn ('I'll make very big smoke').\n\nGwnaf i has two uses. With a noun it means 'I'll make' or 'I'll do' (Gwnaf i fwg). With a verb-noun it simply makes a future, like bydda i'n: gwnaf i ei faglu e ('I'll trip him'), says Mali (here ei, 'him', brings its own soft mutation: baglu → faglu); A gwnaf i ysgrifennu'r stori ('And I'll write the story').\n\nCael also means 'may', as in Gaf i …? / Cei from Pennod 14, so cei di can mean 'you may': Cei di aros yn y sach, Dafi ('You can stay in the bag, Dafi').\n\nTo ask a question, the short form takes the soft mutation where it can: Dafi, wnei di fwg i fi? ('Dafi, will you make smoke for me?'). Ei di starts with a vowel, so it does not change: Mali, ei di at y clogwyn gyda'r rhaff? ('Mali, will you go to the cliff with the rope?'). When you are asked Ei di …? or Wnei di …?, you can answer with the verb alone, in the 'I' form: Mali answers Af ('Yes, I will [go]'), and the answer to Wnei di …? is Gwnaf. The same happens after a question word: Beth wna i? ('What will I do?'), asks Dafi; Pryd awn ni yn ôl i Gaerllion? ('When will we go back to Caerllion?'), asks Cai. Notice that before i the f of gwnaf is often dropped: wna i.\n\nThe negative uses the soft-mutated form and ddim: Wna i ddim aros yn y sach! ('I won't stay in the bag!'); Wna i ddim ymladd ar fy mhen fy hun ('I won't fight on my own'). Af i stays af i, because it begins with a vowel: Af i ddim i'r copa ('I won't go to the summit'), says Myrddin. Be careful not to confuse wna i ddim ('I won't') with the past wnes i ddim ('I didn't'): Wnest ti ddim ennill, a wnes i ddim ennill ar fy mhen fy hun ('You didn't win, and I didn't win on my own').\n\nAr fy mhen fy hun means 'on my own', literally 'on my head myself'; pen takes the nasal mutation after fy. For 'you' it is ar dy ben dy hun: Ti a fi, frenin bach, ar dy ben dy hun! ('You and me, little king, on your own!').\n\nThe chapter also compares with mor … â ('as … as'). Mor gives the soft mutation (though not to ll- and rh-), â gives the aspirate mutation, and before a vowel â becomes ag:\n- Rwyt ti mor fach â llygoden! ('You're as small as a mouse!'); roedd e mor gryf â'i dad ('he was as strong as his father').\n- Cododd Rhita garreg mor fawr â thŷ ('Rhita lifted a stone as big as a house'); gyda sŵn mor uchel â tharanau ('with a noise as loud as thunder'); roedd ei draed e mor fawr â chychod ('his feet were as big as boats').\n- carreg mor fach ag wy ('a stone as small as an egg').\n\nFinally, the conditional from Pennod 34 now has all its persons: baset ti ('you would'), basen ni ('we would'), basech chi ('you would', plural or polite) and basen nhw ('they would'). Rhita sneers: Baset ti'n ymladd ar dy ben dy hun, tasai dewrder gyda ti! ('You would fight on your own, if you had courage!'); Cai tells Myrddin: Basech chi'n gallu taflu'r cawr i'r môr gyda hud! ('You could throw the giant into the sea with magic!'). Arthur answers Cai's worry: Basen nhw'n chwerthin, ond basen ni'n ennill ('They would laugh, but we would win')."
+  "nodyn_en": "This chapter teaches a short way to talk about the future for three very common verbs: mynd ('go'), gwneud ('do, make') and cael ('get'), and for two forms of dod ('come'). Each short form means the same as the bydd forms you know: af i = bydda i'n mynd ('I'll go'), gwnaf i = bydda i'n gwneud ('I'll do, I'll make'), caf i = bydda i'n cael ('I'll get'). The verb itself carries the future, so this construction needs no linking yn before its verb-noun; adverbial yn remains, as in Af i’n gyntaf.\n\nThese are the forms the story uses, for 'I', 'you' (ti) and 'we':\n- mynd: af i, ei di, awn ni. Af i'n gyntaf ('I'll go first'), says Cai. Mali answers: Ei di'n gyntaf, Cai, ond ble mae'r llwybr? ('You'll go first, Cai, but where is the path?'). Arthur decides: Awn ni gyda'n gilydd ('We'll go together').\n- gwneud: gwnaf i, wnei di? (a question), gwnawn ni. Gwnaf i rywbeth defnyddiol, felly ('I'll do something useful, then'), says Mali; Gwnawn ni garnedd ('We'll make a cairn'), says Arthur.\n- cael: caf i, cei di. Caf i bastai yno! ('I'll get a pie there!'), says Cai.\n- dod: doi di, down ni. Af i gyda Cai, a doi di gyda ni, Mali ('I'll go with Cai, and you'll come with us, Mali'); Down ni o'r graig gyda'n gilydd ('We'll come out from the rock together').\nFor he, she or a noun, this chapter still uses bydd: Bydd Pero'n dod hefyd ('Pero will come too'); Fydd e ddim yn marw ('He won't die').\n\nA noun object or a verb-noun straight after a short form takes the soft mutation: Gwnaf i fwg ('I'll make smoke'; mwg → fwg); Cei di frathu'r cawr ('You may bite the giant'; brathu → frathu); gwnawn ni wthio ('we'll push'; gwthio → wthio); Caf i bastai (pastai → bastai). Dafi makes this chapter's deliberate mistake: Gwnaf i mwg mawr iawn! Mali corrects him: Gwnaf i fwg, Dafi. Fwg! He repeats it correctly: Gwnaf i fwg mawr iawn ('I'll make very big smoke').\n\nGwnaf i has two uses. With a noun it means 'I'll make' or 'I'll do' (Gwnaf i fwg). With a verb-noun it simply makes a future, like bydda i'n: gwnaf i ei faglu e ('I'll trip him'), says Mali (here ei, 'him', brings its own soft mutation: baglu → faglu); A gwnaf i ysgrifennu'r stori ('And I'll write the story').\n\nCael also means 'may', as in Gaf i …? / Cei from Pennod 14, so cei di can mean 'you may': Cei di aros yn y sach, Dafi ('You can stay in the bag, Dafi').\n\nTo ask a question, the short form takes the soft mutation where it can: Dafi, wnei di fwg i fi? ('Dafi, will you make smoke for me?'). Ei di starts with a vowel, so it does not change: Mali, ei di at y clogwyn gyda'r rhaff? ('Mali, will you go to the cliff with the rope?'). When you are asked Ei di …? or Wnei di …?, you can answer with the verb alone, in the 'I' form: Mali answers Af ('Yes, I will [go]'), and the answer to Wnei di …? is Gwnaf. The same happens after a question word: Beth wna i? ('What will I do?'), asks Dafi; Pryd awn ni yn ôl i Gaerllion? ('When will we go back to Caerllion?'), asks Cai. Notice that before i the f of gwnaf is often dropped: wna i.\n\nWith gwneud, the negative uses wna(f) i and ddim: Wna i ddim aros yn y sach! ('I won't stay in the bag!'); Wna i ddim ymladd ar fy mhen fy hun ('I won't fight on my own'). Af i stays af i, because it begins with a vowel: Af i ddim i'r copa ('I won't go to the summit'), says Myrddin. Be careful not to confuse wna i ddim ('I won't') with the past wnes i ddim ('I didn't'): Wnest ti ddim ennill, a wnes i ddim ennill ar fy mhen fy hun ('You didn't win, and I didn't win on my own').\n\nAr fy mhen fy hun means 'on my own', literally 'on my head myself'; pen takes the nasal mutation after fy. For 'you' it is ar dy ben dy hun: Ti a fi, frenin bach, ar dy ben dy hun! ('You and me, little king, on your own!').\n\nThe chapter also compares with mor … â ('as … as'). Mor gives the soft mutation (though not to ll- and rh-), â gives the aspirate mutation, and before a vowel â becomes ag:\n- Rwyt ti mor fach â llygoden! ('You're as small as a mouse!'); roedd e mor gryf â'i dad ('he was as strong as his father').\n- Cododd Rhita garreg mor fawr â thŷ ('Rhita lifted a stone as big as a house'); gyda sŵn mor uchel â tharanau ('with a noise as loud as thunder'); roedd ei draed e mor fawr â chychod ('his feet were as big as boats').\n- carreg mor fach ag wy ('a stone as small as an egg').\n\nFinally, the conditional from Pennod 34 now has all its persons: baset ti ('you would'), basen ni ('we would'), basech chi ('you would', plural or polite) and basen nhw ('they would'). Rhita sneers: Baset ti'n ymladd ar dy ben dy hun, tasai dewrder gyda ti! ('You would fight on your own, if you had courage!'); Cai tells Myrddin: Basech chi'n gallu taflu'r cawr i'r môr gyda hud! ('You could throw the giant into the sea with magic!'). Arthur answers Cai's worry: Basen nhw'n chwerthin, ond basen ni'n ennill ('They would laugh, but we would win')."
  },
  "pensa": {
   "A": {
@@ -1910,7 +1918,8 @@
        "accepted_answers": [
         "Af i gyda Cai.",
         "A i gyda Cai.",
-        "Fe af i gyda Cai."
+        "Fe af i gyda Cai.",
+        "Fe a i gyda Cai."
        ],
        "source_segment_ids": [
         "cy-brenin-01-l37-s010"
@@ -1924,7 +1933,9 @@
         "Gwnaf i fwg.",
         "Gwna i fwg.",
         "Fe wnaf i fwg.",
-        "Fe wna i fwg."
+        "Fe wna i fwg.",
+        "Wna i fwg.",
+        "Wnaf i fwg."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -1988,22 +1999,22 @@
      "items": [
       {
        "id": "a6",
-       "prompt": "Bydda i'n aros yn y sach. (✗) →",
+       "prompt": "Bydda i'n chwilio am y rhaff. (✗) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Wna i ddim aros yn y sach.",
-        "Wnaf i ddim aros yn y sach."
+        "Wna i ddim chwilio am y rhaff.",
+        "Wnaf i ddim chwilio am y rhaff."
        ],
-       "source_segment_ids": [
-        "cy-brenin-01-l37-s025"
-       ]
+       "source_segment_ids": []
       },
       {
        "id": "a7",
        "prompt": "Bydd y cawr yn codi. (✗) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Fydd y cawr ddim yn codi."
+        "Fydd y cawr ddim yn codi.",
+        "Fydd e ddim yn codi.",
+        "Fydd fe ddim yn codi."
        ],
        "mutation_hint": true,
        "common_wrong": [
@@ -2150,7 +2161,7 @@
     },
     {
      "id": "b7",
-     "prompt": "Mae'r cawr yn gweiddi'n uchel iawn, fel taran: mae e'n ___.",
+     "prompt": "Mae'r cawr yn gweiddi'n uchel iawn, fel taran: mae e'n ___. (roaring)",
      "answer_mode": "exact",
      "accepted_answers": [
       "rhuo"
@@ -2158,7 +2169,7 @@
     },
     {
      "id": "b8",
-     "prompt": "Roedd rhaff ar y llwybr. Doedd Cai ddim yn ei gweld hi, ac yn sydyn roedd e'n ___ ac yn cwympo.",
+     "prompt": "Roedd rhaff ar y llwybr. Doedd Cai ddim yn ei gweld hi, ac yn sydyn roedd e'n ___ ac yn cwympo. (tripping)",
      "answer_mode": "exact",
      "accepted_answers": [
       "baglu"
@@ -2204,9 +2215,9 @@
     },
     {
      "id": "c2",
-     "prompt": "Ar y copa, roedd barf newydd ar glogyn Rhita. Barf pwy?",
+     "prompt": "Barf pwy oedd hi?",
      "answer_mode": "self_check",
-     "model_answer": "Barf Cynyr, arglwydd Cwm Helyg: tad Mali.",
+     "model_answer": "Barf Cynyr oedd hi.",
      "key_terms": [
       "cy-barf"
      ],
@@ -2632,7 +2643,7 @@
    "inline_scene": 3,
    "margin_vignette": 4,
    "margin_diagram": 0,
-   "margin_gloss": 43
+   "margin_gloss": 44
   }
  },
  "completion": {

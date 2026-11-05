@@ -26,7 +26,8 @@
    "Recall pass 2026-10-18: recurrences for Penodau 34–38 vocabulary (tudalen, llawysgrif, siâp, syniad, awgrymu, pentyrru, blino, ci defaid, mawn, tad-cu, mam-gu, tafodiaith, acen, rhuo, taflu, gwasgu, dychymyg, iaith, darllenydd, dallu, brathu, ffêr, baglu, gwendid, cryfder, cynulleidfa, rhannu, chwedl); the Eryri shepherd family attends the round table. Gloss symbols: ⊙ → '← ■ →', ⟳ → '○, cadair ar ôl cadair', 🙇 → 'plygu pen + \"Diolch!\"'. Two over-long segments split (s311, s310). New segments s301–s311.",
    "Recall pass, pruning 2026-10-18 (docs/reviews/recall-pass-critique-2026-10-18.md): applied the critique's revert/rework rows (s303, s308, s125). Deleted new segments' IDs are retired, not to be reused; some recall targets deliberately left unmet rather than re-placed.",
    "Owner fix 2026-11-04: Pensum C converted to eight open self_check questions in story order (Welsh rubrics in known words, key_terms, sources); the exact c2, c3 and c4 converted; one Pam? (c3, s037 states it: fe oedd y brenin); 'Pam mae Arthur yn sôn am y penhwyad …' (a multi-part reason) and the unstated 'tasai'r bwrdd yn hir eto' dropped; c4 practises lle, c5 Ai …? — Nage, c8 y bydd; A ti? no longer a bare yes/no. nodyn_en expanded to a full English explanation; the checker's 60-word cap is advisory (RULES §6). Table cells wrthi hi / wrthyn nhw and the literary 'y mae … wrtho' (never shown) replaced. Pensum B one answer each: b7 rheol (Modlen's kitchen rule, not a law), b8 dangos parch, b9 cynrychioli.",
-   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note states the y bydd rule as a transformation of bydd (mae → bod), not 'about the future'; lle described as this course's convention (ble in direct questions); B bank gwasanaethu → gwrando so b9 has one answer; C c5 now asks what the lord was looking for (pen y bwrdd) instead of the bare Nage; c6 asks what Arthur said to Cai; c4 model matches its frame; recall A a10 now attested (35:s099 Dylai brenin fod yn gyfiawn; 'wrando' after dylai never shown). Optional fe variants added to finite A keys."
+   "Codex review 2026-11-04 (GPT-6.1-Sol, 37–40 half) applied: note states the y bydd rule as a transformation of bydd (mae → bod), not 'about the future'; lle described as this course's convention (ble in direct questions); B bank gwasanaethu → gwrando so b9 has one answer; C c5 now asks what the lord was looking for (pen y bwrdd) instead of the bare Nage; c6 asks what Arthur said to Cai; c4 model matches its frame; recall A a10 now attested (35:s099 Dylai brenin fod yn gyfiawn; 'wrando' after dylai never shown). Optional fe variants added to finite A keys.",
+   "Fresh review continuation: B rule item avoids broken rheoli y article attachment and story copying. Representation/steward/justice/disagreement/agreement/rule/freedom meanings supplied at first encounter; parchu anchor now keeps the whole verb and covers noun/verb together. Seating centre label supplied separately. Copied A2/A6/A10 contexts recombined and optional fe+a recall accepted; C4 frame/model now a sentence. Legacy A redesign and the planned long kingship/civics explanation remain owner decisions; payoff preserved."
   ],
   "review_questions": []
  },
@@ -128,13 +129,13 @@
    },
    {
     "lexeme_id": "cy-cynrychioli",
-    "how": "gloss(define)",
-    "segment_id": "cy-brenin-01-l39-s113"
+    "how": "meaning aid at first use with complete-word anchor",
+    "segment_id": "cy-brenin-01-l39-s074"
    },
    {
     "lexeme_id": "cy-cyfiawnder",
-    "how": "gloss(define: cyfiawn →)",
-    "segment_id": "cy-brenin-01-l39-s121"
+    "how": "meaning aid at first use with complete-word anchor",
+    "segment_id": "cy-brenin-01-l39-s106"
    },
    {
     "lexeme_id": "cy-rhyddid",
@@ -143,13 +144,13 @@
    },
    {
     "lexeme_id": "cy-parch",
-    "how": "gloss(define)",
+    "how": "meaning aid at first use with complete-word anchor",
     "segment_id": "cy-brenin-01-l39-s094"
    },
    {
     "lexeme_id": "cy-parchu",
-    "how": "gloss(define: parch →)",
-    "segment_id": "cy-brenin-01-l39-s118"
+    "how": "meaning aid at first use with complete-word anchor",
+    "segment_id": "cy-brenin-01-l39-s094"
    },
    {
     "lexeme_id": "cy-canol",
@@ -365,11 +366,10 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "anghytuno",
-        "gloss": "cytuno ↔ anghytuno",
-        "gloss_kind": "antonym",
+        "gloss": "anghytuno: un «Ie», un «Nage»",
+        "gloss_kind": "example",
         "covers_lexeme_ids": [
-         "cy-anghytuno",
-         "cy-cytuno"
+         "cy-anghytuno"
         ]
        }
       ]
@@ -569,6 +569,13 @@
         "anchor_text": "gytuno",
         "gloss": "gytuno ← cytuno",
         "gloss_kind": "radical"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "gytuno",
+        "gloss": "cytuno: pawb yn dweud «Ie»",
+        "gloss_kind": "example"
        }
       ]
      }
@@ -640,13 +647,14 @@
         "anchor_text": "gynllun",
         "label": "Y bwrdd crwn",
         "src": "media/diagrams/cy-brenin-01-l39-img-seddau.svg",
-        "alt": "Two seating plans, Welsh labels only. Top, 'y bwrdd hir': a long table with the king's crowned chair at one end marked 'pen', the far end marked 'gwaelod', and two lords' chairs crowding the one seat beside the king ('?!'). Bottom, 'y bwrdd crwn': a ring of tables with twelve identical chairs, the king's marked only by a tiny crown, a fire in the middle marked 'tân' and the words 'dim pen'.",
+        "alt": "Two seating plans, Welsh labels only. Top, 'y bwrdd hir': a long table with the king's crowned chair at one end marked 'pen', the far end marked 'gwaelod', and two lords' chairs crowding the one seat beside the king ('?!'). Bottom, 'y bwrdd crwn': a ring of tables with twelve identical chairs, the king's marked only by a tiny crown, a fire in the middle marked 'tân' and 'canol' and the words 'dim pen'.",
         "status": "draft",
         "art_brief": "Two seating plans, Welsh labels only. Top, 'y bwrdd hir': a long table with the king's crowned chair at one end marked 'pen', the far end marked 'gwaelod', and two lords' chairs crowding the one seat beside the king ('?!'). Bottom, 'y bwrdd crwn': a ring of tables with twelve identical chairs, the king's marked only by a tiny crown, a fire in the middle marked 'tân' and the words 'dim pen'.",
         "covers_lexeme_ids": [
          "cy-cylch",
          "cy-crwn",
-         "cy-cyfartal"
+         "cy-cyfartal",
+         "cy-canol"
         ]
        }
       ]
@@ -696,7 +704,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "Yng nghanol",
-        "gloss": "yng nghanol ← canol: ← ■ →",
+        "gloss": "yng nghanol ← canol",
         "gloss_kind": "radical",
         "covers_lexeme_ids": [
          "cy-canol"
@@ -870,7 +878,19 @@
       "id": "cy-brenin-01-l39-s074",
       "text": "\"Chi sy'n cynrychioli ffermwyr y cwm heddiw,\" meddai Arthur wrth y ffermwr, ac roedd y dyn yn goch iawn.",
       "paragraph_start": true,
-      "speaker": "char-arth"
+      "speaker": "char-arth",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cynrychioli",
+        "gloss": "cynrychioli: siarad dros …",
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-cynrychioli"
+        ]
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l39-s075",
@@ -1047,6 +1067,13 @@
         "covers_lexeme_ids": [
          "cy-distain"
         ]
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "nistain",
+        "gloss": "distain: gofalu am lys a bwyd",
+        "gloss_kind": "define"
        }
       ]
      },
@@ -1164,11 +1191,12 @@
        {
         "type": "gloss",
         "presentation": "margin_gloss",
-        "anchor_text": "parch",
-        "gloss": "parch: plygu pen + \"Diolch!\"",
+        "anchor_text": "parchu",
+        "gloss": "parch/parchu: plygu pen, «Diolch!»",
         "gloss_kind": "define",
         "covers_lexeme_ids": [
-         "cy-parch"
+         "cy-parch",
+         "cy-parchu"
         ]
        }
       ]
@@ -1246,7 +1274,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "rheoli",
-        "gloss": "rheoli: brenin ↔ pobl",
+        "gloss": "rheoli: rhoi rheolau i bobl",
         "gloss_kind": "define",
         "covers_lexeme_ids": [
          "cy-rheoli"
@@ -1274,7 +1302,16 @@
      },
      {
       "id": "cy-brenin-01-l39-s106",
-      "text": "\"Dylai brenin fod yn gyfiawn, a dylai e roi cyfiawnder i bawb. Roedd y penhwyad yn rheoli'r llyn gyda'i ddannedd. Roedd pawb yn ei ofni fe, a doedd neb yn rhydd.\""
+      "text": "\"Dylai brenin fod yn gyfiawn, a dylai e roi cyfiawnder i bawb. Roedd y penhwyad yn rheoli'r llyn gyda'i ddannedd. Roedd pawb yn ei ofni fe, a doedd neb yn rhydd.\"",
+      "inference_aids": [
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "cyfiawnder",
+        "gloss": "cyfiawnder: bod yn deg i bawb",
+        "gloss_kind": "define"
+       }
+      ]
      },
      {
       "id": "cy-brenin-01-l39-s107",
@@ -1284,7 +1321,7 @@
         "type": "gloss",
         "presentation": "margin_gloss",
         "anchor_text": "rhyddid",
-        "gloss": "rhydd → rhyddid",
+        "gloss": "rhyddid: bod yn rhydd",
         "gloss_kind": "define",
         "covers_lexeme_ids": [
          "cy-rhyddid"
@@ -1317,19 +1354,7 @@
      },
      {
       "id": "cy-brenin-01-l39-s113",
-      "text": "\"Mae pob arglwydd yn cynrychioli ei bobl: y gogledd, y de, y cymoedd a'r mynyddoedd.\"",
-      "inference_aids": [
-       {
-        "type": "gloss",
-        "presentation": "margin_gloss",
-        "anchor_text": "cynrychioli",
-        "gloss": "cynrychioli: siarad dros …",
-        "gloss_kind": "define",
-        "covers_lexeme_ids": [
-         "cy-cynrychioli"
-        ]
-       }
-      ]
+      "text": "\"Mae pob arglwydd yn cynrychioli ei bobl: y gogledd, y de, y cymoedd a'r mynyddoedd.\""
      },
      {
       "id": "cy-brenin-01-l39-s114",
@@ -1644,20 +1669,18 @@
       },
       {
        "id": "a2",
-       "prompt": "Mae Cai eisiau bwyd. (Dw i'n gwybod …) →",
+       "prompt": "Mae Mali eisiau llaeth. (Dw i'n gwybod …) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Dw i'n gwybod bod Cai eisiau bwyd."
+        "Dw i'n gwybod bod Mali eisiau llaeth."
        ],
        "common_wrong": [
         {
-         "answer": "Dw i'n gwybod y bydd Cai eisiau bwyd.",
+         "answer": "Dw i'n gwybod y bydd Mali eisiau llaeth.",
          "hint": "mae → bod (bydd → y bydd)"
         }
        ],
-       "source_segment_ids": [
-        "cy-brenin-01-l39-s020"
-       ]
+       "source_segment_ids": []
       },
       {
        "id": "a3",
@@ -1704,14 +1727,12 @@
       },
       {
        "id": "a6",
-       "prompt": "Hwn yw'r pen. (?) →",
+       "prompt": "Hwn yw'r bwrdd newydd. (?) →",
        "answer_mode": "exact",
        "accepted_answers": [
-        "Ai hwn yw'r pen?"
+        "Ai hwn yw'r bwrdd newydd?"
        ],
-       "source_segment_ids": [
-        "cy-brenin-01-l39-s063"
-       ]
+       "source_segment_ids": []
       },
       {
        "id": "a7",
@@ -1758,25 +1779,27 @@
        "accepted_answers": [
         "Af i i Gwm Helyg.",
         "A i i Gwm Helyg.",
-        "Fe af i i Gwm Helyg."
+        "Fe af i i Gwm Helyg.",
+        "Fe a i i Gwm Helyg."
        ]
       },
       {
        "id": "a10",
-       "prompt": "Mae brenin yn gyfiawn. (dylai) →",
+       "prompt": "Mae marchog yn ddewr. (dylai) →",
        "answer_mode": "exact",
        "recall_of": "G35",
        "accepted_answers": [
-        "Dylai brenin fod yn gyfiawn.",
-        "Fe ddylai brenin fod yn gyfiawn."
+        "Dylai marchog fod yn ddewr.",
+        "Fe ddylai marchog fod yn ddewr."
        ],
        "mutation_hint": true,
        "common_wrong": [
         {
-         "answer": "Dylai brenin bod yn gyfiawn.",
+         "answer": "Dylai marchog bod yn ddewr.",
          "hint": "dylai + meddal: bod → fod"
         }
-       ]
+       ],
+       "source_segment_ids": []
       }
      ]
     }
@@ -1882,7 +1905,7 @@
     },
     {
      "id": "b10",
-     "prompt": "Mae'r penhwyad yn ___ y llyn gyda'i ddannedd.",
+     "prompt": "Mae Arthur yn ___ drwy roi rheolau i bawb. (to rule)",
      "answer_mode": "exact",
      "accepted_answers": [
       "rheoli"
@@ -1941,9 +1964,9 @@
     },
     {
      "id": "c4",
-     "prompt": "Yn yr amffitheatr, beth oedd syniad Arthur? Dechrau: Bwrdd lle …",
+     "prompt": "Yn yr amffitheatr, beth oedd syniad Arthur? Dechrau: Roedd Arthur eisiau bwrdd lle …",
      "answer_mode": "self_check",
-     "model_answer": "Bwrdd lle does neb yn eistedd ar y pen.",
+     "model_answer": "Roedd Arthur eisiau bwrdd lle does neb yn eistedd ar y pen.",
      "key_terms": [
       "cy-lle-rel",
       "cy-crwn"
@@ -2338,7 +2361,7 @@
    "inline_scene": 2,
    "margin_vignette": 1,
    "margin_diagram": 1,
-   "margin_gloss": 43
+   "margin_gloss": 46
   }
  },
  "completion": {
