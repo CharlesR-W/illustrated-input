@@ -24,7 +24,8 @@
       "Checker warnings left: local-density at s069–s078, where Modlen's burst of commands repeats the chapter's own new forms (paid, â, cer, dere, prysur, sydyn); no opaque word is first met there. lemma-validation for dere, cer, mas and deilen: already listed in chapters.json validation.not_in_corcencc for fluent sign-off.",
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): s072 gloss 'dewch = dere + dere' read as 'come come'; now 'dewch = dere, i'r plant'. Pensa: C c1 'Ble mae'r wers?' → 'Yn y buarth' was not stated in this chapter's text; it now asks 'Sut mae Arth yn sefyll yn y wers?' → 'Ar un goes' (s016, s025); A a9/a10 accept the short answers (Nac ydw / Nac ydy) beside the full ones; C c4 accepts 'Does dim dŵr yn y bwced'.",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (all seven items now self_check with rubric, key_terms and sources; c1 and c6 converted from exact; c2 'Ydy Arth yn clywed yr afon?' (bare yes/no, form-only rubric) → 'Beth yw'r sŵn pell?'; c4 bare yes/no given the follow-up 'Ble mae Arth yn mynd?'; c5 'Ydy Pero'n bwyta'r bastai? Pam?' (the Pam did not fit the answer) → 'rhywbeth bach coch … Beth yw e?' (Dafi); c7 'A ti?' given a 'Beth yw e?' follow-up; c3 stays the one Pam? item); nodyn_en expanded to a full English explanation (613 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
-      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: 'always ti' statements reconciled with Dewch (s072); aspirate mutation limited to the c → ch the story shows; c4 and c7 made open; c6 anchored to s123."
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: 'always ti' statements reconciled with Dewch (s072); aspirate mutation limited to the c → ch the story shows; c4 and c7 made open; c6 anchored to s123.",
+      "Quality continuation audit, review 1104-201055-26439: first-use eye/ear and standing/leg diagrams; leaf/bird/mas aids moved earlier; prysur meaning examples and second radical aids; B9 tests radical coes rather than the deferred un pattern; copied A4/A5/A7 recombined; Dafi single-word speech; consolidation limited to attested c→ch, with transparent pattern labels and un recognition wording. English-cue, diagram-count and long-note warnings are explained in OPEN.md. Remaining suddenly/touch aid and raster/popup policy questions remain explicit."
     ],
     "review_questions": [
       {
@@ -316,7 +317,7 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "brysur",
-                "gloss": "brysur ← prysur",
+                "gloss": "brysur ← prysur: gweithio, cario, rhedeg",
                 "gloss_kind": "radical"
               }
             ]
@@ -439,13 +440,38 @@
                 "anchor_text": "goes",
                 "gloss": "un goes ← coes (b.)",
                 "gloss_kind": "radical"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l07-img-audit-sefyll",
+                "label": "sefyll · coes",
+                "src": "media/diagrams/cy-brenin-01-l07-img-audit-sefyll.svg",
+                "alt": "Arth stands on one leg in his green tunic; the supporting leg is labelled.",
+                "status": "draft",
+                "art_brief": "Arth stands on one leg in his green tunic; the supporting leg is labelled.",
+                "covers_lexeme_ids": [
+                  "cy-sefyll",
+                  "cy-coes"
+                ],
+                "width": 300,
+                "height": 300
               }
             ]
           },
           {
             "id": "cy-brenin-01-l07-s016",
             "text": "Mae Arth yn codi un goes.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "goes",
+                "gloss": "goes ← coes",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l07-s017",
@@ -480,6 +506,22 @@
                 "anchor_text": "ar gau",
                 "gloss": "ar gau ← cau",
                 "gloss_kind": "radical"
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l07-img-audit-llygad-clust",
+                "label": "llygad · clust",
+                "src": "media/diagrams/cy-brenin-01-l07-img-audit-llygad-clust.svg",
+                "alt": "Separate labelled eye and ear diagrams distinguish the body parts.",
+                "status": "draft",
+                "art_brief": "Separate labelled eye and ear diagrams distinguish the body parts.",
+                "covers_lexeme_ids": [
+                  "cy-llygad",
+                  "cy-clust"
+                ],
+                "width": 300,
+                "height": 160
               }
             ]
           },
@@ -613,19 +655,12 @@
                 "anchor_text": "dail",
                 "gloss": "deilen, dail",
                 "gloss_kind": "number"
-              }
-            ]
-          },
-          {
-            "id": "cy-brenin-01-l07-s033",
-            "text": "Mae deilen fach yn dod o'r goeden.",
-            "paragraph_start": true,
-            "inference_aids": [
+              },
               {
                 "type": "image",
                 "presentation": "margin_vignette",
                 "ref": "cy-brenin-01-l07-img-deilen",
-                "anchor_text": "deilen",
+                "anchor_text": "dail",
                 "label": "deilen · dail",
                 "src": "media/vignettes/cy-brenin-01-l07-img-deilen.webp",
                 "alt": "",
@@ -638,6 +673,12 @@
                 "height": 308
               }
             ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s033",
+            "text": "Mae deilen fach yn dod o'r goeden.",
+            "paragraph_start": true,
+            "inference_aids": []
           },
           {
             "id": "cy-brenin-01-l07-s034",
@@ -665,18 +706,12 @@
                 "anchor_text": "adar",
                 "gloss": "aderyn, adar",
                 "gloss_kind": "number"
-              }
-            ]
-          },
-          {
-            "id": "cy-brenin-01-l07-s038",
-            "text": "Mae adar ar y wal, ac mae aderyn bach yn y goeden.\"",
-            "inference_aids": [
+              },
               {
                 "type": "image",
                 "presentation": "margin_vignette",
                 "ref": "cy-brenin-01-l07-img-aderyn",
-                "anchor_text": "aderyn",
+                "anchor_text": "adar",
                 "label": "aderyn · adar",
                 "src": "media/vignettes/cy-brenin-01-l07-img-aderyn.webp",
                 "alt": "",
@@ -689,6 +724,11 @@
                 "height": 217
               }
             ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s038",
+            "text": "Mae adar ar y wal, ac mae aderyn bach yn y goeden.\"",
+            "inference_aids": []
           },
           {
             "id": "cy-brenin-01-l07-s039",
@@ -765,7 +805,16 @@
           },
           {
             "id": "cy-brenin-01-l07-s050",
-            "text": "Dyw hi ddim yn wers!"
+            "text": "Dyw hi ddim yn wers!",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wers",
+                "gloss": "wers ← gwers",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l07-s051",
@@ -899,7 +948,16 @@
           {
             "id": "cy-brenin-01-l07-s071",
             "text": "Yn sydyn, mae drws y gegin yn agor, ac mae Modlen yn y drws: menyw fach, goch, brysur.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "brysur",
+                "gloss": "brysur ← prysur",
+                "gloss_kind": "radical"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l07-s072",
@@ -1181,7 +1239,7 @@
           },
           {
             "id": "cy-brenin-01-l07-s097",
-            "text": "\"Pastai — nawr!\"",
+            "text": "\"Pastai!\"",
             "paragraph_start": true,
             "speaker": "char-dafi"
           },
@@ -1307,11 +1365,7 @@
           },
           {
             "id": "cy-brenin-01-l07-s116",
-            "text": "\"Cer mas!"
-          },
-          {
-            "id": "cy-brenin-01-l07-s117",
-            "text": "Cer mas o'r gegin, cer mas o'r llys!\"",
+            "text": "\"Cer mas!",
             "inference_aids": [
               {
                 "type": "gloss",
@@ -1321,6 +1375,11 @@
                 "gloss_kind": "synonym"
               }
             ]
+          },
+          {
+            "id": "cy-brenin-01-l07-s117",
+            "text": "Cer mas o'r gegin, cer mas o'r llys!\"",
+            "inference_aids": []
           },
           {
             "id": "cy-brenin-01-l07-s118",
@@ -1508,7 +1567,7 @@
     "rule_cy": "Mae Arth yn gwrando. → Gwranda, Arth! · Na: Paid â …! · Rho wellt! (treiglad) ↔ Rho'r bwced! (dim treiglad)",
     "tables": [
       {
-        "caption": "berfenw → gorchymyn (ti)",
+        "caption": "dod → Dere! · mynd → Cer!",
         "header": [
           "Mae Arth yn …",
           "Arth, …!"
@@ -1574,23 +1633,23 @@
         "rows": [
           [
             "Rho wellt! ← gwellt · Cymer bastai! ← pastai",
-            "gorchymyn + enw: treiglad meddal (Pennod 7)"
+            "Rho + gwellt → Rho wellt! (Pennod 7)"
           ],
           [
             "Rho'r bwced! · Dal y ci!",
-            "'r / y + enw: dim treiglad gorchymyn"
+            "bwced → bwced · ci → ci"
           ],
           [
             "Cymer y bastai! ← pastai (b.)",
-            "ond y + enw benywaidd unigol: treiglad meddal (Pennod 2)"
+            "y + pastai (b.) → y bastai (Pennod 2)"
           ],
           [
             "â chyffwrdd ← cyffwrdd",
-            "â + c → ch (â + p → ph, â + t → th)"
+            "â + c → ch"
           ],
           [
             "un goes · un bastai",
-            "un + enw benywaidd unigol; ll-, rh-: dim treiglad (Pennod 14)"
+            "darllen · Pennod 14"
           ]
         ]
       }
@@ -1615,7 +1674,7 @@
         "segment_id": "cy-brenin-01-l07-s088"
       }
     ],
-    "nodyn_en": "This chapter teaches the command form, which grammar books call the imperative: the form you use to tell someone to do something. Most commands here address one familiar person, using the ti form (for a friend, a child, a family member, an animal). A command needs no word for 'you'. A name, if there is one, is simply added: Gwranda, Arth! ('Listen, Arth!').\n\nThe starting point is the verb-noun (berfenw): the dictionary form of a verb, the form you already use after yn, as in Mae Arth yn gwrando ('Arth is listening'). Some commands are just the verb-noun said as an order: Edrych! ('Look!'), Aros, a gwranda eto ('Wait, and listen again'), Arth, dal y bwced ('Arth, hold the bucket'). Others have their own short form, which you learn together with the verb-noun: gwrando → Gwranda! ('Listen!'), sefyll → Saf ar un goes! ('Stand on one leg!'), cymryd → Cymer bastai! ('Have a pie!', literally 'Take a pie!'), rhoi → Rho wellt i'r ceffylau! ('Give straw to the horses!'). Two common southern ones look nothing like their verb-nouns: dod ('to come') → Dere yma ('Come here'), and mynd ('to go') → Cer i'r afon! ('Go to the river!'). Cer mas! means 'Get out!' (mas is 'out'). No single rule tells you which form a verb takes, so in this book so far, learn each command as you meet it. When Modlen calls all the children, she says Blant, dewch yma! ('Children, come here!'). Dewch is the form for more than one person. It is here for recognition; the commands to learn now are the ti forms.\n\nTo say 'don't', use Paid â + verb-noun: Paid â siarad! ('Don't talk!'), Paid â darllen! ('Don't read!'). Before a vowel, â becomes ag: Paid ag edrych ('Don't look'). Paid can also stand alone: Dafi, paid! ('Dafi, don't!'). Compare Dw i ddim yn edrych ('I'm not looking') with Paid ag edrych.\n\nâ is also a preposition meaning 'with': Mae Cai'n chwarae â'r cleddyf pren ('Cai is playing with the wooden sword'). Some verbs always take it. Cyffwrdd â means 'to touch': Paid â chyffwrdd â'r pasteiod! ('Don't touch the pies!'). With dod and mynd, â means bringing or taking: dere â dŵr ('bring water', literally 'come with water'), Cer â'r bara i'r neuadd! ('Take the bread to the hall!').\n\nA mutation is a regular change to the first sound of a word, caused by the word before it. After â, a word beginning with c takes the aspirate mutation: c becomes ch, as in cyffwrdd → â chyffwrdd. (P and t change too, to ph and th; the book shows those later.) So cyffwrdd becomes â chyffwrdd. A word that already begins with ch, such as chwarae, stays as it is: Cai, paid â chwarae! ('Cai, don't play!').\n\nThe soft mutation is a different change: g drops, p becomes b, c becomes g, and so on. The direct object of a command is the thing the order is about, straight after the command, and it takes the soft mutation: Rho wellt! from gwellt, Cymer bastai! from pastai. When the object begins with 'the' (y or 'r), the command does not change it: Rho'r bwced yma ('Give the bucket here'), Dal y ci! ('Catch the dog!'). 'The' still has its own rule from Pennod 2: it softens a feminine singular noun. So the grammar table gives Cymer y bastai! ('Take the pie!'), and the story has mae e'n bwyta'r bastai ('he eats the pie').\n\nLast, un ('one') softens a feminine singular noun: un goes ('one leg', from coes), un bastai ('one pie', from pastai). A masculine noun does not change after un. Nouns beginning with ll- or rh- do not change after un either; the book comes back to that in Pennod 14."
+    "nodyn_en": "This chapter teaches the command form, which grammar books call the imperative: the form you use to tell someone to do something. Most commands here address one familiar person, using the ti form (for a friend, a child, a family member, an animal). A command needs no word for 'you'. A name, if there is one, is simply added: Gwranda, Arth! ('Listen, Arth!').\n\nThe starting point is the verb-noun (berfenw): the dictionary form of a verb, the form you already use after yn, as in Mae Arth yn gwrando ('Arth is listening'). Some commands are just the verb-noun said as an order: Edrych! ('Look!'), Aros, a gwranda eto ('Wait, and listen again'), Arth, dal y bwced ('Arth, hold the bucket'). Others have their own short form, which you learn together with the verb-noun: gwrando → Gwranda! ('Listen!'), sefyll → Saf ar un goes! ('Stand on one leg!'), cymryd → Cymer bastai! ('Have a pie!', literally 'Take a pie!'), rhoi → Rho wellt i'r ceffylau! ('Give straw to the horses!'). Two common southern ones look nothing like their verb-nouns: dod ('to come') → Dere yma ('Come here'), and mynd ('to go') → Cer i'r afon! ('Go to the river!'). Cer mas! means 'Get out!' (mas is 'out'). No single rule tells you which form a verb takes, so in this book so far, learn each command as you meet it. When Modlen calls all the children, she says Blant, dewch yma! ('Children, come here!'). Dewch is the form for more than one person. It is here for recognition; the commands to learn now are the ti forms.\n\nTo say 'don't', use Paid â + verb-noun: Paid â siarad! ('Don't talk!'), Paid â darllen! ('Don't read!'). Before a vowel, â becomes ag: Paid ag edrych ('Don't look'). Paid can also stand alone: Dafi, paid! ('Dafi, don't!'). Compare Dw i ddim yn edrych ('I'm not looking') with Paid ag edrych.\n\nâ is also a preposition meaning 'with': Mae Cai'n chwarae â'r cleddyf pren ('Cai is playing with the wooden sword'). Some verbs always take it. Cyffwrdd â means 'to touch': Paid â chyffwrdd â'r pasteiod! ('Don't touch the pies!'). With dod and mynd, â means bringing or taking: dere â dŵr ('bring water', literally 'come with water'), Cer â'r bara i'r neuadd! ('Take the bread to the hall!').\n\nA mutation is a regular change to the first sound of a word, caused by the word before it. After â, a word beginning with c takes the aspirate mutation: c becomes ch, as in cyffwrdd → â chyffwrdd. So cyffwrdd becomes â chyffwrdd. A word that already begins with ch, such as chwarae, stays as it is: Cai, paid â chwarae! ('Cai, don't play!').\n\nThe soft mutation is a different change: g drops, p becomes b, c becomes g, and so on. The direct object of a command is the thing the order is about, straight after the command, and it takes the soft mutation: Rho wellt! from gwellt, Cymer bastai! from pastai. When the object begins with 'the' (y or 'r), the command does not change it: Rho'r bwced yma ('Give the bucket here'), Dal y ci! ('Catch the dog!'). 'The' still has its own rule from Pennod 2: it softens a feminine singular noun. So the grammar table gives Cymer y bastai! ('Take the pie!'), and the story has mae e'n bwyta'r bastai ('he eats the pie').\n\nHere un goes ('one leg', from coes) and un bastai ('one pie', from pastai) are recognition phrases. The general un + feminine noun mutation pattern is taught in Pennod 14; this chapter does not require producing it."
   },
   "pensa": {
     "A": {
@@ -1671,23 +1730,23 @@
           "items": [
             {
               "id": "a4",
-              "prompt": "Darllen! → Na!",
+              "prompt": "Darllen wrth y drws! → Na!",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Paid â darllen!"
+                "Paid â darllen wrth y drws!"
               ],
               "source_segment_ids": []
             },
             {
               "id": "a5",
-              "prompt": "Edrych! → Na!",
+              "prompt": "Edrych ar y gath! → Na!",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Paid ag edrych!"
+                "Paid ag edrych ar y gath!"
               ],
               "common_wrong": [
                 {
-                  "answer": "Paid â edrych",
+                  "answer": "Paid â edrych ar y gath!",
                   "hint": "â + e … → ag"
                 }
               ],
@@ -1712,14 +1771,14 @@
           "items": [
             {
               "id": "a7",
-              "prompt": "Cymer + pastai →",
+              "prompt": "Cymer + pastai fach →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Cymer bastai!"
+                "Cymer bastai fach!"
               ],
               "common_wrong": [
                 {
-                  "answer": "Cymer pastai!",
+                  "answer": "Cymer pastai fach!",
                   "hint": "Cymer + p → b"
                 }
               ],
@@ -1870,12 +1929,11 @@
         },
         {
           "id": "b9",
-          "prompt": "Mae aderyn gwyn yn yr afon, ac mae e'n sefyll ar un ___.",
+          "prompt": "Mae ___ Cai yn y gwellt. (leg)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "goes"
-          ],
-          "explanation": "un + coes (b.) → un goes"
+            "coes"
+          ]
         }
       ]
     },
@@ -2439,8 +2497,8 @@
       "cover": 1,
       "inline_scene": 2,
       "margin_vignette": 6,
-      "margin_diagram": 0,
-      "margin_gloss": 35
+      "margin_diagram": 2,
+      "margin_gloss": 38
     }
   },
   "completion": {
@@ -2456,7 +2514,7 @@
     ]
   },
   "metrics": {
-    "running_words": 868,
+    "running_words": 867,
     "sentences": 145,
     "word_target": 800,
     "word_window": [

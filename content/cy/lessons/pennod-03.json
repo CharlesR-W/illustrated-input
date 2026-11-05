@@ -21,7 +21,8 @@
       "Geese appear in pictures only (no lexeme), as the plan beat needs them only as scenery.",
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): the narrator's question-and-fragment tour ('Ble mae X? Yn Y.') ran eight times; two plain ones are now statements (cut s020 'A Mali?' and s031 'Ble mae'r gogyddes?'; s021 'A dyma Mali, wrth ddrws y gegin.' keeps a pointing opener so the Mae run stays ≤ 5; s032 names the subject). Kept: s006–s007 and s015–s016 (the tour's first steps; cutting s015 too made a seven-sentence Mae run and packed new words together), s029–s030 (the reading-thread plant), s041–s042 (Arth sees the sword), s034/s077 'A Pero?' (each answered by a full sentence; s077 turns the chapter) and the closing s088. Meta-language: 'dim newid / dim treiglad' (dim is Pennod 6) replaced by arrows (b → b) in the rule, table caption, Treigladau row and A a1/a5 hints; the rule's no-change example is now bwyta (rhedeg starts with rh, which never mutates after yn, so it showed nothing). Pensa: b1 'Pero … ___ wrth y wal' also fitted bwyta/yfed, now cued by nos da; b6 'Mae ___ mawr yn y neuadd' also fitted cleddyf, now contrasts the small window with the hall's ___ (drws); A a3 and C c1–c4, c6 accept fronted identification, pronoun subjects and fuller answers.",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c1–c4 and c6 were exact; accepted_answers removed; every item now has key_terms, a one-feature English rubric and source segments; c2's fragment model became a full sentence; c5's rubric no longer asks for the reason as a second feature; c4 now also cites s058, where the narrator calls Arth fast, so the set stays in story order and c4 comes before c5, whose prompt states that Arth is fast); nodyn_en expanded to a full English explanation (517 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
-      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: o/i paragraph corrected (the chapter has unmutated i Cai; the article, not i, explains i'r goedwig); manner yn + adjective (yn araf) explained."
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: o/i paragraph corrected (the chapter has unmutated i Cai; the article, not i, explains i'r goedwig); manner yn + adjective (yn araf) explained.",
+      "Quality continuation audit, review 1104-201055-25846: B meaning cues remove ambiguity and the Cai-reading answer; valid A7 variants; C1 narrowed to playing; second radical anchors; delivered colour swatches; complete reference translations and narrower yn explanation. English-cue warnings and long-note warning intentional under RULES §§6–7. Remaining action/material first-use support and bootstrap/pacing/design conflicts are explicit owner questions in OPEN.md; no silent waiver."
     ],
     "review_questions": [
       {
@@ -409,6 +410,13 @@
                 "covers_lexeme_ids": [
                   "cy-cegin"
                 ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wrth y gegin",
+                "gloss": "gegin ← cegin",
+                "gloss_kind": "radical"
               }
             ]
           },
@@ -520,6 +528,23 @@
                 "covers_lexeme_ids": [
                   "cy-du"
                 ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l03-img-audit-lliwiau",
+                "label": "du · coch · gwyn",
+                "src": "media/diagrams/cy-brenin-01-l03-img-audit-lliwiau.svg",
+                "alt": "Black, red and white swatches with Welsh labels.",
+                "status": "draft",
+                "art_brief": "Black, red and white swatches with Welsh labels.",
+                "covers_lexeme_ids": [
+                  "cy-du",
+                  "cy-coch",
+                  "cy-gwyn"
+                ],
+                "width": 300,
+                "height": 130
               }
             ]
           },
@@ -536,6 +561,13 @@
                 "covers_lexeme_ids": [
                   "cy-coch"
                 ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "goch hefyd",
+                "gloss": "goch ← coch",
+                "gloss_kind": "radical"
               }
             ]
           },
@@ -1249,7 +1281,7 @@
         "segment_id": "cy-brenin-01-l03-s083"
       }
     ],
-    "nodyn_en": "This chapter sets two kinds of yn side by side. The new one comes before a verb-noun: the basic form of a Welsh verb, as listed in the vocabulary, such as rhedeg ('run, running'), bwyta ('eat, eating') or darllen ('read, reading'). Its ending never changes for who does the action. Mae … yn + verb-noun is the present tense and covers both English 'is doing' and 'does': Mae Arth yn rhedeg ('Arth is running'), Mae Pero'n cysgu wrth y drws ('Pero is sleeping by the door').\n\nThe other is predicative yn from Pennod 1, before an adjective (a describing word) or a noun. It links the subject to what is said about it, the predicate, and causes soft mutation: a regular change to the next word's first consonant. Here c becomes g, d becomes dd, b and m become f, and g drops: Mae gwallt Cai'n goch ('Cai's hair is red'), Mae hi'n fore ('It is morning'), Mae Cymru'n wlad fach ('Wales is a small country'). In Mae Pero'n hen gi du a gwyn ('Pero is an old black and white dog') the h of hen cannot change, and hen itself softens ci to gi. Yn + adjective can also say how an action happens: Mae hi'n cerdded yn araf ('She walks slowly'). Here yn araf describes the walking, and it follows the same mutation pattern.\n\nThe yn before a verb-noun causes no mutation: Mae Arth yn gweld y cleddyf ('Arth sees the sword'), Mae Mali'n darllen ('Mali is reading'). So it is yn gyflym but yn cario, yn ddu but yn darllen: an action keeps its first letter, a description softens. After a vowel both kinds are written 'n (Cai'n, Pero'n). Two actions or two descriptions can share one Mae by repeating yn after ac ('and', the form of a before a vowel): Mae e'n rhedeg ac yn bwyta! ('He is running and eating!'), Mae Arth yn fach ac yn gyflym ('Arth is small and quick').\n\no means 'from' and i means 'to, into'. After them y ('the') shrinks to 'r, as it does after any vowel: Mae Arth yn cario dŵr o'r afon ('Arth is carrying water from the river'); O'r stabl i'r neuadd! ('From the stable to the hall!'). When the article comes between, it is the article that matters, not o or i: in i'r goedwig ('into the forest'), coedwig becomes goedwig because it is a feminine singular noun after the article. The chapter also has i Cai: Mae Arth yn rhoi'r cleddyf pren i Cai ('Arth gives the wooden sword to Cai'); personal names never mutate in this book.\n\nThe Treigladau ('mutations') table collects the soft mutations so far, with the chapter where each began. Predicative yn softens: yn goch, yn ddu, yn gyflym. The new row is the exception: yn before a verb-noun changes nothing (yn gweld, yn bwyta, yn darllen). y ('the') softens a feminine singular noun; every Welsh noun is masculine or feminine, and the vocabulary marks feminine ones (b.). So cegin → y gegin ('the kitchen'), and gardd → yr ardd ('the garden': the g drops, and y becomes yr before a vowel). An adjective after a feminine singular noun softens too: y gath ddu ('the black cat'), y goedwig dywyll ('the dark forest', t → d). And dyma ('here is') softens the noun after it: Dyma ddrws y neuadd ('Here is the door of the hall')."
+    "nodyn_en": "This chapter sets two kinds of yn side by side. The new one comes before a verb-noun: the basic form of a Welsh verb, as listed in the vocabulary, such as rhedeg ('run, running'), bwyta ('eat, eating') or darllen ('read, reading'). Its ending never changes for who does the action. Mae … yn + verb-noun is the present tense and covers both English 'is doing' and 'does': Mae Arth yn rhedeg ('Arth is running'), Mae Pero'n cysgu wrth y drws ('Pero is sleeping by the door').\n\nThe other is predicative yn from Pennod 1, before an adjective (a describing word) or a noun. It links the subject to what is said about it, the predicate, and causes soft mutation: a regular change to the next word's first consonant. Here c becomes g, d becomes dd, b and m become f, and g drops: Mae gwallt Cai'n goch ('Cai's hair is red'), Mae hi'n fore ('It is morning'), Mae Cymru'n wlad fach ('Wales is a small country'). In Mae Pero'n hen gi du a gwyn ('Pero is an old black and white dog') the h of hen cannot change, and hen itself softens ci to gi. Yn + adjective can also say how an action happens: Mae hi'n cerdded yn araf ('She walks slowly'). Here yn araf describes the walking, and it follows the same mutation pattern.\n\nThe yn before a verb-noun causes no mutation: Mae Arth yn gweld y cleddyf ('Arth sees the sword'), Mae Mali'n darllen ('Mali is reading'). So it is yn gyflym but yn cario, yn ddu but yn darllen: after this yn, verbal nouns remain unchanged; adjectives take soft mutation where applicable. After a vowel both kinds are written 'n (Cai'n, Pero'n). Two actions or two descriptions can share one Mae by repeating yn after ac ('and', the form of a before a vowel): Mae e'n rhedeg ac yn bwyta! ('He is running and eating!'), Mae Arth yn fach ac yn gyflym ('Arth is small and quick').\n\no means 'from' and i means 'to, into'. After them y ('the') shrinks to 'r, as it does after any vowel: Mae Arth yn cario dŵr o'r afon ('Arth is carrying water from the river'); O'r stabl i'r neuadd! ('From the stable to the hall!'). When the article comes between, it is the article that matters, not o or i: in i'r goedwig ('into the forest'), coedwig becomes goedwig because it is a feminine singular noun after the article. The chapter also has i Cai: Mae Arth yn rhoi'r cleddyf pren i Cai ('Arth gives the wooden sword to Cai'); personal names never mutate in this book.\n\nThe Treigladau ('mutations') table collects the soft mutations so far, with the chapter where each began. Predicative yn softens: yn goch, yn ddu, yn gyflym. The new row is the exception: yn before a verb-noun changes nothing (yn gweld, yn bwyta, yn darllen). y ('the') softens a feminine singular noun; every Welsh noun is masculine or feminine, and the vocabulary marks feminine ones (b.). So cegin → y gegin ('the kitchen'), and gardd → yr ardd ('the garden': the g drops, and y becomes yr before a vowel). An adjective after a feminine singular noun softens too: y gath ddu ('the black cat'), y goedwig dywyll ('the dark forest', t → d). And dyma ('here is') softens the noun after it: Dyma ddrws y neuadd ('Here is the door of the hall').\n\nRemaining reference translations: Mae Cai’n chwarae means “Cai is playing”; Mae’r cleddyf pren yn gyflym iawn means “The wooden sword is very fast”; Mae Cai’n codi cleddyf pren means “Cai is lifting a wooden sword”. In the verbal-noun table, yn gweld, yn gwneud and yn gweithio mean “seeing”, “making/doing” and “working”; yn bwyta, yn darllen and yn dod mean “eating”, “reading” and “coming”; yn codi, yn cario and yn cysgu mean “lifting/getting up”, “carrying” and “sleeping”. Mae Pero’n rhedeg o’r buarth, o’r llys, i’r goedwig means “Pero runs out of the farmyard, out of the court, into the forest”. Cath ddu means “a black cat”; dyma ddrws means “here is a door”."
   },
   "pensa": {
     "A": {
@@ -1389,7 +1421,9 @@
               "prompt": "Ble mae'r ogof? (ar · y bryn)",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Mae'r ogof ar y bryn."
+                "Mae'r ogof ar y bryn.",
+                "Ar y bryn.",
+                "Mae hi ar y bryn."
               ],
               "recall_of": "G01"
             }
@@ -1419,7 +1453,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae hi'n nos, ac mae Pero'n ___ wrth y drws: nos da, Pero!",
+          "prompt": "Mae hi'n nos, ac mae Pero'n ___ wrth y drws: nos da, Pero! (sleeping)",
           "answer_mode": "exact",
           "accepted_answers": [
             "cysgu"
@@ -1435,11 +1469,10 @@
         },
         {
           "id": "b3",
-          "prompt": "Mae Cai yn y gegin, ac mae e'n ___ ac yn yfed.",
+          "prompt": "Mae Cai yn y gegin, ac mae e'n ___ ac yn yfed. (eating)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "bwyta",
-            "darllen"
+            "bwyta"
           ]
         },
         {
@@ -1452,7 +1485,7 @@
         },
         {
           "id": "b5",
-          "prompt": "Mae'r dyn ___ yn y buarth, ac mae Cai'n codi'r cleddyf.",
+          "prompt": "Mae'r dyn ___ yn y buarth, ac mae Cai'n codi'r cleddyf. (straw)",
           "answer_mode": "exact",
           "accepted_answers": [
             "gwellt"
@@ -1460,7 +1493,7 @@
         },
         {
           "id": "b6",
-          "prompt": "Mae'r ffenest yn fach, ond mae ___ y neuadd yn fawr.",
+          "prompt": "Mae'r ffenest yn fach, ond mae ___ y neuadd yn fawr. (door)",
           "answer_mode": "exact",
           "accepted_answers": [
             "drws"
@@ -1499,7 +1532,7 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Ble mae Cai yn y bore?",
+          "prompt": "Ble mae Cai'n chwarae?",
           "answer_mode": "self_check",
           "model_answer": "Mae Cai yn y buarth.",
           "key_terms": [
@@ -1507,8 +1540,7 @@
           ],
           "rubric": "Says Cai is in the farmyard (y buarth).",
           "source_segment_ids": [
-            "cy-brenin-01-l03-s006",
-            "cy-brenin-01-l03-s007"
+            "cy-brenin-01-l03-s008"
           ]
         },
         {
@@ -2236,8 +2268,8 @@
       "cover": 1,
       "inline_scene": 2,
       "margin_vignette": 5,
-      "margin_diagram": 1,
-      "margin_gloss": 19
+      "margin_diagram": 2,
+      "margin_gloss": 21
     }
   },
   "completion": {

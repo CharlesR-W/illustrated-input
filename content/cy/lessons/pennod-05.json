@@ -24,7 +24,8 @@
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): two glosses used words the reader had not met. s019 'dewin = dyn + hud' (hud first at s083) moves to s084 'Ie, hud.', where the lamp has just lit itself; at s019 Mali's own 'Dewin?' carries the question until then (the tower, books, hat and dragon in between). s069 'athro → Arth (dysgu)' (dysgu first at s074) is now 'athro → Arth (darllen)', tied to the question Myrddin has just asked. Meta-language: the second table's caption and header 'Ateb' (a Pennod 12 word) is now '✓ · ✗', the third table's 'Ateb' header '→', and 'dim yn' (standalone dim arrives in Pennod 6) is '✗ yn' in the rule, caption and A a2 hint (the lexicon card front 'eisiau (dim 'yn')' is the integrator's call). Pensa: A a5–a7 and C c1 accept the fuller answers a reader would give.",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c1 and c6 converted from exact, accepted_answers removed; c2 moved before c1 for story order, since its evidence is s005–s008; c2 prompt 'Sut rwyt ti'n gwybod?' corrected to 'Sut wyt ti'n gwybod?' and its model answer now quotes 'Wrth gwrs … Arth wyt ti'; source_segment_ids added to c5; every rubric cut to one content point; key_terms added or extended); nodyn_en expanded to a full English explanation (658 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
       "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: ll/rh exception added to yn + SM; scope of word-order and wyt ti statements narrowed; c4 is now the open 'Ble mae Mali eisiau mynd?'; c7 is 'A ti? Pwy wyt ti?'. The reviewer asked to drop the 'Ydw i'n ddewr? → Wyt / Nac wyt' table row and note example as unshown in the story; kept because Pensum A a11 drills that cell (see OPEN.md), now labelled in the note as not yet in the story.",
-      "Fix 2026-11-04 (OPEN.md ch5): Pensum A a11 drilled 'Ydw i'n ddewr? → Wyt', a cell the story never shows (RULES §7); recast as '\"Ydy Pero'n hen?\" (✓) → Ydy' (Ydy …? → Ydy at s039–040, s111–112; Pero is hen in Penodau 2–3). With no drill depending on it, the unshown 'Ydw i'n ddewr? → Wyt / Nac wyt' table row and its two note sentences are dropped, as the earlier review asked."
+      "Fix 2026-11-04 (OPEN.md ch5): Pensum A a11 drilled 'Ydw i'n ddewr? → Wyt', a cell the story never shows (RULES §7); recast as '\"Ydy Pero'n hen?\" (✓) → Ydy' (Ydy …? → Ydy at s039–040, s111–112; Pero is hen in Penodau 2–3). With no drill depending on it, the unshown 'Ydw i'n ddewr? → Wyt / Nac wyt' table row and its two note sentences are dropped, as the earlier review asked.",
+      "Quality continuation audit, review 1104-201055-10821: unique wizard/happy/sad B cues; copied A3/A4 recombined using existing licensed cells; delivered sad/happy contrast at first use. English cues and long-note warning intentional. Wizard/bravery and concrete-word bootstrap support, Myrddin naming chronology, omitted Wyt/Nac wyt objective and legacy A format remain owner questions; no story reordering or plan change."
     ],
     "review_questions": [
       {
@@ -728,6 +729,22 @@
                 "covers_lexeme_ids": [
                   "cy-trist"
                 ]
+              },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l05-img-audit-teimladau",
+                "label": "trist · hapus",
+                "src": "media/diagrams/cy-brenin-01-l05-img-audit-teimladau.svg",
+                "alt": "The same child contrasts sadness (tear) and happiness (smile).",
+                "status": "draft",
+                "art_brief": "The same child contrasts sadness (tear) and happiness (smile).",
+                "covers_lexeme_ids": [
+                  "cy-trist",
+                  "cy-hapus"
+                ],
+                "width": 300,
+                "height": 170
               }
             ]
           },
@@ -1515,22 +1532,22 @@
           "items": [
             {
               "id": "a3",
-              "prompt": "Mae e'n ddraig. → ?",
+              "prompt": "Mae e'n ddraig fach. → ?",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Ydy e'n ddraig?"
+                "Ydy e'n ddraig fach?"
               ]
             },
             {
               "id": "a4",
-              "prompt": "Rwyt ti'n ddraig. → ?",
+              "prompt": "Rwyt ti'n ddraig goch. → ?",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Wyt ti'n ddraig?"
+                "Wyt ti'n ddraig goch?"
               ],
               "common_wrong": [
                 {
-                  "answer": "Ydy ti'n ddraig?",
+                  "answer": "Ydy ti'n ddraig goch?",
                   "hint": "ti → Wyt ti …?"
                 }
               ]
@@ -1689,7 +1706,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae lamp Mali'n gynnes nawr. Hud! Mae Myrddin yn ___.",
+          "prompt": "Mae lamp Mali'n gynnes nawr. Hud! Mae Myrddin yn ___. (wizard)",
           "answer_mode": "exact",
           "accepted_answers": [
             "ddewin"
@@ -1714,20 +1731,18 @@
         },
         {
           "id": "b4",
-          "prompt": "Dyw Arth ddim yn drist: mae e'n ___.",
+          "prompt": "Dyw Arth ddim yn drist: mae e'n ___. (happy)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "hapus",
-            "ddewr"
+            "hapus"
           ]
         },
         {
           "id": "b5",
-          "prompt": "Dyw Mali ddim yn hapus yn y tŵr: mae hi'n ___.",
+          "prompt": "Dyw Mali ddim yn hapus yn y tŵr: mae hi'n ___. (sad)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "drist",
-            "ddewr"
+            "drist"
           ],
           "explanation": "yn + trist → drist"
         },
@@ -2206,7 +2221,7 @@
       "cover": 1,
       "inline_scene": 2,
       "margin_vignette": 5,
-      "margin_diagram": 0,
+      "margin_diagram": 1,
       "margin_gloss": 27
     }
   },

@@ -21,7 +21,8 @@
       "No 'A ti?' item: second-person forms arrive in Pennod 5.",
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): glosses no longer use a word before the reader meets it. s001's 'oer ↔ cynnes' (cynnes first at s003) moves to s003 as 'cynnes ↔ oer', beside the fire vignette; s036's 'pell ↔ agos' (agos first at s037) is now 'pell: Cwm Helyg … Llundain' (the Pennod 1 map), and s037 gets 'agos ↔ pell'; the yma/yno gloss at s049 came after both first uses, so s013 now has 'yma = yn y stabl' and s024 'yno ↔ yma'. Meta-language: Gramadeg header 'Ateb' (a Pennod 12 word) is now '✓ / ✗'; 'dim newid' is now 'll → ll'. Pensa: A a10 'yn ___ (llwyd) → llwyd' gave the answer in the cue; it is now a two-gap item that sets unchanged llwyd beside dawel (Enghraifft likewise: hen … dywyll); b1 also fitted agor, now cued by the cold; A a6/a8/a9/a11 and C c1/c3/c6 accept full answers, pronouns, the fronted identification and 'ar y llwybr' (where Pero runs at s086).",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (c1, c3 and c6 were exact; accepted_answers removed; every item has key_terms, a one-feature English rubric about content and source segments). The bare yes/no items c1, c2, c3 and c7 now carry a wh-follow-up with known words (Ble mae'r ceffylau? / Ble mae hi'n edrych? / Ble mae'r mwg? / Ble mae e?), because Pam? is first known in Pennod 5. c7's prompt no longer names the door, since its follow-up now asks where the creature is. The c5 model is a full sentence. Rubrics no longer test the Ydy/Ie form, only content. There is still no A ti? item (second person comes in Pennod 5) and no 'A …?' contrast item. nodyn_en is expanded to a full English explanation (582 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
-      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: 'feminine singular' restored in the adjective rule; c1–c6 rubrics reduced to one feature (c4 accepts the trees, c6 the path s086); c7 reworded to fix its referent (s098–s099)."
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: 'feminine singular' restored in the adjective rule; c1–c6 rubrics reduced to one feature (c4 accepts the trees, c6 the path s086); c7 reworded to fix its referent (s098–s099).",
+      "Quality continuation audit, review 1104-201055-31332: unique B cues; recombined copied A6–A9 with consistent finite/pronoun variants; C questions narrowed to their one-feature rubrics; first-use temperature/green diagrams, earlier tree aid, sound example and tower definition; completed example translations. English cues and long-note warnings intentional. Early question-type, legacy A-format and remaining perception/bootstrap decisions stay in OPEN.md."
     ],
     "review_questions": [
       {
@@ -274,7 +275,25 @@
           {
             "id": "cy-brenin-01-l04-s001",
             "text": "Mae hi'n nos yn Llys Cynyr, ac mae hi'n oer.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l04-img-audit-tymheredd",
+                "label": "oer · cynnes",
+                "src": "media/diagrams/cy-brenin-01-l04-img-audit-tymheredd.svg",
+                "alt": "Two thermometer diagrams contrast cold and warm temperatures.",
+                "status": "draft",
+                "art_brief": "Two thermometer diagrams contrast cold and warm temperatures.",
+                "covers_lexeme_ids": [
+                  "cy-oer",
+                  "cy-cynnes"
+                ],
+                "width": 300,
+                "height": 180
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l04-s002",
@@ -640,18 +659,12 @@
                 "covers_lexeme_ids": [
                   "cy-gwyrdd"
                 ]
-              }
-            ]
-          },
-          {
-            "id": "cy-brenin-01-l04-s040",
-            "text": "Mae coeden fawr wrth y llwybr, ac mae'r goeden yn uchel iawn.",
-            "inference_aids": [
+              },
               {
                 "type": "image",
                 "presentation": "margin_vignette",
                 "ref": "cy-brenin-01-l04-img-coeden",
-                "anchor_text": "coeden",
+                "anchor_text": "coed",
                 "label": "coeden",
                 "src": "media/vignettes/cy-brenin-01-l04-img-coeden.webp",
                 "alt": "",
@@ -663,6 +676,27 @@
                 "width": 400,
                 "height": 330
               },
+              {
+                "type": "image",
+                "presentation": "margin_diagram",
+                "ref": "cy-brenin-01-l04-img-audit-gwyrdd",
+                "label": "gwyrdd · du",
+                "src": "media/diagrams/cy-brenin-01-l04-img-audit-gwyrdd.svg",
+                "alt": "Green and black swatches with Welsh labels.",
+                "status": "draft",
+                "art_brief": "Green and black swatches with Welsh labels.",
+                "covers_lexeme_ids": [
+                  "cy-gwyrdd"
+                ],
+                "width": 300,
+                "height": 110
+              }
+            ]
+          },
+          {
+            "id": "cy-brenin-01-l04-s040",
+            "text": "Mae coeden fawr wrth y llwybr, ac mae'r goeden yn uchel iawn.",
+            "inference_aids": [
               {
                 "type": "gloss",
                 "presentation": "margin_gloss",
@@ -794,6 +828,13 @@
                 ],
                 "width": 400,
                 "height": 500
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "sŵn",
+                "gloss": "sŵn: «Pero! Pero!»",
+                "gloss_kind": "define"
               }
             ]
           },
@@ -919,7 +960,16 @@
           },
           {
             "id": "cy-brenin-01-l04-s069",
-            "text": "Mae Arth a Mali'n chwilio rhwng y coed, ac nawr mae Arth yn gweld tŵr."
+            "text": "Mae Arth a Mali'n chwilio rhwng y coed, ac nawr mae Arth yn gweld tŵr.",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "tŵr",
+                "gloss": "tŵr: tŷ uchel iawn",
+                "gloss_kind": "define"
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l04-s070",
@@ -1280,7 +1330,7 @@
         "segment_id": "cy-brenin-01-l04-s065"
       }
     ],
-    "nodyn_en": "This chapter teaches yes/no questions, their answers, and 'not'. Keep two kinds of sentence apart: ordinary Mae sentences, and identification sentences with yw (Pennod 2). Each has its own answer words.\n\nYdy …? In a Mae sentence with a definite subject, the question simply starts with Ydy instead of Mae; nothing else changes. A definite subject is a particular, known person or thing: a name (Pero), a pronoun such as e ('he, it'), or a noun with y, yr or 'r ('the'). Mae Pero yn y stabl ('Pero is in the stable') becomes Ydy Pero yn y stabl? ('Is Pero in the stable?'). So too Ydy'r goedwig yn bell? ('Is the forest far?') and, with a verb-noun, Ydy Pero'n cysgu yn y goedwig? ('Is Pero sleeping in the forest?').\n\nThere is no single word for 'yes' or 'no' here: you answer with the verb, Ydy ('yes, he/she/it is') or Nac ydy ('no, he/she/it isn't'). Ydy'r lamp yn gynnes? Ydy, mae'r lamp yn gynnes ('Is the lamp warm? Yes, the lamp is warm').\n\nDyw … ddim. For 'not', replace Mae with Dyw and put ddim after the subject: Dyw Pero ddim yn y stabl ('Pero isn't in the stable'); dyw Pero ddim yn dod ('Pero doesn't come'); Dyw'r sŵn ddim yn sŵn ci ('The noise isn't a dog's noise'). Positive and negative often stand together: Mae'r ceffylau yma, ond dyw Pero ddim yma ('The horses are here, but Pero isn't here'). Dyw … ddim is the southern form the book uses; treat it as a fixed frame for now. In this book so far every Ydy question and every Dyw sentence has a definite subject. Mae mwg ('There is smoke') has an indefinite one (some smoke, not 'the smoke'); questions and negatives about indefinite things work differently and are not used yet.\n\nIe and Nage. An identification sentence puts the important word first, then yw: Pero yw e ('It's Pero', literally 'Pero is it'). As a question it keeps the same words: Pero yw e? ('Is it Pero?'), Tân yw e? ('Is it fire?'). It does not start with a verb, so Ydy cannot answer it. Say Ie ('yes') or Nage ('no'): Cath yw e? Nage. ('Is it a cat? No.'); Ie, Pero yw e! ('Yes, it's Pero!'). A quick test: a question starting with Ydy takes Ydy or Nac ydy; one starting with a noun before yw takes Ie or Nage.\n\nThe Treigladau ('mutations') table adds new words to known rules. Predicative yn, which links a subject to a description, causes soft mutation, a regular change to the first consonant: tawel → yn dawel ('quiet'), cynnes → yn gynnes ('warm'), pell → yn bell ('far'), gwyrdd → yn wyrdd ('green'); so t → d, c → g, p → b, and g drops. But ll and rh do not change after this yn: Mae'r mwg yn llwyd ('The smoke is grey'). y ('the') softens a feminine singular noun: y goeden ('the tree'), y garreg ('the stone'); plurals do not change: y coed ('the trees'). An adjective after a feminine singular noun softens too: in mae Elen yn fenyw dawel ('Elen is a quiet woman') yn softens menyw and the feminine noun softens tawel. After masculine drws nothing changes: drws gwyrdd ('a green door'). Last, ar dân ('on fire'), ar gau ('closed') and ar agor ('open') are fixed phrases for now: ar ('on') softens tân and cau, and agor, starting with a vowel, cannot change. The table points to Pennod 16 for this rule."
+    "nodyn_en": "This chapter teaches yes/no questions, their answers, and 'not'. Keep two kinds of sentence apart: ordinary Mae sentences, and identification sentences with yw (Pennod 2). Each has its own answer words.\n\nYdy …? In a Mae sentence with a definite subject, the question simply starts with Ydy instead of Mae; nothing else changes. A definite subject is a particular, known person or thing: a name (Pero), a pronoun such as e ('he, it'), or a noun with y, yr or 'r ('the'). Mae Pero yn y stabl ('Pero is in the stable') becomes Ydy Pero yn y stabl? ('Is Pero in the stable?'). So too Ydy'r goedwig yn bell? ('Is the forest far?') and, with a verb-noun, Ydy Pero'n cysgu yn y goedwig? ('Is Pero sleeping in the forest?').\n\nThere is no single word for 'yes' or 'no' here: you answer with the verb, Ydy ('yes, he/she/it is') or Nac ydy ('no, he/she/it isn't'). Ydy'r lamp yn gynnes? Ydy, mae'r lamp yn gynnes ('Is the lamp warm? Yes, the lamp is warm').\n\nDyw … ddim. For 'not', replace Mae with Dyw and put ddim after the subject: Dyw Pero ddim yn y stabl ('Pero isn't in the stable'); dyw Pero ddim yn dod ('Pero doesn't come'); Dyw'r sŵn ddim yn sŵn ci ('The noise isn't a dog's noise'). Positive and negative often stand together: Mae'r ceffylau yma, ond dyw Pero ddim yma ('The horses are here, but Pero isn't here'). Dyw … ddim is the southern form the book uses; treat it as a fixed frame for now. In this book so far every Ydy question and every Dyw sentence has a definite subject. Mae mwg ('There is smoke') has an indefinite one (some smoke, not 'the smoke'); questions and negatives about indefinite things work differently and are not used yet.\n\nIe and Nage. An identification sentence puts the important word first, then yw: Pero yw e ('It's Pero', literally 'Pero is it'). As a question it keeps the same words: Pero yw e? ('Is it Pero?'), Tân yw e? ('Is it fire?'). It does not start with a verb, so Ydy cannot answer it. Say Ie ('yes') or Nage ('no'): Cath yw e? Nage. ('Is it a cat? No.'); Ie, Pero yw e! ('Yes, it's Pero!'). A quick test: a question starting with Ydy takes Ydy or Nac ydy; one starting with a noun before yw takes Ie or Nage.\n\nThe Treigladau ('mutations') table adds new words to known rules. Predicative yn, which links a subject to a description, causes soft mutation, a regular change to the first consonant: tawel → yn dawel ('quiet'), cynnes → yn gynnes ('warm'), pell → yn bell ('far'), gwyrdd → yn wyrdd ('green'); so t → d, c → g, p → b, and g drops. But ll and rh do not change after this yn: Mae'r mwg yn llwyd ('The smoke is grey'). y ('the') softens a feminine singular noun: y goeden ('the tree'), y garreg ('the stone'); plurals do not change: y coed ('the trees'). An adjective after a feminine singular noun softens too: in mae Elen yn fenyw dawel ('Elen is a quiet woman') yn softens menyw and the feminine noun softens tawel. After masculine drws nothing changes: drws gwyrdd ('a green door'). Last, ar dân ('on fire'), ar gau ('closed') and ar agor ('open') are fixed phrases for now: ar ('on') softens tân and cau, and agor, starting with a vowel, cannot change. The table points to Pennod 16 for this rule.\n\nRemaining example translations: Ydy’r goedwig ar dân? means “Is the forest on fire?”; Dyw’r goedwig ddim yn bell means “The forest is not far away”; Dyw’r coed ddim ar dân means “The trees are not on fire”; Mae’r mwg yn llwyd means “The smoke is grey”."
   },
   "pensa": {
     "A": {
@@ -1349,12 +1399,14 @@
           "items": [
             {
               "id": "a6",
-              "prompt": "\"Ydy'r goedwig ar dân?\" (✗) →",
+              "prompt": "\"Ydy'r tŵr yn oer?\" (✗) →",
               "answer_mode": "exact",
               "accepted_answers": [
                 "Nac ydy",
-                "Nac ydy. Dyw'r goedwig ddim ar dân",
-                "Dyw'r goedwig ddim ar dân"
+                "Nac ydy, dyw'r tŵr ddim yn oer.",
+                "Dyw'r tŵr ddim yn oer.",
+                "Nac ydy, dyw e ddim yn oer.",
+                "Dyw e ddim yn oer."
               ],
               "common_wrong": [
                 {
@@ -1365,10 +1417,16 @@
             },
             {
               "id": "a7",
-              "prompt": "\"Cath yw e?\" (✗) →",
+              "prompt": "\"Pero yw'r gath?\" (✗) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Nage"
+                "Nage",
+                "Nage, ci yw Pero.",
+                "Ci yw Pero.",
+                "Nage, dyw Pero ddim yn gath.",
+                "Dyw Pero ddim yn gath.",
+                "Nage, dyw e ddim yn gath.",
+                "Dyw e ddim yn gath."
               ],
               "common_wrong": [
                 {
@@ -1379,28 +1437,32 @@
             },
             {
               "id": "a8",
-              "prompt": "\"Tŵr carreg yw e?\" (✓) →",
+              "prompt": "\"Y tŵr yw'r tŷ carreg?\" (✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ie",
-                "Ie, tŵr carreg yw e",
-                "Tŵr carreg yw e"
+                "Ie, y tŵr yw'r tŷ carreg.",
+                "Y tŵr yw'r tŷ carreg.",
+                "Ie, mae e’n dŵr carreg.",
+                "Mae e’n dŵr carreg."
               ],
               "common_wrong": [
                 {
                   "answer": "Ydy",
-                  "hint": "… yw e? → Ie"
+                  "hint": "… yw …? → Ie"
                 }
               ]
             },
             {
               "id": "a9",
-              "prompt": "\"Ydy'r lamp yn gynnes?\" (✓) →",
+              "prompt": "\"Ydy'r neuadd yn gynnes?\" (✓) →",
               "answer_mode": "exact",
               "accepted_answers": [
                 "Ydy",
-                "Ydy, mae'r lamp yn gynnes",
-                "Mae'r lamp yn gynnes"
+                "Ydy, mae'r neuadd yn gynnes.",
+                "Mae'r neuadd yn gynnes.",
+                "Ydy, mae hi'n gynnes.",
+                "Mae hi'n gynnes."
               ],
               "common_wrong": [
                 {
@@ -1469,7 +1531,7 @@
       "items": [
         {
           "id": "b1",
-          "prompt": "Mae hi'n nos ac mae hi'n oer: mae Elen yn ___ y ffenest.",
+          "prompt": "Mae hi'n nos ac mae hi'n oer: mae Elen yn ___ y ffenest. (close)",
           "answer_mode": "exact",
           "accepted_answers": [
             "cau"
@@ -1493,11 +1555,10 @@
         },
         {
           "id": "b4",
-          "prompt": "Dyw Mali ddim yn gweld Pero: mae hi'n ___ yn y stabl ac yn y gegin.",
+          "prompt": "Dyw Mali ddim yn gweld Pero: mae hi'n ___ yn y stabl ac yn y gegin. (search)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "chwilio",
-            "galw"
+            "chwilio"
           ]
         },
         {
@@ -1549,9 +1610,9 @@
       "items": [
         {
           "id": "c1",
-          "prompt": "Ydy Pero yn y stabl? Ble mae'r ceffylau?",
+          "prompt": "Ble mae'r ceffylau?",
           "answer_mode": "self_check",
-          "model_answer": "Nac ydy. Dyw Pero ddim yn y stabl, ond mae'r ceffylau yno.",
+          "model_answer": "Mae'r ceffylau yn y stabl.",
           "key_terms": [
             "cy-stabl",
             "cy-ceffyl",
@@ -1565,9 +1626,9 @@
         },
         {
           "id": "c2",
-          "prompt": "Ydy Elen yn galw \"Pero!\"? Ble mae hi'n edrych?",
+          "prompt": "Ble mae Elen yn edrych?",
           "answer_mode": "self_check",
-          "model_answer": "Nac ydy. Dyw Elen ddim yn galw: mae hi'n edrych ar y goedwig.",
+          "model_answer": "Mae Elen yn edrych ar y goedwig.",
           "key_terms": [
             "cy-galw",
             "cy-edrych",
@@ -1581,9 +1642,9 @@
         },
         {
           "id": "c3",
-          "prompt": "Ydy'r goedwig ar dân? Ble mae'r mwg?",
+          "prompt": "Ble mae'r mwg?",
           "answer_mode": "self_check",
-          "model_answer": "Nac ydy. Mae'r mwg yn y coed, ond dyw'r coed ddim ar dân.",
+          "model_answer": "Mae'r mwg yn y coed.",
           "key_terms": [
             "cy-mwg",
             "cy-tan",
@@ -1612,9 +1673,9 @@
         },
         {
           "id": "c5",
-          "prompt": "Mae'r ffenest yn goch. Tân yw e? Ble mae'r tân?",
+          "prompt": "Ble mae'r tân?",
           "answer_mode": "self_check",
-          "model_answer": "Ie, tân yw e: mae'r tân yn y tŵr.",
+          "model_answer": "Mae'r tân yn y tŵr.",
           "key_terms": [
             "cy-ie",
             "cy-tan",
@@ -2060,8 +2121,8 @@
       "cover": 1,
       "inline_scene": 1,
       "margin_vignette": 4,
-      "margin_diagram": 0,
-      "margin_gloss": 28
+      "margin_diagram": 2,
+      "margin_gloss": 30
     }
   },
   "completion": {
