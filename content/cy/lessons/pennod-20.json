@@ -24,7 +24,9 @@
    "Fluent review 2026-10-12 applied: glosses no longer state false equations (s030 'etifedd → yr orsedd', s036 'gŵyl: gwledd, canu a chwarae', s079 'twrnamaint: cymryd rhan → ymladd'); B.b9 now establishes the heir relationship and B.b10 the message's importance; B.b6 also accepts dewis, B.b8 also paratoi; C.c1 and C.c3 keys widened; nodyn_en notes that the answer verb follows the person. Review-question verdicts, all accepted unchanged: s051 formula 'tynnu'r cleddyf o'r garreg' (no allan); s028 'Roedd hynny amser hir yn ôl'; s036 'ar ddydd Calan … Gŵyl Calan' (a story name for the feast, not claimed as a traditional title); s077 'urddo'; s113 'Rwyt ti'n dewis, a dw i'n gwrando!'; s069–070 'Fyddwch chi …? — Byddwn' (Cynyr answers for the family); s143 'Oedd etifedd gyda'r Brenin Uthr?'.",
    "Recall pass 2026-10-18: recurrences added for cy-cynnar (s001), cy-chwys (s005), cy-mis / cy-hydref (s015, the messenger's month on the road), cy-brenhines (new s147, Elen remembers the young queen she served; nothing is said about the queen's fate), cy-cywilydd (s035), cy-gorffwys (s063), cy-llyncu (s065), cy-deuddeg (s074), cy-helpu (s096), cy-blanced (s121), cy-moddion / cy-silff (s122), cy-ph-y-rhain (s125), cy-yna (s131, Modlen's 'y ddraig yna'), cy-gorffennol / cy-dyfodol / cy-tuag-at (s144, Myrddin's answer echoes Pennod 15). Padding: s073 shortened (dropped 'ac mae llysoedd mawr a bach yng Nghymru'), retired s123 (servants busy, a background line) to stay inside the word window. Other Pennod 18–19 items were left to Penodau 21–24, where they now recur.",
    "Owner fix 2026-11-04: Pensum C converted to open self_check questions (eight items in story order, all self_check with rubric, key_terms and sources; the exact c1 and c3 converted and accepted_answers removed; three Pam? items reduced to one, c7 (Elen's stated reason: Mali can read); c2 now asks the message, c5 where Mali saw the sword (not why she looks at Myrddin), c3 what there will be at Caerllion, new c4 the herald's answer about the new king; c6's yes/no has a 'Beth fydd e?' follow-up). nodyn_en expanded to a full English explanation, with the Rhan 2 summary explained. Cumulative tables limited to forms the course shows: Est ti? and Ddaeth e? (never in the prose) replaced by Wnest ti weld? / Wnest ti?; dau garw → dau gaws, tri cheffyl → tri chaws · chwe cheiniog (14), Ces i fara → Ces i gawl (12:s073), Aeth Cai → Aeth e, Cwympodd e → Cwympodd Cai. Pensum A recall a10 and its example drilled dros/drwy + SM, which the prose never shows (as in Pennod 16); now o Gaerllion (s013) and wrth ddrws (s002, s137). The checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content). Codex review (GPT-6.1-Sol, 2026-11-04) fixes: c4 (the new king pulling the sword, a whitelist formula glossed but never tested) replaced by the tournament question (s049) and the C order restored (mirror c4, tournament c5); future-table rows now exemplify their labels (bydd e: s132; Fyddwch chi …? — Byddwn); the note adds the ll-/rh- exception (yn llwyd, s044), says pob becomes bob, and translates the cumulative verb examples.",
-   "Quality continuation audit, review 1104-203450-23919: first message/messenger/important/throne meanings; unsupported heir pointer removed pending delivered generic reference diagram; future aid uses known dyfodol and Calan overload removed; valid A pronoun/e-fe variants; unique B senses including previously rejected paratoi alternative; copied A6 recombined; C6 open question; tense labels, yes/no scope and mixed-mutation wording corrected; remaining examples translated and teithio pointer refreshed. English cues/long note intentional. Inherited flag/period policy, death-timing clarification, legacy A contrast/format and future recycling remain owner questions."
+   "Quality continuation audit, review 1104-203450-23919: first message/messenger/important/throne meanings; unsupported heir pointer removed pending delivered generic reference diagram; future aid uses known dyfodol and Calan overload removed; valid A pronoun/e-fe variants; unique B senses including previously rejected paratoi alternative; copied A6 recombined; C6 open question; tense labels, yes/no scope and mixed-mutation wording corrected; remaining examples translated and teithio pointer refreshed. English cues/long note intentional. Inherited flag/period policy, death-timing clarification, legacy A contrast/format and future recycling remain owner questions.",
+   "Final gate-warning audit: stale first-use metadata/anchors aligned with delivered aids; simultaneous meaning/radical support retained without adding a scene. Sentence boundaries keep no more than two glosses on each sentence.",
+   "Closure correction: retain all three original Calan encounters; attach the calendar definition aid to the second-sentence Dydd Calan so the first sentence keeps only its two aids."
   ],
   "review_questions": []
  },
@@ -184,7 +186,7 @@
    },
    {
     "lexeme_id": "cy-etifedd",
-    "how": "gloss",
+    "how": "delivered generic inheritance margin_diagram at first use",
     "segment_id": "cy-brenin-01-l20-s030"
    },
    {
@@ -331,7 +333,10 @@
         "presentation": "margin_gloss",
         "anchor_text": "Negesydd",
         "gloss": "neges: «Dewch i Gaerllion!»",
-        "gloss_kind": "define"
+        "gloss_kind": "define",
+        "covers_lexeme_ids": [
+         "cy-neges"
+        ]
        },
        {
         "type": "gloss",
@@ -560,6 +565,13 @@
         "presentation": "margin_gloss",
         "anchor_text": "gŵyl fawr",
         "gloss": "gŵyl: gwledd, canu a chwarae",
+        "gloss_kind": "define"
+       },
+       {
+        "type": "gloss",
+        "presentation": "margin_gloss",
+        "anchor_text": "Dydd Calan",
+        "gloss": "Calan: dydd cyntaf y flwyddyn",
         "gloss_kind": "define"
        }
       ]
@@ -2411,7 +2423,7 @@
    "inline_scene": 2,
    "margin_vignette": 3,
    "margin_diagram": 1,
-   "margin_gloss": 32
+   "margin_gloss": 33
   }
  },
  "completion": {
