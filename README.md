@@ -19,6 +19,7 @@ those files reference:
 - La porta aperta (`it-NEW-01`, draft): `content/it/`
 - Die offene Tür (`de-NEW-01`, draft): `content/de/`
 - O café da esquina (`pt-NEW-01`, draft): `content/pt/`
+- Otwarty warsztat (`pl-NEW-01`, draft): `content/pl/`
 
 Standalone pages (not courses):
 
