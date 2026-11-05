@@ -16,6 +16,7 @@ those files reference:
 - Il libro e la via (`it-dante-01`, draft): `content/it-dante/`
 - 書與遠方 — Classical Chinese (`lzh-NEW-01`, draft): `content/lzh/`
 - La puerta del patio (`es-NEW-01`, draft): `content/es/`
+- La porta aperta (`it-NEW-01`, draft): `content/it/`
 - Die offene Tür (`de-NEW-01`, draft): `content/de/`
 - O café da esquina (`pt-NEW-01`, draft): `content/pt/`
 
