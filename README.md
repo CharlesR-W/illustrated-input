@@ -14,6 +14,7 @@ those files reference:
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Kvöldvakan (`is-kvold-01`, draft): `content/is/`
 - Il libro e la via (`it-dante-01`, draft): `content/it-dante/`
+- Die offene Tür (`de-NEW-01`, draft): `content/de/`
 
 Standalone pages (not courses):
 
