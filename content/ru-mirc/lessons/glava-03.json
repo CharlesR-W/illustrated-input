@@ -301,7 +301,7 @@
             "items": [
               {
                 "id": "ru-mirc-01-l03-i001",
-                "prompt": "Кто шёл к шко́ле с Да́рьей? — Ми́ша и ___.",
+                "prompt": "С Да́рьей шли её де́ти: Ми́ша и ___.",
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -327,7 +327,7 @@
               },
               {
                 "id": "ru-mirc-01-l03-i003",
-                "prompt": "Кто Анастаси́я Петро́вна? — Э́то ___.",
+                "prompt": "Give her familiar home name: Анастаси́я Петро́вна — э́то ___.",
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -454,7 +454,7 @@
           },
           {
             "id": "ru-mirc-01-l03-s051",
-            "text": "Мать зва́ла его́ «Ва́ня», Фёдор — «Ва́нька», а учи́тельница сказа́ла «Ива́н Петро́вич».",
+            "text": "Мать звала́ его́ «Ва́ня», Фёдор — «Ва́нька», а учи́тельница сказа́ла «Ива́н Петро́вич».",
             "paragraph_start": true
           },
           {
@@ -734,11 +734,12 @@
             "items": [
               {
                 "id": "ru-mirc-01-l03-i005",
-                "prompt": "Кто ста́рший брат На́сти? — Э́то ___.",
+                "prompt": "Кто не уме́л чита́ть вы́веску? — Э́то ___.",
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "Ива́н",
+                  "Ва́ня",
                   "Ива́н Петро́вич"
                 ],
                 "first_letters": 1,
@@ -752,7 +753,10 @@
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "На́стя"
+                  "На́стя",
+                  "Анастаси́я",
+                  "сестра́",
+                  "Анастаси́я Петро́вна"
                 ],
                 "first_letters": 1,
                 "source_segment_ids": [
@@ -774,7 +778,7 @@
               },
               {
                 "id": "ru-mirc-01-l03-i008",
-                "prompt": "Кто не уме́л чита́ть, как Ива́н? — Его́ ___.",
+                "prompt": "Кто сказа́л «На́стя уме́ет, а мы — нет»? — Его́ ___.",
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -798,9 +802,8 @@
               "G02"
             ],
             "obrazec": {
-              "rule": "он → чита́ет",
-              "prompt": "Он ___ (чита́ть; он).",
-              "answer": "чита́ет"
+              "prompt": "Он ___ (рабо́тать; он).",
+              "answer": "рабо́тает"
             },
             "items": [
               {
@@ -825,7 +828,7 @@
               },
               {
                 "id": "ru-mirc-01-l03-i023",
-                "prompt": "Э́то ___ и́мя (мой; оно́).",
+                "prompt": "Э́то ___ по́ле (мой; оно́).",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1305,6 +1308,7 @@
                 "answer_mode": "exact",
                 "accepted_answers": [
                   "Ива́н",
+                  "Ва́ня",
                   "Ива́н Петро́вич"
                 ],
                 "first_letters": 1,
@@ -1318,7 +1322,10 @@
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "На́стя"
+                  "На́стя",
+                  "Анастаси́я",
+                  "сестра́",
+                  "Анастаси́я Петро́вна"
                 ],
                 "first_letters": 1,
                 "source_segment_ids": [
@@ -1364,9 +1371,8 @@
               "G02"
             ],
             "obrazec": {
-              "rule": "он → чита́ет",
-              "prompt": "Он ___ (чита́ть; он).",
-              "answer": "чита́ет"
+              "prompt": "Он ___ (рабо́тать; он).",
+              "answer": "рабо́тает"
             },
             "items": [
               {
@@ -1801,9 +1807,8 @@
               "G02"
             ],
             "obrazec": {
-              "rule": "он → чита́ет",
-              "prompt": "Он ___ (чита́ть; он).",
-              "answer": "чита́ет"
+              "prompt": "Он ___ (рабо́тать; он).",
+              "answer": "рабо́тает"
             },
             "items": [
               {
@@ -2047,7 +2052,10 @@
                 "mode": "recognition",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "На́стя"
+                  "На́стя",
+                  "Анастаси́я",
+                  "сестра́",
+                  "Анастаси́я Петро́вна"
                 ],
                 "first_letters": 1,
                 "source_segment_ids": [
@@ -2106,9 +2114,8 @@
               "G02"
             ],
             "obrazec": {
-              "rule": "он → чита́ет",
-              "prompt": "Он ___ (чита́ть; он).",
-              "answer": "чита́ет"
+              "prompt": "Он ___ (рабо́тать; он).",
+              "answer": "рабо́тает"
             },
             "items": [
               {
@@ -2642,7 +2649,7 @@
         "form": "спроси́ла"
       },
       {
-        "form": "зва́ла"
+        "form": "звала́"
       },
       {
         "form": "спроси́л"
@@ -2698,7 +2705,8 @@
       "The lexicon schema has no government property. Required verb government is recorded explicitly in each verb entry notes, rather than adding an invalid field or altering tooling.",
       "Independent read-only Codex review, cx1104-124157-14313 (2026-11-04): all10 blockers corrected. Workbook i014 now names the absent village with a nominative frame; first-use sound/correctness glosses independently define meanings; слышать/смеяться/повторять locally aided; past narration s102 restored. Masculine -а/-я declension distinguished from masculine consonant class; окно́ stress corrected. Взяла́/взял arrows identify взять with брать separately marked imperfective. Свой recall has an explicit subject. Шарик explicitly outside in the yard. Vera explicitly knows Moscow. Exact comprehension keys narrowed/expanded. Suggestions addressed: narrative взял, Fyodor speech punctuation, C first-question scope, nontrivial i035/i047, agreement-specific feedback, Пётр reference and наш/ваш spelling explanation, and correct planned-cover classification/counts. No finding disputed; no new independent review claimed.",
       "Review-question verdicts: s077 почини́л accepted by independent reviewer as accurate economical support; s110/s182 resolved by correcting the form lemma to взять and separately marking its aspect partner брать. Planned art is absent and supplies no inference. Previous generic warning justifications still apply; no owner question decided.",
-      "Post-review semantic licence check: C first models contain nominative names and licensed imperfective past only; k-school dative remains input, never a required answer. The first question explicitly asks for Darya's children, excluding Nastya without relying on first-letter help."
+      "Post-review semantic licence check: C first models contain nominative names and licensed imperfective past only; k-school dative remains input, never a required answer. The first question explicitly asks for Darya's children, excluding Nastya without relying on first-letter help.",
+      "2026-11-04 stricter quality review cx 1104-214913-13971: original linguistic and pedagogical verdicts blocked; confirmed blockers repaired locally, not a second independent ready verdict. Corrected звала́ stress, replaced unmet чита́ет worked examples, narrowed ambiguous identity questions and accepted equivalent names. Added all six pre-attempt C frames, repaired scheduled singular/plural recall, annotated reference forms and corrected continuity wording. Copying-to-dictation suggestion remains optional; established literacy outcome unchanged. Existing owner/history questions remain open; audio suspended. Earlier ready claims above describe their historical snapshots."
     ],
     "review_questions": []
   },
@@ -2900,18 +2908,18 @@
             },
             {
               "id": "ru-mirc-01-l03-i052",
-              "prompt": "Я зна́ю ___ и́мя (свой; оно́).",
+              "prompt": "Э́то моё сло́во, а э́то ___ слова́ (мой; plural).",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
-                "своё"
+                "мои́"
               ],
               "first_letters": 1,
               "recall_of": "G01",
               "common_wrong": [
                 {
-                  "answer": "свой",
-                  "hint": "и́мя — оно́ → своё"
+                  "answer": "моё",
+                  "hint": "Слова́ — они́. Смотри́ Уро́к 1."
                 }
               ]
             }
@@ -3025,7 +3033,7 @@
       "items": [
         {
           "id": "ru-mirc-01-l03-i061",
-          "prompt": "Каки́е де́ти Да́рьи шли к но́вой шко́ле?",
+          "prompt": "Каки́е де́ти Да́рьи шли к но́вой шко́ле? С Да́рьей шли её сын ___ и её дочь ___.",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
@@ -3044,7 +3052,7 @@
         },
         {
           "id": "ru-mirc-01-l03-i062",
-          "prompt": "Что На́стя уме́ла де́лать, а Ива́н не уме́л?",
+          "prompt": "Что На́стя уме́ла де́лать, а Ива́н не уме́л? На́стя уме́ла ___, а Ива́н не уме́л.",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
@@ -3062,7 +3070,7 @@
         },
         {
           "id": "ru-mirc-01-l03-i063",
-          "prompt": "Как Ива́н хоте́л учи́ться и рабо́тать?",
+          "prompt": "Как Ива́н хоте́л учи́ться и рабо́тать? У́тром он ___, а ве́чером ___.",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
@@ -3081,7 +3089,7 @@
         },
         {
           "id": "ru-mirc-01-l03-i064",
-          "prompt": "Кто шёл в шко́лу с Ива́ном?",
+          "prompt": "Кто шёл в шко́лу с Ива́ном? С Ива́ном шла его́ ___.",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
@@ -3099,7 +3107,7 @@
         },
         {
           "id": "ru-mirc-01-l03-i065",
-          "prompt": "Как Ива́н писа́л на уро́ке?",
+          "prompt": "Как Ива́н писа́л на уро́ке? Он писа́л ___, но ___.",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
@@ -3118,7 +3126,7 @@
         },
         {
           "id": "ru-mirc-01-l03-i066",
-          "prompt": "Что Ива́н писа́л до́ма на доске́?",
+          "prompt": "Что Ива́н писа́л до́ма на доске́? До́ма он писа́л ___.",
           "mode": "productive",
           "answer_mode": "self_check",
           "source_segment_ids": [
@@ -3140,11 +3148,11 @@
   "grammar": {
     "title": "Уро́к 3. Кого́? Что? У кого́?",
     "rule": "Я ви́жу до́ску и бра́та. У Ива́на есть доска́; у него́ нет тетра́ди.",
-    "note_en": "Уро́к 3а: кого́? что? — the accusative\n\nA case is a form showing a noun's job in a sentence. The nominative names the subject, the person or thing doing the action. The accusative commonly names its direct object: what someone sees, reads, takes or loves. In «Ива́н ви́дит до́ску» (“Ivan sees the slate”), Ива́н is the subject and до́ску is the object. Russian uses endings rather than a fixed position to distinguish these jobs. Moving the object before the verb does not turn it into the subject. «Ве́ру Никола́евну он не ви́дел» means “He did not see Vera Nikolayevna.” The ending on Ве́ру still marks the woman as the object.\n\nFor a feminine noun ending in -а, replace -а with -у: доска́ → до́ску, ла́мпа → ла́мпу. Nouns in -я take -ю: На́стя → На́стю. Notice the stress movement in доска́ → до́ску: the case ending does not tell you where the stress belongs. A feminine noun ending in a soft sign keeps its form in the accusative: тетра́дь → тетра́дь. Both living and nonliving feminine nouns follow these patterns. Thus Ве́ру means “Vera” as an object, just as ла́мпу means “the lamp” as an object.\n\nMasculine singular nouns distinguish animacy. An animate noun denotes a person or animal; an inanimate noun denotes a thing. For an inanimate masculine noun, the accusative equals the nominative: «Я ви́жу стол» (“I see the table”). For an animate masculine noun ending in a consonant, -й or -ь, the accusative equals the genitive, the case explained in part б: Ива́н → Ива́на, брат → бра́та, учи́тель → учи́теля. «Она́ ви́дела бра́та» means “She saw her brother.” Masculine nouns ending in -а or -я instead follow the same ending pattern as nouns of that form regardless of gender: Ва́ня → Ва́ню (“Vanya” as object), ба́тюшка → ба́тюшку (“the priest” as object). They are masculine in agreement but belong to the noun class traditionally called the first declension. Neuter nouns ordinarily keep the nominative form: «Он пи́шет сло́во» (“He is writing a word”).\n\nAdjectives and possessive words agree with their noun. Feminine -ая becomes -ую and -яя becomes -юю: молода́я учи́тельница → молоду́ю учи́тельницу (“a young woman teacher”). Masculine animate adjective endings become -ого or -его: ста́рший брат → ста́ршего бра́та (“the older brother” as object). An inanimate masculine adjective keeps its nominative form. The table includes demonstratives, words that point something out: э́та → э́ту, э́тот → э́того before an animate masculine noun, but э́тот remains before an inanimate masculine noun. Neuter э́то remains э́то. Plural inanimate objects keep their nominative forms; animate plural objects belong to a later lesson and are for recognition here.\n\nPronouns replace nouns, but their object forms must be learned separately. Я becomes меня́, ты becomes тебя́, он becomes его́, она́ becomes её, мы becomes нас, вы becomes вас, они́ becomes их. The same вас can mean “you” addressing several people or one adult politely. When Vera asks «А кого́ вы ви́дите?» (“And whom do you see?”), Ivan answers «Вас» (“You”). Кого́ asks about a person or animal, while что asks about a thing. These questions identify the object without changing the verb's tense. Learn a verb together with its government: this means the case it requires. Here ви́деть кого́/что, слу́шать кого́/что and люби́ть кого́/что take accusative objects. Do not transfer an English preposition into Russian: слу́шать учи́тельницу means “listen to the teacher,” with no Russian equivalent of “to.”\n\nУро́к 3б: у кого́? чего́ нет? — the genitive\n\nThe genitive is another case, used here for possession, absence, certain prepositions, and the quantity after two, three or four. Possession means the relation between something and its owner: «доска́ На́сти» (“Nastya's slate”). The possessed thing comes first and the owner's name follows in the genitive. Russian does not add an apostrophe or a word meaning “of.” «Шко́ла уе́зда» means “the district's school,” the school maintained by the district. Genitive endings also appear in animate masculine accusatives, but the grammatical job differs: «Она́ ви́дит бра́та» means “She sees her brother,” while «доска́ бра́та» means “her brother's slate.” The form alone does not determine its use.\n\nTo build the genitive singular, first identify the noun's class. Masculine nouns ending in a consonant usually add -а: стол → стола́. Those ending in -й or -ь usually replace that ending with -я: учи́тель → учи́теля. Neuter -о becomes -а and -е becomes -я: окно́ → окна́, по́ле → по́ля. Feminine -а becomes -ы, while -я and feminine -ь become -и: шко́ла → шко́лы, На́стя → На́сти, тетра́дь → тетра́ди. After г, к, х, ж, ч, ш, щ, write и instead of ы: бу́ква → бу́квы, but кни́га → кни́ги. This is a spelling rule, not a separate meaning. The same -а/-я noun-class endings apply to masculine Ва́ня → Ва́ни (“Vanya’s”) and ба́тюшка → ба́тюшки (“the priest’s”); grammatical gender alone does not determine the ending. Stress can move, as in стол → стола́. Some nouns lose a vowel in the stem, the part before the ending: оте́ц → отца́, not *отеца. Learn such forms with the noun.\n\nAdjectives also take genitive endings: masculine and neuter -ого/-его, feminine -ой/-ей. Hard and soft patterns are shown in the table. In ordinary speech the г of -ого/-его in these adjective endings is pronounced like в; the spelling stays г. Possessives мой, твой, наш, ваш and свой inflect too. На́шего and ва́шего use -его because the spelling rule after ш writes е, not о, in these unstressed endings; compare the hard-pattern но́вого. Свой points back to the subject as owner: «На́стя взяла́ своего́ бра́та за́ руку» means “Nastya took her own brother by the hand.” It does not always mean “his.” Its English translation depends on whose action the sentence describes. Его́, её and их used as possessives do not change.\n\nRussian usually expresses having with у plus a genitive owner, then есть and a nominative thing: «У него́ есть доска́» (“He has a slate”). To express absence, use нет and put the missing thing in the genitive: «У Ива́на нет тетра́ди» (“Ivan has no exercise book”). In the past the story has «У Ива́на не́ было тетра́ди» (“Ivan had no exercise book”). Recognise this past frame now; its formal production belongs to Урок 5. In third-person pronouns after у, add н: у него́, у неё, у них. Compare object его́ with у него́ (“at his place; he has”).\n\nThe prepositions из (“out of; from”), от (“from”), до (“up to; until”), без (“without”), для (“for”), у (“at; by”) and по́сле (“after”) govern the genitive. «Я из Ряза́ни» means “I am from Ryazan”; «по́сле уро́ка» means “after the lesson.” Finally, two, three and four take a singular genitive noun: «три бу́квы» (“three letters”). The spelling бу́квы can also be nominative plural, but here the number determines its grammatical role. Use two forms for “two”: два with masculine and neuter nouns, две with feminine nouns. Larger quantities and adjectives within these number phrases need further rules; do not extend today's small pattern to every number.",
+    "note_en": "Уро́к 3а: кого́? что? — the accusative\n\nA case is a form showing a noun's job in a sentence. The nominative names the subject, the person or thing doing the action. The accusative commonly names its direct object: what someone sees, reads, takes or loves. In «Ива́н ви́дит до́ску» (“Ivan sees the slate”), Ива́н is the subject and до́ску is the object. Russian uses endings rather than a fixed position to distinguish these jobs. Moving the object before the verb does not turn it into the subject. «Ве́ру Никола́евну он не ви́дел» means “He did not see Vera Nikolayevna.” The ending on Ве́ру still marks the woman as the object.\n\nFor a feminine noun ending in -а, replace -а with -у: доска́ → до́ску, ла́мпа → ла́мпу. Nouns in -я take -ю: На́стя → На́стю. Notice the stress movement in доска́ → до́ску: the case ending does not tell you where the stress belongs. A feminine noun ending in a soft sign keeps its form in the accusative: тетра́дь → тетра́дь. Both living and nonliving feminine nouns follow these patterns. Thus Ве́ру means “Vera” as an object, just as ла́мпу means “the lamp” as an object.\n\nMasculine singular nouns distinguish animacy. An animate noun denotes a person or animal; an inanimate noun denotes a thing. For an inanimate masculine noun, the accusative equals the nominative: «Я ви́жу стол» (“I see the table”). For an animate masculine noun ending in a consonant, -й or -ь, the accusative equals the genitive, the case explained in part б: Ива́н → Ива́на, брат → бра́та, учи́тель → учи́теля. «Она́ ви́дела бра́та» means “She saw her brother.” Masculine nouns ending in -а or -я instead follow the same ending pattern as nouns of that form regardless of gender: Ва́ня → Ва́ню (“Vanya” as object), ба́тюшка → ба́тюшку (“the priest” as object). They are masculine in agreement but belong to the noun class traditionally called the first declension. Neuter nouns ordinarily keep the nominative form: «Он пи́шет сло́во» (“He is writing a word”).\n\nAdjectives and possessive words agree with their noun. Feminine -ая becomes -ую and -яя becomes -юю: молода́я учи́тельница → молоду́ю учи́тельницу (“a young woman teacher”). Masculine animate adjective endings become -ого or -его: ста́рший брат → ста́ршего бра́та (“the older brother” as object). An inanimate masculine adjective keeps its nominative form. The table includes demonstratives, words that point something out: э́та → э́ту, э́тот → э́того before an animate masculine noun, but э́тот remains before an inanimate masculine noun. Neuter э́то remains э́то. Plural inanimate objects keep their nominative forms; animate plural objects belong to a later lesson and are for recognition here.\n\nPronouns replace nouns, but their object forms must be learned separately. Я becomes меня́, ты becomes тебя́, он becomes его́, она́ becomes её, мы becomes нас, вы becomes вас, они́ becomes их. The same вас can mean “you” addressing several people or one adult politely. When Vera asks «А кого́ вы ви́дите?» (“And whom do you see?”), Ivan answers «Вас» (“You”). Кого́ asks about a person or animal, while что asks about a thing. These questions identify the object without changing the verb's tense. Learn a verb together with its government: this means the case it requires. Here ви́деть кого́/что, слу́шать кого́/что and люби́ть кого́/что take accusative objects. Do not transfer an English preposition into Russian: слу́шать учи́тельницу means “listen to the teacher,” with no Russian equivalent of “to.”\n\nУро́к 3б: у кого́? чего́ нет? — the genitive\n\nThe genitive is another case, used here for possession, absence, certain prepositions, and the quantity after two, three or four. Possession means the relation between something and its owner: «доска́ На́сти» (“Nastya's slate”). The possessed thing comes first and the owner's name follows in the genitive. Russian does not add an apostrophe or a word meaning “of.” «Шко́ла уе́зда» means “the district's school,” the school maintained by the district. Genitive endings also appear in animate masculine accusatives, but the grammatical job differs: «Она́ ви́дит бра́та» means “She sees her brother,” while «доска́ бра́та» means “her brother's slate.” The form alone does not determine its use.\n\nTo build the genitive singular, first identify the noun's class. Masculine nouns ending in a consonant usually add -а: стол → стола́. Those ending in -й or -ь usually replace that ending with -я: учи́тель → учи́теля. Neuter -о becomes -а and -е becomes -я: окно́ → окна́, по́ле → по́ля. Feminine -а becomes -ы, while -я and feminine -ь become -и: шко́ла → шко́лы, На́стя → На́сти, тетра́дь → тетра́ди. After г, к, х, ж, ч, ш, щ, write и instead of ы: бу́ква → бу́квы, but кни́га → кни́ги. This is a spelling rule, not a separate meaning. The same -а/-я noun-class endings apply to masculine Ва́ня → Ва́ни (“Vanya’s”) and ба́тюшка → ба́тюшки (“the priest’s”); grammatical gender alone does not determine the ending. Stress can move, as in стол → стола́. Some nouns lose a vowel in the stem, the part before the ending: оте́ц → отца́, not *отеца. Learn such forms with the noun.\n\nAdjectives also take genitive endings: masculine and neuter -ого/-его, feminine -ой/-ей. Hard and soft patterns are shown in the table. In ordinary speech the г of -ого/-его in these adjective endings is pronounced like в; the spelling stays г. Possessives мой, твой, наш, ваш and свой inflect too. На́шего and ва́шего use -его because the spelling rule after ш writes е, not о, in these unstressed endings; compare the hard-pattern но́вого. Свой points back to the subject as owner: «На́стя взяла́ своего́ бра́та за́ руку» means “Nastya took her own brother by the hand.” It does not always mean “his.” Its English translation depends on whose action the sentence describes. Его́, её and их used as possessives do not change.\n\nRussian usually expresses having with у plus a genitive owner, then есть and a nominative thing: «У него́ есть доска́» (“He has a slate”). To express absence, use нет and put the missing thing in the genitive: «У Ива́на нет тетра́ди» (“Ivan has no exercise book”). In the past the story has «У Ива́на не́ было тетра́ди» (“Ivan had no exercise book”). Recognise this past frame now; its formal production belongs to Урок 5. In third-person pronouns after у, add н: у него́, у неё, у них. Compare object его́ with у него́ (“at his place; he has”).\n\nThe prepositions из (“out of; from”), от (“from”), до (“up to; until”), без (“without”), для (“for”), у (“at; by”) and по́сле (“after”) govern the genitive. «Я из Ряза́ни» means “I am from Ryazan”; «по́сле уро́ка» means “after the lesson.” Finally, two, three and four take a singular genitive noun: «три бу́квы» (“three letters”). The spelling бу́квы can also be nominative plural, but here the number determines its grammatical role. Use two forms for “two”: два with masculine and neuter nouns, две with feminine nouns. Larger quantities and adjectives within these number phrases need further rules; do not extend today's small pattern to every number.\n\nAccusative possessives agree with the object: «свою́ учени́цу» (her own pupil, s119) shows feminine свою́. The reference/preview feminine forms мою́ (my), на́шу (our) and ва́шу (your) follow the same -у/-ю object pattern. They are lookup examples, not new required answers.",
     "tables": [
       {
         "id": "acc-nouns",
-        "caption": "Кого́? Что?",
+        "caption": "Кого́? Что? — Reference: marked cells include forms not yet met in the story; lookup only.",
         "header": [
           "Кто? Что?",
           "Кого́? Что?",
@@ -3163,7 +3171,7 @@
           ],
           [
             "учи́тель",
-            "учи́теля",
+            "учи́теля (reference/preview)",
             "teacher → direct object"
           ],
           [
@@ -3173,7 +3181,7 @@
           ],
           [
             "На́стя",
-            "На́стю",
+            "На́стю (reference/preview)",
             "Nastya → direct object"
           ],
           [
@@ -3188,7 +3196,7 @@
           ],
           [
             "Ва́ня",
-            "Ва́ню",
+            "Ва́ню (reference/preview)",
             "Vanya: masculine noun in -я"
           ],
           [
@@ -3200,7 +3208,7 @@
       },
       {
         "id": "acc-agreement",
-        "caption": "Ви́дит кого́? Что?",
+        "caption": "Ви́дит кого́? Что? — Reference: marked cells include forms not yet met in the story; lookup only.",
         "header": [
           "Кто? Что?",
           "Кого́? Что?",
@@ -3209,12 +3217,12 @@
         "rows": [
           [
             "молодо́й учени́к",
-            "молодо́го ученика́",
+            "молодо́го (reference/preview) ученика́",
             "young pupil, animate masculine"
           ],
           [
             "ста́рший брат",
-            "ста́ршего бра́та",
+            "ста́ршего (reference/preview) бра́та",
             "older brother, animate masculine"
           ],
           [
@@ -3229,7 +3237,7 @@
           ],
           [
             "си́няя тетра́дь",
-            "си́нюю тетра́дь",
+            "си́нюю (reference/preview) тетра́дь",
             "blue exercise book, soft adjective pattern"
           ],
           [
@@ -3239,7 +3247,7 @@
           ],
           [
             "э́тот брат",
-            "э́того бра́та",
+            "э́того (reference/preview) бра́та",
             "this brother"
           ],
           [
@@ -3307,7 +3315,7 @@
       },
       {
         "id": "gen-nouns",
-        "caption": "Чего́ нет?",
+        "caption": "Чего́ нет? — Reference: marked cells include forms not yet met in the story; lookup only.",
         "header": [
           "Кто? Что?",
           "Кого́? Чего́?",
@@ -3321,7 +3329,7 @@
           ],
           [
             "учи́тель",
-            "учи́теля",
+            "учи́теля (reference/preview)",
             "teacher"
           ],
           [
@@ -3361,12 +3369,12 @@
           ],
           [
             "Ва́ня",
-            "Ва́ни",
+            "Ва́ни (reference/preview)",
             "Vanya: masculine noun in -я"
           ],
           [
             "ба́тюшка",
-            "ба́тюшки",
+            "ба́тюшки (reference/preview)",
             "priest: -и after к"
           ],
           [
@@ -3378,7 +3386,7 @@
       },
       {
         "id": "gen-adjectives",
-        "caption": "Чей? Чья? Чьё?",
+        "caption": "Чей? Чья? Чьё? — Reference: marked cells include forms not yet met in the story; lookup only.",
         "header": [
           "Кто? Что?",
           "Кого́? Чего́?",
@@ -3387,7 +3395,7 @@
         "rows": [
           [
             "но́вый / но́вое",
-            "но́вого",
+            "но́вого (reference/preview)",
             "new: masculine / neuter"
           ],
           [
@@ -3397,52 +3405,52 @@
           ],
           [
             "си́ний / си́нее",
-            "си́него",
+            "си́него (reference/preview)",
             "blue: soft masculine / neuter"
           ],
           [
             "си́няя",
-            "си́ней",
+            "си́ней (reference/preview)",
             "blue: soft feminine"
           ],
           [
             "мой / моё",
-            "моего́",
+            "моего́ (reference/preview)",
             "my: masculine / neuter"
           ],
           [
             "моя́",
-            "мое́й",
+            "мое́й (reference/preview)",
             "my: feminine"
           ],
           [
             "твой / твоё",
-            "твоего́",
+            "твоего́ (reference/preview)",
             "your: masculine / neuter"
           ],
           [
             "твоя́",
-            "твое́й",
+            "твое́й (reference/preview)",
             "your: feminine"
           ],
           [
             "наш / на́ше",
-            "на́шего",
+            "на́шего (reference/preview)",
             "our: masculine / neuter"
           ],
           [
             "на́ша",
-            "на́шей",
+            "на́шей (reference/preview)",
             "our: feminine"
           ],
           [
             "ваш / ва́ше",
-            "ва́шего",
+            "ва́шего (reference/preview)",
             "your: masculine / neuter"
           ],
           [
             "ва́ша",
-            "ва́шей",
+            "ва́шей (reference/preview)",
             "your: feminine"
           ],
           [
@@ -3452,17 +3460,17 @@
           ],
           [
             "своя́",
-            "свое́й",
+            "свое́й (reference/preview)",
             "subject's own: feminine"
           ],
           [
             "э́тот / э́то",
-            "э́того",
+            "э́того (reference/preview)",
             "this: masculine / neuter"
           ],
           [
             "э́та",
-            "э́той",
+            "э́той (reference/preview)",
             "this: feminine"
           ]
         ]
@@ -3579,7 +3587,7 @@
   "words_with_history": {
     "title": "Слова́ с исто́рией",
     "word": "и́мя и о́тчество",
-    "text": "Мать зва́ла сы́на «Ва́ня». Для неё э́то был её сын, её Ва́ня. Фёдор крича́л: «Ва́нька!» — он был ста́рший брат. Учи́тельница сказа́ла «Ива́н Петро́вич». И́мя и о́тчество: она́ говори́ла с ним, как со взро́слым. Фами́лия была́ одна́: Соколо́в. Но до́ма он был Ва́ня, а в шко́ле — Ива́н Петро́вич.",
+    "text": "Мать звала́ сы́на «Ва́ня». Для неё э́то был её сын, её Ва́ня. Фёдор крича́л: «Ва́нька!» — он был ста́рший брат. Учи́тельница сказа́ла «Ива́н Петро́вич». И́мя и о́тчество: она́ говори́ла с ним, как со взро́слым. Фами́лия была́ одна́: Соколо́в. Но до́ма он был Ва́ня, а в шко́ле — Ива́н Петро́вич.",
     "lexeme_ids": [
       "ru-imya",
       "ru-otchestvo",
