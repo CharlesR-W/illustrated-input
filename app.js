@@ -9,6 +9,9 @@ const Core = window.IllustratedCore;
 const UI_DEFAULTS = {
   skip: "Skip to the text", nav_lessons: "Lessons", contents: "Contents", course_progress: "Course progress",
   continue: "Continue", start: "Start reading", how_to_read: "How to read this book",
+  under_construction: "Under construction",
+  under_construction_note: "This part of the course is an unreviewed draft. It is being rewritten and may change completely.",
+  under_construction_from: "Lessons {from} onward are under construction: unreviewed drafts that may change completely.",
   part: "Part", lesson: "Lesson", lessons_range: "Lessons {from}–{to}", planned: "coming soon",
   finished: "finished", hide_notes: "Hide notes", show_notes: "Show notes", notes: "Notes",
   grammar: "Grammar", grammar_note_en: "Note (English)",
@@ -195,6 +198,28 @@ function courseString(key, vars) {
 
 // ------------------------------------------------------------------ course features
 
+// Owner-set "under construction" marks: content/courses.json course entries may carry
+// under_construction: true or { from: <lesson order>, note_en: "..." }.
+function constructionMark(entry) {
+  entry ??= (state.index?.courses || []).find((course) => course.id === state.course?.id) || state.indexEntry;
+  const mark = entry?.under_construction;
+  return mark === true ? {} : mark && typeof mark === "object" ? mark : null;
+}
+function underConstruction(order, entry) {
+  const mark = constructionMark(entry);
+  return Boolean(mark) && (order === undefined ? !Number.isInteger(mark.from) : !Number.isInteger(mark.from) || order >= mark.from);
+}
+function constructionBanner(order) {
+  const mark = constructionMark();
+  if (!mark) return null;
+  if (order !== undefined && !underConstruction(order)) return null;
+  const text = order === undefined && Number.isInteger(mark.from) ? t("under_construction_from", { from: mark.from }) : (mark.note_en || t("under_construction_note"));
+  return h("p", { class: "construction-banner", role: "note", lang: "en" },
+    h("strong", null, `${t("under_construction")}. `), text);
+}
+function constructionDot(order) {
+  return Number.isInteger(constructionMark()?.from) && underConstruction(order) ? h("span", { class: "construction-dot", title: t("under_construction"), role: "img", "aria-label": t("under_construction") }) : null;
+}
 function capability(name) { return state.course?.capabilities?.[name] === true; }
 let vocabularyStorage = null;
 let vocabularyStorageCourse = null;
@@ -363,7 +388,8 @@ function renderCourseSwitch() {
         h("span", { class: "course-option-title", lang: course.language || null }, course.title || course.id),
         course.language_name ? h("small", { lang: course.language || null }, course.language_name) : null,
         // The current course's tag follows its capability; others' tags are plain text.
-        tagged(course) ? (course.id === current ? ui("span", "custom", { class: "custom-tag" }) : h("small", null, t("custom"))) : null)))));
+        tagged(course) ? (course.id === current ? ui("span", "custom", { class: "custom-tag" }) : h("small", null, t("custom"))) : null,
+        constructionMark(course) ? h("small", { class: "construction-tag", lang: "en" }, Number.isInteger(constructionMark(course).from) ? `${t("under_construction")} · ${t("lesson")} ${constructionMark(course).from}+` : t("under_construction")) : null)))));
   box.hidden = false;
 }
 
@@ -704,7 +730,7 @@ function renderNav() {
       const finished = done.has(entry.id);
       const inner = [
         h("span", { class: "lesson-number", "aria-hidden": "true" }, pad(order)),
-        h("span", { class: "lesson-name", lang: targetLang() }, entry.title || entry.id),
+        h("span", { class: "lesson-name", lang: targetLang() }, entry.title || entry.id, available(entry) ? constructionDot(order) : null),
         finished ? h("span", { class: "lesson-check" }, h("span", { "aria-hidden": "true" }, "✓"), h("span", { class: "visually-hidden", lang: tl("finished_state")[1] }, bare(t("finished_state")))) : null
       ];
       if (!available(entry)) {
@@ -790,7 +816,7 @@ function showIntro(focus) {
     h("div", { class: "intro-card", lang: "en" },
       h("p", { class: "eyebrow", lang: targetLang() }, state.course.title || ""),
       h("h1", { id: "intro-title" }, state.course.intro_title_en || "How to read this book"),
-      body, courseCredits(),
+      constructionBanner(), body, courseCredits(),
       h("div", { class: "intro-actions" }, ui("button", "start", { class: "button primary", type: "button", onclick: done })))
   );
   showView("intro");
@@ -875,7 +901,8 @@ function showOverview(focus) {
     h("header", { class: "overview-header" },
       h("p", { class: "eyebrow", lang: targetLang() }, course.language?.name || ""),
       h("h1", { id: "overview-title", lang: targetLang() }, course.title || ""),
-      course.subtitle ? h("p", { class: "overview-subtitle", lang: targetLang() }, course.subtitle) : null),
+      course.subtitle ? h("p", { class: "overview-subtitle", lang: targetLang() }, course.subtitle) : null,
+      constructionBanner()),
     h("div", { class: "overview-actions" },
       target ? h("a", { class: "button primary", id: "continue-link", href: `#${encodeURIComponent(target.id)}` },
         h("span", { lang: tl(done.size ? "continue" : "start")[1] }, t(done.size ? "continue" : "start")),
@@ -898,7 +925,7 @@ function showOverview(focus) {
         const finished = done.has(entry.id);
         const content = [
           h("span", { class: "chapter-number", "aria-hidden": "true" }, pad(order)),
-          h("span", { class: "chapter-title", lang: targetLang() }, entry.title || entry.id),
+          h("span", { class: "chapter-title", lang: targetLang() }, entry.title || entry.id, available(entry) ? constructionDot(order) : null),
           finished ? h("span", { class: "chapter-state done" }, h("span", { "aria-hidden": "true" }, "✓ "), h("span", { lang: tl("finished_state")[1] }, bare(t("finished_state")))) : null,
           !available(entry) ? ui("span", "planned", { class: "chapter-state" }) : null
         ];
@@ -1015,7 +1042,8 @@ function renderLessonHeader(lesson, order, part) {
       part && part.number !== "" ? h("span", { lang: tl("part")[1] }, `${t("part")} ${part.number} · `) : null,
       h("span", { lang: tl("lesson")[1] }, lessonLabel(order))),
     h("h1", { id: "lesson-title", lang: targetLang(), tabindex: "-1" }, lesson.title || ""),
-    lesson.status && lesson.status !== "published" ? ui("span", statusKey, { class: "status-badge" }) : null);
+    lesson.status && lesson.status !== "published" ? ui("span", statusKey, { class: "status-badge" }) : null,
+    constructionBanner(order));
 }
 
 function renderToolbar(lesson) {
@@ -2742,7 +2770,8 @@ function renderWorkbookBook(lesson, order, part) {
         part && part.number !== "" ? h("span", { lang: tl("part")[1] }, `${t("part")} ${part.number} · `) : null,
         h("span", { lang: tl("lesson")[1] }, lessonLabel(order))),
       h("h1", { id: "lesson-title", lang: targetLang(), tabindex: "-1" }, lesson.title || ""),
-      lesson.status && lesson.status !== "published" ? ui("span", statusKey, { class: "status-badge" }) : null),
+      lesson.status && lesson.status !== "published" ? ui("span", statusKey, { class: "status-badge" }) : null,
+      constructionBanner(order)),
     h("p", { class: "workbook-back" }, h("a", { href: `#${encodeURIComponent(lesson.id)}` },
       h("span", { "aria-hidden": "true" }, "← "), ui("span", "back_to_chapter"))),
     stressConfig() ? h("div", { class: "lesson-toolbar" }, renderStressToggle(lesson)) : null,
