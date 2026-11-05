@@ -26,7 +26,8 @@
       "Running words about 930 against 850 (window 765–935, at the top): the chapter also carries next-five-chapter recall for Penodau 3–7 (breakfast foods, yfed, gardd, gweithio, chwarae, chwilio, galw, oer, carreg, sŵn; Pennod 7 sefyll, cymryd, bwced, gwynt, dail, adar, distaw, prysur, clust). Each recall item sits inside an event (birthday breakfast, Cai riding, the evening search for Arth).",
       "Audit-fix pass 2026-10-19 (docs/reviews/welsh-russian-lessons-2026-10-19.md): Pensa bank ambiguities fixed: b9 'does dim ___ gyda fe' fitted both arian and the bank word aur, so aur leaves the bank (12 words, still 3 spare); b7 'mae e'n ___ i Arth' also fitted anrheg, now cued by mutual liking (→ ffrind). A a10 accepts the short 'Ydw'; C c1 accepts 'Cai yw'r marchog'.",
       "Owner fix 2026-11-04: Pensum C converted to open self_check questions (all seven items now self_check with rubric, key_terms and sources; c1, c2 and c6 converted from exact; c2 bare yes/no given the follow-up 'Ble mae'r ddraig aur?' and moved before c1 (story order, s028–030 before s033–035; IDs kept); c7 'A ti? Oes ffrind gyda ti?' given 'Beth yw enw'r ffrind?'; c4 and c5 both kept as good existing Pam? items); nodyn_en expanded to a full English explanation (687 words); the checker's 60-word nodyn_en cap is advisory (RULES §6: length follows content).",
-      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: possession opening no longer claims Welsh has no 'have' verb or a fixed order; c2 and c3 made single open questions (c3 quotes s060 to fix giver/recipient); c4/c6 anchored to their scenes; c5 rubric accepts age, size, strength or no sword/money."
+      "Codex review (GPT-6.1-Sol, 2026-11-04) of the C/nodyn fix: possession opening no longer claims Welsh has no 'have' verb or a fixed order; c2 and c3 made single open questions (c3 quotes s060 to fix giver/recipient); c4/c6 anchored to their scenes; c5 rubric accepts age, size, strength or no sword/money.",
+      "Quality continuation audit, review 1104-202415-32698: B8/B9 unique sense cues; cloak and riding aids moved to first use; sword impact made explicit in its already planned straw-man incident; false apology=sad equation removed (correct English popup/note retained); copied A2 recombined; C2 avoids premature bare-noun preposition production; C7 elicits a reason on either personal-response branch. English-cue and long-note warnings intentional. Weight/strength/material bootstrap, accurate Welsh apology support and repeated gag/legacy format remain owner questions; no new incident or plan change."
     ],
     "review_questions": [
       {
@@ -605,7 +606,25 @@
           {
             "id": "cy-brenin-01-l08-s031",
             "text": "Mae Elen yn codi clogyn, ac mae hi'n rhoi'r clogyn i Cai.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "margin_vignette",
+                "ref": "cy-brenin-01-l08-img-clogyn",
+                "anchor_text": "clogyn",
+                "label": "clogyn",
+                "src": "media/vignettes/cy-brenin-01-l08-img-clogyn.webp",
+                "alt": "",
+                "status": "draft",
+                "art_brief": "A long red wool cloak laid out flat, with a round silver brooch at the neck. Ink line and watercolour, transparent background, no text.",
+                "covers_lexeme_ids": [
+                  "cy-clogyn"
+                ],
+                "width": 400,
+                "height": 500
+              }
+            ]
           },
           {
             "id": "cy-brenin-01-l08-s032",
@@ -617,22 +636,6 @@
                 "anchor_text": "newydd",
                 "gloss": "newydd ↔ hen",
                 "gloss_kind": "antonym"
-              },
-              {
-                "type": "image",
-                "presentation": "margin_vignette",
-                "ref": "cy-brenin-01-l08-img-clogyn",
-                "anchor_text": "Clogyn",
-                "label": "clogyn",
-                "src": "media/vignettes/cy-brenin-01-l08-img-clogyn.webp",
-                "alt": "",
-                "status": "draft",
-                "art_brief": "A long red wool cloak laid out flat, with a round silver brooch at the neck. Ink line and watercolour, transparent background, no text.",
-                "covers_lexeme_ids": [
-                  "cy-clogyn"
-                ],
-                "width": 400,
-                "height": 500
               }
             ]
           },
@@ -888,15 +891,7 @@
           },
           {
             "id": "cy-brenin-01-l08-s066",
-            "text": "Ac mae e'n gallu marchogaeth hefyd."
-          },
-          {
-            "id": "cy-brenin-01-l08-s067",
-            "text": "Nawr mae e ar y ceffyl ifanc, yn y clogyn newydd, ac mae'r darian gyda fe."
-          },
-          {
-            "id": "cy-brenin-01-l08-s068",
-            "text": "Mae e'n marchogaeth yn gyflym o'r buarth i'r ardd, ac o'r ardd i'r buarth.",
+            "text": "Ac mae e'n gallu marchogaeth hefyd.",
             "inference_aids": [
               {
                 "type": "gloss",
@@ -906,6 +901,15 @@
                 "gloss_kind": "synonym"
               }
             ]
+          },
+          {
+            "id": "cy-brenin-01-l08-s067",
+            "text": "Nawr mae e ar y ceffyl ifanc, yn y clogyn newydd, ac mae'r darian gyda fe."
+          },
+          {
+            "id": "cy-brenin-01-l08-s068",
+            "text": "Mae e'n marchogaeth yn gyflym o'r buarth i'r ardd, ac o'r ardd i'r buarth.",
+            "inference_aids": []
           },
           {
             "id": "cy-brenin-01-l08-s069",
@@ -1085,7 +1089,7 @@
           },
           {
             "id": "cy-brenin-01-l08-s093",
-            "text": "Ond mae'r cleddyf yn drwm, ac mae e'n mynd i'r dyn gwellt newydd.",
+            "text": "Ond mae'r cleddyf yn drwm, ac mae e'n mynd i'r dyn gwellt newydd. Nawr mae'r cleddyf yn y dyn gwellt newydd!",
             "paragraph_start": true
           },
           {
@@ -1121,15 +1125,7 @@
             "text": "\"Mae'n ddrwg gyda fi, Cai!\"",
             "paragraph_start": true,
             "speaker": "char-arth",
-            "inference_aids": [
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "Mae'n ddrwg gyda fi",
-                "gloss": "= Dw i'n drist, Cai!",
-                "gloss_kind": "synonym"
-              }
-            ]
+            "inference_aids": []
           },
           {
             "id": "cy-brenin-01-l08-s096",
@@ -1529,7 +1525,7 @@
         "segment_id": "cy-brenin-01-l08-s070"
       }
     ],
-    "nodyn_en": "For possession, saying that someone has something, the southern pattern used here says the thing is with them, using gyda ('with'): Mae cleddyf gyda Cai ('Cai has a sword', literally 'a sword is with Cai'). In this pattern the order is Mae, then the thing, then gyda, then the owner. Other words can follow: Mae pasteiod gyda hi ar y plât mawr ('She has pies on the big plate').\n\nAfter gyda, use the pronouns fi, ti, fe and hi: Mae clogyn newydd gyda fi! ('I have a new cloak!'), Mae ffrind gyda ti ('You have a friend'), Mae tarian gyda fe ('He has a shield'), Mae pasteiod gyda hi ('She has pies'). A name stays as it is, because personal names never mutate (never change their first sound). Before a vowel sound, gyda becomes gydag: Mae cleddyf gyda Cai, ond mae draig gydag Arth ('Cai has a sword, but Arth has a dragon').\n\nThe thing owned is almost always indefinite here. It has no 'the': 'a sword', 'a present', 'money'. So these sentences work like the 'there is' sentences of Pennod 6. A question begins Oes …?, the answers are Oes ('Yes') and Nac oes ('No'), and the negative is Does dim …. Cai asks, Mali, oes anrheg gyda ti? ('Mali, have you got a present?'), and Mali says Oes. Arth answers Nac oes. Does dim anrheg gyda fi ('No. I haven't got a present'). Likewise Does dim arian gyda fi ('I have no money'). Myrddin turns Arth's words into a question just with his voice: Does dim byd gyda ti? ('You have nothing?').\n\nKeep three ideas apart. Cleddyf Cai yw e ('It's Cai's sword') says whose sword it is: as in Pennod 2, the owner simply follows the thing, with no word for 'of'. Mae cleddyf gyda Cai ('Cai has a sword') says what Cai has. Mae Cai'n cael cleddyf go iawn ('Cai gets a real sword') says what he receives: cael ('to get') is the other side of rhoi ('to give').\n\nA verb-noun is the dictionary form of a verb, the form used after yn. Three verb-nouns here take a second verb-noun straight after them, with no word for 'to': gallu ('to be able, can'), hoffi ('to like') and cael, which before a verb-noun means 'to be allowed to'. Mae Cai'n gallu marchogaeth ('Cai can ride'), Dw i ddim yn gallu darllen ('I can't read'), Dw i'n gallu dysgu Cai! ('I can teach Cai!'), Dw i'n hoffi marchogaeth! ('I like riding!'), Dw i'n cael dal y cleddyf? ('Am I allowed to hold the sword?'). The second verb-noun does not mutate. Hoffi can also take a noun: Dw i'n hoffi'r anrheg ('I like the present'). Questions are made as in Pennod 5: Wyt ti'n gallu codi'r cleddyf? ('Can you lift the sword?') Nac ydw! ('No!').\n\nThe mutation table adds a group of prepositions. After ar ('on'), wrth ('by'), i ('to, for'), o ('from, of') and dan ('under'), the next word takes the soft mutation, a softening of its first sound: m becomes f, d becomes dd, c becomes g. Examples: Clogyn newydd i farchog newydd ('A new cloak for a new knight', from marchog), wrth ddrws y neuadd ('by the door of the hall', from drws), ar gadair ('on a chair', from cadair), ar garreg ('on a stone', from carreg). When 'the' comes between, the preposition does not change the noun: ar y bwrdd hir ('on the long table'). Only the Pennod 2 rule for 'the' with a feminine noun applies: ar y darian ('on the shield', from tarian). Names do not change: mae hi'n rhoi'r clogyn i Cai ('she gives the cloak to Cai'). The book returns to these prepositions in Pennod 16.\n\nTwo fixed phrases are worth learning whole for now. Mae'n ddrwg gyda fi means 'I'm sorry' (literally 'it is bad with me'). Ages use oed ('years old') after the number: Mae Cai'n bymtheg oed ('Cai is fifteen'), where pymtheg softens after yn like any description. In Dim ond un ar ddeg oed wyt ti! ('You're only eleven!'), the age comes before wyt ti; for now, treat this as a fixed age pattern."
+    "nodyn_en": "For possession, saying that someone has something, the southern pattern used here says the thing is with them, using gyda ('with'): Mae cleddyf gyda Cai ('Cai has a sword', literally 'a sword is with Cai'). In this pattern the order is Mae, then the thing, then gyda, then the owner. Other words can follow: Mae pasteiod gyda hi ar y plât mawr ('She has pies on the big plate').\n\nAfter gyda, use the pronouns fi, ti, fe and hi: Mae clogyn newydd gyda fi! ('I have a new cloak!'), Mae ffrind gyda ti ('You have a friend'), Mae tarian gyda fe ('He has a shield'), Mae pasteiod gyda hi ('She has pies'). A name stays as it is, because personal names never mutate (never change their first sound). Before a vowel sound, gyda becomes gydag: Mae cleddyf gyda Cai, ond mae draig gydag Arth ('Cai has a sword, but Arth has a dragon').\n\nThe thing owned is almost always indefinite here. It has no 'the': 'a sword', 'a present', 'money'. So these sentences work like the 'there is' sentences of Pennod 6. A question begins Oes …?, the answers are Oes ('Yes') and Nac oes ('No'), and the negative is Does dim …. Cai asks, Mali, oes anrheg gyda ti? ('Mali, have you got a present?'), and Mali says Oes. Arth answers Nac oes. Does dim anrheg gyda fi ('No. I haven't got a present'). Likewise Does dim arian gyda fi ('I have no money'). Myrddin turns Arth's words into a question just with his voice: Does dim byd gyda ti? ('You have nothing?').\n\nKeep three ideas apart. Cleddyf Cai yw e ('It's Cai's sword') says whose sword it is: as in Pennod 2, the owner simply follows the thing, with no word for 'of'. Mae cleddyf gyda Cai ('Cai has a sword') says what Cai has. Mae Cai'n cael cleddyf go iawn ('Cai gets a real sword') says what he receives: cael ('to get') is the other side of rhoi ('to give').\n\nA verb-noun is the dictionary form of a verb, the form used after yn. Three verb-nouns here take a second verb-noun straight after them, with no word for 'to': gallu ('to be able, can'), hoffi ('to like') and cael, which before a verb-noun means 'to be allowed to'. Mae Cai'n gallu marchogaeth ('Cai can ride'), Dw i ddim yn gallu darllen ('I can't read'), Dw i'n gallu dysgu Cai! ('I can teach Cai!'), Dw i'n hoffi marchogaeth! ('I like riding!'), Dw i'n cael dal y cleddyf? ('Am I allowed to hold the sword?'). The second verb-noun does not mutate. Hoffi can also take a noun: Dw i'n hoffi'r anrheg ('I like the present'). Questions are made as in Pennod 5: Wyt ti'n gallu codi'r cleddyf? ('Can you lift the sword?') Nac ydw! ('No!').\n\nThe mutation table adds a group of prepositions. After ar ('on'), wrth ('by'), i ('to, for'), o ('from, of') and dan ('under'), the next word takes the soft mutation, a softening of its first sound: m becomes f, d becomes dd, c becomes g. Examples: Clogyn newydd i farchog newydd ('A new cloak for a new knight', from marchog), wrth ddrws y neuadd ('by the door of the hall', from drws), ar gadair ('on a chair', from cadair), ar garreg ('on a stone', from carreg). When 'the' comes between, the preposition does not change the noun: ar y bwrdd hir ('on the long table'). Only the Pennod 2 rule for 'the' with a feminine noun applies: ar y darian ('on the shield', from tarian). Names do not change: mae hi'n rhoi'r clogyn i Cai ('she gives the cloak to Cai'). The book returns to these prepositions in Pennod 16.\n\nTwo fixed phrases are worth learning whole for now. Mae'n ddrwg gyda fi means 'I'm sorry' (literally 'it is bad with me'). Ages use oed ('years old') after the number: Mae Cai'n bymtheg oed ('Cai is fifteen'), where pymtheg softens after yn like any description. In Dim ond un ar ddeg oed wyt ti! ('You're only eleven!'), the age comes before wyt ti; for now, treat this as a fixed age pattern.\n\nThe bare-noun preposition examples in this chapter are recognition material: the general mutation pattern after prepositions is taught in Pennod 16. The open shield model here uses the already familiar ar y darian (“on the shield”)."
   },
   "pensa": {
     "A": {
@@ -1553,15 +1549,15 @@
             },
             {
               "id": "a2",
-              "prompt": "(fi: arian ✗) →",
+              "prompt": "(fi: tarian ✗) →",
               "answer_mode": "exact",
               "accepted_answers": [
-                "Does dim arian gyda fi."
+                "Does dim tarian gyda fi."
               ],
               "common_wrong": [
                 {
-                  "answer": "Dyw arian ddim gyda fi.",
-                  "hint": "arian (dim y) → Does dim"
+                  "answer": "Dyw tarian ddim gyda fi.",
+                  "hint": "tarian (dim y) → Does dim"
                 }
               ],
               "source_segment_ids": []
@@ -1763,7 +1759,7 @@
         },
         {
           "id": "b8",
-          "prompt": "Mae hi'n oer yn y nos: mae Elen yn rhoi ___ hir i Cai.",
+          "prompt": "Mae hi'n oer yn y nos: mae Elen yn rhoi ___ hir i Cai. (cloak)",
           "answer_mode": "exact",
           "accepted_answers": [
             "clogyn"
@@ -1771,11 +1767,10 @@
         },
         {
           "id": "b9",
-          "prompt": "Mae Arth eisiau rhoi anrheg i Cai, ond does dim ___ gyda fe.",
+          "prompt": "Mae Arth eisiau rhoi anrheg i Cai, ond does dim ___ gyda fe. (money)",
           "answer_mode": "exact",
           "accepted_answers": [
-            "arian",
-            "anrheg"
+            "arian"
           ]
         }
       ]
@@ -1788,7 +1783,7 @@
           "id": "c2",
           "prompt": "Ble mae'r ddraig aur?",
           "answer_mode": "self_check",
-          "model_answer": "Mae'r ddraig aur ar darian Cai.",
+          "model_answer": "Mae'r ddraig aur ar y darian.",
           "key_terms": [
             "cy-tarian",
             "cy-draig",
@@ -1884,15 +1879,14 @@
         },
         {
           "id": "c7",
-          "prompt": "A ti? Oes ffrind gyda ti? Beth yw enw'r ffrind?",
+          "prompt": "A ti? Wyt ti'n hoffi Cai? Pam?",
           "answer_mode": "self_check",
-          "model_answer": "Mae ffrind gyda fi: Mali yw enw'r ffrind. / Nac oes, does dim ffrind gyda fi.",
+          "model_answer": "Ydw, dw i'n hoffi Cai: mae e'n ffrind i Arth. / Nac ydw: mae e'n dweud 'Fi yw'r marchog!'",
           "key_terms": [
-            "cy-ffrind",
-            "cy-gyda",
-            "cy-enw"
+            "cy-hoffi",
+            "cy-ffrind"
           ],
-          "rubric": "Names a friend, or says in a full sentence that there is none."
+          "rubric": "Says whether they like Cai and gives one reason from his behaviour."
         }
       ]
     }
@@ -2325,7 +2319,7 @@
       "inline_scene": 3,
       "margin_vignette": 4,
       "margin_diagram": 0,
-      "margin_gloss": 31
+      "margin_gloss": 30
     }
   },
   "completion": {
@@ -2341,7 +2335,7 @@
     ]
   },
   "metrics": {
-    "running_words": 928,
+    "running_words": 936,
     "sentences": 139,
     "word_target": 850,
     "word_window": [
