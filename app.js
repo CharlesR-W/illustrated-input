@@ -1340,8 +1340,17 @@ function glossFile(path) {
 function lessonGlosses(lesson) {
   if (!lesson._entry) return Promise.resolve(null);
   const file = entryPath(lesson._entry).split("/").pop();
-  return Promise.all([glossFile("glosses/forms.json"), glossFile(`glosses/${file}`)]).then(([forms, layer]) =>
-    (forms?.forms || layer?.segments ? { forms: forms?.forms || {}, segments: layer?.segments || {} } : null));
+  return Promise.all([glossFile("glosses/forms.json"), glossFile(`glosses/${file}`), state.course?.lang === "lzh" ? (state.lexicon || glossFile(state.course.lexicon_path || "lexicon.json")) : null]).then(([forms, layer, lexicon]) => {
+    if (state.course?.lang !== "lzh") return forms?.forms || layer?.segments ? { forms: forms?.forms || {}, segments: layer?.segments || {} } : null;
+    const dictionary = Object.create(null);
+    for (const entry of lexicon?.entries || []) {
+      for (const surface of [entry.lemma, ...(entry.forms || []).map(f => typeof f === "string" ? f : f.form)].filter(Boolean)) {
+        const key = Core.glossKey(surface, state.course);
+        (dictionary[key] ||= []).push({ lemma: entry.lemma, pos: entry.part_of_speech, en: entry.sense_en || entry.meaning_en || (entry.senses || []).map(s => s.gloss_en).filter(Boolean).join("; "), lexeme_id: entry.id });
+      }
+    }
+    return { forms: { ...dictionary, ...forms?.forms }, segments: layer?.segments || {} };
+  });
 }
 
 function wireStoryWords(story, lesson) {
@@ -2617,7 +2626,7 @@ function renderVocabulary(lesson) {
   if (!words.length) return null;
   const lang = targetLang();
   return h("details", { class: "vocabulary" },
-    h("summary", null, ui("span", "vocabulary", { class: "vocab-title" }), " ", ui("small", "words_count", null, { n: words.length })),
+    h("summary", null, ui("span", "vocabulary", { class: "vocab-title" }), " ", state.course?.lang === "lzh" ? h("small", {}, `${words.length} lexical senses`) : ui("small", "words_count", null, { n: words.length })),
     h("dl", { class: "vocab-list" }, words.map((word) => {
       const form = word.citation_form || word.display_form || "";
       const gender = word.gender && !/\(.*\)/.test(form) ? ` (${t(`gender_${word.gender}`)})` : "";

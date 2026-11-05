@@ -1068,6 +1068,11 @@
   function genericTokens(text, language = "und") {
     const source = String(text ?? "");
     const code = String(language).toLowerCase().split(/[-_]/u)[0];
+    if (code === "lzh") {
+      // Exact UTF-16 source offsets; one Han code point with its variation selector.
+      const pattern = /\p{Script=Han}[\uFE00-\uFE0F\u{E0100}-\u{E01EF}]?|(?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+(?:['’‘ʼ`´-](?:(?!\p{Script=Han}|ʼ)[\p{L}\p{M}])+)*/gu;
+      return [...source.matchAll(pattern)].map(m => ({ text: m[0], start: m.index, end: m.index + m[0].length }));
+    }
     const policy = Object.prototype.hasOwnProperty.call(ELISION, code) ? ELISION[code] : null;
     // Matched single quotes delimit text rather than spelling an apocope. Internal
     // apocope may precede a later closer; unpaired poetic 'l / 'n remain clitics.
@@ -1174,6 +1179,28 @@
         cursor = end;
         if (token.start >= start && token.start < end) { item = { ...entry, start, end }; break; }
       }
+    }
+    // Reuse contextual phrases. Longest dictionary span, then earliest start,
+    // resolves overlapping compounds without granting component senses.
+    if (!item && course?.lang === "lzh" && forms) {
+      const candidates = [];
+      for (const [surface, analyses] of Object.entries(forms)) {
+        if (!Array.isArray(analyses) || !analyses.length || glossTokens(surface, course).length < 2) continue;
+        const parts = glossTokens(surface, course);
+        for (let i = 0; i + parts.length <= tokens.length; i++) {
+          const matched = parts.every((part, j) => {
+            const current = tokens[i + j], previous = tokens[i + j - 1];
+            const gap = j ? source.slice(previous.end, current.start) : "";
+            const hanBoundary = j && (/^\p{Script=Han}/u.test(previous.text) || /^\p{Script=Han}/u.test(current.text));
+            return glossKey(current.text, course) === glossKey(part.text, course) && (hanBoundary ? gap === "" : !/\S/u.test(gap));
+          });
+          if (!matched) continue;
+          const start = tokens[i].start, end = tokens[i + parts.length - 1].end;
+          if (token.start >= start && token.end <= end) candidates.push({ ...analyses[0], text: source.slice(start, end), start, end });
+        }
+      }
+      candidates.sort((a, b) => (b.end - b.start) - (a.end - a.start) || a.start - b.start);
+      item = candidates[0] ?? null;
     }
     const phrase = item && glossTokens(item.text, course).length > 1 ? item : null;
     let component = null;
