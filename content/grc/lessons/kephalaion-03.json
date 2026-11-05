@@ -21,7 +21,8 @@
       "Ἐπίλεξον items: the reader does not show one-word choices as chips (owner, 2026-10-23), so the three options are printed in brackets in each prompt, as the Unit 2 Παράδειγμα did, and the learner types the word; `choices` keeps them for the checker. Three options per item (brief: at least three real-word options).",
       "Συμπλήρωσον (x3) is stage 2 for six of Unit 2's ten production words in new Unit 3 sentences (review checklist; design §7.2). Its cues are Greek (a synonym or definition from the Unit 2 gloss), not English: the brief forbids English in production cues, so Unit 2's English-sense pattern is not repeated. The same reason gives the Γράφε cloze cards Greek hints.",
       "Kata: the reader's checker is accent-insensitive by design, so a choice between τίς and τις alone would mark the wrong button right. Every kata option therefore differs in word order as well as accent (Τίς ἄνθρωπος / Ἄνθρωπός τις); the label names the function (interrogative / indefinite) and the stage-2 hint gives the rule. collapsed is empty because the normalised options never collide.",
-      "Warnings justified: (1) the continuity-log warning ('not yet in continuity.json') is expected until the runner merges the log; the writer may not edit continuity.json. (2) grammar-unlicensed 'προσδοκᾷ' (s063): Morpheus offers only subjunctive parses for the 3 sg. present indicative of α-contracts (-ᾷ is both), so no pin can select the indicative; the form is the present indicative after ὁ γὰρ πατήρ σου. (3) duplicate-sentence s047: Diodorus replays «Τίς προσέρχεται;» (s040) as his game; the echo is the point of the scene."
+      "Warnings justified: (1) the continuity-log warning ('not yet in continuity.json') is expected until the runner merges the log; the writer may not edit continuity.json. (2) grammar-unlicensed 'προσδοκᾷ' (s063): Morpheus offers only subjunctive parses for the 3 sg. present indicative of α-contracts (-ᾷ is both), so no pin can select the indicative; the form is the present indicative after ὁ γὰρ πατήρ σου. (3) duplicate-sentence s047: Diodorus replays «Τίς προσέρχεται;» (s040) as his game; the echo is the point of the scene.",
+      "2026-11-04 repair: historical kata, English-ban and obsolete title claims above are superseded by current COURSE.md/parent rulings. Stage1 recognises this unit; Stage2 now recombines earlier words. Principal parts displayed only as encountered. No prose facts or owner-only text statuses changed."
     ],
     "review_questions": [
       {
@@ -801,15 +802,15 @@
               },
               {
                 "id": "x1-6",
-                "prompt": "«Ξένος τις,» ἔφη ὁ Σωσίας. ___ δὲ μετὰ τῶν κυνῶν εἰς τὴν ὕλην ἀπῆλθεν. (Αὔριον / Ἀεί / Ἐντεῦθεν)",
+                "prompt": "«Ξένος τις,» ἔφη ὁ Σωσίας. ___ δὲ μετὰ τῶν κυνῶν εἰς τὴν ὕλην ἀπῆλθεν. (= ἐκ τούτου τοῦ τόπου) (Πάλιν / Ὕστερον / Ἐντεῦθεν)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
                   "Ἐντεῦθεν"
                 ],
                 "choices": [
-                  "Αὔριον",
-                  "Ἀεί",
+                  "Πάλιν",
+                  "Ὕστερον",
                   "Ἐντεῦθεν"
                 ],
                 "source_segment_ids": [
@@ -1299,15 +1300,15 @@
               },
               {
                 "id": "x2-4",
-                "prompt": "Ἔπειτα δὲ οἱ κύνες ___. (ἀνεγίγνωσκον / ἐμέτρουν / ἐσήμαινον)",
+                "prompt": "Ἔπειτα δὲ οἱ κύνες ___. (ἔμενον / ἔκειντο / ἐσήμαινον)",
                 "mode": "productive",
                 "answer_mode": "choice",
                 "accepted_answers": [
                   "ἐσήμαινον"
                 ],
                 "choices": [
-                  "ἀνεγίγνωσκον",
-                  "ἐμέτρουν",
+                  "ἔμενον",
+                  "ἔκειντο",
                   "ἐσήμαινον"
                 ],
                 "source_segment_ids": [
@@ -1544,7 +1545,7 @@
             "items": [
               {
                 "id": "x3-1",
-                "prompt": "Ἡ γὰρ ὁδὸς ὀλίγον ___ τῆς οἰκίας. (+ γεν.: οὐ μακρὰν ἦν ἀπό)",
+                "prompt": "Οἱ παῖδες πρὸ τῆς οἰκίας ἦσαν· ἡ δὲ ὁδὸς ὀλίγον ___ αὐτῶν. (+ γεν.: οὐ μακρὰν ἦν ἀπό)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1558,7 +1559,7 @@
               },
               {
                 "id": "x3-2",
-                "prompt": "«Ἆρα νῦν ὁ ξένος ___;» ἔφη ὁ Γρύλλος. (= ἦλθε καὶ πάρεστιν)",
+                "prompt": "«Νῦν μὲν ὁ ξένος οὐχ ___, αὔριον δὲ αὐτὸν προσδοκῶμεν.» (= ἦλθε καὶ πάρεστιν)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1571,7 +1572,7 @@
               },
               {
                 "id": "x3-3",
-                "prompt": "Πολλοὶ μὲν ἄνθρωποι κατὰ τὴν ὁδὸν ___. (= ὁδὸν ἐποιοῦντο)",
+                "prompt": "Οἱ γεωργοὶ παρὰ τὴν οἰκίαν ___, καὶ οἱ παῖδες αὐτοὺς ἑώρων. (= ὁδὸν ἐποιοῦντο)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1584,7 +1585,7 @@
               },
               {
                 "id": "x3-4",
-                "prompt": "«___, ὦ Γρύλλε,» ἔφη ὁ Σωσίας· «τὴν ὁδὸν σκόπει.» (= μηκέτι λέγε)",
+                "prompt": "«Νῦν ___ τοῦ λόγου, ὦ Γρύλλε· ὁ Διόδωρος ἄλλο ἐρωτᾷ.» (= μηκέτι λέγε)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1597,7 +1598,7 @@
               },
               {
                 "id": "x3-5",
-                "prompt": "«Ἆρα ἥξει ὁ ξένος; τί ___ αὐτῷ;» (= ἐγένετο)",
+                "prompt": "«Ἆρα δεινὰ ___ τῷ ξένῳ;» (= ἐγένετο)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1610,7 +1611,7 @@
               },
               {
                 "id": "x3-6",
-                "prompt": "«Ὁ δὲ ξένος καὶ αὐτὸς πολλὰ περὶ τοῦ πολέμου ___.» (= οἶδε)",
+                "prompt": "Περὶ τῶν ἵππων ὁ Σωσίας πολλὰ ___. (= οἶδε)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -1636,7 +1637,7 @@
         "caption": "τίς; ἢ τις · question or «someone»",
         "header": [
           "",
-          "from the reading",
+          "Reading examples and comparisons",
           "how to tell"
         ],
         "rows": [
@@ -1751,7 +1752,7 @@
         "segment_id": "grc-skil-01-l03-s066"
       }
     ],
-    "note_en": "τίς and τις. Greek has one word for \"who? what?\" and, with a different accent and position, \"someone, something, a certain\". The forms are the same (the second table), so two things tell them apart: where the word stands, and its accent.\n\n1. The interrogative τίς; τί; asks. It usually stands near the beginning of its clause (a preposition or an emphatic word can precede it, as in διὰ τί) and always has an accent. Its τί- forms have an acute on the first syllable; interrogative τίς and τί never change that acute to a grave (the alternative forms τοῦ and τῷ have a circumflex): «Τίς ἐστιν ὁ ξένος;» \"Who is the guest?\" (s004); «Τίνα προσδοκῶμεν;» \"Whom are we expecting?\" (s005); «Τί ποιεῖς;» \"What are you doing?\" (s048). It can also stand with a noun: «Τίς ἄνθρωπος;» \"Which man?\" (s047). Plural «τίνες ἦσαν οἱ πολέμιοι;» \"Who were the enemy?\" (s022). Neuter τί can also mean \"why?\", as in διὰ τί (Κεφάλαιον 1).\n\n2. The indefinite τις, τι does not ask; it leaves the person open. It is normally enclitic: it leans on a preceding word. The accented plural τινές (\"some people\") can begin a clause, as in τινὲς μὲν … τινὲς δέ (\"some … others\"), where the final acute is written as a grave. Xenophon's «Ξένος τις ἐκ Λακεδαίμονος» (s006) means \"a guest, someone from Lacedaemon\" and tells Diodorus nothing, which is his complaint: «Ξένος τις· τοῦτο οὐδὲν λέγει» (s009). On the road it is γεωργός τις \"a farmer\" (s041), ἄνθρωπός τις ἄλλος \"some other man\" (s045), and γεωργοί τινες would be \"some farmers\". Diodorus's game puts the two side by side: «Τίς προσέρχεται; Ἄνθρωπός τις. Τίς ἄνθρωπος; Γεωργός τις.» (s047).\n\nReading the accents. The interrogative is accented on its first syllable: τίνα, τίνος, τίνες. The indefinite τις and τι normally have no accent, but a following enclitic can give them one: ἄνθρωπός τίς ἐστιν (\"he is some man\"). Two-syllable forms keep their final accent after a word accented acutely on the penult (the second syllable from the end): ξένοι τινές (\"some strangers\"), but γεωργοί τινες. A word accented on the antepenult (the third syllable from the end) or circumflexed on the penult takes an additional acute before an enclitic: ἄνθρωπός τις (s045), παῖδές τινες (\"some boys\"). You never need to type these accents; they are how to tell the two words apart when reading.\n\n3. A question inside a sentence. «Οὐκ οἶδα τίς ἐστιν» \"I don't know who he is\" (s034): Philesia's direct question would be «Τίς ἐστιν;», and inside the sentence it keeps both τίς and the indicative ἐστιν. After a present verb like οἶδα, the indicative is kept. After a past verb it can stay or be replaced by the optative; Κεφάλαια 13 and 14 explain the alternatives.\n\nIn the reading, Xenophon and Sosias answer τίς with τις; Philesia says that she does not know. The guest stays ξένος τις until he arrives.",
+    "note_en": "τίς and τις. Greek has one word for \"who? what?\" and, with a different accent and position, \"someone, something, a certain\". The forms are the same (the second table), so two things tell them apart: where the word stands, and its accent.\n\n1. The interrogative τίς; τί; asks. It usually stands near the beginning of its clause (a preposition or an emphatic word can precede it, as in διὰ τί) and always has an accent. Its τί- forms have an acute on the first syllable; interrogative τίς and τί never change that acute to a grave (the alternative forms τοῦ and τῷ have a circumflex): «Τίς ἐστιν ὁ ξένος;» \"Who is the guest?\" (s004); «Τίνα προσδοκῶμεν;» \"Whom are we expecting?\" (s005); «Τί ποιεῖς;» \"What are you doing?\" (s048). It can also stand with a noun: «Τίς ἄνθρωπος;» \"Which man?\" (s047). Plural «τίνες ἦσαν οἱ πολέμιοι;» \"Who were the enemy?\" (s022). Neuter τί can also mean \"why?\", as in διὰ τί (Κεφάλαιον 1).\n\n2. The indefinite τις, τι does not ask; it leaves the person open. It is normally enclitic: it leans on a preceding word. The accented plural τινές (\"some people\") can begin a clause, as in τινὲς μὲν … τινὲς δέ (\"some … others\"), where the final acute is written as a grave. Xenophon's «Ξένος τις ἐκ Λακεδαίμονος» (s006) means \"a guest, someone from Lacedaemon\" and tells Diodorus nothing, which is his complaint: «Ξένος τις· τοῦτο οὐδὲν λέγει» (s009). On the road it is γεωργός τις \"a farmer\" (s041), ἄνθρωπός τις ἄλλος \"some other man\" (s045), and γεωργοί τινες would be \"some farmers\". Diodorus's game puts the two side by side: «Τίς προσέρχεται; Ἄνθρωπός τις. Τίς ἄνθρωπος; Γεωργός τις.» (s047).\n\nReading the accents. The interrogative is accented on its first syllable: τίνα, τίνος, τίνες. The indefinite τις and τι normally have no accent, but a following enclitic can give them one: ἄνθρωπός τίς ἐστιν (\"he is some man\"). Two-syllable forms keep their final accent after a word accented acutely on the penult (the second syllable from the end): ξένοι τινές (\"some strangers\"), but γεωργοί τινες. A word accented on the antepenult (the third syllable from the end) or circumflexed on the penult takes an additional acute before an enclitic: ἄνθρωπός τις (s045), παῖδές τινες (\"some boys\"). You never need to type these accents; they are how to tell the two words apart when reading.\n\n3. A question inside a sentence. «Οὐκ οἶδα τίς ἐστιν» \"I don't know who he is\" (s034): Philesia's direct question would be «Τίς ἐστιν;», and inside the sentence it keeps both τίς and the indicative ἐστιν. After a present verb like οἶδα, the indicative is kept. After a past verb it can stay or be replaced by the optative; Κεφάλαια 13 and 14 explain the alternatives.\n\nIn the reading, Xenophon and Sosias answer τίς with τις; Philesia says that she does not know. The guest stays ξένος τις until he arrives. The complete s047 exchange is “Who is approaching? Some man. Which man? A farmer.” The question seeks an identity; the indefinite gives an unspecific answer.",
     "parergon": {
       "title": "οὖν",
       "body_en": "οὖν draws a consequence from what came before: \"so, then, therefore\". Like γάρ it is postpositive, normally second in its clause. The two point in opposite directions: γάρ gives the reason for what was just said, οὖν the result. Xenophon will not tell the story, so Gryllus goes to Sosias: ὁ οὖν Γρύλλος ἀπῆλθε πρὸς τὸν Σωσίαν (s021). In a question οὖν connects the question with what precedes and can press for an answer: «Τίς οὖν ἐστιν ὁ ξένος;» \"Who is he, then?\" (s025, again s033). Philesia: a guest is due, δεῖ οὖν τὸ δεῖπνον καλὸν εἶναι (s035).",
@@ -2025,7 +2026,7 @@
     "notes": "Cover (dusk on the third day, the empty road, the hounds alert) and one scene (the morning by the river) are planned raster images with inline art briefs; the text is fully resolvable without them. The Συγγενῆ diagram is deterministic SVG authored by the writer."
   },
   "metrics": {
-    "running_words": 625,
+    "running_words": 627,
     "sentences": 88,
     "word_target": 550,
     "word_window": [

@@ -18,7 +18,8 @@
       "Segments s052–s055 are Xenophon, Anabasis 5.3.13 (the inscription, as printed in design §3.2), shown receptively and glossed; its ἂν … ποιῇ is outside the Unit 1 licence. Xenophon paraphrases it at once in licensed Greek.",
       "Edition conventions: capital only at a paragraph start and at the start of direct speech; «» for speech; movable ν before a vowel and at a pause.",
       "Reasons for the temple (design §3.2, Anab. 5.3.4–9): a tithe of the spoils for Artemis, no vow.",
-      "Word count 665, 15 over the 650 ceiling after the review additions (s056); accepted."
+      "Word count 665, 15 over the 650 ceiling after the review additions (s056); accepted.",
+      "2026-11-04 repair: historical kata, English-ban and obsolete title claims above are superseded by current COURSE.md/parent rulings. The former early Stage2 block is now Stage1 recognition from this unit. Principal parts displayed only as encountered. No prose facts or owner-only text statuses changed."
     ],
     "review_questions": [
       {
@@ -130,7 +131,7 @@
       {
         "lexeme_id": "grc-diabaino",
         "how": "margin gloss",
-        "segment_id": "grc-skil-01-l01-s022"
+        "segment_id": "grc-skil-01-l01-s027"
       },
       {
         "lexeme_id": "grc-exerchomai",
@@ -155,7 +156,7 @@
       {
         "lexeme_id": "grc-anagignosko",
         "how": "margin gloss",
-        "segment_id": "grc-skil-01-l01-s049"
+        "segment_id": "grc-skil-01-l01-s050"
       },
       {
         "lexeme_id": "grc-eao",
@@ -277,7 +278,7 @@
       "cover": 1,
       "inline_scene": 3,
       "margin_diagram": 0,
-      "margin_gloss": 68
+      "margin_gloss": 67
     },
     "notes": "Cover and two scenes are generated drafts (2026-10-22, art log docs/reviews/greek-u01-art-log-2026-10-22.md); the text is fully resolvable without them. The map and the preverb diagram are deterministic SVG authored by the writer."
   },
@@ -363,7 +364,8 @@
                 "gloss_kind": "form",
                 "covers_lexeme_ids": [
                   "grc-kyon"
-                ]
+                ],
+                "reveal_en": "dogs, hounds"
               }
             ]
           },
@@ -1504,22 +1506,14 @@
               {
                 "type": "gloss",
                 "presentation": "margin_gloss",
-                "anchor_text": "δεκάτην",
-                "gloss": "δεκάτη = τὸ δέκατον μέρος",
+                "anchor_text": "δεκάτην καταθύειν",
+                "gloss": "δεκάτη = τὸ δέκατον μέρος · καταθύειν = θύειν τῇ θεῷ",
                 "gloss_kind": "synonym",
                 "covers_lexeme_ids": [
-                  "grc-dekatos"
-                ]
-              },
-              {
-                "type": "gloss",
-                "presentation": "margin_gloss",
-                "anchor_text": "καταθύειν",
-                "gloss": "καταθύειν = θύειν τῇ θεῷ («δεῖ θύειν»)",
-                "gloss_kind": "paraphrase",
-                "covers_lexeme_ids": [
+                  "grc-dekatos",
                   "grc-thyo"
-                ]
+                ],
+                "reveal_en": "the tithe: a tenth part; to sacrifice it to the goddess"
               }
             ]
           },
@@ -1544,8 +1538,9 @@
                 "type": "gloss",
                 "presentation": "margin_gloss",
                 "anchor_text": "ἐπισκευάζειν",
-                "gloss": "ἐπισκευάζειν = πάλιν καλὸν ποιεῖν («δεῖ»)",
-                "gloss_kind": "paraphrase"
+                "gloss": "ἐπισκευάζειν ≈ πάλιν καλὸν ποιεῖν («δεῖ»)",
+                "gloss_kind": "paraphrase",
+                "reveal_en": "repair, maintain"
               }
             ]
           },
@@ -1916,101 +1911,119 @@
           {
             "id": "grc-skil-01-l01-x3",
             "type": "podstanovka",
-            "title": "Συμπλήρωσον",
-            "instruction": "Συμπλήρωσον τὴν λέξιν.",
-            "hint_en": "The English sense and the ending are given. Type the whole word; accents are optional.",
+            "title": "Ἐπίλεξον",
+            "instruction": "Ἐπίλεξον τὴν ὀρθὴν λέξιν.",
+            "hint_en": "Choose the word that completes the sentence as read in this unit. Both options fit grammatically; decide from the story. Type only the missing word.",
             "grammar_target_ids": [
               "G01"
             ],
             "obrazec": {
-              "rule": "ᾔσθ… + ετο → ᾔσθετο",
-              "prompt": "Ἡ δὲ Ἀλκὴ πρώτη τοῦ λαγὼ ___ετο. (noticed)",
-              "answer": "ᾔσθετο"
+              "rule": "Ἐπίλεξον.",
+              "prompt": "ἐκεῖ ἡ Ἀλκὴ ἐτύγχανε παρὰ τῇ ___ κειμένη. (στήλῃ / οἰκίᾳ)",
+              "answer": "στήλῃ"
             },
             "items": [
               {
                 "id": "x3-1",
-                "prompt": "Οὐδὲ οἱ παῖδες ___. (noticed)",
+                "prompt": "οὐδὲ οἱ παῖδες ___. (ἐδέοντο / ᾔσθοντο)",
                 "mode": "productive",
-                "answer_mode": "exact",
+                "answer_mode": "choice",
                 "accepted_answers": [
                   "ᾔσθοντο",
                   "ᾐσθάνοντο"
                 ],
-                "ending_shown": "οντο",
                 "source_segment_ids": [
                   "grc-skil-01-l01-s025"
+                ],
+                "choices": [
+                  "ἐδέοντο",
+                  "ᾔσθοντο"
                 ]
               },
               {
                 "id": "x3-2",
-                "prompt": "Λαγὼς ___ παρὰ τῷ ποταμῷ ὤν. (happened)",
+                "prompt": "___ δὲ λαγὼς παρὰ τῷ ποταμῷ ὤν. (Ἐτύγχανε / ἔμενε)",
                 "mode": "productive",
-                "answer_mode": "exact",
+                "answer_mode": "choice",
                 "accepted_answers": [
                   "ἐτύγχανε",
                   "ἐτύγχανεν"
                 ],
-                "ending_shown": "ανε",
                 "source_segment_ids": [
                   "grc-skil-01-l01-s022"
+                ],
+                "choices": [
+                  "Ἐτύγχανε",
+                  "ἔμενε"
                 ]
               },
               {
                 "id": "x3-3",
-                "prompt": "Ἡ Ἀλκὴ ___ τὸν Σωσίαν ἀπελθοῦσα. (escaped the notice of)",
+                "prompt": "καὶ εὐθὺς ___ τὸν Σωσίαν ἀπελθοῦσα. (ἐδίωκε / ἔλαθε)",
                 "mode": "productive",
-                "answer_mode": "exact",
+                "answer_mode": "choice",
                 "accepted_answers": [
                   "ἔλαθε",
                   "ἔλαθεν",
                   "ἐλάνθανε",
                   "ἐλάνθανεν"
                 ],
-                "ending_shown": "ε",
                 "source_segment_ids": [
                   "grc-skil-01-l01-s024"
+                ],
+                "choices": [
+                  "ἐδίωκε",
+                  "ἔλαθε"
                 ]
               },
               {
                 "id": "x3-4",
-                "prompt": "Οἱ δὲ κύνες διώκειν ἐβούλοντο, ὁ δὲ Ξενοφῶν οὐκ ___. (allowed)",
+                "prompt": "Οἱ δὲ κύνες διώκειν ἐβούλοντο, ὁ δὲ Ξενοφῶν οὐκ ___. (εἴα / ἤκουε)",
                 "mode": "productive",
-                "answer_mode": "exact",
+                "answer_mode": "choice",
                 "accepted_answers": [
                   "εἴα"
                 ],
-                "ending_shown": "α",
                 "source_segment_ids": [
                   "grc-skil-01-l01-s018"
+                ],
+                "choices": [
+                  "εἴα",
+                  "ἤκουε"
                 ]
               },
               {
                 "id": "x3-5",
-                "prompt": "Ὁ δὲ Γρύλλος πολλὰ ___ τοῦ πατρός. (begged)",
+                "prompt": "Ὁ δὲ Γρύλλος πολλὰ ___ τοῦ πατρός. (ἤκουε / ἐδεῖτο)",
                 "mode": "productive",
-                "answer_mode": "exact",
+                "answer_mode": "choice",
                 "accepted_answers": [
                   "ἐδεῖτο",
                   "ἐδέετο"
                 ],
-                "ending_shown": "εῖτο",
                 "source_segment_ids": [
                   "grc-skil-01-l01-s068"
+                ],
+                "choices": [
+                  "ἤκουε",
+                  "ἐδεῖτο"
                 ]
               },
               {
                 "id": "x3-6",
-                "prompt": "«___ τὴν Ἀλκὴν πρὸς τὸν ναὸν ἐλθεῖν.» (I think)",
+                "prompt": "«___ τὴν Ἀλκὴν πρὸς τὸν ναὸν ἐλθεῖν· ἐκεῖ γὰρ φέρει τὰ ἴχνη.» (Οἶμαι / Βούλομαι)",
                 "mode": "productive",
-                "answer_mode": "exact",
+                "answer_mode": "choice",
                 "accepted_answers": [
                   "οἶμαι",
                   "οἴομαι"
                 ],
-                "ending_shown": "μαι",
                 "source_segment_ids": [
                   "grc-skil-01-l01-s044"
+                ],
+                "choices": [
+                  "Οἶμαι",
+                  "Βούλομαι"
                 ]
               }
             ]
@@ -2040,22 +2053,16 @@
             "ἐκ τῆς ὕλης"
           ],
           [
-            "παρά · πρός · ἀπό (places)",
+            "παρά",
             "παρὰ τῷ ποταμῷ",
-            "πρὸς τὸν ποταμόν",
-            "ἀπὸ τοῦ ποταμοῦ"
-          ],
-          [
-            "παρά (persons)",
-            "παρὰ τῷ Σωσίᾳ",
-            "παρὰ τὸν Σωσίαν",
-            "παρὰ τοῦ Σωσίου"
+            "παρὰ τὴν Ἀλκήν",
+            "παρὰ τοῦ πατρός"
           ],
           [
             "adverbs",
-            "ἐκεῖ · οἴκοι",
-            "ἐκεῖσε · οἴκαδε",
-            "ἐκεῖθεν · οἴκοθεν"
+            "ἐκεῖ",
+            "ἐκεῖσε",
+            "ἐκεῖθεν"
           ]
         ]
       },
@@ -2085,7 +2092,7 @@
             "δια- (across)",
             "διαβαίνω",
             "διέβη, διέβησαν",
-            "διαβῆναι"
+            "—"
           ],
           [
             "ἀπο- (away)",
@@ -2097,19 +2104,19 @@
             "ἐκ- / ἐξ- (out)",
             "ἐξέρχομαι",
             "ἐξῆλθε(ν), ἐξῆλθον",
-            "ἐξελθεῖν"
+            "—"
           ],
           [
             "εἰσ- (in)",
             "εἰσέρχομαι",
             "εἰσῆλθε(ν), εἰσῆλθον",
-            "εἰσελθεῖν"
+            "—"
           ],
           [
             "προσ- (towards)",
             "προσέρχομαι",
             "προσῆλθε(ν), προσῆλθον",
-            "προσελθεῖν"
+            "—"
           ],
           [
             "ἀνα- (imperfect)",
@@ -2155,7 +2162,7 @@
         "segment_id": "grc-skil-01-l01-s071"
       }
     ],
-    "note_en": "Where, whither, whence. Greek asks three questions about place: ποῦ; (where is it?), ποῖ; (where is it going?) and πόθεν; (where is it coming from?). Each has its usual answers: ἐν + dative for position; εἰς \"into, to\" or πρός \"towards, up to\" + accusative for destination; ἐκ \"out of\" or ἀπό \"away from\" + genitive for source. Strictly it is the preposition and its meaning that choose the case, so learn these as pairs rather than as a rule that ποῦ; always wants a dative. Sosias answers ποῖ; and ποῦ; in one breath: εἰς τὴν ὕλην εἰσῆλθεν … καὶ νῦν ἐν τῇ ὕλῃ ἐστίν (s031). To Diodorus's πόθεν; he says ἀπὸ τοῦ ποταμοῦ (s041).\n\nπαρά shows the pattern most clearly, because it takes all three cases: the dative usually marks being beside someone or something, the accusative going up to it, the genitive coming away from it. (παρά + accusative can also mean simply \"alongside\", as on the stele by the temple in the Anabasis.) Xenophon stood παρὰ τῷ ποταμῷ, beside the river (s008); Gryllus went παρὰ τὴν Ἀλκήν, up to Alke (s048); and he went away παρὰ τοῦ πατρός, from his father (s073). With persons, παρά is the ordinary word for \"at the house of, to, from\"; with places Greek prefers ἐν, εἰς, πρός, ἐκ and ἀπό. ὑπέρ + genitive \"above\" and πρό + genitive \"in front of\" describe the estate in s010 and s009.\n\nPreverbs of motion. The same prepositions are fixed to verbs of motion as preverbs: ἀνα- up, κατα- down, δια- across or through, εἰσ- in, ἐκ- out, ἀπο- away, προσ- towards. A compound often repeats its preposition in the phrase: εἰς τὴν ὕλην εἰσῆλθε, ἐκ τῆς ὕλης ἐξῆλθον, πρὸς τὸν ναὸν προσῆλθον (s045). διαβαίνω takes a plain accusative of the thing crossed: διέβη τὸν ποταμόν (s027).\n\nThe augment goes inside. The augment belongs to the simple verb, so in a past indicative it stands between the preverb and the stem: ἀνα + ἔβη → ἀνέβη, κατα + ἔβησαν → κατέβησαν, ἀπο + ἦλθε → ἀπῆλθε. A preverb that ends in a vowel drops it before the augment (ἀν-, κατ-, δι-, ἀπ-); περι- and προ- keep theirs, as later units will show. ἐκ becomes ἐξ before any vowel: ἐξῆλθε. εἰσ- and προσ- already end in a consonant: εἰσῆλθε, προσῆλθε. ἀναγιγνώσκω \"read\" works the same way in the imperfect: ἀνεγίγνωσκεν (s051).\n\nOutside the indicative there is no augment, and the preverb keeps its own shape: ἀναβῆναι (s017), ἀπελθοῦσα (s024), καταβαίνετε (s071). So ἀπελθοῦσα, never *ἀπηλθοῦσα: the participle has no augment to lose.\n\nTo find the dictionary form of a compound, take the augment out and give the preverb back its vowel: διέβη → δια-βαίνω, κατέβησαν → κατα-βαίνω, ἐξῆλθον → ἐκ + ἔρχομαι = ἐξέρχομαι. The table is for looking things up, not for learning by heart.",
+    "note_en": "Where, whither, whence. Greek asks three questions about place: ποῦ; (where is it?), ποῖ; (where is it going?) and πόθεν; (where is it coming from?). Each has its usual answers: ἐν + dative for position; εἰς \"into, to\" or πρός \"towards, up to\" + accusative for destination; ἐκ \"out of\" or ἀπό \"away from\" + genitive for source. Strictly it is the preposition and its meaning that choose the case, so learn these as pairs rather than as a rule that ποῦ; always wants a dative. Sosias answers ποῖ; and ποῦ; in one breath: εἰς τὴν ὕλην εἰσῆλθεν … καὶ νῦν ἐν τῇ ὕλῃ ἐστίν (s031). To Diodorus's πόθεν; he says ἀπὸ τοῦ ποταμοῦ (s041).\n\nπαρά shows the pattern most clearly, because it takes all three cases: the dative usually marks being beside someone or something, the accusative going up to it, the genitive coming away from it. (παρά + accusative can also mean simply \"alongside\", as on the stele by the temple in the Anabasis.) Xenophon stood παρὰ τῷ ποταμῷ, beside the river (s008); Gryllus went παρὰ τὴν Ἀλκήν, up to Alke (s048); and he went away παρὰ τοῦ πατρός, from his father (s073). With persons, παρά is the ordinary word for \"at the house of, to, from\"; with places Greek prefers ἐν, εἰς, πρός, ἐκ and ἀπό. ὑπέρ + genitive \"above\" and πρό + genitive \"in front of\" describe the estate in s010 and s009.\n\nPreverbs of motion. The same prepositions are fixed to verbs of motion as preverbs: ἀνα- up, κατα- down, δια- across or through, εἰσ- in, ἐκ- out, ἀπο- away, προσ- towards. A compound often repeats its preposition in the phrase: εἰς τὴν ὕλην εἰσῆλθε, ἐκ τῆς ὕλης ἐξῆλθον, πρὸς τὸν ναὸν προσῆλθον (s045). διαβαίνω takes a plain accusative of the thing crossed: διέβη τὸν ποταμόν (s027).\n\nThe augment goes inside. The augment belongs to the simple verb, so in a past indicative it stands between the preverb and the stem: ἀνα + ἔβη → ἀνέβη, κατα + ἔβησαν → κατέβησαν, ἀπο + ἦλθε → ἀπῆλθε. A preverb that ends in a vowel drops it before the augment (ἀν-, κατ-, δι-, ἀπ-); περι- and προ- keep theirs, as later units will show. ἐκ becomes ἐξ before any vowel: ἐξῆλθε. εἰσ- and προσ- already end in a consonant: εἰσῆλθε, προσῆλθε. ἀναγιγνώσκω \"read\" works the same way in the imperfect: ἀνεγίγνωσκεν (s051).\n\nOutside the indicative there is no augment; ordinary joining and elision still apply: ἀναβῆναι (s017), ἀπελθοῦσα (s024), καταβαίνετε (s071). So ἀπελθοῦσα, never *ἀπηλθοῦσα: the participle has no augment to lose.\n\nFirst identify the preverb and past stem. Removing the augment does not always recover the present stem: διέβη belongs to διαβαίνω, and ἀπῆλθε to ἀπέρχομαι. Use the table to match irregular stems. Restore an elided preverb vowel where appropriate; it can remain elided before a vowel even without an augment, as in ἀπελθοῦσα. The table consolidates reading examples, and a dash means no example was read. It is for reference, not recitation. The complete s031 contrast means “she entered the wood … and now she is in the wood.” Motion into a place and position within it therefore use different cases.",
     "parergon": {
       "title": "μέν … δέ",
       "body_en": "μέν … δέ sets two things side by side. English rarely needs \"on the one hand … on the other\": usually \"while\", \"but\", or nothing at all. μέν comes after the first word or phrase of the first half and usually tells you a δέ is coming: ὁ μὲν λαγὼς ἔφευγεν, ἡ δὲ Ἀλκὴ ἐδίωκεν (s026). It sorts time (πρῶτον μὲν … ἔπειτα δέ, s027), people (Ἐγὼ μὲν … Ἐγὼ δέ, s016–s017) and things (ταῦτα μὲν … ταῦτα δέ, s039); the inscription uses it for the owner's two duties (τὴν μὲν δεκάτην … ἐκ δὲ τοῦ περιττοῦ). δέ alone, also placed after the first word, means \"and\" or \"but\" and moves the story on.",
@@ -2323,7 +2330,7 @@
     },
     {
       "lexeme_id": "grc-eao",
-      "citation_form": "ἐάω (impf. εἴων), εἴασα",
+      "citation_form": "ἐάω (impf. εἴων)",
       "part_of_speech": "verb",
       "current_sense": "allow, let (+ acc. + inf.); οὐκ ἐάω forbid",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2339,7 +2346,7 @@
     },
     {
       "lexeme_id": "grc-deomai",
-      "citation_form": "δέομαι (+ gen.), ἐδεήθην",
+      "citation_form": "δέομαι (+ gen.)",
       "part_of_speech": "verb",
       "current_sense": "ask, beg (+ gen. of the person)",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2347,7 +2354,7 @@
     },
     {
       "lexeme_id": "grc-axioo",
-      "citation_form": "ἀξιόω, ἠξίωσα",
+      "citation_form": "ἀξιόω",
       "part_of_speech": "verb",
       "current_sense": "think it right, claim, insist (+ inf.)",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2355,7 +2362,7 @@
     },
     {
       "lexeme_id": "grc-oiomai",
-      "citation_form": "οἴομαι (οἶμαι), ᾠήθην",
+      "citation_form": "οἴομαι (οἶμαι)",
       "part_of_speech": "verb",
       "current_sense": "think, suppose (+ acc. + inf.)",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2363,7 +2370,7 @@
     },
     {
       "lexeme_id": "grc-tynchano",
-      "citation_form": "τυγχάνω, ἔτυχον",
+      "citation_form": "τυγχάνω",
       "part_of_speech": "verb",
       "current_sense": "happen to (+ ptc.); hit, meet (+ gen.)",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2379,7 +2386,7 @@
     },
     {
       "lexeme_id": "grc-skopeo",
-      "citation_form": "σκοπέω, ἐσκεψάμην",
+      "citation_form": "σκοπέω",
       "part_of_speech": "verb",
       "current_sense": "look at, examine",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2387,7 +2394,7 @@
     },
     {
       "lexeme_id": "grc-phylatto",
-      "citation_form": "φυλάττω, ἐφύλαξα",
+      "citation_form": "φυλάττω",
       "part_of_speech": "verb",
       "current_sense": "guard, keep watch on",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2395,7 +2402,7 @@
     },
     {
       "lexeme_id": "grc-dioko",
-      "citation_form": "διώκω, ἐδίωξα",
+      "citation_form": "διώκω",
       "part_of_speech": "verb",
       "current_sense": "chase, pursue, hunt",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2443,7 +2450,7 @@
     },
     {
       "lexeme_id": "grc-phaino",
-      "citation_form": "φαίνω, ἔφηνα; φαίνομαι",
+      "citation_form": "φαίνω; φαίνομαι",
       "part_of_speech": "verb",
       "current_sense": "show; (mid.) appear, be seen",
       "first_introduced_lesson": "grc-skil-01-l01",
@@ -2459,7 +2466,7 @@
     },
     {
       "lexeme_id": "grc-thyo",
-      "citation_form": "θύω, ἔθυσα",
+      "citation_form": "θύω",
       "part_of_speech": "verb",
       "current_sense": "sacrifice",
       "first_introduced_lesson": "grc-skil-01-l01",
