@@ -206,8 +206,9 @@
     ]
   },
   "media": {
-    "status": "draft",
-    "notes": "No audio or paid images. Chapter-local contextual English popups deliver exact first-use meanings; no absent illustration is an inference dependency."
+    "status": "planned",
+    "cover": "is-kvold-01-l08-img-cover",
+    "notes": "Cover and section scenes are planned only; all reading support is delivered in prose or contextual popups."
   },
   "completion": {
     "button_label": "Búið"
@@ -230,7 +231,19 @@
           {
             "id": "is-kvold-01-l08-s001",
             "text": "Guðrún opnar hurðina. Séra Þorvaldur kemur að Hömrum. Í dag er húsvitjun: presturinn kemur heim að bænum og heyrir börnin. Börnin lesa.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l08-img-cover",
+                "src": "media/images/is-kvold-01-l08-img-cover.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Guðrún opnar hurðina. Séra Þorvaldur kemur að Hömrum. Í dag er húsvitjun: presturinn kemur heim að bænum og heyrir börnin. Börnin lesa. Fólkið er fínt. Ásta tekur skotthúfuna af sér. Siggi tekur kverið. Kver er lítil bók; börnin lesa úr kverinu. „Viljið þér kaffi, séra Þorvaldur?“ Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "is-kvold-01-l08-s002",
@@ -414,11 +427,12 @@
               },
               {
                 "id": "x1-2-2",
-                "prompt": "Guðrún kemur með ___. (ka…)",
+                "prompt": "Guðrún hefur ekki kverið; hún hefur ___. (ka…)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "kaffi"
+                  "kaffi",
+                  "kaffið"
                 ]
               },
               {
@@ -432,7 +446,7 @@
               },
               {
                 "id": "x1-2-4",
-                "prompt": "Siggi sér stafinn. Hér er ___. (st…)",
+                "prompt": "Siggi sér ekki orð; hér er einn ___. (st…)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -460,7 +474,19 @@
           {
             "id": "is-kvold-01-l08-s017",
             "text": "Um kvöldið borðar fólkið graut úr öskum. Gesturinn hefur ask og góðan mat. Þórunn segir sögu um kvæðamann: Hallur kemur úr snjónum og kveður rímu.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l08-img-scene-2",
+                "src": "media/images/is-kvold-01-l08-img-scene-2.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Um kvöldið borðar fólkið graut úr öskum. Gesturinn hefur ask og góðan mat. Þórunn segir sögu um kvæðamann: Hallur kemur úr snjónum og kveður rímu. „Ég þekki nafnið. Hallur kveður hátt.“ Afi tekur kverið af Sigga. Siggi kemur að lampanum. Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "is-kvold-01-l08-s018",
@@ -737,7 +763,19 @@
           {
             "id": "is-kvold-01-l08-s033",
             "text": "Um morguninn tekur Siggi kverið aftur. Séra Þorvaldur situr hjá lampanum.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l08-img-scene-3",
+                "src": "media/images/is-kvold-01-l08-img-scene-3.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Um morguninn tekur Siggi kverið aftur. Séra Þorvaldur situr hjá lampanum. „Ég vil reyna aftur, séra Þorvaldur. Ég get nú!“ Guðrún kemur með kaffi. Nú prófar presturinn Sigga aftur. Siggi les hægt, en hann les vel. Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "is-kvold-01-l08-s034",
@@ -874,7 +912,7 @@
               },
               {
                 "id": "x3-1-4",
-                "prompt": "„Þú ___ orðin,“ segir afi við Sigga. (læra)",
+                "prompt": "„Þú ___ mörg orð,“ segir Guðrún við Sigga. (læra)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
@@ -961,7 +999,19 @@
           {
             "id": "is-kvold-01-l08-s048",
             "text": "Afi opnar Edduna. Siggi situr hjá honum. Hér er sagan um Þór, eftir Snorra-Eddu.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l08-img-scene-4",
+                "src": "media/images/is-kvold-01-l08-img-scene-4.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Afi opnar Edduna. Siggi situr hjá honum. Hér er sagan um Þór, eftir Snorra-Eddu. Þór er sterkur. Hann á hamar og vagn. Hafrar draga vagninn. Þór situr í vagninum. Hafrarnir eru ekki hestar; hér eru tveir hafrar. Þór og Loki koma að bæ. Þar er bóndi með konu, strák og stelpu. Bóndinn á ekki mikinn mat. Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "is-kvold-01-l08-s049",
@@ -1148,7 +1198,8 @@
             "title": "Skrifaðu",
             "instruction": "Settu orðið í rétt form.",
             "grammar_target_ids": [
-              "G08"
+              "G08",
+              "G06"
             ],
             "obrazec": {
               "prompt": "Siggi vill heyra sögu. Afi ___ hana. (segja)",
@@ -1161,7 +1212,8 @@
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "vagn"
+                  "vagn",
+                  "vagninn"
                 ]
               },
               {
@@ -1170,7 +1222,8 @@
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "bein"
+                  "bein",
+                  "beinið"
                 ]
               },
               {
@@ -1201,7 +1254,17 @@
                 ]
               }
             ],
-            "hint_en": "Closed recap. Use vagn, bein, hamar, blaðsíða and lesa; inflect where needed. Extra nouns: kver, orð, stafur."
+            "hint_en": "Complete one gap per sentence, using the bank and the local cues. Where a lemma is shown, inflect it as needed.",
+            "word_bank": [
+              "bein",
+              "blaðsíða",
+              "hamar",
+              "kver",
+              "lesa",
+              "orð",
+              "stafur",
+              "vagn"
+            ]
           }
         ]
       }
@@ -1278,8 +1341,8 @@
         },
         {
           "obrazec": {
-            "prompt": "„Ég ___ með kverið.“ (koma)",
-            "answer": "kem"
+            "prompt": "Hér er hafur. Hér eru ___. (hafrar / hafur / hafri)",
+            "answer": "hafrar"
           },
           "items": [
             {
@@ -1302,21 +1365,21 @@
             },
             {
               "id": "a7",
-              "prompt": "Siggi sér ___. (bókina / bókinni / bókin)",
+              "prompt": "Hér er hafurinn. Hér eru ___. (hafrarnir / hafurinn / hafrana)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
-                "bókina"
+                "hafrarnir"
               ],
-              "recall_of": "G05"
+              "recall_of": "G03"
             },
             {
               "id": "a8",
-              "prompt": "Ásta situr hjá ___. (afi)",
+              "prompt": "Siggi fer í baðstofuna. Nú er hann í ___. (baðstofan)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
-                "afa"
+                "baðstofunni"
               ],
               "recall_of": "G06"
             }
@@ -1348,7 +1411,8 @@
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
-            "bein"
+            "bein",
+            "beinið"
           ]
         },
         {
@@ -1366,7 +1430,8 @@
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
-            "kaffi"
+            "kaffi",
+            "kaffið"
           ]
         },
         {
@@ -1384,7 +1449,9 @@
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
-            "orð"
+            "orð",
+            "orðið",
+            "orðin"
           ]
         },
         {
@@ -1411,7 +1478,8 @@
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
-            "vagn"
+            "vagn",
+            "vagninn"
           ]
         }
       ]
@@ -1493,7 +1561,7 @@
           "model_answer": "Hann brýtur beinið.",
           "model_answers": [
             "Hann brýtur beinið.",
-            "Hann brýtur bein og borðar merg."
+            "Þjálfi brýtur beinið."
           ],
           "rubric": "He splits a bone for its marrow.",
           "rubric_lang": "en",
@@ -1827,18 +1895,19 @@
   "provenance": {
     "author": "GPT-6.1-Sol via Codex",
     "notes": [
-      "Draft against unchanged row8. Main story in present; the priest records reading, not confirmation itself. No dative objects, ordinary genitive noun phrases, weak adjectives or accusative two/three.",
-      "English grammar note intentionally exceeds80 words to define terms and translate examples.",
-      "Myth source: Snorra-Edda, Gylfaginning21,44 (first half),48. Retold, not quoted.",
-      "Learner load: fixed28 planned lexemes, one supported confirmation formula; supported skinn and mergur supply necessary myth meanings with contextual English popups, not productive gaps.  Actual checker metrics will be recorded after review.",
-      "Additional supported reading material required by the immutable myth beat: skinn (skins), mergur (marrow), eldinum (the fire), yfir (over); each receives first-occurrence contextual English support and never serves as an expected productive answer. Attribution eftir Snorra-Eddu is a supplied source label. Af sér is a supported self-reference chunk. All others remain the fixed28 planned targets.",
-      "Independent whole-chapter review cx1104-130116-30276, gpt-6.1-sol high, completed2026-11-04. All seven blocker groups addressed: reyna class and fara person label; contextual formal pronoun and verb analyses; correctly/first/allur simplified and river clarified; early second-person gap repaired; infinitive constructions removed; kunna collocation supported; bank/key ambiguities and B lexical giveaways repaired. All actionable suggestions applied, including distinct worked models, bone/marrow action order, precise supported source details, and canonical continuity thread.",
-      "Supported myth material: brýt at s065 is first-person present and covered by G08, with form-and-meaning popup. No production gap uses skinn/mergur/eldur/yfir. The added detail identifies a hind-leg injury and hammer consecration through contextual English reading notes, without new productive Icelandic vocabulary.",
-      "Historical evidence checked by independent reviewer: https://ordabelgur.skjalasafn.is/kb/soknarmannatol/ and https://ordabelgur.skjalasafn.is/kb/ferming/. Register wording and next-morning amendment are fictional, not a claimed local archival transcription. Myth: https://www.snerpa.is/net/snorri/gylf.htm (44).",
-      "Material warnings: optional raster cover/scenes/vignettes omitted under no-paid-art instruction; actual chapter-local popups support opaque meanings. The media-coverage lint does not count those popups. Unmerged continuity belongs to parent finalization; focus carryovers svara/fjórir should not be padded into this chapter.",
-      "Final post-review learner-load ledger2026-11-04:769 running words; fixed28 planned new lexemes including one planned chunk á morgun; every planned lexeme at least3 uses. Additional supported myth lemmas skinn/mergur/eldur/yfir, supported confirmation and af sér chunks, and the supplied source label are disclosed separately; none is a productive gap. New inflections of known verbs include kem/kemur, tek/tekur/tökum, les/lest/lesum and segi/segir; formal plural verb questions remain whole formulas. The local myth cluster has precise contextual popups for each opaque new meaning. No receptive verse. Checker actual new/aided share18.21%, prior coverage81.79%, unknown0; focus20/22=90.9%. Final gate0 errors. Chapter metrics report15 warnings:3 omitted artwork counts,11 popup-supported media-coverage warnings,1 recall carryover (svara/fjórir). The report also includes3 pending course continuity merges (8–10); chapter8 owns one. No absent image is needed for comprehension.",
-      "Additional Opus editorial cross-check: repaired remaining construction licensing, answer variants and cross-chapter meaning issues; rechecked dependent text and contextual popup segment snapshots. No plan changes.",
-      "Final editorial ledger: 769 running words, 28 planned new lexemes, every new lexeme at least three uses; focus 20/22; new/aided share 18.21%. These replace earlier draft counts where they differ."
+      "Earlier version / review history: Draft against unchanged row8. Main story in present; the priest records reading, not confirmation itself. No dative objects, ordinary genitive noun phrases, weak adjectives or accusative two/three.",
+      "Earlier version / review history: English grammar note intentionally exceeds80 words to define terms and translate examples.",
+      "Earlier version / review history: Myth source: Snorra-Edda, Gylfaginning21,44 (first half),48. Retold, not quoted.",
+      "Earlier version / review history: Learner load: fixed28 planned lexemes, one supported confirmation formula; supported skinn and mergur supply necessary myth meanings with contextual English popups, not productive gaps.  Actual checker metrics will be recorded after review.",
+      "Earlier version / review history: Additional supported reading material required by the immutable myth beat: skinn (skins), mergur (marrow), eldinum (the fire), yfir (over); each receives first-occurrence contextual English support and never serves as an expected productive answer. Attribution eftir Snorra-Eddu is a supplied source label. Af sér is a supported self-reference chunk. All others remain the fixed28 planned targets.",
+      "Earlier version / review history: Independent whole-chapter review cx1104-130116-30276, gpt-6.1-sol high, completed2026-11-04. All seven blocker groups addressed: reyna class and fara person label; contextual formal pronoun and verb analyses; correctly/first/allur simplified and river clarified; early second-person gap repaired; infinitive constructions removed; kunna collocation supported; bank/key ambiguities and B lexical giveaways repaired. All actionable suggestions applied, including distinct worked models, bone/marrow action order, precise supported source details, and canonical continuity thread.",
+      "Earlier version / review history: Supported myth material: brýt at s065 is first-person present and covered by G08, with form-and-meaning popup. No production gap uses skinn/mergur/eldur/yfir. The added detail identifies a hind-leg injury and hammer consecration through contextual English reading notes, without new productive Icelandic vocabulary.",
+      "Earlier version / review history: Historical evidence checked by independent reviewer: https://ordabelgur.skjalasafn.is/kb/soknarmannatol/ and https://ordabelgur.skjalasafn.is/kb/ferming/. Register wording and next-morning amendment are fictional, not a claimed local archival transcription. Myth: https://www.snerpa.is/net/snorri/gylf.htm (44).",
+      "Earlier version / review history: Material warnings: optional raster cover/scenes/vignettes omitted under no-paid-art instruction; actual chapter-local popups support opaque meanings. The media-coverage lint does not count those popups. Unmerged continuity belongs to parent finalization; focus carryovers svara/fjórir should not be padded into this chapter.",
+      "Earlier version / review history: Final post-review learner-load ledger2026-11-04:769 running words; fixed28 planned new lexemes including one planned chunk á morgun; every planned lexeme at least3 uses. Additional supported myth lemmas skinn/mergur/eldur/yfir, supported confirmation and af sér chunks, and the supplied source label are disclosed separately; none is a productive gap. New inflections of known verbs include kem/kemur, tek/tekur/tökum, les/lest/lesum and segi/segir; formal plural verb questions remain whole formulas. The local myth cluster has precise contextual popups for each opaque new meaning. No receptive verse. Checker actual new/aided share18.21%, prior coverage81.79%, unknown0; focus20/22=90.9%. Final gate0 errors. Chapter metrics report15 warnings:3 omitted artwork counts,11 popup-supported media-coverage warnings,1 recall carryover (svara/fjórir). The report also includes3 pending course continuity merges (8–10); chapter8 owns one. No absent image is needed for comprehension.",
+      "Earlier version / review history: Additional Opus editorial cross-check: repaired remaining construction licensing, answer variants and cross-chapter meaning issues; rechecked dependent text and contextual popup segment snapshots. No plan changes.",
+      "Earlier version / review history: Final editorial ledger: 769 running words, 28 planned new lexemes, every new lexeme at least three uses; focus 20/22; new/aided share 18.21%. These replace earlier draft counts where they differ.",
+      "Audit repair, 2026-11-04: current version corrects the published-chapter audit blockers in popups, exercise frames, keys, recall and grammar references as applicable. Earlier word/focus counts and omission claims above are historical. Current chapter gate and independent review are archived in docs/reviews/is-audit-repairs-2026-11-04 and OPEN.md. For chapters 5–12, cover/scene records are planned; no image generation or audio. Reference-labelled table cells are for lookup only, never required output. Weak later recurrence is scheduled in plan rows 15–17. Text remains draft."
     ],
     "review_questions": [
       {

@@ -42,6 +42,16 @@
                   "is-saman",
                   "is-einn"
                 ]
+              },
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l05-img-cover",
+                "src": "media/images/is-kvold-01-l05-img-cover.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Siggi vaknar snemma. Ketill kemur, og báðir strákarnir fara saman. Það er morgunn. Nú er haust. „Réttir í dag!“ kallar Ketill. „Siggi er ekki seinn í dag! Göngur og réttir!“ Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
               }
             ]
           },
@@ -325,9 +335,10 @@
             "type": "napishi",
             "title": "Skrifaðu",
             "instruction": "Settu orðið í rétt form.",
-            "hint_en": "Use the object form after á or sér. The cue gives the subject form; choices are shown inside the question.",
+            "hint_en": "Complete one gap per sentence, using the bank and the local cues. Where a lemma is shown, inflect it as needed.",
             "grammar_target_ids": [
-              "G05"
+              "G05",
+              "G03"
             ],
             "obrazec": {
               "prompt": "Hrúturinn er hér. Bjarni á ___. (hann / hana / það)",
@@ -389,6 +400,16 @@
                   "litla"
                 ]
               }
+            ],
+            "word_bank": [
+              "gráa",
+              "gráar",
+              "hana",
+              "hann",
+              "litla",
+              "lítinn",
+              "þau",
+              "þá"
             ]
           }
         ]
@@ -400,7 +421,19 @@
           {
             "id": "is-kvold-01-l05-s015",
             "text": "Lambið er hér líka. Siggi og Ketill skoða það saman. Það hefur skrítið mark.",
-            "paragraph_start": true
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l05-img-scene-2",
+                "src": "media/images/is-kvold-01-l05-img-scene-2.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Lambið er hér líka. Siggi og Ketill skoða það saman. Það hefur skrítið mark. „Hver á lambið?“ kallar Bjarni. Mennirnir skoða markið, en enginn þekkir það. Jón þekkir það ekki. Óli þekkir það ekki. Enginn þekkir markið; enginn á lambið. Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
+              }
+            ]
           },
           {
             "id": "is-kvold-01-l05-s016",
@@ -676,9 +709,10 @@
             "type": "napishi",
             "title": "Skrifaðu",
             "instruction": "Settu orðið í rétt form.",
-            "hint_en": "Use the object form after á or sér. The cue gives the subject form; choices are shown inside the question.",
+            "hint_en": "Complete one gap per sentence, using the bank and the local cues. Where a lemma is shown, inflect it as needed.",
             "grammar_target_ids": [
-              "G05"
+              "G05",
+              "G03"
             ],
             "obrazec": {
               "prompt": "Hér er grá kind. Siggi sér ___ kind. (grár)",
@@ -735,6 +769,16 @@
                   "kindina"
                 ]
               }
+            ],
+            "word_bank": [
+              "gott",
+              "gráa",
+              "gráar",
+              "hana",
+              "kindina",
+              "litla",
+              "lítinn",
+              "það"
             ]
           }
         ]
@@ -757,6 +801,16 @@
                 "covers_lexeme_ids": [
                   "is-um"
                 ]
+              },
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "is-kvold-01-l05-img-scene-3",
+                "src": "media/images/is-kvold-01-l05-img-scene-3.webp",
+                "status": "planned",
+                "alt": "Scene at the opening of this section.",
+                "art_brief": "Ink and watercolour for the Hamrar household; woodcut for an embedded myth. Follow the course visual bible and established cast, clothing and earmarks. Depict exactly this section opening, preserving count, location, posture and objects: Um kvöldið er fjölskyldan í bænum. Um haustið er mikið hey hér. Heyið er þurrt, og hlaðan er þurr. Kindurnar eru hér. Ásta er lítil stelpa, og hún sér Sigga og lambið. „Lambið! Hvað gerir lambið hér? Á Siggi lambið eða Ketill?“ „Nú á Siggi lambið,“ segir Guðrún. „Mennirnir finna féð um haustið. Haustið er gott.“ Do not depict later outcomes. No lettering.",
+                "covers_lexeme_ids": []
               }
             ]
           },
@@ -850,16 +904,11 @@
               },
               {
                 "id": "x3-1-3",
-                "prompt": "Ásta sér Bjarna, og Siggi sér ___ líka. (hann / hana / það)",
+                "prompt": "Bjarni er hér, og Siggi sér ___ líka. (hann / hana / það)",
                 "mode": "productive",
-                "answer_mode": "choice",
+                "answer_mode": "exact",
                 "accepted_answers": [
                   "hann"
-                ],
-                "choices": [
-                  "hann",
-                  "hana",
-                  "það"
                 ]
               },
               {
@@ -892,9 +941,10 @@
             "type": "napishi",
             "title": "Skrifaðu",
             "instruction": "Settu orðið í rétt form.",
-            "hint_en": "Complete this connected model of the evening scene. Each sentence has one gap. Use the subject-form cue to write the object form; the final item recalls singular present -ar.",
+            "hint_en": "Complete one gap per sentence, using the bank and the local cues. Where a lemma is shown, inflect it as needed.",
             "grammar_target_ids": [
-              "G05"
+              "G05",
+              "G03"
             ],
             "obrazec": {
               "prompt": "Bókin er hér. Afi á ___. (hún)",
@@ -912,11 +962,11 @@
               },
               {
                 "id": "x3-2-2",
-                "prompt": "Bjarni tekur bókina. Siggi sér ___. (hann)",
+                "prompt": "Siggi er hér, og Ásta sér ___ líka. (Siggi)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "hann"
+                  "Sigga"
                 ]
               },
               {
@@ -939,13 +989,22 @@
               },
               {
                 "id": "x3-2-5",
-                "prompt": "„Edda!“ ___ Ásta. Siggi sér bókina. (kalla)",
+                "prompt": "Ásta er barn, og Siggi er barn. Þau eru ___. (barn)",
                 "mode": "productive",
                 "answer_mode": "exact",
                 "accepted_answers": [
-                  "kallar"
+                  "börn"
                 ]
               }
+            ],
+            "word_bank": [
+              "Ketil",
+              "Sigga",
+              "bókina",
+              "börn",
+              "hana",
+              "hundana",
+              "það"
             ]
           }
         ]
@@ -984,7 +1043,7 @@
             "gráar kindur"
           ],
           [
-            "litlir hrútar",
+            "litlir hrútar [reference only; not demonstrated]",
             "litla hrúta"
           ]
         ]
@@ -1141,7 +1200,7 @@
             },
             {
               "id": "a6",
-              "prompt": "Siggi sér hrútana. Bjarni á ___. (þeir)",
+              "prompt": "Siggi sér hundana. Bjarni á ___. (þeir)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
@@ -1152,29 +1211,30 @@
         },
         {
           "obrazec": {
-            "prompt": "Siggi kallar. Mennirnir ___. (kalla)",
-            "answer": "kalla"
+            "prompt": "Hér er lamb; þar eru ___. (lamb)",
+            "answer": "lömb"
           },
           "items": [
             {
               "id": "a7",
-              "prompt": "Ásta ___ snemma. (vakna)",
+              "prompt": "Hér er kind; þar eru ___. (kind)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
-                "vaknar"
+                "kindur",
+                "kindurnar"
               ],
-              "recall_of": "G04"
+              "recall_of": "G03"
             },
             {
               "id": "a8",
-              "prompt": "Jón og Bjarni ___. (kalla)",
+              "prompt": "Hér er bók. ___ er hér um kvöldið. (bók)",
               "mode": "productive",
               "answer_mode": "exact",
               "accepted_answers": [
-                "kalla"
+                "Bókin"
               ],
-              "recall_of": "G04"
+              "recall_of": "G02"
             }
           ]
         }
@@ -1237,7 +1297,7 @@
         },
         {
           "id": "b5",
-          "prompt": "Mennirnir gera það aftur og aftur. Þetta er ___. (s…)",
+          "prompt": "Göngur og réttir um haustið: það er ___ hér. (s…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1246,7 +1306,7 @@
         },
         {
           "id": "b6",
-          "prompt": "Sumarið er ekki hér nú. Nú er ___. (h…)",
+          "prompt": "Í dag eru réttir; það er ___. (h…)",
           "mode": "productive",
           "answer_mode": "exact",
           "accepted_answers": [
@@ -1376,7 +1436,8 @@
   },
   "media": {
     "status": "planned",
-    "notes": "Delivered deterministic pen and coin diagrams support first encounters. No paid rasters or audio; remaining meaning support is in prose and margin aids."
+    "cover": "is-kvold-01-l05-img-cover",
+    "notes": "Cover and section scenes are planned only; all reading support is delivered in prose or contextual popups."
   },
   "anki_export": {
     "enabled": true,
@@ -1624,18 +1685,19 @@
     "author": "Codex",
     "model": "gpt-6.1-sol",
     "notes": [
-      "Length follows connected scenes, not the advisory target. Grammar note exceeds the old 80-word cap to explain object case, article/adjective agreement and pronouns in full English, as RULES §6 requires.",
-      "History follows the binding plan: stray belongs to hreppur by custom; no invented price or named official. Ketill is hurt but no villain. Book remains with Bjarni until final scene. The boy’s response retains present narration.",
-      "Self-check passes: case/government; article/adjectives; verbs; V2; letters; historical/myth constraints; answer variants and banks; licensing and continuity. Independent review remains required.",
-      "The older son rivalry stays within plan. Missing optional art is not needed for text comprehension; money support uses deterministic coins, not paid generation.",
-      "Fé has separate sheep and money senses; the delivered coin diagram at s024 and contextual English tap gloss distinguish money. New noun and adjective forms are read before the exercises. The exact unknown-token count/coverage is machine-checked; the learner must still infer supported meanings from the adjacent contrasts.",
-      "Independent Codex review cx1104-123506-10013: all7 blockers addressed. Delivered pen diagram resolves rétt/dilkur and pulling at first use; hrútur meaning precedes collective examples; removed unlicensed numeral objects; choice keys preserve definiteness; b4 accepts hreppur/hreppurinn; C syntax repaired; fé money is current, not obsolete. Dependent grammar examples and translations updated.",
-      "Review suggestions applied: pull after resistance; kaupir aid at firstuse; season contrast not antonym; einn includes alone; ownership stage clear in C; worked examples match exercise; last Skrifaðu is connected gapped model text; haycock/rain recap in explicitly signalled present retelling; book identity stable.",
-      "Late September is called haust in modern seasonal usage; afi calls it sumar in chapter4, consistent with the traditional Icelandic calendar’s summer half lasting into October. There is no claim that the season changes overnight.",
-      "Material warnings: only two delivered deterministic diagrams; optional raster counts remain low because no paid art is needed. Prose and diagrams support every meaning. í heyinu is an established indivisible place chunk. Context-supported first-use warnings do not imply absent aids. Missing sumar, gras and fjorir focus items carry forward; do not pad for optional recall.",
-      "Historical sale custom is unresolved [?]: binding plan supplies immediate communal ownership and Bjarni buying the lamb, but no contemporary1874 Jökuldalur regulation confirming this exact procedure is verified. Related1886 Árnessýsla evidence does not settle local1874 practice. No exact price or official is invented.",
-      "English pronunciation guidance is confined to the listed words; rn allows retained-r [rtn] and [tn], rather than asserting unrestricted spelling rules.",
-      "After review repairs:616running words;27planned new lexemes all≥3uses;23/26focus lexemes=88.5%;0unknown tokens. Final checker0errors; two heyinu warnings are established chunks,22local warnings total including supported contextual aids and low optional raster counts. Both SVGs were inspected as actual Chrome screenshots; labels do not collide and the pen boundaries/gates/pulling action are visible."
+      "Earlier version / review history: Length follows connected scenes, not the advisory target. Grammar note exceeds the old 80-word cap to explain object case, article/adjective agreement and pronouns in full English, as RULES §6 requires.",
+      "Earlier version / review history: History follows the binding plan: stray belongs to hreppur by custom; no invented price or named official. Ketill is hurt but no villain. Book remains with Bjarni until final scene. The boy’s response retains present narration.",
+      "Earlier version / review history: Self-check passes: case/government; article/adjectives; verbs; V2; letters; historical/myth constraints; answer variants and banks; licensing and continuity. Independent review remains required.",
+      "Earlier version / review history: The older son rivalry stays within plan. Missing optional art is not needed for text comprehension; money support uses deterministic coins, not paid generation.",
+      "Earlier version / review history: Fé has separate sheep and money senses; the delivered coin diagram at s024 and contextual English tap gloss distinguish money. New noun and adjective forms are read before the exercises. The exact unknown-token count/coverage is machine-checked; the learner must still infer supported meanings from the adjacent contrasts.",
+      "Earlier version / review history: Independent Codex review cx1104-123506-10013: all7 blockers addressed. Delivered pen diagram resolves rétt/dilkur and pulling at first use; hrútur meaning precedes collective examples; removed unlicensed numeral objects; choice keys preserve definiteness; b4 accepts hreppur/hreppurinn; C syntax repaired; fé money is current, not obsolete. Dependent grammar examples and translations updated.",
+      "Earlier version / review history: Review suggestions applied: pull after resistance; kaupir aid at firstuse; season contrast not antonym; einn includes alone; ownership stage clear in C; worked examples match exercise; last Skrifaðu is connected gapped model text; haycock/rain recap in explicitly signalled present retelling; book identity stable.",
+      "Earlier version / review history: Late September is called haust in modern seasonal usage; afi calls it sumar in chapter4, consistent with the traditional Icelandic calendar’s summer half lasting into October. There is no claim that the season changes overnight.",
+      "Earlier version / review history: Material warnings: only two delivered deterministic diagrams; optional raster counts remain low because no paid art is needed. Prose and diagrams support every meaning. í heyinu is an established indivisible place chunk. Context-supported first-use warnings do not imply absent aids. Missing sumar, gras and fjorir focus items carry forward; do not pad for optional recall.",
+      "Earlier version / review history: Historical sale custom is unresolved [?]: binding plan supplies immediate communal ownership and Bjarni buying the lamb, but no contemporary1874 Jökuldalur regulation confirming this exact procedure is verified. Related1886 Árnessýsla evidence does not settle local1874 practice. No exact price or official is invented.",
+      "Earlier version / review history: English pronunciation guidance is confined to the listed words; rn allows retained-r [rtn] and [tn], rather than asserting unrestricted spelling rules.",
+      "Earlier version / review history: After review repairs:616running words;27planned new lexemes all≥3uses;23/26focus lexemes=88.5%;0unknown tokens. Final checker0errors; two heyinu warnings are established chunks,22local warnings total including supported contextual aids and low optional raster counts. Both SVGs were inspected as actual Chrome screenshots; labels do not collide and the pen boundaries/gates/pulling action are visible.",
+      "Audit repair, 2026-11-04: current version corrects the published-chapter audit blockers in popups, exercise frames, keys, recall and grammar references as applicable. Earlier word/focus counts and omission claims above are historical. Current chapter gate and independent review are archived in docs/reviews/is-audit-repairs-2026-11-04 and OPEN.md. For chapters 5–12, cover/scene records are planned; no image generation or audio. Reference-labelled table cells are for lookup only, never required output. Weak later recurrence is scheduled in plan rows 15–17. Text remains draft."
     ],
     "review_questions": [
       {
