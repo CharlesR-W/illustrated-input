@@ -1,0 +1,31 @@
+name: Language spec
+description: Ask for a new course. Easiest is to have a coding agent interview you using CONTRIBUTING.md, then paste its spec here.
+title: "Language spec: "
+labels: ["language-spec"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a course! The full guide is in
+        [CONTRIBUTING.md](https://github.com/CharlesR-W/illustrated-input/blob/main/CONTRIBUTING.md).
+        If you have a coding agent (Claude Code, Codex, …), tell it:
+        *"Read CONTRIBUTING.md in github.com/CharlesR-W/illustrated-input and interview me for a language spec."*
+        It will ask the questions and file this issue for you. Short answers are fine.
+  - type: input
+    id: language
+    attributes:
+      label: Language (and variety or period)
+      placeholder: e.g. Biblical Hebrew; Brazilian Portuguese; Old Norse
+    validations:
+      required: true
+  - type: textarea
+    id: spec
+    attributes:
+      label: Spec
+      description: The agent's spec (the sections in CONTRIBUTING.md), or your own answers in any form.
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: How should the owner reach you with follow-up questions? (optional)

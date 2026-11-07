@@ -6,7 +6,7 @@
   <meta name="description" content="Illustrated Input — graded illustrated readers for language learners.">
   <title>Illustrated Input</title>
   <script>try { if (localStorage.getItem("illustrated-input:theme") === "light") document.documentElement.dataset.theme = "light"; if (localStorage.getItem("illustrated-input:nav-collapsed") === "1") document.documentElement.classList.add("nav-collapsed"); } catch {}</script>
-  <link rel="stylesheet" href="styles.css?v=0b8f760e9d">
+  <link rel="stylesheet" href="styles.css?v=0fb7760410">
 </head>
 <body>
   <a class="skip-link" href="#main" data-ui="skip">Skip to the text</a>
@@ -23,6 +23,7 @@
       </a>
     </div>
     <div class="header-actions">
+      <a class="pill suggest-link" href="https://github.com/CharlesR-W/illustrated-input/issues/new?template=language-spec.yml" target="_blank" rel="noopener" lang="en">Suggest a language</a>
       <button id="theme-toggle" class="pill theme-toggle" type="button" lang="en"></button>
       <button id="english-toggle" class="pill" type="button" aria-pressed="false" lang="en" hidden>English</button>
     </div>
@@ -43,6 +44,7 @@
       <p class="panel-links"><a href="#contents" data-ui="contents">Contents</a><a href="#intro" id="intro-link" data-ui="how_to_read" hidden>How to read this book</a><a href="#whats-next" id="next-link" data-ui="whats_next" hidden>What next</a></p>
       <div class="book-switch" id="book-switch" role="group" hidden></div>
       <nav id="lesson-nav"></nav>
+      <p class="site-links" lang="en"><a class="pill" href="https://github.com/CharlesR-W/illustrated-input/issues/new?template=language-spec.yml" target="_blank" rel="noopener">Suggest a language</a><a href="https://github.com/CharlesR-W/illustrated-input" target="_blank" rel="noopener">Source on GitHub</a></p>
     </aside>
 
     <main id="main" tabindex="-1">

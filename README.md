@@ -27,6 +27,13 @@ Standalone pages (not courses):
 - Greek placement diagnostic: `tools/grc-diagnostic/`
 - Russian placement diagnostic: `tools/ru-diagnostic/`
 
+## Suggest a language
+
+Want a course in another language? See [CONTRIBUTING.md](CONTRIBUTING.md): point a coding
+agent at it and it will interview you and file a
+[language spec issue](https://github.com/CharlesR-W/illustrated-input/issues/new?template=language-spec.yml).
+Pull requests here are overwritten by the next build, so specs arrive as issues.
+
 GitHub Pages serves it from the root of the `main` branch. No build step, account or API
 key is needed; to read it locally run `python -m http.server` here and open
 http://localhost:8000.

@@ -78,6 +78,8 @@ img { max-width: 100%; }
 .progress-track { height: 7px; margin-top: .45rem; background: var(--track); border-radius: 99px; overflow: hidden; }
 .progress-fill { display: block; width: 0; height: 100%; background: var(--forest); transition: width .3s; }
 .panel-links { display: flex; flex-wrap: wrap; gap: .3rem 1rem; margin: 0 0 1.2rem; font-size: .86rem; font-weight: 700; }
+.site-links { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; margin: 1.6rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; }
+.site-links a.pill { text-decoration: none; }
 .nav-part { margin-bottom: 1rem; }
 .nav-part-title { margin: 0 0 .3rem; color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .lesson-list { margin: 0; padding: 0; list-style: none; display: grid; gap: .1rem; }
@@ -509,3 +511,5 @@ main:focus { outline: none; }
 .construction-banner { margin: .8rem 0 0; padding: .6rem .8rem; border: 1px solid #c9a227; border-left-width: 4px; border-radius: .4rem; background: rgba(201, 162, 39, .12); font: .9rem/1.45 var(--sans); }
 .construction-dot { display: inline-block; width: .5rem; height: .5rem; margin-left: .4rem; border-radius: 50%; background: #c9a227; vertical-align: middle; flex: none; }
 .construction-tag { display: block; color: #c9a227; }
+.suggest-link { text-decoration: none; }
+@media (max-width: 640px) { .suggest-link { display: none; } }
