@@ -17,6 +17,7 @@ those files reference:
 - 書與遠方 — Classical Chinese (`lzh-NEW-01`, draft): `content/lzh/`
 - La puerta del patio (`es-NEW-01`, draft): `content/es/`
 - La porta aperta (`it-NEW-01`, draft): `content/it/`
+- Das Spektrum (`de-NEW-01`, draft): `content/de/`
 - まちのほん (`ja-NEW-01`, draft): `content/ja/`
 - O café da esquina (`pt-NEW-01`, draft): `content/pt/`
 - Otwarty warsztat (`pl-NEW-01`, draft): `content/pl/`

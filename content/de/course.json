@@ -1,0 +1,1250 @@
+{
+  "_comment": "Das Spektrum, fresh 30-chapter plan. Every lesson is unwritten and unpublished. Owner design gate remains in BLOCKED.md; audio suspended.",
+  "schema_version": "0.3.0",
+  "id": "de-NEW-01",
+  "lang": "de",
+  "bridge_languages": [],
+  "bridge_references": {},
+  "language": {
+    "code": "de",
+    "name": "Deutsch",
+    "locale": "de-DE"
+  },
+  "title": "Das Spektrum",
+  "subtitle": "Heidelberg und Ludwigshafen, 1852–1872",
+  "status": "draft",
+  "content_version": "0.1.0",
+  "lesson_count": 30,
+  "custom": false,
+  "plugin": "generic",
+  "answer_checker": "generic",
+  "language_checks": {},
+  "answer_folds": {
+    "ä": "a",
+    "ö": "o",
+    "ü": "u",
+    "ß": "ss"
+  },
+  "lesson_labels": {
+    "chapter": "Kapitel",
+    "file_stem": "kapitel"
+  },
+  "grammar_licensing": "advisory",
+  "capabilities": {
+    "inflecting": true,
+    "scaffolded_answers": true,
+    "families": false,
+    "grammar_note_open": true
+  },
+  "stepper": true,
+  "lexicon_path": "lexicon.json",
+  "plan_path": "plan/chapters.json",
+  "grammar_map_path": "plan/grammar-map.json",
+  "continuity_path": "plan/continuity.json",
+  "design_path": "../../docs/de-spektrum-design.md",
+  "special_characters": [
+    "ä",
+    "ö",
+    "ü",
+    "Ä",
+    "Ö",
+    "Ü",
+    "ß"
+  ],
+  "ui_strings": {
+    "de": {
+      "nav_lessons": "Kapitel",
+      "contents": "Inhalt",
+      "course_progress": "Fortschritt",
+      "lesson": "Kapitel",
+      "part": "Teil",
+      "lessons_range": "Kapitel {from}–{to}",
+      "pensa": "Aufgaben",
+      "oral_mode": "Mündlich",
+      "grammar": "Grammatik",
+      "correct": "Richtig!",
+      "ending_hint": "Fast! Die Endung?",
+      "wrong": "Noch nicht. Noch einmal?",
+      "retry": "Noch einmal",
+      "english_toggle": "English",
+      "finish": "Kapitel abschließen",
+      "workbook": "Übungsbuch",
+      "obrazec": "Beispiel",
+      "skip_exercise": "Überspringen",
+      "skipped": "Übersprungen",
+      "unskip": "Zurück",
+      "lookalike_warning": "Ähnliche Zeichen ({chars}) wurden durch deutsche Buchstaben ersetzt.",
+      "stepper": "Schritte",
+      "step_read": "Lesen {n}",
+      "step_exercises": "Übungen {n}",
+      "step_grammar": "Grammatik und Wortgeschichte",
+      "step_pensa": "Aufgaben A, B, C",
+      "step_write": "Schreiben",
+      "step_reread": "Noch einmal lesen",
+      "step_anki": "Anki",
+      "step_done": "Fertig",
+      "step_mark": "Schritt abschließen",
+      "step_marked": "Fertig",
+      "step_next": "Weiter: {step}",
+      "continue_step": "{lesson} · {step}",
+      "export_timing": "Zeit exportieren (JSON)",
+      "words_with_history": "Wortgeschichte",
+      "note_en": "Erklärung (English)",
+      "afterword": "Nachwort",
+      "whats_next": "Wie weiter?",
+      "napishi": "Schreiben",
+      "napishi_draft": "Dein Text",
+      "napishi_rewrite": "Korrigierter Text",
+      "napishi_mark": "Markiere einen oder zwei Fehler und schreibe die Sätze neu.",
+      "napishi_typical": "Häufige Fehler",
+      "my_error": "Mein Fehler",
+      "model_answers": "Beispielantworten",
+      "copy_feedback": "Für Feedback kopieren",
+      "copied": "Kopiert.",
+      "copy_failed": "Kopieren nicht möglich. Bitte den Text auswählen und selbst kopieren.",
+      "timing_summary": "Zeit pro Kapitel",
+      "timing_total": "Insgesamt:",
+      "minutes": "{n} Min.",
+      "words_typed": "{n} Wörter",
+      "course_select": "Kurs",
+      "model_answer": "Beispielantwort",
+      "rubric": "Prüfe selbst",
+      "key_terms": "Schlüsselwörter",
+      "word_bank": "Wortbank",
+      "vocabulary": "Wortschatz",
+      "ex_type_okonchaniya": "Endungen",
+      "ex_type_preobrazovanie": "Umformen",
+      "ex_type_podstanovka": "Ergänzen",
+      "ex_type_otvet": "Antworten",
+      "ex_type_soedini": "Verbinden",
+      "ex_type_rasstav": "Wortstellung",
+      "ex_type_napishi": "Schreiben",
+      "course_contents": "Inhalt",
+      "continue": "Weiter",
+      "chapter": "Kapitel",
+      "story": "Die Geschichte",
+      "nodyn": "Erklärung (English)",
+      "exercises": "Übungen",
+      "pensum": "Aufgabe",
+      "example": "Beispiel",
+      "check": "Prüfen",
+      "reveal": "Zeigen",
+      "try_again": "Noch einmal",
+      "almost_circumflex": "Fast! Prüfe die Sonderzeichen.",
+      "almost_ending": "Fast! Die Endung?",
+      "mutation_hint": "Fast! Die Endung?",
+      "empty": "Schreibe zuerst eine Antwort.",
+      "self_check_yes": "Das war richtig",
+      "self_check_no": "Noch nicht",
+      "hide_notes": "Randnotizen ausblenden",
+      "show_notes": "Randnotizen zeigen",
+      "finished": "✓ Abgeschlossen",
+      "next": "Nächstes Kapitel",
+      "previous": "Vorheriges Kapitel",
+      "anki": "Anki-Karten herunterladen",
+      "anki_cumulative": "Anki-Karten: Kapitel 1–N",
+      "anki_include_known": "Bekannte Wörter einschließen",
+      "start": "Lesen beginnen",
+      "planned": "Demnächst",
+      "notes": "Notizen",
+      "enlarge": "Bild vergrößern",
+      "close": "Schließen",
+      "item": "Frage {n}",
+      "blank": "Lücke {n}",
+      "words_count": "{n} Wörter",
+      "anki_done": "Anki: {n} Karten",
+      "stop": "Stopp",
+      "proverb": "Sprichwort",
+      "skip": "Zum Text",
+      "hint_toggle": "Hilfe (English)",
+      "exercise_okonchaniya": "Endungen",
+      "exercise_preobrazovanie": "Umformen",
+      "exercise_podstanovka": "Ergänzen",
+      "exercise_otvet": "Antworten",
+      "exercise_soedini": "Verbinden",
+      "exercise_rasstav": "Wortstellung",
+      "exercise_napishi": "Schreiben",
+      "pensum_a": "Aufgabe A — Formen",
+      "pensum_b": "Aufgabe B — Wörter",
+      "pensum_c": "Aufgabe C — Fragen",
+      "next_step": "Nächster Schritt",
+      "steps": "Schritte",
+      "section_n": "Abschnitt {n}",
+      "write_box": "Dein Text",
+      "length_hint": "Länge",
+      "typical_errors": "Häufige Fehler",
+      "correction_mark": "Markiere anhand der Liste einen oder zwei eigene Fehler.",
+      "correction_rewrite": "Schreibe diese Sätze richtig.",
+      "correction_box": "Korrigierter Text",
+      "copy_for_feedback": "Für Feedback kopieren",
+      "baseline_known": "Schon bekannt",
+      "baseline_uncertain": "Teilweise bekannt",
+      "baseline_new": "Neu",
+      "draft_notice": "Entwurf: noch nicht von einer muttersprachlichen Person geprüft.",
+      "accent_hint": "Fast! Prüfe die Sonderzeichen.",
+      "correct_letters": "Richtig, aber schreibe: {answer}",
+      "ambiguous_letters": "Meinst du {answer}?",
+      "case_hint": "Fast! Der Fall?",
+      "number_hint": "Fast! Die Zahl?",
+      "tense_hint": "Fast! Die Zeitform?",
+      "mood_hint": "Fast! Der Modus?",
+      "step_listen": "Hören {n}",
+      "about": "Über diesen Kurs",
+      "anki_lesson": "Anki: dieses Kapitel",
+      "listen": "Hören",
+      "pronunciation": "Aussprache"
+    },
+    "en": {
+      "nav_lessons": "Chapters",
+      "contents": "Contents",
+      "course_progress": "Progress",
+      "lesson": "Chapter",
+      "part": "Part",
+      "lessons_range": "Chapters {from}–{to}",
+      "pensa": "Pensum",
+      "oral_mode": "Oral mode",
+      "grammar": "Grammar",
+      "correct": "Correct!",
+      "ending_hint": "Almost! The ending?",
+      "wrong": "Not yet. Again?",
+      "retry": "Again",
+      "english_toggle": "Deutsch",
+      "finish": "Finish chapter",
+      "workbook": "Workbook",
+      "obrazec": "Example",
+      "skip_exercise": "Skip",
+      "skipped": "Skipped",
+      "unskip": "Undo",
+      "lookalike_warning": "Look-alike letters ({chars}) were replaced by German letters.",
+      "stepper": "Steps",
+      "step_read": "Read {n}",
+      "step_exercises": "Workbook {n}",
+      "step_grammar": "Grammar and words with a history",
+      "step_pensa": "Pensum A, B, C",
+      "step_write": "Write",
+      "step_reread": "Re-read",
+      "step_anki": "Anki",
+      "step_done": "Done",
+      "step_mark": "Step done",
+      "step_marked": "Done",
+      "step_next": "Next: {step}",
+      "continue_step": "{lesson} · {step}",
+      "export_timing": "Export timing (JSON)",
+      "words_with_history": "Words with a history",
+      "note_en": "Note (English)",
+      "afterword": "Afterword",
+      "whats_next": "What next",
+      "napishi": "Write",
+      "napishi_draft": "Your text",
+      "napishi_rewrite": "Corrected version",
+      "napishi_mark": "Mark one or two of your own errors and rewrite those sentences below.",
+      "napishi_typical": "Typical errors",
+      "my_error": "I did this",
+      "model_answers": "Model answers",
+      "copy_feedback": "Copy for feedback",
+      "copied": "Copied.",
+      "copy_failed": "Could not copy. Select the text below and copy it yourself.",
+      "timing_summary": "Time per chapter",
+      "timing_total": "Total:",
+      "minutes": "{n} min",
+      "words_typed": "{n} words",
+      "course_select": "Course",
+      "model_answer": "Model answer",
+      "rubric": "Check yourself",
+      "key_terms": "Key words",
+      "word_bank": "Word bank",
+      "vocabulary": "Vocabulary",
+      "ex_type_okonchaniya": "Endings",
+      "ex_type_preobrazovanie": "Transform",
+      "ex_type_podstanovka": "Substitute",
+      "ex_type_otvet": "Answer",
+      "ex_type_soedini": "Join",
+      "ex_type_rasstav": "Word order",
+      "ex_type_napishi": "Write",
+      "course_contents": "Contents",
+      "continue": "Continue",
+      "chapter": "Chapter",
+      "story": "The story",
+      "nodyn": "Note (English)",
+      "exercises": "Exercises",
+      "pensum": "Exercise",
+      "example": "Example",
+      "check": "Check",
+      "reveal": "Show",
+      "try_again": "Again",
+      "almost_circumflex": "Almost! Check your accents.",
+      "almost_ending": "Almost! Ending?",
+      "mutation_hint": "Almost! Ending?",
+      "empty": "Write an answer first.",
+      "self_check_yes": "I had it",
+      "self_check_no": "Not yet",
+      "hide_notes": "Hide margin notes",
+      "show_notes": "Show margin notes",
+      "finished": "✓ Finished",
+      "next": "Next chapter",
+      "previous": "Previous chapter",
+      "anki": "Download Anki cards",
+      "anki_cumulative": "Anki cards: chapters 1–N",
+      "anki_include_known": "Include words I already know",
+      "start": "Start reading",
+      "planned": "coming soon",
+      "notes": "Notes",
+      "enlarge": "Enlarge picture",
+      "close": "Close",
+      "item": "Question {n}",
+      "blank": "blank {n}",
+      "words_count": "{n} words",
+      "anki_done": "Anki: {n} cards",
+      "stop": "Stop",
+      "proverb": "Proverb",
+      "skip": "Skip",
+      "hint_toggle": "Hint (English)",
+      "exercise_okonchaniya": "Endings",
+      "exercise_preobrazovanie": "Transform",
+      "exercise_podstanovka": "Substitute",
+      "exercise_otvet": "Answer",
+      "exercise_soedini": "Join",
+      "exercise_rasstav": "Word order",
+      "exercise_napishi": "Write",
+      "pensum_a": "Exercise A — Forms",
+      "pensum_b": "Exercise B — Words",
+      "pensum_c": "Exercise C — Questions",
+      "next_step": "Next step",
+      "steps": "Steps",
+      "section_n": "Section {n}",
+      "write_box": "Your text",
+      "length_hint": "Length",
+      "typical_errors": "Typical mistakes",
+      "correction_mark": "Mark one or two of your own mistakes against the checklist.",
+      "correction_rewrite": "Rewrite those sentences correctly.",
+      "correction_box": "Corrected text",
+      "copy_for_feedback": "Copy for feedback",
+      "baseline_known": "already known",
+      "baseline_uncertain": "half-known",
+      "baseline_new": "new",
+      "draft_notice": "Draft: not yet checked by a native speaker.",
+      "accent_hint": "Almost! Check your accents.",
+      "correct_letters": "Correct, but use: {answer}",
+      "ambiguous_letters": "Did you mean {answer}?",
+      "case_hint": "Almost! Case?",
+      "number_hint": "Almost! Number?",
+      "tense_hint": "Almost! Tense?",
+      "mood_hint": "Almost! Mood?",
+      "step_listen": "Listen {n}",
+      "about": "About this course",
+      "anki_lesson": "Anki: this chapter",
+      "listen": "Listen",
+      "pronunciation": "Pronunciation"
+    }
+  },
+  "baseline_chunks": [
+    {
+      "text": "Guten Morgen",
+      "from": 1
+    },
+    {
+      "text": "Herr Professor",
+      "from": 1
+    },
+    {
+      "text": "dreizehn Jahre alt",
+      "from": 1
+    },
+    {
+      "text": "Morgen. Sieben Uhr. Hier.",
+      "from": 1
+    },
+    {
+      "text": "Guten Tag",
+      "from": 1
+    }
+  ],
+  "incidental_verbs": [],
+  "place_chunks": [
+    {
+      "text": "vor dem Kloster",
+      "from": 1
+    },
+    {
+      "text": "im Laboratorium",
+      "from": 1
+    },
+    {
+      "text": "in Heidelberg",
+      "from": 1
+    },
+    {
+      "text": "in der Hauptstraße",
+      "from": 1
+    },
+    {
+      "text": "zu Hause",
+      "from": 1
+    }
+  ],
+  "names_personal": [
+    "Jakob",
+    "Lauer",
+    "Kathrin",
+    "Peter",
+    "Bunsen",
+    "Robert",
+    "Wolf",
+    "Ludwig",
+    "Reinhardt",
+    "Lene",
+    "Hartmann",
+    "Konrad",
+    "Desaga",
+    "Gustav",
+    "Kirchhoff",
+    "Hermann",
+    "Helmholtz",
+    "Carl",
+    "Schurz",
+    "Heinrich",
+    "Caro",
+    "Friedrich",
+    "Engelhorn",
+    "Graebe",
+    "Liebermann",
+    "Perkin",
+    "Kekulé",
+    "Anna",
+    "Liebig",
+    "Clausius",
+    "Schiller",
+    "Bismarck",
+    "Weller"
+  ],
+  "names_place": [
+    "Heidelberg",
+    "Baden",
+    "Hauptstraße",
+    "Brunnengasse",
+    "Ziegelhausen",
+    "Mannheim",
+    "Rastatt",
+    "Karlsruhe",
+    "Plöck",
+    "Akademiestraße",
+    "Ludwigshafen",
+    "Dürkheim",
+    "Rhein",
+    "Bayern",
+    "Amerika",
+    "Schleswig",
+    "Düppel",
+    "Hundheim",
+    "Werbach",
+    "Tauberbischofsheim",
+    "Alsace",
+    "Elsass",
+    "London",
+    "Versailles",
+    "Hemshof",
+    "Preußen",
+    "Österreich",
+    "Frankreich",
+    "Königsberg",
+    "Sachsen",
+    "Berlin",
+    "Provence",
+    "Avignon",
+    "Niederlande",
+    "Neckar"
+  ],
+  "names_other": [
+    "BASF"
+  ],
+  "names_declensions": {
+    "Jakob": [
+      "Jakobs"
+    ],
+    "Bunsen": [
+      "Bunsens"
+    ],
+    "Kirchhoff": [
+      "Kirchhoffs"
+    ],
+    "Lauer": [
+      "Lauers"
+    ]
+  },
+  "function_words": {
+    "der": 1,
+    "die": 1,
+    "das": 1,
+    "ein": 1,
+    "eine": 1,
+    "und": 1,
+    "aber": 1,
+    "ja": 1,
+    "nein": 1,
+    "ich": 1,
+    "du": 1,
+    "er": 1,
+    "sie": 1,
+    "es": 1,
+    "wir": 2,
+    "ihr": 2,
+    "wer": 2,
+    "was": 2,
+    "wo": 2,
+    "wie": 2,
+    "den": 3,
+    "einen": 3,
+    "kein": 3,
+    "keine": 3,
+    "keinen": 3,
+    "mich": 3,
+    "dich": 3,
+    "ihn": 3,
+    "dem": 7,
+    "einem": 7,
+    "einer": 7,
+    "mir": 7,
+    "dir": 7,
+    "ihm": 7,
+    "ihnen": 7,
+    "mit": 7,
+    "bei": 7,
+    "von": 7,
+    "zu": 7,
+    "aus": 7,
+    "nach": 7,
+    "für": 7,
+    "ohne": 7,
+    "durch": 7,
+    "in": 7,
+    "auf": 7,
+    "dass": 9,
+    "weil": 9,
+    "wenn": 9,
+    "ob": 9,
+    "als": 12,
+    "des": 13,
+    "eines": 13,
+    "um": 15,
+    "man": 16,
+    "sich": 16,
+    "nachdem": 17,
+    "indem": 26,
+    "sodass": 26,
+    "insofern": 26,
+    "warum": 16
+  },
+  "instruction_vocabulary": [
+    "Kapitel",
+    "Teil",
+    "Grammatik",
+    "Formen",
+    "Wörter",
+    "Fragen",
+    "Beispiel",
+    "Ergänze",
+    "Antworte",
+    "Wortbank",
+    "Satz",
+    "Sätze",
+    "Singular",
+    "Plural",
+    "Lies",
+    "Übungen",
+    "A",
+    "B",
+    "C"
+  ],
+  "credits": [],
+  "parts": [
+    {
+      "number": 1,
+      "part": 1,
+      "title": "Das Kloster",
+      "from": 1,
+      "to": 7,
+      "dates": "November 1852 – summer 1855"
+    },
+    {
+      "number": 2,
+      "part": 2,
+      "title": "Das Licht",
+      "from": 8,
+      "to": 15,
+      "dates": "spring 1859 – 1861"
+    },
+    {
+      "number": 3,
+      "part": 3,
+      "title": "Die Kraft",
+      "from": 16,
+      "to": 23,
+      "dates": "summer 1862 – end 1865"
+    },
+    {
+      "number": 4,
+      "part": 4,
+      "title": "Die Farbe",
+      "from": 24,
+      "to": 30,
+      "dates": "summer 1866 – spring 1872"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "de-NEW-01-l01",
+      "order": 1,
+      "title": "Das Kloster",
+      "part": 1,
+      "status": "draft",
+      "text_status": "draft",
+      "grammar_target_id": "G01",
+      "published": true,
+      "path": "lessons/kapitel-01.json"
+    },
+    {
+      "id": "de-NEW-01-l02",
+      "order": 2,
+      "title": "Glas",
+      "part": 1,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G02",
+      "published": false,
+      "planned_path": "lessons/kapitel-02.json"
+    },
+    {
+      "id": "de-NEW-01-l03",
+      "order": 3,
+      "title": "Feuer",
+      "part": 1,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G03",
+      "published": false,
+      "planned_path": "lessons/kapitel-03.json"
+    },
+    {
+      "id": "de-NEW-01-l04",
+      "order": 4,
+      "title": "Bücher",
+      "part": 1,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G04",
+      "published": false,
+      "planned_path": "lessons/kapitel-04.json"
+    },
+    {
+      "id": "de-NEW-01-l05",
+      "order": 5,
+      "title": "Der Name",
+      "part": 1,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G05",
+      "published": false,
+      "planned_path": "lessons/kapitel-05.json"
+    },
+    {
+      "id": "de-NEW-01-l06",
+      "order": 6,
+      "title": "Die Flamme",
+      "part": 1,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G06",
+      "published": false,
+      "planned_path": "lessons/kapitel-06.json"
+    },
+    {
+      "id": "de-NEW-01-l07",
+      "order": 7,
+      "title": "Das neue Haus",
+      "part": 1,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G07",
+      "published": false,
+      "planned_path": "lessons/kapitel-07.json"
+    },
+    {
+      "id": "de-NEW-01-l08",
+      "order": 8,
+      "title": "Farben",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G08",
+      "published": false,
+      "planned_path": "lessons/kapitel-08.json"
+    },
+    {
+      "id": "de-NEW-01-l09",
+      "order": 9,
+      "title": "Licht aus der Ferne",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G09",
+      "published": false,
+      "planned_path": "lessons/kapitel-09.json"
+    },
+    {
+      "id": "de-NEW-01-l10",
+      "order": 10,
+      "title": "Die Sonne",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G10",
+      "published": false,
+      "planned_path": "lessons/kapitel-10.json"
+    },
+    {
+      "id": "de-NEW-01-l11",
+      "order": 11,
+      "title": "Schiller",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G11",
+      "published": false,
+      "planned_path": "lessons/kapitel-11.json"
+    },
+    {
+      "id": "de-NEW-01-l12",
+      "order": 12,
+      "title": "Wasser",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G12",
+      "published": false,
+      "planned_path": "lessons/kapitel-12.json"
+    },
+    {
+      "id": "de-NEW-01-l13",
+      "order": 13,
+      "title": "Caesius",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G13",
+      "published": false,
+      "planned_path": "lessons/kapitel-13.json"
+    },
+    {
+      "id": "de-NEW-01-l14",
+      "order": 14,
+      "title": "Der Arzt",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G14",
+      "published": false,
+      "planned_path": "lessons/kapitel-14.json"
+    },
+    {
+      "id": "de-NEW-01-l15",
+      "order": 15,
+      "title": "Kirchhoffs Augen",
+      "part": 2,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G15",
+      "published": false,
+      "planned_path": "lessons/kapitel-15.json"
+    },
+    {
+      "id": "de-NEW-01-l16",
+      "order": 16,
+      "title": "Ein Brief aus Amerika",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G16",
+      "published": false,
+      "planned_path": "lessons/kapitel-16.json"
+    },
+    {
+      "id": "de-NEW-01-l17",
+      "order": 17,
+      "title": "Rastatt",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G17",
+      "published": false,
+      "planned_path": "lessons/kapitel-17.json"
+    },
+    {
+      "id": "de-NEW-01-l18",
+      "order": 18,
+      "title": "Eisen und Blut",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G18",
+      "published": false,
+      "planned_path": "lessons/kapitel-18.json"
+    },
+    {
+      "id": "de-NEW-01-l19",
+      "order": 19,
+      "title": "Die Erhaltung der Kraft",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G19",
+      "published": false,
+      "planned_path": "lessons/kapitel-19.json"
+    },
+    {
+      "id": "de-NEW-01-l20",
+      "order": 20,
+      "title": "Düppel",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G20",
+      "published": false,
+      "planned_path": "lessons/kapitel-20.json"
+    },
+    {
+      "id": "de-NEW-01-l21",
+      "order": 21,
+      "title": "Die Gründung",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G21",
+      "published": false,
+      "planned_path": "lessons/kapitel-21.json"
+    },
+    {
+      "id": "de-NEW-01-l22",
+      "order": 22,
+      "title": "Ludwigshafen",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G22",
+      "published": false,
+      "planned_path": "lessons/kapitel-22.json"
+    },
+    {
+      "id": "de-NEW-01-l23",
+      "order": 23,
+      "title": "Entropie",
+      "part": 3,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G23",
+      "published": false,
+      "planned_path": "lessons/kapitel-23.json"
+    },
+    {
+      "id": "de-NEW-01-l24",
+      "order": 24,
+      "title": "Werbach",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G24",
+      "published": false,
+      "planned_path": "lessons/kapitel-24.json"
+    },
+    {
+      "id": "de-NEW-01-l25",
+      "order": 25,
+      "title": "Die Mutter",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G25",
+      "published": false,
+      "planned_path": "lessons/kapitel-25.json"
+    },
+    {
+      "id": "de-NEW-01-l26",
+      "order": 26,
+      "title": "Krapp",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G26",
+      "published": false,
+      "planned_path": "lessons/kapitel-26.json"
+    },
+    {
+      "id": "de-NEW-01-l27",
+      "order": 27,
+      "title": "Der fünfundzwanzigste Juni",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G27",
+      "published": false,
+      "planned_path": "lessons/kapitel-27.json"
+    },
+    {
+      "id": "de-NEW-01-l28",
+      "order": 28,
+      "title": "Die Fabrik",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G28",
+      "published": false,
+      "planned_path": "lessons/kapitel-28.json"
+    },
+    {
+      "id": "de-NEW-01-l29",
+      "order": 29,
+      "title": "Versailles",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G29",
+      "published": false,
+      "planned_path": "lessons/kapitel-29.json"
+    },
+    {
+      "id": "de-NEW-01-l30",
+      "order": 30,
+      "title": "Der Hemshof",
+      "part": 4,
+      "status": "planned",
+      "text_status": "draft",
+      "grammar_target_id": "G30",
+      "published": false,
+      "planned_path": "lessons/kapitel-30.json"
+    }
+  ],
+  "grading": {
+    "_comment": "Per-part settings use by_rhan for the checker. Row word windows and lexical ceilings govern; chapter 1 ceiling 45, chapters 2–7 50, then 60. Word targets follow the updated 1000–4000 curve.",
+    "recurrence": {
+      "min_uses_in_chapter": 3,
+      "recall_in_next_five_min": 2
+    },
+    "coverage": {
+      "unlicensed_tokens_max": 0,
+      "local_window_tokens": 25,
+      "local_window_new_max": 4
+    },
+    "primary_target_min_demonstrations": 8,
+    "primary_target_min_contrasts": 2,
+    "by_rhan": {
+      "1": {
+        "chapters": [
+          1,
+          7
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "bootstrap_chapters": [
+          1
+        ],
+        "word_targets": {
+          "1": 1000,
+          "2": 1103,
+          "3": 1207,
+          "4": 1310,
+          "5": 1414,
+          "6": 1517,
+          "7": 1621
+        },
+        "sections": {
+          "min": 3,
+          "max": 4
+        },
+        "new_lexemes_ceiling": 50,
+        "open_slots_max": 0,
+        "gloss_per_100": [
+          2,
+          4
+        ],
+        "exercises_per_section": [
+          2,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ],
+        "pensa": {
+          "A": [
+            8,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "media": {
+          "cover": [
+            0,
+            0
+          ],
+          "inline_scene": [
+            0,
+            2
+          ],
+          "margin_vignette": [
+            0,
+            0
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      },
+      "2": {
+        "chapters": [
+          8,
+          15
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "word_targets": {
+          "8": 1724,
+          "9": 1828,
+          "10": 1931,
+          "11": 2034,
+          "12": 2138,
+          "13": 2241,
+          "14": 2345,
+          "15": 2448
+        },
+        "sections": {
+          "min": 4,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 60,
+        "open_slots_max": 0,
+        "gloss_per_100": [
+          1,
+          3
+        ],
+        "exercises_per_section": [
+          2,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ],
+        "pensa": {
+          "A": [
+            8,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "media": {
+          "cover": [
+            0,
+            0
+          ],
+          "inline_scene": [
+            0,
+            2
+          ],
+          "margin_vignette": [
+            0,
+            0
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      },
+      "3": {
+        "chapters": [
+          16,
+          23
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "word_targets": {
+          "16": 2552,
+          "17": 2655,
+          "18": 2759,
+          "19": 2862,
+          "20": 2966,
+          "21": 3069,
+          "22": 3172,
+          "23": 3276
+        },
+        "sections": {
+          "min": 4,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 60,
+        "open_slots_max": 0,
+        "gloss_per_100": [
+          0.5,
+          2
+        ],
+        "exercises_per_section": [
+          2,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ],
+        "pensa": {
+          "A": [
+            8,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "media": {
+          "cover": [
+            0,
+            0
+          ],
+          "inline_scene": [
+            0,
+            2
+          ],
+          "margin_vignette": [
+            0,
+            0
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      },
+      "4": {
+        "chapters": [
+          24,
+          30
+        ],
+        "length_is_advisory": true,
+        "word_tolerance": 0.1,
+        "word_targets": {
+          "24": 3379,
+          "25": 3483,
+          "26": 3586,
+          "27": 3690,
+          "28": 3793,
+          "29": 3897,
+          "30": 4000
+        },
+        "sections": {
+          "min": 4,
+          "max": 5
+        },
+        "new_lexemes_ceiling": 60,
+        "open_slots_max": 0,
+        "gloss_per_100": [
+          0.5,
+          1.5
+        ],
+        "exercises_per_section": [
+          2,
+          3
+        ],
+        "items_per_exercise": [
+          5,
+          6
+        ],
+        "pensa": {
+          "A": [
+            8,
+            10
+          ],
+          "B": [
+            8,
+            10
+          ],
+          "C": [
+            6,
+            8
+          ]
+        },
+        "media": {
+          "cover": [
+            0,
+            0
+          ],
+          "inline_scene": [
+            0,
+            2
+          ],
+          "margin_vignette": [
+            0,
+            0
+          ],
+          "margin_diagram": [
+            0,
+            2
+          ]
+        }
+      }
+    }
+  },
+  "anki": {
+    "unit": "lesson",
+    "format": "tsv",
+    "mode": "inflecting",
+    "deck": "Deutsch::Das Spektrum",
+    "file_headers": [
+      "#separator:tab",
+      "#html:true",
+      "#guid column:1",
+      "#tags column:4",
+      "#deck:Deutsch::Das Spektrum"
+    ],
+    "fields": [
+      "guid",
+      "front",
+      "back",
+      "tags",
+      "source"
+    ],
+    "identity": "course_id + lexeme_id + card_stage",
+    "guid_pattern": "de-NEW-01:{lexeme_id}:{stage_id}",
+    "source": "lexicon.card_stages where lesson == this lesson id",
+    "cumulative_export": true,
+    "tags_base": [
+      "de-NEW-01"
+    ],
+    "tag_pattern": "de-NEW-01 chapter-NN part-N <pos> recognition|production",
+    "chapter_tag": "chapter",
+    "part_tag": "part",
+    "card_kinds": [
+      "recognition",
+      "production"
+    ],
+    "skip_baseline_known_default": true
+  },
+  "intro_en": "Start here with no German. Follow Jakob from a Heidelberg laboratory to the dye works across the Rhine. Read for what happens; reread a passage if you need to. Tap a word for its gloss when available, and use the margin aids. English grammar notes after each chapter explain the patterns you have met. The workbook and Pensa practise them; Anki can help with memorisation. There is no audio. Scientific readings grow from supported quotations into annotated originals."
+}
