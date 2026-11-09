@@ -1,0 +1,2793 @@
+{
+  "schema_version": "0.2.0-proposed",
+  "id": "de-NEW-01-l04",
+  "course_id": "de-NEW-01",
+  "order": 4,
+  "title": "Bücher",
+  "part": 1,
+  "status": "draft",
+  "text_status": "draft",
+  "content_version": "0.1.0",
+  "provenance": {
+    "author": "Claude (chapter lead); reviewed by GPT-6.1 Sol",
+    "model": "claude-opus-5-5",
+    "prompt": "Write chapter 4 (Bücher, G04) per plan row, RULES.md, COURSE.md, docs/de-spektrum-design.md, cards.md and sources.md; gentle Part 1 pace (owner, 2026-11-08); pre-empt chapter 1–3 fresh-eyes lessons.",
+    "review_required": "Independent Codex review by GPT-6.1 Sol: blocked in rounds 1–2, clean in round 3 (2026-11-08); fresh-eyes review (publish after fixes) applied. Owner design approved 2026-11-08. Not human-reviewed.",
+    "notes": [
+      "Real text: Justus Liebig, Chemische Briefe, Heidelberg: C. F. Winter, 1844, first letter, p. 2; scan https://doi.org/10.3931/e-rara-20946 (e-rara IIIF canvas labelled '2'). The full sentence „Die Chemie, als Theil der Wissenschaft der Naturforschung, ist auf's engste verwandt mit der Physik, diese letztere steht in genauer Verbindung mit Astronomie und Mathematik.“ was checked word for word, with spelling (Theil, auf's) and punctuation, against the page image on 2026-11-08 (sources.md had the same wording). It is quoted unabridged and unchanged; the story shows it first in fragments as Jakob reads it aloud (s046–s054), then whole (s058), cited in the text. Not a graded adaptation. Other printed words Jakob reads are also from the same scan: page 1 opens „Erster Brief.“ and „In den Schriften der neueren Zeit …“ (s023 shows only „Erster Brief. In … den … Schrif … ten …“); „Naturbeobachtung“ is in the next sentence on page 2 („Die Grundlage eines jeden Zweiges der Naturwissenschaft ist die einfache Naturbeobachtung“), so Jakob meets it right after the quoted sentence (s072).",
+      "Gentle pace (COURSE.md, owner 2026-11-08): section 1 introduces about ten opaque words (lesen, öffnen, Brief, langsam, warten, Seite, Buchstabe, plus the narrative past forms), at most two aids per sentence, each a one-word German aid in words already read. Non-transparent new lexemes: 19 (Presse, Gendarm, Proklamation flagged transparent), well under the 60 ceiling. Every new content word recurs at least three times.",
+      "Deferred chapter-1 words: Brücke and Fluss are picked up (Hartmann's print shop by the Neckar bridge; the gendarmes come from the bridge). Hosen and übermorgen still wait: no natural beat in this chapter.",
+      "G04: narration is Präteritum from the first sentence (war, hatte/hatten, arbeitete, trocknete, zählte, wartete, öffnete, setzte, druckte, hörte, lachte, sagte, machte; plurals waren, hatten, arbeiteten), with present dialogue beside it and Konrad's past-tense memory inside dialogue. The first aids contrast ist (jetzt) → war (nicht jetzt) and arbeitet → arbeitete. Productive answers use only war/waren/hatte/hatten and weak -te/-ete forms read in the prose by the end of that section.",
+      "Bounded receptive items (row incidental_allowed; none is a production answer): strong pasts kam/kamen, ging, sah/sahen, las, nahm, gab, each with a form aid at first use; dative chunks (mit deinem Vater, von der Brücke, von den Buchstaben, am Fluss, an der Brücke, in der Druckerei) before G07; separable machte … zu (like sieht … an) before G06; attributive die ganze Nacht (glossed) before G10; man as general subject; the Liebig sentence's genitive, als and auf's engste, aided and source-bound. No uncontracted von dem / in das / zu dem.",
+      "Address: Ludwig du to Jakob, Jakob Sie / Herr Reinhardt; Lene and Jakob mutual du (stated: they are no longer children but still say du); Konrad du to the boy, Jakob Herr Hartmann; Kathrin du/Bub/gell; the gendarme's curt „Guten Abend, Hartmann“ omits Herr. Bunsen does not appear. Ludwig still hears only Jakob's first name.",
+      "Theme and history: no lecture on 1849; Konrad's memory is private and stops at „Und dein Vater …“; Jakob refuses to hear it (Ich lese) and the narration gives only his thought Und dann Rastatt. Lene sets local work, never Liebig's Annalen; what she was setting when the gendarmes arrive is left open for chapter 5.",
+      "Remaining checker warnings: digits are years (1853, 1849) and the page citation of the real text (1844, Seite 2), which read better as numerals; prior coverage 55.8% (part-1 target 80%; chapters 2–3 were 63–66%) reflects the fresh print-shop domain and the deliberate repetition of new words, plus the quoted original; lexicon-plan date differences are inherited from chapters 1–3 (Brücke/Fluss were planned for chapter 1 and deferred by the owner's easing); instruction-unknown flags the English exercise cues allowed by RULES §7; the continuity delta merges at finalize. Word count (about 1190 by the checker) is inside the 1179–1441 window.",
+      "English grammar note is longer than the minimum because it introduces the narrative past, regular -te/-ete formation, the strong pasts met for reading only, present-in-speech versus past narration, and a translation and grammar comment for the real Liebig sentence.",
+      "Sol review round 1 (blocked) fixes: -ete rule restricted to t/d stems plus öffnen/trocknen with lernte as the counter-example, and plural -n stated only for wir/sie; grammar tables rebuilt as same-person present/past pairs from this chapter's events, with translations; Naturforschung taught as one compound word of two parts (s049, s073, b5), its aid now gives meaning (Forschung = Versuche) and Lene paraphrases als Theil der Wissenschaft in known words (s047); x1-2-4 no longer prints langsam; B bank gains schnell/leise/laut; b3 asks for a page reference; page-1 fragment corrected to the scan's real opening and both extra fragments recorded against the scan; s055 now Zehn Minuten für einen Satz!; Es war wieder Abend marks the next evening. Not applied: a fuller C7 model (Zwei Gendarmen waren in der Druckerei) because zwei and in are reading-only for production answers; the cue reduction across later form items (kept for the gentle Part 1 pace).",
+      "Sol round 2 (four blockers) fixes: plural rule now says weak verbs and hatte add -n while sein is irregular (war → waren), in the note and the workbook hints; s023's authentic page-1 opening has the aid Schriften: Text auf Papier; every grammar-table pair and bare verb example is translated in the note; x3-2-1 and b9 are real sentences (Der Abend war zu Ende. Es war ___; Es war ___, aber Lene arbeitete noch.); C7's model is the sentence Es waren Gendarmen, and the C1/C3 rubrics ask for a sentence; C4 accepts hörte as well as setzte; b1 no longer duplicates x1-2-2 and its bank extras (schnell, dünn, sauber) cannot fit the slow-syllable frame. Continuity log no longer asserts what Ludwig knows of Jakob's surname.",
+      "Sol round 3: no blockers; linguistically and pedagogically ready. Applied its optional suggestions: shorter form hints in sections 2–3, a der Buchstabe → einen Buchstaben note, s071 added to C4's sources.",
+      "Fresh-eyes fixes: Pensa A10 now matches the story (Am Abend hörte Lene, und Jakob las; Peter set type and Konrad printed); the note names ich druckte as the same form as er; the -ete rule is stated (t/d stems, and n after a consonant other than l/r: öffnete, trocknete; lernte); x2-2-5 is Chemie und Physik: Das ist ___ so plural Wissenschaften is not invited; page 1 is bridged (Lene reads page one aloud, then Jakob reads page two); Ludwig now comes zu Jakob; x1-2-4 and C5 reworded; the druckte table cell keeps Papier. Bounded chunk: machte … zu (separable, before G06) appears with a first-use aid (s021: jetzt war das Buch zu, nicht offen) and in the note's Reading chunks; it is never a production answer except the worked example of x3-1, which shows it. Administrative: Fluss and Drucker occurred unlicensed-as-lexemes in chapters 1–2 prose and are first declared as lexemes here."
+    ],
+    "review_questions": [
+      {
+        "segment_id": "de-NEW-01-l04-s078",
+        "question": "[?] Gendarmes in Heidelberg in 1853: Baden had a Grand-Ducal gendarmerie (from 1829) and towns had their own police; the card specifies gendarmes. A night inspection of a liberal printer's shop after 1849 is plausible under post-revolutionary press control, but no specific Heidelberg incident is claimed."
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s064",
+        "question": "[?] Konrad's memory: Mannheim printers setting revolutionary proclamations overnight in May 1849 is historically plausible (the Baden revolution, 13–14 May 1849); Peter and Konrad are fictional and no specific proclamation is named."
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s015",
+        "question": "[?] Ludwig says Liebig „ist Professor in München“: Liebig accepted the Munich chair in 1852, so this is right for summer 1853. Ludwig's copy is the 1844 Heidelberg first edition (later editions were enlarged); a second-hand small copy is assumed."
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s030",
+        "question": "[?] Hartmann's shop by the Neckar bridge (town side) is fiction; the bible only places 'the river and the bridge' and 'Hartmann's print shop' in Heidelberg."
+      }
+    ]
+  },
+  "learning_contract": {
+    "grammar_target_id": "G04",
+    "primary_new_grammar": {
+      "id": "G04",
+      "label": "Narrative Präteritum: sein, haben and weak verbs",
+      "minimum_demonstrations": 6
+    },
+    "recycled_grammar": [
+      "G01",
+      "G02",
+      "G03"
+    ],
+    "incidental": [
+      {
+        "form": "A"
+      },
+      {
+        "form": "Am"
+      },
+      {
+        "form": "Astronomie"
+      },
+      {
+        "form": "B"
+      },
+      {
+        "form": "Beobachtung"
+      },
+      {
+        "form": "Bitte"
+      },
+      {
+        "form": "Brie"
+      },
+      {
+        "form": "C"
+      },
+      {
+        "form": "Che"
+      },
+      {
+        "form": "Chemische"
+      },
+      {
+        "form": "Danke"
+      },
+      {
+        "form": "Dein"
+      },
+      {
+        "form": "Diese"
+      },
+      {
+        "form": "Ende"
+      },
+      {
+        "form": "Erster"
+      },
+      {
+        "form": "Forschung"
+      },
+      {
+        "form": "Für"
+      },
+      {
+        "form": "Ganz"
+      },
+      {
+        "form": "Guten"
+      },
+      {
+        "form": "Hartmanns"
+      },
+      {
+        "form": "Herr"
+      },
+      {
+        "form": "Herren"
+      },
+      {
+        "form": "Herrn"
+      },
+      {
+        "form": "Im"
+      },
+      {
+        "form": "In"
+      },
+      {
+        "form": "Jahre"
+      },
+      {
+        "form": "Juli"
+      },
+      {
+        "form": "Kind"
+      },
+      {
+        "form": "Klopf"
+      },
+      {
+        "form": "L"
+      },
+      {
+        "form": "Mai"
+      },
+      {
+        "form": "Man"
+      },
+      {
+        "form": "Mathematik"
+      },
+      {
+        "form": "Metall"
+      },
+      {
+        "form": "Minuten"
+      },
+      {
+        "form": "März"
+      },
+      {
+        "form": "München"
+      },
+      {
+        "form": "Name"
+      },
+      {
+        "form": "Natur"
+      },
+      {
+        "form": "Natur-Forschung"
+      },
+      {
+        "form": "Naturforschung"
+      },
+      {
+        "form": "Oben"
+      },
+      {
+        "form": "Papier"
+      },
+      {
+        "form": "Physik"
+      },
+      {
+        "form": "Polizei"
+      },
+      {
+        "form": "Post"
+      },
+      {
+        "form": "Revolution"
+      },
+      {
+        "form": "Schrif"
+      },
+      {
+        "form": "Schriften"
+      },
+      {
+        "form": "Sehr"
+      },
+      {
+        "form": "So"
+      },
+      {
+        "form": "Sohn"
+      },
+      {
+        "form": "Teil"
+      },
+      {
+        "form": "Text"
+      },
+      {
+        "form": "Theil"
+      },
+      {
+        "form": "Titel"
+      },
+      {
+        "form": "Typograf"
+      },
+      {
+        "form": "Unten"
+      },
+      {
+        "form": "Verbindung"
+      },
+      {
+        "form": "Verwandt"
+      },
+      {
+        "form": "Von"
+      },
+      {
+        "form": "Zwei"
+      },
+      {
+        "form": "als"
+      },
+      {
+        "form": "am"
+      },
+      {
+        "form": "an"
+      },
+      {
+        "form": "ansehen"
+      },
+      {
+        "form": "auf"
+      },
+      {
+        "form": "auf's"
+      },
+      {
+        "form": "aus"
+      },
+      {
+        "form": "bei"
+      },
+      {
+        "form": "braun"
+      },
+      {
+        "form": "da"
+      },
+      {
+        "form": "danke"
+      },
+      {
+        "form": "dein"
+      },
+      {
+        "form": "dem"
+      },
+      {
+        "form": "diese"
+      },
+      {
+        "form": "dort"
+      },
+      {
+        "form": "drei"
+      },
+      {
+        "form": "dunkel"
+      },
+      {
+        "form": "einem"
+      },
+      {
+        "form": "einer"
+      },
+      {
+        "form": "einmal"
+      },
+      {
+        "form": "eins"
+      },
+      {
+        "form": "engste"
+      },
+      {
+        "form": "exakt"
+      },
+      {
+        "form": "fe"
+      },
+      {
+        "form": "für"
+      },
+      {
+        "form": "ganz"
+      },
+      {
+        "form": "ganze"
+      },
+      {
+        "form": "gell"
+      },
+      {
+        "form": "genau"
+      },
+      {
+        "form": "genauer"
+      },
+      {
+        "form": "hell"
+      },
+      {
+        "form": "im"
+      },
+      {
+        "form": "in"
+      },
+      {
+        "form": "klar"
+      },
+      {
+        "form": "klopf"
+      },
+      {
+        "form": "lang"
+      },
+      {
+        "form": "lange"
+      },
+      {
+        "form": "letztere"
+      },
+      {
+        "form": "man"
+      },
+      {
+        "form": "mehr"
+      },
+      {
+        "form": "mein"
+      },
+      {
+        "form": "meine"
+      },
+      {
+        "form": "mi"
+      },
+      {
+        "form": "mie"
+      },
+      {
+        "form": "mit"
+      },
+      {
+        "form": "nichts"
+      },
+      {
+        "form": "noch"
+      },
+      {
+        "form": "nur"
+      },
+      {
+        "form": "offen"
+      },
+      {
+        "form": "per"
+      },
+      {
+        "form": "s"
+      },
+      {
+        "form": "sche"
+      },
+      {
+        "form": "schwarz"
+      },
+      {
+        "form": "sehr"
+      },
+      {
+        "form": "sieben"
+      },
+      {
+        "form": "steht"
+      },
+      {
+        "form": "ten"
+      },
+      {
+        "form": "trägst"
+      },
+      {
+        "form": "verwandt"
+      },
+      {
+        "form": "von"
+      },
+      {
+        "form": "warm"
+      },
+      {
+        "form": "wieder"
+      },
+      {
+        "form": "zehn"
+      },
+      {
+        "form": "zu"
+      },
+      {
+        "form": "zwei"
+      },
+      {
+        "form": "über"
+      }
+    ],
+    "new_lexeme_ids": [
+      "de-lesen",
+      "de-langsam",
+      "de-brief",
+      "de-oeffnen",
+      "de-warten",
+      "de-seite",
+      "de-buchstabe",
+      "de-druckerei",
+      "de-drucken",
+      "de-drucker",
+      "de-tochter",
+      "de-setzen",
+      "de-wort",
+      "de-hoeren",
+      "de-wissenschaft",
+      "de-satz",
+      "de-nacht",
+      "de-bruecke",
+      "de-fluss",
+      "de-presse",
+      "de-gendarm",
+      "de-proklamation"
+    ],
+    "recycle_lexeme_ids": [
+      "de-buch",
+      "de-dank",
+      "de-gold",
+      "de-kolben",
+      "de-glas",
+      "de-mantel",
+      "de-hemd",
+      "de-student",
+      "de-tuch",
+      "de-zaehlen",
+      "de-trocknen",
+      "de-schule",
+      "de-lampe",
+      "de-waesche",
+      "de-versuch",
+      "de-chemie",
+      "de-chemiker",
+      "de-tuer",
+      "de-tisch",
+      "de-schnell",
+      "de-leise",
+      "de-laut",
+      "de-still",
+      "de-arbeit",
+      "de-hand",
+      "de-vater",
+      "de-mutter",
+      "de-kein",
+      "de-lachen",
+      "de-nehmen",
+      "de-geben",
+      "de-machen",
+      "de-bub"
+    ],
+    "introductions": [
+      {
+        "lexeme_id": "de-lesen",
+        "segment_id": "de-NEW-01-l04-s011",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-langsam",
+        "segment_id": "de-NEW-01-l04-s016",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-brief",
+        "segment_id": "de-NEW-01-l04-s014",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-oeffnen",
+        "segment_id": "de-NEW-01-l04-s013",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-warten",
+        "segment_id": "de-NEW-01-l04-s017",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-seite",
+        "segment_id": "de-NEW-01-l04-s022",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-buchstabe",
+        "segment_id": "de-NEW-01-l04-s023",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-druckerei",
+        "segment_id": "de-NEW-01-l04-s030",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-drucken",
+        "segment_id": "de-NEW-01-l04-s032",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-drucker",
+        "segment_id": "de-NEW-01-l04-s030",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-tochter",
+        "segment_id": "de-NEW-01-l04-s033",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-setzen",
+        "segment_id": "de-NEW-01-l04-s034",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-wort",
+        "segment_id": "de-NEW-01-l04-s034",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-hoeren",
+        "segment_id": "de-NEW-01-l04-s044",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-wissenschaft",
+        "segment_id": "de-NEW-01-l04-s046",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-satz",
+        "segment_id": "de-NEW-01-l04-s055",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-nacht",
+        "segment_id": "de-NEW-01-l04-s064",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-bruecke",
+        "segment_id": "de-NEW-01-l04-s030",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-fluss",
+        "segment_id": "de-NEW-01-l04-s030",
+        "how": "adjacent context and German margin aid"
+      },
+      {
+        "lexeme_id": "de-presse",
+        "segment_id": "de-NEW-01-l04-s032",
+        "how": "English-transparent cognate plus scene context"
+      },
+      {
+        "lexeme_id": "de-gendarm",
+        "segment_id": "de-NEW-01-l04-s078",
+        "how": "English-transparent cognate plus scene context"
+      },
+      {
+        "lexeme_id": "de-proklamation",
+        "segment_id": "de-NEW-01-l04-s064",
+        "how": "English-transparent cognate plus scene context"
+      }
+    ],
+    "swaps": []
+  },
+  "story": {
+    "sections": [
+      {
+        "id": "de-NEW-01-l04-sec1",
+        "title": "Das Buch",
+        "segments": [
+          {
+            "id": "de-NEW-01-l04-s001",
+            "text": "Es war Juli 1853. Es war Nachmittag, und Jakob war im Kloster. Er arbeitete.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "war",
+                "gloss": "ist (jetzt) → war (nicht jetzt)",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-sein"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "arbeitete",
+                "gloss": "arbeitet (jetzt) → arbeitete (nicht jetzt)",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-arbeiten"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s002",
+            "text": "Er trocknete die Kolben, und dann zählte er das Glas: zwölf Kolben, sieben Flaschen, zwanzig Rohre.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "zählte",
+                "gloss": "zählt → zählte",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-zaehlen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s003",
+            "text": "Im Juli war kein Kolben kaputt. Jakob war schnell, aber nicht zu schnell.",
+            "paragraph_start": false
+          },
+          {
+            "id": "de-NEW-01-l04-s004",
+            "text": "Es war warm. Die Tür war offen, und die Studenten hatten keine Mäntel.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "hatten",
+                "gloss": "haben → hatten",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-haben"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Mäntel",
+                "gloss": "ein Mantel → zwei Mäntel",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-mantel"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s005",
+            "text": "Auch Ludwig hatte jetzt keinen Mantel. Er hatte nur ein Hemd, weiß und fein.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "hatte",
+                "gloss": "hat → hatte",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-haben"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s006",
+            "text": "Dann kam Ludwig zu Jakob. Er hatte ein Buch in der Hand.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "kam",
+                "gloss": "kommt → kam",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-kommen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s007",
+            "text": "Das Buch war nicht dick, und es war nicht neu. Es war klein und braun.",
+            "paragraph_start": false
+          },
+          {
+            "id": "de-NEW-01-l04-s008",
+            "text": "„Jakob“, sagte Ludwig leise. „Hier. Das ist für dich.“",
+            "paragraph_start": true,
+            "speaker": "char-ludwig",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "sagte",
+                "gloss": "sagt → sagte",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-sagen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s009",
+            "text": "Jakob sah die Studenten an. Aber die Studenten sahen nichts. Sie arbeiteten, und Ludwig war leise.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "sah",
+                "gloss": "sieht → sah",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-sehen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s010",
+            "text": "„Ein Buch, Herr Reinhardt? Für mich?“",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s011",
+            "text": "„Ja. Gold nimmst du nicht, gut. Aber ein Buch ist kein Gold. Das ist mein Dank, Jakob. Du liest das Buch, und dann gibst du es wieder.“",
+            "paragraph_start": true,
+            "speaker": "char-ludwig",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "liest",
+                "gloss": "liest: die Augen sehen den Text",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-lesen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s012",
+            "text": "Jakob sagte nicht: „Nein, danke.“ Er sagte: „Danke, Herr Reinhardt.“",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s013",
+            "text": "Jakob nahm das Buch, und er öffnete es.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "nahm",
+                "gloss": "nimmt → nahm",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-nehmen"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "öffnete",
+                "gloss": "öffnete: jetzt war das Buch offen",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-oeffnen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s014",
+            "text": "Oben war der Titel: „Chemische Briefe“. Unten war der Name: Liebig.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Briefe",
+                "gloss": "Brief: Text auf Papier, per Post",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-brief"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s015",
+            "text": "„Liebig ist Chemiker, wie Professor Bunsen. Er ist Professor in München“, sagte Ludwig. „Das sind Briefe von Liebig. Sie sind nicht für Professoren. Sie sind für dich und für mich.“",
+            "paragraph_start": true,
+            "speaker": "char-ludwig"
+          },
+          {
+            "id": "de-NEW-01-l04-s016",
+            "text": "Jakob las den Titel. Er las langsam: „Che … mi … sche … Brie … fe.“",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "las",
+                "gloss": "liest → las",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-lesen"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "langsam",
+                "gloss": "langsam ↔ schnell",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "de-langsam"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s017",
+            "text": "Ludwig lachte nicht. Er wartete.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "wartete",
+                "gloss": "wartete: war da, sagte nichts, machte nichts",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-warten"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s018",
+            "text": "Aber Jakob war rot. Am Morgen war er in der Schule, ja. Aber er las wie ein Junge, acht Jahre alt.",
+            "paragraph_start": false
+          },
+          {
+            "id": "de-NEW-01-l04-s019",
+            "text": "„Gut“, sagte Ludwig. „Eine Woche, zwei Wochen: kein Problem.“ Dann ging er wieder an die Arbeit.",
+            "paragraph_start": true,
+            "speaker": "char-ludwig",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "ging",
+                "gloss": "geht → ging",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-gehen"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s020",
+            "text": "Wolf sah das Buch. „Ein Buch, Junge? Hier arbeitet man. Hier liest man nicht.“",
+            "paragraph_start": true,
+            "speaker": "char-wolf"
+          },
+          {
+            "id": "de-NEW-01-l04-s021",
+            "text": "„Ja, Herr Wolf.“ Jakob machte das Buch zu, und er arbeitete wieder. Aber er sah das Buch an, wieder und wieder.",
+            "paragraph_start": true,
+            "speaker": "char-jakob",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "machte das Buch zu",
+                "gloss": "machte … zu: jetzt war das Buch zu, nicht offen",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s022",
+            "text": "Am Abend war Jakob zu Hause. Kathrin arbeitete am Wasser, und Jakob öffnete das Buch: Brief eins, Seite eins.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Seite",
+                "gloss": "Seite: Buch = Seite + Seite + Seite",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-seite"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s023",
+            "text": "Er las: „Erster Brief. In … den … Schrif … ten …“ Dann las er nicht mehr. Die Buchstaben waren klein und schwarz, und die Lampe war nicht hell.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Schrif … ten",
+                "gloss": "Schriften: Text auf Papier",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Buchstaben",
+                "gloss": "Buchstaben: A, B, C …",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "de-buchstabe"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s024",
+            "text": "„Was hast du da, Bub?“",
+            "paragraph_start": true,
+            "speaker": "char-kathrin"
+          },
+          {
+            "id": "de-NEW-01-l04-s025",
+            "text": "„Ein Buch, Mutter. Von Herrn Reinhardt.“",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s026",
+            "text": "„Ein Buch? Und? Liest du es?“",
+            "paragraph_start": true,
+            "speaker": "char-kathrin"
+          },
+          {
+            "id": "de-NEW-01-l04-s027",
+            "text": "„Ich lese langsam, Mutter. Sehr langsam.“ Jakob war wieder rot.",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s028",
+            "text": "Kathrin sah das Buch an. Dann sah sie Jakob an. „Morgen trägst du die Wäsche zu Hartmanns, gell? Und das Buch auch. Lene Hartmann liest schnell.“",
+            "paragraph_start": true,
+            "speaker": "char-kathrin"
+          },
+          {
+            "id": "de-NEW-01-l04-s029",
+            "text": "Jakob sagte nichts. Er sah das Buch an, und dann die Wäsche.",
+            "paragraph_start": true
+          }
+        ],
+        "exercises": [
+          {
+            "id": "de-NEW-01-l04-x1-1",
+            "type": "podstanovka",
+            "title": "Formen",
+            "instruction": "Ergänze. 1: ist · 2: hat · 3: sind · 4: zählt · 5: arbeiten · 6: wartet",
+            "hint_en": "Write the past (Präteritum) of the present form in brackets. sein: ist → war, sind → waren; haben: hat → hatte, haben → hatten; regular verbs add -te to the stem (zählt → zählte, -ten in the plural: arbeiten → arbeiteten), and -ete after a stem ending in t or d, or in n after a consonant other than l or r (öffnen, trocknen; but lernen → lernte) (arbeitet → arbeitete, wartet → wartete, öffnet → öffnete). For wir and plural sie, weak verbs and hatte add -n: arbeitete → arbeiteten, hatte → hatten; sein is irregular: war → waren.",
+            "grammar_target_ids": [
+              "G04"
+            ],
+            "obrazec": {
+              "prompt": "Es ___ warm. (ist)",
+              "answer": "war"
+            },
+            "items": [
+              {
+                "id": "x1-1-1",
+                "prompt": "Im Juli ___ das Glas sauber. (ist)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "war"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-1-2",
+                "prompt": "Jakob ___ ein Tuch in der Hand. (hat)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "hatte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-1-3",
+                "prompt": "Die Kolben ___ sauber und trocken. (sind)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "waren"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-1-4",
+                "prompt": "Am Abend ___ Jakob die Flaschen. (zählt)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "zählte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-1-5",
+                "prompt": "Die Studenten ___ im Laboratorium. (arbeiten)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "arbeiteten"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-1-6",
+                "prompt": "Wolf ___ am Tisch. (wartet)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "wartete"
+                ],
+                "first_letters": 1
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-x1-2",
+            "type": "podstanovka",
+            "title": "Wörter",
+            "instruction": "Ergänze. 1: opened · 2: slowly · 3: letters (by post) · 4: page · 5: letters (A, B, C) · 6: waited",
+            "hint_en": "Complete each sentence with the German word matching its English cue. First letters are available.",
+            "grammar_target_ids": [
+              "G04"
+            ],
+            "obrazec": {
+              "prompt": "Das Buch war nicht dick; es war ___.",
+              "answer": "dünn"
+            },
+            "items": [
+              {
+                "id": "x1-2-1",
+                "prompt": "Jakob ___ das Buch; jetzt war es offen.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "öffnete"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-2-2",
+                "prompt": "Jakob liest nicht schnell; er liest ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "langsam"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-2-3",
+                "prompt": "Das Buch heißt „Chemische ___“.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Briefe"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-2-4",
+                "prompt": "Jakob las Brief eins, ___ eins.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Seite"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-2-5",
+                "prompt": "A, B und C sind ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Buchstaben"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x1-2-6",
+                "prompt": "Ludwig sagte nichts; er ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "wartete"
+                ],
+                "first_letters": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-NEW-01-l04-sec2",
+        "title": "Die Druckerei",
+        "segments": [
+          {
+            "id": "de-NEW-01-l04-s030",
+            "text": "Die Druckerei von Konrad Hartmann war am Fluss, an der Brücke.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Druckerei",
+                "gloss": "Druckerei: Haus für Drucker",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-druckerei"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Brücke",
+                "gloss": "Brücke: Man geht über den Fluss.",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-bruecke"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s031",
+            "text": "Es war wieder Abend, und Jakob kam mit der Wäsche und mit dem Buch. Die Tür war offen, und man sah den Fluss. Der Fluss war ruhig, und auf der Brücke waren Studenten.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Fluss",
+                "gloss": "Fluss: Wasser, lang; hier: der Neckar",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-fluss"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s032",
+            "text": "Konrad Hartmann war Drucker. In der Druckerei war es laut: Hier war eine Presse, groß und schwarz, und Konrad Hartmann druckte: Papier, Papier, Papier.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Drucker",
+                "gloss": "Drucker: Typograf",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-drucker"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "druckte",
+                "gloss": "druckt: Presse → Text auf Papier",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-drucken"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s033",
+            "text": "Und dort war Lene, die Tochter von Konrad Hartmann. Jakob und Lene waren keine Kinder mehr, aber sie sagten noch „du“.",
+            "paragraph_start": false,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Tochter",
+                "gloss": "Tochter ↔ Sohn",
+                "gloss_kind": "antonym",
+                "covers_lexeme_ids": [
+                  "de-tochter"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Kinder",
+                "gloss": "Kind: ein Junge, sieben Jahre alt",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s034",
+            "text": "Lene setzte Buchstaben. Sie nahm einen Buchstaben, dann noch einen und noch einen: ein Wort.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "setzte",
+                "gloss": "setzt: Buchstabe + Buchstabe → Wort",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-setzen"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Wort",
+                "gloss": "Wort: „Chemie“ ist ein Wort.",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "de-wort"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s035",
+            "text": "Lene las den Text, und sie setzte ihn. Sie las schnell, und sie setzte schnell, sehr schnell. Ein Wort, zwei Wörter, drei Wörter.",
+            "paragraph_start": false
+          },
+          {
+            "id": "de-NEW-01-l04-s036",
+            "text": "Lene hatte einen Buchstaben in der Hand: ein „L“, klein, aus Metall.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s037",
+            "text": "„L wie Lene“, sagte sie. „Und L wie Lauer. Guten Abend, Jakob.“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s038",
+            "text": "„Die Wäsche? Danke.“ Dann sah Lene das Buch. „Und das? Was hast du da?“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s039",
+            "text": "„Ein Buch, von Herrn Reinhardt. Er ist Student bei Professor Bunsen.“",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s040",
+            "text": "Lene nahm das Buch. Sie las den Titel schnell, nicht wie Jakob.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s041",
+            "text": "„‚Chemische Briefe‘. Liebig! Und? Liest du es?“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s042",
+            "text": "„Ja. Langsam.“ Jakob war wieder rot.",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s043",
+            "text": "Lene lachte nicht. Sie gab Jakob das Buch wieder, und dann nahm sie wieder einen Buchstaben.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "gab",
+                "gloss": "gibt → gab",
+                "gloss_kind": "form",
+                "covers_lexeme_ids": [
+                  "de-geben"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s044",
+            "text": "„Langsam? Gut. Dann liest du langsam und laut, und ich setze, und ich höre.“",
+            "paragraph_start": true,
+            "speaker": "char-lene",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "höre",
+                "gloss": "hören: „Klopf, klopf!“ – Wer ist da?",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "de-hoeren"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s045",
+            "text": "Jakob öffnete das Buch: Brief eins. Lene las Seite eins, schnell und laut. Dann Seite zwei: Jetzt las Jakob, laut, aber langsam.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "image",
+                "presentation": "inline_scene",
+                "ref": "de-NEW-01-l04-img-scene",
+                "src": "media/images/de-NEW-01-l04-img-scene.webp",
+                "status": "planned",
+                "alt": "Lene helps Jakob read the book Ludwig lent him.",
+                "art_brief": "Summer evening 1853 in Konrad Hartmann's small Heidelberg print shop by the Neckar bridge; the door stands open on the river and the old bridge in evening light. Lene (12–13, quick, dark hair tied back, printer's apron, ink on her fingers) stands at a slanted type case with a composing stick in one hand, picking metal type, not looking up. Jakob (13–14, thin, plain shirt, no coat) stands beside her holding a small, worn brown book open at its first pages, reading aloud slowly, finger under the line; a bundle of clean washing lies on a side table. In the background Konrad Hartmann (about 45, quiet, sleeves rolled, ink-black hands) works a dark iron hand press. No legible invented text; the book's page shows only illegible lines.",
+                "characters": [
+                  "char-lene",
+                  "char-jakob",
+                  "char-konrad"
+                ],
+                "covers_lexeme_ids": [
+                  "de-lesen",
+                  "de-setzen",
+                  "de-buchstabe",
+                  "de-druckerei",
+                  "de-presse"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s046",
+            "text": "„Die Chemie, als Theil der Wissenschaft …“",
+            "paragraph_start": true,
+            "speaker": "char-jakob",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Theil",
+                "gloss": "Theil = Teil: ½, ⅓, ¼",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Wissenschaft",
+                "gloss": "Wissenschaft: Chemie, Physik, Mathematik …",
+                "gloss_kind": "example",
+                "covers_lexeme_ids": [
+                  "de-wissenschaft"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s047",
+            "text": "„Gut“, sagte Lene. Sie sah Jakob nicht an. Sie setzte. „Chemie, Physik, Mathematik: Das ist Wissenschaft, und die Chemie ist ein Teil. Und dann? Ich warte.“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s048",
+            "text": "„… der Naturforschung …“ Jakob war still. Das Wort war lang, sehr lang.",
+            "paragraph_start": true,
+            "speaker": "char-jakob",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Naturforschung",
+                "gloss": "Naturforschung: Natur + Forschung; Forschung = Versuche",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s049",
+            "text": "„Naturforschung ist ein Wort, Jakob, aber es hat zwei Wörter: Natur und Forschung. Ein Chemiker macht Versuche: Das ist Forschung. Und dann?“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s050",
+            "text": "„… ist auf’s engste verwandt mit der Physik …“",
+            "paragraph_start": true,
+            "speaker": "char-jakob",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "verwandt",
+                "gloss": "verwandt: wie Vater und Sohn",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "auf’s engste",
+                "gloss": "auf’s engste: sehr, sehr",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s051",
+            "text": "„Verwandt: wie Vater und Sohn, wie Mutter und Tochter“, sagte Lene. „Die Chemie und die Physik sind verwandt. Und dann?“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s052",
+            "text": "„… diese letztere …“ Jakob war wieder still.",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s053",
+            "text": "„Diese letztere? Das ist die Physik, Jakob, nicht die Chemie.“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s054",
+            "text": "„… steht in genauer Verbindung mit Astronomie und Mathematik.“",
+            "paragraph_start": true,
+            "speaker": "char-jakob",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "genauer",
+                "gloss": "genau: exakt",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Verbindung",
+                "gloss": "Verbindung: A — B",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s055",
+            "text": "Punkt. Ein Satz! Zehn Minuten für einen Satz.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Satz",
+                "gloss": "Satz: Wort, Wort, Wort … Punkt.",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-satz"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s056",
+            "text": "„Gut“, sagte Lene. „Und jetzt der Satz noch einmal.“",
+            "paragraph_start": true,
+            "speaker": "char-lene",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "noch einmal",
+                "gloss": "noch einmal: wieder",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s057",
+            "text": "Jakob las den Satz noch einmal, und jetzt las er ihn ganz:",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s058",
+            "text": "„Die Chemie, als Theil der Wissenschaft der Naturforschung, ist auf’s engste verwandt mit der Physik, diese letztere steht in genauer Verbindung mit Astronomie und Mathematik.“ (Liebig, „Chemische Briefe“, 1844, Seite 2)",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s059",
+            "text": "Es war nicht schnell. Aber jetzt war der Satz klar.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s060",
+            "text": "„Siehst du?“, sagte Lene. „Das ist Wissenschaft, Jakob Lauer. Und du liest Wissenschaft.“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          }
+        ],
+        "exercises": [
+          {
+            "id": "de-NEW-01-l04-x2-1",
+            "type": "podstanovka",
+            "title": "Formen",
+            "instruction": "Ergänze. 1: setzt · 2: öffnet · 3: ist · 4: sind · 5: hat · 6: lacht",
+            "hint_en": "Write the past of the present form in brackets: war, waren, hatte, hatten, or the stem + -te / -ete (see section 1).",
+            "grammar_target_ids": [
+              "G04"
+            ],
+            "obrazec": {
+              "prompt": "Konrad Hartmann ___ Papier. (druckt)",
+              "answer": "druckte"
+            },
+            "items": [
+              {
+                "id": "x2-1-1",
+                "prompt": "Lene ___ einen Text. (setzt)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "setzte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-1-2",
+                "prompt": "Jakob ___ das Buch, Seite drei. (öffnet)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "öffnete"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-1-3",
+                "prompt": "Der Titel ___ lang. (ist)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "war"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-1-4",
+                "prompt": "Die Wörter ___ lang. (sind)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "waren"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-1-5",
+                "prompt": "Lene ___ keine Angst. (hat)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "hatte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-1-6",
+                "prompt": "Konrad Hartmann ___ nicht. (lacht)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "lachte"
+                ],
+                "first_letters": 1
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-x2-2",
+            "type": "podstanovka",
+            "title": "Wörter",
+            "instruction": "Ergänze. 1: print shop · 2: bridge · 3: daughter · 4: word · 5: science · 6: sentence",
+            "hint_en": "Complete each sentence with the German word matching its English cue. First letters are available.",
+            "grammar_target_ids": [
+              "G04"
+            ],
+            "obrazec": {
+              "prompt": "Jakob trocknet die Kolben mit einem ___.",
+              "answer": "Tuch"
+            },
+            "items": [
+              {
+                "id": "x2-2-1",
+                "prompt": "Hartmann druckt Papier in der ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Druckerei"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-2-2",
+                "prompt": "Am Fluss ist eine ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Brücke"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-2-3",
+                "prompt": "Konrad Hartmann hat eine ___: Lene.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Tochter"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-2-4",
+                "prompt": "„Physik“ ist ein ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Wort"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-2-5",
+                "prompt": "Chemie und Physik: Das ist ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Wissenschaft"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x2-2-6",
+                "prompt": "Ein ___ hat Wörter und einen Punkt.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Satz"
+                ],
+                "first_letters": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "de-NEW-01-l04-sec3",
+        "title": "Die Nacht",
+        "segments": [
+          {
+            "id": "de-NEW-01-l04-s061",
+            "text": "Dann kam Konrad Hartmann, der Drucker, von der Presse. Die Hände von Konrad Hartmann waren schwarz.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s062",
+            "text": "Er sah das Buch an, und dann sah er Jakob an, lange. „Du liest, und meine Tochter hört“, sagte er. „So war das auch in Mannheim, mit deinem Vater.“",
+            "paragraph_start": true,
+            "speaker": "char-konrad",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "deinem Vater",
+                "gloss": "deinem Vater: Peter Lauer, Jakobs Vater",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s063",
+            "text": "Jakob sagte nichts. Konrad Hartmann machte die Tür zu, und dann sagte er leise:",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s064",
+            "text": "„Dein Vater und ich, wir waren Drucker in Mannheim. Mai 1849: die Revolution. Wir hatten Proklamationen, Proklamation auf Proklamation, und wir hatten nur eine Nacht.“",
+            "paragraph_start": true,
+            "speaker": "char-konrad",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Proklamationen",
+                "gloss": "Proklamation: Text für die Stadt",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-proklamation"
+                ]
+              },
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Nacht",
+                "gloss": "Nacht: Abend → Nacht → Morgen",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-nacht"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s065",
+            "text": "„Dein Vater setzte die Buchstaben, die ganze Nacht. Er war schnell, Jakob, sehr schnell, wie Lene. Und ich druckte.“",
+            "paragraph_start": true,
+            "speaker": "char-konrad",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "die ganze Nacht",
+                "gloss": "die ganze Nacht: Abend … Morgen",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-nacht"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s066",
+            "text": "„Am Morgen waren die Proklamationen in der Stadt. Ganz Mannheim las sie. Und dein Vater …“",
+            "paragraph_start": true,
+            "speaker": "char-konrad"
+          },
+          {
+            "id": "de-NEW-01-l04-s067",
+            "text": "Und dann Rastatt. Jakob sah das Buch an, nur das Buch. Lene setzte nicht mehr. Sie sah Jakob an.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s068",
+            "text": "„Herr Hartmann“, sagte Jakob. „Ich lese.“",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s069",
+            "text": "Er sah nur das Buch an, nicht Konrad Hartmann: die Buchstaben, die Wörter, den Satz. Jakob hörte nicht mehr.",
+            "paragraph_start": false
+          },
+          {
+            "id": "de-NEW-01-l04-s070",
+            "text": "Konrad Hartmann wartete. Dann öffnete er die Tür wieder, und er ging an die Presse.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s071",
+            "text": "Jakob las. Er las langsam, Wort für Wort, Satz für Satz. Lene setzte, und sie hörte.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s072",
+            "text": "Ein Wort war wieder lang. „Natur … beobachtung?“, fragte Jakob.",
+            "paragraph_start": true,
+            "speaker": "char-jakob",
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "beobachtung",
+                "gloss": "Beobachtung: ansehen, genau ansehen",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": []
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s073",
+            "text": "„Natur und Beobachtung“, sagte Lene. „Ein Wort, wie Naturforschung.“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s074",
+            "text": "Am Fluss war es jetzt dunkel. Es war Nacht, und auf dem Tisch war eine Lampe.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s075",
+            "text": "Dann war Brief eins zu Ende. Jakob machte das Buch zu. Er war nicht mehr rot.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s076",
+            "text": "„Brief eins“, sagte Lene. „Und morgen Brief zwei?“",
+            "paragraph_start": true,
+            "speaker": "char-lene"
+          },
+          {
+            "id": "de-NEW-01-l04-s077",
+            "text": "„Morgen Brief zwei.“ Jakob lachte.",
+            "paragraph_start": true,
+            "speaker": "char-jakob"
+          },
+          {
+            "id": "de-NEW-01-l04-s078",
+            "text": "Die Tür war offen. Jakob sah den Fluss und die Brücke. Zwei Männer kamen von der Brücke, und dann waren sie in der Druckerei: zwei Gendarmen.",
+            "paragraph_start": true,
+            "inference_aids": [
+              {
+                "type": "gloss",
+                "presentation": "margin_gloss",
+                "anchor_text": "Gendarmen",
+                "gloss": "Gendarm: Polizei",
+                "gloss_kind": "define",
+                "covers_lexeme_ids": [
+                  "de-gendarm"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-s079",
+            "text": "„Guten Abend, Hartmann“, sagte ein Gendarm. „Was druckt man hier? Wir sehen das Papier an.“",
+            "paragraph_start": true,
+            "speaker": "char-gendarm"
+          },
+          {
+            "id": "de-NEW-01-l04-s080",
+            "text": "„Bitte, meine Herren“, sagte Konrad Hartmann. Er war ruhig.",
+            "paragraph_start": true,
+            "speaker": "char-konrad"
+          },
+          {
+            "id": "de-NEW-01-l04-s081",
+            "text": "Die Gendarmen sahen Lene an, dann Jakob, dann das Buch.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s082",
+            "text": "Lene nahm die Hand von den Buchstaben. Jakob hatte das Buch noch in der Hand.",
+            "paragraph_start": true
+          },
+          {
+            "id": "de-NEW-01-l04-s083",
+            "text": "Ein Gendarm sah die Presse an. Dann ging er an den Tisch von Lene.",
+            "paragraph_start": false
+          }
+        ],
+        "exercises": [
+          {
+            "id": "de-NEW-01-l04-x3-1",
+            "type": "podstanovka",
+            "title": "Formen",
+            "instruction": "Ergänze. 1: hört · 2: ist · 3: setzt · 4: druckt · 5: haben · 6: sind",
+            "hint_en": "Write the past of the present form in brackets: war, waren, hatte, hatten, or the stem + -te / -ete (see section 1).",
+            "grammar_target_ids": [
+              "G04"
+            ],
+            "obrazec": {
+              "prompt": "Jakob ___ das Buch zu. (macht)",
+              "answer": "machte"
+            },
+            "items": [
+              {
+                "id": "x3-1-1",
+                "prompt": "Lene ___ Jakob. (hört)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "hörte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-1-2",
+                "prompt": "In Mannheim ___ es Nacht. (ist)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "war"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-1-3",
+                "prompt": "Peter Lauer ___ die Proklamationen. (setzt)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "setzte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-1-4",
+                "prompt": "Konrad Hartmann ___ die Proklamationen. (druckt)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "druckte"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-1-5",
+                "prompt": "Konrad und Peter ___ nur eine Nacht. (haben)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "hatten"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-1-6",
+                "prompt": "Die Gendarmen ___ in der Druckerei. (sind)",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "waren"
+                ],
+                "first_letters": 1
+              }
+            ]
+          },
+          {
+            "id": "de-NEW-01-l04-x3-2",
+            "type": "podstanovka",
+            "title": "Wörter",
+            "instruction": "Ergänze. 1: night · 2: printer · 3: gendarmes · 4: river · 5: press · 6: proclamations",
+            "hint_en": "Complete each sentence with the German word matching its English cue. First letters are available.",
+            "grammar_target_ids": [
+              "G04"
+            ],
+            "obrazec": {
+              "prompt": "Jakob liest Brief eins, ___ eins.",
+              "answer": "Seite"
+            },
+            "items": [
+              {
+                "id": "x3-2-1",
+                "prompt": "Der Abend war zu Ende. Es war ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Nacht"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-2-2",
+                "prompt": "Peter Lauer war ___ in Mannheim.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Drucker"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-2-3",
+                "prompt": "Zwei ___ kamen in die Druckerei.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Gendarmen"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-2-4",
+                "prompt": "Man geht über die Brücke, über den ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Fluss"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-2-5",
+                "prompt": "Konrad Hartmann druckt mit einer ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Presse"
+                ],
+                "first_letters": 1
+              },
+              {
+                "id": "x3-2-6",
+                "prompt": "Ganz Mannheim las die ___.",
+                "mode": "productive",
+                "answer_mode": "exact",
+                "accepted_answers": [
+                  "Proklamationen"
+                ],
+                "first_letters": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "grammar": {
+    "title": "Grammatik",
+    "rule": "ist → war · hat → hatte · arbeitet → arbeitete",
+    "tables": [
+      {
+        "id": "sein-haben",
+        "caption": "ist → war · sind → waren · hat → hatte · haben → hatten",
+        "header": [
+          "ist · sind · hat · haben",
+          "war · waren · hatte · hatten"
+        ],
+        "rows": [
+          [
+            "Das Buch ist nicht dick.",
+            "Das Buch war nicht dick."
+          ],
+          [
+            "Die Buchstaben sind klein und schwarz.",
+            "Die Buchstaben waren klein und schwarz."
+          ],
+          [
+            "Er hat ein Buch in der Hand.",
+            "Er hatte ein Buch in der Hand."
+          ],
+          [
+            "Wir haben nur eine Nacht.",
+            "Wir hatten nur eine Nacht."
+          ]
+        ]
+      },
+      {
+        "id": "schwach",
+        "caption": "-te · -ete",
+        "header": [
+          "arbeitet · hört · druckt",
+          "arbeitete · hörte · druckte"
+        ],
+        "rows": [
+          [
+            "Er arbeitet.",
+            "Er arbeitete."
+          ],
+          [
+            "Lene setzt, und sie hört.",
+            "Lene setzte, und sie hörte."
+          ],
+          [
+            "Konrad Hartmann druckt Papier.",
+            "Konrad Hartmann druckte Papier."
+          ],
+          [
+            "Er wartet.",
+            "Er wartete."
+          ],
+          [
+            "Jakob öffnet das Buch.",
+            "Jakob öffnete das Buch."
+          ]
+        ]
+      },
+      {
+        "id": "stark",
+        "caption": "kommt → kam · geht → ging · sieht → sah · liest → las",
+        "header": [
+          "kommt · geht · sieht · liest · nimmt · gibt",
+          "kam · ging · sah · las · nahm · gab"
+        ],
+        "rows": [
+          [
+            "Dann kommt Ludwig zu Jakob.",
+            "Dann kam Ludwig zu Jakob."
+          ],
+          [
+            "Dann geht er wieder an die Arbeit.",
+            "Dann ging er wieder an die Arbeit."
+          ],
+          [
+            "Jakob sieht die Studenten an.",
+            "Jakob sah die Studenten an."
+          ],
+          [
+            "Jakob liest den Titel.",
+            "Jakob las den Titel."
+          ],
+          [
+            "Jakob nimmt das Buch.",
+            "Jakob nahm das Buch."
+          ],
+          [
+            "Sie gibt Jakob das Buch wieder.",
+            "Sie gab Jakob das Buch wieder."
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "segment_id": "de-NEW-01-l04-s006"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s007"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s001"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s004"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s005"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s002"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s017"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s023"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s034"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s032"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s062"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s064"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s065"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s069"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s070"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s009"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s016"
+      },
+      {
+        "segment_id": "de-NEW-01-l04-s058"
+      }
+    ],
+    "note_en": "The past tense of narration (Präteritum). From this chapter the story is told in the past, as German stories normally are: Es war Juli 1853 (“It was July 1853”), Jakob war im Kloster (“Jakob was in the monastery”), Er arbeitete (“He worked” or “He was working”). One German past form covers both English “worked” and “was working”. The margin aid ist (jetzt) → war (nicht jetzt) means “is (now) → was (not now)”.\n\nsein and haben. The past of sein (“to be”) is war, plural waren; the past of haben (“to have”) is hatte, plural hatten. Das Buch war nicht dick (“The book was not thick”); Die Buchstaben waren klein und schwarz (“The letters were small and black”); Er hatte ein Buch in der Hand (“He had a book in his hand”); Die Studenten hatten keine Mäntel (“The students had no coats”). With wir (“we”) the plural form is used too: wir waren Drucker (“we were printers”), wir hatten nur eine Nacht (“we had only one night”). In this chapter you have seen the forms for er, sie, es (one person or thing), for ich, which is the same as er (Und ich druckte, “And I printed”), and for wir and plural sie.\n\nRegular (“weak”) verbs. Most verbs make their past by adding -te to the stem, the part before -en: zählen, zählt → zählte (“counted”); hören, hört → hörte (“heard, listened”); setzen, setzt → setzte (“set”); drucken, druckt → druckte (“printed”); lachen → lachte (“laughed”); sagen → sagte (“said”); machen → machte (“made, did”). If the stem ends in t or d, an e is added first so the ending can be heard: arbeiten → arbeitete, warten → wartete. The same happens when the stem ends in n after another consonant: öffn- → öffnete, trockn- → trocknete. After l or r the n needs no e: lernen → lernte. For wir and plural sie, weak verbs and hatte add -n to the singular past form: arbeitete → die Studenten arbeiteten, hatte → hatten. sein is irregular: war → waren. (The forms for du and ihr come later.) These past forms are the ones to learn to produce now. The table pairs: Er arbeitet / Er arbeitete (“He works, is working / He worked, was working”); Lene setzt, und sie hört / Lene setzte, und sie hörte (“Lene sets type and listens / Lene set type and listened”); Konrad Hartmann druckt Papier / Konrad Hartmann druckte Papier (“Konrad Hartmann prints paper / Konrad Hartmann printed paper”); Er wartet / Er wartete (“He waits / He waited”); Jakob öffnet das Buch / Jakob öffnete das Buch (“Jakob opens the book / Jakob opened the book”). In the sein/haben table: Das Buch ist / war nicht dick (“The book is / was not thick”); Die Buchstaben sind / waren klein und schwarz (“The letters are / were small and black”); Er hat / hatte ein Buch in der Hand (“He has / had a book in his hand”); Wir haben / hatten nur eine Nacht (“We have / had only one night”).\n\nIrregular (“strong”) verbs, for reading only. Some very common verbs change their vowel instead: kommt → kam (“came”), geht → ging (“went”), sieht → sah (“saw, looked”), liest → las (“read”), nimmt → nahm (“took”), gibt → gab (“gave”). In the table: Dann kam Ludwig zu Jakob (“Then Ludwig came to Jakob”); Dann ging er wieder an die Arbeit (“Then he went back to work”); Jakob sah die Studenten an (“Jakob looked at the students”); Jakob las den Titel (“Jakob read the title”); Jakob nahm das Buch (“Jakob took the book”); Sie gab Jakob das Buch wieder (“She gave Jakob the book back”). Each has a margin aid at first use. Read them; you are not asked to produce them yet. They are taught in chapter 6.\n\nNarration in the past, speech in the present. The narrator tells what happened in the past, but people still speak in the present about the present: „Du liest, und meine Tochter hört“ (“You are reading, and my daughter is listening”), said Konrad in the past tense of the story. When Konrad tells an older story, of May 1849, he uses the past himself: Dein Vater setzte die Buchstaben, die ganze Nacht (“Your father set the type all night long”). The printed sentence of Liebig stays in the present, as he wrote it (ist, steht), even though Jakob read it in 1853: quotations are not changed into the past.\n\nThe Liebig sentence. Justus Liebig, Chemische Briefe (“Chemical Letters”), Heidelberg 1844, first letter, page 2: „Die Chemie, als Theil der Wissenschaft der Naturforschung, ist auf’s engste verwandt mit der Physik, diese letztere steht in genauer Verbindung mit Astronomie und Mathematik.“ — “Chemistry, as part of the science of the investigation of nature, is most closely related to physics; the latter stands in exact connection with astronomy and mathematics.” It keeps its 1844 spelling Theil (modern Teil, “part”). It has grammar from later chapters: als means “as”; der Wissenschaft der Naturforschung means “of the science of the investigation of nature” (der here marks the genitive, “of”, taught much later); auf’s engste means “most closely”; diese letztere means “the latter” (physics). Read it as a whole with its margin aids and Lene’s explanations, as Jakob did. Naturforschung is one word built from two, Natur + Forschung; German writes such compounds as one word.\n\nReading chunks. Jakob machte das Buch zu (“Jakob closed the book”) and Konrad machte die Tür zu (“Konrad shut the door”) split like sieht … an; zu means “shut”, as in die Tür ist zu. Wort für Wort, Satz für Satz is “word by word, sentence by sentence”; noch einmal means “once more”; zu Ende means “at an end, finished”. Der Buchstabe (“letter”) takes -n as an object: Sie nahm einen Buchstaben (“She took a letter”); the plural is also die Buchstaben. Das Wort, plural die Wörter; das Kind, plural die Kinder (“child, children”). In mit deinem Vater (“with your father”) and von der Brücke (“from the bridge”) the article has the dative ending taught in chapter 7. „Guten Abend, Hartmann“: the gendarme leaves out Herr, which is curt. Was druckt man hier? means “What is being printed here?”: man (“one, people”) is the general subject."
+  },
+  "pensa": {
+    "A": {
+      "id": "de-NEW-01-l04-pa",
+      "title": "Formen",
+      "instruction": "Complete one word: the past (Präteritum) of the verb in the first sentence. The numbered cues give the present form: 1: ist · 2: sind · 3: ist · 4: hat · 5: hat · 6: haben · 7: arbeitet · 8: setzt · 9: druckt · 10: hört",
+      "blocks": [
+        {
+          "obrazec": {
+            "prompt": "Jetzt ist Jakob in der Druckerei. Am Nachmittag ___ er im Kloster.",
+            "answer": "war"
+          },
+          "items": [
+            {
+              "id": "a1",
+              "prompt": "Jetzt ist Konrad in Heidelberg. 1849 ___ er in Mannheim.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "war"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a2",
+              "prompt": "Jetzt sind die Proklamationen alt. 1849 ___ sie neu.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "waren"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a3",
+              "prompt": "Jetzt ist es Nacht. Am Nachmittag ___ es warm.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "war"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a4",
+              "prompt": "Jetzt hat Jakob ein Buch. Im März ___ er kein Buch.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "hatte"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a5",
+              "prompt": "Jetzt hat Ludwig keinen Mantel. Im März ___ er einen Mantel.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "hatte"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a6",
+              "prompt": "Jetzt haben die Studenten keine Mäntel. Im März ___ sie Mäntel.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "hatten"
+              ],
+              "first_letters": 1
+            }
+          ]
+        },
+        {
+          "obrazec": {
+            "prompt": "Jetzt wartet Lene. Am Abend ___ Konrad. (wartet)",
+            "answer": "wartete"
+          },
+          "items": [
+            {
+              "id": "a7",
+              "prompt": "Jetzt arbeitet Jakob im Laboratorium. 1849 ___ Peter Lauer in Mannheim.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "arbeitete"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a8",
+              "prompt": "Jetzt setzt Lene Buchstaben. 1849 ___ Peter Lauer Buchstaben.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "setzte"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a9",
+              "prompt": "Jetzt druckt Konrad Papier für Heidelberg. 1849 ___ er Proklamationen.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "druckte"
+              ],
+              "first_letters": 1
+            },
+            {
+              "id": "a10",
+              "prompt": "Jetzt hört Lene, und Jakob liest. Am Abend ___ Lene, und Jakob las.",
+              "mode": "productive",
+              "answer_mode": "exact",
+              "accepted_answers": [
+                "hörte"
+              ],
+              "first_letters": 1
+            }
+          ]
+        }
+      ]
+    },
+    "B": {
+      "id": "de-NEW-01-l04-pb",
+      "title": "Wörter",
+      "instruction": "Complete one word from the word bank (use the form shown in the bank). The numbered English cues fix the meaning: 1: slowly · 2: letters (by post) · 3: page · 4: letter (A, B, C) · 5: words · 6: sentence · 7: print shop · 8: daughter · 9: night · 10: science",
+      "word_bank": [
+        "langsam",
+        "Briefe",
+        "Seite",
+        "Buchstaben",
+        "Wörter",
+        "Satz",
+        "Druckerei",
+        "Tochter",
+        "Nacht",
+        "Wissenschaft",
+        "Brücke",
+        "Presse",
+        "Fluss",
+        "Drucker",
+        "schnell",
+        "dünn",
+        "sauber"
+      ],
+      "items": [
+        {
+          "id": "b1",
+          "prompt": "Jakob las den Titel ___: „Che … mi … sche …“",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "langsam"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b2",
+          "prompt": "Der Titel ist „Chemische ___“.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Briefe"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b3",
+          "prompt": "Jakob liest: Brief eins, ___ zwei.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Seite"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b4",
+          "prompt": "Lene setzt einen ___: ein „L“.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Buchstaben"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b5",
+          "prompt": "„Natur“ und „Forschung“ sind zwei ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Wörter"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b6",
+          "prompt": "Jakob liest den ___ noch einmal.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Satz"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b7",
+          "prompt": "Die ___ von Hartmann ist am Fluss, an der Brücke.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Druckerei"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b8",
+          "prompt": "Lene ist die ___ von Konrad Hartmann.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Tochter"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b9",
+          "prompt": "Es war ___, aber Lene arbeitete noch.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Nacht"
+          ],
+          "first_letters": 1
+        },
+        {
+          "id": "b10",
+          "prompt": "Chemie, Physik und Mathematik: Das ist ___.",
+          "mode": "productive",
+          "answer_mode": "exact",
+          "accepted_answers": [
+            "Wissenschaft"
+          ],
+          "first_letters": 1
+        }
+      ]
+    },
+    "C": {
+      "id": "de-NEW-01-l04-pc",
+      "title": "Fragen",
+      "items": [
+        {
+          "id": "c1",
+          "prompt": "Was hatte Ludwig in der Hand?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Ludwig hatte ein Buch."
+          ],
+          "rubric": "A (small, brown) book, Liebig's Chemische Briefe; it was for Jakob, as Ludwig's thanks. Answer in a sentence; naming the book is the key information.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s006",
+            "de-NEW-01-l04-s011"
+          ]
+        },
+        {
+          "id": "c2",
+          "prompt": "Was sagte Jakob am Abend zu Kathrin?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "„Ich lese langsam, Mutter.“"
+          ],
+          "rubric": "He reads slowly (very slowly). Quoting him in the present, as he spoke, is right.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s027"
+          ]
+        },
+        {
+          "id": "c3",
+          "prompt": "Was hatte Lene in der Hand?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Lene hatte einen Buchstaben."
+          ],
+          "rubric": "A letter of type, an L (L wie Lene, L wie Lauer). Answer in a sentence; einen Buchstaben is the key information.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s036"
+          ]
+        },
+        {
+          "id": "c4",
+          "prompt": "Was machte Lene in der Druckerei?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Lene setzte Buchstaben."
+          ],
+          "rubric": "She set type (Buchstaben, Wörter, einen Text) and listened to Jakob: Lene setzte Buchstaben and Lene hörte Jakob are both right.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s034",
+            "de-NEW-01-l04-s071"
+          ]
+        },
+        {
+          "id": "c5",
+          "prompt": "Was ist Wissenschaft? Was sagte Lene?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Die Chemie ist Wissenschaft."
+          ],
+          "rubric": "Lene says: Chemie, Physik, Mathematik: Das ist Wissenschaft. Any of these sciences named in a sentence is right.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s060"
+          ]
+        },
+        {
+          "id": "c6",
+          "prompt": "Was war Peter Lauer in Mannheim, und was machte er im Mai 1849?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Er war Drucker. Er setzte die Proklamationen."
+          ],
+          "rubric": "He was a printer (Drucker) and set the proclamations all night; Konrad printed them. Look for war and setzte.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s064",
+            "de-NEW-01-l04-s065"
+          ]
+        },
+        {
+          "id": "c7",
+          "prompt": "Wer kam am Ende in die Druckerei?",
+          "mode": "productive",
+          "answer_mode": "self_check",
+          "model_answers": [
+            "Es waren Gendarmen."
+          ],
+          "rubric": "Two gendarmes (police) came from the bridge; one asks what is printed here. Any sentence naming the gendarmes is right.",
+          "source_segment_ids": [
+            "de-NEW-01-l04-s078"
+          ]
+        }
+      ]
+    }
+  },
+  "vocabulary": [
+    {
+      "lexeme_id": "de-lesen",
+      "citation_form": "lesen",
+      "part_of_speech": "verb",
+      "current_sense": "read",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-langsam",
+      "citation_form": "langsam",
+      "part_of_speech": "adj",
+      "current_sense": "slow; slowly",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-brief",
+      "citation_form": "der Brief",
+      "part_of_speech": "noun",
+      "current_sense": "letter (post)",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-oeffnen",
+      "citation_form": "öffnen",
+      "part_of_speech": "verb",
+      "current_sense": "open",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-warten",
+      "citation_form": "warten",
+      "part_of_speech": "verb",
+      "current_sense": "wait",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-seite",
+      "citation_form": "die Seite",
+      "part_of_speech": "noun",
+      "current_sense": "page",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-buchstabe",
+      "citation_form": "der Buchstabe",
+      "part_of_speech": "noun",
+      "current_sense": "letter (of the alphabet); piece of type",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-druckerei",
+      "citation_form": "die Druckerei",
+      "part_of_speech": "noun",
+      "current_sense": "print shop",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-drucken",
+      "citation_form": "drucken",
+      "part_of_speech": "verb",
+      "current_sense": "print",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-drucker",
+      "citation_form": "der Drucker",
+      "part_of_speech": "noun",
+      "current_sense": "printer",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-tochter",
+      "citation_form": "die Tochter",
+      "part_of_speech": "noun",
+      "current_sense": "daughter",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-setzen",
+      "citation_form": "setzen",
+      "part_of_speech": "verb",
+      "current_sense": "set (type)",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-wort",
+      "citation_form": "das Wort",
+      "part_of_speech": "noun",
+      "current_sense": "word",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-hoeren",
+      "citation_form": "hören",
+      "part_of_speech": "verb",
+      "current_sense": "hear; listen",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-wissenschaft",
+      "citation_form": "die Wissenschaft",
+      "part_of_speech": "noun",
+      "current_sense": "science",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-satz",
+      "citation_form": "der Satz",
+      "part_of_speech": "noun",
+      "current_sense": "sentence",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-nacht",
+      "citation_form": "die Nacht",
+      "part_of_speech": "noun",
+      "current_sense": "night",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-bruecke",
+      "citation_form": "die Brücke",
+      "part_of_speech": "noun",
+      "current_sense": "bridge",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-fluss",
+      "citation_form": "der Fluss",
+      "part_of_speech": "noun",
+      "current_sense": "river",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-presse",
+      "citation_form": "die Presse",
+      "part_of_speech": "noun",
+      "current_sense": "printing press",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-gendarm",
+      "citation_form": "der Gendarm",
+      "part_of_speech": "noun",
+      "current_sense": "gendarme (rural policeman)",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    },
+    {
+      "lexeme_id": "de-proklamation",
+      "citation_form": "die Proklamation",
+      "part_of_speech": "noun",
+      "current_sense": "proclamation",
+      "first_introduced_lesson": "de-NEW-01-l04",
+      "new": true
+    }
+  ],
+  "media": {
+    "status": "draft",
+    "counts": {
+      "cover": 0,
+      "inline_scene": 1,
+      "margin_diagram": 0,
+      "margin_vignette": 0,
+      "margin_gloss": 47
+    }
+  },
+  "metrics": {
+    "word_target": 1310
+  }
+}
