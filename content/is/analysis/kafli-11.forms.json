@@ -6,7 +6,7 @@
       "islenska-data": "5.0.0",
       "tokenizer": "3.7.0"
     },
-    "input_sha256": "3e25eda14ede964e756e463cc9c72ca19a90c109353280041d8d81d38d2b29e5",
+    "input_sha256": "9a74ee287bcd430f73feba0b7dc6389530c4fa1e2eaf52f9597c6660b230a3bb",
     "license": "CC BY-SA 4.0",
     "credit": "Beygingarlýsing íslensks nútímamáls. Stofnun Árna Magnússonar í íslenskum fræðum. Höfundur og ritstjóri Kristín Bjarnadóttir.",
     "source": "https://bin.arnastofnun.is",
@@ -4198,65 +4198,248 @@
       }
     }
   ],
-  "því": {
-    "lexeme_id": "is-thad",
-    "lemma": "það",
-    "bin_id": 403786,
-    "forms": [
-      "þau",
-      "það",
-      "þeim",
-      "þeirra",
-      "þess",
-      "því"
-    ],
-    "features_by_form": {
-      "þau": [
-        {
+  "því": [
+    {
+      "lexeme_id": "is-thad",
+      "lemma": "það",
+      "bin_id": 403786,
+      "forms": [
+        "þau",
+        "það",
+        "þeim",
+        "þeirra",
+        "þess",
+        "því"
+      ],
+      "features_by_form": {
+        "þau": [
+          {
+            "pos": "pron",
+            "case": "nom",
+            "number": "plur"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "plur"
+          }
+        ],
+        "það": [
+          {
+            "pos": "pron",
+            "case": "nom",
+            "number": "sing"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "sing"
+          }
+        ],
+        "þeim": {
           "pos": "pron",
-          "case": "nom",
+          "case": "dat",
           "number": "plur"
         },
-        {
+        "þeirra": {
           "pos": "pron",
-          "case": "acc",
+          "case": "gen",
           "number": "plur"
-        }
-      ],
-      "það": [
-        {
+        },
+        "þess": {
           "pos": "pron",
-          "case": "nom",
+          "case": "gen",
           "number": "sing"
         },
-        {
+        "því": {
           "pos": "pron",
-          "case": "acc",
+          "case": "dat",
           "number": "sing"
         }
+      }
+    },
+    {
+      "lexeme_id": "is-sa",
+      "lemma": "sá",
+      "bin_id": 478812,
+      "forms": [
+        "sá",
+        "sú",
+        "þann",
+        "þau",
+        "það",
+        "þeim",
+        "þeir",
+        "þeirra",
+        "þeirrar",
+        "þeirri",
+        "þess",
+        "því",
+        "þá",
+        "þær"
       ],
-      "þeim": {
-        "pos": "pron",
-        "case": "dat",
-        "number": "plur"
-      },
-      "þeirra": {
-        "pos": "pron",
-        "case": "gen",
-        "number": "plur"
-      },
-      "þess": {
-        "pos": "pron",
-        "case": "gen",
-        "number": "sing"
-      },
-      "því": {
-        "pos": "pron",
-        "case": "dat",
-        "number": "sing"
+      "features_by_form": {
+        "sá": {
+          "pos": "pron",
+          "case": "nom",
+          "number": "sing",
+          "gender": "m"
+        },
+        "sú": {
+          "pos": "pron",
+          "case": "nom",
+          "number": "sing",
+          "gender": "f"
+        },
+        "þann": {
+          "pos": "pron",
+          "case": "acc",
+          "number": "sing",
+          "gender": "m"
+        },
+        "þau": [
+          {
+            "pos": "pron",
+            "case": "nom",
+            "number": "plur",
+            "gender": "n"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "plur",
+            "gender": "n"
+          }
+        ],
+        "það": [
+          {
+            "pos": "pron",
+            "case": "nom",
+            "number": "sing",
+            "gender": "n"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "sing",
+            "gender": "n"
+          }
+        ],
+        "þeim": [
+          {
+            "pos": "pron",
+            "case": "dat",
+            "number": "sing",
+            "gender": "m"
+          },
+          {
+            "pos": "pron",
+            "case": "dat",
+            "number": "plur",
+            "gender": "m"
+          },
+          {
+            "pos": "pron",
+            "case": "dat",
+            "number": "plur",
+            "gender": "f"
+          },
+          {
+            "pos": "pron",
+            "case": "dat",
+            "number": "plur",
+            "gender": "n"
+          }
+        ],
+        "þeir": {
+          "pos": "pron",
+          "case": "nom",
+          "number": "plur",
+          "gender": "m"
+        },
+        "þeirra": [
+          {
+            "pos": "pron",
+            "case": "gen",
+            "number": "plur",
+            "gender": "m"
+          },
+          {
+            "pos": "pron",
+            "case": "gen",
+            "number": "plur",
+            "gender": "f"
+          },
+          {
+            "pos": "pron",
+            "case": "gen",
+            "number": "plur",
+            "gender": "n"
+          }
+        ],
+        "þeirrar": {
+          "pos": "pron",
+          "case": "gen",
+          "number": "sing",
+          "gender": "f"
+        },
+        "þeirri": {
+          "pos": "pron",
+          "case": "dat",
+          "number": "sing",
+          "gender": "f"
+        },
+        "þess": [
+          {
+            "pos": "pron",
+            "case": "gen",
+            "number": "sing",
+            "gender": "m"
+          },
+          {
+            "pos": "pron",
+            "case": "gen",
+            "number": "sing",
+            "gender": "n"
+          }
+        ],
+        "því": {
+          "pos": "pron",
+          "case": "dat",
+          "number": "sing",
+          "gender": "n"
+        },
+        "þá": [
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "sing",
+            "gender": "f"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "plur",
+            "gender": "m"
+          }
+        ],
+        "þær": [
+          {
+            "pos": "pron",
+            "case": "nom",
+            "number": "plur",
+            "gender": "f"
+          },
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "plur",
+            "gender": "f"
+          }
+        ]
       }
     }
-  },
+  ],
   "beit": [
     {
       "lexeme_id": "is-beit",
