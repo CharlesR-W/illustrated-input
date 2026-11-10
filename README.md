@@ -9,18 +9,11 @@ each course its `course.json`, the written lesson files, `lexicon.json`, and the
 those files reference:
 
 - Мир (`ru-mir-01`, draft): `content/ru/`
-- Мир: ускоренный курс (`ru-mirc-01`, draft): `content/ru-mirc/`
 - Ἐν Σκιλλοῦντι (`grc-skil-01`, draft): `content/grc/`
 - Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
 - Kvöldvakan (`is-kvold-01`, draft): `content/is/`
 - Dare e avere (`it-dante-01`, draft): `content/it-dante/`
-- 書與遠方 — Classical Chinese (`lzh-NEW-01`, draft): `content/lzh/`
-- La puerta del patio (`es-NEW-01`, draft): `content/es/`
-- La porta aperta (`it-NEW-01`, draft): `content/it/`
 - Das Spektrum (`de-NEW-01`, draft): `content/de/`
-- まちのほん (`ja-NEW-01`, draft): `content/ja/`
-- O café da esquina (`pt-NEW-01`, draft): `content/pt/`
-- Otwarty warsztat (`pl-NEW-01`, draft): `content/pl/`
 
 Standalone pages (not courses):
 
