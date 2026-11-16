@@ -6,7 +6,7 @@
       "islenska-data": "5.0.0",
       "tokenizer": "3.7.0"
     },
-    "input_sha256": "6cfd5acfd47a298c8d80238a9b2e21ce3328ce581e7ebc5a1985b454cdeb52ab",
+    "input_sha256": "e3b00f970334f818964bb2be7a54e15e31372fa2895789244a7ca6b84989b2ed",
     "license": "CC BY-SA 4.0",
     "credit": "Beygingarlýsing íslensks nútímamáls. Stofnun Árna Magnússonar í íslenskum fræðum. Höfundur og ritstjóri Kristín Bjarnadóttir.",
     "source": "https://bin.arnastofnun.is",
@@ -6525,64 +6525,100 @@
       }
     }
   },
-  "þér": {
-    "lexeme_id": "is-thu",
-    "lemma": "þú",
-    "bin_id": 403782,
-    "forms": [
-      "ykkar",
-      "ykkur",
-      "þig",
-      "þið",
-      "þér",
-      "þín",
-      "þú"
-    ],
-    "features_by_form": {
-      "ykkar": {
-        "pos": "pron",
-        "case": "gen",
-        "number": "plur"
-      },
-      "ykkur": [
-        {
+  "þér": [
+    {
+      "lexeme_id": "is-thu",
+      "lemma": "þú",
+      "bin_id": 403782,
+      "forms": [
+        "ykkar",
+        "ykkur",
+        "þig",
+        "þið",
+        "þér",
+        "þín",
+        "þú"
+      ],
+      "features_by_form": {
+        "ykkar": {
           "pos": "pron",
-          "case": "acc",
+          "case": "gen",
           "number": "plur"
         },
-        {
+        "ykkur": [
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "plur"
+          },
+          {
+            "pos": "pron",
+            "case": "dat",
+            "number": "plur"
+          }
+        ],
+        "þig": {
+          "pos": "pron",
+          "case": "acc",
+          "number": "sing"
+        },
+        "þið": {
+          "pos": "pron",
+          "case": "nom",
+          "number": "plur"
+        },
+        "þér": {
           "pos": "pron",
           "case": "dat",
+          "number": "sing"
+        },
+        "þín": {
+          "pos": "pron",
+          "case": "gen",
+          "number": "sing"
+        },
+        "þú": {
+          "pos": "pron",
+          "case": "nom",
+          "number": "sing"
+        }
+      }
+    },
+    {
+      "lexeme_id": "is-ther",
+      "lemma": "þér",
+      "bin_id": 480342,
+      "forms": [
+        "yðar",
+        "yður",
+        "þér"
+      ],
+      "features_by_form": {
+        "yðar": {
+          "pos": "pron",
+          "case": "gen",
+          "number": "plur"
+        },
+        "yður": [
+          {
+            "pos": "pron",
+            "case": "acc",
+            "number": "plur"
+          },
+          {
+            "pos": "pron",
+            "case": "dat",
+            "number": "plur"
+          }
+        ],
+        "þér": {
+          "pos": "pron",
+          "case": "nom",
           "number": "plur"
         }
-      ],
-      "þig": {
-        "pos": "pron",
-        "case": "acc",
-        "number": "sing"
-      },
-      "þið": {
-        "pos": "pron",
-        "case": "nom",
-        "number": "plur"
-      },
-      "þér": {
-        "pos": "pron",
-        "case": "dat",
-        "number": "sing"
-      },
-      "þín": {
-        "pos": "pron",
-        "case": "gen",
-        "number": "sing"
-      },
-      "þú": {
-        "pos": "pron",
-        "case": "nom",
-        "number": "sing"
       }
     }
-  },
+  ],
   "hlaðinu": {
     "lexeme_id": "is-hlad",
     "lemma": "hlað",
