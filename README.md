@@ -8,12 +8,12 @@ the course index `content/courses.json` that the reader's course selector reads,
 each course its `course.json`, the written lesson files, `lexicon.json`, and the media
 those files reference:
 
-- Мир (`ru-mir-01`, draft): `content/ru/`
-- Ἐν Σκιλλοῦντι (`grc-skil-01`, draft): `content/grc/`
-- Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`
-- Kvöldvakan (`is-kvold-01`, draft): `content/is/`
-- Dare e avere (`it-dante-01`, draft): `content/it-dante/`
-- Das Spektrum (`de-NEW-01`, draft): `content/de/`
+- Мир (`ru-mir-01`, draft): `content/ru/`; offline book: `downloads/ru-mir-01.html`, `downloads/ru-mir-01.epub`
+- Ἐν Σκιλλοῦντι (`grc-skil-01`, draft): `content/grc/`; offline book: `downloads/grc-skil-01.html`, `downloads/grc-skil-01.epub`
+- Y Brenin a Fu ac a Fydd (`cy-brenin-01`, published): `content/cy/`; offline book: `downloads/cy-brenin-01.html`, `downloads/cy-brenin-01.epub`
+- Kvöldvakan (`is-kvold-01`, draft): `content/is/`; offline book: `downloads/is-kvold-01.html`, `downloads/is-kvold-01.epub`
+- Dare e avere (`it-dante-01`, draft): `content/it-dante/`; offline book: `downloads/it-dante-01.html`, `downloads/it-dante-01.epub`
+- Das Spektrum (`de-NEW-01`, draft): `content/de/`; offline book: `downloads/de-NEW-01.html`, `downloads/de-NEW-01.epub`
 
 Standalone pages (not courses):
 

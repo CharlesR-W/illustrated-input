@@ -884,6 +884,7 @@ function showOverview(focus) {
       introText() ? ui("a", "how_to_read", { class: "button secondary", href: "#intro" }) : null,
       whatsNext() ? ui("a", "whats_next", { class: "button secondary", href: "#whats-next" }) : null,
       stepperCourse() ? ui("button", "export_timing", { type: "button", class: "button secondary", onclick: exportTiming }) : null),
+    renderDownloads(),
     courseCredits(),
     stepperCourse() ? timingSummary() : null,
     h("div", { class: "overview-progress" },
@@ -915,6 +916,19 @@ function showOverview(focus) {
   renderNav();
   window.scrollTo(0, 0);
   if (focus) focusHeading("#overview-title");
+}
+
+// Offline book files the build generated for this course (content/courses.json `downloads`).
+function renderDownloads() {
+  const files = state.indexEntry?.id === state.course?.id ? state.indexEntry?.downloads : null;
+  if (!files?.html && !files?.epub) return null;
+  const size = (bytes) => (Number.isFinite(bytes) ? ` (${Math.max(0.1, bytes / 1048576).toFixed(1)} MB)` : "");
+  const link = (href, label, bytes) => h("a", { href: new URL(href, location.href).href, download: href.split("/").pop(), lang: "en" }, label, h("small", null, size(bytes)));
+  return h("p", { class: "download-links", lang: "en" },
+    h("span", { class: "download-label" }, "Download the book: "),
+    files.html ? link(files.html, "HTML (to read offline or print)", files.html_bytes) : null,
+    files.html && files.epub ? " · " : null,
+    files.epub ? link(files.epub, "EPUB (e-readers)", files.epub_bytes) : null);
 }
 
 // ------------------------------------------------------------------ lesson
