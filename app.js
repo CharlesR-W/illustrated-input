@@ -28,6 +28,7 @@ const UI_DEFAULTS = {
   status_draft: "draft", status_reviewed: "reviewed", status_published: "published",
   gender_m: "m.", gender_f: "f.", load_error: "The course could not be opened.",
   serve_hint: "Run this site through a local web server (python -m http.server) rather than opening index.html directly.",
+  listen_chapter: "Listen to this chapter", audio_minutes: "{n} min",
   gender_n: "n.", course_select: "Course", stress_marks: "Stress marks", workbook: "Workbook", obrazec: "Example",
   skip_exercise: "Skip", skipped: "Skipped", unskip: "Undo", correct_yo: "Correct! (ё)", ending_hint: "Almost! The ending?",
   aspect_hint: "Almost! Aspect?", lookalike_warning: "Latin letters ({chars}) were replaced by Cyrillic ones.",
@@ -724,6 +725,7 @@ function whatsNext() { return state.course?.whats_next || (state.course?.whats_n
 const VIEWS = ["intro", "overview", "lesson", "whats-next"];
 function showView(name) {
   closeGloss();
+  if (name !== "lesson") stopChapterAudio();
   if (state.view === "lesson" && name !== "lesson") stopStepTimer();
   state.view = name;
   for (const id of VIEWS) if ($(`#${id}`)) $(`#${id}`).hidden = id !== name;
@@ -963,6 +965,7 @@ async function loadAnswerForms(lesson, entry) {
 
 async function openLesson(entry, focus = true, stepId = null, seq = routeSeq) {
   const hash = location.hash;
+  if (chapterPlayer && chapterPlayer.lesson.id !== entry.id) stopChapterAudio();
   if (state.view !== "lesson") { $("#loading").hidden = false; }
   try {
     const lesson = await fetchLesson(entry);
@@ -996,6 +999,7 @@ function renderLesson(lesson) {
   const inWorkbook = state.book === "workbook" && exerciseBook(state.course);
   article.classList.toggle("is-workbook", inWorkbook);
   if (inWorkbook) {
+    stopChapterAudio();
     article.replaceChildren(...renderWorkbookBook(lesson, order, part).filter(Boolean));
     markStepRegions(article, lesson);
     return;
@@ -1004,6 +1008,7 @@ function renderLesson(lesson) {
   article.replaceChildren(...[
     renderLessonHeader(lesson, order, part),
     renderToolbar(lesson),
+    renderChapterAudio(lesson),
     renderStepper(lesson),
     renderCover(lesson),
     renderStory(lesson),
@@ -1021,6 +1026,38 @@ function renderLesson(lesson) {
   markStepRegions(article, lesson);
   bindStoryObservers(article);
   scheduleAlign();
+}
+
+// One recording per chapter: lesson.chapter_audio, which only build.mjs writes (from a
+// validated LanguageBooks manifest). The <audio> element is reused when the same chapter
+// re-renders (stress marks, English, re-read), so playback continues; it pauses whenever
+// the reader leaves the chapter (another chapter, contents, intro, workbook).
+let chapterPlayer = null;
+const CHAPTER_AUDIO_PREFIX = "https://github.com/CharlesR-W/illustrated-input-audio/releases/download/";
+function stopChapterAudio() { chapterPlayer?.audio.pause(); }
+function chapterAudioOf(lesson) {
+  const data = lesson?.chapter_audio;
+  if (!data || typeof data.url !== "string") return null;
+  let url;
+  try { url = new URL(data.url); } catch { return null; }
+  // Compare the parsed, normalized URL: a raw "prefix/../" must not reach another repository.
+  return url.href.startsWith(CHAPTER_AUDIO_PREFIX) && url.href === data.url && !url.search && !url.hash ? data : null;
+}
+function renderChapterAudio(lesson) {
+  const data = chapterAudioOf(lesson);
+  if (chapterPlayer && (chapterPlayer.lesson !== lesson || chapterPlayer.url !== data?.url)) {
+    stopChapterAudio();
+    chapterPlayer = null;
+  }
+  if (!data) return null;
+  chapterPlayer ||= { lesson, url: data.url, audio: h("audio", { controls: true, preload: "none", src: data.url, class: "chapter-audio-player" }) };
+  const minutes = Number(data.duration_s) > 0 ? Math.max(1, Math.round(Number(data.duration_s) / 60)) : null;
+  return h("section", { class: "chapter-audio", "aria-labelledby": "chapter-audio-label" },
+    h("p", { class: "chapter-audio-label", id: "chapter-audio-label" },
+      ui("span", "listen_chapter"),
+      minutes ? h("span", { class: "chapter-audio-duration" }, " · ", ui("span", "audio_minutes", {}, { n: minutes })) : null),
+    chapterPlayer.audio,
+    typeof data.credit === "string" && data.credit ? h("p", { class: "chapter-audio-credit", lang: "en" }, data.credit) : null);
 }
 
 function renderLessonHeader(lesson, order, part) {
@@ -2926,6 +2963,7 @@ function closeNav(returnFocus) {
 }
 
 function showError(error) {
+  stopChapterAudio();
   $("#loading").hidden = true;
   for (const id of VIEWS) if ($(`#${id}`)) $(`#${id}`).hidden = true;
   const box = $("#error");
@@ -2992,7 +3030,6 @@ function boot() {
     else if (state.view === "intro") showIntro(false);
     else if (state.view === "whats-next") showWhatsNext(false);
     window.scrollTo(0, scroll);
-    updateDock();
     $("#english-toggle").focus();
   });
   document.addEventListener("keydown", (event) => {
